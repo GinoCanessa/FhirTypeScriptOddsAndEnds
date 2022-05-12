@@ -91,47 +91,4 @@ export const SpecimenCollectionValueSet = {
 /**
  * Actions that can be taken for the collection of specimen from a subject.
  */
-export var SpecimenCollectionValueSetEnum;
-(function (SpecimenCollectionValueSetEnum) {
-    /**
-     * Code: 129300006
-     */
-    SpecimenCollectionValueSetEnum["PunctureAction"] = "129300006";
-    /**
-     * Code: 129304002
-     */
-    SpecimenCollectionValueSetEnum["ExcisionAction"] = "129304002";
-    /**
-     * Code: 129314006
-     */
-    SpecimenCollectionValueSetEnum["BiopsyAction"] = "129314006";
-    /**
-     * Code: 129316008
-     */
-    SpecimenCollectionValueSetEnum["AspirationAction"] = "129316008";
-    /**
-     * Code: 129323009
-     */
-    SpecimenCollectionValueSetEnum["ScrapingAction"] = "129323009";
-    /**
-     * Code: 225113003
-     */
-    SpecimenCollectionValueSetEnum["TimedUrineCollection"] = "225113003";
-    /**
-     * Code: 278450005
-     */
-    SpecimenCollectionValueSetEnum["FingerPrickSampling"] = "278450005";
-    /**
-     * Code: 386089008
-     */
-    SpecimenCollectionValueSetEnum["CollectionOfCoughedSputum"] = "386089008";
-    /**
-     * Code: 70777001
-     */
-    SpecimenCollectionValueSetEnum["UrineSpecimenCollectionCatheterized"] = "70777001";
-    /**
-     * Code: 73416001
-     */
-    SpecimenCollectionValueSetEnum["UrineSpecimenCollectionCleanCatch"] = "73416001";
-})(SpecimenCollectionValueSetEnum || (SpecimenCollectionValueSetEnum = {}));
 //# sourceMappingURL=SpecimenCollectionValueSet.js.map

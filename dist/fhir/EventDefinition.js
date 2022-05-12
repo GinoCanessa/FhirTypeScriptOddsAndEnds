@@ -3,9 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: EventDefinition
 import * as fhir from '../fhir.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { SubjectTypeValueSet } from '../fhirValueSets/SubjectTypeValueSet.js';
-import { DefinitionTopicValueSet } from '../fhirValueSets/DefinitionTopicValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { DefinitionTopicValueSet, } from '../fhirValueSets/DefinitionTopicValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The EventDefinition resource provides a reusable description of when a particular event can occur.
  */
@@ -13,41 +14,72 @@ export class EventDefinition extends fhir.DomainResource {
     /**
      * Default constructor for EventDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EventDefinition';
+        /**
+         * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this event definition outside of FHIR, where it is not possible to use the logical URI.
+         */
+        this.identifier = [];
+        this.__subjectIsChoice = true;
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the event definition to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * Descriptive topics related to the module. Topics provide a high-level categorization of the module that can be useful for filtering and searching.
+         */
+        this.topic = [];
+        /**
+         * An individiual or organization primarily involved in the creation and maintenance of the content.
+         */
+        this.author = [];
+        /**
+         * An individual or organization primarily responsible for internal coherence of the content.
+         */
+        this.editor = [];
+        /**
+         * An individual or organization primarily responsible for review of some aspect of the content.
+         */
+        this.reviewer = [];
+        /**
+         * An individual or organization responsible for officially endorsing the content for use in some setting.
+         */
+        this.endorser = [];
+        /**
+         * Each related resource is either an attachment, or a reference to another resource, but not both.
+         */
+        this.relatedArtifact = [];
+        /**
+         * The trigger element defines when the event occurs. If more than one trigger condition is specified, the event fires whenever any one of the trigger conditions is met.
+         */
+        this.trigger = [];
         this.resourceType = 'EventDefinition';
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['subtitle']) {
-            this.subtitle = source.subtitle;
-        }
-        if (source['_subtitle']) {
-            this._subtitle = new fhir.FhirElement(source._subtitle);
+            this.subtitle = new fhir.FhirString({ value: source.subtitle });
         }
         if (source['status']) {
             this.status = source.status;
@@ -55,41 +87,29 @@ export class EventDefinition extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+        if (source['subject']) {
+            this.subject = source.subject;
         }
-        if (source['subjectCodeableConcept']) {
-            this.subjectCodeableConcept = new fhir.CodeableConcept(source.subjectCodeableConcept);
+        else if (source['subjectCodeableConcept']) {
+            this.subject = new fhir.CodeableConcept(source.subjectCodeableConcept);
         }
-        if (source['subjectReference']) {
-            this.subjectReference = new fhir.Reference(source.subjectReference);
+        else if (source['subjectReference']) {
+            this.subject = new fhir.Reference(source.subjectReference);
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -98,34 +118,19 @@ export class EventDefinition extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['usage']) {
-            this.usage = source.usage;
-        }
-        if (source['_usage']) {
-            this._usage = new fhir.FhirElement(source._usage);
+            this.usage = new fhir.FhirString({ value: source.usage });
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['approvalDate']) {
-            this.approvalDate = source.approvalDate;
-        }
-        if (source['_approvalDate']) {
-            this._approvalDate = new fhir.FhirElement(source._approvalDate);
+            this.approvalDate = new fhir.FhirDate({ value: source.approvalDate });
         }
         if (source['lastReviewDate']) {
-            this.lastReviewDate = source.lastReviewDate;
-        }
-        if (source['_lastReviewDate']) {
-            this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate);
+            this.lastReviewDate = new fhir.FhirDate({ value: source.lastReviewDate });
         }
         if (source['effectivePeriod']) {
             this.effectivePeriod = new fhir.Period(source.effectivePeriod);
@@ -162,18 +167,6 @@ export class EventDefinition extends fhir.DomainResource {
         return PublicationStatusValueSet;
     }
     /**
-     * Extensible-bound Value Set for subjectCodeableConcept
-     */
-    static subjectCodeableConceptExtensibleValueSet() {
-        return SubjectTypeValueSet;
-    }
-    /**
-     * Extensible-bound Value Set for subjectReference
-     */
-    static subjectReferenceExtensibleValueSet() {
-        return SubjectTypeValueSet;
-    }
-    /**
      * Example-bound Value Set for topic
      */
     static topicExampleValueSet() {
@@ -183,104 +176,107 @@ export class EventDefinition extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: EventDefinition.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'EventDefinition' fhir: EventDefinition.resourceType:'EventDefinition'", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_subtitle"]) {
-            results.push(...this._subtitle.doModelValidation());
+        if (this["subtitle"]) {
+            outcome.issue.push(...this.subtitle.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: EventDefinition.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: EventDefinition.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["subjectCodeableConcept"]) {
-            results.push(...this.subjectCodeableConcept.doModelValidation());
-        }
-        if (this["subjectReference"]) {
-            results.push(...this.subjectReference.doModelValidation());
-        }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (this["_usage"]) {
-            results.push(...this._usage.doModelValidation());
+        if (this["usage"]) {
+            outcome.issue.push(...this.usage.doModelValidation().issue);
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
-        if (this["_approvalDate"]) {
-            results.push(...this._approvalDate.doModelValidation());
+        if (this["approvalDate"]) {
+            outcome.issue.push(...this.approvalDate.doModelValidation().issue);
         }
-        if (this["_lastReviewDate"]) {
-            results.push(...this._lastReviewDate.doModelValidation());
+        if (this["lastReviewDate"]) {
+            outcome.issue.push(...this.lastReviewDate.doModelValidation().issue);
         }
         if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
+            outcome.issue.push(...this.effectivePeriod.doModelValidation().issue);
         }
         if (this["topic"]) {
-            this.topic.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.topic.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["author"]) {
-            this.author.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.author.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["editor"]) {
-            this.editor.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.editor.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reviewer"]) {
-            this.reviewer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reviewer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["endorser"]) {
-            this.endorser.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.endorser.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relatedArtifact"]) {
-            this.relatedArtifact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relatedArtifact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if ((!this["trigger"]) || (this["trigger"].length === 0)) {
-            results.push(["trigger", 'Missing required element: EventDefinition.trigger']);
+        if (!this['trigger']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property trigger:fhir.TriggerDefinition[] fhir: EventDefinition.trigger:TriggerDefinition", }));
+        }
+        else if (!Array.isArray(this.trigger)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property trigger:fhir.TriggerDefinition[] fhir: EventDefinition.trigger:TriggerDefinition", }));
+        }
+        else if (this.trigger.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property trigger:fhir.TriggerDefinition[] fhir: EventDefinition.trigger:TriggerDefinition", }));
         }
         if (this["trigger"]) {
-            this.trigger.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.trigger.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=EventDefinition.js.map

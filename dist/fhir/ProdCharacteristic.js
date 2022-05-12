@@ -10,8 +10,21 @@ export class ProdCharacteristic extends fhir.BackboneElement {
     /**
      * Default constructor for ProdCharacteristic - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ProdCharacteristic';
+        /**
+         * Where applicable, the color can be specified An appropriate controlled vocabulary shall be used The term and the term identifier shall be used.
+         */
+        this.color = [];
+        /**
+         * Where applicable, the imprint can be specified as text.
+         */
+        this.imprint = [];
+        /**
+         * Where applicable, the image can be provided The format of the image attachment shall be specified by regional implementations.
+         */
+        this.image = [];
         if (source['height']) {
             this.height = new fhir.Quantity(source.height);
         }
@@ -31,22 +44,13 @@ export class ProdCharacteristic extends fhir.BackboneElement {
             this.externalDiameter = new fhir.Quantity(source.externalDiameter);
         }
         if (source['shape']) {
-            this.shape = source.shape;
-        }
-        if (source['_shape']) {
-            this._shape = new fhir.FhirElement(source._shape);
+            this.shape = new fhir.FhirString({ value: source.shape });
         }
         if (source['color']) {
-            this.color = source.color.map((x) => (x));
-        }
-        if (source['_color']) {
-            this._color = source._color.map((x) => new fhir.FhirElement(x));
+            this.color = source.color.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['imprint']) {
-            this.imprint = source.imprint.map((x) => (x));
-        }
-        if (source['_imprint']) {
-            this._imprint = source._imprint.map((x) => new fhir.FhirElement(x));
+            this.imprint = source.imprint.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['image']) {
             this.image = source.image.map((x) => new fhir.Attachment(x));
@@ -59,41 +63,47 @@ export class ProdCharacteristic extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["height"]) {
-            results.push(...this.height.doModelValidation());
+            outcome.issue.push(...this.height.doModelValidation().issue);
         }
         if (this["width"]) {
-            results.push(...this.width.doModelValidation());
+            outcome.issue.push(...this.width.doModelValidation().issue);
         }
         if (this["depth"]) {
-            results.push(...this.depth.doModelValidation());
+            outcome.issue.push(...this.depth.doModelValidation().issue);
         }
         if (this["weight"]) {
-            results.push(...this.weight.doModelValidation());
+            outcome.issue.push(...this.weight.doModelValidation().issue);
         }
         if (this["nominalVolume"]) {
-            results.push(...this.nominalVolume.doModelValidation());
+            outcome.issue.push(...this.nominalVolume.doModelValidation().issue);
         }
         if (this["externalDiameter"]) {
-            results.push(...this.externalDiameter.doModelValidation());
+            outcome.issue.push(...this.externalDiameter.doModelValidation().issue);
         }
-        if (this["_shape"]) {
-            results.push(...this._shape.doModelValidation());
+        if (this["shape"]) {
+            outcome.issue.push(...this.shape.doModelValidation().issue);
         }
-        if (this["_color"]) {
-            this._color.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["color"]) {
+            this.color.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_imprint"]) {
-            this._imprint.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["imprint"]) {
+            this.imprint.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["image"]) {
-            this.image.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.image.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["scoring"]) {
-            results.push(...this.scoring.doModelValidation());
+            outcome.issue.push(...this.scoring.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ProdCharacteristic.js.map

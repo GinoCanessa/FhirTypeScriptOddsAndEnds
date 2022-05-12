@@ -3,180 +3,71 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: PaymentReconciliation
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { PaymentTypeValueSet, PaymentTypeValueSetType, PaymentTypeValueSetEnum } from '../fhirValueSets/PaymentTypeValueSet.js'
-import { NoteTypeValueSet, NoteTypeValueSetType, NoteTypeValueSetEnum } from '../fhirValueSets/NoteTypeValueSet.js'
-import { FmStatusValueSet, FmStatusValueSetType, FmStatusValueSetEnum } from '../fhirValueSets/FmStatusValueSet.js'
-import { RemittanceOutcomeValueSet, RemittanceOutcomeValueSetType, RemittanceOutcomeValueSetEnum } from '../fhirValueSets/RemittanceOutcomeValueSet.js'
-import { FormsValueSet, FormsValueSetType, FormsValueSetEnum } from '../fhirValueSets/FormsValueSet.js'
-
+import { PaymentTypeValueSet, PaymentTypeValueSetType,} from '../fhirValueSets/PaymentTypeValueSet.js';
+import { PaymentTypeValueSetEnum } from '../valueSetEnums.js';
+import { NoteTypeValueSet, NoteTypeValueSetType,} from '../fhirValueSets/NoteTypeValueSet.js';
+import { NoteTypeValueSetEnum } from '../valueSetEnums.js';
+import { FmStatusValueSet, FmStatusValueSetType,} from '../fhirValueSets/FmStatusValueSet.js';
+import { FmStatusValueSetEnum } from '../valueSetEnums.js';
+import { RemittanceOutcomeValueSet, RemittanceOutcomeValueSetType,} from '../fhirValueSets/RemittanceOutcomeValueSet.js';
+import { RemittanceOutcomeValueSetEnum } from '../valueSetEnums.js';
+import { FormsValueSet, FormsValueSetType,} from '../fhirValueSets/FormsValueSet.js';
+import { FormsValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Distribution of the payment amount for a previously acknowledged payable.
+ * Valid arguments for the PaymentReconciliationDetail type.
  */
-export type IPaymentReconciliationDetail = fhir.IBackboneElement & { 
+export interface PaymentReconciliationDetailArgs extends fhir.BackboneElementArgs {
   /**
    * Unique identifier for the current payment item for the referenced payable.
    */
-  identifier?: fhir.IIdentifier|undefined;
+  identifier?: fhir.IdentifierArgs|undefined;
   /**
    * Unique identifier for the prior payment item for the referenced payable.
    */
-  predecessor?: fhir.IIdentifier|undefined;
+  predecessor?: fhir.IdentifierArgs|undefined;
   /**
    * For example: payment, adjustment, funds advance, etc.
    */
-  type: fhir.ICodeableConcept|null;
+  type: fhir.CodeableConceptArgs|null;
   /**
    * A resource, such as a Claim, the evaluation of which could lead to payment.
    */
-  request?: fhir.IReference|undefined;
+  request?: fhir.ReferenceArgs|undefined;
   /**
    * The party which submitted the claim or financial transaction.
    */
-  submitter?: fhir.IReference|undefined;
+  submitter?: fhir.ReferenceArgs|undefined;
   /**
    * A resource, such as a ClaimResponse, which contains a commitment to payment.
    */
-  response?: fhir.IReference|undefined;
+  response?: fhir.ReferenceArgs|undefined;
   /**
    * The date from the response resource containing a commitment to pay.
    */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.detail.date
-   */
-  _date?: fhir.IFhirElement|undefined;
+  date?: fhir.FhirDate|string|undefined;
   /**
    * A reference to the individual who is responsible for inquiries regarding the response and its payment.
    */
-  responsible?: fhir.IReference|undefined;
+  responsible?: fhir.ReferenceArgs|undefined;
   /**
    * The party which is receiving the payment.
    */
-  payee?: fhir.IReference|undefined;
+  payee?: fhir.ReferenceArgs|undefined;
   /**
    * The monetary amount allocated from the total payment to the payable.
    */
-  amount?: fhir.IMoney|undefined;
-}
-
-/**
- * A note that describes or explains the processing in a human readable form.
- */
-export type IPaymentReconciliationProcessNote = fhir.IBackboneElement & { 
-  /**
-   * The business purpose of the note text.
-   */
-  type?: NoteTypeValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.processNote.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * The explanation or description associated with the processing.
-   */
-  text?: string|undefined;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.processNote.text
-   */
-  _text?: fhir.IFhirElement|undefined;
-}
-
-/**
- * This resource provides the details including amount of a payment and allocates the payment items being paid.
- */
-export type IPaymentReconciliation = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "PaymentReconciliation";
-  /**
-   * A unique identifier assigned to this payment reconciliation.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-   */
-  status: FmStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * The period of time for which payments have been gathered into this bulk payment for settlement.
-   */
-  period?: fhir.IPeriod|undefined;
-  /**
-   * The date when the resource was created.
-   */
-  created: string|null;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.created
-   */
-  _created?: fhir.IFhirElement|undefined;
-  /**
-   * This party is also responsible for the reconciliation.
-   */
-  paymentIssuer?: fhir.IReference|undefined;
-  /**
-   * Original request resource reference.
-   */
-  request?: fhir.IReference|undefined;
-  /**
-   * The practitioner who is responsible for the services rendered to the patient.
-   */
-  requestor?: fhir.IReference|undefined;
-  /**
-   * The resource may be used to indicate that: the request has been held (queued) for processing; that it has been processed and errors found (error); that no errors were found and that some of the adjudication has been undertaken (partial) or that all of the adjudication has been undertaken (complete).
-   */
-  outcome?: RemittanceOutcomeValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.outcome
-   */
-  _outcome?: fhir.IFhirElement|undefined;
-  /**
-   * A human readable description of the status of the request for the reconciliation.
-   */
-  disposition?: string|undefined;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.disposition
-   */
-  _disposition?: fhir.IFhirElement|undefined;
-  /**
-   * The date of payment as indicated on the financial instrument.
-   */
-  paymentDate: string|null;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.paymentDate
-   */
-  _paymentDate?: fhir.IFhirElement|undefined;
-  /**
-   * Total payment amount as indicated on the financial instrument.
-   */
-  paymentAmount: fhir.IMoney|null;
-  /**
-   * For example: EFT number or check number.
-   */
-  paymentIdentifier?: fhir.IIdentifier|undefined;
-  /**
-   * Distribution of the payment amount for a previously acknowledged payable.
-   */
-  detail?: fhir.IPaymentReconciliationDetail[]|undefined;
-  /**
-   * May be needed to identify specific jurisdictional forms.
-   */
-  formCode?: fhir.ICodeableConcept|undefined;
-  /**
-   * A note that describes or explains the processing in a human readable form.
-   */
-  processNote?: fhir.IPaymentReconciliationProcessNote[]|undefined;
+  amount?: fhir.MoneyArgs|undefined;
 }
 
 /**
  * Distribution of the payment amount for a previously acknowledged payable.
  */
-export class PaymentReconciliationDetail extends fhir.BackboneElement implements IPaymentReconciliationDetail {
+export class PaymentReconciliationDetail extends fhir.BackboneElement {
+  readonly __dataType:string = 'PaymentReconciliationDetail';
   /**
    * Unique identifier for the current payment item for the referenced payable.
    */
@@ -204,11 +95,7 @@ export class PaymentReconciliationDetail extends fhir.BackboneElement implements
   /**
    * The date from the response resource containing a commitment to pay.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.detail.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDate|undefined;
   /**
    * A reference to the individual who is responsible for inquiries regarding the response and its payment.
    */
@@ -224,20 +111,19 @@ export class PaymentReconciliationDetail extends fhir.BackboneElement implements
   /**
    * Default constructor for PaymentReconciliationDetail - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IPaymentReconciliationDetail> = { }) {
-    super(source);
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
-    if (source['predecessor']) { this.predecessor = new fhir.Identifier(source.predecessor!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<PaymentReconciliationDetailArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
+    if (source['predecessor']) { this.predecessor = new fhir.Identifier(source.predecessor); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
-    if (source['request']) { this.request = new fhir.Reference(source.request!); }
-    if (source['submitter']) { this.submitter = new fhir.Reference(source.submitter!); }
-    if (source['response']) { this.response = new fhir.Reference(source.response!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['responsible']) { this.responsible = new fhir.Reference(source.responsible!); }
-    if (source['payee']) { this.payee = new fhir.Reference(source.payee!); }
-    if (source['amount']) { this.amount = new fhir.Money(source.amount!); }
+    if (source['request']) { this.request = new fhir.Reference(source.request); }
+    if (source['submitter']) { this.submitter = new fhir.Reference(source.submitter); }
+    if (source['response']) { this.response = new fhir.Reference(source.response); }
+    if (source['date']) { this.date = new fhir.FhirDate({value: source.date}); }
+    if (source['responsible']) { this.responsible = new fhir.Reference(source.responsible); }
+    if (source['payee']) { this.payee = new fhir.Reference(source.payee); }
+    if (source['amount']) { this.amount = new fhir.Money(source.amount); }
   }
   /**
    * Example-bound Value Set for type
@@ -248,52 +134,64 @@ export class PaymentReconciliationDetail extends fhir.BackboneElement implements
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (this["predecessor"]) { results.push(...this.predecessor.doModelValidation()); }
-    if (!this["type"]) { results.push(["type",'Missing required element: PaymentReconciliation.detail.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["request"]) { results.push(...this.request.doModelValidation()); }
-    if (this["submitter"]) { results.push(...this.submitter.doModelValidation()); }
-    if (this["response"]) { results.push(...this.response.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["responsible"]) { results.push(...this.responsible.doModelValidation()); }
-    if (this["payee"]) { results.push(...this.payee.doModelValidation()); }
-    if (this["amount"]) { results.push(...this.amount.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (this["predecessor"]) { outcome.issue!.push(...this.predecessor.doModelValidation().issue!); }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: PaymentReconciliation.detail.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["request"]) { outcome.issue!.push(...this.request.doModelValidation().issue!); }
+    if (this["submitter"]) { outcome.issue!.push(...this.submitter.doModelValidation().issue!); }
+    if (this["response"]) { outcome.issue!.push(...this.response.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["responsible"]) { outcome.issue!.push(...this.responsible.doModelValidation().issue!); }
+    if (this["payee"]) { outcome.issue!.push(...this.payee.doModelValidation().issue!); }
+    if (this["amount"]) { outcome.issue!.push(...this.amount.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the PaymentReconciliationProcessNote type.
+ */
+export interface PaymentReconciliationProcessNoteArgs extends fhir.BackboneElementArgs {
+  /**
+   * The business purpose of the note text.
+   */
+  type?: NoteTypeValueSetEnum|undefined;
+  /**
+   * The explanation or description associated with the processing.
+   */
+  text?: fhir.FhirString|string|undefined;
 }
 
 /**
  * A note that describes or explains the processing in a human readable form.
  */
-export class PaymentReconciliationProcessNote extends fhir.BackboneElement implements IPaymentReconciliationProcessNote {
+export class PaymentReconciliationProcessNote extends fhir.BackboneElement {
+  readonly __dataType:string = 'PaymentReconciliationProcessNote';
   /**
    * The business purpose of the note text.
    */
   public type?: NoteTypeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: PaymentReconciliation.processNote.type
-   */
-  public _type?: fhir.FhirElement|undefined;
-  /**
    * The explanation or description associated with the processing.
    */
-  public text?: string|undefined;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.processNote.text
-   */
-  public _text?: fhir.FhirElement|undefined;
+  public text?: fhir.FhirString|undefined;
   /**
    * Default constructor for PaymentReconciliationProcessNote - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IPaymentReconciliationProcessNote> = { }) {
-    super(source);
+  constructor(source:Partial<PaymentReconciliationProcessNoteArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['type']) { this.type = source.type; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['text']) { this.text = source.text; }
-    if (source['_text']) { this._text = new fhir.FhirElement(source._text!); }
+    if (source['text']) { this.text = new fhir.FhirString({value: source.text}); }
   }
   /**
    * Required-bound Value Set for type
@@ -304,18 +202,93 @@ export class PaymentReconciliationProcessNote extends fhir.BackboneElement imple
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_text"]) { results.push(...this._text.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["text"]) { outcome.issue!.push(...this.text.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the PaymentReconciliation type.
+ */
+export interface PaymentReconciliationArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "PaymentReconciliation"|undefined;
+  /**
+   * A unique identifier assigned to this payment reconciliation.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+   */
+  status: FmStatusValueSetEnum|null;
+  /**
+   * The period of time for which payments have been gathered into this bulk payment for settlement.
+   */
+  period?: fhir.PeriodArgs|undefined;
+  /**
+   * The date when the resource was created.
+   */
+  created: fhir.FhirDateTime|string|undefined;
+  /**
+   * This party is also responsible for the reconciliation.
+   */
+  paymentIssuer?: fhir.ReferenceArgs|undefined;
+  /**
+   * Original request resource reference.
+   */
+  request?: fhir.ReferenceArgs|undefined;
+  /**
+   * The practitioner who is responsible for the services rendered to the patient.
+   */
+  requestor?: fhir.ReferenceArgs|undefined;
+  /**
+   * The resource may be used to indicate that: the request has been held (queued) for processing; that it has been processed and errors found (error); that no errors were found and that some of the adjudication has been undertaken (partial) or that all of the adjudication has been undertaken (complete).
+   */
+  outcome?: RemittanceOutcomeValueSetEnum|undefined;
+  /**
+   * A human readable description of the status of the request for the reconciliation.
+   */
+  disposition?: fhir.FhirString|string|undefined;
+  /**
+   * The date of payment as indicated on the financial instrument.
+   */
+  paymentDate: fhir.FhirDate|string|undefined;
+  /**
+   * Total payment amount as indicated on the financial instrument.
+   */
+  paymentAmount: fhir.MoneyArgs|null;
+  /**
+   * For example: EFT number or check number.
+   */
+  paymentIdentifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * Distribution of the payment amount for a previously acknowledged payable.
+   */
+  detail?: fhir.PaymentReconciliationDetailArgs[]|undefined;
+  /**
+   * May be needed to identify specific jurisdictional forms.
+   */
+  formCode?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * A note that describes or explains the processing in a human readable form.
+   */
+  processNote?: fhir.PaymentReconciliationProcessNoteArgs[]|undefined;
 }
 
 /**
  * This resource provides the details including amount of a payment and allocates the payment items being paid.
  */
-export class PaymentReconciliation extends fhir.DomainResource implements IPaymentReconciliation {
+export class PaymentReconciliation extends fhir.DomainResource {
+  readonly __dataType:string = 'PaymentReconciliation';
   /**
    * Resource Type Name
    */
@@ -323,15 +296,11 @@ export class PaymentReconciliation extends fhir.DomainResource implements IPayme
   /**
    * A unique identifier assigned to this payment reconciliation.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
   public status: FmStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * The period of time for which payments have been gathered into this bulk payment for settlement.
    */
@@ -339,11 +308,7 @@ export class PaymentReconciliation extends fhir.DomainResource implements IPayme
   /**
    * The date when the resource was created.
    */
-  public created: string|null;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.created
-   */
-  public _created?: fhir.FhirElement|undefined;
+  public created: fhir.FhirDateTime|null;
   /**
    * This party is also responsible for the reconciliation.
    */
@@ -361,25 +326,13 @@ export class PaymentReconciliation extends fhir.DomainResource implements IPayme
    */
   public outcome?: RemittanceOutcomeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: PaymentReconciliation.outcome
-   */
-  public _outcome?: fhir.FhirElement|undefined;
-  /**
    * A human readable description of the status of the request for the reconciliation.
    */
-  public disposition?: string|undefined;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.disposition
-   */
-  public _disposition?: fhir.FhirElement|undefined;
+  public disposition?: fhir.FhirString|undefined;
   /**
    * The date of payment as indicated on the financial instrument.
    */
-  public paymentDate: string|null;
-  /**
-   * Extended properties for primitive element: PaymentReconciliation.paymentDate
-   */
-  public _paymentDate?: fhir.FhirElement|undefined;
+  public paymentDate: fhir.FhirDate|null;
   /**
    * Total payment amount as indicated on the financial instrument.
    */
@@ -391,7 +344,7 @@ export class PaymentReconciliation extends fhir.DomainResource implements IPayme
   /**
    * Distribution of the payment amount for a previously acknowledged payable.
    */
-  public detail?: fhir.PaymentReconciliationDetail[]|undefined;
+  public detail?: fhir.PaymentReconciliationDetail[]|undefined = [];
   /**
    * May be needed to identify specific jurisdictional forms.
    */
@@ -399,36 +352,31 @@ export class PaymentReconciliation extends fhir.DomainResource implements IPayme
   /**
    * A note that describes or explains the processing in a human readable form.
    */
-  public processNote?: fhir.PaymentReconciliationProcessNote[]|undefined;
+  public processNote?: fhir.PaymentReconciliationProcessNote[]|undefined = [];
   /**
    * Default constructor for PaymentReconciliation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IPaymentReconciliation> = { }) {
-    super(source);
+  constructor(source:Partial<PaymentReconciliationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'PaymentReconciliation';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
-    if (source['created']) { this.created = source.created; }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
+    if (source['created']) { this.created = new fhir.FhirDateTime({value: source.created}); }
     else { this.created = null; }
-    if (source['_created']) { this._created = new fhir.FhirElement(source._created!); }
-    if (source['paymentIssuer']) { this.paymentIssuer = new fhir.Reference(source.paymentIssuer!); }
-    if (source['request']) { this.request = new fhir.Reference(source.request!); }
-    if (source['requestor']) { this.requestor = new fhir.Reference(source.requestor!); }
+    if (source['paymentIssuer']) { this.paymentIssuer = new fhir.Reference(source.paymentIssuer); }
+    if (source['request']) { this.request = new fhir.Reference(source.request); }
+    if (source['requestor']) { this.requestor = new fhir.Reference(source.requestor); }
     if (source['outcome']) { this.outcome = source.outcome; }
-    if (source['_outcome']) { this._outcome = new fhir.FhirElement(source._outcome!); }
-    if (source['disposition']) { this.disposition = source.disposition; }
-    if (source['_disposition']) { this._disposition = new fhir.FhirElement(source._disposition!); }
-    if (source['paymentDate']) { this.paymentDate = source.paymentDate; }
+    if (source['disposition']) { this.disposition = new fhir.FhirString({value: source.disposition}); }
+    if (source['paymentDate']) { this.paymentDate = new fhir.FhirDate({value: source.paymentDate}); }
     else { this.paymentDate = null; }
-    if (source['_paymentDate']) { this._paymentDate = new fhir.FhirElement(source._paymentDate!); }
-    if (source['paymentAmount']) { this.paymentAmount = new fhir.Money(source.paymentAmount!); }
+    if (source['paymentAmount']) { this.paymentAmount = new fhir.Money(source.paymentAmount); }
     else { this.paymentAmount = null; }
-    if (source['paymentIdentifier']) { this.paymentIdentifier = new fhir.Identifier(source.paymentIdentifier!); }
+    if (source['paymentIdentifier']) { this.paymentIdentifier = new fhir.Identifier(source.paymentIdentifier); }
     if (source['detail']) { this.detail = source.detail.map((x) => new fhir.PaymentReconciliationDetail(x)); }
-    if (source['formCode']) { this.formCode = new fhir.CodeableConcept(source.formCode!); }
+    if (source['formCode']) { this.formCode = new fhir.CodeableConcept(source.formCode); }
     if (source['processNote']) { this.processNote = source.processNote.map((x) => new fhir.PaymentReconciliationProcessNote(x)); }
   }
   /**
@@ -452,28 +400,42 @@ export class PaymentReconciliation extends fhir.DomainResource implements IPayme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: PaymentReconciliation.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: PaymentReconciliation.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    if (!this["created"]) { results.push(["created",'Missing required element: PaymentReconciliation.created']); }
-    if (this["_created"]) { results.push(...this._created.doModelValidation()); }
-    if (this["paymentIssuer"]) { results.push(...this.paymentIssuer.doModelValidation()); }
-    if (this["request"]) { results.push(...this.request.doModelValidation()); }
-    if (this["requestor"]) { results.push(...this.requestor.doModelValidation()); }
-    if (this["_outcome"]) { results.push(...this._outcome.doModelValidation()); }
-    if (this["_disposition"]) { results.push(...this._disposition.doModelValidation()); }
-    if (!this["paymentDate"]) { results.push(["paymentDate",'Missing required element: PaymentReconciliation.paymentDate']); }
-    if (this["_paymentDate"]) { results.push(...this._paymentDate.doModelValidation()); }
-    if (!this["paymentAmount"]) { results.push(["paymentAmount",'Missing required element: PaymentReconciliation.paymentAmount']); }
-    if (this["paymentAmount"]) { results.push(...this.paymentAmount.doModelValidation()); }
-    if (this["paymentIdentifier"]) { results.push(...this.paymentIdentifier.doModelValidation()); }
-    if (this["detail"]) { this.detail.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["formCode"]) { results.push(...this.formCode.doModelValidation()); }
-    if (this["processNote"]) { this.processNote.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'PaymentReconciliation' fhir: PaymentReconciliation.resourceType:'PaymentReconciliation'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:FmStatusValueSetEnum fhir: PaymentReconciliation.status:code", }));
+    }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    if (!this['created']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property created:fhir.FhirDateTime fhir: PaymentReconciliation.created:dateTime", }));
+    }
+    if (this["created"]) { outcome.issue!.push(...this.created.doModelValidation().issue!); }
+    if (this["paymentIssuer"]) { outcome.issue!.push(...this.paymentIssuer.doModelValidation().issue!); }
+    if (this["request"]) { outcome.issue!.push(...this.request.doModelValidation().issue!); }
+    if (this["requestor"]) { outcome.issue!.push(...this.requestor.doModelValidation().issue!); }
+    if (this["disposition"]) { outcome.issue!.push(...this.disposition.doModelValidation().issue!); }
+    if (!this['paymentDate']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property paymentDate:fhir.FhirDate fhir: PaymentReconciliation.paymentDate:date", }));
+    }
+    if (this["paymentDate"]) { outcome.issue!.push(...this.paymentDate.doModelValidation().issue!); }
+    if (!this['paymentAmount']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property paymentAmount:fhir.Money fhir: PaymentReconciliation.paymentAmount:Money", }));
+    }
+    if (this["paymentAmount"]) { outcome.issue!.push(...this.paymentAmount.doModelValidation().issue!); }
+    if (this["paymentIdentifier"]) { outcome.issue!.push(...this.paymentIdentifier.doModelValidation().issue!); }
+    if (this["detail"]) { this.detail.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["formCode"]) { outcome.issue!.push(...this.formCode.doModelValidation().issue!); }
+    if (this["processNote"]) { this.processNote.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

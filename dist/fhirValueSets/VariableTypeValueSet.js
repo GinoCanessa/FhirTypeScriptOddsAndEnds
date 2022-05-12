@@ -35,19 +35,4 @@ export const VariableTypeValueSet = {
 /**
  * The possible types of variables for exposures or outcomes (E.g. Dichotomous, Continuous, Descriptive).
  */
-export var VariableTypeValueSetEnum;
-(function (VariableTypeValueSetEnum) {
-    /**
-     * continuous: The variable is a continuous result such as a quantity.
-     */
-    VariableTypeValueSetEnum["Continuous"] = "continuous";
-    /**
-     * descriptive: The variable is described narratively rather than quantitatively.
-     */
-    VariableTypeValueSetEnum["Descriptive"] = "descriptive";
-    /**
-     * dichotomous: The variable is dichotomous, such as present or absent.
-     */
-    VariableTypeValueSetEnum["Dichotomous"] = "dichotomous";
-})(VariableTypeValueSetEnum || (VariableTypeValueSetEnum = {}));
 //# sourceMappingURL=VariableTypeValueSet.js.map

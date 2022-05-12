@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MedicinalProductInteraction
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The specific medication, food or laboratory test that interacts.
  */
@@ -10,27 +12,38 @@ export class MedicinalProductInteractionInteractant extends fhir.BackboneElement
     /**
      * Default constructor for MedicinalProductInteractionInteractant - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['itemReference']) {
-            this.itemReference = new fhir.Reference(source.itemReference);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicinalProductInteractionInteractant';
+        this.__itemIsChoice = true;
+        if (source['item']) {
+            this.item = source.item;
         }
-        if (source['itemCodeableConcept']) {
-            this.itemCodeableConcept = new fhir.CodeableConcept(source.itemCodeableConcept);
+        else if (source['itemReference']) {
+            this.item = new fhir.Reference(source.itemReference);
+        }
+        else if (source['itemCodeableConcept']) {
+            this.item = new fhir.CodeableConcept(source.itemCodeableConcept);
+        }
+        else {
+            this.item = null;
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["itemReference"]) {
-            results.push(...this.itemReference.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['item']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property item: fhir: MedicinalProductInteraction.interactant.item[x]:", }));
         }
-        if (this["itemCodeableConcept"]) {
-            results.push(...this.itemCodeableConcept.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -40,17 +53,23 @@ export class MedicinalProductInteraction extends fhir.DomainResource {
     /**
      * Default constructor for MedicinalProductInteraction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicinalProductInteraction';
+        /**
+         * The medication for which this is a described interaction.
+         */
+        this.subject = [];
+        /**
+         * The specific medication, food or laboratory test that interacts.
+         */
+        this.interactant = [];
         this.resourceType = 'MedicinalProductInteraction';
         if (source['subject']) {
             this.subject = source.subject.map((x) => new fhir.Reference(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['interactant']) {
             this.interactant = source.interactant.map((x) => new fhir.MedicinalProductInteractionInteractant(x));
@@ -72,32 +91,38 @@ export class MedicinalProductInteraction extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: MedicinalProductInteraction.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'MedicinalProductInteraction' fhir: MedicinalProductInteraction.resourceType:'MedicinalProductInteraction'", }));
         }
         if (this["subject"]) {
-            this.subject.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.subject.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["interactant"]) {
-            this.interactant.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.interactant.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["effect"]) {
-            results.push(...this.effect.doModelValidation());
+            outcome.issue.push(...this.effect.doModelValidation().issue);
         }
         if (this["incidence"]) {
-            results.push(...this.incidence.doModelValidation());
+            outcome.issue.push(...this.incidence.doModelValidation().issue);
         }
         if (this["management"]) {
-            results.push(...this.management.doModelValidation());
+            outcome.issue.push(...this.management.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=MedicinalProductInteraction.js.map

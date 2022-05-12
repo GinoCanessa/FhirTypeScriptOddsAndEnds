@@ -67,35 +67,4 @@ export const DiagnosisRoleValueSet = {
 /**
  * This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.
  */
-export var DiagnosisRoleValueSetEnum;
-(function (DiagnosisRoleValueSetEnum) {
-    /**
-     * Code: AD
-     */
-    DiagnosisRoleValueSetEnum["AdmissionDiagnosis"] = "AD";
-    /**
-     * Code: billing
-     */
-    DiagnosisRoleValueSetEnum["Billing"] = "billing";
-    /**
-     * Code: CC
-     */
-    DiagnosisRoleValueSetEnum["ChiefComplaint"] = "CC";
-    /**
-     * Code: CM
-     */
-    DiagnosisRoleValueSetEnum["ComorbidityDiagnosis"] = "CM";
-    /**
-     * Code: DD
-     */
-    DiagnosisRoleValueSetEnum["DischargeDiagnosis"] = "DD";
-    /**
-     * Code: post-op
-     */
-    DiagnosisRoleValueSetEnum["PostOpDiagnosis"] = "post-op";
-    /**
-     * Code: pre-op
-     */
-    DiagnosisRoleValueSetEnum["PreOpDiagnosis"] = "pre-op";
-})(DiagnosisRoleValueSetEnum || (DiagnosisRoleValueSetEnum = {}));
 //# sourceMappingURL=DiagnosisRoleValueSet.js.map

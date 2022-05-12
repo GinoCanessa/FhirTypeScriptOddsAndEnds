@@ -35,19 +35,4 @@ export const HandlingConditionValueSet = {
 /**
  * Set of handling instructions prior testing of the specimen.
  */
-export var HandlingConditionValueSetEnum;
-(function (HandlingConditionValueSetEnum) {
-    /**
-     * frozen: frozen temperature.
-     */
-    HandlingConditionValueSetEnum["Frozen"] = "frozen";
-    /**
-     * refrigerated: refrigerated temperature.
-     */
-    HandlingConditionValueSetEnum["Refrigerated"] = "refrigerated";
-    /**
-     * room: room temperature.
-     */
-    HandlingConditionValueSetEnum["RoomTemperature"] = "room";
-})(HandlingConditionValueSetEnum || (HandlingConditionValueSetEnum = {}));
 //# sourceMappingURL=HandlingConditionValueSet.js.map

@@ -3,15 +3,15 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Specimen
 import * as fhir from '../fhir.js';
-import { SpecimenCollectionMethodValueSet } from '../fhirValueSets/SpecimenCollectionMethodValueSet.js';
-import { BodySiteValueSet } from '../fhirValueSets/BodySiteValueSet.js';
-import { V20916ValueSet } from '../fhirValueSets/V20916ValueSet.js';
-import { SpecimenProcessingProcedureValueSet } from '../fhirValueSets/SpecimenProcessingProcedureValueSet.js';
-import { SpecimenContainerTypeValueSet } from '../fhirValueSets/SpecimenContainerTypeValueSet.js';
-import { V20371ValueSet } from '../fhirValueSets/V20371ValueSet.js';
-import { SpecimenStatusValueSet } from '../fhirValueSets/SpecimenStatusValueSet.js';
-import { V20487ValueSet } from '../fhirValueSets/V20487ValueSet.js';
-import { V20493ValueSet } from '../fhirValueSets/V20493ValueSet.js';
+import { SpecimenCollectionMethodValueSet, } from '../fhirValueSets/SpecimenCollectionMethodValueSet.js';
+import { BodySiteValueSet, } from '../fhirValueSets/BodySiteValueSet.js';
+import { SpecimenProcessingProcedureValueSet, } from '../fhirValueSets/SpecimenProcessingProcedureValueSet.js';
+import { SpecimenContainerTypeValueSet, } from '../fhirValueSets/SpecimenContainerTypeValueSet.js';
+import { SpecimenStatusValueSet, } from '../fhirValueSets/SpecimenStatusValueSet.js';
+import { V20487ValueSet, } from '../fhirValueSets/V20487ValueSet.js';
+import { V20493ValueSet, } from '../fhirValueSets/V20493ValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Details concerning the specimen collection.
  */
@@ -19,19 +19,22 @@ export class SpecimenCollection extends fhir.BackboneElement {
     /**
      * Default constructor for SpecimenCollection - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SpecimenCollection';
+        this.__collectedIsChoice = true;
+        this.__fastingStatusIsChoice = true;
         if (source['collector']) {
             this.collector = new fhir.Reference(source.collector);
         }
-        if (source['collectedDateTime']) {
-            this.collectedDateTime = source.collectedDateTime;
+        if (source['collected']) {
+            this.collected = source.collected;
         }
-        if (source['_collectedDateTime']) {
-            this._collectedDateTime = new fhir.FhirElement(source._collectedDateTime);
+        else if (source['collectedDateTime']) {
+            this.collected = new fhir.FhirDateTime({ value: source.collectedDateTime });
         }
-        if (source['collectedPeriod']) {
-            this.collectedPeriod = new fhir.Period(source.collectedPeriod);
+        else if (source['collectedPeriod']) {
+            this.collected = new fhir.Period(source.collectedPeriod);
         }
         if (source['duration']) {
             this.duration = new fhir.Duration(source.duration);
@@ -45,11 +48,14 @@ export class SpecimenCollection extends fhir.BackboneElement {
         if (source['bodySite']) {
             this.bodySite = new fhir.CodeableConcept(source.bodySite);
         }
-        if (source['fastingStatusCodeableConcept']) {
-            this.fastingStatusCodeableConcept = new fhir.CodeableConcept(source.fastingStatusCodeableConcept);
+        if (source['fastingStatus']) {
+            this.fastingStatus = source.fastingStatus;
         }
-        if (source['fastingStatusDuration']) {
-            this.fastingStatusDuration = new fhir.Duration(source.fastingStatusDuration);
+        else if (source['fastingStatusCodeableConcept']) {
+            this.fastingStatus = new fhir.CodeableConcept(source.fastingStatusCodeableConcept);
+        }
+        else if (source['fastingStatusDuration']) {
+            this.fastingStatus = new fhir.Duration(source.fastingStatusDuration);
         }
     }
     /**
@@ -65,50 +71,32 @@ export class SpecimenCollection extends fhir.BackboneElement {
         return BodySiteValueSet;
     }
     /**
-     * Extensible-bound Value Set for fastingStatusCodeableConcept
-     */
-    static fastingStatusCodeableConceptExtensibleValueSet() {
-        return V20916ValueSet;
-    }
-    /**
-     * Extensible-bound Value Set for fastingStatusDuration
-     */
-    static fastingStatusDurationExtensibleValueSet() {
-        return V20916ValueSet;
-    }
-    /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["collector"]) {
-            results.push(...this.collector.doModelValidation());
-        }
-        if (this["_collectedDateTime"]) {
-            results.push(...this._collectedDateTime.doModelValidation());
-        }
-        if (this["collectedPeriod"]) {
-            results.push(...this.collectedPeriod.doModelValidation());
+            outcome.issue.push(...this.collector.doModelValidation().issue);
         }
         if (this["duration"]) {
-            results.push(...this.duration.doModelValidation());
+            outcome.issue.push(...this.duration.doModelValidation().issue);
         }
         if (this["quantity"]) {
-            results.push(...this.quantity.doModelValidation());
+            outcome.issue.push(...this.quantity.doModelValidation().issue);
         }
         if (this["method"]) {
-            results.push(...this.method.doModelValidation());
+            outcome.issue.push(...this.method.doModelValidation().issue);
         }
         if (this["bodySite"]) {
-            results.push(...this.bodySite.doModelValidation());
+            outcome.issue.push(...this.bodySite.doModelValidation().issue);
         }
-        if (this["fastingStatusCodeableConcept"]) {
-            results.push(...this.fastingStatusCodeableConcept.doModelValidation());
-        }
-        if (this["fastingStatusDuration"]) {
-            results.push(...this.fastingStatusDuration.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -118,13 +106,16 @@ export class SpecimenProcessing extends fhir.BackboneElement {
     /**
      * Default constructor for SpecimenProcessing - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SpecimenProcessing';
+        /**
+         * Material used in the processing step.
+         */
+        this.additive = [];
+        this.__timeIsChoice = true;
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['procedure']) {
             this.procedure = new fhir.CodeableConcept(source.procedure);
@@ -132,14 +123,14 @@ export class SpecimenProcessing extends fhir.BackboneElement {
         if (source['additive']) {
             this.additive = source.additive.map((x) => new fhir.Reference(x));
         }
-        if (source['timeDateTime']) {
-            this.timeDateTime = source.timeDateTime;
+        if (source['time']) {
+            this.time = source.time;
         }
-        if (source['_timeDateTime']) {
-            this._timeDateTime = new fhir.FhirElement(source._timeDateTime);
+        else if (source['timeDateTime']) {
+            this.time = new fhir.FhirDateTime({ value: source.timeDateTime });
         }
-        if (source['timePeriod']) {
-            this.timePeriod = new fhir.Period(source.timePeriod);
+        else if (source['timePeriod']) {
+            this.time = new fhir.Period(source.timePeriod);
         }
     }
     /**
@@ -152,23 +143,23 @@ export class SpecimenProcessing extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["procedure"]) {
-            results.push(...this.procedure.doModelValidation());
+            outcome.issue.push(...this.procedure.doModelValidation().issue);
         }
         if (this["additive"]) {
-            this.additive.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.additive.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_timeDateTime"]) {
-            results.push(...this._timeDateTime.doModelValidation());
-        }
-        if (this["timePeriod"]) {
-            results.push(...this.timePeriod.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -178,16 +169,19 @@ export class SpecimenContainer extends fhir.BackboneElement {
     /**
      * Default constructor for SpecimenContainer - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SpecimenContainer';
+        /**
+         * Id for container. There may be multiple; a manufacturer's bar code, lab assigned identifier, etc. The container ID may differ from the specimen id in some circumstances.
+         */
+        this.identifier = [];
+        this.__additiveIsChoice = true;
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
@@ -198,11 +192,14 @@ export class SpecimenContainer extends fhir.BackboneElement {
         if (source['specimenQuantity']) {
             this.specimenQuantity = new fhir.Quantity(source.specimenQuantity);
         }
-        if (source['additiveCodeableConcept']) {
-            this.additiveCodeableConcept = new fhir.CodeableConcept(source.additiveCodeableConcept);
+        if (source['additive']) {
+            this.additive = source.additive;
         }
-        if (source['additiveReference']) {
-            this.additiveReference = new fhir.Reference(source.additiveReference);
+        else if (source['additiveCodeableConcept']) {
+            this.additive = new fhir.CodeableConcept(source.additiveCodeableConcept);
+        }
+        else if (source['additiveReference']) {
+            this.additive = new fhir.Reference(source.additiveReference);
         }
     }
     /**
@@ -212,44 +209,32 @@ export class SpecimenContainer extends fhir.BackboneElement {
         return SpecimenContainerTypeValueSet;
     }
     /**
-     * Example-bound Value Set for additiveCodeableConcept
-     */
-    static additiveCodeableConceptExampleValueSet() {
-        return V20371ValueSet;
-    }
-    /**
-     * Example-bound Value Set for additiveReference
-     */
-    static additiveReferenceExampleValueSet() {
-        return V20371ValueSet;
-    }
-    /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["capacity"]) {
-            results.push(...this.capacity.doModelValidation());
+            outcome.issue.push(...this.capacity.doModelValidation().issue);
         }
         if (this["specimenQuantity"]) {
-            results.push(...this.specimenQuantity.doModelValidation());
+            outcome.issue.push(...this.specimenQuantity.doModelValidation().issue);
         }
-        if (this["additiveCodeableConcept"]) {
-            results.push(...this.additiveCodeableConcept.doModelValidation());
-        }
-        if (this["additiveReference"]) {
-            results.push(...this.additiveReference.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -259,8 +244,37 @@ export class Specimen extends fhir.DomainResource {
     /**
      * Default constructor for Specimen - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Specimen';
+        /**
+         * Id for specimen.
+         */
+        this.identifier = [];
+        /**
+         * The parent specimen could be the source from which the current specimen is derived by some processing step (e.g. an aliquot or isolate or extracted nucleic acids from clinical samples) or one of many specimens that were combined to create a pooled sample.
+         */
+        this.parent = [];
+        /**
+         * The request may be explicit or implied such with a ServiceRequest that requires a blood draw.
+         */
+        this.request = [];
+        /**
+         * Details concerning processing and processing steps for the specimen.
+         */
+        this.processing = [];
+        /**
+         * The container holding the specimen.  The recursive nature of containers; i.e. blood in tube in tray in rack is not addressed here.
+         */
+        this.container = [];
+        /**
+         * Specimen condition is an observation made about the specimen.  It's a point-in-time assessment.  It can be used to assess its quality or appropriateness for a specific test.
+         */
+        this.condition = [];
+        /**
+         * To communicate any details or issues about the specimen or during the specimen collection. (for example: broken vial, sent with patient, frozen).
+         */
+        this.note = [];
         this.resourceType = 'Specimen';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -271,9 +285,6 @@ export class Specimen extends fhir.DomainResource {
         if (source['status']) {
             this.status = source.status;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
@@ -281,10 +292,7 @@ export class Specimen extends fhir.DomainResource {
             this.subject = new fhir.Reference(source.subject);
         }
         if (source['receivedTime']) {
-            this.receivedTime = source.receivedTime;
-        }
-        if (source['_receivedTime']) {
-            this._receivedTime = new fhir.FhirElement(source._receivedTime);
+            this.receivedTime = new fhir.FhirDateTime({ value: source.receivedTime });
         }
         if (source['parent']) {
             this.parent = source.parent.map((x) => new fhir.Reference(x));
@@ -330,50 +338,53 @@ export class Specimen extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Specimen.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Specimen' fhir: Specimen.resourceType:'Specimen'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["accessionIdentifier"]) {
-            results.push(...this.accessionIdentifier.doModelValidation());
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+            outcome.issue.push(...this.accessionIdentifier.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
-        if (this["_receivedTime"]) {
-            results.push(...this._receivedTime.doModelValidation());
+        if (this["receivedTime"]) {
+            outcome.issue.push(...this.receivedTime.doModelValidation().issue);
         }
         if (this["parent"]) {
-            this.parent.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.parent.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["request"]) {
-            this.request.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.request.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["collection"]) {
-            results.push(...this.collection.doModelValidation());
+            outcome.issue.push(...this.collection.doModelValidation().issue);
         }
         if (this["processing"]) {
-            this.processing.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.processing.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["container"]) {
-            this.container.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.container.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["condition"]) {
-            this.condition.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.condition.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Specimen.js.map

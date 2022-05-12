@@ -3,347 +3,119 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: EvidenceVariable
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { GroupMeasureValueSet, GroupMeasureValueSetType, GroupMeasureValueSetEnum } from '../fhirValueSets/GroupMeasureValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-import { DefinitionTopicValueSet, DefinitionTopicValueSetType, DefinitionTopicValueSetEnum } from '../fhirValueSets/DefinitionTopicValueSet.js'
-import { VariableTypeValueSet, VariableTypeValueSetType, VariableTypeValueSetEnum } from '../fhirValueSets/VariableTypeValueSet.js'
-
+import { GroupMeasureValueSet, GroupMeasureValueSetType,} from '../fhirValueSets/GroupMeasureValueSet.js';
+import { GroupMeasureValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { DefinitionTopicValueSet, DefinitionTopicValueSetType,} from '../fhirValueSets/DefinitionTopicValueSet.js';
+import { DefinitionTopicValueSetEnum } from '../valueSetEnums.js';
+import { VariableTypeValueSet, VariableTypeValueSetType,} from '../fhirValueSets/VariableTypeValueSet.js';
+import { VariableTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
+ * Valid arguments for the EvidenceVariableCharacteristic type.
  */
-export type IEvidenceVariableCharacteristic = fhir.IBackboneElement & { 
+export interface EvidenceVariableCharacteristicArgs extends fhir.BackboneElementArgs {
   /**
    * A short, natural language description of the characteristic that could be used to communicate the criteria to an end-user.
    */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.characteristic.description
-   */
-  _description?: fhir.IFhirElement|undefined;
+  description?: fhir.FhirString|string|undefined;
   /**
    * Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
    */
-  definitionReference?: fhir.IReference|undefined;
+  definition?: fhir.Reference|fhir.FhirCanonical|fhir.CodeableConcept|fhir.Expression|fhir.DataRequirement|fhir.TriggerDefinition|undefined;
   /**
    * Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
    */
-  definitionCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.characteristic.definition[x]
-   */
-  _definitionCanonical?: fhir.IFhirElement|undefined;
+  definitionReference?: fhir.ReferenceArgs|undefined;
   /**
    * Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
    */
-  definitionCodeableConcept?: fhir.ICodeableConcept|undefined;
+  definitionCanonical?: fhir.FhirCanonical|string|undefined;
   /**
    * Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
    */
-  definitionExpression?: fhir.IExpression|undefined;
+  definitionCodeableConcept?: fhir.CodeableConceptArgs|undefined;
   /**
    * Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
    */
-  definitionDataRequirement?: fhir.IDataRequirement|undefined;
+  definitionExpression?: fhir.ExpressionArgs|undefined;
   /**
    * Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
    */
-  definitionTriggerDefinition?: fhir.ITriggerDefinition|undefined;
+  definitionDataRequirement?: fhir.DataRequirementArgs|undefined;
+  /**
+   * Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
+   */
+  definitionTriggerDefinition?: fhir.TriggerDefinitionArgs|undefined;
   /**
    * Use UsageContext to define the members of the population, such as Age Ranges, Genders, Settings.
    */
-  usageContext?: fhir.IUsageContext[]|undefined;
+  usageContext?: fhir.UsageContextArgs[]|undefined;
   /**
    * When true, members with this characteristic are excluded from the element.
    */
-  exclude?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.characteristic.exclude
-   */
-  _exclude?: fhir.IFhirElement|undefined;
+  exclude?: fhir.FhirBoolean|boolean|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  participantEffectiveDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.characteristic.participantEffective[x]
-   */
-  _participantEffectiveDateTime?: fhir.IFhirElement|undefined;
+  participantEffective?: fhir.FhirDateTime|fhir.Period|fhir.Duration|fhir.Timing|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  participantEffectivePeriod?: fhir.IPeriod|undefined;
+  participantEffectiveDateTime?: fhir.FhirDateTime|string|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  participantEffectiveDuration?: fhir.IDuration|undefined;
+  participantEffectivePeriod?: fhir.PeriodArgs|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  participantEffectiveTiming?: fhir.ITiming|undefined;
+  participantEffectiveDuration?: fhir.DurationArgs|undefined;
+  /**
+   * Indicates what effective period the study covers.
+   */
+  participantEffectiveTiming?: fhir.TimingArgs|undefined;
   /**
    * Indicates duration from the participant's study entry.
    */
-  timeFromStart?: fhir.IDuration|undefined;
+  timeFromStart?: fhir.DurationArgs|undefined;
   /**
    * Indicates how elements are aggregated within the study effective period.
    */
   groupMeasure?: GroupMeasureValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.characteristic.groupMeasure
-   */
-  _groupMeasure?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The EvidenceVariable resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
- */
-export type IEvidenceVariable = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "EvidenceVariable";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this evidence variable outside of FHIR, where it is not possible to use the logical URI.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * There may be different evidence variable instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the evidence variable with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * The short title provides an alternate title for use in informal descriptive contexts where the full, formal title is not necessary.
-   */
-  shortTitle?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.shortTitle
-   */
-  _shortTitle?: fhir.IFhirElement|undefined;
-  /**
-   * An explanatory or alternate title for the EvidenceVariable giving additional information about its content.
-   */
-  subtitle?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.subtitle
-   */
-  _subtitle?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of evidence variables that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the evidence variable. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the evidence variable is the organization or individual primarily responsible for the maintenance and upkeep of the evidence variable. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the evidence variable. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the evidence variable was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the evidence variable as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the evidence variable is presumed to be the predominant language in the place the evidence variable was created).
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * A human-readable string to clarify or explain concepts about the resource.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the evidence variable to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * A copyright statement relating to the evidence variable and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the evidence variable.
-   */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-  /**
-   * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
-   */
-  approvalDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.approvalDate
-   */
-  _approvalDate?: fhir.IFhirElement|undefined;
-  /**
-   * If specified, this date follows the original approval date.
-   */
-  lastReviewDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.lastReviewDate
-   */
-  _lastReviewDate?: fhir.IFhirElement|undefined;
-  /**
-   * The effective period for a evidence variable  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
-   */
-  effectivePeriod?: fhir.IPeriod|undefined;
-  /**
-   * Descriptive topics related to the content of the EvidenceVariable. Topics provide a high-level categorization grouping types of EvidenceVariables that can be useful for filtering and searching.
-   */
-  topic?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * An individiual or organization primarily involved in the creation and maintenance of the content.
-   */
-  author?: fhir.IContactDetail[]|undefined;
-  /**
-   * An individual or organization primarily responsible for internal coherence of the content.
-   */
-  editor?: fhir.IContactDetail[]|undefined;
-  /**
-   * An individual or organization primarily responsible for review of some aspect of the content.
-   */
-  reviewer?: fhir.IContactDetail[]|undefined;
-  /**
-   * An individual or organization responsible for officially endorsing the content for use in some setting.
-   */
-  endorser?: fhir.IContactDetail[]|undefined;
-  /**
-   * Each related artifact is either an attachment, or a reference to another resource, but not both.
-   */
-  relatedArtifact?: fhir.IRelatedArtifact[]|undefined;
-  /**
-   * The type of evidence element, a population, an exposure, or an outcome.
-   */
-  type?: VariableTypeValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
-   */
-  characteristic: fhir.IEvidenceVariableCharacteristic[]|null;
 }
 
 /**
  * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
  */
-export class EvidenceVariableCharacteristic extends fhir.BackboneElement implements IEvidenceVariableCharacteristic {
+export class EvidenceVariableCharacteristic extends fhir.BackboneElement {
+  readonly __dataType:string = 'EvidenceVariableCharacteristic';
   /**
    * A short, natural language description of the characteristic that could be used to communicate the criteria to an end-user.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.characteristic.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
    */
-  public definitionReference?: fhir.Reference|undefined;
-  /**
-   * Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
-   */
-  public definitionCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.characteristic.definition[x]
-   */
-  public _definitionCanonical?: fhir.FhirElement|undefined;
-  /**
-   * Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
-   */
-  public definitionCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
-   */
-  public definitionExpression?: fhir.Expression|undefined;
-  /**
-   * Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
-   */
-  public definitionDataRequirement?: fhir.DataRequirement|undefined;
-  /**
-   * Define members of the evidence element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
-   */
-  public definitionTriggerDefinition?: fhir.TriggerDefinition|undefined;
+  public definition: (fhir.Reference|fhir.FhirCanonical|fhir.CodeableConcept|fhir.Expression|fhir.DataRequirement|fhir.TriggerDefinition)|null;
+  readonly __definitionIsChoice:true = true;
   /**
    * Use UsageContext to define the members of the population, such as Age Ranges, Genders, Settings.
    */
-  public usageContext?: fhir.UsageContext[]|undefined;
+  public usageContext?: fhir.UsageContext[]|undefined = [];
   /**
    * When true, members with this characteristic are excluded from the element.
    */
-  public exclude?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.characteristic.exclude
-   */
-  public _exclude?: fhir.FhirElement|undefined;
+  public exclude?: fhir.FhirBoolean|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  public participantEffectiveDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.characteristic.participantEffective[x]
-   */
-  public _participantEffectiveDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Indicates what effective period the study covers.
-   */
-  public participantEffectivePeriod?: fhir.Period|undefined;
-  /**
-   * Indicates what effective period the study covers.
-   */
-  public participantEffectiveDuration?: fhir.Duration|undefined;
-  /**
-   * Indicates what effective period the study covers.
-   */
-  public participantEffectiveTiming?: fhir.Timing|undefined;
+  public participantEffective?: (fhir.FhirDateTime|fhir.Period|fhir.Duration|fhir.Timing)|undefined;
+  readonly __participantEffectiveIsChoice:true = true;
   /**
    * Indicates duration from the participant's study entry.
    */
@@ -353,34 +125,28 @@ export class EvidenceVariableCharacteristic extends fhir.BackboneElement impleme
    */
   public groupMeasure?: GroupMeasureValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: EvidenceVariable.characteristic.groupMeasure
-   */
-  public _groupMeasure?: fhir.FhirElement|undefined;
-  /**
    * Default constructor for EvidenceVariableCharacteristic - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IEvidenceVariableCharacteristic> = { }) {
-    super(source);
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['definitionReference']) { this.definitionReference = new fhir.Reference(source.definitionReference!); }
-    if (source['definitionCanonical']) { this.definitionCanonical = source.definitionCanonical; }
-    if (source['_definitionCanonical']) { this._definitionCanonical = new fhir.FhirElement(source._definitionCanonical!); }
-    if (source['definitionCodeableConcept']) { this.definitionCodeableConcept = new fhir.CodeableConcept(source.definitionCodeableConcept!); }
-    if (source['definitionExpression']) { this.definitionExpression = new fhir.Expression(source.definitionExpression!); }
-    if (source['definitionDataRequirement']) { this.definitionDataRequirement = new fhir.DataRequirement(source.definitionDataRequirement!); }
-    if (source['definitionTriggerDefinition']) { this.definitionTriggerDefinition = new fhir.TriggerDefinition(source.definitionTriggerDefinition!); }
+  constructor(source:Partial<EvidenceVariableCharacteristicArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['definition']) { this.definition = source.definition; }
+    else if (source['definitionReference']) { this.definition = new fhir.Reference(source.definitionReference); }
+    else if (source['definitionCanonical']) { this.definition = new fhir.FhirCanonical({value: source.definitionCanonical}); }
+    else if (source['definitionCodeableConcept']) { this.definition = new fhir.CodeableConcept(source.definitionCodeableConcept); }
+    else if (source['definitionExpression']) { this.definition = new fhir.Expression(source.definitionExpression); }
+    else if (source['definitionDataRequirement']) { this.definition = new fhir.DataRequirement(source.definitionDataRequirement); }
+    else if (source['definitionTriggerDefinition']) { this.definition = new fhir.TriggerDefinition(source.definitionTriggerDefinition); }
+    else { this.definition = null; }
     if (source['usageContext']) { this.usageContext = source.usageContext.map((x) => new fhir.UsageContext(x)); }
-    if (source['exclude']) { this.exclude = source.exclude; }
-    if (source['_exclude']) { this._exclude = new fhir.FhirElement(source._exclude!); }
-    if (source['participantEffectiveDateTime']) { this.participantEffectiveDateTime = source.participantEffectiveDateTime; }
-    if (source['_participantEffectiveDateTime']) { this._participantEffectiveDateTime = new fhir.FhirElement(source._participantEffectiveDateTime!); }
-    if (source['participantEffectivePeriod']) { this.participantEffectivePeriod = new fhir.Period(source.participantEffectivePeriod!); }
-    if (source['participantEffectiveDuration']) { this.participantEffectiveDuration = new fhir.Duration(source.participantEffectiveDuration!); }
-    if (source['participantEffectiveTiming']) { this.participantEffectiveTiming = new fhir.Timing(source.participantEffectiveTiming!); }
-    if (source['timeFromStart']) { this.timeFromStart = new fhir.Duration(source.timeFromStart!); }
+    if (source['exclude']) { this.exclude = new fhir.FhirBoolean({value: source.exclude}); }
+    if (source['participantEffective']) { this.participantEffective = source.participantEffective; }
+    else if (source['participantEffectiveDateTime']) { this.participantEffective = new fhir.FhirDateTime({value: source.participantEffectiveDateTime}); }
+    else if (source['participantEffectivePeriod']) { this.participantEffective = new fhir.Period(source.participantEffectivePeriod); }
+    else if (source['participantEffectiveDuration']) { this.participantEffective = new fhir.Duration(source.participantEffectiveDuration); }
+    else if (source['participantEffectiveTiming']) { this.participantEffective = new fhir.Timing(source.participantEffectiveTiming); }
+    if (source['timeFromStart']) { this.timeFromStart = new fhir.Duration(source.timeFromStart); }
     if (source['groupMeasure']) { this.groupMeasure = source.groupMeasure; }
-    if (source['_groupMeasure']) { this._groupMeasure = new fhir.FhirElement(source._groupMeasure!); }
   }
   /**
    * Required-bound Value Set for groupMeasure
@@ -391,31 +157,149 @@ export class EvidenceVariableCharacteristic extends fhir.BackboneElement impleme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["definitionReference"]) { results.push(...this.definitionReference.doModelValidation()); }
-    if (this["_definitionCanonical"]) { results.push(...this._definitionCanonical.doModelValidation()); }
-    if (this["definitionCodeableConcept"]) { results.push(...this.definitionCodeableConcept.doModelValidation()); }
-    if (this["definitionExpression"]) { results.push(...this.definitionExpression.doModelValidation()); }
-    if (this["definitionDataRequirement"]) { results.push(...this.definitionDataRequirement.doModelValidation()); }
-    if (this["definitionTriggerDefinition"]) { results.push(...this.definitionTriggerDefinition.doModelValidation()); }
-    if (this["usageContext"]) { this.usageContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_exclude"]) { results.push(...this._exclude.doModelValidation()); }
-    if (this["_participantEffectiveDateTime"]) { results.push(...this._participantEffectiveDateTime.doModelValidation()); }
-    if (this["participantEffectivePeriod"]) { results.push(...this.participantEffectivePeriod.doModelValidation()); }
-    if (this["participantEffectiveDuration"]) { results.push(...this.participantEffectiveDuration.doModelValidation()); }
-    if (this["participantEffectiveTiming"]) { results.push(...this.participantEffectiveTiming.doModelValidation()); }
-    if (this["timeFromStart"]) { results.push(...this.timeFromStart.doModelValidation()); }
-    if (this["_groupMeasure"]) { results.push(...this._groupMeasure.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (!this['definition']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property definition: fhir: EvidenceVariable.characteristic.definition[x]:", }));
+    }
+    if (this["usageContext"]) { this.usageContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["exclude"]) { outcome.issue!.push(...this.exclude.doModelValidation().issue!); }
+    if (this["timeFromStart"]) { outcome.issue!.push(...this.timeFromStart.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the EvidenceVariable type.
+ */
+export interface EvidenceVariableArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "EvidenceVariable"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this evidence variable outside of FHIR, where it is not possible to use the logical URI.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * There may be different evidence variable instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the evidence variable with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * The short title provides an alternate title for use in informal descriptive contexts where the full, formal title is not necessary.
+   */
+  shortTitle?: fhir.FhirString|string|undefined;
+  /**
+   * An explanatory or alternate title for the EvidenceVariable giving additional information about its content.
+   */
+  subtitle?: fhir.FhirString|string|undefined;
+  /**
+   * Allows filtering of evidence variables that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the evidence variable. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the evidence variable is the organization or individual primarily responsible for the maintenance and upkeep of the evidence variable. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the evidence variable. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the evidence variable was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the evidence variable as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the evidence variable is presumed to be the predominant language in the place the evidence variable was created).
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * A human-readable string to clarify or explain concepts about the resource.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the evidence variable to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * A copyright statement relating to the evidence variable and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the evidence variable.
+   */
+  copyright?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
+   */
+  approvalDate?: fhir.FhirDate|string|undefined;
+  /**
+   * If specified, this date follows the original approval date.
+   */
+  lastReviewDate?: fhir.FhirDate|string|undefined;
+  /**
+   * The effective period for a evidence variable  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
+   */
+  effectivePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * Descriptive topics related to the content of the EvidenceVariable. Topics provide a high-level categorization grouping types of EvidenceVariables that can be useful for filtering and searching.
+   */
+  topic?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * An individiual or organization primarily involved in the creation and maintenance of the content.
+   */
+  author?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * An individual or organization primarily responsible for internal coherence of the content.
+   */
+  editor?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * An individual or organization primarily responsible for review of some aspect of the content.
+   */
+  reviewer?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * An individual or organization responsible for officially endorsing the content for use in some setting.
+   */
+  endorser?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * Each related artifact is either an attachment, or a reference to another resource, but not both.
+   */
+  relatedArtifact?: fhir.RelatedArtifactArgs[]|undefined;
+  /**
+   * The type of evidence element, a population, an exposure, or an outcome.
+   */
+  type?: VariableTypeValueSetEnum|undefined;
+  /**
+   * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
+   */
+  characteristic: fhir.EvidenceVariableCharacteristicArgs[]|null;
 }
 
 /**
  * The EvidenceVariable resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
  */
-export class EvidenceVariable extends fhir.DomainResource implements IEvidenceVariable {
+export class EvidenceVariable extends fhir.DomainResource {
+  readonly __dataType:string = 'EvidenceVariable';
   /**
    * Resource Type Name
    */
@@ -425,127 +309,75 @@ export class EvidenceVariable extends fhir.DomainResource implements IEvidenceVa
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this evidence variable outside of FHIR, where it is not possible to use the logical URI.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * There may be different evidence variable instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the evidence variable with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * The short title provides an alternate title for use in informal descriptive contexts where the full, formal title is not necessary.
    */
-  public shortTitle?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.shortTitle
-   */
-  public _shortTitle?: fhir.FhirElement|undefined;
+  public shortTitle?: fhir.FhirString|undefined;
   /**
    * An explanatory or alternate title for the EvidenceVariable giving additional information about its content.
    */
-  public subtitle?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.subtitle
-   */
-  public _subtitle?: fhir.FhirElement|undefined;
+  public subtitle?: fhir.FhirString|undefined;
   /**
    * Allows filtering of evidence variables that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: EvidenceVariable.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the evidence variable. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the evidence variable is the organization or individual primarily responsible for the maintenance and upkeep of the evidence variable. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the evidence variable. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the evidence variable was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the evidence variable as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the evidence variable is presumed to be the predominant language in the place the evidence variable was created).
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * A human-readable string to clarify or explain concepts about the resource.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the evidence variable to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * A copyright statement relating to the evidence variable and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the evidence variable.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
    */
-  public approvalDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.approvalDate
-   */
-  public _approvalDate?: fhir.FhirElement|undefined;
+  public approvalDate?: fhir.FhirDate|undefined;
   /**
    * If specified, this date follows the original approval date.
    */
-  public lastReviewDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: EvidenceVariable.lastReviewDate
-   */
-  public _lastReviewDate?: fhir.FhirElement|undefined;
+  public lastReviewDate?: fhir.FhirDate|undefined;
   /**
    * The effective period for a evidence variable  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
    */
@@ -553,78 +385,61 @@ export class EvidenceVariable extends fhir.DomainResource implements IEvidenceVa
   /**
    * Descriptive topics related to the content of the EvidenceVariable. Topics provide a high-level categorization grouping types of EvidenceVariables that can be useful for filtering and searching.
    */
-  public topic?: fhir.CodeableConcept[]|undefined;
+  public topic?: fhir.CodeableConcept[]|undefined = [];
   /**
    * An individiual or organization primarily involved in the creation and maintenance of the content.
    */
-  public author?: fhir.ContactDetail[]|undefined;
+  public author?: fhir.ContactDetail[]|undefined = [];
   /**
    * An individual or organization primarily responsible for internal coherence of the content.
    */
-  public editor?: fhir.ContactDetail[]|undefined;
+  public editor?: fhir.ContactDetail[]|undefined = [];
   /**
    * An individual or organization primarily responsible for review of some aspect of the content.
    */
-  public reviewer?: fhir.ContactDetail[]|undefined;
+  public reviewer?: fhir.ContactDetail[]|undefined = [];
   /**
    * An individual or organization responsible for officially endorsing the content for use in some setting.
    */
-  public endorser?: fhir.ContactDetail[]|undefined;
+  public endorser?: fhir.ContactDetail[]|undefined = [];
   /**
    * Each related artifact is either an attachment, or a reference to another resource, but not both.
    */
-  public relatedArtifact?: fhir.RelatedArtifact[]|undefined;
+  public relatedArtifact?: fhir.RelatedArtifact[]|undefined = [];
   /**
    * The type of evidence element, a population, an exposure, or an outcome.
    */
   public type?: VariableTypeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: EvidenceVariable.type
-   */
-  public _type?: fhir.FhirElement|undefined;
-  /**
    * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
    */
-  public characteristic: fhir.EvidenceVariableCharacteristic[]|null;
+  public characteristic: fhir.EvidenceVariableCharacteristic[]|null = [];
   /**
    * Default constructor for EvidenceVariable - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IEvidenceVariable> = { }) {
-    super(source);
+  constructor(source:Partial<EvidenceVariableArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'EvidenceVariable';
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
-    if (source['shortTitle']) { this.shortTitle = source.shortTitle; }
-    if (source['_shortTitle']) { this._shortTitle = new fhir.FhirElement(source._shortTitle!); }
-    if (source['subtitle']) { this.subtitle = source.subtitle; }
-    if (source['_subtitle']) { this._subtitle = new fhir.FhirElement(source._subtitle!); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
+    if (source['shortTitle']) { this.shortTitle = new fhir.FhirString({value: source.shortTitle}); }
+    if (source['subtitle']) { this.subtitle = new fhir.FhirString({value: source.subtitle}); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
-    if (source['approvalDate']) { this.approvalDate = source.approvalDate; }
-    if (source['_approvalDate']) { this._approvalDate = new fhir.FhirElement(source._approvalDate!); }
-    if (source['lastReviewDate']) { this.lastReviewDate = source.lastReviewDate; }
-    if (source['_lastReviewDate']) { this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate!); }
-    if (source['effectivePeriod']) { this.effectivePeriod = new fhir.Period(source.effectivePeriod!); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
+    if (source['approvalDate']) { this.approvalDate = new fhir.FhirDate({value: source.approvalDate}); }
+    if (source['lastReviewDate']) { this.lastReviewDate = new fhir.FhirDate({value: source.lastReviewDate}); }
+    if (source['effectivePeriod']) { this.effectivePeriod = new fhir.Period(source.effectivePeriod); }
     if (source['topic']) { this.topic = source.topic.map((x) => new fhir.CodeableConcept(x)); }
     if (source['author']) { this.author = source.author.map((x) => new fhir.ContactDetail(x)); }
     if (source['editor']) { this.editor = source.editor.map((x) => new fhir.ContactDetail(x)); }
@@ -632,7 +447,6 @@ export class EvidenceVariable extends fhir.DomainResource implements IEvidenceVa
     if (source['endorser']) { this.endorser = source.endorser.map((x) => new fhir.ContactDetail(x)); }
     if (source['relatedArtifact']) { this.relatedArtifact = source.relatedArtifact.map((x) => new fhir.RelatedArtifact(x)); }
     if (source['type']) { this.type = source.type; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
     if (source['characteristic']) { this.characteristic = source.characteristic.map((x) => new fhir.EvidenceVariableCharacteristic(x)); }
     else { this.characteristic = null; }
   }
@@ -657,38 +471,52 @@ export class EvidenceVariable extends fhir.DomainResource implements IEvidenceVa
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: EvidenceVariable.resourceType']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (this["_shortTitle"]) { results.push(...this._shortTitle.doModelValidation()); }
-    if (this["_subtitle"]) { results.push(...this._subtitle.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: EvidenceVariable.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (this["_approvalDate"]) { results.push(...this._approvalDate.doModelValidation()); }
-    if (this["_lastReviewDate"]) { results.push(...this._lastReviewDate.doModelValidation()); }
-    if (this["effectivePeriod"]) { results.push(...this.effectivePeriod.doModelValidation()); }
-    if (this["topic"]) { this.topic.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["author"]) { this.author.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["editor"]) { this.editor.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reviewer"]) { this.reviewer.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["endorser"]) { this.endorser.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["relatedArtifact"]) { this.relatedArtifact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if ((!this["characteristic"]) || (this["characteristic"].length === 0)) { results.push(["characteristic",'Missing required element: EvidenceVariable.characteristic']); }
-    if (this["characteristic"]) { this.characteristic.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'EvidenceVariable' fhir: EvidenceVariable.resourceType:'EvidenceVariable'", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (this["shortTitle"]) { outcome.issue!.push(...this.shortTitle.doModelValidation().issue!); }
+    if (this["subtitle"]) { outcome.issue!.push(...this.subtitle.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: EvidenceVariable.status:code", }));
+    }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (this["approvalDate"]) { outcome.issue!.push(...this.approvalDate.doModelValidation().issue!); }
+    if (this["lastReviewDate"]) { outcome.issue!.push(...this.lastReviewDate.doModelValidation().issue!); }
+    if (this["effectivePeriod"]) { outcome.issue!.push(...this.effectivePeriod.doModelValidation().issue!); }
+    if (this["topic"]) { this.topic.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["author"]) { this.author.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["editor"]) { this.editor.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reviewer"]) { this.reviewer.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["endorser"]) { this.endorser.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["relatedArtifact"]) { this.relatedArtifact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['characteristic']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property characteristic:fhir.EvidenceVariableCharacteristic[] fhir: EvidenceVariable.characteristic:characteristic", }));
+    } else if (!Array.isArray(this.characteristic)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property characteristic:fhir.EvidenceVariableCharacteristic[] fhir: EvidenceVariable.characteristic:characteristic", }));
+    } else if (this.characteristic.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property characteristic:fhir.EvidenceVariableCharacteristic[] fhir: EvidenceVariable.characteristic:characteristic", }));
+    }
+    if (this["characteristic"]) { this.characteristic.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

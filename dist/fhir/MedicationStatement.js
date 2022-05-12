@@ -3,11 +3,12 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MedicationStatement
 import * as fhir from '../fhir.js';
-import { MedicationStatementStatusValueSet } from '../fhirValueSets/MedicationStatementStatusValueSet.js';
-import { ReasonMedicationStatusCodesValueSet } from '../fhirValueSets/ReasonMedicationStatusCodesValueSet.js';
-import { MedicationStatementCategoryValueSet } from '../fhirValueSets/MedicationStatementCategoryValueSet.js';
-import { MedicationCodesValueSet } from '../fhirValueSets/MedicationCodesValueSet.js';
-import { ConditionCodeValueSet } from '../fhirValueSets/ConditionCodeValueSet.js';
+import { MedicationStatementStatusValueSet, } from '../fhirValueSets/MedicationStatementStatusValueSet.js';
+import { ReasonMedicationStatusCodesValueSet, } from '../fhirValueSets/ReasonMedicationStatusCodesValueSet.js';
+import { MedicationStatementCategoryValueSet, } from '../fhirValueSets/MedicationStatementCategoryValueSet.js';
+import { ConditionCodeValueSet, } from '../fhirValueSets/ConditionCodeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains.
  * The primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the medication statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
@@ -16,8 +17,47 @@ export class MedicationStatement extends fhir.DomainResource {
     /**
      * Default constructor for MedicationStatement - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicationStatement';
+        /**
+         * This is a business identifier, not a resource identifier.
+         */
+        this.identifier = [];
+        /**
+         * A plan, proposal or order that is fulfilled in whole or in part by this event.
+         */
+        this.basedOn = [];
+        /**
+         * A larger event of which this particular event is a component or step.
+         */
+        this.partOf = [];
+        /**
+         * This is generally only used for "exception" statuses such as "not-taken", "on-hold", "cancelled" or "entered-in-error". The reason for performing the event at all is captured in reasonCode, not here.
+         */
+        this.statusReason = [];
+        this.__medicationIsChoice = true;
+        this.__effectiveIsChoice = true;
+        /**
+         * Likely references would be to MedicationRequest, MedicationDispense, Claim, Observation or QuestionnaireAnswers.  The most common use cases for deriving a MedicationStatement comes from creating a MedicationStatement from a MedicationRequest or from a lab observation or a claim.  it should be noted that the amount of information that is available varies from the type resource that you derive the MedicationStatement from.
+         */
+        this.derivedFrom = [];
+        /**
+         * This could be a diagnosis code. If a full condition record exists or additional detail is needed, use reasonForUseReference.
+         */
+        this.reasonCode = [];
+        /**
+         * This is a reference to a condition that is the reason why the medication is being/was taken.  If only a code exists, use reasonForUseCode.
+         */
+        this.reasonReference = [];
+        /**
+         * Provides extra information about the medication statement that is not conveyed by the other attributes.
+         */
+        this.note = [];
+        /**
+         * The dates included in the dosage on a Medication Statement reflect the dates for a given dose.  For example, "from November 1, 2016 to November 3, 2016, take one tablet daily and from November 4, 2016 to November 7, 2016, take two tablets daily."  It is expected that this specificity may only be populated where the patient brings in their labeled container or where the Medication Statement is derived from a MedicationRequest.
+         */
+        this.dosage = [];
         this.resourceType = 'MedicationStatement';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -34,20 +74,23 @@ export class MedicationStatement extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['statusReason']) {
             this.statusReason = source.statusReason.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['category']) {
             this.category = new fhir.CodeableConcept(source.category);
         }
-        if (source['medicationCodeableConcept']) {
-            this.medicationCodeableConcept = new fhir.CodeableConcept(source.medicationCodeableConcept);
+        if (source['medication']) {
+            this.medication = source.medication;
         }
-        if (source['medicationReference']) {
-            this.medicationReference = new fhir.Reference(source.medicationReference);
+        else if (source['medicationCodeableConcept']) {
+            this.medication = new fhir.CodeableConcept(source.medicationCodeableConcept);
+        }
+        else if (source['medicationReference']) {
+            this.medication = new fhir.Reference(source.medicationReference);
+        }
+        else {
+            this.medication = null;
         }
         if (source['subject']) {
             this.subject = new fhir.Reference(source.subject);
@@ -58,20 +101,17 @@ export class MedicationStatement extends fhir.DomainResource {
         if (source['context']) {
             this.context = new fhir.Reference(source.context);
         }
-        if (source['effectiveDateTime']) {
-            this.effectiveDateTime = source.effectiveDateTime;
+        if (source['effective']) {
+            this.effective = source.effective;
         }
-        if (source['_effectiveDateTime']) {
-            this._effectiveDateTime = new fhir.FhirElement(source._effectiveDateTime);
+        else if (source['effectiveDateTime']) {
+            this.effective = new fhir.FhirDateTime({ value: source.effectiveDateTime });
         }
-        if (source['effectivePeriod']) {
-            this.effectivePeriod = new fhir.Period(source.effectivePeriod);
+        else if (source['effectivePeriod']) {
+            this.effective = new fhir.Period(source.effectivePeriod);
         }
         if (source['dateAsserted']) {
-            this.dateAsserted = source.dateAsserted;
-        }
-        if (source['_dateAsserted']) {
-            this._dateAsserted = new fhir.FhirElement(source._dateAsserted);
+            this.dateAsserted = new fhir.FhirDateTime({ value: source.dateAsserted });
         }
         if (source['informationSource']) {
             this.informationSource = new fhir.Reference(source.informationSource);
@@ -111,18 +151,6 @@ export class MedicationStatement extends fhir.DomainResource {
         return MedicationStatementCategoryValueSet;
     }
     /**
-     * Example-bound Value Set for medicationCodeableConcept
-     */
-    static medicationCodeableConceptExampleValueSet() {
-        return MedicationCodesValueSet;
-    }
-    /**
-     * Example-bound Value Set for medicationReference
-     */
-    static medicationReferenceExampleValueSet() {
-        return MedicationCodesValueSet;
-    }
-    /**
      * Example-bound Value Set for reasonCode
      */
     static reasonCodeExampleValueSet() {
@@ -132,74 +160,68 @@ export class MedicationStatement extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: MedicationStatement.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'MedicationStatement' fhir: MedicationStatement.resourceType:'MedicationStatement'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["partOf"]) {
-            this.partOf.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.partOf.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: MedicationStatement.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:MedicationStatementStatusValueSetEnum fhir: MedicationStatement.status:code", }));
         }
         if (this["statusReason"]) {
-            this.statusReason.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.statusReason.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["category"]) {
-            results.push(...this.category.doModelValidation());
+            outcome.issue.push(...this.category.doModelValidation().issue);
         }
-        if (this["medicationCodeableConcept"]) {
-            results.push(...this.medicationCodeableConcept.doModelValidation());
+        if (!this['medication']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property medication: fhir: MedicationStatement.medication[x]:", }));
         }
-        if (this["medicationReference"]) {
-            results.push(...this.medicationReference.doModelValidation());
-        }
-        if (!this["subject"]) {
-            results.push(["subject", 'Missing required element: MedicationStatement.subject']);
+        if (!this['subject']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property subject:fhir.Reference fhir: MedicationStatement.subject:Reference", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["context"]) {
-            results.push(...this.context.doModelValidation());
+            outcome.issue.push(...this.context.doModelValidation().issue);
         }
-        if (this["_effectiveDateTime"]) {
-            results.push(...this._effectiveDateTime.doModelValidation());
-        }
-        if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
-        }
-        if (this["_dateAsserted"]) {
-            results.push(...this._dateAsserted.doModelValidation());
+        if (this["dateAsserted"]) {
+            outcome.issue.push(...this.dateAsserted.doModelValidation().issue);
         }
         if (this["informationSource"]) {
-            results.push(...this.informationSource.doModelValidation());
+            outcome.issue.push(...this.informationSource.doModelValidation().issue);
         }
         if (this["derivedFrom"]) {
-            this.derivedFrom.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.derivedFrom.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["dosage"]) {
-            this.dosage.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.dosage.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=MedicationStatement.js.map

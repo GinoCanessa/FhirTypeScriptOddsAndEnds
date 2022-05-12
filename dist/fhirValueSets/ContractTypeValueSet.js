@@ -51,27 +51,4 @@ export const ContractTypeValueSet = {
 /**
  * This value set includes sample Contract Type codes.
  */
-export var ContractTypeValueSetEnum;
-(function (ContractTypeValueSetEnum) {
-    /**
-     * consent: Consent Directive.
-     */
-    ContractTypeValueSetEnum["Consent"] = "consent";
-    /**
-     * disclosure: Information disclosure policy.
-     */
-    ContractTypeValueSetEnum["Disclosure"] = "disclosure";
-    /**
-     * healthinsurance: Health Insurance policy.
-     */
-    ContractTypeValueSetEnum["HealthInsurance"] = "healthinsurance";
-    /**
-     * privacy: Privacy policy.
-     */
-    ContractTypeValueSetEnum["Privacy"] = "privacy";
-    /**
-     * supply: Contract to supply goods or services.
-     */
-    ContractTypeValueSetEnum["SupplyContract"] = "supply";
-})(ContractTypeValueSetEnum || (ContractTypeValueSetEnum = {}));
 //# sourceMappingURL=ContractTypeValueSet.js.map

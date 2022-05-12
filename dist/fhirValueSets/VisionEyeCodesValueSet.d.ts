@@ -19,14 +19,4 @@ export declare type VisionEyeCodesValueSetType = typeof VisionEyeCodesValueSet;
 /**
  * A coded concept listing the eye codes.
  */
-export declare enum VisionEyeCodesValueSetEnum {
-    /**
-     * left: Left Eye.
-     */
-    LeftEye = "left",
-    /**
-     * right: Right Eye.
-     */
-    RightEye = "right"
-}
 //# sourceMappingURL=VisionEyeCodesValueSet.d.ts.map

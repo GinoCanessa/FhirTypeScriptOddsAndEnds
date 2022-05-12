@@ -19,11 +19,4 @@ export const ContractSecurityClassificationValueSet = {
 /**
  * This value set contract specific codes for security classification.
  */
-export var ContractSecurityClassificationValueSetEnum;
-(function (ContractSecurityClassificationValueSetEnum) {
-    /**
-     * policy: To be completed
-     */
-    ContractSecurityClassificationValueSetEnum["Policy"] = "policy";
-})(ContractSecurityClassificationValueSetEnum || (ContractSecurityClassificationValueSetEnum = {}));
 //# sourceMappingURL=ContractSecurityClassificationValueSet.js.map

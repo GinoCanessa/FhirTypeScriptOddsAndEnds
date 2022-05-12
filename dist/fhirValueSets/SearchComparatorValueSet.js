@@ -83,43 +83,4 @@ export const SearchComparatorValueSet = {
 /**
  * What Search Comparator Codes are supported in search.
  */
-export var SearchComparatorValueSetEnum;
-(function (SearchComparatorValueSetEnum) {
-    /**
-     * ap: the value for the parameter in the resource is approximately the same to the provided value.
-     */
-    SearchComparatorValueSetEnum["Approximately"] = "ap";
-    /**
-     * eb: the value for the parameter in the resource ends before the provided value.
-     */
-    SearchComparatorValueSetEnum["EndsBefore"] = "eb";
-    /**
-     * eq: the value for the parameter in the resource is equal to the provided value.
-     */
-    SearchComparatorValueSetEnum["Equals"] = "eq";
-    /**
-     * ge: the value for the parameter in the resource is greater or equal to the provided value.
-     */
-    SearchComparatorValueSetEnum["GreaterOrEquals"] = "ge";
-    /**
-     * gt: the value for the parameter in the resource is greater than the provided value.
-     */
-    SearchComparatorValueSetEnum["GreaterThan"] = "gt";
-    /**
-     * le: the value for the parameter in the resource is less or equal to the provided value.
-     */
-    SearchComparatorValueSetEnum["LessOfEqual"] = "le";
-    /**
-     * lt: the value for the parameter in the resource is less than the provided value.
-     */
-    SearchComparatorValueSetEnum["LessThan"] = "lt";
-    /**
-     * ne: the value for the parameter in the resource is not equal to the provided value.
-     */
-    SearchComparatorValueSetEnum["NotEquals"] = "ne";
-    /**
-     * sa: the value for the parameter in the resource starts after the provided value.
-     */
-    SearchComparatorValueSetEnum["StartsAfter"] = "sa";
-})(SearchComparatorValueSetEnum || (SearchComparatorValueSetEnum = {}));
 //# sourceMappingURL=SearchComparatorValueSet.js.map

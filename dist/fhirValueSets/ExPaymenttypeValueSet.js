@@ -27,15 +27,4 @@ export const ExPaymenttypeValueSet = {
 /**
  * This value set includes example Payment Type codes.
  */
-export var ExPaymenttypeValueSetEnum;
-(function (ExPaymenttypeValueSetEnum) {
-    /**
-     * complete: Complete (final) payment of the benefit under the Claim less any adjustments.
-     */
-    ExPaymenttypeValueSetEnum["Complete"] = "complete";
-    /**
-     * partial: Partial payment of the benefit under the Claim less any adjustments.
-     */
-    ExPaymenttypeValueSetEnum["Partial"] = "partial";
-})(ExPaymenttypeValueSetEnum || (ExPaymenttypeValueSetEnum = {}));
 //# sourceMappingURL=ExPaymenttypeValueSet.js.map

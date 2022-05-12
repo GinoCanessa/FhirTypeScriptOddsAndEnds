@@ -3,197 +3,55 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: DeviceRequest
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { RequestStatusValueSet, RequestStatusValueSetType, RequestStatusValueSetEnum } from '../fhirValueSets/RequestStatusValueSet.js'
-import { RequestIntentValueSet, RequestIntentValueSetType, RequestIntentValueSetEnum } from '../fhirValueSets/RequestIntentValueSet.js'
-import { RequestPriorityValueSet, RequestPriorityValueSetType, RequestPriorityValueSetEnum } from '../fhirValueSets/RequestPriorityValueSet.js'
-import { DeviceKindValueSet, DeviceKindValueSetType, DeviceKindValueSetEnum } from '../fhirValueSets/DeviceKindValueSet.js'
-import { ParticipantRoleValueSet, ParticipantRoleValueSetType, ParticipantRoleValueSetEnum } from '../fhirValueSets/ParticipantRoleValueSet.js'
-import { ConditionCodeValueSet, ConditionCodeValueSetType, ConditionCodeValueSetEnum } from '../fhirValueSets/ConditionCodeValueSet.js'
-
+import { RequestStatusValueSet, RequestStatusValueSetType,} from '../fhirValueSets/RequestStatusValueSet.js';
+import { RequestStatusValueSetEnum } from '../valueSetEnums.js';
+import { RequestIntentValueSet, RequestIntentValueSetType,} from '../fhirValueSets/RequestIntentValueSet.js';
+import { RequestIntentValueSetEnum } from '../valueSetEnums.js';
+import { RequestPriorityValueSet, RequestPriorityValueSetType,} from '../fhirValueSets/RequestPriorityValueSet.js';
+import { RequestPriorityValueSetEnum } from '../valueSetEnums.js';
+import { ParticipantRoleValueSet, ParticipantRoleValueSetType,} from '../fhirValueSets/ParticipantRoleValueSet.js';
+import { ParticipantRoleValueSetEnum } from '../valueSetEnums.js';
+import { ConditionCodeValueSet, ConditionCodeValueSetType,} from '../fhirValueSets/ConditionCodeValueSet.js';
+import { ConditionCodeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Specific parameters for the ordered item.  For example, the prism value for lenses.
+ * Valid arguments for the DeviceRequestParameter type.
  */
-export type IDeviceRequestParameter = fhir.IBackboneElement & { 
+export interface DeviceRequestParameterArgs extends fhir.BackboneElementArgs {
   /**
    * A code or string that identifies the device detail being asserted.
    */
-  code?: fhir.ICodeableConcept|undefined;
+  code?: fhir.CodeableConceptArgs|undefined;
   /**
    * Range means device should have a value that falls somewhere within the specified range.
    */
-  valueCodeableConcept?: fhir.ICodeableConcept|undefined;
+  value?: fhir.CodeableConcept|fhir.Quantity|fhir.Range|fhir.FhirBoolean|undefined;
   /**
    * Range means device should have a value that falls somewhere within the specified range.
    */
-  valueQuantity?: fhir.IQuantity|undefined;
+  valueCodeableConcept?: fhir.CodeableConceptArgs|undefined;
   /**
    * Range means device should have a value that falls somewhere within the specified range.
    */
-  valueRange?: fhir.IRange|undefined;
+  valueQuantity?: fhir.QuantityArgs|undefined;
   /**
    * Range means device should have a value that falls somewhere within the specified range.
    */
-  valueBoolean?: boolean|undefined;
+  valueRange?: fhir.RangeArgs|undefined;
   /**
-   * Extended properties for primitive element: DeviceRequest.parameter.value[x]
+   * Range means device should have a value that falls somewhere within the specified range.
    */
-  _valueBoolean?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Represents a request for a patient to employ a medical device. The device may be an implantable device, or an external assistive device, such as a walker.
- */
-export type IDeviceRequest = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "DeviceRequest";
-  /**
-   * Identifiers assigned to this order by the orderer or by the receiver.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * Note: This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
-   */
-  instantiatesCanonical?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: DeviceRequest.instantiatesCanonical
-   */
-  _instantiatesCanonical?: fhir.IFhirElement[]|undefined;
-  /**
-   * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
-   */
-  instantiatesUri?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: DeviceRequest.instantiatesUri
-   */
-  _instantiatesUri?: fhir.IFhirElement[]|undefined;
-  /**
-   * Plan/proposal/order fulfilled by this request.
-   */
-  basedOn?: fhir.IReference[]|undefined;
-  /**
-   * The request takes the place of the referenced completed or terminated request(s).
-   */
-  priorRequest?: fhir.IReference[]|undefined;
-  /**
-   * Composite request this is part of.
-   */
-  groupIdentifier?: fhir.IIdentifier|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains the codes cancelled and entered-in-error that mark the request as not currently valid.
-   */
-  status?: RequestStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: DeviceRequest.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Whether the request is a proposal, plan, an original order or a reflex order.
-   */
-  intent: RequestIntentValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: DeviceRequest.intent
-   */
-  _intent?: fhir.IFhirElement|undefined;
-  /**
-   * Indicates how quickly the {{title}} should be addressed with respect to other requests.
-   */
-  priority?: RequestPriorityValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: DeviceRequest.priority
-   */
-  _priority?: fhir.IFhirElement|undefined;
-  /**
-   * The details of the device to be used.
-   */
-  codeReference?: fhir.IReference|undefined;
-  /**
-   * The details of the device to be used.
-   */
-  codeCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * Specific parameters for the ordered item.  For example, the prism value for lenses.
-   */
-  parameter?: fhir.IDeviceRequestParameter[]|undefined;
-  /**
-   * The patient who will use the device.
-   */
-  subject: fhir.IReference|null;
-  /**
-   * An encounter that provides additional context in which this request is made.
-   */
-  encounter?: fhir.IReference|undefined;
-  /**
-   * The timing schedule for the use of the device. The Schedule data type allows many different expressions, for example. "Every 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
-   */
-  occurrenceDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceRequest.occurrence[x]
-   */
-  _occurrenceDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * The timing schedule for the use of the device. The Schedule data type allows many different expressions, for example. "Every 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
-   */
-  occurrencePeriod?: fhir.IPeriod|undefined;
-  /**
-   * The timing schedule for the use of the device. The Schedule data type allows many different expressions, for example. "Every 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
-   */
-  occurrenceTiming?: fhir.ITiming|undefined;
-  /**
-   * When the request transitioned to being actionable.
-   */
-  authoredOn?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceRequest.authoredOn
-   */
-  _authoredOn?: fhir.IFhirElement|undefined;
-  /**
-   * The individual who initiated the request and has responsibility for its activation.
-   */
-  requester?: fhir.IReference|undefined;
-  /**
-   * Desired type of performer for doing the diagnostic testing.
-   */
-  performerType?: fhir.ICodeableConcept|undefined;
-  /**
-   * The desired performer for doing the diagnostic testing.
-   */
-  performer?: fhir.IReference|undefined;
-  /**
-   * Reason or justification for the use of this device.
-   */
-  reasonCode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Reason or justification for the use of this device.
-   */
-  reasonReference?: fhir.IReference[]|undefined;
-  /**
-   * Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be required for delivering the requested service.
-   */
-  insurance?: fhir.IReference[]|undefined;
-  /**
-   * Additional clinical information about the patient that may influence the request fulfilment.  For example, this may include where on the subject's body the device will be used (i.e. the target site).
-   */
-  supportingInfo?: fhir.IReference[]|undefined;
-  /**
-   * Details about this request that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-  /**
-   * This might not include provenances for all versions of the request - only those deemed "relevant" or important.
-   * This SHALL NOT include the Provenance associated with this current version of the resource.  (If that provenance is deemed to be a "relevant" change, it will need to be added as part of a later update.  Until then, it can be queried directly as the Provenance that points to this version using _revinclude
-   * All Provenances should have some historical version of this Request as their subject.
-   */
-  relevantHistory?: fhir.IReference[]|undefined;
+  valueBoolean?: fhir.FhirBoolean|boolean|undefined;
 }
 
 /**
  * Specific parameters for the ordered item.  For example, the prism value for lenses.
  */
-export class DeviceRequestParameter extends fhir.BackboneElement implements IDeviceRequestParameter {
+export class DeviceRequestParameter extends fhir.BackboneElement {
+  readonly __dataType:string = 'DeviceRequestParameter';
   /**
    * A code or string that identifies the device detail being asserted.
    */
@@ -201,53 +59,168 @@ export class DeviceRequestParameter extends fhir.BackboneElement implements IDev
   /**
    * Range means device should have a value that falls somewhere within the specified range.
    */
-  public valueCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * Range means device should have a value that falls somewhere within the specified range.
-   */
-  public valueQuantity?: fhir.Quantity|undefined;
-  /**
-   * Range means device should have a value that falls somewhere within the specified range.
-   */
-  public valueRange?: fhir.Range|undefined;
-  /**
-   * Range means device should have a value that falls somewhere within the specified range.
-   */
-  public valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: DeviceRequest.parameter.value[x]
-   */
-  public _valueBoolean?: fhir.FhirElement|undefined;
+  public value?: (fhir.CodeableConcept|fhir.Quantity|fhir.Range|fhir.FhirBoolean)|undefined;
+  readonly __valueIsChoice:true = true;
   /**
    * Default constructor for DeviceRequestParameter - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IDeviceRequestParameter> = { }) {
-    super(source);
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
-    if (source['valueCodeableConcept']) { this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept!); }
-    if (source['valueQuantity']) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
-    if (source['valueRange']) { this.valueRange = new fhir.Range(source.valueRange!); }
-    if (source['valueBoolean']) { this.valueBoolean = source.valueBoolean; }
-    if (source['_valueBoolean']) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
+  constructor(source:Partial<DeviceRequestParameterArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueCodeableConcept']) { this.value = new fhir.CodeableConcept(source.valueCodeableConcept); }
+    else if (source['valueQuantity']) { this.value = new fhir.Quantity(source.valueQuantity); }
+    else if (source['valueRange']) { this.value = new fhir.Range(source.valueRange); }
+    else if (source['valueBoolean']) { this.value = new fhir.FhirBoolean({value: source.valueBoolean}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["valueCodeableConcept"]) { results.push(...this.valueCodeableConcept.doModelValidation()); }
-    if (this["valueQuantity"]) { results.push(...this.valueQuantity.doModelValidation()); }
-    if (this["valueRange"]) { results.push(...this.valueRange.doModelValidation()); }
-    if (this["_valueBoolean"]) { results.push(...this._valueBoolean.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the DeviceRequest type.
+ */
+export interface DeviceRequestArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "DeviceRequest"|undefined;
+  /**
+   * Identifiers assigned to this order by the orderer or by the receiver.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * Note: This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+   */
+  instantiatesCanonical?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
+   */
+  instantiatesUri?: fhir.FhirUri[]|string[]|undefined;
+  /**
+   * Plan/proposal/order fulfilled by this request.
+   */
+  basedOn?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The request takes the place of the referenced completed or terminated request(s).
+   */
+  priorRequest?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Composite request this is part of.
+   */
+  groupIdentifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains the codes cancelled and entered-in-error that mark the request as not currently valid.
+   */
+  status?: RequestStatusValueSetEnum|undefined;
+  /**
+   * Whether the request is a proposal, plan, an original order or a reflex order.
+   */
+  intent: RequestIntentValueSetEnum|null;
+  /**
+   * Indicates how quickly the {{title}} should be addressed with respect to other requests.
+   */
+  priority?: RequestPriorityValueSetEnum|undefined;
+  /**
+   * The details of the device to be used.
+   */
+  code?: fhir.Reference|fhir.CodeableConcept|undefined;
+  /**
+   * The details of the device to be used.
+   */
+  codeReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * The details of the device to be used.
+   */
+  codeCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Specific parameters for the ordered item.  For example, the prism value for lenses.
+   */
+  parameter?: fhir.DeviceRequestParameterArgs[]|undefined;
+  /**
+   * The patient who will use the device.
+   */
+  subject: fhir.ReferenceArgs|null;
+  /**
+   * An encounter that provides additional context in which this request is made.
+   */
+  encounter?: fhir.ReferenceArgs|undefined;
+  /**
+   * The timing schedule for the use of the device. The Schedule data type allows many different expressions, for example. "Every 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
+   */
+  occurrence?: fhir.FhirDateTime|fhir.Period|fhir.Timing|undefined;
+  /**
+   * The timing schedule for the use of the device. The Schedule data type allows many different expressions, for example. "Every 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
+   */
+  occurrenceDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * The timing schedule for the use of the device. The Schedule data type allows many different expressions, for example. "Every 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
+   */
+  occurrencePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * The timing schedule for the use of the device. The Schedule data type allows many different expressions, for example. "Every 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
+   */
+  occurrenceTiming?: fhir.TimingArgs|undefined;
+  /**
+   * When the request transitioned to being actionable.
+   */
+  authoredOn?: fhir.FhirDateTime|string|undefined;
+  /**
+   * The individual who initiated the request and has responsibility for its activation.
+   */
+  requester?: fhir.ReferenceArgs|undefined;
+  /**
+   * Desired type of performer for doing the diagnostic testing.
+   */
+  performerType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The desired performer for doing the diagnostic testing.
+   */
+  performer?: fhir.ReferenceArgs|undefined;
+  /**
+   * Reason or justification for the use of this device.
+   */
+  reasonCode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Reason or justification for the use of this device.
+   */
+  reasonReference?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be required for delivering the requested service.
+   */
+  insurance?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Additional clinical information about the patient that may influence the request fulfilment.  For example, this may include where on the subject's body the device will be used (i.e. the target site).
+   */
+  supportingInfo?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Details about this request that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
+  /**
+   * This might not include provenances for all versions of the request - only those deemed "relevant" or important.
+   * This SHALL NOT include the Provenance associated with this current version of the resource.  (If that provenance is deemed to be a "relevant" change, it will need to be added as part of a later update.  Until then, it can be queried directly as the Provenance that points to this version using _revinclude
+   * All Provenances should have some historical version of this Request as their subject.
+   */
+  relevantHistory?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * Represents a request for a patient to employ a medical device. The device may be an implantable device, or an external assistive device, such as a walker.
  */
-export class DeviceRequest extends fhir.DomainResource implements IDeviceRequest {
+export class DeviceRequest extends fhir.DomainResource {
+  readonly __dataType:string = 'DeviceRequest';
   /**
    * Resource Type Name
    */
@@ -255,31 +228,23 @@ export class DeviceRequest extends fhir.DomainResource implements IDeviceRequest
   /**
    * Identifiers assigned to this order by the orderer or by the receiver.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Note: This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
    */
-  public instantiatesCanonical?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: DeviceRequest.instantiatesCanonical
-   */
-  public _instantiatesCanonical?: fhir.FhirElement[]|undefined;
+  public instantiatesCanonical?: fhir.FhirCanonical[]|undefined = [];
   /**
    * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
    */
-  public instantiatesUri?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: DeviceRequest.instantiatesUri
-   */
-  public _instantiatesUri?: fhir.FhirElement[]|undefined;
+  public instantiatesUri?: fhir.FhirUri[]|undefined = [];
   /**
    * Plan/proposal/order fulfilled by this request.
    */
-  public basedOn?: fhir.Reference[]|undefined;
+  public basedOn?: fhir.Reference[]|undefined = [];
   /**
    * The request takes the place of the referenced completed or terminated request(s).
    */
-  public priorRequest?: fhir.Reference[]|undefined;
+  public priorRequest?: fhir.Reference[]|undefined = [];
   /**
    * Composite request this is part of.
    */
@@ -289,37 +254,22 @@ export class DeviceRequest extends fhir.DomainResource implements IDeviceRequest
    */
   public status?: RequestStatusValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: DeviceRequest.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Whether the request is a proposal, plan, an original order or a reflex order.
    */
   public intent: RequestIntentValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: DeviceRequest.intent
-   */
-  public _intent?: fhir.FhirElement|undefined;
   /**
    * Indicates how quickly the {{title}} should be addressed with respect to other requests.
    */
   public priority?: RequestPriorityValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: DeviceRequest.priority
-   */
-  public _priority?: fhir.FhirElement|undefined;
-  /**
    * The details of the device to be used.
    */
-  public codeReference?: fhir.Reference|undefined;
-  /**
-   * The details of the device to be used.
-   */
-  public codeCodeableConcept?: fhir.CodeableConcept|undefined;
+  public code: (fhir.Reference|fhir.CodeableConcept)|null;
+  readonly __codeIsChoice:true = true;
   /**
    * Specific parameters for the ordered item.  For example, the prism value for lenses.
    */
-  public parameter?: fhir.DeviceRequestParameter[]|undefined;
+  public parameter?: fhir.DeviceRequestParameter[]|undefined = [];
   /**
    * The patient who will use the device.
    */
@@ -331,27 +281,12 @@ export class DeviceRequest extends fhir.DomainResource implements IDeviceRequest
   /**
    * The timing schedule for the use of the device. The Schedule data type allows many different expressions, for example. "Every 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
    */
-  public occurrenceDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceRequest.occurrence[x]
-   */
-  public _occurrenceDateTime?: fhir.FhirElement|undefined;
-  /**
-   * The timing schedule for the use of the device. The Schedule data type allows many different expressions, for example. "Every 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
-   */
-  public occurrencePeriod?: fhir.Period|undefined;
-  /**
-   * The timing schedule for the use of the device. The Schedule data type allows many different expressions, for example. "Every 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
-   */
-  public occurrenceTiming?: fhir.Timing|undefined;
+  public occurrence?: (fhir.FhirDateTime|fhir.Period|fhir.Timing)|undefined;
+  readonly __occurrenceIsChoice:true = true;
   /**
    * When the request transitioned to being actionable.
    */
-  public authoredOn?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceRequest.authoredOn
-   */
-  public _authoredOn?: fhir.FhirElement|undefined;
+  public authoredOn?: fhir.FhirDateTime|undefined;
   /**
    * The individual who initiated the request and has responsibility for its activation.
    */
@@ -367,65 +302,61 @@ export class DeviceRequest extends fhir.DomainResource implements IDeviceRequest
   /**
    * Reason or justification for the use of this device.
    */
-  public reasonCode?: fhir.CodeableConcept[]|undefined;
+  public reasonCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Reason or justification for the use of this device.
    */
-  public reasonReference?: fhir.Reference[]|undefined;
+  public reasonReference?: fhir.Reference[]|undefined = [];
   /**
    * Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be required for delivering the requested service.
    */
-  public insurance?: fhir.Reference[]|undefined;
+  public insurance?: fhir.Reference[]|undefined = [];
   /**
    * Additional clinical information about the patient that may influence the request fulfilment.  For example, this may include where on the subject's body the device will be used (i.e. the target site).
    */
-  public supportingInfo?: fhir.Reference[]|undefined;
+  public supportingInfo?: fhir.Reference[]|undefined = [];
   /**
    * Details about this request that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * This might not include provenances for all versions of the request - only those deemed "relevant" or important.
    * This SHALL NOT include the Provenance associated with this current version of the resource.  (If that provenance is deemed to be a "relevant" change, it will need to be added as part of a later update.  Until then, it can be queried directly as the Provenance that points to this version using _revinclude
    * All Provenances should have some historical version of this Request as their subject.
    */
-  public relevantHistory?: fhir.Reference[]|undefined;
+  public relevantHistory?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for DeviceRequest - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IDeviceRequest> = { }) {
-    super(source);
+  constructor(source:Partial<DeviceRequestArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'DeviceRequest';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['instantiatesCanonical']) { this.instantiatesCanonical = source.instantiatesCanonical.map((x) => (x)); }
-    if (source['_instantiatesCanonical']) { this._instantiatesCanonical = source._instantiatesCanonical.map((x) => new fhir.FhirElement(x)); }
-    if (source['instantiatesUri']) { this.instantiatesUri = source.instantiatesUri.map((x) => (x)); }
-    if (source['_instantiatesUri']) { this._instantiatesUri = source._instantiatesUri.map((x) => new fhir.FhirElement(x)); }
+    if (source['instantiatesCanonical']) { this.instantiatesCanonical = source.instantiatesCanonical.map((x) => new fhir.FhirCanonical({value: x})); }
+    if (source['instantiatesUri']) { this.instantiatesUri = source.instantiatesUri.map((x) => new fhir.FhirUri({value: x})); }
     if (source['basedOn']) { this.basedOn = source.basedOn.map((x) => new fhir.Reference(x)); }
     if (source['priorRequest']) { this.priorRequest = source.priorRequest.map((x) => new fhir.Reference(x)); }
-    if (source['groupIdentifier']) { this.groupIdentifier = new fhir.Identifier(source.groupIdentifier!); }
+    if (source['groupIdentifier']) { this.groupIdentifier = new fhir.Identifier(source.groupIdentifier); }
     if (source['status']) { this.status = source.status; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
     if (source['intent']) { this.intent = source.intent; }
     else { this.intent = null; }
-    if (source['_intent']) { this._intent = new fhir.FhirElement(source._intent!); }
     if (source['priority']) { this.priority = source.priority; }
-    if (source['_priority']) { this._priority = new fhir.FhirElement(source._priority!); }
-    if (source['codeReference']) { this.codeReference = new fhir.Reference(source.codeReference!); }
-    if (source['codeCodeableConcept']) { this.codeCodeableConcept = new fhir.CodeableConcept(source.codeCodeableConcept!); }
+    if (source['code']) { this.code = source.code; }
+    else if (source['codeReference']) { this.code = new fhir.Reference(source.codeReference); }
+    else if (source['codeCodeableConcept']) { this.code = new fhir.CodeableConcept(source.codeCodeableConcept); }
+    else { this.code = null; }
     if (source['parameter']) { this.parameter = source.parameter.map((x) => new fhir.DeviceRequestParameter(x)); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
     else { this.subject = null; }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['occurrenceDateTime']) { this.occurrenceDateTime = source.occurrenceDateTime; }
-    if (source['_occurrenceDateTime']) { this._occurrenceDateTime = new fhir.FhirElement(source._occurrenceDateTime!); }
-    if (source['occurrencePeriod']) { this.occurrencePeriod = new fhir.Period(source.occurrencePeriod!); }
-    if (source['occurrenceTiming']) { this.occurrenceTiming = new fhir.Timing(source.occurrenceTiming!); }
-    if (source['authoredOn']) { this.authoredOn = source.authoredOn; }
-    if (source['_authoredOn']) { this._authoredOn = new fhir.FhirElement(source._authoredOn!); }
-    if (source['requester']) { this.requester = new fhir.Reference(source.requester!); }
-    if (source['performerType']) { this.performerType = new fhir.CodeableConcept(source.performerType!); }
-    if (source['performer']) { this.performer = new fhir.Reference(source.performer!); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['occurrence']) { this.occurrence = source.occurrence; }
+    else if (source['occurrenceDateTime']) { this.occurrence = new fhir.FhirDateTime({value: source.occurrenceDateTime}); }
+    else if (source['occurrencePeriod']) { this.occurrence = new fhir.Period(source.occurrencePeriod); }
+    else if (source['occurrenceTiming']) { this.occurrence = new fhir.Timing(source.occurrenceTiming); }
+    if (source['authoredOn']) { this.authoredOn = new fhir.FhirDateTime({value: source.authoredOn}); }
+    if (source['requester']) { this.requester = new fhir.Reference(source.requester); }
+    if (source['performerType']) { this.performerType = new fhir.CodeableConcept(source.performerType); }
+    if (source['performer']) { this.performer = new fhir.Reference(source.performer); }
     if (source['reasonCode']) { this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x)); }
     if (source['reasonReference']) { this.reasonReference = source.reasonReference.map((x) => new fhir.Reference(x)); }
     if (source['insurance']) { this.insurance = source.insurance.map((x) => new fhir.Reference(x)); }
@@ -452,18 +383,6 @@ export class DeviceRequest extends fhir.DomainResource implements IDeviceRequest
     return RequestPriorityValueSet;
   }
   /**
-   * Example-bound Value Set for codeReference
-   */
-  public static codeReferenceExampleValueSet():DeviceKindValueSetType {
-    return DeviceKindValueSet;
-  }
-  /**
-   * Example-bound Value Set for codeCodeableConcept
-   */
-  public static codeCodeableConceptExampleValueSet():DeviceKindValueSetType {
-    return DeviceKindValueSet;
-  }
-  /**
    * Example-bound Value Set for performerType
    */
   public static performerTypeExampleValueSet():ParticipantRoleValueSetType {
@@ -478,38 +397,45 @@ export class DeviceRequest extends fhir.DomainResource implements IDeviceRequest
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: DeviceRequest.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_instantiatesCanonical"]) { this._instantiatesCanonical.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_instantiatesUri"]) { this._instantiatesUri.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["basedOn"]) { this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["priorRequest"]) { this.priorRequest.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["groupIdentifier"]) { results.push(...this.groupIdentifier.doModelValidation()); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (!this["intent"]) { results.push(["intent",'Missing required element: DeviceRequest.intent']); }
-    if (this["_intent"]) { results.push(...this._intent.doModelValidation()); }
-    if (this["_priority"]) { results.push(...this._priority.doModelValidation()); }
-    if (this["codeReference"]) { results.push(...this.codeReference.doModelValidation()); }
-    if (this["codeCodeableConcept"]) { results.push(...this.codeCodeableConcept.doModelValidation()); }
-    if (this["parameter"]) { this.parameter.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["subject"]) { results.push(["subject",'Missing required element: DeviceRequest.subject']); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (this["_occurrenceDateTime"]) { results.push(...this._occurrenceDateTime.doModelValidation()); }
-    if (this["occurrencePeriod"]) { results.push(...this.occurrencePeriod.doModelValidation()); }
-    if (this["occurrenceTiming"]) { results.push(...this.occurrenceTiming.doModelValidation()); }
-    if (this["_authoredOn"]) { results.push(...this._authoredOn.doModelValidation()); }
-    if (this["requester"]) { results.push(...this.requester.doModelValidation()); }
-    if (this["performerType"]) { results.push(...this.performerType.doModelValidation()); }
-    if (this["performer"]) { results.push(...this.performer.doModelValidation()); }
-    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["insurance"]) { this.insurance.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["supportingInfo"]) { this.supportingInfo.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["relevantHistory"]) { this.relevantHistory.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'DeviceRequest' fhir: DeviceRequest.resourceType:'DeviceRequest'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instantiatesCanonical"]) { this.instantiatesCanonical.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instantiatesUri"]) { this.instantiatesUri.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["basedOn"]) { this.basedOn.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["priorRequest"]) { this.priorRequest.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["groupIdentifier"]) { outcome.issue!.push(...this.groupIdentifier.doModelValidation().issue!); }
+    if (!this['intent']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property intent:RequestIntentValueSetEnum fhir: DeviceRequest.intent:code", }));
+    }
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code: fhir: DeviceRequest.code[x]:", }));
+    }
+    if (this["parameter"]) { this.parameter.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['subject']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property subject:fhir.Reference fhir: DeviceRequest.subject:Reference", }));
+    }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (this["authoredOn"]) { outcome.issue!.push(...this.authoredOn.doModelValidation().issue!); }
+    if (this["requester"]) { outcome.issue!.push(...this.requester.doModelValidation().issue!); }
+    if (this["performerType"]) { outcome.issue!.push(...this.performerType.doModelValidation().issue!); }
+    if (this["performer"]) { outcome.issue!.push(...this.performer.doModelValidation().issue!); }
+    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["insurance"]) { this.insurance.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["supportingInfo"]) { this.supportingInfo.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["relevantHistory"]) { this.relevantHistory.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

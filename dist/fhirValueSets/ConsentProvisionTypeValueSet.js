@@ -27,15 +27,4 @@ export const ConsentProvisionTypeValueSet = {
 /**
  * How a rule statement is applied, such as adding additional consent or removing consent.
  */
-export var ConsentProvisionTypeValueSetEnum;
-(function (ConsentProvisionTypeValueSetEnum) {
-    /**
-     * deny: Consent is denied for actions meeting these rules.
-     */
-    ConsentProvisionTypeValueSetEnum["OptOut"] = "deny";
-    /**
-     * permit: Consent is provided for actions meeting these rules.
-     */
-    ConsentProvisionTypeValueSetEnum["OptIn"] = "permit";
-})(ConsentProvisionTypeValueSetEnum || (ConsentProvisionTypeValueSetEnum = {}));
 //# sourceMappingURL=ConsentProvisionTypeValueSet.js.map

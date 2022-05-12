@@ -51,21 +51,3 @@ export type ExProgramCodeValueSetType = typeof ExProgramCodeValueSet;
 /**
  * This value set includes sample Program Reason Span codes.
  */
-export enum ExProgramCodeValueSetEnum {
-  /**
-   * as: Child Asthma Program
-   */
-  ChildAsthma = "as",
-  /**
-   * auscr: Autism Screening Program.
-   */
-  AutismScreening = "auscr",
-  /**
-   * hd: Hemodialysis Program.
-   */
-  Hemodialysis = "hd",
-  /**
-   * none: No program code applies.
-   */
-  None = "none",
-}

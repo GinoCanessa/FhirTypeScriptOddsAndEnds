@@ -27,9 +27,3 @@ export type ContractDecisionModeValueSetType = typeof ContractDecisionModeValueS
 /**
  * This value set contract specific codes for decision modes.
  */
-export enum ContractDecisionModeValueSetEnum {
-  /**
-   * policy: To be completed
-   */
-  Policy = "policy",
-}

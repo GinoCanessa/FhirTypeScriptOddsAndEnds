@@ -27,15 +27,4 @@ export const AdjudicationReasonValueSet = {
 /**
  * This value set includes smattering of Adjudication Reason codes.
  */
-export var AdjudicationReasonValueSetEnum;
-(function (AdjudicationReasonValueSetEnum) {
-    /**
-     * ar001: Not covered
-     */
-    AdjudicationReasonValueSetEnum["NotCovered"] = "ar001";
-    /**
-     * ar002: Plan Limit Reached
-     */
-    AdjudicationReasonValueSetEnum["PlanLimitReached"] = "ar002";
-})(AdjudicationReasonValueSetEnum || (AdjudicationReasonValueSetEnum = {}));
 //# sourceMappingURL=AdjudicationReasonValueSet.js.map

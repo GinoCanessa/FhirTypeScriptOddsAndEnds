@@ -35,19 +35,4 @@ export const FlagStatusValueSet = {
 /**
  * Indicates whether this flag is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error.
  */
-export var FlagStatusValueSetEnum;
-(function (FlagStatusValueSetEnum) {
-    /**
-     * active: A current flag that should be displayed to a user. A system may use the category to determine which user roles should view the flag.
-     */
-    FlagStatusValueSetEnum["Active"] = "active";
-    /**
-     * entered-in-error: The flag was added in error and should no longer be displayed.
-     */
-    FlagStatusValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * inactive: The flag no longer needs to be displayed.
-     */
-    FlagStatusValueSetEnum["Inactive"] = "inactive";
-})(FlagStatusValueSetEnum || (FlagStatusValueSetEnum = {}));
 //# sourceMappingURL=FlagStatusValueSet.js.map

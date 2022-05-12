@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MedicinalProduct
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Coding words or phrases of the name.
  */
@@ -10,16 +12,14 @@ export class MedicinalProductNameNamePart extends fhir.BackboneElement {
     /**
      * Default constructor for MedicinalProductNameNamePart - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicinalProductNameNamePart';
         if (source['part']) {
-            this.part = source.part;
+            this.part = new fhir.FhirString({ value: source.part });
         }
         else {
             this.part = null;
-        }
-        if (source['_part']) {
-            this._part = new fhir.FhirElement(source._part);
         }
         if (source['type']) {
             this.type = new fhir.Coding(source.type);
@@ -32,20 +32,26 @@ export class MedicinalProductNameNamePart extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["part"]) {
-            results.push(["part", 'Missing required element: MedicinalProduct.name.namePart.part']);
+        var outcome = super.doModelValidation();
+        if (!this['part']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property part:fhir.FhirString fhir: MedicinalProduct.name.namePart.part:string", }));
         }
-        if (this["_part"]) {
-            results.push(...this._part.doModelValidation());
+        if (this["part"]) {
+            outcome.issue.push(...this.part.doModelValidation().issue);
         }
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: MedicinalProduct.name.namePart.type']);
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.Coding fhir: MedicinalProduct.name.namePart.type:Coding", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -55,8 +61,9 @@ export class MedicinalProductNameCountryLanguage extends fhir.BackboneElement {
     /**
      * Default constructor for MedicinalProductNameCountryLanguage - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicinalProductNameCountryLanguage';
         if (source['country']) {
             this.country = new fhir.CodeableConcept(source.country);
         }
@@ -77,23 +84,29 @@ export class MedicinalProductNameCountryLanguage extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["country"]) {
-            results.push(["country", 'Missing required element: MedicinalProduct.name.countryLanguage.country']);
+        var outcome = super.doModelValidation();
+        if (!this['country']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property country:fhir.CodeableConcept fhir: MedicinalProduct.name.countryLanguage.country:CodeableConcept", }));
         }
         if (this["country"]) {
-            results.push(...this.country.doModelValidation());
+            outcome.issue.push(...this.country.doModelValidation().issue);
         }
         if (this["jurisdiction"]) {
-            results.push(...this.jurisdiction.doModelValidation());
+            outcome.issue.push(...this.jurisdiction.doModelValidation().issue);
         }
-        if (!this["language"]) {
-            results.push(["language", 'Missing required element: MedicinalProduct.name.countryLanguage.language']);
+        if (!this['language']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property language:fhir.CodeableConcept fhir: MedicinalProduct.name.countryLanguage.language:CodeableConcept", }));
         }
         if (this["language"]) {
-            results.push(...this.language.doModelValidation());
+            outcome.issue.push(...this.language.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -103,16 +116,22 @@ export class MedicinalProductName extends fhir.BackboneElement {
     /**
      * Default constructor for MedicinalProductName - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicinalProductName';
+        /**
+         * Coding words or phrases of the name.
+         */
+        this.namePart = [];
+        /**
+         * Country where the name applies.
+         */
+        this.countryLanguage = [];
         if (source['productName']) {
-            this.productName = source.productName;
+            this.productName = new fhir.FhirString({ value: source.productName });
         }
         else {
             this.productName = null;
-        }
-        if (source['_productName']) {
-            this._productName = new fhir.FhirElement(source._productName);
         }
         if (source['namePart']) {
             this.namePart = source.namePart.map((x) => new fhir.MedicinalProductNameNamePart(x));
@@ -125,20 +144,26 @@ export class MedicinalProductName extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["productName"]) {
-            results.push(["productName", 'Missing required element: MedicinalProduct.name.productName']);
+        var outcome = super.doModelValidation();
+        if (!this['productName']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property productName:fhir.FhirString fhir: MedicinalProduct.name.productName:string", }));
         }
-        if (this["_productName"]) {
-            results.push(...this._productName.doModelValidation());
+        if (this["productName"]) {
+            outcome.issue.push(...this.productName.doModelValidation().issue);
         }
         if (this["namePart"]) {
-            this.namePart.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.namePart.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["countryLanguage"]) {
-            this.countryLanguage.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.countryLanguage.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -148,8 +173,13 @@ export class MedicinalProductManufacturingBusinessOperation extends fhir.Backbon
     /**
      * Default constructor for MedicinalProductManufacturingBusinessOperation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicinalProductManufacturingBusinessOperation';
+        /**
+         * The manufacturer or establishment associated with the process.
+         */
+        this.manufacturer = [];
         if (source['operationType']) {
             this.operationType = new fhir.CodeableConcept(source.operationType);
         }
@@ -157,10 +187,7 @@ export class MedicinalProductManufacturingBusinessOperation extends fhir.Backbon
             this.authorisationReferenceNumber = new fhir.Identifier(source.authorisationReferenceNumber);
         }
         if (source['effectiveDate']) {
-            this.effectiveDate = source.effectiveDate;
-        }
-        if (source['_effectiveDate']) {
-            this._effectiveDate = new fhir.FhirElement(source._effectiveDate);
+            this.effectiveDate = new fhir.FhirDateTime({ value: source.effectiveDate });
         }
         if (source['confidentialityIndicator']) {
             this.confidentialityIndicator = new fhir.CodeableConcept(source.confidentialityIndicator);
@@ -176,26 +203,32 @@ export class MedicinalProductManufacturingBusinessOperation extends fhir.Backbon
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["operationType"]) {
-            results.push(...this.operationType.doModelValidation());
+            outcome.issue.push(...this.operationType.doModelValidation().issue);
         }
         if (this["authorisationReferenceNumber"]) {
-            results.push(...this.authorisationReferenceNumber.doModelValidation());
+            outcome.issue.push(...this.authorisationReferenceNumber.doModelValidation().issue);
         }
-        if (this["_effectiveDate"]) {
-            results.push(...this._effectiveDate.doModelValidation());
+        if (this["effectiveDate"]) {
+            outcome.issue.push(...this.effectiveDate.doModelValidation().issue);
         }
         if (this["confidentialityIndicator"]) {
-            results.push(...this.confidentialityIndicator.doModelValidation());
+            outcome.issue.push(...this.confidentialityIndicator.doModelValidation().issue);
         }
         if (this["manufacturer"]) {
-            this.manufacturer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.manufacturer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["regulator"]) {
-            results.push(...this.regulator.doModelValidation());
+            outcome.issue.push(...this.regulator.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -205,8 +238,14 @@ export class MedicinalProductSpecialDesignation extends fhir.BackboneElement {
     /**
      * Default constructor for MedicinalProductSpecialDesignation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicinalProductSpecialDesignation';
+        /**
+         * Identifier for the designation, or procedure number.
+         */
+        this.identifier = [];
+        this.__indicationIsChoice = true;
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
@@ -216,20 +255,20 @@ export class MedicinalProductSpecialDesignation extends fhir.BackboneElement {
         if (source['intendedUse']) {
             this.intendedUse = new fhir.CodeableConcept(source.intendedUse);
         }
-        if (source['indicationCodeableConcept']) {
-            this.indicationCodeableConcept = new fhir.CodeableConcept(source.indicationCodeableConcept);
+        if (source['indication']) {
+            this.indication = source.indication;
         }
-        if (source['indicationReference']) {
-            this.indicationReference = new fhir.Reference(source.indicationReference);
+        else if (source['indicationCodeableConcept']) {
+            this.indication = new fhir.CodeableConcept(source.indicationCodeableConcept);
+        }
+        else if (source['indicationReference']) {
+            this.indication = new fhir.Reference(source.indicationReference);
         }
         if (source['status']) {
             this.status = new fhir.CodeableConcept(source.status);
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['species']) {
             this.species = new fhir.CodeableConcept(source.species);
@@ -239,32 +278,32 @@ export class MedicinalProductSpecialDesignation extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["intendedUse"]) {
-            results.push(...this.intendedUse.doModelValidation());
-        }
-        if (this["indicationCodeableConcept"]) {
-            results.push(...this.indicationCodeableConcept.doModelValidation());
-        }
-        if (this["indicationReference"]) {
-            results.push(...this.indicationReference.doModelValidation());
+            outcome.issue.push(...this.intendedUse.doModelValidation().issue);
         }
         if (this["status"]) {
-            results.push(...this.status.doModelValidation());
+            outcome.issue.push(...this.status.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
         if (this["species"]) {
-            results.push(...this.species.doModelValidation());
+            outcome.issue.push(...this.species.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -274,8 +313,65 @@ export class MedicinalProduct extends fhir.DomainResource {
     /**
      * Default constructor for MedicinalProduct - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicinalProduct';
+        /**
+         * Business identifier for this product. Could be an MPID.
+         */
+        this.identifier = [];
+        /**
+         * Whether the Medicinal Product is subject to special measures for regulatory reasons.
+         */
+        this.specialMeasures = [];
+        /**
+         * Allows the product to be classified by various systems.
+         */
+        this.productClassification = [];
+        /**
+         * Marketing status of the medicinal product, in contrast to marketing authorizaton.
+         */
+        this.marketingStatus = [];
+        /**
+         * Pharmaceutical aspects of product.
+         */
+        this.pharmaceuticalProduct = [];
+        /**
+         * Package representation for the product.
+         */
+        this.packagedMedicinalProduct = [];
+        /**
+         * Supporting documentation, typically for regulatory submission.
+         */
+        this.attachedDocument = [];
+        /**
+         * A master file for to the medicinal product (e.g. Pharmacovigilance System Master File).
+         */
+        this.masterFile = [];
+        /**
+         * A product specific contact, person (in a role), or an organization.
+         */
+        this.contact = [];
+        /**
+         * Clinical trials or studies that this product is involved in.
+         */
+        this.clinicalTrial = [];
+        /**
+         * The product's name, including full name and possibly coded parts.
+         */
+        this.name = [];
+        /**
+         * Reference to another product, e.g. for linking authorised to investigational product.
+         */
+        this.crossReference = [];
+        /**
+         * An operation applied to the product, for manufacturing or adminsitrative purpose.
+         */
+        this.manufacturingBusinessOperation = [];
+        /**
+         * Indicates if the medicinal product has an orphan designation for the treatment of a rare disease.
+         */
+        this.specialDesignation = [];
         this.resourceType = 'MedicinalProduct';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -296,10 +392,7 @@ export class MedicinalProduct extends fhir.DomainResource {
             this.additionalMonitoringIndicator = new fhir.CodeableConcept(source.additionalMonitoringIndicator);
         }
         if (source['specialMeasures']) {
-            this.specialMeasures = source.specialMeasures.map((x) => (x));
-        }
-        if (source['_specialMeasures']) {
-            this._specialMeasures = source._specialMeasures.map((x) => new fhir.FhirElement(x));
+            this.specialMeasures = source.specialMeasures.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['paediatricUseIndicator']) {
             this.paediatricUseIndicator = new fhir.CodeableConcept(source.paediatricUseIndicator);
@@ -348,74 +441,86 @@ export class MedicinalProduct extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: MedicinalProduct.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'MedicinalProduct' fhir: MedicinalProduct.resourceType:'MedicinalProduct'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["domain"]) {
-            results.push(...this.domain.doModelValidation());
+            outcome.issue.push(...this.domain.doModelValidation().issue);
         }
         if (this["combinedPharmaceuticalDoseForm"]) {
-            results.push(...this.combinedPharmaceuticalDoseForm.doModelValidation());
+            outcome.issue.push(...this.combinedPharmaceuticalDoseForm.doModelValidation().issue);
         }
         if (this["legalStatusOfSupply"]) {
-            results.push(...this.legalStatusOfSupply.doModelValidation());
+            outcome.issue.push(...this.legalStatusOfSupply.doModelValidation().issue);
         }
         if (this["additionalMonitoringIndicator"]) {
-            results.push(...this.additionalMonitoringIndicator.doModelValidation());
+            outcome.issue.push(...this.additionalMonitoringIndicator.doModelValidation().issue);
         }
-        if (this["_specialMeasures"]) {
-            this._specialMeasures.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["specialMeasures"]) {
+            this.specialMeasures.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["paediatricUseIndicator"]) {
-            results.push(...this.paediatricUseIndicator.doModelValidation());
+            outcome.issue.push(...this.paediatricUseIndicator.doModelValidation().issue);
         }
         if (this["productClassification"]) {
-            this.productClassification.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.productClassification.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["marketingStatus"]) {
-            this.marketingStatus.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.marketingStatus.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["pharmaceuticalProduct"]) {
-            this.pharmaceuticalProduct.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.pharmaceuticalProduct.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["packagedMedicinalProduct"]) {
-            this.packagedMedicinalProduct.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.packagedMedicinalProduct.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["attachedDocument"]) {
-            this.attachedDocument.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.attachedDocument.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["masterFile"]) {
-            this.masterFile.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.masterFile.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["clinicalTrial"]) {
-            this.clinicalTrial.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.clinicalTrial.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if ((!this["name"]) || (this["name"].length === 0)) {
-            results.push(["name", 'Missing required element: MedicinalProduct.name']);
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.MedicinalProductName[] fhir: MedicinalProduct.name:name", }));
+        }
+        else if (!Array.isArray(this.name)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property name:fhir.MedicinalProductName[] fhir: MedicinalProduct.name:name", }));
+        }
+        else if (this.name.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.MedicinalProductName[] fhir: MedicinalProduct.name:name", }));
         }
         if (this["name"]) {
-            this.name.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.name.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["crossReference"]) {
-            this.crossReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.crossReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["manufacturingBusinessOperation"]) {
-            this.manufacturingBusinessOperation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.manufacturingBusinessOperation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["specialDesignation"]) {
-            this.specialDesignation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.specialDesignation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=MedicinalProduct.js.map

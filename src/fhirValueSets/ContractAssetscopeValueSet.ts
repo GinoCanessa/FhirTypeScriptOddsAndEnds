@@ -27,9 +27,3 @@ export type ContractAssetscopeValueSetType = typeof ContractAssetscopeValueSet;
 /**
  * This value set contract specific codes for asset scope.
  */
-export enum ContractAssetscopeValueSetEnum {
-  /**
-   * thing: To be completed
-   */
-  Thing = "thing",
-}

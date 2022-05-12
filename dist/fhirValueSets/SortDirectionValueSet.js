@@ -27,15 +27,4 @@ export const SortDirectionValueSet = {
 /**
  * The possible sort directions, ascending or descending.
  */
-export var SortDirectionValueSetEnum;
-(function (SortDirectionValueSetEnum) {
-    /**
-     * ascending: Sort by the value ascending, so that lower values appear first.
-     */
-    SortDirectionValueSetEnum["Ascending"] = "ascending";
-    /**
-     * descending: Sort by the value descending, so that lower values appear last.
-     */
-    SortDirectionValueSetEnum["Descending"] = "descending";
-})(SortDirectionValueSetEnum || (SortDirectionValueSetEnum = {}));
 //# sourceMappingURL=SortDirectionValueSet.js.map

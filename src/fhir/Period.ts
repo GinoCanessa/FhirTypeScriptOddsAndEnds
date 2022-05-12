@@ -3,68 +3,58 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Period
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A time period defined by a start and end date and optionally time.
+ * Valid arguments for the Period type.
  */
-export type IPeriod = fhir.IFhirElement & { 
+export interface PeriodArgs extends fhir.FhirElementArgs {
   /**
    * If the low element is missing, the meaning is that the low boundary is not known.
    */
-  start?: string|undefined;
-  /**
-   * Extended properties for primitive element: Period.start
-   */
-  _start?: fhir.IFhirElement|undefined;
+  start?: fhir.FhirDateTime|string|undefined;
   /**
    * The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03.
    */
-  end?: string|undefined;
-  /**
-   * Extended properties for primitive element: Period.end
-   */
-  _end?: fhir.IFhirElement|undefined;
+  end?: fhir.FhirDateTime|string|undefined;
 }
 
 /**
  * A time period defined by a start and end date and optionally time.
  */
-export class Period extends fhir.FhirElement implements IPeriod {
+export class Period extends fhir.FhirElement {
+  readonly __dataType:string = 'Period';
   /**
    * If the low element is missing, the meaning is that the low boundary is not known.
    */
-  public start?: string|undefined;
-  /**
-   * Extended properties for primitive element: Period.start
-   */
-  public _start?: fhir.FhirElement|undefined;
+  public start?: fhir.FhirDateTime|undefined;
   /**
    * The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03.
    */
-  public end?: string|undefined;
-  /**
-   * Extended properties for primitive element: Period.end
-   */
-  public _end?: fhir.FhirElement|undefined;
+  public end?: fhir.FhirDateTime|undefined;
   /**
    * Default constructor for Period - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IPeriod> = { }) {
-    super(source);
-    if (source['start']) { this.start = source.start; }
-    if (source['_start']) { this._start = new fhir.FhirElement(source._start!); }
-    if (source['end']) { this.end = source.end; }
-    if (source['_end']) { this._end = new fhir.FhirElement(source._end!); }
+  constructor(source:Partial<PeriodArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['start']) { this.start = new fhir.FhirDateTime({value: source.start}); }
+    if (source['end']) { this.end = new fhir.FhirDateTime({value: source.end}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_start"]) { results.push(...this._start.doModelValidation()); }
-    if (this["_end"]) { results.push(...this._end.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["start"]) { outcome.issue!.push(...this.start.doModelValidation().issue!); }
+    if (this["end"]) { outcome.issue!.push(...this.end.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

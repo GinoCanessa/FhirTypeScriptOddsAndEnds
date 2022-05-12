@@ -83,43 +83,4 @@ export const CarePlanActivityStatusValueSet = {
 /**
  * Codes that reflect the current state of a care plan activity within its overall life cycle.
  */
-export var CarePlanActivityStatusValueSetEnum;
-(function (CarePlanActivityStatusValueSetEnum) {
-    /**
-     * cancelled: The planned care plan activity has been withdrawn.
-     */
-    CarePlanActivityStatusValueSetEnum["Cancelled"] = "cancelled";
-    /**
-     * completed: Care plan activity has been completed (more or less) as planned.
-     */
-    CarePlanActivityStatusValueSetEnum["Completed"] = "completed";
-    /**
-     * entered-in-error: Care plan activity was entered in error and voided.
-     */
-    CarePlanActivityStatusValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * in-progress: Care plan activity has been started but is not yet complete.
-     */
-    CarePlanActivityStatusValueSetEnum["InProgress"] = "in-progress";
-    /**
-     * not-started: Care plan activity is planned but no action has yet been taken.
-     */
-    CarePlanActivityStatusValueSetEnum["NotStarted"] = "not-started";
-    /**
-     * on-hold: Care plan activity was started but has temporarily ceased with an expectation of resumption at a future time.
-     */
-    CarePlanActivityStatusValueSetEnum["OnHold"] = "on-hold";
-    /**
-     * scheduled: Appointment or other booking has occurred but activity has not yet begun.
-     */
-    CarePlanActivityStatusValueSetEnum["Scheduled"] = "scheduled";
-    /**
-     * stopped: The planned care plan activity has been ended prior to completion after the activity was started.
-     */
-    CarePlanActivityStatusValueSetEnum["Stopped"] = "stopped";
-    /**
-     * unknown: The current state of the care plan activity is not known.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which one.
-     */
-    CarePlanActivityStatusValueSetEnum["Unknown"] = "unknown";
-})(CarePlanActivityStatusValueSetEnum || (CarePlanActivityStatusValueSetEnum = {}));
 //# sourceMappingURL=CarePlanActivityStatusValueSet.js.map

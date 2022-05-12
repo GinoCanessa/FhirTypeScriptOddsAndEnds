@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: MarketingStatus
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.
  */
@@ -10,8 +12,9 @@ export class MarketingStatus extends fhir.BackboneElement {
     /**
      * Default constructor for MarketingStatus - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MarketingStatus';
         if (source['country']) {
             this.country = new fhir.CodeableConcept(source.country);
         }
@@ -34,42 +37,45 @@ export class MarketingStatus extends fhir.BackboneElement {
             this.dateRange = null;
         }
         if (source['restoreDate']) {
-            this.restoreDate = source.restoreDate;
-        }
-        if (source['_restoreDate']) {
-            this._restoreDate = new fhir.FhirElement(source._restoreDate);
+            this.restoreDate = new fhir.FhirDateTime({ value: source.restoreDate });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["country"]) {
-            results.push(["country", 'Missing required element: MarketingStatus.country']);
+        var outcome = super.doModelValidation();
+        if (!this['country']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property country:fhir.CodeableConcept fhir: MarketingStatus.country:CodeableConcept", }));
         }
         if (this["country"]) {
-            results.push(...this.country.doModelValidation());
+            outcome.issue.push(...this.country.doModelValidation().issue);
         }
         if (this["jurisdiction"]) {
-            results.push(...this.jurisdiction.doModelValidation());
+            outcome.issue.push(...this.jurisdiction.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: MarketingStatus.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:fhir.CodeableConcept fhir: MarketingStatus.status:CodeableConcept", }));
         }
         if (this["status"]) {
-            results.push(...this.status.doModelValidation());
+            outcome.issue.push(...this.status.doModelValidation().issue);
         }
-        if (!this["dateRange"]) {
-            results.push(["dateRange", 'Missing required element: MarketingStatus.dateRange']);
+        if (!this['dateRange']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property dateRange:fhir.Period fhir: MarketingStatus.dateRange:Period", }));
         }
         if (this["dateRange"]) {
-            results.push(...this.dateRange.doModelValidation());
+            outcome.issue.push(...this.dateRange.doModelValidation().issue);
         }
-        if (this["_restoreDate"]) {
-            results.push(...this._restoreDate.doModelValidation());
+        if (this["restoreDate"]) {
+            outcome.issue.push(...this.restoreDate.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=MarketingStatus.js.map

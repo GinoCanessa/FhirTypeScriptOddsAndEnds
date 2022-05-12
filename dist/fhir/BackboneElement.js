@@ -10,8 +10,13 @@ export class BackboneElement extends fhir.FhirElement {
     /**
      * Default constructor for BackboneElement - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'BackboneElement';
+        /**
+         * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+         */
+        this.modifierExtension = [];
         if (source['modifierExtension']) {
             this.modifierExtension = source.modifierExtension.map((x) => new fhir.Extension(x));
         }
@@ -20,11 +25,17 @@ export class BackboneElement extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["modifierExtension"]) {
-            this.modifierExtension.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.modifierExtension.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=BackboneElement.js.map

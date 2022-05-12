@@ -19,11 +19,4 @@ export const ContractDecisionModeValueSet = {
 /**
  * This value set contract specific codes for decision modes.
  */
-export var ContractDecisionModeValueSetEnum;
-(function (ContractDecisionModeValueSetEnum) {
-    /**
-     * policy: To be completed
-     */
-    ContractDecisionModeValueSetEnum["Policy"] = "policy";
-})(ContractDecisionModeValueSetEnum || (ContractDecisionModeValueSetEnum = {}));
 //# sourceMappingURL=ContractDecisionModeValueSet.js.map

@@ -3,8 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MessageHeader
 import * as fhir from '../fhir.js';
-import { ResponseCodeValueSet } from '../fhirValueSets/ResponseCodeValueSet.js';
-import { MessageReasonEncounterValueSet } from '../fhirValueSets/MessageReasonEncounterValueSet.js';
+import { ResponseCodeValueSet, } from '../fhirValueSets/ResponseCodeValueSet.js';
+import { MessageReasonEncounterValueSet, } from '../fhirValueSets/MessageReasonEncounterValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * There SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system.
  */
@@ -12,25 +14,20 @@ export class MessageHeaderDestination extends fhir.BackboneElement {
     /**
      * Default constructor for MessageHeaderDestination - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MessageHeaderDestination';
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['target']) {
             this.target = new fhir.Reference(source.target);
         }
         if (source['endpoint']) {
-            this.endpoint = source.endpoint;
+            this.endpoint = new fhir.FhirUrl({ value: source.endpoint });
         }
         else {
             this.endpoint = null;
-        }
-        if (source['_endpoint']) {
-            this._endpoint = new fhir.FhirElement(source._endpoint);
         }
         if (source['receiver']) {
             this.receiver = new fhir.Reference(source.receiver);
@@ -40,23 +37,29 @@ export class MessageHeaderDestination extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
         if (this["target"]) {
-            results.push(...this.target.doModelValidation());
+            outcome.issue.push(...this.target.doModelValidation().issue);
         }
-        if (!this["endpoint"]) {
-            results.push(["endpoint", 'Missing required element: MessageHeader.destination.endpoint']);
+        if (!this['endpoint']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property endpoint:fhir.FhirUrl fhir: MessageHeader.destination.endpoint:url", }));
         }
-        if (this["_endpoint"]) {
-            results.push(...this._endpoint.doModelValidation());
+        if (this["endpoint"]) {
+            outcome.issue.push(...this.endpoint.doModelValidation().issue);
         }
         if (this["receiver"]) {
-            results.push(...this.receiver.doModelValidation());
+            outcome.issue.push(...this.receiver.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -66,63 +69,58 @@ export class MessageHeaderSource extends fhir.BackboneElement {
     /**
      * Default constructor for MessageHeaderSource - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MessageHeaderSource';
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['software']) {
-            this.software = source.software;
-        }
-        if (source['_software']) {
-            this._software = new fhir.FhirElement(source._software);
+            this.software = new fhir.FhirString({ value: source.software });
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['contact']) {
             this.contact = new fhir.ContactPoint(source.contact);
         }
         if (source['endpoint']) {
-            this.endpoint = source.endpoint;
+            this.endpoint = new fhir.FhirUrl({ value: source.endpoint });
         }
         else {
             this.endpoint = null;
-        }
-        if (source['_endpoint']) {
-            this._endpoint = new fhir.FhirElement(source._endpoint);
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_software"]) {
-            results.push(...this._software.doModelValidation());
+        if (this["software"]) {
+            outcome.issue.push(...this.software.doModelValidation().issue);
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
         if (this["contact"]) {
-            results.push(...this.contact.doModelValidation());
+            outcome.issue.push(...this.contact.doModelValidation().issue);
         }
-        if (!this["endpoint"]) {
-            results.push(["endpoint", 'Missing required element: MessageHeader.source.endpoint']);
+        if (!this['endpoint']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property endpoint:fhir.FhirUrl fhir: MessageHeader.source.endpoint:url", }));
         }
-        if (this["_endpoint"]) {
-            results.push(...this._endpoint.doModelValidation());
+        if (this["endpoint"]) {
+            outcome.issue.push(...this.endpoint.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -132,25 +130,20 @@ export class MessageHeaderResponse extends fhir.BackboneElement {
     /**
      * Default constructor for MessageHeaderResponse - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MessageHeaderResponse';
         if (source['identifier']) {
-            this.identifier = source.identifier;
+            this.identifier = new fhir.FhirId({ value: source.identifier });
         }
         else {
             this.identifier = null;
-        }
-        if (source['_identifier']) {
-            this._identifier = new fhir.FhirElement(source._identifier);
         }
         if (source['code']) {
             this.code = source.code;
         }
         else {
             this.code = null;
-        }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
         }
         if (source['details']) {
             this.details = new fhir.Reference(source.details);
@@ -166,23 +159,26 @@ export class MessageHeaderResponse extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["identifier"]) {
-            results.push(["identifier", 'Missing required element: MessageHeader.response.identifier']);
+        var outcome = super.doModelValidation();
+        if (!this['identifier']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property identifier:fhir.FhirId fhir: MessageHeader.response.identifier:id", }));
         }
-        if (this["_identifier"]) {
-            results.push(...this._identifier.doModelValidation());
+        if (this["identifier"]) {
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: MessageHeader.response.code']);
-        }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:ResponseCodeValueSetEnum fhir: MessageHeader.response.code:code", }));
         }
         if (this["details"]) {
-            results.push(...this.details.doModelValidation());
+            outcome.issue.push(...this.details.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -192,17 +188,30 @@ export class MessageHeader extends fhir.DomainResource {
     /**
      * Default constructor for MessageHeader - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MessageHeader';
+        this.__eventIsChoice = true;
+        /**
+         * There SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system.
+         */
+        this.destination = [];
+        /**
+         * The data is defined where the transaction type is defined. The transaction data is always included in the bundle that is the full message.  Only the root resource is specified.  The resources it references should be contained in the bundle but are not also listed here.  Multiple repetitions are allowed to cater for merges and other situations with multiple focal targets.
+         */
+        this.focus = [];
         this.resourceType = 'MessageHeader';
-        if (source['eventCoding']) {
-            this.eventCoding = new fhir.Coding(source.eventCoding);
+        if (source['event']) {
+            this.event = source.event;
         }
-        if (source['eventUri']) {
-            this.eventUri = source.eventUri;
+        else if (source['eventCoding']) {
+            this.event = new fhir.Coding(source.eventCoding);
         }
-        if (source['_eventUri']) {
-            this._eventUri = new fhir.FhirElement(source._eventUri);
+        else if (source['eventUri']) {
+            this.event = new fhir.FhirUri({ value: source.eventUri });
+        }
+        else {
+            this.event = null;
         }
         if (source['destination']) {
             this.destination = source.destination.map((x) => new fhir.MessageHeaderDestination(x));
@@ -235,10 +244,7 @@ export class MessageHeader extends fhir.DomainResource {
             this.focus = source.focus.map((x) => new fhir.Reference(x));
         }
         if (source['definition']) {
-            this.definition = source.definition;
-        }
-        if (source['_definition']) {
-            this._definition = new fhir.FhirElement(source._definition);
+            this.definition = new fhir.FhirCanonical({ value: source.definition });
         }
     }
     /**
@@ -251,50 +257,53 @@ export class MessageHeader extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: MessageHeader.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'MessageHeader' fhir: MessageHeader.resourceType:'MessageHeader'", }));
         }
-        if (this["eventCoding"]) {
-            results.push(...this.eventCoding.doModelValidation());
-        }
-        if (this["_eventUri"]) {
-            results.push(...this._eventUri.doModelValidation());
+        if (!this['event']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property event: fhir: MessageHeader.event[x]:", }));
         }
         if (this["destination"]) {
-            this.destination.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.destination.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["sender"]) {
-            results.push(...this.sender.doModelValidation());
+            outcome.issue.push(...this.sender.doModelValidation().issue);
         }
         if (this["enterer"]) {
-            results.push(...this.enterer.doModelValidation());
+            outcome.issue.push(...this.enterer.doModelValidation().issue);
         }
         if (this["author"]) {
-            results.push(...this.author.doModelValidation());
+            outcome.issue.push(...this.author.doModelValidation().issue);
         }
-        if (!this["source"]) {
-            results.push(["source", 'Missing required element: MessageHeader.source']);
+        if (!this['source']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property source:fhir.MessageHeaderSource fhir: MessageHeader.source:source", }));
         }
         if (this["source"]) {
-            results.push(...this.source.doModelValidation());
+            outcome.issue.push(...this.source.doModelValidation().issue);
         }
         if (this["responsible"]) {
-            results.push(...this.responsible.doModelValidation());
+            outcome.issue.push(...this.responsible.doModelValidation().issue);
         }
         if (this["reason"]) {
-            results.push(...this.reason.doModelValidation());
+            outcome.issue.push(...this.reason.doModelValidation().issue);
         }
         if (this["response"]) {
-            results.push(...this.response.doModelValidation());
+            outcome.issue.push(...this.response.doModelValidation().issue);
         }
         if (this["focus"]) {
-            this.focus.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.focus.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_definition"]) {
-            results.push(...this._definition.doModelValidation());
+        if (this["definition"]) {
+            outcome.issue.push(...this.definition.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=MessageHeader.js.map

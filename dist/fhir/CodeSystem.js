@@ -3,13 +3,15 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: CodeSystem
 import * as fhir from '../fhir.js';
-import { FilterOperatorValueSet } from '../fhirValueSets/FilterOperatorValueSet.js';
-import { ConceptPropertyTypeValueSet } from '../fhirValueSets/ConceptPropertyTypeValueSet.js';
-import { LanguagesValueSet } from '../fhirValueSets/LanguagesValueSet.js';
-import { DesignationUseValueSet } from '../fhirValueSets/DesignationUseValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { CodesystemHierarchyMeaningValueSet } from '../fhirValueSets/CodesystemHierarchyMeaningValueSet.js';
-import { CodesystemContentModeValueSet } from '../fhirValueSets/CodesystemContentModeValueSet.js';
+import { FilterOperatorValueSet, } from '../fhirValueSets/FilterOperatorValueSet.js';
+import { ConceptPropertyTypeValueSet, } from '../fhirValueSets/ConceptPropertyTypeValueSet.js';
+import { LanguagesValueSet, } from '../fhirValueSets/LanguagesValueSet.js';
+import { DesignationUseValueSet, } from '../fhirValueSets/DesignationUseValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { CodesystemHierarchyMeaningValueSet, } from '../fhirValueSets/CodesystemHierarchyMeaningValueSet.js';
+import { CodesystemContentModeValueSet, } from '../fhirValueSets/CodesystemContentModeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Note that filters defined in code systems usually require custom code on the part of any terminology engine that will make them available for use in value set filters. For this reason, they are generally only seen in high value published terminologies.
  */
@@ -17,40 +19,33 @@ export class CodeSystemFilter extends fhir.BackboneElement {
     /**
      * Default constructor for CodeSystemFilter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CodeSystemFilter';
+        /**
+         * A list of operators that can be used with the filter.
+         */
+        this.operator = [];
         if (source['code']) {
-            this.code = source.code;
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         else {
             this.code = null;
         }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
-        }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['operator']) {
-            this.operator = source.operator.map((x) => (x));
+            this.operator = source.operator.map((x) => x);
         }
         else {
             this.operator = null;
         }
-        if (source['_operator']) {
-            this._operator = source._operator.map((x) => new fhir.FhirElement(x));
-        }
         if (source['value']) {
-            this.value = source.value;
+            this.value = new fhir.FhirString({ value: source.value });
         }
         else {
             this.value = null;
-        }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
         }
     }
     /**
@@ -63,29 +58,38 @@ export class CodeSystemFilter extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: CodeSystem.filter.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.FhirCode fhir: CodeSystem.filter.code:code", }));
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if ((!this["operator"]) || (this["operator"].length === 0)) {
-            results.push(["operator", 'Missing required element: CodeSystem.filter.operator']);
+        if (!this['operator']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property operator:FilterOperatorValueSetEnum[] fhir: CodeSystem.filter.operator:code", }));
         }
-        if (this["_operator"]) {
-            this._operator.forEach((x) => { results.push(...x.doModelValidation()); });
+        else if (!Array.isArray(this.operator)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property operator:FilterOperatorValueSetEnum[] fhir: CodeSystem.filter.operator:code", }));
         }
-        if (!this["value"]) {
-            results.push(["value", 'Missing required element: CodeSystem.filter.value']);
+        else if (this.operator.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property operator:FilterOperatorValueSetEnum[] fhir: CodeSystem.filter.operator:code", }));
         }
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value:fhir.FhirString fhir: CodeSystem.filter.value:string", }));
         }
-        return results;
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
+        }
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -95,37 +99,26 @@ export class CodeSystemProperty extends fhir.BackboneElement {
     /**
      * Default constructor for CodeSystemProperty - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CodeSystemProperty';
         if (source['code']) {
-            this.code = source.code;
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         else {
             this.code = null;
         }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
-        }
         if (source['uri']) {
-            this.uri = source.uri;
-        }
-        if (source['_uri']) {
-            this._uri = new fhir.FhirElement(source._uri);
+            this.uri = new fhir.FhirUri({ value: source.uri });
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['type']) {
             this.type = source.type;
         }
         else {
             this.type = null;
-        }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
         }
     }
     /**
@@ -138,26 +131,29 @@ export class CodeSystemProperty extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: CodeSystem.property.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.FhirCode fhir: CodeSystem.property.code:code", }));
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_uri"]) {
-            results.push(...this._uri.doModelValidation());
+        if (this["uri"]) {
+            outcome.issue.push(...this.uri.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: CodeSystem.property.type']);
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:ConceptPropertyTypeValueSetEnum fhir: CodeSystem.property.type:code", }));
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -167,25 +163,20 @@ export class CodeSystemConceptDesignation extends fhir.BackboneElement {
     /**
      * Default constructor for CodeSystemConceptDesignation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CodeSystemConceptDesignation';
         if (source['language']) {
-            this.language = source.language;
-        }
-        if (source['_language']) {
-            this._language = new fhir.FhirElement(source._language);
+            this.language = new fhir.FhirCode({ value: source.language });
         }
         if (source['use']) {
             this.use = new fhir.Coding(source.use);
         }
         if (source['value']) {
-            this.value = source.value;
+            this.value = new fhir.FhirString({ value: source.value });
         }
         else {
             this.value = null;
-        }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
         }
     }
     /**
@@ -204,20 +195,26 @@ export class CodeSystemConceptDesignation extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_language"]) {
-            results.push(...this._language.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["language"]) {
+            outcome.issue.push(...this.language.doModelValidation().issue);
         }
         if (this["use"]) {
-            results.push(...this.use.doModelValidation());
+            outcome.issue.push(...this.use.doModelValidation().issue);
         }
-        if (!this["value"]) {
-            results.push(["value", 'Missing required element: CodeSystem.concept.designation.value']);
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value:fhir.FhirString fhir: CodeSystem.concept.designation.value:string", }));
         }
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -227,90 +224,65 @@ export class CodeSystemConceptProperty extends fhir.BackboneElement {
     /**
      * Default constructor for CodeSystemConceptProperty - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CodeSystemConceptProperty';
+        this.__valueIsChoice = true;
         if (source['code']) {
-            this.code = source.code;
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         else {
             this.code = null;
         }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['valueCode']) {
-            this.valueCode = source.valueCode;
+        else if (source['valueCode']) {
+            this.value = new fhir.FhirCode({ value: source.valueCode });
         }
-        if (source['_valueCode']) {
-            this._valueCode = new fhir.FhirElement(source._valueCode);
+        else if (source['valueCoding']) {
+            this.value = new fhir.Coding(source.valueCoding);
         }
-        if (source['valueCoding']) {
-            this.valueCoding = new fhir.Coding(source.valueCoding);
+        else if (source['valueString']) {
+            this.value = new fhir.FhirString({ value: source.valueString });
         }
-        if (source['valueString']) {
-            this.valueString = source.valueString;
+        else if (source['valueInteger']) {
+            this.value = new fhir.FhirInteger({ value: source.valueInteger });
         }
-        if (source['_valueString']) {
-            this._valueString = new fhir.FhirElement(source._valueString);
+        else if (source['valueBoolean']) {
+            this.value = new fhir.FhirBoolean({ value: source.valueBoolean });
         }
-        if (source['valueInteger']) {
-            this.valueInteger = source.valueInteger;
+        else if (source['valueDateTime']) {
+            this.value = new fhir.FhirDateTime({ value: source.valueDateTime });
         }
-        if (source['_valueInteger']) {
-            this._valueInteger = new fhir.FhirElement(source._valueInteger);
+        else if (source['valueDecimal']) {
+            this.value = new fhir.FhirDecimal({ value: source.valueDecimal });
         }
-        if (source['valueBoolean']) {
-            this.valueBoolean = source.valueBoolean;
-        }
-        if (source['_valueBoolean']) {
-            this._valueBoolean = new fhir.FhirElement(source._valueBoolean);
-        }
-        if (source['valueDateTime']) {
-            this.valueDateTime = source.valueDateTime;
-        }
-        if (source['_valueDateTime']) {
-            this._valueDateTime = new fhir.FhirElement(source._valueDateTime);
-        }
-        if (source['valueDecimal']) {
-            this.valueDecimal = source.valueDecimal;
-        }
-        if (source['_valueDecimal']) {
-            this._valueDecimal = new fhir.FhirElement(source._valueDecimal);
+        else {
+            this.value = null;
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: CodeSystem.concept.property.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.FhirCode fhir: CodeSystem.concept.property.code:code", }));
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_valueCode"]) {
-            results.push(...this._valueCode.doModelValidation());
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value: fhir: CodeSystem.concept.property.value[x]:", }));
         }
-        if (this["valueCoding"]) {
-            results.push(...this.valueCoding.doModelValidation());
-        }
-        if (this["_valueString"]) {
-            results.push(...this._valueString.doModelValidation());
-        }
-        if (this["_valueInteger"]) {
-            results.push(...this._valueInteger.doModelValidation());
-        }
-        if (this["_valueBoolean"]) {
-            results.push(...this._valueBoolean.doModelValidation());
-        }
-        if (this["_valueDateTime"]) {
-            results.push(...this._valueDateTime.doModelValidation());
-        }
-        if (this["_valueDecimal"]) {
-            results.push(...this._valueDecimal.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -320,28 +292,32 @@ export class CodeSystemConcept extends fhir.BackboneElement {
     /**
      * Default constructor for CodeSystemConcept - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CodeSystemConcept';
+        /**
+         * Concepts have both a ```display``` and an array of ```designation```. The display is equivalent to a special designation with an implied ```designation.use``` of "primary code" and a language equal to the [Resource Language](resource.html#language).
+         */
+        this.designation = [];
+        /**
+         * A property value for this concept.
+         */
+        this.property = [];
+        /**
+         * Defines children of a concept to produce a hierarchy of concepts. The nature of the relationships is variable (is-a/contains/categorizes) - see hierarchyMeaning.
+         */
+        this.concept = [];
         if (source['code']) {
-            this.code = source.code;
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         else {
             this.code = null;
         }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
-        }
         if (source['display']) {
-            this.display = source.display;
-        }
-        if (source['_display']) {
-            this._display = new fhir.FhirElement(source._display);
+            this.display = new fhir.FhirString({ value: source.display });
         }
         if (source['definition']) {
-            this.definition = source.definition;
-        }
-        if (source['_definition']) {
-            this._definition = new fhir.FhirElement(source._definition);
+            this.definition = new fhir.FhirString({ value: source.definition });
         }
         if (source['designation']) {
             this.designation = source.designation.map((x) => new fhir.CodeSystemConceptDesignation(x));
@@ -357,29 +333,35 @@ export class CodeSystemConcept extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: CodeSystem.concept.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.FhirCode fhir: CodeSystem.concept.code:code", }));
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_display"]) {
-            results.push(...this._display.doModelValidation());
+        if (this["display"]) {
+            outcome.issue.push(...this.display.doModelValidation().issue);
         }
-        if (this["_definition"]) {
-            results.push(...this._definition.doModelValidation());
+        if (this["definition"]) {
+            outcome.issue.push(...this.definition.doModelValidation().issue);
         }
         if (this["designation"]) {
-            this.designation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.designation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["property"]) {
-            this.property.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.property.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["concept"]) {
-            this.concept.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.concept.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -389,35 +371,52 @@ export class CodeSystem extends fhir.DomainResource {
     /**
      * Default constructor for CodeSystem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CodeSystem';
+        /**
+         * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this code system outside of FHIR, where it is not possible to use the logical URI.  Note that HL7 defines at least three identifiers for many of its code systems - the FHIR canonical URL, the OID and the V2 Table 0396 mnemonic code.
+         */
+        this.identifier = [];
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the code system to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * Note that filters defined in code systems usually require custom code on the part of any terminology engine that will make them available for use in value set filters. For this reason, they are generally only seen in high value published terminologies.
+         */
+        this.filter = [];
+        /**
+         * A property defines an additional slot through which additional information can be provided about a concept.
+         */
+        this.property = [];
+        /**
+         * If this is empty, it means that the code system resource does not represent the content of the code system.
+         */
+        this.concept = [];
         this.resourceType = 'CodeSystem';
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['status']) {
             this.status = source.status;
@@ -425,35 +424,20 @@ export class CodeSystem extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
-        }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -462,46 +446,25 @@ export class CodeSystem extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['caseSensitive']) {
-            this.caseSensitive = source.caseSensitive;
-        }
-        if (source['_caseSensitive']) {
-            this._caseSensitive = new fhir.FhirElement(source._caseSensitive);
+            this.caseSensitive = new fhir.FhirBoolean({ value: source.caseSensitive });
         }
         if (source['valueSet']) {
-            this.valueSet = source.valueSet;
-        }
-        if (source['_valueSet']) {
-            this._valueSet = new fhir.FhirElement(source._valueSet);
+            this.valueSet = new fhir.FhirCanonical({ value: source.valueSet });
         }
         if (source['hierarchyMeaning']) {
             this.hierarchyMeaning = source.hierarchyMeaning;
         }
-        if (source['_hierarchyMeaning']) {
-            this._hierarchyMeaning = new fhir.FhirElement(source._hierarchyMeaning);
-        }
         if (source['compositional']) {
-            this.compositional = source.compositional;
-        }
-        if (source['_compositional']) {
-            this._compositional = new fhir.FhirElement(source._compositional);
+            this.compositional = new fhir.FhirBoolean({ value: source.compositional });
         }
         if (source['versionNeeded']) {
-            this.versionNeeded = source.versionNeeded;
-        }
-        if (source['_versionNeeded']) {
-            this._versionNeeded = new fhir.FhirElement(source._versionNeeded);
+            this.versionNeeded = new fhir.FhirBoolean({ value: source.versionNeeded });
         }
         if (source['content']) {
             this.content = source.content;
@@ -509,20 +472,11 @@ export class CodeSystem extends fhir.DomainResource {
         else {
             this.content = null;
         }
-        if (source['_content']) {
-            this._content = new fhir.FhirElement(source._content);
-        }
         if (source['supplements']) {
-            this.supplements = source.supplements;
-        }
-        if (source['_supplements']) {
-            this._supplements = new fhir.FhirElement(source._supplements);
+            this.supplements = new fhir.FhirCanonical({ value: source.supplements });
         }
         if (source['count']) {
-            this.count = source.count;
-        }
-        if (source['_count']) {
-            this._count = new fhir.FhirElement(source._count);
+            this.count = new fhir.FhirUnsignedInt({ value: source.count });
         }
         if (source['filter']) {
             this.filter = source.filter.map((x) => new fhir.CodeSystemFilter(x));
@@ -556,95 +510,92 @@ export class CodeSystem extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: CodeSystem.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'CodeSystem' fhir: CodeSystem.resourceType:'CodeSystem'", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: CodeSystem.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: CodeSystem.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
-        if (this["_caseSensitive"]) {
-            results.push(...this._caseSensitive.doModelValidation());
+        if (this["caseSensitive"]) {
+            outcome.issue.push(...this.caseSensitive.doModelValidation().issue);
         }
-        if (this["_valueSet"]) {
-            results.push(...this._valueSet.doModelValidation());
+        if (this["valueSet"]) {
+            outcome.issue.push(...this.valueSet.doModelValidation().issue);
         }
-        if (this["_hierarchyMeaning"]) {
-            results.push(...this._hierarchyMeaning.doModelValidation());
+        if (this["compositional"]) {
+            outcome.issue.push(...this.compositional.doModelValidation().issue);
         }
-        if (this["_compositional"]) {
-            results.push(...this._compositional.doModelValidation());
+        if (this["versionNeeded"]) {
+            outcome.issue.push(...this.versionNeeded.doModelValidation().issue);
         }
-        if (this["_versionNeeded"]) {
-            results.push(...this._versionNeeded.doModelValidation());
+        if (!this['content']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property content:CodesystemContentModeValueSetEnum fhir: CodeSystem.content:code", }));
         }
-        if (!this["content"]) {
-            results.push(["content", 'Missing required element: CodeSystem.content']);
+        if (this["supplements"]) {
+            outcome.issue.push(...this.supplements.doModelValidation().issue);
         }
-        if (this["_content"]) {
-            results.push(...this._content.doModelValidation());
-        }
-        if (this["_supplements"]) {
-            results.push(...this._supplements.doModelValidation());
-        }
-        if (this["_count"]) {
-            results.push(...this._count.doModelValidation());
+        if (this["count"]) {
+            outcome.issue.push(...this.count.doModelValidation().issue);
         }
         if (this["filter"]) {
-            this.filter.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.filter.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["property"]) {
-            this.property.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.property.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["concept"]) {
-            this.concept.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.concept.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=CodeSystem.js.map

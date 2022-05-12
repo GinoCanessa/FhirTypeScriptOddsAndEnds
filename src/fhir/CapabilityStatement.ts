@@ -3,765 +3,138 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: CapabilityStatement
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { RestfulSecurityServiceValueSet, RestfulSecurityServiceValueSetType, RestfulSecurityServiceValueSetEnum } from '../fhirValueSets/RestfulSecurityServiceValueSet.js'
-import { TypeRestfulInteractionValueSet, TypeRestfulInteractionValueSetType, TypeRestfulInteractionValueSetEnum } from '../fhirValueSets/TypeRestfulInteractionValueSet.js'
-import { SearchParamTypeValueSet, SearchParamTypeValueSetType, SearchParamTypeValueSetEnum } from '../fhirValueSets/SearchParamTypeValueSet.js'
-import { ResourceTypesValueSet, ResourceTypesValueSetType, ResourceTypesValueSetEnum } from '../fhirValueSets/ResourceTypesValueSet.js'
-import { VersioningPolicyValueSet, VersioningPolicyValueSetType, VersioningPolicyValueSetEnum } from '../fhirValueSets/VersioningPolicyValueSet.js'
-import { ConditionalReadStatusValueSet, ConditionalReadStatusValueSetType, ConditionalReadStatusValueSetEnum } from '../fhirValueSets/ConditionalReadStatusValueSet.js'
-import { ConditionalDeleteStatusValueSet, ConditionalDeleteStatusValueSetType, ConditionalDeleteStatusValueSetEnum } from '../fhirValueSets/ConditionalDeleteStatusValueSet.js'
-import { ReferenceHandlingPolicyValueSet, ReferenceHandlingPolicyValueSetType, ReferenceHandlingPolicyValueSetEnum } from '../fhirValueSets/ReferenceHandlingPolicyValueSet.js'
-import { SystemRestfulInteractionValueSet, SystemRestfulInteractionValueSetType, SystemRestfulInteractionValueSetEnum } from '../fhirValueSets/SystemRestfulInteractionValueSet.js'
-import { RestfulCapabilityModeValueSet, RestfulCapabilityModeValueSetType, RestfulCapabilityModeValueSetEnum } from '../fhirValueSets/RestfulCapabilityModeValueSet.js'
-import { MessageTransportValueSet, MessageTransportValueSetType, MessageTransportValueSetEnum } from '../fhirValueSets/MessageTransportValueSet.js'
-import { EventCapabilityModeValueSet, EventCapabilityModeValueSetType, EventCapabilityModeValueSetEnum } from '../fhirValueSets/EventCapabilityModeValueSet.js'
-import { DocumentModeValueSet, DocumentModeValueSetType, DocumentModeValueSetEnum } from '../fhirValueSets/DocumentModeValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-import { CapabilityStatementKindValueSet, CapabilityStatementKindValueSetType, CapabilityStatementKindValueSetEnum } from '../fhirValueSets/CapabilityStatementKindValueSet.js'
-import { FHIRVersionValueSet, FHIRVersionValueSetType, FHIRVersionValueSetEnum } from '../fhirValueSets/FHIRVersionValueSet.js'
-
+import { RestfulSecurityServiceValueSet, RestfulSecurityServiceValueSetType,} from '../fhirValueSets/RestfulSecurityServiceValueSet.js';
+import { RestfulSecurityServiceValueSetEnum } from '../valueSetEnums.js';
+import { TypeRestfulInteractionValueSet, TypeRestfulInteractionValueSetType,} from '../fhirValueSets/TypeRestfulInteractionValueSet.js';
+import { TypeRestfulInteractionValueSetEnum } from '../valueSetEnums.js';
+import { SearchParamTypeValueSet, SearchParamTypeValueSetType,} from '../fhirValueSets/SearchParamTypeValueSet.js';
+import { SearchParamTypeValueSetEnum } from '../valueSetEnums.js';
+import { ResourceTypesValueSet, ResourceTypesValueSetType,} from '../fhirValueSets/ResourceTypesValueSet.js';
+import { ResourceTypesValueSetEnum } from '../valueSetEnums.js';
+import { VersioningPolicyValueSet, VersioningPolicyValueSetType,} from '../fhirValueSets/VersioningPolicyValueSet.js';
+import { VersioningPolicyValueSetEnum } from '../valueSetEnums.js';
+import { ConditionalReadStatusValueSet, ConditionalReadStatusValueSetType,} from '../fhirValueSets/ConditionalReadStatusValueSet.js';
+import { ConditionalReadStatusValueSetEnum } from '../valueSetEnums.js';
+import { ConditionalDeleteStatusValueSet, ConditionalDeleteStatusValueSetType,} from '../fhirValueSets/ConditionalDeleteStatusValueSet.js';
+import { ConditionalDeleteStatusValueSetEnum } from '../valueSetEnums.js';
+import { ReferenceHandlingPolicyValueSet, ReferenceHandlingPolicyValueSetType,} from '../fhirValueSets/ReferenceHandlingPolicyValueSet.js';
+import { ReferenceHandlingPolicyValueSetEnum } from '../valueSetEnums.js';
+import { SystemRestfulInteractionValueSet, SystemRestfulInteractionValueSetType,} from '../fhirValueSets/SystemRestfulInteractionValueSet.js';
+import { SystemRestfulInteractionValueSetEnum } from '../valueSetEnums.js';
+import { RestfulCapabilityModeValueSet, RestfulCapabilityModeValueSetType,} from '../fhirValueSets/RestfulCapabilityModeValueSet.js';
+import { RestfulCapabilityModeValueSetEnum } from '../valueSetEnums.js';
+import { MessageTransportValueSet, MessageTransportValueSetType,} from '../fhirValueSets/MessageTransportValueSet.js';
+import { MessageTransportValueSetEnum } from '../valueSetEnums.js';
+import { EventCapabilityModeValueSet, EventCapabilityModeValueSetType,} from '../fhirValueSets/EventCapabilityModeValueSet.js';
+import { EventCapabilityModeValueSetEnum } from '../valueSetEnums.js';
+import { DocumentModeValueSet, DocumentModeValueSetType,} from '../fhirValueSets/DocumentModeValueSet.js';
+import { DocumentModeValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { CapabilityStatementKindValueSet, CapabilityStatementKindValueSetType,} from '../fhirValueSets/CapabilityStatementKindValueSet.js';
+import { CapabilityStatementKindValueSetEnum } from '../valueSetEnums.js';
+import { FHIRVersionValueSet, FHIRVersionValueSetType,} from '../fhirValueSets/FHIRVersionValueSet.js';
+import { FHIRVersionValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Software that is covered by this capability statement.  It is used when the capability statement describes the capabilities of a particular software version, independent of an installation.
+ * Valid arguments for the CapabilityStatementSoftware type.
  */
-export type ICapabilityStatementSoftware = fhir.IBackboneElement & { 
+export interface CapabilityStatementSoftwareArgs extends fhir.BackboneElementArgs {
   /**
    * Name the software is known by.
    */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.software.name
-   */
-  _name?: fhir.IFhirElement|undefined;
+  name: fhir.FhirString|string|undefined;
   /**
    * If possible, a version should be specified, as statements are likely to be different for different versions of software.
    */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.software.version
-   */
-  _version?: fhir.IFhirElement|undefined;
+  version?: fhir.FhirString|string|undefined;
   /**
    * Date this version of the software was released.
    */
-  releaseDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.software.releaseDate
-   */
-  _releaseDate?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Identifies a specific implementation instance that is described by the capability statement - i.e. a particular installation, rather than the capabilities of a software program.
- */
-export type ICapabilityStatementImplementation = fhir.IBackboneElement & { 
-  /**
-   * Information about the specific installation that this capability statement relates to.
-   */
-  description: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.implementation.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * An absolute base URL for the implementation.  This forms the base for REST interfaces as well as the mailbox and document interfaces.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.implementation.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * The organization responsible for the management of the instance and oversight of the data on the server at the specified URL.
-   */
-  custodian?: fhir.IReference|undefined;
-}
-
-/**
- * Information about security implementation from an interface perspective - what a client needs to know.
- */
-export type ICapabilityStatementRestSecurity = fhir.IBackboneElement & { 
-  /**
-   * The easiest CORS headers to add are Access-Control-Allow-Origin: * &amp; Access-Control-Request-Method: GET, POST, PUT, DELETE. All servers SHOULD support CORS.
-   */
-  cors?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.security.cors
-   */
-  _cors?: fhir.IFhirElement|undefined;
-  /**
-   * Types of security services that are supported/required by the system.
-   */
-  service?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * General description of how security works.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.security.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-}
-
-/**
- * In general, a Resource will only appear in a CapabilityStatement if the server actually has some capabilities - e.g. there is at least one interaction supported. However interactions can be omitted to support summarization (_summary = true).
- */
-export type ICapabilityStatementRestResourceInteraction = fhir.IBackboneElement & { 
-  /**
-   * Coded identifier of the operation, supported by the system resource.
-   */
-  code: TypeRestfulInteractionValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.interaction.code
-   */
-  _code?: fhir.IFhirElement|undefined;
-  /**
-   * Guidance specific to the implementation of this operation, such as 'delete is a logical delete' or 'updates are only allowed with version id' or 'creates permitted from pre-authorized certificates only'.
-   */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.interaction.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The search parameters should include the control search parameters such as _sort, _count, etc. that also apply to this resource (though many will be listed at [CapabilityStatement.rest.searchParam](capabilitystatement-definitions.html#CapabilityStatement.rest.searchParam)). The behavior of some search parameters may be further described by other code or extension elements, or narrative within the capability statement or linked [SearchParameter](searchparameter.html#) definitions.
- */
-export type ICapabilityStatementRestResourceSearchParam = fhir.IBackboneElement & { 
-  /**
-   * Parameter names cannot overlap with standard parameter names, and standard parameters cannot be redefined.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.searchParam.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This SHOULD be present, and matches refers to a SearchParameter by its canonical URL. If systems wish to document their support for modifiers, comparators, target resource types, and chained parameters, they should do using a search parameter resource. This element SHALL be populated if the search parameter refers to a SearchParameter defined by the FHIR core specification or externally defined IGs.
-   */
-  definition?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.searchParam.definition
-   */
-  _definition?: fhir.IFhirElement|undefined;
-  /**
-   * While this can be looked up from the definition, it is included here as a convenience for systems that autogenerate a query interface based on the server capability statement.  It SHALL be the same as the type in the search parameter definition.
-   */
-  type: SearchParamTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.searchParam.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * This allows documentation of any distinct behaviors about how the search parameter is used.  For example, text matching algorithms.
-   */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.searchParam.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Operations linked from CapabilityStatement.rest.resource.operation must have OperationDefinition.type = true or OperationDefinition.instance = true.    
- * If an operation that is listed in multiple CapabilityStatement.rest.resource.operation (e.g. for different resource types), then clients should understand that the operation is only supported on the specified resource types, and that may be a subset of those listed in OperationDefinition.resource.
- */
-export type ICapabilityStatementRestResourceOperation = fhir.IBackboneElement & { 
-  /**
-   * The name here SHOULD be the same as the name in the definition, unless there is a name clash and the name cannot be used. The name does not include the "$" portion that is always included in the URL.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.operation.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This can be used to build an HTML form to invoke the operation, for instance.
-   */
-  definition: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.operation.definition
-   */
-  _definition?: fhir.IFhirElement|undefined;
-  /**
-   * Documentation that describes anything special about the operation behavior, possibly detailing different behavior for system, type and instance-level invocation of the operation.
-   */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.operation.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Max of one repetition per resource type.
- */
-export type ICapabilityStatementRestResource = fhir.IBackboneElement & { 
-  /**
-   * A type of resource exposed via the restful interface.
-   */
-  type: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * The profile applies to all  resources of this type - i.e. it is the superset of what is supported by the system.
-   */
-  profile?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.profile
-   */
-  _profile?: fhir.IFhirElement|undefined;
-  /**
-   * Supported profiles are different than the profile that applies to a particular resource in .rest.resource.profile. The resource profile is a general statement of what features of the resource are supported overall by the system - the sum total of the facilities it supports. A supported profile is a deeper statement about the functionality of the data and services provided by the server (or used by the client). A typical case is a laboratory system that produces a set of different reports - this is the list of types of data that it publishes. A key aspect of declaring profiles here is the question of how the client converts knowledge that the server publishes this data into working with the data; the client can inspect individual resources to determine whether they conform to a particular profile, but how does it find the ones that do? It does so by searching using the _profile parameter, so any resources listed here must be valid values for the _profile resource (using the identifier in the target profile).
-   */
-  supportedProfile?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.supportedProfile
-   */
-  _supportedProfile?: fhir.IFhirElement[]|undefined;
-  /**
-   * Additional information about the resource type used by the system.
-   */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-  /**
-   * In general, a Resource will only appear in a CapabilityStatement if the server actually has some capabilities - e.g. there is at least one interaction supported. However interactions can be omitted to support summarization (_summary = true).
-   */
-  interaction?: fhir.ICapabilityStatementRestResourceInteraction[]|undefined;
-  /**
-   * If a server supports versionIds correctly, it SHOULD support vread too, but is not required to do so.
-   */
-  versioning?: VersioningPolicyValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.versioning
-   */
-  _versioning?: fhir.IFhirElement|undefined;
-  /**
-   * It is useful to support the vRead operation for current operations, even if past versions aren't available.
-   */
-  readHistory?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.readHistory
-   */
-  _readHistory?: fhir.IFhirElement|undefined;
-  /**
-   * Allowing the clients to create new identities on the server means that the system administrator needs to have confidence that the clients do not create clashing identities between them. Obviously, if there is only one client, this won't happen. While creating identities on the client means that the clients need to be managed, it's much more convenient for many scenarios if such management can be put in place.
-   */
-  updateCreate?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.updateCreate
-   */
-  _updateCreate?: fhir.IFhirElement|undefined;
-  /**
-   * Conditional Create is mainly appropriate for interface engine scripts converting from other formats, such as v2.
-   */
-  conditionalCreate?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.conditionalCreate
-   */
-  _conditionalCreate?: fhir.IFhirElement|undefined;
-  /**
-   * Conditional Read is mainly appropriate for interface engine scripts converting from other formats, such as v2.
-   */
-  conditionalRead?: ConditionalReadStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.conditionalRead
-   */
-  _conditionalRead?: fhir.IFhirElement|undefined;
-  /**
-   * Conditional Update is mainly appropriate for interface engine scripts converting from other formats, such as v2.
-   */
-  conditionalUpdate?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.conditionalUpdate
-   */
-  _conditionalUpdate?: fhir.IFhirElement|undefined;
-  /**
-   * Conditional Delete is mainly appropriate for interface engine scripts converting from other formats, such as v2.
-   */
-  conditionalDelete?: ConditionalDeleteStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.conditionalDelete
-   */
-  _conditionalDelete?: fhir.IFhirElement|undefined;
-  /**
-   * A set of flags that defines how references are supported.
-   */
-  referencePolicy?: ReferenceHandlingPolicyValueSetEnum[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.referencePolicy
-   */
-  _referencePolicy?: fhir.IFhirElement[]|undefined;
-  /**
-   * If this list is empty, the server does not support includes.
-   */
-  searchInclude?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.searchInclude
-   */
-  _searchInclude?: fhir.IFhirElement[]|undefined;
-  /**
-   * If this list is empty, the server does not support reverse includes.
-   */
-  searchRevInclude?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.searchRevInclude
-   */
-  _searchRevInclude?: fhir.IFhirElement[]|undefined;
-  /**
-   * The search parameters should include the control search parameters such as _sort, _count, etc. that also apply to this resource (though many will be listed at [CapabilityStatement.rest.searchParam](capabilitystatement-definitions.html#CapabilityStatement.rest.searchParam)). The behavior of some search parameters may be further described by other code or extension elements, or narrative within the capability statement or linked [SearchParameter](searchparameter.html#) definitions.
-   */
-  searchParam?: fhir.ICapabilityStatementRestResourceSearchParam[]|undefined;
-  /**
-   * Operations linked from CapabilityStatement.rest.resource.operation must have OperationDefinition.type = true or OperationDefinition.instance = true.    
-   * If an operation that is listed in multiple CapabilityStatement.rest.resource.operation (e.g. for different resource types), then clients should understand that the operation is only supported on the specified resource types, and that may be a subset of those listed in OperationDefinition.resource.
-   */
-  operation?: fhir.ICapabilityStatementRestResourceOperation[]|undefined;
-}
-
-/**
- * A specification of restful operations supported by the system.
- */
-export type ICapabilityStatementRestInteraction = fhir.IBackboneElement & { 
-  /**
-   * A coded identifier of the operation, supported by the system.
-   */
-  code: SystemRestfulInteractionValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.interaction.code
-   */
-  _code?: fhir.IFhirElement|undefined;
-  /**
-   * Guidance specific to the implementation of this operation, such as limitations on the kind of transactions allowed, or information about system wide search is implemented.
-   */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.interaction.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Multiple repetitions allow definition of both client and/or server behaviors or possibly behaviors under different configuration settings (for software or requirements statements).
- */
-export type ICapabilityStatementRest = fhir.IBackboneElement & { 
-  /**
-   * Identifies whether this portion of the statement is describing the ability to initiate or receive restful operations.
-   */
-  mode: RestfulCapabilityModeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.mode
-   */
-  _mode?: fhir.IFhirElement|undefined;
-  /**
-   * Information about the system's restful capabilities that apply across all applications, such as security.
-   */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-  /**
-   * Information about security implementation from an interface perspective - what a client needs to know.
-   */
-  security?: fhir.ICapabilityStatementRestSecurity|undefined;
-  /**
-   * Max of one repetition per resource type.
-   */
-  resource?: fhir.ICapabilityStatementRestResource[]|undefined;
-  /**
-   * A specification of restful operations supported by the system.
-   */
-  interaction?: fhir.ICapabilityStatementRestInteraction[]|undefined;
-  /**
-   * Typically, the only search parameters supported for all searches are those that apply to all resources - tags, profiles, text search etc. These search parameters should include the control search parameters such as _sort, _count, etc. that also apply to this resource (though many will be listed at [CapabilityStatement.rest.searchParam](capabilitystatement-definitions.html#CapabilityStatement.rest.searchParam)). The behavior of some search parameters may be further described by other code or extension elements, or narrative within the capability statement or linked [SearchParameter](searchparameter.html#) definitions.
-   */
-  searchParam?: fhir.ICapabilityStatementRestResourceSearchParam[]|undefined;
-  /**
-   * CapabilityStatement.rest.operation is for operations invoked at the system level, or for operations that are supported across multiple resource types. Operations linked from CapabilityStatement.rest.operation must have OperationDefinition.system = true, or more than one Operation.resource.
-   */
-  operation?: fhir.ICapabilityStatementRestResourceOperation[]|undefined;
-  /**
-   * At present, the only defined compartments are at [CompartmentDefinition](compartmentdefinition.html).
-   */
-  compartment?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.compartment
-   */
-  _compartment?: fhir.IFhirElement[]|undefined;
-}
-
-/**
- * An endpoint (network accessible address) to which messages and/or replies are to be sent.
- */
-export type ICapabilityStatementMessagingEndpoint = fhir.IBackboneElement & { 
-  /**
-   * A list of the messaging transport protocol(s) identifiers, supported by this endpoint.
-   */
-  protocol: fhir.ICoding|null;
-  /**
-   * The network address of the endpoint. For solutions that do not use network addresses for routing, it can be just an identifier.
-   */
-  address: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.messaging.endpoint.address
-   */
-  _address?: fhir.IFhirElement|undefined;
-}
-
-/**
- * This is a proposed alternative to the messaging.event structure.
- */
-export type ICapabilityStatementMessagingSupportedMessage = fhir.IBackboneElement & { 
-  /**
-   * The mode of this event declaration - whether application is sender or receiver.
-   */
-  mode: EventCapabilityModeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.messaging.supportedMessage.mode
-   */
-  _mode?: fhir.IFhirElement|undefined;
-  /**
-   * Points to a message definition that identifies the messaging event, message structure, allowed responses, etc.
-   */
-  definition: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.messaging.supportedMessage.definition
-   */
-  _definition?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Multiple repetitions allow the documentation of multiple endpoints per solution.
- */
-export type ICapabilityStatementMessaging = fhir.IBackboneElement & { 
-  /**
-   * An endpoint (network accessible address) to which messages and/or replies are to be sent.
-   */
-  endpoint?: fhir.ICapabilityStatementMessagingEndpoint[]|undefined;
-  /**
-   * If this value is missing then the application does not implement (receiver) or depend on (sender) reliable messaging.
-   */
-  reliableCache?: number|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.messaging.reliableCache
-   */
-  _reliableCache?: fhir.IFhirElement|undefined;
-  /**
-   * Documentation about the system's messaging capabilities for this endpoint not otherwise documented by the capability statement.  For example, the process for becoming an authorized messaging exchange partner.
-   */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.messaging.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-  /**
-   * This is a proposed alternative to the messaging.event structure.
-   */
-  supportedMessage?: fhir.ICapabilityStatementMessagingSupportedMessage[]|undefined;
-}
-
-/**
- * A document definition.
- */
-export type ICapabilityStatementDocument = fhir.IBackboneElement & { 
-  /**
-   * Mode of this document declaration - whether an application is a producer or consumer.
-   */
-  mode: DocumentModeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.document.mode
-   */
-  _mode?: fhir.IFhirElement|undefined;
-  /**
-   * A description of how the application supports or uses the specified document profile.  For example, when documents are created, what action is taken with consumed documents, etc.
-   */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.document.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-  /**
-   * The profile is actually on the Bundle.
-   */
-  profile: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.document.profile
-   */
-  _profile?: fhir.IFhirElement|undefined;
-}
-
-/**
- * A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
- */
-export type ICapabilityStatement = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "CapabilityStatement";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * There may be different capability statement instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the capability statement with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of capability statements that are appropriate for use versus not.This is not intended for use with actual capability statements, but where capability statements are used to describe possible or desired systems.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of capability statements that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the capability statement. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the capability statement is the organization or individual primarily responsible for the maintenance and upkeep of the capability statement. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the capability statement. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the capability statement was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the capability statement as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the capability statement is presumed to be the predominant language in the place the capability statement was created).This does not need to be populated if the description is adequately implied by the software or implementation details.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the capability statement to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * This element does not describe the usage of the capability statement. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this capability statement.
-   */
-  purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.purpose
-   */
-  _purpose?: fhir.IFhirElement|undefined;
-  /**
-   * A copyright statement relating to the capability statement and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the capability statement.
-   */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-  /**
-   * The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).
-   */
-  kind: CapabilityStatementKindValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.kind
-   */
-  _kind?: fhir.IFhirElement|undefined;
-  /**
-   * HL7 defines the following Services: [Terminology Service](terminology-service.html).    
-   * Many [Implementation Guides](http://fhir.org/guides/registry) define additional services.
-   */
-  instantiates?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.instantiates
-   */
-  _instantiates?: fhir.IFhirElement[]|undefined;
-  /**
-   * the contents of any directly or indirectly imported CapabilityStatements SHALL NOT overlap, i.e. they cannot refer to the same rest/resource, operations/name, searchparam/name, interaction/code, messaging/endpoint, document/mode pair.
-   * A capability statement that imports another CapabilityStatement automatically instantiates it too (though this is often not a very useful statement for the kinds of CapabilityStatements that are suitable for importing).
-   */
-  imports?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.imports
-   */
-  _imports?: fhir.IFhirElement[]|undefined;
-  /**
-   * Software that is covered by this capability statement.  It is used when the capability statement describes the capabilities of a particular software version, independent of an installation.
-   */
-  software?: fhir.ICapabilityStatementSoftware|undefined;
-  /**
-   * Identifies a specific implementation instance that is described by the capability statement - i.e. a particular installation, rather than the capabilities of a software program.
-   */
-  implementation?: fhir.ICapabilityStatementImplementation|undefined;
-  /**
-   * Servers may implement multiple versions (see [Managing Multiple Versions](versioning.html), and the [$versions](capabilitystatement-operation-versions.html) operation). If they do, and the CapabilityStatement is requested from the server, then this fhirVersion will be either the version requested, or the server's default version.
-   */
-  fhirVersion: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.fhirVersion
-   */
-  _fhirVersion?: fhir.IFhirElement|undefined;
-  /**
-   * "xml", "json" and "ttl" are allowed, which describe the simple encodings described in the specification (and imply appropriate bundle support). Otherwise, mime types are legal here.
-   */
-  format: string[]|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.format
-   */
-  _format?: fhir.IFhirElement[]|undefined;
-  /**
-   * At present, the patch mime types application/json-patch+json and application/xml-patch+xml are legal. Generally, if a server supports PATCH, it would be expected to support the patch formats and match the formats it supports, but this is not always possible or necessary.
-   */
-  patchFormat?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.patchFormat
-   */
-  _patchFormat?: fhir.IFhirElement[]|undefined;
-  /**
-   * A list of implementation guides that the server does (or should) support in their entirety.
-   */
-  implementationGuide?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.implementationGuide
-   */
-  _implementationGuide?: fhir.IFhirElement[]|undefined;
-  /**
-   * Multiple repetitions allow definition of both client and/or server behaviors or possibly behaviors under different configuration settings (for software or requirements statements).
-   */
-  rest?: fhir.ICapabilityStatementRest[]|undefined;
-  /**
-   * Multiple repetitions allow the documentation of multiple endpoints per solution.
-   */
-  messaging?: fhir.ICapabilityStatementMessaging[]|undefined;
-  /**
-   * A document definition.
-   */
-  document?: fhir.ICapabilityStatementDocument[]|undefined;
+  releaseDate?: fhir.FhirDateTime|string|undefined;
 }
 
 /**
  * Software that is covered by this capability statement.  It is used when the capability statement describes the capabilities of a particular software version, independent of an installation.
  */
-export class CapabilityStatementSoftware extends fhir.BackboneElement implements ICapabilityStatementSoftware {
+export class CapabilityStatementSoftware extends fhir.BackboneElement {
+  readonly __dataType:string = 'CapabilityStatementSoftware';
   /**
    * Name the software is known by.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.software.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * If possible, a version should be specified, as statements are likely to be different for different versions of software.
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.software.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * Date this version of the software was released.
    */
-  public releaseDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.software.releaseDate
-   */
-  public _releaseDate?: fhir.FhirElement|undefined;
+  public releaseDate?: fhir.FhirDateTime|undefined;
   /**
    * Default constructor for CapabilityStatementSoftware - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatementSoftware> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<CapabilityStatementSoftwareArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['releaseDate']) { this.releaseDate = source.releaseDate; }
-    if (source['_releaseDate']) { this._releaseDate = new fhir.FhirElement(source._releaseDate!); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['releaseDate']) { this.releaseDate = new fhir.FhirDateTime({value: source.releaseDate}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: CapabilityStatement.software.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_releaseDate"]) { results.push(...this._releaseDate.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: CapabilityStatement.software.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["releaseDate"]) { outcome.issue!.push(...this.releaseDate.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CapabilityStatementImplementation type.
+ */
+export interface CapabilityStatementImplementationArgs extends fhir.BackboneElementArgs {
+  /**
+   * Information about the specific installation that this capability statement relates to.
+   */
+  description: fhir.FhirString|string|undefined;
+  /**
+   * An absolute base URL for the implementation.  This forms the base for REST interfaces as well as the mailbox and document interfaces.
+   */
+  url?: fhir.FhirUrl|string|undefined;
+  /**
+   * The organization responsible for the management of the instance and oversight of the data on the server at the specified URL.
+   */
+  custodian?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * Identifies a specific implementation instance that is described by the capability statement - i.e. a particular installation, rather than the capabilities of a software program.
  */
-export class CapabilityStatementImplementation extends fhir.BackboneElement implements ICapabilityStatementImplementation {
+export class CapabilityStatementImplementation extends fhir.BackboneElement {
+  readonly __dataType:string = 'CapabilityStatementImplementation';
   /**
    * Information about the specific installation that this capability statement relates to.
    */
-  public description: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.implementation.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description: fhir.FhirString|null;
   /**
    * An absolute base URL for the implementation.  This forms the base for REST interfaces as well as the mailbox and document interfaces.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.implementation.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUrl|undefined;
   /**
    * The organization responsible for the management of the instance and oversight of the data on the server at the specified URL.
    */
@@ -769,62 +142,76 @@ export class CapabilityStatementImplementation extends fhir.BackboneElement impl
   /**
    * Default constructor for CapabilityStatementImplementation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatementImplementation> = { }) {
-    super(source);
-    if (source['description']) { this.description = source.description; }
+  constructor(source:Partial<CapabilityStatementImplementationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
     else { this.description = null; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['custodian']) { this.custodian = new fhir.Reference(source.custodian!); }
+    if (source['url']) { this.url = new fhir.FhirUrl({value: source.url}); }
+    if (source['custodian']) { this.custodian = new fhir.Reference(source.custodian); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["description"]) { results.push(["description",'Missing required element: CapabilityStatement.implementation.description']); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["custodian"]) { results.push(...this.custodian.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['description']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property description:fhir.FhirString fhir: CapabilityStatement.implementation.description:string", }));
+    }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["custodian"]) { outcome.issue!.push(...this.custodian.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CapabilityStatementRestSecurity type.
+ */
+export interface CapabilityStatementRestSecurityArgs extends fhir.BackboneElementArgs {
+  /**
+   * The easiest CORS headers to add are Access-Control-Allow-Origin: * &amp; Access-Control-Request-Method: GET, POST, PUT, DELETE. All servers SHOULD support CORS.
+   */
+  cors?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Types of security services that are supported/required by the system.
+   */
+  service?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * General description of how security works.
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
 }
 
 /**
  * Information about security implementation from an interface perspective - what a client needs to know.
  */
-export class CapabilityStatementRestSecurity extends fhir.BackboneElement implements ICapabilityStatementRestSecurity {
+export class CapabilityStatementRestSecurity extends fhir.BackboneElement {
+  readonly __dataType:string = 'CapabilityStatementRestSecurity';
   /**
    * The easiest CORS headers to add are Access-Control-Allow-Origin: * &amp; Access-Control-Request-Method: GET, POST, PUT, DELETE. All servers SHOULD support CORS.
    */
-  public cors?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.security.cors
-   */
-  public _cors?: fhir.FhirElement|undefined;
+  public cors?: fhir.FhirBoolean|undefined;
   /**
    * Types of security services that are supported/required by the system.
    */
-  public service?: fhir.CodeableConcept[]|undefined;
+  public service?: fhir.CodeableConcept[]|undefined = [];
   /**
    * General description of how security works.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.security.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * Default constructor for CapabilityStatementRestSecurity - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatementRestSecurity> = { }) {
-    super(source);
-    if (source['cors']) { this.cors = source.cors; }
-    if (source['_cors']) { this._cors = new fhir.FhirElement(source._cors!); }
+  constructor(source:Partial<CapabilityStatementRestSecurityArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['cors']) { this.cors = new fhir.FhirBoolean({value: source.cors}); }
     if (source['service']) { this.service = source.service.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
   }
   /**
    * Extensible-bound Value Set for service
@@ -835,45 +222,55 @@ export class CapabilityStatementRestSecurity extends fhir.BackboneElement implem
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_cors"]) { results.push(...this._cors.doModelValidation()); }
-    if (this["service"]) { this.service.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["cors"]) { outcome.issue!.push(...this.cors.doModelValidation().issue!); }
+    if (this["service"]) { this.service.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CapabilityStatementRestResourceInteraction type.
+ */
+export interface CapabilityStatementRestResourceInteractionArgs extends fhir.BackboneElementArgs {
+  /**
+   * Coded identifier of the operation, supported by the system resource.
+   */
+  code: TypeRestfulInteractionValueSetEnum|null;
+  /**
+   * Guidance specific to the implementation of this operation, such as 'delete is a logical delete' or 'updates are only allowed with version id' or 'creates permitted from pre-authorized certificates only'.
+   */
+  documentation?: fhir.FhirMarkdown|string|undefined;
 }
 
 /**
  * In general, a Resource will only appear in a CapabilityStatement if the server actually has some capabilities - e.g. there is at least one interaction supported. However interactions can be omitted to support summarization (_summary = true).
  */
-export class CapabilityStatementRestResourceInteraction extends fhir.BackboneElement implements ICapabilityStatementRestResourceInteraction {
+export class CapabilityStatementRestResourceInteraction extends fhir.BackboneElement {
+  readonly __dataType:string = 'CapabilityStatementRestResourceInteraction';
   /**
    * Coded identifier of the operation, supported by the system resource.
    */
   public code: TypeRestfulInteractionValueSetEnum|null;
   /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.interaction.code
-   */
-  public _code?: fhir.FhirElement|undefined;
-  /**
    * Guidance specific to the implementation of this operation, such as 'delete is a logical delete' or 'updates are only allowed with version id' or 'creates permitted from pre-authorized certificates only'.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.interaction.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirMarkdown|undefined;
   /**
    * Default constructor for CapabilityStatementRestResourceInteraction - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatementRestResourceInteraction> = { }) {
-    super(source);
+  constructor(source:Partial<CapabilityStatementRestResourceInteractionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['code']) { this.code = source.code; }
     else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
+    if (source['documentation']) { this.documentation = new fhir.FhirMarkdown({value: source.documentation}); }
   }
   /**
    * Required-bound Value Set for code
@@ -884,66 +281,75 @@ export class CapabilityStatementRestResourceInteraction extends fhir.BackboneEle
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: CapabilityStatement.rest.resource.interaction.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:TypeRestfulInteractionValueSetEnum fhir: CapabilityStatement.rest.resource.interaction.code:code", }));
+    }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CapabilityStatementRestResourceSearchParam type.
+ */
+export interface CapabilityStatementRestResourceSearchParamArgs extends fhir.BackboneElementArgs {
+  /**
+   * Parameter names cannot overlap with standard parameter names, and standard parameters cannot be redefined.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * This SHOULD be present, and matches refers to a SearchParameter by its canonical URL. If systems wish to document their support for modifiers, comparators, target resource types, and chained parameters, they should do using a search parameter resource. This element SHALL be populated if the search parameter refers to a SearchParameter defined by the FHIR core specification or externally defined IGs.
+   */
+  definition?: fhir.FhirCanonical|string|undefined;
+  /**
+   * While this can be looked up from the definition, it is included here as a convenience for systems that autogenerate a query interface based on the server capability statement.  It SHALL be the same as the type in the search parameter definition.
+   */
+  type: SearchParamTypeValueSetEnum|null;
+  /**
+   * This allows documentation of any distinct behaviors about how the search parameter is used.  For example, text matching algorithms.
+   */
+  documentation?: fhir.FhirMarkdown|string|undefined;
 }
 
 /**
  * The search parameters should include the control search parameters such as _sort, _count, etc. that also apply to this resource (though many will be listed at [CapabilityStatement.rest.searchParam](capabilitystatement-definitions.html#CapabilityStatement.rest.searchParam)). The behavior of some search parameters may be further described by other code or extension elements, or narrative within the capability statement or linked [SearchParameter](searchparameter.html#) definitions.
  */
-export class CapabilityStatementRestResourceSearchParam extends fhir.BackboneElement implements ICapabilityStatementRestResourceSearchParam {
+export class CapabilityStatementRestResourceSearchParam extends fhir.BackboneElement {
+  readonly __dataType:string = 'CapabilityStatementRestResourceSearchParam';
   /**
    * Parameter names cannot overlap with standard parameter names, and standard parameters cannot be redefined.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.searchParam.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * This SHOULD be present, and matches refers to a SearchParameter by its canonical URL. If systems wish to document their support for modifiers, comparators, target resource types, and chained parameters, they should do using a search parameter resource. This element SHALL be populated if the search parameter refers to a SearchParameter defined by the FHIR core specification or externally defined IGs.
    */
-  public definition?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.searchParam.definition
-   */
-  public _definition?: fhir.FhirElement|undefined;
+  public definition?: fhir.FhirCanonical|undefined;
   /**
    * While this can be looked up from the definition, it is included here as a convenience for systems that autogenerate a query interface based on the server capability statement.  It SHALL be the same as the type in the search parameter definition.
    */
   public type: SearchParamTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.searchParam.type
-   */
-  public _type?: fhir.FhirElement|undefined;
-  /**
    * This allows documentation of any distinct behaviors about how the search parameter is used.  For example, text matching algorithms.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.searchParam.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirMarkdown|undefined;
   /**
    * Default constructor for CapabilityStatementRestResourceSearchParam - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatementRestResourceSearchParam> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<CapabilityStatementRestResourceSearchParamArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['definition']) { this.definition = source.definition; }
-    if (source['_definition']) { this._definition = new fhir.FhirElement(source._definition!); }
+    if (source['definition']) { this.definition = new fhir.FhirCanonical({value: source.definition}); }
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
+    if (source['documentation']) { this.documentation = new fhir.FhirMarkdown({value: source.documentation}); }
   }
   /**
    * Required-bound Value Set for type
@@ -954,239 +360,266 @@ export class CapabilityStatementRestResourceSearchParam extends fhir.BackboneEle
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: CapabilityStatement.rest.resource.searchParam.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_definition"]) { results.push(...this._definition.doModelValidation()); }
-    if (!this["type"]) { results.push(["type",'Missing required element: CapabilityStatement.rest.resource.searchParam.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: CapabilityStatement.rest.resource.searchParam.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["definition"]) { outcome.issue!.push(...this.definition.doModelValidation().issue!); }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:SearchParamTypeValueSetEnum fhir: CapabilityStatement.rest.resource.searchParam.type:code", }));
+    }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CapabilityStatementRestResourceOperation type.
+ */
+export interface CapabilityStatementRestResourceOperationArgs extends fhir.BackboneElementArgs {
+  /**
+   * The name here SHOULD be the same as the name in the definition, unless there is a name clash and the name cannot be used. The name does not include the "$" portion that is always included in the URL.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * This can be used to build an HTML form to invoke the operation, for instance.
+   */
+  definition: fhir.FhirCanonical|string|undefined;
+  /**
+   * Documentation that describes anything special about the operation behavior, possibly detailing different behavior for system, type and instance-level invocation of the operation.
+   */
+  documentation?: fhir.FhirMarkdown|string|undefined;
 }
 
 /**
  * Operations linked from CapabilityStatement.rest.resource.operation must have OperationDefinition.type = true or OperationDefinition.instance = true.    
  * If an operation that is listed in multiple CapabilityStatement.rest.resource.operation (e.g. for different resource types), then clients should understand that the operation is only supported on the specified resource types, and that may be a subset of those listed in OperationDefinition.resource.
  */
-export class CapabilityStatementRestResourceOperation extends fhir.BackboneElement implements ICapabilityStatementRestResourceOperation {
+export class CapabilityStatementRestResourceOperation extends fhir.BackboneElement {
+  readonly __dataType:string = 'CapabilityStatementRestResourceOperation';
   /**
    * The name here SHOULD be the same as the name in the definition, unless there is a name clash and the name cannot be used. The name does not include the "$" portion that is always included in the URL.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.operation.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * This can be used to build an HTML form to invoke the operation, for instance.
    */
-  public definition: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.operation.definition
-   */
-  public _definition?: fhir.FhirElement|undefined;
+  public definition: fhir.FhirCanonical|null;
   /**
    * Documentation that describes anything special about the operation behavior, possibly detailing different behavior for system, type and instance-level invocation of the operation.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.operation.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirMarkdown|undefined;
   /**
    * Default constructor for CapabilityStatementRestResourceOperation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatementRestResourceOperation> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<CapabilityStatementRestResourceOperationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['definition']) { this.definition = source.definition; }
+    if (source['definition']) { this.definition = new fhir.FhirCanonical({value: source.definition}); }
     else { this.definition = null; }
-    if (source['_definition']) { this._definition = new fhir.FhirElement(source._definition!); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
+    if (source['documentation']) { this.documentation = new fhir.FhirMarkdown({value: source.documentation}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: CapabilityStatement.rest.resource.operation.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (!this["definition"]) { results.push(["definition",'Missing required element: CapabilityStatement.rest.resource.operation.definition']); }
-    if (this["_definition"]) { results.push(...this._definition.doModelValidation()); }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: CapabilityStatement.rest.resource.operation.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (!this['definition']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property definition:fhir.FhirCanonical fhir: CapabilityStatement.rest.resource.operation.definition:canonical", }));
+    }
+    if (this["definition"]) { outcome.issue!.push(...this.definition.doModelValidation().issue!); }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CapabilityStatementRestResource type.
+ */
+export interface CapabilityStatementRestResourceArgs extends fhir.BackboneElementArgs {
+  /**
+   * A type of resource exposed via the restful interface.
+   */
+  type: fhir.FhirCode|string|undefined;
+  /**
+   * The profile applies to all  resources of this type - i.e. it is the superset of what is supported by the system.
+   */
+  profile?: fhir.FhirCanonical|string|undefined;
+  /**
+   * Supported profiles are different than the profile that applies to a particular resource in .rest.resource.profile. The resource profile is a general statement of what features of the resource are supported overall by the system - the sum total of the facilities it supports. A supported profile is a deeper statement about the functionality of the data and services provided by the server (or used by the client). A typical case is a laboratory system that produces a set of different reports - this is the list of types of data that it publishes. A key aspect of declaring profiles here is the question of how the client converts knowledge that the server publishes this data into working with the data; the client can inspect individual resources to determine whether they conform to a particular profile, but how does it find the ones that do? It does so by searching using the _profile parameter, so any resources listed here must be valid values for the _profile resource (using the identifier in the target profile).
+   */
+  supportedProfile?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * Additional information about the resource type used by the system.
+   */
+  documentation?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * In general, a Resource will only appear in a CapabilityStatement if the server actually has some capabilities - e.g. there is at least one interaction supported. However interactions can be omitted to support summarization (_summary = true).
+   */
+  interaction?: fhir.CapabilityStatementRestResourceInteractionArgs[]|undefined;
+  /**
+   * If a server supports versionIds correctly, it SHOULD support vread too, but is not required to do so.
+   */
+  versioning?: VersioningPolicyValueSetEnum|undefined;
+  /**
+   * It is useful to support the vRead operation for current operations, even if past versions aren't available.
+   */
+  readHistory?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Allowing the clients to create new identities on the server means that the system administrator needs to have confidence that the clients do not create clashing identities between them. Obviously, if there is only one client, this won't happen. While creating identities on the client means that the clients need to be managed, it's much more convenient for many scenarios if such management can be put in place.
+   */
+  updateCreate?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Conditional Create is mainly appropriate for interface engine scripts converting from other formats, such as v2.
+   */
+  conditionalCreate?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Conditional Read is mainly appropriate for interface engine scripts converting from other formats, such as v2.
+   */
+  conditionalRead?: ConditionalReadStatusValueSetEnum|undefined;
+  /**
+   * Conditional Update is mainly appropriate for interface engine scripts converting from other formats, such as v2.
+   */
+  conditionalUpdate?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Conditional Delete is mainly appropriate for interface engine scripts converting from other formats, such as v2.
+   */
+  conditionalDelete?: ConditionalDeleteStatusValueSetEnum|undefined;
+  /**
+   * A set of flags that defines how references are supported.
+   */
+  referencePolicy?: ReferenceHandlingPolicyValueSetEnum[]|undefined;
+  /**
+   * If this list is empty, the server does not support includes.
+   */
+  searchInclude?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * If this list is empty, the server does not support reverse includes.
+   */
+  searchRevInclude?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * The search parameters should include the control search parameters such as _sort, _count, etc. that also apply to this resource (though many will be listed at [CapabilityStatement.rest.searchParam](capabilitystatement-definitions.html#CapabilityStatement.rest.searchParam)). The behavior of some search parameters may be further described by other code or extension elements, or narrative within the capability statement or linked [SearchParameter](searchparameter.html#) definitions.
+   */
+  searchParam?: fhir.CapabilityStatementRestResourceSearchParamArgs[]|undefined;
+  /**
+   * Operations linked from CapabilityStatement.rest.resource.operation must have OperationDefinition.type = true or OperationDefinition.instance = true.    
+   * If an operation that is listed in multiple CapabilityStatement.rest.resource.operation (e.g. for different resource types), then clients should understand that the operation is only supported on the specified resource types, and that may be a subset of those listed in OperationDefinition.resource.
+   */
+  operation?: fhir.CapabilityStatementRestResourceOperationArgs[]|undefined;
 }
 
 /**
  * Max of one repetition per resource type.
  */
-export class CapabilityStatementRestResource extends fhir.BackboneElement implements ICapabilityStatementRestResource {
+export class CapabilityStatementRestResource extends fhir.BackboneElement {
+  readonly __dataType:string = 'CapabilityStatementRestResource';
   /**
    * A type of resource exposed via the restful interface.
    */
-  public type: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.type
-   */
-  public _type?: fhir.FhirElement|undefined;
+  public type: fhir.FhirCode|null;
   /**
    * The profile applies to all  resources of this type - i.e. it is the superset of what is supported by the system.
    */
-  public profile?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.profile
-   */
-  public _profile?: fhir.FhirElement|undefined;
+  public profile?: fhir.FhirCanonical|undefined;
   /**
    * Supported profiles are different than the profile that applies to a particular resource in .rest.resource.profile. The resource profile is a general statement of what features of the resource are supported overall by the system - the sum total of the facilities it supports. A supported profile is a deeper statement about the functionality of the data and services provided by the server (or used by the client). A typical case is a laboratory system that produces a set of different reports - this is the list of types of data that it publishes. A key aspect of declaring profiles here is the question of how the client converts knowledge that the server publishes this data into working with the data; the client can inspect individual resources to determine whether they conform to a particular profile, but how does it find the ones that do? It does so by searching using the _profile parameter, so any resources listed here must be valid values for the _profile resource (using the identifier in the target profile).
    */
-  public supportedProfile?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.supportedProfile
-   */
-  public _supportedProfile?: fhir.FhirElement[]|undefined;
+  public supportedProfile?: fhir.FhirCanonical[]|undefined = [];
   /**
    * Additional information about the resource type used by the system.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirMarkdown|undefined;
   /**
    * In general, a Resource will only appear in a CapabilityStatement if the server actually has some capabilities - e.g. there is at least one interaction supported. However interactions can be omitted to support summarization (_summary = true).
    */
-  public interaction?: fhir.CapabilityStatementRestResourceInteraction[]|undefined;
+  public interaction?: fhir.CapabilityStatementRestResourceInteraction[]|undefined = [];
   /**
    * If a server supports versionIds correctly, it SHOULD support vread too, but is not required to do so.
    */
   public versioning?: VersioningPolicyValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.versioning
-   */
-  public _versioning?: fhir.FhirElement|undefined;
-  /**
    * It is useful to support the vRead operation for current operations, even if past versions aren't available.
    */
-  public readHistory?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.readHistory
-   */
-  public _readHistory?: fhir.FhirElement|undefined;
+  public readHistory?: fhir.FhirBoolean|undefined;
   /**
    * Allowing the clients to create new identities on the server means that the system administrator needs to have confidence that the clients do not create clashing identities between them. Obviously, if there is only one client, this won't happen. While creating identities on the client means that the clients need to be managed, it's much more convenient for many scenarios if such management can be put in place.
    */
-  public updateCreate?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.updateCreate
-   */
-  public _updateCreate?: fhir.FhirElement|undefined;
+  public updateCreate?: fhir.FhirBoolean|undefined;
   /**
    * Conditional Create is mainly appropriate for interface engine scripts converting from other formats, such as v2.
    */
-  public conditionalCreate?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.conditionalCreate
-   */
-  public _conditionalCreate?: fhir.FhirElement|undefined;
+  public conditionalCreate?: fhir.FhirBoolean|undefined;
   /**
    * Conditional Read is mainly appropriate for interface engine scripts converting from other formats, such as v2.
    */
   public conditionalRead?: ConditionalReadStatusValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.conditionalRead
-   */
-  public _conditionalRead?: fhir.FhirElement|undefined;
-  /**
    * Conditional Update is mainly appropriate for interface engine scripts converting from other formats, such as v2.
    */
-  public conditionalUpdate?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.conditionalUpdate
-   */
-  public _conditionalUpdate?: fhir.FhirElement|undefined;
+  public conditionalUpdate?: fhir.FhirBoolean|undefined;
   /**
    * Conditional Delete is mainly appropriate for interface engine scripts converting from other formats, such as v2.
    */
   public conditionalDelete?: ConditionalDeleteStatusValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.conditionalDelete
-   */
-  public _conditionalDelete?: fhir.FhirElement|undefined;
-  /**
    * A set of flags that defines how references are supported.
    */
-  public referencePolicy?: ReferenceHandlingPolicyValueSetEnum[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.referencePolicy
-   */
-  public _referencePolicy?: fhir.FhirElement[]|undefined;
+  public referencePolicy?: ReferenceHandlingPolicyValueSetEnum[]|undefined = [];
   /**
    * If this list is empty, the server does not support includes.
    */
-  public searchInclude?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.searchInclude
-   */
-  public _searchInclude?: fhir.FhirElement[]|undefined;
+  public searchInclude?: fhir.FhirString[]|undefined = [];
   /**
    * If this list is empty, the server does not support reverse includes.
    */
-  public searchRevInclude?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.resource.searchRevInclude
-   */
-  public _searchRevInclude?: fhir.FhirElement[]|undefined;
+  public searchRevInclude?: fhir.FhirString[]|undefined = [];
   /**
    * The search parameters should include the control search parameters such as _sort, _count, etc. that also apply to this resource (though many will be listed at [CapabilityStatement.rest.searchParam](capabilitystatement-definitions.html#CapabilityStatement.rest.searchParam)). The behavior of some search parameters may be further described by other code or extension elements, or narrative within the capability statement or linked [SearchParameter](searchparameter.html#) definitions.
    */
-  public searchParam?: fhir.CapabilityStatementRestResourceSearchParam[]|undefined;
+  public searchParam?: fhir.CapabilityStatementRestResourceSearchParam[]|undefined = [];
   /**
    * Operations linked from CapabilityStatement.rest.resource.operation must have OperationDefinition.type = true or OperationDefinition.instance = true.    
    * If an operation that is listed in multiple CapabilityStatement.rest.resource.operation (e.g. for different resource types), then clients should understand that the operation is only supported on the specified resource types, and that may be a subset of those listed in OperationDefinition.resource.
    */
-  public operation?: fhir.CapabilityStatementRestResourceOperation[]|undefined;
+  public operation?: fhir.CapabilityStatementRestResourceOperation[]|undefined = [];
   /**
    * Default constructor for CapabilityStatementRestResource - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatementRestResource> = { }) {
-    super(source);
-    if (source['type']) { this.type = source.type; }
+  constructor(source:Partial<CapabilityStatementRestResourceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.FhirCode({value: source.type}); }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['profile']) { this.profile = source.profile; }
-    if (source['_profile']) { this._profile = new fhir.FhirElement(source._profile!); }
-    if (source['supportedProfile']) { this.supportedProfile = source.supportedProfile.map((x) => (x)); }
-    if (source['_supportedProfile']) { this._supportedProfile = source._supportedProfile.map((x) => new fhir.FhirElement(x)); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
+    if (source['profile']) { this.profile = new fhir.FhirCanonical({value: source.profile}); }
+    if (source['supportedProfile']) { this.supportedProfile = source.supportedProfile.map((x) => new fhir.FhirCanonical({value: x})); }
+    if (source['documentation']) { this.documentation = new fhir.FhirMarkdown({value: source.documentation}); }
     if (source['interaction']) { this.interaction = source.interaction.map((x) => new fhir.CapabilityStatementRestResourceInteraction(x)); }
     if (source['versioning']) { this.versioning = source.versioning; }
-    if (source['_versioning']) { this._versioning = new fhir.FhirElement(source._versioning!); }
-    if (source['readHistory']) { this.readHistory = source.readHistory; }
-    if (source['_readHistory']) { this._readHistory = new fhir.FhirElement(source._readHistory!); }
-    if (source['updateCreate']) { this.updateCreate = source.updateCreate; }
-    if (source['_updateCreate']) { this._updateCreate = new fhir.FhirElement(source._updateCreate!); }
-    if (source['conditionalCreate']) { this.conditionalCreate = source.conditionalCreate; }
-    if (source['_conditionalCreate']) { this._conditionalCreate = new fhir.FhirElement(source._conditionalCreate!); }
+    if (source['readHistory']) { this.readHistory = new fhir.FhirBoolean({value: source.readHistory}); }
+    if (source['updateCreate']) { this.updateCreate = new fhir.FhirBoolean({value: source.updateCreate}); }
+    if (source['conditionalCreate']) { this.conditionalCreate = new fhir.FhirBoolean({value: source.conditionalCreate}); }
     if (source['conditionalRead']) { this.conditionalRead = source.conditionalRead; }
-    if (source['_conditionalRead']) { this._conditionalRead = new fhir.FhirElement(source._conditionalRead!); }
-    if (source['conditionalUpdate']) { this.conditionalUpdate = source.conditionalUpdate; }
-    if (source['_conditionalUpdate']) { this._conditionalUpdate = new fhir.FhirElement(source._conditionalUpdate!); }
+    if (source['conditionalUpdate']) { this.conditionalUpdate = new fhir.FhirBoolean({value: source.conditionalUpdate}); }
     if (source['conditionalDelete']) { this.conditionalDelete = source.conditionalDelete; }
-    if (source['_conditionalDelete']) { this._conditionalDelete = new fhir.FhirElement(source._conditionalDelete!); }
-    if (source['referencePolicy']) { this.referencePolicy = source.referencePolicy.map((x) => (x)); }
-    if (source['_referencePolicy']) { this._referencePolicy = source._referencePolicy.map((x) => new fhir.FhirElement(x)); }
-    if (source['searchInclude']) { this.searchInclude = source.searchInclude.map((x) => (x)); }
-    if (source['_searchInclude']) { this._searchInclude = source._searchInclude.map((x) => new fhir.FhirElement(x)); }
-    if (source['searchRevInclude']) { this.searchRevInclude = source.searchRevInclude.map((x) => (x)); }
-    if (source['_searchRevInclude']) { this._searchRevInclude = source._searchRevInclude.map((x) => new fhir.FhirElement(x)); }
+    if (source['referencePolicy']) { this.referencePolicy = source.referencePolicy.map((x) => x); }
+    if (source['searchInclude']) { this.searchInclude = source.searchInclude.map((x) => new fhir.FhirString({value: x})); }
+    if (source['searchRevInclude']) { this.searchRevInclude = source.searchRevInclude.map((x) => new fhir.FhirString({value: x})); }
     if (source['searchParam']) { this.searchParam = source.searchParam.map((x) => new fhir.CapabilityStatementRestResourceSearchParam(x)); }
     if (source['operation']) { this.operation = source.operation.map((x) => new fhir.CapabilityStatementRestResourceOperation(x)); }
   }
@@ -1223,60 +656,68 @@ export class CapabilityStatementRestResource extends fhir.BackboneElement implem
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: CapabilityStatement.rest.resource.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_profile"]) { results.push(...this._profile.doModelValidation()); }
-    if (this["_supportedProfile"]) { this._supportedProfile.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    if (this["interaction"]) { this.interaction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_versioning"]) { results.push(...this._versioning.doModelValidation()); }
-    if (this["_readHistory"]) { results.push(...this._readHistory.doModelValidation()); }
-    if (this["_updateCreate"]) { results.push(...this._updateCreate.doModelValidation()); }
-    if (this["_conditionalCreate"]) { results.push(...this._conditionalCreate.doModelValidation()); }
-    if (this["_conditionalRead"]) { results.push(...this._conditionalRead.doModelValidation()); }
-    if (this["_conditionalUpdate"]) { results.push(...this._conditionalUpdate.doModelValidation()); }
-    if (this["_conditionalDelete"]) { results.push(...this._conditionalDelete.doModelValidation()); }
-    if (this["_referencePolicy"]) { this._referencePolicy.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_searchInclude"]) { this._searchInclude.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_searchRevInclude"]) { this._searchRevInclude.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["searchParam"]) { this.searchParam.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["operation"]) { this.operation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.FhirCode fhir: CapabilityStatement.rest.resource.type:code", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["profile"]) { outcome.issue!.push(...this.profile.doModelValidation().issue!); }
+    if (this["supportedProfile"]) { this.supportedProfile.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    if (this["interaction"]) { this.interaction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["readHistory"]) { outcome.issue!.push(...this.readHistory.doModelValidation().issue!); }
+    if (this["updateCreate"]) { outcome.issue!.push(...this.updateCreate.doModelValidation().issue!); }
+    if (this["conditionalCreate"]) { outcome.issue!.push(...this.conditionalCreate.doModelValidation().issue!); }
+    if (this["conditionalUpdate"]) { outcome.issue!.push(...this.conditionalUpdate.doModelValidation().issue!); }
+    if (this["searchInclude"]) { this.searchInclude.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["searchRevInclude"]) { this.searchRevInclude.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["searchParam"]) { this.searchParam.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["operation"]) { this.operation.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CapabilityStatementRestInteraction type.
+ */
+export interface CapabilityStatementRestInteractionArgs extends fhir.BackboneElementArgs {
+  /**
+   * A coded identifier of the operation, supported by the system.
+   */
+  code: SystemRestfulInteractionValueSetEnum|null;
+  /**
+   * Guidance specific to the implementation of this operation, such as limitations on the kind of transactions allowed, or information about system wide search is implemented.
+   */
+  documentation?: fhir.FhirMarkdown|string|undefined;
 }
 
 /**
  * A specification of restful operations supported by the system.
  */
-export class CapabilityStatementRestInteraction extends fhir.BackboneElement implements ICapabilityStatementRestInteraction {
+export class CapabilityStatementRestInteraction extends fhir.BackboneElement {
+  readonly __dataType:string = 'CapabilityStatementRestInteraction';
   /**
    * A coded identifier of the operation, supported by the system.
    */
   public code: SystemRestfulInteractionValueSetEnum|null;
   /**
-   * Extended properties for primitive element: CapabilityStatement.rest.interaction.code
-   */
-  public _code?: fhir.FhirElement|undefined;
-  /**
    * Guidance specific to the implementation of this operation, such as limitations on the kind of transactions allowed, or information about system wide search is implemented.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.interaction.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirMarkdown|undefined;
   /**
    * Default constructor for CapabilityStatementRestInteraction - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatementRestInteraction> = { }) {
-    super(source);
+  constructor(source:Partial<CapabilityStatementRestInteractionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['code']) { this.code = source.code; }
     else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
+    if (source['documentation']) { this.documentation = new fhir.FhirMarkdown({value: source.documentation}); }
   }
   /**
    * Required-bound Value Set for code
@@ -1287,35 +728,72 @@ export class CapabilityStatementRestInteraction extends fhir.BackboneElement imp
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: CapabilityStatement.rest.interaction.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:SystemRestfulInteractionValueSetEnum fhir: CapabilityStatement.rest.interaction.code:code", }));
+    }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CapabilityStatementRest type.
+ */
+export interface CapabilityStatementRestArgs extends fhir.BackboneElementArgs {
+  /**
+   * Identifies whether this portion of the statement is describing the ability to initiate or receive restful operations.
+   */
+  mode: RestfulCapabilityModeValueSetEnum|null;
+  /**
+   * Information about the system's restful capabilities that apply across all applications, such as security.
+   */
+  documentation?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Information about security implementation from an interface perspective - what a client needs to know.
+   */
+  security?: fhir.CapabilityStatementRestSecurityArgs|undefined;
+  /**
+   * Max of one repetition per resource type.
+   */
+  resource?: fhir.CapabilityStatementRestResourceArgs[]|undefined;
+  /**
+   * A specification of restful operations supported by the system.
+   */
+  interaction?: fhir.CapabilityStatementRestInteractionArgs[]|undefined;
+  /**
+   * Typically, the only search parameters supported for all searches are those that apply to all resources - tags, profiles, text search etc. These search parameters should include the control search parameters such as _sort, _count, etc. that also apply to this resource (though many will be listed at [CapabilityStatement.rest.searchParam](capabilitystatement-definitions.html#CapabilityStatement.rest.searchParam)). The behavior of some search parameters may be further described by other code or extension elements, or narrative within the capability statement or linked [SearchParameter](searchparameter.html#) definitions.
+   */
+  searchParam?: fhir.CapabilityStatementRestResourceSearchParamArgs[]|undefined;
+  /**
+   * CapabilityStatement.rest.operation is for operations invoked at the system level, or for operations that are supported across multiple resource types. Operations linked from CapabilityStatement.rest.operation must have OperationDefinition.system = true, or more than one Operation.resource.
+   */
+  operation?: fhir.CapabilityStatementRestResourceOperationArgs[]|undefined;
+  /**
+   * At present, the only defined compartments are at [CompartmentDefinition](compartmentdefinition.html).
+   */
+  compartment?: fhir.FhirCanonical[]|string[]|undefined;
 }
 
 /**
  * Multiple repetitions allow definition of both client and/or server behaviors or possibly behaviors under different configuration settings (for software or requirements statements).
  */
-export class CapabilityStatementRest extends fhir.BackboneElement implements ICapabilityStatementRest {
+export class CapabilityStatementRest extends fhir.BackboneElement {
+  readonly __dataType:string = 'CapabilityStatementRest';
   /**
    * Identifies whether this portion of the statement is describing the ability to initiate or receive restful operations.
    */
   public mode: RestfulCapabilityModeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: CapabilityStatement.rest.mode
-   */
-  public _mode?: fhir.FhirElement|undefined;
-  /**
    * Information about the system's restful capabilities that apply across all applications, such as security.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirMarkdown|undefined;
   /**
    * Information about security implementation from an interface perspective - what a client needs to know.
    */
@@ -1323,44 +801,37 @@ export class CapabilityStatementRest extends fhir.BackboneElement implements ICa
   /**
    * Max of one repetition per resource type.
    */
-  public resource?: fhir.CapabilityStatementRestResource[]|undefined;
+  public resource?: fhir.CapabilityStatementRestResource[]|undefined = [];
   /**
    * A specification of restful operations supported by the system.
    */
-  public interaction?: fhir.CapabilityStatementRestInteraction[]|undefined;
+  public interaction?: fhir.CapabilityStatementRestInteraction[]|undefined = [];
   /**
    * Typically, the only search parameters supported for all searches are those that apply to all resources - tags, profiles, text search etc. These search parameters should include the control search parameters such as _sort, _count, etc. that also apply to this resource (though many will be listed at [CapabilityStatement.rest.searchParam](capabilitystatement-definitions.html#CapabilityStatement.rest.searchParam)). The behavior of some search parameters may be further described by other code or extension elements, or narrative within the capability statement or linked [SearchParameter](searchparameter.html#) definitions.
    */
-  public searchParam?: fhir.CapabilityStatementRestResourceSearchParam[]|undefined;
+  public searchParam?: fhir.CapabilityStatementRestResourceSearchParam[]|undefined = [];
   /**
    * CapabilityStatement.rest.operation is for operations invoked at the system level, or for operations that are supported across multiple resource types. Operations linked from CapabilityStatement.rest.operation must have OperationDefinition.system = true, or more than one Operation.resource.
    */
-  public operation?: fhir.CapabilityStatementRestResourceOperation[]|undefined;
+  public operation?: fhir.CapabilityStatementRestResourceOperation[]|undefined = [];
   /**
    * At present, the only defined compartments are at [CompartmentDefinition](compartmentdefinition.html).
    */
-  public compartment?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.rest.compartment
-   */
-  public _compartment?: fhir.FhirElement[]|undefined;
+  public compartment?: fhir.FhirCanonical[]|undefined = [];
   /**
    * Default constructor for CapabilityStatementRest - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatementRest> = { }) {
-    super(source);
+  constructor(source:Partial<CapabilityStatementRestArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['mode']) { this.mode = source.mode; }
     else { this.mode = null; }
-    if (source['_mode']) { this._mode = new fhir.FhirElement(source._mode!); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
-    if (source['security']) { this.security = new fhir.CapabilityStatementRestSecurity(source.security!); }
+    if (source['documentation']) { this.documentation = new fhir.FhirMarkdown({value: source.documentation}); }
+    if (source['security']) { this.security = new fhir.CapabilityStatementRestSecurity(source.security); }
     if (source['resource']) { this.resource = source.resource.map((x) => new fhir.CapabilityStatementRestResource(x)); }
     if (source['interaction']) { this.interaction = source.interaction.map((x) => new fhir.CapabilityStatementRestInteraction(x)); }
     if (source['searchParam']) { this.searchParam = source.searchParam.map((x) => new fhir.CapabilityStatementRestResourceSearchParam(x)); }
     if (source['operation']) { this.operation = source.operation.map((x) => new fhir.CapabilityStatementRestResourceOperation(x)); }
-    if (source['compartment']) { this.compartment = source.compartment.map((x) => (x)); }
-    if (source['_compartment']) { this._compartment = source._compartment.map((x) => new fhir.FhirElement(x)); }
+    if (source['compartment']) { this.compartment = source.compartment.map((x) => new fhir.FhirCanonical({value: x})); }
   }
   /**
    * Required-bound Value Set for mode
@@ -1371,25 +842,46 @@ export class CapabilityStatementRest extends fhir.BackboneElement implements ICa
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["mode"]) { results.push(["mode",'Missing required element: CapabilityStatement.rest.mode']); }
-    if (this["_mode"]) { results.push(...this._mode.doModelValidation()); }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    if (this["security"]) { results.push(...this.security.doModelValidation()); }
-    if (this["resource"]) { this.resource.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["interaction"]) { this.interaction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["searchParam"]) { this.searchParam.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["operation"]) { this.operation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_compartment"]) { this._compartment.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['mode']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property mode:RestfulCapabilityModeValueSetEnum fhir: CapabilityStatement.rest.mode:code", }));
+    }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    if (this["security"]) { outcome.issue!.push(...this.security.doModelValidation().issue!); }
+    if (this["resource"]) { this.resource.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["interaction"]) { this.interaction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["searchParam"]) { this.searchParam.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["operation"]) { this.operation.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["compartment"]) { this.compartment.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CapabilityStatementMessagingEndpoint type.
+ */
+export interface CapabilityStatementMessagingEndpointArgs extends fhir.BackboneElementArgs {
+  /**
+   * A list of the messaging transport protocol(s) identifiers, supported by this endpoint.
+   */
+  protocol: fhir.CodingArgs|null;
+  /**
+   * The network address of the endpoint. For solutions that do not use network addresses for routing, it can be just an identifier.
+   */
+  address: fhir.FhirUrl|string|undefined;
 }
 
 /**
  * An endpoint (network accessible address) to which messages and/or replies are to be sent.
  */
-export class CapabilityStatementMessagingEndpoint extends fhir.BackboneElement implements ICapabilityStatementMessagingEndpoint {
+export class CapabilityStatementMessagingEndpoint extends fhir.BackboneElement {
+  readonly __dataType:string = 'CapabilityStatementMessagingEndpoint';
   /**
    * A list of the messaging transport protocol(s) identifiers, supported by this endpoint.
    */
@@ -1397,21 +889,16 @@ export class CapabilityStatementMessagingEndpoint extends fhir.BackboneElement i
   /**
    * The network address of the endpoint. For solutions that do not use network addresses for routing, it can be just an identifier.
    */
-  public address: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.messaging.endpoint.address
-   */
-  public _address?: fhir.FhirElement|undefined;
+  public address: fhir.FhirUrl|null;
   /**
    * Default constructor for CapabilityStatementMessagingEndpoint - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatementMessagingEndpoint> = { }) {
-    super(source);
-    if (source['protocol']) { this.protocol = new fhir.Coding(source.protocol!); }
+  constructor(source:Partial<CapabilityStatementMessagingEndpointArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['protocol']) { this.protocol = new fhir.Coding(source.protocol); }
     else { this.protocol = null; }
-    if (source['address']) { this.address = source.address; }
+    if (source['address']) { this.address = new fhir.FhirUrl({value: source.address}); }
     else { this.address = null; }
-    if (source['_address']) { this._address = new fhir.FhirElement(source._address!); }
   }
   /**
    * Extensible-bound Value Set for protocol
@@ -1422,47 +909,61 @@ export class CapabilityStatementMessagingEndpoint extends fhir.BackboneElement i
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["protocol"]) { results.push(["protocol",'Missing required element: CapabilityStatement.messaging.endpoint.protocol']); }
-    if (this["protocol"]) { results.push(...this.protocol.doModelValidation()); }
-    if (!this["address"]) { results.push(["address",'Missing required element: CapabilityStatement.messaging.endpoint.address']); }
-    if (this["_address"]) { results.push(...this._address.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['protocol']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property protocol:fhir.Coding fhir: CapabilityStatement.messaging.endpoint.protocol:Coding", }));
+    }
+    if (this["protocol"]) { outcome.issue!.push(...this.protocol.doModelValidation().issue!); }
+    if (!this['address']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property address:fhir.FhirUrl fhir: CapabilityStatement.messaging.endpoint.address:url", }));
+    }
+    if (this["address"]) { outcome.issue!.push(...this.address.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CapabilityStatementMessagingSupportedMessage type.
+ */
+export interface CapabilityStatementMessagingSupportedMessageArgs extends fhir.BackboneElementArgs {
+  /**
+   * The mode of this event declaration - whether application is sender or receiver.
+   */
+  mode: EventCapabilityModeValueSetEnum|null;
+  /**
+   * Points to a message definition that identifies the messaging event, message structure, allowed responses, etc.
+   */
+  definition: fhir.FhirCanonical|string|undefined;
 }
 
 /**
  * This is a proposed alternative to the messaging.event structure.
  */
-export class CapabilityStatementMessagingSupportedMessage extends fhir.BackboneElement implements ICapabilityStatementMessagingSupportedMessage {
+export class CapabilityStatementMessagingSupportedMessage extends fhir.BackboneElement {
+  readonly __dataType:string = 'CapabilityStatementMessagingSupportedMessage';
   /**
    * The mode of this event declaration - whether application is sender or receiver.
    */
   public mode: EventCapabilityModeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: CapabilityStatement.messaging.supportedMessage.mode
-   */
-  public _mode?: fhir.FhirElement|undefined;
-  /**
    * Points to a message definition that identifies the messaging event, message structure, allowed responses, etc.
    */
-  public definition: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.messaging.supportedMessage.definition
-   */
-  public _definition?: fhir.FhirElement|undefined;
+  public definition: fhir.FhirCanonical|null;
   /**
    * Default constructor for CapabilityStatementMessagingSupportedMessage - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatementMessagingSupportedMessage> = { }) {
-    super(source);
+  constructor(source:Partial<CapabilityStatementMessagingSupportedMessageArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['mode']) { this.mode = source.mode; }
     else { this.mode = null; }
-    if (source['_mode']) { this._mode = new fhir.FhirElement(source._mode!); }
-    if (source['definition']) { this.definition = source.definition; }
+    if (source['definition']) { this.definition = new fhir.FhirCanonical({value: source.definition}); }
     else { this.definition = null; }
-    if (source['_definition']) { this._definition = new fhir.FhirElement(source._definition!); }
   }
   /**
    * Required-bound Value Set for mode
@@ -1473,110 +974,140 @@ export class CapabilityStatementMessagingSupportedMessage extends fhir.BackboneE
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["mode"]) { results.push(["mode",'Missing required element: CapabilityStatement.messaging.supportedMessage.mode']); }
-    if (this["_mode"]) { results.push(...this._mode.doModelValidation()); }
-    if (!this["definition"]) { results.push(["definition",'Missing required element: CapabilityStatement.messaging.supportedMessage.definition']); }
-    if (this["_definition"]) { results.push(...this._definition.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['mode']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property mode:EventCapabilityModeValueSetEnum fhir: CapabilityStatement.messaging.supportedMessage.mode:code", }));
+    }
+    if (!this['definition']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property definition:fhir.FhirCanonical fhir: CapabilityStatement.messaging.supportedMessage.definition:canonical", }));
+    }
+    if (this["definition"]) { outcome.issue!.push(...this.definition.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CapabilityStatementMessaging type.
+ */
+export interface CapabilityStatementMessagingArgs extends fhir.BackboneElementArgs {
+  /**
+   * An endpoint (network accessible address) to which messages and/or replies are to be sent.
+   */
+  endpoint?: fhir.CapabilityStatementMessagingEndpointArgs[]|undefined;
+  /**
+   * If this value is missing then the application does not implement (receiver) or depend on (sender) reliable messaging.
+   */
+  reliableCache?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * Documentation about the system's messaging capabilities for this endpoint not otherwise documented by the capability statement.  For example, the process for becoming an authorized messaging exchange partner.
+   */
+  documentation?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * This is a proposed alternative to the messaging.event structure.
+   */
+  supportedMessage?: fhir.CapabilityStatementMessagingSupportedMessageArgs[]|undefined;
 }
 
 /**
  * Multiple repetitions allow the documentation of multiple endpoints per solution.
  */
-export class CapabilityStatementMessaging extends fhir.BackboneElement implements ICapabilityStatementMessaging {
+export class CapabilityStatementMessaging extends fhir.BackboneElement {
+  readonly __dataType:string = 'CapabilityStatementMessaging';
   /**
    * An endpoint (network accessible address) to which messages and/or replies are to be sent.
    */
-  public endpoint?: fhir.CapabilityStatementMessagingEndpoint[]|undefined;
+  public endpoint?: fhir.CapabilityStatementMessagingEndpoint[]|undefined = [];
   /**
    * If this value is missing then the application does not implement (receiver) or depend on (sender) reliable messaging.
    */
-  public reliableCache?: number|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.messaging.reliableCache
-   */
-  public _reliableCache?: fhir.FhirElement|undefined;
+  public reliableCache?: fhir.FhirUnsignedInt|undefined;
   /**
    * Documentation about the system's messaging capabilities for this endpoint not otherwise documented by the capability statement.  For example, the process for becoming an authorized messaging exchange partner.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.messaging.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirMarkdown|undefined;
   /**
    * This is a proposed alternative to the messaging.event structure.
    */
-  public supportedMessage?: fhir.CapabilityStatementMessagingSupportedMessage[]|undefined;
+  public supportedMessage?: fhir.CapabilityStatementMessagingSupportedMessage[]|undefined = [];
   /**
    * Default constructor for CapabilityStatementMessaging - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatementMessaging> = { }) {
-    super(source);
+  constructor(source:Partial<CapabilityStatementMessagingArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['endpoint']) { this.endpoint = source.endpoint.map((x) => new fhir.CapabilityStatementMessagingEndpoint(x)); }
-    if (source['reliableCache']) { this.reliableCache = source.reliableCache; }
-    if (source['_reliableCache']) { this._reliableCache = new fhir.FhirElement(source._reliableCache!); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
+    if (source['reliableCache']) { this.reliableCache = new fhir.FhirUnsignedInt({value: source.reliableCache}); }
+    if (source['documentation']) { this.documentation = new fhir.FhirMarkdown({value: source.documentation}); }
     if (source['supportedMessage']) { this.supportedMessage = source.supportedMessage.map((x) => new fhir.CapabilityStatementMessagingSupportedMessage(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["endpoint"]) { this.endpoint.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_reliableCache"]) { results.push(...this._reliableCache.doModelValidation()); }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    if (this["supportedMessage"]) { this.supportedMessage.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["endpoint"]) { this.endpoint.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reliableCache"]) { outcome.issue!.push(...this.reliableCache.doModelValidation().issue!); }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    if (this["supportedMessage"]) { this.supportedMessage.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CapabilityStatementDocument type.
+ */
+export interface CapabilityStatementDocumentArgs extends fhir.BackboneElementArgs {
+  /**
+   * Mode of this document declaration - whether an application is a producer or consumer.
+   */
+  mode: DocumentModeValueSetEnum|null;
+  /**
+   * A description of how the application supports or uses the specified document profile.  For example, when documents are created, what action is taken with consumed documents, etc.
+   */
+  documentation?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * The profile is actually on the Bundle.
+   */
+  profile: fhir.FhirCanonical|string|undefined;
 }
 
 /**
  * A document definition.
  */
-export class CapabilityStatementDocument extends fhir.BackboneElement implements ICapabilityStatementDocument {
+export class CapabilityStatementDocument extends fhir.BackboneElement {
+  readonly __dataType:string = 'CapabilityStatementDocument';
   /**
    * Mode of this document declaration - whether an application is a producer or consumer.
    */
   public mode: DocumentModeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: CapabilityStatement.document.mode
-   */
-  public _mode?: fhir.FhirElement|undefined;
-  /**
    * A description of how the application supports or uses the specified document profile.  For example, when documents are created, what action is taken with consumed documents, etc.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.document.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirMarkdown|undefined;
   /**
    * The profile is actually on the Bundle.
    */
-  public profile: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.document.profile
-   */
-  public _profile?: fhir.FhirElement|undefined;
+  public profile: fhir.FhirCanonical|null;
   /**
    * Default constructor for CapabilityStatementDocument - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatementDocument> = { }) {
-    super(source);
+  constructor(source:Partial<CapabilityStatementDocumentArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['mode']) { this.mode = source.mode; }
     else { this.mode = null; }
-    if (source['_mode']) { this._mode = new fhir.FhirElement(source._mode!); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
-    if (source['profile']) { this.profile = source.profile; }
+    if (source['documentation']) { this.documentation = new fhir.FhirMarkdown({value: source.documentation}); }
+    if (source['profile']) { this.profile = new fhir.FhirCanonical({value: source.profile}); }
     else { this.profile = null; }
-    if (source['_profile']) { this._profile = new fhir.FhirElement(source._profile!); }
   }
   /**
    * Required-bound Value Set for mode
@@ -1587,21 +1118,148 @@ export class CapabilityStatementDocument extends fhir.BackboneElement implements
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["mode"]) { results.push(["mode",'Missing required element: CapabilityStatement.document.mode']); }
-    if (this["_mode"]) { results.push(...this._mode.doModelValidation()); }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    if (!this["profile"]) { results.push(["profile",'Missing required element: CapabilityStatement.document.profile']); }
-    if (this["_profile"]) { results.push(...this._profile.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['mode']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property mode:DocumentModeValueSetEnum fhir: CapabilityStatement.document.mode:code", }));
+    }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    if (!this['profile']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property profile:fhir.FhirCanonical fhir: CapabilityStatement.document.profile:canonical", }));
+    }
+    if (this["profile"]) { outcome.issue!.push(...this.profile.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CapabilityStatement type.
+ */
+export interface CapabilityStatementArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "CapabilityStatement"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * There may be different capability statement instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the capability statement with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * Allows filtering of capability statements that are appropriate for use versus not.This is not intended for use with actual capability statements, but where capability statements are used to describe possible or desired systems.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Allows filtering of capability statements that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the capability statement. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the capability statement is the organization or individual primarily responsible for the maintenance and upkeep of the capability statement. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the capability statement. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the capability statement was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the capability statement as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the capability statement is presumed to be the predominant language in the place the capability statement was created).This does not need to be populated if the description is adequately implied by the software or implementation details.
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the capability statement to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * This element does not describe the usage of the capability statement. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this capability statement.
+   */
+  purpose?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * A copyright statement relating to the capability statement and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the capability statement.
+   */
+  copyright?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).
+   */
+  kind: CapabilityStatementKindValueSetEnum|null;
+  /**
+   * HL7 defines the following Services: [Terminology Service](terminology-service.html).    
+   * Many [Implementation Guides](http://fhir.org/guides/registry) define additional services.
+   */
+  instantiates?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * the contents of any directly or indirectly imported CapabilityStatements SHALL NOT overlap, i.e. they cannot refer to the same rest/resource, operations/name, searchparam/name, interaction/code, messaging/endpoint, document/mode pair.
+   * A capability statement that imports another CapabilityStatement automatically instantiates it too (though this is often not a very useful statement for the kinds of CapabilityStatements that are suitable for importing).
+   */
+  imports?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * Software that is covered by this capability statement.  It is used when the capability statement describes the capabilities of a particular software version, independent of an installation.
+   */
+  software?: fhir.CapabilityStatementSoftwareArgs|undefined;
+  /**
+   * Identifies a specific implementation instance that is described by the capability statement - i.e. a particular installation, rather than the capabilities of a software program.
+   */
+  implementation?: fhir.CapabilityStatementImplementationArgs|undefined;
+  /**
+   * Servers may implement multiple versions (see [Managing Multiple Versions](versioning.html), and the [$versions](capabilitystatement-operation-versions.html) operation). If they do, and the CapabilityStatement is requested from the server, then this fhirVersion will be either the version requested, or the server's default version.
+   */
+  fhirVersion: fhir.FhirCode|string|undefined;
+  /**
+   * "xml", "json" and "ttl" are allowed, which describe the simple encodings described in the specification (and imply appropriate bundle support). Otherwise, mime types are legal here.
+   */
+  format: fhir.FhirCode[]|string[]|undefined;
+  /**
+   * At present, the patch mime types application/json-patch+json and application/xml-patch+xml are legal. Generally, if a server supports PATCH, it would be expected to support the patch formats and match the formats it supports, but this is not always possible or necessary.
+   */
+  patchFormat?: fhir.FhirCode[]|string[]|undefined;
+  /**
+   * A list of implementation guides that the server does (or should) support in their entirety.
+   */
+  implementationGuide?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * Multiple repetitions allow definition of both client and/or server behaviors or possibly behaviors under different configuration settings (for software or requirements statements).
+   */
+  rest?: fhir.CapabilityStatementRestArgs[]|undefined;
+  /**
+   * Multiple repetitions allow the documentation of multiple endpoints per solution.
+   */
+  messaging?: fhir.CapabilityStatementMessagingArgs[]|undefined;
+  /**
+   * A document definition.
+   */
+  document?: fhir.CapabilityStatementDocumentArgs[]|undefined;
 }
 
 /**
  * A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
  */
-export class CapabilityStatement extends fhir.DomainResource implements ICapabilityStatement {
+export class CapabilityStatement extends fhir.DomainResource {
+  readonly __dataType:string = 'CapabilityStatement';
   /**
    * Resource Type Name
    */
@@ -1611,129 +1269,73 @@ export class CapabilityStatement extends fhir.DomainResource implements ICapabil
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * There may be different capability statement instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the capability statement with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * Allows filtering of capability statements that are appropriate for use versus not.This is not intended for use with actual capability statements, but where capability statements are used to describe possible or desired systems.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: CapabilityStatement.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of capability statements that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the capability statement. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date: fhir.FhirDateTime|null;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the capability statement is the organization or individual primarily responsible for the maintenance and upkeep of the capability statement. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the capability statement. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the capability statement was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the capability statement as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the capability statement is presumed to be the predominant language in the place the capability statement was created).This does not need to be populated if the description is adequately implied by the software or implementation details.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the capability statement to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * This element does not describe the usage of the capability statement. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this capability statement.
    */
-  public purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.purpose
-   */
-  public _purpose?: fhir.FhirElement|undefined;
+  public purpose?: fhir.FhirMarkdown|undefined;
   /**
    * A copyright statement relating to the capability statement and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the capability statement.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).
    */
   public kind: CapabilityStatementKindValueSetEnum|null;
   /**
-   * Extended properties for primitive element: CapabilityStatement.kind
-   */
-  public _kind?: fhir.FhirElement|undefined;
-  /**
    * HL7 defines the following Services: [Terminology Service](terminology-service.html).    
    * Many [Implementation Guides](http://fhir.org/guides/registry) define additional services.
    */
-  public instantiates?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.instantiates
-   */
-  public _instantiates?: fhir.FhirElement[]|undefined;
+  public instantiates?: fhir.FhirCanonical[]|undefined = [];
   /**
    * the contents of any directly or indirectly imported CapabilityStatements SHALL NOT overlap, i.e. they cannot refer to the same rest/resource, operations/name, searchparam/name, interaction/code, messaging/endpoint, document/mode pair.
    * A capability statement that imports another CapabilityStatement automatically instantiates it too (though this is often not a very useful statement for the kinds of CapabilityStatements that are suitable for importing).
    */
-  public imports?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.imports
-   */
-  public _imports?: fhir.FhirElement[]|undefined;
+  public imports?: fhir.FhirCanonical[]|undefined = [];
   /**
    * Software that is covered by this capability statement.  It is used when the capability statement describes the capabilities of a particular software version, independent of an installation.
    */
@@ -1745,99 +1347,65 @@ export class CapabilityStatement extends fhir.DomainResource implements ICapabil
   /**
    * Servers may implement multiple versions (see [Managing Multiple Versions](versioning.html), and the [$versions](capabilitystatement-operation-versions.html) operation). If they do, and the CapabilityStatement is requested from the server, then this fhirVersion will be either the version requested, or the server's default version.
    */
-  public fhirVersion: string|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.fhirVersion
-   */
-  public _fhirVersion?: fhir.FhirElement|undefined;
+  public fhirVersion: fhir.FhirCode|null;
   /**
    * "xml", "json" and "ttl" are allowed, which describe the simple encodings described in the specification (and imply appropriate bundle support). Otherwise, mime types are legal here.
    */
-  public format: string[]|null;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.format
-   */
-  public _format?: fhir.FhirElement[]|undefined;
+  public format: fhir.FhirCode[]|null = [];
   /**
    * At present, the patch mime types application/json-patch+json and application/xml-patch+xml are legal. Generally, if a server supports PATCH, it would be expected to support the patch formats and match the formats it supports, but this is not always possible or necessary.
    */
-  public patchFormat?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.patchFormat
-   */
-  public _patchFormat?: fhir.FhirElement[]|undefined;
+  public patchFormat?: fhir.FhirCode[]|undefined = [];
   /**
    * A list of implementation guides that the server does (or should) support in their entirety.
    */
-  public implementationGuide?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CapabilityStatement.implementationGuide
-   */
-  public _implementationGuide?: fhir.FhirElement[]|undefined;
+  public implementationGuide?: fhir.FhirCanonical[]|undefined = [];
   /**
    * Multiple repetitions allow definition of both client and/or server behaviors or possibly behaviors under different configuration settings (for software or requirements statements).
    */
-  public rest?: fhir.CapabilityStatementRest[]|undefined;
+  public rest?: fhir.CapabilityStatementRest[]|undefined = [];
   /**
    * Multiple repetitions allow the documentation of multiple endpoints per solution.
    */
-  public messaging?: fhir.CapabilityStatementMessaging[]|undefined;
+  public messaging?: fhir.CapabilityStatementMessaging[]|undefined = [];
   /**
    * A document definition.
    */
-  public document?: fhir.CapabilityStatementDocument[]|undefined;
+  public document?: fhir.CapabilityStatementDocument[]|undefined = [];
   /**
    * Default constructor for CapabilityStatement - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICapabilityStatement> = { }) {
-    super(source);
+  constructor(source:Partial<CapabilityStatementArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'CapabilityStatement';
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['date']) { this.date = source.date; }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
     else { this.date = null; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['purpose']) { this.purpose = source.purpose; }
-    if (source['_purpose']) { this._purpose = new fhir.FhirElement(source._purpose!); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
+    if (source['purpose']) { this.purpose = new fhir.FhirMarkdown({value: source.purpose}); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
     if (source['kind']) { this.kind = source.kind; }
     else { this.kind = null; }
-    if (source['_kind']) { this._kind = new fhir.FhirElement(source._kind!); }
-    if (source['instantiates']) { this.instantiates = source.instantiates.map((x) => (x)); }
-    if (source['_instantiates']) { this._instantiates = source._instantiates.map((x) => new fhir.FhirElement(x)); }
-    if (source['imports']) { this.imports = source.imports.map((x) => (x)); }
-    if (source['_imports']) { this._imports = source._imports.map((x) => new fhir.FhirElement(x)); }
-    if (source['software']) { this.software = new fhir.CapabilityStatementSoftware(source.software!); }
-    if (source['implementation']) { this.implementation = new fhir.CapabilityStatementImplementation(source.implementation!); }
-    if (source['fhirVersion']) { this.fhirVersion = source.fhirVersion; }
+    if (source['instantiates']) { this.instantiates = source.instantiates.map((x) => new fhir.FhirCanonical({value: x})); }
+    if (source['imports']) { this.imports = source.imports.map((x) => new fhir.FhirCanonical({value: x})); }
+    if (source['software']) { this.software = new fhir.CapabilityStatementSoftware(source.software); }
+    if (source['implementation']) { this.implementation = new fhir.CapabilityStatementImplementation(source.implementation); }
+    if (source['fhirVersion']) { this.fhirVersion = new fhir.FhirCode({value: source.fhirVersion}); }
     else { this.fhirVersion = null; }
-    if (source['_fhirVersion']) { this._fhirVersion = new fhir.FhirElement(source._fhirVersion!); }
-    if (source['format']) { this.format = source.format.map((x) => (x)); }
+    if (source['format']) { this.format = source.format.map((x) => new fhir.FhirCode({value: x})); }
     else { this.format = null; }
-    if (source['_format']) { this._format = source._format.map((x) => new fhir.FhirElement(x)); }
-    if (source['patchFormat']) { this.patchFormat = source.patchFormat.map((x) => (x)); }
-    if (source['_patchFormat']) { this._patchFormat = source._patchFormat.map((x) => new fhir.FhirElement(x)); }
-    if (source['implementationGuide']) { this.implementationGuide = source.implementationGuide.map((x) => (x)); }
-    if (source['_implementationGuide']) { this._implementationGuide = source._implementationGuide.map((x) => new fhir.FhirElement(x)); }
+    if (source['patchFormat']) { this.patchFormat = source.patchFormat.map((x) => new fhir.FhirCode({value: x})); }
+    if (source['implementationGuide']) { this.implementationGuide = source.implementationGuide.map((x) => new fhir.FhirCanonical({value: x})); }
     if (source['rest']) { this.rest = source.rest.map((x) => new fhir.CapabilityStatementRest(x)); }
     if (source['messaging']) { this.messaging = source.messaging.map((x) => new fhir.CapabilityStatementMessaging(x)); }
     if (source['document']) { this.document = source.document.map((x) => new fhir.CapabilityStatementDocument(x)); }
@@ -1863,40 +1431,60 @@ export class CapabilityStatement extends fhir.DomainResource implements ICapabil
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: CapabilityStatement.resourceType']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: CapabilityStatement.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (!this["date"]) { results.push(["date",'Missing required element: CapabilityStatement.date']); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_purpose"]) { results.push(...this._purpose.doModelValidation()); }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (!this["kind"]) { results.push(["kind",'Missing required element: CapabilityStatement.kind']); }
-    if (this["_kind"]) { results.push(...this._kind.doModelValidation()); }
-    if (this["_instantiates"]) { this._instantiates.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_imports"]) { this._imports.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["software"]) { results.push(...this.software.doModelValidation()); }
-    if (this["implementation"]) { results.push(...this.implementation.doModelValidation()); }
-    if (!this["fhirVersion"]) { results.push(["fhirVersion",'Missing required element: CapabilityStatement.fhirVersion']); }
-    if (this["_fhirVersion"]) { results.push(...this._fhirVersion.doModelValidation()); }
-    if ((!this["format"]) || (this["format"].length === 0)) { results.push(["format",'Missing required element: CapabilityStatement.format']); }
-    if (this["_format"]) { this._format.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_patchFormat"]) { this._patchFormat.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_implementationGuide"]) { this._implementationGuide.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["rest"]) { this.rest.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["messaging"]) { this.messaging.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["document"]) { this.document.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'CapabilityStatement' fhir: CapabilityStatement.resourceType:'CapabilityStatement'", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: CapabilityStatement.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (!this['date']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property date:fhir.FhirDateTime fhir: CapabilityStatement.date:dateTime", }));
+    }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (!this['kind']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property kind:CapabilityStatementKindValueSetEnum fhir: CapabilityStatement.kind:code", }));
+    }
+    if (this["instantiates"]) { this.instantiates.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["imports"]) { this.imports.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["software"]) { outcome.issue!.push(...this.software.doModelValidation().issue!); }
+    if (this["implementation"]) { outcome.issue!.push(...this.implementation.doModelValidation().issue!); }
+    if (!this['fhirVersion']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property fhirVersion:fhir.FhirCode fhir: CapabilityStatement.fhirVersion:code", }));
+    }
+    if (this["fhirVersion"]) { outcome.issue!.push(...this.fhirVersion.doModelValidation().issue!); }
+    if (!this['format']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property format:fhir.FhirCode[] fhir: CapabilityStatement.format:code", }));
+    } else if (!Array.isArray(this.format)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property format:fhir.FhirCode[] fhir: CapabilityStatement.format:code", }));
+    } else if (this.format.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property format:fhir.FhirCode[] fhir: CapabilityStatement.format:code", }));
+    }
+    if (this["format"]) { this.format.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["patchFormat"]) { this.patchFormat.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["implementationGuide"]) { this.implementationGuide.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["rest"]) { this.rest.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["messaging"]) { this.messaging.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["document"]) { this.document.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

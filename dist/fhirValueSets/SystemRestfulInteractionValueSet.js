@@ -43,23 +43,4 @@ export const SystemRestfulInteractionValueSet = {
 /**
  * Operations supported by REST at the system level.
  */
-export var SystemRestfulInteractionValueSetEnum;
-(function (SystemRestfulInteractionValueSetEnum) {
-    /**
-     * batch: perform a set of a separate interactions in a single http operation
-     */
-    SystemRestfulInteractionValueSetEnum["Batch"] = "batch";
-    /**
-     * history-system: Retrieve the change history for all resources on a system.
-     */
-    SystemRestfulInteractionValueSetEnum["HistorySystem"] = "history-system";
-    /**
-     * search-system: Search all resources based on some filter criteria.
-     */
-    SystemRestfulInteractionValueSetEnum["SearchSystem"] = "search-system";
-    /**
-     * transaction: Update, create or delete a set of resources as a single transaction.
-     */
-    SystemRestfulInteractionValueSetEnum["Transaction"] = "transaction";
-})(SystemRestfulInteractionValueSetEnum || (SystemRestfulInteractionValueSetEnum = {}));
 //# sourceMappingURL=SystemRestfulInteractionValueSet.js.map

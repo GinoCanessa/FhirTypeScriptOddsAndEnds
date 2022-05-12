@@ -3,425 +3,41 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MedicationKnowledge
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { MedicationknowledgePackageTypeValueSet, MedicationknowledgePackageTypeValueSetType, MedicationknowledgePackageTypeValueSetEnum } from '../fhirValueSets/MedicationknowledgePackageTypeValueSet.js'
-import { MedicationknowledgeCharacteristicValueSet, MedicationknowledgeCharacteristicValueSetType, MedicationknowledgeCharacteristicValueSetEnum } from '../fhirValueSets/MedicationknowledgeCharacteristicValueSet.js'
-import { MedicationCodesValueSet, MedicationCodesValueSetType, MedicationCodesValueSetEnum } from '../fhirValueSets/MedicationCodesValueSet.js'
-import { MedicationknowledgeStatusValueSet, MedicationknowledgeStatusValueSetType, MedicationknowledgeStatusValueSetEnum } from '../fhirValueSets/MedicationknowledgeStatusValueSet.js'
-import { MedicationFormCodesValueSet, MedicationFormCodesValueSetType, MedicationFormCodesValueSetEnum } from '../fhirValueSets/MedicationFormCodesValueSet.js'
-import { RouteCodesValueSet, RouteCodesValueSetType, RouteCodesValueSetEnum } from '../fhirValueSets/RouteCodesValueSet.js'
-
+import { MedicationknowledgePackageTypeValueSet, MedicationknowledgePackageTypeValueSetType,} from '../fhirValueSets/MedicationknowledgePackageTypeValueSet.js';
+import { MedicationknowledgePackageTypeValueSetEnum } from '../valueSetEnums.js';
+import { MedicationknowledgeCharacteristicValueSet, MedicationknowledgeCharacteristicValueSetType,} from '../fhirValueSets/MedicationknowledgeCharacteristicValueSet.js';
+import { MedicationknowledgeCharacteristicValueSetEnum } from '../valueSetEnums.js';
+import { MedicationCodesValueSet, MedicationCodesValueSetType,} from '../fhirValueSets/MedicationCodesValueSet.js';
+import { MedicationCodesValueSetEnum } from '../valueSetEnums.js';
+import { MedicationknowledgeStatusValueSet, MedicationknowledgeStatusValueSetType,} from '../fhirValueSets/MedicationknowledgeStatusValueSet.js';
+import { MedicationknowledgeStatusValueSetEnum } from '../valueSetEnums.js';
+import { MedicationFormCodesValueSet, MedicationFormCodesValueSetType,} from '../fhirValueSets/MedicationFormCodesValueSet.js';
+import { MedicationFormCodesValueSetEnum } from '../valueSetEnums.js';
+import { RouteCodesValueSet, RouteCodesValueSetType,} from '../fhirValueSets/RouteCodesValueSet.js';
+import { RouteCodesValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Associated or related knowledge about a medication.
+ * Valid arguments for the MedicationKnowledgeRelatedMedicationKnowledge type.
  */
-export type IMedicationKnowledgeRelatedMedicationKnowledge = fhir.IBackboneElement & { 
+export interface MedicationKnowledgeRelatedMedicationKnowledgeArgs extends fhir.BackboneElementArgs {
   /**
    * The category of the associated medication knowledge reference.
    */
-  type: fhir.ICodeableConcept|null;
+  type: fhir.CodeableConceptArgs|null;
   /**
    * Associated documentation about the associated medication knowledge.
    */
-  reference: fhir.IReference[]|null;
-}
-
-/**
- * Associated documentation about the medication.
- */
-export type IMedicationKnowledgeMonograph = fhir.IBackboneElement & { 
-  /**
-   * The category of documentation about the medication. (e.g. professional monograph, patient education monograph).
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Associated documentation about the medication.
-   */
-  source?: fhir.IReference|undefined;
-}
-
-/**
- * Identifies a particular constituent of interest in the product.
- */
-export type IMedicationKnowledgeIngredient = fhir.IBackboneElement & { 
-  /**
-   * The actual ingredient - either a substance (simple ingredient) or another medication.
-   */
-  itemCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * The actual ingredient - either a substance (simple ingredient) or another medication.
-   */
-  itemReference?: fhir.IReference|undefined;
-  /**
-   * Indication of whether this ingredient affects the therapeutic action of the drug.
-   */
-  isActive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.ingredient.isActive
-   */
-  _isActive?: fhir.IFhirElement|undefined;
-  /**
-   * Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet.
-   */
-  strength?: fhir.IRatio|undefined;
-}
-
-/**
- * The price of the medication.
- */
-export type IMedicationKnowledgeCost = fhir.IBackboneElement & { 
-  /**
-   * The category of the cost information.  For example, manufacturers' cost, patient cost, claim reimbursement cost, actual acquisition cost.
-   */
-  type: fhir.ICodeableConcept|null;
-  /**
-   * The source or owner that assigns the price to the medication.
-   */
-  source?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.cost.source
-   */
-  _source?: fhir.IFhirElement|undefined;
-  /**
-   * The price of the medication.
-   */
-  cost: fhir.IMoney|null;
-}
-
-/**
- * The program under which the medication is reviewed.
- */
-export type IMedicationKnowledgeMonitoringProgram = fhir.IBackboneElement & { 
-  /**
-   * Type of program under which the medication is monitored.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Name of the reviewing program.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.monitoringProgram.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Dosage for the medication for the specific guidelines.
- */
-export type IMedicationKnowledgeAdministrationGuidelinesDosage = fhir.IBackboneElement & { 
-  /**
-   * The type of dosage (for example, prophylaxis, maintenance, therapeutic, etc.).
-   */
-  type: fhir.ICodeableConcept|null;
-  /**
-   * Dosage for the medication for the specific guidelines.
-   */
-  dosage: fhir.IDosage[]|null;
-}
-
-/**
- * Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).
- */
-export type IMedicationKnowledgeAdministrationGuidelinesPatientCharacteristics = fhir.IBackboneElement & { 
-  /**
-   * Specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).
-   */
-  characteristicCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * Specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).
-   */
-  characteristicQuantity?: fhir.IQuantity|undefined;
-  /**
-   * The specific characteristic (e.g. height, weight, gender, etc.).
-   */
-  value?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.administrationGuidelines.patientCharacteristics.value
-   */
-  _value?: fhir.IFhirElement[]|undefined;
-}
-
-/**
- * Guidelines for the administration of the medication.
- */
-export type IMedicationKnowledgeAdministrationGuidelines = fhir.IBackboneElement & { 
-  /**
-   * Dosage for the medication for the specific guidelines.
-   */
-  dosage?: fhir.IMedicationKnowledgeAdministrationGuidelinesDosage[]|undefined;
-  /**
-   * Indication for use that apply to the specific administration guidelines.
-   */
-  indicationCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * Indication for use that apply to the specific administration guidelines.
-   */
-  indicationReference?: fhir.IReference|undefined;
-  /**
-   * Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).
-   */
-  patientCharacteristics?: fhir.IMedicationKnowledgeAdministrationGuidelinesPatientCharacteristics[]|undefined;
-}
-
-/**
- * Categorization of the medication within a formulary or classification system.
- */
-export type IMedicationKnowledgeMedicineClassification = fhir.IBackboneElement & { 
-  /**
-   * The type of category for the medication (for example, therapeutic classification, therapeutic sub-classification).
-   */
-  type: fhir.ICodeableConcept|null;
-  /**
-   * Specific category assigned to the medication (e.g. anti-infective, anti-hypertensive, antibiotic, etc.).
-   */
-  classification?: fhir.ICodeableConcept[]|undefined;
-}
-
-/**
- * Information that only applies to packages (not products).
- */
-export type IMedicationKnowledgePackaging = fhir.IBackboneElement & { 
-  /**
-   * A code that defines the specific type of packaging that the medication can be found in (e.g. blister sleeve, tube, bottle).
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * The number of product units the package would contain if fully loaded.
-   */
-  quantity?: fhir.IQuantity|undefined;
-}
-
-/**
- * Specifies descriptive properties of the medicine, such as color, shape, imprints, etc.
- */
-export type IMedicationKnowledgeDrugCharacteristic = fhir.IBackboneElement & { 
-  /**
-   * A code specifying which characteristic of the medicine is being described (for example, colour, shape, imprint).
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * The description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.
-   */
-  valueCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * The description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.
-   */
-  valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.drugCharacteristic.value[x]
-   */
-  _valueString?: fhir.IFhirElement|undefined;
-  /**
-   * The description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.
-   */
-  valueQuantity?: fhir.IQuantity|undefined;
-  /**
-   * The description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.
-   */
-  valueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.drugCharacteristic.value[x]
-   */
-  _valueBase64Binary?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Specifies if changes are allowed when dispensing a medication from a regulatory perspective.
- */
-export type IMedicationKnowledgeRegulatorySubstitution = fhir.IBackboneElement & { 
-  /**
-   * Specifies the type of substitution allowed.
-   */
-  type: fhir.ICodeableConcept|null;
-  /**
-   * Specifies if regulation allows for changes in the medication when dispensing.
-   */
-  allowed: boolean|null;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.regulatory.substitution.allowed
-   */
-  _allowed?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Specifies the schedule of a medication in jurisdiction.
- */
-export type IMedicationKnowledgeRegulatorySchedule = fhir.IBackboneElement & { 
-  /**
-   * Specifies the specific drug schedule.
-   */
-  schedule: fhir.ICodeableConcept|null;
-}
-
-/**
- * The maximum number of units of the medication that can be dispensed in a period.
- */
-export type IMedicationKnowledgeRegulatoryMaxDispense = fhir.IBackboneElement & { 
-  /**
-   * The maximum number of units of the medication that can be dispensed.
-   */
-  quantity: fhir.IQuantity|null;
-  /**
-   * The period that applies to the maximum number of units.
-   */
-  period?: fhir.IDuration|undefined;
-}
-
-/**
- * Regulatory information about a medication.
- */
-export type IMedicationKnowledgeRegulatory = fhir.IBackboneElement & { 
-  /**
-   * The authority that is specifying the regulations.
-   */
-  regulatoryAuthority: fhir.IReference|null;
-  /**
-   * Specifies if changes are allowed when dispensing a medication from a regulatory perspective.
-   */
-  substitution?: fhir.IMedicationKnowledgeRegulatorySubstitution[]|undefined;
-  /**
-   * Specifies the schedule of a medication in jurisdiction.
-   */
-  schedule?: fhir.IMedicationKnowledgeRegulatorySchedule[]|undefined;
-  /**
-   * The maximum number of units of the medication that can be dispensed in a period.
-   */
-  maxDispense?: fhir.IMedicationKnowledgeRegulatoryMaxDispense|undefined;
-}
-
-/**
- * The time course of drug absorption, distribution, metabolism and excretion of a medication from the body.
- */
-export type IMedicationKnowledgeKinetics = fhir.IBackboneElement & { 
-  /**
-   * The drug concentration measured at certain discrete points in time.
-   */
-  areaUnderCurve?: fhir.IQuantity[]|undefined;
-  /**
-   * The median lethal dose of a drug.
-   */
-  lethalDose50?: fhir.IQuantity[]|undefined;
-  /**
-   * The time required for any specified property (e.g., the concentration of a substance in the body) to decrease by half.
-   */
-  halfLifePeriod?: fhir.IDuration|undefined;
-}
-
-/**
- * Information about a medication that is used to support knowledge.
- */
-export type IMedicationKnowledge = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "MedicationKnowledge";
-  /**
-   * Depending on the context of use, the code that was actually selected by the user (prescriber, dispenser, etc.) will have the coding.userSelected set to true.  As described in the coding datatype: "A coding may be marked as a "userSelected" if a user selected the particular coded value in a user interface (e.g. the user selects an item in a pick-list). If a user selected coding exists, it is the preferred choice for performing translations etc. Other codes can only be literal translations to alternative code systems, or codes at a lower level of granularity (e.g. a generic code for a vendor-specific primary one).
-   */
-  code?: fhir.ICodeableConcept|undefined;
-  /**
-   * This status is intended to identify if the medication in a local system is in active use within a drug database or inventory.  For example, a pharmacy system may create a new drug file record for a compounded product "ABC Hospital Special Cream" with an active status.  At some point in the future, it may be determined that the drug record was created with an error and the status is changed to "entered in error".   This status is not intended to specify if a medication is part of a particular formulary.  It is possible that the drug record may be referenced by multiple formularies or catalogues and each of those entries would have a separate status.
-   */
-  status?: MedicationknowledgeStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.
-   */
-  manufacturer?: fhir.IReference|undefined;
-  /**
-   * When Medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When Medication is referenced within MedicationAdministration, this is administered form.
-   */
-  doseForm?: fhir.ICodeableConcept|undefined;
-  /**
-   * This is the quantity of medication in a package.  To specify the strength of the medication, the Ingredient.strength attribute is used.
-   */
-  amount?: fhir.IQuantity|undefined;
-  /**
-   * Additional names for a medication, for example, the name(s) given to a medication in different countries.  For example, acetaminophen and paracetamol or salbutamol and albuterol.
-   */
-  synonym?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.synonym
-   */
-  _synonym?: fhir.IFhirElement[]|undefined;
-  /**
-   * Associated or related knowledge about a medication.
-   */
-  relatedMedicationKnowledge?: fhir.IMedicationKnowledgeRelatedMedicationKnowledge[]|undefined;
-  /**
-   * Associated or related medications.  For example, if the medication is a branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor).
-   */
-  associatedMedication?: fhir.IReference[]|undefined;
-  /**
-   * Category of the medication or product (e.g. branded product, therapeutic moeity, generic product, innovator product, etc.).
-   */
-  productType?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Associated documentation about the medication.
-   */
-  monograph?: fhir.IMedicationKnowledgeMonograph[]|undefined;
-  /**
-   * Identifies a particular constituent of interest in the product.
-   */
-  ingredient?: fhir.IMedicationKnowledgeIngredient[]|undefined;
-  /**
-   * The instructions for preparing the medication.
-   */
-  preparationInstruction?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.preparationInstruction
-   */
-  _preparationInstruction?: fhir.IFhirElement|undefined;
-  /**
-   * The intended or approved route of administration.
-   */
-  intendedRoute?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The price of the medication.
-   */
-  cost?: fhir.IMedicationKnowledgeCost[]|undefined;
-  /**
-   * The program under which the medication is reviewed.
-   */
-  monitoringProgram?: fhir.IMedicationKnowledgeMonitoringProgram[]|undefined;
-  /**
-   * Guidelines for the administration of the medication.
-   */
-  administrationGuidelines?: fhir.IMedicationKnowledgeAdministrationGuidelines[]|undefined;
-  /**
-   * Categorization of the medication within a formulary or classification system.
-   */
-  medicineClassification?: fhir.IMedicationKnowledgeMedicineClassification[]|undefined;
-  /**
-   * Information that only applies to packages (not products).
-   */
-  packaging?: fhir.IMedicationKnowledgePackaging|undefined;
-  /**
-   * Specifies descriptive properties of the medicine, such as color, shape, imprints, etc.
-   */
-  drugCharacteristic?: fhir.IMedicationKnowledgeDrugCharacteristic[]|undefined;
-  /**
-   * Potential clinical issue with or between medication(s) (for example, drug-drug interaction, drug-disease contraindication, drug-allergy interaction, etc.).
-   */
-  contraindication?: fhir.IReference[]|undefined;
-  /**
-   * Regulatory information about a medication.
-   */
-  regulatory?: fhir.IMedicationKnowledgeRegulatory[]|undefined;
-  /**
-   * The time course of drug absorption, distribution, metabolism and excretion of a medication from the body.
-   */
-  kinetics?: fhir.IMedicationKnowledgeKinetics[]|undefined;
+  reference: fhir.ReferenceArgs[]|null;
 }
 
 /**
  * Associated or related knowledge about a medication.
  */
-export class MedicationKnowledgeRelatedMedicationKnowledge extends fhir.BackboneElement implements IMedicationKnowledgeRelatedMedicationKnowledge {
+export class MedicationKnowledgeRelatedMedicationKnowledge extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeRelatedMedicationKnowledge';
   /**
    * The category of the associated medication knowledge reference.
    */
@@ -429,13 +45,13 @@ export class MedicationKnowledgeRelatedMedicationKnowledge extends fhir.Backbone
   /**
    * Associated documentation about the associated medication knowledge.
    */
-  public reference: fhir.Reference[]|null;
+  public reference: fhir.Reference[]|null = [];
   /**
    * Default constructor for MedicationKnowledgeRelatedMedicationKnowledge - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeRelatedMedicationKnowledge> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<MedicationKnowledgeRelatedMedicationKnowledgeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
     if (source['reference']) { this.reference = source.reference.map((x) => new fhir.Reference(x)); }
     else { this.reference = null; }
@@ -443,20 +59,48 @@ export class MedicationKnowledgeRelatedMedicationKnowledge extends fhir.Backbone
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: MedicationKnowledge.relatedMedicationKnowledge.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if ((!this["reference"]) || (this["reference"].length === 0)) { results.push(["reference",'Missing required element: MedicationKnowledge.relatedMedicationKnowledge.reference']); }
-    if (this["reference"]) { this.reference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: MedicationKnowledge.relatedMedicationKnowledge.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (!this['reference']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property reference:fhir.Reference[] fhir: MedicationKnowledge.relatedMedicationKnowledge.reference:Reference", }));
+    } else if (!Array.isArray(this.reference)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property reference:fhir.Reference[] fhir: MedicationKnowledge.relatedMedicationKnowledge.reference:Reference", }));
+    } else if (this.reference.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property reference:fhir.Reference[] fhir: MedicationKnowledge.relatedMedicationKnowledge.reference:Reference", }));
+    }
+    if (this["reference"]) { this.reference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeMonograph type.
+ */
+export interface MedicationKnowledgeMonographArgs extends fhir.BackboneElementArgs {
+  /**
+   * The category of documentation about the medication. (e.g. professional monograph, patient education monograph).
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Associated documentation about the medication.
+   */
+  source?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * Associated documentation about the medication.
  */
-export class MedicationKnowledgeMonograph extends fhir.BackboneElement implements IMedicationKnowledgeMonograph {
+export class MedicationKnowledgeMonograph extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeMonograph';
   /**
    * The category of documentation about the medication. (e.g. professional monograph, patient education monograph).
    */
@@ -468,42 +112,67 @@ export class MedicationKnowledgeMonograph extends fhir.BackboneElement implement
   /**
    * Default constructor for MedicationKnowledgeMonograph - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeMonograph> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['source']) { this.source = new fhir.Reference(source.source!); }
+  constructor(source:Partial<MedicationKnowledgeMonographArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['source']) { this.source = new fhir.Reference(source.source); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["source"]) { results.push(...this.source.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["source"]) { outcome.issue!.push(...this.source.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeIngredient type.
+ */
+export interface MedicationKnowledgeIngredientArgs extends fhir.BackboneElementArgs {
+  /**
+   * The actual ingredient - either a substance (simple ingredient) or another medication.
+   */
+  item?: fhir.CodeableConcept|fhir.Reference|undefined;
+  /**
+   * The actual ingredient - either a substance (simple ingredient) or another medication.
+   */
+  itemCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The actual ingredient - either a substance (simple ingredient) or another medication.
+   */
+  itemReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * Indication of whether this ingredient affects the therapeutic action of the drug.
+   */
+  isActive?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet.
+   */
+  strength?: fhir.RatioArgs|undefined;
 }
 
 /**
  * Identifies a particular constituent of interest in the product.
  */
-export class MedicationKnowledgeIngredient extends fhir.BackboneElement implements IMedicationKnowledgeIngredient {
+export class MedicationKnowledgeIngredient extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeIngredient';
   /**
    * The actual ingredient - either a substance (simple ingredient) or another medication.
    */
-  public itemCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * The actual ingredient - either a substance (simple ingredient) or another medication.
-   */
-  public itemReference?: fhir.Reference|undefined;
+  public item: (fhir.CodeableConcept|fhir.Reference)|null;
+  readonly __itemIsChoice:true = true;
   /**
    * Indication of whether this ingredient affects the therapeutic action of the drug.
    */
-  public isActive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.ingredient.isActive
-   */
-  public _isActive?: fhir.FhirElement|undefined;
+  public isActive?: fhir.FhirBoolean|undefined;
   /**
    * Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet.
    */
@@ -511,31 +180,57 @@ export class MedicationKnowledgeIngredient extends fhir.BackboneElement implemen
   /**
    * Default constructor for MedicationKnowledgeIngredient - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeIngredient> = { }) {
-    super(source);
-    if (source['itemCodeableConcept']) { this.itemCodeableConcept = new fhir.CodeableConcept(source.itemCodeableConcept!); }
-    if (source['itemReference']) { this.itemReference = new fhir.Reference(source.itemReference!); }
-    if (source['isActive']) { this.isActive = source.isActive; }
-    if (source['_isActive']) { this._isActive = new fhir.FhirElement(source._isActive!); }
-    if (source['strength']) { this.strength = new fhir.Ratio(source.strength!); }
+  constructor(source:Partial<MedicationKnowledgeIngredientArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['item']) { this.item = source.item; }
+    else if (source['itemCodeableConcept']) { this.item = new fhir.CodeableConcept(source.itemCodeableConcept); }
+    else if (source['itemReference']) { this.item = new fhir.Reference(source.itemReference); }
+    else { this.item = null; }
+    if (source['isActive']) { this.isActive = new fhir.FhirBoolean({value: source.isActive}); }
+    if (source['strength']) { this.strength = new fhir.Ratio(source.strength); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["itemCodeableConcept"]) { results.push(...this.itemCodeableConcept.doModelValidation()); }
-    if (this["itemReference"]) { results.push(...this.itemReference.doModelValidation()); }
-    if (this["_isActive"]) { results.push(...this._isActive.doModelValidation()); }
-    if (this["strength"]) { results.push(...this.strength.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['item']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property item: fhir: MedicationKnowledge.ingredient.item[x]:", }));
+    }
+    if (this["isActive"]) { outcome.issue!.push(...this.isActive.doModelValidation().issue!); }
+    if (this["strength"]) { outcome.issue!.push(...this.strength.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeCost type.
+ */
+export interface MedicationKnowledgeCostArgs extends fhir.BackboneElementArgs {
+  /**
+   * The category of the cost information.  For example, manufacturers' cost, patient cost, claim reimbursement cost, actual acquisition cost.
+   */
+  type: fhir.CodeableConceptArgs|null;
+  /**
+   * The source or owner that assigns the price to the medication.
+   */
+  source?: fhir.FhirString|string|undefined;
+  /**
+   * The price of the medication.
+   */
+  cost: fhir.MoneyArgs|null;
 }
 
 /**
  * The price of the medication.
  */
-export class MedicationKnowledgeCost extends fhir.BackboneElement implements IMedicationKnowledgeCost {
+export class MedicationKnowledgeCost extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeCost';
   /**
    * The category of the cost information.  For example, manufacturers' cost, patient cost, claim reimbursement cost, actual acquisition cost.
    */
@@ -543,11 +238,7 @@ export class MedicationKnowledgeCost extends fhir.BackboneElement implements IMe
   /**
    * The source or owner that assigns the price to the medication.
    */
-  public source?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.cost.source
-   */
-  public _source?: fhir.FhirElement|undefined;
+  public source?: fhir.FhirString|undefined;
   /**
    * The price of the medication.
    */
@@ -555,33 +246,56 @@ export class MedicationKnowledgeCost extends fhir.BackboneElement implements IMe
   /**
    * Default constructor for MedicationKnowledgeCost - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeCost> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<MedicationKnowledgeCostArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
-    if (source['source']) { this.source = source.source; }
-    if (source['_source']) { this._source = new fhir.FhirElement(source._source!); }
-    if (source['cost']) { this.cost = new fhir.Money(source.cost!); }
+    if (source['source']) { this.source = new fhir.FhirString({value: source.source}); }
+    if (source['cost']) { this.cost = new fhir.Money(source.cost); }
     else { this.cost = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: MedicationKnowledge.cost.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["_source"]) { results.push(...this._source.doModelValidation()); }
-    if (!this["cost"]) { results.push(["cost",'Missing required element: MedicationKnowledge.cost.cost']); }
-    if (this["cost"]) { results.push(...this.cost.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: MedicationKnowledge.cost.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["source"]) { outcome.issue!.push(...this.source.doModelValidation().issue!); }
+    if (!this['cost']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property cost:fhir.Money fhir: MedicationKnowledge.cost.cost:Money", }));
+    }
+    if (this["cost"]) { outcome.issue!.push(...this.cost.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeMonitoringProgram type.
+ */
+export interface MedicationKnowledgeMonitoringProgramArgs extends fhir.BackboneElementArgs {
+  /**
+   * Type of program under which the medication is monitored.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Name of the reviewing program.
+   */
+  name?: fhir.FhirString|string|undefined;
 }
 
 /**
  * The program under which the medication is reviewed.
  */
-export class MedicationKnowledgeMonitoringProgram extends fhir.BackboneElement implements IMedicationKnowledgeMonitoringProgram {
+export class MedicationKnowledgeMonitoringProgram extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeMonitoringProgram';
   /**
    * Type of program under which the medication is monitored.
    */
@@ -589,35 +303,50 @@ export class MedicationKnowledgeMonitoringProgram extends fhir.BackboneElement i
   /**
    * Name of the reviewing program.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.monitoringProgram.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Default constructor for MedicationKnowledgeMonitoringProgram - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeMonitoringProgram> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
+  constructor(source:Partial<MedicationKnowledgeMonitoringProgramArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeAdministrationGuidelinesDosage type.
+ */
+export interface MedicationKnowledgeAdministrationGuidelinesDosageArgs extends fhir.BackboneElementArgs {
+  /**
+   * The type of dosage (for example, prophylaxis, maintenance, therapeutic, etc.).
+   */
+  type: fhir.CodeableConceptArgs|null;
+  /**
+   * Dosage for the medication for the specific guidelines.
+   */
+  dosage: fhir.DosageArgs[]|null;
 }
 
 /**
  * Dosage for the medication for the specific guidelines.
  */
-export class MedicationKnowledgeAdministrationGuidelinesDosage extends fhir.BackboneElement implements IMedicationKnowledgeAdministrationGuidelinesDosage {
+export class MedicationKnowledgeAdministrationGuidelinesDosage extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeAdministrationGuidelinesDosage';
   /**
    * The type of dosage (for example, prophylaxis, maintenance, therapeutic, etc.).
    */
@@ -625,13 +354,13 @@ export class MedicationKnowledgeAdministrationGuidelinesDosage extends fhir.Back
   /**
    * Dosage for the medication for the specific guidelines.
    */
-  public dosage: fhir.Dosage[]|null;
+  public dosage: fhir.Dosage[]|null = [];
   /**
    * Default constructor for MedicationKnowledgeAdministrationGuidelinesDosage - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeAdministrationGuidelinesDosage> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<MedicationKnowledgeAdministrationGuidelinesDosageArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
     if (source['dosage']) { this.dosage = source.dosage.map((x) => new fhir.Dosage(x)); }
     else { this.dosage = null; }
@@ -639,105 +368,184 @@ export class MedicationKnowledgeAdministrationGuidelinesDosage extends fhir.Back
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: MedicationKnowledge.administrationGuidelines.dosage.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if ((!this["dosage"]) || (this["dosage"].length === 0)) { results.push(["dosage",'Missing required element: MedicationKnowledge.administrationGuidelines.dosage.dosage']); }
-    if (this["dosage"]) { this.dosage.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: MedicationKnowledge.administrationGuidelines.dosage.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (!this['dosage']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property dosage:fhir.Dosage[] fhir: MedicationKnowledge.administrationGuidelines.dosage.dosage:Dosage", }));
+    } else if (!Array.isArray(this.dosage)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property dosage:fhir.Dosage[] fhir: MedicationKnowledge.administrationGuidelines.dosage.dosage:Dosage", }));
+    } else if (this.dosage.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property dosage:fhir.Dosage[] fhir: MedicationKnowledge.administrationGuidelines.dosage.dosage:Dosage", }));
+    }
+    if (this["dosage"]) { this.dosage.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics type.
+ */
+export interface MedicationKnowledgeAdministrationGuidelinesPatientCharacteristicsArgs extends fhir.BackboneElementArgs {
+  /**
+   * Specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).
+   */
+  characteristic?: fhir.CodeableConcept|fhir.Quantity|undefined;
+  /**
+   * Specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).
+   */
+  characteristicCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).
+   */
+  characteristicQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * The specific characteristic (e.g. height, weight, gender, etc.).
+   */
+  value?: fhir.FhirString[]|string[]|undefined;
 }
 
 /**
  * Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).
  */
-export class MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics extends fhir.BackboneElement implements IMedicationKnowledgeAdministrationGuidelinesPatientCharacteristics {
+export class MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics';
   /**
    * Specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).
    */
-  public characteristicCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * Specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).
-   */
-  public characteristicQuantity?: fhir.Quantity|undefined;
+  public characteristic: (fhir.CodeableConcept|fhir.Quantity)|null;
+  readonly __characteristicIsChoice:true = true;
   /**
    * The specific characteristic (e.g. height, weight, gender, etc.).
    */
-  public value?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.administrationGuidelines.patientCharacteristics.value
-   */
-  public _value?: fhir.FhirElement[]|undefined;
+  public value?: fhir.FhirString[]|undefined = [];
   /**
    * Default constructor for MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeAdministrationGuidelinesPatientCharacteristics> = { }) {
-    super(source);
-    if (source['characteristicCodeableConcept']) { this.characteristicCodeableConcept = new fhir.CodeableConcept(source.characteristicCodeableConcept!); }
-    if (source['characteristicQuantity']) { this.characteristicQuantity = new fhir.Quantity(source.characteristicQuantity!); }
-    if (source['value']) { this.value = source.value.map((x) => (x)); }
-    if (source['_value']) { this._value = source._value.map((x) => new fhir.FhirElement(x)); }
+  constructor(source:Partial<MedicationKnowledgeAdministrationGuidelinesPatientCharacteristicsArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['characteristic']) { this.characteristic = source.characteristic; }
+    else if (source['characteristicCodeableConcept']) { this.characteristic = new fhir.CodeableConcept(source.characteristicCodeableConcept); }
+    else if (source['characteristicQuantity']) { this.characteristic = new fhir.Quantity(source.characteristicQuantity); }
+    else { this.characteristic = null; }
+    if (source['value']) { this.value = source.value.map((x) => new fhir.FhirString({value: x})); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["characteristicCodeableConcept"]) { results.push(...this.characteristicCodeableConcept.doModelValidation()); }
-    if (this["characteristicQuantity"]) { results.push(...this.characteristicQuantity.doModelValidation()); }
-    if (this["_value"]) { this._value.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['characteristic']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property characteristic: fhir: MedicationKnowledge.administrationGuidelines.patientCharacteristics.characteristic[x]:", }));
+    }
+    if (this["value"]) { this.value.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeAdministrationGuidelines type.
+ */
+export interface MedicationKnowledgeAdministrationGuidelinesArgs extends fhir.BackboneElementArgs {
+  /**
+   * Dosage for the medication for the specific guidelines.
+   */
+  dosage?: fhir.MedicationKnowledgeAdministrationGuidelinesDosageArgs[]|undefined;
+  /**
+   * Indication for use that apply to the specific administration guidelines.
+   */
+  indication?: fhir.CodeableConcept|fhir.Reference|undefined;
+  /**
+   * Indication for use that apply to the specific administration guidelines.
+   */
+  indicationCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Indication for use that apply to the specific administration guidelines.
+   */
+  indicationReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).
+   */
+  patientCharacteristics?: fhir.MedicationKnowledgeAdministrationGuidelinesPatientCharacteristicsArgs[]|undefined;
 }
 
 /**
  * Guidelines for the administration of the medication.
  */
-export class MedicationKnowledgeAdministrationGuidelines extends fhir.BackboneElement implements IMedicationKnowledgeAdministrationGuidelines {
+export class MedicationKnowledgeAdministrationGuidelines extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeAdministrationGuidelines';
   /**
    * Dosage for the medication for the specific guidelines.
    */
-  public dosage?: fhir.MedicationKnowledgeAdministrationGuidelinesDosage[]|undefined;
+  public dosage?: fhir.MedicationKnowledgeAdministrationGuidelinesDosage[]|undefined = [];
   /**
    * Indication for use that apply to the specific administration guidelines.
    */
-  public indicationCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * Indication for use that apply to the specific administration guidelines.
-   */
-  public indicationReference?: fhir.Reference|undefined;
+  public indication?: (fhir.CodeableConcept|fhir.Reference)|undefined;
+  readonly __indicationIsChoice:true = true;
   /**
    * Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).
    */
-  public patientCharacteristics?: fhir.MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics[]|undefined;
+  public patientCharacteristics?: fhir.MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics[]|undefined = [];
   /**
    * Default constructor for MedicationKnowledgeAdministrationGuidelines - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeAdministrationGuidelines> = { }) {
-    super(source);
+  constructor(source:Partial<MedicationKnowledgeAdministrationGuidelinesArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['dosage']) { this.dosage = source.dosage.map((x) => new fhir.MedicationKnowledgeAdministrationGuidelinesDosage(x)); }
-    if (source['indicationCodeableConcept']) { this.indicationCodeableConcept = new fhir.CodeableConcept(source.indicationCodeableConcept!); }
-    if (source['indicationReference']) { this.indicationReference = new fhir.Reference(source.indicationReference!); }
+    if (source['indication']) { this.indication = source.indication; }
+    else if (source['indicationCodeableConcept']) { this.indication = new fhir.CodeableConcept(source.indicationCodeableConcept); }
+    else if (source['indicationReference']) { this.indication = new fhir.Reference(source.indicationReference); }
     if (source['patientCharacteristics']) { this.patientCharacteristics = source.patientCharacteristics.map((x) => new fhir.MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["dosage"]) { this.dosage.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["indicationCodeableConcept"]) { results.push(...this.indicationCodeableConcept.doModelValidation()); }
-    if (this["indicationReference"]) { results.push(...this.indicationReference.doModelValidation()); }
-    if (this["patientCharacteristics"]) { this.patientCharacteristics.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["dosage"]) { this.dosage.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["patientCharacteristics"]) { this.patientCharacteristics.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeMedicineClassification type.
+ */
+export interface MedicationKnowledgeMedicineClassificationArgs extends fhir.BackboneElementArgs {
+  /**
+   * The type of category for the medication (for example, therapeutic classification, therapeutic sub-classification).
+   */
+  type: fhir.CodeableConceptArgs|null;
+  /**
+   * Specific category assigned to the medication (e.g. anti-infective, anti-hypertensive, antibiotic, etc.).
+   */
+  classification?: fhir.CodeableConceptArgs[]|undefined;
 }
 
 /**
  * Categorization of the medication within a formulary or classification system.
  */
-export class MedicationKnowledgeMedicineClassification extends fhir.BackboneElement implements IMedicationKnowledgeMedicineClassification {
+export class MedicationKnowledgeMedicineClassification extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeMedicineClassification';
   /**
    * The type of category for the medication (for example, therapeutic classification, therapeutic sub-classification).
    */
@@ -745,32 +553,54 @@ export class MedicationKnowledgeMedicineClassification extends fhir.BackboneElem
   /**
    * Specific category assigned to the medication (e.g. anti-infective, anti-hypertensive, antibiotic, etc.).
    */
-  public classification?: fhir.CodeableConcept[]|undefined;
+  public classification?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Default constructor for MedicationKnowledgeMedicineClassification - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeMedicineClassification> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<MedicationKnowledgeMedicineClassificationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
     if (source['classification']) { this.classification = source.classification.map((x) => new fhir.CodeableConcept(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: MedicationKnowledge.medicineClassification.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["classification"]) { this.classification.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: MedicationKnowledge.medicineClassification.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["classification"]) { this.classification.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgePackaging type.
+ */
+export interface MedicationKnowledgePackagingArgs extends fhir.BackboneElementArgs {
+  /**
+   * A code that defines the specific type of packaging that the medication can be found in (e.g. blister sleeve, tube, bottle).
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The number of product units the package would contain if fully loaded.
+   */
+  quantity?: fhir.QuantityArgs|undefined;
 }
 
 /**
  * Information that only applies to packages (not products).
  */
-export class MedicationKnowledgePackaging extends fhir.BackboneElement implements IMedicationKnowledgePackaging {
+export class MedicationKnowledgePackaging extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgePackaging';
   /**
    * A code that defines the specific type of packaging that the medication can be found in (e.g. blister sleeve, tube, bottle).
    */
@@ -782,10 +612,10 @@ export class MedicationKnowledgePackaging extends fhir.BackboneElement implement
   /**
    * Default constructor for MedicationKnowledgePackaging - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgePackaging> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity!); }
+  constructor(source:Partial<MedicationKnowledgePackagingArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity); }
   }
   /**
    * Example-bound Value Set for type
@@ -796,18 +626,54 @@ export class MedicationKnowledgePackaging extends fhir.BackboneElement implement
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["quantity"]) { results.push(...this.quantity.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["quantity"]) { outcome.issue!.push(...this.quantity.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeDrugCharacteristic type.
+ */
+export interface MedicationKnowledgeDrugCharacteristicArgs extends fhir.BackboneElementArgs {
+  /**
+   * A code specifying which characteristic of the medicine is being described (for example, colour, shape, imprint).
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.
+   */
+  value?: fhir.CodeableConcept|fhir.FhirString|fhir.Quantity|fhir.FhirBase64Binary|undefined;
+  /**
+   * The description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.
+   */
+  valueCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.
+   */
+  valueString?: fhir.FhirString|string|undefined;
+  /**
+   * The description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.
+   */
+  valueQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * The description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.
+   */
+  valueBase64Binary?: fhir.FhirBase64Binary|string|undefined;
 }
 
 /**
  * Specifies descriptive properties of the medicine, such as color, shape, imprints, etc.
  */
-export class MedicationKnowledgeDrugCharacteristic extends fhir.BackboneElement implements IMedicationKnowledgeDrugCharacteristic {
+export class MedicationKnowledgeDrugCharacteristic extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeDrugCharacteristic';
   /**
    * A code specifying which characteristic of the medicine is being described (for example, colour, shape, imprint).
    */
@@ -815,39 +681,19 @@ export class MedicationKnowledgeDrugCharacteristic extends fhir.BackboneElement 
   /**
    * The description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.
    */
-  public valueCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * The description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.
-   */
-  public valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.drugCharacteristic.value[x]
-   */
-  public _valueString?: fhir.FhirElement|undefined;
-  /**
-   * The description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.
-   */
-  public valueQuantity?: fhir.Quantity|undefined;
-  /**
-   * The description should be provided as a CodeableConcept, SimpleQuantity or an image.  The description can be a string only when these others are not available.
-   */
-  public valueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.drugCharacteristic.value[x]
-   */
-  public _valueBase64Binary?: fhir.FhirElement|undefined;
+  public value?: (fhir.CodeableConcept|fhir.FhirString|fhir.Quantity|fhir.FhirBase64Binary)|undefined;
+  readonly __valueIsChoice:true = true;
   /**
    * Default constructor for MedicationKnowledgeDrugCharacteristic - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeDrugCharacteristic> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['valueCodeableConcept']) { this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept!); }
-    if (source['valueString']) { this.valueString = source.valueString; }
-    if (source['_valueString']) { this._valueString = new fhir.FhirElement(source._valueString!); }
-    if (source['valueQuantity']) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
-    if (source['valueBase64Binary']) { this.valueBase64Binary = source.valueBase64Binary; }
-    if (source['_valueBase64Binary']) { this._valueBase64Binary = new fhir.FhirElement(source._valueBase64Binary!); }
+  constructor(source:Partial<MedicationKnowledgeDrugCharacteristicArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueCodeableConcept']) { this.value = new fhir.CodeableConcept(source.valueCodeableConcept); }
+    else if (source['valueString']) { this.value = new fhir.FhirString({value: source.valueString}); }
+    else if (source['valueQuantity']) { this.value = new fhir.Quantity(source.valueQuantity); }
+    else if (source['valueBase64Binary']) { this.value = new fhir.FhirBase64Binary({value: source.valueBase64Binary}); }
   }
   /**
    * Example-bound Value Set for type
@@ -858,21 +704,37 @@ export class MedicationKnowledgeDrugCharacteristic extends fhir.BackboneElement 
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["valueCodeableConcept"]) { results.push(...this.valueCodeableConcept.doModelValidation()); }
-    if (this["_valueString"]) { results.push(...this._valueString.doModelValidation()); }
-    if (this["valueQuantity"]) { results.push(...this.valueQuantity.doModelValidation()); }
-    if (this["_valueBase64Binary"]) { results.push(...this._valueBase64Binary.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeRegulatorySubstitution type.
+ */
+export interface MedicationKnowledgeRegulatorySubstitutionArgs extends fhir.BackboneElementArgs {
+  /**
+   * Specifies the type of substitution allowed.
+   */
+  type: fhir.CodeableConceptArgs|null;
+  /**
+   * Specifies if regulation allows for changes in the medication when dispensing.
+   */
+  allowed: fhir.FhirBoolean|boolean|undefined;
 }
 
 /**
  * Specifies if changes are allowed when dispensing a medication from a regulatory perspective.
  */
-export class MedicationKnowledgeRegulatorySubstitution extends fhir.BackboneElement implements IMedicationKnowledgeRegulatorySubstitution {
+export class MedicationKnowledgeRegulatorySubstitution extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeRegulatorySubstitution';
   /**
    * Specifies the type of substitution allowed.
    */
@@ -880,39 +742,54 @@ export class MedicationKnowledgeRegulatorySubstitution extends fhir.BackboneElem
   /**
    * Specifies if regulation allows for changes in the medication when dispensing.
    */
-  public allowed: boolean|null;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.regulatory.substitution.allowed
-   */
-  public _allowed?: fhir.FhirElement|undefined;
+  public allowed: fhir.FhirBoolean|null;
   /**
    * Default constructor for MedicationKnowledgeRegulatorySubstitution - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeRegulatorySubstitution> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<MedicationKnowledgeRegulatorySubstitutionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
-    if (source['allowed']) { this.allowed = source.allowed; }
+    if (source['allowed']) { this.allowed = new fhir.FhirBoolean({value: source.allowed}); }
     else { this.allowed = null; }
-    if (source['_allowed']) { this._allowed = new fhir.FhirElement(source._allowed!); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: MedicationKnowledge.regulatory.substitution.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (!this["allowed"]) { results.push(["allowed",'Missing required element: MedicationKnowledge.regulatory.substitution.allowed']); }
-    if (this["_allowed"]) { results.push(...this._allowed.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: MedicationKnowledge.regulatory.substitution.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (!this['allowed']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property allowed:fhir.FhirBoolean fhir: MedicationKnowledge.regulatory.substitution.allowed:boolean", }));
+    }
+    if (this["allowed"]) { outcome.issue!.push(...this.allowed.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeRegulatorySchedule type.
+ */
+export interface MedicationKnowledgeRegulatoryScheduleArgs extends fhir.BackboneElementArgs {
+  /**
+   * Specifies the specific drug schedule.
+   */
+  schedule: fhir.CodeableConceptArgs|null;
 }
 
 /**
  * Specifies the schedule of a medication in jurisdiction.
  */
-export class MedicationKnowledgeRegulatorySchedule extends fhir.BackboneElement implements IMedicationKnowledgeRegulatorySchedule {
+export class MedicationKnowledgeRegulatorySchedule extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeRegulatorySchedule';
   /**
    * Specifies the specific drug schedule.
    */
@@ -920,26 +797,48 @@ export class MedicationKnowledgeRegulatorySchedule extends fhir.BackboneElement 
   /**
    * Default constructor for MedicationKnowledgeRegulatorySchedule - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeRegulatorySchedule> = { }) {
-    super(source);
-    if (source['schedule']) { this.schedule = new fhir.CodeableConcept(source.schedule!); }
+  constructor(source:Partial<MedicationKnowledgeRegulatoryScheduleArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['schedule']) { this.schedule = new fhir.CodeableConcept(source.schedule); }
     else { this.schedule = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["schedule"]) { results.push(["schedule",'Missing required element: MedicationKnowledge.regulatory.schedule.schedule']); }
-    if (this["schedule"]) { results.push(...this.schedule.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['schedule']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property schedule:fhir.CodeableConcept fhir: MedicationKnowledge.regulatory.schedule.schedule:CodeableConcept", }));
+    }
+    if (this["schedule"]) { outcome.issue!.push(...this.schedule.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeRegulatoryMaxDispense type.
+ */
+export interface MedicationKnowledgeRegulatoryMaxDispenseArgs extends fhir.BackboneElementArgs {
+  /**
+   * The maximum number of units of the medication that can be dispensed.
+   */
+  quantity: fhir.QuantityArgs|null;
+  /**
+   * The period that applies to the maximum number of units.
+   */
+  period?: fhir.DurationArgs|undefined;
 }
 
 /**
  * The maximum number of units of the medication that can be dispensed in a period.
  */
-export class MedicationKnowledgeRegulatoryMaxDispense extends fhir.BackboneElement implements IMedicationKnowledgeRegulatoryMaxDispense {
+export class MedicationKnowledgeRegulatoryMaxDispense extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeRegulatoryMaxDispense';
   /**
    * The maximum number of units of the medication that can be dispensed.
    */
@@ -951,28 +850,58 @@ export class MedicationKnowledgeRegulatoryMaxDispense extends fhir.BackboneEleme
   /**
    * Default constructor for MedicationKnowledgeRegulatoryMaxDispense - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeRegulatoryMaxDispense> = { }) {
-    super(source);
-    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity!); }
+  constructor(source:Partial<MedicationKnowledgeRegulatoryMaxDispenseArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity); }
     else { this.quantity = null; }
-    if (source['period']) { this.period = new fhir.Duration(source.period!); }
+    if (source['period']) { this.period = new fhir.Duration(source.period); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["quantity"]) { results.push(["quantity",'Missing required element: MedicationKnowledge.regulatory.maxDispense.quantity']); }
-    if (this["quantity"]) { results.push(...this.quantity.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['quantity']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property quantity:fhir.Quantity fhir: MedicationKnowledge.regulatory.maxDispense.quantity:Quantity", }));
+    }
+    if (this["quantity"]) { outcome.issue!.push(...this.quantity.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeRegulatory type.
+ */
+export interface MedicationKnowledgeRegulatoryArgs extends fhir.BackboneElementArgs {
+  /**
+   * The authority that is specifying the regulations.
+   */
+  regulatoryAuthority: fhir.ReferenceArgs|null;
+  /**
+   * Specifies if changes are allowed when dispensing a medication from a regulatory perspective.
+   */
+  substitution?: fhir.MedicationKnowledgeRegulatorySubstitutionArgs[]|undefined;
+  /**
+   * Specifies the schedule of a medication in jurisdiction.
+   */
+  schedule?: fhir.MedicationKnowledgeRegulatoryScheduleArgs[]|undefined;
+  /**
+   * The maximum number of units of the medication that can be dispensed in a period.
+   */
+  maxDispense?: fhir.MedicationKnowledgeRegulatoryMaxDispenseArgs|undefined;
 }
 
 /**
  * Regulatory information about a medication.
  */
-export class MedicationKnowledgeRegulatory extends fhir.BackboneElement implements IMedicationKnowledgeRegulatory {
+export class MedicationKnowledgeRegulatory extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeRegulatory';
   /**
    * The authority that is specifying the regulations.
    */
@@ -980,11 +909,11 @@ export class MedicationKnowledgeRegulatory extends fhir.BackboneElement implemen
   /**
    * Specifies if changes are allowed when dispensing a medication from a regulatory perspective.
    */
-  public substitution?: fhir.MedicationKnowledgeRegulatorySubstitution[]|undefined;
+  public substitution?: fhir.MedicationKnowledgeRegulatorySubstitution[]|undefined = [];
   /**
    * Specifies the schedule of a medication in jurisdiction.
    */
-  public schedule?: fhir.MedicationKnowledgeRegulatorySchedule[]|undefined;
+  public schedule?: fhir.MedicationKnowledgeRegulatorySchedule[]|undefined = [];
   /**
    * The maximum number of units of the medication that can be dispensed in a period.
    */
@@ -992,40 +921,66 @@ export class MedicationKnowledgeRegulatory extends fhir.BackboneElement implemen
   /**
    * Default constructor for MedicationKnowledgeRegulatory - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeRegulatory> = { }) {
-    super(source);
-    if (source['regulatoryAuthority']) { this.regulatoryAuthority = new fhir.Reference(source.regulatoryAuthority!); }
+  constructor(source:Partial<MedicationKnowledgeRegulatoryArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['regulatoryAuthority']) { this.regulatoryAuthority = new fhir.Reference(source.regulatoryAuthority); }
     else { this.regulatoryAuthority = null; }
     if (source['substitution']) { this.substitution = source.substitution.map((x) => new fhir.MedicationKnowledgeRegulatorySubstitution(x)); }
     if (source['schedule']) { this.schedule = source.schedule.map((x) => new fhir.MedicationKnowledgeRegulatorySchedule(x)); }
-    if (source['maxDispense']) { this.maxDispense = new fhir.MedicationKnowledgeRegulatoryMaxDispense(source.maxDispense!); }
+    if (source['maxDispense']) { this.maxDispense = new fhir.MedicationKnowledgeRegulatoryMaxDispense(source.maxDispense); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["regulatoryAuthority"]) { results.push(["regulatoryAuthority",'Missing required element: MedicationKnowledge.regulatory.regulatoryAuthority']); }
-    if (this["regulatoryAuthority"]) { results.push(...this.regulatoryAuthority.doModelValidation()); }
-    if (this["substitution"]) { this.substitution.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["schedule"]) { this.schedule.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["maxDispense"]) { results.push(...this.maxDispense.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['regulatoryAuthority']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property regulatoryAuthority:fhir.Reference fhir: MedicationKnowledge.regulatory.regulatoryAuthority:Reference", }));
+    }
+    if (this["regulatoryAuthority"]) { outcome.issue!.push(...this.regulatoryAuthority.doModelValidation().issue!); }
+    if (this["substitution"]) { this.substitution.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["schedule"]) { this.schedule.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["maxDispense"]) { outcome.issue!.push(...this.maxDispense.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledgeKinetics type.
+ */
+export interface MedicationKnowledgeKineticsArgs extends fhir.BackboneElementArgs {
+  /**
+   * The drug concentration measured at certain discrete points in time.
+   */
+  areaUnderCurve?: fhir.QuantityArgs[]|undefined;
+  /**
+   * The median lethal dose of a drug.
+   */
+  lethalDose50?: fhir.QuantityArgs[]|undefined;
+  /**
+   * The time required for any specified property (e.g., the concentration of a substance in the body) to decrease by half.
+   */
+  halfLifePeriod?: fhir.DurationArgs|undefined;
 }
 
 /**
  * The time course of drug absorption, distribution, metabolism and excretion of a medication from the body.
  */
-export class MedicationKnowledgeKinetics extends fhir.BackboneElement implements IMedicationKnowledgeKinetics {
+export class MedicationKnowledgeKinetics extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationKnowledgeKinetics';
   /**
    * The drug concentration measured at certain discrete points in time.
    */
-  public areaUnderCurve?: fhir.Quantity[]|undefined;
+  public areaUnderCurve?: fhir.Quantity[]|undefined = [];
   /**
    * The median lethal dose of a drug.
    */
-  public lethalDose50?: fhir.Quantity[]|undefined;
+  public lethalDose50?: fhir.Quantity[]|undefined = [];
   /**
    * The time required for any specified property (e.g., the concentration of a substance in the body) to decrease by half.
    */
@@ -1033,28 +988,132 @@ export class MedicationKnowledgeKinetics extends fhir.BackboneElement implements
   /**
    * Default constructor for MedicationKnowledgeKinetics - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledgeKinetics> = { }) {
-    super(source);
+  constructor(source:Partial<MedicationKnowledgeKineticsArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['areaUnderCurve']) { this.areaUnderCurve = source.areaUnderCurve.map((x) => new fhir.Quantity(x)); }
     if (source['lethalDose50']) { this.lethalDose50 = source.lethalDose50.map((x) => new fhir.Quantity(x)); }
-    if (source['halfLifePeriod']) { this.halfLifePeriod = new fhir.Duration(source.halfLifePeriod!); }
+    if (source['halfLifePeriod']) { this.halfLifePeriod = new fhir.Duration(source.halfLifePeriod); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["areaUnderCurve"]) { this.areaUnderCurve.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["lethalDose50"]) { this.lethalDose50.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["halfLifePeriod"]) { results.push(...this.halfLifePeriod.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["areaUnderCurve"]) { this.areaUnderCurve.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["lethalDose50"]) { this.lethalDose50.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["halfLifePeriod"]) { outcome.issue!.push(...this.halfLifePeriod.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationKnowledge type.
+ */
+export interface MedicationKnowledgeArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "MedicationKnowledge"|undefined;
+  /**
+   * Depending on the context of use, the code that was actually selected by the user (prescriber, dispenser, etc.) will have the coding.userSelected set to true.  As described in the coding datatype: "A coding may be marked as a "userSelected" if a user selected the particular coded value in a user interface (e.g. the user selects an item in a pick-list). If a user selected coding exists, it is the preferred choice for performing translations etc. Other codes can only be literal translations to alternative code systems, or codes at a lower level of granularity (e.g. a generic code for a vendor-specific primary one).
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * This status is intended to identify if the medication in a local system is in active use within a drug database or inventory.  For example, a pharmacy system may create a new drug file record for a compounded product "ABC Hospital Special Cream" with an active status.  At some point in the future, it may be determined that the drug record was created with an error and the status is changed to "entered in error".   This status is not intended to specify if a medication is part of a particular formulary.  It is possible that the drug record may be referenced by multiple formularies or catalogues and each of those entries would have a separate status.
+   */
+  status?: MedicationknowledgeStatusValueSetEnum|undefined;
+  /**
+   * Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.
+   */
+  manufacturer?: fhir.ReferenceArgs|undefined;
+  /**
+   * When Medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When Medication is referenced within MedicationAdministration, this is administered form.
+   */
+  doseForm?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * This is the quantity of medication in a package.  To specify the strength of the medication, the Ingredient.strength attribute is used.
+   */
+  amount?: fhir.QuantityArgs|undefined;
+  /**
+   * Additional names for a medication, for example, the name(s) given to a medication in different countries.  For example, acetaminophen and paracetamol or salbutamol and albuterol.
+   */
+  synonym?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * Associated or related knowledge about a medication.
+   */
+  relatedMedicationKnowledge?: fhir.MedicationKnowledgeRelatedMedicationKnowledgeArgs[]|undefined;
+  /**
+   * Associated or related medications.  For example, if the medication is a branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor).
+   */
+  associatedMedication?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Category of the medication or product (e.g. branded product, therapeutic moeity, generic product, innovator product, etc.).
+   */
+  productType?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Associated documentation about the medication.
+   */
+  monograph?: fhir.MedicationKnowledgeMonographArgs[]|undefined;
+  /**
+   * Identifies a particular constituent of interest in the product.
+   */
+  ingredient?: fhir.MedicationKnowledgeIngredientArgs[]|undefined;
+  /**
+   * The instructions for preparing the medication.
+   */
+  preparationInstruction?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * The intended or approved route of administration.
+   */
+  intendedRoute?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The price of the medication.
+   */
+  cost?: fhir.MedicationKnowledgeCostArgs[]|undefined;
+  /**
+   * The program under which the medication is reviewed.
+   */
+  monitoringProgram?: fhir.MedicationKnowledgeMonitoringProgramArgs[]|undefined;
+  /**
+   * Guidelines for the administration of the medication.
+   */
+  administrationGuidelines?: fhir.MedicationKnowledgeAdministrationGuidelinesArgs[]|undefined;
+  /**
+   * Categorization of the medication within a formulary or classification system.
+   */
+  medicineClassification?: fhir.MedicationKnowledgeMedicineClassificationArgs[]|undefined;
+  /**
+   * Information that only applies to packages (not products).
+   */
+  packaging?: fhir.MedicationKnowledgePackagingArgs|undefined;
+  /**
+   * Specifies descriptive properties of the medicine, such as color, shape, imprints, etc.
+   */
+  drugCharacteristic?: fhir.MedicationKnowledgeDrugCharacteristicArgs[]|undefined;
+  /**
+   * Potential clinical issue with or between medication(s) (for example, drug-drug interaction, drug-disease contraindication, drug-allergy interaction, etc.).
+   */
+  contraindication?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Regulatory information about a medication.
+   */
+  regulatory?: fhir.MedicationKnowledgeRegulatoryArgs[]|undefined;
+  /**
+   * The time course of drug absorption, distribution, metabolism and excretion of a medication from the body.
+   */
+  kinetics?: fhir.MedicationKnowledgeKineticsArgs[]|undefined;
 }
 
 /**
  * Information about a medication that is used to support knowledge.
  */
-export class MedicationKnowledge extends fhir.DomainResource implements IMedicationKnowledge {
+export class MedicationKnowledge extends fhir.DomainResource {
+  readonly __dataType:string = 'MedicationKnowledge';
   /**
    * Resource Type Name
    */
@@ -1067,10 +1126,6 @@ export class MedicationKnowledge extends fhir.DomainResource implements IMedicat
    * This status is intended to identify if the medication in a local system is in active use within a drug database or inventory.  For example, a pharmacy system may create a new drug file record for a compounded product "ABC Hospital Special Cream" with an active status.  At some point in the future, it may be determined that the drug record was created with an error and the status is changed to "entered in error".   This status is not intended to specify if a medication is part of a particular formulary.  It is possible that the drug record may be referenced by multiple formularies or catalogues and each of those entries would have a separate status.
    */
   public status?: MedicationknowledgeStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.
    */
@@ -1086,59 +1141,51 @@ export class MedicationKnowledge extends fhir.DomainResource implements IMedicat
   /**
    * Additional names for a medication, for example, the name(s) given to a medication in different countries.  For example, acetaminophen and paracetamol or salbutamol and albuterol.
    */
-  public synonym?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.synonym
-   */
-  public _synonym?: fhir.FhirElement[]|undefined;
+  public synonym?: fhir.FhirString[]|undefined = [];
   /**
    * Associated or related knowledge about a medication.
    */
-  public relatedMedicationKnowledge?: fhir.MedicationKnowledgeRelatedMedicationKnowledge[]|undefined;
+  public relatedMedicationKnowledge?: fhir.MedicationKnowledgeRelatedMedicationKnowledge[]|undefined = [];
   /**
    * Associated or related medications.  For example, if the medication is a branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor).
    */
-  public associatedMedication?: fhir.Reference[]|undefined;
+  public associatedMedication?: fhir.Reference[]|undefined = [];
   /**
    * Category of the medication or product (e.g. branded product, therapeutic moeity, generic product, innovator product, etc.).
    */
-  public productType?: fhir.CodeableConcept[]|undefined;
+  public productType?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Associated documentation about the medication.
    */
-  public monograph?: fhir.MedicationKnowledgeMonograph[]|undefined;
+  public monograph?: fhir.MedicationKnowledgeMonograph[]|undefined = [];
   /**
    * Identifies a particular constituent of interest in the product.
    */
-  public ingredient?: fhir.MedicationKnowledgeIngredient[]|undefined;
+  public ingredient?: fhir.MedicationKnowledgeIngredient[]|undefined = [];
   /**
    * The instructions for preparing the medication.
    */
-  public preparationInstruction?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationKnowledge.preparationInstruction
-   */
-  public _preparationInstruction?: fhir.FhirElement|undefined;
+  public preparationInstruction?: fhir.FhirMarkdown|undefined;
   /**
    * The intended or approved route of administration.
    */
-  public intendedRoute?: fhir.CodeableConcept[]|undefined;
+  public intendedRoute?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The price of the medication.
    */
-  public cost?: fhir.MedicationKnowledgeCost[]|undefined;
+  public cost?: fhir.MedicationKnowledgeCost[]|undefined = [];
   /**
    * The program under which the medication is reviewed.
    */
-  public monitoringProgram?: fhir.MedicationKnowledgeMonitoringProgram[]|undefined;
+  public monitoringProgram?: fhir.MedicationKnowledgeMonitoringProgram[]|undefined = [];
   /**
    * Guidelines for the administration of the medication.
    */
-  public administrationGuidelines?: fhir.MedicationKnowledgeAdministrationGuidelines[]|undefined;
+  public administrationGuidelines?: fhir.MedicationKnowledgeAdministrationGuidelines[]|undefined = [];
   /**
    * Categorization of the medication within a formulary or classification system.
    */
-  public medicineClassification?: fhir.MedicationKnowledgeMedicineClassification[]|undefined;
+  public medicineClassification?: fhir.MedicationKnowledgeMedicineClassification[]|undefined = [];
   /**
    * Information that only applies to packages (not products).
    */
@@ -1146,46 +1193,43 @@ export class MedicationKnowledge extends fhir.DomainResource implements IMedicat
   /**
    * Specifies descriptive properties of the medicine, such as color, shape, imprints, etc.
    */
-  public drugCharacteristic?: fhir.MedicationKnowledgeDrugCharacteristic[]|undefined;
+  public drugCharacteristic?: fhir.MedicationKnowledgeDrugCharacteristic[]|undefined = [];
   /**
    * Potential clinical issue with or between medication(s) (for example, drug-drug interaction, drug-disease contraindication, drug-allergy interaction, etc.).
    */
-  public contraindication?: fhir.Reference[]|undefined;
+  public contraindication?: fhir.Reference[]|undefined = [];
   /**
    * Regulatory information about a medication.
    */
-  public regulatory?: fhir.MedicationKnowledgeRegulatory[]|undefined;
+  public regulatory?: fhir.MedicationKnowledgeRegulatory[]|undefined = [];
   /**
    * The time course of drug absorption, distribution, metabolism and excretion of a medication from the body.
    */
-  public kinetics?: fhir.MedicationKnowledgeKinetics[]|undefined;
+  public kinetics?: fhir.MedicationKnowledgeKinetics[]|undefined = [];
   /**
    * Default constructor for MedicationKnowledge - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationKnowledge> = { }) {
-    super(source);
+  constructor(source:Partial<MedicationKnowledgeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'MedicationKnowledge';
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
     if (source['status']) { this.status = source.status; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['manufacturer']) { this.manufacturer = new fhir.Reference(source.manufacturer!); }
-    if (source['doseForm']) { this.doseForm = new fhir.CodeableConcept(source.doseForm!); }
-    if (source['amount']) { this.amount = new fhir.Quantity(source.amount!); }
-    if (source['synonym']) { this.synonym = source.synonym.map((x) => (x)); }
-    if (source['_synonym']) { this._synonym = source._synonym.map((x) => new fhir.FhirElement(x)); }
+    if (source['manufacturer']) { this.manufacturer = new fhir.Reference(source.manufacturer); }
+    if (source['doseForm']) { this.doseForm = new fhir.CodeableConcept(source.doseForm); }
+    if (source['amount']) { this.amount = new fhir.Quantity(source.amount); }
+    if (source['synonym']) { this.synonym = source.synonym.map((x) => new fhir.FhirString({value: x})); }
     if (source['relatedMedicationKnowledge']) { this.relatedMedicationKnowledge = source.relatedMedicationKnowledge.map((x) => new fhir.MedicationKnowledgeRelatedMedicationKnowledge(x)); }
     if (source['associatedMedication']) { this.associatedMedication = source.associatedMedication.map((x) => new fhir.Reference(x)); }
     if (source['productType']) { this.productType = source.productType.map((x) => new fhir.CodeableConcept(x)); }
     if (source['monograph']) { this.monograph = source.monograph.map((x) => new fhir.MedicationKnowledgeMonograph(x)); }
     if (source['ingredient']) { this.ingredient = source.ingredient.map((x) => new fhir.MedicationKnowledgeIngredient(x)); }
-    if (source['preparationInstruction']) { this.preparationInstruction = source.preparationInstruction; }
-    if (source['_preparationInstruction']) { this._preparationInstruction = new fhir.FhirElement(source._preparationInstruction!); }
+    if (source['preparationInstruction']) { this.preparationInstruction = new fhir.FhirMarkdown({value: source.preparationInstruction}); }
     if (source['intendedRoute']) { this.intendedRoute = source.intendedRoute.map((x) => new fhir.CodeableConcept(x)); }
     if (source['cost']) { this.cost = source.cost.map((x) => new fhir.MedicationKnowledgeCost(x)); }
     if (source['monitoringProgram']) { this.monitoringProgram = source.monitoringProgram.map((x) => new fhir.MedicationKnowledgeMonitoringProgram(x)); }
     if (source['administrationGuidelines']) { this.administrationGuidelines = source.administrationGuidelines.map((x) => new fhir.MedicationKnowledgeAdministrationGuidelines(x)); }
     if (source['medicineClassification']) { this.medicineClassification = source.medicineClassification.map((x) => new fhir.MedicationKnowledgeMedicineClassification(x)); }
-    if (source['packaging']) { this.packaging = new fhir.MedicationKnowledgePackaging(source.packaging!); }
+    if (source['packaging']) { this.packaging = new fhir.MedicationKnowledgePackaging(source.packaging); }
     if (source['drugCharacteristic']) { this.drugCharacteristic = source.drugCharacteristic.map((x) => new fhir.MedicationKnowledgeDrugCharacteristic(x)); }
     if (source['contraindication']) { this.contraindication = source.contraindication.map((x) => new fhir.Reference(x)); }
     if (source['regulatory']) { this.regulatory = source.regulatory.map((x) => new fhir.MedicationKnowledgeRegulatory(x)); }
@@ -1218,31 +1262,38 @@ export class MedicationKnowledge extends fhir.DomainResource implements IMedicat
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: MedicationKnowledge.resourceType']); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["manufacturer"]) { results.push(...this.manufacturer.doModelValidation()); }
-    if (this["doseForm"]) { results.push(...this.doseForm.doModelValidation()); }
-    if (this["amount"]) { results.push(...this.amount.doModelValidation()); }
-    if (this["_synonym"]) { this._synonym.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["relatedMedicationKnowledge"]) { this.relatedMedicationKnowledge.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["associatedMedication"]) { this.associatedMedication.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["productType"]) { this.productType.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["monograph"]) { this.monograph.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["ingredient"]) { this.ingredient.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_preparationInstruction"]) { results.push(...this._preparationInstruction.doModelValidation()); }
-    if (this["intendedRoute"]) { this.intendedRoute.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["cost"]) { this.cost.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["monitoringProgram"]) { this.monitoringProgram.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["administrationGuidelines"]) { this.administrationGuidelines.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["medicineClassification"]) { this.medicineClassification.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["packaging"]) { results.push(...this.packaging.doModelValidation()); }
-    if (this["drugCharacteristic"]) { this.drugCharacteristic.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["contraindication"]) { this.contraindication.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["regulatory"]) { this.regulatory.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["kinetics"]) { this.kinetics.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'MedicationKnowledge' fhir: MedicationKnowledge.resourceType:'MedicationKnowledge'", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["manufacturer"]) { outcome.issue!.push(...this.manufacturer.doModelValidation().issue!); }
+    if (this["doseForm"]) { outcome.issue!.push(...this.doseForm.doModelValidation().issue!); }
+    if (this["amount"]) { outcome.issue!.push(...this.amount.doModelValidation().issue!); }
+    if (this["synonym"]) { this.synonym.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["relatedMedicationKnowledge"]) { this.relatedMedicationKnowledge.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["associatedMedication"]) { this.associatedMedication.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["productType"]) { this.productType.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["monograph"]) { this.monograph.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["ingredient"]) { this.ingredient.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["preparationInstruction"]) { outcome.issue!.push(...this.preparationInstruction.doModelValidation().issue!); }
+    if (this["intendedRoute"]) { this.intendedRoute.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["cost"]) { this.cost.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["monitoringProgram"]) { this.monitoringProgram.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["administrationGuidelines"]) { this.administrationGuidelines.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["medicineClassification"]) { this.medicineClassification.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["packaging"]) { outcome.issue!.push(...this.packaging.doModelValidation().issue!); }
+    if (this["drugCharacteristic"]) { this.drugCharacteristic.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["contraindication"]) { this.contraindication.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["regulatory"]) { this.regulatory.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["kinetics"]) { this.kinetics.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -35,19 +35,4 @@ export const ContainerMaterialValueSet = {
 /**
  * This value set includes SNOMED CT codes for materials that specimen containers are made of
  */
-export var ContainerMaterialValueSetEnum;
-(function (ContainerMaterialValueSetEnum) {
-    /**
-     * Code: 32039001
-     */
-    ContainerMaterialValueSetEnum["Glass"] = "32039001";
-    /**
-     * Code: 425620007
-     */
-    ContainerMaterialValueSetEnum["Metal"] = "425620007";
-    /**
-     * Code: 61088005
-     */
-    ContainerMaterialValueSetEnum["Plastic"] = "61088005";
-})(ContainerMaterialValueSetEnum || (ContainerMaterialValueSetEnum = {}));
 //# sourceMappingURL=ContainerMaterialValueSet.js.map

@@ -83,43 +83,4 @@ export const VerificationresultPrimarySourceTypeValueSet = {
 /**
  * Type of the validation primary source
  */
-export var VerificationresultPrimarySourceTypeValueSetEnum;
-(function (VerificationresultPrimarySourceTypeValueSetEnum) {
-    /**
-     * Code: auth-source
-     */
-    VerificationresultPrimarySourceTypeValueSetEnum["AuthoritativeSource"] = "auth-source";
-    /**
-     * Code: cont-ed
-     */
-    VerificationresultPrimarySourceTypeValueSetEnum["ContinuingEducation"] = "cont-ed";
-    /**
-     * Code: issuer
-     */
-    VerificationresultPrimarySourceTypeValueSetEnum["IssuingSource"] = "issuer";
-    /**
-     * Code: legal
-     */
-    VerificationresultPrimarySourceTypeValueSetEnum["LegalSource"] = "legal";
-    /**
-     * Code: lic-board
-     */
-    VerificationresultPrimarySourceTypeValueSetEnum["LicenseBoard"] = "lic-board";
-    /**
-     * Code: post-serv
-     */
-    VerificationresultPrimarySourceTypeValueSetEnum["PostalService"] = "post-serv";
-    /**
-     * Code: prim
-     */
-    VerificationresultPrimarySourceTypeValueSetEnum["PrimaryEducation"] = "prim";
-    /**
-     * Code: reg-auth
-     */
-    VerificationresultPrimarySourceTypeValueSetEnum["RegistrationAuthority"] = "reg-auth";
-    /**
-     * Code: rel-own
-     */
-    VerificationresultPrimarySourceTypeValueSetEnum["RelationshipOwner"] = "rel-own";
-})(VerificationresultPrimarySourceTypeValueSetEnum || (VerificationresultPrimarySourceTypeValueSetEnum = {}));
 //# sourceMappingURL=VerificationresultPrimarySourceTypeValueSet.js.map

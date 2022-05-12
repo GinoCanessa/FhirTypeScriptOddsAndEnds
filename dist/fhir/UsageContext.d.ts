@@ -1,34 +1,39 @@
 import * as fhir from '../fhir.js';
 import { UsageContextTypeValueSetType } from '../fhirValueSets/UsageContextTypeValueSet.js';
 /**
- * Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
+ * Valid arguments for the UsageContext type.
  */
-export declare type IUsageContext = fhir.IFhirElement & {
+export interface UsageContextArgs extends fhir.FhirElementArgs {
     /**
      * A code that identifies the type of context being specified by this usage context.
      */
-    code: fhir.ICoding | null;
+    code: fhir.CodingArgs | null;
     /**
      * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
      */
-    valueCodeableConcept?: fhir.ICodeableConcept | undefined;
+    value?: fhir.CodeableConcept | fhir.Quantity | fhir.Range | fhir.Reference | undefined;
     /**
      * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
      */
-    valueQuantity?: fhir.IQuantity | undefined;
+    valueCodeableConcept?: fhir.CodeableConceptArgs | undefined;
     /**
      * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
      */
-    valueRange?: fhir.IRange | undefined;
+    valueQuantity?: fhir.QuantityArgs | undefined;
     /**
      * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
      */
-    valueReference?: fhir.IReference | undefined;
-};
+    valueRange?: fhir.RangeArgs | undefined;
+    /**
+     * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
+     */
+    valueReference?: fhir.ReferenceArgs | undefined;
+}
 /**
  * Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
  */
-export declare class UsageContext extends fhir.FhirElement implements IUsageContext {
+export declare class UsageContext extends fhir.FhirElement {
+    readonly __dataType: string;
     /**
      * A code that identifies the type of context being specified by this usage context.
      */
@@ -36,23 +41,12 @@ export declare class UsageContext extends fhir.FhirElement implements IUsageCont
     /**
      * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
      */
-    valueCodeableConcept?: fhir.CodeableConcept | undefined;
-    /**
-     * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
-     */
-    valueQuantity?: fhir.Quantity | undefined;
-    /**
-     * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
-     */
-    valueRange?: fhir.Range | undefined;
-    /**
-     * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
-     */
-    valueReference?: fhir.Reference | undefined;
+    value: (fhir.CodeableConcept | fhir.Quantity | fhir.Range | fhir.Reference) | null;
+    readonly __valueIsChoice: true;
     /**
      * Default constructor for UsageContext - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IUsageContext>);
+    constructor(source?: Partial<UsageContextArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Extensible-bound Value Set for code
      */
@@ -60,6 +54,10 @@ export declare class UsageContext extends fhir.FhirElement implements IUsageCont
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=UsageContext.d.ts.map

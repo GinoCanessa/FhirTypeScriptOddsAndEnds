@@ -35,19 +35,4 @@ export const AddressTypeValueSet = {
 /**
  * The type of an address (physical / postal).
  */
-export var AddressTypeValueSetEnum;
-(function (AddressTypeValueSetEnum) {
-    /**
-     * both: An address that is both physical and postal.
-     */
-    AddressTypeValueSetEnum["PostalAndPhysical"] = "both";
-    /**
-     * physical: A physical address that can be visited.
-     */
-    AddressTypeValueSetEnum["Physical"] = "physical";
-    /**
-     * postal: Mailing addresses - PO Boxes and care-of addresses.
-     */
-    AddressTypeValueSetEnum["Postal"] = "postal";
-})(AddressTypeValueSetEnum || (AddressTypeValueSetEnum = {}));
 //# sourceMappingURL=AddressTypeValueSet.js.map

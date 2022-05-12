@@ -3,211 +3,63 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Patient
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { PatientContactrelationshipValueSet, PatientContactrelationshipValueSetType, PatientContactrelationshipValueSetEnum } from '../fhirValueSets/PatientContactrelationshipValueSet.js'
-import { AdministrativeGenderValueSet, AdministrativeGenderValueSetType, AdministrativeGenderValueSetEnum } from '../fhirValueSets/AdministrativeGenderValueSet.js'
-import { LanguagesValueSet, LanguagesValueSetType, LanguagesValueSetEnum } from '../fhirValueSets/LanguagesValueSet.js'
-import { LinkTypeValueSet, LinkTypeValueSetType, LinkTypeValueSetEnum } from '../fhirValueSets/LinkTypeValueSet.js'
-import { MaritalStatusValueSet, MaritalStatusValueSetType, MaritalStatusValueSetEnum } from '../fhirValueSets/MaritalStatusValueSet.js'
-
+import { PatientContactrelationshipValueSet, PatientContactrelationshipValueSetType,} from '../fhirValueSets/PatientContactrelationshipValueSet.js';
+import { PatientContactrelationshipValueSetEnum } from '../valueSetEnums.js';
+import { AdministrativeGenderValueSet, AdministrativeGenderValueSetType,} from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { AdministrativeGenderValueSetEnum } from '../valueSetEnums.js';
+import { LanguagesValueSet, LanguagesValueSetType,} from '../fhirValueSets/LanguagesValueSet.js';
+import { LanguagesValueSetEnum } from '../valueSetEnums.js';
+import { LinkTypeValueSet, LinkTypeValueSetType,} from '../fhirValueSets/LinkTypeValueSet.js';
+import { LinkTypeValueSetEnum } from '../valueSetEnums.js';
+import { MaritalStatusValueSet, MaritalStatusValueSetType,} from '../fhirValueSets/MaritalStatusValueSet.js';
+import { MaritalStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.
+ * Valid arguments for the PatientContact type.
  */
-export type IPatientContact = fhir.IBackboneElement & { 
+export interface PatientContactArgs extends fhir.BackboneElementArgs {
   /**
    * The nature of the relationship between the patient and the contact person.
    */
-  relationship?: fhir.ICodeableConcept[]|undefined;
+  relationship?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * A name associated with the contact person.
    */
-  name?: fhir.IHumanName|undefined;
+  name?: fhir.HumanNameArgs|undefined;
   /**
    * Contact may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification.
    */
-  telecom?: fhir.IContactPoint[]|undefined;
+  telecom?: fhir.ContactPointArgs[]|undefined;
   /**
    * Address for the contact person.
    */
-  address?: fhir.IAddress|undefined;
+  address?: fhir.AddressArgs|undefined;
   /**
    * Administrative Gender - the gender that the contact person is considered to have for administration and record keeping purposes.
    */
   gender?: AdministrativeGenderValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Patient.contact.gender
-   */
-  _gender?: fhir.IFhirElement|undefined;
-  /**
    * Organization on behalf of which the contact is acting or for which the contact is working.
    */
-  organization?: fhir.IReference|undefined;
+  organization?: fhir.ReferenceArgs|undefined;
   /**
    * The period during which this contact person or organization is valid to be contacted relating to this patient.
    */
-  period?: fhir.IPeriod|undefined;
-}
-
-/**
- * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
- */
-export type IPatientCommunication = fhir.IBackboneElement & { 
-  /**
-   * The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.
-   */
-  language: fhir.ICodeableConcept|null;
-  /**
-   * This language is specifically identified for communicating healthcare information.
-   */
-  preferred?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Patient.communication.preferred
-   */
-  _preferred?: fhir.IFhirElement|undefined;
-}
-
-/**
- * There is no assumption that linked patient records have mutual links.
- */
-export type IPatientLink = fhir.IBackboneElement & { 
-  /**
-   * Referencing a RelatedPerson here removes the need to use a Person record to associate a Patient and RelatedPerson as the same individual.
-   */
-  other: fhir.IReference|null;
-  /**
-   * The type of link between this patient resource and another patient resource.
-   */
-  type: LinkTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Patient.link.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Demographics and other administrative information about an individual or animal receiving care or other health-related services.
- */
-export type IPatient = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Patient";
-  /**
-   * An identifier for this patient.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * If a record is inactive, and linked to an active record, then future patient/record updates should occur on the other patient.
-   */
-  active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Patient.active
-   */
-  _active?: fhir.IFhirElement|undefined;
-  /**
-   * A patient may have multiple names with different uses or applicable periods. For animals, the name is a "HumanName" in the sense that is assigned and used by humans and has the same patterns.
-   */
-  name?: fhir.IHumanName[]|undefined;
-  /**
-   * A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address might not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).
-   */
-  telecom?: fhir.IContactPoint[]|undefined;
-  /**
-   * The gender might not match the biological sex as determined by genetics or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than male and female, though the vast majority of systems and contexts only support male and female.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific sex or gender aspect of interest (anatomical, chromosomal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosomal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overridable error, not a "hard" error.  See the Patient Gender and Sex section for additional information about communicating patient gender and sex.
-   */
-  gender?: AdministrativeGenderValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: Patient.gender
-   */
-  _gender?: fhir.IFhirElement|undefined;
-  /**
-   * At least an estimated year should be provided as a guess if the real DOB is unknown  There is a standard extension "patient-birthTime" available that should be used where Time is required (such as in maternity/infant care systems).
-   */
-  birthDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Patient.birthDate
-   */
-  _birthDate?: fhir.IFhirElement|undefined;
-  /**
-   * If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
-   */
-  deceasedBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Patient.deceased[x]
-   */
-  _deceasedBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
-   */
-  deceasedDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Patient.deceased[x]
-   */
-  _deceasedDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * Patient may have multiple addresses with different uses or applicable periods.
-   */
-  address?: fhir.IAddress[]|undefined;
-  /**
-   * This field contains a patient's most recent marital (civil) status.
-   */
-  maritalStatus?: fhir.ICodeableConcept|undefined;
-  /**
-   * Where the valueInteger is provided, the number is the birth number in the sequence. E.g. The middle birth in triplets would be valueInteger=2 and the third born would have valueInteger=3 If a boolean value was provided for this triplets example, then all 3 patient records would have valueBoolean=true (the ordering is not indicated).
-   */
-  multipleBirthBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Patient.multipleBirth[x]
-   */
-  _multipleBirthBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * Where the valueInteger is provided, the number is the birth number in the sequence. E.g. The middle birth in triplets would be valueInteger=2 and the third born would have valueInteger=3 If a boolean value was provided for this triplets example, then all 3 patient records would have valueBoolean=true (the ordering is not indicated).
-   */
-  multipleBirthInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Patient.multipleBirth[x]
-   */
-  _multipleBirthInteger?: fhir.IFhirElement|undefined;
-  /**
-   * Guidelines:
-   * * Use id photos, not clinical photos.
-   * * Limit dimensions to thumbnail.
-   * * Keep byte count low to ease resource updates.
-   */
-  photo?: fhir.IAttachment[]|undefined;
-  /**
-   * Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.
-   */
-  contact?: fhir.IPatientContact[]|undefined;
-  /**
-   * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
-   */
-  communication?: fhir.IPatientCommunication[]|undefined;
-  /**
-   * This may be the primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disability setting, or even organization that will provide people to perform the care provider roles.  It is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources.
-   * Multiple GPs may be recorded against the patient for various reasons, such as a student that has his home GP listed along with the GP at university during the school semesters, or a "fly-in/fly-out" worker that has the onsite GP also included with his home GP to remain aware of medical issues.
-   * Jurisdictions may decide that they can profile this down to 1 if desired, or 1 per type.
-   */
-  generalPractitioner?: fhir.IReference[]|undefined;
-  /**
-   * There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association).
-   */
-  managingOrganization?: fhir.IReference|undefined;
-  /**
-   * There is no assumption that linked patient records have mutual links.
-   */
-  link?: fhir.IPatientLink[]|undefined;
+  period?: fhir.PeriodArgs|undefined;
 }
 
 /**
  * Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.
  */
-export class PatientContact extends fhir.BackboneElement implements IPatientContact {
+export class PatientContact extends fhir.BackboneElement {
+  readonly __dataType:string = 'PatientContact';
   /**
    * The nature of the relationship between the patient and the contact person.
    */
-  public relationship?: fhir.CodeableConcept[]|undefined;
+  public relationship?: fhir.CodeableConcept[]|undefined = [];
   /**
    * A name associated with the contact person.
    */
@@ -215,7 +67,7 @@ export class PatientContact extends fhir.BackboneElement implements IPatientCont
   /**
    * Contact may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification.
    */
-  public telecom?: fhir.ContactPoint[]|undefined;
+  public telecom?: fhir.ContactPoint[]|undefined = [];
   /**
    * Address for the contact person.
    */
@@ -224,10 +76,6 @@ export class PatientContact extends fhir.BackboneElement implements IPatientCont
    * Administrative Gender - the gender that the contact person is considered to have for administration and record keeping purposes.
    */
   public gender?: AdministrativeGenderValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: Patient.contact.gender
-   */
-  public _gender?: fhir.FhirElement|undefined;
   /**
    * Organization on behalf of which the contact is acting or for which the contact is working.
    */
@@ -239,16 +87,15 @@ export class PatientContact extends fhir.BackboneElement implements IPatientCont
   /**
    * Default constructor for PatientContact - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IPatientContact> = { }) {
-    super(source);
+  constructor(source:Partial<PatientContactArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['relationship']) { this.relationship = source.relationship.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['name']) { this.name = new fhir.HumanName(source.name!); }
+    if (source['name']) { this.name = new fhir.HumanName(source.name); }
     if (source['telecom']) { this.telecom = source.telecom.map((x) => new fhir.ContactPoint(x)); }
-    if (source['address']) { this.address = new fhir.Address(source.address!); }
+    if (source['address']) { this.address = new fhir.Address(source.address); }
     if (source['gender']) { this.gender = source.gender; }
-    if (source['_gender']) { this._gender = new fhir.FhirElement(source._gender!); }
-    if (source['organization']) { this.organization = new fhir.Reference(source.organization!); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
+    if (source['organization']) { this.organization = new fhir.Reference(source.organization); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
   }
   /**
    * Extensible-bound Value Set for relationship
@@ -265,23 +112,42 @@ export class PatientContact extends fhir.BackboneElement implements IPatientCont
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["relationship"]) { this.relationship.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["name"]) { results.push(...this.name.doModelValidation()); }
-    if (this["telecom"]) { this.telecom.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["address"]) { results.push(...this.address.doModelValidation()); }
-    if (this["_gender"]) { results.push(...this._gender.doModelValidation()); }
-    if (this["organization"]) { results.push(...this.organization.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["relationship"]) { this.relationship.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["telecom"]) { this.telecom.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["address"]) { outcome.issue!.push(...this.address.doModelValidation().issue!); }
+    if (this["organization"]) { outcome.issue!.push(...this.organization.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the PatientCommunication type.
+ */
+export interface PatientCommunicationArgs extends fhir.BackboneElementArgs {
+  /**
+   * The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.
+   */
+  language: fhir.CodeableConceptArgs|null;
+  /**
+   * This language is specifically identified for communicating healthcare information.
+   */
+  preferred?: fhir.FhirBoolean|boolean|undefined;
 }
 
 /**
  * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
  */
-export class PatientCommunication extends fhir.BackboneElement implements IPatientCommunication {
+export class PatientCommunication extends fhir.BackboneElement {
+  readonly __dataType:string = 'PatientCommunication';
   /**
    * The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.
    */
@@ -289,20 +155,15 @@ export class PatientCommunication extends fhir.BackboneElement implements IPatie
   /**
    * This language is specifically identified for communicating healthcare information.
    */
-  public preferred?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Patient.communication.preferred
-   */
-  public _preferred?: fhir.FhirElement|undefined;
+  public preferred?: fhir.FhirBoolean|undefined;
   /**
    * Default constructor for PatientCommunication - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IPatientCommunication> = { }) {
-    super(source);
-    if (source['language']) { this.language = new fhir.CodeableConcept(source.language!); }
+  constructor(source:Partial<PatientCommunicationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['language']) { this.language = new fhir.CodeableConcept(source.language); }
     else { this.language = null; }
-    if (source['preferred']) { this.preferred = source.preferred; }
-    if (source['_preferred']) { this._preferred = new fhir.FhirElement(source._preferred!); }
+    if (source['preferred']) { this.preferred = new fhir.FhirBoolean({value: source.preferred}); }
   }
   /**
    * Preferred-bound Value Set for language
@@ -313,19 +174,41 @@ export class PatientCommunication extends fhir.BackboneElement implements IPatie
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["language"]) { results.push(["language",'Missing required element: Patient.communication.language']); }
-    if (this["language"]) { results.push(...this.language.doModelValidation()); }
-    if (this["_preferred"]) { results.push(...this._preferred.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['language']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property language:fhir.CodeableConcept fhir: Patient.communication.language:CodeableConcept", }));
+    }
+    if (this["language"]) { outcome.issue!.push(...this.language.doModelValidation().issue!); }
+    if (this["preferred"]) { outcome.issue!.push(...this.preferred.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the PatientLink type.
+ */
+export interface PatientLinkArgs extends fhir.BackboneElementArgs {
+  /**
+   * Referencing a RelatedPerson here removes the need to use a Person record to associate a Patient and RelatedPerson as the same individual.
+   */
+  other: fhir.ReferenceArgs|null;
+  /**
+   * The type of link between this patient resource and another patient resource.
+   */
+  type: LinkTypeValueSetEnum|null;
 }
 
 /**
  * There is no assumption that linked patient records have mutual links.
  */
-export class PatientLink extends fhir.BackboneElement implements IPatientLink {
+export class PatientLink extends fhir.BackboneElement {
+  readonly __dataType:string = 'PatientLink';
   /**
    * Referencing a RelatedPerson here removes the need to use a Person record to associate a Patient and RelatedPerson as the same individual.
    */
@@ -335,19 +218,14 @@ export class PatientLink extends fhir.BackboneElement implements IPatientLink {
    */
   public type: LinkTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Patient.link.type
-   */
-  public _type?: fhir.FhirElement|undefined;
-  /**
    * Default constructor for PatientLink - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IPatientLink> = { }) {
-    super(source);
-    if (source['other']) { this.other = new fhir.Reference(source.other!); }
+  constructor(source:Partial<PatientLinkArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['other']) { this.other = new fhir.Reference(source.other); }
     else { this.other = null; }
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
   }
   /**
    * Required-bound Value Set for type
@@ -358,20 +236,124 @@ export class PatientLink extends fhir.BackboneElement implements IPatientLink {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["other"]) { results.push(["other",'Missing required element: Patient.link.other']); }
-    if (this["other"]) { results.push(...this.other.doModelValidation()); }
-    if (!this["type"]) { results.push(["type",'Missing required element: Patient.link.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['other']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property other:fhir.Reference fhir: Patient.link.other:Reference", }));
+    }
+    if (this["other"]) { outcome.issue!.push(...this.other.doModelValidation().issue!); }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:LinkTypeValueSetEnum fhir: Patient.link.type:code", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Patient type.
+ */
+export interface PatientArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Patient"|undefined;
+  /**
+   * An identifier for this patient.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * If a record is inactive, and linked to an active record, then future patient/record updates should occur on the other patient.
+   */
+  active?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * A patient may have multiple names with different uses or applicable periods. For animals, the name is a "HumanName" in the sense that is assigned and used by humans and has the same patterns.
+   */
+  name?: fhir.HumanNameArgs[]|undefined;
+  /**
+   * A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address might not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).
+   */
+  telecom?: fhir.ContactPointArgs[]|undefined;
+  /**
+   * The gender might not match the biological sex as determined by genetics or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than male and female, though the vast majority of systems and contexts only support male and female.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific sex or gender aspect of interest (anatomical, chromosomal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosomal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overridable error, not a "hard" error.  See the Patient Gender and Sex section for additional information about communicating patient gender and sex.
+   */
+  gender?: AdministrativeGenderValueSetEnum|undefined;
+  /**
+   * At least an estimated year should be provided as a guess if the real DOB is unknown  There is a standard extension "patient-birthTime" available that should be used where Time is required (such as in maternity/infant care systems).
+   */
+  birthDate?: fhir.FhirDate|string|undefined;
+  /**
+   * If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
+   */
+  deceased?: fhir.FhirBoolean|fhir.FhirDateTime|undefined;
+  /**
+   * If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
+   */
+  deceasedBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
+   */
+  deceasedDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Patient may have multiple addresses with different uses or applicable periods.
+   */
+  address?: fhir.AddressArgs[]|undefined;
+  /**
+   * This field contains a patient's most recent marital (civil) status.
+   */
+  maritalStatus?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Where the valueInteger is provided, the number is the birth number in the sequence. E.g. The middle birth in triplets would be valueInteger=2 and the third born would have valueInteger=3 If a boolean value was provided for this triplets example, then all 3 patient records would have valueBoolean=true (the ordering is not indicated).
+   */
+  multipleBirth?: fhir.FhirBoolean|fhir.FhirInteger|undefined;
+  /**
+   * Where the valueInteger is provided, the number is the birth number in the sequence. E.g. The middle birth in triplets would be valueInteger=2 and the third born would have valueInteger=3 If a boolean value was provided for this triplets example, then all 3 patient records would have valueBoolean=true (the ordering is not indicated).
+   */
+  multipleBirthBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Where the valueInteger is provided, the number is the birth number in the sequence. E.g. The middle birth in triplets would be valueInteger=2 and the third born would have valueInteger=3 If a boolean value was provided for this triplets example, then all 3 patient records would have valueBoolean=true (the ordering is not indicated).
+   */
+  multipleBirthInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * Guidelines:
+   * * Use id photos, not clinical photos.
+   * * Limit dimensions to thumbnail.
+   * * Keep byte count low to ease resource updates.
+   */
+  photo?: fhir.AttachmentArgs[]|undefined;
+  /**
+   * Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.
+   */
+  contact?: fhir.PatientContactArgs[]|undefined;
+  /**
+   * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
+   */
+  communication?: fhir.PatientCommunicationArgs[]|undefined;
+  /**
+   * This may be the primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disability setting, or even organization that will provide people to perform the care provider roles.  It is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources.
+   * Multiple GPs may be recorded against the patient for various reasons, such as a student that has his home GP listed along with the GP at university during the school semesters, or a "fly-in/fly-out" worker that has the onsite GP also included with his home GP to remain aware of medical issues.
+   * Jurisdictions may decide that they can profile this down to 1 if desired, or 1 per type.
+   */
+  generalPractitioner?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association).
+   */
+  managingOrganization?: fhir.ReferenceArgs|undefined;
+  /**
+   * There is no assumption that linked patient records have mutual links.
+   */
+  link?: fhir.PatientLinkArgs[]|undefined;
 }
 
 /**
  * Demographics and other administrative information about an individual or animal receiving care or other health-related services.
  */
-export class Patient extends fhir.DomainResource implements IPatient {
+export class Patient extends fhir.DomainResource {
+  readonly __dataType:string = 'Patient';
   /**
    * Resource Type Name
    */
@@ -379,59 +361,36 @@ export class Patient extends fhir.DomainResource implements IPatient {
   /**
    * An identifier for this patient.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * If a record is inactive, and linked to an active record, then future patient/record updates should occur on the other patient.
    */
-  public active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Patient.active
-   */
-  public _active?: fhir.FhirElement|undefined;
+  public active?: fhir.FhirBoolean|undefined;
   /**
    * A patient may have multiple names with different uses or applicable periods. For animals, the name is a "HumanName" in the sense that is assigned and used by humans and has the same patterns.
    */
-  public name?: fhir.HumanName[]|undefined;
+  public name?: fhir.HumanName[]|undefined = [];
   /**
    * A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address might not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).
    */
-  public telecom?: fhir.ContactPoint[]|undefined;
+  public telecom?: fhir.ContactPoint[]|undefined = [];
   /**
    * The gender might not match the biological sex as determined by genetics or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than male and female, though the vast majority of systems and contexts only support male and female.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific sex or gender aspect of interest (anatomical, chromosomal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosomal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overridable error, not a "hard" error.  See the Patient Gender and Sex section for additional information about communicating patient gender and sex.
    */
   public gender?: AdministrativeGenderValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Patient.gender
-   */
-  public _gender?: fhir.FhirElement|undefined;
-  /**
    * At least an estimated year should be provided as a guess if the real DOB is unknown  There is a standard extension "patient-birthTime" available that should be used where Time is required (such as in maternity/infant care systems).
    */
-  public birthDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Patient.birthDate
-   */
-  public _birthDate?: fhir.FhirElement|undefined;
+  public birthDate?: fhir.FhirDate|undefined;
   /**
    * If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
    */
-  public deceasedBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Patient.deceased[x]
-   */
-  public _deceasedBoolean?: fhir.FhirElement|undefined;
-  /**
-   * If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
-   */
-  public deceasedDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Patient.deceased[x]
-   */
-  public _deceasedDateTime?: fhir.FhirElement|undefined;
+  public deceased?: (fhir.FhirBoolean|fhir.FhirDateTime)|undefined;
+  readonly __deceasedIsChoice:true = true;
   /**
    * Patient may have multiple addresses with different uses or applicable periods.
    */
-  public address?: fhir.Address[]|undefined;
+  public address?: fhir.Address[]|undefined = [];
   /**
    * This field contains a patient's most recent marital (civil) status.
    */
@@ -439,40 +398,29 @@ export class Patient extends fhir.DomainResource implements IPatient {
   /**
    * Where the valueInteger is provided, the number is the birth number in the sequence. E.g. The middle birth in triplets would be valueInteger=2 and the third born would have valueInteger=3 If a boolean value was provided for this triplets example, then all 3 patient records would have valueBoolean=true (the ordering is not indicated).
    */
-  public multipleBirthBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Patient.multipleBirth[x]
-   */
-  public _multipleBirthBoolean?: fhir.FhirElement|undefined;
-  /**
-   * Where the valueInteger is provided, the number is the birth number in the sequence. E.g. The middle birth in triplets would be valueInteger=2 and the third born would have valueInteger=3 If a boolean value was provided for this triplets example, then all 3 patient records would have valueBoolean=true (the ordering is not indicated).
-   */
-  public multipleBirthInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Patient.multipleBirth[x]
-   */
-  public _multipleBirthInteger?: fhir.FhirElement|undefined;
+  public multipleBirth?: (fhir.FhirBoolean|fhir.FhirInteger)|undefined;
+  readonly __multipleBirthIsChoice:true = true;
   /**
    * Guidelines:
    * * Use id photos, not clinical photos.
    * * Limit dimensions to thumbnail.
    * * Keep byte count low to ease resource updates.
    */
-  public photo?: fhir.Attachment[]|undefined;
+  public photo?: fhir.Attachment[]|undefined = [];
   /**
    * Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.
    */
-  public contact?: fhir.PatientContact[]|undefined;
+  public contact?: fhir.PatientContact[]|undefined = [];
   /**
    * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
    */
-  public communication?: fhir.PatientCommunication[]|undefined;
+  public communication?: fhir.PatientCommunication[]|undefined = [];
   /**
    * This may be the primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disability setting, or even organization that will provide people to perform the care provider roles.  It is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources.
    * Multiple GPs may be recorded against the patient for various reasons, such as a student that has his home GP listed along with the GP at university during the school semesters, or a "fly-in/fly-out" worker that has the onsite GP also included with his home GP to remain aware of medical issues.
    * Jurisdictions may decide that they can profile this down to 1 if desired, or 1 per type.
    */
-  public generalPractitioner?: fhir.Reference[]|undefined;
+  public generalPractitioner?: fhir.Reference[]|undefined = [];
   /**
    * There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association).
    */
@@ -480,37 +428,32 @@ export class Patient extends fhir.DomainResource implements IPatient {
   /**
    * There is no assumption that linked patient records have mutual links.
    */
-  public link?: fhir.PatientLink[]|undefined;
+  public link?: fhir.PatientLink[]|undefined = [];
   /**
    * Default constructor for Patient - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IPatient> = { }) {
-    super(source);
+  constructor(source:Partial<PatientArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Patient';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['active']) { this.active = source.active; }
-    if (source['_active']) { this._active = new fhir.FhirElement(source._active!); }
+    if (source['active']) { this.active = new fhir.FhirBoolean({value: source.active}); }
     if (source['name']) { this.name = source.name.map((x) => new fhir.HumanName(x)); }
     if (source['telecom']) { this.telecom = source.telecom.map((x) => new fhir.ContactPoint(x)); }
     if (source['gender']) { this.gender = source.gender; }
-    if (source['_gender']) { this._gender = new fhir.FhirElement(source._gender!); }
-    if (source['birthDate']) { this.birthDate = source.birthDate; }
-    if (source['_birthDate']) { this._birthDate = new fhir.FhirElement(source._birthDate!); }
-    if (source['deceasedBoolean']) { this.deceasedBoolean = source.deceasedBoolean; }
-    if (source['_deceasedBoolean']) { this._deceasedBoolean = new fhir.FhirElement(source._deceasedBoolean!); }
-    if (source['deceasedDateTime']) { this.deceasedDateTime = source.deceasedDateTime; }
-    if (source['_deceasedDateTime']) { this._deceasedDateTime = new fhir.FhirElement(source._deceasedDateTime!); }
+    if (source['birthDate']) { this.birthDate = new fhir.FhirDate({value: source.birthDate}); }
+    if (source['deceased']) { this.deceased = source.deceased; }
+    else if (source['deceasedBoolean']) { this.deceased = new fhir.FhirBoolean({value: source.deceasedBoolean}); }
+    else if (source['deceasedDateTime']) { this.deceased = new fhir.FhirDateTime({value: source.deceasedDateTime}); }
     if (source['address']) { this.address = source.address.map((x) => new fhir.Address(x)); }
-    if (source['maritalStatus']) { this.maritalStatus = new fhir.CodeableConcept(source.maritalStatus!); }
-    if (source['multipleBirthBoolean']) { this.multipleBirthBoolean = source.multipleBirthBoolean; }
-    if (source['_multipleBirthBoolean']) { this._multipleBirthBoolean = new fhir.FhirElement(source._multipleBirthBoolean!); }
-    if (source['multipleBirthInteger']) { this.multipleBirthInteger = source.multipleBirthInteger; }
-    if (source['_multipleBirthInteger']) { this._multipleBirthInteger = new fhir.FhirElement(source._multipleBirthInteger!); }
+    if (source['maritalStatus']) { this.maritalStatus = new fhir.CodeableConcept(source.maritalStatus); }
+    if (source['multipleBirth']) { this.multipleBirth = source.multipleBirth; }
+    else if (source['multipleBirthBoolean']) { this.multipleBirth = new fhir.FhirBoolean({value: source.multipleBirthBoolean}); }
+    else if (source['multipleBirthInteger']) { this.multipleBirth = new fhir.FhirInteger({value: source.multipleBirthInteger}); }
     if (source['photo']) { this.photo = source.photo.map((x) => new fhir.Attachment(x)); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.PatientContact(x)); }
     if (source['communication']) { this.communication = source.communication.map((x) => new fhir.PatientCommunication(x)); }
     if (source['generalPractitioner']) { this.generalPractitioner = source.generalPractitioner.map((x) => new fhir.Reference(x)); }
-    if (source['managingOrganization']) { this.managingOrganization = new fhir.Reference(source.managingOrganization!); }
+    if (source['managingOrganization']) { this.managingOrganization = new fhir.Reference(source.managingOrganization); }
     if (source['link']) { this.link = source.link.map((x) => new fhir.PatientLink(x)); }
   }
   /**
@@ -528,27 +471,30 @@ export class Patient extends fhir.DomainResource implements IPatient {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Patient.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_active"]) { results.push(...this._active.doModelValidation()); }
-    if (this["name"]) { this.name.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["telecom"]) { this.telecom.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_gender"]) { results.push(...this._gender.doModelValidation()); }
-    if (this["_birthDate"]) { results.push(...this._birthDate.doModelValidation()); }
-    if (this["_deceasedBoolean"]) { results.push(...this._deceasedBoolean.doModelValidation()); }
-    if (this["_deceasedDateTime"]) { results.push(...this._deceasedDateTime.doModelValidation()); }
-    if (this["address"]) { this.address.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["maritalStatus"]) { results.push(...this.maritalStatus.doModelValidation()); }
-    if (this["_multipleBirthBoolean"]) { results.push(...this._multipleBirthBoolean.doModelValidation()); }
-    if (this["_multipleBirthInteger"]) { results.push(...this._multipleBirthInteger.doModelValidation()); }
-    if (this["photo"]) { this.photo.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["communication"]) { this.communication.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["generalPractitioner"]) { this.generalPractitioner.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["managingOrganization"]) { results.push(...this.managingOrganization.doModelValidation()); }
-    if (this["link"]) { this.link.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Patient' fhir: Patient.resourceType:'Patient'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["active"]) { outcome.issue!.push(...this.active.doModelValidation().issue!); }
+    if (this["name"]) { this.name.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["telecom"]) { this.telecom.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["birthDate"]) { outcome.issue!.push(...this.birthDate.doModelValidation().issue!); }
+    if (this["address"]) { this.address.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["maritalStatus"]) { outcome.issue!.push(...this.maritalStatus.doModelValidation().issue!); }
+    if (this["photo"]) { this.photo.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["communication"]) { this.communication.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["generalPractitioner"]) { this.generalPractitioner.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["managingOrganization"]) { outcome.issue!.push(...this.managingOrganization.doModelValidation().issue!); }
+    if (this["link"]) { this.link.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -35,19 +35,4 @@ export const ConditionalDeleteStatusValueSet = {
 /**
  * A code that indicates how the server supports conditional delete.
  */
-export var ConditionalDeleteStatusValueSetEnum;
-(function (ConditionalDeleteStatusValueSetEnum) {
-    /**
-     * multiple: Conditional deletes are supported, and multiple resources can be deleted in a single interaction.
-     */
-    ConditionalDeleteStatusValueSetEnum["MultipleDeletesSupported"] = "multiple";
-    /**
-     * not-supported: No support for conditional deletes.
-     */
-    ConditionalDeleteStatusValueSetEnum["NotSupported"] = "not-supported";
-    /**
-     * single: Conditional deletes are supported, but only single resources at a time.
-     */
-    ConditionalDeleteStatusValueSetEnum["SingleDeletesSupported"] = "single";
-})(ConditionalDeleteStatusValueSetEnum || (ConditionalDeleteStatusValueSetEnum = {}));
 //# sourceMappingURL=ConditionalDeleteStatusValueSet.js.map

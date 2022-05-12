@@ -35,13 +35,3 @@ export type RestfulCapabilityModeValueSetType = typeof RestfulCapabilityModeValu
 /**
  * The mode of a RESTful capability statement.
  */
-export enum RestfulCapabilityModeValueSetEnum {
-  /**
-   * client: The application acts as a client for this resource.
-   */
-  Client = "client",
-  /**
-   * server: The application acts as a server for this resource.
-   */
-  Server = "server",
-}

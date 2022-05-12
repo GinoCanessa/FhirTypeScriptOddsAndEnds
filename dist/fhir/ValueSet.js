@@ -3,10 +3,12 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ValueSet
 import * as fhir from '../fhir.js';
-import { LanguagesValueSet } from '../fhirValueSets/LanguagesValueSet.js';
-import { DesignationUseValueSet } from '../fhirValueSets/DesignationUseValueSet.js';
-import { FilterOperatorValueSet } from '../fhirValueSets/FilterOperatorValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { LanguagesValueSet, } from '../fhirValueSets/LanguagesValueSet.js';
+import { DesignationUseValueSet, } from '../fhirValueSets/DesignationUseValueSet.js';
+import { FilterOperatorValueSet, } from '../fhirValueSets/FilterOperatorValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Concepts have both a ```display``` and an array of ```designation```. The display is equivalent to a special designation with an implied ```designation.use``` of "primary code" and a language equal to the [Resource Language](resource.html#language).
  */
@@ -14,25 +16,20 @@ export class ValueSetComposeIncludeConceptDesignation extends fhir.BackboneEleme
     /**
      * Default constructor for ValueSetComposeIncludeConceptDesignation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ValueSetComposeIncludeConceptDesignation';
         if (source['language']) {
-            this.language = source.language;
-        }
-        if (source['_language']) {
-            this._language = new fhir.FhirElement(source._language);
+            this.language = new fhir.FhirCode({ value: source.language });
         }
         if (source['use']) {
             this.use = new fhir.Coding(source.use);
         }
         if (source['value']) {
-            this.value = source.value;
+            this.value = new fhir.FhirString({ value: source.value });
         }
         else {
             this.value = null;
-        }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
         }
     }
     /**
@@ -51,20 +48,26 @@ export class ValueSetComposeIncludeConceptDesignation extends fhir.BackboneEleme
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_language"]) {
-            results.push(...this._language.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["language"]) {
+            outcome.issue.push(...this.language.doModelValidation().issue);
         }
         if (this["use"]) {
-            results.push(...this.use.doModelValidation());
+            outcome.issue.push(...this.use.doModelValidation().issue);
         }
-        if (!this["value"]) {
-            results.push(["value", 'Missing required element: ValueSet.compose.include.concept.designation.value']);
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value:fhir.FhirString fhir: ValueSet.compose.include.concept.designation.value:string", }));
         }
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -74,22 +77,21 @@ export class ValueSetComposeIncludeConcept extends fhir.BackboneElement {
     /**
      * Default constructor for ValueSetComposeIncludeConcept - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ValueSetComposeIncludeConcept';
+        /**
+         * Concepts have both a ```display``` and an array of ```designation```. The display is equivalent to a special designation with an implied ```designation.use``` of "primary code" and a language equal to the [Resource Language](resource.html#language).
+         */
+        this.designation = [];
         if (source['code']) {
-            this.code = source.code;
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         else {
             this.code = null;
         }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
-        }
         if (source['display']) {
-            this.display = source.display;
-        }
-        if (source['_display']) {
-            this._display = new fhir.FhirElement(source._display);
+            this.display = new fhir.FhirString({ value: source.display });
         }
         if (source['designation']) {
             this.designation = source.designation.map((x) => new fhir.ValueSetComposeIncludeConceptDesignation(x));
@@ -99,20 +101,26 @@ export class ValueSetComposeIncludeConcept extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: ValueSet.compose.include.concept.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.FhirCode fhir: ValueSet.compose.include.concept.code:code", }));
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_display"]) {
-            results.push(...this._display.doModelValidation());
+        if (this["display"]) {
+            outcome.issue.push(...this.display.doModelValidation().issue);
         }
         if (this["designation"]) {
-            this.designation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.designation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -122,16 +130,14 @@ export class ValueSetComposeIncludeFilter extends fhir.BackboneElement {
     /**
      * Default constructor for ValueSetComposeIncludeFilter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ValueSetComposeIncludeFilter';
         if (source['property']) {
-            this.property = source.property;
+            this.property = new fhir.FhirCode({ value: source.property });
         }
         else {
             this.property = null;
-        }
-        if (source['_property']) {
-            this._property = new fhir.FhirElement(source._property);
         }
         if (source['op']) {
             this.op = source.op;
@@ -139,17 +145,11 @@ export class ValueSetComposeIncludeFilter extends fhir.BackboneElement {
         else {
             this.op = null;
         }
-        if (source['_op']) {
-            this._op = new fhir.FhirElement(source._op);
-        }
         if (source['value']) {
-            this.value = source.value;
+            this.value = new fhir.FhirString({ value: source.value });
         }
         else {
             this.value = null;
-        }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
         }
     }
     /**
@@ -162,26 +162,29 @@ export class ValueSetComposeIncludeFilter extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["property"]) {
-            results.push(["property", 'Missing required element: ValueSet.compose.include.filter.property']);
+        var outcome = super.doModelValidation();
+        if (!this['property']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property property:fhir.FhirCode fhir: ValueSet.compose.include.filter.property:code", }));
         }
-        if (this["_property"]) {
-            results.push(...this._property.doModelValidation());
+        if (this["property"]) {
+            outcome.issue.push(...this.property.doModelValidation().issue);
         }
-        if (!this["op"]) {
-            results.push(["op", 'Missing required element: ValueSet.compose.include.filter.op']);
+        if (!this['op']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property op:FilterOperatorValueSetEnum fhir: ValueSet.compose.include.filter.op:code", }));
         }
-        if (this["_op"]) {
-            results.push(...this._op.doModelValidation());
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value:fhir.FhirString fhir: ValueSet.compose.include.filter.value:string", }));
         }
-        if (!this["value"]) {
-            results.push(["value", 'Missing required element: ValueSet.compose.include.filter.value']);
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
         }
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -191,19 +194,26 @@ export class ValueSetComposeInclude extends fhir.BackboneElement {
     /**
      * Default constructor for ValueSetComposeInclude - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ValueSetComposeInclude';
+        /**
+         * The list of concepts is considered ordered, though the order might not have any particular significance. Typically, the order of an expansion follows that defined in the compose element.
+         */
+        this.concept = [];
+        /**
+         * Selecting codes by specifying filters based on properties is only possible where the underlying code system defines appropriate properties. Note that in some cases, the underlying code system defines the logical concepts but not the literal codes for the concepts. In such cases, the literal definitions may be provided by a third party.
+         */
+        this.filter = [];
+        /**
+         * The value set URI is either a logical reference to a defined value set such as a [SNOMED CT reference set](snomedct.html#implicit), or a direct reference to a value set definition using ValueSet.url. The reference might not refer to an actual FHIR ValueSet resource; in this case, whatever is referred to is an implicit definition of a value set that needs to be clear about how versions are resolved.
+         */
+        this.valueSet = [];
         if (source['system']) {
-            this.system = source.system;
-        }
-        if (source['_system']) {
-            this._system = new fhir.FhirElement(source._system);
+            this.system = new fhir.FhirUri({ value: source.system });
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['concept']) {
             this.concept = source.concept.map((x) => new fhir.ValueSetComposeIncludeConcept(x));
@@ -212,33 +222,36 @@ export class ValueSetComposeInclude extends fhir.BackboneElement {
             this.filter = source.filter.map((x) => new fhir.ValueSetComposeIncludeFilter(x));
         }
         if (source['valueSet']) {
-            this.valueSet = source.valueSet.map((x) => (x));
-        }
-        if (source['_valueSet']) {
-            this._valueSet = source._valueSet.map((x) => new fhir.FhirElement(x));
+            this.valueSet = source.valueSet.map((x) => new fhir.FhirCanonical({ value: x }));
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_system"]) {
-            results.push(...this._system.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["system"]) {
+            outcome.issue.push(...this.system.doModelValidation().issue);
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
         if (this["concept"]) {
-            this.concept.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.concept.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["filter"]) {
-            this.filter.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.filter.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_valueSet"]) {
-            this._valueSet.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["valueSet"]) {
+            this.valueSet.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -248,19 +261,22 @@ export class ValueSetCompose extends fhir.BackboneElement {
     /**
      * Default constructor for ValueSetCompose - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ValueSetCompose';
+        /**
+         * All the conditions in an include must be true. If a system is listed, all the codes from the system are listed. If one or more filters are listed, all of the filters must apply. If one or more value sets are listed, the codes must be in all the value sets. E.g. each include is 'include all the codes that meet all these conditions'.
+         */
+        this.include = [];
+        /**
+         * Usually this is used to selectively exclude codes that were included by subsumption in the inclusions. Any display names specified for the codes are ignored.
+         */
+        this.exclude = [];
         if (source['lockedDate']) {
-            this.lockedDate = source.lockedDate;
-        }
-        if (source['_lockedDate']) {
-            this._lockedDate = new fhir.FhirElement(source._lockedDate);
+            this.lockedDate = new fhir.FhirDate({ value: source.lockedDate });
         }
         if (source['inactive']) {
-            this.inactive = source.inactive;
-        }
-        if (source['_inactive']) {
-            this._inactive = new fhir.FhirElement(source._inactive);
+            this.inactive = new fhir.FhirBoolean({ value: source.inactive });
         }
         if (source['include']) {
             this.include = source.include.map((x) => new fhir.ValueSetComposeInclude(x));
@@ -276,23 +292,35 @@ export class ValueSetCompose extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_lockedDate"]) {
-            results.push(...this._lockedDate.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["lockedDate"]) {
+            outcome.issue.push(...this.lockedDate.doModelValidation().issue);
         }
-        if (this["_inactive"]) {
-            results.push(...this._inactive.doModelValidation());
+        if (this["inactive"]) {
+            outcome.issue.push(...this.inactive.doModelValidation().issue);
         }
-        if ((!this["include"]) || (this["include"].length === 0)) {
-            results.push(["include", 'Missing required element: ValueSet.compose.include']);
+        if (!this['include']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property include:fhir.ValueSetComposeInclude[] fhir: ValueSet.compose.include:include", }));
+        }
+        else if (!Array.isArray(this.include)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property include:fhir.ValueSetComposeInclude[] fhir: ValueSet.compose.include:include", }));
+        }
+        else if (this.include.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property include:fhir.ValueSetComposeInclude[] fhir: ValueSet.compose.include:include", }));
         }
         if (this["include"]) {
-            this.include.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.include.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["exclude"]) {
-            this.exclude.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.exclude.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -302,93 +330,59 @@ export class ValueSetExpansionParameter extends fhir.BackboneElement {
     /**
      * Default constructor for ValueSetExpansionParameter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ValueSetExpansionParameter';
+        this.__valueIsChoice = true;
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirString({ value: source.name });
         }
         else {
             this.name = null;
         }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['valueString']) {
-            this.valueString = source.valueString;
+        else if (source['valueString']) {
+            this.value = new fhir.FhirString({ value: source.valueString });
         }
-        if (source['_valueString']) {
-            this._valueString = new fhir.FhirElement(source._valueString);
+        else if (source['valueBoolean']) {
+            this.value = new fhir.FhirBoolean({ value: source.valueBoolean });
         }
-        if (source['valueBoolean']) {
-            this.valueBoolean = source.valueBoolean;
+        else if (source['valueInteger']) {
+            this.value = new fhir.FhirInteger({ value: source.valueInteger });
         }
-        if (source['_valueBoolean']) {
-            this._valueBoolean = new fhir.FhirElement(source._valueBoolean);
+        else if (source['valueDecimal']) {
+            this.value = new fhir.FhirDecimal({ value: source.valueDecimal });
         }
-        if (source['valueInteger']) {
-            this.valueInteger = source.valueInteger;
+        else if (source['valueUri']) {
+            this.value = new fhir.FhirUri({ value: source.valueUri });
         }
-        if (source['_valueInteger']) {
-            this._valueInteger = new fhir.FhirElement(source._valueInteger);
+        else if (source['valueCode']) {
+            this.value = new fhir.FhirCode({ value: source.valueCode });
         }
-        if (source['valueDecimal']) {
-            this.valueDecimal = source.valueDecimal;
-        }
-        if (source['_valueDecimal']) {
-            this._valueDecimal = new fhir.FhirElement(source._valueDecimal);
-        }
-        if (source['valueUri']) {
-            this.valueUri = source.valueUri;
-        }
-        if (source['_valueUri']) {
-            this._valueUri = new fhir.FhirElement(source._valueUri);
-        }
-        if (source['valueCode']) {
-            this.valueCode = source.valueCode;
-        }
-        if (source['_valueCode']) {
-            this._valueCode = new fhir.FhirElement(source._valueCode);
-        }
-        if (source['valueDateTime']) {
-            this.valueDateTime = source.valueDateTime;
-        }
-        if (source['_valueDateTime']) {
-            this._valueDateTime = new fhir.FhirElement(source._valueDateTime);
+        else if (source['valueDateTime']) {
+            this.value = new fhir.FhirDateTime({ value: source.valueDateTime });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: ValueSet.expansion.parameter.name']);
+        var outcome = super.doModelValidation();
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirString fhir: ValueSet.expansion.parameter.name:string", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_valueString"]) {
-            results.push(...this._valueString.doModelValidation());
-        }
-        if (this["_valueBoolean"]) {
-            results.push(...this._valueBoolean.doModelValidation());
-        }
-        if (this["_valueInteger"]) {
-            results.push(...this._valueInteger.doModelValidation());
-        }
-        if (this["_valueDecimal"]) {
-            results.push(...this._valueDecimal.doModelValidation());
-        }
-        if (this["_valueUri"]) {
-            results.push(...this._valueUri.doModelValidation());
-        }
-        if (this["_valueCode"]) {
-            results.push(...this._valueCode.doModelValidation());
-        }
-        if (this["_valueDateTime"]) {
-            results.push(...this._valueDateTime.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -398,43 +392,34 @@ export class ValueSetExpansionContains extends fhir.BackboneElement {
     /**
      * Default constructor for ValueSetExpansionContains - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ValueSetExpansionContains';
+        /**
+         * The designations provided must be based on the value set and code system definitions.
+         */
+        this.designation = [];
+        /**
+         * If the expansion uses this element, there is  no implication about the logical relationship between them, and the  structure cannot be used for logical inferencing. The structure  exists to provide navigational assistance for helping human users to  locate codes in the expansion.
+         */
+        this.contains = [];
         if (source['system']) {
-            this.system = source.system;
-        }
-        if (source['_system']) {
-            this._system = new fhir.FhirElement(source._system);
+            this.system = new fhir.FhirUri({ value: source.system });
         }
         if (source['abstract']) {
-            this.abstract = source.abstract;
-        }
-        if (source['_abstract']) {
-            this._abstract = new fhir.FhirElement(source._abstract);
+            this.abstract = new fhir.FhirBoolean({ value: source.abstract });
         }
         if (source['inactive']) {
-            this.inactive = source.inactive;
-        }
-        if (source['_inactive']) {
-            this._inactive = new fhir.FhirElement(source._inactive);
+            this.inactive = new fhir.FhirBoolean({ value: source.inactive });
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['code']) {
-            this.code = source.code;
-        }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         if (source['display']) {
-            this.display = source.display;
-        }
-        if (source['_display']) {
-            this._display = new fhir.FhirElement(source._display);
+            this.display = new fhir.FhirString({ value: source.display });
         }
         if (source['designation']) {
             this.designation = source.designation.map((x) => new fhir.ValueSetComposeIncludeConceptDesignation(x));
@@ -447,32 +432,38 @@ export class ValueSetExpansionContains extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_system"]) {
-            results.push(...this._system.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["system"]) {
+            outcome.issue.push(...this.system.doModelValidation().issue);
         }
-        if (this["_abstract"]) {
-            results.push(...this._abstract.doModelValidation());
+        if (this["abstract"]) {
+            outcome.issue.push(...this.abstract.doModelValidation().issue);
         }
-        if (this["_inactive"]) {
-            results.push(...this._inactive.doModelValidation());
+        if (this["inactive"]) {
+            outcome.issue.push(...this.inactive.doModelValidation().issue);
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_display"]) {
-            results.push(...this._display.doModelValidation());
+        if (this["display"]) {
+            outcome.issue.push(...this.display.doModelValidation().issue);
         }
         if (this["designation"]) {
-            this.designation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.designation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["contains"]) {
-            this.contains.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contains.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -483,34 +474,31 @@ export class ValueSetExpansion extends fhir.BackboneElement {
     /**
      * Default constructor for ValueSetExpansion - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ValueSetExpansion';
+        /**
+         * The server decides which parameters to include here, but at a minimum, the list SHOULD include all of the parameters that affect the $expand operation. If the expansion will be persisted all of these parameters SHALL be included. If the codeSystem on the server has a specified version then this version SHALL be provided as a parameter in the expansion (note that not all code systems have a version).
+         */
+        this.parameter = [];
+        /**
+         * The codes that are contained in the value set expansion.
+         */
+        this.contains = [];
         if (source['identifier']) {
-            this.identifier = source.identifier;
-        }
-        if (source['_identifier']) {
-            this._identifier = new fhir.FhirElement(source._identifier);
+            this.identifier = new fhir.FhirUri({ value: source.identifier });
         }
         if (source['timestamp']) {
-            this.timestamp = source.timestamp;
+            this.timestamp = new fhir.FhirDateTime({ value: source.timestamp });
         }
         else {
             this.timestamp = null;
         }
-        if (source['_timestamp']) {
-            this._timestamp = new fhir.FhirElement(source._timestamp);
-        }
         if (source['total']) {
-            this.total = source.total;
-        }
-        if (source['_total']) {
-            this._total = new fhir.FhirElement(source._total);
+            this.total = new fhir.FhirInteger({ value: source.total });
         }
         if (source['offset']) {
-            this.offset = source.offset;
-        }
-        if (source['_offset']) {
-            this._offset = new fhir.FhirElement(source._offset);
+            this.offset = new fhir.FhirInteger({ value: source.offset });
         }
         if (source['parameter']) {
             this.parameter = source.parameter.map((x) => new fhir.ValueSetExpansionParameter(x));
@@ -523,29 +511,35 @@ export class ValueSetExpansion extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_identifier"]) {
-            results.push(...this._identifier.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["identifier"]) {
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (!this["timestamp"]) {
-            results.push(["timestamp", 'Missing required element: ValueSet.expansion.timestamp']);
+        if (!this['timestamp']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property timestamp:fhir.FhirDateTime fhir: ValueSet.expansion.timestamp:dateTime", }));
         }
-        if (this["_timestamp"]) {
-            results.push(...this._timestamp.doModelValidation());
+        if (this["timestamp"]) {
+            outcome.issue.push(...this.timestamp.doModelValidation().issue);
         }
-        if (this["_total"]) {
-            results.push(...this._total.doModelValidation());
+        if (this["total"]) {
+            outcome.issue.push(...this.total.doModelValidation().issue);
         }
-        if (this["_offset"]) {
-            results.push(...this._offset.doModelValidation());
+        if (this["offset"]) {
+            outcome.issue.push(...this.offset.doModelValidation().issue);
         }
         if (this["parameter"]) {
-            this.parameter.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.parameter.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["contains"]) {
-            this.contains.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contains.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -555,35 +549,40 @@ export class ValueSet extends fhir.DomainResource {
     /**
      * Default constructor for ValueSet - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ValueSet';
+        /**
+         * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this value set outside of FHIR, where it is not possible to use the logical URI.
+         */
+        this.identifier = [];
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the value set to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
         this.resourceType = 'ValueSet';
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['status']) {
             this.status = source.status;
@@ -591,35 +590,20 @@ export class ValueSet extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
-        }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -628,22 +612,13 @@ export class ValueSet extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['immutable']) {
-            this.immutable = source.immutable;
-        }
-        if (source['_immutable']) {
-            this._immutable = new fhir.FhirElement(source._immutable);
+            this.immutable = new fhir.FhirBoolean({ value: source.immutable });
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['compose']) {
             this.compose = new fhir.ValueSetCompose(source.compose);
@@ -662,68 +637,71 @@ export class ValueSet extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: ValueSet.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'ValueSet' fhir: ValueSet.resourceType:'ValueSet'", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: ValueSet.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: ValueSet.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_immutable"]) {
-            results.push(...this._immutable.doModelValidation());
+        if (this["immutable"]) {
+            outcome.issue.push(...this.immutable.doModelValidation().issue);
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
         if (this["compose"]) {
-            results.push(...this.compose.doModelValidation());
+            outcome.issue.push(...this.compose.doModelValidation().issue);
         }
         if (this["expansion"]) {
-            results.push(...this.expansion.doModelValidation());
+            outcome.issue.push(...this.expansion.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ValueSet.js.map

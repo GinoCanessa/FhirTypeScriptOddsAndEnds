@@ -51,27 +51,4 @@ export const DistanceUnitsValueSet = {
 /**
  * Unified Code for Units of Measure (UCUM). This value set includes common UCUM codes for units of distance
  */
-export var DistanceUnitsValueSetEnum;
-(function (DistanceUnitsValueSetEnum) {
-    /**
-     * Code: km
-     */
-    DistanceUnitsValueSetEnum["Kilometers"] = "km";
-    /**
-     * Code: m
-     */
-    DistanceUnitsValueSetEnum["Meters"] = "m";
-    /**
-     * Code: mm
-     */
-    DistanceUnitsValueSetEnum["Millimeters"] = "mm";
-    /**
-     * Code: nm
-     */
-    DistanceUnitsValueSetEnum["Nanometers"] = "nm";
-    /**
-     * Code: um
-     */
-    DistanceUnitsValueSetEnum["Micrometers"] = "um";
-})(DistanceUnitsValueSetEnum || (DistanceUnitsValueSetEnum = {}));
 //# sourceMappingURL=DistanceUnitsValueSet.js.map

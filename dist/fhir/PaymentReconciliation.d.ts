@@ -1,172 +1,62 @@
 import * as fhir from '../fhir.js';
 import { PaymentTypeValueSetType } from '../fhirValueSets/PaymentTypeValueSet.js';
-import { NoteTypeValueSetType, NoteTypeValueSetEnum } from '../fhirValueSets/NoteTypeValueSet.js';
-import { FmStatusValueSetType, FmStatusValueSetEnum } from '../fhirValueSets/FmStatusValueSet.js';
-import { RemittanceOutcomeValueSetType, RemittanceOutcomeValueSetEnum } from '../fhirValueSets/RemittanceOutcomeValueSet.js';
+import { NoteTypeValueSetType } from '../fhirValueSets/NoteTypeValueSet.js';
+import { NoteTypeValueSetEnum } from '../valueSetEnums.js';
+import { FmStatusValueSetType } from '../fhirValueSets/FmStatusValueSet.js';
+import { FmStatusValueSetEnum } from '../valueSetEnums.js';
+import { RemittanceOutcomeValueSetType } from '../fhirValueSets/RemittanceOutcomeValueSet.js';
+import { RemittanceOutcomeValueSetEnum } from '../valueSetEnums.js';
 import { FormsValueSetType } from '../fhirValueSets/FormsValueSet.js';
 /**
- * Distribution of the payment amount for a previously acknowledged payable.
+ * Valid arguments for the PaymentReconciliationDetail type.
  */
-export declare type IPaymentReconciliationDetail = fhir.IBackboneElement & {
+export interface PaymentReconciliationDetailArgs extends fhir.BackboneElementArgs {
     /**
      * Unique identifier for the current payment item for the referenced payable.
      */
-    identifier?: fhir.IIdentifier | undefined;
+    identifier?: fhir.IdentifierArgs | undefined;
     /**
      * Unique identifier for the prior payment item for the referenced payable.
      */
-    predecessor?: fhir.IIdentifier | undefined;
+    predecessor?: fhir.IdentifierArgs | undefined;
     /**
      * For example: payment, adjustment, funds advance, etc.
      */
-    type: fhir.ICodeableConcept | null;
+    type: fhir.CodeableConceptArgs | null;
     /**
      * A resource, such as a Claim, the evaluation of which could lead to payment.
      */
-    request?: fhir.IReference | undefined;
+    request?: fhir.ReferenceArgs | undefined;
     /**
      * The party which submitted the claim or financial transaction.
      */
-    submitter?: fhir.IReference | undefined;
+    submitter?: fhir.ReferenceArgs | undefined;
     /**
      * A resource, such as a ClaimResponse, which contains a commitment to payment.
      */
-    response?: fhir.IReference | undefined;
+    response?: fhir.ReferenceArgs | undefined;
     /**
      * The date from the response resource containing a commitment to pay.
      */
-    date?: string | undefined;
-    /**
-     * Extended properties for primitive element: PaymentReconciliation.detail.date
-     */
-    _date?: fhir.IFhirElement | undefined;
+    date?: fhir.FhirDate | string | undefined;
     /**
      * A reference to the individual who is responsible for inquiries regarding the response and its payment.
      */
-    responsible?: fhir.IReference | undefined;
+    responsible?: fhir.ReferenceArgs | undefined;
     /**
      * The party which is receiving the payment.
      */
-    payee?: fhir.IReference | undefined;
+    payee?: fhir.ReferenceArgs | undefined;
     /**
      * The monetary amount allocated from the total payment to the payable.
      */
-    amount?: fhir.IMoney | undefined;
-};
-/**
- * A note that describes or explains the processing in a human readable form.
- */
-export declare type IPaymentReconciliationProcessNote = fhir.IBackboneElement & {
-    /**
-     * The business purpose of the note text.
-     */
-    type?: NoteTypeValueSetEnum | undefined;
-    /**
-     * Extended properties for primitive element: PaymentReconciliation.processNote.type
-     */
-    _type?: fhir.IFhirElement | undefined;
-    /**
-     * The explanation or description associated with the processing.
-     */
-    text?: string | undefined;
-    /**
-     * Extended properties for primitive element: PaymentReconciliation.processNote.text
-     */
-    _text?: fhir.IFhirElement | undefined;
-};
-/**
- * This resource provides the details including amount of a payment and allocates the payment items being paid.
- */
-export declare type IPaymentReconciliation = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "PaymentReconciliation";
-    /**
-     * A unique identifier assigned to this payment reconciliation.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-     */
-    status: FmStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: PaymentReconciliation.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * The period of time for which payments have been gathered into this bulk payment for settlement.
-     */
-    period?: fhir.IPeriod | undefined;
-    /**
-     * The date when the resource was created.
-     */
-    created: string | null;
-    /**
-     * Extended properties for primitive element: PaymentReconciliation.created
-     */
-    _created?: fhir.IFhirElement | undefined;
-    /**
-     * This party is also responsible for the reconciliation.
-     */
-    paymentIssuer?: fhir.IReference | undefined;
-    /**
-     * Original request resource reference.
-     */
-    request?: fhir.IReference | undefined;
-    /**
-     * The practitioner who is responsible for the services rendered to the patient.
-     */
-    requestor?: fhir.IReference | undefined;
-    /**
-     * The resource may be used to indicate that: the request has been held (queued) for processing; that it has been processed and errors found (error); that no errors were found and that some of the adjudication has been undertaken (partial) or that all of the adjudication has been undertaken (complete).
-     */
-    outcome?: RemittanceOutcomeValueSetEnum | undefined;
-    /**
-     * Extended properties for primitive element: PaymentReconciliation.outcome
-     */
-    _outcome?: fhir.IFhirElement | undefined;
-    /**
-     * A human readable description of the status of the request for the reconciliation.
-     */
-    disposition?: string | undefined;
-    /**
-     * Extended properties for primitive element: PaymentReconciliation.disposition
-     */
-    _disposition?: fhir.IFhirElement | undefined;
-    /**
-     * The date of payment as indicated on the financial instrument.
-     */
-    paymentDate: string | null;
-    /**
-     * Extended properties for primitive element: PaymentReconciliation.paymentDate
-     */
-    _paymentDate?: fhir.IFhirElement | undefined;
-    /**
-     * Total payment amount as indicated on the financial instrument.
-     */
-    paymentAmount: fhir.IMoney | null;
-    /**
-     * For example: EFT number or check number.
-     */
-    paymentIdentifier?: fhir.IIdentifier | undefined;
-    /**
-     * Distribution of the payment amount for a previously acknowledged payable.
-     */
-    detail?: fhir.IPaymentReconciliationDetail[] | undefined;
-    /**
-     * May be needed to identify specific jurisdictional forms.
-     */
-    formCode?: fhir.ICodeableConcept | undefined;
-    /**
-     * A note that describes or explains the processing in a human readable form.
-     */
-    processNote?: fhir.IPaymentReconciliationProcessNote[] | undefined;
-};
+    amount?: fhir.MoneyArgs | undefined;
+}
 /**
  * Distribution of the payment amount for a previously acknowledged payable.
  */
-export declare class PaymentReconciliationDetail extends fhir.BackboneElement implements IPaymentReconciliationDetail {
+export declare class PaymentReconciliationDetail extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Unique identifier for the current payment item for the referenced payable.
      */
@@ -194,11 +84,7 @@ export declare class PaymentReconciliationDetail extends fhir.BackboneElement im
     /**
      * The date from the response resource containing a commitment to pay.
      */
-    date?: string | undefined;
-    /**
-     * Extended properties for primitive element: PaymentReconciliation.detail.date
-     */
-    _date?: fhir.FhirElement | undefined;
+    date?: fhir.FhirDate | undefined;
     /**
      * A reference to the individual who is responsible for inquiries regarding the response and its payment.
      */
@@ -214,7 +100,7 @@ export declare class PaymentReconciliationDetail extends fhir.BackboneElement im
     /**
      * Default constructor for PaymentReconciliationDetail - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IPaymentReconciliationDetail>);
+    constructor(source?: Partial<PaymentReconciliationDetailArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Example-bound Value Set for type
      */
@@ -222,32 +108,42 @@ export declare class PaymentReconciliationDetail extends fhir.BackboneElement im
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 /**
- * A note that describes or explains the processing in a human readable form.
+ * Valid arguments for the PaymentReconciliationProcessNote type.
  */
-export declare class PaymentReconciliationProcessNote extends fhir.BackboneElement implements IPaymentReconciliationProcessNote {
+export interface PaymentReconciliationProcessNoteArgs extends fhir.BackboneElementArgs {
     /**
      * The business purpose of the note text.
      */
     type?: NoteTypeValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: PaymentReconciliation.processNote.type
+     * The explanation or description associated with the processing.
      */
-    _type?: fhir.FhirElement | undefined;
+    text?: fhir.FhirString | string | undefined;
+}
+/**
+ * A note that describes or explains the processing in a human readable form.
+ */
+export declare class PaymentReconciliationProcessNote extends fhir.BackboneElement {
+    readonly __dataType: string;
+    /**
+     * The business purpose of the note text.
+     */
+    type?: NoteTypeValueSetEnum | undefined;
     /**
      * The explanation or description associated with the processing.
      */
-    text?: string | undefined;
-    /**
-     * Extended properties for primitive element: PaymentReconciliation.processNote.text
-     */
-    _text?: fhir.FhirElement | undefined;
+    text?: fhir.FhirString | undefined;
     /**
      * Default constructor for PaymentReconciliationProcessNote - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IPaymentReconciliationProcessNote>);
+    constructor(source?: Partial<PaymentReconciliationProcessNoteArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for type
      */
@@ -255,12 +151,86 @@ export declare class PaymentReconciliationProcessNote extends fhir.BackboneEleme
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the PaymentReconciliation type.
+ */
+export interface PaymentReconciliationArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "PaymentReconciliation" | undefined;
+    /**
+     * A unique identifier assigned to this payment reconciliation.
+     */
+    identifier?: fhir.IdentifierArgs[] | undefined;
+    /**
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+     */
+    status: FmStatusValueSetEnum | null;
+    /**
+     * The period of time for which payments have been gathered into this bulk payment for settlement.
+     */
+    period?: fhir.PeriodArgs | undefined;
+    /**
+     * The date when the resource was created.
+     */
+    created: fhir.FhirDateTime | string | undefined;
+    /**
+     * This party is also responsible for the reconciliation.
+     */
+    paymentIssuer?: fhir.ReferenceArgs | undefined;
+    /**
+     * Original request resource reference.
+     */
+    request?: fhir.ReferenceArgs | undefined;
+    /**
+     * The practitioner who is responsible for the services rendered to the patient.
+     */
+    requestor?: fhir.ReferenceArgs | undefined;
+    /**
+     * The resource may be used to indicate that: the request has been held (queued) for processing; that it has been processed and errors found (error); that no errors were found and that some of the adjudication has been undertaken (partial) or that all of the adjudication has been undertaken (complete).
+     */
+    outcome?: RemittanceOutcomeValueSetEnum | undefined;
+    /**
+     * A human readable description of the status of the request for the reconciliation.
+     */
+    disposition?: fhir.FhirString | string | undefined;
+    /**
+     * The date of payment as indicated on the financial instrument.
+     */
+    paymentDate: fhir.FhirDate | string | undefined;
+    /**
+     * Total payment amount as indicated on the financial instrument.
+     */
+    paymentAmount: fhir.MoneyArgs | null;
+    /**
+     * For example: EFT number or check number.
+     */
+    paymentIdentifier?: fhir.IdentifierArgs | undefined;
+    /**
+     * Distribution of the payment amount for a previously acknowledged payable.
+     */
+    detail?: fhir.PaymentReconciliationDetailArgs[] | undefined;
+    /**
+     * May be needed to identify specific jurisdictional forms.
+     */
+    formCode?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * A note that describes or explains the processing in a human readable form.
+     */
+    processNote?: fhir.PaymentReconciliationProcessNoteArgs[] | undefined;
 }
 /**
  * This resource provides the details including amount of a payment and allocates the payment items being paid.
  */
-export declare class PaymentReconciliation extends fhir.DomainResource implements IPaymentReconciliation {
+export declare class PaymentReconciliation extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -274,21 +244,13 @@ export declare class PaymentReconciliation extends fhir.DomainResource implement
      */
     status: FmStatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: PaymentReconciliation.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * The period of time for which payments have been gathered into this bulk payment for settlement.
      */
     period?: fhir.Period | undefined;
     /**
      * The date when the resource was created.
      */
-    created: string | null;
-    /**
-     * Extended properties for primitive element: PaymentReconciliation.created
-     */
-    _created?: fhir.FhirElement | undefined;
+    created: fhir.FhirDateTime | null;
     /**
      * This party is also responsible for the reconciliation.
      */
@@ -306,25 +268,13 @@ export declare class PaymentReconciliation extends fhir.DomainResource implement
      */
     outcome?: RemittanceOutcomeValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: PaymentReconciliation.outcome
-     */
-    _outcome?: fhir.FhirElement | undefined;
-    /**
      * A human readable description of the status of the request for the reconciliation.
      */
-    disposition?: string | undefined;
-    /**
-     * Extended properties for primitive element: PaymentReconciliation.disposition
-     */
-    _disposition?: fhir.FhirElement | undefined;
+    disposition?: fhir.FhirString | undefined;
     /**
      * The date of payment as indicated on the financial instrument.
      */
-    paymentDate: string | null;
-    /**
-     * Extended properties for primitive element: PaymentReconciliation.paymentDate
-     */
-    _paymentDate?: fhir.FhirElement | undefined;
+    paymentDate: fhir.FhirDate | null;
     /**
      * Total payment amount as indicated on the financial instrument.
      */
@@ -348,7 +298,7 @@ export declare class PaymentReconciliation extends fhir.DomainResource implement
     /**
      * Default constructor for PaymentReconciliation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IPaymentReconciliation>);
+    constructor(source?: Partial<PaymentReconciliationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -364,6 +314,10 @@ export declare class PaymentReconciliation extends fhir.DomainResource implement
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=PaymentReconciliation.d.ts.map

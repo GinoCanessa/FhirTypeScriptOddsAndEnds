@@ -43,23 +43,4 @@ export const CommunicationCategoryValueSet = {
 /**
  * Codes for general categories of communications such as alerts, instructions, etc.
  */
-export var CommunicationCategoryValueSetEnum;
-(function (CommunicationCategoryValueSetEnum) {
-    /**
-     * alert: The communication conveys an alert.
-     */
-    CommunicationCategoryValueSetEnum["Alert"] = "alert";
-    /**
-     * instruction: The communication conveys an instruction.
-     */
-    CommunicationCategoryValueSetEnum["Instruction"] = "instruction";
-    /**
-     * notification: The communication conveys a notification.
-     */
-    CommunicationCategoryValueSetEnum["Notification"] = "notification";
-    /**
-     * reminder: The communication conveys a reminder.
-     */
-    CommunicationCategoryValueSetEnum["Reminder"] = "reminder";
-})(CommunicationCategoryValueSetEnum || (CommunicationCategoryValueSetEnum = {}));
 //# sourceMappingURL=CommunicationCategoryValueSet.js.map

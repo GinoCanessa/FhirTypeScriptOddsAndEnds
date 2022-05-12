@@ -19,11 +19,4 @@ export const ContractAssetscopeValueSet = {
 /**
  * This value set contract specific codes for asset scope.
  */
-export var ContractAssetscopeValueSetEnum;
-(function (ContractAssetscopeValueSetEnum) {
-    /**
-     * thing: To be completed
-     */
-    ContractAssetscopeValueSetEnum["Thing"] = "thing";
-})(ContractAssetscopeValueSetEnum || (ContractAssetscopeValueSetEnum = {}));
 //# sourceMappingURL=ContractAssetscopeValueSet.js.map

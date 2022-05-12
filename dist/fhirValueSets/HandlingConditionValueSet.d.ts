@@ -23,18 +23,4 @@ export declare type HandlingConditionValueSetType = typeof HandlingConditionValu
 /**
  * Set of handling instructions prior testing of the specimen.
  */
-export declare enum HandlingConditionValueSetEnum {
-    /**
-     * frozen: frozen temperature.
-     */
-    Frozen = "frozen",
-    /**
-     * refrigerated: refrigerated temperature.
-     */
-    Refrigerated = "refrigerated",
-    /**
-     * room: room temperature.
-     */
-    RoomTemperature = "room"
-}
 //# sourceMappingURL=HandlingConditionValueSet.d.ts.map

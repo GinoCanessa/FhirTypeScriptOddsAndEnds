@@ -3,176 +3,55 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ObservationDefinition
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { UcumUnitsValueSet, UcumUnitsValueSetType, UcumUnitsValueSetEnum } from '../fhirValueSets/UcumUnitsValueSet.js'
-import { ObservationRangeCategoryValueSet, ObservationRangeCategoryValueSetType, ObservationRangeCategoryValueSetEnum } from '../fhirValueSets/ObservationRangeCategoryValueSet.js'
-import { ReferencerangeMeaningValueSet, ReferencerangeMeaningValueSetType, ReferencerangeMeaningValueSetEnum } from '../fhirValueSets/ReferencerangeMeaningValueSet.js'
-import { ReferencerangeAppliestoValueSet, ReferencerangeAppliestoValueSetType, ReferencerangeAppliestoValueSetEnum } from '../fhirValueSets/ReferencerangeAppliestoValueSet.js'
-import { AdministrativeGenderValueSet, AdministrativeGenderValueSetType, AdministrativeGenderValueSetEnum } from '../fhirValueSets/AdministrativeGenderValueSet.js'
-import { ObservationCategoryValueSet, ObservationCategoryValueSetType, ObservationCategoryValueSetEnum } from '../fhirValueSets/ObservationCategoryValueSet.js'
-import { ObservationCodesValueSet, ObservationCodesValueSetType, ObservationCodesValueSetEnum } from '../fhirValueSets/ObservationCodesValueSet.js'
-import { PermittedDataTypeValueSet, PermittedDataTypeValueSetType, PermittedDataTypeValueSetEnum } from '../fhirValueSets/PermittedDataTypeValueSet.js'
-import { ObservationMethodsValueSet, ObservationMethodsValueSetType, ObservationMethodsValueSetEnum } from '../fhirValueSets/ObservationMethodsValueSet.js'
-
+import { UcumUnitsValueSet, UcumUnitsValueSetType,} from '../fhirValueSets/UcumUnitsValueSet.js';
+import { UcumUnitsValueSetEnum } from '../valueSetEnums.js';
+import { ObservationRangeCategoryValueSet, ObservationRangeCategoryValueSetType,} from '../fhirValueSets/ObservationRangeCategoryValueSet.js';
+import { ObservationRangeCategoryValueSetEnum } from '../valueSetEnums.js';
+import { ReferencerangeMeaningValueSet, ReferencerangeMeaningValueSetType,} from '../fhirValueSets/ReferencerangeMeaningValueSet.js';
+import { ReferencerangeMeaningValueSetEnum } from '../valueSetEnums.js';
+import { ReferencerangeAppliestoValueSet, ReferencerangeAppliestoValueSetType,} from '../fhirValueSets/ReferencerangeAppliestoValueSet.js';
+import { ReferencerangeAppliestoValueSetEnum } from '../valueSetEnums.js';
+import { AdministrativeGenderValueSet, AdministrativeGenderValueSetType,} from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { AdministrativeGenderValueSetEnum } from '../valueSetEnums.js';
+import { ObservationCategoryValueSet, ObservationCategoryValueSetType,} from '../fhirValueSets/ObservationCategoryValueSet.js';
+import { ObservationCategoryValueSetEnum } from '../valueSetEnums.js';
+import { ObservationCodesValueSet, ObservationCodesValueSetType,} from '../fhirValueSets/ObservationCodesValueSet.js';
+import { ObservationCodesValueSetEnum } from '../valueSetEnums.js';
+import { PermittedDataTypeValueSet, PermittedDataTypeValueSetType,} from '../fhirValueSets/PermittedDataTypeValueSet.js';
+import { PermittedDataTypeValueSetEnum } from '../valueSetEnums.js';
+import { ObservationMethodsValueSet, ObservationMethodsValueSetType,} from '../fhirValueSets/ObservationMethodsValueSet.js';
+import { ObservationMethodsValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Characteristics for quantitative results of this observation.
+ * Valid arguments for the ObservationDefinitionQuantitativeDetails type.
  */
-export type IObservationDefinitionQuantitativeDetails = fhir.IBackboneElement & { 
+export interface ObservationDefinitionQuantitativeDetailsArgs extends fhir.BackboneElementArgs {
   /**
    * Customary unit used to report quantitative results of observations conforming to this ObservationDefinition.
    */
-  customaryUnit?: fhir.ICodeableConcept|undefined;
+  customaryUnit?: fhir.CodeableConceptArgs|undefined;
   /**
    * SI unit used to report quantitative results of observations conforming to this ObservationDefinition.
    */
-  unit?: fhir.ICodeableConcept|undefined;
+  unit?: fhir.CodeableConceptArgs|undefined;
   /**
    * Factor for converting value expressed with SI unit to value expressed with customary unit.
    */
-  conversionFactor?: number|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.quantitativeDetails.conversionFactor
-   */
-  _conversionFactor?: fhir.IFhirElement|undefined;
+  conversionFactor?: fhir.FhirDecimal|number|undefined;
   /**
    * Number of digits after decimal separator when the results of such observations are of type Quantity.
    */
-  decimalPrecision?: number|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.quantitativeDetails.decimalPrecision
-   */
-  _decimalPrecision?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Multiple  ranges of results qualified by different contexts for ordinal or continuous observations conforming to this ObservationDefinition.
- */
-export type IObservationDefinitionQualifiedInterval = fhir.IBackboneElement & { 
-  /**
-   * The category of interval of values for continuous or ordinal observations conforming to this ObservationDefinition.
-   */
-  category?: ObservationRangeCategoryValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.qualifiedInterval.category
-   */
-  _category?: fhir.IFhirElement|undefined;
-  /**
-   * The low and high values determining the interval. There may be only one of the two.
-   */
-  range?: fhir.IRange|undefined;
-  /**
-   * Codes to indicate the health context the range applies to. For example, the normal or therapeutic range.
-   */
-  context?: fhir.ICodeableConcept|undefined;
-  /**
-   * If this element is not present then the global population is assumed.
-   */
-  appliesTo?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Sex of the population the range applies to.
-   */
-  gender?: AdministrativeGenderValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.qualifiedInterval.gender
-   */
-  _gender?: fhir.IFhirElement|undefined;
-  /**
-   * Some analytes vary greatly over age.
-   */
-  age?: fhir.IRange|undefined;
-  /**
-   * The gestational age to which this reference range is applicable, in the context of pregnancy.
-   */
-  gestationalAge?: fhir.IRange|undefined;
-  /**
-   * Text based condition for which the reference range is valid.
-   */
-  condition?: string|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.qualifiedInterval.condition
-   */
-  _condition?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Set of definitional characteristics for a kind of observation or measurement produced or consumed by an orderable health care service.
- */
-export type IObservationDefinition = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "ObservationDefinition";
-  /**
-   * This element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used for one instance of ObservationDefinition. The level of granularity is defined by the category concepts in the value set.
-   */
-  category?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Describes what will be observed. Sometimes this is called the observation "name".
-   */
-  code: fhir.ICodeableConcept|null;
-  /**
-   * A unique identifier assigned to this ObservationDefinition artifact.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * The data types allowed for the value element of the instance observations conforming to this ObservationDefinition.
-   */
-  permittedDataType?: PermittedDataTypeValueSetEnum[]|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.permittedDataType
-   */
-  _permittedDataType?: fhir.IFhirElement[]|undefined;
-  /**
-   * An example of observation allowing multiple results is "bacteria identified by culture". Conversely, the measurement of a potassium level allows a single result.
-   */
-  multipleResultsAllowed?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.multipleResultsAllowed
-   */
-  _multipleResultsAllowed?: fhir.IFhirElement|undefined;
-  /**
-   * Only used if not implicit in observation code.
-   */
-  method?: fhir.ICodeableConcept|undefined;
-  /**
-   * The preferred name to be used when reporting the results of observations conforming to this ObservationDefinition.
-   */
-  preferredReportName?: string|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.preferredReportName
-   */
-  _preferredReportName?: fhir.IFhirElement|undefined;
-  /**
-   * Characteristics for quantitative results of this observation.
-   */
-  quantitativeDetails?: fhir.IObservationDefinitionQuantitativeDetails|undefined;
-  /**
-   * Multiple  ranges of results qualified by different contexts for ordinal or continuous observations conforming to this ObservationDefinition.
-   */
-  qualifiedInterval?: fhir.IObservationDefinitionQualifiedInterval[]|undefined;
-  /**
-   * The set of valid coded results for the observations  conforming to this ObservationDefinition.
-   */
-  validCodedValueSet?: fhir.IReference|undefined;
-  /**
-   * The set of normal coded results for the observations conforming to this ObservationDefinition.
-   */
-  normalCodedValueSet?: fhir.IReference|undefined;
-  /**
-   * The set of abnormal coded results for the observation conforming to this ObservationDefinition.
-   */
-  abnormalCodedValueSet?: fhir.IReference|undefined;
-  /**
-   * The set of critical coded results for the observation conforming to this ObservationDefinition.
-   */
-  criticalCodedValueSet?: fhir.IReference|undefined;
+  decimalPrecision?: fhir.FhirInteger|number|undefined;
 }
 
 /**
  * Characteristics for quantitative results of this observation.
  */
-export class ObservationDefinitionQuantitativeDetails extends fhir.BackboneElement implements IObservationDefinitionQuantitativeDetails {
+export class ObservationDefinitionQuantitativeDetails extends fhir.BackboneElement {
+  readonly __dataType:string = 'ObservationDefinitionQuantitativeDetails';
   /**
    * Customary unit used to report quantitative results of observations conforming to this ObservationDefinition.
    */
@@ -184,30 +63,20 @@ export class ObservationDefinitionQuantitativeDetails extends fhir.BackboneEleme
   /**
    * Factor for converting value expressed with SI unit to value expressed with customary unit.
    */
-  public conversionFactor?: number|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.quantitativeDetails.conversionFactor
-   */
-  public _conversionFactor?: fhir.FhirElement|undefined;
+  public conversionFactor?: fhir.FhirDecimal|undefined;
   /**
    * Number of digits after decimal separator when the results of such observations are of type Quantity.
    */
-  public decimalPrecision?: number|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.quantitativeDetails.decimalPrecision
-   */
-  public _decimalPrecision?: fhir.FhirElement|undefined;
+  public decimalPrecision?: fhir.FhirInteger|undefined;
   /**
    * Default constructor for ObservationDefinitionQuantitativeDetails - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IObservationDefinitionQuantitativeDetails> = { }) {
-    super(source);
-    if (source['customaryUnit']) { this.customaryUnit = new fhir.CodeableConcept(source.customaryUnit!); }
-    if (source['unit']) { this.unit = new fhir.CodeableConcept(source.unit!); }
-    if (source['conversionFactor']) { this.conversionFactor = source.conversionFactor; }
-    if (source['_conversionFactor']) { this._conversionFactor = new fhir.FhirElement(source._conversionFactor!); }
-    if (source['decimalPrecision']) { this.decimalPrecision = source.decimalPrecision; }
-    if (source['_decimalPrecision']) { this._decimalPrecision = new fhir.FhirElement(source._decimalPrecision!); }
+  constructor(source:Partial<ObservationDefinitionQuantitativeDetailsArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['customaryUnit']) { this.customaryUnit = new fhir.CodeableConcept(source.customaryUnit); }
+    if (source['unit']) { this.unit = new fhir.CodeableConcept(source.unit); }
+    if (source['conversionFactor']) { this.conversionFactor = new fhir.FhirDecimal({value: source.conversionFactor}); }
+    if (source['decimalPrecision']) { this.decimalPrecision = new fhir.FhirInteger({value: source.decimalPrecision}); }
   }
   /**
    * Extensible-bound Value Set for customaryUnit
@@ -224,28 +93,68 @@ export class ObservationDefinitionQuantitativeDetails extends fhir.BackboneEleme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["customaryUnit"]) { results.push(...this.customaryUnit.doModelValidation()); }
-    if (this["unit"]) { results.push(...this.unit.doModelValidation()); }
-    if (this["_conversionFactor"]) { results.push(...this._conversionFactor.doModelValidation()); }
-    if (this["_decimalPrecision"]) { results.push(...this._decimalPrecision.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["customaryUnit"]) { outcome.issue!.push(...this.customaryUnit.doModelValidation().issue!); }
+    if (this["unit"]) { outcome.issue!.push(...this.unit.doModelValidation().issue!); }
+    if (this["conversionFactor"]) { outcome.issue!.push(...this.conversionFactor.doModelValidation().issue!); }
+    if (this["decimalPrecision"]) { outcome.issue!.push(...this.decimalPrecision.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ObservationDefinitionQualifiedInterval type.
+ */
+export interface ObservationDefinitionQualifiedIntervalArgs extends fhir.BackboneElementArgs {
+  /**
+   * The category of interval of values for continuous or ordinal observations conforming to this ObservationDefinition.
+   */
+  category?: ObservationRangeCategoryValueSetEnum|undefined;
+  /**
+   * The low and high values determining the interval. There may be only one of the two.
+   */
+  range?: fhir.RangeArgs|undefined;
+  /**
+   * Codes to indicate the health context the range applies to. For example, the normal or therapeutic range.
+   */
+  context?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * If this element is not present then the global population is assumed.
+   */
+  appliesTo?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Sex of the population the range applies to.
+   */
+  gender?: AdministrativeGenderValueSetEnum|undefined;
+  /**
+   * Some analytes vary greatly over age.
+   */
+  age?: fhir.RangeArgs|undefined;
+  /**
+   * The gestational age to which this reference range is applicable, in the context of pregnancy.
+   */
+  gestationalAge?: fhir.RangeArgs|undefined;
+  /**
+   * Text based condition for which the reference range is valid.
+   */
+  condition?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Multiple  ranges of results qualified by different contexts for ordinal or continuous observations conforming to this ObservationDefinition.
  */
-export class ObservationDefinitionQualifiedInterval extends fhir.BackboneElement implements IObservationDefinitionQualifiedInterval {
+export class ObservationDefinitionQualifiedInterval extends fhir.BackboneElement {
+  readonly __dataType:string = 'ObservationDefinitionQualifiedInterval';
   /**
    * The category of interval of values for continuous or ordinal observations conforming to this ObservationDefinition.
    */
   public category?: ObservationRangeCategoryValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.qualifiedInterval.category
-   */
-  public _category?: fhir.FhirElement|undefined;
   /**
    * The low and high values determining the interval. There may be only one of the two.
    */
@@ -257,15 +166,11 @@ export class ObservationDefinitionQualifiedInterval extends fhir.BackboneElement
   /**
    * If this element is not present then the global population is assumed.
    */
-  public appliesTo?: fhir.CodeableConcept[]|undefined;
+  public appliesTo?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Sex of the population the range applies to.
    */
   public gender?: AdministrativeGenderValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.qualifiedInterval.gender
-   */
-  public _gender?: fhir.FhirElement|undefined;
   /**
    * Some analytes vary greatly over age.
    */
@@ -277,27 +182,20 @@ export class ObservationDefinitionQualifiedInterval extends fhir.BackboneElement
   /**
    * Text based condition for which the reference range is valid.
    */
-  public condition?: string|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.qualifiedInterval.condition
-   */
-  public _condition?: fhir.FhirElement|undefined;
+  public condition?: fhir.FhirString|undefined;
   /**
    * Default constructor for ObservationDefinitionQualifiedInterval - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IObservationDefinitionQualifiedInterval> = { }) {
-    super(source);
+  constructor(source:Partial<ObservationDefinitionQualifiedIntervalArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['category']) { this.category = source.category; }
-    if (source['_category']) { this._category = new fhir.FhirElement(source._category!); }
-    if (source['range']) { this.range = new fhir.Range(source.range!); }
-    if (source['context']) { this.context = new fhir.CodeableConcept(source.context!); }
+    if (source['range']) { this.range = new fhir.Range(source.range); }
+    if (source['context']) { this.context = new fhir.CodeableConcept(source.context); }
     if (source['appliesTo']) { this.appliesTo = source.appliesTo.map((x) => new fhir.CodeableConcept(x)); }
     if (source['gender']) { this.gender = source.gender; }
-    if (source['_gender']) { this._gender = new fhir.FhirElement(source._gender!); }
-    if (source['age']) { this.age = new fhir.Range(source.age!); }
-    if (source['gestationalAge']) { this.gestationalAge = new fhir.Range(source.gestationalAge!); }
-    if (source['condition']) { this.condition = source.condition; }
-    if (source['_condition']) { this._condition = new fhir.FhirElement(source._condition!); }
+    if (source['age']) { this.age = new fhir.Range(source.age); }
+    if (source['gestationalAge']) { this.gestationalAge = new fhir.Range(source.gestationalAge); }
+    if (source['condition']) { this.condition = new fhir.FhirString({value: source.condition}); }
   }
   /**
    * Required-bound Value Set for category
@@ -326,24 +224,90 @@ export class ObservationDefinitionQualifiedInterval extends fhir.BackboneElement
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_category"]) { results.push(...this._category.doModelValidation()); }
-    if (this["range"]) { results.push(...this.range.doModelValidation()); }
-    if (this["context"]) { results.push(...this.context.doModelValidation()); }
-    if (this["appliesTo"]) { this.appliesTo.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_gender"]) { results.push(...this._gender.doModelValidation()); }
-    if (this["age"]) { results.push(...this.age.doModelValidation()); }
-    if (this["gestationalAge"]) { results.push(...this.gestationalAge.doModelValidation()); }
-    if (this["_condition"]) { results.push(...this._condition.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["range"]) { outcome.issue!.push(...this.range.doModelValidation().issue!); }
+    if (this["context"]) { outcome.issue!.push(...this.context.doModelValidation().issue!); }
+    if (this["appliesTo"]) { this.appliesTo.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["age"]) { outcome.issue!.push(...this.age.doModelValidation().issue!); }
+    if (this["gestationalAge"]) { outcome.issue!.push(...this.gestationalAge.doModelValidation().issue!); }
+    if (this["condition"]) { outcome.issue!.push(...this.condition.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ObservationDefinition type.
+ */
+export interface ObservationDefinitionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "ObservationDefinition"|undefined;
+  /**
+   * This element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used for one instance of ObservationDefinition. The level of granularity is defined by the category concepts in the value set.
+   */
+  category?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Describes what will be observed. Sometimes this is called the observation "name".
+   */
+  code: fhir.CodeableConceptArgs|null;
+  /**
+   * A unique identifier assigned to this ObservationDefinition artifact.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * The data types allowed for the value element of the instance observations conforming to this ObservationDefinition.
+   */
+  permittedDataType?: PermittedDataTypeValueSetEnum[]|undefined;
+  /**
+   * An example of observation allowing multiple results is "bacteria identified by culture". Conversely, the measurement of a potassium level allows a single result.
+   */
+  multipleResultsAllowed?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Only used if not implicit in observation code.
+   */
+  method?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The preferred name to be used when reporting the results of observations conforming to this ObservationDefinition.
+   */
+  preferredReportName?: fhir.FhirString|string|undefined;
+  /**
+   * Characteristics for quantitative results of this observation.
+   */
+  quantitativeDetails?: fhir.ObservationDefinitionQuantitativeDetailsArgs|undefined;
+  /**
+   * Multiple  ranges of results qualified by different contexts for ordinal or continuous observations conforming to this ObservationDefinition.
+   */
+  qualifiedInterval?: fhir.ObservationDefinitionQualifiedIntervalArgs[]|undefined;
+  /**
+   * The set of valid coded results for the observations  conforming to this ObservationDefinition.
+   */
+  validCodedValueSet?: fhir.ReferenceArgs|undefined;
+  /**
+   * The set of normal coded results for the observations conforming to this ObservationDefinition.
+   */
+  normalCodedValueSet?: fhir.ReferenceArgs|undefined;
+  /**
+   * The set of abnormal coded results for the observation conforming to this ObservationDefinition.
+   */
+  abnormalCodedValueSet?: fhir.ReferenceArgs|undefined;
+  /**
+   * The set of critical coded results for the observation conforming to this ObservationDefinition.
+   */
+  criticalCodedValueSet?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * Set of definitional characteristics for a kind of observation or measurement produced or consumed by an orderable health care service.
  */
-export class ObservationDefinition extends fhir.DomainResource implements IObservationDefinition {
+export class ObservationDefinition extends fhir.DomainResource {
+  readonly __dataType:string = 'ObservationDefinition';
   /**
    * Resource Type Name
    */
@@ -351,7 +315,7 @@ export class ObservationDefinition extends fhir.DomainResource implements IObser
   /**
    * This element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used for one instance of ObservationDefinition. The level of granularity is defined by the category concepts in the value set.
    */
-  public category?: fhir.CodeableConcept[]|undefined;
+  public category?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Describes what will be observed. Sometimes this is called the observation "name".
    */
@@ -359,23 +323,15 @@ export class ObservationDefinition extends fhir.DomainResource implements IObser
   /**
    * A unique identifier assigned to this ObservationDefinition artifact.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * The data types allowed for the value element of the instance observations conforming to this ObservationDefinition.
    */
-  public permittedDataType?: PermittedDataTypeValueSetEnum[]|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.permittedDataType
-   */
-  public _permittedDataType?: fhir.FhirElement[]|undefined;
+  public permittedDataType?: PermittedDataTypeValueSetEnum[]|undefined = [];
   /**
    * An example of observation allowing multiple results is "bacteria identified by culture". Conversely, the measurement of a potassium level allows a single result.
    */
-  public multipleResultsAllowed?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.multipleResultsAllowed
-   */
-  public _multipleResultsAllowed?: fhir.FhirElement|undefined;
+  public multipleResultsAllowed?: fhir.FhirBoolean|undefined;
   /**
    * Only used if not implicit in observation code.
    */
@@ -383,11 +339,7 @@ export class ObservationDefinition extends fhir.DomainResource implements IObser
   /**
    * The preferred name to be used when reporting the results of observations conforming to this ObservationDefinition.
    */
-  public preferredReportName?: string|undefined;
-  /**
-   * Extended properties for primitive element: ObservationDefinition.preferredReportName
-   */
-  public _preferredReportName?: fhir.FhirElement|undefined;
+  public preferredReportName?: fhir.FhirString|undefined;
   /**
    * Characteristics for quantitative results of this observation.
    */
@@ -395,7 +347,7 @@ export class ObservationDefinition extends fhir.DomainResource implements IObser
   /**
    * Multiple  ranges of results qualified by different contexts for ordinal or continuous observations conforming to this ObservationDefinition.
    */
-  public qualifiedInterval?: fhir.ObservationDefinitionQualifiedInterval[]|undefined;
+  public qualifiedInterval?: fhir.ObservationDefinitionQualifiedInterval[]|undefined = [];
   /**
    * The set of valid coded results for the observations  conforming to this ObservationDefinition.
    */
@@ -415,26 +367,23 @@ export class ObservationDefinition extends fhir.DomainResource implements IObser
   /**
    * Default constructor for ObservationDefinition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IObservationDefinition> = { }) {
-    super(source);
+  constructor(source:Partial<ObservationDefinitionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'ObservationDefinition';
     if (source['category']) { this.category = source.category.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
     else { this.code = null; }
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['permittedDataType']) { this.permittedDataType = source.permittedDataType.map((x) => (x)); }
-    if (source['_permittedDataType']) { this._permittedDataType = source._permittedDataType.map((x) => new fhir.FhirElement(x)); }
-    if (source['multipleResultsAllowed']) { this.multipleResultsAllowed = source.multipleResultsAllowed; }
-    if (source['_multipleResultsAllowed']) { this._multipleResultsAllowed = new fhir.FhirElement(source._multipleResultsAllowed!); }
-    if (source['method']) { this.method = new fhir.CodeableConcept(source.method!); }
-    if (source['preferredReportName']) { this.preferredReportName = source.preferredReportName; }
-    if (source['_preferredReportName']) { this._preferredReportName = new fhir.FhirElement(source._preferredReportName!); }
-    if (source['quantitativeDetails']) { this.quantitativeDetails = new fhir.ObservationDefinitionQuantitativeDetails(source.quantitativeDetails!); }
+    if (source['permittedDataType']) { this.permittedDataType = source.permittedDataType.map((x) => x); }
+    if (source['multipleResultsAllowed']) { this.multipleResultsAllowed = new fhir.FhirBoolean({value: source.multipleResultsAllowed}); }
+    if (source['method']) { this.method = new fhir.CodeableConcept(source.method); }
+    if (source['preferredReportName']) { this.preferredReportName = new fhir.FhirString({value: source.preferredReportName}); }
+    if (source['quantitativeDetails']) { this.quantitativeDetails = new fhir.ObservationDefinitionQuantitativeDetails(source.quantitativeDetails); }
     if (source['qualifiedInterval']) { this.qualifiedInterval = source.qualifiedInterval.map((x) => new fhir.ObservationDefinitionQualifiedInterval(x)); }
-    if (source['validCodedValueSet']) { this.validCodedValueSet = new fhir.Reference(source.validCodedValueSet!); }
-    if (source['normalCodedValueSet']) { this.normalCodedValueSet = new fhir.Reference(source.normalCodedValueSet!); }
-    if (source['abnormalCodedValueSet']) { this.abnormalCodedValueSet = new fhir.Reference(source.abnormalCodedValueSet!); }
-    if (source['criticalCodedValueSet']) { this.criticalCodedValueSet = new fhir.Reference(source.criticalCodedValueSet!); }
+    if (source['validCodedValueSet']) { this.validCodedValueSet = new fhir.Reference(source.validCodedValueSet); }
+    if (source['normalCodedValueSet']) { this.normalCodedValueSet = new fhir.Reference(source.normalCodedValueSet); }
+    if (source['abnormalCodedValueSet']) { this.abnormalCodedValueSet = new fhir.Reference(source.abnormalCodedValueSet); }
+    if (source['criticalCodedValueSet']) { this.criticalCodedValueSet = new fhir.Reference(source.criticalCodedValueSet); }
   }
   /**
    * Example-bound Value Set for category
@@ -463,23 +412,32 @@ export class ObservationDefinition extends fhir.DomainResource implements IObser
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: ObservationDefinition.resourceType']); }
-    if (this["category"]) { this.category.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["code"]) { results.push(["code",'Missing required element: ObservationDefinition.code']); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_permittedDataType"]) { this._permittedDataType.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_multipleResultsAllowed"]) { results.push(...this._multipleResultsAllowed.doModelValidation()); }
-    if (this["method"]) { results.push(...this.method.doModelValidation()); }
-    if (this["_preferredReportName"]) { results.push(...this._preferredReportName.doModelValidation()); }
-    if (this["quantitativeDetails"]) { results.push(...this.quantitativeDetails.doModelValidation()); }
-    if (this["qualifiedInterval"]) { this.qualifiedInterval.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["validCodedValueSet"]) { results.push(...this.validCodedValueSet.doModelValidation()); }
-    if (this["normalCodedValueSet"]) { results.push(...this.normalCodedValueSet.doModelValidation()); }
-    if (this["abnormalCodedValueSet"]) { results.push(...this.abnormalCodedValueSet.doModelValidation()); }
-    if (this["criticalCodedValueSet"]) { results.push(...this.criticalCodedValueSet.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'ObservationDefinition' fhir: ObservationDefinition.resourceType:'ObservationDefinition'", }));
+    }
+    if (this["category"]) { this.category.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.CodeableConcept fhir: ObservationDefinition.code:CodeableConcept", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["multipleResultsAllowed"]) { outcome.issue!.push(...this.multipleResultsAllowed.doModelValidation().issue!); }
+    if (this["method"]) { outcome.issue!.push(...this.method.doModelValidation().issue!); }
+    if (this["preferredReportName"]) { outcome.issue!.push(...this.preferredReportName.doModelValidation().issue!); }
+    if (this["quantitativeDetails"]) { outcome.issue!.push(...this.quantitativeDetails.doModelValidation().issue!); }
+    if (this["qualifiedInterval"]) { this.qualifiedInterval.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["validCodedValueSet"]) { outcome.issue!.push(...this.validCodedValueSet.doModelValidation().issue!); }
+    if (this["normalCodedValueSet"]) { outcome.issue!.push(...this.normalCodedValueSet.doModelValidation().issue!); }
+    if (this["abnormalCodedValueSet"]) { outcome.issue!.push(...this.abnormalCodedValueSet.doModelValidation().issue!); }
+    if (this["criticalCodedValueSet"]) { outcome.issue!.push(...this.criticalCodedValueSet.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

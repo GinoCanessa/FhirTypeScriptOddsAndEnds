@@ -3,11 +3,13 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: DetectedIssue
 import * as fhir from '../fhir.js';
-import { ManifestationOrSymptomValueSet } from '../fhirValueSets/ManifestationOrSymptomValueSet.js';
-import { DetectedissueMitigationActionValueSet } from '../fhirValueSets/DetectedissueMitigationActionValueSet.js';
-import { ObservationStatusValueSet } from '../fhirValueSets/ObservationStatusValueSet.js';
-import { DetectedissueCategoryValueSet } from '../fhirValueSets/DetectedissueCategoryValueSet.js';
-import { DetectedissueSeverityValueSet } from '../fhirValueSets/DetectedissueSeverityValueSet.js';
+import { ManifestationOrSymptomValueSet, } from '../fhirValueSets/ManifestationOrSymptomValueSet.js';
+import { DetectedissueMitigationActionValueSet, } from '../fhirValueSets/DetectedissueMitigationActionValueSet.js';
+import { ObservationStatusValueSet, } from '../fhirValueSets/ObservationStatusValueSet.js';
+import { DetectedissueCategoryValueSet, } from '../fhirValueSets/DetectedissueCategoryValueSet.js';
+import { DetectedissueSeverityValueSet, } from '../fhirValueSets/DetectedissueSeverityValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Supporting evidence or manifestations that provide the basis for identifying the detected issue such as a GuidanceResponse or MeasureReport.
  */
@@ -15,8 +17,17 @@ export class DetectedIssueEvidence extends fhir.BackboneElement {
     /**
      * Default constructor for DetectedIssueEvidence - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DetectedIssueEvidence';
+        /**
+         * A manifestation that led to the recording of this detected issue.
+         */
+        this.code = [];
+        /**
+         * Links to resources that constitute evidence for the detected issue such as a GuidanceResponse or MeasureReport.
+         */
+        this.detail = [];
         if (source['code']) {
             this.code = source.code.map((x) => new fhir.CodeableConcept(x));
         }
@@ -34,14 +45,20 @@ export class DetectedIssueEvidence extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["code"]) {
-            this.code.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.code.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["detail"]) {
-            this.detail.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.detail.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -51,8 +68,9 @@ export class DetectedIssueMitigation extends fhir.BackboneElement {
     /**
      * Default constructor for DetectedIssueMitigation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DetectedIssueMitigation';
         if (source['action']) {
             this.action = new fhir.CodeableConcept(source.action);
         }
@@ -60,10 +78,7 @@ export class DetectedIssueMitigation extends fhir.BackboneElement {
             this.action = null;
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['author']) {
             this.author = new fhir.Reference(source.author);
@@ -79,20 +94,26 @@ export class DetectedIssueMitigation extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["action"]) {
-            results.push(["action", 'Missing required element: DetectedIssue.mitigation.action']);
+        var outcome = super.doModelValidation();
+        if (!this['action']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property action:fhir.CodeableConcept fhir: DetectedIssue.mitigation.action:CodeableConcept", }));
         }
         if (this["action"]) {
-            results.push(...this.action.doModelValidation());
+            outcome.issue.push(...this.action.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
         if (this["author"]) {
-            results.push(...this.author.doModelValidation());
+            outcome.issue.push(...this.author.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -102,8 +123,26 @@ export class DetectedIssue extends fhir.DomainResource {
     /**
      * Default constructor for DetectedIssue - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DetectedIssue';
+        /**
+         * Business identifier associated with the detected issue record.
+         */
+        this.identifier = [];
+        this.__identifiedIsChoice = true;
+        /**
+         * There's an implicit constraint on the number of implicated resources based on DetectedIssue.type; e.g. For drug-drug, there would be more than one.  For timing, there would typically only be one.
+         */
+        this.implicated = [];
+        /**
+         * Supporting evidence or manifestations that provide the basis for identifying the detected issue such as a GuidanceResponse or MeasureReport.
+         */
+        this.evidence = [];
+        /**
+         * Indicates an action that has been taken or is committed to reduce or eliminate the likelihood of the risk identified by the detected issue from manifesting.  Can also reflect an observation of known mitigating factors that may reduce/eliminate the need for any action.
+         */
+        this.mitigation = [];
         this.resourceType = 'DetectedIssue';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -114,29 +153,23 @@ export class DetectedIssue extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
         if (source['severity']) {
             this.severity = source.severity;
         }
-        if (source['_severity']) {
-            this._severity = new fhir.FhirElement(source._severity);
-        }
         if (source['patient']) {
             this.patient = new fhir.Reference(source.patient);
         }
-        if (source['identifiedDateTime']) {
-            this.identifiedDateTime = source.identifiedDateTime;
+        if (source['identified']) {
+            this.identified = source.identified;
         }
-        if (source['_identifiedDateTime']) {
-            this._identifiedDateTime = new fhir.FhirElement(source._identifiedDateTime);
+        else if (source['identifiedDateTime']) {
+            this.identified = new fhir.FhirDateTime({ value: source.identifiedDateTime });
         }
-        if (source['identifiedPeriod']) {
-            this.identifiedPeriod = new fhir.Period(source.identifiedPeriod);
+        else if (source['identifiedPeriod']) {
+            this.identified = new fhir.Period(source.identifiedPeriod);
         }
         if (source['author']) {
             this.author = new fhir.Reference(source.author);
@@ -148,16 +181,10 @@ export class DetectedIssue extends fhir.DomainResource {
             this.evidence = source.evidence.map((x) => new fhir.DetectedIssueEvidence(x));
         }
         if (source['detail']) {
-            this.detail = source.detail;
-        }
-        if (source['_detail']) {
-            this._detail = new fhir.FhirElement(source._detail);
+            this.detail = new fhir.FhirString({ value: source.detail });
         }
         if (source['reference']) {
-            this.reference = source.reference;
-        }
-        if (source['_reference']) {
-            this._reference = new fhir.FhirElement(source._reference);
+            this.reference = new fhir.FhirUri({ value: source.reference });
         }
         if (source['mitigation']) {
             this.mitigation = source.mitigation.map((x) => new fhir.DetectedIssueMitigation(x));
@@ -185,53 +212,47 @@ export class DetectedIssue extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: DetectedIssue.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'DetectedIssue' fhir: DetectedIssue.resourceType:'DetectedIssue'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: DetectedIssue.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:ObservationStatusValueSetEnum fhir: DetectedIssue.status:code", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
-        }
-        if (this["_severity"]) {
-            results.push(...this._severity.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["patient"]) {
-            results.push(...this.patient.doModelValidation());
-        }
-        if (this["_identifiedDateTime"]) {
-            results.push(...this._identifiedDateTime.doModelValidation());
-        }
-        if (this["identifiedPeriod"]) {
-            results.push(...this.identifiedPeriod.doModelValidation());
+            outcome.issue.push(...this.patient.doModelValidation().issue);
         }
         if (this["author"]) {
-            results.push(...this.author.doModelValidation());
+            outcome.issue.push(...this.author.doModelValidation().issue);
         }
         if (this["implicated"]) {
-            this.implicated.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.implicated.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["evidence"]) {
-            this.evidence.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.evidence.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_detail"]) {
-            results.push(...this._detail.doModelValidation());
+        if (this["detail"]) {
+            outcome.issue.push(...this.detail.doModelValidation().issue);
         }
-        if (this["_reference"]) {
-            results.push(...this._reference.doModelValidation());
+        if (this["reference"]) {
+            outcome.issue.push(...this.reference.doModelValidation().issue);
         }
         if (this["mitigation"]) {
-            this.mitigation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.mitigation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=DetectedIssue.js.map

@@ -3,8 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: ContactPoint
 import * as fhir from '../fhir.js';
-import { ContactPointSystemValueSet } from '../fhirValueSets/ContactPointSystemValueSet.js';
-import { ContactPointUseValueSet } from '../fhirValueSets/ContactPointUseValueSet.js';
+import { ContactPointSystemValueSet, } from '../fhirValueSets/ContactPointSystemValueSet.js';
+import { ContactPointUseValueSet, } from '../fhirValueSets/ContactPointUseValueSet.js';
 /**
  * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
  */
@@ -12,31 +12,20 @@ export class ContactPoint extends fhir.FhirElement {
     /**
      * Default constructor for ContactPoint - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContactPoint';
         if (source['system']) {
             this.system = source.system;
         }
-        if (source['_system']) {
-            this._system = new fhir.FhirElement(source._system);
-        }
         if (source['value']) {
-            this.value = source.value;
-        }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
+            this.value = new fhir.FhirString({ value: source.value });
         }
         if (source['use']) {
             this.use = source.use;
         }
-        if (source['_use']) {
-            this._use = new fhir.FhirElement(source._use);
-        }
         if (source['rank']) {
-            this.rank = source.rank;
-        }
-        if (source['_rank']) {
-            this._rank = new fhir.FhirElement(source._rank);
+            this.rank = new fhir.FhirPositiveInt({ value: source.rank });
         }
         if (source['period']) {
             this.period = new fhir.Period(source.period);
@@ -58,23 +47,23 @@ export class ContactPoint extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_system"]) {
-            results.push(...this._system.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
         }
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
-        }
-        if (this["_use"]) {
-            results.push(...this._use.doModelValidation());
-        }
-        if (this["_rank"]) {
-            results.push(...this._rank.doModelValidation());
+        if (this["rank"]) {
+            outcome.issue.push(...this.rank.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ContactPoint.js.map

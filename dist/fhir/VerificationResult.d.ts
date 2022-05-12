@@ -5,206 +5,49 @@ import { VerificationresultValidationStatusValueSetType } from '../fhirValueSets
 import { VerificationresultCanPushUpdatesValueSetType } from '../fhirValueSets/VerificationresultCanPushUpdatesValueSet.js';
 import { VerificationresultPushTypeAvailableValueSetType } from '../fhirValueSets/VerificationresultPushTypeAvailableValueSet.js';
 import { VerificationresultNeedValueSetType } from '../fhirValueSets/VerificationresultNeedValueSet.js';
-import { VerificationresultStatusValueSetType, VerificationresultStatusValueSetEnum } from '../fhirValueSets/VerificationresultStatusValueSet.js';
+import { VerificationresultStatusValueSetType } from '../fhirValueSets/VerificationresultStatusValueSet.js';
+import { VerificationresultStatusValueSetEnum } from '../valueSetEnums.js';
 import { VerificationresultValidationTypeValueSetType } from '../fhirValueSets/VerificationresultValidationTypeValueSet.js';
 import { VerificationresultValidationProcessValueSetType } from '../fhirValueSets/VerificationresultValidationProcessValueSet.js';
 import { VerificationresultFailureActionValueSetType } from '../fhirValueSets/VerificationresultFailureActionValueSet.js';
 /**
- * Information about the primary source(s) involved in validation.
+ * Valid arguments for the VerificationResultPrimarySource type.
  */
-export declare type IVerificationResultPrimarySource = fhir.IBackboneElement & {
+export interface VerificationResultPrimarySourceArgs extends fhir.BackboneElementArgs {
     /**
      * Reference to the primary source.
      */
-    who?: fhir.IReference | undefined;
+    who?: fhir.ReferenceArgs | undefined;
     /**
      * Type of primary source (License Board; Primary Education; Continuing Education; Postal Service; Relationship owner; Registration Authority; legal source; issuing source; authoritative source).
      */
-    type?: fhir.ICodeableConcept[] | undefined;
+    type?: fhir.CodeableConceptArgs[] | undefined;
     /**
      * Method for communicating with the primary source (manual; API; Push).
      */
-    communicationMethod?: fhir.ICodeableConcept[] | undefined;
+    communicationMethod?: fhir.CodeableConceptArgs[] | undefined;
     /**
      * Status of the validation of the target against the primary source (successful; failed; unknown).
      */
-    validationStatus?: fhir.ICodeableConcept | undefined;
+    validationStatus?: fhir.CodeableConceptArgs | undefined;
     /**
      * When the target was validated against the primary source.
      */
-    validationDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.primarySource.validationDate
-     */
-    _validationDate?: fhir.IFhirElement | undefined;
+    validationDate?: fhir.FhirDateTime | string | undefined;
     /**
      * Ability of the primary source to push updates/alerts (yes; no; undetermined).
      */
-    canPushUpdates?: fhir.ICodeableConcept | undefined;
+    canPushUpdates?: fhir.CodeableConceptArgs | undefined;
     /**
      * Type of alerts/updates the primary source can send (specific requested changes; any changes; as defined by source).
      */
-    pushTypeAvailable?: fhir.ICodeableConcept[] | undefined;
-};
-/**
- * Information about the entity attesting to information.
- */
-export declare type IVerificationResultAttestation = fhir.IBackboneElement & {
-    /**
-     * The individual or organization attesting to information.
-     */
-    who?: fhir.IReference | undefined;
-    /**
-     * When the who is asserting on behalf of another (organization or individual).
-     */
-    onBehalfOf?: fhir.IReference | undefined;
-    /**
-     * The method by which attested information was submitted/retrieved (manual; API; Push).
-     */
-    communicationMethod?: fhir.ICodeableConcept | undefined;
-    /**
-     * The date the information was attested to.
-     */
-    date?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.attestation.date
-     */
-    _date?: fhir.IFhirElement | undefined;
-    /**
-     * A digital identity certificate associated with the attestation source.
-     */
-    sourceIdentityCertificate?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.attestation.sourceIdentityCertificate
-     */
-    _sourceIdentityCertificate?: fhir.IFhirElement | undefined;
-    /**
-     * A digital identity certificate associated with the proxy entity submitting attested information on behalf of the attestation source.
-     */
-    proxyIdentityCertificate?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.attestation.proxyIdentityCertificate
-     */
-    _proxyIdentityCertificate?: fhir.IFhirElement | undefined;
-    /**
-     * Signed assertion by the proxy entity indicating that they have the right to submit attested information on behalf of the attestation source.
-     */
-    proxySignature?: fhir.ISignature | undefined;
-    /**
-     * Signed assertion by the attestation source that they have attested to the information.
-     */
-    sourceSignature?: fhir.ISignature | undefined;
-};
-/**
- * Information about the entity validating information.
- */
-export declare type IVerificationResultValidator = fhir.IBackboneElement & {
-    /**
-     * Reference to the organization validating information.
-     */
-    organization: fhir.IReference | null;
-    /**
-     * A digital identity certificate associated with the validator.
-     */
-    identityCertificate?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.validator.identityCertificate
-     */
-    _identityCertificate?: fhir.IFhirElement | undefined;
-    /**
-     * Signed assertion by the validator that they have validated the information.
-     */
-    attestationSignature?: fhir.ISignature | undefined;
-};
-/**
- * Describes validation requirements, source(s), status and dates for one or more elements.
- */
-export declare type IVerificationResult = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "VerificationResult";
-    /**
-     * A resource that was validated.
-     */
-    target?: fhir.IReference[] | undefined;
-    /**
-     * The fhirpath location(s) within the resource that was validated.
-     */
-    targetLocation?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.targetLocation
-     */
-    _targetLocation?: fhir.IFhirElement[] | undefined;
-    /**
-     * The frequency with which the target must be validated (none; initial; periodic).
-     */
-    need?: fhir.ICodeableConcept | undefined;
-    /**
-     * The validation status of the target (attested; validated; in process; requires revalidation; validation failed; revalidation failed).
-     */
-    status: VerificationresultStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: VerificationResult.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * When the validation status was updated.
-     */
-    statusDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.statusDate
-     */
-    _statusDate?: fhir.IFhirElement | undefined;
-    /**
-     * What the target is validated against (nothing; primary source; multiple sources).
-     */
-    validationType?: fhir.ICodeableConcept | undefined;
-    /**
-     * The primary process by which the target is validated (edit check; value set; primary source; multiple sources; standalone; in context).
-     */
-    validationProcess?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Frequency of revalidation.
-     */
-    frequency?: fhir.ITiming | undefined;
-    /**
-     * The date/time validation was last completed (including failed validations).
-     */
-    lastPerformed?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.lastPerformed
-     */
-    _lastPerformed?: fhir.IFhirElement | undefined;
-    /**
-     * The date when target is next validated, if appropriate.
-     */
-    nextScheduled?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.nextScheduled
-     */
-    _nextScheduled?: fhir.IFhirElement | undefined;
-    /**
-     * The result if validation fails (fatal; warning; record only; none).
-     */
-    failureAction?: fhir.ICodeableConcept | undefined;
-    /**
-     * Information about the primary source(s) involved in validation.
-     */
-    primarySource?: fhir.IVerificationResultPrimarySource[] | undefined;
-    /**
-     * Information about the entity attesting to information.
-     */
-    attestation?: fhir.IVerificationResultAttestation | undefined;
-    /**
-     * Information about the entity validating information.
-     */
-    validator?: fhir.IVerificationResultValidator[] | undefined;
-};
+    pushTypeAvailable?: fhir.CodeableConceptArgs[] | undefined;
+}
 /**
  * Information about the primary source(s) involved in validation.
  */
-export declare class VerificationResultPrimarySource extends fhir.BackboneElement implements IVerificationResultPrimarySource {
+export declare class VerificationResultPrimarySource extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Reference to the primary source.
      */
@@ -224,11 +67,7 @@ export declare class VerificationResultPrimarySource extends fhir.BackboneElemen
     /**
      * When the target was validated against the primary source.
      */
-    validationDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.primarySource.validationDate
-     */
-    _validationDate?: fhir.FhirElement | undefined;
+    validationDate?: fhir.FhirDateTime | undefined;
     /**
      * Ability of the primary source to push updates/alerts (yes; no; undetermined).
      */
@@ -240,7 +79,7 @@ export declare class VerificationResultPrimarySource extends fhir.BackboneElemen
     /**
      * Default constructor for VerificationResultPrimarySource - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IVerificationResultPrimarySource>);
+    constructor(source?: Partial<VerificationResultPrimarySourceArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Example-bound Value Set for type
      */
@@ -264,12 +103,54 @@ export declare class VerificationResultPrimarySource extends fhir.BackboneElemen
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the VerificationResultAttestation type.
+ */
+export interface VerificationResultAttestationArgs extends fhir.BackboneElementArgs {
+    /**
+     * The individual or organization attesting to information.
+     */
+    who?: fhir.ReferenceArgs | undefined;
+    /**
+     * When the who is asserting on behalf of another (organization or individual).
+     */
+    onBehalfOf?: fhir.ReferenceArgs | undefined;
+    /**
+     * The method by which attested information was submitted/retrieved (manual; API; Push).
+     */
+    communicationMethod?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * The date the information was attested to.
+     */
+    date?: fhir.FhirDate | string | undefined;
+    /**
+     * A digital identity certificate associated with the attestation source.
+     */
+    sourceIdentityCertificate?: fhir.FhirString | string | undefined;
+    /**
+     * A digital identity certificate associated with the proxy entity submitting attested information on behalf of the attestation source.
+     */
+    proxyIdentityCertificate?: fhir.FhirString | string | undefined;
+    /**
+     * Signed assertion by the proxy entity indicating that they have the right to submit attested information on behalf of the attestation source.
+     */
+    proxySignature?: fhir.SignatureArgs | undefined;
+    /**
+     * Signed assertion by the attestation source that they have attested to the information.
+     */
+    sourceSignature?: fhir.SignatureArgs | undefined;
 }
 /**
  * Information about the entity attesting to information.
  */
-export declare class VerificationResultAttestation extends fhir.BackboneElement implements IVerificationResultAttestation {
+export declare class VerificationResultAttestation extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The individual or organization attesting to information.
      */
@@ -285,27 +166,15 @@ export declare class VerificationResultAttestation extends fhir.BackboneElement 
     /**
      * The date the information was attested to.
      */
-    date?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.attestation.date
-     */
-    _date?: fhir.FhirElement | undefined;
+    date?: fhir.FhirDate | undefined;
     /**
      * A digital identity certificate associated with the attestation source.
      */
-    sourceIdentityCertificate?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.attestation.sourceIdentityCertificate
-     */
-    _sourceIdentityCertificate?: fhir.FhirElement | undefined;
+    sourceIdentityCertificate?: fhir.FhirString | undefined;
     /**
      * A digital identity certificate associated with the proxy entity submitting attested information on behalf of the attestation source.
      */
-    proxyIdentityCertificate?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.attestation.proxyIdentityCertificate
-     */
-    _proxyIdentityCertificate?: fhir.FhirElement | undefined;
+    proxyIdentityCertificate?: fhir.FhirString | undefined;
     /**
      * Signed assertion by the proxy entity indicating that they have the right to submit attested information on behalf of the attestation source.
      */
@@ -317,7 +186,7 @@ export declare class VerificationResultAttestation extends fhir.BackboneElement 
     /**
      * Default constructor for VerificationResultAttestation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IVerificationResultAttestation>);
+    constructor(source?: Partial<VerificationResultAttestationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Example-bound Value Set for communicationMethod
      */
@@ -325,12 +194,34 @@ export declare class VerificationResultAttestation extends fhir.BackboneElement 
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the VerificationResultValidator type.
+ */
+export interface VerificationResultValidatorArgs extends fhir.BackboneElementArgs {
+    /**
+     * Reference to the organization validating information.
+     */
+    organization: fhir.ReferenceArgs | null;
+    /**
+     * A digital identity certificate associated with the validator.
+     */
+    identityCertificate?: fhir.FhirString | string | undefined;
+    /**
+     * Signed assertion by the validator that they have validated the information.
+     */
+    attestationSignature?: fhir.SignatureArgs | undefined;
 }
 /**
  * Information about the entity validating information.
  */
-export declare class VerificationResultValidator extends fhir.BackboneElement implements IVerificationResultValidator {
+export declare class VerificationResultValidator extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Reference to the organization validating information.
      */
@@ -338,11 +229,7 @@ export declare class VerificationResultValidator extends fhir.BackboneElement im
     /**
      * A digital identity certificate associated with the validator.
      */
-    identityCertificate?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.validator.identityCertificate
-     */
-    _identityCertificate?: fhir.FhirElement | undefined;
+    identityCertificate?: fhir.FhirString | undefined;
     /**
      * Signed assertion by the validator that they have validated the information.
      */
@@ -350,16 +237,86 @@ export declare class VerificationResultValidator extends fhir.BackboneElement im
     /**
      * Default constructor for VerificationResultValidator - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IVerificationResultValidator>);
+    constructor(source?: Partial<VerificationResultValidatorArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the VerificationResult type.
+ */
+export interface VerificationResultArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "VerificationResult" | undefined;
+    /**
+     * A resource that was validated.
+     */
+    target?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * The fhirpath location(s) within the resource that was validated.
+     */
+    targetLocation?: fhir.FhirString[] | string[] | undefined;
+    /**
+     * The frequency with which the target must be validated (none; initial; periodic).
+     */
+    need?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * The validation status of the target (attested; validated; in process; requires revalidation; validation failed; revalidation failed).
+     */
+    status: VerificationresultStatusValueSetEnum | null;
+    /**
+     * When the validation status was updated.
+     */
+    statusDate?: fhir.FhirDateTime | string | undefined;
+    /**
+     * What the target is validated against (nothing; primary source; multiple sources).
+     */
+    validationType?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * The primary process by which the target is validated (edit check; value set; primary source; multiple sources; standalone; in context).
+     */
+    validationProcess?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * Frequency of revalidation.
+     */
+    frequency?: fhir.TimingArgs | undefined;
+    /**
+     * The date/time validation was last completed (including failed validations).
+     */
+    lastPerformed?: fhir.FhirDateTime | string | undefined;
+    /**
+     * The date when target is next validated, if appropriate.
+     */
+    nextScheduled?: fhir.FhirDate | string | undefined;
+    /**
+     * The result if validation fails (fatal; warning; record only; none).
+     */
+    failureAction?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Information about the primary source(s) involved in validation.
+     */
+    primarySource?: fhir.VerificationResultPrimarySourceArgs[] | undefined;
+    /**
+     * Information about the entity attesting to information.
+     */
+    attestation?: fhir.VerificationResultAttestationArgs | undefined;
+    /**
+     * Information about the entity validating information.
+     */
+    validator?: fhir.VerificationResultValidatorArgs[] | undefined;
 }
 /**
  * Describes validation requirements, source(s), status and dates for one or more elements.
  */
-export declare class VerificationResult extends fhir.DomainResource implements IVerificationResult {
+export declare class VerificationResult extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -371,11 +328,7 @@ export declare class VerificationResult extends fhir.DomainResource implements I
     /**
      * The fhirpath location(s) within the resource that was validated.
      */
-    targetLocation?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.targetLocation
-     */
-    _targetLocation?: fhir.FhirElement[] | undefined;
+    targetLocation?: fhir.FhirString[] | undefined;
     /**
      * The frequency with which the target must be validated (none; initial; periodic).
      */
@@ -385,17 +338,9 @@ export declare class VerificationResult extends fhir.DomainResource implements I
      */
     status: VerificationresultStatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: VerificationResult.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * When the validation status was updated.
      */
-    statusDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.statusDate
-     */
-    _statusDate?: fhir.FhirElement | undefined;
+    statusDate?: fhir.FhirDateTime | undefined;
     /**
      * What the target is validated against (nothing; primary source; multiple sources).
      */
@@ -411,19 +356,11 @@ export declare class VerificationResult extends fhir.DomainResource implements I
     /**
      * The date/time validation was last completed (including failed validations).
      */
-    lastPerformed?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.lastPerformed
-     */
-    _lastPerformed?: fhir.FhirElement | undefined;
+    lastPerformed?: fhir.FhirDateTime | undefined;
     /**
      * The date when target is next validated, if appropriate.
      */
-    nextScheduled?: string | undefined;
-    /**
-     * Extended properties for primitive element: VerificationResult.nextScheduled
-     */
-    _nextScheduled?: fhir.FhirElement | undefined;
+    nextScheduled?: fhir.FhirDate | undefined;
     /**
      * The result if validation fails (fatal; warning; record only; none).
      */
@@ -443,7 +380,7 @@ export declare class VerificationResult extends fhir.DomainResource implements I
     /**
      * Default constructor for VerificationResult - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IVerificationResult>);
+    constructor(source?: Partial<VerificationResultArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Preferred-bound Value Set for need
      */
@@ -467,6 +404,10 @@ export declare class VerificationResult extends fhir.DomainResource implements I
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=VerificationResult.d.ts.map

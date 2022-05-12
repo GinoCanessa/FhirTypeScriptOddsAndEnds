@@ -43,23 +43,4 @@ export const MeasureScoringValueSet = {
 /**
  * The scoring type of the measure.
  */
-export var MeasureScoringValueSetEnum;
-(function (MeasureScoringValueSetEnum) {
-    /**
-     * cohort: The measure is a cohort definition.
-     */
-    MeasureScoringValueSetEnum["Cohort"] = "cohort";
-    /**
-     * continuous-variable: The score is defined by a calculation of some quantity.
-     */
-    MeasureScoringValueSetEnum["ContinuousVariable"] = "continuous-variable";
-    /**
-     * proportion: The measure score is defined using a proportion.
-     */
-    MeasureScoringValueSetEnum["Proportion"] = "proportion";
-    /**
-     * ratio: The measure score is defined using a ratio.
-     */
-    MeasureScoringValueSetEnum["Ratio"] = "ratio";
-})(MeasureScoringValueSetEnum || (MeasureScoringValueSetEnum = {}));
 //# sourceMappingURL=MeasureScoringValueSet.js.map

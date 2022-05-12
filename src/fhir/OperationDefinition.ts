@@ -3,397 +3,60 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: OperationDefinition
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { BindingStrengthValueSet, BindingStrengthValueSetType, BindingStrengthValueSetEnum } from '../fhirValueSets/BindingStrengthValueSet.js'
-import { OperationParameterUseValueSet, OperationParameterUseValueSetType, OperationParameterUseValueSetEnum } from '../fhirValueSets/OperationParameterUseValueSet.js'
-import { AllTypesValueSet, AllTypesValueSetType, AllTypesValueSetEnum } from '../fhirValueSets/AllTypesValueSet.js'
-import { SearchParamTypeValueSet, SearchParamTypeValueSetType, SearchParamTypeValueSetEnum } from '../fhirValueSets/SearchParamTypeValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-import { OperationKindValueSet, OperationKindValueSetType, OperationKindValueSetEnum } from '../fhirValueSets/OperationKindValueSet.js'
-import { ResourceTypesValueSet, ResourceTypesValueSetType, ResourceTypesValueSetEnum } from '../fhirValueSets/ResourceTypesValueSet.js'
-
+import { BindingStrengthValueSet, BindingStrengthValueSetType,} from '../fhirValueSets/BindingStrengthValueSet.js';
+import { BindingStrengthValueSetEnum } from '../valueSetEnums.js';
+import { OperationParameterUseValueSet, OperationParameterUseValueSetType,} from '../fhirValueSets/OperationParameterUseValueSet.js';
+import { OperationParameterUseValueSetEnum } from '../valueSetEnums.js';
+import { AllTypesValueSet, AllTypesValueSetType,} from '../fhirValueSets/AllTypesValueSet.js';
+import { AllTypesValueSetEnum } from '../valueSetEnums.js';
+import { SearchParamTypeValueSet, SearchParamTypeValueSetType,} from '../fhirValueSets/SearchParamTypeValueSet.js';
+import { SearchParamTypeValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { OperationKindValueSet, OperationKindValueSetType,} from '../fhirValueSets/OperationKindValueSet.js';
+import { OperationKindValueSetEnum } from '../valueSetEnums.js';
+import { ResourceTypesValueSet, ResourceTypesValueSetType,} from '../fhirValueSets/ResourceTypesValueSet.js';
+import { ResourceTypesValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Binds to a value set if this parameter is coded (code, Coding, CodeableConcept).
+ * Valid arguments for the OperationDefinitionParameterBinding type.
  */
-export type IOperationDefinitionParameterBinding = fhir.IBackboneElement & { 
+export interface OperationDefinitionParameterBindingArgs extends fhir.BackboneElementArgs {
   /**
    * For further discussion, see [Using Terminologies](terminologies.html).
    */
   strength: BindingStrengthValueSetEnum|null;
   /**
-   * Extended properties for primitive element: OperationDefinition.parameter.binding.strength
-   */
-  _strength?: fhir.IFhirElement|undefined;
-  /**
    * For value sets with a referenceResource, the display can contain the value set description.  The reference may be version-specific or not.
    */
-  valueSet: string|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.binding.valueSet
-   */
-  _valueSet?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Resolution applies if the referenced parameter exists.
- */
-export type IOperationDefinitionParameterReferencedFrom = fhir.IBackboneElement & { 
-  /**
-   * The name of the parameter or dot-separated path of parameter names pointing to the resource parameter that is expected to contain a reference to this resource.
-   */
-  source: string|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.referencedFrom.source
-   */
-  _source?: fhir.IFhirElement|undefined;
-  /**
-   * The id of the element in the referencing resource that is expected to resolve to this resource.
-   */
-  sourceId?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.referencedFrom.sourceId
-   */
-  _sourceId?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Query Definitions only have one output parameter, named "result". This might not be described, but can be to allow a profile to be defined.
- */
-export type IOperationDefinitionParameter = fhir.IBackboneElement & { 
-  /**
-   * This name must be a token (start with a letter in a..z, and only contain letters, numerals, and underscore. Note that for search parameters (type = string, with a search type), the name may be altered by the search modifiers.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * If a parameter name is used for both an input and an output parameter, the parameter should be defined twice.
-   */
-  use: OperationParameterUseValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.use
-   */
-  _use?: fhir.IFhirElement|undefined;
-  /**
-   * The minimum number of times this parameter SHALL appear in the request or response.
-   */
-  min: number|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.min
-   */
-  _min?: fhir.IFhirElement|undefined;
-  /**
-   * The maximum number of times this element is permitted to appear in the request or response.
-   */
-  max: string|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.max
-   */
-  _max?: fhir.IFhirElement|undefined;
-  /**
-   * Describes the meaning or use of this parameter.
-   */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-  /**
-   * if there is no stated parameter, then the parameter is a multi-part parameter; type and must have at least one part defined.
-   */
-  type?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * Often, these profiles are the base definitions from the spec (e.g. http://hl7.org/fhir/StructureDefinition/Patient).
-   */
-  targetProfile?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.targetProfile
-   */
-  _targetProfile?: fhir.IFhirElement[]|undefined;
-  /**
-   * How the parameter is understood as a search parameter. This is only used if the parameter type is 'string'.
-   */
-  searchType?: SearchParamTypeValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.searchType
-   */
-  _searchType?: fhir.IFhirElement|undefined;
-  /**
-   * Binds to a value set if this parameter is coded (code, Coding, CodeableConcept).
-   */
-  binding?: fhir.IOperationDefinitionParameterBinding|undefined;
-  /**
-   * Resolution applies if the referenced parameter exists.
-   */
-  referencedFrom?: fhir.IOperationDefinitionParameterReferencedFrom[]|undefined;
-  /**
-   * Query Definitions only have one output parameter, named "result". This might not be described, but can be to allow a profile to be defined.
-   */
-  part?: fhir.IOperationDefinitionParameter[]|undefined;
-}
-
-/**
- * The combinations are suggestions as to which sets of parameters to use together, but the combinations are not intended to be authoritative.
- */
-export type IOperationDefinitionOverload = fhir.IBackboneElement & { 
-  /**
-   * Name of parameter to include in overload.
-   */
-  parameterName?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.overload.parameterName
-   */
-  _parameterName?: fhir.IFhirElement[]|undefined;
-  /**
-   * Comments to go on overload.
-   */
-  comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.overload.comment
-   */
-  _comment?: fhir.IFhirElement|undefined;
-}
-
-/**
- * A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
- */
-export type IOperationDefinition = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "OperationDefinition";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * There may be different operation definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the operation definition with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of operation definitions that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Named queries are invoked differently, and have different capabilities.
-   */
-  kind: OperationKindValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.kind
-   */
-  _kind?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of operation definitions that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the operation definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the operation definition is the organization or individual primarily responsible for the maintenance and upkeep of the operation definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the operation definition. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the operation definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the operation definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the operation definition is presumed to be the predominant language in the place the operation definition was created).
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the operation definition to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * This element does not describe the usage of the operation definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this operation definition.
-   */
-  purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.purpose
-   */
-  _purpose?: fhir.IFhirElement|undefined;
-  /**
-   * What http methods can be used for the operation depends on the .affectsState value and whether the input parameters are primitive or complex:
-   * 1. Servers SHALL support POST method for all operations.
-   * 2. Servers SHALL support GET method if all the parameters for the operation are primitive or there are no parameters and the operation has affectsState = false.
-   */
-  affectsState?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.affectsState
-   */
-  _affectsState?: fhir.IFhirElement|undefined;
-  /**
-   * The name used to invoke the operation.
-   */
-  code: string|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.code
-   */
-  _code?: fhir.IFhirElement|undefined;
-  /**
-   * Additional information about how to use this operation or named query.
-   */
-  comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.comment
-   */
-  _comment?: fhir.IFhirElement|undefined;
-  /**
-   * A constrained profile can make optional parameters required or not used and clarify documentation.
-   */
-  base?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.base
-   */
-  _base?: fhir.IFhirElement|undefined;
-  /**
-   * If the type is an abstract resource ("Resource" or "DomainResource") then the operation can be invoked on any concrete specialization.
-   */
-  resource?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.resource
-   */
-  _resource?: fhir.IFhirElement[]|undefined;
-  /**
-   * Indicates whether this operation or named query can be invoked at the system level (e.g. without needing to choose a resource type for the context).
-   */
-  system: boolean|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.system
-   */
-  _system?: fhir.IFhirElement|undefined;
-  /**
-   * Indicates whether this operation or named query can be invoked at the resource type level for any given resource type level (e.g. without needing to choose a specific resource id for the context).
-   */
-  type: boolean|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * Indicates whether this operation can be invoked on a particular instance of one of the given types.
-   */
-  instance: boolean|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.instance
-   */
-  _instance?: fhir.IFhirElement|undefined;
-  /**
-   * If present the profile shall not conflict with what is specified in the parameters in the operation definition (max/min etc.), though it may provide additional constraints. The constraints expressed in the profile apply whether the operation is invoked by a POST wih parameters or not.
-   */
-  inputProfile?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.inputProfile
-   */
-  _inputProfile?: fhir.IFhirElement|undefined;
-  /**
-   * If present the profile shall not conflict with what is specified in the parameters in the operation definition (max/min etc.), though it may provide additional constraints. The constraints expressed in the profile apply whether the operation is invoked by a POST wih parameters or not.
-   */
-  outputProfile?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.outputProfile
-   */
-  _outputProfile?: fhir.IFhirElement|undefined;
-  /**
-   * Query Definitions only have one output parameter, named "result". This might not be described, but can be to allow a profile to be defined.
-   */
-  parameter?: fhir.IOperationDefinitionParameter[]|undefined;
-  /**
-   * The combinations are suggestions as to which sets of parameters to use together, but the combinations are not intended to be authoritative.
-   */
-  overload?: fhir.IOperationDefinitionOverload[]|undefined;
+  valueSet: fhir.FhirCanonical|string|undefined;
 }
 
 /**
  * Binds to a value set if this parameter is coded (code, Coding, CodeableConcept).
  */
-export class OperationDefinitionParameterBinding extends fhir.BackboneElement implements IOperationDefinitionParameterBinding {
+export class OperationDefinitionParameterBinding extends fhir.BackboneElement {
+  readonly __dataType:string = 'OperationDefinitionParameterBinding';
   /**
    * For further discussion, see [Using Terminologies](terminologies.html).
    */
   public strength: BindingStrengthValueSetEnum|null;
   /**
-   * Extended properties for primitive element: OperationDefinition.parameter.binding.strength
-   */
-  public _strength?: fhir.FhirElement|undefined;
-  /**
    * For value sets with a referenceResource, the display can contain the value set description.  The reference may be version-specific or not.
    */
-  public valueSet: string|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.binding.valueSet
-   */
-  public _valueSet?: fhir.FhirElement|undefined;
+  public valueSet: fhir.FhirCanonical|null;
   /**
    * Default constructor for OperationDefinitionParameterBinding - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IOperationDefinitionParameterBinding> = { }) {
-    super(source);
+  constructor(source:Partial<OperationDefinitionParameterBindingArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['strength']) { this.strength = source.strength; }
     else { this.strength = null; }
-    if (source['_strength']) { this._strength = new fhir.FhirElement(source._strength!); }
-    if (source['valueSet']) { this.valueSet = source.valueSet; }
+    if (source['valueSet']) { this.valueSet = new fhir.FhirCanonical({value: source.valueSet}); }
     else { this.valueSet = null; }
-    if (source['_valueSet']) { this._valueSet = new fhir.FhirElement(source._valueSet!); }
   }
   /**
    * Required-bound Value Set for strength
@@ -404,127 +67,166 @@ export class OperationDefinitionParameterBinding extends fhir.BackboneElement im
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["strength"]) { results.push(["strength",'Missing required element: OperationDefinition.parameter.binding.strength']); }
-    if (this["_strength"]) { results.push(...this._strength.doModelValidation()); }
-    if (!this["valueSet"]) { results.push(["valueSet",'Missing required element: OperationDefinition.parameter.binding.valueSet']); }
-    if (this["_valueSet"]) { results.push(...this._valueSet.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['strength']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property strength:BindingStrengthValueSetEnum fhir: OperationDefinition.parameter.binding.strength:code", }));
+    }
+    if (!this['valueSet']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property valueSet:fhir.FhirCanonical fhir: OperationDefinition.parameter.binding.valueSet:canonical", }));
+    }
+    if (this["valueSet"]) { outcome.issue!.push(...this.valueSet.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the OperationDefinitionParameterReferencedFrom type.
+ */
+export interface OperationDefinitionParameterReferencedFromArgs extends fhir.BackboneElementArgs {
+  /**
+   * The name of the parameter or dot-separated path of parameter names pointing to the resource parameter that is expected to contain a reference to this resource.
+   */
+  source: fhir.FhirString|string|undefined;
+  /**
+   * The id of the element in the referencing resource that is expected to resolve to this resource.
+   */
+  sourceId?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Resolution applies if the referenced parameter exists.
  */
-export class OperationDefinitionParameterReferencedFrom extends fhir.BackboneElement implements IOperationDefinitionParameterReferencedFrom {
+export class OperationDefinitionParameterReferencedFrom extends fhir.BackboneElement {
+  readonly __dataType:string = 'OperationDefinitionParameterReferencedFrom';
   /**
    * The name of the parameter or dot-separated path of parameter names pointing to the resource parameter that is expected to contain a reference to this resource.
    */
-  public source: string|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.referencedFrom.source
-   */
-  public _source?: fhir.FhirElement|undefined;
+  public source: fhir.FhirString|null;
   /**
    * The id of the element in the referencing resource that is expected to resolve to this resource.
    */
-  public sourceId?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.referencedFrom.sourceId
-   */
-  public _sourceId?: fhir.FhirElement|undefined;
+  public sourceId?: fhir.FhirString|undefined;
   /**
    * Default constructor for OperationDefinitionParameterReferencedFrom - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IOperationDefinitionParameterReferencedFrom> = { }) {
-    super(source);
-    if (source['source']) { this.source = source.source; }
+  constructor(source:Partial<OperationDefinitionParameterReferencedFromArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['source']) { this.source = new fhir.FhirString({value: source.source}); }
     else { this.source = null; }
-    if (source['_source']) { this._source = new fhir.FhirElement(source._source!); }
-    if (source['sourceId']) { this.sourceId = source.sourceId; }
-    if (source['_sourceId']) { this._sourceId = new fhir.FhirElement(source._sourceId!); }
+    if (source['sourceId']) { this.sourceId = new fhir.FhirString({value: source.sourceId}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["source"]) { results.push(["source",'Missing required element: OperationDefinition.parameter.referencedFrom.source']); }
-    if (this["_source"]) { results.push(...this._source.doModelValidation()); }
-    if (this["_sourceId"]) { results.push(...this._sourceId.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['source']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property source:fhir.FhirString fhir: OperationDefinition.parameter.referencedFrom.source:string", }));
+    }
+    if (this["source"]) { outcome.issue!.push(...this.source.doModelValidation().issue!); }
+    if (this["sourceId"]) { outcome.issue!.push(...this.sourceId.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the OperationDefinitionParameter type.
+ */
+export interface OperationDefinitionParameterArgs extends fhir.BackboneElementArgs {
+  /**
+   * This name must be a token (start with a letter in a..z, and only contain letters, numerals, and underscore. Note that for search parameters (type = string, with a search type), the name may be altered by the search modifiers.
+   */
+  name: fhir.FhirCode|string|undefined;
+  /**
+   * If a parameter name is used for both an input and an output parameter, the parameter should be defined twice.
+   */
+  use: OperationParameterUseValueSetEnum|null;
+  /**
+   * The minimum number of times this parameter SHALL appear in the request or response.
+   */
+  min: fhir.FhirInteger|number|undefined;
+  /**
+   * The maximum number of times this element is permitted to appear in the request or response.
+   */
+  max: fhir.FhirString|string|undefined;
+  /**
+   * Describes the meaning or use of this parameter.
+   */
+  documentation?: fhir.FhirString|string|undefined;
+  /**
+   * if there is no stated parameter, then the parameter is a multi-part parameter; type and must have at least one part defined.
+   */
+  type?: fhir.FhirCode|string|undefined;
+  /**
+   * Often, these profiles are the base definitions from the spec (e.g. http://hl7.org/fhir/StructureDefinition/Patient).
+   */
+  targetProfile?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * How the parameter is understood as a search parameter. This is only used if the parameter type is 'string'.
+   */
+  searchType?: SearchParamTypeValueSetEnum|undefined;
+  /**
+   * Binds to a value set if this parameter is coded (code, Coding, CodeableConcept).
+   */
+  binding?: fhir.OperationDefinitionParameterBindingArgs|undefined;
+  /**
+   * Resolution applies if the referenced parameter exists.
+   */
+  referencedFrom?: fhir.OperationDefinitionParameterReferencedFromArgs[]|undefined;
+  /**
+   * Query Definitions only have one output parameter, named "result". This might not be described, but can be to allow a profile to be defined.
+   */
+  part?: fhir.OperationDefinitionParameterArgs[]|undefined;
 }
 
 /**
  * Query Definitions only have one output parameter, named "result". This might not be described, but can be to allow a profile to be defined.
  */
-export class OperationDefinitionParameter extends fhir.BackboneElement implements IOperationDefinitionParameter {
+export class OperationDefinitionParameter extends fhir.BackboneElement {
+  readonly __dataType:string = 'OperationDefinitionParameter';
   /**
    * This name must be a token (start with a letter in a..z, and only contain letters, numerals, and underscore. Note that for search parameters (type = string, with a search type), the name may be altered by the search modifiers.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirCode|null;
   /**
    * If a parameter name is used for both an input and an output parameter, the parameter should be defined twice.
    */
   public use: OperationParameterUseValueSetEnum|null;
   /**
-   * Extended properties for primitive element: OperationDefinition.parameter.use
-   */
-  public _use?: fhir.FhirElement|undefined;
-  /**
    * The minimum number of times this parameter SHALL appear in the request or response.
    */
-  public min: number|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.min
-   */
-  public _min?: fhir.FhirElement|undefined;
+  public min: fhir.FhirInteger|null;
   /**
    * The maximum number of times this element is permitted to appear in the request or response.
    */
-  public max: string|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.max
-   */
-  public _max?: fhir.FhirElement|undefined;
+  public max: fhir.FhirString|null;
   /**
    * Describes the meaning or use of this parameter.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirString|undefined;
   /**
    * if there is no stated parameter, then the parameter is a multi-part parameter; type and must have at least one part defined.
    */
-  public type?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.type
-   */
-  public _type?: fhir.FhirElement|undefined;
+  public type?: fhir.FhirCode|undefined;
   /**
    * Often, these profiles are the base definitions from the spec (e.g. http://hl7.org/fhir/StructureDefinition/Patient).
    */
-  public targetProfile?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.targetProfile
-   */
-  public _targetProfile?: fhir.FhirElement[]|undefined;
+  public targetProfile?: fhir.FhirCanonical[]|undefined = [];
   /**
    * How the parameter is understood as a search parameter. This is only used if the parameter type is 'string'.
    */
   public searchType?: SearchParamTypeValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.parameter.searchType
-   */
-  public _searchType?: fhir.FhirElement|undefined;
   /**
    * Binds to a value set if this parameter is coded (code, Coding, CodeableConcept).
    */
@@ -532,37 +234,29 @@ export class OperationDefinitionParameter extends fhir.BackboneElement implement
   /**
    * Resolution applies if the referenced parameter exists.
    */
-  public referencedFrom?: fhir.OperationDefinitionParameterReferencedFrom[]|undefined;
+  public referencedFrom?: fhir.OperationDefinitionParameterReferencedFrom[]|undefined = [];
   /**
    * Query Definitions only have one output parameter, named "result". This might not be described, but can be to allow a profile to be defined.
    */
-  public part?: fhir.OperationDefinitionParameter[]|undefined;
+  public part?: fhir.OperationDefinitionParameter[]|undefined = [];
   /**
    * Default constructor for OperationDefinitionParameter - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IOperationDefinitionParameter> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<OperationDefinitionParameterArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirCode({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
     if (source['use']) { this.use = source.use; }
     else { this.use = null; }
-    if (source['_use']) { this._use = new fhir.FhirElement(source._use!); }
-    if (source['min']) { this.min = source.min; }
+    if (source['min']) { this.min = new fhir.FhirInteger({value: source.min}); }
     else { this.min = null; }
-    if (source['_min']) { this._min = new fhir.FhirElement(source._min!); }
-    if (source['max']) { this.max = source.max; }
+    if (source['max']) { this.max = new fhir.FhirString({value: source.max}); }
     else { this.max = null; }
-    if (source['_max']) { this._max = new fhir.FhirElement(source._max!); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
-    if (source['type']) { this.type = source.type; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['targetProfile']) { this.targetProfile = source.targetProfile.map((x) => (x)); }
-    if (source['_targetProfile']) { this._targetProfile = source._targetProfile.map((x) => new fhir.FhirElement(x)); }
+    if (source['documentation']) { this.documentation = new fhir.FhirString({value: source.documentation}); }
+    if (source['type']) { this.type = new fhir.FhirCode({value: source.type}); }
+    if (source['targetProfile']) { this.targetProfile = source.targetProfile.map((x) => new fhir.FhirCanonical({value: x})); }
     if (source['searchType']) { this.searchType = source.searchType; }
-    if (source['_searchType']) { this._searchType = new fhir.FhirElement(source._searchType!); }
-    if (source['binding']) { this.binding = new fhir.OperationDefinitionParameterBinding(source.binding!); }
+    if (source['binding']) { this.binding = new fhir.OperationDefinitionParameterBinding(source.binding); }
     if (source['referencedFrom']) { this.referencedFrom = source.referencedFrom.map((x) => new fhir.OperationDefinitionParameterReferencedFrom(x)); }
     if (source['part']) { this.part = source.part.map((x) => new fhir.OperationDefinitionParameter(x)); }
   }
@@ -587,72 +281,212 @@ export class OperationDefinitionParameter extends fhir.BackboneElement implement
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: OperationDefinition.parameter.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (!this["use"]) { results.push(["use",'Missing required element: OperationDefinition.parameter.use']); }
-    if (this["_use"]) { results.push(...this._use.doModelValidation()); }
-    if (!this["min"]) { results.push(["min",'Missing required element: OperationDefinition.parameter.min']); }
-    if (this["_min"]) { results.push(...this._min.doModelValidation()); }
-    if (!this["max"]) { results.push(["max",'Missing required element: OperationDefinition.parameter.max']); }
-    if (this["_max"]) { results.push(...this._max.doModelValidation()); }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_targetProfile"]) { this._targetProfile.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_searchType"]) { results.push(...this._searchType.doModelValidation()); }
-    if (this["binding"]) { results.push(...this.binding.doModelValidation()); }
-    if (this["referencedFrom"]) { this.referencedFrom.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["part"]) { this.part.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirCode fhir: OperationDefinition.parameter.name:code", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (!this['use']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property use:OperationParameterUseValueSetEnum fhir: OperationDefinition.parameter.use:code", }));
+    }
+    if (!this['min']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property min:fhir.FhirInteger fhir: OperationDefinition.parameter.min:integer", }));
+    }
+    if (this["min"]) { outcome.issue!.push(...this.min.doModelValidation().issue!); }
+    if (!this['max']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property max:fhir.FhirString fhir: OperationDefinition.parameter.max:string", }));
+    }
+    if (this["max"]) { outcome.issue!.push(...this.max.doModelValidation().issue!); }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["targetProfile"]) { this.targetProfile.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["binding"]) { outcome.issue!.push(...this.binding.doModelValidation().issue!); }
+    if (this["referencedFrom"]) { this.referencedFrom.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["part"]) { this.part.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the OperationDefinitionOverload type.
+ */
+export interface OperationDefinitionOverloadArgs extends fhir.BackboneElementArgs {
+  /**
+   * Name of parameter to include in overload.
+   */
+  parameterName?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * Comments to go on overload.
+   */
+  comment?: fhir.FhirString|string|undefined;
 }
 
 /**
  * The combinations are suggestions as to which sets of parameters to use together, but the combinations are not intended to be authoritative.
  */
-export class OperationDefinitionOverload extends fhir.BackboneElement implements IOperationDefinitionOverload {
+export class OperationDefinitionOverload extends fhir.BackboneElement {
+  readonly __dataType:string = 'OperationDefinitionOverload';
   /**
    * Name of parameter to include in overload.
    */
-  public parameterName?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.overload.parameterName
-   */
-  public _parameterName?: fhir.FhirElement[]|undefined;
+  public parameterName?: fhir.FhirString[]|undefined = [];
   /**
    * Comments to go on overload.
    */
-  public comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.overload.comment
-   */
-  public _comment?: fhir.FhirElement|undefined;
+  public comment?: fhir.FhirString|undefined;
   /**
    * Default constructor for OperationDefinitionOverload - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IOperationDefinitionOverload> = { }) {
-    super(source);
-    if (source['parameterName']) { this.parameterName = source.parameterName.map((x) => (x)); }
-    if (source['_parameterName']) { this._parameterName = source._parameterName.map((x) => new fhir.FhirElement(x)); }
-    if (source['comment']) { this.comment = source.comment; }
-    if (source['_comment']) { this._comment = new fhir.FhirElement(source._comment!); }
+  constructor(source:Partial<OperationDefinitionOverloadArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['parameterName']) { this.parameterName = source.parameterName.map((x) => new fhir.FhirString({value: x})); }
+    if (source['comment']) { this.comment = new fhir.FhirString({value: source.comment}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_parameterName"]) { this._parameterName.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_comment"]) { results.push(...this._comment.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["parameterName"]) { this.parameterName.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["comment"]) { outcome.issue!.push(...this.comment.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the OperationDefinition type.
+ */
+export interface OperationDefinitionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "OperationDefinition"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * There may be different operation definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the operation definition with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * Allows filtering of operation definitions that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Named queries are invoked differently, and have different capabilities.
+   */
+  kind: OperationKindValueSetEnum|null;
+  /**
+   * Allows filtering of operation definitions that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the operation definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the operation definition is the organization or individual primarily responsible for the maintenance and upkeep of the operation definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the operation definition. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the operation definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the operation definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the operation definition is presumed to be the predominant language in the place the operation definition was created).
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the operation definition to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * This element does not describe the usage of the operation definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this operation definition.
+   */
+  purpose?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * What http methods can be used for the operation depends on the .affectsState value and whether the input parameters are primitive or complex:
+   * 1. Servers SHALL support POST method for all operations.
+   * 2. Servers SHALL support GET method if all the parameters for the operation are primitive or there are no parameters and the operation has affectsState = false.
+   */
+  affectsState?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * The name used to invoke the operation.
+   */
+  code: fhir.FhirCode|string|undefined;
+  /**
+   * Additional information about how to use this operation or named query.
+   */
+  comment?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * A constrained profile can make optional parameters required or not used and clarify documentation.
+   */
+  base?: fhir.FhirCanonical|string|undefined;
+  /**
+   * If the type is an abstract resource ("Resource" or "DomainResource") then the operation can be invoked on any concrete specialization.
+   */
+  resource?: fhir.FhirCode[]|string[]|undefined;
+  /**
+   * Indicates whether this operation or named query can be invoked at the system level (e.g. without needing to choose a resource type for the context).
+   */
+  system: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Indicates whether this operation or named query can be invoked at the resource type level for any given resource type level (e.g. without needing to choose a specific resource id for the context).
+   */
+  type: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Indicates whether this operation can be invoked on a particular instance of one of the given types.
+   */
+  instance: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * If present the profile shall not conflict with what is specified in the parameters in the operation definition (max/min etc.), though it may provide additional constraints. The constraints expressed in the profile apply whether the operation is invoked by a POST wih parameters or not.
+   */
+  inputProfile?: fhir.FhirCanonical|string|undefined;
+  /**
+   * If present the profile shall not conflict with what is specified in the parameters in the operation definition (max/min etc.), though it may provide additional constraints. The constraints expressed in the profile apply whether the operation is invoked by a POST wih parameters or not.
+   */
+  outputProfile?: fhir.FhirCanonical|string|undefined;
+  /**
+   * Query Definitions only have one output parameter, named "result". This might not be described, but can be to allow a profile to be defined.
+   */
+  parameter?: fhir.OperationDefinitionParameterArgs[]|undefined;
+  /**
+   * The combinations are suggestions as to which sets of parameters to use together, but the combinations are not intended to be authoritative.
+   */
+  overload?: fhir.OperationDefinitionOverloadArgs[]|undefined;
 }
 
 /**
  * A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
  */
-export class OperationDefinition extends fhir.DomainResource implements IOperationDefinition {
+export class OperationDefinition extends fhir.DomainResource {
+  readonly __dataType:string = 'OperationDefinition';
   /**
    * Resource Type Name
    */
@@ -662,251 +496,146 @@ export class OperationDefinition extends fhir.DomainResource implements IOperati
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * There may be different operation definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the operation definition with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * Allows filtering of operation definitions that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: OperationDefinition.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Named queries are invoked differently, and have different capabilities.
    */
   public kind: OperationKindValueSetEnum|null;
   /**
-   * Extended properties for primitive element: OperationDefinition.kind
-   */
-  public _kind?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of operation definitions that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the operation definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the operation definition is the organization or individual primarily responsible for the maintenance and upkeep of the operation definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the operation definition. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the operation definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the operation definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the operation definition is presumed to be the predominant language in the place the operation definition was created).
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the operation definition to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * This element does not describe the usage of the operation definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this operation definition.
    */
-  public purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.purpose
-   */
-  public _purpose?: fhir.FhirElement|undefined;
+  public purpose?: fhir.FhirMarkdown|undefined;
   /**
    * What http methods can be used for the operation depends on the .affectsState value and whether the input parameters are primitive or complex:
    * 1. Servers SHALL support POST method for all operations.
    * 2. Servers SHALL support GET method if all the parameters for the operation are primitive or there are no parameters and the operation has affectsState = false.
    */
-  public affectsState?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.affectsState
-   */
-  public _affectsState?: fhir.FhirElement|undefined;
+  public affectsState?: fhir.FhirBoolean|undefined;
   /**
    * The name used to invoke the operation.
    */
-  public code: string|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.code
-   */
-  public _code?: fhir.FhirElement|undefined;
+  public code: fhir.FhirCode|null;
   /**
    * Additional information about how to use this operation or named query.
    */
-  public comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.comment
-   */
-  public _comment?: fhir.FhirElement|undefined;
+  public comment?: fhir.FhirMarkdown|undefined;
   /**
    * A constrained profile can make optional parameters required or not used and clarify documentation.
    */
-  public base?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.base
-   */
-  public _base?: fhir.FhirElement|undefined;
+  public base?: fhir.FhirCanonical|undefined;
   /**
    * If the type is an abstract resource ("Resource" or "DomainResource") then the operation can be invoked on any concrete specialization.
    */
-  public resource?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.resource
-   */
-  public _resource?: fhir.FhirElement[]|undefined;
+  public resource?: fhir.FhirCode[]|undefined = [];
   /**
    * Indicates whether this operation or named query can be invoked at the system level (e.g. without needing to choose a resource type for the context).
    */
-  public system: boolean|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.system
-   */
-  public _system?: fhir.FhirElement|undefined;
+  public system: fhir.FhirBoolean|null;
   /**
    * Indicates whether this operation or named query can be invoked at the resource type level for any given resource type level (e.g. without needing to choose a specific resource id for the context).
    */
-  public type: boolean|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.type
-   */
-  public _type?: fhir.FhirElement|undefined;
+  public type: fhir.FhirBoolean|null;
   /**
    * Indicates whether this operation can be invoked on a particular instance of one of the given types.
    */
-  public instance: boolean|null;
-  /**
-   * Extended properties for primitive element: OperationDefinition.instance
-   */
-  public _instance?: fhir.FhirElement|undefined;
+  public instance: fhir.FhirBoolean|null;
   /**
    * If present the profile shall not conflict with what is specified in the parameters in the operation definition (max/min etc.), though it may provide additional constraints. The constraints expressed in the profile apply whether the operation is invoked by a POST wih parameters or not.
    */
-  public inputProfile?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.inputProfile
-   */
-  public _inputProfile?: fhir.FhirElement|undefined;
+  public inputProfile?: fhir.FhirCanonical|undefined;
   /**
    * If present the profile shall not conflict with what is specified in the parameters in the operation definition (max/min etc.), though it may provide additional constraints. The constraints expressed in the profile apply whether the operation is invoked by a POST wih parameters or not.
    */
-  public outputProfile?: string|undefined;
-  /**
-   * Extended properties for primitive element: OperationDefinition.outputProfile
-   */
-  public _outputProfile?: fhir.FhirElement|undefined;
+  public outputProfile?: fhir.FhirCanonical|undefined;
   /**
    * Query Definitions only have one output parameter, named "result". This might not be described, but can be to allow a profile to be defined.
    */
-  public parameter?: fhir.OperationDefinitionParameter[]|undefined;
+  public parameter?: fhir.OperationDefinitionParameter[]|undefined = [];
   /**
    * The combinations are suggestions as to which sets of parameters to use together, but the combinations are not intended to be authoritative.
    */
-  public overload?: fhir.OperationDefinitionOverload[]|undefined;
+  public overload?: fhir.OperationDefinitionOverload[]|undefined = [];
   /**
    * Default constructor for OperationDefinition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IOperationDefinition> = { }) {
-    super(source);
+  constructor(source:Partial<OperationDefinitionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'OperationDefinition';
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
     if (source['kind']) { this.kind = source.kind; }
     else { this.kind = null; }
-    if (source['_kind']) { this._kind = new fhir.FhirElement(source._kind!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['purpose']) { this.purpose = source.purpose; }
-    if (source['_purpose']) { this._purpose = new fhir.FhirElement(source._purpose!); }
-    if (source['affectsState']) { this.affectsState = source.affectsState; }
-    if (source['_affectsState']) { this._affectsState = new fhir.FhirElement(source._affectsState!); }
-    if (source['code']) { this.code = source.code; }
+    if (source['purpose']) { this.purpose = new fhir.FhirMarkdown({value: source.purpose}); }
+    if (source['affectsState']) { this.affectsState = new fhir.FhirBoolean({value: source.affectsState}); }
+    if (source['code']) { this.code = new fhir.FhirCode({value: source.code}); }
     else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['comment']) { this.comment = source.comment; }
-    if (source['_comment']) { this._comment = new fhir.FhirElement(source._comment!); }
-    if (source['base']) { this.base = source.base; }
-    if (source['_base']) { this._base = new fhir.FhirElement(source._base!); }
-    if (source['resource']) { this.resource = source.resource.map((x) => (x)); }
-    if (source['_resource']) { this._resource = source._resource.map((x) => new fhir.FhirElement(x)); }
-    if (source['system']) { this.system = source.system; }
+    if (source['comment']) { this.comment = new fhir.FhirMarkdown({value: source.comment}); }
+    if (source['base']) { this.base = new fhir.FhirCanonical({value: source.base}); }
+    if (source['resource']) { this.resource = source.resource.map((x) => new fhir.FhirCode({value: x})); }
+    if (source['system']) { this.system = new fhir.FhirBoolean({value: source.system}); }
     else { this.system = null; }
-    if (source['_system']) { this._system = new fhir.FhirElement(source._system!); }
-    if (source['type']) { this.type = source.type; }
+    if (source['type']) { this.type = new fhir.FhirBoolean({value: source.type}); }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['instance']) { this.instance = source.instance; }
+    if (source['instance']) { this.instance = new fhir.FhirBoolean({value: source.instance}); }
     else { this.instance = null; }
-    if (source['_instance']) { this._instance = new fhir.FhirElement(source._instance!); }
-    if (source['inputProfile']) { this.inputProfile = source.inputProfile; }
-    if (source['_inputProfile']) { this._inputProfile = new fhir.FhirElement(source._inputProfile!); }
-    if (source['outputProfile']) { this.outputProfile = source.outputProfile; }
-    if (source['_outputProfile']) { this._outputProfile = new fhir.FhirElement(source._outputProfile!); }
+    if (source['inputProfile']) { this.inputProfile = new fhir.FhirCanonical({value: source.inputProfile}); }
+    if (source['outputProfile']) { this.outputProfile = new fhir.FhirCanonical({value: source.outputProfile}); }
     if (source['parameter']) { this.parameter = source.parameter.map((x) => new fhir.OperationDefinitionParameter(x)); }
     if (source['overload']) { this.overload = source.overload.map((x) => new fhir.OperationDefinitionOverload(x)); }
   }
@@ -931,42 +660,62 @@ export class OperationDefinition extends fhir.DomainResource implements IOperati
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: OperationDefinition.resourceType']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (!this["name"]) { results.push(["name",'Missing required element: OperationDefinition.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: OperationDefinition.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (!this["kind"]) { results.push(["kind",'Missing required element: OperationDefinition.kind']); }
-    if (this["_kind"]) { results.push(...this._kind.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_purpose"]) { results.push(...this._purpose.doModelValidation()); }
-    if (this["_affectsState"]) { results.push(...this._affectsState.doModelValidation()); }
-    if (!this["code"]) { results.push(["code",'Missing required element: OperationDefinition.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["_comment"]) { results.push(...this._comment.doModelValidation()); }
-    if (this["_base"]) { results.push(...this._base.doModelValidation()); }
-    if (this["_resource"]) { this._resource.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["system"]) { results.push(["system",'Missing required element: OperationDefinition.system']); }
-    if (this["_system"]) { results.push(...this._system.doModelValidation()); }
-    if (!this["type"]) { results.push(["type",'Missing required element: OperationDefinition.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (!this["instance"]) { results.push(["instance",'Missing required element: OperationDefinition.instance']); }
-    if (this["_instance"]) { results.push(...this._instance.doModelValidation()); }
-    if (this["_inputProfile"]) { results.push(...this._inputProfile.doModelValidation()); }
-    if (this["_outputProfile"]) { results.push(...this._outputProfile.doModelValidation()); }
-    if (this["parameter"]) { this.parameter.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["overload"]) { this.overload.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'OperationDefinition' fhir: OperationDefinition.resourceType:'OperationDefinition'", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: OperationDefinition.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: OperationDefinition.status:code", }));
+    }
+    if (!this['kind']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property kind:OperationKindValueSetEnum fhir: OperationDefinition.kind:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (this["affectsState"]) { outcome.issue!.push(...this.affectsState.doModelValidation().issue!); }
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.FhirCode fhir: OperationDefinition.code:code", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["comment"]) { outcome.issue!.push(...this.comment.doModelValidation().issue!); }
+    if (this["base"]) { outcome.issue!.push(...this.base.doModelValidation().issue!); }
+    if (this["resource"]) { this.resource.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['system']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property system:fhir.FhirBoolean fhir: OperationDefinition.system:boolean", }));
+    }
+    if (this["system"]) { outcome.issue!.push(...this.system.doModelValidation().issue!); }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.FhirBoolean fhir: OperationDefinition.type:boolean", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (!this['instance']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property instance:fhir.FhirBoolean fhir: OperationDefinition.instance:boolean", }));
+    }
+    if (this["instance"]) { outcome.issue!.push(...this.instance.doModelValidation().issue!); }
+    if (this["inputProfile"]) { outcome.issue!.push(...this.inputProfile.doModelValidation().issue!); }
+    if (this["outputProfile"]) { outcome.issue!.push(...this.outputProfile.doModelValidation().issue!); }
+    if (this["parameter"]) { this.parameter.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["overload"]) { this.overload.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

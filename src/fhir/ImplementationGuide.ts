@@ -3,602 +3,123 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ImplementationGuide
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ResourceTypesValueSet, ResourceTypesValueSetType, ResourceTypesValueSetEnum } from '../fhirValueSets/ResourceTypesValueSet.js'
-import { FHIRVersionValueSet, FHIRVersionValueSetType, FHIRVersionValueSetEnum } from '../fhirValueSets/FHIRVersionValueSet.js'
-import { GuidePageGenerationValueSet, GuidePageGenerationValueSetType, GuidePageGenerationValueSetEnum } from '../fhirValueSets/GuidePageGenerationValueSet.js'
-import { GuideParameterCodeValueSet, GuideParameterCodeValueSetType, GuideParameterCodeValueSetEnum } from '../fhirValueSets/GuideParameterCodeValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-import { SpdxLicenseValueSet, SpdxLicenseValueSetType, SpdxLicenseValueSetEnum } from '../fhirValueSets/SpdxLicenseValueSet.js'
-
+import { ResourceTypesValueSet, ResourceTypesValueSetType,} from '../fhirValueSets/ResourceTypesValueSet.js';
+import { ResourceTypesValueSetEnum } from '../valueSetEnums.js';
+import { FHIRVersionValueSet, FHIRVersionValueSetType,} from '../fhirValueSets/FHIRVersionValueSet.js';
+import { FHIRVersionValueSetEnum } from '../valueSetEnums.js';
+import { GuidePageGenerationValueSet, GuidePageGenerationValueSetType,} from '../fhirValueSets/GuidePageGenerationValueSet.js';
+import { GuidePageGenerationValueSetEnum } from '../valueSetEnums.js';
+import { GuideParameterCodeValueSet, GuideParameterCodeValueSetType,} from '../fhirValueSets/GuideParameterCodeValueSet.js';
+import { GuideParameterCodeValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { SpdxLicenseValueSet, SpdxLicenseValueSetType,} from '../fhirValueSets/SpdxLicenseValueSet.js';
+import { SpdxLicenseValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Another implementation guide that this implementation depends on. Typically, an implementation guide uses value sets, profiles etc.defined in other implementation guides.
+ * Valid arguments for the ImplementationGuideDependsOn type.
  */
-export type IImplementationGuideDependsOn = fhir.IBackboneElement & { 
+export interface ImplementationGuideDependsOnArgs extends fhir.BackboneElementArgs {
   /**
    * Usually, A canonical reference to the implementation guide is the same as the master location at which the implementation guide is published.
    */
-  uri: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.dependsOn.uri
-   */
-  _uri?: fhir.IFhirElement|undefined;
+  uri: fhir.FhirCanonical|string|undefined;
   /**
    * The NPM package name for the Implementation Guide that this IG depends on.
    */
-  packageId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.dependsOn.packageId
-   */
-  _packageId?: fhir.IFhirElement|undefined;
+  packageId?: fhir.FhirId|string|undefined;
   /**
    * This follows the syntax of the NPM packaging version field - see [[reference]].
    */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.dependsOn.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-}
-
-/**
- * See [Default Profiles](implementationguide.html#default) for a discussion of which resources are 'covered' by an implementation guide.
- */
-export type IImplementationGuideGlobal = fhir.IBackboneElement & { 
-  /**
-   * The type must match that of the profile that is referred to but is made explicit here as a denormalization so that a system processing the implementation guide resource knows which resources the profile applies to even if the profile itself is not available.
-   */
-  type: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.global.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * A reference to the profile that all instances must conform to.
-   */
-  profile: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.global.profile
-   */
-  _profile?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Groupings are arbitrary sub-divisions of content. Typically, they are used to help build Table of Contents automatically.
- */
-export type IImplementationGuideDefinitionGrouping = fhir.IBackboneElement & { 
-  /**
-   * The human-readable title to display for the package of resources when rendering the implementation guide.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.grouping.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Human readable text describing the package.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.grouping.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-}
-
-/**
- * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
- */
-export type IImplementationGuideDefinitionResource = fhir.IBackboneElement & { 
-  /**
-   * Usually this is a relative URL that locates the resource within the implementation guide. If you authoring an implementation guide, and will publish it using the FHIR publication tooling, use a URI that may point to a resource, or to one of various alternative representations (e.g. spreadsheet). The tooling will convert this when it publishes it.
-   */
-  reference: fhir.IReference|null;
-  /**
-   * The resource SHALL be valid against all the versions it is specified to apply to. If the resource referred to is a StructureDefinition, the fhirVersion stated in the StructureDefinition cannot disagree with the version specified here; the specified versions SHALL include the version specified by the StructureDefinition, and may include additional versions using the [applicable-version](extension-structuredefinition-applicable-version.html) extension.
-   */
-  fhirVersion?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.resource.fhirVersion
-   */
-  _fhirVersion?: fhir.IFhirElement[]|undefined;
-  /**
-   * A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.resource.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This is mostly used with examples to explain why it is present (though they can have extensive comments in the examples).
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.resource.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Examples: 
-   * * StructureDefinition -&gt; Any 
-   * * ValueSet -&gt; expansion 
-   * * OperationDefinition -&gt; Parameters 
-   * * Questionnaire -&gt; QuestionnaireResponse.
-   */
-  exampleBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.resource.example[x]
-   */
-  _exampleBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * Examples: 
-   * * StructureDefinition -&gt; Any 
-   * * ValueSet -&gt; expansion 
-   * * OperationDefinition -&gt; Parameters 
-   * * Questionnaire -&gt; QuestionnaireResponse.
-   */
-  exampleCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.resource.example[x]
-   */
-  _exampleCanonical?: fhir.IFhirElement|undefined;
-  /**
-   * This must correspond to a package.id element within this implementation guide.
-   */
-  groupingId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.resource.groupingId
-   */
-  _groupingId?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Pages automatically become sections if they have sub-pages. By convention, the home page is called index.html.
- */
-export type IImplementationGuideDefinitionPage = fhir.IBackboneElement & { 
-  /**
-   * The publishing tool will autogenerate source for list (source = n/a) and inject included implementations for include (source = uri of guide to include).
-   */
-  nameUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.page.name[x]
-   */
-  _nameUrl?: fhir.IFhirElement|undefined;
-  /**
-   * The publishing tool will autogenerate source for list (source = n/a) and inject included implementations for include (source = uri of guide to include).
-   */
-  nameReference?: fhir.IReference|undefined;
-  /**
-   * A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.
-   */
-  title: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.page.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * A code that indicates how the page is generated.
-   */
-  generation: GuidePageGenerationValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.page.generation
-   */
-  _generation?: fhir.IFhirElement|undefined;
-  /**
-   * The implementation guide breadcrumbs are generated from this structure.
-   */
-  page?: fhir.IImplementationGuideDefinitionPage[]|undefined;
-}
-
-/**
- * Defines how IG is built by tools.
- */
-export type IImplementationGuideDefinitionParameter = fhir.IBackboneElement & { 
-  /**
-   * apply | path-resource | path-pages | path-tx-cache | expansion-parameter | rule-broken-links | generate-xml | generate-json | generate-turtle | html-template.
-   */
-  code: GuideParameterCodeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.parameter.code
-   */
-  _code?: fhir.IFhirElement|undefined;
-  /**
-   * Value for named type.
-   */
-  value: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.parameter.value
-   */
-  _value?: fhir.IFhirElement|undefined;
-}
-
-/**
- * A template for building resources.
- */
-export type IImplementationGuideDefinitionTemplate = fhir.IBackboneElement & { 
-  /**
-   * Type of template specified.
-   */
-  code: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.template.code
-   */
-  _code?: fhir.IFhirElement|undefined;
-  /**
-   * The source location for the template.
-   */
-  source: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.template.source
-   */
-  _source?: fhir.IFhirElement|undefined;
-  /**
-   * The scope in which the template applies.
-   */
-  scope?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.template.scope
-   */
-  _scope?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Principally, this consists of information abuot source resource and file locations, and build parameters and templates.
- */
-export type IImplementationGuideDefinition = fhir.IBackboneElement & { 
-  /**
-   * Groupings are arbitrary sub-divisions of content. Typically, they are used to help build Table of Contents automatically.
-   */
-  grouping?: fhir.IImplementationGuideDefinitionGrouping[]|undefined;
-  /**
-   * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
-   */
-  resource: fhir.IImplementationGuideDefinitionResource[]|null;
-  /**
-   * Pages automatically become sections if they have sub-pages. By convention, the home page is called index.html.
-   */
-  page?: fhir.IImplementationGuideDefinitionPage|undefined;
-  /**
-   * Defines how IG is built by tools.
-   */
-  parameter?: fhir.IImplementationGuideDefinitionParameter[]|undefined;
-  /**
-   * A template for building resources.
-   */
-  template?: fhir.IImplementationGuideDefinitionTemplate[]|undefined;
-}
-
-/**
- * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
- */
-export type IImplementationGuideManifestResource = fhir.IBackboneElement & { 
-  /**
-   * Usually this is a relative URL that locates the resource within the implementation guide. If you authoring an implementation guide, and will publish it using the FHIR publication tooling, use a URI that may point to a resource, or to one of various alternative representations (e.g. spreadsheet). The tooling will convert this when it publishes it.
-   */
-  reference: fhir.IReference|null;
-  /**
-   * Typically, conformance resources and knowledge resources are directly part of the implementation guide, with their normal meaning, and patient linked resources are usually examples. However this is not always true.
-   */
-  exampleBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.resource.example[x]
-   */
-  _exampleBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * Typically, conformance resources and knowledge resources are directly part of the implementation guide, with their normal meaning, and patient linked resources are usually examples. However this is not always true.
-   */
-  exampleCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.resource.example[x]
-   */
-  _exampleCanonical?: fhir.IFhirElement|undefined;
-  /**
-   * Appending 'rendering' + "/" + this should resolve to the resource page.
-   */
-  relativePath?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.resource.relativePath
-   */
-  _relativePath?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Information about a page within the IG.
- */
-export type IImplementationGuideManifestPage = fhir.IBackboneElement & { 
-  /**
-   * Appending 'rendering' + "/" + this should resolve to the page.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.page.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Label for the page intended for human display.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.page.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * Appending 'rendering' + "/" + page.name + "#" + page.anchor should resolve to the anchor.
-   */
-  anchor?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.page.anchor
-   */
-  _anchor?: fhir.IFhirElement[]|undefined;
-}
-
-/**
- * Information about an assembled implementation guide, created by the publication tooling.
- */
-export type IImplementationGuideManifest = fhir.IBackboneElement & { 
-  /**
-   * A pointer to official web page, PDF or other rendering of the implementation guide.
-   */
-  rendering?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.rendering
-   */
-  _rendering?: fhir.IFhirElement|undefined;
-  /**
-   * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
-   */
-  resource: fhir.IImplementationGuideManifestResource[]|null;
-  /**
-   * Information about a page within the IG.
-   */
-  page?: fhir.IImplementationGuideManifestPage[]|undefined;
-  /**
-   * Indicates a relative path to an image that exists within the IG.
-   */
-  image?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.image
-   */
-  _image?: fhir.IFhirElement[]|undefined;
-  /**
-   * Indicates the relative path of an additional non-page, non-image file that is part of the IG - e.g. zip, jar and similar files that could be the target of a hyperlink in a derived IG.
-   */
-  other?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.other
-   */
-  _other?: fhir.IFhirElement[]|undefined;
-}
-
-/**
- * A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
- */
-export type IImplementationGuide = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "ImplementationGuide";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * There may be different implementation guide instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the implementation guide with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of implementation guides that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of implementation guides that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the implementation guide. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the implementation guide is the organization or individual primarily responsible for the maintenance and upkeep of the implementation guide. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the implementation guide. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the implementation guide was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the implementation guide as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the implementation guide is presumed to be the predominant language in the place the implementation guide was created).
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the implementation guide to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * A copyright statement relating to the implementation guide and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the implementation guide.
-   */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-  /**
-   * Many (if not all) IG publishing tools will require that this element be present. For implementation guides published through HL7 or the FHIR foundation, the FHIR product director assigns package IDs.
-   */
-  packageId: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.packageId
-   */
-  _packageId?: fhir.IFhirElement|undefined;
-  /**
-   * The license that applies to this Implementation Guide, using an SPDX license code, or 'not-open-source'.
-   */
-  license?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.license
-   */
-  _license?: fhir.IFhirElement|undefined;
-  /**
-   * Most implementation guides target a single version - e.g. they describe how to use a particular version, and the profiles and examples etc are valid for that version. But some implementation guides describe how to use multiple different versions of FHIR to solve the same problem, or in concert with each other. Typically, the requirement to support multiple versions arises as implementation matures and different implementation communities are stuck at different versions by regulation or market dynamics.
-   */
-  fhirVersion: string[]|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.fhirVersion
-   */
-  _fhirVersion?: fhir.IFhirElement[]|undefined;
-  /**
-   * Another implementation guide that this implementation depends on. Typically, an implementation guide uses value sets, profiles etc.defined in other implementation guides.
-   */
-  dependsOn?: fhir.IImplementationGuideDependsOn[]|undefined;
-  /**
-   * See [Default Profiles](implementationguide.html#default) for a discussion of which resources are 'covered' by an implementation guide.
-   */
-  global?: fhir.IImplementationGuideGlobal[]|undefined;
-  /**
-   * Principally, this consists of information abuot source resource and file locations, and build parameters and templates.
-   */
-  definition?: fhir.IImplementationGuideDefinition|undefined;
-  /**
-   * Information about an assembled implementation guide, created by the publication tooling.
-   */
-  manifest?: fhir.IImplementationGuideManifest|undefined;
+  version?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Another implementation guide that this implementation depends on. Typically, an implementation guide uses value sets, profiles etc.defined in other implementation guides.
  */
-export class ImplementationGuideDependsOn extends fhir.BackboneElement implements IImplementationGuideDependsOn {
+export class ImplementationGuideDependsOn extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImplementationGuideDependsOn';
   /**
    * Usually, A canonical reference to the implementation guide is the same as the master location at which the implementation guide is published.
    */
-  public uri: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.dependsOn.uri
-   */
-  public _uri?: fhir.FhirElement|undefined;
+  public uri: fhir.FhirCanonical|null;
   /**
    * The NPM package name for the Implementation Guide that this IG depends on.
    */
-  public packageId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.dependsOn.packageId
-   */
-  public _packageId?: fhir.FhirElement|undefined;
+  public packageId?: fhir.FhirId|undefined;
   /**
    * This follows the syntax of the NPM packaging version field - see [[reference]].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.dependsOn.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * Default constructor for ImplementationGuideDependsOn - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImplementationGuideDependsOn> = { }) {
-    super(source);
-    if (source['uri']) { this.uri = source.uri; }
+  constructor(source:Partial<ImplementationGuideDependsOnArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['uri']) { this.uri = new fhir.FhirCanonical({value: source.uri}); }
     else { this.uri = null; }
-    if (source['_uri']) { this._uri = new fhir.FhirElement(source._uri!); }
-    if (source['packageId']) { this.packageId = source.packageId; }
-    if (source['_packageId']) { this._packageId = new fhir.FhirElement(source._packageId!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
+    if (source['packageId']) { this.packageId = new fhir.FhirId({value: source.packageId}); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["uri"]) { results.push(["uri",'Missing required element: ImplementationGuide.dependsOn.uri']); }
-    if (this["_uri"]) { results.push(...this._uri.doModelValidation()); }
-    if (this["_packageId"]) { results.push(...this._packageId.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['uri']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property uri:fhir.FhirCanonical fhir: ImplementationGuide.dependsOn.uri:canonical", }));
+    }
+    if (this["uri"]) { outcome.issue!.push(...this.uri.doModelValidation().issue!); }
+    if (this["packageId"]) { outcome.issue!.push(...this.packageId.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImplementationGuideGlobal type.
+ */
+export interface ImplementationGuideGlobalArgs extends fhir.BackboneElementArgs {
+  /**
+   * The type must match that of the profile that is referred to but is made explicit here as a denormalization so that a system processing the implementation guide resource knows which resources the profile applies to even if the profile itself is not available.
+   */
+  type: fhir.FhirCode|string|undefined;
+  /**
+   * A reference to the profile that all instances must conform to.
+   */
+  profile: fhir.FhirCanonical|string|undefined;
 }
 
 /**
  * See [Default Profiles](implementationguide.html#default) for a discussion of which resources are 'covered' by an implementation guide.
  */
-export class ImplementationGuideGlobal extends fhir.BackboneElement implements IImplementationGuideGlobal {
+export class ImplementationGuideGlobal extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImplementationGuideGlobal';
   /**
    * The type must match that of the profile that is referred to but is made explicit here as a denormalization so that a system processing the implementation guide resource knows which resources the profile applies to even if the profile itself is not available.
    */
-  public type: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.global.type
-   */
-  public _type?: fhir.FhirElement|undefined;
+  public type: fhir.FhirCode|null;
   /**
    * A reference to the profile that all instances must conform to.
    */
-  public profile: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.global.profile
-   */
-  public _profile?: fhir.FhirElement|undefined;
+  public profile: fhir.FhirCanonical|null;
   /**
    * Default constructor for ImplementationGuideGlobal - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImplementationGuideGlobal> = { }) {
-    super(source);
-    if (source['type']) { this.type = source.type; }
+  constructor(source:Partial<ImplementationGuideGlobalArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.FhirCode({value: source.type}); }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['profile']) { this.profile = source.profile; }
+    if (source['profile']) { this.profile = new fhir.FhirCanonical({value: source.profile}); }
     else { this.profile = null; }
-    if (source['_profile']) { this._profile = new fhir.FhirElement(source._profile!); }
   }
   /**
    * Required-bound Value Set for type
@@ -609,63 +130,135 @@ export class ImplementationGuideGlobal extends fhir.BackboneElement implements I
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: ImplementationGuide.global.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (!this["profile"]) { results.push(["profile",'Missing required element: ImplementationGuide.global.profile']); }
-    if (this["_profile"]) { results.push(...this._profile.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.FhirCode fhir: ImplementationGuide.global.type:code", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (!this['profile']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property profile:fhir.FhirCanonical fhir: ImplementationGuide.global.profile:canonical", }));
+    }
+    if (this["profile"]) { outcome.issue!.push(...this.profile.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImplementationGuideDefinitionGrouping type.
+ */
+export interface ImplementationGuideDefinitionGroupingArgs extends fhir.BackboneElementArgs {
+  /**
+   * The human-readable title to display for the package of resources when rendering the implementation guide.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * Human readable text describing the package.
+   */
+  description?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Groupings are arbitrary sub-divisions of content. Typically, they are used to help build Table of Contents automatically.
  */
-export class ImplementationGuideDefinitionGrouping extends fhir.BackboneElement implements IImplementationGuideDefinitionGrouping {
+export class ImplementationGuideDefinitionGrouping extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImplementationGuideDefinitionGrouping';
   /**
    * The human-readable title to display for the package of resources when rendering the implementation guide.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.grouping.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * Human readable text describing the package.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.grouping.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Default constructor for ImplementationGuideDefinitionGrouping - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImplementationGuideDefinitionGrouping> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<ImplementationGuideDefinitionGroupingArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: ImplementationGuide.definition.grouping.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: ImplementationGuide.definition.grouping.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImplementationGuideDefinitionResource type.
+ */
+export interface ImplementationGuideDefinitionResourceArgs extends fhir.BackboneElementArgs {
+  /**
+   * Usually this is a relative URL that locates the resource within the implementation guide. If you authoring an implementation guide, and will publish it using the FHIR publication tooling, use a URI that may point to a resource, or to one of various alternative representations (e.g. spreadsheet). The tooling will convert this when it publishes it.
+   */
+  reference: fhir.ReferenceArgs|null;
+  /**
+   * The resource SHALL be valid against all the versions it is specified to apply to. If the resource referred to is a StructureDefinition, the fhirVersion stated in the StructureDefinition cannot disagree with the version specified here; the specified versions SHALL include the version specified by the StructureDefinition, and may include additional versions using the [applicable-version](extension-structuredefinition-applicable-version.html) extension.
+   */
+  fhirVersion?: fhir.FhirCode[]|string[]|undefined;
+  /**
+   * A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * This is mostly used with examples to explain why it is present (though they can have extensive comments in the examples).
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * Examples: 
+   * * StructureDefinition -&gt; Any 
+   * * ValueSet -&gt; expansion 
+   * * OperationDefinition -&gt; Parameters 
+   * * Questionnaire -&gt; QuestionnaireResponse.
+   */
+  example?: fhir.FhirBoolean|fhir.FhirCanonical|undefined;
+  /**
+   * Examples: 
+   * * StructureDefinition -&gt; Any 
+   * * ValueSet -&gt; expansion 
+   * * OperationDefinition -&gt; Parameters 
+   * * Questionnaire -&gt; QuestionnaireResponse.
+   */
+  exampleBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Examples: 
+   * * StructureDefinition -&gt; Any 
+   * * ValueSet -&gt; expansion 
+   * * OperationDefinition -&gt; Parameters 
+   * * Questionnaire -&gt; QuestionnaireResponse.
+   */
+  exampleCanonical?: fhir.FhirCanonical|string|undefined;
+  /**
+   * This must correspond to a package.id element within this implementation guide.
+   */
+  groupingId?: fhir.FhirId|string|undefined;
 }
 
 /**
  * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
  */
-export class ImplementationGuideDefinitionResource extends fhir.BackboneElement implements IImplementationGuideDefinitionResource {
+export class ImplementationGuideDefinitionResource extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImplementationGuideDefinitionResource';
   /**
    * Usually this is a relative URL that locates the resource within the implementation guide. If you authoring an implementation guide, and will publish it using the FHIR publication tooling, use a URI that may point to a resource, or to one of various alternative representations (e.g. spreadsheet). The tooling will convert this when it publishes it.
    */
@@ -673,27 +266,15 @@ export class ImplementationGuideDefinitionResource extends fhir.BackboneElement 
   /**
    * The resource SHALL be valid against all the versions it is specified to apply to. If the resource referred to is a StructureDefinition, the fhirVersion stated in the StructureDefinition cannot disagree with the version specified here; the specified versions SHALL include the version specified by the StructureDefinition, and may include additional versions using the [applicable-version](extension-structuredefinition-applicable-version.html) extension.
    */
-  public fhirVersion?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.resource.fhirVersion
-   */
-  public _fhirVersion?: fhir.FhirElement[]|undefined;
+  public fhirVersion?: fhir.FhirCode[]|undefined = [];
   /**
    * A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.resource.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * This is mostly used with examples to explain why it is present (though they can have extensive comments in the examples).
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.resource.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Examples: 
    * * StructureDefinition -&gt; Any 
@@ -701,50 +282,26 @@ export class ImplementationGuideDefinitionResource extends fhir.BackboneElement 
    * * OperationDefinition -&gt; Parameters 
    * * Questionnaire -&gt; QuestionnaireResponse.
    */
-  public exampleBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.resource.example[x]
-   */
-  public _exampleBoolean?: fhir.FhirElement|undefined;
-  /**
-   * Examples: 
-   * * StructureDefinition -&gt; Any 
-   * * ValueSet -&gt; expansion 
-   * * OperationDefinition -&gt; Parameters 
-   * * Questionnaire -&gt; QuestionnaireResponse.
-   */
-  public exampleCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.resource.example[x]
-   */
-  public _exampleCanonical?: fhir.FhirElement|undefined;
+  public example?: (fhir.FhirBoolean|fhir.FhirCanonical)|undefined;
+  readonly __exampleIsChoice:true = true;
   /**
    * This must correspond to a package.id element within this implementation guide.
    */
-  public groupingId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.resource.groupingId
-   */
-  public _groupingId?: fhir.FhirElement|undefined;
+  public groupingId?: fhir.FhirId|undefined;
   /**
    * Default constructor for ImplementationGuideDefinitionResource - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImplementationGuideDefinitionResource> = { }) {
-    super(source);
-    if (source['reference']) { this.reference = new fhir.Reference(source.reference!); }
+  constructor(source:Partial<ImplementationGuideDefinitionResourceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['reference']) { this.reference = new fhir.Reference(source.reference); }
     else { this.reference = null; }
-    if (source['fhirVersion']) { this.fhirVersion = source.fhirVersion.map((x) => (x)); }
-    if (source['_fhirVersion']) { this._fhirVersion = source._fhirVersion.map((x) => new fhir.FhirElement(x)); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['exampleBoolean']) { this.exampleBoolean = source.exampleBoolean; }
-    if (source['_exampleBoolean']) { this._exampleBoolean = new fhir.FhirElement(source._exampleBoolean!); }
-    if (source['exampleCanonical']) { this.exampleCanonical = source.exampleCanonical; }
-    if (source['_exampleCanonical']) { this._exampleCanonical = new fhir.FhirElement(source._exampleCanonical!); }
-    if (source['groupingId']) { this.groupingId = source.groupingId; }
-    if (source['_groupingId']) { this._groupingId = new fhir.FhirElement(source._groupingId!); }
+    if (source['fhirVersion']) { this.fhirVersion = source.fhirVersion.map((x) => new fhir.FhirCode({value: x})); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['example']) { this.example = source.example; }
+    else if (source['exampleBoolean']) { this.example = new fhir.FhirBoolean({value: source.exampleBoolean}); }
+    else if (source['exampleCanonical']) { this.example = new fhir.FhirCanonical({value: source.exampleCanonical}); }
+    if (source['groupingId']) { this.groupingId = new fhir.FhirId({value: source.groupingId}); }
   }
   /**
    * Required-bound Value Set for fhirVersion
@@ -755,70 +312,90 @@ export class ImplementationGuideDefinitionResource extends fhir.BackboneElement 
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["reference"]) { results.push(["reference",'Missing required element: ImplementationGuide.definition.resource.reference']); }
-    if (this["reference"]) { results.push(...this.reference.doModelValidation()); }
-    if (this["_fhirVersion"]) { this._fhirVersion.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_exampleBoolean"]) { results.push(...this._exampleBoolean.doModelValidation()); }
-    if (this["_exampleCanonical"]) { results.push(...this._exampleCanonical.doModelValidation()); }
-    if (this["_groupingId"]) { results.push(...this._groupingId.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['reference']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property reference:fhir.Reference fhir: ImplementationGuide.definition.resource.reference:Reference", }));
+    }
+    if (this["reference"]) { outcome.issue!.push(...this.reference.doModelValidation().issue!); }
+    if (this["fhirVersion"]) { this.fhirVersion.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["groupingId"]) { outcome.issue!.push(...this.groupingId.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImplementationGuideDefinitionPage type.
+ */
+export interface ImplementationGuideDefinitionPageArgs extends fhir.BackboneElementArgs {
+  /**
+   * The publishing tool will autogenerate source for list (source = n/a) and inject included implementations for include (source = uri of guide to include).
+   */
+  name?: fhir.FhirUrl|fhir.Reference|undefined;
+  /**
+   * The publishing tool will autogenerate source for list (source = n/a) and inject included implementations for include (source = uri of guide to include).
+   */
+  nameUrl?: fhir.FhirUrl|string|undefined;
+  /**
+   * The publishing tool will autogenerate source for list (source = n/a) and inject included implementations for include (source = uri of guide to include).
+   */
+  nameReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.
+   */
+  title: fhir.FhirString|string|undefined;
+  /**
+   * A code that indicates how the page is generated.
+   */
+  generation: GuidePageGenerationValueSetEnum|null;
+  /**
+   * The implementation guide breadcrumbs are generated from this structure.
+   */
+  page?: fhir.ImplementationGuideDefinitionPageArgs[]|undefined;
 }
 
 /**
  * Pages automatically become sections if they have sub-pages. By convention, the home page is called index.html.
  */
-export class ImplementationGuideDefinitionPage extends fhir.BackboneElement implements IImplementationGuideDefinitionPage {
+export class ImplementationGuideDefinitionPage extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImplementationGuideDefinitionPage';
   /**
    * The publishing tool will autogenerate source for list (source = n/a) and inject included implementations for include (source = uri of guide to include).
    */
-  public nameUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.page.name[x]
-   */
-  public _nameUrl?: fhir.FhirElement|undefined;
-  /**
-   * The publishing tool will autogenerate source for list (source = n/a) and inject included implementations for include (source = uri of guide to include).
-   */
-  public nameReference?: fhir.Reference|undefined;
+  public name: (fhir.FhirUrl|fhir.Reference)|null;
+  readonly __nameIsChoice:true = true;
   /**
    * A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.
    */
-  public title: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.page.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title: fhir.FhirString|null;
   /**
    * A code that indicates how the page is generated.
    */
   public generation: GuidePageGenerationValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ImplementationGuide.definition.page.generation
-   */
-  public _generation?: fhir.FhirElement|undefined;
-  /**
    * The implementation guide breadcrumbs are generated from this structure.
    */
-  public page?: fhir.ImplementationGuideDefinitionPage[]|undefined;
+  public page?: fhir.ImplementationGuideDefinitionPage[]|undefined = [];
   /**
    * Default constructor for ImplementationGuideDefinitionPage - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImplementationGuideDefinitionPage> = { }) {
-    super(source);
-    if (source['nameUrl']) { this.nameUrl = source.nameUrl; }
-    if (source['_nameUrl']) { this._nameUrl = new fhir.FhirElement(source._nameUrl!); }
-    if (source['nameReference']) { this.nameReference = new fhir.Reference(source.nameReference!); }
-    if (source['title']) { this.title = source.title; }
+  constructor(source:Partial<ImplementationGuideDefinitionPageArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = source.name; }
+    else if (source['nameUrl']) { this.name = new fhir.FhirUrl({value: source.nameUrl}); }
+    else if (source['nameReference']) { this.name = new fhir.Reference(source.nameReference); }
+    else { this.name = null; }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
     else { this.title = null; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
     if (source['generation']) { this.generation = source.generation; }
     else { this.generation = null; }
-    if (source['_generation']) { this._generation = new fhir.FhirElement(source._generation!); }
     if (source['page']) { this.page = source.page.map((x) => new fhir.ImplementationGuideDefinitionPage(x)); }
   }
   /**
@@ -830,50 +407,64 @@ export class ImplementationGuideDefinitionPage extends fhir.BackboneElement impl
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_nameUrl"]) { results.push(...this._nameUrl.doModelValidation()); }
-    if (this["nameReference"]) { results.push(...this.nameReference.doModelValidation()); }
-    if (!this["title"]) { results.push(["title",'Missing required element: ImplementationGuide.definition.page.title']); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (!this["generation"]) { results.push(["generation",'Missing required element: ImplementationGuide.definition.page.generation']); }
-    if (this["_generation"]) { results.push(...this._generation.doModelValidation()); }
-    if (this["page"]) { this.page.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name: fhir: ImplementationGuide.definition.page.name[x]:", }));
+    }
+    if (!this['title']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property title:fhir.FhirString fhir: ImplementationGuide.definition.page.title:string", }));
+    }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (!this['generation']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property generation:GuidePageGenerationValueSetEnum fhir: ImplementationGuide.definition.page.generation:code", }));
+    }
+    if (this["page"]) { this.page.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImplementationGuideDefinitionParameter type.
+ */
+export interface ImplementationGuideDefinitionParameterArgs extends fhir.BackboneElementArgs {
+  /**
+   * apply | path-resource | path-pages | path-tx-cache | expansion-parameter | rule-broken-links | generate-xml | generate-json | generate-turtle | html-template.
+   */
+  code: GuideParameterCodeValueSetEnum|null;
+  /**
+   * Value for named type.
+   */
+  value: fhir.FhirString|string|undefined;
 }
 
 /**
  * Defines how IG is built by tools.
  */
-export class ImplementationGuideDefinitionParameter extends fhir.BackboneElement implements IImplementationGuideDefinitionParameter {
+export class ImplementationGuideDefinitionParameter extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImplementationGuideDefinitionParameter';
   /**
    * apply | path-resource | path-pages | path-tx-cache | expansion-parameter | rule-broken-links | generate-xml | generate-json | generate-turtle | html-template.
    */
   public code: GuideParameterCodeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ImplementationGuide.definition.parameter.code
-   */
-  public _code?: fhir.FhirElement|undefined;
-  /**
    * Value for named type.
    */
-  public value: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.parameter.value
-   */
-  public _value?: fhir.FhirElement|undefined;
+  public value: fhir.FhirString|null;
   /**
    * Default constructor for ImplementationGuideDefinitionParameter - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImplementationGuideDefinitionParameter> = { }) {
-    super(source);
+  constructor(source:Partial<ImplementationGuideDefinitionParameterArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['code']) { this.code = source.code; }
     else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['value']) { this.value = source.value; }
+    if (source['value']) { this.value = new fhir.FhirString({value: source.value}); }
     else { this.value = null; }
-    if (source['_value']) { this._value = new fhir.FhirElement(source._value!); }
   }
   /**
    * Required-bound Value Set for code
@@ -884,84 +475,132 @@ export class ImplementationGuideDefinitionParameter extends fhir.BackboneElement
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: ImplementationGuide.definition.parameter.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (!this["value"]) { results.push(["value",'Missing required element: ImplementationGuide.definition.parameter.value']); }
-    if (this["_value"]) { results.push(...this._value.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:GuideParameterCodeValueSetEnum fhir: ImplementationGuide.definition.parameter.code:code", }));
+    }
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value:fhir.FhirString fhir: ImplementationGuide.definition.parameter.value:string", }));
+    }
+    if (this["value"]) { outcome.issue!.push(...this.value.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImplementationGuideDefinitionTemplate type.
+ */
+export interface ImplementationGuideDefinitionTemplateArgs extends fhir.BackboneElementArgs {
+  /**
+   * Type of template specified.
+   */
+  code: fhir.FhirCode|string|undefined;
+  /**
+   * The source location for the template.
+   */
+  source: fhir.FhirString|string|undefined;
+  /**
+   * The scope in which the template applies.
+   */
+  scope?: fhir.FhirString|string|undefined;
 }
 
 /**
  * A template for building resources.
  */
-export class ImplementationGuideDefinitionTemplate extends fhir.BackboneElement implements IImplementationGuideDefinitionTemplate {
+export class ImplementationGuideDefinitionTemplate extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImplementationGuideDefinitionTemplate';
   /**
    * Type of template specified.
    */
-  public code: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.template.code
-   */
-  public _code?: fhir.FhirElement|undefined;
+  public code: fhir.FhirCode|null;
   /**
    * The source location for the template.
    */
-  public source: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.template.source
-   */
-  public _source?: fhir.FhirElement|undefined;
+  public source: fhir.FhirString|null;
   /**
    * The scope in which the template applies.
    */
-  public scope?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.definition.template.scope
-   */
-  public _scope?: fhir.FhirElement|undefined;
+  public scope?: fhir.FhirString|undefined;
   /**
    * Default constructor for ImplementationGuideDefinitionTemplate - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImplementationGuideDefinitionTemplate> = { }) {
-    super(source);
-    if (source['code']) { this.code = source.code; }
+  constructor(source:Partial<ImplementationGuideDefinitionTemplateArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.FhirCode({value: source.code}); }
     else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['source']) { this.source = source.source; }
+    if (source['source']) { this.source = new fhir.FhirString({value: source.source}); }
     else { this.source = null; }
-    if (source['_source']) { this._source = new fhir.FhirElement(source._source!); }
-    if (source['scope']) { this.scope = source.scope; }
-    if (source['_scope']) { this._scope = new fhir.FhirElement(source._scope!); }
+    if (source['scope']) { this.scope = new fhir.FhirString({value: source.scope}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: ImplementationGuide.definition.template.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (!this["source"]) { results.push(["source",'Missing required element: ImplementationGuide.definition.template.source']); }
-    if (this["_source"]) { results.push(...this._source.doModelValidation()); }
-    if (this["_scope"]) { results.push(...this._scope.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.FhirCode fhir: ImplementationGuide.definition.template.code:code", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (!this['source']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property source:fhir.FhirString fhir: ImplementationGuide.definition.template.source:string", }));
+    }
+    if (this["source"]) { outcome.issue!.push(...this.source.doModelValidation().issue!); }
+    if (this["scope"]) { outcome.issue!.push(...this.scope.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImplementationGuideDefinition type.
+ */
+export interface ImplementationGuideDefinitionArgs extends fhir.BackboneElementArgs {
+  /**
+   * Groupings are arbitrary sub-divisions of content. Typically, they are used to help build Table of Contents automatically.
+   */
+  grouping?: fhir.ImplementationGuideDefinitionGroupingArgs[]|undefined;
+  /**
+   * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
+   */
+  resource: fhir.ImplementationGuideDefinitionResourceArgs[]|null;
+  /**
+   * Pages automatically become sections if they have sub-pages. By convention, the home page is called index.html.
+   */
+  page?: fhir.ImplementationGuideDefinitionPageArgs|undefined;
+  /**
+   * Defines how IG is built by tools.
+   */
+  parameter?: fhir.ImplementationGuideDefinitionParameterArgs[]|undefined;
+  /**
+   * A template for building resources.
+   */
+  template?: fhir.ImplementationGuideDefinitionTemplateArgs[]|undefined;
 }
 
 /**
  * Principally, this consists of information abuot source resource and file locations, and build parameters and templates.
  */
-export class ImplementationGuideDefinition extends fhir.BackboneElement implements IImplementationGuideDefinition {
+export class ImplementationGuideDefinition extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImplementationGuideDefinition';
   /**
    * Groupings are arbitrary sub-divisions of content. Typically, they are used to help build Table of Contents automatically.
    */
-  public grouping?: fhir.ImplementationGuideDefinitionGrouping[]|undefined;
+  public grouping?: fhir.ImplementationGuideDefinitionGrouping[]|undefined = [];
   /**
    * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
    */
-  public resource: fhir.ImplementationGuideDefinitionResource[]|null;
+  public resource: fhir.ImplementationGuideDefinitionResource[]|null = [];
   /**
    * Pages automatically become sections if they have sub-pages. By convention, the home page is called index.html.
    */
@@ -969,42 +608,80 @@ export class ImplementationGuideDefinition extends fhir.BackboneElement implemen
   /**
    * Defines how IG is built by tools.
    */
-  public parameter?: fhir.ImplementationGuideDefinitionParameter[]|undefined;
+  public parameter?: fhir.ImplementationGuideDefinitionParameter[]|undefined = [];
   /**
    * A template for building resources.
    */
-  public template?: fhir.ImplementationGuideDefinitionTemplate[]|undefined;
+  public template?: fhir.ImplementationGuideDefinitionTemplate[]|undefined = [];
   /**
    * Default constructor for ImplementationGuideDefinition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImplementationGuideDefinition> = { }) {
-    super(source);
+  constructor(source:Partial<ImplementationGuideDefinitionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['grouping']) { this.grouping = source.grouping.map((x) => new fhir.ImplementationGuideDefinitionGrouping(x)); }
     if (source['resource']) { this.resource = source.resource.map((x) => new fhir.ImplementationGuideDefinitionResource(x)); }
     else { this.resource = null; }
-    if (source['page']) { this.page = new fhir.ImplementationGuideDefinitionPage(source.page!); }
+    if (source['page']) { this.page = new fhir.ImplementationGuideDefinitionPage(source.page); }
     if (source['parameter']) { this.parameter = source.parameter.map((x) => new fhir.ImplementationGuideDefinitionParameter(x)); }
     if (source['template']) { this.template = source.template.map((x) => new fhir.ImplementationGuideDefinitionTemplate(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["grouping"]) { this.grouping.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if ((!this["resource"]) || (this["resource"].length === 0)) { results.push(["resource",'Missing required element: ImplementationGuide.definition.resource']); }
-    if (this["resource"]) { this.resource.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["page"]) { results.push(...this.page.doModelValidation()); }
-    if (this["parameter"]) { this.parameter.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["template"]) { this.template.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["grouping"]) { this.grouping.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['resource']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resource:fhir.ImplementationGuideDefinitionResource[] fhir: ImplementationGuide.definition.resource:resource", }));
+    } else if (!Array.isArray(this.resource)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property resource:fhir.ImplementationGuideDefinitionResource[] fhir: ImplementationGuide.definition.resource:resource", }));
+    } else if (this.resource.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resource:fhir.ImplementationGuideDefinitionResource[] fhir: ImplementationGuide.definition.resource:resource", }));
+    }
+    if (this["resource"]) { this.resource.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["page"]) { outcome.issue!.push(...this.page.doModelValidation().issue!); }
+    if (this["parameter"]) { this.parameter.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["template"]) { this.template.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImplementationGuideManifestResource type.
+ */
+export interface ImplementationGuideManifestResourceArgs extends fhir.BackboneElementArgs {
+  /**
+   * Usually this is a relative URL that locates the resource within the implementation guide. If you authoring an implementation guide, and will publish it using the FHIR publication tooling, use a URI that may point to a resource, or to one of various alternative representations (e.g. spreadsheet). The tooling will convert this when it publishes it.
+   */
+  reference: fhir.ReferenceArgs|null;
+  /**
+   * Typically, conformance resources and knowledge resources are directly part of the implementation guide, with their normal meaning, and patient linked resources are usually examples. However this is not always true.
+   */
+  example?: fhir.FhirBoolean|fhir.FhirCanonical|undefined;
+  /**
+   * Typically, conformance resources and knowledge resources are directly part of the implementation guide, with their normal meaning, and patient linked resources are usually examples. However this is not always true.
+   */
+  exampleBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Typically, conformance resources and knowledge resources are directly part of the implementation guide, with their normal meaning, and patient linked resources are usually examples. However this is not always true.
+   */
+  exampleCanonical?: fhir.FhirCanonical|string|undefined;
+  /**
+   * Appending 'rendering' + "/" + this should resolve to the resource page.
+   */
+  relativePath?: fhir.FhirUrl|string|undefined;
 }
 
 /**
  * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
  */
-export class ImplementationGuideManifestResource extends fhir.BackboneElement implements IImplementationGuideManifestResource {
+export class ImplementationGuideManifestResource extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImplementationGuideManifestResource';
   /**
    * Usually this is a relative URL that locates the resource within the implementation guide. If you authoring an implementation guide, and will publish it using the FHIR publication tooling, use a URI that may point to a resource, or to one of various alternative representations (e.g. spreadsheet). The tooling will convert this when it publishes it.
    */
@@ -1012,179 +689,294 @@ export class ImplementationGuideManifestResource extends fhir.BackboneElement im
   /**
    * Typically, conformance resources and knowledge resources are directly part of the implementation guide, with their normal meaning, and patient linked resources are usually examples. However this is not always true.
    */
-  public exampleBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.resource.example[x]
-   */
-  public _exampleBoolean?: fhir.FhirElement|undefined;
-  /**
-   * Typically, conformance resources and knowledge resources are directly part of the implementation guide, with their normal meaning, and patient linked resources are usually examples. However this is not always true.
-   */
-  public exampleCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.resource.example[x]
-   */
-  public _exampleCanonical?: fhir.FhirElement|undefined;
+  public example?: (fhir.FhirBoolean|fhir.FhirCanonical)|undefined;
+  readonly __exampleIsChoice:true = true;
   /**
    * Appending 'rendering' + "/" + this should resolve to the resource page.
    */
-  public relativePath?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.resource.relativePath
-   */
-  public _relativePath?: fhir.FhirElement|undefined;
+  public relativePath?: fhir.FhirUrl|undefined;
   /**
    * Default constructor for ImplementationGuideManifestResource - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImplementationGuideManifestResource> = { }) {
-    super(source);
-    if (source['reference']) { this.reference = new fhir.Reference(source.reference!); }
+  constructor(source:Partial<ImplementationGuideManifestResourceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['reference']) { this.reference = new fhir.Reference(source.reference); }
     else { this.reference = null; }
-    if (source['exampleBoolean']) { this.exampleBoolean = source.exampleBoolean; }
-    if (source['_exampleBoolean']) { this._exampleBoolean = new fhir.FhirElement(source._exampleBoolean!); }
-    if (source['exampleCanonical']) { this.exampleCanonical = source.exampleCanonical; }
-    if (source['_exampleCanonical']) { this._exampleCanonical = new fhir.FhirElement(source._exampleCanonical!); }
-    if (source['relativePath']) { this.relativePath = source.relativePath; }
-    if (source['_relativePath']) { this._relativePath = new fhir.FhirElement(source._relativePath!); }
+    if (source['example']) { this.example = source.example; }
+    else if (source['exampleBoolean']) { this.example = new fhir.FhirBoolean({value: source.exampleBoolean}); }
+    else if (source['exampleCanonical']) { this.example = new fhir.FhirCanonical({value: source.exampleCanonical}); }
+    if (source['relativePath']) { this.relativePath = new fhir.FhirUrl({value: source.relativePath}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["reference"]) { results.push(["reference",'Missing required element: ImplementationGuide.manifest.resource.reference']); }
-    if (this["reference"]) { results.push(...this.reference.doModelValidation()); }
-    if (this["_exampleBoolean"]) { results.push(...this._exampleBoolean.doModelValidation()); }
-    if (this["_exampleCanonical"]) { results.push(...this._exampleCanonical.doModelValidation()); }
-    if (this["_relativePath"]) { results.push(...this._relativePath.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['reference']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property reference:fhir.Reference fhir: ImplementationGuide.manifest.resource.reference:Reference", }));
+    }
+    if (this["reference"]) { outcome.issue!.push(...this.reference.doModelValidation().issue!); }
+    if (this["relativePath"]) { outcome.issue!.push(...this.relativePath.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImplementationGuideManifestPage type.
+ */
+export interface ImplementationGuideManifestPageArgs extends fhir.BackboneElementArgs {
+  /**
+   * Appending 'rendering' + "/" + this should resolve to the page.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * Label for the page intended for human display.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * Appending 'rendering' + "/" + page.name + "#" + page.anchor should resolve to the anchor.
+   */
+  anchor?: fhir.FhirString[]|string[]|undefined;
 }
 
 /**
  * Information about a page within the IG.
  */
-export class ImplementationGuideManifestPage extends fhir.BackboneElement implements IImplementationGuideManifestPage {
+export class ImplementationGuideManifestPage extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImplementationGuideManifestPage';
   /**
    * Appending 'rendering' + "/" + this should resolve to the page.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.page.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * Label for the page intended for human display.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.page.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * Appending 'rendering' + "/" + page.name + "#" + page.anchor should resolve to the anchor.
    */
-  public anchor?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.page.anchor
-   */
-  public _anchor?: fhir.FhirElement[]|undefined;
+  public anchor?: fhir.FhirString[]|undefined = [];
   /**
    * Default constructor for ImplementationGuideManifestPage - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImplementationGuideManifestPage> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<ImplementationGuideManifestPageArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
-    if (source['anchor']) { this.anchor = source.anchor.map((x) => (x)); }
-    if (source['_anchor']) { this._anchor = source._anchor.map((x) => new fhir.FhirElement(x)); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
+    if (source['anchor']) { this.anchor = source.anchor.map((x) => new fhir.FhirString({value: x})); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: ImplementationGuide.manifest.page.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (this["_anchor"]) { this._anchor.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: ImplementationGuide.manifest.page.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (this["anchor"]) { this.anchor.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImplementationGuideManifest type.
+ */
+export interface ImplementationGuideManifestArgs extends fhir.BackboneElementArgs {
+  /**
+   * A pointer to official web page, PDF or other rendering of the implementation guide.
+   */
+  rendering?: fhir.FhirUrl|string|undefined;
+  /**
+   * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
+   */
+  resource: fhir.ImplementationGuideManifestResourceArgs[]|null;
+  /**
+   * Information about a page within the IG.
+   */
+  page?: fhir.ImplementationGuideManifestPageArgs[]|undefined;
+  /**
+   * Indicates a relative path to an image that exists within the IG.
+   */
+  image?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * Indicates the relative path of an additional non-page, non-image file that is part of the IG - e.g. zip, jar and similar files that could be the target of a hyperlink in a derived IG.
+   */
+  other?: fhir.FhirString[]|string[]|undefined;
 }
 
 /**
  * Information about an assembled implementation guide, created by the publication tooling.
  */
-export class ImplementationGuideManifest extends fhir.BackboneElement implements IImplementationGuideManifest {
+export class ImplementationGuideManifest extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImplementationGuideManifest';
   /**
    * A pointer to official web page, PDF or other rendering of the implementation guide.
    */
-  public rendering?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.rendering
-   */
-  public _rendering?: fhir.FhirElement|undefined;
+  public rendering?: fhir.FhirUrl|undefined;
   /**
    * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
    */
-  public resource: fhir.ImplementationGuideManifestResource[]|null;
+  public resource: fhir.ImplementationGuideManifestResource[]|null = [];
   /**
    * Information about a page within the IG.
    */
-  public page?: fhir.ImplementationGuideManifestPage[]|undefined;
+  public page?: fhir.ImplementationGuideManifestPage[]|undefined = [];
   /**
    * Indicates a relative path to an image that exists within the IG.
    */
-  public image?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.image
-   */
-  public _image?: fhir.FhirElement[]|undefined;
+  public image?: fhir.FhirString[]|undefined = [];
   /**
    * Indicates the relative path of an additional non-page, non-image file that is part of the IG - e.g. zip, jar and similar files that could be the target of a hyperlink in a derived IG.
    */
-  public other?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.manifest.other
-   */
-  public _other?: fhir.FhirElement[]|undefined;
+  public other?: fhir.FhirString[]|undefined = [];
   /**
    * Default constructor for ImplementationGuideManifest - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImplementationGuideManifest> = { }) {
-    super(source);
-    if (source['rendering']) { this.rendering = source.rendering; }
-    if (source['_rendering']) { this._rendering = new fhir.FhirElement(source._rendering!); }
+  constructor(source:Partial<ImplementationGuideManifestArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['rendering']) { this.rendering = new fhir.FhirUrl({value: source.rendering}); }
     if (source['resource']) { this.resource = source.resource.map((x) => new fhir.ImplementationGuideManifestResource(x)); }
     else { this.resource = null; }
     if (source['page']) { this.page = source.page.map((x) => new fhir.ImplementationGuideManifestPage(x)); }
-    if (source['image']) { this.image = source.image.map((x) => (x)); }
-    if (source['_image']) { this._image = source._image.map((x) => new fhir.FhirElement(x)); }
-    if (source['other']) { this.other = source.other.map((x) => (x)); }
-    if (source['_other']) { this._other = source._other.map((x) => new fhir.FhirElement(x)); }
+    if (source['image']) { this.image = source.image.map((x) => new fhir.FhirString({value: x})); }
+    if (source['other']) { this.other = source.other.map((x) => new fhir.FhirString({value: x})); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_rendering"]) { results.push(...this._rendering.doModelValidation()); }
-    if ((!this["resource"]) || (this["resource"].length === 0)) { results.push(["resource",'Missing required element: ImplementationGuide.manifest.resource']); }
-    if (this["resource"]) { this.resource.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["page"]) { this.page.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_image"]) { this._image.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_other"]) { this._other.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["rendering"]) { outcome.issue!.push(...this.rendering.doModelValidation().issue!); }
+    if (!this['resource']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resource:fhir.ImplementationGuideManifestResource[] fhir: ImplementationGuide.manifest.resource:resource", }));
+    } else if (!Array.isArray(this.resource)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property resource:fhir.ImplementationGuideManifestResource[] fhir: ImplementationGuide.manifest.resource:resource", }));
+    } else if (this.resource.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resource:fhir.ImplementationGuideManifestResource[] fhir: ImplementationGuide.manifest.resource:resource", }));
+    }
+    if (this["resource"]) { this.resource.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["page"]) { this.page.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["image"]) { this.image.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["other"]) { this.other.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImplementationGuide type.
+ */
+export interface ImplementationGuideArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "ImplementationGuide"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url: fhir.FhirUri|string|undefined;
+  /**
+   * There may be different implementation guide instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the implementation guide with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * Allows filtering of implementation guides that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Allows filtering of implementation guides that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the implementation guide. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the implementation guide is the organization or individual primarily responsible for the maintenance and upkeep of the implementation guide. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the implementation guide. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the implementation guide was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the implementation guide as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the implementation guide is presumed to be the predominant language in the place the implementation guide was created).
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the implementation guide to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * A copyright statement relating to the implementation guide and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the implementation guide.
+   */
+  copyright?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Many (if not all) IG publishing tools will require that this element be present. For implementation guides published through HL7 or the FHIR foundation, the FHIR product director assigns package IDs.
+   */
+  packageId: fhir.FhirId|string|undefined;
+  /**
+   * The license that applies to this Implementation Guide, using an SPDX license code, or 'not-open-source'.
+   */
+  license?: fhir.FhirCode|string|undefined;
+  /**
+   * Most implementation guides target a single version - e.g. they describe how to use a particular version, and the profiles and examples etc are valid for that version. But some implementation guides describe how to use multiple different versions of FHIR to solve the same problem, or in concert with each other. Typically, the requirement to support multiple versions arises as implementation matures and different implementation communities are stuck at different versions by regulation or market dynamics.
+   */
+  fhirVersion: fhir.FhirCode[]|string[]|undefined;
+  /**
+   * Another implementation guide that this implementation depends on. Typically, an implementation guide uses value sets, profiles etc.defined in other implementation guides.
+   */
+  dependsOn?: fhir.ImplementationGuideDependsOnArgs[]|undefined;
+  /**
+   * See [Default Profiles](implementationguide.html#default) for a discussion of which resources are 'covered' by an implementation guide.
+   */
+  global?: fhir.ImplementationGuideGlobalArgs[]|undefined;
+  /**
+   * Principally, this consists of information abuot source resource and file locations, and build parameters and templates.
+   */
+  definition?: fhir.ImplementationGuideDefinitionArgs|undefined;
+  /**
+   * Information about an assembled implementation guide, created by the publication tooling.
+   */
+  manifest?: fhir.ImplementationGuideManifestArgs|undefined;
 }
 
 /**
  * A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
  */
-export class ImplementationGuide extends fhir.DomainResource implements IImplementationGuide {
+export class ImplementationGuide extends fhir.DomainResource {
+  readonly __dataType:string = 'ImplementationGuide';
   /**
    * Resource Type Name
    */
@@ -1194,127 +986,75 @@ export class ImplementationGuide extends fhir.DomainResource implements IImpleme
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url: fhir.FhirUri|null;
   /**
    * There may be different implementation guide instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the implementation guide with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * Allows filtering of implementation guides that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ImplementationGuide.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of implementation guides that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the implementation guide. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the implementation guide is the organization or individual primarily responsible for the maintenance and upkeep of the implementation guide. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the implementation guide. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the implementation guide was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the implementation guide as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the implementation guide is presumed to be the predominant language in the place the implementation guide was created).
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the implementation guide to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * A copyright statement relating to the implementation guide and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the implementation guide.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * Many (if not all) IG publishing tools will require that this element be present. For implementation guides published through HL7 or the FHIR foundation, the FHIR product director assigns package IDs.
    */
-  public packageId: string|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.packageId
-   */
-  public _packageId?: fhir.FhirElement|undefined;
+  public packageId: fhir.FhirId|null;
   /**
    * The license that applies to this Implementation Guide, using an SPDX license code, or 'not-open-source'.
    */
-  public license?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.license
-   */
-  public _license?: fhir.FhirElement|undefined;
+  public license?: fhir.FhirCode|undefined;
   /**
    * Most implementation guides target a single version - e.g. they describe how to use a particular version, and the profiles and examples etc are valid for that version. But some implementation guides describe how to use multiple different versions of FHIR to solve the same problem, or in concert with each other. Typically, the requirement to support multiple versions arises as implementation matures and different implementation communities are stuck at different versions by regulation or market dynamics.
    */
-  public fhirVersion: string[]|null;
-  /**
-   * Extended properties for primitive element: ImplementationGuide.fhirVersion
-   */
-  public _fhirVersion?: fhir.FhirElement[]|undefined;
+  public fhirVersion: fhir.FhirCode[]|null = [];
   /**
    * Another implementation guide that this implementation depends on. Typically, an implementation guide uses value sets, profiles etc.defined in other implementation guides.
    */
-  public dependsOn?: fhir.ImplementationGuideDependsOn[]|undefined;
+  public dependsOn?: fhir.ImplementationGuideDependsOn[]|undefined = [];
   /**
    * See [Default Profiles](implementationguide.html#default) for a discussion of which resources are 'covered' by an implementation guide.
    */
-  public global?: fhir.ImplementationGuideGlobal[]|undefined;
+  public global?: fhir.ImplementationGuideGlobal[]|undefined = [];
   /**
    * Principally, this consists of information abuot source resource and file locations, and build parameters and templates.
    */
@@ -1326,47 +1066,34 @@ export class ImplementationGuide extends fhir.DomainResource implements IImpleme
   /**
    * Default constructor for ImplementationGuide - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImplementationGuide> = { }) {
-    super(source);
+  constructor(source:Partial<ImplementationGuideArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'ImplementationGuide';
-    if (source['url']) { this.url = source.url; }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     else { this.url = null; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
-    if (source['packageId']) { this.packageId = source.packageId; }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
+    if (source['packageId']) { this.packageId = new fhir.FhirId({value: source.packageId}); }
     else { this.packageId = null; }
-    if (source['_packageId']) { this._packageId = new fhir.FhirElement(source._packageId!); }
-    if (source['license']) { this.license = source.license; }
-    if (source['_license']) { this._license = new fhir.FhirElement(source._license!); }
-    if (source['fhirVersion']) { this.fhirVersion = source.fhirVersion.map((x) => (x)); }
+    if (source['license']) { this.license = new fhir.FhirCode({value: source.license}); }
+    if (source['fhirVersion']) { this.fhirVersion = source.fhirVersion.map((x) => new fhir.FhirCode({value: x})); }
     else { this.fhirVersion = null; }
-    if (source['_fhirVersion']) { this._fhirVersion = source._fhirVersion.map((x) => new fhir.FhirElement(x)); }
     if (source['dependsOn']) { this.dependsOn = source.dependsOn.map((x) => new fhir.ImplementationGuideDependsOn(x)); }
     if (source['global']) { this.global = source.global.map((x) => new fhir.ImplementationGuideGlobal(x)); }
-    if (source['definition']) { this.definition = new fhir.ImplementationGuideDefinition(source.definition!); }
-    if (source['manifest']) { this.manifest = new fhir.ImplementationGuideManifest(source.manifest!); }
+    if (source['definition']) { this.definition = new fhir.ImplementationGuideDefinition(source.definition); }
+    if (source['manifest']) { this.manifest = new fhir.ImplementationGuideManifest(source.manifest); }
   }
   /**
    * Required-bound Value Set for status
@@ -1389,34 +1116,55 @@ export class ImplementationGuide extends fhir.DomainResource implements IImpleme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: ImplementationGuide.resourceType']); }
-    if (!this["url"]) { results.push(["url",'Missing required element: ImplementationGuide.url']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (!this["name"]) { results.push(["name",'Missing required element: ImplementationGuide.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: ImplementationGuide.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (!this["packageId"]) { results.push(["packageId",'Missing required element: ImplementationGuide.packageId']); }
-    if (this["_packageId"]) { results.push(...this._packageId.doModelValidation()); }
-    if (this["_license"]) { results.push(...this._license.doModelValidation()); }
-    if ((!this["fhirVersion"]) || (this["fhirVersion"].length === 0)) { results.push(["fhirVersion",'Missing required element: ImplementationGuide.fhirVersion']); }
-    if (this["_fhirVersion"]) { this._fhirVersion.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["dependsOn"]) { this.dependsOn.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["global"]) { this.global.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["definition"]) { results.push(...this.definition.doModelValidation()); }
-    if (this["manifest"]) { results.push(...this.manifest.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'ImplementationGuide' fhir: ImplementationGuide.resourceType:'ImplementationGuide'", }));
+    }
+    if (!this['url']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property url:fhir.FhirUri fhir: ImplementationGuide.url:uri", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: ImplementationGuide.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: ImplementationGuide.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (!this['packageId']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property packageId:fhir.FhirId fhir: ImplementationGuide.packageId:id", }));
+    }
+    if (this["packageId"]) { outcome.issue!.push(...this.packageId.doModelValidation().issue!); }
+    if (this["license"]) { outcome.issue!.push(...this.license.doModelValidation().issue!); }
+    if (!this['fhirVersion']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property fhirVersion:fhir.FhirCode[] fhir: ImplementationGuide.fhirVersion:code", }));
+    } else if (!Array.isArray(this.fhirVersion)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property fhirVersion:fhir.FhirCode[] fhir: ImplementationGuide.fhirVersion:code", }));
+    } else if (this.fhirVersion.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property fhirVersion:fhir.FhirCode[] fhir: ImplementationGuide.fhirVersion:code", }));
+    }
+    if (this["fhirVersion"]) { this.fhirVersion.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["dependsOn"]) { this.dependsOn.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["global"]) { this.global.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["definition"]) { outcome.issue!.push(...this.definition.doModelValidation().issue!); }
+    if (this["manifest"]) { outcome.issue!.push(...this.manifest.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

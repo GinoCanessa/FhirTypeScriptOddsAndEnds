@@ -3,17 +3,18 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ServiceRequest
 import * as fhir from '../fhir.js';
-import { RequestStatusValueSet } from '../fhirValueSets/RequestStatusValueSet.js';
-import { RequestIntentValueSet } from '../fhirValueSets/RequestIntentValueSet.js';
-import { ServicerequestCategoryValueSet } from '../fhirValueSets/ServicerequestCategoryValueSet.js';
-import { RequestPriorityValueSet } from '../fhirValueSets/RequestPriorityValueSet.js';
-import { ProcedureCodeValueSet } from '../fhirValueSets/ProcedureCodeValueSet.js';
-import { ServicerequestOrderdetailValueSet } from '../fhirValueSets/ServicerequestOrderdetailValueSet.js';
-import { MedicationAsNeededReasonValueSet } from '../fhirValueSets/MedicationAsNeededReasonValueSet.js';
-import { ParticipantRoleValueSet } from '../fhirValueSets/ParticipantRoleValueSet.js';
-import { V3ServiceDeliveryLocationRoleTypeValueSet } from '../fhirValueSets/V3ServiceDeliveryLocationRoleTypeValueSet.js';
-import { ProcedureReasonValueSet } from '../fhirValueSets/ProcedureReasonValueSet.js';
-import { BodySiteValueSet } from '../fhirValueSets/BodySiteValueSet.js';
+import { RequestStatusValueSet, } from '../fhirValueSets/RequestStatusValueSet.js';
+import { RequestIntentValueSet, } from '../fhirValueSets/RequestIntentValueSet.js';
+import { ServicerequestCategoryValueSet, } from '../fhirValueSets/ServicerequestCategoryValueSet.js';
+import { RequestPriorityValueSet, } from '../fhirValueSets/RequestPriorityValueSet.js';
+import { ProcedureCodeValueSet, } from '../fhirValueSets/ProcedureCodeValueSet.js';
+import { ServicerequestOrderdetailValueSet, } from '../fhirValueSets/ServicerequestOrderdetailValueSet.js';
+import { ParticipantRoleValueSet, } from '../fhirValueSets/ParticipantRoleValueSet.js';
+import { V3ServiceDeliveryLocationRoleTypeValueSet, } from '../fhirValueSets/V3ServiceDeliveryLocationRoleTypeValueSet.js';
+import { ProcedureReasonValueSet, } from '../fhirValueSets/ProcedureReasonValueSet.js';
+import { BodySiteValueSet, } from '../fhirValueSets/BodySiteValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.
  */
@@ -21,23 +22,95 @@ export class ServiceRequest extends fhir.DomainResource {
     /**
      * Default constructor for ServiceRequest - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ServiceRequest';
+        /**
+         * The identifier.type element is used to distinguish between the identifiers assigned by the orderer (known as the 'Placer' in HL7 v2) and the producer of the observations in response to the order (known as the 'Filler' in HL7 v2).  For further discussion and examples see the resource notes section below.
+         */
+        this.identifier = [];
+        /**
+         * Note: This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+         */
+        this.instantiatesCanonical = [];
+        /**
+         * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
+         */
+        this.instantiatesUri = [];
+        /**
+         * Plan/proposal/order fulfilled by this request.
+         */
+        this.basedOn = [];
+        /**
+         * The request takes the place of the referenced completed or terminated request(s).
+         */
+        this.replaces = [];
+        /**
+         * There may be multiple axis of categorization depending on the context or use case for retrieving or displaying the resource.  The level of granularity is defined by the category concepts in the value set.
+         */
+        this.category = [];
+        /**
+         * For information from the medical record intended to support the delivery of the requested services, use the `supportingInformation` element.
+         */
+        this.orderDetail = [];
+        this.__quantityIsChoice = true;
+        this.__occurrenceIsChoice = true;
+        this.__asNeededIsChoice = true;
+        /**
+         * If multiple performers are present, it is interpreted as a list of *alternative* performers without any preference regardless of order.  If order of preference is needed use the [request-performerOrder extension](extension-request-performerorder.html).  Use CareTeam to represent a group of performers (for example, Practitioner A *and* Practitioner B).
+         */
+        this.performer = [];
+        /**
+         * The preferred location(s) where the procedure should actually happen in coded or free text form. E.g. at home or nursing day care center.
+         */
+        this.locationCode = [];
+        /**
+         * A reference to the the preferred location(s) where the procedure should actually happen. E.g. at home or nursing day care center.
+         */
+        this.locationReference = [];
+        /**
+         * This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.   Use `CodeableConcept.text` element if the data is free (uncoded) text as shown in the [CT Scan example](servicerequest-example-di.html).
+         */
+        this.reasonCode = [];
+        /**
+         * This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.    To be as specific as possible,  a reference to  *Observation* or *Condition* should be used if available.  Otherwise when referencing  *DiagnosticReport*  it should contain a finding  in `DiagnosticReport.conclusion` and/or `DiagnosticReport.conclusionCode`.   When using a reference to *DocumentReference*, the target document should contain clear findings language providing the relevant reason for this service request.  Use  the CodeableConcept text element in `ServiceRequest.reasonCode` if the data is free (uncoded) text as shown in the [CT Scan example](servicerequest-example-di.html).
+         */
+        this.reasonReference = [];
+        /**
+         * Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be needed for delivering the requested service.
+         */
+        this.insurance = [];
+        /**
+         * To represent information about how the services are to be delivered use the `instructions` element.
+         */
+        this.supportingInfo = [];
+        /**
+         * Many diagnostic procedures need a specimen, but the request itself is not actually about the specimen. This element is for when the diagnostic is requested on already existing specimens and the request points to the specimen it applies to.    Conversely, if the request is entered first with an unknown specimen, then the [Specimen](specimen.html) resource points to the ServiceRequest.
+         */
+        this.specimen = [];
+        /**
+         * Only used if not implicit in the code found in ServiceRequest.code.  If the use case requires BodySite to be handled as a separate resource instead of an inline coded element (e.g. to identify and track separately)  then use the standard extension [procedure-targetBodyStructure](extension-procedure-targetbodystructure.html).
+         */
+        this.bodySite = [];
+        /**
+         * Any other notes and comments made about the service request. For example, internal billing notes.
+         */
+        this.note = [];
+        /**
+         * This might not include provenances for all versions of the request – only those deemed “relevant” or important.
+         * This SHALL NOT include the Provenance associated with this current version of the resource.  (If that provenance is deemed to be a “relevant” change, it will need to be added as part of a later update.  Until then, it can be queried directly as the Provenance that points to this version using _revinclude
+         * All Provenances should have some historical version of this Request as their subject.
+         */
+        this.relevantHistory = [];
         this.resourceType = 'ServiceRequest';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['instantiatesCanonical']) {
-            this.instantiatesCanonical = source.instantiatesCanonical.map((x) => (x));
-        }
-        if (source['_instantiatesCanonical']) {
-            this._instantiatesCanonical = source._instantiatesCanonical.map((x) => new fhir.FhirElement(x));
+            this.instantiatesCanonical = source.instantiatesCanonical.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['instantiatesUri']) {
-            this.instantiatesUri = source.instantiatesUri.map((x) => (x));
-        }
-        if (source['_instantiatesUri']) {
-            this._instantiatesUri = source._instantiatesUri.map((x) => new fhir.FhirElement(x));
+            this.instantiatesUri = source.instantiatesUri.map((x) => new fhir.FhirUri({ value: x }));
         }
         if (source['basedOn']) {
             this.basedOn = source.basedOn.map((x) => new fhir.Reference(x));
@@ -54,17 +127,11 @@ export class ServiceRequest extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['intent']) {
             this.intent = source.intent;
         }
         else {
             this.intent = null;
-        }
-        if (source['_intent']) {
-            this._intent = new fhir.FhirElement(source._intent);
         }
         if (source['category']) {
             this.category = source.category.map((x) => new fhir.CodeableConcept(x));
@@ -72,14 +139,8 @@ export class ServiceRequest extends fhir.DomainResource {
         if (source['priority']) {
             this.priority = source.priority;
         }
-        if (source['_priority']) {
-            this._priority = new fhir.FhirElement(source._priority);
-        }
         if (source['doNotPerform']) {
-            this.doNotPerform = source.doNotPerform;
-        }
-        if (source['_doNotPerform']) {
-            this._doNotPerform = new fhir.FhirElement(source._doNotPerform);
+            this.doNotPerform = new fhir.FhirBoolean({ value: source.doNotPerform });
         }
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
@@ -87,14 +148,17 @@ export class ServiceRequest extends fhir.DomainResource {
         if (source['orderDetail']) {
             this.orderDetail = source.orderDetail.map((x) => new fhir.CodeableConcept(x));
         }
-        if (source['quantityQuantity']) {
-            this.quantityQuantity = new fhir.Quantity(source.quantityQuantity);
+        if (source['quantity']) {
+            this.quantity = source.quantity;
         }
-        if (source['quantityRatio']) {
-            this.quantityRatio = new fhir.Ratio(source.quantityRatio);
+        else if (source['quantityQuantity']) {
+            this.quantity = new fhir.Quantity(source.quantityQuantity);
         }
-        if (source['quantityRange']) {
-            this.quantityRange = new fhir.Range(source.quantityRange);
+        else if (source['quantityRatio']) {
+            this.quantity = new fhir.Ratio(source.quantityRatio);
+        }
+        else if (source['quantityRange']) {
+            this.quantity = new fhir.Range(source.quantityRange);
         }
         if (source['subject']) {
             this.subject = new fhir.Reference(source.subject);
@@ -105,32 +169,29 @@ export class ServiceRequest extends fhir.DomainResource {
         if (source['encounter']) {
             this.encounter = new fhir.Reference(source.encounter);
         }
-        if (source['occurrenceDateTime']) {
-            this.occurrenceDateTime = source.occurrenceDateTime;
+        if (source['occurrence']) {
+            this.occurrence = source.occurrence;
         }
-        if (source['_occurrenceDateTime']) {
-            this._occurrenceDateTime = new fhir.FhirElement(source._occurrenceDateTime);
+        else if (source['occurrenceDateTime']) {
+            this.occurrence = new fhir.FhirDateTime({ value: source.occurrenceDateTime });
         }
-        if (source['occurrencePeriod']) {
-            this.occurrencePeriod = new fhir.Period(source.occurrencePeriod);
+        else if (source['occurrencePeriod']) {
+            this.occurrence = new fhir.Period(source.occurrencePeriod);
         }
-        if (source['occurrenceTiming']) {
-            this.occurrenceTiming = new fhir.Timing(source.occurrenceTiming);
+        else if (source['occurrenceTiming']) {
+            this.occurrence = new fhir.Timing(source.occurrenceTiming);
         }
-        if (source['asNeededBoolean']) {
-            this.asNeededBoolean = source.asNeededBoolean;
+        if (source['asNeeded']) {
+            this.asNeeded = source.asNeeded;
         }
-        if (source['_asNeededBoolean']) {
-            this._asNeededBoolean = new fhir.FhirElement(source._asNeededBoolean);
+        else if (source['asNeededBoolean']) {
+            this.asNeeded = new fhir.FhirBoolean({ value: source.asNeededBoolean });
         }
-        if (source['asNeededCodeableConcept']) {
-            this.asNeededCodeableConcept = new fhir.CodeableConcept(source.asNeededCodeableConcept);
+        else if (source['asNeededCodeableConcept']) {
+            this.asNeeded = new fhir.CodeableConcept(source.asNeededCodeableConcept);
         }
         if (source['authoredOn']) {
-            this.authoredOn = source.authoredOn;
-        }
-        if (source['_authoredOn']) {
-            this._authoredOn = new fhir.FhirElement(source._authoredOn);
+            this.authoredOn = new fhir.FhirDateTime({ value: source.authoredOn });
         }
         if (source['requester']) {
             this.requester = new fhir.Reference(source.requester);
@@ -169,10 +230,7 @@ export class ServiceRequest extends fhir.DomainResource {
             this.note = source.note.map((x) => new fhir.Annotation(x));
         }
         if (source['patientInstruction']) {
-            this.patientInstruction = source.patientInstruction;
-        }
-        if (source['_patientInstruction']) {
-            this._patientInstruction = new fhir.FhirElement(source._patientInstruction);
+            this.patientInstruction = new fhir.FhirString({ value: source.patientInstruction });
         }
         if (source['relevantHistory']) {
             this.relevantHistory = source.relevantHistory.map((x) => new fhir.Reference(x));
@@ -215,18 +273,6 @@ export class ServiceRequest extends fhir.DomainResource {
         return ServicerequestOrderdetailValueSet;
     }
     /**
-     * Example-bound Value Set for asNeededBoolean
-     */
-    static asNeededBooleanExampleValueSet() {
-        return MedicationAsNeededReasonValueSet;
-    }
-    /**
-     * Example-bound Value Set for asNeededCodeableConcept
-     */
-    static asNeededCodeableConceptExampleValueSet() {
-        return MedicationAsNeededReasonValueSet;
-    }
-    /**
      * Example-bound Value Set for performerType
      */
     static performerTypeExampleValueSet() {
@@ -254,134 +300,107 @@ export class ServiceRequest extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: ServiceRequest.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'ServiceRequest' fhir: ServiceRequest.resourceType:'ServiceRequest'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instantiatesCanonical"]) {
-            this._instantiatesCanonical.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["instantiatesCanonical"]) {
+            this.instantiatesCanonical.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instantiatesUri"]) {
-            this._instantiatesUri.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["instantiatesUri"]) {
+            this.instantiatesUri.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["replaces"]) {
-            this.replaces.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.replaces.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["requisition"]) {
-            results.push(...this.requisition.doModelValidation());
+            outcome.issue.push(...this.requisition.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: ServiceRequest.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:RequestStatusValueSetEnum fhir: ServiceRequest.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
-        }
-        if (!this["intent"]) {
-            results.push(["intent", 'Missing required element: ServiceRequest.intent']);
-        }
-        if (this["_intent"]) {
-            results.push(...this._intent.doModelValidation());
+        if (!this['intent']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property intent:RequestIntentValueSetEnum fhir: ServiceRequest.intent:code", }));
         }
         if (this["category"]) {
-            this.category.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.category.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_priority"]) {
-            results.push(...this._priority.doModelValidation());
-        }
-        if (this["_doNotPerform"]) {
-            results.push(...this._doNotPerform.doModelValidation());
+        if (this["doNotPerform"]) {
+            outcome.issue.push(...this.doNotPerform.doModelValidation().issue);
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["orderDetail"]) {
-            this.orderDetail.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.orderDetail.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["quantityQuantity"]) {
-            results.push(...this.quantityQuantity.doModelValidation());
-        }
-        if (this["quantityRatio"]) {
-            results.push(...this.quantityRatio.doModelValidation());
-        }
-        if (this["quantityRange"]) {
-            results.push(...this.quantityRange.doModelValidation());
-        }
-        if (!this["subject"]) {
-            results.push(["subject", 'Missing required element: ServiceRequest.subject']);
+        if (!this['subject']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property subject:fhir.Reference fhir: ServiceRequest.subject:Reference", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_occurrenceDateTime"]) {
-            results.push(...this._occurrenceDateTime.doModelValidation());
-        }
-        if (this["occurrencePeriod"]) {
-            results.push(...this.occurrencePeriod.doModelValidation());
-        }
-        if (this["occurrenceTiming"]) {
-            results.push(...this.occurrenceTiming.doModelValidation());
-        }
-        if (this["_asNeededBoolean"]) {
-            results.push(...this._asNeededBoolean.doModelValidation());
-        }
-        if (this["asNeededCodeableConcept"]) {
-            results.push(...this.asNeededCodeableConcept.doModelValidation());
-        }
-        if (this["_authoredOn"]) {
-            results.push(...this._authoredOn.doModelValidation());
+        if (this["authoredOn"]) {
+            outcome.issue.push(...this.authoredOn.doModelValidation().issue);
         }
         if (this["requester"]) {
-            results.push(...this.requester.doModelValidation());
+            outcome.issue.push(...this.requester.doModelValidation().issue);
         }
         if (this["performerType"]) {
-            results.push(...this.performerType.doModelValidation());
+            outcome.issue.push(...this.performerType.doModelValidation().issue);
         }
         if (this["performer"]) {
-            this.performer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.performer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["locationCode"]) {
-            this.locationCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.locationCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["locationReference"]) {
-            this.locationReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.locationReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["insurance"]) {
-            this.insurance.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.insurance.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["supportingInfo"]) {
-            this.supportingInfo.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.supportingInfo.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["specimen"]) {
-            this.specimen.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.specimen.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["bodySite"]) {
-            this.bodySite.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.bodySite.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_patientInstruction"]) {
-            results.push(...this._patientInstruction.doModelValidation());
+        if (this["patientInstruction"]) {
+            outcome.issue.push(...this.patientInstruction.doModelValidation().issue);
         }
         if (this["relevantHistory"]) {
-            this.relevantHistory.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relevantHistory.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ServiceRequest.js.map

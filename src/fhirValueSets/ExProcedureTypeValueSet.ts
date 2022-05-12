@@ -35,13 +35,3 @@ export type ExProcedureTypeValueSetType = typeof ExProcedureTypeValueSet;
 /**
  * This value set includes example Procedure Type codes.
  */
-export enum ExProcedureTypeValueSetEnum {
-  /**
-   * primary: The first procedure in a series required to produce and overall patient outcome.
-   */
-  PrimaryProcedure = "primary",
-  /**
-   * secondary: The second procedure in a series required to produce and overall patient outcome.
-   */
-  SecondaryProcedure = "secondary",
-}

@@ -83,43 +83,4 @@ export const EnteralRouteValueSet = {
 /**
  * EnteralRouteOfAdministration: Codes specifying the route of administration of enteral formula.  This value set is composed of HL7 V3 codes and is provided as a suggestive example.
  */
-export var EnteralRouteValueSetEnum;
-(function (EnteralRouteValueSetEnum) {
-    /**
-     * EFT: Instillation, enteral feeding tube
-     */
-    EnteralRouteValueSetEnum["InstillationEnteralFeedingTube"] = "EFT";
-    /**
-     * ENTINSTL: Instillation, enteral
-     */
-    EnteralRouteValueSetEnum["InstillationEnteral"] = "ENTINSTL";
-    /**
-     * GJT: Instillation, gastro-jejunostomy tube
-     */
-    EnteralRouteValueSetEnum["InstillationGastroJejunostomyTube"] = "GJT";
-    /**
-     * GT: Instillation, gastrostomy tube
-     */
-    EnteralRouteValueSetEnum["InstillationGastrostomyTube"] = "GT";
-    /**
-     * JJTINSTL: Instillation, jejunostomy tube
-     */
-    EnteralRouteValueSetEnum["InstillationJejunostomyTube"] = "JJTINSTL";
-    /**
-     * NGT: Instillation, nasogastric tube
-     */
-    EnteralRouteValueSetEnum["InstillationNasogastricTube"] = "NGT";
-    /**
-     * OGT: Instillation, orogastric tube
-     */
-    EnteralRouteValueSetEnum["InstillationOrogastricTube"] = "OGT";
-    /**
-     * OJJ: Instillation, orojejunum tube
-     */
-    EnteralRouteValueSetEnum["InstillationOrojejunumTube"] = "OJJ";
-    /**
-     * PO: Swallow, oral
-     */
-    EnteralRouteValueSetEnum["SwallowOral"] = "PO";
-})(EnteralRouteValueSetEnum || (EnteralRouteValueSetEnum = {}));
 //# sourceMappingURL=EnteralRouteValueSet.js.map

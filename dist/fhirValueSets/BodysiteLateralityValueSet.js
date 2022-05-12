@@ -35,19 +35,4 @@ export const BodysiteLateralityValueSet = {
 /**
  * Laterality: SNOMED-CT concepts for 'left', 'right', and 'bilateral'
  */
-export var BodysiteLateralityValueSetEnum;
-(function (BodysiteLateralityValueSetEnum) {
-    /**
-     * Code: 419161000
-     */
-    BodysiteLateralityValueSetEnum["UnilateralLeft"] = "419161000";
-    /**
-     * Code: 419465000
-     */
-    BodysiteLateralityValueSetEnum["UnilateralRight"] = "419465000";
-    /**
-     * Code: 51440002
-     */
-    BodysiteLateralityValueSetEnum["Bilateral"] = "51440002";
-})(BodysiteLateralityValueSetEnum || (BodysiteLateralityValueSetEnum = {}));
 //# sourceMappingURL=BodysiteLateralityValueSet.js.map

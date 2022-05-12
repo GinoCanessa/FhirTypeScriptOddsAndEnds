@@ -59,31 +59,4 @@ export const HttpVerbValueSet = {
 /**
  * HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.
  */
-export var HttpVerbValueSetEnum;
-(function (HttpVerbValueSetEnum) {
-    /**
-     * DELETE: HTTP DELETE Command.
-     */
-    HttpVerbValueSetEnum["DELETE"] = "DELETE";
-    /**
-     * GET: HTTP GET Command.
-     */
-    HttpVerbValueSetEnum["GET"] = "GET";
-    /**
-     * HEAD: HTTP HEAD Command.
-     */
-    HttpVerbValueSetEnum["HEAD"] = "HEAD";
-    /**
-     * PATCH: HTTP PATCH Command.
-     */
-    HttpVerbValueSetEnum["PATCH"] = "PATCH";
-    /**
-     * POST: HTTP POST Command.
-     */
-    HttpVerbValueSetEnum["POST"] = "POST";
-    /**
-     * PUT: HTTP PUT Command.
-     */
-    HttpVerbValueSetEnum["PUT"] = "PUT";
-})(HttpVerbValueSetEnum || (HttpVerbValueSetEnum = {}));
 //# sourceMappingURL=HttpVerbValueSet.js.map

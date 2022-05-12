@@ -1,287 +1,50 @@
 import * as fhir from '../fhir.js';
-import { ReportParticipantTypeValueSetType, ReportParticipantTypeValueSetEnum } from '../fhirValueSets/ReportParticipantTypeValueSet.js';
-import { ReportActionResultCodesValueSetType, ReportActionResultCodesValueSetEnum } from '../fhirValueSets/ReportActionResultCodesValueSet.js';
-import { ReportStatusCodesValueSetType, ReportStatusCodesValueSetEnum } from '../fhirValueSets/ReportStatusCodesValueSet.js';
-import { ReportResultCodesValueSetType, ReportResultCodesValueSetEnum } from '../fhirValueSets/ReportResultCodesValueSet.js';
+import { ReportParticipantTypeValueSetType } from '../fhirValueSets/ReportParticipantTypeValueSet.js';
+import { ReportParticipantTypeValueSetEnum } from '../valueSetEnums.js';
+import { ReportActionResultCodesValueSetType } from '../fhirValueSets/ReportActionResultCodesValueSet.js';
+import { ReportActionResultCodesValueSetEnum } from '../valueSetEnums.js';
+import { ReportStatusCodesValueSetType } from '../fhirValueSets/ReportStatusCodesValueSet.js';
+import { ReportStatusCodesValueSetEnum } from '../valueSetEnums.js';
+import { ReportResultCodesValueSetType } from '../fhirValueSets/ReportResultCodesValueSet.js';
+import { ReportResultCodesValueSetEnum } from '../valueSetEnums.js';
 /**
- * A participant in the test execution, either the execution engine, a client, or a server.
+ * Valid arguments for the TestReportParticipant type.
  */
-export declare type ITestReportParticipant = fhir.IBackboneElement & {
+export interface TestReportParticipantArgs extends fhir.BackboneElementArgs {
     /**
      * The type of participant.
      */
     type: ReportParticipantTypeValueSetEnum | null;
     /**
-     * Extended properties for primitive element: TestReport.participant.type
-     */
-    _type?: fhir.IFhirElement | undefined;
-    /**
      * The uri of the participant. An absolute URL is preferred.
      */
-    uri: string | null;
-    /**
-     * Extended properties for primitive element: TestReport.participant.uri
-     */
-    _uri?: fhir.IFhirElement | undefined;
+    uri: fhir.FhirUri | string | undefined;
     /**
      * The display name of the participant.
      */
-    display?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.participant.display
-     */
-    _display?: fhir.IFhirElement | undefined;
-};
-/**
- * The operation performed.
- */
-export declare type ITestReportSetupActionOperation = fhir.IBackboneElement & {
-    /**
-     * The result of this operation.
-     */
-    result: ReportActionResultCodesValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: TestReport.setup.action.operation.result
-     */
-    _result?: fhir.IFhirElement | undefined;
-    /**
-     * An explanatory message associated with the result.
-     */
-    message?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.setup.action.operation.message
-     */
-    _message?: fhir.IFhirElement | undefined;
-    /**
-     * A link to further details on the result.
-     */
-    detail?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.setup.action.operation.detail
-     */
-    _detail?: fhir.IFhirElement | undefined;
-};
-/**
- * The results of the assertion performed on the previous operations.
- */
-export declare type ITestReportSetupActionAssert = fhir.IBackboneElement & {
-    /**
-     * The result of this assertion.
-     */
-    result: ReportActionResultCodesValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: TestReport.setup.action.assert.result
-     */
-    _result?: fhir.IFhirElement | undefined;
-    /**
-     * An explanatory message associated with the result.
-     */
-    message?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.setup.action.assert.message
-     */
-    _message?: fhir.IFhirElement | undefined;
-    /**
-     * A link to further details on the result.
-     */
-    detail?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.setup.action.assert.detail
-     */
-    _detail?: fhir.IFhirElement | undefined;
-};
-/**
- * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
- */
-export declare type ITestReportSetupAction = fhir.IBackboneElement & {
-    /**
-     * The operation performed.
-     */
-    operation?: fhir.ITestReportSetupActionOperation | undefined;
-    /**
-     * The results of the assertion performed on the previous operations.
-     */
-    assert?: fhir.ITestReportSetupActionAssert | undefined;
-};
-/**
- * The results of the series of required setup operations before the tests were executed.
- */
-export declare type ITestReportSetup = fhir.IBackboneElement & {
-    /**
-     * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
-     */
-    action: fhir.ITestReportSetupAction[] | null;
-};
-/**
- * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
- */
-export declare type ITestReportTestAction = fhir.IBackboneElement & {
-    /**
-     * An operation would involve a REST request to a server.
-     */
-    operation?: fhir.ITestReportSetupActionOperation | undefined;
-    /**
-     * The results of the assertion performed on the previous operations.
-     */
-    assert?: fhir.ITestReportSetupActionAssert | undefined;
-};
-/**
- * A test executed from the test script.
- */
-export declare type ITestReportTest = fhir.IBackboneElement & {
-    /**
-     * The name of this test used for tracking/logging purposes by test engines.
-     */
-    name?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.test.name
-     */
-    _name?: fhir.IFhirElement | undefined;
-    /**
-     * A short description of the test used by test engines for tracking and reporting purposes.
-     */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.test.description
-     */
-    _description?: fhir.IFhirElement | undefined;
-    /**
-     * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
-     */
-    action: fhir.ITestReportTestAction[] | null;
-};
-/**
- * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
- */
-export declare type ITestReportTeardownAction = fhir.IBackboneElement & {
-    /**
-     * An operation would involve a REST request to a server.
-     */
-    operation: fhir.ITestReportSetupActionOperation | null;
-};
-/**
- * The results of the series of operations required to clean up after all the tests were executed (successfully or otherwise).
- */
-export declare type ITestReportTeardown = fhir.IBackboneElement & {
-    /**
-     * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
-     */
-    action: fhir.ITestReportTeardownAction[] | null;
-};
-/**
- * A summary of information based on the results of executing a TestScript.
- */
-export declare type ITestReport = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "TestReport";
-    /**
-     * Identifier for the TestScript assigned for external purposes outside the context of FHIR.
-     */
-    identifier?: fhir.IIdentifier | undefined;
-    /**
-     * Not expected to be globally unique.
-     */
-    name?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.name
-     */
-    _name?: fhir.IFhirElement | undefined;
-    /**
-     * The status represents where the execution is currently within the test script execution life cycle.
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-     */
-    status: ReportStatusCodesValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: TestReport.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * Ideally this is an absolute URL that is used to identify the version-specific TestScript that was executed, matching the `TestScript.url`.
-     */
-    testScript: fhir.IReference | null;
-    /**
-     * The pass and fail result represents a completed test script execution. The pending result represents a test script execution that has not yet started or is currently in progress.
-     */
-    result: ReportResultCodesValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: TestReport.result
-     */
-    _result?: fhir.IFhirElement | undefined;
-    /**
-     * The final score (percentage of tests passed) resulting from the execution of the TestScript.
-     */
-    score?: number | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.score
-     */
-    _score?: fhir.IFhirElement | undefined;
-    /**
-     * Usually an organization, but may be an individual. This item SHOULD be populated unless the information is available from context.
-     */
-    tester?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.tester
-     */
-    _tester?: fhir.IFhirElement | undefined;
-    /**
-     * Additional specific dates may be added as extensions.
-     */
-    issued?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.issued
-     */
-    _issued?: fhir.IFhirElement | undefined;
-    /**
-     * A participant in the test execution, either the execution engine, a client, or a server.
-     */
-    participant?: fhir.ITestReportParticipant[] | undefined;
-    /**
-     * The results of the series of required setup operations before the tests were executed.
-     */
-    setup?: fhir.ITestReportSetup | undefined;
-    /**
-     * A test executed from the test script.
-     */
-    test?: fhir.ITestReportTest[] | undefined;
-    /**
-     * The results of the series of operations required to clean up after all the tests were executed (successfully or otherwise).
-     */
-    teardown?: fhir.ITestReportTeardown | undefined;
-};
+    display?: fhir.FhirString | string | undefined;
+}
 /**
  * A participant in the test execution, either the execution engine, a client, or a server.
  */
-export declare class TestReportParticipant extends fhir.BackboneElement implements ITestReportParticipant {
+export declare class TestReportParticipant extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The type of participant.
      */
     type: ReportParticipantTypeValueSetEnum | null;
     /**
-     * Extended properties for primitive element: TestReport.participant.type
-     */
-    _type?: fhir.FhirElement | undefined;
-    /**
      * The uri of the participant. An absolute URL is preferred.
      */
-    uri: string | null;
-    /**
-     * Extended properties for primitive element: TestReport.participant.uri
-     */
-    _uri?: fhir.FhirElement | undefined;
+    uri: fhir.FhirUri | null;
     /**
      * The display name of the participant.
      */
-    display?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.participant.display
-     */
-    _display?: fhir.FhirElement | undefined;
+    display?: fhir.FhirString | undefined;
     /**
      * Default constructor for TestReportParticipant - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITestReportParticipant>);
+    constructor(source?: Partial<TestReportParticipantArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for type
      */
@@ -289,40 +52,50 @@ export declare class TestReportParticipant extends fhir.BackboneElement implemen
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 /**
- * The operation performed.
+ * Valid arguments for the TestReportSetupActionOperation type.
  */
-export declare class TestReportSetupActionOperation extends fhir.BackboneElement implements ITestReportSetupActionOperation {
+export interface TestReportSetupActionOperationArgs extends fhir.BackboneElementArgs {
     /**
      * The result of this operation.
      */
     result: ReportActionResultCodesValueSetEnum | null;
     /**
-     * Extended properties for primitive element: TestReport.setup.action.operation.result
-     */
-    _result?: fhir.FhirElement | undefined;
-    /**
      * An explanatory message associated with the result.
      */
-    message?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.setup.action.operation.message
-     */
-    _message?: fhir.FhirElement | undefined;
+    message?: fhir.FhirMarkdown | string | undefined;
     /**
      * A link to further details on the result.
      */
-    detail?: string | undefined;
+    detail?: fhir.FhirUri | string | undefined;
+}
+/**
+ * The operation performed.
+ */
+export declare class TestReportSetupActionOperation extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
-     * Extended properties for primitive element: TestReport.setup.action.operation.detail
+     * The result of this operation.
      */
-    _detail?: fhir.FhirElement | undefined;
+    result: ReportActionResultCodesValueSetEnum | null;
+    /**
+     * An explanatory message associated with the result.
+     */
+    message?: fhir.FhirMarkdown | undefined;
+    /**
+     * A link to further details on the result.
+     */
+    detail?: fhir.FhirUri | undefined;
     /**
      * Default constructor for TestReportSetupActionOperation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITestReportSetupActionOperation>);
+    constructor(source?: Partial<TestReportSetupActionOperationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for result
      */
@@ -330,40 +103,50 @@ export declare class TestReportSetupActionOperation extends fhir.BackboneElement
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 /**
- * The results of the assertion performed on the previous operations.
+ * Valid arguments for the TestReportSetupActionAssert type.
  */
-export declare class TestReportSetupActionAssert extends fhir.BackboneElement implements ITestReportSetupActionAssert {
+export interface TestReportSetupActionAssertArgs extends fhir.BackboneElementArgs {
     /**
      * The result of this assertion.
      */
     result: ReportActionResultCodesValueSetEnum | null;
     /**
-     * Extended properties for primitive element: TestReport.setup.action.assert.result
-     */
-    _result?: fhir.FhirElement | undefined;
-    /**
      * An explanatory message associated with the result.
      */
-    message?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.setup.action.assert.message
-     */
-    _message?: fhir.FhirElement | undefined;
+    message?: fhir.FhirMarkdown | string | undefined;
     /**
      * A link to further details on the result.
      */
-    detail?: string | undefined;
+    detail?: fhir.FhirString | string | undefined;
+}
+/**
+ * The results of the assertion performed on the previous operations.
+ */
+export declare class TestReportSetupActionAssert extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
-     * Extended properties for primitive element: TestReport.setup.action.assert.detail
+     * The result of this assertion.
      */
-    _detail?: fhir.FhirElement | undefined;
+    result: ReportActionResultCodesValueSetEnum | null;
+    /**
+     * An explanatory message associated with the result.
+     */
+    message?: fhir.FhirMarkdown | undefined;
+    /**
+     * A link to further details on the result.
+     */
+    detail?: fhir.FhirString | undefined;
     /**
      * Default constructor for TestReportSetupActionAssert - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITestReportSetupActionAssert>);
+    constructor(source?: Partial<TestReportSetupActionAssertArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for result
      */
@@ -371,12 +154,30 @@ export declare class TestReportSetupActionAssert extends fhir.BackboneElement im
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the TestReportSetupAction type.
+ */
+export interface TestReportSetupActionArgs extends fhir.BackboneElementArgs {
+    /**
+     * The operation performed.
+     */
+    operation?: fhir.TestReportSetupActionOperationArgs | undefined;
+    /**
+     * The results of the assertion performed on the previous operations.
+     */
+    assert?: fhir.TestReportSetupActionAssertArgs | undefined;
 }
 /**
  * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
  */
-export declare class TestReportSetupAction extends fhir.BackboneElement implements ITestReportSetupAction {
+export declare class TestReportSetupAction extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The operation performed.
      */
@@ -388,16 +189,30 @@ export declare class TestReportSetupAction extends fhir.BackboneElement implemen
     /**
      * Default constructor for TestReportSetupAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITestReportSetupAction>);
+    constructor(source?: Partial<TestReportSetupActionArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the TestReportSetup type.
+ */
+export interface TestReportSetupArgs extends fhir.BackboneElementArgs {
+    /**
+     * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
+     */
+    action: fhir.TestReportSetupActionArgs[] | null;
 }
 /**
  * The results of the series of required setup operations before the tests were executed.
  */
-export declare class TestReportSetup extends fhir.BackboneElement implements ITestReportSetup {
+export declare class TestReportSetup extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
      */
@@ -405,16 +220,34 @@ export declare class TestReportSetup extends fhir.BackboneElement implements ITe
     /**
      * Default constructor for TestReportSetup - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITestReportSetup>);
+    constructor(source?: Partial<TestReportSetupArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the TestReportTestAction type.
+ */
+export interface TestReportTestActionArgs extends fhir.BackboneElementArgs {
+    /**
+     * An operation would involve a REST request to a server.
+     */
+    operation?: fhir.TestReportSetupActionOperationArgs | undefined;
+    /**
+     * The results of the assertion performed on the previous operations.
+     */
+    assert?: fhir.TestReportSetupActionAssertArgs | undefined;
 }
 /**
  * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
  */
-export declare class TestReportTestAction extends fhir.BackboneElement implements ITestReportTestAction {
+export declare class TestReportTestAction extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * An operation would involve a REST request to a server.
      */
@@ -426,32 +259,46 @@ export declare class TestReportTestAction extends fhir.BackboneElement implement
     /**
      * Default constructor for TestReportTestAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITestReportTestAction>);
+    constructor(source?: Partial<TestReportTestActionArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the TestReportTest type.
+ */
+export interface TestReportTestArgs extends fhir.BackboneElementArgs {
+    /**
+     * The name of this test used for tracking/logging purposes by test engines.
+     */
+    name?: fhir.FhirString | string | undefined;
+    /**
+     * A short description of the test used by test engines for tracking and reporting purposes.
+     */
+    description?: fhir.FhirString | string | undefined;
+    /**
+     * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
+     */
+    action: fhir.TestReportTestActionArgs[] | null;
 }
 /**
  * A test executed from the test script.
  */
-export declare class TestReportTest extends fhir.BackboneElement implements ITestReportTest {
+export declare class TestReportTest extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The name of this test used for tracking/logging purposes by test engines.
      */
-    name?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.test.name
-     */
-    _name?: fhir.FhirElement | undefined;
+    name?: fhir.FhirString | undefined;
     /**
      * A short description of the test used by test engines for tracking and reporting purposes.
      */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.test.description
-     */
-    _description?: fhir.FhirElement | undefined;
+    description?: fhir.FhirString | undefined;
     /**
      * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
      */
@@ -459,16 +306,30 @@ export declare class TestReportTest extends fhir.BackboneElement implements ITes
     /**
      * Default constructor for TestReportTest - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITestReportTest>);
+    constructor(source?: Partial<TestReportTestArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the TestReportTeardownAction type.
+ */
+export interface TestReportTeardownActionArgs extends fhir.BackboneElementArgs {
+    /**
+     * An operation would involve a REST request to a server.
+     */
+    operation: fhir.TestReportSetupActionOperationArgs | null;
 }
 /**
  * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
  */
-export declare class TestReportTeardownAction extends fhir.BackboneElement implements ITestReportTeardownAction {
+export declare class TestReportTeardownAction extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * An operation would involve a REST request to a server.
      */
@@ -476,16 +337,30 @@ export declare class TestReportTeardownAction extends fhir.BackboneElement imple
     /**
      * Default constructor for TestReportTeardownAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITestReportTeardownAction>);
+    constructor(source?: Partial<TestReportTeardownActionArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the TestReportTeardown type.
+ */
+export interface TestReportTeardownArgs extends fhir.BackboneElementArgs {
+    /**
+     * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
+     */
+    action: fhir.TestReportTeardownActionArgs[] | null;
 }
 /**
  * The results of the series of operations required to clean up after all the tests were executed (successfully or otherwise).
  */
-export declare class TestReportTeardown extends fhir.BackboneElement implements ITestReportTeardown {
+export declare class TestReportTeardown extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
      */
@@ -493,16 +368,79 @@ export declare class TestReportTeardown extends fhir.BackboneElement implements 
     /**
      * Default constructor for TestReportTeardown - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITestReportTeardown>);
+    constructor(source?: Partial<TestReportTeardownArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the TestReport type.
+ */
+export interface TestReportArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "TestReport" | undefined;
+    /**
+     * Identifier for the TestScript assigned for external purposes outside the context of FHIR.
+     */
+    identifier?: fhir.IdentifierArgs | undefined;
+    /**
+     * Not expected to be globally unique.
+     */
+    name?: fhir.FhirString | string | undefined;
+    /**
+     * The status represents where the execution is currently within the test script execution life cycle.
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+     */
+    status: ReportStatusCodesValueSetEnum | null;
+    /**
+     * Ideally this is an absolute URL that is used to identify the version-specific TestScript that was executed, matching the `TestScript.url`.
+     */
+    testScript: fhir.ReferenceArgs | null;
+    /**
+     * The pass and fail result represents a completed test script execution. The pending result represents a test script execution that has not yet started or is currently in progress.
+     */
+    result: ReportResultCodesValueSetEnum | null;
+    /**
+     * The final score (percentage of tests passed) resulting from the execution of the TestScript.
+     */
+    score?: fhir.FhirDecimal | number | undefined;
+    /**
+     * Usually an organization, but may be an individual. This item SHOULD be populated unless the information is available from context.
+     */
+    tester?: fhir.FhirString | string | undefined;
+    /**
+     * Additional specific dates may be added as extensions.
+     */
+    issued?: fhir.FhirDateTime | string | undefined;
+    /**
+     * A participant in the test execution, either the execution engine, a client, or a server.
+     */
+    participant?: fhir.TestReportParticipantArgs[] | undefined;
+    /**
+     * The results of the series of required setup operations before the tests were executed.
+     */
+    setup?: fhir.TestReportSetupArgs | undefined;
+    /**
+     * A test executed from the test script.
+     */
+    test?: fhir.TestReportTestArgs[] | undefined;
+    /**
+     * The results of the series of operations required to clean up after all the tests were executed (successfully or otherwise).
+     */
+    teardown?: fhir.TestReportTeardownArgs | undefined;
 }
 /**
  * A summary of information based on the results of executing a TestScript.
  */
-export declare class TestReport extends fhir.DomainResource implements ITestReport {
+export declare class TestReport extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -514,20 +452,12 @@ export declare class TestReport extends fhir.DomainResource implements ITestRepo
     /**
      * Not expected to be globally unique.
      */
-    name?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.name
-     */
-    _name?: fhir.FhirElement | undefined;
+    name?: fhir.FhirString | undefined;
     /**
      * The status represents where the execution is currently within the test script execution life cycle.
      * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
      */
     status: ReportStatusCodesValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: TestReport.status
-     */
-    _status?: fhir.FhirElement | undefined;
     /**
      * Ideally this is an absolute URL that is used to identify the version-specific TestScript that was executed, matching the `TestScript.url`.
      */
@@ -537,33 +467,17 @@ export declare class TestReport extends fhir.DomainResource implements ITestRepo
      */
     result: ReportResultCodesValueSetEnum | null;
     /**
-     * Extended properties for primitive element: TestReport.result
-     */
-    _result?: fhir.FhirElement | undefined;
-    /**
      * The final score (percentage of tests passed) resulting from the execution of the TestScript.
      */
-    score?: number | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.score
-     */
-    _score?: fhir.FhirElement | undefined;
+    score?: fhir.FhirDecimal | undefined;
     /**
      * Usually an organization, but may be an individual. This item SHOULD be populated unless the information is available from context.
      */
-    tester?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.tester
-     */
-    _tester?: fhir.FhirElement | undefined;
+    tester?: fhir.FhirString | undefined;
     /**
      * Additional specific dates may be added as extensions.
      */
-    issued?: string | undefined;
-    /**
-     * Extended properties for primitive element: TestReport.issued
-     */
-    _issued?: fhir.FhirElement | undefined;
+    issued?: fhir.FhirDateTime | undefined;
     /**
      * A participant in the test execution, either the execution engine, a client, or a server.
      */
@@ -583,7 +497,7 @@ export declare class TestReport extends fhir.DomainResource implements ITestRepo
     /**
      * Default constructor for TestReport - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITestReport>);
+    constructor(source?: Partial<TestReportArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -595,6 +509,10 @@ export declare class TestReport extends fhir.DomainResource implements ITestRepo
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=TestReport.d.ts.map

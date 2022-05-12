@@ -10,13 +10,18 @@ export class Population extends fhir.BackboneElement {
     /**
      * Default constructor for Population - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['ageRange']) {
-            this.ageRange = new fhir.Range(source.ageRange);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Population';
+        this.__ageIsChoice = true;
+        if (source['age']) {
+            this.age = source.age;
         }
-        if (source['ageCodeableConcept']) {
-            this.ageCodeableConcept = new fhir.CodeableConcept(source.ageCodeableConcept);
+        else if (source['ageRange']) {
+            this.age = new fhir.Range(source.ageRange);
+        }
+        else if (source['ageCodeableConcept']) {
+            this.age = new fhir.CodeableConcept(source.ageCodeableConcept);
         }
         if (source['gender']) {
             this.gender = new fhir.CodeableConcept(source.gender);
@@ -32,23 +37,23 @@ export class Population extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["ageRange"]) {
-            results.push(...this.ageRange.doModelValidation());
-        }
-        if (this["ageCodeableConcept"]) {
-            results.push(...this.ageCodeableConcept.doModelValidation());
-        }
+        var outcome = super.doModelValidation();
         if (this["gender"]) {
-            results.push(...this.gender.doModelValidation());
+            outcome.issue.push(...this.gender.doModelValidation().issue);
         }
         if (this["race"]) {
-            results.push(...this.race.doModelValidation());
+            outcome.issue.push(...this.race.doModelValidation().issue);
         }
         if (this["physiologicalCondition"]) {
-            results.push(...this.physiologicalCondition.doModelValidation());
+            outcome.issue.push(...this.physiologicalCondition.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Population.js.map

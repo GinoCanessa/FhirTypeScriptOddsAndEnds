@@ -1,50 +1,35 @@
 import * as fhir from '../fhir.js';
 import { CurrenciesValueSetType } from '../fhirValueSets/CurrenciesValueSet.js';
 /**
- * An amount of economic utility in some recognized currency.
+ * Valid arguments for the Money type.
  */
-export declare type IMoney = fhir.IFhirElement & {
+export interface MoneyArgs extends fhir.FhirElementArgs {
     /**
      * Monetary values have their own rules for handling precision (refer to standard accounting text books).
      */
-    value?: number | undefined;
-    /**
-     * Extended properties for primitive element: Money.value
-     */
-    _value?: fhir.IFhirElement | undefined;
+    value?: fhir.FhirDecimal | number | undefined;
     /**
      * ISO 4217 Currency Code.
      */
-    currency?: string | undefined;
-    /**
-     * Extended properties for primitive element: Money.currency
-     */
-    _currency?: fhir.IFhirElement | undefined;
-};
+    currency?: fhir.FhirCode | string | undefined;
+}
 /**
  * An amount of economic utility in some recognized currency.
  */
-export declare class Money extends fhir.FhirElement implements IMoney {
+export declare class Money extends fhir.FhirElement {
+    readonly __dataType: string;
     /**
      * Monetary values have their own rules for handling precision (refer to standard accounting text books).
      */
-    value?: number | undefined;
-    /**
-     * Extended properties for primitive element: Money.value
-     */
-    _value?: fhir.FhirElement | undefined;
+    value?: fhir.FhirDecimal | undefined;
     /**
      * ISO 4217 Currency Code.
      */
-    currency?: string | undefined;
-    /**
-     * Extended properties for primitive element: Money.currency
-     */
-    _currency?: fhir.FhirElement | undefined;
+    currency?: fhir.FhirCode | undefined;
     /**
      * Default constructor for Money - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMoney>);
+    constructor(source?: Partial<MoneyArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for currency
      */
@@ -52,6 +37,10 @@ export declare class Money extends fhir.FhirElement implements IMoney {
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Money.d.ts.map

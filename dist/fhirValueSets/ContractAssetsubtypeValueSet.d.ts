@@ -15,10 +15,4 @@ export declare type ContractAssetsubtypeValueSetType = typeof ContractAssetsubty
 /**
  * This value set contract specific codes for asset subtype.
  */
-export declare enum ContractAssetsubtypeValueSetEnum {
-    /**
-     * participation: To be completed
-     */
-    Participation = "participation"
-}
 //# sourceMappingURL=ContractAssetsubtypeValueSet.d.ts.map

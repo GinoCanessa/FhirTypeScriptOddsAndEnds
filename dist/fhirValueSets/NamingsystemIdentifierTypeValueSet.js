@@ -43,23 +43,4 @@ export const NamingsystemIdentifierTypeValueSet = {
 /**
  * Identifies the style of unique identifier used to identify a namespace.
  */
-export var NamingsystemIdentifierTypeValueSetEnum;
-(function (NamingsystemIdentifierTypeValueSetEnum) {
-    /**
-     * oid: An ISO object identifier; e.g. 1.2.3.4.5.
-     */
-    NamingsystemIdentifierTypeValueSetEnum["OID"] = "oid";
-    /**
-     * other: Some other type of unique identifier; e.g. HL7-assigned reserved string such as LN for LOINC.
-     */
-    NamingsystemIdentifierTypeValueSetEnum["Other"] = "other";
-    /**
-     * uri: A uniform resource identifier (ideally a URL - uniform resource locator); e.g. http://unitsofmeasure.org.
-     */
-    NamingsystemIdentifierTypeValueSetEnum["URI"] = "uri";
-    /**
-     * uuid: A universally unique identifier of the form a5afddf4-e880-459b-876e-e4591b0acc11.
-     */
-    NamingsystemIdentifierTypeValueSetEnum["UUID"] = "uuid";
-})(NamingsystemIdentifierTypeValueSetEnum || (NamingsystemIdentifierTypeValueSetEnum = {}));
 //# sourceMappingURL=NamingsystemIdentifierTypeValueSet.js.map

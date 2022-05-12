@@ -1,96 +1,25 @@
 import * as fhir from '../fhir.js';
-import { DocumentReferenceStatusValueSetType, DocumentReferenceStatusValueSetEnum } from '../fhirValueSets/DocumentReferenceStatusValueSet.js';
+import { DocumentReferenceStatusValueSetType } from '../fhirValueSets/DocumentReferenceStatusValueSet.js';
+import { DocumentReferenceStatusValueSetEnum } from '../valueSetEnums.js';
 import { V3ActCodeValueSetType } from '../fhirValueSets/V3ActCodeValueSet.js';
 /**
- * May be identifiers or resources that caused the DocumentManifest to be created.
+ * Valid arguments for the DocumentManifestRelated type.
  */
-export declare type IDocumentManifestRelated = fhir.IBackboneElement & {
+export interface DocumentManifestRelatedArgs extends fhir.BackboneElementArgs {
     /**
      * If both identifier and ref elements are present they shall refer to the same thing.
      */
-    identifier?: fhir.IIdentifier | undefined;
+    identifier?: fhir.IdentifierArgs | undefined;
     /**
      * If both identifier and ref elements are present they shall refer to the same thing.
      */
-    ref?: fhir.IReference | undefined;
-};
-/**
- * A collection of documents compiled for a purpose together with metadata that applies to the collection.
- */
-export declare type IDocumentManifest = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "DocumentManifest";
-    /**
-     * A single identifier that uniquely identifies this manifest. Principally used to refer to the manifest in non-FHIR contexts.
-     */
-    masterIdentifier?: fhir.IIdentifier | undefined;
-    /**
-     * Other identifiers associated with the document manifest, including version independent  identifiers.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * This element is labeled as a modifier because the status contains the codes that mark the manifest as not currently valid.
-     */
-    status: DocumentReferenceStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: DocumentManifest.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * Specifies the kind of this set of documents (e.g. Patient Summary, Discharge Summary, Prescription, etc.). The type of a set of documents may be the same as one of the documents in it - especially if there is only one - but it may be wider.
-     */
-    type?: fhir.ICodeableConcept | undefined;
-    /**
-     * Who or what the set of documents is about. The documents can be about a person, (patient or healthcare practitioner), a device (i.e. machine) or even a group of subjects (such as a document about a herd of farm animals, or a set of patients that share a common exposure). If the documents cross more than one subject, then more than one subject is allowed here (unusual use case).
-     */
-    subject?: fhir.IReference | undefined;
-    /**
-     * Creation time is used for tracking, organizing versions and searching. This is the creation time of the document set, not the documents on which it is based.
-     */
-    created?: string | undefined;
-    /**
-     * Extended properties for primitive element: DocumentManifest.created
-     */
-    _created?: fhir.IFhirElement | undefined;
-    /**
-     * Not necessarily who did the actual data entry (i.e. typist) or who was the source (informant).
-     */
-    author?: fhir.IReference[] | undefined;
-    /**
-     * How the recipient receives the document set or is notified of it is up to the implementation. This element is just a statement of intent. If the recipient is a person, and it is not known whether the person is a patient or a practitioner, RelatedPerson would be the default choice.
-     */
-    recipient?: fhir.IReference[] | undefined;
-    /**
-     * Identifies the source system, application, or software that produced the document manifest.
-     */
-    source?: string | undefined;
-    /**
-     * Extended properties for primitive element: DocumentManifest.source
-     */
-    _source?: fhir.IFhirElement | undefined;
-    /**
-     * What the document is about, rather than a terse summary of the document. It is commonly the case that records do not have a title and are collectively referred to by the display name of Record code (e.g. a "consultation" or "progress note").
-     */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: DocumentManifest.description
-     */
-    _description?: fhir.IFhirElement | undefined;
-    /**
-     * When used for XDS the intended focus of the DocumentManifest is for the reference to target to be a set of DocumentReference Resources. The reference is to "Any" to support EN 13606 usage, where an extract is DocumentManifest that references  List and Composition resources.
-     */
-    content: fhir.IReference[] | null;
-    /**
-     * May be identifiers or resources that caused the DocumentManifest to be created.
-     */
-    related?: fhir.IDocumentManifestRelated[] | undefined;
-};
+    ref?: fhir.ReferenceArgs | undefined;
+}
 /**
  * May be identifiers or resources that caused the DocumentManifest to be created.
  */
-export declare class DocumentManifestRelated extends fhir.BackboneElement implements IDocumentManifestRelated {
+export declare class DocumentManifestRelated extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * If both identifier and ref elements are present they shall refer to the same thing.
      */
@@ -102,16 +31,78 @@ export declare class DocumentManifestRelated extends fhir.BackboneElement implem
     /**
      * Default constructor for DocumentManifestRelated - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IDocumentManifestRelated>);
+    constructor(source?: Partial<DocumentManifestRelatedArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the DocumentManifest type.
+ */
+export interface DocumentManifestArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "DocumentManifest" | undefined;
+    /**
+     * A single identifier that uniquely identifies this manifest. Principally used to refer to the manifest in non-FHIR contexts.
+     */
+    masterIdentifier?: fhir.IdentifierArgs | undefined;
+    /**
+     * Other identifiers associated with the document manifest, including version independent  identifiers.
+     */
+    identifier?: fhir.IdentifierArgs[] | undefined;
+    /**
+     * This element is labeled as a modifier because the status contains the codes that mark the manifest as not currently valid.
+     */
+    status: DocumentReferenceStatusValueSetEnum | null;
+    /**
+     * Specifies the kind of this set of documents (e.g. Patient Summary, Discharge Summary, Prescription, etc.). The type of a set of documents may be the same as one of the documents in it - especially if there is only one - but it may be wider.
+     */
+    type?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Who or what the set of documents is about. The documents can be about a person, (patient or healthcare practitioner), a device (i.e. machine) or even a group of subjects (such as a document about a herd of farm animals, or a set of patients that share a common exposure). If the documents cross more than one subject, then more than one subject is allowed here (unusual use case).
+     */
+    subject?: fhir.ReferenceArgs | undefined;
+    /**
+     * Creation time is used for tracking, organizing versions and searching. This is the creation time of the document set, not the documents on which it is based.
+     */
+    created?: fhir.FhirDateTime | string | undefined;
+    /**
+     * Not necessarily who did the actual data entry (i.e. typist) or who was the source (informant).
+     */
+    author?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * How the recipient receives the document set or is notified of it is up to the implementation. This element is just a statement of intent. If the recipient is a person, and it is not known whether the person is a patient or a practitioner, RelatedPerson would be the default choice.
+     */
+    recipient?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * Identifies the source system, application, or software that produced the document manifest.
+     */
+    source?: fhir.FhirUri | string | undefined;
+    /**
+     * What the document is about, rather than a terse summary of the document. It is commonly the case that records do not have a title and are collectively referred to by the display name of Record code (e.g. a "consultation" or "progress note").
+     */
+    description?: fhir.FhirString | string | undefined;
+    /**
+     * When used for XDS the intended focus of the DocumentManifest is for the reference to target to be a set of DocumentReference Resources. The reference is to "Any" to support EN 13606 usage, where an extract is DocumentManifest that references  List and Composition resources.
+     */
+    content: fhir.ReferenceArgs[] | null;
+    /**
+     * May be identifiers or resources that caused the DocumentManifest to be created.
+     */
+    related?: fhir.DocumentManifestRelatedArgs[] | undefined;
 }
 /**
  * A collection of documents compiled for a purpose together with metadata that applies to the collection.
  */
-export declare class DocumentManifest extends fhir.DomainResource implements IDocumentManifest {
+export declare class DocumentManifest extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -129,10 +120,6 @@ export declare class DocumentManifest extends fhir.DomainResource implements IDo
      */
     status: DocumentReferenceStatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: DocumentManifest.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * Specifies the kind of this set of documents (e.g. Patient Summary, Discharge Summary, Prescription, etc.). The type of a set of documents may be the same as one of the documents in it - especially if there is only one - but it may be wider.
      */
     type?: fhir.CodeableConcept | undefined;
@@ -143,11 +130,7 @@ export declare class DocumentManifest extends fhir.DomainResource implements IDo
     /**
      * Creation time is used for tracking, organizing versions and searching. This is the creation time of the document set, not the documents on which it is based.
      */
-    created?: string | undefined;
-    /**
-     * Extended properties for primitive element: DocumentManifest.created
-     */
-    _created?: fhir.FhirElement | undefined;
+    created?: fhir.FhirDateTime | undefined;
     /**
      * Not necessarily who did the actual data entry (i.e. typist) or who was the source (informant).
      */
@@ -159,19 +142,11 @@ export declare class DocumentManifest extends fhir.DomainResource implements IDo
     /**
      * Identifies the source system, application, or software that produced the document manifest.
      */
-    source?: string | undefined;
-    /**
-     * Extended properties for primitive element: DocumentManifest.source
-     */
-    _source?: fhir.FhirElement | undefined;
+    source?: fhir.FhirUri | undefined;
     /**
      * What the document is about, rather than a terse summary of the document. It is commonly the case that records do not have a title and are collectively referred to by the display name of Record code (e.g. a "consultation" or "progress note").
      */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: DocumentManifest.description
-     */
-    _description?: fhir.FhirElement | undefined;
+    description?: fhir.FhirString | undefined;
     /**
      * When used for XDS the intended focus of the DocumentManifest is for the reference to target to be a set of DocumentReference Resources. The reference is to "Any" to support EN 13606 usage, where an extract is DocumentManifest that references  List and Composition resources.
      */
@@ -183,7 +158,7 @@ export declare class DocumentManifest extends fhir.DomainResource implements IDo
     /**
      * Default constructor for DocumentManifest - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IDocumentManifest>);
+    constructor(source?: Partial<DocumentManifestArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -195,6 +170,10 @@ export declare class DocumentManifest extends fhir.DomainResource implements IDo
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=DocumentManifest.d.ts.map

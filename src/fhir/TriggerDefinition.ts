@@ -3,112 +3,76 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: TriggerDefinition
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { TriggerTypeValueSet, TriggerTypeValueSetType, TriggerTypeValueSetEnum } from '../fhirValueSets/TriggerTypeValueSet.js'
-
+import { TriggerTypeValueSet, TriggerTypeValueSetType,} from '../fhirValueSets/TriggerTypeValueSet.js';
+import { TriggerTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.
+ * Valid arguments for the TriggerDefinition type.
  */
-export type ITriggerDefinition = fhir.IFhirElement & { 
+export interface TriggerDefinitionArgs extends fhir.FhirElementArgs {
   /**
    * The type of triggering event.
    */
   type: TriggerTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: TriggerDefinition.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
    * An event name can be provided for all event types, but is required for named events. If a name is provided for a type other than named events, it is considered to be a shorthand for the semantics described by the formal description of the event.
    */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: TriggerDefinition.name
-   */
-  _name?: fhir.IFhirElement|undefined;
+  name?: fhir.FhirString|string|undefined;
   /**
    * The timing of the event (if this is a periodic trigger).
    */
-  timingTiming?: fhir.ITiming|undefined;
+  timing?: fhir.Timing|fhir.Reference|fhir.FhirDate|fhir.FhirDateTime|undefined;
   /**
    * The timing of the event (if this is a periodic trigger).
    */
-  timingReference?: fhir.IReference|undefined;
+  timingTiming?: fhir.TimingArgs|undefined;
   /**
    * The timing of the event (if this is a periodic trigger).
    */
-  timingDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: TriggerDefinition.timing[x]
-   */
-  _timingDate?: fhir.IFhirElement|undefined;
+  timingReference?: fhir.ReferenceArgs|undefined;
   /**
    * The timing of the event (if this is a periodic trigger).
    */
-  timingDateTime?: string|undefined;
+  timingDate?: fhir.FhirDate|string|undefined;
   /**
-   * Extended properties for primitive element: TriggerDefinition.timing[x]
+   * The timing of the event (if this is a periodic trigger).
    */
-  _timingDateTime?: fhir.IFhirElement|undefined;
+  timingDateTime?: fhir.FhirDateTime|string|undefined;
   /**
    * This element shall be present for any data type trigger.
    */
-  data?: fhir.IDataRequirement[]|undefined;
+  data?: fhir.DataRequirementArgs[]|undefined;
   /**
    * This element can be only be specified for data type triggers and provides additional semantics for the trigger. The context available within the condition is based on the type of data event. For all events, the current resource will be available as context. In addition, for modification events, the previous resource will also be available. The expression may be inlined, or may be a simple absolute URI, which is a reference to a named expression within a logic library referenced by a library element or extension within the containing resource. If the expression is a FHIR Path expression, it evaluates in the context of a resource of one of the type identified in the data requirement, and may also refer to the variable %previous for delta comparisons on events of type data-changed, data-modified, and data-deleted which will always have the same type.
    */
-  condition?: fhir.IExpression|undefined;
+  condition?: fhir.ExpressionArgs|undefined;
 }
 
 /**
  * A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.
  */
-export class TriggerDefinition extends fhir.FhirElement implements ITriggerDefinition {
+export class TriggerDefinition extends fhir.FhirElement {
+  readonly __dataType:string = 'TriggerDefinition';
   /**
    * The type of triggering event.
    */
   public type: TriggerTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: TriggerDefinition.type
-   */
-  public _type?: fhir.FhirElement|undefined;
-  /**
    * An event name can be provided for all event types, but is required for named events. If a name is provided for a type other than named events, it is considered to be a shorthand for the semantics described by the formal description of the event.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: TriggerDefinition.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * The timing of the event (if this is a periodic trigger).
    */
-  public timingTiming?: fhir.Timing|undefined;
-  /**
-   * The timing of the event (if this is a periodic trigger).
-   */
-  public timingReference?: fhir.Reference|undefined;
-  /**
-   * The timing of the event (if this is a periodic trigger).
-   */
-  public timingDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: TriggerDefinition.timing[x]
-   */
-  public _timingDate?: fhir.FhirElement|undefined;
-  /**
-   * The timing of the event (if this is a periodic trigger).
-   */
-  public timingDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: TriggerDefinition.timing[x]
-   */
-  public _timingDateTime?: fhir.FhirElement|undefined;
+  public timing?: (fhir.Timing|fhir.Reference|fhir.FhirDate|fhir.FhirDateTime)|undefined;
+  readonly __timingIsChoice:true = true;
   /**
    * This element shall be present for any data type trigger.
    */
-  public data?: fhir.DataRequirement[]|undefined;
+  public data?: fhir.DataRequirement[]|undefined = [];
   /**
    * This element can be only be specified for data type triggers and provides additional semantics for the trigger. The context available within the condition is based on the type of data event. For all events, the current resource will be available as context. In addition, for modification events, the previous resource will also be available. The expression may be inlined, or may be a simple absolute URI, which is a reference to a named expression within a logic library referenced by a library element or extension within the containing resource. If the expression is a FHIR Path expression, it evaluates in the context of a resource of one of the type identified in the data requirement, and may also refer to the variable %previous for delta comparisons on events of type data-changed, data-modified, and data-deleted which will always have the same type.
    */
@@ -116,21 +80,18 @@ export class TriggerDefinition extends fhir.FhirElement implements ITriggerDefin
   /**
    * Default constructor for TriggerDefinition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITriggerDefinition> = { }) {
-    super(source);
+  constructor(source:Partial<TriggerDefinitionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['timingTiming']) { this.timingTiming = new fhir.Timing(source.timingTiming!); }
-    if (source['timingReference']) { this.timingReference = new fhir.Reference(source.timingReference!); }
-    if (source['timingDate']) { this.timingDate = source.timingDate; }
-    if (source['_timingDate']) { this._timingDate = new fhir.FhirElement(source._timingDate!); }
-    if (source['timingDateTime']) { this.timingDateTime = source.timingDateTime; }
-    if (source['_timingDateTime']) { this._timingDateTime = new fhir.FhirElement(source._timingDateTime!); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['timing']) { this.timing = source.timing; }
+    else if (source['timingTiming']) { this.timing = new fhir.Timing(source.timingTiming); }
+    else if (source['timingReference']) { this.timing = new fhir.Reference(source.timingReference); }
+    else if (source['timingDate']) { this.timing = new fhir.FhirDate({value: source.timingDate}); }
+    else if (source['timingDateTime']) { this.timing = new fhir.FhirDateTime({value: source.timingDateTime}); }
     if (source['data']) { this.data = source.data.map((x) => new fhir.DataRequirement(x)); }
-    if (source['condition']) { this.condition = new fhir.Expression(source.condition!); }
+    if (source['condition']) { this.condition = new fhir.Expression(source.condition); }
   }
   /**
    * Required-bound Value Set for type
@@ -141,17 +102,20 @@ export class TriggerDefinition extends fhir.FhirElement implements ITriggerDefin
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: TriggerDefinition.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["timingTiming"]) { results.push(...this.timingTiming.doModelValidation()); }
-    if (this["timingReference"]) { results.push(...this.timingReference.doModelValidation()); }
-    if (this["_timingDate"]) { results.push(...this._timingDate.doModelValidation()); }
-    if (this["_timingDateTime"]) { results.push(...this._timingDateTime.doModelValidation()); }
-    if (this["data"]) { this.data.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["condition"]) { results.push(...this.condition.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:TriggerTypeValueSetEnum fhir: TriggerDefinition.type:code", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["data"]) { this.data.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["condition"]) { outcome.issue!.push(...this.condition.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SubstanceSpecification
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Moiety, for structural modifications.
  */
@@ -10,8 +12,10 @@ export class SubstanceSpecificationMoiety extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceSpecificationMoiety - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSpecificationMoiety';
+        this.__amountIsChoice = true;
         if (source['role']) {
             this.role = new fhir.CodeableConcept(source.role);
         }
@@ -19,10 +23,7 @@ export class SubstanceSpecificationMoiety extends fhir.BackboneElement {
             this.identifier = new fhir.Identifier(source.identifier);
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['stereochemistry']) {
             this.stereochemistry = new fhir.CodeableConcept(source.stereochemistry);
@@ -31,51 +32,48 @@ export class SubstanceSpecificationMoiety extends fhir.BackboneElement {
             this.opticalActivity = new fhir.CodeableConcept(source.opticalActivity);
         }
         if (source['molecularFormula']) {
-            this.molecularFormula = source.molecularFormula;
+            this.molecularFormula = new fhir.FhirString({ value: source.molecularFormula });
         }
-        if (source['_molecularFormula']) {
-            this._molecularFormula = new fhir.FhirElement(source._molecularFormula);
+        if (source['amount']) {
+            this.amount = source.amount;
         }
-        if (source['amountQuantity']) {
-            this.amountQuantity = new fhir.Quantity(source.amountQuantity);
+        else if (source['amountQuantity']) {
+            this.amount = new fhir.Quantity(source.amountQuantity);
         }
-        if (source['amountString']) {
-            this.amountString = source.amountString;
-        }
-        if (source['_amountString']) {
-            this._amountString = new fhir.FhirElement(source._amountString);
+        else if (source['amountString']) {
+            this.amount = new fhir.FhirString({ value: source.amountString });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["role"]) {
-            results.push(...this.role.doModelValidation());
+            outcome.issue.push(...this.role.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
         if (this["stereochemistry"]) {
-            results.push(...this.stereochemistry.doModelValidation());
+            outcome.issue.push(...this.stereochemistry.doModelValidation().issue);
         }
         if (this["opticalActivity"]) {
-            results.push(...this.opticalActivity.doModelValidation());
+            outcome.issue.push(...this.opticalActivity.doModelValidation().issue);
         }
-        if (this["_molecularFormula"]) {
-            results.push(...this._molecularFormula.doModelValidation());
+        if (this["molecularFormula"]) {
+            outcome.issue.push(...this.molecularFormula.doModelValidation().issue);
         }
-        if (this["amountQuantity"]) {
-            results.push(...this.amountQuantity.doModelValidation());
-        }
-        if (this["_amountString"]) {
-            results.push(...this._amountString.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -85,8 +83,11 @@ export class SubstanceSpecificationProperty extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceSpecificationProperty - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSpecificationProperty';
+        this.__definingSubstanceIsChoice = true;
+        this.__amountIsChoice = true;
         if (source['category']) {
             this.category = new fhir.CodeableConcept(source.category);
         }
@@ -94,54 +95,48 @@ export class SubstanceSpecificationProperty extends fhir.BackboneElement {
             this.code = new fhir.CodeableConcept(source.code);
         }
         if (source['parameters']) {
-            this.parameters = source.parameters;
+            this.parameters = new fhir.FhirString({ value: source.parameters });
         }
-        if (source['_parameters']) {
-            this._parameters = new fhir.FhirElement(source._parameters);
+        if (source['definingSubstance']) {
+            this.definingSubstance = source.definingSubstance;
         }
-        if (source['definingSubstanceReference']) {
-            this.definingSubstanceReference = new fhir.Reference(source.definingSubstanceReference);
+        else if (source['definingSubstanceReference']) {
+            this.definingSubstance = new fhir.Reference(source.definingSubstanceReference);
         }
-        if (source['definingSubstanceCodeableConcept']) {
-            this.definingSubstanceCodeableConcept = new fhir.CodeableConcept(source.definingSubstanceCodeableConcept);
+        else if (source['definingSubstanceCodeableConcept']) {
+            this.definingSubstance = new fhir.CodeableConcept(source.definingSubstanceCodeableConcept);
         }
-        if (source['amountQuantity']) {
-            this.amountQuantity = new fhir.Quantity(source.amountQuantity);
+        if (source['amount']) {
+            this.amount = source.amount;
         }
-        if (source['amountString']) {
-            this.amountString = source.amountString;
+        else if (source['amountQuantity']) {
+            this.amount = new fhir.Quantity(source.amountQuantity);
         }
-        if (source['_amountString']) {
-            this._amountString = new fhir.FhirElement(source._amountString);
+        else if (source['amountString']) {
+            this.amount = new fhir.FhirString({ value: source.amountString });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["category"]) {
-            results.push(...this.category.doModelValidation());
+            outcome.issue.push(...this.category.doModelValidation().issue);
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_parameters"]) {
-            results.push(...this._parameters.doModelValidation());
+        if (this["parameters"]) {
+            outcome.issue.push(...this.parameters.doModelValidation().issue);
         }
-        if (this["definingSubstanceReference"]) {
-            results.push(...this.definingSubstanceReference.doModelValidation());
-        }
-        if (this["definingSubstanceCodeableConcept"]) {
-            results.push(...this.definingSubstanceCodeableConcept.doModelValidation());
-        }
-        if (this["amountQuantity"]) {
-            results.push(...this.amountQuantity.doModelValidation());
-        }
-        if (this["_amountString"]) {
-            results.push(...this._amountString.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -151,8 +146,9 @@ export class SubstanceSpecificationStructureIsotopeMolecularWeight extends fhir.
     /**
      * Default constructor for SubstanceSpecificationStructureIsotopeMolecularWeight - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSpecificationStructureIsotopeMolecularWeight';
         if (source['method']) {
             this.method = new fhir.CodeableConcept(source.method);
         }
@@ -167,17 +163,23 @@ export class SubstanceSpecificationStructureIsotopeMolecularWeight extends fhir.
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["method"]) {
-            results.push(...this.method.doModelValidation());
+            outcome.issue.push(...this.method.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["amount"]) {
-            results.push(...this.amount.doModelValidation());
+            outcome.issue.push(...this.amount.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -187,8 +189,9 @@ export class SubstanceSpecificationStructureIsotope extends fhir.BackboneElement
     /**
      * Default constructor for SubstanceSpecificationStructureIsotope - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSpecificationStructureIsotope';
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
         }
@@ -209,23 +212,29 @@ export class SubstanceSpecificationStructureIsotope extends fhir.BackboneElement
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
         if (this["name"]) {
-            results.push(...this.name.doModelValidation());
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
         if (this["substitution"]) {
-            results.push(...this.substitution.doModelValidation());
+            outcome.issue.push(...this.substitution.doModelValidation().issue);
         }
         if (this["halfLife"]) {
-            results.push(...this.halfLife.doModelValidation());
+            outcome.issue.push(...this.halfLife.doModelValidation().issue);
         }
         if (this["molecularWeight"]) {
-            results.push(...this.molecularWeight.doModelValidation());
+            outcome.issue.push(...this.molecularWeight.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -235,16 +244,14 @@ export class SubstanceSpecificationStructureRepresentation extends fhir.Backbone
     /**
      * Default constructor for SubstanceSpecificationStructureRepresentation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSpecificationStructureRepresentation';
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
         if (source['representation']) {
-            this.representation = source.representation;
-        }
-        if (source['_representation']) {
-            this._representation = new fhir.FhirElement(source._representation);
+            this.representation = new fhir.FhirString({ value: source.representation });
         }
         if (source['attachment']) {
             this.attachment = new fhir.Attachment(source.attachment);
@@ -254,17 +261,23 @@ export class SubstanceSpecificationStructureRepresentation extends fhir.Backbone
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_representation"]) {
-            results.push(...this._representation.doModelValidation());
+        if (this["representation"]) {
+            outcome.issue.push(...this.representation.doModelValidation().issue);
         }
         if (this["attachment"]) {
-            results.push(...this.attachment.doModelValidation());
+            outcome.issue.push(...this.attachment.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -274,8 +287,21 @@ export class SubstanceSpecificationStructure extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceSpecificationStructure - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSpecificationStructure';
+        /**
+         * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
+         */
+        this.isotope = [];
+        /**
+         * Supporting literature.
+         */
+        this.source = [];
+        /**
+         * Molecular structural representation.
+         */
+        this.representation = [];
         if (source['stereochemistry']) {
             this.stereochemistry = new fhir.CodeableConcept(source.stereochemistry);
         }
@@ -283,16 +309,10 @@ export class SubstanceSpecificationStructure extends fhir.BackboneElement {
             this.opticalActivity = new fhir.CodeableConcept(source.opticalActivity);
         }
         if (source['molecularFormula']) {
-            this.molecularFormula = source.molecularFormula;
-        }
-        if (source['_molecularFormula']) {
-            this._molecularFormula = new fhir.FhirElement(source._molecularFormula);
+            this.molecularFormula = new fhir.FhirString({ value: source.molecularFormula });
         }
         if (source['molecularFormulaByMoiety']) {
-            this.molecularFormulaByMoiety = source.molecularFormulaByMoiety;
-        }
-        if (source['_molecularFormulaByMoiety']) {
-            this._molecularFormulaByMoiety = new fhir.FhirElement(source._molecularFormulaByMoiety);
+            this.molecularFormulaByMoiety = new fhir.FhirString({ value: source.molecularFormulaByMoiety });
         }
         if (source['isotope']) {
             this.isotope = source.isotope.map((x) => new fhir.SubstanceSpecificationStructureIsotope(x));
@@ -311,32 +331,38 @@ export class SubstanceSpecificationStructure extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["stereochemistry"]) {
-            results.push(...this.stereochemistry.doModelValidation());
+            outcome.issue.push(...this.stereochemistry.doModelValidation().issue);
         }
         if (this["opticalActivity"]) {
-            results.push(...this.opticalActivity.doModelValidation());
+            outcome.issue.push(...this.opticalActivity.doModelValidation().issue);
         }
-        if (this["_molecularFormula"]) {
-            results.push(...this._molecularFormula.doModelValidation());
+        if (this["molecularFormula"]) {
+            outcome.issue.push(...this.molecularFormula.doModelValidation().issue);
         }
-        if (this["_molecularFormulaByMoiety"]) {
-            results.push(...this._molecularFormulaByMoiety.doModelValidation());
+        if (this["molecularFormulaByMoiety"]) {
+            outcome.issue.push(...this.molecularFormulaByMoiety.doModelValidation().issue);
         }
         if (this["isotope"]) {
-            this.isotope.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.isotope.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["molecularWeight"]) {
-            results.push(...this.molecularWeight.doModelValidation());
+            outcome.issue.push(...this.molecularWeight.doModelValidation().issue);
         }
         if (this["source"]) {
-            this.source.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.source.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["representation"]) {
-            this.representation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.representation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -346,8 +372,13 @@ export class SubstanceSpecificationCode extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceSpecificationCode - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSpecificationCode';
+        /**
+         * Supporting literature.
+         */
+        this.source = [];
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
@@ -355,16 +386,10 @@ export class SubstanceSpecificationCode extends fhir.BackboneElement {
             this.status = new fhir.CodeableConcept(source.status);
         }
         if (source['statusDate']) {
-            this.statusDate = source.statusDate;
-        }
-        if (source['_statusDate']) {
-            this._statusDate = new fhir.FhirElement(source._statusDate);
+            this.statusDate = new fhir.FhirDateTime({ value: source.statusDate });
         }
         if (source['comment']) {
-            this.comment = source.comment;
-        }
-        if (source['_comment']) {
-            this._comment = new fhir.FhirElement(source._comment);
+            this.comment = new fhir.FhirString({ value: source.comment });
         }
         if (source['source']) {
             this.source = source.source.map((x) => new fhir.Reference(x));
@@ -374,23 +399,29 @@ export class SubstanceSpecificationCode extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["status"]) {
-            results.push(...this.status.doModelValidation());
+            outcome.issue.push(...this.status.doModelValidation().issue);
         }
-        if (this["_statusDate"]) {
-            results.push(...this._statusDate.doModelValidation());
+        if (this["statusDate"]) {
+            outcome.issue.push(...this.statusDate.doModelValidation().issue);
         }
-        if (this["_comment"]) {
-            results.push(...this._comment.doModelValidation());
+        if (this["comment"]) {
+            outcome.issue.push(...this.comment.doModelValidation().issue);
         }
         if (this["source"]) {
-            this.source.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.source.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -400,8 +431,9 @@ export class SubstanceSpecificationNameOfficial extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceSpecificationNameOfficial - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSpecificationNameOfficial';
         if (source['authority']) {
             this.authority = new fhir.CodeableConcept(source.authority);
         }
@@ -409,27 +441,30 @@ export class SubstanceSpecificationNameOfficial extends fhir.BackboneElement {
             this.status = new fhir.CodeableConcept(source.status);
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["authority"]) {
-            results.push(...this.authority.doModelValidation());
+            outcome.issue.push(...this.authority.doModelValidation().issue);
         }
         if (this["status"]) {
-            results.push(...this.status.doModelValidation());
+            outcome.issue.push(...this.status.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -439,16 +474,42 @@ export class SubstanceSpecificationName extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceSpecificationName - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSpecificationName';
+        /**
+         * Language of the name.
+         */
+        this.language = [];
+        /**
+         * The use context of this name for example if there is a different name a drug active ingredient as opposed to a food colour additive.
+         */
+        this.domain = [];
+        /**
+         * The jurisdiction where this name applies.
+         */
+        this.jurisdiction = [];
+        /**
+         * A synonym of this name.
+         */
+        this.synonym = [];
+        /**
+         * A translation for this name.
+         */
+        this.translation = [];
+        /**
+         * Details of the official nature of this name.
+         */
+        this.official = [];
+        /**
+         * Supporting literature.
+         */
+        this.source = [];
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirString({ value: source.name });
         }
         else {
             this.name = null;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
         }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
@@ -457,10 +518,7 @@ export class SubstanceSpecificationName extends fhir.BackboneElement {
             this.status = new fhir.CodeableConcept(source.status);
         }
         if (source['preferred']) {
-            this.preferred = source.preferred;
-        }
-        if (source['_preferred']) {
-            this._preferred = new fhir.FhirElement(source._preferred);
+            this.preferred = new fhir.FhirBoolean({ value: source.preferred });
         }
         if (source['language']) {
             this.language = source.language.map((x) => new fhir.CodeableConcept(x));
@@ -488,44 +546,50 @@ export class SubstanceSpecificationName extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: SubstanceSpecification.name.name']);
+        var outcome = super.doModelValidation();
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirString fhir: SubstanceSpecification.name.name:string", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["status"]) {
-            results.push(...this.status.doModelValidation());
+            outcome.issue.push(...this.status.doModelValidation().issue);
         }
-        if (this["_preferred"]) {
-            results.push(...this._preferred.doModelValidation());
+        if (this["preferred"]) {
+            outcome.issue.push(...this.preferred.doModelValidation().issue);
         }
         if (this["language"]) {
-            this.language.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.language.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["domain"]) {
-            this.domain.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.domain.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["synonym"]) {
-            this.synonym.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.synonym.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["translation"]) {
-            this.translation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.translation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["official"]) {
-            this.official.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.official.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["source"]) {
-            this.source.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.source.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -535,37 +599,44 @@ export class SubstanceSpecificationRelationship extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceSpecificationRelationship - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['substanceReference']) {
-            this.substanceReference = new fhir.Reference(source.substanceReference);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSpecificationRelationship';
+        this.__substanceIsChoice = true;
+        this.__amountIsChoice = true;
+        /**
+         * Supporting literature.
+         */
+        this.source = [];
+        if (source['substance']) {
+            this.substance = source.substance;
         }
-        if (source['substanceCodeableConcept']) {
-            this.substanceCodeableConcept = new fhir.CodeableConcept(source.substanceCodeableConcept);
+        else if (source['substanceReference']) {
+            this.substance = new fhir.Reference(source.substanceReference);
+        }
+        else if (source['substanceCodeableConcept']) {
+            this.substance = new fhir.CodeableConcept(source.substanceCodeableConcept);
         }
         if (source['relationship']) {
             this.relationship = new fhir.CodeableConcept(source.relationship);
         }
         if (source['isDefining']) {
-            this.isDefining = source.isDefining;
+            this.isDefining = new fhir.FhirBoolean({ value: source.isDefining });
         }
-        if (source['_isDefining']) {
-            this._isDefining = new fhir.FhirElement(source._isDefining);
+        if (source['amount']) {
+            this.amount = source.amount;
         }
-        if (source['amountQuantity']) {
-            this.amountQuantity = new fhir.Quantity(source.amountQuantity);
+        else if (source['amountQuantity']) {
+            this.amount = new fhir.Quantity(source.amountQuantity);
         }
-        if (source['amountRange']) {
-            this.amountRange = new fhir.Range(source.amountRange);
+        else if (source['amountRange']) {
+            this.amount = new fhir.Range(source.amountRange);
         }
-        if (source['amountRatio']) {
-            this.amountRatio = new fhir.Ratio(source.amountRatio);
+        else if (source['amountRatio']) {
+            this.amount = new fhir.Ratio(source.amountRatio);
         }
-        if (source['amountString']) {
-            this.amountString = source.amountString;
-        }
-        if (source['_amountString']) {
-            this._amountString = new fhir.FhirElement(source._amountString);
+        else if (source['amountString']) {
+            this.amount = new fhir.FhirString({ value: source.amountString });
         }
         if (source['amountRatioLowLimit']) {
             this.amountRatioLowLimit = new fhir.Ratio(source.amountRatioLowLimit);
@@ -581,41 +652,29 @@ export class SubstanceSpecificationRelationship extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["substanceReference"]) {
-            results.push(...this.substanceReference.doModelValidation());
-        }
-        if (this["substanceCodeableConcept"]) {
-            results.push(...this.substanceCodeableConcept.doModelValidation());
-        }
+        var outcome = super.doModelValidation();
         if (this["relationship"]) {
-            results.push(...this.relationship.doModelValidation());
+            outcome.issue.push(...this.relationship.doModelValidation().issue);
         }
-        if (this["_isDefining"]) {
-            results.push(...this._isDefining.doModelValidation());
-        }
-        if (this["amountQuantity"]) {
-            results.push(...this.amountQuantity.doModelValidation());
-        }
-        if (this["amountRange"]) {
-            results.push(...this.amountRange.doModelValidation());
-        }
-        if (this["amountRatio"]) {
-            results.push(...this.amountRatio.doModelValidation());
-        }
-        if (this["_amountString"]) {
-            results.push(...this._amountString.doModelValidation());
+        if (this["isDefining"]) {
+            outcome.issue.push(...this.isDefining.doModelValidation().issue);
         }
         if (this["amountRatioLowLimit"]) {
-            results.push(...this.amountRatioLowLimit.doModelValidation());
+            outcome.issue.push(...this.amountRatioLowLimit.doModelValidation().issue);
         }
         if (this["amountType"]) {
-            results.push(...this.amountType.doModelValidation());
+            outcome.issue.push(...this.amountType.doModelValidation().issue);
         }
         if (this["source"]) {
-            this.source.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.source.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -625,8 +684,37 @@ export class SubstanceSpecification extends fhir.DomainResource {
     /**
      * Default constructor for SubstanceSpecification - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSpecification';
+        /**
+         * Supporting literature.
+         */
+        this.source = [];
+        /**
+         * Moiety, for structural modifications.
+         */
+        this.moiety = [];
+        /**
+         * General specifications for this substance, including how it is related to other substances.
+         */
+        this.property = [];
+        /**
+         * Codes associated with the substance.
+         */
+        this.code = [];
+        /**
+         * Names applicable to this substance.
+         */
+        this.name = [];
+        /**
+         * The molecular weight or weight range (for proteins, polymers or nucleic acids).
+         */
+        this.molecularWeight = [];
+        /**
+         * A link between this substance and another, with details of the relationship.
+         */
+        this.relationship = [];
         this.resourceType = 'SubstanceSpecification';
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
@@ -641,19 +729,13 @@ export class SubstanceSpecification extends fhir.DomainResource {
             this.domain = new fhir.CodeableConcept(source.domain);
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['source']) {
             this.source = source.source.map((x) => new fhir.Reference(x));
         }
         if (source['comment']) {
-            this.comment = source.comment;
-        }
-        if (source['_comment']) {
-            this._comment = new fhir.FhirElement(source._comment);
+            this.comment = new fhir.FhirString({ value: source.comment });
         }
         if (source['moiety']) {
             this.moiety = source.moiety.map((x) => new fhir.SubstanceSpecificationMoiety(x));
@@ -696,68 +778,74 @@ export class SubstanceSpecification extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: SubstanceSpecification.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'SubstanceSpecification' fhir: SubstanceSpecification.resourceType:'SubstanceSpecification'", }));
         }
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["status"]) {
-            results.push(...this.status.doModelValidation());
+            outcome.issue.push(...this.status.doModelValidation().issue);
         }
         if (this["domain"]) {
-            results.push(...this.domain.doModelValidation());
+            outcome.issue.push(...this.domain.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["source"]) {
-            this.source.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.source.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_comment"]) {
-            results.push(...this._comment.doModelValidation());
+        if (this["comment"]) {
+            outcome.issue.push(...this.comment.doModelValidation().issue);
         }
         if (this["moiety"]) {
-            this.moiety.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.moiety.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["property"]) {
-            this.property.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.property.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["referenceInformation"]) {
-            results.push(...this.referenceInformation.doModelValidation());
+            outcome.issue.push(...this.referenceInformation.doModelValidation().issue);
         }
         if (this["structure"]) {
-            results.push(...this.structure.doModelValidation());
+            outcome.issue.push(...this.structure.doModelValidation().issue);
         }
         if (this["code"]) {
-            this.code.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.code.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["name"]) {
-            this.name.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.name.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["molecularWeight"]) {
-            this.molecularWeight.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.molecularWeight.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relationship"]) {
-            this.relationship.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relationship.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["nucleicAcid"]) {
-            results.push(...this.nucleicAcid.doModelValidation());
+            outcome.issue.push(...this.nucleicAcid.doModelValidation().issue);
         }
         if (this["polymer"]) {
-            results.push(...this.polymer.doModelValidation());
+            outcome.issue.push(...this.polymer.doModelValidation().issue);
         }
         if (this["protein"]) {
-            results.push(...this.protein.doModelValidation());
+            outcome.issue.push(...this.protein.doModelValidation().issue);
         }
         if (this["sourceMaterial"]) {
-            results.push(...this.sourceMaterial.doModelValidation());
+            outcome.issue.push(...this.sourceMaterial.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=SubstanceSpecification.js.map

@@ -91,47 +91,4 @@ export const V20493ValueSet = {
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0493 ( Specimen Condition)
  */
-export var V20493ValueSetEnum;
-(function (V20493ValueSetEnum) {
-    /**
-     * Code: AUT
-     */
-    V20493ValueSetEnum["Autolyzed"] = "AUT";
-    /**
-     * Code: CFU
-     */
-    V20493ValueSetEnum["Centrifuged"] = "CFU";
-    /**
-     * Code: CLOT
-     */
-    V20493ValueSetEnum["Clotted"] = "CLOT";
-    /**
-     * Code: CON
-     */
-    V20493ValueSetEnum["Contaminated"] = "CON";
-    /**
-     * Code: COOL
-     */
-    V20493ValueSetEnum["Cool"] = "COOL";
-    /**
-     * Code: FROZ
-     */
-    V20493ValueSetEnum["Frozen"] = "FROZ";
-    /**
-     * Code: HEM
-     */
-    V20493ValueSetEnum["Hemolyzed"] = "HEM";
-    /**
-     * Code: LIVE
-     */
-    V20493ValueSetEnum["Live"] = "LIVE";
-    /**
-     * Code: ROOM
-     */
-    V20493ValueSetEnum["RoomTemperature"] = "ROOM";
-    /**
-     * Code: SNR
-     */
-    V20493ValueSetEnum["SampleNotReceived"] = "SNR";
-})(V20493ValueSetEnum || (V20493ValueSetEnum = {}));
 //# sourceMappingURL=V20493ValueSet.js.map

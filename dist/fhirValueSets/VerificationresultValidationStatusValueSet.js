@@ -35,19 +35,4 @@ export const VerificationresultValidationStatusValueSet = {
 /**
  * Status of the validation of the target against the primary source
  */
-export var VerificationresultValidationStatusValueSetEnum;
-(function (VerificationresultValidationStatusValueSetEnum) {
-    /**
-     * Code: failed
-     */
-    VerificationresultValidationStatusValueSetEnum["Failed"] = "failed";
-    /**
-     * Code: successful
-     */
-    VerificationresultValidationStatusValueSetEnum["Successful"] = "successful";
-    /**
-     * unknown: The validations status has not been determined yet
-     */
-    VerificationresultValidationStatusValueSetEnum["Unknown"] = "unknown";
-})(VerificationresultValidationStatusValueSetEnum || (VerificationresultValidationStatusValueSetEnum = {}));
 //# sourceMappingURL=VerificationresultValidationStatusValueSet.js.map

@@ -35,19 +35,4 @@ export const V20916ValueSet = {
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0916 ( Relevant Clincial Information)
  */
-export var V20916ValueSetEnum;
-(function (V20916ValueSetEnum) {
-    /**
-     * Code: F
-     */
-    V20916ValueSetEnum["PatientWasFastingPriorToTheProcedure"] = "F";
-    /**
-     * Code: NF
-     */
-    V20916ValueSetEnum["ThePatientIndicatedTheyDidNotFastPriorToTheProcedure"] = "NF";
-    /**
-     * Code: NG
-     */
-    V20916ValueSetEnum["NotGivenPatientWasNotAskedAtTheTimeOfTheProcedure"] = "NG";
-})(V20916ValueSetEnum || (V20916ValueSetEnum = {}));
 //# sourceMappingURL=V20916ValueSet.js.map

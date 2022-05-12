@@ -43,23 +43,4 @@ export const ClaimCareteamroleValueSet = {
 /**
  * This value set includes sample Claim Care Team Role codes.
  */
-export var ClaimCareteamroleValueSetEnum;
-(function (ClaimCareteamroleValueSetEnum) {
-    /**
-     * assist: Assisting care provider.
-     */
-    ClaimCareteamroleValueSetEnum["AssistingProvider"] = "assist";
-    /**
-     * other: Other role on the care team.
-     */
-    ClaimCareteamroleValueSetEnum["Other"] = "other";
-    /**
-     * primary: The primary care provider.
-     */
-    ClaimCareteamroleValueSetEnum["PrimaryProvider"] = "primary";
-    /**
-     * supervisor: Supervising care provider.
-     */
-    ClaimCareteamroleValueSetEnum["SupervisingProvider"] = "supervisor";
-})(ClaimCareteamroleValueSetEnum || (ClaimCareteamroleValueSetEnum = {}));
 //# sourceMappingURL=ClaimCareteamroleValueSet.js.map

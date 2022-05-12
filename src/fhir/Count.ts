@@ -3,30 +3,38 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Count
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
+ * Valid arguments for the Count type.
  */
-export type ICount = fhir.IQuantity & { 
+export interface CountArgs extends fhir.QuantityArgs {
 }
 
 /**
  * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
  */
-export class Count extends fhir.Quantity implements ICount {
+export class Count extends fhir.Quantity {
+  readonly __dataType:string = 'Count';
   /**
    * Default constructor for Count - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICount> = { }) {
-    super(source);
+  constructor(source:Partial<CountArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

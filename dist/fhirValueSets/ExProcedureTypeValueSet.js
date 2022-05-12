@@ -27,15 +27,4 @@ export const ExProcedureTypeValueSet = {
 /**
  * This value set includes example Procedure Type codes.
  */
-export var ExProcedureTypeValueSetEnum;
-(function (ExProcedureTypeValueSetEnum) {
-    /**
-     * primary: The first procedure in a series required to produce and overall patient outcome.
-     */
-    ExProcedureTypeValueSetEnum["PrimaryProcedure"] = "primary";
-    /**
-     * secondary: The second procedure in a series required to produce and overall patient outcome.
-     */
-    ExProcedureTypeValueSetEnum["SecondaryProcedure"] = "secondary";
-})(ExProcedureTypeValueSetEnum || (ExProcedureTypeValueSetEnum = {}));
 //# sourceMappingURL=ExProcedureTypeValueSet.js.map

@@ -27,9 +27,3 @@ export type ContractAssetcontextValueSetType = typeof ContractAssetcontextValueS
 /**
  * This value set contract specific codes for asset context.
  */
-export enum ContractAssetcontextValueSetEnum {
-  /**
-   * custodian: To be completed
-   */
-  Custodian = "custodian",
-}

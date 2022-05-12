@@ -1,178 +1,37 @@
 import * as fhir from '../fhir.js';
-import { ResponseCodeValueSetType, ResponseCodeValueSetEnum } from '../fhirValueSets/ResponseCodeValueSet.js';
+import { ResponseCodeValueSetType } from '../fhirValueSets/ResponseCodeValueSet.js';
+import { ResponseCodeValueSetEnum } from '../valueSetEnums.js';
 import { MessageReasonEncounterValueSetType } from '../fhirValueSets/MessageReasonEncounterValueSet.js';
 /**
- * There SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system.
+ * Valid arguments for the MessageHeaderDestination type.
  */
-export declare type IMessageHeaderDestination = fhir.IBackboneElement & {
+export interface MessageHeaderDestinationArgs extends fhir.BackboneElementArgs {
     /**
      * Human-readable name for the target system.
      */
-    name?: string | undefined;
-    /**
-     * Extended properties for primitive element: MessageHeader.destination.name
-     */
-    _name?: fhir.IFhirElement | undefined;
+    name?: fhir.FhirString | string | undefined;
     /**
      * Identifies the target end system in situations where the initial message transmission is to an intermediary system.
      */
-    target?: fhir.IReference | undefined;
+    target?: fhir.ReferenceArgs | undefined;
     /**
      * The id may be a non-resolvable URI for systems that do not use standard network-based addresses.
      */
-    endpoint: string | null;
-    /**
-     * Extended properties for primitive element: MessageHeader.destination.endpoint
-     */
-    _endpoint?: fhir.IFhirElement | undefined;
+    endpoint: fhir.FhirUrl | string | undefined;
     /**
      * Allows data conveyed by a message to be addressed to a particular person or department when routing to a specific application isn't sufficient.
      */
-    receiver?: fhir.IReference | undefined;
-};
-/**
- * The source application from which this message originated.
- */
-export declare type IMessageHeaderSource = fhir.IBackboneElement & {
-    /**
-     * Human-readable name for the source system.
-     */
-    name?: string | undefined;
-    /**
-     * Extended properties for primitive element: MessageHeader.source.name
-     */
-    _name?: fhir.IFhirElement | undefined;
-    /**
-     * May include configuration or other information useful in debugging.
-     */
-    software?: string | undefined;
-    /**
-     * Extended properties for primitive element: MessageHeader.source.software
-     */
-    _software?: fhir.IFhirElement | undefined;
-    /**
-     * Can convey versions of multiple systems in situations where a message passes through multiple hands.
-     */
-    version?: string | undefined;
-    /**
-     * Extended properties for primitive element: MessageHeader.source.version
-     */
-    _version?: fhir.IFhirElement | undefined;
-    /**
-     * An e-mail, phone, website or other contact point to use to resolve issues with message communications.
-     */
-    contact?: fhir.IContactPoint | undefined;
-    /**
-     * The id may be a non-resolvable URI for systems that do not use standard network-based addresses.
-     */
-    endpoint: string | null;
-    /**
-     * Extended properties for primitive element: MessageHeader.source.endpoint
-     */
-    _endpoint?: fhir.IFhirElement | undefined;
-};
-/**
- * Information about the message that this message is a response to.  Only present if this message is a response.
- */
-export declare type IMessageHeaderResponse = fhir.IBackboneElement & {
-    /**
-     * The MessageHeader.id of the message to which this message is a response.
-     */
-    identifier: string | null;
-    /**
-     * Extended properties for primitive element: MessageHeader.response.identifier
-     */
-    _identifier?: fhir.IFhirElement | undefined;
-    /**
-     * This is a generic response to the request message. Specific data for the response will be found in MessageHeader.focus.
-     */
-    code: ResponseCodeValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: MessageHeader.response.code
-     */
-    _code?: fhir.IFhirElement | undefined;
-    /**
-     * This SHALL be contained in the bundle. If any of the issues are errors, the response code SHALL be an error.
-     */
-    details?: fhir.IReference | undefined;
-};
-/**
- * The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
- */
-export declare type IMessageHeader = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "MessageHeader";
-    /**
-     * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
-     */
-    eventCoding?: fhir.ICoding | undefined;
-    /**
-     * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
-     */
-    eventUri?: string | undefined;
-    /**
-     * Extended properties for primitive element: MessageHeader.event[x]
-     */
-    _eventUri?: fhir.IFhirElement | undefined;
-    /**
-     * There SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system.
-     */
-    destination?: fhir.IMessageHeaderDestination[] | undefined;
-    /**
-     * Use case is for where a (trusted) sending system is responsible for multiple organizations, and therefore cannot differentiate based on source endpoint / authentication alone.
-     */
-    sender?: fhir.IReference | undefined;
-    /**
-     * Usually only for the request but can be used in a response.
-     */
-    enterer?: fhir.IReference | undefined;
-    /**
-     * Usually only for the request but can be used in a response.
-     */
-    author?: fhir.IReference | undefined;
-    /**
-     * The source application from which this message originated.
-     */
-    source: fhir.IMessageHeaderSource | null;
-    /**
-     * Usually only for the request but can be used in a response.
-     */
-    responsible?: fhir.IReference | undefined;
-    /**
-     * Coded indication of the cause for the event - indicates  a reason for the occurrence of the event that is a focus of this message.
-     */
-    reason?: fhir.ICodeableConcept | undefined;
-    /**
-     * Information about the message that this message is a response to.  Only present if this message is a response.
-     */
-    response?: fhir.IMessageHeaderResponse | undefined;
-    /**
-     * The data is defined where the transaction type is defined. The transaction data is always included in the bundle that is the full message.  Only the root resource is specified.  The resources it references should be contained in the bundle but are not also listed here.  Multiple repetitions are allowed to cater for merges and other situations with multiple focal targets.
-     */
-    focus?: fhir.IReference[] | undefined;
-    /**
-     * Permanent link to the MessageDefinition for this message.
-     */
-    definition?: string | undefined;
-    /**
-     * Extended properties for primitive element: MessageHeader.definition
-     */
-    _definition?: fhir.IFhirElement | undefined;
-};
+    receiver?: fhir.ReferenceArgs | undefined;
+}
 /**
  * There SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system.
  */
-export declare class MessageHeaderDestination extends fhir.BackboneElement implements IMessageHeaderDestination {
+export declare class MessageHeaderDestination extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Human-readable name for the target system.
      */
-    name?: string | undefined;
-    /**
-     * Extended properties for primitive element: MessageHeader.destination.name
-     */
-    _name?: fhir.FhirElement | undefined;
+    name?: fhir.FhirString | undefined;
     /**
      * Identifies the target end system in situations where the initial message transmission is to an intermediary system.
      */
@@ -180,11 +39,7 @@ export declare class MessageHeaderDestination extends fhir.BackboneElement imple
     /**
      * The id may be a non-resolvable URI for systems that do not use standard network-based addresses.
      */
-    endpoint: string | null;
-    /**
-     * Extended properties for primitive element: MessageHeader.destination.endpoint
-     */
-    _endpoint?: fhir.FhirElement | undefined;
+    endpoint: fhir.FhirUrl | null;
     /**
      * Allows data conveyed by a message to be addressed to a particular person or department when routing to a specific application isn't sufficient.
      */
@@ -192,40 +47,58 @@ export declare class MessageHeaderDestination extends fhir.BackboneElement imple
     /**
      * Default constructor for MessageHeaderDestination - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMessageHeaderDestination>);
+    constructor(source?: Partial<MessageHeaderDestinationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the MessageHeaderSource type.
+ */
+export interface MessageHeaderSourceArgs extends fhir.BackboneElementArgs {
+    /**
+     * Human-readable name for the source system.
+     */
+    name?: fhir.FhirString | string | undefined;
+    /**
+     * May include configuration or other information useful in debugging.
+     */
+    software?: fhir.FhirString | string | undefined;
+    /**
+     * Can convey versions of multiple systems in situations where a message passes through multiple hands.
+     */
+    version?: fhir.FhirString | string | undefined;
+    /**
+     * An e-mail, phone, website or other contact point to use to resolve issues with message communications.
+     */
+    contact?: fhir.ContactPointArgs | undefined;
+    /**
+     * The id may be a non-resolvable URI for systems that do not use standard network-based addresses.
+     */
+    endpoint: fhir.FhirUrl | string | undefined;
 }
 /**
  * The source application from which this message originated.
  */
-export declare class MessageHeaderSource extends fhir.BackboneElement implements IMessageHeaderSource {
+export declare class MessageHeaderSource extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Human-readable name for the source system.
      */
-    name?: string | undefined;
-    /**
-     * Extended properties for primitive element: MessageHeader.source.name
-     */
-    _name?: fhir.FhirElement | undefined;
+    name?: fhir.FhirString | undefined;
     /**
      * May include configuration or other information useful in debugging.
      */
-    software?: string | undefined;
-    /**
-     * Extended properties for primitive element: MessageHeader.source.software
-     */
-    _software?: fhir.FhirElement | undefined;
+    software?: fhir.FhirString | undefined;
     /**
      * Can convey versions of multiple systems in situations where a message passes through multiple hands.
      */
-    version?: string | undefined;
-    /**
-     * Extended properties for primitive element: MessageHeader.source.version
-     */
-    _version?: fhir.FhirElement | undefined;
+    version?: fhir.FhirString | undefined;
     /**
      * An e-mail, phone, website or other contact point to use to resolve issues with message communications.
      */
@@ -233,40 +106,50 @@ export declare class MessageHeaderSource extends fhir.BackboneElement implements
     /**
      * The id may be a non-resolvable URI for systems that do not use standard network-based addresses.
      */
-    endpoint: string | null;
-    /**
-     * Extended properties for primitive element: MessageHeader.source.endpoint
-     */
-    _endpoint?: fhir.FhirElement | undefined;
+    endpoint: fhir.FhirUrl | null;
     /**
      * Default constructor for MessageHeaderSource - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMessageHeaderSource>);
+    constructor(source?: Partial<MessageHeaderSourceArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 /**
- * Information about the message that this message is a response to.  Only present if this message is a response.
+ * Valid arguments for the MessageHeaderResponse type.
  */
-export declare class MessageHeaderResponse extends fhir.BackboneElement implements IMessageHeaderResponse {
+export interface MessageHeaderResponseArgs extends fhir.BackboneElementArgs {
     /**
      * The MessageHeader.id of the message to which this message is a response.
      */
-    identifier: string | null;
-    /**
-     * Extended properties for primitive element: MessageHeader.response.identifier
-     */
-    _identifier?: fhir.FhirElement | undefined;
+    identifier: fhir.FhirId | string | undefined;
     /**
      * This is a generic response to the request message. Specific data for the response will be found in MessageHeader.focus.
      */
     code: ResponseCodeValueSetEnum | null;
     /**
-     * Extended properties for primitive element: MessageHeader.response.code
+     * This SHALL be contained in the bundle. If any of the issues are errors, the response code SHALL be an error.
      */
-    _code?: fhir.FhirElement | undefined;
+    details?: fhir.ReferenceArgs | undefined;
+}
+/**
+ * Information about the message that this message is a response to.  Only present if this message is a response.
+ */
+export declare class MessageHeaderResponse extends fhir.BackboneElement {
+    readonly __dataType: string;
+    /**
+     * The MessageHeader.id of the message to which this message is a response.
+     */
+    identifier: fhir.FhirId | null;
+    /**
+     * This is a generic response to the request message. Specific data for the response will be found in MessageHeader.focus.
+     */
+    code: ResponseCodeValueSetEnum | null;
     /**
      * This SHALL be contained in the bundle. If any of the issues are errors, the response code SHALL be an error.
      */
@@ -274,7 +157,7 @@ export declare class MessageHeaderResponse extends fhir.BackboneElement implemen
     /**
      * Default constructor for MessageHeaderResponse - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMessageHeaderResponse>);
+    constructor(source?: Partial<MessageHeaderResponseArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for code
      */
@@ -282,12 +165,78 @@ export declare class MessageHeaderResponse extends fhir.BackboneElement implemen
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the MessageHeader type.
+ */
+export interface MessageHeaderArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "MessageHeader" | undefined;
+    /**
+     * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
+     */
+    event?: fhir.Coding | fhir.FhirUri | undefined;
+    /**
+     * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
+     */
+    eventCoding?: fhir.CodingArgs | undefined;
+    /**
+     * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
+     */
+    eventUri?: fhir.FhirUri | string | undefined;
+    /**
+     * There SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system.
+     */
+    destination?: fhir.MessageHeaderDestinationArgs[] | undefined;
+    /**
+     * Use case is for where a (trusted) sending system is responsible for multiple organizations, and therefore cannot differentiate based on source endpoint / authentication alone.
+     */
+    sender?: fhir.ReferenceArgs | undefined;
+    /**
+     * Usually only for the request but can be used in a response.
+     */
+    enterer?: fhir.ReferenceArgs | undefined;
+    /**
+     * Usually only for the request but can be used in a response.
+     */
+    author?: fhir.ReferenceArgs | undefined;
+    /**
+     * The source application from which this message originated.
+     */
+    source: fhir.MessageHeaderSourceArgs | null;
+    /**
+     * Usually only for the request but can be used in a response.
+     */
+    responsible?: fhir.ReferenceArgs | undefined;
+    /**
+     * Coded indication of the cause for the event - indicates  a reason for the occurrence of the event that is a focus of this message.
+     */
+    reason?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Information about the message that this message is a response to.  Only present if this message is a response.
+     */
+    response?: fhir.MessageHeaderResponseArgs | undefined;
+    /**
+     * The data is defined where the transaction type is defined. The transaction data is always included in the bundle that is the full message.  Only the root resource is specified.  The resources it references should be contained in the bundle but are not also listed here.  Multiple repetitions are allowed to cater for merges and other situations with multiple focal targets.
+     */
+    focus?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * Permanent link to the MessageDefinition for this message.
+     */
+    definition?: fhir.FhirCanonical | string | undefined;
 }
 /**
  * The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
  */
-export declare class MessageHeader extends fhir.DomainResource implements IMessageHeader {
+export declare class MessageHeader extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -295,15 +244,8 @@ export declare class MessageHeader extends fhir.DomainResource implements IMessa
     /**
      * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
      */
-    eventCoding?: fhir.Coding | undefined;
-    /**
-     * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
-     */
-    eventUri?: string | undefined;
-    /**
-     * Extended properties for primitive element: MessageHeader.event[x]
-     */
-    _eventUri?: fhir.FhirElement | undefined;
+    event: (fhir.Coding | fhir.FhirUri) | null;
+    readonly __eventIsChoice: true;
     /**
      * There SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system.
      */
@@ -343,15 +285,11 @@ export declare class MessageHeader extends fhir.DomainResource implements IMessa
     /**
      * Permanent link to the MessageDefinition for this message.
      */
-    definition?: string | undefined;
-    /**
-     * Extended properties for primitive element: MessageHeader.definition
-     */
-    _definition?: fhir.FhirElement | undefined;
+    definition?: fhir.FhirCanonical | undefined;
     /**
      * Default constructor for MessageHeader - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMessageHeader>);
+    constructor(source?: Partial<MessageHeaderArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Example-bound Value Set for reason
      */
@@ -359,6 +297,10 @@ export declare class MessageHeader extends fhir.DomainResource implements IMessa
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=MessageHeader.d.ts.map

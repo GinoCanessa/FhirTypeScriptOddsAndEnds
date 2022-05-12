@@ -51,27 +51,4 @@ export const ServiceReferralMethodValueSet = {
 /**
  * The methods of referral can be used when referring to a specific HealthCareService resource.
  */
-export var ServiceReferralMethodValueSetEnum;
-(function (ServiceReferralMethodValueSetEnum) {
-    /**
-     * elec: Referrals may be accepted via a secure messaging system. To determine the types of secure messaging systems supported, refer to the identifiers collection. Callers will need to understand the specific identifier system used to know that they are able to transmit messages.
-     */
-    ServiceReferralMethodValueSetEnum["SecureMessaging"] = "elec";
-    /**
-     * fax: Referrals may be accepted by fax.
-     */
-    ServiceReferralMethodValueSetEnum["Fax"] = "fax";
-    /**
-     * mail: Referrals may be accepted via regular postage (or hand delivered).
-     */
-    ServiceReferralMethodValueSetEnum["Mail"] = "mail";
-    /**
-     * phone: Referrals may be accepted over the phone from a practitioner.
-     */
-    ServiceReferralMethodValueSetEnum["Phone"] = "phone";
-    /**
-     * semail: Referrals may be accepted via a secure email. To send please encrypt with the services public key.
-     */
-    ServiceReferralMethodValueSetEnum["SecureEmail"] = "semail";
-})(ServiceReferralMethodValueSetEnum || (ServiceReferralMethodValueSetEnum = {}));
 //# sourceMappingURL=ServiceReferralMethodValueSet.js.map

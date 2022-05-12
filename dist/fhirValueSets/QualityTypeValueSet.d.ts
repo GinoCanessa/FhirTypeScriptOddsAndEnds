@@ -23,18 +23,4 @@ export declare type QualityTypeValueSetType = typeof QualityTypeValueSet;
 /**
  * Type for quality report.
  */
-export declare enum QualityTypeValueSetEnum {
-    /**
-     * indel: INDEL Comparison.
-     */
-    INDELComparison = "indel",
-    /**
-     * snp: SNP Comparison.
-     */
-    SNPComparison = "snp",
-    /**
-     * unknown: UNKNOWN Comparison.
-     */
-    UNKNOWNComparison = "unknown"
-}
 //# sourceMappingURL=QualityTypeValueSet.d.ts.map

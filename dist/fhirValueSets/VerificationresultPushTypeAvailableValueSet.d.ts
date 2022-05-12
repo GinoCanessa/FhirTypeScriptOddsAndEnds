@@ -23,18 +23,4 @@ export declare type VerificationresultPushTypeAvailableValueSetType = typeof Ver
 /**
  * Type of alerts/updates the primary source can send
  */
-export declare enum VerificationresultPushTypeAvailableValueSetEnum {
-    /**
-     * Code: any
-     */
-    AnyChanges = "any",
-    /**
-     * Code: source
-     */
-    AsDefinedBySource = "source",
-    /**
-     * Code: specific
-     */
-    SpecificRequestedChanges = "specific"
-}
 //# sourceMappingURL=VerificationresultPushTypeAvailableValueSet.d.ts.map

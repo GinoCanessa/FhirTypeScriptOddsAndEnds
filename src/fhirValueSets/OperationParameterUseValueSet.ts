@@ -35,13 +35,3 @@ export type OperationParameterUseValueSetType = typeof OperationParameterUseValu
 /**
  * Whether an operation parameter is an input or an output parameter.
  */
-export enum OperationParameterUseValueSetEnum {
-  /**
-   * in: This is an input parameter.
-   */
-  In = "in",
-  /**
-   * out: This is an output parameter.
-   */
-  Out = "out",
-}

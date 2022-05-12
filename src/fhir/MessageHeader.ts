@@ -3,187 +3,45 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MessageHeader
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ResponseCodeValueSet, ResponseCodeValueSetType, ResponseCodeValueSetEnum } from '../fhirValueSets/ResponseCodeValueSet.js'
-import { MessageReasonEncounterValueSet, MessageReasonEncounterValueSetType, MessageReasonEncounterValueSetEnum } from '../fhirValueSets/MessageReasonEncounterValueSet.js'
-
+import { ResponseCodeValueSet, ResponseCodeValueSetType,} from '../fhirValueSets/ResponseCodeValueSet.js';
+import { ResponseCodeValueSetEnum } from '../valueSetEnums.js';
+import { MessageReasonEncounterValueSet, MessageReasonEncounterValueSetType,} from '../fhirValueSets/MessageReasonEncounterValueSet.js';
+import { MessageReasonEncounterValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * There SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system.
+ * Valid arguments for the MessageHeaderDestination type.
  */
-export type IMessageHeaderDestination = fhir.IBackboneElement & { 
+export interface MessageHeaderDestinationArgs extends fhir.BackboneElementArgs {
   /**
    * Human-readable name for the target system.
    */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageHeader.destination.name
-   */
-  _name?: fhir.IFhirElement|undefined;
+  name?: fhir.FhirString|string|undefined;
   /**
    * Identifies the target end system in situations where the initial message transmission is to an intermediary system.
    */
-  target?: fhir.IReference|undefined;
+  target?: fhir.ReferenceArgs|undefined;
   /**
    * The id may be a non-resolvable URI for systems that do not use standard network-based addresses.
    */
-  endpoint: string|null;
-  /**
-   * Extended properties for primitive element: MessageHeader.destination.endpoint
-   */
-  _endpoint?: fhir.IFhirElement|undefined;
+  endpoint: fhir.FhirUrl|string|undefined;
   /**
    * Allows data conveyed by a message to be addressed to a particular person or department when routing to a specific application isn't sufficient.
    */
-  receiver?: fhir.IReference|undefined;
-}
-
-/**
- * The source application from which this message originated.
- */
-export type IMessageHeaderSource = fhir.IBackboneElement & { 
-  /**
-   * Human-readable name for the source system.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageHeader.source.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * May include configuration or other information useful in debugging.
-   */
-  software?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageHeader.source.software
-   */
-  _software?: fhir.IFhirElement|undefined;
-  /**
-   * Can convey versions of multiple systems in situations where a message passes through multiple hands.
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageHeader.source.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * An e-mail, phone, website or other contact point to use to resolve issues with message communications.
-   */
-  contact?: fhir.IContactPoint|undefined;
-  /**
-   * The id may be a non-resolvable URI for systems that do not use standard network-based addresses.
-   */
-  endpoint: string|null;
-  /**
-   * Extended properties for primitive element: MessageHeader.source.endpoint
-   */
-  _endpoint?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Information about the message that this message is a response to.  Only present if this message is a response.
- */
-export type IMessageHeaderResponse = fhir.IBackboneElement & { 
-  /**
-   * The MessageHeader.id of the message to which this message is a response.
-   */
-  identifier: string|null;
-  /**
-   * Extended properties for primitive element: MessageHeader.response.identifier
-   */
-  _identifier?: fhir.IFhirElement|undefined;
-  /**
-   * This is a generic response to the request message. Specific data for the response will be found in MessageHeader.focus.
-   */
-  code: ResponseCodeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: MessageHeader.response.code
-   */
-  _code?: fhir.IFhirElement|undefined;
-  /**
-   * This SHALL be contained in the bundle. If any of the issues are errors, the response code SHALL be an error.
-   */
-  details?: fhir.IReference|undefined;
-}
-
-/**
- * The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
- */
-export type IMessageHeader = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "MessageHeader";
-  /**
-   * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
-   */
-  eventCoding?: fhir.ICoding|undefined;
-  /**
-   * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
-   */
-  eventUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageHeader.event[x]
-   */
-  _eventUri?: fhir.IFhirElement|undefined;
-  /**
-   * There SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system.
-   */
-  destination?: fhir.IMessageHeaderDestination[]|undefined;
-  /**
-   * Use case is for where a (trusted) sending system is responsible for multiple organizations, and therefore cannot differentiate based on source endpoint / authentication alone.
-   */
-  sender?: fhir.IReference|undefined;
-  /**
-   * Usually only for the request but can be used in a response.
-   */
-  enterer?: fhir.IReference|undefined;
-  /**
-   * Usually only for the request but can be used in a response.
-   */
-  author?: fhir.IReference|undefined;
-  /**
-   * The source application from which this message originated.
-   */
-  source: fhir.IMessageHeaderSource|null;
-  /**
-   * Usually only for the request but can be used in a response.
-   */
-  responsible?: fhir.IReference|undefined;
-  /**
-   * Coded indication of the cause for the event - indicates  a reason for the occurrence of the event that is a focus of this message.
-   */
-  reason?: fhir.ICodeableConcept|undefined;
-  /**
-   * Information about the message that this message is a response to.  Only present if this message is a response.
-   */
-  response?: fhir.IMessageHeaderResponse|undefined;
-  /**
-   * The data is defined where the transaction type is defined. The transaction data is always included in the bundle that is the full message.  Only the root resource is specified.  The resources it references should be contained in the bundle but are not also listed here.  Multiple repetitions are allowed to cater for merges and other situations with multiple focal targets.
-   */
-  focus?: fhir.IReference[]|undefined;
-  /**
-   * Permanent link to the MessageDefinition for this message.
-   */
-  definition?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageHeader.definition
-   */
-  _definition?: fhir.IFhirElement|undefined;
+  receiver?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * There SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system.
  */
-export class MessageHeaderDestination extends fhir.BackboneElement implements IMessageHeaderDestination {
+export class MessageHeaderDestination extends fhir.BackboneElement {
+  readonly __dataType:string = 'MessageHeaderDestination';
   /**
    * Human-readable name for the target system.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageHeader.destination.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Identifies the target end system in situations where the initial message transmission is to an intermediary system.
    */
@@ -191,11 +49,7 @@ export class MessageHeaderDestination extends fhir.BackboneElement implements IM
   /**
    * The id may be a non-resolvable URI for systems that do not use standard network-based addresses.
    */
-  public endpoint: string|null;
-  /**
-   * Extended properties for primitive element: MessageHeader.destination.endpoint
-   */
-  public _endpoint?: fhir.FhirElement|undefined;
+  public endpoint: fhir.FhirUrl|null;
   /**
    * Allows data conveyed by a message to be addressed to a particular person or department when routing to a specific application isn't sufficient.
    */
@@ -203,58 +57,78 @@ export class MessageHeaderDestination extends fhir.BackboneElement implements IM
   /**
    * Default constructor for MessageHeaderDestination - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMessageHeaderDestination> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['target']) { this.target = new fhir.Reference(source.target!); }
-    if (source['endpoint']) { this.endpoint = source.endpoint; }
+  constructor(source:Partial<MessageHeaderDestinationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['target']) { this.target = new fhir.Reference(source.target); }
+    if (source['endpoint']) { this.endpoint = new fhir.FhirUrl({value: source.endpoint}); }
     else { this.endpoint = null; }
-    if (source['_endpoint']) { this._endpoint = new fhir.FhirElement(source._endpoint!); }
-    if (source['receiver']) { this.receiver = new fhir.Reference(source.receiver!); }
+    if (source['receiver']) { this.receiver = new fhir.Reference(source.receiver); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["target"]) { results.push(...this.target.doModelValidation()); }
-    if (!this["endpoint"]) { results.push(["endpoint",'Missing required element: MessageHeader.destination.endpoint']); }
-    if (this["_endpoint"]) { results.push(...this._endpoint.doModelValidation()); }
-    if (this["receiver"]) { results.push(...this.receiver.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["target"]) { outcome.issue!.push(...this.target.doModelValidation().issue!); }
+    if (!this['endpoint']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property endpoint:fhir.FhirUrl fhir: MessageHeader.destination.endpoint:url", }));
+    }
+    if (this["endpoint"]) { outcome.issue!.push(...this.endpoint.doModelValidation().issue!); }
+    if (this["receiver"]) { outcome.issue!.push(...this.receiver.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MessageHeaderSource type.
+ */
+export interface MessageHeaderSourceArgs extends fhir.BackboneElementArgs {
+  /**
+   * Human-readable name for the source system.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * May include configuration or other information useful in debugging.
+   */
+  software?: fhir.FhirString|string|undefined;
+  /**
+   * Can convey versions of multiple systems in situations where a message passes through multiple hands.
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * An e-mail, phone, website or other contact point to use to resolve issues with message communications.
+   */
+  contact?: fhir.ContactPointArgs|undefined;
+  /**
+   * The id may be a non-resolvable URI for systems that do not use standard network-based addresses.
+   */
+  endpoint: fhir.FhirUrl|string|undefined;
 }
 
 /**
  * The source application from which this message originated.
  */
-export class MessageHeaderSource extends fhir.BackboneElement implements IMessageHeaderSource {
+export class MessageHeaderSource extends fhir.BackboneElement {
+  readonly __dataType:string = 'MessageHeaderSource';
   /**
    * Human-readable name for the source system.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageHeader.source.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * May include configuration or other information useful in debugging.
    */
-  public software?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageHeader.source.software
-   */
-  public _software?: fhir.FhirElement|undefined;
+  public software?: fhir.FhirString|undefined;
   /**
    * Can convey versions of multiple systems in situations where a message passes through multiple hands.
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageHeader.source.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * An e-mail, phone, website or other contact point to use to resolve issues with message communications.
    */
@@ -262,62 +136,72 @@ export class MessageHeaderSource extends fhir.BackboneElement implements IMessag
   /**
    * The id may be a non-resolvable URI for systems that do not use standard network-based addresses.
    */
-  public endpoint: string|null;
-  /**
-   * Extended properties for primitive element: MessageHeader.source.endpoint
-   */
-  public _endpoint?: fhir.FhirElement|undefined;
+  public endpoint: fhir.FhirUrl|null;
   /**
    * Default constructor for MessageHeaderSource - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMessageHeaderSource> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['software']) { this.software = source.software; }
-    if (source['_software']) { this._software = new fhir.FhirElement(source._software!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['contact']) { this.contact = new fhir.ContactPoint(source.contact!); }
-    if (source['endpoint']) { this.endpoint = source.endpoint; }
+  constructor(source:Partial<MessageHeaderSourceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['software']) { this.software = new fhir.FhirString({value: source.software}); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['contact']) { this.contact = new fhir.ContactPoint(source.contact); }
+    if (source['endpoint']) { this.endpoint = new fhir.FhirUrl({value: source.endpoint}); }
     else { this.endpoint = null; }
-    if (source['_endpoint']) { this._endpoint = new fhir.FhirElement(source._endpoint!); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_software"]) { results.push(...this._software.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["contact"]) { results.push(...this.contact.doModelValidation()); }
-    if (!this["endpoint"]) { results.push(["endpoint",'Missing required element: MessageHeader.source.endpoint']); }
-    if (this["_endpoint"]) { results.push(...this._endpoint.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["software"]) { outcome.issue!.push(...this.software.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["contact"]) { outcome.issue!.push(...this.contact.doModelValidation().issue!); }
+    if (!this['endpoint']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property endpoint:fhir.FhirUrl fhir: MessageHeader.source.endpoint:url", }));
+    }
+    if (this["endpoint"]) { outcome.issue!.push(...this.endpoint.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MessageHeaderResponse type.
+ */
+export interface MessageHeaderResponseArgs extends fhir.BackboneElementArgs {
+  /**
+   * The MessageHeader.id of the message to which this message is a response.
+   */
+  identifier: fhir.FhirId|string|undefined;
+  /**
+   * This is a generic response to the request message. Specific data for the response will be found in MessageHeader.focus.
+   */
+  code: ResponseCodeValueSetEnum|null;
+  /**
+   * This SHALL be contained in the bundle. If any of the issues are errors, the response code SHALL be an error.
+   */
+  details?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * Information about the message that this message is a response to.  Only present if this message is a response.
  */
-export class MessageHeaderResponse extends fhir.BackboneElement implements IMessageHeaderResponse {
+export class MessageHeaderResponse extends fhir.BackboneElement {
+  readonly __dataType:string = 'MessageHeaderResponse';
   /**
    * The MessageHeader.id of the message to which this message is a response.
    */
-  public identifier: string|null;
-  /**
-   * Extended properties for primitive element: MessageHeader.response.identifier
-   */
-  public _identifier?: fhir.FhirElement|undefined;
+  public identifier: fhir.FhirId|null;
   /**
    * This is a generic response to the request message. Specific data for the response will be found in MessageHeader.focus.
    */
   public code: ResponseCodeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: MessageHeader.response.code
-   */
-  public _code?: fhir.FhirElement|undefined;
   /**
    * This SHALL be contained in the bundle. If any of the issues are errors, the response code SHALL be an error.
    */
@@ -325,15 +209,13 @@ export class MessageHeaderResponse extends fhir.BackboneElement implements IMess
   /**
    * Default constructor for MessageHeaderResponse - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMessageHeaderResponse> = { }) {
-    super(source);
-    if (source['identifier']) { this.identifier = source.identifier; }
+  constructor(source:Partial<MessageHeaderResponseArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['identifier']) { this.identifier = new fhir.FhirId({value: source.identifier}); }
     else { this.identifier = null; }
-    if (source['_identifier']) { this._identifier = new fhir.FhirElement(source._identifier!); }
     if (source['code']) { this.code = source.code; }
     else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['details']) { this.details = new fhir.Reference(source.details!); }
+    if (source['details']) { this.details = new fhir.Reference(source.details); }
   }
   /**
    * Required-bound Value Set for code
@@ -344,21 +226,92 @@ export class MessageHeaderResponse extends fhir.BackboneElement implements IMess
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["identifier"]) { results.push(["identifier",'Missing required element: MessageHeader.response.identifier']); }
-    if (this["_identifier"]) { results.push(...this._identifier.doModelValidation()); }
-    if (!this["code"]) { results.push(["code",'Missing required element: MessageHeader.response.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["details"]) { results.push(...this.details.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['identifier']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property identifier:fhir.FhirId fhir: MessageHeader.response.identifier:id", }));
+    }
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:ResponseCodeValueSetEnum fhir: MessageHeader.response.code:code", }));
+    }
+    if (this["details"]) { outcome.issue!.push(...this.details.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MessageHeader type.
+ */
+export interface MessageHeaderArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "MessageHeader"|undefined;
+  /**
+   * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
+   */
+  event?: fhir.Coding|fhir.FhirUri|undefined;
+  /**
+   * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
+   */
+  eventCoding?: fhir.CodingArgs|undefined;
+  /**
+   * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
+   */
+  eventUri?: fhir.FhirUri|string|undefined;
+  /**
+   * There SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system.
+   */
+  destination?: fhir.MessageHeaderDestinationArgs[]|undefined;
+  /**
+   * Use case is for where a (trusted) sending system is responsible for multiple organizations, and therefore cannot differentiate based on source endpoint / authentication alone.
+   */
+  sender?: fhir.ReferenceArgs|undefined;
+  /**
+   * Usually only for the request but can be used in a response.
+   */
+  enterer?: fhir.ReferenceArgs|undefined;
+  /**
+   * Usually only for the request but can be used in a response.
+   */
+  author?: fhir.ReferenceArgs|undefined;
+  /**
+   * The source application from which this message originated.
+   */
+  source: fhir.MessageHeaderSourceArgs|null;
+  /**
+   * Usually only for the request but can be used in a response.
+   */
+  responsible?: fhir.ReferenceArgs|undefined;
+  /**
+   * Coded indication of the cause for the event - indicates  a reason for the occurrence of the event that is a focus of this message.
+   */
+  reason?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Information about the message that this message is a response to.  Only present if this message is a response.
+   */
+  response?: fhir.MessageHeaderResponseArgs|undefined;
+  /**
+   * The data is defined where the transaction type is defined. The transaction data is always included in the bundle that is the full message.  Only the root resource is specified.  The resources it references should be contained in the bundle but are not also listed here.  Multiple repetitions are allowed to cater for merges and other situations with multiple focal targets.
+   */
+  focus?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Permanent link to the MessageDefinition for this message.
+   */
+  definition?: fhir.FhirCanonical|string|undefined;
 }
 
 /**
  * The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
  */
-export class MessageHeader extends fhir.DomainResource implements IMessageHeader {
+export class MessageHeader extends fhir.DomainResource {
+  readonly __dataType:string = 'MessageHeader';
   /**
    * Resource Type Name
    */
@@ -366,19 +319,12 @@ export class MessageHeader extends fhir.DomainResource implements IMessageHeader
   /**
    * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
    */
-  public eventCoding?: fhir.Coding|undefined;
-  /**
-   * The time of the event will be found in the focus resource. The time of the message will be found in [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp).
-   */
-  public eventUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageHeader.event[x]
-   */
-  public _eventUri?: fhir.FhirElement|undefined;
+  public event: (fhir.Coding|fhir.FhirUri)|null;
+  readonly __eventIsChoice:true = true;
   /**
    * There SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system.
    */
-  public destination?: fhir.MessageHeaderDestination[]|undefined;
+  public destination?: fhir.MessageHeaderDestination[]|undefined = [];
   /**
    * Use case is for where a (trusted) sending system is responsible for multiple organizations, and therefore cannot differentiate based on source endpoint / authentication alone.
    */
@@ -410,36 +356,32 @@ export class MessageHeader extends fhir.DomainResource implements IMessageHeader
   /**
    * The data is defined where the transaction type is defined. The transaction data is always included in the bundle that is the full message.  Only the root resource is specified.  The resources it references should be contained in the bundle but are not also listed here.  Multiple repetitions are allowed to cater for merges and other situations with multiple focal targets.
    */
-  public focus?: fhir.Reference[]|undefined;
+  public focus?: fhir.Reference[]|undefined = [];
   /**
    * Permanent link to the MessageDefinition for this message.
    */
-  public definition?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageHeader.definition
-   */
-  public _definition?: fhir.FhirElement|undefined;
+  public definition?: fhir.FhirCanonical|undefined;
   /**
    * Default constructor for MessageHeader - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMessageHeader> = { }) {
-    super(source);
+  constructor(source:Partial<MessageHeaderArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'MessageHeader';
-    if (source['eventCoding']) { this.eventCoding = new fhir.Coding(source.eventCoding!); }
-    if (source['eventUri']) { this.eventUri = source.eventUri; }
-    if (source['_eventUri']) { this._eventUri = new fhir.FhirElement(source._eventUri!); }
+    if (source['event']) { this.event = source.event; }
+    else if (source['eventCoding']) { this.event = new fhir.Coding(source.eventCoding); }
+    else if (source['eventUri']) { this.event = new fhir.FhirUri({value: source.eventUri}); }
+    else { this.event = null; }
     if (source['destination']) { this.destination = source.destination.map((x) => new fhir.MessageHeaderDestination(x)); }
-    if (source['sender']) { this.sender = new fhir.Reference(source.sender!); }
-    if (source['enterer']) { this.enterer = new fhir.Reference(source.enterer!); }
-    if (source['author']) { this.author = new fhir.Reference(source.author!); }
-    if (source['source']) { this.source = new fhir.MessageHeaderSource(source.source!); }
+    if (source['sender']) { this.sender = new fhir.Reference(source.sender); }
+    if (source['enterer']) { this.enterer = new fhir.Reference(source.enterer); }
+    if (source['author']) { this.author = new fhir.Reference(source.author); }
+    if (source['source']) { this.source = new fhir.MessageHeaderSource(source.source); }
     else { this.source = null; }
-    if (source['responsible']) { this.responsible = new fhir.Reference(source.responsible!); }
-    if (source['reason']) { this.reason = new fhir.CodeableConcept(source.reason!); }
-    if (source['response']) { this.response = new fhir.MessageHeaderResponse(source.response!); }
+    if (source['responsible']) { this.responsible = new fhir.Reference(source.responsible); }
+    if (source['reason']) { this.reason = new fhir.CodeableConcept(source.reason); }
+    if (source['response']) { this.response = new fhir.MessageHeaderResponse(source.response); }
     if (source['focus']) { this.focus = source.focus.map((x) => new fhir.Reference(x)); }
-    if (source['definition']) { this.definition = source.definition; }
-    if (source['_definition']) { this._definition = new fhir.FhirElement(source._definition!); }
+    if (source['definition']) { this.definition = new fhir.FhirCanonical({value: source.definition}); }
   }
   /**
    * Example-bound Value Set for reason
@@ -450,22 +392,33 @@ export class MessageHeader extends fhir.DomainResource implements IMessageHeader
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: MessageHeader.resourceType']); }
-    if (this["eventCoding"]) { results.push(...this.eventCoding.doModelValidation()); }
-    if (this["_eventUri"]) { results.push(...this._eventUri.doModelValidation()); }
-    if (this["destination"]) { this.destination.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["sender"]) { results.push(...this.sender.doModelValidation()); }
-    if (this["enterer"]) { results.push(...this.enterer.doModelValidation()); }
-    if (this["author"]) { results.push(...this.author.doModelValidation()); }
-    if (!this["source"]) { results.push(["source",'Missing required element: MessageHeader.source']); }
-    if (this["source"]) { results.push(...this.source.doModelValidation()); }
-    if (this["responsible"]) { results.push(...this.responsible.doModelValidation()); }
-    if (this["reason"]) { results.push(...this.reason.doModelValidation()); }
-    if (this["response"]) { results.push(...this.response.doModelValidation()); }
-    if (this["focus"]) { this.focus.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_definition"]) { results.push(...this._definition.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'MessageHeader' fhir: MessageHeader.resourceType:'MessageHeader'", }));
+    }
+    if (!this['event']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property event: fhir: MessageHeader.event[x]:", }));
+    }
+    if (this["destination"]) { this.destination.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["sender"]) { outcome.issue!.push(...this.sender.doModelValidation().issue!); }
+    if (this["enterer"]) { outcome.issue!.push(...this.enterer.doModelValidation().issue!); }
+    if (this["author"]) { outcome.issue!.push(...this.author.doModelValidation().issue!); }
+    if (!this['source']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property source:fhir.MessageHeaderSource fhir: MessageHeader.source:source", }));
+    }
+    if (this["source"]) { outcome.issue!.push(...this.source.doModelValidation().issue!); }
+    if (this["responsible"]) { outcome.issue!.push(...this.responsible.doModelValidation().issue!); }
+    if (this["reason"]) { outcome.issue!.push(...this.reason.doModelValidation().issue!); }
+    if (this["response"]) { outcome.issue!.push(...this.response.doModelValidation().issue!); }
+    if (this["focus"]) { this.focus.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["definition"]) { outcome.issue!.push(...this.definition.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

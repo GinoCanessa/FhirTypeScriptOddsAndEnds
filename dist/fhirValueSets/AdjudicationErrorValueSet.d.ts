@@ -19,14 +19,4 @@ export declare type AdjudicationErrorValueSetType = typeof AdjudicationErrorValu
 /**
  * This value set includes a smattering of adjudication codes.
  */
-export declare enum AdjudicationErrorValueSetEnum {
-    /**
-     * a001: Missing Identifier
-     */
-    MissingIdentifier = "a001",
-    /**
-     * a002: Missing Creation Date
-     */
-    MissingCreationDate = "a002"
-}
 //# sourceMappingURL=AdjudicationErrorValueSet.d.ts.map

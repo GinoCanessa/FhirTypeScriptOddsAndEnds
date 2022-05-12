@@ -35,19 +35,4 @@ export const LocationStatusValueSet = {
 /**
  * Indicates whether the location is still in use.
  */
-export var LocationStatusValueSetEnum;
-(function (LocationStatusValueSetEnum) {
-    /**
-     * active: The location is operational.
-     */
-    LocationStatusValueSetEnum["Active"] = "active";
-    /**
-     * inactive: The location is no longer used.
-     */
-    LocationStatusValueSetEnum["Inactive"] = "inactive";
-    /**
-     * suspended: The location is temporarily closed.
-     */
-    LocationStatusValueSetEnum["Suspended"] = "suspended";
-})(LocationStatusValueSetEnum || (LocationStatusValueSetEnum = {}));
 //# sourceMappingURL=LocationStatusValueSet.js.map

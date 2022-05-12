@@ -35,19 +35,4 @@ export const MedicationStatusValueSet = {
 /**
  * Medication Status Codes
  */
-export var MedicationStatusValueSetEnum;
-(function (MedicationStatusValueSetEnum) {
-    /**
-     * active: The medication is available for use.
-     */
-    MedicationStatusValueSetEnum["Active"] = "active";
-    /**
-     * entered-in-error: The medication was entered in error.
-     */
-    MedicationStatusValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * inactive: The medication is not available for use.
-     */
-    MedicationStatusValueSetEnum["Inactive"] = "inactive";
-})(MedicationStatusValueSetEnum || (MedicationStatusValueSetEnum = {}));
 //# sourceMappingURL=MedicationStatusValueSet.js.map

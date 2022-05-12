@@ -25,15 +25,4 @@ export const ImmunizationReasonValueSet = {
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose of vaccine was administered. This value set is provided as a suggestive example.
  */
-export var ImmunizationReasonValueSetEnum;
-(function (ImmunizationReasonValueSetEnum) {
-    /**
-     * Code: 281657000
-     */
-    ImmunizationReasonValueSetEnum["VAL281657000"] = "281657000";
-    /**
-     * Code: 429060002
-     */
-    ImmunizationReasonValueSetEnum["VAL429060002"] = "429060002";
-})(ImmunizationReasonValueSetEnum || (ImmunizationReasonValueSetEnum = {}));
 //# sourceMappingURL=ImmunizationReasonValueSet.js.map

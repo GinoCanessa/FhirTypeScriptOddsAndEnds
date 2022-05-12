@@ -43,17 +43,3 @@ export type AdverseEventSeverityValueSetType = typeof AdverseEventSeverityValueS
 /**
  * The severity of the adverse event itself, in direct relation to the subject.
  */
-export enum AdverseEventSeverityValueSetEnum {
-  /**
-   * Code: mild
-   */
-  Mild = "mild",
-  /**
-   * Code: moderate
-   */
-  Moderate = "moderate",
-  /**
-   * Code: severe
-   */
-  Severe = "severe",
-}

@@ -51,27 +51,4 @@ export const SearchXpathUsageValueSet = {
 /**
  * How a search parameter relates to the set of elements returned by evaluating its xpath query.
  */
-export var SearchXpathUsageValueSetEnum;
-(function (SearchXpathUsageValueSetEnum) {
-    /**
-     * distance: The search parameter is based on a spatial transform of the selected nodes, using physical distance from the middle.
-     */
-    SearchXpathUsageValueSetEnum["Distance"] = "distance";
-    /**
-     * nearby: The search parameter is based on a spatial transform of the selected nodes.
-     */
-    SearchXpathUsageValueSetEnum["Nearby"] = "nearby";
-    /**
-     * normal: The search parameter is derived directly from the selected nodes based on the type definitions.
-     */
-    SearchXpathUsageValueSetEnum["Normal"] = "normal";
-    /**
-     * other: The interpretation of the xpath statement is unknown (and can't be automated).
-     */
-    SearchXpathUsageValueSetEnum["Other"] = "other";
-    /**
-     * phonetic: The search parameter is derived by a phonetic transform from the selected nodes.
-     */
-    SearchXpathUsageValueSetEnum["Phonetic"] = "phonetic";
-})(SearchXpathUsageValueSetEnum || (SearchXpathUsageValueSetEnum = {}));
 //# sourceMappingURL=SearchXpathUsageValueSet.js.map

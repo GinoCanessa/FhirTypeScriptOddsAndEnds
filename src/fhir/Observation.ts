@@ -3,339 +3,63 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Observation
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ReferencerangeMeaningValueSet, ReferencerangeMeaningValueSetType, ReferencerangeMeaningValueSetEnum } from '../fhirValueSets/ReferencerangeMeaningValueSet.js'
-import { ReferencerangeAppliestoValueSet, ReferencerangeAppliestoValueSetType, ReferencerangeAppliestoValueSetEnum } from '../fhirValueSets/ReferencerangeAppliestoValueSet.js'
-import { ObservationCodesValueSet, ObservationCodesValueSetType, ObservationCodesValueSetEnum } from '../fhirValueSets/ObservationCodesValueSet.js'
-import { DataAbsentReasonValueSet, DataAbsentReasonValueSetType, DataAbsentReasonValueSetEnum } from '../fhirValueSets/DataAbsentReasonValueSet.js'
-import { ObservationInterpretationValueSet, ObservationInterpretationValueSetType, ObservationInterpretationValueSetEnum } from '../fhirValueSets/ObservationInterpretationValueSet.js'
-import { ObservationStatusValueSet, ObservationStatusValueSetType, ObservationStatusValueSetEnum } from '../fhirValueSets/ObservationStatusValueSet.js'
-import { ObservationCategoryValueSet, ObservationCategoryValueSetType, ObservationCategoryValueSetEnum } from '../fhirValueSets/ObservationCategoryValueSet.js'
-import { BodySiteValueSet, BodySiteValueSetType, BodySiteValueSetEnum } from '../fhirValueSets/BodySiteValueSet.js'
-import { ObservationMethodsValueSet, ObservationMethodsValueSetType, ObservationMethodsValueSetEnum } from '../fhirValueSets/ObservationMethodsValueSet.js'
-
+import { ReferencerangeMeaningValueSet, ReferencerangeMeaningValueSetType,} from '../fhirValueSets/ReferencerangeMeaningValueSet.js';
+import { ReferencerangeMeaningValueSetEnum } from '../valueSetEnums.js';
+import { ReferencerangeAppliestoValueSet, ReferencerangeAppliestoValueSetType,} from '../fhirValueSets/ReferencerangeAppliestoValueSet.js';
+import { ReferencerangeAppliestoValueSetEnum } from '../valueSetEnums.js';
+import { ObservationCodesValueSet, ObservationCodesValueSetType,} from '../fhirValueSets/ObservationCodesValueSet.js';
+import { ObservationCodesValueSetEnum } from '../valueSetEnums.js';
+import { DataAbsentReasonValueSet, DataAbsentReasonValueSetType,} from '../fhirValueSets/DataAbsentReasonValueSet.js';
+import { DataAbsentReasonValueSetEnum } from '../valueSetEnums.js';
+import { ObservationInterpretationValueSet, ObservationInterpretationValueSetType,} from '../fhirValueSets/ObservationInterpretationValueSet.js';
+import { ObservationInterpretationValueSetEnum } from '../valueSetEnums.js';
+import { ObservationStatusValueSet, ObservationStatusValueSetType,} from '../fhirValueSets/ObservationStatusValueSet.js';
+import { ObservationStatusValueSetEnum } from '../valueSetEnums.js';
+import { ObservationCategoryValueSet, ObservationCategoryValueSetType,} from '../fhirValueSets/ObservationCategoryValueSet.js';
+import { ObservationCategoryValueSetEnum } from '../valueSetEnums.js';
+import { BodySiteValueSet, BodySiteValueSetType,} from '../fhirValueSets/BodySiteValueSet.js';
+import { BodySiteValueSetEnum } from '../valueSetEnums.js';
+import { ObservationMethodsValueSet, ObservationMethodsValueSetType,} from '../fhirValueSets/ObservationMethodsValueSet.js';
+import { ObservationMethodsValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
+ * Valid arguments for the ObservationReferenceRange type.
  */
-export type IObservationReferenceRange = fhir.IBackboneElement & { 
+export interface ObservationReferenceRangeArgs extends fhir.BackboneElementArgs {
   /**
    * The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is &gt;=5 - &lt;=9). If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is &lt;=2.3).
    */
-  low?: fhir.IQuantity|undefined;
+  low?: fhir.QuantityArgs|undefined;
   /**
    * The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is &gt;=5 - &lt;=9). If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is &gt;= 2.3).
    */
-  high?: fhir.IQuantity|undefined;
+  high?: fhir.QuantityArgs|undefined;
   /**
    * This SHOULD be populated if there is more than one range.  If this element is not present then the normal range is assumed.
    */
-  type?: fhir.ICodeableConcept|undefined;
+  type?: fhir.CodeableConceptArgs|undefined;
   /**
    * This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.
    */
-  appliesTo?: fhir.ICodeableConcept[]|undefined;
+  appliesTo?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.
    */
-  age?: fhir.IRange|undefined;
+  age?: fhir.RangeArgs|undefined;
   /**
    * Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of "Negative" or a list or table of "normals".
    */
-  text?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.referenceRange.text
-   */
-  _text?: fhir.IFhirElement|undefined;
-}
-
-/**
- * For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.
- */
-export type IObservationComponent = fhir.IBackboneElement & { 
-  /**
-   * *All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.
-   */
-  code: fhir.ICodeableConcept|null;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueQuantity?: fhir.IQuantity|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.component.value[x]
-   */
-  _valueString?: fhir.IFhirElement|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Observation.component.value[x]
-   */
-  _valueBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Observation.component.value[x]
-   */
-  _valueInteger?: fhir.IFhirElement|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueRange?: fhir.IRange|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueRatio?: fhir.IRatio|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueSampledData?: fhir.ISampledData|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.component.value[x]
-   */
-  _valueTime?: fhir.IFhirElement|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.component.value[x]
-   */
-  _valueDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valuePeriod?: fhir.IPeriod|undefined;
-  /**
-   * "Null" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, measurement values for a serology test could be  "detected", "not detected", "inconclusive", or  "test not done". 
-   * The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For example, the dataAbsentReason code "error" could be used when the measurement was not completed.  Because of these options, use-case agreements are required to interpret general observations for exceptional values.
-   */
-  dataAbsentReason?: fhir.ICodeableConcept|undefined;
-  /**
-   * Historically used for laboratory results (known as 'abnormal flag' ),  its use extends to other use cases where coded interpretations  are relevant.  Often reported as one or more simple compact codes this element is often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result.
-   */
-  interpretation?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
-   */
-  referenceRange?: fhir.IObservationReferenceRange[]|undefined;
-}
-
-/**
- * Measurements and simple assertions made about a patient, device or other subject.
- */
-export type IObservation = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Observation";
-  /**
-   * A unique identifier assigned to this observation.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.
-   */
-  basedOn?: fhir.IReference[]|undefined;
-  /**
-   * To link an Observation to an Encounter use `encounter`.  See the  [Notes](observation.html#obsgrouping) below for guidance on referencing another Observation.
-   */
-  partOf?: fhir.IReference[]|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-   */
-  status: ObservationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Observation.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.
-   */
-  category?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * *All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.
-   */
-  code: fhir.ICodeableConcept|null;
-  /**
-   * One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.
-   */
-  subject?: fhir.IReference|undefined;
-  /**
-   * Typically, an observation is made about the subject - a patient, or group of patients, location, or device - and the distinction between the subject and what is directly measured for an observation is specified in the observation code itself ( e.g., "Blood Glucose") and does not need to be represented separately using this element.  Use `specimen` if a reference to a specimen is required.  If a code is required instead of a resource use either  `bodysite` for bodysites or the standard extension [focusCode](extension-observation-focuscode.html).
-   */
-  focus?: fhir.IReference[]|undefined;
-  /**
-   * This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests).
-   */
-  encounter?: fhir.IReference|undefined;
-  /**
-   * At least a date should be present unless this observation is a historical report.  For recording imprecise or "fuzzy" times (For example, a blood glucose measurement taken "after breakfast") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.
-   */
-  effectiveDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.effective[x]
-   */
-  _effectiveDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * At least a date should be present unless this observation is a historical report.  For recording imprecise or "fuzzy" times (For example, a blood glucose measurement taken "after breakfast") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.
-   */
-  effectivePeriod?: fhir.IPeriod|undefined;
-  /**
-   * At least a date should be present unless this observation is a historical report.  For recording imprecise or "fuzzy" times (For example, a blood glucose measurement taken "after breakfast") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.
-   */
-  effectiveTiming?: fhir.ITiming|undefined;
-  /**
-   * At least a date should be present unless this observation is a historical report.  For recording imprecise or "fuzzy" times (For example, a blood glucose measurement taken "after breakfast") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.
-   */
-  effectiveInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.effective[x]
-   */
-  _effectiveInstant?: fhir.IFhirElement|undefined;
-  /**
-   * For Observations that don’t require review and verification, it may be the same as the [`lastUpdated` ](resource-definitions.html#Meta.lastUpdated) time of the resource itself.  For Observations that do require review and verification for certain updates, it might not be the same as the `lastUpdated` time of the resource itself due to a non-clinically significant update that doesn’t require the new version to be reviewed and verified again.
-   */
-  issued?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.issued
-   */
-  _issued?: fhir.IFhirElement|undefined;
-  /**
-   * Who was responsible for asserting the observed value as "true".
-   */
-  performer?: fhir.IReference[]|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueQuantity?: fhir.IQuantity|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.value[x]
-   */
-  _valueString?: fhir.IFhirElement|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Observation.value[x]
-   */
-  _valueBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Observation.value[x]
-   */
-  _valueInteger?: fhir.IFhirElement|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueRange?: fhir.IRange|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueRatio?: fhir.IRatio|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueSampledData?: fhir.ISampledData|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.value[x]
-   */
-  _valueTime?: fhir.IFhirElement|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.value[x]
-   */
-  _valueDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  valuePeriod?: fhir.IPeriod|undefined;
-  /**
-   * Null or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, measurement values for a serology test could be  "detected", "not detected", "inconclusive", or  "specimen unsatisfactory".   
-   * The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For example, the dataAbsentReason code "error" could be used when the measurement was not completed. Note that an observation may only be reported if there are values to report. For example differential cell counts values may be reported only when &gt; 0.  Because of these options, use-case agreements are required to interpret general observations for null or exceptional values.
-   */
-  dataAbsentReason?: fhir.ICodeableConcept|undefined;
-  /**
-   * Historically used for laboratory results (known as 'abnormal flag' ),  its use extends to other use cases where coded interpretations  are relevant.  Often reported as one or more simple compact codes this element is often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result.
-   */
-  interpretation?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * May include general statements about the observation, or statements about significant, unexpected or unreliable results values, or information about its source when relevant to its interpretation.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-  /**
-   * Only used if not implicit in code found in Observation.code.  In many systems, this may be represented as a related observation instead of an inline component.   
-   * If the use case requires BodySite to be handled as a separate resource (e.g. to identify and track separately) then use the standard extension[ bodySite](extension-bodysite.html).
-   */
-  bodySite?: fhir.ICodeableConcept|undefined;
-  /**
-   * Only used if not implicit in code for Observation.code.
-   */
-  method?: fhir.ICodeableConcept|undefined;
-  /**
-   * Should only be used if not implicit in code found in `Observation.code`.  Observations are not made on specimens themselves; they are made on a subject, but in many cases by the means of a specimen. Note that although specimens are often involved, they are not always tracked and reported explicitly. Also note that observation resources may be used in contexts that track the specimen explicitly (e.g. Diagnostic Report).
-   */
-  specimen?: fhir.IReference|undefined;
-  /**
-   * Note that this is not meant to represent a device involved in the transmission of the result, e.g., a gateway.  Such devices may be documented using the Provenance resource where relevant.
-   */
-  device?: fhir.IReference|undefined;
-  /**
-   * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
-   */
-  referenceRange?: fhir.IObservationReferenceRange[]|undefined;
-  /**
-   * When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.
-   */
-  hasMember?: fhir.IReference[]|undefined;
-  /**
-   * All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.
-   */
-  derivedFrom?: fhir.IReference[]|undefined;
-  /**
-   * For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.
-   */
-  component?: fhir.IObservationComponent[]|undefined;
+  text?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
  */
-export class ObservationReferenceRange extends fhir.BackboneElement implements IObservationReferenceRange {
+export class ObservationReferenceRange extends fhir.BackboneElement {
+  readonly __dataType:string = 'ObservationReferenceRange';
   /**
    * The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is &gt;=5 - &lt;=9). If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is &lt;=2.3).
    */
@@ -351,7 +75,7 @@ export class ObservationReferenceRange extends fhir.BackboneElement implements I
   /**
    * This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.
    */
-  public appliesTo?: fhir.CodeableConcept[]|undefined;
+  public appliesTo?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.
    */
@@ -359,23 +83,18 @@ export class ObservationReferenceRange extends fhir.BackboneElement implements I
   /**
    * Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of "Negative" or a list or table of "normals".
    */
-  public text?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.referenceRange.text
-   */
-  public _text?: fhir.FhirElement|undefined;
+  public text?: fhir.FhirString|undefined;
   /**
    * Default constructor for ObservationReferenceRange - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IObservationReferenceRange> = { }) {
-    super(source);
-    if (source['low']) { this.low = new fhir.Quantity(source.low!); }
-    if (source['high']) { this.high = new fhir.Quantity(source.high!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<ObservationReferenceRangeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['low']) { this.low = new fhir.Quantity(source.low); }
+    if (source['high']) { this.high = new fhir.Quantity(source.high); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     if (source['appliesTo']) { this.appliesTo = source.appliesTo.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['age']) { this.age = new fhir.Range(source.age!); }
-    if (source['text']) { this.text = source.text; }
-    if (source['_text']) { this._text = new fhir.FhirElement(source._text!); }
+    if (source['age']) { this.age = new fhir.Range(source.age); }
+    if (source['text']) { this.text = new fhir.FhirString({value: source.text}); }
   }
   /**
    * Preferred-bound Value Set for type
@@ -392,22 +111,99 @@ export class ObservationReferenceRange extends fhir.BackboneElement implements I
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["low"]) { results.push(...this.low.doModelValidation()); }
-    if (this["high"]) { results.push(...this.high.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["appliesTo"]) { this.appliesTo.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["age"]) { results.push(...this.age.doModelValidation()); }
-    if (this["_text"]) { results.push(...this._text.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["low"]) { outcome.issue!.push(...this.low.doModelValidation().issue!); }
+    if (this["high"]) { outcome.issue!.push(...this.high.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["appliesTo"]) { this.appliesTo.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["age"]) { outcome.issue!.push(...this.age.doModelValidation().issue!); }
+    if (this["text"]) { outcome.issue!.push(...this.text.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ObservationComponent type.
+ */
+export interface ObservationComponentArgs extends fhir.BackboneElementArgs {
+  /**
+   * *All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.
+   */
+  code: fhir.CodeableConceptArgs|null;
+  /**
+   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  value?: fhir.Quantity|fhir.CodeableConcept|fhir.FhirString|fhir.FhirBoolean|fhir.FhirInteger|fhir.Range|fhir.Ratio|fhir.SampledData|fhir.FhirTime|fhir.FhirDateTime|fhir.Period|undefined;
+  /**
+   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueString?: fhir.FhirString|string|undefined;
+  /**
+   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueRange?: fhir.RangeArgs|undefined;
+  /**
+   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueRatio?: fhir.RatioArgs|undefined;
+  /**
+   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueSampledData?: fhir.SampledDataArgs|undefined;
+  /**
+   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueTime?: fhir.FhirTime|string|undefined;
+  /**
+   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valuePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * "Null" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, measurement values for a serology test could be  "detected", "not detected", "inconclusive", or  "test not done". 
+   * The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For example, the dataAbsentReason code "error" could be used when the measurement was not completed.  Because of these options, use-case agreements are required to interpret general observations for exceptional values.
+   */
+  dataAbsentReason?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Historically used for laboratory results (known as 'abnormal flag' ),  its use extends to other use cases where coded interpretations  are relevant.  Often reported as one or more simple compact codes this element is often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result.
+   */
+  interpretation?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
+   */
+  referenceRange?: fhir.ObservationReferenceRangeArgs[]|undefined;
 }
 
 /**
  * For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.
  */
-export class ObservationComponent extends fhir.BackboneElement implements IObservationComponent {
+export class ObservationComponent extends fhir.BackboneElement {
+  readonly __dataType:string = 'ObservationComponent';
   /**
    * *All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.
    */
@@ -415,67 +211,8 @@ export class ObservationComponent extends fhir.BackboneElement implements IObser
   /**
    * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
    */
-  public valueQuantity?: fhir.Quantity|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.component.value[x]
-   */
-  public _valueString?: fhir.FhirElement|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Observation.component.value[x]
-   */
-  public _valueBoolean?: fhir.FhirElement|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Observation.component.value[x]
-   */
-  public _valueInteger?: fhir.FhirElement|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueRange?: fhir.Range|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueRatio?: fhir.Ratio|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueSampledData?: fhir.SampledData|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.component.value[x]
-   */
-  public _valueTime?: fhir.FhirElement|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.component.value[x]
-   */
-  public _valueDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valuePeriod?: fhir.Period|undefined;
+  public value?: (fhir.Quantity|fhir.CodeableConcept|fhir.FhirString|fhir.FhirBoolean|fhir.FhirInteger|fhir.Range|fhir.Ratio|fhir.SampledData|fhir.FhirTime|fhir.FhirDateTime|fhir.Period)|undefined;
+  readonly __valueIsChoice:true = true;
   /**
    * "Null" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, measurement values for a serology test could be  "detected", "not detected", "inconclusive", or  "test not done". 
    * The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For example, the dataAbsentReason code "error" could be used when the measurement was not completed.  Because of these options, use-case agreements are required to interpret general observations for exceptional values.
@@ -484,35 +221,31 @@ export class ObservationComponent extends fhir.BackboneElement implements IObser
   /**
    * Historically used for laboratory results (known as 'abnormal flag' ),  its use extends to other use cases where coded interpretations  are relevant.  Often reported as one or more simple compact codes this element is often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result.
    */
-  public interpretation?: fhir.CodeableConcept[]|undefined;
+  public interpretation?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
    */
-  public referenceRange?: fhir.ObservationReferenceRange[]|undefined;
+  public referenceRange?: fhir.ObservationReferenceRange[]|undefined = [];
   /**
    * Default constructor for ObservationComponent - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IObservationComponent> = { }) {
-    super(source);
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+  constructor(source:Partial<ObservationComponentArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
     else { this.code = null; }
-    if (source['valueQuantity']) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
-    if (source['valueCodeableConcept']) { this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept!); }
-    if (source['valueString']) { this.valueString = source.valueString; }
-    if (source['_valueString']) { this._valueString = new fhir.FhirElement(source._valueString!); }
-    if (source['valueBoolean']) { this.valueBoolean = source.valueBoolean; }
-    if (source['_valueBoolean']) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
-    if (source['valueInteger']) { this.valueInteger = source.valueInteger; }
-    if (source['_valueInteger']) { this._valueInteger = new fhir.FhirElement(source._valueInteger!); }
-    if (source['valueRange']) { this.valueRange = new fhir.Range(source.valueRange!); }
-    if (source['valueRatio']) { this.valueRatio = new fhir.Ratio(source.valueRatio!); }
-    if (source['valueSampledData']) { this.valueSampledData = new fhir.SampledData(source.valueSampledData!); }
-    if (source['valueTime']) { this.valueTime = source.valueTime; }
-    if (source['_valueTime']) { this._valueTime = new fhir.FhirElement(source._valueTime!); }
-    if (source['valueDateTime']) { this.valueDateTime = source.valueDateTime; }
-    if (source['_valueDateTime']) { this._valueDateTime = new fhir.FhirElement(source._valueDateTime!); }
-    if (source['valuePeriod']) { this.valuePeriod = new fhir.Period(source.valuePeriod!); }
-    if (source['dataAbsentReason']) { this.dataAbsentReason = new fhir.CodeableConcept(source.dataAbsentReason!); }
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueQuantity']) { this.value = new fhir.Quantity(source.valueQuantity); }
+    else if (source['valueCodeableConcept']) { this.value = new fhir.CodeableConcept(source.valueCodeableConcept); }
+    else if (source['valueString']) { this.value = new fhir.FhirString({value: source.valueString}); }
+    else if (source['valueBoolean']) { this.value = new fhir.FhirBoolean({value: source.valueBoolean}); }
+    else if (source['valueInteger']) { this.value = new fhir.FhirInteger({value: source.valueInteger}); }
+    else if (source['valueRange']) { this.value = new fhir.Range(source.valueRange); }
+    else if (source['valueRatio']) { this.value = new fhir.Ratio(source.valueRatio); }
+    else if (source['valueSampledData']) { this.value = new fhir.SampledData(source.valueSampledData); }
+    else if (source['valueTime']) { this.value = new fhir.FhirTime({value: source.valueTime}); }
+    else if (source['valueDateTime']) { this.value = new fhir.FhirDateTime({value: source.valueDateTime}); }
+    else if (source['valuePeriod']) { this.value = new fhir.Period(source.valuePeriod); }
+    if (source['dataAbsentReason']) { this.dataAbsentReason = new fhir.CodeableConcept(source.dataAbsentReason); }
     if (source['interpretation']) { this.interpretation = source.interpretation.map((x) => new fhir.CodeableConcept(x)); }
     if (source['referenceRange']) { this.referenceRange = source.referenceRange.map((x) => new fhir.ObservationReferenceRange(x)); }
   }
@@ -537,32 +270,197 @@ export class ObservationComponent extends fhir.BackboneElement implements IObser
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: Observation.component.code']); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["valueQuantity"]) { results.push(...this.valueQuantity.doModelValidation()); }
-    if (this["valueCodeableConcept"]) { results.push(...this.valueCodeableConcept.doModelValidation()); }
-    if (this["_valueString"]) { results.push(...this._valueString.doModelValidation()); }
-    if (this["_valueBoolean"]) { results.push(...this._valueBoolean.doModelValidation()); }
-    if (this["_valueInteger"]) { results.push(...this._valueInteger.doModelValidation()); }
-    if (this["valueRange"]) { results.push(...this.valueRange.doModelValidation()); }
-    if (this["valueRatio"]) { results.push(...this.valueRatio.doModelValidation()); }
-    if (this["valueSampledData"]) { results.push(...this.valueSampledData.doModelValidation()); }
-    if (this["_valueTime"]) { results.push(...this._valueTime.doModelValidation()); }
-    if (this["_valueDateTime"]) { results.push(...this._valueDateTime.doModelValidation()); }
-    if (this["valuePeriod"]) { results.push(...this.valuePeriod.doModelValidation()); }
-    if (this["dataAbsentReason"]) { results.push(...this.dataAbsentReason.doModelValidation()); }
-    if (this["interpretation"]) { this.interpretation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["referenceRange"]) { this.referenceRange.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.CodeableConcept fhir: Observation.component.code:CodeableConcept", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["dataAbsentReason"]) { outcome.issue!.push(...this.dataAbsentReason.doModelValidation().issue!); }
+    if (this["interpretation"]) { this.interpretation.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["referenceRange"]) { this.referenceRange.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Observation type.
+ */
+export interface ObservationArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Observation"|undefined;
+  /**
+   * A unique identifier assigned to this observation.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.
+   */
+  basedOn?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * To link an Observation to an Encounter use `encounter`.  See the  [Notes](observation.html#obsgrouping) below for guidance on referencing another Observation.
+   */
+  partOf?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+   */
+  status: ObservationStatusValueSetEnum|null;
+  /**
+   * In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.
+   */
+  category?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * *All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.
+   */
+  code: fhir.CodeableConceptArgs|null;
+  /**
+   * One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.
+   */
+  subject?: fhir.ReferenceArgs|undefined;
+  /**
+   * Typically, an observation is made about the subject - a patient, or group of patients, location, or device - and the distinction between the subject and what is directly measured for an observation is specified in the observation code itself ( e.g., "Blood Glucose") and does not need to be represented separately using this element.  Use `specimen` if a reference to a specimen is required.  If a code is required instead of a resource use either  `bodysite` for bodysites or the standard extension [focusCode](extension-observation-focuscode.html).
+   */
+  focus?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests).
+   */
+  encounter?: fhir.ReferenceArgs|undefined;
+  /**
+   * At least a date should be present unless this observation is a historical report.  For recording imprecise or "fuzzy" times (For example, a blood glucose measurement taken "after breakfast") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.
+   */
+  effective?: fhir.FhirDateTime|fhir.Period|fhir.Timing|fhir.FhirInstant|undefined;
+  /**
+   * At least a date should be present unless this observation is a historical report.  For recording imprecise or "fuzzy" times (For example, a blood glucose measurement taken "after breakfast") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.
+   */
+  effectiveDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * At least a date should be present unless this observation is a historical report.  For recording imprecise or "fuzzy" times (For example, a blood glucose measurement taken "after breakfast") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.
+   */
+  effectivePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * At least a date should be present unless this observation is a historical report.  For recording imprecise or "fuzzy" times (For example, a blood glucose measurement taken "after breakfast") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.
+   */
+  effectiveTiming?: fhir.TimingArgs|undefined;
+  /**
+   * At least a date should be present unless this observation is a historical report.  For recording imprecise or "fuzzy" times (For example, a blood glucose measurement taken "after breakfast") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.
+   */
+  effectiveInstant?: fhir.FhirInstant|string|undefined;
+  /**
+   * For Observations that don’t require review and verification, it may be the same as the [`lastUpdated` ](resource-definitions.html#Meta.lastUpdated) time of the resource itself.  For Observations that do require review and verification for certain updates, it might not be the same as the `lastUpdated` time of the resource itself due to a non-clinically significant update that doesn’t require the new version to be reviewed and verified again.
+   */
+  issued?: fhir.FhirInstant|string|undefined;
+  /**
+   * Who was responsible for asserting the observed value as "true".
+   */
+  performer?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  value?: fhir.Quantity|fhir.CodeableConcept|fhir.FhirString|fhir.FhirBoolean|fhir.FhirInteger|fhir.Range|fhir.Ratio|fhir.SampledData|fhir.FhirTime|fhir.FhirDateTime|fhir.Period|undefined;
+  /**
+   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueString?: fhir.FhirString|string|undefined;
+  /**
+   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueRange?: fhir.RangeArgs|undefined;
+  /**
+   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueRatio?: fhir.RatioArgs|undefined;
+  /**
+   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueSampledData?: fhir.SampledDataArgs|undefined;
+  /**
+   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueTime?: fhir.FhirTime|string|undefined;
+  /**
+   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valueDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
+   */
+  valuePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * Null or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, measurement values for a serology test could be  "detected", "not detected", "inconclusive", or  "specimen unsatisfactory".   
+   * The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For example, the dataAbsentReason code "error" could be used when the measurement was not completed. Note that an observation may only be reported if there are values to report. For example differential cell counts values may be reported only when &gt; 0.  Because of these options, use-case agreements are required to interpret general observations for null or exceptional values.
+   */
+  dataAbsentReason?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Historically used for laboratory results (known as 'abnormal flag' ),  its use extends to other use cases where coded interpretations  are relevant.  Often reported as one or more simple compact codes this element is often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result.
+   */
+  interpretation?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * May include general statements about the observation, or statements about significant, unexpected or unreliable results values, or information about its source when relevant to its interpretation.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
+  /**
+   * Only used if not implicit in code found in Observation.code.  In many systems, this may be represented as a related observation instead of an inline component.   
+   * If the use case requires BodySite to be handled as a separate resource (e.g. to identify and track separately) then use the standard extension[ bodySite](extension-bodysite.html).
+   */
+  bodySite?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Only used if not implicit in code for Observation.code.
+   */
+  method?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Should only be used if not implicit in code found in `Observation.code`.  Observations are not made on specimens themselves; they are made on a subject, but in many cases by the means of a specimen. Note that although specimens are often involved, they are not always tracked and reported explicitly. Also note that observation resources may be used in contexts that track the specimen explicitly (e.g. Diagnostic Report).
+   */
+  specimen?: fhir.ReferenceArgs|undefined;
+  /**
+   * Note that this is not meant to represent a device involved in the transmission of the result, e.g., a gateway.  Such devices may be documented using the Provenance resource where relevant.
+   */
+  device?: fhir.ReferenceArgs|undefined;
+  /**
+   * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
+   */
+  referenceRange?: fhir.ObservationReferenceRangeArgs[]|undefined;
+  /**
+   * When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.
+   */
+  hasMember?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.
+   */
+  derivedFrom?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.
+   */
+  component?: fhir.ObservationComponentArgs[]|undefined;
 }
 
 /**
  * Measurements and simple assertions made about a patient, device or other subject.
  */
-export class Observation extends fhir.DomainResource implements IObservation {
+export class Observation extends fhir.DomainResource {
+  readonly __dataType:string = 'Observation';
   /**
    * Resource Type Name
    */
@@ -570,27 +468,23 @@ export class Observation extends fhir.DomainResource implements IObservation {
   /**
    * A unique identifier assigned to this observation.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.
    */
-  public basedOn?: fhir.Reference[]|undefined;
+  public basedOn?: fhir.Reference[]|undefined = [];
   /**
    * To link an Observation to an Encounter use `encounter`.  See the  [Notes](observation.html#obsgrouping) below for guidance on referencing another Observation.
    */
-  public partOf?: fhir.Reference[]|undefined;
+  public partOf?: fhir.Reference[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
   public status: ObservationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Observation.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.
    */
-  public category?: fhir.CodeableConcept[]|undefined;
+  public category?: fhir.CodeableConcept[]|undefined = [];
   /**
    * *All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.
    */
@@ -602,7 +496,7 @@ export class Observation extends fhir.DomainResource implements IObservation {
   /**
    * Typically, an observation is made about the subject - a patient, or group of patients, location, or device - and the distinction between the subject and what is directly measured for an observation is specified in the observation code itself ( e.g., "Blood Glucose") and does not need to be represented separately using this element.  Use `specimen` if a reference to a specimen is required.  If a code is required instead of a resource use either  `bodysite` for bodysites or the standard extension [focusCode](extension-observation-focuscode.html).
    */
-  public focus?: fhir.Reference[]|undefined;
+  public focus?: fhir.Reference[]|undefined = [];
   /**
    * This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests).
    */
@@ -610,103 +504,21 @@ export class Observation extends fhir.DomainResource implements IObservation {
   /**
    * At least a date should be present unless this observation is a historical report.  For recording imprecise or "fuzzy" times (For example, a blood glucose measurement taken "after breakfast") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.
    */
-  public effectiveDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.effective[x]
-   */
-  public _effectiveDateTime?: fhir.FhirElement|undefined;
-  /**
-   * At least a date should be present unless this observation is a historical report.  For recording imprecise or "fuzzy" times (For example, a blood glucose measurement taken "after breakfast") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.
-   */
-  public effectivePeriod?: fhir.Period|undefined;
-  /**
-   * At least a date should be present unless this observation is a historical report.  For recording imprecise or "fuzzy" times (For example, a blood glucose measurement taken "after breakfast") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.
-   */
-  public effectiveTiming?: fhir.Timing|undefined;
-  /**
-   * At least a date should be present unless this observation is a historical report.  For recording imprecise or "fuzzy" times (For example, a blood glucose measurement taken "after breakfast") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.
-   */
-  public effectiveInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.effective[x]
-   */
-  public _effectiveInstant?: fhir.FhirElement|undefined;
+  public effective?: (fhir.FhirDateTime|fhir.Period|fhir.Timing|fhir.FhirInstant)|undefined;
+  readonly __effectiveIsChoice:true = true;
   /**
    * For Observations that don’t require review and verification, it may be the same as the [`lastUpdated` ](resource-definitions.html#Meta.lastUpdated) time of the resource itself.  For Observations that do require review and verification for certain updates, it might not be the same as the `lastUpdated` time of the resource itself due to a non-clinically significant update that doesn’t require the new version to be reviewed and verified again.
    */
-  public issued?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.issued
-   */
-  public _issued?: fhir.FhirElement|undefined;
+  public issued?: fhir.FhirInstant|undefined;
   /**
    * Who was responsible for asserting the observed value as "true".
    */
-  public performer?: fhir.Reference[]|undefined;
+  public performer?: fhir.Reference[]|undefined = [];
   /**
    * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
    */
-  public valueQuantity?: fhir.Quantity|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.value[x]
-   */
-  public _valueString?: fhir.FhirElement|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Observation.value[x]
-   */
-  public _valueBoolean?: fhir.FhirElement|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Observation.value[x]
-   */
-  public _valueInteger?: fhir.FhirElement|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueRange?: fhir.Range|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueRatio?: fhir.Ratio|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueSampledData?: fhir.SampledData|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.value[x]
-   */
-  public _valueTime?: fhir.FhirElement|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Observation.value[x]
-   */
-  public _valueDateTime?: fhir.FhirElement|undefined;
-  /**
-   * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
-   */
-  public valuePeriod?: fhir.Period|undefined;
+  public value?: (fhir.Quantity|fhir.CodeableConcept|fhir.FhirString|fhir.FhirBoolean|fhir.FhirInteger|fhir.Range|fhir.Ratio|fhir.SampledData|fhir.FhirTime|fhir.FhirDateTime|fhir.Period)|undefined;
+  readonly __valueIsChoice:true = true;
   /**
    * Null or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, measurement values for a serology test could be  "detected", "not detected", "inconclusive", or  "specimen unsatisfactory".   
    * The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For example, the dataAbsentReason code "error" could be used when the measurement was not completed. Note that an observation may only be reported if there are values to report. For example differential cell counts values may be reported only when &gt; 0.  Because of these options, use-case agreements are required to interpret general observations for null or exceptional values.
@@ -715,11 +527,11 @@ export class Observation extends fhir.DomainResource implements IObservation {
   /**
    * Historically used for laboratory results (known as 'abnormal flag' ),  its use extends to other use cases where coded interpretations  are relevant.  Often reported as one or more simple compact codes this element is often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result.
    */
-  public interpretation?: fhir.CodeableConcept[]|undefined;
+  public interpretation?: fhir.CodeableConcept[]|undefined = [];
   /**
    * May include general statements about the observation, or statements about significant, unexpected or unreliable results values, or information about its source when relevant to its interpretation.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Only used if not implicit in code found in Observation.code.  In many systems, this may be represented as a related observation instead of an inline component.   
    * If the use case requires BodySite to be handled as a separate resource (e.g. to identify and track separately) then use the standard extension[ bodySite](extension-bodysite.html).
@@ -740,69 +552,62 @@ export class Observation extends fhir.DomainResource implements IObservation {
   /**
    * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
    */
-  public referenceRange?: fhir.ObservationReferenceRange[]|undefined;
+  public referenceRange?: fhir.ObservationReferenceRange[]|undefined = [];
   /**
    * When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.
    */
-  public hasMember?: fhir.Reference[]|undefined;
+  public hasMember?: fhir.Reference[]|undefined = [];
   /**
    * All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.
    */
-  public derivedFrom?: fhir.Reference[]|undefined;
+  public derivedFrom?: fhir.Reference[]|undefined = [];
   /**
    * For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.
    */
-  public component?: fhir.ObservationComponent[]|undefined;
+  public component?: fhir.ObservationComponent[]|undefined = [];
   /**
    * Default constructor for Observation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IObservation> = { }) {
-    super(source);
+  constructor(source:Partial<ObservationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Observation';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['basedOn']) { this.basedOn = source.basedOn.map((x) => new fhir.Reference(x)); }
     if (source['partOf']) { this.partOf = source.partOf.map((x) => new fhir.Reference(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
     if (source['category']) { this.category = source.category.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
     else { this.code = null; }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
     if (source['focus']) { this.focus = source.focus.map((x) => new fhir.Reference(x)); }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['effectiveDateTime']) { this.effectiveDateTime = source.effectiveDateTime; }
-    if (source['_effectiveDateTime']) { this._effectiveDateTime = new fhir.FhirElement(source._effectiveDateTime!); }
-    if (source['effectivePeriod']) { this.effectivePeriod = new fhir.Period(source.effectivePeriod!); }
-    if (source['effectiveTiming']) { this.effectiveTiming = new fhir.Timing(source.effectiveTiming!); }
-    if (source['effectiveInstant']) { this.effectiveInstant = source.effectiveInstant; }
-    if (source['_effectiveInstant']) { this._effectiveInstant = new fhir.FhirElement(source._effectiveInstant!); }
-    if (source['issued']) { this.issued = source.issued; }
-    if (source['_issued']) { this._issued = new fhir.FhirElement(source._issued!); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['effective']) { this.effective = source.effective; }
+    else if (source['effectiveDateTime']) { this.effective = new fhir.FhirDateTime({value: source.effectiveDateTime}); }
+    else if (source['effectivePeriod']) { this.effective = new fhir.Period(source.effectivePeriod); }
+    else if (source['effectiveTiming']) { this.effective = new fhir.Timing(source.effectiveTiming); }
+    else if (source['effectiveInstant']) { this.effective = new fhir.FhirInstant({value: source.effectiveInstant}); }
+    if (source['issued']) { this.issued = new fhir.FhirInstant({value: source.issued}); }
     if (source['performer']) { this.performer = source.performer.map((x) => new fhir.Reference(x)); }
-    if (source['valueQuantity']) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
-    if (source['valueCodeableConcept']) { this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept!); }
-    if (source['valueString']) { this.valueString = source.valueString; }
-    if (source['_valueString']) { this._valueString = new fhir.FhirElement(source._valueString!); }
-    if (source['valueBoolean']) { this.valueBoolean = source.valueBoolean; }
-    if (source['_valueBoolean']) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
-    if (source['valueInteger']) { this.valueInteger = source.valueInteger; }
-    if (source['_valueInteger']) { this._valueInteger = new fhir.FhirElement(source._valueInteger!); }
-    if (source['valueRange']) { this.valueRange = new fhir.Range(source.valueRange!); }
-    if (source['valueRatio']) { this.valueRatio = new fhir.Ratio(source.valueRatio!); }
-    if (source['valueSampledData']) { this.valueSampledData = new fhir.SampledData(source.valueSampledData!); }
-    if (source['valueTime']) { this.valueTime = source.valueTime; }
-    if (source['_valueTime']) { this._valueTime = new fhir.FhirElement(source._valueTime!); }
-    if (source['valueDateTime']) { this.valueDateTime = source.valueDateTime; }
-    if (source['_valueDateTime']) { this._valueDateTime = new fhir.FhirElement(source._valueDateTime!); }
-    if (source['valuePeriod']) { this.valuePeriod = new fhir.Period(source.valuePeriod!); }
-    if (source['dataAbsentReason']) { this.dataAbsentReason = new fhir.CodeableConcept(source.dataAbsentReason!); }
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueQuantity']) { this.value = new fhir.Quantity(source.valueQuantity); }
+    else if (source['valueCodeableConcept']) { this.value = new fhir.CodeableConcept(source.valueCodeableConcept); }
+    else if (source['valueString']) { this.value = new fhir.FhirString({value: source.valueString}); }
+    else if (source['valueBoolean']) { this.value = new fhir.FhirBoolean({value: source.valueBoolean}); }
+    else if (source['valueInteger']) { this.value = new fhir.FhirInteger({value: source.valueInteger}); }
+    else if (source['valueRange']) { this.value = new fhir.Range(source.valueRange); }
+    else if (source['valueRatio']) { this.value = new fhir.Ratio(source.valueRatio); }
+    else if (source['valueSampledData']) { this.value = new fhir.SampledData(source.valueSampledData); }
+    else if (source['valueTime']) { this.value = new fhir.FhirTime({value: source.valueTime}); }
+    else if (source['valueDateTime']) { this.value = new fhir.FhirDateTime({value: source.valueDateTime}); }
+    else if (source['valuePeriod']) { this.value = new fhir.Period(source.valuePeriod); }
+    if (source['dataAbsentReason']) { this.dataAbsentReason = new fhir.CodeableConcept(source.dataAbsentReason); }
     if (source['interpretation']) { this.interpretation = source.interpretation.map((x) => new fhir.CodeableConcept(x)); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
-    if (source['bodySite']) { this.bodySite = new fhir.CodeableConcept(source.bodySite!); }
-    if (source['method']) { this.method = new fhir.CodeableConcept(source.method!); }
-    if (source['specimen']) { this.specimen = new fhir.Reference(source.specimen!); }
-    if (source['device']) { this.device = new fhir.Reference(source.device!); }
+    if (source['bodySite']) { this.bodySite = new fhir.CodeableConcept(source.bodySite); }
+    if (source['method']) { this.method = new fhir.CodeableConcept(source.method); }
+    if (source['specimen']) { this.specimen = new fhir.Reference(source.specimen); }
+    if (source['device']) { this.device = new fhir.Reference(source.device); }
     if (source['referenceRange']) { this.referenceRange = source.referenceRange.map((x) => new fhir.ObservationReferenceRange(x)); }
     if (source['hasMember']) { this.hasMember = source.hasMember.map((x) => new fhir.Reference(x)); }
     if (source['derivedFrom']) { this.derivedFrom = source.derivedFrom.map((x) => new fhir.Reference(x)); }
@@ -853,48 +658,44 @@ export class Observation extends fhir.DomainResource implements IObservation {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Observation.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["basedOn"]) { this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["partOf"]) { this.partOf.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: Observation.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["category"]) { this.category.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["code"]) { results.push(["code",'Missing required element: Observation.code']); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["focus"]) { this.focus.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (this["_effectiveDateTime"]) { results.push(...this._effectiveDateTime.doModelValidation()); }
-    if (this["effectivePeriod"]) { results.push(...this.effectivePeriod.doModelValidation()); }
-    if (this["effectiveTiming"]) { results.push(...this.effectiveTiming.doModelValidation()); }
-    if (this["_effectiveInstant"]) { results.push(...this._effectiveInstant.doModelValidation()); }
-    if (this["_issued"]) { results.push(...this._issued.doModelValidation()); }
-    if (this["performer"]) { this.performer.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["valueQuantity"]) { results.push(...this.valueQuantity.doModelValidation()); }
-    if (this["valueCodeableConcept"]) { results.push(...this.valueCodeableConcept.doModelValidation()); }
-    if (this["_valueString"]) { results.push(...this._valueString.doModelValidation()); }
-    if (this["_valueBoolean"]) { results.push(...this._valueBoolean.doModelValidation()); }
-    if (this["_valueInteger"]) { results.push(...this._valueInteger.doModelValidation()); }
-    if (this["valueRange"]) { results.push(...this.valueRange.doModelValidation()); }
-    if (this["valueRatio"]) { results.push(...this.valueRatio.doModelValidation()); }
-    if (this["valueSampledData"]) { results.push(...this.valueSampledData.doModelValidation()); }
-    if (this["_valueTime"]) { results.push(...this._valueTime.doModelValidation()); }
-    if (this["_valueDateTime"]) { results.push(...this._valueDateTime.doModelValidation()); }
-    if (this["valuePeriod"]) { results.push(...this.valuePeriod.doModelValidation()); }
-    if (this["dataAbsentReason"]) { results.push(...this.dataAbsentReason.doModelValidation()); }
-    if (this["interpretation"]) { this.interpretation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["bodySite"]) { results.push(...this.bodySite.doModelValidation()); }
-    if (this["method"]) { results.push(...this.method.doModelValidation()); }
-    if (this["specimen"]) { results.push(...this.specimen.doModelValidation()); }
-    if (this["device"]) { results.push(...this.device.doModelValidation()); }
-    if (this["referenceRange"]) { this.referenceRange.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["hasMember"]) { this.hasMember.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["derivedFrom"]) { this.derivedFrom.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["component"]) { this.component.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Observation' fhir: Observation.resourceType:'Observation'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["basedOn"]) { this.basedOn.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["partOf"]) { this.partOf.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:ObservationStatusValueSetEnum fhir: Observation.status:code", }));
+    }
+    if (this["category"]) { this.category.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.CodeableConcept fhir: Observation.code:CodeableConcept", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["focus"]) { this.focus.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (this["issued"]) { outcome.issue!.push(...this.issued.doModelValidation().issue!); }
+    if (this["performer"]) { this.performer.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["dataAbsentReason"]) { outcome.issue!.push(...this.dataAbsentReason.doModelValidation().issue!); }
+    if (this["interpretation"]) { this.interpretation.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["bodySite"]) { outcome.issue!.push(...this.bodySite.doModelValidation().issue!); }
+    if (this["method"]) { outcome.issue!.push(...this.method.doModelValidation().issue!); }
+    if (this["specimen"]) { outcome.issue!.push(...this.specimen.doModelValidation().issue!); }
+    if (this["device"]) { outcome.issue!.push(...this.device.doModelValidation().issue!); }
+    if (this["referenceRange"]) { this.referenceRange.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["hasMember"]) { this.hasMember.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["derivedFrom"]) { this.derivedFrom.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["component"]) { this.component.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

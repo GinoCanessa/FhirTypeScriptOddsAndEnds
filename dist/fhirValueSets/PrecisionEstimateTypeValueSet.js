@@ -43,23 +43,4 @@ export const PrecisionEstimateTypeValueSet = {
 /**
  * Method of reporting variability of estimates, such as confidence intervals, interquartile range or standard deviation.
  */
-export var PrecisionEstimateTypeValueSetEnum;
-(function (PrecisionEstimateTypeValueSetEnum) {
-    /**
-     * CI: confidence interval.
-     */
-    PrecisionEstimateTypeValueSetEnum["ConfidenceInterval"] = "CI";
-    /**
-     * IQR: interquartile range.
-     */
-    PrecisionEstimateTypeValueSetEnum["InterquartileRange"] = "IQR";
-    /**
-     * SD: standard deviation.
-     */
-    PrecisionEstimateTypeValueSetEnum["StandardDeviation"] = "SD";
-    /**
-     * SE: standard error.
-     */
-    PrecisionEstimateTypeValueSetEnum["StandardError"] = "SE";
-})(PrecisionEstimateTypeValueSetEnum || (PrecisionEstimateTypeValueSetEnum = {}));
 //# sourceMappingURL=PrecisionEstimateTypeValueSet.js.map

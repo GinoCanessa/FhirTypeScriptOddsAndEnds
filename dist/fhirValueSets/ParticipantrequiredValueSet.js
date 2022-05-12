@@ -35,19 +35,4 @@ export const ParticipantrequiredValueSet = {
 /**
  * Is the Participant required to attend the appointment.
  */
-export var ParticipantrequiredValueSetEnum;
-(function (ParticipantrequiredValueSetEnum) {
-    /**
-     * information-only: The participant is excluded from the appointment, and might not be informed of the appointment taking place. (Appointment is about them, not for them - such as 2 doctors discussing results about a patient's test).
-     */
-    ParticipantrequiredValueSetEnum["InformationOnly"] = "information-only";
-    /**
-     * optional: The participant may optionally attend the appointment.
-     */
-    ParticipantrequiredValueSetEnum["Optional"] = "optional";
-    /**
-     * required: The participant is required to attend the appointment.
-     */
-    ParticipantrequiredValueSetEnum["Required"] = "required";
-})(ParticipantrequiredValueSetEnum || (ParticipantrequiredValueSetEnum = {}));
 //# sourceMappingURL=ParticipantrequiredValueSet.js.map

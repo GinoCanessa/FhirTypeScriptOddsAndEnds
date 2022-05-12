@@ -3,15 +3,17 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: NutritionOrder
 import * as fhir from '../fhir.js';
-import { NutrientCodeValueSet } from '../fhirValueSets/NutrientCodeValueSet.js';
-import { ModifiedFoodtypeValueSet } from '../fhirValueSets/ModifiedFoodtypeValueSet.js';
-import { DietTypeValueSet } from '../fhirValueSets/DietTypeValueSet.js';
-import { EntformulaAdditiveValueSet } from '../fhirValueSets/EntformulaAdditiveValueSet.js';
-import { EnteralRouteValueSet } from '../fhirValueSets/EnteralRouteValueSet.js';
-import { RequestStatusValueSet } from '../fhirValueSets/RequestStatusValueSet.js';
-import { RequestIntentValueSet } from '../fhirValueSets/RequestIntentValueSet.js';
-import { EncounterDietValueSet } from '../fhirValueSets/EncounterDietValueSet.js';
-import { FoodTypeValueSet } from '../fhirValueSets/FoodTypeValueSet.js';
+import { NutrientCodeValueSet, } from '../fhirValueSets/NutrientCodeValueSet.js';
+import { ModifiedFoodtypeValueSet, } from '../fhirValueSets/ModifiedFoodtypeValueSet.js';
+import { DietTypeValueSet, } from '../fhirValueSets/DietTypeValueSet.js';
+import { EntformulaAdditiveValueSet, } from '../fhirValueSets/EntformulaAdditiveValueSet.js';
+import { EnteralRouteValueSet, } from '../fhirValueSets/EnteralRouteValueSet.js';
+import { RequestStatusValueSet, } from '../fhirValueSets/RequestStatusValueSet.js';
+import { RequestIntentValueSet, } from '../fhirValueSets/RequestIntentValueSet.js';
+import { EncounterDietValueSet, } from '../fhirValueSets/EncounterDietValueSet.js';
+import { FoodTypeValueSet, } from '../fhirValueSets/FoodTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Class that defines the quantity and type of nutrient modifications (for example carbohydrate, fiber or sodium) required for the oral diet.
  */
@@ -19,8 +21,9 @@ export class NutritionOrderOralDietNutrient extends fhir.BackboneElement {
     /**
      * Default constructor for NutritionOrderOralDietNutrient - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'NutritionOrderOralDietNutrient';
         if (source['modifier']) {
             this.modifier = new fhir.CodeableConcept(source.modifier);
         }
@@ -38,14 +41,20 @@ export class NutritionOrderOralDietNutrient extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["modifier"]) {
-            results.push(...this.modifier.doModelValidation());
+            outcome.issue.push(...this.modifier.doModelValidation().issue);
         }
         if (this["amount"]) {
-            results.push(...this.amount.doModelValidation());
+            outcome.issue.push(...this.amount.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -55,8 +64,9 @@ export class NutritionOrderOralDietTexture extends fhir.BackboneElement {
     /**
      * Default constructor for NutritionOrderOralDietTexture - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'NutritionOrderOralDietTexture';
         if (source['modifier']) {
             this.modifier = new fhir.CodeableConcept(source.modifier);
         }
@@ -74,14 +84,20 @@ export class NutritionOrderOralDietTexture extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["modifier"]) {
-            results.push(...this.modifier.doModelValidation());
+            outcome.issue.push(...this.modifier.doModelValidation().issue);
         }
         if (this["foodType"]) {
-            results.push(...this.foodType.doModelValidation());
+            outcome.issue.push(...this.foodType.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -91,8 +107,29 @@ export class NutritionOrderOralDiet extends fhir.BackboneElement {
     /**
      * Default constructor for NutritionOrderOralDiet - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'NutritionOrderOralDiet';
+        /**
+         * The kind of diet or dietary restriction such as fiber restricted diet or diabetic diet.
+         */
+        this.type = [];
+        /**
+         * The time period and frequency at which the diet should be given.  The diet should be given for the combination of all schedules if more than one schedule is present.
+         */
+        this.schedule = [];
+        /**
+         * Class that defines the quantity and type of nutrient modifications (for example carbohydrate, fiber or sodium) required for the oral diet.
+         */
+        this.nutrient = [];
+        /**
+         * Class that describes any texture modifications required for the patient to safely consume various types of solid foods.
+         */
+        this.texture = [];
+        /**
+         * The required consistency (e.g. honey-thick, nectar-thick, thin, thickened.) of liquids or fluids served to the patient.
+         */
+        this.fluidConsistencyType = [];
         if (source['type']) {
             this.type = source.type.map((x) => new fhir.CodeableConcept(x));
         }
@@ -109,10 +146,7 @@ export class NutritionOrderOralDiet extends fhir.BackboneElement {
             this.fluidConsistencyType = source.fluidConsistencyType.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['instruction']) {
-            this.instruction = source.instruction;
-        }
-        if (source['_instruction']) {
-            this._instruction = new fhir.FhirElement(source._instruction);
+            this.instruction = new fhir.FhirString({ value: source.instruction });
         }
     }
     /**
@@ -125,26 +159,32 @@ export class NutritionOrderOralDiet extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["type"]) {
-            this.type.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.type.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["schedule"]) {
-            this.schedule.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.schedule.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["nutrient"]) {
-            this.nutrient.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.nutrient.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["texture"]) {
-            this.texture.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.texture.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["fluidConsistencyType"]) {
-            this.fluidConsistencyType.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.fluidConsistencyType.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instruction"]) {
-            results.push(...this._instruction.doModelValidation());
+        if (this["instruction"]) {
+            outcome.issue.push(...this.instruction.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -154,16 +194,18 @@ export class NutritionOrderSupplement extends fhir.BackboneElement {
     /**
      * Default constructor for NutritionOrderSupplement - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'NutritionOrderSupplement';
+        /**
+         * The time period and frequency at which the supplement(s) should be given.  The supplement should be given for the combination of all schedules if more than one schedule is present.
+         */
+        this.schedule = [];
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
         if (source['productName']) {
-            this.productName = source.productName;
-        }
-        if (source['_productName']) {
-            this._productName = new fhir.FhirElement(source._productName);
+            this.productName = new fhir.FhirString({ value: source.productName });
         }
         if (source['schedule']) {
             this.schedule = source.schedule.map((x) => new fhir.Timing(x));
@@ -172,33 +214,36 @@ export class NutritionOrderSupplement extends fhir.BackboneElement {
             this.quantity = new fhir.Quantity(source.quantity);
         }
         if (source['instruction']) {
-            this.instruction = source.instruction;
-        }
-        if (source['_instruction']) {
-            this._instruction = new fhir.FhirElement(source._instruction);
+            this.instruction = new fhir.FhirString({ value: source.instruction });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_productName"]) {
-            results.push(...this._productName.doModelValidation());
+        if (this["productName"]) {
+            outcome.issue.push(...this.productName.doModelValidation().issue);
         }
         if (this["schedule"]) {
-            this.schedule.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.schedule.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["quantity"]) {
-            results.push(...this.quantity.doModelValidation());
+            outcome.issue.push(...this.quantity.doModelValidation().issue);
         }
-        if (this["_instruction"]) {
-            results.push(...this._instruction.doModelValidation());
+        if (this["instruction"]) {
+            outcome.issue.push(...this.instruction.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -208,39 +253,44 @@ export class NutritionOrderEnteralFormulaAdministration extends fhir.BackboneEle
     /**
      * Default constructor for NutritionOrderEnteralFormulaAdministration - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'NutritionOrderEnteralFormulaAdministration';
+        this.__rateIsChoice = true;
         if (source['schedule']) {
             this.schedule = new fhir.Timing(source.schedule);
         }
         if (source['quantity']) {
             this.quantity = new fhir.Quantity(source.quantity);
         }
-        if (source['rateQuantity']) {
-            this.rateQuantity = new fhir.Quantity(source.rateQuantity);
+        if (source['rate']) {
+            this.rate = source.rate;
         }
-        if (source['rateRatio']) {
-            this.rateRatio = new fhir.Ratio(source.rateRatio);
+        else if (source['rateQuantity']) {
+            this.rate = new fhir.Quantity(source.rateQuantity);
+        }
+        else if (source['rateRatio']) {
+            this.rate = new fhir.Ratio(source.rateRatio);
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["schedule"]) {
-            results.push(...this.schedule.doModelValidation());
+            outcome.issue.push(...this.schedule.doModelValidation().issue);
         }
         if (this["quantity"]) {
-            results.push(...this.quantity.doModelValidation());
+            outcome.issue.push(...this.quantity.doModelValidation().issue);
         }
-        if (this["rateQuantity"]) {
-            results.push(...this.rateQuantity.doModelValidation());
-        }
-        if (this["rateRatio"]) {
-            results.push(...this.rateRatio.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -250,25 +300,24 @@ export class NutritionOrderEnteralFormula extends fhir.BackboneElement {
     /**
      * Default constructor for NutritionOrderEnteralFormula - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'NutritionOrderEnteralFormula';
+        /**
+         * See implementation notes below for further discussion on how to order continuous vs bolus enteral feeding using this resource.
+         */
+        this.administration = [];
         if (source['baseFormulaType']) {
             this.baseFormulaType = new fhir.CodeableConcept(source.baseFormulaType);
         }
         if (source['baseFormulaProductName']) {
-            this.baseFormulaProductName = source.baseFormulaProductName;
-        }
-        if (source['_baseFormulaProductName']) {
-            this._baseFormulaProductName = new fhir.FhirElement(source._baseFormulaProductName);
+            this.baseFormulaProductName = new fhir.FhirString({ value: source.baseFormulaProductName });
         }
         if (source['additiveType']) {
             this.additiveType = new fhir.CodeableConcept(source.additiveType);
         }
         if (source['additiveProductName']) {
-            this.additiveProductName = source.additiveProductName;
-        }
-        if (source['_additiveProductName']) {
-            this._additiveProductName = new fhir.FhirElement(source._additiveProductName);
+            this.additiveProductName = new fhir.FhirString({ value: source.additiveProductName });
         }
         if (source['caloricDensity']) {
             this.caloricDensity = new fhir.Quantity(source.caloricDensity);
@@ -283,10 +332,7 @@ export class NutritionOrderEnteralFormula extends fhir.BackboneElement {
             this.maxVolumeToDeliver = new fhir.Quantity(source.maxVolumeToDeliver);
         }
         if (source['administrationInstruction']) {
-            this.administrationInstruction = source.administrationInstruction;
-        }
-        if (source['_administrationInstruction']) {
-            this._administrationInstruction = new fhir.FhirElement(source._administrationInstruction);
+            this.administrationInstruction = new fhir.FhirString({ value: source.administrationInstruction });
         }
     }
     /**
@@ -305,35 +351,41 @@ export class NutritionOrderEnteralFormula extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["baseFormulaType"]) {
-            results.push(...this.baseFormulaType.doModelValidation());
+            outcome.issue.push(...this.baseFormulaType.doModelValidation().issue);
         }
-        if (this["_baseFormulaProductName"]) {
-            results.push(...this._baseFormulaProductName.doModelValidation());
+        if (this["baseFormulaProductName"]) {
+            outcome.issue.push(...this.baseFormulaProductName.doModelValidation().issue);
         }
         if (this["additiveType"]) {
-            results.push(...this.additiveType.doModelValidation());
+            outcome.issue.push(...this.additiveType.doModelValidation().issue);
         }
-        if (this["_additiveProductName"]) {
-            results.push(...this._additiveProductName.doModelValidation());
+        if (this["additiveProductName"]) {
+            outcome.issue.push(...this.additiveProductName.doModelValidation().issue);
         }
         if (this["caloricDensity"]) {
-            results.push(...this.caloricDensity.doModelValidation());
+            outcome.issue.push(...this.caloricDensity.doModelValidation().issue);
         }
         if (this["routeofAdministration"]) {
-            results.push(...this.routeofAdministration.doModelValidation());
+            outcome.issue.push(...this.routeofAdministration.doModelValidation().issue);
         }
         if (this["administration"]) {
-            this.administration.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.administration.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["maxVolumeToDeliver"]) {
-            results.push(...this.maxVolumeToDeliver.doModelValidation());
+            outcome.issue.push(...this.maxVolumeToDeliver.doModelValidation().issue);
         }
-        if (this["_administrationInstruction"]) {
-            results.push(...this._administrationInstruction.doModelValidation());
+        if (this["administrationInstruction"]) {
+            outcome.issue.push(...this.administrationInstruction.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -343,29 +395,57 @@ export class NutritionOrder extends fhir.DomainResource {
     /**
      * Default constructor for NutritionOrder - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'NutritionOrder';
+        /**
+         * The Identifier.type element can be to indicate filler vs. placer if needed.  This is explained in further detail [here](servicerequest.html#notes).
+         */
+        this.identifier = [];
+        /**
+         * Note: This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+         */
+        this.instantiatesCanonical = [];
+        /**
+         * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
+         */
+        this.instantiatesUri = [];
+        /**
+         * The URL pointing to a protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.
+         */
+        this.instantiates = [];
+        /**
+         * Information on a patient's food allergies and intolerances to inform healthcare personnel about the type of foods that the patient shouldn't receive or consume.
+         */
+        this.allergyIntolerance = [];
+        /**
+         * Information on a patient's food preferences that inform healthcare personnel about the food that the patient should receive or consume.
+         */
+        this.foodPreferenceModifier = [];
+        /**
+         * Information on a patient's food allergies, intolerances and preferences to inform healthcare personnel about the type  of foods that the patient shouldn't receive or consume.
+         */
+        this.excludeFoodModifier = [];
+        /**
+         * Oral nutritional products given in order to add further nutritional value to the patient's diet.
+         */
+        this.supplement = [];
+        /**
+         * This element SHALL NOT be used to supply free text instructions for the diet which are represented in the `.oralDiet.instruction`, `supplement.instruction`, or `enteralFormula.administrationInstruction` elements.
+         */
+        this.note = [];
         this.resourceType = 'NutritionOrder';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['instantiatesCanonical']) {
-            this.instantiatesCanonical = source.instantiatesCanonical.map((x) => (x));
-        }
-        if (source['_instantiatesCanonical']) {
-            this._instantiatesCanonical = source._instantiatesCanonical.map((x) => new fhir.FhirElement(x));
+            this.instantiatesCanonical = source.instantiatesCanonical.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['instantiatesUri']) {
-            this.instantiatesUri = source.instantiatesUri.map((x) => (x));
-        }
-        if (source['_instantiatesUri']) {
-            this._instantiatesUri = source._instantiatesUri.map((x) => new fhir.FhirElement(x));
+            this.instantiatesUri = source.instantiatesUri.map((x) => new fhir.FhirUri({ value: x }));
         }
         if (source['instantiates']) {
-            this.instantiates = source.instantiates.map((x) => (x));
-        }
-        if (source['_instantiates']) {
-            this._instantiates = source._instantiates.map((x) => new fhir.FhirElement(x));
+            this.instantiates = source.instantiates.map((x) => new fhir.FhirUri({ value: x }));
         }
         if (source['status']) {
             this.status = source.status;
@@ -373,17 +453,11 @@ export class NutritionOrder extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['intent']) {
             this.intent = source.intent;
         }
         else {
             this.intent = null;
-        }
-        if (source['_intent']) {
-            this._intent = new fhir.FhirElement(source._intent);
         }
         if (source['patient']) {
             this.patient = new fhir.Reference(source.patient);
@@ -395,13 +469,10 @@ export class NutritionOrder extends fhir.DomainResource {
             this.encounter = new fhir.Reference(source.encounter);
         }
         if (source['dateTime']) {
-            this.dateTime = source.dateTime;
+            this.dateTime = new fhir.FhirDateTime({ value: source.dateTime });
         }
         else {
             this.dateTime = null;
-        }
-        if (source['_dateTime']) {
-            this._dateTime = new fhir.FhirElement(source._dateTime);
         }
         if (source['orderer']) {
             this.orderer = new fhir.Reference(source.orderer);
@@ -456,74 +527,74 @@ export class NutritionOrder extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: NutritionOrder.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'NutritionOrder' fhir: NutritionOrder.resourceType:'NutritionOrder'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instantiatesCanonical"]) {
-            this._instantiatesCanonical.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["instantiatesCanonical"]) {
+            this.instantiatesCanonical.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instantiatesUri"]) {
-            this._instantiatesUri.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["instantiatesUri"]) {
+            this.instantiatesUri.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instantiates"]) {
-            this._instantiates.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["instantiates"]) {
+            this.instantiates.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: NutritionOrder.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:RequestStatusValueSetEnum fhir: NutritionOrder.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['intent']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property intent:RequestIntentValueSetEnum fhir: NutritionOrder.intent:code", }));
         }
-        if (!this["intent"]) {
-            results.push(["intent", 'Missing required element: NutritionOrder.intent']);
-        }
-        if (this["_intent"]) {
-            results.push(...this._intent.doModelValidation());
-        }
-        if (!this["patient"]) {
-            results.push(["patient", 'Missing required element: NutritionOrder.patient']);
+        if (!this['patient']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property patient:fhir.Reference fhir: NutritionOrder.patient:Reference", }));
         }
         if (this["patient"]) {
-            results.push(...this.patient.doModelValidation());
+            outcome.issue.push(...this.patient.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (!this["dateTime"]) {
-            results.push(["dateTime", 'Missing required element: NutritionOrder.dateTime']);
+        if (!this['dateTime']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property dateTime:fhir.FhirDateTime fhir: NutritionOrder.dateTime:dateTime", }));
         }
-        if (this["_dateTime"]) {
-            results.push(...this._dateTime.doModelValidation());
+        if (this["dateTime"]) {
+            outcome.issue.push(...this.dateTime.doModelValidation().issue);
         }
         if (this["orderer"]) {
-            results.push(...this.orderer.doModelValidation());
+            outcome.issue.push(...this.orderer.doModelValidation().issue);
         }
         if (this["allergyIntolerance"]) {
-            this.allergyIntolerance.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.allergyIntolerance.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["foodPreferenceModifier"]) {
-            this.foodPreferenceModifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.foodPreferenceModifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["excludeFoodModifier"]) {
-            this.excludeFoodModifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.excludeFoodModifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["oralDiet"]) {
-            results.push(...this.oralDiet.doModelValidation());
+            outcome.issue.push(...this.oralDiet.doModelValidation().issue);
         }
         if (this["supplement"]) {
-            this.supplement.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.supplement.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["enteralFormula"]) {
-            results.push(...this.enteralFormula.doModelValidation());
+            outcome.issue.push(...this.enteralFormula.doModelValidation().issue);
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=NutritionOrder.js.map

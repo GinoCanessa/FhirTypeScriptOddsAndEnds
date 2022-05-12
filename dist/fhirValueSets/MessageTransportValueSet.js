@@ -35,19 +35,4 @@ export const MessageTransportValueSet = {
 /**
  * The protocol used for message transport.
  */
-export var MessageTransportValueSetEnum;
-(function (MessageTransportValueSetEnum) {
-    /**
-     * ftp: The application sends or receives messages using File Transfer Protocol.
-     */
-    MessageTransportValueSetEnum["FTP"] = "ftp";
-    /**
-     * http: The application sends or receives messages using HTTP POST (may be over http: or https:).
-     */
-    MessageTransportValueSetEnum["HTTP"] = "http";
-    /**
-     * mllp: The application sends or receives messages using HL7's Minimal Lower Level Protocol.
-     */
-    MessageTransportValueSetEnum["MLLP"] = "mllp";
-})(MessageTransportValueSetEnum || (MessageTransportValueSetEnum = {}));
 //# sourceMappingURL=MessageTransportValueSet.js.map

@@ -19,14 +19,4 @@ export declare type ClaimExceptionValueSetType = typeof ClaimExceptionValueSet;
 /**
  * This value set includes sample Exception codes.
  */
-export declare enum ClaimExceptionValueSetEnum {
-    /**
-     * disabled: Disabled
-     */
-    Disabled = "disabled",
-    /**
-     * student: Fulltime Student
-     */
-    StudentFulltime = "student"
-}
 //# sourceMappingURL=ClaimExceptionValueSet.d.ts.map

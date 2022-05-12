@@ -27,15 +27,4 @@ export const AssertDirectionCodesValueSet = {
 /**
  * The type of direction to use for assertion.
  */
-export var AssertDirectionCodesValueSetEnum;
-(function (AssertDirectionCodesValueSetEnum) {
-    /**
-     * request: The assertion is evaluated on the request.
-     */
-    AssertDirectionCodesValueSetEnum["Request"] = "request";
-    /**
-     * response: The assertion is evaluated on the response. This is the default value.
-     */
-    AssertDirectionCodesValueSetEnum["Response"] = "response";
-})(AssertDirectionCodesValueSetEnum || (AssertDirectionCodesValueSetEnum = {}));
 //# sourceMappingURL=AssertDirectionCodesValueSet.js.map

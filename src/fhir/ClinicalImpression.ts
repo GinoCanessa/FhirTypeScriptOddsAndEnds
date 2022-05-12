@@ -3,172 +3,37 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ClinicalImpression
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { InvestigationSetsValueSet, InvestigationSetsValueSetType, InvestigationSetsValueSetEnum } from '../fhirValueSets/InvestigationSetsValueSet.js'
-import { ConditionCodeValueSet, ConditionCodeValueSetType, ConditionCodeValueSetEnum } from '../fhirValueSets/ConditionCodeValueSet.js'
-import { ClinicalimpressionStatusValueSet, ClinicalimpressionStatusValueSetType, ClinicalimpressionStatusValueSetEnum } from '../fhirValueSets/ClinicalimpressionStatusValueSet.js'
-import { ClinicalimpressionPrognosisValueSet, ClinicalimpressionPrognosisValueSetType, ClinicalimpressionPrognosisValueSetEnum } from '../fhirValueSets/ClinicalimpressionPrognosisValueSet.js'
-
+import { InvestigationSetsValueSet, InvestigationSetsValueSetType,} from '../fhirValueSets/InvestigationSetsValueSet.js';
+import { InvestigationSetsValueSetEnum } from '../valueSetEnums.js';
+import { ConditionCodeValueSet, ConditionCodeValueSetType,} from '../fhirValueSets/ConditionCodeValueSet.js';
+import { ConditionCodeValueSetEnum } from '../valueSetEnums.js';
+import { ClinicalimpressionStatusValueSet, ClinicalimpressionStatusValueSetType,} from '../fhirValueSets/ClinicalimpressionStatusValueSet.js';
+import { ClinicalimpressionStatusValueSetEnum } from '../valueSetEnums.js';
+import { ClinicalimpressionPrognosisValueSet, ClinicalimpressionPrognosisValueSetType,} from '../fhirValueSets/ClinicalimpressionPrognosisValueSet.js';
+import { ClinicalimpressionPrognosisValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * One or more sets of investigations (signs, symptoms, etc.). The actual grouping of investigations varies greatly depending on the type and context of the assessment. These investigations may include data generated during the assessment process, or data previously generated and recorded that is pertinent to the outcomes.
+ * Valid arguments for the ClinicalImpressionInvestigation type.
  */
-export type IClinicalImpressionInvestigation = fhir.IBackboneElement & { 
+export interface ClinicalImpressionInvestigationArgs extends fhir.BackboneElementArgs {
   /**
    * A name/code for the group ("set") of investigations. Typically, this will be something like "signs", "symptoms", "clinical", "diagnostic", but the list is not constrained, and others such groups such as (exposure|family|travel|nutritional) history may be used.
    */
-  code: fhir.ICodeableConcept|null;
+  code: fhir.CodeableConceptArgs|null;
   /**
    * Most investigations are observations of one kind or another but some other specific types of data collection resources can also be used.
    */
-  item?: fhir.IReference[]|undefined;
-}
-
-/**
- * Specific findings or diagnoses that were considered likely or relevant to ongoing treatment.
- */
-export type IClinicalImpressionFinding = fhir.IBackboneElement & { 
-  /**
-   * Specific text or code for finding or diagnosis, which may include ruled-out or resolved conditions.
-   */
-  itemCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * Specific reference for finding or diagnosis, which may include ruled-out or resolved conditions.
-   */
-  itemReference?: fhir.IReference|undefined;
-  /**
-   * Which investigations support finding or diagnosis.
-   */
-  basis?: string|undefined;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.finding.basis
-   */
-  _basis?: fhir.IFhirElement|undefined;
-}
-
-/**
- * A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation / encounter,  but this varies greatly depending on the clinical workflow. This resource is called "ClinicalImpression" rather than "ClinicalAssessment" to avoid confusion with the recording of assessment tools such as Apgar score.
- */
-export type IClinicalImpression = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "ClinicalImpression";
-  /**
-   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains the code entered-in-error that marks the clinical impression as not currently valid.
-   */
-  status: ClinicalimpressionStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * This is generally only used for "exception" statuses such as "not-done", "suspended" or "cancelled".
-   * [distinct reason codes for different statuses can be enforced using invariants if they are universal bindings].
-   */
-  statusReason?: fhir.ICodeableConcept|undefined;
-  /**
-   * This is present as a place-holder only and may be removed based on feedback/work group opinion.
-   */
-  code?: fhir.ICodeableConcept|undefined;
-  /**
-   * A summary of the context and/or cause of the assessment - why / where it was performed, and what patient events/status prompted it.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * The patient or group of individuals assessed as part of this record.
-   */
-  subject: fhir.IReference|null;
-  /**
-   * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.
-   */
-  encounter?: fhir.IReference|undefined;
-  /**
-   * This SHOULD be accurate to at least the minute, though some assessments only have a known date.
-   */
-  effectiveDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.effective[x]
-   */
-  _effectiveDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * This SHOULD be accurate to at least the minute, though some assessments only have a known date.
-   */
-  effectivePeriod?: fhir.IPeriod|undefined;
-  /**
-   * Indicates when the documentation of the assessment was complete.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * The clinician performing the assessment.
-   */
-  assessor?: fhir.IReference|undefined;
-  /**
-   * It is always likely that multiple previous assessments exist for a patient. The point of quoting a previous assessment is that this assessment is relative to it (see resolved).
-   */
-  previous?: fhir.IReference|undefined;
-  /**
-   * e.g. The patient is a pregnant, has congestive heart failure, has an ‎Adenocarcinoma, and is allergic to penicillin.
-   */
-  problem?: fhir.IReference[]|undefined;
-  /**
-   * One or more sets of investigations (signs, symptoms, etc.). The actual grouping of investigations varies greatly depending on the type and context of the assessment. These investigations may include data generated during the assessment process, or data previously generated and recorded that is pertinent to the outcomes.
-   */
-  investigation?: fhir.IClinicalImpressionInvestigation[]|undefined;
-  /**
-   * Reference to a specific published clinical protocol that was followed during this assessment, and/or that provides evidence in support of the diagnosis.
-   */
-  protocol?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.protocol
-   */
-  _protocol?: fhir.IFhirElement[]|undefined;
-  /**
-   * A text summary of the investigations and the diagnosis.
-   */
-  summary?: string|undefined;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.summary
-   */
-  _summary?: fhir.IFhirElement|undefined;
-  /**
-   * Specific findings or diagnoses that were considered likely or relevant to ongoing treatment.
-   */
-  finding?: fhir.IClinicalImpressionFinding[]|undefined;
-  /**
-   * Estimate of likely outcome.
-   */
-  prognosisCodeableConcept?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * RiskAssessment expressing likely outcome.
-   */
-  prognosisReference?: fhir.IReference[]|undefined;
-  /**
-   * Information supporting the clinical impression.
-   */
-  supportingInfo?: fhir.IReference[]|undefined;
-  /**
-   * Don't use this element for content that should more properly appear as one of the specific elements of the impression.
-   */
-  note?: fhir.IAnnotation[]|undefined;
+  item?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * One or more sets of investigations (signs, symptoms, etc.). The actual grouping of investigations varies greatly depending on the type and context of the assessment. These investigations may include data generated during the assessment process, or data previously generated and recorded that is pertinent to the outcomes.
  */
-export class ClinicalImpressionInvestigation extends fhir.BackboneElement implements IClinicalImpressionInvestigation {
+export class ClinicalImpressionInvestigation extends fhir.BackboneElement {
+  readonly __dataType:string = 'ClinicalImpressionInvestigation';
   /**
    * A name/code for the group ("set") of investigations. Typically, this will be something like "signs", "symptoms", "clinical", "diagnostic", but the list is not constrained, and others such groups such as (exposure|family|travel|nutritional) history may be used.
    */
@@ -176,13 +41,13 @@ export class ClinicalImpressionInvestigation extends fhir.BackboneElement implem
   /**
    * Most investigations are observations of one kind or another but some other specific types of data collection resources can also be used.
    */
-  public item?: fhir.Reference[]|undefined;
+  public item?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for ClinicalImpressionInvestigation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IClinicalImpressionInvestigation> = { }) {
-    super(source);
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+  constructor(source:Partial<ClinicalImpressionInvestigationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
     else { this.code = null; }
     if (source['item']) { this.item = source.item.map((x) => new fhir.Reference(x)); }
   }
@@ -195,19 +60,45 @@ export class ClinicalImpressionInvestigation extends fhir.BackboneElement implem
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: ClinicalImpression.investigation.code']); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["item"]) { this.item.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.CodeableConcept fhir: ClinicalImpression.investigation.code:CodeableConcept", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["item"]) { this.item.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ClinicalImpressionFinding type.
+ */
+export interface ClinicalImpressionFindingArgs extends fhir.BackboneElementArgs {
+  /**
+   * Specific text or code for finding or diagnosis, which may include ruled-out or resolved conditions.
+   */
+  itemCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Specific reference for finding or diagnosis, which may include ruled-out or resolved conditions.
+   */
+  itemReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * Which investigations support finding or diagnosis.
+   */
+  basis?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Specific findings or diagnoses that were considered likely or relevant to ongoing treatment.
  */
-export class ClinicalImpressionFinding extends fhir.BackboneElement implements IClinicalImpressionFinding {
+export class ClinicalImpressionFinding extends fhir.BackboneElement {
+  readonly __dataType:string = 'ClinicalImpressionFinding';
   /**
    * Specific text or code for finding or diagnosis, which may include ruled-out or resolved conditions.
    */
@@ -219,20 +110,15 @@ export class ClinicalImpressionFinding extends fhir.BackboneElement implements I
   /**
    * Which investigations support finding or diagnosis.
    */
-  public basis?: string|undefined;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.finding.basis
-   */
-  public _basis?: fhir.FhirElement|undefined;
+  public basis?: fhir.FhirString|undefined;
   /**
    * Default constructor for ClinicalImpressionFinding - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IClinicalImpressionFinding> = { }) {
-    super(source);
-    if (source['itemCodeableConcept']) { this.itemCodeableConcept = new fhir.CodeableConcept(source.itemCodeableConcept!); }
-    if (source['itemReference']) { this.itemReference = new fhir.Reference(source.itemReference!); }
-    if (source['basis']) { this.basis = source.basis; }
-    if (source['_basis']) { this._basis = new fhir.FhirElement(source._basis!); }
+  constructor(source:Partial<ClinicalImpressionFindingArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['itemCodeableConcept']) { this.itemCodeableConcept = new fhir.CodeableConcept(source.itemCodeableConcept); }
+    if (source['itemReference']) { this.itemReference = new fhir.Reference(source.itemReference); }
+    if (source['basis']) { this.basis = new fhir.FhirString({value: source.basis}); }
   }
   /**
    * Example-bound Value Set for itemCodeableConcept
@@ -243,19 +129,124 @@ export class ClinicalImpressionFinding extends fhir.BackboneElement implements I
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["itemCodeableConcept"]) { results.push(...this.itemCodeableConcept.doModelValidation()); }
-    if (this["itemReference"]) { results.push(...this.itemReference.doModelValidation()); }
-    if (this["_basis"]) { results.push(...this._basis.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["itemCodeableConcept"]) { outcome.issue!.push(...this.itemCodeableConcept.doModelValidation().issue!); }
+    if (this["itemReference"]) { outcome.issue!.push(...this.itemReference.doModelValidation().issue!); }
+    if (this["basis"]) { outcome.issue!.push(...this.basis.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ClinicalImpression type.
+ */
+export interface ClinicalImpressionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "ClinicalImpression"|undefined;
+  /**
+   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains the code entered-in-error that marks the clinical impression as not currently valid.
+   */
+  status: ClinicalimpressionStatusValueSetEnum|null;
+  /**
+   * This is generally only used for "exception" statuses such as "not-done", "suspended" or "cancelled".
+   * [distinct reason codes for different statuses can be enforced using invariants if they are universal bindings].
+   */
+  statusReason?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * This is present as a place-holder only and may be removed based on feedback/work group opinion.
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * A summary of the context and/or cause of the assessment - why / where it was performed, and what patient events/status prompted it.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * The patient or group of individuals assessed as part of this record.
+   */
+  subject: fhir.ReferenceArgs|null;
+  /**
+   * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.
+   */
+  encounter?: fhir.ReferenceArgs|undefined;
+  /**
+   * This SHOULD be accurate to at least the minute, though some assessments only have a known date.
+   */
+  effective?: fhir.FhirDateTime|fhir.Period|undefined;
+  /**
+   * This SHOULD be accurate to at least the minute, though some assessments only have a known date.
+   */
+  effectiveDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * This SHOULD be accurate to at least the minute, though some assessments only have a known date.
+   */
+  effectivePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * Indicates when the documentation of the assessment was complete.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * The clinician performing the assessment.
+   */
+  assessor?: fhir.ReferenceArgs|undefined;
+  /**
+   * It is always likely that multiple previous assessments exist for a patient. The point of quoting a previous assessment is that this assessment is relative to it (see resolved).
+   */
+  previous?: fhir.ReferenceArgs|undefined;
+  /**
+   * e.g. The patient is a pregnant, has congestive heart failure, has an ‎Adenocarcinoma, and is allergic to penicillin.
+   */
+  problem?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * One or more sets of investigations (signs, symptoms, etc.). The actual grouping of investigations varies greatly depending on the type and context of the assessment. These investigations may include data generated during the assessment process, or data previously generated and recorded that is pertinent to the outcomes.
+   */
+  investigation?: fhir.ClinicalImpressionInvestigationArgs[]|undefined;
+  /**
+   * Reference to a specific published clinical protocol that was followed during this assessment, and/or that provides evidence in support of the diagnosis.
+   */
+  protocol?: fhir.FhirUri[]|string[]|undefined;
+  /**
+   * A text summary of the investigations and the diagnosis.
+   */
+  summary?: fhir.FhirString|string|undefined;
+  /**
+   * Specific findings or diagnoses that were considered likely or relevant to ongoing treatment.
+   */
+  finding?: fhir.ClinicalImpressionFindingArgs[]|undefined;
+  /**
+   * Estimate of likely outcome.
+   */
+  prognosisCodeableConcept?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * RiskAssessment expressing likely outcome.
+   */
+  prognosisReference?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Information supporting the clinical impression.
+   */
+  supportingInfo?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Don't use this element for content that should more properly appear as one of the specific elements of the impression.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
 }
 
 /**
  * A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation / encounter,  but this varies greatly depending on the clinical workflow. This resource is called "ClinicalImpression" rather than "ClinicalAssessment" to avoid confusion with the recording of assessment tools such as Apgar score.
  */
-export class ClinicalImpression extends fhir.DomainResource implements IClinicalImpression {
+export class ClinicalImpression extends fhir.DomainResource {
+  readonly __dataType:string = 'ClinicalImpression';
   /**
    * Resource Type Name
    */
@@ -263,15 +254,11 @@ export class ClinicalImpression extends fhir.DomainResource implements IClinical
   /**
    * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains the code entered-in-error that marks the clinical impression as not currently valid.
    */
   public status: ClinicalimpressionStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * This is generally only used for "exception" statuses such as "not-done", "suspended" or "cancelled".
    * [distinct reason codes for different statuses can be enforced using invariants if they are universal bindings].
@@ -284,11 +271,7 @@ export class ClinicalImpression extends fhir.DomainResource implements IClinical
   /**
    * A summary of the context and/or cause of the assessment - why / where it was performed, and what patient events/status prompted it.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * The patient or group of individuals assessed as part of this record.
    */
@@ -300,23 +283,12 @@ export class ClinicalImpression extends fhir.DomainResource implements IClinical
   /**
    * This SHOULD be accurate to at least the minute, though some assessments only have a known date.
    */
-  public effectiveDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.effective[x]
-   */
-  public _effectiveDateTime?: fhir.FhirElement|undefined;
-  /**
-   * This SHOULD be accurate to at least the minute, though some assessments only have a known date.
-   */
-  public effectivePeriod?: fhir.Period|undefined;
+  public effective?: (fhir.FhirDateTime|fhir.Period)|undefined;
+  readonly __effectiveIsChoice:true = true;
   /**
    * Indicates when the documentation of the assessment was complete.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * The clinician performing the assessment.
    */
@@ -328,77 +300,64 @@ export class ClinicalImpression extends fhir.DomainResource implements IClinical
   /**
    * e.g. The patient is a pregnant, has congestive heart failure, has an ‎Adenocarcinoma, and is allergic to penicillin.
    */
-  public problem?: fhir.Reference[]|undefined;
+  public problem?: fhir.Reference[]|undefined = [];
   /**
    * One or more sets of investigations (signs, symptoms, etc.). The actual grouping of investigations varies greatly depending on the type and context of the assessment. These investigations may include data generated during the assessment process, or data previously generated and recorded that is pertinent to the outcomes.
    */
-  public investigation?: fhir.ClinicalImpressionInvestigation[]|undefined;
+  public investigation?: fhir.ClinicalImpressionInvestigation[]|undefined = [];
   /**
    * Reference to a specific published clinical protocol that was followed during this assessment, and/or that provides evidence in support of the diagnosis.
    */
-  public protocol?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.protocol
-   */
-  public _protocol?: fhir.FhirElement[]|undefined;
+  public protocol?: fhir.FhirUri[]|undefined = [];
   /**
    * A text summary of the investigations and the diagnosis.
    */
-  public summary?: string|undefined;
-  /**
-   * Extended properties for primitive element: ClinicalImpression.summary
-   */
-  public _summary?: fhir.FhirElement|undefined;
+  public summary?: fhir.FhirString|undefined;
   /**
    * Specific findings or diagnoses that were considered likely or relevant to ongoing treatment.
    */
-  public finding?: fhir.ClinicalImpressionFinding[]|undefined;
+  public finding?: fhir.ClinicalImpressionFinding[]|undefined = [];
   /**
    * Estimate of likely outcome.
    */
-  public prognosisCodeableConcept?: fhir.CodeableConcept[]|undefined;
+  public prognosisCodeableConcept?: fhir.CodeableConcept[]|undefined = [];
   /**
    * RiskAssessment expressing likely outcome.
    */
-  public prognosisReference?: fhir.Reference[]|undefined;
+  public prognosisReference?: fhir.Reference[]|undefined = [];
   /**
    * Information supporting the clinical impression.
    */
-  public supportingInfo?: fhir.Reference[]|undefined;
+  public supportingInfo?: fhir.Reference[]|undefined = [];
   /**
    * Don't use this element for content that should more properly appear as one of the specific elements of the impression.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Default constructor for ClinicalImpression - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IClinicalImpression> = { }) {
-    super(source);
+  constructor(source:Partial<ClinicalImpressionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'ClinicalImpression';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['statusReason']) { this.statusReason = new fhir.CodeableConcept(source.statusReason!); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
+    if (source['statusReason']) { this.statusReason = new fhir.CodeableConcept(source.statusReason); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
     else { this.subject = null; }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['effectiveDateTime']) { this.effectiveDateTime = source.effectiveDateTime; }
-    if (source['_effectiveDateTime']) { this._effectiveDateTime = new fhir.FhirElement(source._effectiveDateTime!); }
-    if (source['effectivePeriod']) { this.effectivePeriod = new fhir.Period(source.effectivePeriod!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['assessor']) { this.assessor = new fhir.Reference(source.assessor!); }
-    if (source['previous']) { this.previous = new fhir.Reference(source.previous!); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['effective']) { this.effective = source.effective; }
+    else if (source['effectiveDateTime']) { this.effective = new fhir.FhirDateTime({value: source.effectiveDateTime}); }
+    else if (source['effectivePeriod']) { this.effective = new fhir.Period(source.effectivePeriod); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['assessor']) { this.assessor = new fhir.Reference(source.assessor); }
+    if (source['previous']) { this.previous = new fhir.Reference(source.previous); }
     if (source['problem']) { this.problem = source.problem.map((x) => new fhir.Reference(x)); }
     if (source['investigation']) { this.investigation = source.investigation.map((x) => new fhir.ClinicalImpressionInvestigation(x)); }
-    if (source['protocol']) { this.protocol = source.protocol.map((x) => (x)); }
-    if (source['_protocol']) { this._protocol = source._protocol.map((x) => new fhir.FhirElement(x)); }
-    if (source['summary']) { this.summary = source.summary; }
-    if (source['_summary']) { this._summary = new fhir.FhirElement(source._summary!); }
+    if (source['protocol']) { this.protocol = source.protocol.map((x) => new fhir.FhirUri({value: x})); }
+    if (source['summary']) { this.summary = new fhir.FhirString({value: source.summary}); }
     if (source['finding']) { this.finding = source.finding.map((x) => new fhir.ClinicalImpressionFinding(x)); }
     if (source['prognosisCodeableConcept']) { this.prognosisCodeableConcept = source.prognosisCodeableConcept.map((x) => new fhir.CodeableConcept(x)); }
     if (source['prognosisReference']) { this.prognosisReference = source.prognosisReference.map((x) => new fhir.Reference(x)); }
@@ -420,32 +379,41 @@ export class ClinicalImpression extends fhir.DomainResource implements IClinical
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: ClinicalImpression.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: ClinicalImpression.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["statusReason"]) { results.push(...this.statusReason.doModelValidation()); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (!this["subject"]) { results.push(["subject",'Missing required element: ClinicalImpression.subject']); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (this["_effectiveDateTime"]) { results.push(...this._effectiveDateTime.doModelValidation()); }
-    if (this["effectivePeriod"]) { results.push(...this.effectivePeriod.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["assessor"]) { results.push(...this.assessor.doModelValidation()); }
-    if (this["previous"]) { results.push(...this.previous.doModelValidation()); }
-    if (this["problem"]) { this.problem.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["investigation"]) { this.investigation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_protocol"]) { this._protocol.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_summary"]) { results.push(...this._summary.doModelValidation()); }
-    if (this["finding"]) { this.finding.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["prognosisCodeableConcept"]) { this.prognosisCodeableConcept.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["prognosisReference"]) { this.prognosisReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["supportingInfo"]) { this.supportingInfo.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'ClinicalImpression' fhir: ClinicalImpression.resourceType:'ClinicalImpression'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:ClinicalimpressionStatusValueSetEnum fhir: ClinicalImpression.status:code", }));
+    }
+    if (this["statusReason"]) { outcome.issue!.push(...this.statusReason.doModelValidation().issue!); }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (!this['subject']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property subject:fhir.Reference fhir: ClinicalImpression.subject:Reference", }));
+    }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["assessor"]) { outcome.issue!.push(...this.assessor.doModelValidation().issue!); }
+    if (this["previous"]) { outcome.issue!.push(...this.previous.doModelValidation().issue!); }
+    if (this["problem"]) { this.problem.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["investigation"]) { this.investigation.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["protocol"]) { this.protocol.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["summary"]) { outcome.issue!.push(...this.summary.doModelValidation().issue!); }
+    if (this["finding"]) { this.finding.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["prognosisCodeableConcept"]) { this.prognosisCodeableConcept.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["prognosisReference"]) { this.prognosisReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["supportingInfo"]) { this.supportingInfo.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

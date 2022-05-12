@@ -3,9 +3,11 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: RelatedPerson
 import * as fhir from '../fhir.js';
-import { LanguagesValueSet } from '../fhirValueSets/LanguagesValueSet.js';
-import { RelatedpersonRelationshiptypeValueSet } from '../fhirValueSets/RelatedpersonRelationshiptypeValueSet.js';
-import { AdministrativeGenderValueSet } from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { LanguagesValueSet, } from '../fhirValueSets/LanguagesValueSet.js';
+import { RelatedpersonRelationshiptypeValueSet, } from '../fhirValueSets/RelatedpersonRelationshiptypeValueSet.js';
+import { AdministrativeGenderValueSet, } from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple RelatedPerson.Communication associations.   If the RelatedPerson does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
  */
@@ -13,8 +15,9 @@ export class RelatedPersonCommunication extends fhir.BackboneElement {
     /**
      * Default constructor for RelatedPersonCommunication - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'RelatedPersonCommunication';
         if (source['language']) {
             this.language = new fhir.CodeableConcept(source.language);
         }
@@ -22,10 +25,7 @@ export class RelatedPersonCommunication extends fhir.BackboneElement {
             this.language = null;
         }
         if (source['preferred']) {
-            this.preferred = source.preferred;
-        }
-        if (source['_preferred']) {
-            this._preferred = new fhir.FhirElement(source._preferred);
+            this.preferred = new fhir.FhirBoolean({ value: source.preferred });
         }
     }
     /**
@@ -38,17 +38,23 @@ export class RelatedPersonCommunication extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["language"]) {
-            results.push(["language", 'Missing required element: RelatedPerson.communication.language']);
+        var outcome = super.doModelValidation();
+        if (!this['language']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property language:fhir.CodeableConcept fhir: RelatedPerson.communication.language:CodeableConcept", }));
         }
         if (this["language"]) {
-            results.push(...this.language.doModelValidation());
+            outcome.issue.push(...this.language.doModelValidation().issue);
         }
-        if (this["_preferred"]) {
-            results.push(...this._preferred.doModelValidation());
+        if (this["preferred"]) {
+            outcome.issue.push(...this.preferred.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -58,17 +64,43 @@ export class RelatedPerson extends fhir.DomainResource {
     /**
      * Default constructor for RelatedPerson - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'RelatedPerson';
+        /**
+         * Identifier for a person within a particular scope.
+         */
+        this.identifier = [];
+        /**
+         * The nature of the relationship between a patient and the related person.
+         */
+        this.relationship = [];
+        /**
+         * A name associated with the person.
+         */
+        this.name = [];
+        /**
+         * Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification.
+         */
+        this.telecom = [];
+        /**
+         * Address where the related person can be contacted or visited.
+         */
+        this.address = [];
+        /**
+         * Image of the person.
+         */
+        this.photo = [];
+        /**
+         * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple RelatedPerson.Communication associations.   If the RelatedPerson does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
+         */
+        this.communication = [];
         this.resourceType = 'RelatedPerson';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['active']) {
-            this.active = source.active;
-        }
-        if (source['_active']) {
-            this._active = new fhir.FhirElement(source._active);
+            this.active = new fhir.FhirBoolean({ value: source.active });
         }
         if (source['patient']) {
             this.patient = new fhir.Reference(source.patient);
@@ -88,14 +120,8 @@ export class RelatedPerson extends fhir.DomainResource {
         if (source['gender']) {
             this.gender = source.gender;
         }
-        if (source['_gender']) {
-            this._gender = new fhir.FhirElement(source._gender);
-        }
         if (source['birthDate']) {
-            this.birthDate = source.birthDate;
-        }
-        if (source['_birthDate']) {
-            this._birthDate = new fhir.FhirElement(source._birthDate);
+            this.birthDate = new fhir.FhirDate({ value: source.birthDate });
         }
         if (source['address']) {
             this.address = source.address.map((x) => new fhir.Address(x));
@@ -126,50 +152,53 @@ export class RelatedPerson extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: RelatedPerson.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'RelatedPerson' fhir: RelatedPerson.resourceType:'RelatedPerson'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_active"]) {
-            results.push(...this._active.doModelValidation());
+        if (this["active"]) {
+            outcome.issue.push(...this.active.doModelValidation().issue);
         }
-        if (!this["patient"]) {
-            results.push(["patient", 'Missing required element: RelatedPerson.patient']);
+        if (!this['patient']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property patient:fhir.Reference fhir: RelatedPerson.patient:Reference", }));
         }
         if (this["patient"]) {
-            results.push(...this.patient.doModelValidation());
+            outcome.issue.push(...this.patient.doModelValidation().issue);
         }
         if (this["relationship"]) {
-            this.relationship.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relationship.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["name"]) {
-            this.name.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.name.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["telecom"]) {
-            this.telecom.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.telecom.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_gender"]) {
-            results.push(...this._gender.doModelValidation());
-        }
-        if (this["_birthDate"]) {
-            results.push(...this._birthDate.doModelValidation());
+        if (this["birthDate"]) {
+            outcome.issue.push(...this.birthDate.doModelValidation().issue);
         }
         if (this["address"]) {
-            this.address.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.address.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["photo"]) {
-            this.photo.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.photo.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
         if (this["communication"]) {
-            this.communication.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.communication.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=RelatedPerson.js.map

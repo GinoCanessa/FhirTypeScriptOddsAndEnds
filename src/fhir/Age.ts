@@ -3,30 +3,38 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Age
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A duration of time during which an organism (or a process) has existed.
+ * Valid arguments for the Age type.
  */
-export type IAge = fhir.IQuantity & { 
+export interface AgeArgs extends fhir.QuantityArgs {
 }
 
 /**
  * A duration of time during which an organism (or a process) has existed.
  */
-export class Age extends fhir.Quantity implements IAge {
+export class Age extends fhir.Quantity {
+  readonly __dataType:string = 'Age';
   /**
    * Default constructor for Age - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAge> = { }) {
-    super(source);
+  constructor(source:Partial<AgeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

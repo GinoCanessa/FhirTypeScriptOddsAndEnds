@@ -3,16 +3,18 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: AllergyIntolerance
 import * as fhir from '../fhir.js';
-import { SubstanceCodeValueSet } from '../fhirValueSets/SubstanceCodeValueSet.js';
-import { ClinicalFindingsValueSet } from '../fhirValueSets/ClinicalFindingsValueSet.js';
-import { ReactionEventSeverityValueSet } from '../fhirValueSets/ReactionEventSeverityValueSet.js';
-import { RouteCodesValueSet } from '../fhirValueSets/RouteCodesValueSet.js';
-import { AllergyintoleranceClinicalValueSet } from '../fhirValueSets/AllergyintoleranceClinicalValueSet.js';
-import { AllergyintoleranceVerificationValueSet } from '../fhirValueSets/AllergyintoleranceVerificationValueSet.js';
-import { AllergyIntoleranceTypeValueSet } from '../fhirValueSets/AllergyIntoleranceTypeValueSet.js';
-import { AllergyIntoleranceCategoryValueSet } from '../fhirValueSets/AllergyIntoleranceCategoryValueSet.js';
-import { AllergyIntoleranceCriticalityValueSet } from '../fhirValueSets/AllergyIntoleranceCriticalityValueSet.js';
-import { AllergyintoleranceCodeValueSet } from '../fhirValueSets/AllergyintoleranceCodeValueSet.js';
+import { SubstanceCodeValueSet, } from '../fhirValueSets/SubstanceCodeValueSet.js';
+import { ClinicalFindingsValueSet, } from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { ReactionEventSeverityValueSet, } from '../fhirValueSets/ReactionEventSeverityValueSet.js';
+import { RouteCodesValueSet, } from '../fhirValueSets/RouteCodesValueSet.js';
+import { AllergyintoleranceClinicalValueSet, } from '../fhirValueSets/AllergyintoleranceClinicalValueSet.js';
+import { AllergyintoleranceVerificationValueSet, } from '../fhirValueSets/AllergyintoleranceVerificationValueSet.js';
+import { AllergyIntoleranceTypeValueSet, } from '../fhirValueSets/AllergyIntoleranceTypeValueSet.js';
+import { AllergyIntoleranceCategoryValueSet, } from '../fhirValueSets/AllergyIntoleranceCategoryValueSet.js';
+import { AllergyIntoleranceCriticalityValueSet, } from '../fhirValueSets/AllergyIntoleranceCriticalityValueSet.js';
+import { AllergyintoleranceCodeValueSet, } from '../fhirValueSets/AllergyintoleranceCodeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Details about each adverse reaction event linked to exposure to the identified substance.
  */
@@ -20,8 +22,17 @@ export class AllergyIntoleranceReaction extends fhir.BackboneElement {
     /**
      * Default constructor for AllergyIntoleranceReaction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AllergyIntoleranceReaction';
+        /**
+         * Manifestation can be expressed as a single word, phrase or brief description. For example: nausea, rash or no reaction. It is preferable that manifestation should be coded with a terminology, where possible. The values entered here may be used to display on an application screen as part of a list of adverse reactions, as recommended in the UK NHS CUI guidelines.  Terminologies commonly used include, but are not limited to, SNOMED CT or ICD10.
+         */
+        this.manifestation = [];
+        /**
+         * Use this field to record information indirectly related to a particular event and not captured in the description. For example: Clinical records are no longer available, recorded based on information provided to the patient by her mother and her mother is deceased.
+         */
+        this.note = [];
         if (source['substance']) {
             this.substance = new fhir.CodeableConcept(source.substance);
         }
@@ -32,22 +43,13 @@ export class AllergyIntoleranceReaction extends fhir.BackboneElement {
             this.manifestation = null;
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['onset']) {
-            this.onset = source.onset;
-        }
-        if (source['_onset']) {
-            this._onset = new fhir.FhirElement(source._onset);
+            this.onset = new fhir.FhirDateTime({ value: source.onset });
         }
         if (source['severity']) {
             this.severity = source.severity;
-        }
-        if (source['_severity']) {
-            this._severity = new fhir.FhirElement(source._severity);
         }
         if (source['exposureRoute']) {
             this.exposureRoute = new fhir.CodeableConcept(source.exposureRoute);
@@ -84,32 +86,41 @@ export class AllergyIntoleranceReaction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["substance"]) {
-            results.push(...this.substance.doModelValidation());
+            outcome.issue.push(...this.substance.doModelValidation().issue);
         }
-        if ((!this["manifestation"]) || (this["manifestation"].length === 0)) {
-            results.push(["manifestation", 'Missing required element: AllergyIntolerance.reaction.manifestation']);
+        if (!this['manifestation']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property manifestation:fhir.CodeableConcept[] fhir: AllergyIntolerance.reaction.manifestation:CodeableConcept", }));
+        }
+        else if (!Array.isArray(this.manifestation)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property manifestation:fhir.CodeableConcept[] fhir: AllergyIntolerance.reaction.manifestation:CodeableConcept", }));
+        }
+        else if (this.manifestation.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property manifestation:fhir.CodeableConcept[] fhir: AllergyIntolerance.reaction.manifestation:CodeableConcept", }));
         }
         if (this["manifestation"]) {
-            this.manifestation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.manifestation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_onset"]) {
-            results.push(...this._onset.doModelValidation());
-        }
-        if (this["_severity"]) {
-            results.push(...this._severity.doModelValidation());
+        if (this["onset"]) {
+            outcome.issue.push(...this.onset.doModelValidation().issue);
         }
         if (this["exposureRoute"]) {
-            results.push(...this.exposureRoute.doModelValidation());
+            outcome.issue.push(...this.exposureRoute.doModelValidation().issue);
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -119,8 +130,26 @@ export class AllergyIntolerance extends fhir.DomainResource {
     /**
      * Default constructor for AllergyIntolerance - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AllergyIntolerance';
+        /**
+         * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+         */
+        this.identifier = [];
+        /**
+         * This data element has been included because it is currently being captured in some clinical systems. This data can be derived from the substance where coding systems are used, and is effectively redundant in that situation.  When searching on category, consider the implications of AllergyIntolerance resources without a category.  For example, when searching on category = medication, medication allergies that don't have a category valued will not be returned.  Refer to [search](search.html) for more information on how to search category with a :missing modifier to get allergies that don't have a category.  Additionally, category should be used with caution because category can be subjective based on the sender.
+         */
+        this.category = [];
+        this.__onsetIsChoice = true;
+        /**
+         * For example: including reason for flagging a seriousness of 'High Risk'; and instructions related to future exposure or administration of the substance, such as administration within an Intensive Care Unit or under corticosteroid cover. The notes should be related to an allergy or intolerance as a condition in general and not related to any particular episode of it. For episode notes and descriptions, use AllergyIntolerance.event.description and  AllergyIntolerance.event.notes.
+         */
+        this.note = [];
+        /**
+         * Details about each adverse reaction event linked to exposure to the identified substance.
+         */
+        this.reaction = [];
         this.resourceType = 'AllergyIntolerance';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -134,20 +163,11 @@ export class AllergyIntolerance extends fhir.DomainResource {
         if (source['type']) {
             this.type = source.type;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['category']) {
-            this.category = source.category.map((x) => (x));
-        }
-        if (source['_category']) {
-            this._category = source._category.map((x) => new fhir.FhirElement(x));
+            this.category = source.category.map((x) => x);
         }
         if (source['criticality']) {
             this.criticality = source.criticality;
-        }
-        if (source['_criticality']) {
-            this._criticality = new fhir.FhirElement(source._criticality);
         }
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
@@ -161,32 +181,26 @@ export class AllergyIntolerance extends fhir.DomainResource {
         if (source['encounter']) {
             this.encounter = new fhir.Reference(source.encounter);
         }
-        if (source['onsetDateTime']) {
-            this.onsetDateTime = source.onsetDateTime;
+        if (source['onset']) {
+            this.onset = source.onset;
         }
-        if (source['_onsetDateTime']) {
-            this._onsetDateTime = new fhir.FhirElement(source._onsetDateTime);
+        else if (source['onsetDateTime']) {
+            this.onset = new fhir.FhirDateTime({ value: source.onsetDateTime });
         }
-        if (source['onsetAge']) {
-            this.onsetAge = new fhir.Age(source.onsetAge);
+        else if (source['onsetAge']) {
+            this.onset = new fhir.Age(source.onsetAge);
         }
-        if (source['onsetPeriod']) {
-            this.onsetPeriod = new fhir.Period(source.onsetPeriod);
+        else if (source['onsetPeriod']) {
+            this.onset = new fhir.Period(source.onsetPeriod);
         }
-        if (source['onsetRange']) {
-            this.onsetRange = new fhir.Range(source.onsetRange);
+        else if (source['onsetRange']) {
+            this.onset = new fhir.Range(source.onsetRange);
         }
-        if (source['onsetString']) {
-            this.onsetString = source.onsetString;
-        }
-        if (source['_onsetString']) {
-            this._onsetString = new fhir.FhirElement(source._onsetString);
+        else if (source['onsetString']) {
+            this.onset = new fhir.FhirString({ value: source.onsetString });
         }
         if (source['recordedDate']) {
-            this.recordedDate = source.recordedDate;
-        }
-        if (source['_recordedDate']) {
-            this._recordedDate = new fhir.FhirElement(source._recordedDate);
+            this.recordedDate = new fhir.FhirDateTime({ value: source.recordedDate });
         }
         if (source['recorder']) {
             this.recorder = new fhir.Reference(source.recorder);
@@ -195,10 +209,7 @@ export class AllergyIntolerance extends fhir.DomainResource {
             this.asserter = new fhir.Reference(source.asserter);
         }
         if (source['lastOccurrence']) {
-            this.lastOccurrence = source.lastOccurrence;
-        }
-        if (source['_lastOccurrence']) {
-            this._lastOccurrence = new fhir.FhirElement(source._lastOccurrence);
+            this.lastOccurrence = new fhir.FhirDateTime({ value: source.lastOccurrence });
         }
         if (source['note']) {
             this.note = source.note.map((x) => new fhir.Annotation(x));
@@ -247,74 +258,56 @@ export class AllergyIntolerance extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: AllergyIntolerance.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'AllergyIntolerance' fhir: AllergyIntolerance.resourceType:'AllergyIntolerance'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["clinicalStatus"]) {
-            results.push(...this.clinicalStatus.doModelValidation());
+            outcome.issue.push(...this.clinicalStatus.doModelValidation().issue);
         }
         if (this["verificationStatus"]) {
-            results.push(...this.verificationStatus.doModelValidation());
-        }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
-        }
-        if (this["_category"]) {
-            this._category.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_criticality"]) {
-            results.push(...this._criticality.doModelValidation());
+            outcome.issue.push(...this.verificationStatus.doModelValidation().issue);
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (!this["patient"]) {
-            results.push(["patient", 'Missing required element: AllergyIntolerance.patient']);
+        if (!this['patient']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property patient:fhir.Reference fhir: AllergyIntolerance.patient:Reference", }));
         }
         if (this["patient"]) {
-            results.push(...this.patient.doModelValidation());
+            outcome.issue.push(...this.patient.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_onsetDateTime"]) {
-            results.push(...this._onsetDateTime.doModelValidation());
-        }
-        if (this["onsetAge"]) {
-            results.push(...this.onsetAge.doModelValidation());
-        }
-        if (this["onsetPeriod"]) {
-            results.push(...this.onsetPeriod.doModelValidation());
-        }
-        if (this["onsetRange"]) {
-            results.push(...this.onsetRange.doModelValidation());
-        }
-        if (this["_onsetString"]) {
-            results.push(...this._onsetString.doModelValidation());
-        }
-        if (this["_recordedDate"]) {
-            results.push(...this._recordedDate.doModelValidation());
+        if (this["recordedDate"]) {
+            outcome.issue.push(...this.recordedDate.doModelValidation().issue);
         }
         if (this["recorder"]) {
-            results.push(...this.recorder.doModelValidation());
+            outcome.issue.push(...this.recorder.doModelValidation().issue);
         }
         if (this["asserter"]) {
-            results.push(...this.asserter.doModelValidation());
+            outcome.issue.push(...this.asserter.doModelValidation().issue);
         }
-        if (this["_lastOccurrence"]) {
-            results.push(...this._lastOccurrence.doModelValidation());
+        if (this["lastOccurrence"]) {
+            outcome.issue.push(...this.lastOccurrence.doModelValidation().issue);
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reaction"]) {
-            this.reaction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reaction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=AllergyIntolerance.js.map

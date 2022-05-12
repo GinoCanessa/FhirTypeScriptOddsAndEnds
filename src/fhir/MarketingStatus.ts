@@ -3,43 +3,41 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: MarketingStatus
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.
+ * Valid arguments for the MarketingStatus type.
  */
-export type IMarketingStatus = fhir.IBackboneElement & { 
+export interface MarketingStatusArgs extends fhir.BackboneElementArgs {
   /**
    * The country in which the marketing authorisation has been granted shall be specified It should be specified using the ISO 3166 ‑ 1 alpha-2 code elements.
    */
-  country: fhir.ICodeableConcept|null;
+  country: fhir.CodeableConceptArgs|null;
   /**
    * Where a Medicines Regulatory Agency has granted a marketing authorisation for which specific provisions within a jurisdiction apply, the jurisdiction can be specified using an appropriate controlled terminology The controlled term and the controlled term identifier shall be specified.
    */
-  jurisdiction?: fhir.ICodeableConcept|undefined;
+  jurisdiction?: fhir.CodeableConceptArgs|undefined;
   /**
    * This attribute provides information on the status of the marketing of the medicinal product See ISO/TS 20443 for more information and examples.
    */
-  status: fhir.ICodeableConcept|null;
+  status: fhir.CodeableConceptArgs|null;
   /**
    * The date when the Medicinal Product is placed on the market by the Marketing Authorisation Holder (or where applicable, the manufacturer/distributor) in a country and/or jurisdiction shall be provided A complete date consisting of day, month and year shall be specified using the ISO 8601 date format NOTE “Placed on the market” refers to the release of the Medicinal Product into the distribution chain.
    */
-  dateRange: fhir.IPeriod|null;
+  dateRange: fhir.PeriodArgs|null;
   /**
    * The date when the Medicinal Product is placed on the market by the Marketing Authorisation Holder (or where applicable, the manufacturer/distributor) in a country and/or jurisdiction shall be provided A complete date consisting of day, month and year shall be specified using the ISO 8601 date format NOTE “Placed on the market” refers to the release of the Medicinal Product into the distribution chain.
    */
-  restoreDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: MarketingStatus.restoreDate
-   */
-  _restoreDate?: fhir.IFhirElement|undefined;
+  restoreDate?: fhir.FhirDateTime|string|undefined;
 }
 
 /**
  * The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.
  */
-export class MarketingStatus extends fhir.BackboneElement implements IMarketingStatus {
+export class MarketingStatus extends fhir.BackboneElement {
+  readonly __dataType:string = 'MarketingStatus';
   /**
    * The country in which the marketing authorisation has been granted shall be specified It should be specified using the ISO 3166 ‑ 1 alpha-2 code elements.
    */
@@ -59,39 +57,46 @@ export class MarketingStatus extends fhir.BackboneElement implements IMarketingS
   /**
    * The date when the Medicinal Product is placed on the market by the Marketing Authorisation Holder (or where applicable, the manufacturer/distributor) in a country and/or jurisdiction shall be provided A complete date consisting of day, month and year shall be specified using the ISO 8601 date format NOTE “Placed on the market” refers to the release of the Medicinal Product into the distribution chain.
    */
-  public restoreDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: MarketingStatus.restoreDate
-   */
-  public _restoreDate?: fhir.FhirElement|undefined;
+  public restoreDate?: fhir.FhirDateTime|undefined;
   /**
    * Default constructor for MarketingStatus - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMarketingStatus> = { }) {
-    super(source);
-    if (source['country']) { this.country = new fhir.CodeableConcept(source.country!); }
+  constructor(source:Partial<MarketingStatusArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['country']) { this.country = new fhir.CodeableConcept(source.country); }
     else { this.country = null; }
-    if (source['jurisdiction']) { this.jurisdiction = new fhir.CodeableConcept(source.jurisdiction!); }
-    if (source['status']) { this.status = new fhir.CodeableConcept(source.status!); }
+    if (source['jurisdiction']) { this.jurisdiction = new fhir.CodeableConcept(source.jurisdiction); }
+    if (source['status']) { this.status = new fhir.CodeableConcept(source.status); }
     else { this.status = null; }
-    if (source['dateRange']) { this.dateRange = new fhir.Period(source.dateRange!); }
+    if (source['dateRange']) { this.dateRange = new fhir.Period(source.dateRange); }
     else { this.dateRange = null; }
-    if (source['restoreDate']) { this.restoreDate = source.restoreDate; }
-    if (source['_restoreDate']) { this._restoreDate = new fhir.FhirElement(source._restoreDate!); }
+    if (source['restoreDate']) { this.restoreDate = new fhir.FhirDateTime({value: source.restoreDate}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["country"]) { results.push(["country",'Missing required element: MarketingStatus.country']); }
-    if (this["country"]) { results.push(...this.country.doModelValidation()); }
-    if (this["jurisdiction"]) { results.push(...this.jurisdiction.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: MarketingStatus.status']); }
-    if (this["status"]) { results.push(...this.status.doModelValidation()); }
-    if (!this["dateRange"]) { results.push(["dateRange",'Missing required element: MarketingStatus.dateRange']); }
-    if (this["dateRange"]) { results.push(...this.dateRange.doModelValidation()); }
-    if (this["_restoreDate"]) { results.push(...this._restoreDate.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['country']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property country:fhir.CodeableConcept fhir: MarketingStatus.country:CodeableConcept", }));
+    }
+    if (this["country"]) { outcome.issue!.push(...this.country.doModelValidation().issue!); }
+    if (this["jurisdiction"]) { outcome.issue!.push(...this.jurisdiction.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:fhir.CodeableConcept fhir: MarketingStatus.status:CodeableConcept", }));
+    }
+    if (this["status"]) { outcome.issue!.push(...this.status.doModelValidation().issue!); }
+    if (!this['dateRange']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property dateRange:fhir.Period fhir: MarketingStatus.dateRange:Period", }));
+    }
+    if (this["dateRange"]) { outcome.issue!.push(...this.dateRange.doModelValidation().issue!); }
+    if (this["restoreDate"]) { outcome.issue!.push(...this.restoreDate.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

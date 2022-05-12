@@ -27,9 +27,3 @@ export type ContractScopeValueSetType = typeof ContractScopeValueSet;
 /**
  * This value set contract specific codes for scope.
  */
-export enum ContractScopeValueSetEnum {
-  /**
-   * policy: To be completed
-   */
-  Policy = "policy",
-}

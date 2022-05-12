@@ -1,21 +1,20 @@
 import * as fhir from '../fhir.js';
-import { UdiEntryTypeValueSetType, UdiEntryTypeValueSetEnum } from '../fhirValueSets/UdiEntryTypeValueSet.js';
-import { DeviceNametypeValueSetType, DeviceNametypeValueSetEnum } from '../fhirValueSets/DeviceNametypeValueSet.js';
-import { DeviceStatusValueSetType, DeviceStatusValueSetEnum } from '../fhirValueSets/DeviceStatusValueSet.js';
+import { UdiEntryTypeValueSetType } from '../fhirValueSets/UdiEntryTypeValueSet.js';
+import { UdiEntryTypeValueSetEnum } from '../valueSetEnums.js';
+import { DeviceNametypeValueSetType } from '../fhirValueSets/DeviceNametypeValueSet.js';
+import { DeviceNametypeValueSetEnum } from '../valueSetEnums.js';
+import { DeviceStatusValueSetType } from '../fhirValueSets/DeviceStatusValueSet.js';
+import { DeviceStatusValueSetEnum } from '../valueSetEnums.js';
 import { DeviceStatusReasonValueSetType } from '../fhirValueSets/DeviceStatusReasonValueSet.js';
 import { DeviceTypeValueSetType } from '../fhirValueSets/DeviceTypeValueSet.js';
 /**
- * UDI may identify an unique instance of a device, or it may only identify the type of the device.  See [UDI mappings](device-mappings.html#udi) for a complete mapping of UDI parts to Device.
+ * Valid arguments for the DeviceUdiCarrier type.
  */
-export declare type IDeviceUdiCarrier = fhir.IBackboneElement & {
+export interface DeviceUdiCarrierArgs extends fhir.BackboneElementArgs {
     /**
      * The device identifier (DI) is a mandatory, fixed portion of a UDI that identifies the labeler and the specific version or model of a device.
      */
-    deviceIdentifier?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.udiCarrier.deviceIdentifier
-     */
-    _deviceIdentifier?: fhir.IFhirElement | undefined;
+    deviceIdentifier?: fhir.FhirString | string | undefined;
     /**
      * Organization that is charged with issuing UDIs for devices.  For example, the US FDA issuers include :
      * 1) GS1:
@@ -27,286 +26,33 @@ export declare type IDeviceUdiCarrier = fhir.IBackboneElement & {
      * 4) ICCBA for other devices:
      * http://hl7.org/fhir/NamingSystem/iccbba-other-di.
      */
-    issuer?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.udiCarrier.issuer
-     */
-    _issuer?: fhir.IFhirElement | undefined;
+    issuer?: fhir.FhirUri | string | undefined;
     /**
      * The identity of the authoritative source for UDI generation within a  jurisdiction.  All UDIs are globally unique within a single namespace with the appropriate repository uri as the system.  For example,  UDIs of devices managed in the U.S. by the FDA, the value is  http://hl7.org/fhir/NamingSystem/fda-udi.
      */
-    jurisdiction?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.udiCarrier.jurisdiction
-     */
-    _jurisdiction?: fhir.IFhirElement | undefined;
+    jurisdiction?: fhir.FhirUri | string | undefined;
     /**
      * The AIDC form of UDIs should be scanned or otherwise used for the identification of the device whenever possible to minimize errors in records resulting from manual transcriptions. If separate barcodes for DI and PI are present, concatenate the string with DI first and in order of human readable expression on label.
      */
-    carrierAIDC?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.udiCarrier.carrierAIDC
-     */
-    _carrierAIDC?: fhir.IFhirElement | undefined;
+    carrierAIDC?: fhir.FhirBase64Binary | string | undefined;
     /**
      * If separate barcodes for DI and PI are present, concatenate the string with DI first and in order of human readable expression on label.
      */
-    carrierHRF?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.udiCarrier.carrierHRF
-     */
-    _carrierHRF?: fhir.IFhirElement | undefined;
+    carrierHRF?: fhir.FhirString | string | undefined;
     /**
      * A coded entry to indicate how the data was entered.
      */
     entryType?: UdiEntryTypeValueSetEnum | undefined;
-    /**
-     * Extended properties for primitive element: Device.udiCarrier.entryType
-     */
-    _entryType?: fhir.IFhirElement | undefined;
-};
-/**
- * This represents the manufacturer's name of the device as provided by the device, from a UDI label, or by a person describing the Device.  This typically would be used when a person provides the name(s) or when the device represents one of the names available from DeviceDefinition.
- */
-export declare type IDeviceDeviceName = fhir.IBackboneElement & {
-    /**
-     * The name of the device.
-     */
-    name: string | null;
-    /**
-     * Extended properties for primitive element: Device.deviceName.name
-     */
-    _name?: fhir.IFhirElement | undefined;
-    /**
-     * The type of deviceName.
-     * UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | ModelName.
-     */
-    type: DeviceNametypeValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: Device.deviceName.type
-     */
-    _type?: fhir.IFhirElement | undefined;
-};
-/**
- * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
- */
-export declare type IDeviceSpecialization = fhir.IBackboneElement & {
-    /**
-     * The standard that is used to operate and communicate.
-     */
-    systemType: fhir.ICodeableConcept | null;
-    /**
-     * The version of the standard that is used to operate and communicate.
-     */
-    version?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.specialization.version
-     */
-    _version?: fhir.IFhirElement | undefined;
-};
-/**
- * The actual design of the device or software version running on the device.
- */
-export declare type IDeviceVersion = fhir.IBackboneElement & {
-    /**
-     * The type of the device version.
-     */
-    type?: fhir.ICodeableConcept | undefined;
-    /**
-     * A single component of the device version.
-     */
-    component?: fhir.IIdentifier | undefined;
-    /**
-     * The version text.
-     */
-    value: string | null;
-    /**
-     * Extended properties for primitive element: Device.version.value
-     */
-    _value?: fhir.IFhirElement | undefined;
-};
-/**
- * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
- */
-export declare type IDeviceProperty = fhir.IBackboneElement & {
-    /**
-     * Code that specifies the property DeviceDefinitionPropetyCode (Extensible).
-     */
-    type: fhir.ICodeableConcept | null;
-    /**
-     * Property value as a quantity.
-     */
-    valueQuantity?: fhir.IQuantity[] | undefined;
-    /**
-     * Property value as a code, e.g., NTP4 (synced to NTP).
-     */
-    valueCode?: fhir.ICodeableConcept[] | undefined;
-};
-/**
- * A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
- */
-export declare type IDevice = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "Device";
-    /**
-     * The barcode string from a barcode present on a device label or package may identify the instance, include names given to the device in local usage, or may identify the type of device. If the identifier identifies the type of device, Device.type element should be used.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * The reference to the definition for the device.
-     */
-    definition?: fhir.IReference | undefined;
-    /**
-     * UDI may identify an unique instance of a device, or it may only identify the type of the device.  See [UDI mappings](device-mappings.html#udi) for a complete mapping of UDI parts to Device.
-     */
-    udiCarrier?: fhir.IDeviceUdiCarrier[] | undefined;
-    /**
-     * This element is labeled as a modifier because the status contains the codes inactive and entered-in-error that mark the device (record)as not currently valid.
-     */
-    status?: DeviceStatusValueSetEnum | undefined;
-    /**
-     * Extended properties for primitive element: Device.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * Reason for the dtatus of the Device availability.
-     */
-    statusReason?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * For example, this applies to devices in the United States regulated under *Code of Federal Regulation 21CFR§1271.290(c)*.
-     */
-    distinctIdentifier?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.distinctIdentifier
-     */
-    _distinctIdentifier?: fhir.IFhirElement | undefined;
-    /**
-     * A name of the manufacturer.
-     */
-    manufacturer?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.manufacturer
-     */
-    _manufacturer?: fhir.IFhirElement | undefined;
-    /**
-     * The date and time when the device was manufactured.
-     */
-    manufactureDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.manufactureDate
-     */
-    _manufactureDate?: fhir.IFhirElement | undefined;
-    /**
-     * The date and time beyond which this device is no longer valid or should not be used (if applicable).
-     */
-    expirationDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.expirationDate
-     */
-    _expirationDate?: fhir.IFhirElement | undefined;
-    /**
-     * Lot number assigned by the manufacturer.
-     */
-    lotNumber?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.lotNumber
-     */
-    _lotNumber?: fhir.IFhirElement | undefined;
-    /**
-     * Alphanumeric Maximum 20.
-     */
-    serialNumber?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.serialNumber
-     */
-    _serialNumber?: fhir.IFhirElement | undefined;
-    /**
-     * This represents the manufacturer's name of the device as provided by the device, from a UDI label, or by a person describing the Device.  This typically would be used when a person provides the name(s) or when the device represents one of the names available from DeviceDefinition.
-     */
-    deviceName?: fhir.IDeviceDeviceName[] | undefined;
-    /**
-     * The model number for the device.
-     */
-    modelNumber?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.modelNumber
-     */
-    _modelNumber?: fhir.IFhirElement | undefined;
-    /**
-     * Alphanumeric Maximum 20.
-     */
-    partNumber?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.partNumber
-     */
-    _partNumber?: fhir.IFhirElement | undefined;
-    /**
-     * The kind or type of device.
-     */
-    type?: fhir.ICodeableConcept | undefined;
-    /**
-     * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
-     */
-    specialization?: fhir.IDeviceSpecialization[] | undefined;
-    /**
-     * The actual design of the device or software version running on the device.
-     */
-    version?: fhir.IDeviceVersion[] | undefined;
-    /**
-     * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
-     */
-    property?: fhir.IDeviceProperty[] | undefined;
-    /**
-     * Patient information, If the device is affixed to a person.
-     */
-    patient?: fhir.IReference | undefined;
-    /**
-     * An organization that is responsible for the provision and ongoing maintenance of the device.
-     */
-    owner?: fhir.IReference | undefined;
-    /**
-     * used for troubleshooting etc.
-     */
-    contact?: fhir.IContactPoint[] | undefined;
-    /**
-     * The place where the device can be found.
-     */
-    location?: fhir.IReference | undefined;
-    /**
-     * If the device is running a FHIR server, the network address should  be the Base URL from which a conformance statement may be retrieved.
-     */
-    url?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.url
-     */
-    _url?: fhir.IFhirElement | undefined;
-    /**
-     * Descriptive information, usage information or implantation information that is not captured in an existing element.
-     */
-    note?: fhir.IAnnotation[] | undefined;
-    /**
-     * Provides additional safety characteristics about a medical device.  For example devices containing latex.
-     */
-    safety?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * The parent device.
-     */
-    parent?: fhir.IReference | undefined;
-};
+}
 /**
  * UDI may identify an unique instance of a device, or it may only identify the type of the device.  See [UDI mappings](device-mappings.html#udi) for a complete mapping of UDI parts to Device.
  */
-export declare class DeviceUdiCarrier extends fhir.BackboneElement implements IDeviceUdiCarrier {
+export declare class DeviceUdiCarrier extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The device identifier (DI) is a mandatory, fixed portion of a UDI that identifies the labeler and the specific version or model of a device.
      */
-    deviceIdentifier?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.udiCarrier.deviceIdentifier
-     */
-    _deviceIdentifier?: fhir.FhirElement | undefined;
+    deviceIdentifier?: fhir.FhirString | undefined;
     /**
      * Organization that is charged with issuing UDIs for devices.  For example, the US FDA issuers include :
      * 1) GS1:
@@ -318,47 +64,27 @@ export declare class DeviceUdiCarrier extends fhir.BackboneElement implements ID
      * 4) ICCBA for other devices:
      * http://hl7.org/fhir/NamingSystem/iccbba-other-di.
      */
-    issuer?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.udiCarrier.issuer
-     */
-    _issuer?: fhir.FhirElement | undefined;
+    issuer?: fhir.FhirUri | undefined;
     /**
      * The identity of the authoritative source for UDI generation within a  jurisdiction.  All UDIs are globally unique within a single namespace with the appropriate repository uri as the system.  For example,  UDIs of devices managed in the U.S. by the FDA, the value is  http://hl7.org/fhir/NamingSystem/fda-udi.
      */
-    jurisdiction?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.udiCarrier.jurisdiction
-     */
-    _jurisdiction?: fhir.FhirElement | undefined;
+    jurisdiction?: fhir.FhirUri | undefined;
     /**
      * The AIDC form of UDIs should be scanned or otherwise used for the identification of the device whenever possible to minimize errors in records resulting from manual transcriptions. If separate barcodes for DI and PI are present, concatenate the string with DI first and in order of human readable expression on label.
      */
-    carrierAIDC?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.udiCarrier.carrierAIDC
-     */
-    _carrierAIDC?: fhir.FhirElement | undefined;
+    carrierAIDC?: fhir.FhirBase64Binary | undefined;
     /**
      * If separate barcodes for DI and PI are present, concatenate the string with DI first and in order of human readable expression on label.
      */
-    carrierHRF?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.udiCarrier.carrierHRF
-     */
-    _carrierHRF?: fhir.FhirElement | undefined;
+    carrierHRF?: fhir.FhirString | undefined;
     /**
      * A coded entry to indicate how the data was entered.
      */
     entryType?: UdiEntryTypeValueSetEnum | undefined;
-    /**
-     * Extended properties for primitive element: Device.udiCarrier.entryType
-     */
-    _entryType?: fhir.FhirElement | undefined;
     /**
      * Default constructor for DeviceUdiCarrier - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IDeviceUdiCarrier>);
+    constructor(source?: Partial<DeviceUdiCarrierArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for entryType
      */
@@ -366,33 +92,44 @@ export declare class DeviceUdiCarrier extends fhir.BackboneElement implements ID
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the DeviceDeviceName type.
+ */
+export interface DeviceDeviceNameArgs extends fhir.BackboneElementArgs {
+    /**
+     * The name of the device.
+     */
+    name: fhir.FhirString | string | undefined;
+    /**
+     * The type of deviceName.
+     * UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | ModelName.
+     */
+    type: DeviceNametypeValueSetEnum | null;
 }
 /**
  * This represents the manufacturer's name of the device as provided by the device, from a UDI label, or by a person describing the Device.  This typically would be used when a person provides the name(s) or when the device represents one of the names available from DeviceDefinition.
  */
-export declare class DeviceDeviceName extends fhir.BackboneElement implements IDeviceDeviceName {
+export declare class DeviceDeviceName extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The name of the device.
      */
-    name: string | null;
-    /**
-     * Extended properties for primitive element: Device.deviceName.name
-     */
-    _name?: fhir.FhirElement | undefined;
+    name: fhir.FhirString | null;
     /**
      * The type of deviceName.
      * UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | ModelName.
      */
     type: DeviceNametypeValueSetEnum | null;
     /**
-     * Extended properties for primitive element: Device.deviceName.type
-     */
-    _type?: fhir.FhirElement | undefined;
-    /**
      * Default constructor for DeviceDeviceName - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IDeviceDeviceName>);
+    constructor(source?: Partial<DeviceDeviceNameArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for type
      */
@@ -400,12 +137,30 @@ export declare class DeviceDeviceName extends fhir.BackboneElement implements ID
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the DeviceSpecialization type.
+ */
+export interface DeviceSpecializationArgs extends fhir.BackboneElementArgs {
+    /**
+     * The standard that is used to operate and communicate.
+     */
+    systemType: fhir.CodeableConceptArgs | null;
+    /**
+     * The version of the standard that is used to operate and communicate.
+     */
+    version?: fhir.FhirString | string | undefined;
 }
 /**
  * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
  */
-export declare class DeviceSpecialization extends fhir.BackboneElement implements IDeviceSpecialization {
+export declare class DeviceSpecialization extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The standard that is used to operate and communicate.
      */
@@ -413,24 +168,42 @@ export declare class DeviceSpecialization extends fhir.BackboneElement implement
     /**
      * The version of the standard that is used to operate and communicate.
      */
-    version?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.specialization.version
-     */
-    _version?: fhir.FhirElement | undefined;
+    version?: fhir.FhirString | undefined;
     /**
      * Default constructor for DeviceSpecialization - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IDeviceSpecialization>);
+    constructor(source?: Partial<DeviceSpecializationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the DeviceVersion type.
+ */
+export interface DeviceVersionArgs extends fhir.BackboneElementArgs {
+    /**
+     * The type of the device version.
+     */
+    type?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * A single component of the device version.
+     */
+    component?: fhir.IdentifierArgs | undefined;
+    /**
+     * The version text.
+     */
+    value: fhir.FhirString | string | undefined;
 }
 /**
  * The actual design of the device or software version running on the device.
  */
-export declare class DeviceVersion extends fhir.BackboneElement implements IDeviceVersion {
+export declare class DeviceVersion extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The type of the device version.
      */
@@ -442,24 +215,42 @@ export declare class DeviceVersion extends fhir.BackboneElement implements IDevi
     /**
      * The version text.
      */
-    value: string | null;
-    /**
-     * Extended properties for primitive element: Device.version.value
-     */
-    _value?: fhir.FhirElement | undefined;
+    value: fhir.FhirString | null;
     /**
      * Default constructor for DeviceVersion - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IDeviceVersion>);
+    constructor(source?: Partial<DeviceVersionArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the DeviceProperty type.
+ */
+export interface DevicePropertyArgs extends fhir.BackboneElementArgs {
+    /**
+     * Code that specifies the property DeviceDefinitionPropetyCode (Extensible).
+     */
+    type: fhir.CodeableConceptArgs | null;
+    /**
+     * Property value as a quantity.
+     */
+    valueQuantity?: fhir.QuantityArgs[] | undefined;
+    /**
+     * Property value as a code, e.g., NTP4 (synced to NTP).
+     */
+    valueCode?: fhir.CodeableConceptArgs[] | undefined;
 }
 /**
  * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
  */
-export declare class DeviceProperty extends fhir.BackboneElement implements IDeviceProperty {
+export declare class DeviceProperty extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Code that specifies the property DeviceDefinitionPropetyCode (Extensible).
      */
@@ -475,16 +266,134 @@ export declare class DeviceProperty extends fhir.BackboneElement implements IDev
     /**
      * Default constructor for DeviceProperty - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IDeviceProperty>);
+    constructor(source?: Partial<DevicePropertyArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the Device type.
+ */
+export interface DeviceArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "Device" | undefined;
+    /**
+     * The barcode string from a barcode present on a device label or package may identify the instance, include names given to the device in local usage, or may identify the type of device. If the identifier identifies the type of device, Device.type element should be used.
+     */
+    identifier?: fhir.IdentifierArgs[] | undefined;
+    /**
+     * The reference to the definition for the device.
+     */
+    definition?: fhir.ReferenceArgs | undefined;
+    /**
+     * UDI may identify an unique instance of a device, or it may only identify the type of the device.  See [UDI mappings](device-mappings.html#udi) for a complete mapping of UDI parts to Device.
+     */
+    udiCarrier?: fhir.DeviceUdiCarrierArgs[] | undefined;
+    /**
+     * This element is labeled as a modifier because the status contains the codes inactive and entered-in-error that mark the device (record)as not currently valid.
+     */
+    status?: DeviceStatusValueSetEnum | undefined;
+    /**
+     * Reason for the dtatus of the Device availability.
+     */
+    statusReason?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * For example, this applies to devices in the United States regulated under *Code of Federal Regulation 21CFR§1271.290(c)*.
+     */
+    distinctIdentifier?: fhir.FhirString | string | undefined;
+    /**
+     * A name of the manufacturer.
+     */
+    manufacturer?: fhir.FhirString | string | undefined;
+    /**
+     * The date and time when the device was manufactured.
+     */
+    manufactureDate?: fhir.FhirDateTime | string | undefined;
+    /**
+     * The date and time beyond which this device is no longer valid or should not be used (if applicable).
+     */
+    expirationDate?: fhir.FhirDateTime | string | undefined;
+    /**
+     * Lot number assigned by the manufacturer.
+     */
+    lotNumber?: fhir.FhirString | string | undefined;
+    /**
+     * Alphanumeric Maximum 20.
+     */
+    serialNumber?: fhir.FhirString | string | undefined;
+    /**
+     * This represents the manufacturer's name of the device as provided by the device, from a UDI label, or by a person describing the Device.  This typically would be used when a person provides the name(s) or when the device represents one of the names available from DeviceDefinition.
+     */
+    deviceName?: fhir.DeviceDeviceNameArgs[] | undefined;
+    /**
+     * The model number for the device.
+     */
+    modelNumber?: fhir.FhirString | string | undefined;
+    /**
+     * Alphanumeric Maximum 20.
+     */
+    partNumber?: fhir.FhirString | string | undefined;
+    /**
+     * The kind or type of device.
+     */
+    type?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
+     */
+    specialization?: fhir.DeviceSpecializationArgs[] | undefined;
+    /**
+     * The actual design of the device or software version running on the device.
+     */
+    version?: fhir.DeviceVersionArgs[] | undefined;
+    /**
+     * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
+     */
+    property?: fhir.DevicePropertyArgs[] | undefined;
+    /**
+     * Patient information, If the device is affixed to a person.
+     */
+    patient?: fhir.ReferenceArgs | undefined;
+    /**
+     * An organization that is responsible for the provision and ongoing maintenance of the device.
+     */
+    owner?: fhir.ReferenceArgs | undefined;
+    /**
+     * used for troubleshooting etc.
+     */
+    contact?: fhir.ContactPointArgs[] | undefined;
+    /**
+     * The place where the device can be found.
+     */
+    location?: fhir.ReferenceArgs | undefined;
+    /**
+     * If the device is running a FHIR server, the network address should  be the Base URL from which a conformance statement may be retrieved.
+     */
+    url?: fhir.FhirUri | string | undefined;
+    /**
+     * Descriptive information, usage information or implantation information that is not captured in an existing element.
+     */
+    note?: fhir.AnnotationArgs[] | undefined;
+    /**
+     * Provides additional safety characteristics about a medical device.  For example devices containing latex.
+     */
+    safety?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * The parent device.
+     */
+    parent?: fhir.ReferenceArgs | undefined;
 }
 /**
  * A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
  */
-export declare class Device extends fhir.DomainResource implements IDevice {
+export declare class Device extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -506,61 +415,33 @@ export declare class Device extends fhir.DomainResource implements IDevice {
      */
     status?: DeviceStatusValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: Device.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * Reason for the dtatus of the Device availability.
      */
     statusReason?: fhir.CodeableConcept[] | undefined;
     /**
      * For example, this applies to devices in the United States regulated under *Code of Federal Regulation 21CFR§1271.290(c)*.
      */
-    distinctIdentifier?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.distinctIdentifier
-     */
-    _distinctIdentifier?: fhir.FhirElement | undefined;
+    distinctIdentifier?: fhir.FhirString | undefined;
     /**
      * A name of the manufacturer.
      */
-    manufacturer?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.manufacturer
-     */
-    _manufacturer?: fhir.FhirElement | undefined;
+    manufacturer?: fhir.FhirString | undefined;
     /**
      * The date and time when the device was manufactured.
      */
-    manufactureDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.manufactureDate
-     */
-    _manufactureDate?: fhir.FhirElement | undefined;
+    manufactureDate?: fhir.FhirDateTime | undefined;
     /**
      * The date and time beyond which this device is no longer valid or should not be used (if applicable).
      */
-    expirationDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.expirationDate
-     */
-    _expirationDate?: fhir.FhirElement | undefined;
+    expirationDate?: fhir.FhirDateTime | undefined;
     /**
      * Lot number assigned by the manufacturer.
      */
-    lotNumber?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.lotNumber
-     */
-    _lotNumber?: fhir.FhirElement | undefined;
+    lotNumber?: fhir.FhirString | undefined;
     /**
      * Alphanumeric Maximum 20.
      */
-    serialNumber?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.serialNumber
-     */
-    _serialNumber?: fhir.FhirElement | undefined;
+    serialNumber?: fhir.FhirString | undefined;
     /**
      * This represents the manufacturer's name of the device as provided by the device, from a UDI label, or by a person describing the Device.  This typically would be used when a person provides the name(s) or when the device represents one of the names available from DeviceDefinition.
      */
@@ -568,19 +449,11 @@ export declare class Device extends fhir.DomainResource implements IDevice {
     /**
      * The model number for the device.
      */
-    modelNumber?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.modelNumber
-     */
-    _modelNumber?: fhir.FhirElement | undefined;
+    modelNumber?: fhir.FhirString | undefined;
     /**
      * Alphanumeric Maximum 20.
      */
-    partNumber?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.partNumber
-     */
-    _partNumber?: fhir.FhirElement | undefined;
+    partNumber?: fhir.FhirString | undefined;
     /**
      * The kind or type of device.
      */
@@ -616,11 +489,7 @@ export declare class Device extends fhir.DomainResource implements IDevice {
     /**
      * If the device is running a FHIR server, the network address should  be the Base URL from which a conformance statement may be retrieved.
      */
-    url?: string | undefined;
-    /**
-     * Extended properties for primitive element: Device.url
-     */
-    _url?: fhir.FhirElement | undefined;
+    url?: fhir.FhirUri | undefined;
     /**
      * Descriptive information, usage information or implantation information that is not captured in an existing element.
      */
@@ -636,7 +505,7 @@ export declare class Device extends fhir.DomainResource implements IDevice {
     /**
      * Default constructor for Device - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IDevice>);
+    constructor(source?: Partial<DeviceArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -652,6 +521,10 @@ export declare class Device extends fhir.DomainResource implements IDevice {
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Device.d.ts.map

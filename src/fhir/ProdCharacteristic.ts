@@ -3,75 +3,65 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: ProdCharacteristic
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.
+ * Valid arguments for the ProdCharacteristic type.
  */
-export type IProdCharacteristic = fhir.IBackboneElement & { 
+export interface ProdCharacteristicArgs extends fhir.BackboneElementArgs {
   /**
    * Where applicable, the height can be specified using a numerical value and its unit of measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
    */
-  height?: fhir.IQuantity|undefined;
+  height?: fhir.QuantityArgs|undefined;
   /**
    * Where applicable, the width can be specified using a numerical value and its unit of measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
    */
-  width?: fhir.IQuantity|undefined;
+  width?: fhir.QuantityArgs|undefined;
   /**
    * Where applicable, the depth can be specified using a numerical value and its unit of measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
    */
-  depth?: fhir.IQuantity|undefined;
+  depth?: fhir.QuantityArgs|undefined;
   /**
    * Where applicable, the weight can be specified using a numerical value and its unit of measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
    */
-  weight?: fhir.IQuantity|undefined;
+  weight?: fhir.QuantityArgs|undefined;
   /**
    * Where applicable, the nominal volume can be specified using a numerical value and its unit of measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
    */
-  nominalVolume?: fhir.IQuantity|undefined;
+  nominalVolume?: fhir.QuantityArgs|undefined;
   /**
    * Where applicable, the external diameter can be specified using a numerical value and its unit of measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
    */
-  externalDiameter?: fhir.IQuantity|undefined;
+  externalDiameter?: fhir.QuantityArgs|undefined;
   /**
    * Where applicable, the shape can be specified An appropriate controlled vocabulary shall be used The term and the term identifier shall be used.
    */
-  shape?: string|undefined;
-  /**
-   * Extended properties for primitive element: ProdCharacteristic.shape
-   */
-  _shape?: fhir.IFhirElement|undefined;
+  shape?: fhir.FhirString|string|undefined;
   /**
    * Where applicable, the color can be specified An appropriate controlled vocabulary shall be used The term and the term identifier shall be used.
    */
-  color?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ProdCharacteristic.color
-   */
-  _color?: fhir.IFhirElement[]|undefined;
+  color?: fhir.FhirString[]|string[]|undefined;
   /**
    * Where applicable, the imprint can be specified as text.
    */
-  imprint?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ProdCharacteristic.imprint
-   */
-  _imprint?: fhir.IFhirElement[]|undefined;
+  imprint?: fhir.FhirString[]|string[]|undefined;
   /**
    * Where applicable, the image can be provided The format of the image attachment shall be specified by regional implementations.
    */
-  image?: fhir.IAttachment[]|undefined;
+  image?: fhir.AttachmentArgs[]|undefined;
   /**
    * Where applicable, the scoring can be specified An appropriate controlled vocabulary shall be used The term and the term identifier shall be used.
    */
-  scoring?: fhir.ICodeableConcept|undefined;
+  scoring?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.
  */
-export class ProdCharacteristic extends fhir.BackboneElement implements IProdCharacteristic {
+export class ProdCharacteristic extends fhir.BackboneElement {
+  readonly __dataType:string = 'ProdCharacteristic';
   /**
    * Where applicable, the height can be specified using a numerical value and its unit of measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
    */
@@ -99,31 +89,19 @@ export class ProdCharacteristic extends fhir.BackboneElement implements IProdCha
   /**
    * Where applicable, the shape can be specified An appropriate controlled vocabulary shall be used The term and the term identifier shall be used.
    */
-  public shape?: string|undefined;
-  /**
-   * Extended properties for primitive element: ProdCharacteristic.shape
-   */
-  public _shape?: fhir.FhirElement|undefined;
+  public shape?: fhir.FhirString|undefined;
   /**
    * Where applicable, the color can be specified An appropriate controlled vocabulary shall be used The term and the term identifier shall be used.
    */
-  public color?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ProdCharacteristic.color
-   */
-  public _color?: fhir.FhirElement[]|undefined;
+  public color?: fhir.FhirString[]|undefined = [];
   /**
    * Where applicable, the imprint can be specified as text.
    */
-  public imprint?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ProdCharacteristic.imprint
-   */
-  public _imprint?: fhir.FhirElement[]|undefined;
+  public imprint?: fhir.FhirString[]|undefined = [];
   /**
    * Where applicable, the image can be provided The format of the image attachment shall be specified by regional implementations.
    */
-  public image?: fhir.Attachment[]|undefined;
+  public image?: fhir.Attachment[]|undefined = [];
   /**
    * Where applicable, the scoring can be specified An appropriate controlled vocabulary shall be used The term and the term identifier shall be used.
    */
@@ -131,39 +109,42 @@ export class ProdCharacteristic extends fhir.BackboneElement implements IProdCha
   /**
    * Default constructor for ProdCharacteristic - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IProdCharacteristic> = { }) {
-    super(source);
-    if (source['height']) { this.height = new fhir.Quantity(source.height!); }
-    if (source['width']) { this.width = new fhir.Quantity(source.width!); }
-    if (source['depth']) { this.depth = new fhir.Quantity(source.depth!); }
-    if (source['weight']) { this.weight = new fhir.Quantity(source.weight!); }
-    if (source['nominalVolume']) { this.nominalVolume = new fhir.Quantity(source.nominalVolume!); }
-    if (source['externalDiameter']) { this.externalDiameter = new fhir.Quantity(source.externalDiameter!); }
-    if (source['shape']) { this.shape = source.shape; }
-    if (source['_shape']) { this._shape = new fhir.FhirElement(source._shape!); }
-    if (source['color']) { this.color = source.color.map((x) => (x)); }
-    if (source['_color']) { this._color = source._color.map((x) => new fhir.FhirElement(x)); }
-    if (source['imprint']) { this.imprint = source.imprint.map((x) => (x)); }
-    if (source['_imprint']) { this._imprint = source._imprint.map((x) => new fhir.FhirElement(x)); }
+  constructor(source:Partial<ProdCharacteristicArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['height']) { this.height = new fhir.Quantity(source.height); }
+    if (source['width']) { this.width = new fhir.Quantity(source.width); }
+    if (source['depth']) { this.depth = new fhir.Quantity(source.depth); }
+    if (source['weight']) { this.weight = new fhir.Quantity(source.weight); }
+    if (source['nominalVolume']) { this.nominalVolume = new fhir.Quantity(source.nominalVolume); }
+    if (source['externalDiameter']) { this.externalDiameter = new fhir.Quantity(source.externalDiameter); }
+    if (source['shape']) { this.shape = new fhir.FhirString({value: source.shape}); }
+    if (source['color']) { this.color = source.color.map((x) => new fhir.FhirString({value: x})); }
+    if (source['imprint']) { this.imprint = source.imprint.map((x) => new fhir.FhirString({value: x})); }
     if (source['image']) { this.image = source.image.map((x) => new fhir.Attachment(x)); }
-    if (source['scoring']) { this.scoring = new fhir.CodeableConcept(source.scoring!); }
+    if (source['scoring']) { this.scoring = new fhir.CodeableConcept(source.scoring); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["height"]) { results.push(...this.height.doModelValidation()); }
-    if (this["width"]) { results.push(...this.width.doModelValidation()); }
-    if (this["depth"]) { results.push(...this.depth.doModelValidation()); }
-    if (this["weight"]) { results.push(...this.weight.doModelValidation()); }
-    if (this["nominalVolume"]) { results.push(...this.nominalVolume.doModelValidation()); }
-    if (this["externalDiameter"]) { results.push(...this.externalDiameter.doModelValidation()); }
-    if (this["_shape"]) { results.push(...this._shape.doModelValidation()); }
-    if (this["_color"]) { this._color.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_imprint"]) { this._imprint.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["image"]) { this.image.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["scoring"]) { results.push(...this.scoring.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["height"]) { outcome.issue!.push(...this.height.doModelValidation().issue!); }
+    if (this["width"]) { outcome.issue!.push(...this.width.doModelValidation().issue!); }
+    if (this["depth"]) { outcome.issue!.push(...this.depth.doModelValidation().issue!); }
+    if (this["weight"]) { outcome.issue!.push(...this.weight.doModelValidation().issue!); }
+    if (this["nominalVolume"]) { outcome.issue!.push(...this.nominalVolume.doModelValidation().issue!); }
+    if (this["externalDiameter"]) { outcome.issue!.push(...this.externalDiameter.doModelValidation().issue!); }
+    if (this["shape"]) { outcome.issue!.push(...this.shape.doModelValidation().issue!); }
+    if (this["color"]) { this.color.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["imprint"]) { this.imprint.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["image"]) { this.image.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["scoring"]) { outcome.issue!.push(...this.scoring.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

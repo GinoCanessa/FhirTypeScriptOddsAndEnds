@@ -59,31 +59,4 @@ export const GroupTypeValueSet = {
 /**
  * Types of resources that are part of group.
  */
-export var GroupTypeValueSetEnum;
-(function (GroupTypeValueSetEnum) {
-    /**
-     * animal: Group contains "animal" Patient resources.
-     */
-    GroupTypeValueSetEnum["Animal"] = "animal";
-    /**
-     * device: Group contains Device resources.
-     */
-    GroupTypeValueSetEnum["Device"] = "device";
-    /**
-     * medication: Group contains Medication resources.
-     */
-    GroupTypeValueSetEnum["Medication"] = "medication";
-    /**
-     * person: Group contains "person" Patient resources.
-     */
-    GroupTypeValueSetEnum["Person"] = "person";
-    /**
-     * practitioner: Group contains healthcare practitioner resources (Practitioner or PractitionerRole).
-     */
-    GroupTypeValueSetEnum["Practitioner"] = "practitioner";
-    /**
-     * substance: Group contains Substance resources.
-     */
-    GroupTypeValueSetEnum["Substance"] = "substance";
-})(GroupTypeValueSetEnum || (GroupTypeValueSetEnum = {}));
 //# sourceMappingURL=GroupTypeValueSet.js.map

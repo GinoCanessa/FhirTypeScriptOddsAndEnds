@@ -35,19 +35,4 @@ export const NoteTypeValueSet = {
 /**
  * The presentation types of notes.
  */
-export var NoteTypeValueSetEnum;
-(function (NoteTypeValueSetEnum) {
-    /**
-     * display: Display the note.
-     */
-    NoteTypeValueSetEnum["Display"] = "display";
-    /**
-     * print: Print the note on the form.
-     */
-    NoteTypeValueSetEnum["PrintForm"] = "print";
-    /**
-     * printoper: Print the note for the operator.
-     */
-    NoteTypeValueSetEnum["PrintOperator"] = "printoper";
-})(NoteTypeValueSetEnum || (NoteTypeValueSetEnum = {}));
 //# sourceMappingURL=NoteTypeValueSet.js.map

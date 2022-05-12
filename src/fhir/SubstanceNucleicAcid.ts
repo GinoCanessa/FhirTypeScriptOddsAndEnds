@@ -3,169 +3,41 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SubstanceNucleicAcid
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * The linkages between sugar residues will also be captured.
+ * Valid arguments for the SubstanceNucleicAcidSubunitLinkage type.
  */
-export type ISubstanceNucleicAcidSubunitLinkage = fhir.IBackboneElement & { 
+export interface SubstanceNucleicAcidSubunitLinkageArgs extends fhir.BackboneElementArgs {
   /**
    * The entity that links the sugar residues together should also be captured for nearly all naturally occurring nucleic acid the linkage is a phosphate group. For many synthetic oligonucleotides phosphorothioate linkages are often seen. Linkage connectivity is assumed to be 3’-5’. If the linkage is either 3’-3’ or 5’-5’ this should be specified.
    */
-  connectivity?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.linkage.connectivity
-   */
-  _connectivity?: fhir.IFhirElement|undefined;
+  connectivity?: fhir.FhirString|string|undefined;
   /**
    * Each linkage will be registered as a fragment and have an ID.
    */
-  identifier?: fhir.IIdentifier|undefined;
+  identifier?: fhir.IdentifierArgs|undefined;
   /**
    * Each linkage will be registered as a fragment and have at least one name. A single name shall be assigned to each linkage.
    */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.linkage.name
-   */
-  _name?: fhir.IFhirElement|undefined;
+  name?: fhir.FhirString|string|undefined;
   /**
    * Residues shall be captured as described in 5.3.6.8.3.
    */
-  residueSite?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.linkage.residueSite
-   */
-  _residueSite?: fhir.IFhirElement|undefined;
-}
-
-/**
- * 5.3.6.8.1 Sugar ID (Mandatory).
- */
-export type ISubstanceNucleicAcidSubunitSugar = fhir.IBackboneElement & { 
-  /**
-   * The Substance ID of the sugar or sugar-like component that make up the nucleotide.
-   */
-  identifier?: fhir.IIdentifier|undefined;
-  /**
-   * The name of the sugar or sugar-like component that make up the nucleotide.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.sugar.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * The residues that contain a given sugar will be captured. The order of given residues will be captured in the 5‘-3‘direction consistent with the base sequences listed above.
-   */
-  residueSite?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.sugar.residueSite
-   */
-  _residueSite?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Subunits are listed in order of decreasing length; sequences of the same length will be ordered by molecular weight; subunits that have identical sequences will be repeated multiple times.
- */
-export type ISubstanceNucleicAcidSubunit = fhir.IBackboneElement & { 
-  /**
-   * Index of linear sequences of nucleic acids in order of decreasing length. Sequences of the same length will be ordered by molecular weight. Subunits that have identical sequences will be repeated and have sequential subscripts.
-   */
-  subunit?: number|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.subunit
-   */
-  _subunit?: fhir.IFhirElement|undefined;
-  /**
-   * Actual nucleotide sequence notation from 5' to 3' end using standard single letter codes. In addition to the base sequence, sugar and type of phosphate or non-phosphate linkage should also be captured.
-   */
-  sequence?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.sequence
-   */
-  _sequence?: fhir.IFhirElement|undefined;
-  /**
-   * The length of the sequence shall be captured.
-   */
-  length?: number|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.length
-   */
-  _length?: fhir.IFhirElement|undefined;
-  /**
-   * (TBC).
-   */
-  sequenceAttachment?: fhir.IAttachment|undefined;
-  /**
-   * The nucleotide present at the 5’ terminal shall be specified based on a controlled vocabulary. Since the sequence is represented from the 5' to the 3' end, the 5’ prime nucleotide is the letter at the first position in the sequence. A separate representation would be redundant.
-   */
-  fivePrime?: fhir.ICodeableConcept|undefined;
-  /**
-   * The nucleotide present at the 3’ terminal shall be specified based on a controlled vocabulary. Since the sequence is represented from the 5' to the 3' end, the 5’ prime nucleotide is the letter at the last position in the sequence. A separate representation would be redundant.
-   */
-  threePrime?: fhir.ICodeableConcept|undefined;
-  /**
-   * The linkages between sugar residues will also be captured.
-   */
-  linkage?: fhir.ISubstanceNucleicAcidSubunitLinkage[]|undefined;
-  /**
-   * 5.3.6.8.1 Sugar ID (Mandatory).
-   */
-  sugar?: fhir.ISubstanceNucleicAcidSubunitSugar[]|undefined;
-}
-
-/**
- * Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
- */
-export type ISubstanceNucleicAcid = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "SubstanceNucleicAcid";
-  /**
-   * The type of the sequence shall be specified based on a controlled vocabulary.
-   */
-  sequenceType?: fhir.ICodeableConcept|undefined;
-  /**
-   * The number of linear sequences of nucleotides linked through phosphodiester bonds shall be described. Subunits would be strands of nucleic acids that are tightly associated typically through Watson-Crick base pairing. NOTE: If not specified in the reference source, the assumption is that there is 1 subunit.
-   */
-  numberOfSubunits?: number|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.numberOfSubunits
-   */
-  _numberOfSubunits?: fhir.IFhirElement|undefined;
-  /**
-   * The area of hybridisation shall be described if applicable for double stranded RNA or DNA. The number associated with the subunit followed by the number associated to the residue shall be specified in increasing order. The underscore “” shall be used as separator as follows: “Subunitnumber Residue”.
-   */
-  areaOfHybridisation?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.areaOfHybridisation
-   */
-  _areaOfHybridisation?: fhir.IFhirElement|undefined;
-  /**
-   * (TBC).
-   */
-  oligoNucleotideType?: fhir.ICodeableConcept|undefined;
-  /**
-   * Subunits are listed in order of decreasing length; sequences of the same length will be ordered by molecular weight; subunits that have identical sequences will be repeated multiple times.
-   */
-  subunit?: fhir.ISubstanceNucleicAcidSubunit[]|undefined;
+  residueSite?: fhir.FhirString|string|undefined;
 }
 
 /**
  * The linkages between sugar residues will also be captured.
  */
-export class SubstanceNucleicAcidSubunitLinkage extends fhir.BackboneElement implements ISubstanceNucleicAcidSubunitLinkage {
+export class SubstanceNucleicAcidSubunitLinkage extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceNucleicAcidSubunitLinkage';
   /**
    * The entity that links the sugar residues together should also be captured for nearly all naturally occurring nucleic acid the linkage is a phosphate group. For many synthetic oligonucleotides phosphorothioate linkages are often seen. Linkage connectivity is assumed to be 3’-5’. If the linkage is either 3’-3’ or 5’-5’ this should be specified.
    */
-  public connectivity?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.linkage.connectivity
-   */
-  public _connectivity?: fhir.FhirElement|undefined;
+  public connectivity?: fhir.FhirString|undefined;
   /**
    * Each linkage will be registered as a fragment and have an ID.
    */
@@ -173,49 +45,62 @@ export class SubstanceNucleicAcidSubunitLinkage extends fhir.BackboneElement imp
   /**
    * Each linkage will be registered as a fragment and have at least one name. A single name shall be assigned to each linkage.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.linkage.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Residues shall be captured as described in 5.3.6.8.3.
    */
-  public residueSite?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.linkage.residueSite
-   */
-  public _residueSite?: fhir.FhirElement|undefined;
+  public residueSite?: fhir.FhirString|undefined;
   /**
    * Default constructor for SubstanceNucleicAcidSubunitLinkage - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceNucleicAcidSubunitLinkage> = { }) {
-    super(source);
-    if (source['connectivity']) { this.connectivity = source.connectivity; }
-    if (source['_connectivity']) { this._connectivity = new fhir.FhirElement(source._connectivity!); }
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['residueSite']) { this.residueSite = source.residueSite; }
-    if (source['_residueSite']) { this._residueSite = new fhir.FhirElement(source._residueSite!); }
+  constructor(source:Partial<SubstanceNucleicAcidSubunitLinkageArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['connectivity']) { this.connectivity = new fhir.FhirString({value: source.connectivity}); }
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['residueSite']) { this.residueSite = new fhir.FhirString({value: source.residueSite}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_connectivity"]) { results.push(...this._connectivity.doModelValidation()); }
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_residueSite"]) { results.push(...this._residueSite.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["connectivity"]) { outcome.issue!.push(...this.connectivity.doModelValidation().issue!); }
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["residueSite"]) { outcome.issue!.push(...this.residueSite.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceNucleicAcidSubunitSugar type.
+ */
+export interface SubstanceNucleicAcidSubunitSugarArgs extends fhir.BackboneElementArgs {
+  /**
+   * The Substance ID of the sugar or sugar-like component that make up the nucleotide.
+   */
+  identifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * The name of the sugar or sugar-like component that make up the nucleotide.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * The residues that contain a given sugar will be captured. The order of given residues will be captured in the 5‘-3‘direction consistent with the base sequences listed above.
+   */
+  residueSite?: fhir.FhirString|string|undefined;
 }
 
 /**
  * 5.3.6.8.1 Sugar ID (Mandatory).
  */
-export class SubstanceNucleicAcidSubunitSugar extends fhir.BackboneElement implements ISubstanceNucleicAcidSubunitSugar {
+export class SubstanceNucleicAcidSubunitSugar extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceNucleicAcidSubunitSugar';
   /**
    * The Substance ID of the sugar or sugar-like component that make up the nucleotide.
    */
@@ -223,70 +108,92 @@ export class SubstanceNucleicAcidSubunitSugar extends fhir.BackboneElement imple
   /**
    * The name of the sugar or sugar-like component that make up the nucleotide.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.sugar.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * The residues that contain a given sugar will be captured. The order of given residues will be captured in the 5‘-3‘direction consistent with the base sequences listed above.
    */
-  public residueSite?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.sugar.residueSite
-   */
-  public _residueSite?: fhir.FhirElement|undefined;
+  public residueSite?: fhir.FhirString|undefined;
   /**
    * Default constructor for SubstanceNucleicAcidSubunitSugar - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceNucleicAcidSubunitSugar> = { }) {
-    super(source);
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['residueSite']) { this.residueSite = source.residueSite; }
-    if (source['_residueSite']) { this._residueSite = new fhir.FhirElement(source._residueSite!); }
+  constructor(source:Partial<SubstanceNucleicAcidSubunitSugarArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['residueSite']) { this.residueSite = new fhir.FhirString({value: source.residueSite}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_residueSite"]) { results.push(...this._residueSite.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["residueSite"]) { outcome.issue!.push(...this.residueSite.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceNucleicAcidSubunit type.
+ */
+export interface SubstanceNucleicAcidSubunitArgs extends fhir.BackboneElementArgs {
+  /**
+   * Index of linear sequences of nucleic acids in order of decreasing length. Sequences of the same length will be ordered by molecular weight. Subunits that have identical sequences will be repeated and have sequential subscripts.
+   */
+  subunit?: fhir.FhirInteger|number|undefined;
+  /**
+   * Actual nucleotide sequence notation from 5' to 3' end using standard single letter codes. In addition to the base sequence, sugar and type of phosphate or non-phosphate linkage should also be captured.
+   */
+  sequence?: fhir.FhirString|string|undefined;
+  /**
+   * The length of the sequence shall be captured.
+   */
+  length?: fhir.FhirInteger|number|undefined;
+  /**
+   * (TBC).
+   */
+  sequenceAttachment?: fhir.AttachmentArgs|undefined;
+  /**
+   * The nucleotide present at the 5’ terminal shall be specified based on a controlled vocabulary. Since the sequence is represented from the 5' to the 3' end, the 5’ prime nucleotide is the letter at the first position in the sequence. A separate representation would be redundant.
+   */
+  fivePrime?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The nucleotide present at the 3’ terminal shall be specified based on a controlled vocabulary. Since the sequence is represented from the 5' to the 3' end, the 5’ prime nucleotide is the letter at the last position in the sequence. A separate representation would be redundant.
+   */
+  threePrime?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The linkages between sugar residues will also be captured.
+   */
+  linkage?: fhir.SubstanceNucleicAcidSubunitLinkageArgs[]|undefined;
+  /**
+   * 5.3.6.8.1 Sugar ID (Mandatory).
+   */
+  sugar?: fhir.SubstanceNucleicAcidSubunitSugarArgs[]|undefined;
 }
 
 /**
  * Subunits are listed in order of decreasing length; sequences of the same length will be ordered by molecular weight; subunits that have identical sequences will be repeated multiple times.
  */
-export class SubstanceNucleicAcidSubunit extends fhir.BackboneElement implements ISubstanceNucleicAcidSubunit {
+export class SubstanceNucleicAcidSubunit extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceNucleicAcidSubunit';
   /**
    * Index of linear sequences of nucleic acids in order of decreasing length. Sequences of the same length will be ordered by molecular weight. Subunits that have identical sequences will be repeated and have sequential subscripts.
    */
-  public subunit?: number|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.subunit
-   */
-  public _subunit?: fhir.FhirElement|undefined;
+  public subunit?: fhir.FhirInteger|undefined;
   /**
    * Actual nucleotide sequence notation from 5' to 3' end using standard single letter codes. In addition to the base sequence, sugar and type of phosphate or non-phosphate linkage should also be captured.
    */
-  public sequence?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.sequence
-   */
-  public _sequence?: fhir.FhirElement|undefined;
+  public sequence?: fhir.FhirString|undefined;
   /**
    * The length of the sequence shall be captured.
    */
-  public length?: number|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.subunit.length
-   */
-  public _length?: fhir.FhirElement|undefined;
+  public length?: fhir.FhirInteger|undefined;
   /**
    * (TBC).
    */
@@ -302,49 +209,82 @@ export class SubstanceNucleicAcidSubunit extends fhir.BackboneElement implements
   /**
    * The linkages between sugar residues will also be captured.
    */
-  public linkage?: fhir.SubstanceNucleicAcidSubunitLinkage[]|undefined;
+  public linkage?: fhir.SubstanceNucleicAcidSubunitLinkage[]|undefined = [];
   /**
    * 5.3.6.8.1 Sugar ID (Mandatory).
    */
-  public sugar?: fhir.SubstanceNucleicAcidSubunitSugar[]|undefined;
+  public sugar?: fhir.SubstanceNucleicAcidSubunitSugar[]|undefined = [];
   /**
    * Default constructor for SubstanceNucleicAcidSubunit - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceNucleicAcidSubunit> = { }) {
-    super(source);
-    if (source['subunit']) { this.subunit = source.subunit; }
-    if (source['_subunit']) { this._subunit = new fhir.FhirElement(source._subunit!); }
-    if (source['sequence']) { this.sequence = source.sequence; }
-    if (source['_sequence']) { this._sequence = new fhir.FhirElement(source._sequence!); }
-    if (source['length']) { this.length = source.length; }
-    if (source['_length']) { this._length = new fhir.FhirElement(source._length!); }
-    if (source['sequenceAttachment']) { this.sequenceAttachment = new fhir.Attachment(source.sequenceAttachment!); }
-    if (source['fivePrime']) { this.fivePrime = new fhir.CodeableConcept(source.fivePrime!); }
-    if (source['threePrime']) { this.threePrime = new fhir.CodeableConcept(source.threePrime!); }
+  constructor(source:Partial<SubstanceNucleicAcidSubunitArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['subunit']) { this.subunit = new fhir.FhirInteger({value: source.subunit}); }
+    if (source['sequence']) { this.sequence = new fhir.FhirString({value: source.sequence}); }
+    if (source['length']) { this.length = new fhir.FhirInteger({value: source.length}); }
+    if (source['sequenceAttachment']) { this.sequenceAttachment = new fhir.Attachment(source.sequenceAttachment); }
+    if (source['fivePrime']) { this.fivePrime = new fhir.CodeableConcept(source.fivePrime); }
+    if (source['threePrime']) { this.threePrime = new fhir.CodeableConcept(source.threePrime); }
     if (source['linkage']) { this.linkage = source.linkage.map((x) => new fhir.SubstanceNucleicAcidSubunitLinkage(x)); }
     if (source['sugar']) { this.sugar = source.sugar.map((x) => new fhir.SubstanceNucleicAcidSubunitSugar(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_subunit"]) { results.push(...this._subunit.doModelValidation()); }
-    if (this["_sequence"]) { results.push(...this._sequence.doModelValidation()); }
-    if (this["_length"]) { results.push(...this._length.doModelValidation()); }
-    if (this["sequenceAttachment"]) { results.push(...this.sequenceAttachment.doModelValidation()); }
-    if (this["fivePrime"]) { results.push(...this.fivePrime.doModelValidation()); }
-    if (this["threePrime"]) { results.push(...this.threePrime.doModelValidation()); }
-    if (this["linkage"]) { this.linkage.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["sugar"]) { this.sugar.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["subunit"]) { outcome.issue!.push(...this.subunit.doModelValidation().issue!); }
+    if (this["sequence"]) { outcome.issue!.push(...this.sequence.doModelValidation().issue!); }
+    if (this["length"]) { outcome.issue!.push(...this.length.doModelValidation().issue!); }
+    if (this["sequenceAttachment"]) { outcome.issue!.push(...this.sequenceAttachment.doModelValidation().issue!); }
+    if (this["fivePrime"]) { outcome.issue!.push(...this.fivePrime.doModelValidation().issue!); }
+    if (this["threePrime"]) { outcome.issue!.push(...this.threePrime.doModelValidation().issue!); }
+    if (this["linkage"]) { this.linkage.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["sugar"]) { this.sugar.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceNucleicAcid type.
+ */
+export interface SubstanceNucleicAcidArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "SubstanceNucleicAcid"|undefined;
+  /**
+   * The type of the sequence shall be specified based on a controlled vocabulary.
+   */
+  sequenceType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The number of linear sequences of nucleotides linked through phosphodiester bonds shall be described. Subunits would be strands of nucleic acids that are tightly associated typically through Watson-Crick base pairing. NOTE: If not specified in the reference source, the assumption is that there is 1 subunit.
+   */
+  numberOfSubunits?: fhir.FhirInteger|number|undefined;
+  /**
+   * The area of hybridisation shall be described if applicable for double stranded RNA or DNA. The number associated with the subunit followed by the number associated to the residue shall be specified in increasing order. The underscore “” shall be used as separator as follows: “Subunitnumber Residue”.
+   */
+  areaOfHybridisation?: fhir.FhirString|string|undefined;
+  /**
+   * (TBC).
+   */
+  oligoNucleotideType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Subunits are listed in order of decreasing length; sequences of the same length will be ordered by molecular weight; subunits that have identical sequences will be repeated multiple times.
+   */
+  subunit?: fhir.SubstanceNucleicAcidSubunitArgs[]|undefined;
 }
 
 /**
  * Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
  */
-export class SubstanceNucleicAcid extends fhir.DomainResource implements ISubstanceNucleicAcid {
+export class SubstanceNucleicAcid extends fhir.DomainResource {
+  readonly __dataType:string = 'SubstanceNucleicAcid';
   /**
    * Resource Type Name
    */
@@ -356,19 +296,11 @@ export class SubstanceNucleicAcid extends fhir.DomainResource implements ISubsta
   /**
    * The number of linear sequences of nucleotides linked through phosphodiester bonds shall be described. Subunits would be strands of nucleic acids that are tightly associated typically through Watson-Crick base pairing. NOTE: If not specified in the reference source, the assumption is that there is 1 subunit.
    */
-  public numberOfSubunits?: number|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.numberOfSubunits
-   */
-  public _numberOfSubunits?: fhir.FhirElement|undefined;
+  public numberOfSubunits?: fhir.FhirInteger|undefined;
   /**
    * The area of hybridisation shall be described if applicable for double stranded RNA or DNA. The number associated with the subunit followed by the number associated to the residue shall be specified in increasing order. The underscore “” shall be used as separator as follows: “Subunitnumber Residue”.
    */
-  public areaOfHybridisation?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceNucleicAcid.areaOfHybridisation
-   */
-  public _areaOfHybridisation?: fhir.FhirElement|undefined;
+  public areaOfHybridisation?: fhir.FhirString|undefined;
   /**
    * (TBC).
    */
@@ -376,32 +308,38 @@ export class SubstanceNucleicAcid extends fhir.DomainResource implements ISubsta
   /**
    * Subunits are listed in order of decreasing length; sequences of the same length will be ordered by molecular weight; subunits that have identical sequences will be repeated multiple times.
    */
-  public subunit?: fhir.SubstanceNucleicAcidSubunit[]|undefined;
+  public subunit?: fhir.SubstanceNucleicAcidSubunit[]|undefined = [];
   /**
    * Default constructor for SubstanceNucleicAcid - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceNucleicAcid> = { }) {
-    super(source);
+  constructor(source:Partial<SubstanceNucleicAcidArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'SubstanceNucleicAcid';
-    if (source['sequenceType']) { this.sequenceType = new fhir.CodeableConcept(source.sequenceType!); }
-    if (source['numberOfSubunits']) { this.numberOfSubunits = source.numberOfSubunits; }
-    if (source['_numberOfSubunits']) { this._numberOfSubunits = new fhir.FhirElement(source._numberOfSubunits!); }
-    if (source['areaOfHybridisation']) { this.areaOfHybridisation = source.areaOfHybridisation; }
-    if (source['_areaOfHybridisation']) { this._areaOfHybridisation = new fhir.FhirElement(source._areaOfHybridisation!); }
-    if (source['oligoNucleotideType']) { this.oligoNucleotideType = new fhir.CodeableConcept(source.oligoNucleotideType!); }
+    if (source['sequenceType']) { this.sequenceType = new fhir.CodeableConcept(source.sequenceType); }
+    if (source['numberOfSubunits']) { this.numberOfSubunits = new fhir.FhirInteger({value: source.numberOfSubunits}); }
+    if (source['areaOfHybridisation']) { this.areaOfHybridisation = new fhir.FhirString({value: source.areaOfHybridisation}); }
+    if (source['oligoNucleotideType']) { this.oligoNucleotideType = new fhir.CodeableConcept(source.oligoNucleotideType); }
     if (source['subunit']) { this.subunit = source.subunit.map((x) => new fhir.SubstanceNucleicAcidSubunit(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: SubstanceNucleicAcid.resourceType']); }
-    if (this["sequenceType"]) { results.push(...this.sequenceType.doModelValidation()); }
-    if (this["_numberOfSubunits"]) { results.push(...this._numberOfSubunits.doModelValidation()); }
-    if (this["_areaOfHybridisation"]) { results.push(...this._areaOfHybridisation.doModelValidation()); }
-    if (this["oligoNucleotideType"]) { results.push(...this.oligoNucleotideType.doModelValidation()); }
-    if (this["subunit"]) { this.subunit.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'SubstanceNucleicAcid' fhir: SubstanceNucleicAcid.resourceType:'SubstanceNucleicAcid'", }));
+    }
+    if (this["sequenceType"]) { outcome.issue!.push(...this.sequenceType.doModelValidation().issue!); }
+    if (this["numberOfSubunits"]) { outcome.issue!.push(...this.numberOfSubunits.doModelValidation().issue!); }
+    if (this["areaOfHybridisation"]) { outcome.issue!.push(...this.areaOfHybridisation.doModelValidation().issue!); }
+    if (this["oligoNucleotideType"]) { outcome.issue!.push(...this.oligoNucleotideType.doModelValidation().issue!); }
+    if (this["subunit"]) { this.subunit.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

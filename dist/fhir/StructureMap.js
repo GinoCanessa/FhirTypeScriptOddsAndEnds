@@ -3,14 +3,16 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: StructureMap
 import * as fhir from '../fhir.js';
-import { MapModelModeValueSet } from '../fhirValueSets/MapModelModeValueSet.js';
-import { MapInputModeValueSet } from '../fhirValueSets/MapInputModeValueSet.js';
-import { MapSourceListModeValueSet } from '../fhirValueSets/MapSourceListModeValueSet.js';
-import { MapContextTypeValueSet } from '../fhirValueSets/MapContextTypeValueSet.js';
-import { MapTargetListModeValueSet } from '../fhirValueSets/MapTargetListModeValueSet.js';
-import { MapTransformValueSet } from '../fhirValueSets/MapTransformValueSet.js';
-import { MapGroupTypeModeValueSet } from '../fhirValueSets/MapGroupTypeModeValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { MapModelModeValueSet, } from '../fhirValueSets/MapModelModeValueSet.js';
+import { MapInputModeValueSet, } from '../fhirValueSets/MapInputModeValueSet.js';
+import { MapSourceListModeValueSet, } from '../fhirValueSets/MapSourceListModeValueSet.js';
+import { MapContextTypeValueSet, } from '../fhirValueSets/MapContextTypeValueSet.js';
+import { MapTargetListModeValueSet, } from '../fhirValueSets/MapTargetListModeValueSet.js';
+import { MapTransformValueSet, } from '../fhirValueSets/MapTransformValueSet.js';
+import { MapGroupTypeModeValueSet, } from '../fhirValueSets/MapGroupTypeModeValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * It is not necessary for a structure map to identify any dependent structures, though not listing them may restrict its usefulness.
  */
@@ -18,16 +20,14 @@ export class StructureMapStructure extends fhir.BackboneElement {
     /**
      * Default constructor for StructureMapStructure - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'StructureMapStructure';
         if (source['url']) {
-            this.url = source.url;
+            this.url = new fhir.FhirCanonical({ value: source.url });
         }
         else {
             this.url = null;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
         }
         if (source['mode']) {
             this.mode = source.mode;
@@ -35,20 +35,11 @@ export class StructureMapStructure extends fhir.BackboneElement {
         else {
             this.mode = null;
         }
-        if (source['_mode']) {
-            this._mode = new fhir.FhirElement(source._mode);
-        }
         if (source['alias']) {
-            this.alias = source.alias;
-        }
-        if (source['_alias']) {
-            this._alias = new fhir.FhirElement(source._alias);
+            this.alias = new fhir.FhirString({ value: source.alias });
         }
         if (source['documentation']) {
-            this.documentation = source.documentation;
-        }
-        if (source['_documentation']) {
-            this._documentation = new fhir.FhirElement(source._documentation);
+            this.documentation = new fhir.FhirString({ value: source.documentation });
         }
     }
     /**
@@ -61,26 +52,29 @@ export class StructureMapStructure extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["url"]) {
-            results.push(["url", 'Missing required element: StructureMap.structure.url']);
+        var outcome = super.doModelValidation();
+        if (!this['url']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property url:fhir.FhirCanonical fhir: StructureMap.structure.url:canonical", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
-        if (!this["mode"]) {
-            results.push(["mode", 'Missing required element: StructureMap.structure.mode']);
+        if (!this['mode']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property mode:MapModelModeValueSetEnum fhir: StructureMap.structure.mode:code", }));
         }
-        if (this["_mode"]) {
-            results.push(...this._mode.doModelValidation());
+        if (this["alias"]) {
+            outcome.issue.push(...this.alias.doModelValidation().issue);
         }
-        if (this["_alias"]) {
-            results.push(...this._alias.doModelValidation());
+        if (this["documentation"]) {
+            outcome.issue.push(...this.documentation.doModelValidation().issue);
         }
-        if (this["_documentation"]) {
-            results.push(...this._documentation.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -90,22 +84,17 @@ export class StructureMapGroupInput extends fhir.BackboneElement {
     /**
      * Default constructor for StructureMapGroupInput - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'StructureMapGroupInput';
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirId({ value: source.name });
         }
         else {
             this.name = null;
         }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
-        }
         if (source['type']) {
-            this.type = source.type;
-        }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
+            this.type = new fhir.FhirString({ value: source.type });
         }
         if (source['mode']) {
             this.mode = source.mode;
@@ -113,14 +102,8 @@ export class StructureMapGroupInput extends fhir.BackboneElement {
         else {
             this.mode = null;
         }
-        if (source['_mode']) {
-            this._mode = new fhir.FhirElement(source._mode);
-        }
         if (source['documentation']) {
-            this.documentation = source.documentation;
-        }
-        if (source['_documentation']) {
-            this._documentation = new fhir.FhirElement(source._documentation);
+            this.documentation = new fhir.FhirString({ value: source.documentation });
         }
     }
     /**
@@ -133,26 +116,29 @@ export class StructureMapGroupInput extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: StructureMap.group.input.name']);
+        var outcome = super.doModelValidation();
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirId fhir: StructureMap.group.input.name:id", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (this["type"]) {
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (!this["mode"]) {
-            results.push(["mode", 'Missing required element: StructureMap.group.input.mode']);
+        if (!this['mode']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property mode:MapInputModeValueSetEnum fhir: StructureMap.group.input.mode:code", }));
         }
-        if (this["_mode"]) {
-            results.push(...this._mode.doModelValidation());
+        if (this["documentation"]) {
+            outcome.issue.push(...this.documentation.doModelValidation().issue);
         }
-        if (this["_documentation"]) {
-            results.push(...this._documentation.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -162,277 +148,195 @@ export class StructureMapGroupRuleSource extends fhir.BackboneElement {
     /**
      * Default constructor for StructureMapGroupRuleSource - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'StructureMapGroupRuleSource';
+        this.__defaultValueIsChoice = true;
         if (source['context']) {
-            this.context = source.context;
+            this.context = new fhir.FhirId({ value: source.context });
         }
         else {
             this.context = null;
         }
-        if (source['_context']) {
-            this._context = new fhir.FhirElement(source._context);
-        }
         if (source['min']) {
-            this.min = source.min;
-        }
-        if (source['_min']) {
-            this._min = new fhir.FhirElement(source._min);
+            this.min = new fhir.FhirInteger({ value: source.min });
         }
         if (source['max']) {
-            this.max = source.max;
-        }
-        if (source['_max']) {
-            this._max = new fhir.FhirElement(source._max);
+            this.max = new fhir.FhirString({ value: source.max });
         }
         if (source['type']) {
-            this.type = source.type;
+            this.type = new fhir.FhirString({ value: source.type });
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
+        if (source['defaultValue']) {
+            this.defaultValue = source.defaultValue;
         }
-        if (source['defaultValueBase64Binary']) {
-            this.defaultValueBase64Binary = source.defaultValueBase64Binary;
+        else if (source['defaultValueBase64Binary']) {
+            this.defaultValue = new fhir.FhirBase64Binary({ value: source.defaultValueBase64Binary });
         }
-        if (source['_defaultValueBase64Binary']) {
-            this._defaultValueBase64Binary = new fhir.FhirElement(source._defaultValueBase64Binary);
+        else if (source['defaultValueBoolean']) {
+            this.defaultValue = new fhir.FhirBoolean({ value: source.defaultValueBoolean });
         }
-        if (source['defaultValueBoolean']) {
-            this.defaultValueBoolean = source.defaultValueBoolean;
+        else if (source['defaultValueCanonical']) {
+            this.defaultValue = new fhir.FhirCanonical({ value: source.defaultValueCanonical });
         }
-        if (source['_defaultValueBoolean']) {
-            this._defaultValueBoolean = new fhir.FhirElement(source._defaultValueBoolean);
+        else if (source['defaultValueCode']) {
+            this.defaultValue = new fhir.FhirCode({ value: source.defaultValueCode });
         }
-        if (source['defaultValueCanonical']) {
-            this.defaultValueCanonical = source.defaultValueCanonical;
+        else if (source['defaultValueDate']) {
+            this.defaultValue = new fhir.FhirDate({ value: source.defaultValueDate });
         }
-        if (source['_defaultValueCanonical']) {
-            this._defaultValueCanonical = new fhir.FhirElement(source._defaultValueCanonical);
+        else if (source['defaultValueDateTime']) {
+            this.defaultValue = new fhir.FhirDateTime({ value: source.defaultValueDateTime });
         }
-        if (source['defaultValueCode']) {
-            this.defaultValueCode = source.defaultValueCode;
+        else if (source['defaultValueDecimal']) {
+            this.defaultValue = new fhir.FhirDecimal({ value: source.defaultValueDecimal });
         }
-        if (source['_defaultValueCode']) {
-            this._defaultValueCode = new fhir.FhirElement(source._defaultValueCode);
+        else if (source['defaultValueId']) {
+            this.defaultValue = new fhir.FhirId({ value: source.defaultValueId });
         }
-        if (source['defaultValueDate']) {
-            this.defaultValueDate = source.defaultValueDate;
+        else if (source['defaultValueInstant']) {
+            this.defaultValue = new fhir.FhirInstant({ value: source.defaultValueInstant });
         }
-        if (source['_defaultValueDate']) {
-            this._defaultValueDate = new fhir.FhirElement(source._defaultValueDate);
+        else if (source['defaultValueInteger']) {
+            this.defaultValue = new fhir.FhirInteger({ value: source.defaultValueInteger });
         }
-        if (source['defaultValueDateTime']) {
-            this.defaultValueDateTime = source.defaultValueDateTime;
+        else if (source['defaultValueMarkdown']) {
+            this.defaultValue = new fhir.FhirMarkdown({ value: source.defaultValueMarkdown });
         }
-        if (source['_defaultValueDateTime']) {
-            this._defaultValueDateTime = new fhir.FhirElement(source._defaultValueDateTime);
+        else if (source['defaultValueOid']) {
+            this.defaultValue = new fhir.FhirOid({ value: source.defaultValueOid });
         }
-        if (source['defaultValueDecimal']) {
-            this.defaultValueDecimal = source.defaultValueDecimal;
+        else if (source['defaultValuePositiveInt']) {
+            this.defaultValue = new fhir.FhirPositiveInt({ value: source.defaultValuePositiveInt });
         }
-        if (source['_defaultValueDecimal']) {
-            this._defaultValueDecimal = new fhir.FhirElement(source._defaultValueDecimal);
+        else if (source['defaultValueString']) {
+            this.defaultValue = new fhir.FhirString({ value: source.defaultValueString });
         }
-        if (source['defaultValueId']) {
-            this.defaultValueId = source.defaultValueId;
+        else if (source['defaultValueTime']) {
+            this.defaultValue = new fhir.FhirTime({ value: source.defaultValueTime });
         }
-        if (source['_defaultValueId']) {
-            this._defaultValueId = new fhir.FhirElement(source._defaultValueId);
+        else if (source['defaultValueUnsignedInt']) {
+            this.defaultValue = new fhir.FhirUnsignedInt({ value: source.defaultValueUnsignedInt });
         }
-        if (source['defaultValueInstant']) {
-            this.defaultValueInstant = source.defaultValueInstant;
+        else if (source['defaultValueUri']) {
+            this.defaultValue = new fhir.FhirUri({ value: source.defaultValueUri });
         }
-        if (source['_defaultValueInstant']) {
-            this._defaultValueInstant = new fhir.FhirElement(source._defaultValueInstant);
+        else if (source['defaultValueUrl']) {
+            this.defaultValue = new fhir.FhirUrl({ value: source.defaultValueUrl });
         }
-        if (source['defaultValueInteger']) {
-            this.defaultValueInteger = source.defaultValueInteger;
+        else if (source['defaultValueUuid']) {
+            this.defaultValue = new fhir.FhirUuid({ value: source.defaultValueUuid });
         }
-        if (source['_defaultValueInteger']) {
-            this._defaultValueInteger = new fhir.FhirElement(source._defaultValueInteger);
+        else if (source['defaultValueAddress']) {
+            this.defaultValue = new fhir.Address(source.defaultValueAddress);
         }
-        if (source['defaultValueMarkdown']) {
-            this.defaultValueMarkdown = source.defaultValueMarkdown;
+        else if (source['defaultValueAge']) {
+            this.defaultValue = new fhir.Age(source.defaultValueAge);
         }
-        if (source['_defaultValueMarkdown']) {
-            this._defaultValueMarkdown = new fhir.FhirElement(source._defaultValueMarkdown);
+        else if (source['defaultValueAnnotation']) {
+            this.defaultValue = new fhir.Annotation(source.defaultValueAnnotation);
         }
-        if (source['defaultValueOid']) {
-            this.defaultValueOid = source.defaultValueOid;
+        else if (source['defaultValueAttachment']) {
+            this.defaultValue = new fhir.Attachment(source.defaultValueAttachment);
         }
-        if (source['_defaultValueOid']) {
-            this._defaultValueOid = new fhir.FhirElement(source._defaultValueOid);
+        else if (source['defaultValueCodeableConcept']) {
+            this.defaultValue = new fhir.CodeableConcept(source.defaultValueCodeableConcept);
         }
-        if (source['defaultValuePositiveInt']) {
-            this.defaultValuePositiveInt = source.defaultValuePositiveInt;
+        else if (source['defaultValueCoding']) {
+            this.defaultValue = new fhir.Coding(source.defaultValueCoding);
         }
-        if (source['_defaultValuePositiveInt']) {
-            this._defaultValuePositiveInt = new fhir.FhirElement(source._defaultValuePositiveInt);
+        else if (source['defaultValueContactPoint']) {
+            this.defaultValue = new fhir.ContactPoint(source.defaultValueContactPoint);
         }
-        if (source['defaultValueString']) {
-            this.defaultValueString = source.defaultValueString;
+        else if (source['defaultValueCount']) {
+            this.defaultValue = new fhir.Count(source.defaultValueCount);
         }
-        if (source['_defaultValueString']) {
-            this._defaultValueString = new fhir.FhirElement(source._defaultValueString);
+        else if (source['defaultValueDistance']) {
+            this.defaultValue = new fhir.Distance(source.defaultValueDistance);
         }
-        if (source['defaultValueTime']) {
-            this.defaultValueTime = source.defaultValueTime;
+        else if (source['defaultValueDuration']) {
+            this.defaultValue = new fhir.Duration(source.defaultValueDuration);
         }
-        if (source['_defaultValueTime']) {
-            this._defaultValueTime = new fhir.FhirElement(source._defaultValueTime);
+        else if (source['defaultValueHumanName']) {
+            this.defaultValue = new fhir.HumanName(source.defaultValueHumanName);
         }
-        if (source['defaultValueUnsignedInt']) {
-            this.defaultValueUnsignedInt = source.defaultValueUnsignedInt;
+        else if (source['defaultValueIdentifier']) {
+            this.defaultValue = new fhir.Identifier(source.defaultValueIdentifier);
         }
-        if (source['_defaultValueUnsignedInt']) {
-            this._defaultValueUnsignedInt = new fhir.FhirElement(source._defaultValueUnsignedInt);
+        else if (source['defaultValueMoney']) {
+            this.defaultValue = new fhir.Money(source.defaultValueMoney);
         }
-        if (source['defaultValueUri']) {
-            this.defaultValueUri = source.defaultValueUri;
+        else if (source['defaultValuePeriod']) {
+            this.defaultValue = new fhir.Period(source.defaultValuePeriod);
         }
-        if (source['_defaultValueUri']) {
-            this._defaultValueUri = new fhir.FhirElement(source._defaultValueUri);
+        else if (source['defaultValueQuantity']) {
+            this.defaultValue = new fhir.Quantity(source.defaultValueQuantity);
         }
-        if (source['defaultValueUrl']) {
-            this.defaultValueUrl = source.defaultValueUrl;
+        else if (source['defaultValueRange']) {
+            this.defaultValue = new fhir.Range(source.defaultValueRange);
         }
-        if (source['_defaultValueUrl']) {
-            this._defaultValueUrl = new fhir.FhirElement(source._defaultValueUrl);
+        else if (source['defaultValueRatio']) {
+            this.defaultValue = new fhir.Ratio(source.defaultValueRatio);
         }
-        if (source['defaultValueUuid']) {
-            this.defaultValueUuid = source.defaultValueUuid;
+        else if (source['defaultValueReference']) {
+            this.defaultValue = new fhir.Reference(source.defaultValueReference);
         }
-        if (source['_defaultValueUuid']) {
-            this._defaultValueUuid = new fhir.FhirElement(source._defaultValueUuid);
+        else if (source['defaultValueSampledData']) {
+            this.defaultValue = new fhir.SampledData(source.defaultValueSampledData);
         }
-        if (source['defaultValueAddress']) {
-            this.defaultValueAddress = new fhir.Address(source.defaultValueAddress);
+        else if (source['defaultValueSignature']) {
+            this.defaultValue = new fhir.Signature(source.defaultValueSignature);
         }
-        if (source['defaultValueAge']) {
-            this.defaultValueAge = new fhir.Age(source.defaultValueAge);
+        else if (source['defaultValueTiming']) {
+            this.defaultValue = new fhir.Timing(source.defaultValueTiming);
         }
-        if (source['defaultValueAnnotation']) {
-            this.defaultValueAnnotation = new fhir.Annotation(source.defaultValueAnnotation);
+        else if (source['defaultValueContactDetail']) {
+            this.defaultValue = new fhir.ContactDetail(source.defaultValueContactDetail);
         }
-        if (source['defaultValueAttachment']) {
-            this.defaultValueAttachment = new fhir.Attachment(source.defaultValueAttachment);
+        else if (source['defaultValueContributor']) {
+            this.defaultValue = new fhir.Contributor(source.defaultValueContributor);
         }
-        if (source['defaultValueCodeableConcept']) {
-            this.defaultValueCodeableConcept = new fhir.CodeableConcept(source.defaultValueCodeableConcept);
+        else if (source['defaultValueDataRequirement']) {
+            this.defaultValue = new fhir.DataRequirement(source.defaultValueDataRequirement);
         }
-        if (source['defaultValueCoding']) {
-            this.defaultValueCoding = new fhir.Coding(source.defaultValueCoding);
+        else if (source['defaultValueExpression']) {
+            this.defaultValue = new fhir.Expression(source.defaultValueExpression);
         }
-        if (source['defaultValueContactPoint']) {
-            this.defaultValueContactPoint = new fhir.ContactPoint(source.defaultValueContactPoint);
+        else if (source['defaultValueParameterDefinition']) {
+            this.defaultValue = new fhir.ParameterDefinition(source.defaultValueParameterDefinition);
         }
-        if (source['defaultValueCount']) {
-            this.defaultValueCount = new fhir.Count(source.defaultValueCount);
+        else if (source['defaultValueRelatedArtifact']) {
+            this.defaultValue = new fhir.RelatedArtifact(source.defaultValueRelatedArtifact);
         }
-        if (source['defaultValueDistance']) {
-            this.defaultValueDistance = new fhir.Distance(source.defaultValueDistance);
+        else if (source['defaultValueTriggerDefinition']) {
+            this.defaultValue = new fhir.TriggerDefinition(source.defaultValueTriggerDefinition);
         }
-        if (source['defaultValueDuration']) {
-            this.defaultValueDuration = new fhir.Duration(source.defaultValueDuration);
+        else if (source['defaultValueUsageContext']) {
+            this.defaultValue = new fhir.UsageContext(source.defaultValueUsageContext);
         }
-        if (source['defaultValueHumanName']) {
-            this.defaultValueHumanName = new fhir.HumanName(source.defaultValueHumanName);
+        else if (source['defaultValueDosage']) {
+            this.defaultValue = new fhir.Dosage(source.defaultValueDosage);
         }
-        if (source['defaultValueIdentifier']) {
-            this.defaultValueIdentifier = new fhir.Identifier(source.defaultValueIdentifier);
-        }
-        if (source['defaultValueMoney']) {
-            this.defaultValueMoney = new fhir.Money(source.defaultValueMoney);
-        }
-        if (source['defaultValuePeriod']) {
-            this.defaultValuePeriod = new fhir.Period(source.defaultValuePeriod);
-        }
-        if (source['defaultValueQuantity']) {
-            this.defaultValueQuantity = new fhir.Quantity(source.defaultValueQuantity);
-        }
-        if (source['defaultValueRange']) {
-            this.defaultValueRange = new fhir.Range(source.defaultValueRange);
-        }
-        if (source['defaultValueRatio']) {
-            this.defaultValueRatio = new fhir.Ratio(source.defaultValueRatio);
-        }
-        if (source['defaultValueReference']) {
-            this.defaultValueReference = new fhir.Reference(source.defaultValueReference);
-        }
-        if (source['defaultValueSampledData']) {
-            this.defaultValueSampledData = new fhir.SampledData(source.defaultValueSampledData);
-        }
-        if (source['defaultValueSignature']) {
-            this.defaultValueSignature = new fhir.Signature(source.defaultValueSignature);
-        }
-        if (source['defaultValueTiming']) {
-            this.defaultValueTiming = new fhir.Timing(source.defaultValueTiming);
-        }
-        if (source['defaultValueContactDetail']) {
-            this.defaultValueContactDetail = new fhir.ContactDetail(source.defaultValueContactDetail);
-        }
-        if (source['defaultValueContributor']) {
-            this.defaultValueContributor = new fhir.Contributor(source.defaultValueContributor);
-        }
-        if (source['defaultValueDataRequirement']) {
-            this.defaultValueDataRequirement = new fhir.DataRequirement(source.defaultValueDataRequirement);
-        }
-        if (source['defaultValueExpression']) {
-            this.defaultValueExpression = new fhir.Expression(source.defaultValueExpression);
-        }
-        if (source['defaultValueParameterDefinition']) {
-            this.defaultValueParameterDefinition = new fhir.ParameterDefinition(source.defaultValueParameterDefinition);
-        }
-        if (source['defaultValueRelatedArtifact']) {
-            this.defaultValueRelatedArtifact = new fhir.RelatedArtifact(source.defaultValueRelatedArtifact);
-        }
-        if (source['defaultValueTriggerDefinition']) {
-            this.defaultValueTriggerDefinition = new fhir.TriggerDefinition(source.defaultValueTriggerDefinition);
-        }
-        if (source['defaultValueUsageContext']) {
-            this.defaultValueUsageContext = new fhir.UsageContext(source.defaultValueUsageContext);
-        }
-        if (source['defaultValueDosage']) {
-            this.defaultValueDosage = new fhir.Dosage(source.defaultValueDosage);
-        }
-        if (source['defaultValueMeta']) {
-            this.defaultValueMeta = new fhir.Meta(source.defaultValueMeta);
+        else if (source['defaultValueMeta']) {
+            this.defaultValue = new fhir.Meta(source.defaultValueMeta);
         }
         if (source['element']) {
-            this.element = source.element;
-        }
-        if (source['_element']) {
-            this._element = new fhir.FhirElement(source._element);
+            this.element = new fhir.FhirString({ value: source.element });
         }
         if (source['listMode']) {
             this.listMode = source.listMode;
         }
-        if (source['_listMode']) {
-            this._listMode = new fhir.FhirElement(source._listMode);
-        }
         if (source['variable']) {
-            this.variable = source.variable;
-        }
-        if (source['_variable']) {
-            this._variable = new fhir.FhirElement(source._variable);
+            this.variable = new fhir.FhirId({ value: source.variable });
         }
         if (source['condition']) {
-            this.condition = source.condition;
-        }
-        if (source['_condition']) {
-            this._condition = new fhir.FhirElement(source._condition);
+            this.condition = new fhir.FhirString({ value: source.condition });
         }
         if (source['check']) {
-            this.check = source.check;
-        }
-        if (source['_check']) {
-            this._check = new fhir.FhirElement(source._check);
+            this.check = new fhir.FhirString({ value: source.check });
         }
         if (source['logMessage']) {
-            this.logMessage = source.logMessage;
-        }
-        if (source['_logMessage']) {
-            this._logMessage = new fhir.FhirElement(source._logMessage);
+            this.logMessage = new fhir.FhirString({ value: source.logMessage });
         }
     }
     /**
@@ -445,191 +349,44 @@ export class StructureMapGroupRuleSource extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["context"]) {
-            results.push(["context", 'Missing required element: StructureMap.group.rule.source.context']);
+        var outcome = super.doModelValidation();
+        if (!this['context']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property context:fhir.FhirId fhir: StructureMap.group.rule.source.context:id", }));
         }
-        if (this["_context"]) {
-            results.push(...this._context.doModelValidation());
+        if (this["context"]) {
+            outcome.issue.push(...this.context.doModelValidation().issue);
         }
-        if (this["_min"]) {
-            results.push(...this._min.doModelValidation());
+        if (this["min"]) {
+            outcome.issue.push(...this.min.doModelValidation().issue);
         }
-        if (this["_max"]) {
-            results.push(...this._max.doModelValidation());
+        if (this["max"]) {
+            outcome.issue.push(...this.max.doModelValidation().issue);
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (this["type"]) {
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_defaultValueBase64Binary"]) {
-            results.push(...this._defaultValueBase64Binary.doModelValidation());
+        if (this["element"]) {
+            outcome.issue.push(...this.element.doModelValidation().issue);
         }
-        if (this["_defaultValueBoolean"]) {
-            results.push(...this._defaultValueBoolean.doModelValidation());
+        if (this["variable"]) {
+            outcome.issue.push(...this.variable.doModelValidation().issue);
         }
-        if (this["_defaultValueCanonical"]) {
-            results.push(...this._defaultValueCanonical.doModelValidation());
+        if (this["condition"]) {
+            outcome.issue.push(...this.condition.doModelValidation().issue);
         }
-        if (this["_defaultValueCode"]) {
-            results.push(...this._defaultValueCode.doModelValidation());
+        if (this["check"]) {
+            outcome.issue.push(...this.check.doModelValidation().issue);
         }
-        if (this["_defaultValueDate"]) {
-            results.push(...this._defaultValueDate.doModelValidation());
+        if (this["logMessage"]) {
+            outcome.issue.push(...this.logMessage.doModelValidation().issue);
         }
-        if (this["_defaultValueDateTime"]) {
-            results.push(...this._defaultValueDateTime.doModelValidation());
-        }
-        if (this["_defaultValueDecimal"]) {
-            results.push(...this._defaultValueDecimal.doModelValidation());
-        }
-        if (this["_defaultValueId"]) {
-            results.push(...this._defaultValueId.doModelValidation());
-        }
-        if (this["_defaultValueInstant"]) {
-            results.push(...this._defaultValueInstant.doModelValidation());
-        }
-        if (this["_defaultValueInteger"]) {
-            results.push(...this._defaultValueInteger.doModelValidation());
-        }
-        if (this["_defaultValueMarkdown"]) {
-            results.push(...this._defaultValueMarkdown.doModelValidation());
-        }
-        if (this["_defaultValueOid"]) {
-            results.push(...this._defaultValueOid.doModelValidation());
-        }
-        if (this["_defaultValuePositiveInt"]) {
-            results.push(...this._defaultValuePositiveInt.doModelValidation());
-        }
-        if (this["_defaultValueString"]) {
-            results.push(...this._defaultValueString.doModelValidation());
-        }
-        if (this["_defaultValueTime"]) {
-            results.push(...this._defaultValueTime.doModelValidation());
-        }
-        if (this["_defaultValueUnsignedInt"]) {
-            results.push(...this._defaultValueUnsignedInt.doModelValidation());
-        }
-        if (this["_defaultValueUri"]) {
-            results.push(...this._defaultValueUri.doModelValidation());
-        }
-        if (this["_defaultValueUrl"]) {
-            results.push(...this._defaultValueUrl.doModelValidation());
-        }
-        if (this["_defaultValueUuid"]) {
-            results.push(...this._defaultValueUuid.doModelValidation());
-        }
-        if (this["defaultValueAddress"]) {
-            results.push(...this.defaultValueAddress.doModelValidation());
-        }
-        if (this["defaultValueAge"]) {
-            results.push(...this.defaultValueAge.doModelValidation());
-        }
-        if (this["defaultValueAnnotation"]) {
-            results.push(...this.defaultValueAnnotation.doModelValidation());
-        }
-        if (this["defaultValueAttachment"]) {
-            results.push(...this.defaultValueAttachment.doModelValidation());
-        }
-        if (this["defaultValueCodeableConcept"]) {
-            results.push(...this.defaultValueCodeableConcept.doModelValidation());
-        }
-        if (this["defaultValueCoding"]) {
-            results.push(...this.defaultValueCoding.doModelValidation());
-        }
-        if (this["defaultValueContactPoint"]) {
-            results.push(...this.defaultValueContactPoint.doModelValidation());
-        }
-        if (this["defaultValueCount"]) {
-            results.push(...this.defaultValueCount.doModelValidation());
-        }
-        if (this["defaultValueDistance"]) {
-            results.push(...this.defaultValueDistance.doModelValidation());
-        }
-        if (this["defaultValueDuration"]) {
-            results.push(...this.defaultValueDuration.doModelValidation());
-        }
-        if (this["defaultValueHumanName"]) {
-            results.push(...this.defaultValueHumanName.doModelValidation());
-        }
-        if (this["defaultValueIdentifier"]) {
-            results.push(...this.defaultValueIdentifier.doModelValidation());
-        }
-        if (this["defaultValueMoney"]) {
-            results.push(...this.defaultValueMoney.doModelValidation());
-        }
-        if (this["defaultValuePeriod"]) {
-            results.push(...this.defaultValuePeriod.doModelValidation());
-        }
-        if (this["defaultValueQuantity"]) {
-            results.push(...this.defaultValueQuantity.doModelValidation());
-        }
-        if (this["defaultValueRange"]) {
-            results.push(...this.defaultValueRange.doModelValidation());
-        }
-        if (this["defaultValueRatio"]) {
-            results.push(...this.defaultValueRatio.doModelValidation());
-        }
-        if (this["defaultValueReference"]) {
-            results.push(...this.defaultValueReference.doModelValidation());
-        }
-        if (this["defaultValueSampledData"]) {
-            results.push(...this.defaultValueSampledData.doModelValidation());
-        }
-        if (this["defaultValueSignature"]) {
-            results.push(...this.defaultValueSignature.doModelValidation());
-        }
-        if (this["defaultValueTiming"]) {
-            results.push(...this.defaultValueTiming.doModelValidation());
-        }
-        if (this["defaultValueContactDetail"]) {
-            results.push(...this.defaultValueContactDetail.doModelValidation());
-        }
-        if (this["defaultValueContributor"]) {
-            results.push(...this.defaultValueContributor.doModelValidation());
-        }
-        if (this["defaultValueDataRequirement"]) {
-            results.push(...this.defaultValueDataRequirement.doModelValidation());
-        }
-        if (this["defaultValueExpression"]) {
-            results.push(...this.defaultValueExpression.doModelValidation());
-        }
-        if (this["defaultValueParameterDefinition"]) {
-            results.push(...this.defaultValueParameterDefinition.doModelValidation());
-        }
-        if (this["defaultValueRelatedArtifact"]) {
-            results.push(...this.defaultValueRelatedArtifact.doModelValidation());
-        }
-        if (this["defaultValueTriggerDefinition"]) {
-            results.push(...this.defaultValueTriggerDefinition.doModelValidation());
-        }
-        if (this["defaultValueUsageContext"]) {
-            results.push(...this.defaultValueUsageContext.doModelValidation());
-        }
-        if (this["defaultValueDosage"]) {
-            results.push(...this.defaultValueDosage.doModelValidation());
-        }
-        if (this["defaultValueMeta"]) {
-            results.push(...this.defaultValueMeta.doModelValidation());
-        }
-        if (this["_element"]) {
-            results.push(...this._element.doModelValidation());
-        }
-        if (this["_listMode"]) {
-            results.push(...this._listMode.doModelValidation());
-        }
-        if (this["_variable"]) {
-            results.push(...this._variable.doModelValidation());
-        }
-        if (this["_condition"]) {
-            results.push(...this._condition.doModelValidation());
-        }
-        if (this["_check"]) {
-            results.push(...this._check.doModelValidation());
-        }
-        if (this["_logMessage"]) {
-            results.push(...this._logMessage.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -639,60 +396,47 @@ export class StructureMapGroupRuleTargetParameter extends fhir.BackboneElement {
     /**
      * Default constructor for StructureMapGroupRuleTargetParameter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['valueId']) {
-            this.valueId = source.valueId;
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'StructureMapGroupRuleTargetParameter';
+        this.__valueIsChoice = true;
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['_valueId']) {
-            this._valueId = new fhir.FhirElement(source._valueId);
+        else if (source['valueId']) {
+            this.value = new fhir.FhirId({ value: source.valueId });
         }
-        if (source['valueString']) {
-            this.valueString = source.valueString;
+        else if (source['valueString']) {
+            this.value = new fhir.FhirString({ value: source.valueString });
         }
-        if (source['_valueString']) {
-            this._valueString = new fhir.FhirElement(source._valueString);
+        else if (source['valueBoolean']) {
+            this.value = new fhir.FhirBoolean({ value: source.valueBoolean });
         }
-        if (source['valueBoolean']) {
-            this.valueBoolean = source.valueBoolean;
+        else if (source['valueInteger']) {
+            this.value = new fhir.FhirInteger({ value: source.valueInteger });
         }
-        if (source['_valueBoolean']) {
-            this._valueBoolean = new fhir.FhirElement(source._valueBoolean);
+        else if (source['valueDecimal']) {
+            this.value = new fhir.FhirDecimal({ value: source.valueDecimal });
         }
-        if (source['valueInteger']) {
-            this.valueInteger = source.valueInteger;
-        }
-        if (source['_valueInteger']) {
-            this._valueInteger = new fhir.FhirElement(source._valueInteger);
-        }
-        if (source['valueDecimal']) {
-            this.valueDecimal = source.valueDecimal;
-        }
-        if (source['_valueDecimal']) {
-            this._valueDecimal = new fhir.FhirElement(source._valueDecimal);
+        else {
+            this.value = null;
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_valueId"]) {
-            results.push(...this._valueId.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value: fhir: StructureMap.group.rule.target.parameter.value[x]:", }));
         }
-        if (this["_valueString"]) {
-            results.push(...this._valueString.doModelValidation());
-        }
-        if (this["_valueBoolean"]) {
-            results.push(...this._valueBoolean.doModelValidation());
-        }
-        if (this["_valueInteger"]) {
-            results.push(...this._valueInteger.doModelValidation());
-        }
-        if (this["_valueDecimal"]) {
-            results.push(...this._valueDecimal.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -702,49 +446,37 @@ export class StructureMapGroupRuleTarget extends fhir.BackboneElement {
     /**
      * Default constructor for StructureMapGroupRuleTarget - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'StructureMapGroupRuleTarget';
+        /**
+         * If field is a list, how to manage the list.
+         */
+        this.listMode = [];
+        /**
+         * Parameters to the transform.
+         */
+        this.parameter = [];
         if (source['context']) {
-            this.context = source.context;
-        }
-        if (source['_context']) {
-            this._context = new fhir.FhirElement(source._context);
+            this.context = new fhir.FhirId({ value: source.context });
         }
         if (source['contextType']) {
             this.contextType = source.contextType;
         }
-        if (source['_contextType']) {
-            this._contextType = new fhir.FhirElement(source._contextType);
-        }
         if (source['element']) {
-            this.element = source.element;
-        }
-        if (source['_element']) {
-            this._element = new fhir.FhirElement(source._element);
+            this.element = new fhir.FhirString({ value: source.element });
         }
         if (source['variable']) {
-            this.variable = source.variable;
-        }
-        if (source['_variable']) {
-            this._variable = new fhir.FhirElement(source._variable);
+            this.variable = new fhir.FhirId({ value: source.variable });
         }
         if (source['listMode']) {
-            this.listMode = source.listMode.map((x) => (x));
-        }
-        if (source['_listMode']) {
-            this._listMode = source._listMode.map((x) => new fhir.FhirElement(x));
+            this.listMode = source.listMode.map((x) => x);
         }
         if (source['listRuleId']) {
-            this.listRuleId = source.listRuleId;
-        }
-        if (source['_listRuleId']) {
-            this._listRuleId = new fhir.FhirElement(source._listRuleId);
+            this.listRuleId = new fhir.FhirId({ value: source.listRuleId });
         }
         if (source['transform']) {
             this.transform = source.transform;
-        }
-        if (source['_transform']) {
-            this._transform = new fhir.FhirElement(source._transform);
         }
         if (source['parameter']) {
             this.parameter = source.parameter.map((x) => new fhir.StructureMapGroupRuleTargetParameter(x));
@@ -772,32 +504,29 @@ export class StructureMapGroupRuleTarget extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_context"]) {
-            results.push(...this._context.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["context"]) {
+            outcome.issue.push(...this.context.doModelValidation().issue);
         }
-        if (this["_contextType"]) {
-            results.push(...this._contextType.doModelValidation());
+        if (this["element"]) {
+            outcome.issue.push(...this.element.doModelValidation().issue);
         }
-        if (this["_element"]) {
-            results.push(...this._element.doModelValidation());
+        if (this["variable"]) {
+            outcome.issue.push(...this.variable.doModelValidation().issue);
         }
-        if (this["_variable"]) {
-            results.push(...this._variable.doModelValidation());
-        }
-        if (this["_listMode"]) {
-            this._listMode.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_listRuleId"]) {
-            results.push(...this._listRuleId.doModelValidation());
-        }
-        if (this["_transform"]) {
-            results.push(...this._transform.doModelValidation());
+        if (this["listRuleId"]) {
+            outcome.issue.push(...this.listRuleId.doModelValidation().issue);
         }
         if (this["parameter"]) {
-            this.parameter.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.parameter.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -807,45 +536,56 @@ export class StructureMapGroupRuleDependent extends fhir.BackboneElement {
     /**
      * Default constructor for StructureMapGroupRuleDependent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'StructureMapGroupRuleDependent';
+        /**
+         * Variable to pass to the rule or group.
+         */
+        this.variable = [];
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirId({ value: source.name });
         }
         else {
             this.name = null;
         }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
-        }
         if (source['variable']) {
-            this.variable = source.variable.map((x) => (x));
+            this.variable = source.variable.map((x) => new fhir.FhirString({ value: x }));
         }
         else {
             this.variable = null;
-        }
-        if (source['_variable']) {
-            this._variable = source._variable.map((x) => new fhir.FhirElement(x));
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: StructureMap.group.rule.dependent.name']);
+        var outcome = super.doModelValidation();
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirId fhir: StructureMap.group.rule.dependent.name:id", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if ((!this["variable"]) || (this["variable"].length === 0)) {
-            results.push(["variable", 'Missing required element: StructureMap.group.rule.dependent.variable']);
+        if (!this['variable']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property variable:fhir.FhirString[] fhir: StructureMap.group.rule.dependent.variable:string", }));
         }
-        if (this["_variable"]) {
-            this._variable.forEach((x) => { results.push(...x.doModelValidation()); });
+        else if (!Array.isArray(this.variable)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property variable:fhir.FhirString[] fhir: StructureMap.group.rule.dependent.variable:string", }));
         }
-        return results;
+        else if (this.variable.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property variable:fhir.FhirString[] fhir: StructureMap.group.rule.dependent.variable:string", }));
+        }
+        if (this["variable"]) {
+            this.variable.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
+        }
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -855,16 +595,30 @@ export class StructureMapGroupRule extends fhir.BackboneElement {
     /**
      * Default constructor for StructureMapGroupRule - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'StructureMapGroupRule';
+        /**
+         * Source inputs to the mapping.
+         */
+        this.source = [];
+        /**
+         * Content to create because of this mapping rule.
+         */
+        this.target = [];
+        /**
+         * Rules contained in this rule.
+         */
+        this.rule = [];
+        /**
+         * Which other rules to apply in the context of this rule.
+         */
+        this.dependent = [];
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirId({ value: source.name });
         }
         else {
             this.name = null;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
         }
         if (source['source']) {
             this.source = source.source.map((x) => new fhir.StructureMapGroupRuleSource(x));
@@ -882,42 +636,51 @@ export class StructureMapGroupRule extends fhir.BackboneElement {
             this.dependent = source.dependent.map((x) => new fhir.StructureMapGroupRuleDependent(x));
         }
         if (source['documentation']) {
-            this.documentation = source.documentation;
-        }
-        if (source['_documentation']) {
-            this._documentation = new fhir.FhirElement(source._documentation);
+            this.documentation = new fhir.FhirString({ value: source.documentation });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: StructureMap.group.rule.name']);
+        var outcome = super.doModelValidation();
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirId fhir: StructureMap.group.rule.name:id", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if ((!this["source"]) || (this["source"].length === 0)) {
-            results.push(["source", 'Missing required element: StructureMap.group.rule.source']);
+        if (!this['source']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property source:fhir.StructureMapGroupRuleSource[] fhir: StructureMap.group.rule.source:source", }));
+        }
+        else if (!Array.isArray(this.source)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property source:fhir.StructureMapGroupRuleSource[] fhir: StructureMap.group.rule.source:source", }));
+        }
+        else if (this.source.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property source:fhir.StructureMapGroupRuleSource[] fhir: StructureMap.group.rule.source:source", }));
         }
         if (this["source"]) {
-            this.source.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.source.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["target"]) {
-            this.target.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.target.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["rule"]) {
-            this.rule.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.rule.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["dependent"]) {
-            this.dependent.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.dependent.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_documentation"]) {
-            results.push(...this._documentation.doModelValidation());
+        if (this["documentation"]) {
+            outcome.issue.push(...this.documentation.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -927,22 +690,25 @@ export class StructureMapGroup extends fhir.BackboneElement {
     /**
      * Default constructor for StructureMapGroup - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'StructureMapGroup';
+        /**
+         * If no inputs are named, then the entry mappings are type based.
+         */
+        this.input = [];
+        /**
+         * Transform Rule from source to target.
+         */
+        this.rule = [];
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirId({ value: source.name });
         }
         else {
             this.name = null;
         }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
-        }
         if (source['extends']) {
-            this.extends = source.extends;
-        }
-        if (source['_extends']) {
-            this._extends = new fhir.FhirElement(source._extends);
+            this.extends = new fhir.FhirId({ value: source.extends });
         }
         if (source['typeMode']) {
             this.typeMode = source.typeMode;
@@ -950,14 +716,8 @@ export class StructureMapGroup extends fhir.BackboneElement {
         else {
             this.typeMode = null;
         }
-        if (source['_typeMode']) {
-            this._typeMode = new fhir.FhirElement(source._typeMode);
-        }
         if (source['documentation']) {
-            this.documentation = source.documentation;
-        }
-        if (source['_documentation']) {
-            this._documentation = new fhir.FhirElement(source._documentation);
+            this.documentation = new fhir.FhirString({ value: source.documentation });
         }
         if (source['input']) {
             this.input = source.input.map((x) => new fhir.StructureMapGroupInput(x));
@@ -982,38 +742,53 @@ export class StructureMapGroup extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: StructureMap.group.name']);
+        var outcome = super.doModelValidation();
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirId fhir: StructureMap.group.name:id", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_extends"]) {
-            results.push(...this._extends.doModelValidation());
+        if (this["extends"]) {
+            outcome.issue.push(...this.extends.doModelValidation().issue);
         }
-        if (!this["typeMode"]) {
-            results.push(["typeMode", 'Missing required element: StructureMap.group.typeMode']);
+        if (!this['typeMode']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property typeMode:MapGroupTypeModeValueSetEnum fhir: StructureMap.group.typeMode:code", }));
         }
-        if (this["_typeMode"]) {
-            results.push(...this._typeMode.doModelValidation());
+        if (this["documentation"]) {
+            outcome.issue.push(...this.documentation.doModelValidation().issue);
         }
-        if (this["_documentation"]) {
-            results.push(...this._documentation.doModelValidation());
+        if (!this['input']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property input:fhir.StructureMapGroupInput[] fhir: StructureMap.group.input:input", }));
         }
-        if ((!this["input"]) || (this["input"].length === 0)) {
-            results.push(["input", 'Missing required element: StructureMap.group.input']);
+        else if (!Array.isArray(this.input)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property input:fhir.StructureMapGroupInput[] fhir: StructureMap.group.input:input", }));
+        }
+        else if (this.input.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property input:fhir.StructureMapGroupInput[] fhir: StructureMap.group.input:input", }));
         }
         if (this["input"]) {
-            this.input.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.input.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if ((!this["rule"]) || (this["rule"].length === 0)) {
-            results.push(["rule", 'Missing required element: StructureMap.group.rule']);
+        if (!this['rule']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property rule:fhir.StructureMapGroupRule[] fhir: StructureMap.group.rule:rule", }));
+        }
+        else if (!Array.isArray(this.rule)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property rule:fhir.StructureMapGroupRule[] fhir: StructureMap.group.rule:rule", }));
+        }
+        else if (this.rule.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property rule:fhir.StructureMapGroupRule[] fhir: StructureMap.group.rule:rule", }));
         }
         if (this["rule"]) {
-            this.rule.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.rule.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -1023,41 +798,58 @@ export class StructureMap extends fhir.DomainResource {
     /**
      * Default constructor for StructureMap - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'StructureMap';
+        /**
+         * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this structure map outside of FHIR, where it is not possible to use the logical URI.
+         */
+        this.identifier = [];
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the structure map to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * It is not necessary for a structure map to identify any dependent structures, though not listing them may restrict its usefulness.
+         */
+        this.structure = [];
+        /**
+         * Other maps used by this map (canonical URLs).
+         */
+        this.import = [];
+        /**
+         * Organizes the mapping into manageable chunks for human review/ease of maintenance.
+         */
+        this.group = [];
         this.resourceType = 'StructureMap';
         if (source['url']) {
-            this.url = source.url;
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         else {
             this.url = null;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
         }
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirString({ value: source.name });
         }
         else {
             this.name = null;
         }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
-        }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['status']) {
             this.status = source.status;
@@ -1065,35 +857,20 @@ export class StructureMap extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
-        }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -1102,25 +879,16 @@ export class StructureMap extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['structure']) {
             this.structure = source.structure.map((x) => new fhir.StructureMapStructure(x));
         }
         if (source['import']) {
-            this.import = source.import.map((x) => (x));
-        }
-        if (source['_import']) {
-            this._import = source._import.map((x) => new fhir.FhirElement(x));
+            this.import = source.import.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['group']) {
             this.group = source.group.map((x) => new fhir.StructureMapGroup(x));
@@ -1139,77 +907,86 @@ export class StructureMap extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: StructureMap.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'StructureMap' fhir: StructureMap.resourceType:'StructureMap'", }));
         }
-        if (!this["url"]) {
-            results.push(["url", 'Missing required element: StructureMap.url']);
+        if (!this['url']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property url:fhir.FhirUri fhir: StructureMap.url:uri", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: StructureMap.name']);
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirString fhir: StructureMap.name:string", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: StructureMap.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: StructureMap.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
         if (this["structure"]) {
-            this.structure.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.structure.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_import"]) {
-            this._import.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["import"]) {
+            this.import.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if ((!this["group"]) || (this["group"].length === 0)) {
-            results.push(["group", 'Missing required element: StructureMap.group']);
+        if (!this['group']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property group:fhir.StructureMapGroup[] fhir: StructureMap.group:group", }));
+        }
+        else if (!Array.isArray(this.group)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property group:fhir.StructureMapGroup[] fhir: StructureMap.group:group", }));
+        }
+        else if (this.group.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property group:fhir.StructureMapGroup[] fhir: StructureMap.group:group", }));
         }
         if (this["group"]) {
-            this.group.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.group.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=StructureMap.js.map

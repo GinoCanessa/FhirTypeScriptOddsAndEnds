@@ -19,11 +19,4 @@ export const ContractActionstatusValueSet = {
 /**
  * This value set contract specific codes for action status.
  */
-export var ContractActionstatusValueSetEnum;
-(function (ContractActionstatusValueSetEnum) {
-    /**
-     * complete: To be completed
-     */
-    ContractActionstatusValueSetEnum["Complete"] = "complete";
-})(ContractActionstatusValueSetEnum || (ContractActionstatusValueSetEnum = {}));
 //# sourceMappingURL=ContractActionstatusValueSet.js.map

@@ -3,13 +3,15 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: FamilyMemberHistory
 import * as fhir from '../fhir.js';
-import { ConditionCodeValueSet } from '../fhirValueSets/ConditionCodeValueSet.js';
-import { ConditionOutcomeValueSet } from '../fhirValueSets/ConditionOutcomeValueSet.js';
-import { HistoryStatusValueSet } from '../fhirValueSets/HistoryStatusValueSet.js';
-import { HistoryAbsentReasonValueSet } from '../fhirValueSets/HistoryAbsentReasonValueSet.js';
-import { V3FamilyMemberValueSet } from '../fhirValueSets/V3FamilyMemberValueSet.js';
-import { AdministrativeGenderValueSet } from '../fhirValueSets/AdministrativeGenderValueSet.js';
-import { ClinicalFindingsValueSet } from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { ConditionCodeValueSet, } from '../fhirValueSets/ConditionCodeValueSet.js';
+import { ConditionOutcomeValueSet, } from '../fhirValueSets/ConditionOutcomeValueSet.js';
+import { HistoryStatusValueSet, } from '../fhirValueSets/HistoryStatusValueSet.js';
+import { HistoryAbsentReasonValueSet, } from '../fhirValueSets/HistoryAbsentReasonValueSet.js';
+import { V3FamilyMemberValueSet, } from '../fhirValueSets/V3FamilyMemberValueSet.js';
+import { AdministrativeGenderValueSet, } from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { ClinicalFindingsValueSet, } from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The significant Conditions (or condition) that the family member had. This is a repeating section to allow a system to represent more than one condition per resource, though there is nothing stopping multiple resources - one per condition.
  */
@@ -17,8 +19,14 @@ export class FamilyMemberHistoryCondition extends fhir.BackboneElement {
     /**
      * Default constructor for FamilyMemberHistoryCondition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'FamilyMemberHistoryCondition';
+        this.__onsetIsChoice = true;
+        /**
+         * An area where general notes can be placed about this specific condition.
+         */
+        this.note = [];
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
@@ -29,25 +37,22 @@ export class FamilyMemberHistoryCondition extends fhir.BackboneElement {
             this.outcome = new fhir.CodeableConcept(source.outcome);
         }
         if (source['contributedToDeath']) {
-            this.contributedToDeath = source.contributedToDeath;
+            this.contributedToDeath = new fhir.FhirBoolean({ value: source.contributedToDeath });
         }
-        if (source['_contributedToDeath']) {
-            this._contributedToDeath = new fhir.FhirElement(source._contributedToDeath);
+        if (source['onset']) {
+            this.onset = source.onset;
         }
-        if (source['onsetAge']) {
-            this.onsetAge = new fhir.Age(source.onsetAge);
+        else if (source['onsetAge']) {
+            this.onset = new fhir.Age(source.onsetAge);
         }
-        if (source['onsetRange']) {
-            this.onsetRange = new fhir.Range(source.onsetRange);
+        else if (source['onsetRange']) {
+            this.onset = new fhir.Range(source.onsetRange);
         }
-        if (source['onsetPeriod']) {
-            this.onsetPeriod = new fhir.Period(source.onsetPeriod);
+        else if (source['onsetPeriod']) {
+            this.onset = new fhir.Period(source.onsetPeriod);
         }
-        if (source['onsetString']) {
-            this.onsetString = source.onsetString;
-        }
-        if (source['_onsetString']) {
-            this._onsetString = new fhir.FhirElement(source._onsetString);
+        else if (source['onsetString']) {
+            this.onset = new fhir.FhirString({ value: source.onsetString });
         }
         if (source['note']) {
             this.note = source.note.map((x) => new fhir.Annotation(x));
@@ -69,35 +74,29 @@ export class FamilyMemberHistoryCondition extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: FamilyMemberHistory.condition.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.CodeableConcept fhir: FamilyMemberHistory.condition.code:CodeableConcept", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["outcome"]) {
-            results.push(...this.outcome.doModelValidation());
+            outcome.issue.push(...this.outcome.doModelValidation().issue);
         }
-        if (this["_contributedToDeath"]) {
-            results.push(...this._contributedToDeath.doModelValidation());
-        }
-        if (this["onsetAge"]) {
-            results.push(...this.onsetAge.doModelValidation());
-        }
-        if (this["onsetRange"]) {
-            results.push(...this.onsetRange.doModelValidation());
-        }
-        if (this["onsetPeriod"]) {
-            results.push(...this.onsetPeriod.doModelValidation());
-        }
-        if (this["_onsetString"]) {
-            results.push(...this._onsetString.doModelValidation());
+        if (this["contributedToDeath"]) {
+            outcome.issue.push(...this.contributedToDeath.doModelValidation().issue);
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -107,32 +106,55 @@ export class FamilyMemberHistory extends fhir.DomainResource {
     /**
      * Default constructor for FamilyMemberHistory - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'FamilyMemberHistory';
+        /**
+         * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+         */
+        this.identifier = [];
+        /**
+         * The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this FamilyMemberHistory.
+         */
+        this.instantiatesCanonical = [];
+        /**
+         * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
+         */
+        this.instantiatesUri = [];
+        this.__bornIsChoice = true;
+        this.__ageIsChoice = true;
+        this.__deceasedIsChoice = true;
+        /**
+         * Textual reasons can be captured using reasonCode.text.
+         */
+        this.reasonCode = [];
+        /**
+         * Indicates a Condition, Observation, AllergyIntolerance, or QuestionnaireResponse that justifies this family member history event.
+         */
+        this.reasonReference = [];
+        /**
+         * This property allows a non condition-specific note to the made about the related person. Ideally, the note would be in the condition property, but this is not always possible.
+         */
+        this.note = [];
+        /**
+         * The significant Conditions (or condition) that the family member had. This is a repeating section to allow a system to represent more than one condition per resource, though there is nothing stopping multiple resources - one per condition.
+         */
+        this.condition = [];
         this.resourceType = 'FamilyMemberHistory';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['instantiatesCanonical']) {
-            this.instantiatesCanonical = source.instantiatesCanonical.map((x) => (x));
-        }
-        if (source['_instantiatesCanonical']) {
-            this._instantiatesCanonical = source._instantiatesCanonical.map((x) => new fhir.FhirElement(x));
+            this.instantiatesCanonical = source.instantiatesCanonical.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['instantiatesUri']) {
-            this.instantiatesUri = source.instantiatesUri.map((x) => (x));
-        }
-        if (source['_instantiatesUri']) {
-            this._instantiatesUri = source._instantiatesUri.map((x) => new fhir.FhirElement(x));
+            this.instantiatesUri = source.instantiatesUri.map((x) => new fhir.FhirUri({ value: x }));
         }
         if (source['status']) {
             this.status = source.status;
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['dataAbsentReason']) {
             this.dataAbsentReason = new fhir.CodeableConcept(source.dataAbsentReason);
@@ -144,16 +166,10 @@ export class FamilyMemberHistory extends fhir.DomainResource {
             this.patient = null;
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['relationship']) {
             this.relationship = new fhir.CodeableConcept(source.relationship);
@@ -164,62 +180,50 @@ export class FamilyMemberHistory extends fhir.DomainResource {
         if (source['sex']) {
             this.sex = new fhir.CodeableConcept(source.sex);
         }
-        if (source['bornPeriod']) {
-            this.bornPeriod = new fhir.Period(source.bornPeriod);
+        if (source['born']) {
+            this.born = source.born;
         }
-        if (source['bornDate']) {
-            this.bornDate = source.bornDate;
+        else if (source['bornPeriod']) {
+            this.born = new fhir.Period(source.bornPeriod);
         }
-        if (source['_bornDate']) {
-            this._bornDate = new fhir.FhirElement(source._bornDate);
+        else if (source['bornDate']) {
+            this.born = new fhir.FhirDate({ value: source.bornDate });
         }
-        if (source['bornString']) {
-            this.bornString = source.bornString;
+        else if (source['bornString']) {
+            this.born = new fhir.FhirString({ value: source.bornString });
         }
-        if (source['_bornString']) {
-            this._bornString = new fhir.FhirElement(source._bornString);
+        if (source['age']) {
+            this.age = source.age;
         }
-        if (source['ageAge']) {
-            this.ageAge = new fhir.Age(source.ageAge);
+        else if (source['ageAge']) {
+            this.age = new fhir.Age(source.ageAge);
         }
-        if (source['ageRange']) {
-            this.ageRange = new fhir.Range(source.ageRange);
+        else if (source['ageRange']) {
+            this.age = new fhir.Range(source.ageRange);
         }
-        if (source['ageString']) {
-            this.ageString = source.ageString;
-        }
-        if (source['_ageString']) {
-            this._ageString = new fhir.FhirElement(source._ageString);
+        else if (source['ageString']) {
+            this.age = new fhir.FhirString({ value: source.ageString });
         }
         if (source['estimatedAge']) {
-            this.estimatedAge = source.estimatedAge;
+            this.estimatedAge = new fhir.FhirBoolean({ value: source.estimatedAge });
         }
-        if (source['_estimatedAge']) {
-            this._estimatedAge = new fhir.FhirElement(source._estimatedAge);
+        if (source['deceased']) {
+            this.deceased = source.deceased;
         }
-        if (source['deceasedBoolean']) {
-            this.deceasedBoolean = source.deceasedBoolean;
+        else if (source['deceasedBoolean']) {
+            this.deceased = new fhir.FhirBoolean({ value: source.deceasedBoolean });
         }
-        if (source['_deceasedBoolean']) {
-            this._deceasedBoolean = new fhir.FhirElement(source._deceasedBoolean);
+        else if (source['deceasedAge']) {
+            this.deceased = new fhir.Age(source.deceasedAge);
         }
-        if (source['deceasedAge']) {
-            this.deceasedAge = new fhir.Age(source.deceasedAge);
+        else if (source['deceasedRange']) {
+            this.deceased = new fhir.Range(source.deceasedRange);
         }
-        if (source['deceasedRange']) {
-            this.deceasedRange = new fhir.Range(source.deceasedRange);
+        else if (source['deceasedDate']) {
+            this.deceased = new fhir.FhirDate({ value: source.deceasedDate });
         }
-        if (source['deceasedDate']) {
-            this.deceasedDate = source.deceasedDate;
-        }
-        if (source['_deceasedDate']) {
-            this._deceasedDate = new fhir.FhirElement(source._deceasedDate);
-        }
-        if (source['deceasedString']) {
-            this.deceasedString = source.deceasedString;
-        }
-        if (source['_deceasedString']) {
-            this._deceasedString = new fhir.FhirElement(source._deceasedString);
+        else if (source['deceasedString']) {
+            this.deceased = new fhir.FhirString({ value: source.deceasedString });
         }
         if (source['reasonCode']) {
             this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x));
@@ -268,98 +272,68 @@ export class FamilyMemberHistory extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: FamilyMemberHistory.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'FamilyMemberHistory' fhir: FamilyMemberHistory.resourceType:'FamilyMemberHistory'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instantiatesCanonical"]) {
-            this._instantiatesCanonical.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["instantiatesCanonical"]) {
+            this.instantiatesCanonical.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instantiatesUri"]) {
-            this._instantiatesUri.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["instantiatesUri"]) {
+            this.instantiatesUri.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: FamilyMemberHistory.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:HistoryStatusValueSetEnum fhir: FamilyMemberHistory.status:code", }));
         }
         if (this["dataAbsentReason"]) {
-            results.push(...this.dataAbsentReason.doModelValidation());
+            outcome.issue.push(...this.dataAbsentReason.doModelValidation().issue);
         }
-        if (!this["patient"]) {
-            results.push(["patient", 'Missing required element: FamilyMemberHistory.patient']);
+        if (!this['patient']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property patient:fhir.Reference fhir: FamilyMemberHistory.patient:Reference", }));
         }
         if (this["patient"]) {
-            results.push(...this.patient.doModelValidation());
+            outcome.issue.push(...this.patient.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (!this["relationship"]) {
-            results.push(["relationship", 'Missing required element: FamilyMemberHistory.relationship']);
+        if (!this['relationship']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property relationship:fhir.CodeableConcept fhir: FamilyMemberHistory.relationship:CodeableConcept", }));
         }
         if (this["relationship"]) {
-            results.push(...this.relationship.doModelValidation());
+            outcome.issue.push(...this.relationship.doModelValidation().issue);
         }
         if (this["sex"]) {
-            results.push(...this.sex.doModelValidation());
+            outcome.issue.push(...this.sex.doModelValidation().issue);
         }
-        if (this["bornPeriod"]) {
-            results.push(...this.bornPeriod.doModelValidation());
-        }
-        if (this["_bornDate"]) {
-            results.push(...this._bornDate.doModelValidation());
-        }
-        if (this["_bornString"]) {
-            results.push(...this._bornString.doModelValidation());
-        }
-        if (this["ageAge"]) {
-            results.push(...this.ageAge.doModelValidation());
-        }
-        if (this["ageRange"]) {
-            results.push(...this.ageRange.doModelValidation());
-        }
-        if (this["_ageString"]) {
-            results.push(...this._ageString.doModelValidation());
-        }
-        if (this["_estimatedAge"]) {
-            results.push(...this._estimatedAge.doModelValidation());
-        }
-        if (this["_deceasedBoolean"]) {
-            results.push(...this._deceasedBoolean.doModelValidation());
-        }
-        if (this["deceasedAge"]) {
-            results.push(...this.deceasedAge.doModelValidation());
-        }
-        if (this["deceasedRange"]) {
-            results.push(...this.deceasedRange.doModelValidation());
-        }
-        if (this["_deceasedDate"]) {
-            results.push(...this._deceasedDate.doModelValidation());
-        }
-        if (this["_deceasedString"]) {
-            results.push(...this._deceasedString.doModelValidation());
+        if (this["estimatedAge"]) {
+            outcome.issue.push(...this.estimatedAge.doModelValidation().issue);
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["condition"]) {
-            this.condition.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.condition.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=FamilyMemberHistory.js.map

@@ -3,10 +3,12 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ClinicalImpression
 import * as fhir from '../fhir.js';
-import { InvestigationSetsValueSet } from '../fhirValueSets/InvestigationSetsValueSet.js';
-import { ConditionCodeValueSet } from '../fhirValueSets/ConditionCodeValueSet.js';
-import { ClinicalimpressionStatusValueSet } from '../fhirValueSets/ClinicalimpressionStatusValueSet.js';
-import { ClinicalimpressionPrognosisValueSet } from '../fhirValueSets/ClinicalimpressionPrognosisValueSet.js';
+import { InvestigationSetsValueSet, } from '../fhirValueSets/InvestigationSetsValueSet.js';
+import { ConditionCodeValueSet, } from '../fhirValueSets/ConditionCodeValueSet.js';
+import { ClinicalimpressionStatusValueSet, } from '../fhirValueSets/ClinicalimpressionStatusValueSet.js';
+import { ClinicalimpressionPrognosisValueSet, } from '../fhirValueSets/ClinicalimpressionPrognosisValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * One or more sets of investigations (signs, symptoms, etc.). The actual grouping of investigations varies greatly depending on the type and context of the assessment. These investigations may include data generated during the assessment process, or data previously generated and recorded that is pertinent to the outcomes.
  */
@@ -14,8 +16,13 @@ export class ClinicalImpressionInvestigation extends fhir.BackboneElement {
     /**
      * Default constructor for ClinicalImpressionInvestigation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ClinicalImpressionInvestigation';
+        /**
+         * Most investigations are observations of one kind or another but some other specific types of data collection resources can also be used.
+         */
+        this.item = [];
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
@@ -36,17 +43,23 @@ export class ClinicalImpressionInvestigation extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: ClinicalImpression.investigation.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.CodeableConcept fhir: ClinicalImpression.investigation.code:CodeableConcept", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["item"]) {
-            this.item.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.item.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -56,8 +69,9 @@ export class ClinicalImpressionFinding extends fhir.BackboneElement {
     /**
      * Default constructor for ClinicalImpressionFinding - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ClinicalImpressionFinding';
         if (source['itemCodeableConcept']) {
             this.itemCodeableConcept = new fhir.CodeableConcept(source.itemCodeableConcept);
         }
@@ -65,10 +79,7 @@ export class ClinicalImpressionFinding extends fhir.BackboneElement {
             this.itemReference = new fhir.Reference(source.itemReference);
         }
         if (source['basis']) {
-            this.basis = source.basis;
-        }
-        if (source['_basis']) {
-            this._basis = new fhir.FhirElement(source._basis);
+            this.basis = new fhir.FhirString({ value: source.basis });
         }
     }
     /**
@@ -81,17 +92,23 @@ export class ClinicalImpressionFinding extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["itemCodeableConcept"]) {
-            results.push(...this.itemCodeableConcept.doModelValidation());
+            outcome.issue.push(...this.itemCodeableConcept.doModelValidation().issue);
         }
         if (this["itemReference"]) {
-            results.push(...this.itemReference.doModelValidation());
+            outcome.issue.push(...this.itemReference.doModelValidation().issue);
         }
-        if (this["_basis"]) {
-            results.push(...this._basis.doModelValidation());
+        if (this["basis"]) {
+            outcome.issue.push(...this.basis.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -101,8 +118,46 @@ export class ClinicalImpression extends fhir.DomainResource {
     /**
      * Default constructor for ClinicalImpression - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ClinicalImpression';
+        /**
+         * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+         */
+        this.identifier = [];
+        this.__effectiveIsChoice = true;
+        /**
+         * e.g. The patient is a pregnant, has congestive heart failure, has an ‎Adenocarcinoma, and is allergic to penicillin.
+         */
+        this.problem = [];
+        /**
+         * One or more sets of investigations (signs, symptoms, etc.). The actual grouping of investigations varies greatly depending on the type and context of the assessment. These investigations may include data generated during the assessment process, or data previously generated and recorded that is pertinent to the outcomes.
+         */
+        this.investigation = [];
+        /**
+         * Reference to a specific published clinical protocol that was followed during this assessment, and/or that provides evidence in support of the diagnosis.
+         */
+        this.protocol = [];
+        /**
+         * Specific findings or diagnoses that were considered likely or relevant to ongoing treatment.
+         */
+        this.finding = [];
+        /**
+         * Estimate of likely outcome.
+         */
+        this.prognosisCodeableConcept = [];
+        /**
+         * RiskAssessment expressing likely outcome.
+         */
+        this.prognosisReference = [];
+        /**
+         * Information supporting the clinical impression.
+         */
+        this.supportingInfo = [];
+        /**
+         * Don't use this element for content that should more properly appear as one of the specific elements of the impression.
+         */
+        this.note = [];
         this.resourceType = 'ClinicalImpression';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -113,9 +168,6 @@ export class ClinicalImpression extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['statusReason']) {
             this.statusReason = new fhir.CodeableConcept(source.statusReason);
         }
@@ -123,10 +175,7 @@ export class ClinicalImpression extends fhir.DomainResource {
             this.code = new fhir.CodeableConcept(source.code);
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['subject']) {
             this.subject = new fhir.Reference(source.subject);
@@ -137,20 +186,17 @@ export class ClinicalImpression extends fhir.DomainResource {
         if (source['encounter']) {
             this.encounter = new fhir.Reference(source.encounter);
         }
-        if (source['effectiveDateTime']) {
-            this.effectiveDateTime = source.effectiveDateTime;
+        if (source['effective']) {
+            this.effective = source.effective;
         }
-        if (source['_effectiveDateTime']) {
-            this._effectiveDateTime = new fhir.FhirElement(source._effectiveDateTime);
+        else if (source['effectiveDateTime']) {
+            this.effective = new fhir.FhirDateTime({ value: source.effectiveDateTime });
         }
-        if (source['effectivePeriod']) {
-            this.effectivePeriod = new fhir.Period(source.effectivePeriod);
+        else if (source['effectivePeriod']) {
+            this.effective = new fhir.Period(source.effectivePeriod);
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['assessor']) {
             this.assessor = new fhir.Reference(source.assessor);
@@ -165,16 +211,10 @@ export class ClinicalImpression extends fhir.DomainResource {
             this.investigation = source.investigation.map((x) => new fhir.ClinicalImpressionInvestigation(x));
         }
         if (source['protocol']) {
-            this.protocol = source.protocol.map((x) => (x));
-        }
-        if (source['_protocol']) {
-            this._protocol = source._protocol.map((x) => new fhir.FhirElement(x));
+            this.protocol = source.protocol.map((x) => new fhir.FhirUri({ value: x }));
         }
         if (source['summary']) {
-            this.summary = source.summary;
-        }
-        if (source['_summary']) {
-            this._summary = new fhir.FhirElement(source._summary);
+            this.summary = new fhir.FhirString({ value: source.summary });
         }
         if (source['finding']) {
             this.finding = source.finding.map((x) => new fhir.ClinicalImpressionFinding(x));
@@ -208,80 +248,77 @@ export class ClinicalImpression extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: ClinicalImpression.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'ClinicalImpression' fhir: ClinicalImpression.resourceType:'ClinicalImpression'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: ClinicalImpression.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:ClinicalimpressionStatusValueSetEnum fhir: ClinicalImpression.status:code", }));
         }
         if (this["statusReason"]) {
-            results.push(...this.statusReason.doModelValidation());
+            outcome.issue.push(...this.statusReason.doModelValidation().issue);
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (!this["subject"]) {
-            results.push(["subject", 'Missing required element: ClinicalImpression.subject']);
+        if (!this['subject']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property subject:fhir.Reference fhir: ClinicalImpression.subject:Reference", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_effectiveDateTime"]) {
-            results.push(...this._effectiveDateTime.doModelValidation());
-        }
-        if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
-        }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
         if (this["assessor"]) {
-            results.push(...this.assessor.doModelValidation());
+            outcome.issue.push(...this.assessor.doModelValidation().issue);
         }
         if (this["previous"]) {
-            results.push(...this.previous.doModelValidation());
+            outcome.issue.push(...this.previous.doModelValidation().issue);
         }
         if (this["problem"]) {
-            this.problem.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.problem.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["investigation"]) {
-            this.investigation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.investigation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_protocol"]) {
-            this._protocol.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["protocol"]) {
+            this.protocol.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_summary"]) {
-            results.push(...this._summary.doModelValidation());
+        if (this["summary"]) {
+            outcome.issue.push(...this.summary.doModelValidation().issue);
         }
         if (this["finding"]) {
-            this.finding.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.finding.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["prognosisCodeableConcept"]) {
-            this.prognosisCodeableConcept.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.prognosisCodeableConcept.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["prognosisReference"]) {
-            this.prognosisReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.prognosisReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["supportingInfo"]) {
-            this.supportingInfo.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.supportingInfo.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ClinicalImpression.js.map

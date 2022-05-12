@@ -3,73 +3,61 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: EnrollmentResponse
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { FmStatusValueSet, FmStatusValueSetType, FmStatusValueSetEnum } from '../fhirValueSets/FmStatusValueSet.js'
-import { RemittanceOutcomeValueSet, RemittanceOutcomeValueSetType, RemittanceOutcomeValueSetEnum } from '../fhirValueSets/RemittanceOutcomeValueSet.js'
-
+import { FmStatusValueSet, FmStatusValueSetType,} from '../fhirValueSets/FmStatusValueSet.js';
+import { FmStatusValueSetEnum } from '../valueSetEnums.js';
+import { RemittanceOutcomeValueSet, RemittanceOutcomeValueSetType,} from '../fhirValueSets/RemittanceOutcomeValueSet.js';
+import { RemittanceOutcomeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * This resource provides enrollment and plan details from the processing of an EnrollmentRequest resource.
+ * Valid arguments for the EnrollmentResponse type.
  */
-export type IEnrollmentResponse = fhir.IDomainResource & { 
+export interface EnrollmentResponseArgs extends fhir.DomainResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "EnrollmentResponse";
+  resourceType: "EnrollmentResponse"|undefined;
   /**
    * The Response business identifier.
    */
-  identifier?: fhir.IIdentifier[]|undefined;
+  identifier?: fhir.IdentifierArgs[]|undefined;
   /**
    * This element is labeled as a modifier because the status contains codes that mark the response as not currently valid.
    */
   status?: FmStatusValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: EnrollmentResponse.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
    * Original request resource reference.
    */
-  request?: fhir.IReference|undefined;
+  request?: fhir.ReferenceArgs|undefined;
   /**
    * Processing status: error, complete.
    */
   outcome?: RemittanceOutcomeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: EnrollmentResponse.outcome
-   */
-  _outcome?: fhir.IFhirElement|undefined;
-  /**
    * A description of the status of the adjudication.
    */
-  disposition?: string|undefined;
-  /**
-   * Extended properties for primitive element: EnrollmentResponse.disposition
-   */
-  _disposition?: fhir.IFhirElement|undefined;
+  disposition?: fhir.FhirString|string|undefined;
   /**
    * The date when the enclosed suite of services were performed or completed.
    */
-  created?: string|undefined;
-  /**
-   * Extended properties for primitive element: EnrollmentResponse.created
-   */
-  _created?: fhir.IFhirElement|undefined;
+  created?: fhir.FhirDateTime|string|undefined;
   /**
    * The Insurer who produced this adjudicated response.
    */
-  organization?: fhir.IReference|undefined;
+  organization?: fhir.ReferenceArgs|undefined;
   /**
    * The practitioner who is responsible for the services rendered to the patient.
    */
-  requestProvider?: fhir.IReference|undefined;
+  requestProvider?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * This resource provides enrollment and plan details from the processing of an EnrollmentRequest resource.
  */
-export class EnrollmentResponse extends fhir.DomainResource implements IEnrollmentResponse {
+export class EnrollmentResponse extends fhir.DomainResource {
+  readonly __dataType:string = 'EnrollmentResponse';
   /**
    * Resource Type Name
    */
@@ -77,15 +65,11 @@ export class EnrollmentResponse extends fhir.DomainResource implements IEnrollme
   /**
    * The Response business identifier.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains codes that mark the response as not currently valid.
    */
   public status?: FmStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: EnrollmentResponse.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * Original request resource reference.
    */
@@ -95,25 +79,13 @@ export class EnrollmentResponse extends fhir.DomainResource implements IEnrollme
    */
   public outcome?: RemittanceOutcomeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: EnrollmentResponse.outcome
-   */
-  public _outcome?: fhir.FhirElement|undefined;
-  /**
    * A description of the status of the adjudication.
    */
-  public disposition?: string|undefined;
-  /**
-   * Extended properties for primitive element: EnrollmentResponse.disposition
-   */
-  public _disposition?: fhir.FhirElement|undefined;
+  public disposition?: fhir.FhirString|undefined;
   /**
    * The date when the enclosed suite of services were performed or completed.
    */
-  public created?: string|undefined;
-  /**
-   * Extended properties for primitive element: EnrollmentResponse.created
-   */
-  public _created?: fhir.FhirElement|undefined;
+  public created?: fhir.FhirDateTime|undefined;
   /**
    * The Insurer who produced this adjudicated response.
    */
@@ -125,21 +97,17 @@ export class EnrollmentResponse extends fhir.DomainResource implements IEnrollme
   /**
    * Default constructor for EnrollmentResponse - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IEnrollmentResponse> = { }) {
-    super(source);
+  constructor(source:Partial<EnrollmentResponseArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'EnrollmentResponse';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['request']) { this.request = new fhir.Reference(source.request!); }
+    if (source['request']) { this.request = new fhir.Reference(source.request); }
     if (source['outcome']) { this.outcome = source.outcome; }
-    if (source['_outcome']) { this._outcome = new fhir.FhirElement(source._outcome!); }
-    if (source['disposition']) { this.disposition = source.disposition; }
-    if (source['_disposition']) { this._disposition = new fhir.FhirElement(source._disposition!); }
-    if (source['created']) { this.created = source.created; }
-    if (source['_created']) { this._created = new fhir.FhirElement(source._created!); }
-    if (source['organization']) { this.organization = new fhir.Reference(source.organization!); }
-    if (source['requestProvider']) { this.requestProvider = new fhir.Reference(source.requestProvider!); }
+    if (source['disposition']) { this.disposition = new fhir.FhirString({value: source.disposition}); }
+    if (source['created']) { this.created = new fhir.FhirDateTime({value: source.created}); }
+    if (source['organization']) { this.organization = new fhir.Reference(source.organization); }
+    if (source['requestProvider']) { this.requestProvider = new fhir.Reference(source.requestProvider); }
   }
   /**
    * Required-bound Value Set for status
@@ -156,17 +124,23 @@ export class EnrollmentResponse extends fhir.DomainResource implements IEnrollme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: EnrollmentResponse.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["request"]) { results.push(...this.request.doModelValidation()); }
-    if (this["_outcome"]) { results.push(...this._outcome.doModelValidation()); }
-    if (this["_disposition"]) { results.push(...this._disposition.doModelValidation()); }
-    if (this["_created"]) { results.push(...this._created.doModelValidation()); }
-    if (this["organization"]) { results.push(...this.organization.doModelValidation()); }
-    if (this["requestProvider"]) { results.push(...this.requestProvider.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'EnrollmentResponse' fhir: EnrollmentResponse.resourceType:'EnrollmentResponse'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["request"]) { outcome.issue!.push(...this.request.doModelValidation().issue!); }
+    if (this["disposition"]) { outcome.issue!.push(...this.disposition.doModelValidation().issue!); }
+    if (this["created"]) { outcome.issue!.push(...this.created.doModelValidation().issue!); }
+    if (this["organization"]) { outcome.issue!.push(...this.organization.doModelValidation().issue!); }
+    if (this["requestProvider"]) { outcome.issue!.push(...this.requestProvider.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

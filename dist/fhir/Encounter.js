@@ -3,22 +3,24 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Encounter
 import * as fhir from '../fhir.js';
-import { EncounterStatusValueSet } from '../fhirValueSets/EncounterStatusValueSet.js';
-import { V3ActEncounterCodeValueSet } from '../fhirValueSets/V3ActEncounterCodeValueSet.js';
-import { EncounterParticipantTypeValueSet } from '../fhirValueSets/EncounterParticipantTypeValueSet.js';
-import { DiagnosisRoleValueSet } from '../fhirValueSets/DiagnosisRoleValueSet.js';
-import { EncounterAdmitSourceValueSet } from '../fhirValueSets/EncounterAdmitSourceValueSet.js';
-import { V20092ValueSet } from '../fhirValueSets/V20092ValueSet.js';
-import { EncounterDietValueSet } from '../fhirValueSets/EncounterDietValueSet.js';
-import { EncounterSpecialCourtesyValueSet } from '../fhirValueSets/EncounterSpecialCourtesyValueSet.js';
-import { EncounterSpecialArrangementsValueSet } from '../fhirValueSets/EncounterSpecialArrangementsValueSet.js';
-import { EncounterDischargeDispositionValueSet } from '../fhirValueSets/EncounterDischargeDispositionValueSet.js';
-import { EncounterLocationStatusValueSet } from '../fhirValueSets/EncounterLocationStatusValueSet.js';
-import { LocationPhysicalTypeValueSet } from '../fhirValueSets/LocationPhysicalTypeValueSet.js';
-import { EncounterTypeValueSet } from '../fhirValueSets/EncounterTypeValueSet.js';
-import { ServiceTypeValueSet } from '../fhirValueSets/ServiceTypeValueSet.js';
-import { V3ActPriorityValueSet } from '../fhirValueSets/V3ActPriorityValueSet.js';
-import { EncounterReasonValueSet } from '../fhirValueSets/EncounterReasonValueSet.js';
+import { EncounterStatusValueSet, } from '../fhirValueSets/EncounterStatusValueSet.js';
+import { V3ActEncounterCodeValueSet, } from '../fhirValueSets/V3ActEncounterCodeValueSet.js';
+import { EncounterParticipantTypeValueSet, } from '../fhirValueSets/EncounterParticipantTypeValueSet.js';
+import { DiagnosisRoleValueSet, } from '../fhirValueSets/DiagnosisRoleValueSet.js';
+import { EncounterAdmitSourceValueSet, } from '../fhirValueSets/EncounterAdmitSourceValueSet.js';
+import { V20092ValueSet, } from '../fhirValueSets/V20092ValueSet.js';
+import { EncounterDietValueSet, } from '../fhirValueSets/EncounterDietValueSet.js';
+import { EncounterSpecialCourtesyValueSet, } from '../fhirValueSets/EncounterSpecialCourtesyValueSet.js';
+import { EncounterSpecialArrangementsValueSet, } from '../fhirValueSets/EncounterSpecialArrangementsValueSet.js';
+import { EncounterDischargeDispositionValueSet, } from '../fhirValueSets/EncounterDischargeDispositionValueSet.js';
+import { EncounterLocationStatusValueSet, } from '../fhirValueSets/EncounterLocationStatusValueSet.js';
+import { LocationPhysicalTypeValueSet, } from '../fhirValueSets/LocationPhysicalTypeValueSet.js';
+import { EncounterTypeValueSet, } from '../fhirValueSets/EncounterTypeValueSet.js';
+import { ServiceTypeValueSet, } from '../fhirValueSets/ServiceTypeValueSet.js';
+import { V3ActPriorityValueSet, } from '../fhirValueSets/V3ActPriorityValueSet.js';
+import { EncounterReasonValueSet, } from '../fhirValueSets/EncounterReasonValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The current status is always found in the current version of the resource, not the status history.
  */
@@ -26,16 +28,14 @@ export class EncounterStatusHistory extends fhir.BackboneElement {
     /**
      * Default constructor for EncounterStatusHistory - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EncounterStatusHistory';
         if (source['status']) {
             this.status = source.status;
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['period']) {
             this.period = new fhir.Period(source.period);
@@ -54,20 +54,23 @@ export class EncounterStatusHistory extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Encounter.statusHistory.status']);
+        var outcome = super.doModelValidation();
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:EncounterStatusValueSetEnum fhir: Encounter.statusHistory.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
-        }
-        if (!this["period"]) {
-            results.push(["period", 'Missing required element: Encounter.statusHistory.period']);
+        if (!this['period']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property period:fhir.Period fhir: Encounter.statusHistory.period:Period", }));
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -77,8 +80,9 @@ export class EncounterClassHistory extends fhir.BackboneElement {
     /**
      * Default constructor for EncounterClassHistory - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EncounterClassHistory';
         if (source['class']) {
             this.class = new fhir.Coding(source.class);
         }
@@ -102,20 +106,26 @@ export class EncounterClassHistory extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["class"]) {
-            results.push(["class", 'Missing required element: Encounter.classHistory.class']);
+        var outcome = super.doModelValidation();
+        if (!this['class']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property class:fhir.Coding fhir: Encounter.classHistory.class:Coding", }));
         }
         if (this["class"]) {
-            results.push(...this.class.doModelValidation());
+            outcome.issue.push(...this.class.doModelValidation().issue);
         }
-        if (!this["period"]) {
-            results.push(["period", 'Missing required element: Encounter.classHistory.period']);
+        if (!this['period']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property period:fhir.Period fhir: Encounter.classHistory.period:Period", }));
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -125,8 +135,13 @@ export class EncounterParticipant extends fhir.BackboneElement {
     /**
      * Default constructor for EncounterParticipant - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EncounterParticipant';
+        /**
+         * The participant type indicates how an individual participates in an encounter. It includes non-practitioner participants, and for practitioners this is to describe the action type in the context of this encounter (e.g. Admitting Dr, Attending Dr, Translator, Consulting Dr). This is different to the practitioner roles which are functional roles, derived from terms of employment, education, licensing, etc.
+         */
+        this.type = [];
         if (source['type']) {
             this.type = source.type.map((x) => new fhir.CodeableConcept(x));
         }
@@ -147,17 +162,23 @@ export class EncounterParticipant extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["type"]) {
-            this.type.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.type.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
         if (this["individual"]) {
-            results.push(...this.individual.doModelValidation());
+            outcome.issue.push(...this.individual.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -167,8 +188,9 @@ export class EncounterDiagnosis extends fhir.BackboneElement {
     /**
      * Default constructor for EncounterDiagnosis - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EncounterDiagnosis';
         if (source['condition']) {
             this.condition = new fhir.Reference(source.condition);
         }
@@ -179,10 +201,7 @@ export class EncounterDiagnosis extends fhir.BackboneElement {
             this.use = new fhir.CodeableConcept(source.use);
         }
         if (source['rank']) {
-            this.rank = source.rank;
-        }
-        if (source['_rank']) {
-            this._rank = new fhir.FhirElement(source._rank);
+            this.rank = new fhir.FhirPositiveInt({ value: source.rank });
         }
     }
     /**
@@ -195,20 +214,26 @@ export class EncounterDiagnosis extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["condition"]) {
-            results.push(["condition", 'Missing required element: Encounter.diagnosis.condition']);
+        var outcome = super.doModelValidation();
+        if (!this['condition']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property condition:fhir.Reference fhir: Encounter.diagnosis.condition:Reference", }));
         }
         if (this["condition"]) {
-            results.push(...this.condition.doModelValidation());
+            outcome.issue.push(...this.condition.doModelValidation().issue);
         }
         if (this["use"]) {
-            results.push(...this.use.doModelValidation());
+            outcome.issue.push(...this.use.doModelValidation().issue);
         }
-        if (this["_rank"]) {
-            results.push(...this._rank.doModelValidation());
+        if (this["rank"]) {
+            outcome.issue.push(...this.rank.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -219,8 +244,21 @@ export class EncounterHospitalization extends fhir.BackboneElement {
     /**
      * Default constructor for EncounterHospitalization - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EncounterHospitalization';
+        /**
+         * For example, a patient may request both a dairy-free and nut-free diet preference (not mutually exclusive).
+         */
+        this.dietPreference = [];
+        /**
+         * Special courtesies (VIP, board member).
+         */
+        this.specialCourtesy = [];
+        /**
+         * Any special requests that have been made for this hospitalization encounter, such as the provision of specific equipment or other things.
+         */
+        this.specialArrangement = [];
         if (source['preAdmissionIdentifier']) {
             this.preAdmissionIdentifier = new fhir.Identifier(source.preAdmissionIdentifier);
         }
@@ -289,35 +327,41 @@ export class EncounterHospitalization extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["preAdmissionIdentifier"]) {
-            results.push(...this.preAdmissionIdentifier.doModelValidation());
+            outcome.issue.push(...this.preAdmissionIdentifier.doModelValidation().issue);
         }
         if (this["origin"]) {
-            results.push(...this.origin.doModelValidation());
+            outcome.issue.push(...this.origin.doModelValidation().issue);
         }
         if (this["admitSource"]) {
-            results.push(...this.admitSource.doModelValidation());
+            outcome.issue.push(...this.admitSource.doModelValidation().issue);
         }
         if (this["reAdmission"]) {
-            results.push(...this.reAdmission.doModelValidation());
+            outcome.issue.push(...this.reAdmission.doModelValidation().issue);
         }
         if (this["dietPreference"]) {
-            this.dietPreference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.dietPreference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["specialCourtesy"]) {
-            this.specialCourtesy.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.specialCourtesy.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["specialArrangement"]) {
-            this.specialArrangement.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.specialArrangement.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["destination"]) {
-            results.push(...this.destination.doModelValidation());
+            outcome.issue.push(...this.destination.doModelValidation().issue);
         }
         if (this["dischargeDisposition"]) {
-            results.push(...this.dischargeDisposition.doModelValidation());
+            outcome.issue.push(...this.dischargeDisposition.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -327,8 +371,9 @@ export class EncounterLocation extends fhir.BackboneElement {
     /**
      * Default constructor for EncounterLocation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EncounterLocation';
         if (source['location']) {
             this.location = new fhir.Reference(source.location);
         }
@@ -337,9 +382,6 @@ export class EncounterLocation extends fhir.BackboneElement {
         }
         if (source['status']) {
             this.status = source.status;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['physicalType']) {
             this.physicalType = new fhir.CodeableConcept(source.physicalType);
@@ -364,23 +406,26 @@ export class EncounterLocation extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["location"]) {
-            results.push(["location", 'Missing required element: Encounter.location.location']);
+        var outcome = super.doModelValidation();
+        if (!this['location']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property location:fhir.Reference fhir: Encounter.location.location:Reference", }));
         }
         if (this["location"]) {
-            results.push(...this.location.doModelValidation());
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+            outcome.issue.push(...this.location.doModelValidation().issue);
         }
         if (this["physicalType"]) {
-            results.push(...this.physicalType.doModelValidation());
+            outcome.issue.push(...this.physicalType.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -390,8 +435,61 @@ export class Encounter extends fhir.DomainResource {
     /**
      * Default constructor for Encounter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Encounter';
+        /**
+         * Identifier(s) by which this encounter is known.
+         */
+        this.identifier = [];
+        /**
+         * The current status is always found in the current version of the resource, not the status history.
+         */
+        this.statusHistory = [];
+        /**
+         * The class history permits the tracking of the encounters transitions without needing to go  through the resource history.  This would be used for a case where an admission starts of as an emergency encounter, then transitions into an inpatient scenario. Doing this and not restarting a new encounter ensures that any lab/diagnostic results can more easily follow the patient and not require re-processing and not get lost or cancelled during a kind of discharge from emergency to inpatient.
+         */
+        this.classHistory = [];
+        /**
+         * Since there are many ways to further classify encounters, this element is 0..*.
+         */
+        this.type = [];
+        /**
+         * Where a specific encounter should be classified as a part of a specific episode(s) of care this field should be used. This association can facilitate grouping of related encounters together for a specific purpose, such as government reporting, issue tracking, association via a common problem.  The association is recorded on the encounter as these are typically created after the episode of care and grouped on entry rather than editing the episode of care to append another encounter to it (the episode of care could span years).
+         */
+        this.episodeOfCare = [];
+        /**
+         * The request this encounter satisfies (e.g. incoming referral or procedure request).
+         */
+        this.basedOn = [];
+        /**
+         * The list of people responsible for providing the service.
+         */
+        this.participant = [];
+        /**
+         * The appointment that scheduled this encounter.
+         */
+        this.appointment = [];
+        /**
+         * For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 = primary diagnosis).
+         */
+        this.reasonCode = [];
+        /**
+         * For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 = primary diagnosis).
+         */
+        this.reasonReference = [];
+        /**
+         * The list of diagnosis relevant to this encounter.
+         */
+        this.diagnosis = [];
+        /**
+         * The billing system may choose to allocate billable items associated with the Encounter to different referenced Accounts based on internal business rules.
+         */
+        this.account = [];
+        /**
+         * Virtual encounters can be recorded in the Encounter by specifying a location reference to a location of type "kind" such as "client's home" and an encounter.class = "virtual".
+         */
+        this.location = [];
         this.resourceType = 'Encounter';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -401,9 +499,6 @@ export class Encounter extends fhir.DomainResource {
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['statusHistory']) {
             this.statusHistory = source.statusHistory.map((x) => new fhir.EncounterStatusHistory(x));
@@ -512,86 +607,89 @@ export class Encounter extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Encounter.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Encounter' fhir: Encounter.resourceType:'Encounter'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Encounter.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:EncounterStatusValueSetEnum fhir: Encounter.status:code", }));
         }
         if (this["statusHistory"]) {
-            this.statusHistory.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.statusHistory.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["class"]) {
-            results.push(["class", 'Missing required element: Encounter.class']);
+        if (!this['class']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property class:fhir.Coding fhir: Encounter.class:Coding", }));
         }
         if (this["class"]) {
-            results.push(...this.class.doModelValidation());
+            outcome.issue.push(...this.class.doModelValidation().issue);
         }
         if (this["classHistory"]) {
-            this.classHistory.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.classHistory.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["type"]) {
-            this.type.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.type.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["serviceType"]) {
-            results.push(...this.serviceType.doModelValidation());
+            outcome.issue.push(...this.serviceType.doModelValidation().issue);
         }
         if (this["priority"]) {
-            results.push(...this.priority.doModelValidation());
+            outcome.issue.push(...this.priority.doModelValidation().issue);
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["episodeOfCare"]) {
-            this.episodeOfCare.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.episodeOfCare.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["participant"]) {
-            this.participant.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.participant.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["appointment"]) {
-            this.appointment.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.appointment.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
         if (this["length"]) {
-            results.push(...this.length.doModelValidation());
+            outcome.issue.push(...this.length.doModelValidation().issue);
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["diagnosis"]) {
-            this.diagnosis.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.diagnosis.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["account"]) {
-            this.account.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.account.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["hospitalization"]) {
-            results.push(...this.hospitalization.doModelValidation());
+            outcome.issue.push(...this.hospitalization.doModelValidation().issue);
         }
         if (this["location"]) {
-            this.location.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.location.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["serviceProvider"]) {
-            results.push(...this.serviceProvider.doModelValidation());
+            outcome.issue.push(...this.serviceProvider.doModelValidation().issue);
         }
         if (this["partOf"]) {
-            results.push(...this.partOf.doModelValidation());
+            outcome.issue.push(...this.partOf.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Encounter.js.map

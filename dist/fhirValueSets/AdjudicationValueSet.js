@@ -75,39 +75,4 @@ export const AdjudicationValueSet = {
 /**
  * This value set includes a smattering of Adjudication Value codes which includes codes to indicate the amounts eligible under the plan, the amount of benefit, copays etc.
  */
-export var AdjudicationValueSetEnum;
-(function (AdjudicationValueSetEnum) {
-    /**
-     * benefit: Amount payable under the coverage
-     */
-    AdjudicationValueSetEnum["BenefitAmount"] = "benefit";
-    /**
-     * copay: Patient Co-Payment
-     */
-    AdjudicationValueSetEnum["CoPay"] = "copay";
-    /**
-     * deductible: Amount deducted from the eligible amount prior to adjudication.
-     */
-    AdjudicationValueSetEnum["Deductible"] = "deductible";
-    /**
-     * eligible: Amount of the change which is considered for adjudication.
-     */
-    AdjudicationValueSetEnum["EligibleAmount"] = "eligible";
-    /**
-     * eligpercent: Eligible Percentage.
-     */
-    AdjudicationValueSetEnum["EligiblePercent"] = "eligpercent";
-    /**
-     * submitted: The total submitted amount for the claim or group or line item.
-     */
-    AdjudicationValueSetEnum["SubmittedAmount"] = "submitted";
-    /**
-     * tax: The amount of tax.
-     */
-    AdjudicationValueSetEnum["Tax"] = "tax";
-    /**
-     * unallocdeduct: The amount of deductible which could not allocated to other line items.
-     */
-    AdjudicationValueSetEnum["UnallocatedDeductible"] = "unallocdeduct";
-})(AdjudicationValueSetEnum || (AdjudicationValueSetEnum = {}));
 //# sourceMappingURL=AdjudicationValueSet.js.map

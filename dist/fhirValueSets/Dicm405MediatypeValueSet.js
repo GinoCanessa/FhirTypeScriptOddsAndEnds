@@ -91,47 +91,4 @@ export const Dicm405MediatypeValueSet = {
 /**
  * Media Type Code
  */
-export var Dicm405MediatypeValueSetEnum;
-(function (Dicm405MediatypeValueSetEnum) {
-    /**
-     * 110010: Film type of output
-     */
-    Dicm405MediatypeValueSetEnum["Film"] = "110010";
-    /**
-     * 110030: A device that connects using the USB hard drive interface. These may be USB-Sticks, portable hard drives, and other technologies
-     */
-    Dicm405MediatypeValueSetEnum["USBDiskEmulation"] = "110030";
-    /**
-     * 110031: Email and email attachments used as a media for data transport
-     */
-    Dicm405MediatypeValueSetEnum["Email"] = "110031";
-    /**
-     * 110032: CD-R, CD-ROM, and CD-RW media used for data transport
-     */
-    Dicm405MediatypeValueSetEnum["CD"] = "110032";
-    /**
-     * 110033: DVD, DVD-RAM, and other DVD formatted media used for data transport
-     */
-    Dicm405MediatypeValueSetEnum["DVD"] = "110033";
-    /**
-     * 110034: Media that comply with the Compact Flash standard
-     */
-    Dicm405MediatypeValueSetEnum["CompactFlash"] = "110034";
-    /**
-     * 110035: Media that comply with the Multi-media Card standard
-     */
-    Dicm405MediatypeValueSetEnum["MultiMediaCard"] = "110035";
-    /**
-     * 110036: Media that comply with the Secure Digital Card standard
-     */
-    Dicm405MediatypeValueSetEnum["SecureDigitalCard"] = "110036";
-    /**
-     * 110037: URI Identifier for network or other resource, see RFC 3968
-     */
-    Dicm405MediatypeValueSetEnum["URI"] = "110037";
-    /**
-     * 110038: Any paper or similar document
-     */
-    Dicm405MediatypeValueSetEnum["PaperDocument"] = "110038";
-})(Dicm405MediatypeValueSetEnum || (Dicm405MediatypeValueSetEnum = {}));
 //# sourceMappingURL=Dicm405MediatypeValueSet.js.map

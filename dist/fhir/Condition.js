@@ -3,15 +3,17 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Condition
 import * as fhir from '../fhir.js';
-import { ConditionStageValueSet } from '../fhirValueSets/ConditionStageValueSet.js';
-import { ConditionStageTypeValueSet } from '../fhirValueSets/ConditionStageTypeValueSet.js';
-import { ManifestationOrSymptomValueSet } from '../fhirValueSets/ManifestationOrSymptomValueSet.js';
-import { ConditionClinicalValueSet } from '../fhirValueSets/ConditionClinicalValueSet.js';
-import { ConditionVerStatusValueSet } from '../fhirValueSets/ConditionVerStatusValueSet.js';
-import { ConditionCategoryValueSet } from '../fhirValueSets/ConditionCategoryValueSet.js';
-import { ConditionSeverityValueSet } from '../fhirValueSets/ConditionSeverityValueSet.js';
-import { ConditionCodeValueSet } from '../fhirValueSets/ConditionCodeValueSet.js';
-import { BodySiteValueSet } from '../fhirValueSets/BodySiteValueSet.js';
+import { ConditionStageValueSet, } from '../fhirValueSets/ConditionStageValueSet.js';
+import { ConditionStageTypeValueSet, } from '../fhirValueSets/ConditionStageTypeValueSet.js';
+import { ManifestationOrSymptomValueSet, } from '../fhirValueSets/ManifestationOrSymptomValueSet.js';
+import { ConditionClinicalValueSet, } from '../fhirValueSets/ConditionClinicalValueSet.js';
+import { ConditionVerStatusValueSet, } from '../fhirValueSets/ConditionVerStatusValueSet.js';
+import { ConditionCategoryValueSet, } from '../fhirValueSets/ConditionCategoryValueSet.js';
+import { ConditionSeverityValueSet, } from '../fhirValueSets/ConditionSeverityValueSet.js';
+import { ConditionCodeValueSet, } from '../fhirValueSets/ConditionCodeValueSet.js';
+import { BodySiteValueSet, } from '../fhirValueSets/BodySiteValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Clinical stage or grade of a condition. May include formal severity assessments.
  */
@@ -19,8 +21,13 @@ export class ConditionStage extends fhir.BackboneElement {
     /**
      * Default constructor for ConditionStage - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ConditionStage';
+        /**
+         * Reference to a formal record of the evidence on which the staging assessment is based.
+         */
+        this.assessment = [];
         if (source['summary']) {
             this.summary = new fhir.CodeableConcept(source.summary);
         }
@@ -47,17 +54,23 @@ export class ConditionStage extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["summary"]) {
-            results.push(...this.summary.doModelValidation());
+            outcome.issue.push(...this.summary.doModelValidation().issue);
         }
         if (this["assessment"]) {
-            this.assessment.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.assessment.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -67,8 +80,17 @@ export class ConditionEvidence extends fhir.BackboneElement {
     /**
      * Default constructor for ConditionEvidence - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ConditionEvidence';
+        /**
+         * A manifestation or symptom that led to the recording of this condition.
+         */
+        this.code = [];
+        /**
+         * Links to other relevant information, including pathology reports.
+         */
+        this.detail = [];
         if (source['code']) {
             this.code = source.code.map((x) => new fhir.CodeableConcept(x));
         }
@@ -86,14 +108,20 @@ export class ConditionEvidence extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["code"]) {
-            this.code.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.code.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["detail"]) {
-            this.detail.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.detail.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -103,8 +131,35 @@ export class Condition extends fhir.DomainResource {
     /**
      * Default constructor for Condition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Condition';
+        /**
+         * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+         */
+        this.identifier = [];
+        /**
+         * The categorization is often highly contextual and may appear poorly differentiated or not very useful in other contexts.
+         */
+        this.category = [];
+        /**
+         * Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.
+         */
+        this.bodySite = [];
+        this.__onsetIsChoice = true;
+        this.__abatementIsChoice = true;
+        /**
+         * Clinical stage or grade of a condition. May include formal severity assessments.
+         */
+        this.stage = [];
+        /**
+         * The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.
+         */
+        this.evidence = [];
+        /**
+         * Additional information about the Condition. This is a general notes/comments entry  for description of the Condition, its diagnosis and prognosis.
+         */
+        this.note = [];
         this.resourceType = 'Condition';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -136,53 +191,44 @@ export class Condition extends fhir.DomainResource {
         if (source['encounter']) {
             this.encounter = new fhir.Reference(source.encounter);
         }
-        if (source['onsetDateTime']) {
-            this.onsetDateTime = source.onsetDateTime;
+        if (source['onset']) {
+            this.onset = source.onset;
         }
-        if (source['_onsetDateTime']) {
-            this._onsetDateTime = new fhir.FhirElement(source._onsetDateTime);
+        else if (source['onsetDateTime']) {
+            this.onset = new fhir.FhirDateTime({ value: source.onsetDateTime });
         }
-        if (source['onsetAge']) {
-            this.onsetAge = new fhir.Age(source.onsetAge);
+        else if (source['onsetAge']) {
+            this.onset = new fhir.Age(source.onsetAge);
         }
-        if (source['onsetPeriod']) {
-            this.onsetPeriod = new fhir.Period(source.onsetPeriod);
+        else if (source['onsetPeriod']) {
+            this.onset = new fhir.Period(source.onsetPeriod);
         }
-        if (source['onsetRange']) {
-            this.onsetRange = new fhir.Range(source.onsetRange);
+        else if (source['onsetRange']) {
+            this.onset = new fhir.Range(source.onsetRange);
         }
-        if (source['onsetString']) {
-            this.onsetString = source.onsetString;
+        else if (source['onsetString']) {
+            this.onset = new fhir.FhirString({ value: source.onsetString });
         }
-        if (source['_onsetString']) {
-            this._onsetString = new fhir.FhirElement(source._onsetString);
+        if (source['abatement']) {
+            this.abatement = source.abatement;
         }
-        if (source['abatementDateTime']) {
-            this.abatementDateTime = source.abatementDateTime;
+        else if (source['abatementDateTime']) {
+            this.abatement = new fhir.FhirDateTime({ value: source.abatementDateTime });
         }
-        if (source['_abatementDateTime']) {
-            this._abatementDateTime = new fhir.FhirElement(source._abatementDateTime);
+        else if (source['abatementAge']) {
+            this.abatement = new fhir.Age(source.abatementAge);
         }
-        if (source['abatementAge']) {
-            this.abatementAge = new fhir.Age(source.abatementAge);
+        else if (source['abatementPeriod']) {
+            this.abatement = new fhir.Period(source.abatementPeriod);
         }
-        if (source['abatementPeriod']) {
-            this.abatementPeriod = new fhir.Period(source.abatementPeriod);
+        else if (source['abatementRange']) {
+            this.abatement = new fhir.Range(source.abatementRange);
         }
-        if (source['abatementRange']) {
-            this.abatementRange = new fhir.Range(source.abatementRange);
-        }
-        if (source['abatementString']) {
-            this.abatementString = source.abatementString;
-        }
-        if (source['_abatementString']) {
-            this._abatementString = new fhir.FhirElement(source._abatementString);
+        else if (source['abatementString']) {
+            this.abatement = new fhir.FhirString({ value: source.abatementString });
         }
         if (source['recordedDate']) {
-            this.recordedDate = source.recordedDate;
-        }
-        if (source['_recordedDate']) {
-            this._recordedDate = new fhir.FhirElement(source._recordedDate);
+            this.recordedDate = new fhir.FhirDateTime({ value: source.recordedDate });
         }
         if (source['recorder']) {
             this.recorder = new fhir.Reference(source.recorder);
@@ -240,89 +286,65 @@ export class Condition extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Condition.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Condition' fhir: Condition.resourceType:'Condition'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["clinicalStatus"]) {
-            results.push(...this.clinicalStatus.doModelValidation());
+            outcome.issue.push(...this.clinicalStatus.doModelValidation().issue);
         }
         if (this["verificationStatus"]) {
-            results.push(...this.verificationStatus.doModelValidation());
+            outcome.issue.push(...this.verificationStatus.doModelValidation().issue);
         }
         if (this["category"]) {
-            this.category.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.category.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["severity"]) {
-            results.push(...this.severity.doModelValidation());
+            outcome.issue.push(...this.severity.doModelValidation().issue);
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["bodySite"]) {
-            this.bodySite.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.bodySite.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["subject"]) {
-            results.push(["subject", 'Missing required element: Condition.subject']);
+        if (!this['subject']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property subject:fhir.Reference fhir: Condition.subject:Reference", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_onsetDateTime"]) {
-            results.push(...this._onsetDateTime.doModelValidation());
-        }
-        if (this["onsetAge"]) {
-            results.push(...this.onsetAge.doModelValidation());
-        }
-        if (this["onsetPeriod"]) {
-            results.push(...this.onsetPeriod.doModelValidation());
-        }
-        if (this["onsetRange"]) {
-            results.push(...this.onsetRange.doModelValidation());
-        }
-        if (this["_onsetString"]) {
-            results.push(...this._onsetString.doModelValidation());
-        }
-        if (this["_abatementDateTime"]) {
-            results.push(...this._abatementDateTime.doModelValidation());
-        }
-        if (this["abatementAge"]) {
-            results.push(...this.abatementAge.doModelValidation());
-        }
-        if (this["abatementPeriod"]) {
-            results.push(...this.abatementPeriod.doModelValidation());
-        }
-        if (this["abatementRange"]) {
-            results.push(...this.abatementRange.doModelValidation());
-        }
-        if (this["_abatementString"]) {
-            results.push(...this._abatementString.doModelValidation());
-        }
-        if (this["_recordedDate"]) {
-            results.push(...this._recordedDate.doModelValidation());
+        if (this["recordedDate"]) {
+            outcome.issue.push(...this.recordedDate.doModelValidation().issue);
         }
         if (this["recorder"]) {
-            results.push(...this.recorder.doModelValidation());
+            outcome.issue.push(...this.recorder.doModelValidation().issue);
         }
         if (this["asserter"]) {
-            results.push(...this.asserter.doModelValidation());
+            outcome.issue.push(...this.asserter.doModelValidation().issue);
         }
         if (this["stage"]) {
-            this.stage.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.stage.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["evidence"]) {
-            this.evidence.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.evidence.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Condition.js.map

@@ -19,11 +19,4 @@ export const ContractAssetcontextValueSet = {
 /**
  * This value set contract specific codes for asset context.
  */
-export var ContractAssetcontextValueSetEnum;
-(function (ContractAssetcontextValueSetEnum) {
-    /**
-     * custodian: To be completed
-     */
-    ContractAssetcontextValueSetEnum["Custodian"] = "custodian";
-})(ContractAssetcontextValueSetEnum || (ContractAssetcontextValueSetEnum = {}));
 //# sourceMappingURL=ContractAssetcontextValueSet.js.map

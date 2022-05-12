@@ -3,15 +3,16 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MedicationAdministration
 import * as fhir from '../fhir.js';
-import { MedAdminPerformFunctionValueSet } from '../fhirValueSets/MedAdminPerformFunctionValueSet.js';
-import { ApproachSiteCodesValueSet } from '../fhirValueSets/ApproachSiteCodesValueSet.js';
-import { RouteCodesValueSet } from '../fhirValueSets/RouteCodesValueSet.js';
-import { AdministrationMethodCodesValueSet } from '../fhirValueSets/AdministrationMethodCodesValueSet.js';
-import { MedicationAdminStatusValueSet } from '../fhirValueSets/MedicationAdminStatusValueSet.js';
-import { ReasonMedicationNotGivenCodesValueSet } from '../fhirValueSets/ReasonMedicationNotGivenCodesValueSet.js';
-import { MedicationAdminCategoryValueSet } from '../fhirValueSets/MedicationAdminCategoryValueSet.js';
-import { MedicationCodesValueSet } from '../fhirValueSets/MedicationCodesValueSet.js';
-import { ReasonMedicationGivenCodesValueSet } from '../fhirValueSets/ReasonMedicationGivenCodesValueSet.js';
+import { MedAdminPerformFunctionValueSet, } from '../fhirValueSets/MedAdminPerformFunctionValueSet.js';
+import { ApproachSiteCodesValueSet, } from '../fhirValueSets/ApproachSiteCodesValueSet.js';
+import { RouteCodesValueSet, } from '../fhirValueSets/RouteCodesValueSet.js';
+import { AdministrationMethodCodesValueSet, } from '../fhirValueSets/AdministrationMethodCodesValueSet.js';
+import { MedicationAdminStatusValueSet, } from '../fhirValueSets/MedicationAdminStatusValueSet.js';
+import { ReasonMedicationNotGivenCodesValueSet, } from '../fhirValueSets/ReasonMedicationNotGivenCodesValueSet.js';
+import { MedicationAdminCategoryValueSet, } from '../fhirValueSets/MedicationAdminCategoryValueSet.js';
+import { ReasonMedicationGivenCodesValueSet, } from '../fhirValueSets/ReasonMedicationGivenCodesValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Indicates who or what performed the medication administration and how they were involved.
  */
@@ -19,8 +20,9 @@ export class MedicationAdministrationPerformer extends fhir.BackboneElement {
     /**
      * Default constructor for MedicationAdministrationPerformer - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicationAdministrationPerformer';
         if (source['function']) {
             this.function = new fhir.CodeableConcept(source.function);
         }
@@ -41,17 +43,23 @@ export class MedicationAdministrationPerformer extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["function"]) {
-            results.push(...this.function.doModelValidation());
+            outcome.issue.push(...this.function.doModelValidation().issue);
         }
-        if (!this["actor"]) {
-            results.push(["actor", 'Missing required element: MedicationAdministration.performer.actor']);
+        if (!this['actor']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property actor:fhir.Reference fhir: MedicationAdministration.performer.actor:Reference", }));
         }
         if (this["actor"]) {
-            results.push(...this.actor.doModelValidation());
+            outcome.issue.push(...this.actor.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -61,13 +69,12 @@ export class MedicationAdministrationDosage extends fhir.BackboneElement {
     /**
      * Default constructor for MedicationAdministrationDosage - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicationAdministrationDosage';
+        this.__rateIsChoice = true;
         if (source['text']) {
-            this.text = source.text;
-        }
-        if (source['_text']) {
-            this._text = new fhir.FhirElement(source._text);
+            this.text = new fhir.FhirString({ value: source.text });
         }
         if (source['site']) {
             this.site = new fhir.CodeableConcept(source.site);
@@ -81,11 +88,14 @@ export class MedicationAdministrationDosage extends fhir.BackboneElement {
         if (source['dose']) {
             this.dose = new fhir.Quantity(source.dose);
         }
-        if (source['rateRatio']) {
-            this.rateRatio = new fhir.Ratio(source.rateRatio);
+        if (source['rate']) {
+            this.rate = source.rate;
         }
-        if (source['rateQuantity']) {
-            this.rateQuantity = new fhir.Quantity(source.rateQuantity);
+        else if (source['rateRatio']) {
+            this.rate = new fhir.Ratio(source.rateRatio);
+        }
+        else if (source['rateQuantity']) {
+            this.rate = new fhir.Quantity(source.rateQuantity);
         }
     }
     /**
@@ -110,29 +120,29 @@ export class MedicationAdministrationDosage extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_text"]) {
-            results.push(...this._text.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["text"]) {
+            outcome.issue.push(...this.text.doModelValidation().issue);
         }
         if (this["site"]) {
-            results.push(...this.site.doModelValidation());
+            outcome.issue.push(...this.site.doModelValidation().issue);
         }
         if (this["route"]) {
-            results.push(...this.route.doModelValidation());
+            outcome.issue.push(...this.route.doModelValidation().issue);
         }
         if (this["method"]) {
-            results.push(...this.method.doModelValidation());
+            outcome.issue.push(...this.method.doModelValidation().issue);
         }
         if (this["dose"]) {
-            results.push(...this.dose.doModelValidation());
+            outcome.issue.push(...this.dose.doModelValidation().issue);
         }
-        if (this["rateRatio"]) {
-            results.push(...this.rateRatio.doModelValidation());
-        }
-        if (this["rateQuantity"]) {
-            results.push(...this.rateQuantity.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -142,17 +152,61 @@ export class MedicationAdministration extends fhir.DomainResource {
     /**
      * Default constructor for MedicationAdministration - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicationAdministration';
+        /**
+         * This is a business identifier, not a resource identifier.
+         */
+        this.identifier = [];
+        /**
+         * A protocol, guideline, orderset, or other definition that was adhered to in whole or in part by this event.
+         */
+        this.instantiates = [];
+        /**
+         * A larger event of which this particular event is a component or step.
+         */
+        this.partOf = [];
+        /**
+         * A code indicating why the administration was not performed.
+         */
+        this.statusReason = [];
+        this.__medicationIsChoice = true;
+        /**
+         * Additional information (for example, patient height and weight) that supports the administration of the medication.
+         */
+        this.supportingInformation = [];
+        this.__effectiveIsChoice = true;
+        /**
+         * Indicates who or what performed the medication administration and how they were involved.
+         */
+        this.performer = [];
+        /**
+         * A code indicating why the medication was given.
+         */
+        this.reasonCode = [];
+        /**
+         * This is a reference to a condition that is the reason for the medication request.  If only a code exists, use reasonCode.
+         */
+        this.reasonReference = [];
+        /**
+         * The device used in administering the medication to the patient.  For example, a particular infusion pump.
+         */
+        this.device = [];
+        /**
+         * Extra information about the medication administration that is not conveyed by the other attributes.
+         */
+        this.note = [];
+        /**
+         * This might not include provenances for all versions of the request – only those deemed “relevant” or important. This SHALL NOT include the Provenance associated with this current version of the resource. (If that provenance is deemed to be a “relevant” change, it will need to be added as part of a later update. Until then, it can be queried directly as the Provenance that points to this version using _revinclude All Provenances should have some historical version of this Request as their subject.
+         */
+        this.eventHistory = [];
         this.resourceType = 'MedicationAdministration';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['instantiates']) {
-            this.instantiates = source.instantiates.map((x) => (x));
-        }
-        if (source['_instantiates']) {
-            this._instantiates = source._instantiates.map((x) => new fhir.FhirElement(x));
+            this.instantiates = source.instantiates.map((x) => new fhir.FhirUri({ value: x }));
         }
         if (source['partOf']) {
             this.partOf = source.partOf.map((x) => new fhir.Reference(x));
@@ -163,20 +217,23 @@ export class MedicationAdministration extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['statusReason']) {
             this.statusReason = source.statusReason.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['category']) {
             this.category = new fhir.CodeableConcept(source.category);
         }
-        if (source['medicationCodeableConcept']) {
-            this.medicationCodeableConcept = new fhir.CodeableConcept(source.medicationCodeableConcept);
+        if (source['medication']) {
+            this.medication = source.medication;
         }
-        if (source['medicationReference']) {
-            this.medicationReference = new fhir.Reference(source.medicationReference);
+        else if (source['medicationCodeableConcept']) {
+            this.medication = new fhir.CodeableConcept(source.medicationCodeableConcept);
+        }
+        else if (source['medicationReference']) {
+            this.medication = new fhir.Reference(source.medicationReference);
+        }
+        else {
+            this.medication = null;
         }
         if (source['subject']) {
             this.subject = new fhir.Reference(source.subject);
@@ -190,14 +247,17 @@ export class MedicationAdministration extends fhir.DomainResource {
         if (source['supportingInformation']) {
             this.supportingInformation = source.supportingInformation.map((x) => new fhir.Reference(x));
         }
-        if (source['effectiveDateTime']) {
-            this.effectiveDateTime = source.effectiveDateTime;
+        if (source['effective']) {
+            this.effective = source.effective;
         }
-        if (source['_effectiveDateTime']) {
-            this._effectiveDateTime = new fhir.FhirElement(source._effectiveDateTime);
+        else if (source['effectiveDateTime']) {
+            this.effective = new fhir.FhirDateTime({ value: source.effectiveDateTime });
         }
-        if (source['effectivePeriod']) {
-            this.effectivePeriod = new fhir.Period(source.effectivePeriod);
+        else if (source['effectivePeriod']) {
+            this.effective = new fhir.Period(source.effectivePeriod);
+        }
+        else {
+            this.effective = null;
         }
         if (source['performer']) {
             this.performer = source.performer.map((x) => new fhir.MedicationAdministrationPerformer(x));
@@ -243,18 +303,6 @@ export class MedicationAdministration extends fhir.DomainResource {
         return MedicationAdminCategoryValueSet;
     }
     /**
-     * Example-bound Value Set for medicationCodeableConcept
-     */
-    static medicationCodeableConceptExampleValueSet() {
-        return MedicationCodesValueSet;
-    }
-    /**
-     * Example-bound Value Set for medicationReference
-     */
-    static medicationReferenceExampleValueSet() {
-        return MedicationCodesValueSet;
-    }
-    /**
      * Example-bound Value Set for reasonCode
      */
     static reasonCodeExampleValueSet() {
@@ -264,80 +312,77 @@ export class MedicationAdministration extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: MedicationAdministration.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'MedicationAdministration' fhir: MedicationAdministration.resourceType:'MedicationAdministration'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instantiates"]) {
-            this._instantiates.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["instantiates"]) {
+            this.instantiates.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["partOf"]) {
-            this.partOf.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.partOf.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: MedicationAdministration.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:MedicationAdminStatusValueSetEnum fhir: MedicationAdministration.status:code", }));
         }
         if (this["statusReason"]) {
-            this.statusReason.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.statusReason.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["category"]) {
-            results.push(...this.category.doModelValidation());
+            outcome.issue.push(...this.category.doModelValidation().issue);
         }
-        if (this["medicationCodeableConcept"]) {
-            results.push(...this.medicationCodeableConcept.doModelValidation());
+        if (!this['medication']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property medication: fhir: MedicationAdministration.medication[x]:", }));
         }
-        if (this["medicationReference"]) {
-            results.push(...this.medicationReference.doModelValidation());
-        }
-        if (!this["subject"]) {
-            results.push(["subject", 'Missing required element: MedicationAdministration.subject']);
+        if (!this['subject']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property subject:fhir.Reference fhir: MedicationAdministration.subject:Reference", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["context"]) {
-            results.push(...this.context.doModelValidation());
+            outcome.issue.push(...this.context.doModelValidation().issue);
         }
         if (this["supportingInformation"]) {
-            this.supportingInformation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.supportingInformation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_effectiveDateTime"]) {
-            results.push(...this._effectiveDateTime.doModelValidation());
-        }
-        if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
+        if (!this['effective']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property effective: fhir: MedicationAdministration.effective[x]:", }));
         }
         if (this["performer"]) {
-            this.performer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.performer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["request"]) {
-            results.push(...this.request.doModelValidation());
+            outcome.issue.push(...this.request.doModelValidation().issue);
         }
         if (this["device"]) {
-            this.device.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.device.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["dosage"]) {
-            results.push(...this.dosage.doModelValidation());
+            outcome.issue.push(...this.dosage.doModelValidation().issue);
         }
         if (this["eventHistory"]) {
-            this.eventHistory.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.eventHistory.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=MedicationAdministration.js.map

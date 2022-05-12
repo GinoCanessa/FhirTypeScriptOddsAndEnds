@@ -3,35 +3,37 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: ProductShelfLife
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * The shelf-life and storage information for a medicinal product item or container can be described using this class.
+ * Valid arguments for the ProductShelfLife type.
  */
-export type IProductShelfLife = fhir.IBackboneElement & { 
+export interface ProductShelfLifeArgs extends fhir.BackboneElementArgs {
   /**
    * Unique identifier for the packaged Medicinal Product.
    */
-  identifier?: fhir.IIdentifier|undefined;
+  identifier?: fhir.IdentifierArgs|undefined;
   /**
    * This describes the shelf life, taking into account various scenarios such as shelf life of the packaged Medicinal Product itself, shelf life after transformation where necessary and shelf life after the first opening of a bottle, etc. The shelf life type shall be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.
    */
-  type: fhir.ICodeableConcept|null;
+  type: fhir.CodeableConceptArgs|null;
   /**
    * The shelf life time period can be specified using a numerical value for the period of time and its unit of time measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
    */
-  period: fhir.IQuantity|null;
+  period: fhir.QuantityArgs|null;
   /**
    * Special precautions for storage, if any, can be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.
    */
-  specialPrecautionsForStorage?: fhir.ICodeableConcept[]|undefined;
+  specialPrecautionsForStorage?: fhir.CodeableConceptArgs[]|undefined;
 }
 
 /**
  * The shelf-life and storage information for a medicinal product item or container can be described using this class.
  */
-export class ProductShelfLife extends fhir.BackboneElement implements IProductShelfLife {
+export class ProductShelfLife extends fhir.BackboneElement {
+  readonly __dataType:string = 'ProductShelfLife';
   /**
    * Unique identifier for the packaged Medicinal Product.
    */
@@ -47,30 +49,40 @@ export class ProductShelfLife extends fhir.BackboneElement implements IProductSh
   /**
    * Special precautions for storage, if any, can be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.
    */
-  public specialPrecautionsForStorage?: fhir.CodeableConcept[]|undefined;
+  public specialPrecautionsForStorage?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Default constructor for ProductShelfLife - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IProductShelfLife> = { }) {
-    super(source);
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<ProductShelfLifeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
-    if (source['period']) { this.period = new fhir.Quantity(source.period!); }
+    if (source['period']) { this.period = new fhir.Quantity(source.period); }
     else { this.period = null; }
     if (source['specialPrecautionsForStorage']) { this.specialPrecautionsForStorage = source.specialPrecautionsForStorage.map((x) => new fhir.CodeableConcept(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (!this["type"]) { results.push(["type",'Missing required element: ProductShelfLife.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (!this["period"]) { results.push(["period",'Missing required element: ProductShelfLife.period']); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    if (this["specialPrecautionsForStorage"]) { this.specialPrecautionsForStorage.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: ProductShelfLife.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (!this['period']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property period:fhir.Quantity fhir: ProductShelfLife.period:Quantity", }));
+    }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    if (this["specialPrecautionsForStorage"]) { this.specialPrecautionsForStorage.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

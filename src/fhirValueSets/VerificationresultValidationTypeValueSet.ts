@@ -43,17 +43,3 @@ export type VerificationresultValidationTypeValueSetType = typeof Verificationre
 /**
  * What the target is validated against
  */
-export enum VerificationresultValidationTypeValueSetEnum {
-  /**
-   * Code: multiple
-   */
-  MultipleSources = "multiple",
-  /**
-   * Code: nothing
-   */
-  Nothing = "nothing",
-  /**
-   * Code: primary
-   */
-  PrimarySource = "primary",
-}

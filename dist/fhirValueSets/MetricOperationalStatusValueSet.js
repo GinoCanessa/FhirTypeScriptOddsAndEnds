@@ -43,23 +43,4 @@ export const MetricOperationalStatusValueSet = {
 /**
  * Describes the operational status of the DeviceMetric.
  */
-export var MetricOperationalStatusValueSetEnum;
-(function (MetricOperationalStatusValueSetEnum) {
-    /**
-     * entered-in-error: The DeviceMetric was entered in error.
-     */
-    MetricOperationalStatusValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * off: The DeviceMetric is not operating.
-     */
-    MetricOperationalStatusValueSetEnum["Off"] = "off";
-    /**
-     * on: The DeviceMetric is operating and will generate DeviceObservations.
-     */
-    MetricOperationalStatusValueSetEnum["On"] = "on";
-    /**
-     * standby: The DeviceMetric is operating, but will not generate any DeviceObservations.
-     */
-    MetricOperationalStatusValueSetEnum["Standby"] = "standby";
-})(MetricOperationalStatusValueSetEnum || (MetricOperationalStatusValueSetEnum = {}));
 //# sourceMappingURL=MetricOperationalStatusValueSet.js.map

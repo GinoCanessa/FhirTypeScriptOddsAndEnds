@@ -3,11 +3,12 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ChargeItem
 import * as fhir from '../fhir.js';
-import { PerformerRoleValueSet } from '../fhirValueSets/PerformerRoleValueSet.js';
-import { ChargeitemStatusValueSet } from '../fhirValueSets/ChargeitemStatusValueSet.js';
-import { ChargeitemBillingcodesValueSet } from '../fhirValueSets/ChargeitemBillingcodesValueSet.js';
-import { BodySiteValueSet } from '../fhirValueSets/BodySiteValueSet.js';
-import { DeviceKindValueSet } from '../fhirValueSets/DeviceKindValueSet.js';
+import { PerformerRoleValueSet, } from '../fhirValueSets/PerformerRoleValueSet.js';
+import { ChargeitemStatusValueSet, } from '../fhirValueSets/ChargeitemStatusValueSet.js';
+import { ChargeitemBillingcodesValueSet, } from '../fhirValueSets/ChargeitemBillingcodesValueSet.js';
+import { BodySiteValueSet, } from '../fhirValueSets/BodySiteValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Indicates who or what performed or participated in the charged service.
  */
@@ -15,8 +16,9 @@ export class ChargeItemPerformer extends fhir.BackboneElement {
     /**
      * Default constructor for ChargeItemPerformer - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ChargeItemPerformer';
         if (source['function']) {
             this.function = new fhir.CodeableConcept(source.function);
         }
@@ -37,17 +39,23 @@ export class ChargeItemPerformer extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["function"]) {
-            results.push(...this.function.doModelValidation());
+            outcome.issue.push(...this.function.doModelValidation().issue);
         }
-        if (!this["actor"]) {
-            results.push(["actor", 'Missing required element: ChargeItem.performer.actor']);
+        if (!this['actor']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property actor:fhir.Reference fhir: ChargeItem.performer.actor:Reference", }));
         }
         if (this["actor"]) {
-            results.push(...this.actor.doModelValidation());
+            outcome.issue.push(...this.actor.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -57,32 +65,70 @@ export class ChargeItem extends fhir.DomainResource {
     /**
      * Default constructor for ChargeItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ChargeItem';
+        /**
+         * Identifiers assigned to this event performer or other systems.
+         */
+        this.identifier = [];
+        /**
+         * References the (external) source of pricing information, rules of application for the code this ChargeItem uses.
+         */
+        this.definitionUri = [];
+        /**
+         * References the source of pricing information, rules of application for the code this ChargeItem uses.
+         */
+        this.definitionCanonical = [];
+        /**
+         * ChargeItems can be grouped to larger ChargeItems covering the whole set.
+         */
+        this.partOf = [];
+        this.__occurrenceIsChoice = true;
+        /**
+         * Indicates who or what performed or participated in the charged service.
+         */
+        this.performer = [];
+        /**
+         * Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.
+         */
+        this.bodysite = [];
+        /**
+         * If the application of the charge item requires a reason to be given, it can be captured here. Textual reasons can be captured using reasonCode.text.
+         */
+        this.reason = [];
+        /**
+         * Indicated the rendered service that caused this charge.
+         */
+        this.service = [];
+        this.__productIsChoice = true;
+        /**
+         * Systems posting the ChargeItems might not always be able to determine, which accounts the Items need to be places into. It is up to the postprocessing Financial System to apply internal rules to decide based on the Encounter/EpisodeOfCare/Patient/Coverage context and the type of ChargeItem, which Account is appropriate.
+         */
+        this.account = [];
+        /**
+         * Comments made about the event by the performer, subject or other participants.
+         */
+        this.note = [];
+        /**
+         * Further information supporting this charge.
+         */
+        this.supportingInformation = [];
         this.resourceType = 'ChargeItem';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['definitionUri']) {
-            this.definitionUri = source.definitionUri.map((x) => (x));
-        }
-        if (source['_definitionUri']) {
-            this._definitionUri = source._definitionUri.map((x) => new fhir.FhirElement(x));
+            this.definitionUri = source.definitionUri.map((x) => new fhir.FhirUri({ value: x }));
         }
         if (source['definitionCanonical']) {
-            this.definitionCanonical = source.definitionCanonical.map((x) => (x));
-        }
-        if (source['_definitionCanonical']) {
-            this._definitionCanonical = source._definitionCanonical.map((x) => new fhir.FhirElement(x));
+            this.definitionCanonical = source.definitionCanonical.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['status']) {
             this.status = source.status;
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['partOf']) {
             this.partOf = source.partOf.map((x) => new fhir.Reference(x));
@@ -102,17 +148,17 @@ export class ChargeItem extends fhir.DomainResource {
         if (source['context']) {
             this.context = new fhir.Reference(source.context);
         }
-        if (source['occurrenceDateTime']) {
-            this.occurrenceDateTime = source.occurrenceDateTime;
+        if (source['occurrence']) {
+            this.occurrence = source.occurrence;
         }
-        if (source['_occurrenceDateTime']) {
-            this._occurrenceDateTime = new fhir.FhirElement(source._occurrenceDateTime);
+        else if (source['occurrenceDateTime']) {
+            this.occurrence = new fhir.FhirDateTime({ value: source.occurrenceDateTime });
         }
-        if (source['occurrencePeriod']) {
-            this.occurrencePeriod = new fhir.Period(source.occurrencePeriod);
+        else if (source['occurrencePeriod']) {
+            this.occurrence = new fhir.Period(source.occurrencePeriod);
         }
-        if (source['occurrenceTiming']) {
-            this.occurrenceTiming = new fhir.Timing(source.occurrenceTiming);
+        else if (source['occurrenceTiming']) {
+            this.occurrence = new fhir.Timing(source.occurrenceTiming);
         }
         if (source['performer']) {
             this.performer = source.performer.map((x) => new fhir.ChargeItemPerformer(x));
@@ -133,28 +179,19 @@ export class ChargeItem extends fhir.DomainResource {
             this.bodysite = source.bodysite.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['factorOverride']) {
-            this.factorOverride = source.factorOverride;
-        }
-        if (source['_factorOverride']) {
-            this._factorOverride = new fhir.FhirElement(source._factorOverride);
+            this.factorOverride = new fhir.FhirDecimal({ value: source.factorOverride });
         }
         if (source['priceOverride']) {
             this.priceOverride = new fhir.Money(source.priceOverride);
         }
         if (source['overrideReason']) {
-            this.overrideReason = source.overrideReason;
-        }
-        if (source['_overrideReason']) {
-            this._overrideReason = new fhir.FhirElement(source._overrideReason);
+            this.overrideReason = new fhir.FhirString({ value: source.overrideReason });
         }
         if (source['enterer']) {
             this.enterer = new fhir.Reference(source.enterer);
         }
         if (source['enteredDate']) {
-            this.enteredDate = source.enteredDate;
-        }
-        if (source['_enteredDate']) {
-            this._enteredDate = new fhir.FhirElement(source._enteredDate);
+            this.enteredDate = new fhir.FhirDateTime({ value: source.enteredDate });
         }
         if (source['reason']) {
             this.reason = source.reason.map((x) => new fhir.CodeableConcept(x));
@@ -162,11 +199,14 @@ export class ChargeItem extends fhir.DomainResource {
         if (source['service']) {
             this.service = source.service.map((x) => new fhir.Reference(x));
         }
-        if (source['productReference']) {
-            this.productReference = new fhir.Reference(source.productReference);
+        if (source['product']) {
+            this.product = source.product;
         }
-        if (source['productCodeableConcept']) {
-            this.productCodeableConcept = new fhir.CodeableConcept(source.productCodeableConcept);
+        else if (source['productReference']) {
+            this.product = new fhir.Reference(source.productReference);
+        }
+        else if (source['productCodeableConcept']) {
+            this.product = new fhir.CodeableConcept(source.productCodeableConcept);
         }
         if (source['account']) {
             this.account = source.account.map((x) => new fhir.Reference(x));
@@ -197,122 +237,98 @@ export class ChargeItem extends fhir.DomainResource {
         return BodySiteValueSet;
     }
     /**
-     * Example-bound Value Set for productReference
-     */
-    static productReferenceExampleValueSet() {
-        return DeviceKindValueSet;
-    }
-    /**
-     * Example-bound Value Set for productCodeableConcept
-     */
-    static productCodeableConceptExampleValueSet() {
-        return DeviceKindValueSet;
-    }
-    /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: ChargeItem.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'ChargeItem' fhir: ChargeItem.resourceType:'ChargeItem'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_definitionUri"]) {
-            this._definitionUri.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["definitionUri"]) {
+            this.definitionUri.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_definitionCanonical"]) {
-            this._definitionCanonical.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["definitionCanonical"]) {
+            this.definitionCanonical.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: ChargeItem.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:ChargeitemStatusValueSetEnum fhir: ChargeItem.status:code", }));
         }
         if (this["partOf"]) {
-            this.partOf.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.partOf.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: ChargeItem.code']);
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.CodeableConcept fhir: ChargeItem.code:CodeableConcept", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (!this["subject"]) {
-            results.push(["subject", 'Missing required element: ChargeItem.subject']);
+        if (!this['subject']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property subject:fhir.Reference fhir: ChargeItem.subject:Reference", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["context"]) {
-            results.push(...this.context.doModelValidation());
-        }
-        if (this["_occurrenceDateTime"]) {
-            results.push(...this._occurrenceDateTime.doModelValidation());
-        }
-        if (this["occurrencePeriod"]) {
-            results.push(...this.occurrencePeriod.doModelValidation());
-        }
-        if (this["occurrenceTiming"]) {
-            results.push(...this.occurrenceTiming.doModelValidation());
+            outcome.issue.push(...this.context.doModelValidation().issue);
         }
         if (this["performer"]) {
-            this.performer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.performer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["performingOrganization"]) {
-            results.push(...this.performingOrganization.doModelValidation());
+            outcome.issue.push(...this.performingOrganization.doModelValidation().issue);
         }
         if (this["requestingOrganization"]) {
-            results.push(...this.requestingOrganization.doModelValidation());
+            outcome.issue.push(...this.requestingOrganization.doModelValidation().issue);
         }
         if (this["costCenter"]) {
-            results.push(...this.costCenter.doModelValidation());
+            outcome.issue.push(...this.costCenter.doModelValidation().issue);
         }
         if (this["quantity"]) {
-            results.push(...this.quantity.doModelValidation());
+            outcome.issue.push(...this.quantity.doModelValidation().issue);
         }
         if (this["bodysite"]) {
-            this.bodysite.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.bodysite.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_factorOverride"]) {
-            results.push(...this._factorOverride.doModelValidation());
+        if (this["factorOverride"]) {
+            outcome.issue.push(...this.factorOverride.doModelValidation().issue);
         }
         if (this["priceOverride"]) {
-            results.push(...this.priceOverride.doModelValidation());
+            outcome.issue.push(...this.priceOverride.doModelValidation().issue);
         }
-        if (this["_overrideReason"]) {
-            results.push(...this._overrideReason.doModelValidation());
+        if (this["overrideReason"]) {
+            outcome.issue.push(...this.overrideReason.doModelValidation().issue);
         }
         if (this["enterer"]) {
-            results.push(...this.enterer.doModelValidation());
+            outcome.issue.push(...this.enterer.doModelValidation().issue);
         }
-        if (this["_enteredDate"]) {
-            results.push(...this._enteredDate.doModelValidation());
+        if (this["enteredDate"]) {
+            outcome.issue.push(...this.enteredDate.doModelValidation().issue);
         }
         if (this["reason"]) {
-            this.reason.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reason.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["service"]) {
-            this.service.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["productReference"]) {
-            results.push(...this.productReference.doModelValidation());
-        }
-        if (this["productCodeableConcept"]) {
-            results.push(...this.productCodeableConcept.doModelValidation());
+            this.service.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["account"]) {
-            this.account.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.account.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["supportingInformation"]) {
-            this.supportingInformation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.supportingInformation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ChargeItem.js.map

@@ -43,17 +43,3 @@ export type LocationStatusValueSetType = typeof LocationStatusValueSet;
 /**
  * Indicates whether the location is still in use.
  */
-export enum LocationStatusValueSetEnum {
-  /**
-   * active: The location is operational.
-   */
-  Active = "active",
-  /**
-   * inactive: The location is no longer used.
-   */
-  Inactive = "inactive",
-  /**
-   * suspended: The location is temporarily closed.
-   */
-  Suspended = "suspended",
-}

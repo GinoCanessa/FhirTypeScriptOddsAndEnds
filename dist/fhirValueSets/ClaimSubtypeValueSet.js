@@ -27,15 +27,4 @@ export const ClaimSubtypeValueSet = {
 /**
  * This value set includes sample Claim SubType codes which are used to distinguish the claim types for example within type institutional there may be subtypes for emergency services, bed stay and transportation.
  */
-export var ClaimSubtypeValueSetEnum;
-(function (ClaimSubtypeValueSetEnum) {
-    /**
-     * emergency: A claim for emergency services.
-     */
-    ClaimSubtypeValueSetEnum["EmergencyClaim"] = "emergency";
-    /**
-     * ortho: A claim for Orthodontic Services.
-     */
-    ClaimSubtypeValueSetEnum["OrthodonticClaim"] = "ortho";
-})(ClaimSubtypeValueSetEnum || (ClaimSubtypeValueSetEnum = {}));
 //# sourceMappingURL=ClaimSubtypeValueSet.js.map

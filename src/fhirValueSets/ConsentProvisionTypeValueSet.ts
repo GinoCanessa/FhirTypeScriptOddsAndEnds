@@ -35,13 +35,3 @@ export type ConsentProvisionTypeValueSetType = typeof ConsentProvisionTypeValueS
 /**
  * How a rule statement is applied, such as adding additional consent or removing consent.
  */
-export enum ConsentProvisionTypeValueSetEnum {
-  /**
-   * deny: Consent is denied for actions meeting these rules.
-   */
-  OptOut = "deny",
-  /**
-   * permit: Consent is provided for actions meeting these rules.
-   */
-  OptIn = "permit",
-}

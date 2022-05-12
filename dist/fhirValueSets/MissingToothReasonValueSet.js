@@ -43,23 +43,4 @@ export const MissingToothReasonValueSet = {
 /**
  * This value set includes sample Missing Tooth Reason codes.
  */
-export var MissingToothReasonValueSetEnum;
-(function (MissingToothReasonValueSetEnum) {
-    /**
-     * c: Congenital
-     */
-    MissingToothReasonValueSetEnum["C"] = "c";
-    /**
-     * e: Extraction
-     */
-    MissingToothReasonValueSetEnum["E"] = "e";
-    /**
-     * o: Other
-     */
-    MissingToothReasonValueSetEnum["O"] = "o";
-    /**
-     * u: Unknown
-     */
-    MissingToothReasonValueSetEnum["U"] = "u";
-})(MissingToothReasonValueSetEnum || (MissingToothReasonValueSetEnum = {}));
 //# sourceMappingURL=MissingToothReasonValueSet.js.map

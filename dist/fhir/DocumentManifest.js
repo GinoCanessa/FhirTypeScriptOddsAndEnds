@@ -3,8 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: DocumentManifest
 import * as fhir from '../fhir.js';
-import { DocumentReferenceStatusValueSet } from '../fhirValueSets/DocumentReferenceStatusValueSet.js';
-import { V3ActCodeValueSet } from '../fhirValueSets/V3ActCodeValueSet.js';
+import { DocumentReferenceStatusValueSet, } from '../fhirValueSets/DocumentReferenceStatusValueSet.js';
+import { V3ActCodeValueSet, } from '../fhirValueSets/V3ActCodeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * May be identifiers or resources that caused the DocumentManifest to be created.
  */
@@ -12,8 +14,9 @@ export class DocumentManifestRelated extends fhir.BackboneElement {
     /**
      * Default constructor for DocumentManifestRelated - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DocumentManifestRelated';
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
         }
@@ -25,14 +28,20 @@ export class DocumentManifestRelated extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
         if (this["ref"]) {
-            results.push(...this.ref.doModelValidation());
+            outcome.issue.push(...this.ref.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -42,8 +51,29 @@ export class DocumentManifest extends fhir.DomainResource {
     /**
      * Default constructor for DocumentManifest - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DocumentManifest';
+        /**
+         * Other identifiers associated with the document manifest, including version independent  identifiers.
+         */
+        this.identifier = [];
+        /**
+         * Not necessarily who did the actual data entry (i.e. typist) or who was the source (informant).
+         */
+        this.author = [];
+        /**
+         * How the recipient receives the document set or is notified of it is up to the implementation. This element is just a statement of intent. If the recipient is a person, and it is not known whether the person is a patient or a practitioner, RelatedPerson would be the default choice.
+         */
+        this.recipient = [];
+        /**
+         * When used for XDS the intended focus of the DocumentManifest is for the reference to target to be a set of DocumentReference Resources. The reference is to "Any" to support EN 13606 usage, where an extract is DocumentManifest that references  List and Composition resources.
+         */
+        this.content = [];
+        /**
+         * May be identifiers or resources that caused the DocumentManifest to be created.
+         */
+        this.related = [];
         this.resourceType = 'DocumentManifest';
         if (source['masterIdentifier']) {
             this.masterIdentifier = new fhir.Identifier(source.masterIdentifier);
@@ -57,9 +87,6 @@ export class DocumentManifest extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
@@ -67,10 +94,7 @@ export class DocumentManifest extends fhir.DomainResource {
             this.subject = new fhir.Reference(source.subject);
         }
         if (source['created']) {
-            this.created = source.created;
-        }
-        if (source['_created']) {
-            this._created = new fhir.FhirElement(source._created);
+            this.created = new fhir.FhirDateTime({ value: source.created });
         }
         if (source['author']) {
             this.author = source.author.map((x) => new fhir.Reference(x));
@@ -79,16 +103,10 @@ export class DocumentManifest extends fhir.DomainResource {
             this.recipient = source.recipient.map((x) => new fhir.Reference(x));
         }
         if (source['source']) {
-            this.source = source.source;
-        }
-        if (source['_source']) {
-            this._source = new fhir.FhirElement(source._source);
+            this.source = new fhir.FhirUri({ value: source.source });
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['content']) {
             this.content = source.content.map((x) => new fhir.Reference(x));
@@ -116,53 +134,62 @@ export class DocumentManifest extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: DocumentManifest.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'DocumentManifest' fhir: DocumentManifest.resourceType:'DocumentManifest'", }));
         }
         if (this["masterIdentifier"]) {
-            results.push(...this.masterIdentifier.doModelValidation());
+            outcome.issue.push(...this.masterIdentifier.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: DocumentManifest.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:DocumentReferenceStatusValueSetEnum fhir: DocumentManifest.status:code", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
-        if (this["_created"]) {
-            results.push(...this._created.doModelValidation());
+        if (this["created"]) {
+            outcome.issue.push(...this.created.doModelValidation().issue);
         }
         if (this["author"]) {
-            this.author.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.author.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["recipient"]) {
-            this.recipient.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.recipient.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_source"]) {
-            results.push(...this._source.doModelValidation());
+        if (this["source"]) {
+            outcome.issue.push(...this.source.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if ((!this["content"]) || (this["content"].length === 0)) {
-            results.push(["content", 'Missing required element: DocumentManifest.content']);
+        if (!this['content']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property content:fhir.Reference[] fhir: DocumentManifest.content:Reference", }));
+        }
+        else if (!Array.isArray(this.content)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property content:fhir.Reference[] fhir: DocumentManifest.content:Reference", }));
+        }
+        else if (this.content.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property content:fhir.Reference[] fhir: DocumentManifest.content:Reference", }));
         }
         if (this["content"]) {
-            this.content.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.content.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["related"]) {
-            this.related.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.related.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=DocumentManifest.js.map

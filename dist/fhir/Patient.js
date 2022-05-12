@@ -3,11 +3,13 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Patient
 import * as fhir from '../fhir.js';
-import { PatientContactrelationshipValueSet } from '../fhirValueSets/PatientContactrelationshipValueSet.js';
-import { AdministrativeGenderValueSet } from '../fhirValueSets/AdministrativeGenderValueSet.js';
-import { LanguagesValueSet } from '../fhirValueSets/LanguagesValueSet.js';
-import { LinkTypeValueSet } from '../fhirValueSets/LinkTypeValueSet.js';
-import { MaritalStatusValueSet } from '../fhirValueSets/MaritalStatusValueSet.js';
+import { PatientContactrelationshipValueSet, } from '../fhirValueSets/PatientContactrelationshipValueSet.js';
+import { AdministrativeGenderValueSet, } from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { LanguagesValueSet, } from '../fhirValueSets/LanguagesValueSet.js';
+import { LinkTypeValueSet, } from '../fhirValueSets/LinkTypeValueSet.js';
+import { MaritalStatusValueSet, } from '../fhirValueSets/MaritalStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.
  */
@@ -15,8 +17,17 @@ export class PatientContact extends fhir.BackboneElement {
     /**
      * Default constructor for PatientContact - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PatientContact';
+        /**
+         * The nature of the relationship between the patient and the contact person.
+         */
+        this.relationship = [];
+        /**
+         * Contact may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification.
+         */
+        this.telecom = [];
         if (source['relationship']) {
             this.relationship = source.relationship.map((x) => new fhir.CodeableConcept(x));
         }
@@ -31,9 +42,6 @@ export class PatientContact extends fhir.BackboneElement {
         }
         if (source['gender']) {
             this.gender = source.gender;
-        }
-        if (source['_gender']) {
-            this._gender = new fhir.FhirElement(source._gender);
         }
         if (source['organization']) {
             this.organization = new fhir.Reference(source.organization);
@@ -58,29 +66,32 @@ export class PatientContact extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["relationship"]) {
-            this.relationship.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relationship.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["name"]) {
-            results.push(...this.name.doModelValidation());
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
         if (this["telecom"]) {
-            this.telecom.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.telecom.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["address"]) {
-            results.push(...this.address.doModelValidation());
-        }
-        if (this["_gender"]) {
-            results.push(...this._gender.doModelValidation());
+            outcome.issue.push(...this.address.doModelValidation().issue);
         }
         if (this["organization"]) {
-            results.push(...this.organization.doModelValidation());
+            outcome.issue.push(...this.organization.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -90,8 +101,9 @@ export class PatientCommunication extends fhir.BackboneElement {
     /**
      * Default constructor for PatientCommunication - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PatientCommunication';
         if (source['language']) {
             this.language = new fhir.CodeableConcept(source.language);
         }
@@ -99,10 +111,7 @@ export class PatientCommunication extends fhir.BackboneElement {
             this.language = null;
         }
         if (source['preferred']) {
-            this.preferred = source.preferred;
-        }
-        if (source['_preferred']) {
-            this._preferred = new fhir.FhirElement(source._preferred);
+            this.preferred = new fhir.FhirBoolean({ value: source.preferred });
         }
     }
     /**
@@ -115,17 +124,23 @@ export class PatientCommunication extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["language"]) {
-            results.push(["language", 'Missing required element: Patient.communication.language']);
+        var outcome = super.doModelValidation();
+        if (!this['language']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property language:fhir.CodeableConcept fhir: Patient.communication.language:CodeableConcept", }));
         }
         if (this["language"]) {
-            results.push(...this.language.doModelValidation());
+            outcome.issue.push(...this.language.doModelValidation().issue);
         }
-        if (this["_preferred"]) {
-            results.push(...this._preferred.doModelValidation());
+        if (this["preferred"]) {
+            outcome.issue.push(...this.preferred.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -135,8 +150,9 @@ export class PatientLink extends fhir.BackboneElement {
     /**
      * Default constructor for PatientLink - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PatientLink';
         if (source['other']) {
             this.other = new fhir.Reference(source.other);
         }
@@ -149,9 +165,6 @@ export class PatientLink extends fhir.BackboneElement {
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
     }
     /**
      * Required-bound Value Set for type
@@ -163,20 +176,23 @@ export class PatientLink extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["other"]) {
-            results.push(["other", 'Missing required element: Patient.link.other']);
+        var outcome = super.doModelValidation();
+        if (!this['other']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property other:fhir.Reference fhir: Patient.link.other:Reference", }));
         }
         if (this["other"]) {
-            results.push(...this.other.doModelValidation());
+            outcome.issue.push(...this.other.doModelValidation().issue);
         }
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: Patient.link.type']);
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:LinkTypeValueSetEnum fhir: Patient.link.type:code", }));
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -186,17 +202,58 @@ export class Patient extends fhir.DomainResource {
     /**
      * Default constructor for Patient - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Patient';
+        /**
+         * An identifier for this patient.
+         */
+        this.identifier = [];
+        /**
+         * A patient may have multiple names with different uses or applicable periods. For animals, the name is a "HumanName" in the sense that is assigned and used by humans and has the same patterns.
+         */
+        this.name = [];
+        /**
+         * A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address might not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).
+         */
+        this.telecom = [];
+        this.__deceasedIsChoice = true;
+        /**
+         * Patient may have multiple addresses with different uses or applicable periods.
+         */
+        this.address = [];
+        this.__multipleBirthIsChoice = true;
+        /**
+         * Guidelines:
+         * * Use id photos, not clinical photos.
+         * * Limit dimensions to thumbnail.
+         * * Keep byte count low to ease resource updates.
+         */
+        this.photo = [];
+        /**
+         * Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.
+         */
+        this.contact = [];
+        /**
+         * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
+         */
+        this.communication = [];
+        /**
+         * This may be the primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disability setting, or even organization that will provide people to perform the care provider roles.  It is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources.
+         * Multiple GPs may be recorded against the patient for various reasons, such as a student that has his home GP listed along with the GP at university during the school semesters, or a "fly-in/fly-out" worker that has the onsite GP also included with his home GP to remain aware of medical issues.
+         * Jurisdictions may decide that they can profile this down to 1 if desired, or 1 per type.
+         */
+        this.generalPractitioner = [];
+        /**
+         * There is no assumption that linked patient records have mutual links.
+         */
+        this.link = [];
         this.resourceType = 'Patient';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['active']) {
-            this.active = source.active;
-        }
-        if (source['_active']) {
-            this._active = new fhir.FhirElement(source._active);
+            this.active = new fhir.FhirBoolean({ value: source.active });
         }
         if (source['name']) {
             this.name = source.name.map((x) => new fhir.HumanName(x));
@@ -207,26 +264,17 @@ export class Patient extends fhir.DomainResource {
         if (source['gender']) {
             this.gender = source.gender;
         }
-        if (source['_gender']) {
-            this._gender = new fhir.FhirElement(source._gender);
-        }
         if (source['birthDate']) {
-            this.birthDate = source.birthDate;
+            this.birthDate = new fhir.FhirDate({ value: source.birthDate });
         }
-        if (source['_birthDate']) {
-            this._birthDate = new fhir.FhirElement(source._birthDate);
+        if (source['deceased']) {
+            this.deceased = source.deceased;
         }
-        if (source['deceasedBoolean']) {
-            this.deceasedBoolean = source.deceasedBoolean;
+        else if (source['deceasedBoolean']) {
+            this.deceased = new fhir.FhirBoolean({ value: source.deceasedBoolean });
         }
-        if (source['_deceasedBoolean']) {
-            this._deceasedBoolean = new fhir.FhirElement(source._deceasedBoolean);
-        }
-        if (source['deceasedDateTime']) {
-            this.deceasedDateTime = source.deceasedDateTime;
-        }
-        if (source['_deceasedDateTime']) {
-            this._deceasedDateTime = new fhir.FhirElement(source._deceasedDateTime);
+        else if (source['deceasedDateTime']) {
+            this.deceased = new fhir.FhirDateTime({ value: source.deceasedDateTime });
         }
         if (source['address']) {
             this.address = source.address.map((x) => new fhir.Address(x));
@@ -234,17 +282,14 @@ export class Patient extends fhir.DomainResource {
         if (source['maritalStatus']) {
             this.maritalStatus = new fhir.CodeableConcept(source.maritalStatus);
         }
-        if (source['multipleBirthBoolean']) {
-            this.multipleBirthBoolean = source.multipleBirthBoolean;
+        if (source['multipleBirth']) {
+            this.multipleBirth = source.multipleBirth;
         }
-        if (source['_multipleBirthBoolean']) {
-            this._multipleBirthBoolean = new fhir.FhirElement(source._multipleBirthBoolean);
+        else if (source['multipleBirthBoolean']) {
+            this.multipleBirth = new fhir.FhirBoolean({ value: source.multipleBirthBoolean });
         }
-        if (source['multipleBirthInteger']) {
-            this.multipleBirthInteger = source.multipleBirthInteger;
-        }
-        if (source['_multipleBirthInteger']) {
-            this._multipleBirthInteger = new fhir.FhirElement(source._multipleBirthInteger);
+        else if (source['multipleBirthInteger']) {
+            this.multipleBirth = new fhir.FhirInteger({ value: source.multipleBirthInteger });
         }
         if (source['photo']) {
             this.photo = source.photo.map((x) => new fhir.Attachment(x));
@@ -281,65 +326,56 @@ export class Patient extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Patient.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Patient' fhir: Patient.resourceType:'Patient'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_active"]) {
-            results.push(...this._active.doModelValidation());
+        if (this["active"]) {
+            outcome.issue.push(...this.active.doModelValidation().issue);
         }
         if (this["name"]) {
-            this.name.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.name.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["telecom"]) {
-            this.telecom.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.telecom.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_gender"]) {
-            results.push(...this._gender.doModelValidation());
-        }
-        if (this["_birthDate"]) {
-            results.push(...this._birthDate.doModelValidation());
-        }
-        if (this["_deceasedBoolean"]) {
-            results.push(...this._deceasedBoolean.doModelValidation());
-        }
-        if (this["_deceasedDateTime"]) {
-            results.push(...this._deceasedDateTime.doModelValidation());
+        if (this["birthDate"]) {
+            outcome.issue.push(...this.birthDate.doModelValidation().issue);
         }
         if (this["address"]) {
-            this.address.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.address.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["maritalStatus"]) {
-            results.push(...this.maritalStatus.doModelValidation());
-        }
-        if (this["_multipleBirthBoolean"]) {
-            results.push(...this._multipleBirthBoolean.doModelValidation());
-        }
-        if (this["_multipleBirthInteger"]) {
-            results.push(...this._multipleBirthInteger.doModelValidation());
+            outcome.issue.push(...this.maritalStatus.doModelValidation().issue);
         }
         if (this["photo"]) {
-            this.photo.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.photo.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["communication"]) {
-            this.communication.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.communication.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["generalPractitioner"]) {
-            this.generalPractitioner.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.generalPractitioner.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["managingOrganization"]) {
-            results.push(...this.managingOrganization.doModelValidation());
+            outcome.issue.push(...this.managingOrganization.doModelValidation().issue);
         }
         if (this["link"]) {
-            this.link.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.link.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Patient.js.map

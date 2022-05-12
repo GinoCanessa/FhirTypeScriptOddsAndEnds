@@ -67,35 +67,4 @@ export const EncounterDietValueSet = {
 /**
  * This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.
  */
-export var EncounterDietValueSetEnum;
-(function (EncounterDietValueSetEnum) {
-    /**
-     * dairy-free: Excludes dairy products.
-     */
-    EncounterDietValueSetEnum["DairyFree"] = "dairy-free";
-    /**
-     * gluten-free: Excludes ingredients containing gluten.
-     */
-    EncounterDietValueSetEnum["GlutenFree"] = "gluten-free";
-    /**
-     * halal: Foods that conform to Islamic law.
-     */
-    EncounterDietValueSetEnum["Halal"] = "halal";
-    /**
-     * kosher: Foods that conform to Jewish dietary law.
-     */
-    EncounterDietValueSetEnum["Kosher"] = "kosher";
-    /**
-     * nut-free: Excludes ingredients containing nuts.
-     */
-    EncounterDietValueSetEnum["NutFree"] = "nut-free";
-    /**
-     * vegan: Food without meat, poultry, seafood, eggs, dairy products and other animal-derived substances.
-     */
-    EncounterDietValueSetEnum["Vegan"] = "vegan";
-    /**
-     * vegetarian: Food without meat, poultry or seafood.
-     */
-    EncounterDietValueSetEnum["Vegetarian"] = "vegetarian";
-})(EncounterDietValueSetEnum || (EncounterDietValueSetEnum = {}));
 //# sourceMappingURL=EncounterDietValueSet.js.map

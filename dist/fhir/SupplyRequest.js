@@ -3,11 +3,12 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SupplyRequest
 import * as fhir from '../fhir.js';
-import { SupplyrequestStatusValueSet } from '../fhirValueSets/SupplyrequestStatusValueSet.js';
-import { SupplyrequestKindValueSet } from '../fhirValueSets/SupplyrequestKindValueSet.js';
-import { RequestPriorityValueSet } from '../fhirValueSets/RequestPriorityValueSet.js';
-import { SupplyItemValueSet } from '../fhirValueSets/SupplyItemValueSet.js';
-import { SupplyrequestReasonValueSet } from '../fhirValueSets/SupplyrequestReasonValueSet.js';
+import { SupplyrequestStatusValueSet, } from '../fhirValueSets/SupplyrequestStatusValueSet.js';
+import { SupplyrequestKindValueSet, } from '../fhirValueSets/SupplyrequestKindValueSet.js';
+import { RequestPriorityValueSet, } from '../fhirValueSets/RequestPriorityValueSet.js';
+import { SupplyrequestReasonValueSet, } from '../fhirValueSets/SupplyrequestReasonValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Specific parameters for the ordered item.  For example, the size of the indicated item.
  */
@@ -15,48 +16,44 @@ export class SupplyRequestParameter extends fhir.BackboneElement {
     /**
      * Default constructor for SupplyRequestParameter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SupplyRequestParameter';
+        this.__valueIsChoice = true;
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
-        if (source['valueCodeableConcept']) {
-            this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept);
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['valueQuantity']) {
-            this.valueQuantity = new fhir.Quantity(source.valueQuantity);
+        else if (source['valueCodeableConcept']) {
+            this.value = new fhir.CodeableConcept(source.valueCodeableConcept);
         }
-        if (source['valueRange']) {
-            this.valueRange = new fhir.Range(source.valueRange);
+        else if (source['valueQuantity']) {
+            this.value = new fhir.Quantity(source.valueQuantity);
         }
-        if (source['valueBoolean']) {
-            this.valueBoolean = source.valueBoolean;
+        else if (source['valueRange']) {
+            this.value = new fhir.Range(source.valueRange);
         }
-        if (source['_valueBoolean']) {
-            this._valueBoolean = new fhir.FhirElement(source._valueBoolean);
+        else if (source['valueBoolean']) {
+            this.value = new fhir.FhirBoolean({ value: source.valueBoolean });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["valueCodeableConcept"]) {
-            results.push(...this.valueCodeableConcept.doModelValidation());
-        }
-        if (this["valueQuantity"]) {
-            results.push(...this.valueQuantity.doModelValidation());
-        }
-        if (this["valueRange"]) {
-            results.push(...this.valueRange.doModelValidation());
-        }
-        if (this["_valueBoolean"]) {
-            results.push(...this._valueBoolean.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -66,8 +63,31 @@ export class SupplyRequest extends fhir.DomainResource {
     /**
      * Default constructor for SupplyRequest - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SupplyRequest';
+        /**
+         * The identifier.type element is used to distinguish between the identifiers assigned by the requester/placer and the performer/filler.
+         */
+        this.identifier = [];
+        this.__itemIsChoice = true;
+        /**
+         * Specific parameters for the ordered item.  For example, the size of the indicated item.
+         */
+        this.parameter = [];
+        this.__occurrenceIsChoice = true;
+        /**
+         * Who is intended to fulfill the request.
+         */
+        this.supplier = [];
+        /**
+         * The reason why the supply item was requested.
+         */
+        this.reasonCode = [];
+        /**
+         * The reason why the supply item was requested.
+         */
+        this.reasonReference = [];
         this.resourceType = 'SupplyRequest';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -75,23 +95,23 @@ export class SupplyRequest extends fhir.DomainResource {
         if (source['status']) {
             this.status = source.status;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['category']) {
             this.category = new fhir.CodeableConcept(source.category);
         }
         if (source['priority']) {
             this.priority = source.priority;
         }
-        if (source['_priority']) {
-            this._priority = new fhir.FhirElement(source._priority);
+        if (source['item']) {
+            this.item = source.item;
         }
-        if (source['itemCodeableConcept']) {
-            this.itemCodeableConcept = new fhir.CodeableConcept(source.itemCodeableConcept);
+        else if (source['itemCodeableConcept']) {
+            this.item = new fhir.CodeableConcept(source.itemCodeableConcept);
         }
-        if (source['itemReference']) {
-            this.itemReference = new fhir.Reference(source.itemReference);
+        else if (source['itemReference']) {
+            this.item = new fhir.Reference(source.itemReference);
+        }
+        else {
+            this.item = null;
         }
         if (source['quantity']) {
             this.quantity = new fhir.Quantity(source.quantity);
@@ -102,23 +122,20 @@ export class SupplyRequest extends fhir.DomainResource {
         if (source['parameter']) {
             this.parameter = source.parameter.map((x) => new fhir.SupplyRequestParameter(x));
         }
-        if (source['occurrenceDateTime']) {
-            this.occurrenceDateTime = source.occurrenceDateTime;
+        if (source['occurrence']) {
+            this.occurrence = source.occurrence;
         }
-        if (source['_occurrenceDateTime']) {
-            this._occurrenceDateTime = new fhir.FhirElement(source._occurrenceDateTime);
+        else if (source['occurrenceDateTime']) {
+            this.occurrence = new fhir.FhirDateTime({ value: source.occurrenceDateTime });
         }
-        if (source['occurrencePeriod']) {
-            this.occurrencePeriod = new fhir.Period(source.occurrencePeriod);
+        else if (source['occurrencePeriod']) {
+            this.occurrence = new fhir.Period(source.occurrencePeriod);
         }
-        if (source['occurrenceTiming']) {
-            this.occurrenceTiming = new fhir.Timing(source.occurrenceTiming);
+        else if (source['occurrenceTiming']) {
+            this.occurrence = new fhir.Timing(source.occurrenceTiming);
         }
         if (source['authoredOn']) {
-            this.authoredOn = source.authoredOn;
-        }
-        if (source['_authoredOn']) {
-            this._authoredOn = new fhir.FhirElement(source._authoredOn);
+            this.authoredOn = new fhir.FhirDateTime({ value: source.authoredOn });
         }
         if (source['requester']) {
             this.requester = new fhir.Reference(source.requester);
@@ -158,18 +175,6 @@ export class SupplyRequest extends fhir.DomainResource {
         return RequestPriorityValueSet;
     }
     /**
-     * Example-bound Value Set for itemCodeableConcept
-     */
-    static itemCodeableConceptExampleValueSet() {
-        return SupplyItemValueSet;
-    }
-    /**
-     * Example-bound Value Set for itemReference
-     */
-    static itemReferenceExampleValueSet() {
-        return SupplyItemValueSet;
-    }
-    /**
      * Example-bound Value Set for reasonCode
      */
     static reasonCodeExampleValueSet() {
@@ -179,68 +184,56 @@ export class SupplyRequest extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: SupplyRequest.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'SupplyRequest' fhir: SupplyRequest.resourceType:'SupplyRequest'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["category"]) {
-            results.push(...this.category.doModelValidation());
+            outcome.issue.push(...this.category.doModelValidation().issue);
         }
-        if (this["_priority"]) {
-            results.push(...this._priority.doModelValidation());
+        if (!this['item']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property item: fhir: SupplyRequest.item[x]:", }));
         }
-        if (this["itemCodeableConcept"]) {
-            results.push(...this.itemCodeableConcept.doModelValidation());
-        }
-        if (this["itemReference"]) {
-            results.push(...this.itemReference.doModelValidation());
-        }
-        if (!this["quantity"]) {
-            results.push(["quantity", 'Missing required element: SupplyRequest.quantity']);
+        if (!this['quantity']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property quantity:fhir.Quantity fhir: SupplyRequest.quantity:Quantity", }));
         }
         if (this["quantity"]) {
-            results.push(...this.quantity.doModelValidation());
+            outcome.issue.push(...this.quantity.doModelValidation().issue);
         }
         if (this["parameter"]) {
-            this.parameter.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.parameter.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_occurrenceDateTime"]) {
-            results.push(...this._occurrenceDateTime.doModelValidation());
-        }
-        if (this["occurrencePeriod"]) {
-            results.push(...this.occurrencePeriod.doModelValidation());
-        }
-        if (this["occurrenceTiming"]) {
-            results.push(...this.occurrenceTiming.doModelValidation());
-        }
-        if (this["_authoredOn"]) {
-            results.push(...this._authoredOn.doModelValidation());
+        if (this["authoredOn"]) {
+            outcome.issue.push(...this.authoredOn.doModelValidation().issue);
         }
         if (this["requester"]) {
-            results.push(...this.requester.doModelValidation());
+            outcome.issue.push(...this.requester.doModelValidation().issue);
         }
         if (this["supplier"]) {
-            this.supplier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.supplier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["deliverFrom"]) {
-            results.push(...this.deliverFrom.doModelValidation());
+            outcome.issue.push(...this.deliverFrom.doModelValidation().issue);
         }
         if (this["deliverTo"]) {
-            results.push(...this.deliverTo.doModelValidation());
+            outcome.issue.push(...this.deliverTo.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=SupplyRequest.js.map

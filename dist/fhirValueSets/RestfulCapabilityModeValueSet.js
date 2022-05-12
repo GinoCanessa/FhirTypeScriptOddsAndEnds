@@ -27,15 +27,4 @@ export const RestfulCapabilityModeValueSet = {
 /**
  * The mode of a RESTful capability statement.
  */
-export var RestfulCapabilityModeValueSetEnum;
-(function (RestfulCapabilityModeValueSetEnum) {
-    /**
-     * client: The application acts as a client for this resource.
-     */
-    RestfulCapabilityModeValueSetEnum["Client"] = "client";
-    /**
-     * server: The application acts as a server for this resource.
-     */
-    RestfulCapabilityModeValueSetEnum["Server"] = "server";
-})(RestfulCapabilityModeValueSetEnum || (RestfulCapabilityModeValueSetEnum = {}));
 //# sourceMappingURL=RestfulCapabilityModeValueSet.js.map

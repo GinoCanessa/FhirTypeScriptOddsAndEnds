@@ -59,31 +59,4 @@ export const DeviceNametypeValueSet = {
 /**
  * The type of name the device is referred by.
  */
-export var DeviceNametypeValueSetEnum;
-(function (DeviceNametypeValueSetEnum) {
-    /**
-     * manufacturer-name: Manufacturer name.
-     */
-    DeviceNametypeValueSetEnum["ManufacturerName"] = "manufacturer-name";
-    /**
-     * model-name: Model name.
-     */
-    DeviceNametypeValueSetEnum["ModelName"] = "model-name";
-    /**
-     * other: other.
-     */
-    DeviceNametypeValueSetEnum["Other"] = "other";
-    /**
-     * patient-reported-name: Patient Reported name.
-     */
-    DeviceNametypeValueSetEnum["PatientReportedName"] = "patient-reported-name";
-    /**
-     * udi-label-name: UDI Label name.
-     */
-    DeviceNametypeValueSetEnum["UDILabelName"] = "udi-label-name";
-    /**
-     * user-friendly-name: User Friendly name.
-     */
-    DeviceNametypeValueSetEnum["UserFriendlyName"] = "user-friendly-name";
-})(DeviceNametypeValueSetEnum || (DeviceNametypeValueSetEnum = {}));
 //# sourceMappingURL=DeviceNametypeValueSet.js.map

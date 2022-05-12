@@ -3,152 +3,59 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Group
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { GroupTypeValueSet, GroupTypeValueSetType, GroupTypeValueSetEnum } from '../fhirValueSets/GroupTypeValueSet.js'
-
+import { GroupTypeValueSet, GroupTypeValueSetType,} from '../fhirValueSets/GroupTypeValueSet.js';
+import { GroupTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * All the identified characteristics must be true for an entity to a member of the group.
+ * Valid arguments for the GroupCharacteristic type.
  */
-export type IGroupCharacteristic = fhir.IBackboneElement & { 
+export interface GroupCharacteristicArgs extends fhir.BackboneElementArgs {
   /**
    * A code that identifies the kind of trait being asserted.
    */
-  code: fhir.ICodeableConcept|null;
+  code: fhir.CodeableConceptArgs|null;
   /**
    * For Range, it means members of the group have a value that falls somewhere within the specified range.
    */
-  valueCodeableConcept?: fhir.ICodeableConcept|undefined;
+  value?: fhir.CodeableConcept|fhir.FhirBoolean|fhir.Quantity|fhir.Range|fhir.Reference|undefined;
   /**
    * For Range, it means members of the group have a value that falls somewhere within the specified range.
    */
-  valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Group.characteristic.value[x]
-   */
-  _valueBoolean?: fhir.IFhirElement|undefined;
+  valueCodeableConcept?: fhir.CodeableConceptArgs|undefined;
   /**
    * For Range, it means members of the group have a value that falls somewhere within the specified range.
    */
-  valueQuantity?: fhir.IQuantity|undefined;
+  valueBoolean?: fhir.FhirBoolean|boolean|undefined;
   /**
    * For Range, it means members of the group have a value that falls somewhere within the specified range.
    */
-  valueRange?: fhir.IRange|undefined;
+  valueQuantity?: fhir.QuantityArgs|undefined;
   /**
    * For Range, it means members of the group have a value that falls somewhere within the specified range.
    */
-  valueReference?: fhir.IReference|undefined;
+  valueRange?: fhir.RangeArgs|undefined;
+  /**
+   * For Range, it means members of the group have a value that falls somewhere within the specified range.
+   */
+  valueReference?: fhir.ReferenceArgs|undefined;
   /**
    * This is labeled as "Is Modifier" because applications cannot wrongly include excluded members as included or vice versa.
    */
-  exclude: boolean|null;
-  /**
-   * Extended properties for primitive element: Group.characteristic.exclude
-   */
-  _exclude?: fhir.IFhirElement|undefined;
+  exclude: fhir.FhirBoolean|boolean|undefined;
   /**
    * The period over which the characteristic is tested; e.g. the patient had an operation during the month of June.
    */
-  period?: fhir.IPeriod|undefined;
-}
-
-/**
- * Identifies the resource instances that are members of the group.
- */
-export type IGroupMember = fhir.IBackboneElement & { 
-  /**
-   * A reference to the entity that is a member of the group. Must be consistent with Group.type. If the entity is another group, then the type must be the same.
-   */
-  entity: fhir.IReference|null;
-  /**
-   * The period that the member was in the group, if known.
-   */
-  period?: fhir.IPeriod|undefined;
-  /**
-   * A flag to indicate that the member is no longer in the group, but previously may have been a member.
-   */
-  inactive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Group.member.inactive
-   */
-  _inactive?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Represents a defined collection of entities that may be discussed or acted upon collectively but which are not expected to act collectively, and are not formally or legally recognized; i.e. a collection of entities that isn't an Organization.
- */
-export type IGroup = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Group";
-  /**
-   * A unique business identifier for this group.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * Indicates whether the record for the group is available for use or is merely being retained for historical purposes.
-   */
-  active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Group.active
-   */
-  _active?: fhir.IFhirElement|undefined;
-  /**
-   * Group members SHALL be of the appropriate resource type (Patient for person or animal; or Practitioner, Device, Medication or Substance for the other types.).
-   */
-  type: GroupTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Group.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * If true, indicates that the resource refers to a specific group of real individuals.  If false, the group defines a set of intended individuals.
-   */
-  actual: boolean|null;
-  /**
-   * Extended properties for primitive element: Group.actual
-   */
-  _actual?: fhir.IFhirElement|undefined;
-  /**
-   * This would generally be omitted for Person resources.
-   */
-  code?: fhir.ICodeableConcept|undefined;
-  /**
-   * A label assigned to the group for human identification and communication.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Group.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Note that the quantity may be less than the number of members if some of the members are not active.
-   */
-  quantity?: number|undefined;
-  /**
-   * Extended properties for primitive element: Group.quantity
-   */
-  _quantity?: fhir.IFhirElement|undefined;
-  /**
-   * This does not strictly align with ownership of a herd or flock, but may suffice to represent that relationship in simple cases. More complex cases will require an extension.
-   */
-  managingEntity?: fhir.IReference|undefined;
-  /**
-   * All the identified characteristics must be true for an entity to a member of the group.
-   */
-  characteristic?: fhir.IGroupCharacteristic[]|undefined;
-  /**
-   * Identifies the resource instances that are members of the group.
-   */
-  member?: fhir.IGroupMember[]|undefined;
+  period?: fhir.PeriodArgs|undefined;
 }
 
 /**
  * All the identified characteristics must be true for an entity to a member of the group.
  */
-export class GroupCharacteristic extends fhir.BackboneElement implements IGroupCharacteristic {
+export class GroupCharacteristic extends fhir.BackboneElement {
+  readonly __dataType:string = 'GroupCharacteristic';
   /**
    * A code that identifies the kind of trait being asserted.
    */
@@ -156,35 +63,12 @@ export class GroupCharacteristic extends fhir.BackboneElement implements IGroupC
   /**
    * For Range, it means members of the group have a value that falls somewhere within the specified range.
    */
-  public valueCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * For Range, it means members of the group have a value that falls somewhere within the specified range.
-   */
-  public valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Group.characteristic.value[x]
-   */
-  public _valueBoolean?: fhir.FhirElement|undefined;
-  /**
-   * For Range, it means members of the group have a value that falls somewhere within the specified range.
-   */
-  public valueQuantity?: fhir.Quantity|undefined;
-  /**
-   * For Range, it means members of the group have a value that falls somewhere within the specified range.
-   */
-  public valueRange?: fhir.Range|undefined;
-  /**
-   * For Range, it means members of the group have a value that falls somewhere within the specified range.
-   */
-  public valueReference?: fhir.Reference|undefined;
+  public value: (fhir.CodeableConcept|fhir.FhirBoolean|fhir.Quantity|fhir.Range|fhir.Reference)|null;
+  readonly __valueIsChoice:true = true;
   /**
    * This is labeled as "Is Modifier" because applications cannot wrongly include excluded members as included or vice versa.
    */
-  public exclude: boolean|null;
-  /**
-   * Extended properties for primitive element: Group.characteristic.exclude
-   */
-  public _exclude?: fhir.FhirElement|undefined;
+  public exclude: fhir.FhirBoolean|null;
   /**
    * The period over which the characteristic is tested; e.g. the patient had an operation during the month of June.
    */
@@ -192,44 +76,70 @@ export class GroupCharacteristic extends fhir.BackboneElement implements IGroupC
   /**
    * Default constructor for GroupCharacteristic - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IGroupCharacteristic> = { }) {
-    super(source);
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+  constructor(source:Partial<GroupCharacteristicArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
     else { this.code = null; }
-    if (source['valueCodeableConcept']) { this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept!); }
-    if (source['valueBoolean']) { this.valueBoolean = source.valueBoolean; }
-    if (source['_valueBoolean']) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
-    if (source['valueQuantity']) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
-    if (source['valueRange']) { this.valueRange = new fhir.Range(source.valueRange!); }
-    if (source['valueReference']) { this.valueReference = new fhir.Reference(source.valueReference!); }
-    if (source['exclude']) { this.exclude = source.exclude; }
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueCodeableConcept']) { this.value = new fhir.CodeableConcept(source.valueCodeableConcept); }
+    else if (source['valueBoolean']) { this.value = new fhir.FhirBoolean({value: source.valueBoolean}); }
+    else if (source['valueQuantity']) { this.value = new fhir.Quantity(source.valueQuantity); }
+    else if (source['valueRange']) { this.value = new fhir.Range(source.valueRange); }
+    else if (source['valueReference']) { this.value = new fhir.Reference(source.valueReference); }
+    else { this.value = null; }
+    if (source['exclude']) { this.exclude = new fhir.FhirBoolean({value: source.exclude}); }
     else { this.exclude = null; }
-    if (source['_exclude']) { this._exclude = new fhir.FhirElement(source._exclude!); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: Group.characteristic.code']); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["valueCodeableConcept"]) { results.push(...this.valueCodeableConcept.doModelValidation()); }
-    if (this["_valueBoolean"]) { results.push(...this._valueBoolean.doModelValidation()); }
-    if (this["valueQuantity"]) { results.push(...this.valueQuantity.doModelValidation()); }
-    if (this["valueRange"]) { results.push(...this.valueRange.doModelValidation()); }
-    if (this["valueReference"]) { results.push(...this.valueReference.doModelValidation()); }
-    if (!this["exclude"]) { results.push(["exclude",'Missing required element: Group.characteristic.exclude']); }
-    if (this["_exclude"]) { results.push(...this._exclude.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.CodeableConcept fhir: Group.characteristic.code:CodeableConcept", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value: fhir: Group.characteristic.value[x]:", }));
+    }
+    if (!this['exclude']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property exclude:fhir.FhirBoolean fhir: Group.characteristic.exclude:boolean", }));
+    }
+    if (this["exclude"]) { outcome.issue!.push(...this.exclude.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the GroupMember type.
+ */
+export interface GroupMemberArgs extends fhir.BackboneElementArgs {
+  /**
+   * A reference to the entity that is a member of the group. Must be consistent with Group.type. If the entity is another group, then the type must be the same.
+   */
+  entity: fhir.ReferenceArgs|null;
+  /**
+   * The period that the member was in the group, if known.
+   */
+  period?: fhir.PeriodArgs|undefined;
+  /**
+   * A flag to indicate that the member is no longer in the group, but previously may have been a member.
+   */
+  inactive?: fhir.FhirBoolean|boolean|undefined;
 }
 
 /**
  * Identifies the resource instances that are members of the group.
  */
-export class GroupMember extends fhir.BackboneElement implements IGroupMember {
+export class GroupMember extends fhir.BackboneElement {
+  readonly __dataType:string = 'GroupMember';
   /**
    * A reference to the entity that is a member of the group. Must be consistent with Group.type. If the entity is another group, then the type must be the same.
    */
@@ -241,39 +151,92 @@ export class GroupMember extends fhir.BackboneElement implements IGroupMember {
   /**
    * A flag to indicate that the member is no longer in the group, but previously may have been a member.
    */
-  public inactive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Group.member.inactive
-   */
-  public _inactive?: fhir.FhirElement|undefined;
+  public inactive?: fhir.FhirBoolean|undefined;
   /**
    * Default constructor for GroupMember - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IGroupMember> = { }) {
-    super(source);
-    if (source['entity']) { this.entity = new fhir.Reference(source.entity!); }
+  constructor(source:Partial<GroupMemberArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['entity']) { this.entity = new fhir.Reference(source.entity); }
     else { this.entity = null; }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
-    if (source['inactive']) { this.inactive = source.inactive; }
-    if (source['_inactive']) { this._inactive = new fhir.FhirElement(source._inactive!); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
+    if (source['inactive']) { this.inactive = new fhir.FhirBoolean({value: source.inactive}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["entity"]) { results.push(["entity",'Missing required element: Group.member.entity']); }
-    if (this["entity"]) { results.push(...this.entity.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    if (this["_inactive"]) { results.push(...this._inactive.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['entity']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property entity:fhir.Reference fhir: Group.member.entity:Reference", }));
+    }
+    if (this["entity"]) { outcome.issue!.push(...this.entity.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    if (this["inactive"]) { outcome.issue!.push(...this.inactive.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Group type.
+ */
+export interface GroupArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Group"|undefined;
+  /**
+   * A unique business identifier for this group.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * Indicates whether the record for the group is available for use or is merely being retained for historical purposes.
+   */
+  active?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Group members SHALL be of the appropriate resource type (Patient for person or animal; or Practitioner, Device, Medication or Substance for the other types.).
+   */
+  type: GroupTypeValueSetEnum|null;
+  /**
+   * If true, indicates that the resource refers to a specific group of real individuals.  If false, the group defines a set of intended individuals.
+   */
+  actual: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * This would generally be omitted for Person resources.
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * A label assigned to the group for human identification and communication.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * Note that the quantity may be less than the number of members if some of the members are not active.
+   */
+  quantity?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * This does not strictly align with ownership of a herd or flock, but may suffice to represent that relationship in simple cases. More complex cases will require an extension.
+   */
+  managingEntity?: fhir.ReferenceArgs|undefined;
+  /**
+   * All the identified characteristics must be true for an entity to a member of the group.
+   */
+  characteristic?: fhir.GroupCharacteristicArgs[]|undefined;
+  /**
+   * Identifies the resource instances that are members of the group.
+   */
+  member?: fhir.GroupMemberArgs[]|undefined;
 }
 
 /**
  * Represents a defined collection of entities that may be discussed or acted upon collectively but which are not expected to act collectively, and are not formally or legally recognized; i.e. a collection of entities that isn't an Organization.
  */
-export class Group extends fhir.DomainResource implements IGroup {
+export class Group extends fhir.DomainResource {
+  readonly __dataType:string = 'Group';
   /**
    * Resource Type Name
    */
@@ -281,31 +244,19 @@ export class Group extends fhir.DomainResource implements IGroup {
   /**
    * A unique business identifier for this group.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Indicates whether the record for the group is available for use or is merely being retained for historical purposes.
    */
-  public active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Group.active
-   */
-  public _active?: fhir.FhirElement|undefined;
+  public active?: fhir.FhirBoolean|undefined;
   /**
    * Group members SHALL be of the appropriate resource type (Patient for person or animal; or Practitioner, Device, Medication or Substance for the other types.).
    */
   public type: GroupTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Group.type
-   */
-  public _type?: fhir.FhirElement|undefined;
-  /**
    * If true, indicates that the resource refers to a specific group of real individuals.  If false, the group defines a set of intended individuals.
    */
-  public actual: boolean|null;
-  /**
-   * Extended properties for primitive element: Group.actual
-   */
-  public _actual?: fhir.FhirElement|undefined;
+  public actual: fhir.FhirBoolean|null;
   /**
    * This would generally be omitted for Person resources.
    */
@@ -313,19 +264,11 @@ export class Group extends fhir.DomainResource implements IGroup {
   /**
    * A label assigned to the group for human identification and communication.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Group.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Note that the quantity may be less than the number of members if some of the members are not active.
    */
-  public quantity?: number|undefined;
-  /**
-   * Extended properties for primitive element: Group.quantity
-   */
-  public _quantity?: fhir.FhirElement|undefined;
+  public quantity?: fhir.FhirUnsignedInt|undefined;
   /**
    * This does not strictly align with ownership of a herd or flock, but may suffice to represent that relationship in simple cases. More complex cases will require an extension.
    */
@@ -333,32 +276,27 @@ export class Group extends fhir.DomainResource implements IGroup {
   /**
    * All the identified characteristics must be true for an entity to a member of the group.
    */
-  public characteristic?: fhir.GroupCharacteristic[]|undefined;
+  public characteristic?: fhir.GroupCharacteristic[]|undefined = [];
   /**
    * Identifies the resource instances that are members of the group.
    */
-  public member?: fhir.GroupMember[]|undefined;
+  public member?: fhir.GroupMember[]|undefined = [];
   /**
    * Default constructor for Group - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IGroup> = { }) {
-    super(source);
+  constructor(source:Partial<GroupArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Group';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['active']) { this.active = source.active; }
-    if (source['_active']) { this._active = new fhir.FhirElement(source._active!); }
+    if (source['active']) { this.active = new fhir.FhirBoolean({value: source.active}); }
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['actual']) { this.actual = source.actual; }
+    if (source['actual']) { this.actual = new fhir.FhirBoolean({value: source.actual}); }
     else { this.actual = null; }
-    if (source['_actual']) { this._actual = new fhir.FhirElement(source._actual!); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['quantity']) { this.quantity = source.quantity; }
-    if (source['_quantity']) { this._quantity = new fhir.FhirElement(source._quantity!); }
-    if (source['managingEntity']) { this.managingEntity = new fhir.Reference(source.managingEntity!); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['quantity']) { this.quantity = new fhir.FhirUnsignedInt({value: source.quantity}); }
+    if (source['managingEntity']) { this.managingEntity = new fhir.Reference(source.managingEntity); }
     if (source['characteristic']) { this.characteristic = source.characteristic.map((x) => new fhir.GroupCharacteristic(x)); }
     if (source['member']) { this.member = source.member.map((x) => new fhir.GroupMember(x)); }
   }
@@ -371,21 +309,32 @@ export class Group extends fhir.DomainResource implements IGroup {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Group.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_active"]) { results.push(...this._active.doModelValidation()); }
-    if (!this["type"]) { results.push(["type",'Missing required element: Group.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (!this["actual"]) { results.push(["actual",'Missing required element: Group.actual']); }
-    if (this["_actual"]) { results.push(...this._actual.doModelValidation()); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_quantity"]) { results.push(...this._quantity.doModelValidation()); }
-    if (this["managingEntity"]) { results.push(...this.managingEntity.doModelValidation()); }
-    if (this["characteristic"]) { this.characteristic.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["member"]) { this.member.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Group' fhir: Group.resourceType:'Group'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["active"]) { outcome.issue!.push(...this.active.doModelValidation().issue!); }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:GroupTypeValueSetEnum fhir: Group.type:code", }));
+    }
+    if (!this['actual']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property actual:fhir.FhirBoolean fhir: Group.actual:boolean", }));
+    }
+    if (this["actual"]) { outcome.issue!.push(...this.actual.doModelValidation().issue!); }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["quantity"]) { outcome.issue!.push(...this.quantity.doModelValidation().issue!); }
+    if (this["managingEntity"]) { outcome.issue!.push(...this.managingEntity.doModelValidation().issue!); }
+    if (this["characteristic"]) { this.characteristic.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["member"]) { this.member.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

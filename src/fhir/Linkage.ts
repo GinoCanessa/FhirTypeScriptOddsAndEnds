@@ -3,66 +3,35 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Linkage
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { LinkageTypeValueSet, LinkageTypeValueSetType, LinkageTypeValueSetEnum } from '../fhirValueSets/LinkageTypeValueSet.js'
-
+import { LinkageTypeValueSet, LinkageTypeValueSetType,} from '../fhirValueSets/LinkageTypeValueSet.js';
+import { LinkageTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
+ * Valid arguments for the LinkageItem type.
  */
-export type ILinkageItem = fhir.IBackboneElement & { 
+export interface LinkageItemArgs extends fhir.BackboneElementArgs {
   /**
    * Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
    */
   type: LinkageTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Linkage.item.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
    * The resource instance being linked as part of the group.
    */
-  resource: fhir.IReference|null;
-}
-
-/**
- * Identifies two or more records (resource instances) that refer to the same real-world "occurrence".
- */
-export type ILinkage = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Linkage";
-  /**
-   * If false, any asserted linkages should not be considered current/relevant/applicable.
-   */
-  active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Linkage.active
-   */
-  _active?: fhir.IFhirElement|undefined;
-  /**
-   * Identifies the user or organization responsible for asserting the linkages as well as the user or organization who establishes the context in which the nature of each linkage is evaluated.
-   */
-  author?: fhir.IReference|undefined;
-  /**
-   * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
-   */
-  item: fhir.ILinkageItem[]|null;
+  resource: fhir.ReferenceArgs|null;
 }
 
 /**
  * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
  */
-export class LinkageItem extends fhir.BackboneElement implements ILinkageItem {
+export class LinkageItem extends fhir.BackboneElement {
+  readonly __dataType:string = 'LinkageItem';
   /**
    * Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
    */
   public type: LinkageTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Linkage.item.type
-   */
-  public _type?: fhir.FhirElement|undefined;
   /**
    * The resource instance being linked as part of the group.
    */
@@ -70,12 +39,11 @@ export class LinkageItem extends fhir.BackboneElement implements ILinkageItem {
   /**
    * Default constructor for LinkageItem - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ILinkageItem> = { }) {
-    super(source);
+  constructor(source:Partial<LinkageItemArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['resource']) { this.resource = new fhir.Reference(source.resource!); }
+    if (source['resource']) { this.resource = new fhir.Reference(source.resource); }
     else { this.resource = null; }
   }
   /**
@@ -87,20 +55,51 @@ export class LinkageItem extends fhir.BackboneElement implements ILinkageItem {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: Linkage.item.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (!this["resource"]) { results.push(["resource",'Missing required element: Linkage.item.resource']); }
-    if (this["resource"]) { results.push(...this.resource.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:LinkageTypeValueSetEnum fhir: Linkage.item.type:code", }));
+    }
+    if (!this['resource']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resource:fhir.Reference fhir: Linkage.item.resource:Reference", }));
+    }
+    if (this["resource"]) { outcome.issue!.push(...this.resource.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Linkage type.
+ */
+export interface LinkageArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Linkage"|undefined;
+  /**
+   * If false, any asserted linkages should not be considered current/relevant/applicable.
+   */
+  active?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Identifies the user or organization responsible for asserting the linkages as well as the user or organization who establishes the context in which the nature of each linkage is evaluated.
+   */
+  author?: fhir.ReferenceArgs|undefined;
+  /**
+   * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
+   */
+  item: fhir.LinkageItemArgs[]|null;
 }
 
 /**
  * Identifies two or more records (resource instances) that refer to the same real-world "occurrence".
  */
-export class Linkage extends fhir.DomainResource implements ILinkage {
+export class Linkage extends fhir.DomainResource {
+  readonly __dataType:string = 'Linkage';
   /**
    * Resource Type Name
    */
@@ -108,11 +107,7 @@ export class Linkage extends fhir.DomainResource implements ILinkage {
   /**
    * If false, any asserted linkages should not be considered current/relevant/applicable.
    */
-  public active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Linkage.active
-   */
-  public _active?: fhir.FhirElement|undefined;
+  public active?: fhir.FhirBoolean|undefined;
   /**
    * Identifies the user or organization responsible for asserting the linkages as well as the user or organization who establishes the context in which the nature of each linkage is evaluated.
    */
@@ -120,29 +115,42 @@ export class Linkage extends fhir.DomainResource implements ILinkage {
   /**
    * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
    */
-  public item: fhir.LinkageItem[]|null;
+  public item: fhir.LinkageItem[]|null = [];
   /**
    * Default constructor for Linkage - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ILinkage> = { }) {
-    super(source);
+  constructor(source:Partial<LinkageArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Linkage';
-    if (source['active']) { this.active = source.active; }
-    if (source['_active']) { this._active = new fhir.FhirElement(source._active!); }
-    if (source['author']) { this.author = new fhir.Reference(source.author!); }
+    if (source['active']) { this.active = new fhir.FhirBoolean({value: source.active}); }
+    if (source['author']) { this.author = new fhir.Reference(source.author); }
     if (source['item']) { this.item = source.item.map((x) => new fhir.LinkageItem(x)); }
     else { this.item = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Linkage.resourceType']); }
-    if (this["_active"]) { results.push(...this._active.doModelValidation()); }
-    if (this["author"]) { results.push(...this.author.doModelValidation()); }
-    if ((!this["item"]) || (this["item"].length === 0)) { results.push(["item",'Missing required element: Linkage.item']); }
-    if (this["item"]) { this.item.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Linkage' fhir: Linkage.resourceType:'Linkage'", }));
+    }
+    if (this["active"]) { outcome.issue!.push(...this.active.doModelValidation().issue!); }
+    if (this["author"]) { outcome.issue!.push(...this.author.doModelValidation().issue!); }
+    if (!this['item']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property item:fhir.LinkageItem[] fhir: Linkage.item:item", }));
+    } else if (!Array.isArray(this.item)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property item:fhir.LinkageItem[] fhir: Linkage.item:item", }));
+    } else if (this.item.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property item:fhir.LinkageItem[] fhir: Linkage.item:item", }));
+    }
+    if (this["item"]) { this.item.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

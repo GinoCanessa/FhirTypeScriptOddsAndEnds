@@ -3,11 +3,13 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Slot
 import * as fhir from '../fhir.js';
-import { ServiceCategoryValueSet } from '../fhirValueSets/ServiceCategoryValueSet.js';
-import { ServiceTypeValueSet } from '../fhirValueSets/ServiceTypeValueSet.js';
-import { C80PracticeCodesValueSet } from '../fhirValueSets/C80PracticeCodesValueSet.js';
-import { V20276ValueSet } from '../fhirValueSets/V20276ValueSet.js';
-import { SlotstatusValueSet } from '../fhirValueSets/SlotstatusValueSet.js';
+import { ServiceCategoryValueSet, } from '../fhirValueSets/ServiceCategoryValueSet.js';
+import { ServiceTypeValueSet, } from '../fhirValueSets/ServiceTypeValueSet.js';
+import { C80PracticeCodesValueSet, } from '../fhirValueSets/C80PracticeCodesValueSet.js';
+import { V20276ValueSet, } from '../fhirValueSets/V20276ValueSet.js';
+import { SlotstatusValueSet, } from '../fhirValueSets/SlotstatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A slot of time on a schedule that may be available for booking appointments.
  */
@@ -15,8 +17,25 @@ export class Slot extends fhir.DomainResource {
     /**
      * Default constructor for Slot - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Slot';
+        /**
+         * External Ids for this item.
+         */
+        this.identifier = [];
+        /**
+         * A broad categorization of the service that is to be performed during this appointment.
+         */
+        this.serviceCategory = [];
+        /**
+         * The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource.
+         */
+        this.serviceType = [];
+        /**
+         * The specialty of a practitioner that would be required to perform the service requested in this appointment.
+         */
+        this.specialty = [];
         this.resourceType = 'Slot';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -45,38 +64,23 @@ export class Slot extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['start']) {
-            this.start = source.start;
+            this.start = new fhir.FhirInstant({ value: source.start });
         }
         else {
             this.start = null;
         }
-        if (source['_start']) {
-            this._start = new fhir.FhirElement(source._start);
-        }
         if (source['end']) {
-            this.end = source.end;
+            this.end = new fhir.FhirInstant({ value: source.end });
         }
         else {
             this.end = null;
         }
-        if (source['_end']) {
-            this._end = new fhir.FhirElement(source._end);
-        }
         if (source['overbooked']) {
-            this.overbooked = source.overbooked;
-        }
-        if (source['_overbooked']) {
-            this._overbooked = new fhir.FhirElement(source._overbooked);
+            this.overbooked = new fhir.FhirBoolean({ value: source.overbooked });
         }
         if (source['comment']) {
-            this.comment = source.comment;
-        }
-        if (source['_comment']) {
-            this._comment = new fhir.FhirElement(source._comment);
+            this.comment = new fhir.FhirString({ value: source.comment });
         }
     }
     /**
@@ -113,56 +117,59 @@ export class Slot extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Slot.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Slot' fhir: Slot.resourceType:'Slot'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["serviceCategory"]) {
-            this.serviceCategory.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.serviceCategory.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["serviceType"]) {
-            this.serviceType.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.serviceType.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["specialty"]) {
-            this.specialty.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.specialty.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["appointmentType"]) {
-            results.push(...this.appointmentType.doModelValidation());
+            outcome.issue.push(...this.appointmentType.doModelValidation().issue);
         }
-        if (!this["schedule"]) {
-            results.push(["schedule", 'Missing required element: Slot.schedule']);
+        if (!this['schedule']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property schedule:fhir.Reference fhir: Slot.schedule:Reference", }));
         }
         if (this["schedule"]) {
-            results.push(...this.schedule.doModelValidation());
+            outcome.issue.push(...this.schedule.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Slot.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:SlotstatusValueSetEnum fhir: Slot.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['start']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property start:fhir.FhirInstant fhir: Slot.start:instant", }));
         }
-        if (!this["start"]) {
-            results.push(["start", 'Missing required element: Slot.start']);
+        if (this["start"]) {
+            outcome.issue.push(...this.start.doModelValidation().issue);
         }
-        if (this["_start"]) {
-            results.push(...this._start.doModelValidation());
+        if (!this['end']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property end:fhir.FhirInstant fhir: Slot.end:instant", }));
         }
-        if (!this["end"]) {
-            results.push(["end", 'Missing required element: Slot.end']);
+        if (this["end"]) {
+            outcome.issue.push(...this.end.doModelValidation().issue);
         }
-        if (this["_end"]) {
-            results.push(...this._end.doModelValidation());
+        if (this["overbooked"]) {
+            outcome.issue.push(...this.overbooked.doModelValidation().issue);
         }
-        if (this["_overbooked"]) {
-            results.push(...this._overbooked.doModelValidation());
+        if (this["comment"]) {
+            outcome.issue.push(...this.comment.doModelValidation().issue);
         }
-        if (this["_comment"]) {
-            results.push(...this._comment.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Slot.js.map

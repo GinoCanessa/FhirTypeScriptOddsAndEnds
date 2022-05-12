@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SubstanceSourceMaterial
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Many complex materials are fractions of parts of plants, animals, or minerals. Fraction elements are often necessary to define both Substances and Specified Group 1 Substances. For substances derived from Plants, fraction information will be captured at the Substance information level ( . Oils, Juices and Exudates). Additional information for Extracts, such as extraction solvent composition, will be captured at the Specified Substance Group 1 information level. For plasma-derived products fraction information will be captured at the Substance and the Specified Substance Group 1 levels.
  */
@@ -10,13 +12,11 @@ export class SubstanceSourceMaterialFractionDescription extends fhir.BackboneEle
     /**
      * Default constructor for SubstanceSourceMaterialFractionDescription - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSourceMaterialFractionDescription';
         if (source['fraction']) {
-            this.fraction = source.fraction;
-        }
-        if (source['_fraction']) {
-            this._fraction = new fhir.FhirElement(source._fraction);
+            this.fraction = new fhir.FhirString({ value: source.fraction });
         }
         if (source['materialType']) {
             this.materialType = new fhir.CodeableConcept(source.materialType);
@@ -26,14 +26,20 @@ export class SubstanceSourceMaterialFractionDescription extends fhir.BackboneEle
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_fraction"]) {
-            results.push(...this._fraction.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["fraction"]) {
+            outcome.issue.push(...this.fraction.doModelValidation().issue);
         }
         if (this["materialType"]) {
-            results.push(...this.materialType.doModelValidation());
+            outcome.issue.push(...this.materialType.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -43,30 +49,34 @@ export class SubstanceSourceMaterialOrganismAuthor extends fhir.BackboneElement 
     /**
      * Default constructor for SubstanceSourceMaterialOrganismAuthor - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSourceMaterialOrganismAuthor';
         if (source['authorType']) {
             this.authorType = new fhir.CodeableConcept(source.authorType);
         }
         if (source['authorDescription']) {
-            this.authorDescription = source.authorDescription;
-        }
-        if (source['_authorDescription']) {
-            this._authorDescription = new fhir.FhirElement(source._authorDescription);
+            this.authorDescription = new fhir.FhirString({ value: source.authorDescription });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["authorType"]) {
-            results.push(...this.authorType.doModelValidation());
+            outcome.issue.push(...this.authorType.doModelValidation().issue);
         }
-        if (this["_authorDescription"]) {
-            results.push(...this._authorDescription.doModelValidation());
+        if (this["authorDescription"]) {
+            outcome.issue.push(...this.authorDescription.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -76,31 +86,20 @@ export class SubstanceSourceMaterialOrganismHybrid extends fhir.BackboneElement 
     /**
      * Default constructor for SubstanceSourceMaterialOrganismHybrid - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSourceMaterialOrganismHybrid';
         if (source['maternalOrganismId']) {
-            this.maternalOrganismId = source.maternalOrganismId;
-        }
-        if (source['_maternalOrganismId']) {
-            this._maternalOrganismId = new fhir.FhirElement(source._maternalOrganismId);
+            this.maternalOrganismId = new fhir.FhirString({ value: source.maternalOrganismId });
         }
         if (source['maternalOrganismName']) {
-            this.maternalOrganismName = source.maternalOrganismName;
-        }
-        if (source['_maternalOrganismName']) {
-            this._maternalOrganismName = new fhir.FhirElement(source._maternalOrganismName);
+            this.maternalOrganismName = new fhir.FhirString({ value: source.maternalOrganismName });
         }
         if (source['paternalOrganismId']) {
-            this.paternalOrganismId = source.paternalOrganismId;
-        }
-        if (source['_paternalOrganismId']) {
-            this._paternalOrganismId = new fhir.FhirElement(source._paternalOrganismId);
+            this.paternalOrganismId = new fhir.FhirString({ value: source.paternalOrganismId });
         }
         if (source['paternalOrganismName']) {
-            this.paternalOrganismName = source.paternalOrganismName;
-        }
-        if (source['_paternalOrganismName']) {
-            this._paternalOrganismName = new fhir.FhirElement(source._paternalOrganismName);
+            this.paternalOrganismName = new fhir.FhirString({ value: source.paternalOrganismName });
         }
         if (source['hybridType']) {
             this.hybridType = new fhir.CodeableConcept(source.hybridType);
@@ -110,23 +109,29 @@ export class SubstanceSourceMaterialOrganismHybrid extends fhir.BackboneElement 
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_maternalOrganismId"]) {
-            results.push(...this._maternalOrganismId.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["maternalOrganismId"]) {
+            outcome.issue.push(...this.maternalOrganismId.doModelValidation().issue);
         }
-        if (this["_maternalOrganismName"]) {
-            results.push(...this._maternalOrganismName.doModelValidation());
+        if (this["maternalOrganismName"]) {
+            outcome.issue.push(...this.maternalOrganismName.doModelValidation().issue);
         }
-        if (this["_paternalOrganismId"]) {
-            results.push(...this._paternalOrganismId.doModelValidation());
+        if (this["paternalOrganismId"]) {
+            outcome.issue.push(...this.paternalOrganismId.doModelValidation().issue);
         }
-        if (this["_paternalOrganismName"]) {
-            results.push(...this._paternalOrganismName.doModelValidation());
+        if (this["paternalOrganismName"]) {
+            outcome.issue.push(...this.paternalOrganismName.doModelValidation().issue);
         }
         if (this["hybridType"]) {
-            results.push(...this.hybridType.doModelValidation());
+            outcome.issue.push(...this.hybridType.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -136,8 +141,9 @@ export class SubstanceSourceMaterialOrganismOrganismGeneral extends fhir.Backbon
     /**
      * Default constructor for SubstanceSourceMaterialOrganismOrganismGeneral - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSourceMaterialOrganismOrganismGeneral';
         if (source['kingdom']) {
             this.kingdom = new fhir.CodeableConcept(source.kingdom);
         }
@@ -155,20 +161,26 @@ export class SubstanceSourceMaterialOrganismOrganismGeneral extends fhir.Backbon
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["kingdom"]) {
-            results.push(...this.kingdom.doModelValidation());
+            outcome.issue.push(...this.kingdom.doModelValidation().issue);
         }
         if (this["phylum"]) {
-            results.push(...this.phylum.doModelValidation());
+            outcome.issue.push(...this.phylum.doModelValidation().issue);
         }
         if (this["class"]) {
-            results.push(...this.class.doModelValidation());
+            outcome.issue.push(...this.class.doModelValidation().issue);
         }
         if (this["order"]) {
-            results.push(...this.order.doModelValidation());
+            outcome.issue.push(...this.order.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -178,8 +190,13 @@ export class SubstanceSourceMaterialOrganism extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceSourceMaterialOrganism - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSourceMaterialOrganism';
+        /**
+         * 4.9.13.6.1 Author type (Conditional).
+         */
+        this.author = [];
         if (source['family']) {
             this.family = new fhir.CodeableConcept(source.family);
         }
@@ -193,10 +210,7 @@ export class SubstanceSourceMaterialOrganism extends fhir.BackboneElement {
             this.intraspecificType = new fhir.CodeableConcept(source.intraspecificType);
         }
         if (source['intraspecificDescription']) {
-            this.intraspecificDescription = source.intraspecificDescription;
-        }
-        if (source['_intraspecificDescription']) {
-            this._intraspecificDescription = new fhir.FhirElement(source._intraspecificDescription);
+            this.intraspecificDescription = new fhir.FhirString({ value: source.intraspecificDescription });
         }
         if (source['author']) {
             this.author = source.author.map((x) => new fhir.SubstanceSourceMaterialOrganismAuthor(x));
@@ -212,32 +226,38 @@ export class SubstanceSourceMaterialOrganism extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["family"]) {
-            results.push(...this.family.doModelValidation());
+            outcome.issue.push(...this.family.doModelValidation().issue);
         }
         if (this["genus"]) {
-            results.push(...this.genus.doModelValidation());
+            outcome.issue.push(...this.genus.doModelValidation().issue);
         }
         if (this["species"]) {
-            results.push(...this.species.doModelValidation());
+            outcome.issue.push(...this.species.doModelValidation().issue);
         }
         if (this["intraspecificType"]) {
-            results.push(...this.intraspecificType.doModelValidation());
+            outcome.issue.push(...this.intraspecificType.doModelValidation().issue);
         }
-        if (this["_intraspecificDescription"]) {
-            results.push(...this._intraspecificDescription.doModelValidation());
+        if (this["intraspecificDescription"]) {
+            outcome.issue.push(...this.intraspecificDescription.doModelValidation().issue);
         }
         if (this["author"]) {
-            this.author.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.author.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["hybrid"]) {
-            results.push(...this.hybrid.doModelValidation());
+            outcome.issue.push(...this.hybrid.doModelValidation().issue);
         }
         if (this["organismGeneral"]) {
-            results.push(...this.organismGeneral.doModelValidation());
+            outcome.issue.push(...this.organismGeneral.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -247,8 +267,9 @@ export class SubstanceSourceMaterialPartDescription extends fhir.BackboneElement
     /**
      * Default constructor for SubstanceSourceMaterialPartDescription - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSourceMaterialPartDescription';
         if (source['part']) {
             this.part = new fhir.CodeableConcept(source.part);
         }
@@ -260,14 +281,20 @@ export class SubstanceSourceMaterialPartDescription extends fhir.BackboneElement
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["part"]) {
-            results.push(...this.part.doModelValidation());
+            outcome.issue.push(...this.part.doModelValidation().issue);
         }
         if (this["partLocation"]) {
-            results.push(...this.partLocation.doModelValidation());
+            outcome.issue.push(...this.partLocation.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -277,8 +304,33 @@ export class SubstanceSourceMaterial extends fhir.DomainResource {
     /**
      * Default constructor for SubstanceSourceMaterial - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceSourceMaterial';
+        /**
+         * The parent of the herbal drug Ginkgo biloba, Leaf is the substance ID of the substance (fresh) of Ginkgo biloba L. or Ginkgo biloba L. (Whole plant).
+         */
+        this.parentSubstanceId = [];
+        /**
+         * The parent substance of the Herbal Drug, or Herbal preparation.
+         */
+        this.parentSubstanceName = [];
+        /**
+         * The country where the plant material is harvested or the countries where the plasma is sourced from as laid down in accordance with the Plasma Master File. For “Plasma-derived substances” the attribute country of origin provides information about the countries used for the manufacturing of the Cryopoor plama or Crioprecipitate.
+         */
+        this.countryOfOrigin = [];
+        /**
+         * The place/region where the plant is harvested or the places/regions where the animal source material has its habitat.
+         */
+        this.geographicalLocation = [];
+        /**
+         * Many complex materials are fractions of parts of plants, animals, or minerals. Fraction elements are often necessary to define both Substances and Specified Group 1 Substances. For substances derived from Plants, fraction information will be captured at the Substance information level ( . Oils, Juices and Exudates). Additional information for Extracts, such as extraction solvent composition, will be captured at the Specified Substance Group 1 information level. For plasma-derived products fraction information will be captured at the Substance and the Specified Substance Group 1 levels.
+         */
+        this.fractionDescription = [];
+        /**
+         * To do.
+         */
+        this.partDescription = [];
         this.resourceType = 'SubstanceSourceMaterial';
         if (source['sourceMaterialClass']) {
             this.sourceMaterialClass = new fhir.CodeableConcept(source.sourceMaterialClass);
@@ -293,28 +345,19 @@ export class SubstanceSourceMaterial extends fhir.DomainResource {
             this.organismId = new fhir.Identifier(source.organismId);
         }
         if (source['organismName']) {
-            this.organismName = source.organismName;
-        }
-        if (source['_organismName']) {
-            this._organismName = new fhir.FhirElement(source._organismName);
+            this.organismName = new fhir.FhirString({ value: source.organismName });
         }
         if (source['parentSubstanceId']) {
             this.parentSubstanceId = source.parentSubstanceId.map((x) => new fhir.Identifier(x));
         }
         if (source['parentSubstanceName']) {
-            this.parentSubstanceName = source.parentSubstanceName.map((x) => (x));
-        }
-        if (source['_parentSubstanceName']) {
-            this._parentSubstanceName = source._parentSubstanceName.map((x) => new fhir.FhirElement(x));
+            this.parentSubstanceName = source.parentSubstanceName.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['countryOfOrigin']) {
             this.countryOfOrigin = source.countryOfOrigin.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['geographicalLocation']) {
-            this.geographicalLocation = source.geographicalLocation.map((x) => (x));
-        }
-        if (source['_geographicalLocation']) {
-            this._geographicalLocation = source._geographicalLocation.map((x) => new fhir.FhirElement(x));
+            this.geographicalLocation = source.geographicalLocation.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['developmentStage']) {
             this.developmentStage = new fhir.CodeableConcept(source.developmentStage);
@@ -333,50 +376,56 @@ export class SubstanceSourceMaterial extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: SubstanceSourceMaterial.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'SubstanceSourceMaterial' fhir: SubstanceSourceMaterial.resourceType:'SubstanceSourceMaterial'", }));
         }
         if (this["sourceMaterialClass"]) {
-            results.push(...this.sourceMaterialClass.doModelValidation());
+            outcome.issue.push(...this.sourceMaterialClass.doModelValidation().issue);
         }
         if (this["sourceMaterialType"]) {
-            results.push(...this.sourceMaterialType.doModelValidation());
+            outcome.issue.push(...this.sourceMaterialType.doModelValidation().issue);
         }
         if (this["sourceMaterialState"]) {
-            results.push(...this.sourceMaterialState.doModelValidation());
+            outcome.issue.push(...this.sourceMaterialState.doModelValidation().issue);
         }
         if (this["organismId"]) {
-            results.push(...this.organismId.doModelValidation());
+            outcome.issue.push(...this.organismId.doModelValidation().issue);
         }
-        if (this["_organismName"]) {
-            results.push(...this._organismName.doModelValidation());
+        if (this["organismName"]) {
+            outcome.issue.push(...this.organismName.doModelValidation().issue);
         }
         if (this["parentSubstanceId"]) {
-            this.parentSubstanceId.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.parentSubstanceId.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_parentSubstanceName"]) {
-            this._parentSubstanceName.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["parentSubstanceName"]) {
+            this.parentSubstanceName.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["countryOfOrigin"]) {
-            this.countryOfOrigin.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.countryOfOrigin.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_geographicalLocation"]) {
-            this._geographicalLocation.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["geographicalLocation"]) {
+            this.geographicalLocation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["developmentStage"]) {
-            results.push(...this.developmentStage.doModelValidation());
+            outcome.issue.push(...this.developmentStage.doModelValidation().issue);
         }
         if (this["fractionDescription"]) {
-            this.fractionDescription.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.fractionDescription.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["organism"]) {
-            results.push(...this.organism.doModelValidation());
+            outcome.issue.push(...this.organism.doModelValidation().issue);
         }
         if (this["partDescription"]) {
-            this.partDescription.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.partDescription.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=SubstanceSourceMaterial.js.map

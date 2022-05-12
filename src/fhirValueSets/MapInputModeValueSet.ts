@@ -35,13 +35,3 @@ export type MapInputModeValueSetType = typeof MapInputModeValueSet;
 /**
  * Mode for this instance of data.
  */
-export enum MapInputModeValueSetEnum {
-  /**
-   * source: Names an input instance used a source for mapping.
-   */
-  SourceInstance = "source",
-  /**
-   * target: Names an instance that is being populated.
-   */
-  TargetInstance = "target",
-}

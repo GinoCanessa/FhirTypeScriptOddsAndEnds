@@ -43,23 +43,4 @@ export const ConsentDataMeaningValueSet = {
 /**
  * How a resource reference is interpreted when testing consent restrictions.
  */
-export var ConsentDataMeaningValueSetEnum;
-(function (ConsentDataMeaningValueSetEnum) {
-    /**
-     * authoredby: The consent applies to instances of resources that are authored by.
-     */
-    ConsentDataMeaningValueSetEnum["AuthoredBy"] = "authoredby";
-    /**
-     * dependents: The consent applies directly to the instance of the resource and instances that refer to it.
-     */
-    ConsentDataMeaningValueSetEnum["Dependents"] = "dependents";
-    /**
-     * instance: The consent applies directly to the instance of the resource.
-     */
-    ConsentDataMeaningValueSetEnum["Instance"] = "instance";
-    /**
-     * related: The consent applies directly to the instance of the resource and instances it refers to.
-     */
-    ConsentDataMeaningValueSetEnum["Related"] = "related";
-})(ConsentDataMeaningValueSetEnum || (ConsentDataMeaningValueSetEnum = {}));
 //# sourceMappingURL=ConsentDataMeaningValueSet.js.map

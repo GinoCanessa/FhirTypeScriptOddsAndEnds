@@ -35,13 +35,3 @@ export type BenefitNetworkValueSetType = typeof BenefitNetworkValueSet;
 /**
  * This value set includes a smattering of Network type codes.
  */
-export enum BenefitNetworkValueSetEnum {
-  /**
-   * in: Services rendered by a Network provider
-   */
-  InNetwork = "in",
-  /**
-   * out: Services rendered by a provider who is not in the Network
-   */
-  OutOfNetwork = "out",
-}

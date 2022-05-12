@@ -10,8 +10,21 @@ export class DomainResource extends fhir.Resource {
     /**
      * Default constructor for DomainResource - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DomainResource';
+        /**
+         * This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.
+         */
+        this.contained = [];
+        /**
+         * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+         */
+        this.extension = [];
+        /**
+         * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+         */
+        this.modifierExtension = [];
         if (source['text']) {
             this.text = new fhir.Narrative(source.text);
         }
@@ -35,20 +48,26 @@ export class DomainResource extends fhir.Resource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["text"]) {
-            results.push(...this.text.doModelValidation());
+            outcome.issue.push(...this.text.doModelValidation().issue);
         }
         if (this["contained"]) {
-            this.contained.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contained.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["extension"]) {
-            this.extension.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.extension.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["modifierExtension"]) {
-            this.modifierExtension.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.modifierExtension.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=DomainResource.js.map

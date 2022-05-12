@@ -35,19 +35,4 @@ export const ObservationRangeCategoryValueSet = {
 /**
  * Codes identifying the category of observation range.
  */
-export var ObservationRangeCategoryValueSetEnum;
-(function (ObservationRangeCategoryValueSetEnum) {
-    /**
-     * absolute: Absolute Range for Ordinal and Continuous Observations. Results outside this range are not possible.
-     */
-    ObservationRangeCategoryValueSetEnum["AbsoluteRange"] = "absolute";
-    /**
-     * critical: Critical Range for Ordinal and Continuous Observations.
-     */
-    ObservationRangeCategoryValueSetEnum["CriticalRange"] = "critical";
-    /**
-     * reference: Reference (Normal) Range for Ordinal and Continuous Observations.
-     */
-    ObservationRangeCategoryValueSetEnum["ReferenceRange"] = "reference";
-})(ObservationRangeCategoryValueSetEnum || (ObservationRangeCategoryValueSetEnum = {}));
 //# sourceMappingURL=ObservationRangeCategoryValueSet.js.map

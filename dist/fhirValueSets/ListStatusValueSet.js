@@ -35,19 +35,4 @@ export const ListStatusValueSet = {
 /**
  * The current state of the list.
  */
-export var ListStatusValueSetEnum;
-(function (ListStatusValueSetEnum) {
-    /**
-     * current: The list is considered to be an active part of the patient's record.
-     */
-    ListStatusValueSetEnum["Current"] = "current";
-    /**
-     * entered-in-error: The list was never accurate.  It is retained for medico-legal purposes only.
-     */
-    ListStatusValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * retired: The list is "old" and should no longer be considered accurate or relevant.
-     */
-    ListStatusValueSetEnum["Retired"] = "retired";
-})(ListStatusValueSetEnum || (ListStatusValueSetEnum = {}));
 //# sourceMappingURL=ListStatusValueSet.js.map

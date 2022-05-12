@@ -35,19 +35,4 @@ export const EvidenceVariantStateValueSet = {
 /**
  * Used for results by exposure in variant states such as low-risk, medium-risk and high-risk states.
  */
-export var EvidenceVariantStateValueSetEnum;
-(function (EvidenceVariantStateValueSetEnum) {
-    /**
-     * high-risk: high risk estimate.
-     */
-    EvidenceVariantStateValueSetEnum["HighRisk"] = "high-risk";
-    /**
-     * low-risk: low risk estimate.
-     */
-    EvidenceVariantStateValueSetEnum["LowRisk"] = "low-risk";
-    /**
-     * medium-risk: medium risk estimate.
-     */
-    EvidenceVariantStateValueSetEnum["MediumRisk"] = "medium-risk";
-})(EvidenceVariantStateValueSetEnum || (EvidenceVariantStateValueSetEnum = {}));
 //# sourceMappingURL=EvidenceVariantStateValueSet.js.map

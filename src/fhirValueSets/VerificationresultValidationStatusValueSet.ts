@@ -43,17 +43,3 @@ export type VerificationresultValidationStatusValueSetType = typeof Verification
 /**
  * Status of the validation of the target against the primary source
  */
-export enum VerificationresultValidationStatusValueSetEnum {
-  /**
-   * Code: failed
-   */
-  Failed = "failed",
-  /**
-   * Code: successful
-   */
-  Successful = "successful",
-  /**
-   * unknown: The validations status has not been determined yet
-   */
-  Unknown = "unknown",
-}

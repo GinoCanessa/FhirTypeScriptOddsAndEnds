@@ -3,58 +3,51 @@ import { BodystructureCodeValueSetType } from '../fhirValueSets/BodystructureCod
 import { BodySiteValueSetType } from '../fhirValueSets/BodySiteValueSet.js';
 import { BodystructureRelativeLocationValueSetType } from '../fhirValueSets/BodystructureRelativeLocationValueSet.js';
 /**
- * Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
+ * Valid arguments for the BodyStructure type.
  */
-export declare type IBodyStructure = fhir.IDomainResource & {
+export interface BodyStructureArgs extends fhir.DomainResourceArgs {
     /**
      * Resource Type Name
      */
-    resourceType: "BodyStructure";
+    resourceType: "BodyStructure" | undefined;
     /**
      * Identifier for this instance of the anatomical structure.
      */
-    identifier?: fhir.IIdentifier[] | undefined;
+    identifier?: fhir.IdentifierArgs[] | undefined;
     /**
      * This element is labeled as a modifier because it may be used to mark that the resource was created in error.
      */
-    active?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: BodyStructure.active
-     */
-    _active?: fhir.IFhirElement | undefined;
+    active?: fhir.FhirBoolean | boolean | undefined;
     /**
      * The minimum cardinality of 0 supports the use case of specifying a location without defining a morphology.
      */
-    morphology?: fhir.ICodeableConcept | undefined;
+    morphology?: fhir.CodeableConceptArgs | undefined;
     /**
      * The anatomical location or region of the specimen, lesion, or body structure.
      */
-    location?: fhir.ICodeableConcept | undefined;
+    location?: fhir.CodeableConceptArgs | undefined;
     /**
      * Qualifier to refine the anatomical location.  These include qualifiers for laterality, relative location, directionality, number, and plane.
      */
-    locationQualifier?: fhir.ICodeableConcept[] | undefined;
+    locationQualifier?: fhir.CodeableConceptArgs[] | undefined;
     /**
      * This description could include any visual markings used to orientate the viewer e.g. external reference points, special sutures, ink markings.
      */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: BodyStructure.description
-     */
-    _description?: fhir.IFhirElement | undefined;
+    description?: fhir.FhirString | string | undefined;
     /**
      * Image or images used to identify a location.
      */
-    image?: fhir.IAttachment[] | undefined;
+    image?: fhir.AttachmentArgs[] | undefined;
     /**
      * The person to which the body site belongs.
      */
-    patient: fhir.IReference | null;
-};
+    patient: fhir.ReferenceArgs | null;
+}
 /**
  * Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
  */
-export declare class BodyStructure extends fhir.DomainResource implements IBodyStructure {
+export declare class BodyStructure extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -66,11 +59,7 @@ export declare class BodyStructure extends fhir.DomainResource implements IBodyS
     /**
      * This element is labeled as a modifier because it may be used to mark that the resource was created in error.
      */
-    active?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: BodyStructure.active
-     */
-    _active?: fhir.FhirElement | undefined;
+    active?: fhir.FhirBoolean | undefined;
     /**
      * The minimum cardinality of 0 supports the use case of specifying a location without defining a morphology.
      */
@@ -86,11 +75,7 @@ export declare class BodyStructure extends fhir.DomainResource implements IBodyS
     /**
      * This description could include any visual markings used to orientate the viewer e.g. external reference points, special sutures, ink markings.
      */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: BodyStructure.description
-     */
-    _description?: fhir.FhirElement | undefined;
+    description?: fhir.FhirString | undefined;
     /**
      * Image or images used to identify a location.
      */
@@ -102,7 +87,7 @@ export declare class BodyStructure extends fhir.DomainResource implements IBodyS
     /**
      * Default constructor for BodyStructure - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IBodyStructure>);
+    constructor(source?: Partial<BodyStructureArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Example-bound Value Set for morphology
      */
@@ -118,6 +103,10 @@ export declare class BodyStructure extends fhir.DomainResource implements IBodyS
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=BodyStructure.d.ts.map

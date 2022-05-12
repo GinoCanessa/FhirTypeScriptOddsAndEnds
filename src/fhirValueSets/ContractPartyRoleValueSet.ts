@@ -27,9 +27,3 @@ export type ContractPartyRoleValueSetType = typeof ContractPartyRoleValueSet;
 /**
  * This value set contract specific codes for offer party participation.
  */
-export enum ContractPartyRoleValueSetEnum {
-  /**
-   * flunky: To be completed
-   */
-  FLunky = "flunky",
-}

@@ -19,11 +19,4 @@ export const AssetAvailabilityValueSet = {
 /**
  * This value set has asset availability codes.
  */
-export var AssetAvailabilityValueSetEnum;
-(function (AssetAvailabilityValueSetEnum) {
-    /**
-     * lease: To be completed
-     */
-    AssetAvailabilityValueSetEnum["Lease"] = "lease";
-})(AssetAvailabilityValueSetEnum || (AssetAvailabilityValueSetEnum = {}));
 //# sourceMappingURL=AssetAvailabilityValueSet.js.map

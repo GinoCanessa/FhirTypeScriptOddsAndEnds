@@ -67,35 +67,4 @@ export const HttpOperationsValueSet = {
 /**
  * The allowable request method or HTTP operation codes.
  */
-export var HttpOperationsValueSetEnum;
-(function (HttpOperationsValueSetEnum) {
-    /**
-     * delete: HTTP DELETE operation.
-     */
-    HttpOperationsValueSetEnum["DELETE"] = "delete";
-    /**
-     * get: HTTP GET operation.
-     */
-    HttpOperationsValueSetEnum["GET"] = "get";
-    /**
-     * head: HTTP HEAD operation.
-     */
-    HttpOperationsValueSetEnum["HEAD"] = "head";
-    /**
-     * options: HTTP OPTIONS operation.
-     */
-    HttpOperationsValueSetEnum["OPTIONS"] = "options";
-    /**
-     * patch: HTTP PATCH operation.
-     */
-    HttpOperationsValueSetEnum["PATCH"] = "patch";
-    /**
-     * post: HTTP POST operation.
-     */
-    HttpOperationsValueSetEnum["POST"] = "post";
-    /**
-     * put: HTTP PUT operation.
-     */
-    HttpOperationsValueSetEnum["PUT"] = "put";
-})(HttpOperationsValueSetEnum || (HttpOperationsValueSetEnum = {}));
 //# sourceMappingURL=HttpOperationsValueSet.js.map

@@ -27,15 +27,4 @@ export const DoseRateTypeValueSet = {
 /**
  * The kind of dose or rate specified.
  */
-export var DoseRateTypeValueSetEnum;
-(function (DoseRateTypeValueSetEnum) {
-    /**
-     * calculated: The dose specified is calculated by the prescriber or the system.
-     */
-    DoseRateTypeValueSetEnum["Calculated"] = "calculated";
-    /**
-     * ordered: The dose specified is as ordered by the prescriber.
-     */
-    DoseRateTypeValueSetEnum["Ordered"] = "ordered";
-})(DoseRateTypeValueSetEnum || (DoseRateTypeValueSetEnum = {}));
 //# sourceMappingURL=DoseRateTypeValueSet.js.map

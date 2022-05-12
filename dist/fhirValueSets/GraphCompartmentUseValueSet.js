@@ -27,15 +27,4 @@ export const GraphCompartmentUseValueSet = {
 /**
  * Defines how a compartment rule is used.
  */
-export var GraphCompartmentUseValueSetEnum;
-(function (GraphCompartmentUseValueSetEnum) {
-    /**
-     * condition: This compartment rule is a condition for whether the rule applies.
-     */
-    GraphCompartmentUseValueSetEnum["Condition"] = "condition";
-    /**
-     * requirement: This compartment rule is enforced on any relationships that meet the conditions.
-     */
-    GraphCompartmentUseValueSetEnum["Requirement"] = "requirement";
-})(GraphCompartmentUseValueSetEnum || (GraphCompartmentUseValueSetEnum = {}));
 //# sourceMappingURL=GraphCompartmentUseValueSet.js.map

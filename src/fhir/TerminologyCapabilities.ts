@@ -3,892 +3,721 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: TerminologyCapabilities
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-import { CapabilityStatementKindValueSet, CapabilityStatementKindValueSetType, CapabilityStatementKindValueSetEnum } from '../fhirValueSets/CapabilityStatementKindValueSet.js'
-import { CodeSearchSupportValueSet, CodeSearchSupportValueSetType, CodeSearchSupportValueSetEnum } from '../fhirValueSets/CodeSearchSupportValueSet.js'
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { CapabilityStatementKindValueSet, CapabilityStatementKindValueSetType,} from '../fhirValueSets/CapabilityStatementKindValueSet.js';
+import { CapabilityStatementKindValueSetEnum } from '../valueSetEnums.js';
+import { CodeSearchSupportValueSet, CodeSearchSupportValueSetType,} from '../fhirValueSets/CodeSearchSupportValueSet.js';
+import { CodeSearchSupportValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
+/**
+ * Valid arguments for the TerminologyCapabilitiesSoftware type.
+ */
+export interface TerminologyCapabilitiesSoftwareArgs extends fhir.BackboneElementArgs {
+  /**
+   * Name the software is known by.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * If possible, a version should be specified, as statements are likely to be different for different versions of software.
+   */
+  version?: fhir.FhirString|string|undefined;
+}
 
 /**
  * Software that is covered by this terminology capability statement.  It is used when the statement describes the capabilities of a particular software version, independent of an installation.
  */
-export type ITerminologyCapabilitiesSoftware = fhir.IBackboneElement & { 
+export class TerminologyCapabilitiesSoftware extends fhir.BackboneElement {
+  readonly __dataType:string = 'TerminologyCapabilitiesSoftware';
   /**
    * Name the software is known by.
    */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.software.name
-   */
-  _name?: fhir.IFhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * If possible, a version should be specified, as statements are likely to be different for different versions of software.
    */
-  version?: string|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.software.version
+   * Default constructor for TerminologyCapabilitiesSoftware - initializes any required elements to null if a value is not provided.
    */
-  _version?: fhir.IFhirElement|undefined;
+  constructor(source:Partial<TerminologyCapabilitiesSoftwareArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    else { this.name = null; }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: TerminologyCapabilities.software.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TerminologyCapabilitiesImplementation type.
+ */
+export interface TerminologyCapabilitiesImplementationArgs extends fhir.BackboneElementArgs {
+  /**
+   * Information about the specific installation that this terminology capability statement relates to.
+   */
+  description: fhir.FhirString|string|undefined;
+  /**
+   * An absolute base URL for the implementation.
+   */
+  url?: fhir.FhirUrl|string|undefined;
 }
 
 /**
  * Identifies a specific implementation instance that is described by the terminology capability statement - i.e. a particular installation, rather than the capabilities of a software program.
  */
-export type ITerminologyCapabilitiesImplementation = fhir.IBackboneElement & { 
+export class TerminologyCapabilitiesImplementation extends fhir.BackboneElement {
+  readonly __dataType:string = 'TerminologyCapabilitiesImplementation';
   /**
    * Information about the specific installation that this terminology capability statement relates to.
    */
-  description: string|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.implementation.description
-   */
-  _description?: fhir.IFhirElement|undefined;
+  public description: fhir.FhirString|null;
   /**
    * An absolute base URL for the implementation.
    */
-  url?: string|undefined;
+  public url?: fhir.FhirUrl|undefined;
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.implementation.url
+   * Default constructor for TerminologyCapabilitiesImplementation - initializes any required elements to null if a value is not provided.
    */
-  _url?: fhir.IFhirElement|undefined;
+  constructor(source:Partial<TerminologyCapabilitiesImplementationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    else { this.description = null; }
+    if (source['url']) { this.url = new fhir.FhirUrl({value: source.url}); }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['description']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property description:fhir.FhirString fhir: TerminologyCapabilities.implementation.description:string", }));
+    }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TerminologyCapabilitiesCodeSystemVersionFilter type.
+ */
+export interface TerminologyCapabilitiesCodeSystemVersionFilterArgs extends fhir.BackboneElementArgs {
+  /**
+   * Code of the property supported.
+   */
+  code: fhir.FhirCode|string|undefined;
+  /**
+   * Operations supported for the property.
+   */
+  op: fhir.FhirCode[]|string[]|undefined;
 }
 
 /**
  * Filter Properties supported.
  */
-export type ITerminologyCapabilitiesCodeSystemVersionFilter = fhir.IBackboneElement & { 
+export class TerminologyCapabilitiesCodeSystemVersionFilter extends fhir.BackboneElement {
+  readonly __dataType:string = 'TerminologyCapabilitiesCodeSystemVersionFilter';
   /**
    * Code of the property supported.
    */
-  code: string|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.filter.code
-   */
-  _code?: fhir.IFhirElement|undefined;
+  public code: fhir.FhirCode|null;
   /**
    * Operations supported for the property.
    */
-  op: string[]|null;
+  public op: fhir.FhirCode[]|null = [];
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.filter.op
+   * Default constructor for TerminologyCapabilitiesCodeSystemVersionFilter - initializes any required elements to null if a value is not provided.
    */
-  _op?: fhir.IFhirElement[]|undefined;
+  constructor(source:Partial<TerminologyCapabilitiesCodeSystemVersionFilterArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.FhirCode({value: source.code}); }
+    else { this.code = null; }
+    if (source['op']) { this.op = source.op.map((x) => new fhir.FhirCode({value: x})); }
+    else { this.op = null; }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.FhirCode fhir: TerminologyCapabilities.codeSystem.version.filter.code:code", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (!this['op']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property op:fhir.FhirCode[] fhir: TerminologyCapabilities.codeSystem.version.filter.op:code", }));
+    } else if (!Array.isArray(this.op)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property op:fhir.FhirCode[] fhir: TerminologyCapabilities.codeSystem.version.filter.op:code", }));
+    } else if (this.op.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property op:fhir.FhirCode[] fhir: TerminologyCapabilities.codeSystem.version.filter.op:code", }));
+    }
+    if (this["op"]) { this.op.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TerminologyCapabilitiesCodeSystemVersion type.
+ */
+export interface TerminologyCapabilitiesCodeSystemVersionArgs extends fhir.BackboneElementArgs {
+  /**
+   * For version-less code systems, there should be a single version with no identifier.
+   */
+  code?: fhir.FhirString|string|undefined;
+  /**
+   * If this is the default version for this code system.
+   */
+  isDefault?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * If the compositional grammar defined by the code system is supported.
+   */
+  compositional?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Language Displays supported.
+   */
+  language?: fhir.FhirCode[]|string[]|undefined;
+  /**
+   * Filter Properties supported.
+   */
+  filter?: fhir.TerminologyCapabilitiesCodeSystemVersionFilterArgs[]|undefined;
+  /**
+   * Properties supported for $lookup.
+   */
+  property?: fhir.FhirCode[]|string[]|undefined;
 }
 
 /**
  * Language translations might not be available for all codes.
  */
-export type ITerminologyCapabilitiesCodeSystemVersion = fhir.IBackboneElement & { 
+export class TerminologyCapabilitiesCodeSystemVersion extends fhir.BackboneElement {
+  readonly __dataType:string = 'TerminologyCapabilitiesCodeSystemVersion';
   /**
    * For version-less code systems, there should be a single version with no identifier.
    */
-  code?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.code
-   */
-  _code?: fhir.IFhirElement|undefined;
+  public code?: fhir.FhirString|undefined;
   /**
    * If this is the default version for this code system.
    */
-  isDefault?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.isDefault
-   */
-  _isDefault?: fhir.IFhirElement|undefined;
+  public isDefault?: fhir.FhirBoolean|undefined;
   /**
    * If the compositional grammar defined by the code system is supported.
    */
-  compositional?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.compositional
-   */
-  _compositional?: fhir.IFhirElement|undefined;
+  public compositional?: fhir.FhirBoolean|undefined;
   /**
    * Language Displays supported.
    */
-  language?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.language
-   */
-  _language?: fhir.IFhirElement[]|undefined;
+  public language?: fhir.FhirCode[]|undefined = [];
   /**
    * Filter Properties supported.
    */
-  filter?: fhir.ITerminologyCapabilitiesCodeSystemVersionFilter[]|undefined;
+  public filter?: fhir.TerminologyCapabilitiesCodeSystemVersionFilter[]|undefined = [];
   /**
    * Properties supported for $lookup.
    */
-  property?: string[]|undefined;
+  public property?: fhir.FhirCode[]|undefined = [];
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.property
+   * Default constructor for TerminologyCapabilitiesCodeSystemVersion - initializes any required elements to null if a value is not provided.
    */
-  _property?: fhir.IFhirElement[]|undefined;
+  constructor(source:Partial<TerminologyCapabilitiesCodeSystemVersionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.FhirString({value: source.code}); }
+    if (source['isDefault']) { this.isDefault = new fhir.FhirBoolean({value: source.isDefault}); }
+    if (source['compositional']) { this.compositional = new fhir.FhirBoolean({value: source.compositional}); }
+    if (source['language']) { this.language = source.language.map((x) => new fhir.FhirCode({value: x})); }
+    if (source['filter']) { this.filter = source.filter.map((x) => new fhir.TerminologyCapabilitiesCodeSystemVersionFilter(x)); }
+    if (source['property']) { this.property = source.property.map((x) => new fhir.FhirCode({value: x})); }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["isDefault"]) { outcome.issue!.push(...this.isDefault.doModelValidation().issue!); }
+    if (this["compositional"]) { outcome.issue!.push(...this.compositional.doModelValidation().issue!); }
+    if (this["language"]) { this.language.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["filter"]) { this.filter.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["property"]) { this.property.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TerminologyCapabilitiesCodeSystem type.
+ */
+export interface TerminologyCapabilitiesCodeSystemArgs extends fhir.BackboneElementArgs {
+  /**
+   * URI for the Code System.
+   */
+  uri?: fhir.FhirCanonical|string|undefined;
+  /**
+   * Language translations might not be available for all codes.
+   */
+  version?: fhir.TerminologyCapabilitiesCodeSystemVersionArgs[]|undefined;
+  /**
+   * True if subsumption is supported for this version of the code system.
+   */
+  subsumption?: fhir.FhirBoolean|boolean|undefined;
 }
 
 /**
  * The code system - identified by its system URL - may also be declared explicitly as a Code System Resource at /CodeSystem, but it might not be.
  */
-export type ITerminologyCapabilitiesCodeSystem = fhir.IBackboneElement & { 
+export class TerminologyCapabilitiesCodeSystem extends fhir.BackboneElement {
+  readonly __dataType:string = 'TerminologyCapabilitiesCodeSystem';
   /**
    * URI for the Code System.
    */
-  uri?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.uri
-   */
-  _uri?: fhir.IFhirElement|undefined;
+  public uri?: fhir.FhirCanonical|undefined;
   /**
    * Language translations might not be available for all codes.
    */
-  version?: fhir.ITerminologyCapabilitiesCodeSystemVersion[]|undefined;
+  public version?: fhir.TerminologyCapabilitiesCodeSystemVersion[]|undefined = [];
   /**
    * True if subsumption is supported for this version of the code system.
    */
-  subsumption?: boolean|undefined;
+  public subsumption?: fhir.FhirBoolean|undefined;
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.subsumption
+   * Default constructor for TerminologyCapabilitiesCodeSystem - initializes any required elements to null if a value is not provided.
    */
-  _subsumption?: fhir.IFhirElement|undefined;
+  constructor(source:Partial<TerminologyCapabilitiesCodeSystemArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['uri']) { this.uri = new fhir.FhirCanonical({value: source.uri}); }
+    if (source['version']) { this.version = source.version.map((x) => new fhir.TerminologyCapabilitiesCodeSystemVersion(x)); }
+    if (source['subsumption']) { this.subsumption = new fhir.FhirBoolean({value: source.subsumption}); }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["uri"]) { outcome.issue!.push(...this.uri.doModelValidation().issue!); }
+    if (this["version"]) { this.version.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["subsumption"]) { outcome.issue!.push(...this.subsumption.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TerminologyCapabilitiesExpansionParameter type.
+ */
+export interface TerminologyCapabilitiesExpansionParameterArgs extends fhir.BackboneElementArgs {
+  /**
+   * Expansion Parameter name.
+   */
+  name: fhir.FhirCode|string|undefined;
+  /**
+   * Description of support for parameter.
+   */
+  documentation?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Supported expansion parameter.
  */
-export type ITerminologyCapabilitiesExpansionParameter = fhir.IBackboneElement & { 
+export class TerminologyCapabilitiesExpansionParameter extends fhir.BackboneElement {
+  readonly __dataType:string = 'TerminologyCapabilitiesExpansionParameter';
   /**
    * Expansion Parameter name.
    */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.expansion.parameter.name
-   */
-  _name?: fhir.IFhirElement|undefined;
+  public name: fhir.FhirCode|null;
   /**
    * Description of support for parameter.
    */
-  documentation?: string|undefined;
+  public documentation?: fhir.FhirString|undefined;
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.expansion.parameter.documentation
+   * Default constructor for TerminologyCapabilitiesExpansionParameter - initializes any required elements to null if a value is not provided.
    */
-  _documentation?: fhir.IFhirElement|undefined;
+  constructor(source:Partial<TerminologyCapabilitiesExpansionParameterArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirCode({value: source.name}); }
+    else { this.name = null; }
+    if (source['documentation']) { this.documentation = new fhir.FhirString({value: source.documentation}); }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirCode fhir: TerminologyCapabilities.expansion.parameter.name:code", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TerminologyCapabilitiesExpansion type.
+ */
+export interface TerminologyCapabilitiesExpansionArgs extends fhir.BackboneElementArgs {
+  /**
+   * Whether the server can return nested value sets.
+   */
+  hierarchical?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Whether the server supports paging on expansion.
+   */
+  paging?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Allow request for incomplete expansions?
+   */
+  incomplete?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Supported expansion parameter.
+   */
+  parameter?: fhir.TerminologyCapabilitiesExpansionParameterArgs[]|undefined;
+  /**
+   * This documentation should cover things like case sensitivity,  use of punctuation if not ignored, what wild cards are supported (if any), whether text is starts with or contains, and whether word order matters.
+   */
+  textFilter?: fhir.FhirMarkdown|string|undefined;
 }
 
 /**
  * Information about the [ValueSet/$expand](valueset-operation-expand.html) operation.
  */
-export type ITerminologyCapabilitiesExpansion = fhir.IBackboneElement & { 
+export class TerminologyCapabilitiesExpansion extends fhir.BackboneElement {
+  readonly __dataType:string = 'TerminologyCapabilitiesExpansion';
   /**
    * Whether the server can return nested value sets.
    */
-  hierarchical?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.expansion.hierarchical
-   */
-  _hierarchical?: fhir.IFhirElement|undefined;
+  public hierarchical?: fhir.FhirBoolean|undefined;
   /**
    * Whether the server supports paging on expansion.
    */
-  paging?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.expansion.paging
-   */
-  _paging?: fhir.IFhirElement|undefined;
+  public paging?: fhir.FhirBoolean|undefined;
   /**
    * Allow request for incomplete expansions?
    */
-  incomplete?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.expansion.incomplete
-   */
-  _incomplete?: fhir.IFhirElement|undefined;
+  public incomplete?: fhir.FhirBoolean|undefined;
   /**
    * Supported expansion parameter.
    */
-  parameter?: fhir.ITerminologyCapabilitiesExpansionParameter[]|undefined;
+  public parameter?: fhir.TerminologyCapabilitiesExpansionParameter[]|undefined = [];
   /**
    * This documentation should cover things like case sensitivity,  use of punctuation if not ignored, what wild cards are supported (if any), whether text is starts with or contains, and whether word order matters.
    */
-  textFilter?: string|undefined;
+  public textFilter?: fhir.FhirMarkdown|undefined;
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.expansion.textFilter
+   * Default constructor for TerminologyCapabilitiesExpansion - initializes any required elements to null if a value is not provided.
    */
-  _textFilter?: fhir.IFhirElement|undefined;
+  constructor(source:Partial<TerminologyCapabilitiesExpansionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['hierarchical']) { this.hierarchical = new fhir.FhirBoolean({value: source.hierarchical}); }
+    if (source['paging']) { this.paging = new fhir.FhirBoolean({value: source.paging}); }
+    if (source['incomplete']) { this.incomplete = new fhir.FhirBoolean({value: source.incomplete}); }
+    if (source['parameter']) { this.parameter = source.parameter.map((x) => new fhir.TerminologyCapabilitiesExpansionParameter(x)); }
+    if (source['textFilter']) { this.textFilter = new fhir.FhirMarkdown({value: source.textFilter}); }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["hierarchical"]) { outcome.issue!.push(...this.hierarchical.doModelValidation().issue!); }
+    if (this["paging"]) { outcome.issue!.push(...this.paging.doModelValidation().issue!); }
+    if (this["incomplete"]) { outcome.issue!.push(...this.incomplete.doModelValidation().issue!); }
+    if (this["parameter"]) { this.parameter.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["textFilter"]) { outcome.issue!.push(...this.textFilter.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TerminologyCapabilitiesValidateCode type.
+ */
+export interface TerminologyCapabilitiesValidateCodeArgs extends fhir.BackboneElementArgs {
+  /**
+   * Whether translations are validated.
+   */
+  translations: fhir.FhirBoolean|boolean|undefined;
 }
 
 /**
  * Information about the [ValueSet/$validate-code](valueset-operation-validate-code.html) operation.
  */
-export type ITerminologyCapabilitiesValidateCode = fhir.IBackboneElement & { 
+export class TerminologyCapabilitiesValidateCode extends fhir.BackboneElement {
+  readonly __dataType:string = 'TerminologyCapabilitiesValidateCode';
   /**
    * Whether translations are validated.
    */
-  translations: boolean|null;
+  public translations: fhir.FhirBoolean|null;
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.validateCode.translations
+   * Default constructor for TerminologyCapabilitiesValidateCode - initializes any required elements to null if a value is not provided.
    */
-  _translations?: fhir.IFhirElement|undefined;
+  constructor(source:Partial<TerminologyCapabilitiesValidateCodeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['translations']) { this.translations = new fhir.FhirBoolean({value: source.translations}); }
+    else { this.translations = null; }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['translations']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property translations:fhir.FhirBoolean fhir: TerminologyCapabilities.validateCode.translations:boolean", }));
+    }
+    if (this["translations"]) { outcome.issue!.push(...this.translations.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TerminologyCapabilitiesTranslation type.
+ */
+export interface TerminologyCapabilitiesTranslationArgs extends fhir.BackboneElementArgs {
+  /**
+   * Whether the client must identify the map.
+   */
+  needsMap: fhir.FhirBoolean|boolean|undefined;
 }
 
 /**
  * Information about the [ConceptMap/$translate](conceptmap-operation-translate.html) operation.
  */
-export type ITerminologyCapabilitiesTranslation = fhir.IBackboneElement & { 
+export class TerminologyCapabilitiesTranslation extends fhir.BackboneElement {
+  readonly __dataType:string = 'TerminologyCapabilitiesTranslation';
   /**
    * Whether the client must identify the map.
    */
-  needsMap: boolean|null;
+  public needsMap: fhir.FhirBoolean|null;
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.translation.needsMap
+   * Default constructor for TerminologyCapabilitiesTranslation - initializes any required elements to null if a value is not provided.
    */
-  _needsMap?: fhir.IFhirElement|undefined;
+  constructor(source:Partial<TerminologyCapabilitiesTranslationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['needsMap']) { this.needsMap = new fhir.FhirBoolean({value: source.needsMap}); }
+    else { this.needsMap = null; }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['needsMap']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property needsMap:fhir.FhirBoolean fhir: TerminologyCapabilities.translation.needsMap:boolean", }));
+    }
+    if (this["needsMap"]) { outcome.issue!.push(...this.needsMap.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TerminologyCapabilitiesClosure type.
+ */
+export interface TerminologyCapabilitiesClosureArgs extends fhir.BackboneElementArgs {
+  /**
+   * If cross-system closure is supported.
+   */
+  translation?: fhir.FhirBoolean|boolean|undefined;
 }
 
 /**
  * Whether the $closure operation is supported.
  */
-export type ITerminologyCapabilitiesClosure = fhir.IBackboneElement & { 
+export class TerminologyCapabilitiesClosure extends fhir.BackboneElement {
+  readonly __dataType:string = 'TerminologyCapabilitiesClosure';
   /**
    * If cross-system closure is supported.
    */
-  translation?: boolean|undefined;
+  public translation?: fhir.FhirBoolean|undefined;
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.closure.translation
+   * Default constructor for TerminologyCapabilitiesClosure - initializes any required elements to null if a value is not provided.
    */
-  _translation?: fhir.IFhirElement|undefined;
+  constructor(source:Partial<TerminologyCapabilitiesClosureArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['translation']) { this.translation = new fhir.FhirBoolean({value: source.translation}); }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["translation"]) { outcome.issue!.push(...this.translation.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
 }
-
 /**
- * A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+ * Valid arguments for the TerminologyCapabilities type.
  */
-export type ITerminologyCapabilities = fhir.IDomainResource & { 
+export interface TerminologyCapabilitiesArgs extends fhir.DomainResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "TerminologyCapabilities";
+  resourceType: "TerminologyCapabilities"|undefined;
   /**
    * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.url
-   */
-  _url?: fhir.IFhirElement|undefined;
+  url?: fhir.FhirUri|string|undefined;
   /**
    * There may be different terminology capabilities instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the terminology capabilities with the format [url]|[version].
    */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.version
-   */
-  _version?: fhir.IFhirElement|undefined;
+  version?: fhir.FhirString|string|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.name
-   */
-  _name?: fhir.IFhirElement|undefined;
+  name?: fhir.FhirString|string|undefined;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.title
-   */
-  _title?: fhir.IFhirElement|undefined;
+  title?: fhir.FhirString|string|undefined;
   /**
    * Allows filtering of terminology capabilitiess that are appropriate for use versus not.This is not intended for use with actual capability statements, but where capability statements are used to describe possible or desired systems.
    */
   status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
    * Allows filtering of terminology capabilitiess that are appropriate for use versus not.
    */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
+  experimental?: fhir.FhirBoolean|boolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the terminology capabilities. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  date: string|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.date
-   */
-  _date?: fhir.IFhirElement|undefined;
+  date: fhir.FhirDateTime|string|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the terminology capabilities is the organization or individual primarily responsible for the maintenance and upkeep of the terminology capabilities. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the terminology capabilities. This item SHOULD be populated unless the information is available from context.
    */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
+  publisher?: fhir.FhirString|string|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  contact?: fhir.IContactDetail[]|undefined;
+  contact?: fhir.ContactDetailArgs[]|undefined;
   /**
    * This description can be used to capture details such as why the terminology capabilities was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the terminology capabilities as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the terminology capabilities is presumed to be the predominant language in the place the terminology capabilities was created).This does not need to be populated if the description is adequately implied by the software or implementation details.
    */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.description
-   */
-  _description?: fhir.IFhirElement|undefined;
+  description?: fhir.FhirMarkdown|string|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  useContext?: fhir.IUsageContext[]|undefined;
+  useContext?: fhir.UsageContextArgs[]|undefined;
   /**
    * It may be possible for the terminology capabilities to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * This element does not describe the usage of the terminology capabilities. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this terminology capabilities.
    */
-  purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.purpose
-   */
-  _purpose?: fhir.IFhirElement|undefined;
+  purpose?: fhir.FhirMarkdown|string|undefined;
   /**
    * A copyright statement relating to the terminology capabilities and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the terminology capabilities.
    */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
+  copyright?: fhir.FhirMarkdown|string|undefined;
   /**
    * The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).
    */
   kind: CapabilityStatementKindValueSetEnum|null;
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.kind
-   */
-  _kind?: fhir.IFhirElement|undefined;
-  /**
    * Software that is covered by this terminology capability statement.  It is used when the statement describes the capabilities of a particular software version, independent of an installation.
    */
-  software?: fhir.ITerminologyCapabilitiesSoftware|undefined;
+  software?: fhir.TerminologyCapabilitiesSoftwareArgs|undefined;
   /**
    * Identifies a specific implementation instance that is described by the terminology capability statement - i.e. a particular installation, rather than the capabilities of a software program.
    */
-  implementation?: fhir.ITerminologyCapabilitiesImplementation|undefined;
+  implementation?: fhir.TerminologyCapabilitiesImplementationArgs|undefined;
   /**
    * Whether the server supports lockedDate.
    */
-  lockedDate?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.lockedDate
-   */
-  _lockedDate?: fhir.IFhirElement|undefined;
+  lockedDate?: fhir.FhirBoolean|boolean|undefined;
   /**
    * The code system - identified by its system URL - may also be declared explicitly as a Code System Resource at /CodeSystem, but it might not be.
    */
-  codeSystem?: fhir.ITerminologyCapabilitiesCodeSystem[]|undefined;
+  codeSystem?: fhir.TerminologyCapabilitiesCodeSystemArgs[]|undefined;
   /**
    * Information about the [ValueSet/$expand](valueset-operation-expand.html) operation.
    */
-  expansion?: fhir.ITerminologyCapabilitiesExpansion|undefined;
+  expansion?: fhir.TerminologyCapabilitiesExpansionArgs|undefined;
   /**
    * See notes on the [ValueSet](valueset.html#) resource.
    */
   codeSearch?: CodeSearchSupportValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSearch
-   */
-  _codeSearch?: fhir.IFhirElement|undefined;
-  /**
    * Information about the [ValueSet/$validate-code](valueset-operation-validate-code.html) operation.
    */
-  validateCode?: fhir.ITerminologyCapabilitiesValidateCode|undefined;
+  validateCode?: fhir.TerminologyCapabilitiesValidateCodeArgs|undefined;
   /**
    * Information about the [ConceptMap/$translate](conceptmap-operation-translate.html) operation.
    */
-  translation?: fhir.ITerminologyCapabilitiesTranslation|undefined;
+  translation?: fhir.TerminologyCapabilitiesTranslationArgs|undefined;
   /**
    * Whether the $closure operation is supported.
    */
-  closure?: fhir.ITerminologyCapabilitiesClosure|undefined;
-}
-
-/**
- * Software that is covered by this terminology capability statement.  It is used when the statement describes the capabilities of a particular software version, independent of an installation.
- */
-export class TerminologyCapabilitiesSoftware extends fhir.BackboneElement implements ITerminologyCapabilitiesSoftware {
-  /**
-   * Name the software is known by.
-   */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.software.name
-   */
-  public _name?: fhir.FhirElement|undefined;
-  /**
-   * If possible, a version should be specified, as statements are likely to be different for different versions of software.
-   */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.software.version
-   */
-  public _version?: fhir.FhirElement|undefined;
-  /**
-   * Default constructor for TerminologyCapabilitiesSoftware - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<ITerminologyCapabilitiesSoftware> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
-    else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: TerminologyCapabilities.software.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    return results;
-  }
-}
-
-/**
- * Identifies a specific implementation instance that is described by the terminology capability statement - i.e. a particular installation, rather than the capabilities of a software program.
- */
-export class TerminologyCapabilitiesImplementation extends fhir.BackboneElement implements ITerminologyCapabilitiesImplementation {
-  /**
-   * Information about the specific installation that this terminology capability statement relates to.
-   */
-  public description: string|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.implementation.description
-   */
-  public _description?: fhir.FhirElement|undefined;
-  /**
-   * An absolute base URL for the implementation.
-   */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.implementation.url
-   */
-  public _url?: fhir.FhirElement|undefined;
-  /**
-   * Default constructor for TerminologyCapabilitiesImplementation - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<ITerminologyCapabilitiesImplementation> = { }) {
-    super(source);
-    if (source['description']) { this.description = source.description; }
-    else { this.description = null; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["description"]) { results.push(["description",'Missing required element: TerminologyCapabilities.implementation.description']); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    return results;
-  }
-}
-
-/**
- * Filter Properties supported.
- */
-export class TerminologyCapabilitiesCodeSystemVersionFilter extends fhir.BackboneElement implements ITerminologyCapabilitiesCodeSystemVersionFilter {
-  /**
-   * Code of the property supported.
-   */
-  public code: string|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.filter.code
-   */
-  public _code?: fhir.FhirElement|undefined;
-  /**
-   * Operations supported for the property.
-   */
-  public op: string[]|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.filter.op
-   */
-  public _op?: fhir.FhirElement[]|undefined;
-  /**
-   * Default constructor for TerminologyCapabilitiesCodeSystemVersionFilter - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<ITerminologyCapabilitiesCodeSystemVersionFilter> = { }) {
-    super(source);
-    if (source['code']) { this.code = source.code; }
-    else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['op']) { this.op = source.op.map((x) => (x)); }
-    else { this.op = null; }
-    if (source['_op']) { this._op = source._op.map((x) => new fhir.FhirElement(x)); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: TerminologyCapabilities.codeSystem.version.filter.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if ((!this["op"]) || (this["op"].length === 0)) { results.push(["op",'Missing required element: TerminologyCapabilities.codeSystem.version.filter.op']); }
-    if (this["_op"]) { this._op.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
-  }
-}
-
-/**
- * Language translations might not be available for all codes.
- */
-export class TerminologyCapabilitiesCodeSystemVersion extends fhir.BackboneElement implements ITerminologyCapabilitiesCodeSystemVersion {
-  /**
-   * For version-less code systems, there should be a single version with no identifier.
-   */
-  public code?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.code
-   */
-  public _code?: fhir.FhirElement|undefined;
-  /**
-   * If this is the default version for this code system.
-   */
-  public isDefault?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.isDefault
-   */
-  public _isDefault?: fhir.FhirElement|undefined;
-  /**
-   * If the compositional grammar defined by the code system is supported.
-   */
-  public compositional?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.compositional
-   */
-  public _compositional?: fhir.FhirElement|undefined;
-  /**
-   * Language Displays supported.
-   */
-  public language?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.language
-   */
-  public _language?: fhir.FhirElement[]|undefined;
-  /**
-   * Filter Properties supported.
-   */
-  public filter?: fhir.TerminologyCapabilitiesCodeSystemVersionFilter[]|undefined;
-  /**
-   * Properties supported for $lookup.
-   */
-  public property?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.version.property
-   */
-  public _property?: fhir.FhirElement[]|undefined;
-  /**
-   * Default constructor for TerminologyCapabilitiesCodeSystemVersion - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<ITerminologyCapabilitiesCodeSystemVersion> = { }) {
-    super(source);
-    if (source['code']) { this.code = source.code; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['isDefault']) { this.isDefault = source.isDefault; }
-    if (source['_isDefault']) { this._isDefault = new fhir.FhirElement(source._isDefault!); }
-    if (source['compositional']) { this.compositional = source.compositional; }
-    if (source['_compositional']) { this._compositional = new fhir.FhirElement(source._compositional!); }
-    if (source['language']) { this.language = source.language.map((x) => (x)); }
-    if (source['_language']) { this._language = source._language.map((x) => new fhir.FhirElement(x)); }
-    if (source['filter']) { this.filter = source.filter.map((x) => new fhir.TerminologyCapabilitiesCodeSystemVersionFilter(x)); }
-    if (source['property']) { this.property = source.property.map((x) => (x)); }
-    if (source['_property']) { this._property = source._property.map((x) => new fhir.FhirElement(x)); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["_isDefault"]) { results.push(...this._isDefault.doModelValidation()); }
-    if (this["_compositional"]) { results.push(...this._compositional.doModelValidation()); }
-    if (this["_language"]) { this._language.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["filter"]) { this.filter.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_property"]) { this._property.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
-  }
-}
-
-/**
- * The code system - identified by its system URL - may also be declared explicitly as a Code System Resource at /CodeSystem, but it might not be.
- */
-export class TerminologyCapabilitiesCodeSystem extends fhir.BackboneElement implements ITerminologyCapabilitiesCodeSystem {
-  /**
-   * URI for the Code System.
-   */
-  public uri?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.uri
-   */
-  public _uri?: fhir.FhirElement|undefined;
-  /**
-   * Language translations might not be available for all codes.
-   */
-  public version?: fhir.TerminologyCapabilitiesCodeSystemVersion[]|undefined;
-  /**
-   * True if subsumption is supported for this version of the code system.
-   */
-  public subsumption?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSystem.subsumption
-   */
-  public _subsumption?: fhir.FhirElement|undefined;
-  /**
-   * Default constructor for TerminologyCapabilitiesCodeSystem - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<ITerminologyCapabilitiesCodeSystem> = { }) {
-    super(source);
-    if (source['uri']) { this.uri = source.uri; }
-    if (source['_uri']) { this._uri = new fhir.FhirElement(source._uri!); }
-    if (source['version']) { this.version = source.version.map((x) => new fhir.TerminologyCapabilitiesCodeSystemVersion(x)); }
-    if (source['subsumption']) { this.subsumption = source.subsumption; }
-    if (source['_subsumption']) { this._subsumption = new fhir.FhirElement(source._subsumption!); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_uri"]) { results.push(...this._uri.doModelValidation()); }
-    if (this["version"]) { this.version.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_subsumption"]) { results.push(...this._subsumption.doModelValidation()); }
-    return results;
-  }
-}
-
-/**
- * Supported expansion parameter.
- */
-export class TerminologyCapabilitiesExpansionParameter extends fhir.BackboneElement implements ITerminologyCapabilitiesExpansionParameter {
-  /**
-   * Expansion Parameter name.
-   */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.expansion.parameter.name
-   */
-  public _name?: fhir.FhirElement|undefined;
-  /**
-   * Description of support for parameter.
-   */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.expansion.parameter.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
-  /**
-   * Default constructor for TerminologyCapabilitiesExpansionParameter - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<ITerminologyCapabilitiesExpansionParameter> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
-    else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: TerminologyCapabilities.expansion.parameter.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    return results;
-  }
-}
-
-/**
- * Information about the [ValueSet/$expand](valueset-operation-expand.html) operation.
- */
-export class TerminologyCapabilitiesExpansion extends fhir.BackboneElement implements ITerminologyCapabilitiesExpansion {
-  /**
-   * Whether the server can return nested value sets.
-   */
-  public hierarchical?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.expansion.hierarchical
-   */
-  public _hierarchical?: fhir.FhirElement|undefined;
-  /**
-   * Whether the server supports paging on expansion.
-   */
-  public paging?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.expansion.paging
-   */
-  public _paging?: fhir.FhirElement|undefined;
-  /**
-   * Allow request for incomplete expansions?
-   */
-  public incomplete?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.expansion.incomplete
-   */
-  public _incomplete?: fhir.FhirElement|undefined;
-  /**
-   * Supported expansion parameter.
-   */
-  public parameter?: fhir.TerminologyCapabilitiesExpansionParameter[]|undefined;
-  /**
-   * This documentation should cover things like case sensitivity,  use of punctuation if not ignored, what wild cards are supported (if any), whether text is starts with or contains, and whether word order matters.
-   */
-  public textFilter?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.expansion.textFilter
-   */
-  public _textFilter?: fhir.FhirElement|undefined;
-  /**
-   * Default constructor for TerminologyCapabilitiesExpansion - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<ITerminologyCapabilitiesExpansion> = { }) {
-    super(source);
-    if (source['hierarchical']) { this.hierarchical = source.hierarchical; }
-    if (source['_hierarchical']) { this._hierarchical = new fhir.FhirElement(source._hierarchical!); }
-    if (source['paging']) { this.paging = source.paging; }
-    if (source['_paging']) { this._paging = new fhir.FhirElement(source._paging!); }
-    if (source['incomplete']) { this.incomplete = source.incomplete; }
-    if (source['_incomplete']) { this._incomplete = new fhir.FhirElement(source._incomplete!); }
-    if (source['parameter']) { this.parameter = source.parameter.map((x) => new fhir.TerminologyCapabilitiesExpansionParameter(x)); }
-    if (source['textFilter']) { this.textFilter = source.textFilter; }
-    if (source['_textFilter']) { this._textFilter = new fhir.FhirElement(source._textFilter!); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_hierarchical"]) { results.push(...this._hierarchical.doModelValidation()); }
-    if (this["_paging"]) { results.push(...this._paging.doModelValidation()); }
-    if (this["_incomplete"]) { results.push(...this._incomplete.doModelValidation()); }
-    if (this["parameter"]) { this.parameter.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_textFilter"]) { results.push(...this._textFilter.doModelValidation()); }
-    return results;
-  }
-}
-
-/**
- * Information about the [ValueSet/$validate-code](valueset-operation-validate-code.html) operation.
- */
-export class TerminologyCapabilitiesValidateCode extends fhir.BackboneElement implements ITerminologyCapabilitiesValidateCode {
-  /**
-   * Whether translations are validated.
-   */
-  public translations: boolean|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.validateCode.translations
-   */
-  public _translations?: fhir.FhirElement|undefined;
-  /**
-   * Default constructor for TerminologyCapabilitiesValidateCode - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<ITerminologyCapabilitiesValidateCode> = { }) {
-    super(source);
-    if (source['translations']) { this.translations = source.translations; }
-    else { this.translations = null; }
-    if (source['_translations']) { this._translations = new fhir.FhirElement(source._translations!); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["translations"]) { results.push(["translations",'Missing required element: TerminologyCapabilities.validateCode.translations']); }
-    if (this["_translations"]) { results.push(...this._translations.doModelValidation()); }
-    return results;
-  }
-}
-
-/**
- * Information about the [ConceptMap/$translate](conceptmap-operation-translate.html) operation.
- */
-export class TerminologyCapabilitiesTranslation extends fhir.BackboneElement implements ITerminologyCapabilitiesTranslation {
-  /**
-   * Whether the client must identify the map.
-   */
-  public needsMap: boolean|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.translation.needsMap
-   */
-  public _needsMap?: fhir.FhirElement|undefined;
-  /**
-   * Default constructor for TerminologyCapabilitiesTranslation - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<ITerminologyCapabilitiesTranslation> = { }) {
-    super(source);
-    if (source['needsMap']) { this.needsMap = source.needsMap; }
-    else { this.needsMap = null; }
-    if (source['_needsMap']) { this._needsMap = new fhir.FhirElement(source._needsMap!); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["needsMap"]) { results.push(["needsMap",'Missing required element: TerminologyCapabilities.translation.needsMap']); }
-    if (this["_needsMap"]) { results.push(...this._needsMap.doModelValidation()); }
-    return results;
-  }
-}
-
-/**
- * Whether the $closure operation is supported.
- */
-export class TerminologyCapabilitiesClosure extends fhir.BackboneElement implements ITerminologyCapabilitiesClosure {
-  /**
-   * If cross-system closure is supported.
-   */
-  public translation?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.closure.translation
-   */
-  public _translation?: fhir.FhirElement|undefined;
-  /**
-   * Default constructor for TerminologyCapabilitiesClosure - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<ITerminologyCapabilitiesClosure> = { }) {
-    super(source);
-    if (source['translation']) { this.translation = source.translation; }
-    if (source['_translation']) { this._translation = new fhir.FhirElement(source._translation!); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_translation"]) { results.push(...this._translation.doModelValidation()); }
-    return results;
-  }
+  closure?: fhir.TerminologyCapabilitiesClosureArgs|undefined;
 }
 
 /**
  * A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
  */
-export class TerminologyCapabilities extends fhir.DomainResource implements ITerminologyCapabilities {
+export class TerminologyCapabilities extends fhir.DomainResource {
+  readonly __dataType:string = 'TerminologyCapabilities';
   /**
    * Resource Type Name
    */
@@ -898,111 +727,63 @@ export class TerminologyCapabilities extends fhir.DomainResource implements ITer
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * There may be different terminology capabilities instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the terminology capabilities with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * Allows filtering of terminology capabilitiess that are appropriate for use versus not.This is not intended for use with actual capability statements, but where capability statements are used to describe possible or desired systems.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: TerminologyCapabilities.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of terminology capabilitiess that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the terminology capabilities. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date: string|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date: fhir.FhirDateTime|null;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the terminology capabilities is the organization or individual primarily responsible for the maintenance and upkeep of the terminology capabilities. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the terminology capabilities. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the terminology capabilities was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the terminology capabilities as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the terminology capabilities is presumed to be the predominant language in the place the terminology capabilities was created).This does not need to be populated if the description is adequately implied by the software or implementation details.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the terminology capabilities to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * This element does not describe the usage of the terminology capabilities. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this terminology capabilities.
    */
-  public purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.purpose
-   */
-  public _purpose?: fhir.FhirElement|undefined;
+  public purpose?: fhir.FhirMarkdown|undefined;
   /**
    * A copyright statement relating to the terminology capabilities and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the terminology capabilities.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).
    */
   public kind: CapabilityStatementKindValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.kind
-   */
-  public _kind?: fhir.FhirElement|undefined;
   /**
    * Software that is covered by this terminology capability statement.  It is used when the statement describes the capabilities of a particular software version, independent of an installation.
    */
@@ -1014,15 +795,11 @@ export class TerminologyCapabilities extends fhir.DomainResource implements ITer
   /**
    * Whether the server supports lockedDate.
    */
-  public lockedDate?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.lockedDate
-   */
-  public _lockedDate?: fhir.FhirElement|undefined;
+  public lockedDate?: fhir.FhirBoolean|undefined;
   /**
    * The code system - identified by its system URL - may also be declared explicitly as a Code System Resource at /CodeSystem, but it might not be.
    */
-  public codeSystem?: fhir.TerminologyCapabilitiesCodeSystem[]|undefined;
+  public codeSystem?: fhir.TerminologyCapabilitiesCodeSystem[]|undefined = [];
   /**
    * Information about the [ValueSet/$expand](valueset-operation-expand.html) operation.
    */
@@ -1031,10 +808,6 @@ export class TerminologyCapabilities extends fhir.DomainResource implements ITer
    * See notes on the [ValueSet](valueset.html#) resource.
    */
   public codeSearch?: CodeSearchSupportValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: TerminologyCapabilities.codeSearch
-   */
-  public _codeSearch?: fhir.FhirElement|undefined;
   /**
    * Information about the [ValueSet/$validate-code](valueset-operation-validate-code.html) operation.
    */
@@ -1050,50 +823,36 @@ export class TerminologyCapabilities extends fhir.DomainResource implements ITer
   /**
    * Default constructor for TerminologyCapabilities - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITerminologyCapabilities> = { }) {
-    super(source);
+  constructor(source:Partial<TerminologyCapabilitiesArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'TerminologyCapabilities';
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['date']) { this.date = source.date; }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
     else { this.date = null; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['purpose']) { this.purpose = source.purpose; }
-    if (source['_purpose']) { this._purpose = new fhir.FhirElement(source._purpose!); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
+    if (source['purpose']) { this.purpose = new fhir.FhirMarkdown({value: source.purpose}); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
     if (source['kind']) { this.kind = source.kind; }
     else { this.kind = null; }
-    if (source['_kind']) { this._kind = new fhir.FhirElement(source._kind!); }
-    if (source['software']) { this.software = new fhir.TerminologyCapabilitiesSoftware(source.software!); }
-    if (source['implementation']) { this.implementation = new fhir.TerminologyCapabilitiesImplementation(source.implementation!); }
-    if (source['lockedDate']) { this.lockedDate = source.lockedDate; }
-    if (source['_lockedDate']) { this._lockedDate = new fhir.FhirElement(source._lockedDate!); }
+    if (source['software']) { this.software = new fhir.TerminologyCapabilitiesSoftware(source.software); }
+    if (source['implementation']) { this.implementation = new fhir.TerminologyCapabilitiesImplementation(source.implementation); }
+    if (source['lockedDate']) { this.lockedDate = new fhir.FhirBoolean({value: source.lockedDate}); }
     if (source['codeSystem']) { this.codeSystem = source.codeSystem.map((x) => new fhir.TerminologyCapabilitiesCodeSystem(x)); }
-    if (source['expansion']) { this.expansion = new fhir.TerminologyCapabilitiesExpansion(source.expansion!); }
+    if (source['expansion']) { this.expansion = new fhir.TerminologyCapabilitiesExpansion(source.expansion); }
     if (source['codeSearch']) { this.codeSearch = source.codeSearch; }
-    if (source['_codeSearch']) { this._codeSearch = new fhir.FhirElement(source._codeSearch!); }
-    if (source['validateCode']) { this.validateCode = new fhir.TerminologyCapabilitiesValidateCode(source.validateCode!); }
-    if (source['translation']) { this.translation = new fhir.TerminologyCapabilitiesTranslation(source.translation!); }
-    if (source['closure']) { this.closure = new fhir.TerminologyCapabilitiesClosure(source.closure!); }
+    if (source['validateCode']) { this.validateCode = new fhir.TerminologyCapabilitiesValidateCode(source.validateCode); }
+    if (source['translation']) { this.translation = new fhir.TerminologyCapabilitiesTranslation(source.translation); }
+    if (source['closure']) { this.closure = new fhir.TerminologyCapabilitiesClosure(source.closure); }
   }
   /**
    * Required-bound Value Set for status
@@ -1116,36 +875,47 @@ export class TerminologyCapabilities extends fhir.DomainResource implements ITer
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: TerminologyCapabilities.resourceType']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: TerminologyCapabilities.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (!this["date"]) { results.push(["date",'Missing required element: TerminologyCapabilities.date']); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_purpose"]) { results.push(...this._purpose.doModelValidation()); }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (!this["kind"]) { results.push(["kind",'Missing required element: TerminologyCapabilities.kind']); }
-    if (this["_kind"]) { results.push(...this._kind.doModelValidation()); }
-    if (this["software"]) { results.push(...this.software.doModelValidation()); }
-    if (this["implementation"]) { results.push(...this.implementation.doModelValidation()); }
-    if (this["_lockedDate"]) { results.push(...this._lockedDate.doModelValidation()); }
-    if (this["codeSystem"]) { this.codeSystem.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["expansion"]) { results.push(...this.expansion.doModelValidation()); }
-    if (this["_codeSearch"]) { results.push(...this._codeSearch.doModelValidation()); }
-    if (this["validateCode"]) { results.push(...this.validateCode.doModelValidation()); }
-    if (this["translation"]) { results.push(...this.translation.doModelValidation()); }
-    if (this["closure"]) { results.push(...this.closure.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'TerminologyCapabilities' fhir: TerminologyCapabilities.resourceType:'TerminologyCapabilities'", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: TerminologyCapabilities.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (!this['date']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property date:fhir.FhirDateTime fhir: TerminologyCapabilities.date:dateTime", }));
+    }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (!this['kind']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property kind:CapabilityStatementKindValueSetEnum fhir: TerminologyCapabilities.kind:code", }));
+    }
+    if (this["software"]) { outcome.issue!.push(...this.software.doModelValidation().issue!); }
+    if (this["implementation"]) { outcome.issue!.push(...this.implementation.doModelValidation().issue!); }
+    if (this["lockedDate"]) { outcome.issue!.push(...this.lockedDate.doModelValidation().issue!); }
+    if (this["codeSystem"]) { this.codeSystem.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["expansion"]) { outcome.issue!.push(...this.expansion.doModelValidation().issue!); }
+    if (this["validateCode"]) { outcome.issue!.push(...this.validateCode.doModelValidation().issue!); }
+    if (this["translation"]) { outcome.issue!.push(...this.translation.doModelValidation().issue!); }
+    if (this["closure"]) { outcome.issue!.push(...this.closure.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

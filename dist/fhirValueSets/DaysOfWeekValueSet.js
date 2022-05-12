@@ -67,35 +67,4 @@ export const DaysOfWeekValueSet = {
 /**
  * The days of the week.
  */
-export var DaysOfWeekValueSetEnum;
-(function (DaysOfWeekValueSetEnum) {
-    /**
-     * fri: Friday.
-     */
-    DaysOfWeekValueSetEnum["Friday"] = "fri";
-    /**
-     * mon: Monday.
-     */
-    DaysOfWeekValueSetEnum["Monday"] = "mon";
-    /**
-     * sat: Saturday.
-     */
-    DaysOfWeekValueSetEnum["Saturday"] = "sat";
-    /**
-     * sun: Sunday.
-     */
-    DaysOfWeekValueSetEnum["Sunday"] = "sun";
-    /**
-     * thu: Thursday.
-     */
-    DaysOfWeekValueSetEnum["Thursday"] = "thu";
-    /**
-     * tue: Tuesday.
-     */
-    DaysOfWeekValueSetEnum["Tuesday"] = "tue";
-    /**
-     * wed: Wednesday.
-     */
-    DaysOfWeekValueSetEnum["Wednesday"] = "wed";
-})(DaysOfWeekValueSetEnum || (DaysOfWeekValueSetEnum = {}));
 //# sourceMappingURL=DaysOfWeekValueSet.js.map

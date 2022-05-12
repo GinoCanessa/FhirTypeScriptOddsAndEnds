@@ -51,27 +51,4 @@ export const ReportStatusCodesValueSet = {
 /**
  * The current status of the test report.
  */
-export var ReportStatusCodesValueSetEnum;
-(function (ReportStatusCodesValueSetEnum) {
-    /**
-     * completed: All test operations have completed.
-     */
-    ReportStatusCodesValueSetEnum["Completed"] = "completed";
-    /**
-     * entered-in-error: This test report was entered or created in error.
-     */
-    ReportStatusCodesValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * in-progress: A test operations is currently executing.
-     */
-    ReportStatusCodesValueSetEnum["InProgress"] = "in-progress";
-    /**
-     * stopped: The test script execution was manually stopped.
-     */
-    ReportStatusCodesValueSetEnum["Stopped"] = "stopped";
-    /**
-     * waiting: A test operation is waiting for an external client request.
-     */
-    ReportStatusCodesValueSetEnum["Waiting"] = "waiting";
-})(ReportStatusCodesValueSetEnum || (ReportStatusCodesValueSetEnum = {}));
 //# sourceMappingURL=ReportStatusCodesValueSet.js.map

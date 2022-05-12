@@ -3,7 +3,7 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Reference
 import * as fhir from '../fhir.js';
-import { ResourceTypesValueSet } from '../fhirValueSets/ResourceTypesValueSet.js';
+import { ResourceTypesValueSet, } from '../fhirValueSets/ResourceTypesValueSet.js';
 /**
  * A reference from one resource to another.
  */
@@ -11,28 +11,20 @@ export class Reference extends fhir.FhirElement {
     /**
      * Default constructor for Reference - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Reference';
         if (source['reference']) {
-            this.reference = source.reference;
-        }
-        if (source['_reference']) {
-            this._reference = new fhir.FhirElement(source._reference);
+            this.reference = new fhir.FhirString({ value: source.reference });
         }
         if (source['type']) {
-            this.type = source.type;
-        }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
+            this.type = new fhir.FhirUri({ value: source.type });
         }
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
         }
         if (source['display']) {
-            this.display = source.display;
-        }
-        if (source['_display']) {
-            this._display = new fhir.FhirElement(source._display);
+            this.display = new fhir.FhirString({ value: source.display });
         }
     }
     /**
@@ -45,20 +37,26 @@ export class Reference extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_reference"]) {
-            results.push(...this._reference.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["reference"]) {
+            outcome.issue.push(...this.reference.doModelValidation().issue);
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (this["type"]) {
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (this["_display"]) {
-            results.push(...this._display.doModelValidation());
+        if (this["display"]) {
+            outcome.issue.push(...this.display.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
     /**
      * Create a reference from an existing resource

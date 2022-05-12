@@ -51,27 +51,4 @@ export const V20276ValueSet = {
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0276 ( Appointment Reason Codes)
  */
-export var V20276ValueSetEnum;
-(function (V20276ValueSetEnum) {
-    /**
-     * Code: CHECKUP
-     */
-    V20276ValueSetEnum["ARoutineCheckUpSuchAsAnAnnualPhysical"] = "CHECKUP";
-    /**
-     * Code: EMERGENCY
-     */
-    V20276ValueSetEnum["EmergencyAppointment"] = "EMERGENCY";
-    /**
-     * Code: FOLLOWUP
-     */
-    V20276ValueSetEnum["AFollowUpVisitFromAPreviousAppointment"] = "FOLLOWUP";
-    /**
-     * Code: ROUTINE
-     */
-    V20276ValueSetEnum["RoutineAppointmentDefaultIfNotValued"] = "ROUTINE";
-    /**
-     * Code: WALKIN
-     */
-    V20276ValueSetEnum["APreviouslyUnscheduledWalkInVisit"] = "WALKIN";
-})(V20276ValueSetEnum || (V20276ValueSetEnum = {}));
 //# sourceMappingURL=V20276ValueSet.js.map

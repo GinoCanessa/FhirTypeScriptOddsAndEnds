@@ -27,9 +27,3 @@ export type ContractActionstatusValueSetType = typeof ContractActionstatusValueS
 /**
  * This value set contract specific codes for action status.
  */
-export enum ContractActionstatusValueSetEnum {
-  /**
-   * complete: To be completed
-   */
-  Complete = "complete",
-}

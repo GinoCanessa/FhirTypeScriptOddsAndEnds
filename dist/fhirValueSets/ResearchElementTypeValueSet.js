@@ -35,19 +35,4 @@ export const ResearchElementTypeValueSet = {
 /**
  * The possible types of research elements (E.g. Population, Exposure, Outcome).
  */
-export var ResearchElementTypeValueSetEnum;
-(function (ResearchElementTypeValueSetEnum) {
-    /**
-     * exposure: The element defines an exposure within the population that is being researched.
-     */
-    ResearchElementTypeValueSetEnum["Exposure"] = "exposure";
-    /**
-     * outcome: The element defines an outcome within the population that is being researched.
-     */
-    ResearchElementTypeValueSetEnum["Outcome"] = "outcome";
-    /**
-     * population: The element defines the population that forms the basis for research.
-     */
-    ResearchElementTypeValueSetEnum["Population"] = "population";
-})(ResearchElementTypeValueSetEnum || (ResearchElementTypeValueSetEnum = {}));
 //# sourceMappingURL=ResearchElementTypeValueSet.js.map

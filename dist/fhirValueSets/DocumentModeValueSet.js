@@ -27,15 +27,4 @@ export const DocumentModeValueSet = {
 /**
  * Whether the application produces or consumes documents.
  */
-export var DocumentModeValueSetEnum;
-(function (DocumentModeValueSetEnum) {
-    /**
-     * consumer: The application consumes documents of the specified type.
-     */
-    DocumentModeValueSetEnum["Consumer"] = "consumer";
-    /**
-     * producer: The application produces documents of the specified type.
-     */
-    DocumentModeValueSetEnum["Producer"] = "producer";
-})(DocumentModeValueSetEnum || (DocumentModeValueSetEnum = {}));
 //# sourceMappingURL=DocumentModeValueSet.js.map

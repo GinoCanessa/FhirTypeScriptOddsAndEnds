@@ -3,7 +3,9 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Basic
 import * as fhir from '../fhir.js';
-import { BasicResourceTypeValueSet } from '../fhirValueSets/BasicResourceTypeValueSet.js';
+import { BasicResourceTypeValueSet, } from '../fhirValueSets/BasicResourceTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.
  */
@@ -11,8 +13,13 @@ export class Basic extends fhir.DomainResource {
     /**
      * Default constructor for Basic - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Basic';
+        /**
+         * Identifier assigned to the resource for business purposes, outside the context of FHIR.
+         */
+        this.identifier = [];
         this.resourceType = 'Basic';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -27,10 +34,7 @@ export class Basic extends fhir.DomainResource {
             this.subject = new fhir.Reference(source.subject);
         }
         if (source['created']) {
-            this.created = source.created;
-        }
-        if (source['_created']) {
-            this._created = new fhir.FhirElement(source._created);
+            this.created = new fhir.FhirDate({ value: source.created });
         }
         if (source['author']) {
             this.author = new fhir.Reference(source.author);
@@ -46,29 +50,35 @@ export class Basic extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Basic.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Basic' fhir: Basic.resourceType:'Basic'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: Basic.code']);
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.CodeableConcept fhir: Basic.code:CodeableConcept", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
-        if (this["_created"]) {
-            results.push(...this._created.doModelValidation());
+        if (this["created"]) {
+            outcome.issue.push(...this.created.doModelValidation().issue);
         }
         if (this["author"]) {
-            results.push(...this.author.doModelValidation());
+            outcome.issue.push(...this.author.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Basic.js.map

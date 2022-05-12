@@ -27,15 +27,4 @@ export const ClaimExceptionValueSet = {
 /**
  * This value set includes sample Exception codes.
  */
-export var ClaimExceptionValueSetEnum;
-(function (ClaimExceptionValueSetEnum) {
-    /**
-     * disabled: Disabled
-     */
-    ClaimExceptionValueSetEnum["Disabled"] = "disabled";
-    /**
-     * student: Fulltime Student
-     */
-    ClaimExceptionValueSetEnum["StudentFulltime"] = "student";
-})(ClaimExceptionValueSetEnum || (ClaimExceptionValueSetEnum = {}));
 //# sourceMappingURL=ClaimExceptionValueSet.js.map

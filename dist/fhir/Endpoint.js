@@ -3,8 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Endpoint
 import * as fhir from '../fhir.js';
-import { EndpointStatusValueSet } from '../fhirValueSets/EndpointStatusValueSet.js';
-import { EndpointConnectionTypeValueSet } from '../fhirValueSets/EndpointConnectionTypeValueSet.js';
+import { EndpointStatusValueSet, } from '../fhirValueSets/EndpointStatusValueSet.js';
+import { EndpointConnectionTypeValueSet, } from '../fhirValueSets/EndpointConnectionTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information.
  */
@@ -12,8 +14,29 @@ export class Endpoint extends fhir.DomainResource {
     /**
      * Default constructor for Endpoint - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Endpoint';
+        /**
+         * Identifier for the organization that is used to identify the endpoint across multiple disparate systems.
+         */
+        this.identifier = [];
+        /**
+         * Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting.
+         */
+        this.contact = [];
+        /**
+         * The payloadFormat describes the serialization format of the data, where the payloadType indicates the specific document/schema that is being transferred; e.g. DischargeSummary or CarePlan.
+         */
+        this.payloadType = [];
+        /**
+         * Sending the payload has obvious security consequences. The server is responsible for ensuring that the content is appropriately secured.
+         */
+        this.payloadMimeType = [];
+        /**
+         * Exactly what these mean depends on the channel type. The can convey additional information to the recipient and/or meet security requirements.
+         */
+        this.header = [];
         this.resourceType = 'Endpoint';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -24,9 +47,6 @@ export class Endpoint extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['connectionType']) {
             this.connectionType = new fhir.Coding(source.connectionType);
         }
@@ -34,10 +54,7 @@ export class Endpoint extends fhir.DomainResource {
             this.connectionType = null;
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['managingOrganization']) {
             this.managingOrganization = new fhir.Reference(source.managingOrganization);
@@ -55,25 +72,16 @@ export class Endpoint extends fhir.DomainResource {
             this.payloadType = null;
         }
         if (source['payloadMimeType']) {
-            this.payloadMimeType = source.payloadMimeType.map((x) => (x));
-        }
-        if (source['_payloadMimeType']) {
-            this._payloadMimeType = source._payloadMimeType.map((x) => new fhir.FhirElement(x));
+            this.payloadMimeType = source.payloadMimeType.map((x) => new fhir.FhirCode({ value: x }));
         }
         if (source['address']) {
-            this.address = source.address;
+            this.address = new fhir.FhirUrl({ value: source.address });
         }
         else {
             this.address = null;
         }
-        if (source['_address']) {
-            this._address = new fhir.FhirElement(source._address);
-        }
         if (source['header']) {
-            this.header = source.header.map((x) => (x));
-        }
-        if (source['_header']) {
-            this._header = source._header.map((x) => new fhir.FhirElement(x));
+            this.header = source.header.map((x) => new fhir.FhirString({ value: x }));
         }
     }
     /**
@@ -92,56 +100,65 @@ export class Endpoint extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Endpoint.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Endpoint' fhir: Endpoint.resourceType:'Endpoint'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Endpoint.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:EndpointStatusValueSetEnum fhir: Endpoint.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
-        }
-        if (!this["connectionType"]) {
-            results.push(["connectionType", 'Missing required element: Endpoint.connectionType']);
+        if (!this['connectionType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property connectionType:fhir.Coding fhir: Endpoint.connectionType:Coding", }));
         }
         if (this["connectionType"]) {
-            results.push(...this.connectionType.doModelValidation());
+            outcome.issue.push(...this.connectionType.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
         if (this["managingOrganization"]) {
-            results.push(...this.managingOrganization.doModelValidation());
+            outcome.issue.push(...this.managingOrganization.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        if ((!this["payloadType"]) || (this["payloadType"].length === 0)) {
-            results.push(["payloadType", 'Missing required element: Endpoint.payloadType']);
+        if (!this['payloadType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property payloadType:fhir.CodeableConcept[] fhir: Endpoint.payloadType:CodeableConcept", }));
+        }
+        else if (!Array.isArray(this.payloadType)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property payloadType:fhir.CodeableConcept[] fhir: Endpoint.payloadType:CodeableConcept", }));
+        }
+        else if (this.payloadType.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property payloadType:fhir.CodeableConcept[] fhir: Endpoint.payloadType:CodeableConcept", }));
         }
         if (this["payloadType"]) {
-            this.payloadType.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.payloadType.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_payloadMimeType"]) {
-            this._payloadMimeType.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["payloadMimeType"]) {
+            this.payloadMimeType.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["address"]) {
-            results.push(["address", 'Missing required element: Endpoint.address']);
+        if (!this['address']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property address:fhir.FhirUrl fhir: Endpoint.address:url", }));
         }
-        if (this["_address"]) {
-            results.push(...this._address.doModelValidation());
+        if (this["address"]) {
+            outcome.issue.push(...this.address.doModelValidation().issue);
         }
-        if (this["_header"]) {
-            this._header.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["header"]) {
+            this.header.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Endpoint.js.map

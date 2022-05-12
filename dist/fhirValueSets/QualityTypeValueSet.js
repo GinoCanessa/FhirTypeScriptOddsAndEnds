@@ -35,19 +35,4 @@ export const QualityTypeValueSet = {
 /**
  * Type for quality report.
  */
-export var QualityTypeValueSetEnum;
-(function (QualityTypeValueSetEnum) {
-    /**
-     * indel: INDEL Comparison.
-     */
-    QualityTypeValueSetEnum["INDELComparison"] = "indel";
-    /**
-     * snp: SNP Comparison.
-     */
-    QualityTypeValueSetEnum["SNPComparison"] = "snp";
-    /**
-     * unknown: UNKNOWN Comparison.
-     */
-    QualityTypeValueSetEnum["UNKNOWNComparison"] = "unknown";
-})(QualityTypeValueSetEnum || (QualityTypeValueSetEnum = {}));
 //# sourceMappingURL=QualityTypeValueSet.js.map

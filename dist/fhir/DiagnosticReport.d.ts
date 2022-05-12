@@ -1,138 +1,31 @@
 import * as fhir from '../fhir.js';
-import { DiagnosticReportStatusValueSetType, DiagnosticReportStatusValueSetEnum } from '../fhirValueSets/DiagnosticReportStatusValueSet.js';
+import { DiagnosticReportStatusValueSetType } from '../fhirValueSets/DiagnosticReportStatusValueSet.js';
+import { DiagnosticReportStatusValueSetEnum } from '../valueSetEnums.js';
 import { DiagnosticServiceSectionsValueSetType } from '../fhirValueSets/DiagnosticServiceSectionsValueSet.js';
 import { ReportCodesValueSetType } from '../fhirValueSets/ReportCodesValueSet.js';
 import { ClinicalFindingsValueSetType } from '../fhirValueSets/ClinicalFindingsValueSet.js';
 /**
- * A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).
+ * Valid arguments for the DiagnosticReportMedia type.
  */
-export declare type IDiagnosticReportMedia = fhir.IBackboneElement & {
+export interface DiagnosticReportMediaArgs extends fhir.BackboneElementArgs {
     /**
      * The comment should be displayed with the image. It would be common for the report to include additional discussion of the image contents in other sections such as the conclusion.
      */
-    comment?: string | undefined;
-    /**
-     * Extended properties for primitive element: DiagnosticReport.media.comment
-     */
-    _comment?: fhir.IFhirElement | undefined;
+    comment?: fhir.FhirString | string | undefined;
     /**
      * Reference to the image source.
      */
-    link: fhir.IReference | null;
-};
-/**
- * The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.
- */
-export declare type IDiagnosticReport = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "DiagnosticReport";
-    /**
-     * Usually assigned by the Information System of the diagnostic service provider (filler id).
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * Note: Usually there is one test request for each result, however in some circumstances multiple test requests may be represented using a single test result resource. Note that there are also cases where one request leads to multiple reports.
-     */
-    basedOn?: fhir.IReference[] | undefined;
-    /**
-     * The status of the diagnostic report.
-     */
-    status: DiagnosticReportStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: DiagnosticReport.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * Multiple categories are allowed using various categorization schemes.   The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code.
-     */
-    category?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * A code or name that describes this diagnostic report.
-     */
-    code: fhir.ICodeableConcept | null;
-    /**
-     * The subject of the report. Usually, but not always, this is a patient. However, diagnostic services also perform analyses on specimens collected from a variety of other sources.
-     */
-    subject?: fhir.IReference | undefined;
-    /**
-     * This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter  but still be tied to the context of the encounter  (e.g. pre-admission laboratory tests).
-     */
-    encounter?: fhir.IReference | undefined;
-    /**
-     * If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic.
-     */
-    effectiveDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: DiagnosticReport.effective[x]
-     */
-    _effectiveDateTime?: fhir.IFhirElement | undefined;
-    /**
-     * If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic.
-     */
-    effectivePeriod?: fhir.IPeriod | undefined;
-    /**
-     * May be different from the update time of the resource itself, because that is the status of the record (potentially a secondary copy), not the actual release time of the report.
-     */
-    issued?: string | undefined;
-    /**
-     * Extended properties for primitive element: DiagnosticReport.issued
-     */
-    _issued?: fhir.IFhirElement | undefined;
-    /**
-     * This is not necessarily the source of the atomic data items or the entity that interpreted the results. It is the entity that takes responsibility for the clinical report.
-     */
-    performer?: fhir.IReference[] | undefined;
-    /**
-     * Might not be the same entity that takes responsibility for the clinical report.
-     */
-    resultsInterpreter?: fhir.IReference[] | undefined;
-    /**
-     * If the specimen is sufficiently specified with a code in the test result name, then this additional data may be redundant. If there are multiple specimens, these may be represented per observation or group.
-     */
-    specimen?: fhir.IReference[] | undefined;
-    /**
-     * Observations can contain observations.
-     */
-    result?: fhir.IReference[] | undefined;
-    /**
-     * ImagingStudy and the image element are somewhat overlapping - typically, the list of image references in the image element will also be found in one of the imaging study resources. However, each caters to different types of displays for different types of purposes. Neither, either, or both may be provided.
-     */
-    imagingStudy?: fhir.IReference[] | undefined;
-    /**
-     * A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).
-     */
-    media?: fhir.IDiagnosticReportMedia[] | undefined;
-    /**
-     * Concise and clinically contextualized summary conclusion (interpretation/impression) of the diagnostic report.
-     */
-    conclusion?: string | undefined;
-    /**
-     * Extended properties for primitive element: DiagnosticReport.conclusion
-     */
-    _conclusion?: fhir.IFhirElement | undefined;
-    /**
-     * One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.
-     */
-    conclusionCode?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * "application/pdf" is recommended as the most reliable and interoperable in this context.
-     */
-    presentedForm?: fhir.IAttachment[] | undefined;
-};
+    link: fhir.ReferenceArgs | null;
+}
 /**
  * A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).
  */
-export declare class DiagnosticReportMedia extends fhir.BackboneElement implements IDiagnosticReportMedia {
+export declare class DiagnosticReportMedia extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The comment should be displayed with the image. It would be common for the report to include additional discussion of the image contents in other sections such as the conclusion.
      */
-    comment?: string | undefined;
-    /**
-     * Extended properties for primitive element: DiagnosticReport.media.comment
-     */
-    _comment?: fhir.FhirElement | undefined;
+    comment?: fhir.FhirString | undefined;
     /**
      * Reference to the image source.
      */
@@ -140,16 +33,110 @@ export declare class DiagnosticReportMedia extends fhir.BackboneElement implemen
     /**
      * Default constructor for DiagnosticReportMedia - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IDiagnosticReportMedia>);
+    constructor(source?: Partial<DiagnosticReportMediaArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the DiagnosticReport type.
+ */
+export interface DiagnosticReportArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "DiagnosticReport" | undefined;
+    /**
+     * Usually assigned by the Information System of the diagnostic service provider (filler id).
+     */
+    identifier?: fhir.IdentifierArgs[] | undefined;
+    /**
+     * Note: Usually there is one test request for each result, however in some circumstances multiple test requests may be represented using a single test result resource. Note that there are also cases where one request leads to multiple reports.
+     */
+    basedOn?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * The status of the diagnostic report.
+     */
+    status: DiagnosticReportStatusValueSetEnum | null;
+    /**
+     * Multiple categories are allowed using various categorization schemes.   The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code.
+     */
+    category?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * A code or name that describes this diagnostic report.
+     */
+    code: fhir.CodeableConceptArgs | null;
+    /**
+     * The subject of the report. Usually, but not always, this is a patient. However, diagnostic services also perform analyses on specimens collected from a variety of other sources.
+     */
+    subject?: fhir.ReferenceArgs | undefined;
+    /**
+     * This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter  but still be tied to the context of the encounter  (e.g. pre-admission laboratory tests).
+     */
+    encounter?: fhir.ReferenceArgs | undefined;
+    /**
+     * If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic.
+     */
+    effective?: fhir.FhirDateTime | fhir.Period | undefined;
+    /**
+     * If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic.
+     */
+    effectiveDateTime?: fhir.FhirDateTime | string | undefined;
+    /**
+     * If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic.
+     */
+    effectivePeriod?: fhir.PeriodArgs | undefined;
+    /**
+     * May be different from the update time of the resource itself, because that is the status of the record (potentially a secondary copy), not the actual release time of the report.
+     */
+    issued?: fhir.FhirInstant | string | undefined;
+    /**
+     * This is not necessarily the source of the atomic data items or the entity that interpreted the results. It is the entity that takes responsibility for the clinical report.
+     */
+    performer?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * Might not be the same entity that takes responsibility for the clinical report.
+     */
+    resultsInterpreter?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * If the specimen is sufficiently specified with a code in the test result name, then this additional data may be redundant. If there are multiple specimens, these may be represented per observation or group.
+     */
+    specimen?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * Observations can contain observations.
+     */
+    result?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * ImagingStudy and the image element are somewhat overlapping - typically, the list of image references in the image element will also be found in one of the imaging study resources. However, each caters to different types of displays for different types of purposes. Neither, either, or both may be provided.
+     */
+    imagingStudy?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).
+     */
+    media?: fhir.DiagnosticReportMediaArgs[] | undefined;
+    /**
+     * Concise and clinically contextualized summary conclusion (interpretation/impression) of the diagnostic report.
+     */
+    conclusion?: fhir.FhirString | string | undefined;
+    /**
+     * One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.
+     */
+    conclusionCode?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * "application/pdf" is recommended as the most reliable and interoperable in this context.
+     */
+    presentedForm?: fhir.AttachmentArgs[] | undefined;
 }
 /**
  * The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.
  */
-export declare class DiagnosticReport extends fhir.DomainResource implements IDiagnosticReport {
+export declare class DiagnosticReport extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -166,10 +153,6 @@ export declare class DiagnosticReport extends fhir.DomainResource implements IDi
      * The status of the diagnostic report.
      */
     status: DiagnosticReportStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: DiagnosticReport.status
-     */
-    _status?: fhir.FhirElement | undefined;
     /**
      * Multiple categories are allowed using various categorization schemes.   The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code.
      */
@@ -189,23 +172,12 @@ export declare class DiagnosticReport extends fhir.DomainResource implements IDi
     /**
      * If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic.
      */
-    effectiveDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: DiagnosticReport.effective[x]
-     */
-    _effectiveDateTime?: fhir.FhirElement | undefined;
-    /**
-     * If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic.
-     */
-    effectivePeriod?: fhir.Period | undefined;
+    effective?: (fhir.FhirDateTime | fhir.Period) | undefined;
+    readonly __effectiveIsChoice: true;
     /**
      * May be different from the update time of the resource itself, because that is the status of the record (potentially a secondary copy), not the actual release time of the report.
      */
-    issued?: string | undefined;
-    /**
-     * Extended properties for primitive element: DiagnosticReport.issued
-     */
-    _issued?: fhir.FhirElement | undefined;
+    issued?: fhir.FhirInstant | undefined;
     /**
      * This is not necessarily the source of the atomic data items or the entity that interpreted the results. It is the entity that takes responsibility for the clinical report.
      */
@@ -233,11 +205,7 @@ export declare class DiagnosticReport extends fhir.DomainResource implements IDi
     /**
      * Concise and clinically contextualized summary conclusion (interpretation/impression) of the diagnostic report.
      */
-    conclusion?: string | undefined;
-    /**
-     * Extended properties for primitive element: DiagnosticReport.conclusion
-     */
-    _conclusion?: fhir.FhirElement | undefined;
+    conclusion?: fhir.FhirString | undefined;
     /**
      * One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.
      */
@@ -249,7 +217,7 @@ export declare class DiagnosticReport extends fhir.DomainResource implements IDi
     /**
      * Default constructor for DiagnosticReport - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IDiagnosticReport>);
+    constructor(source?: Partial<DiagnosticReportArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -269,6 +237,10 @@ export declare class DiagnosticReport extends fhir.DomainResource implements IDi
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=DiagnosticReport.d.ts.map

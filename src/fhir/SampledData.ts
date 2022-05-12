@@ -3,71 +3,49 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: SampledData
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
+ * Valid arguments for the SampledData type.
  */
-export type ISampledData = fhir.IFhirElement & { 
+export interface SampledDataArgs extends fhir.FhirElementArgs {
   /**
    * The base quantity that a measured value of zero represents. In addition, this provides the units of the entire measurement series.
    */
-  origin: fhir.IQuantity|null;
+  origin: fhir.QuantityArgs|null;
   /**
    * This is usually a whole number.
    */
-  period: number|null;
-  /**
-   * Extended properties for primitive element: SampledData.period
-   */
-  _period?: fhir.IFhirElement|undefined;
+  period: fhir.FhirDecimal|number|undefined;
   /**
    * A correction factor that is applied to the sampled data points before they are added to the origin.
    */
-  factor?: number|undefined;
-  /**
-   * Extended properties for primitive element: SampledData.factor
-   */
-  _factor?: fhir.IFhirElement|undefined;
+  factor?: fhir.FhirDecimal|number|undefined;
   /**
    * The lower limit of detection of the measured points. This is needed if any of the data points have the value "L" (lower than detection limit).
    */
-  lowerLimit?: number|undefined;
-  /**
-   * Extended properties for primitive element: SampledData.lowerLimit
-   */
-  _lowerLimit?: fhir.IFhirElement|undefined;
+  lowerLimit?: fhir.FhirDecimal|number|undefined;
   /**
    * The upper limit of detection of the measured points. This is needed if any of the data points have the value "U" (higher than detection limit).
    */
-  upperLimit?: number|undefined;
-  /**
-   * Extended properties for primitive element: SampledData.upperLimit
-   */
-  _upperLimit?: fhir.IFhirElement|undefined;
+  upperLimit?: fhir.FhirDecimal|number|undefined;
   /**
    * If there is more than one dimension, the code for the type of data will define the meaning of the dimensions (typically ECG data).
    */
-  dimensions: number|null;
-  /**
-   * Extended properties for primitive element: SampledData.dimensions
-   */
-  _dimensions?: fhir.IFhirElement|undefined;
+  dimensions: fhir.FhirPositiveInt|number|undefined;
   /**
    * Data may be missing if it is omitted for summarization purposes. In general, data is required for any actual use of a SampledData.
    */
-  data?: string|undefined;
-  /**
-   * Extended properties for primitive element: SampledData.data
-   */
-  _data?: fhir.IFhirElement|undefined;
+  data?: fhir.FhirString|string|undefined;
 }
 
 /**
  * A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
  */
-export class SampledData extends fhir.FhirElement implements ISampledData {
+export class SampledData extends fhir.FhirElement {
+  readonly __dataType:string = 'SampledData';
   /**
    * The base quantity that a measured value of zero represents. In addition, this provides the units of the entire measurement series.
    */
@@ -75,88 +53,70 @@ export class SampledData extends fhir.FhirElement implements ISampledData {
   /**
    * This is usually a whole number.
    */
-  public period: number|null;
-  /**
-   * Extended properties for primitive element: SampledData.period
-   */
-  public _period?: fhir.FhirElement|undefined;
+  public period: fhir.FhirDecimal|null;
   /**
    * A correction factor that is applied to the sampled data points before they are added to the origin.
    */
-  public factor?: number|undefined;
-  /**
-   * Extended properties for primitive element: SampledData.factor
-   */
-  public _factor?: fhir.FhirElement|undefined;
+  public factor?: fhir.FhirDecimal|undefined;
   /**
    * The lower limit of detection of the measured points. This is needed if any of the data points have the value "L" (lower than detection limit).
    */
-  public lowerLimit?: number|undefined;
-  /**
-   * Extended properties for primitive element: SampledData.lowerLimit
-   */
-  public _lowerLimit?: fhir.FhirElement|undefined;
+  public lowerLimit?: fhir.FhirDecimal|undefined;
   /**
    * The upper limit of detection of the measured points. This is needed if any of the data points have the value "U" (higher than detection limit).
    */
-  public upperLimit?: number|undefined;
-  /**
-   * Extended properties for primitive element: SampledData.upperLimit
-   */
-  public _upperLimit?: fhir.FhirElement|undefined;
+  public upperLimit?: fhir.FhirDecimal|undefined;
   /**
    * If there is more than one dimension, the code for the type of data will define the meaning of the dimensions (typically ECG data).
    */
-  public dimensions: number|null;
-  /**
-   * Extended properties for primitive element: SampledData.dimensions
-   */
-  public _dimensions?: fhir.FhirElement|undefined;
+  public dimensions: fhir.FhirPositiveInt|null;
   /**
    * Data may be missing if it is omitted for summarization purposes. In general, data is required for any actual use of a SampledData.
    */
-  public data?: string|undefined;
-  /**
-   * Extended properties for primitive element: SampledData.data
-   */
-  public _data?: fhir.FhirElement|undefined;
+  public data?: fhir.FhirString|undefined;
   /**
    * Default constructor for SampledData - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISampledData> = { }) {
-    super(source);
-    if (source['origin']) { this.origin = new fhir.Quantity(source.origin!); }
+  constructor(source:Partial<SampledDataArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['origin']) { this.origin = new fhir.Quantity(source.origin); }
     else { this.origin = null; }
-    if (source['period']) { this.period = source.period; }
+    if (source['period']) { this.period = new fhir.FhirDecimal({value: source.period}); }
     else { this.period = null; }
-    if (source['_period']) { this._period = new fhir.FhirElement(source._period!); }
-    if (source['factor']) { this.factor = source.factor; }
-    if (source['_factor']) { this._factor = new fhir.FhirElement(source._factor!); }
-    if (source['lowerLimit']) { this.lowerLimit = source.lowerLimit; }
-    if (source['_lowerLimit']) { this._lowerLimit = new fhir.FhirElement(source._lowerLimit!); }
-    if (source['upperLimit']) { this.upperLimit = source.upperLimit; }
-    if (source['_upperLimit']) { this._upperLimit = new fhir.FhirElement(source._upperLimit!); }
-    if (source['dimensions']) { this.dimensions = source.dimensions; }
+    if (source['factor']) { this.factor = new fhir.FhirDecimal({value: source.factor}); }
+    if (source['lowerLimit']) { this.lowerLimit = new fhir.FhirDecimal({value: source.lowerLimit}); }
+    if (source['upperLimit']) { this.upperLimit = new fhir.FhirDecimal({value: source.upperLimit}); }
+    if (source['dimensions']) { this.dimensions = new fhir.FhirPositiveInt({value: source.dimensions}); }
     else { this.dimensions = null; }
-    if (source['_dimensions']) { this._dimensions = new fhir.FhirElement(source._dimensions!); }
-    if (source['data']) { this.data = source.data; }
-    if (source['_data']) { this._data = new fhir.FhirElement(source._data!); }
+    if (source['data']) { this.data = new fhir.FhirString({value: source.data}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["origin"]) { results.push(["origin",'Missing required element: SampledData.origin']); }
-    if (this["origin"]) { results.push(...this.origin.doModelValidation()); }
-    if (!this["period"]) { results.push(["period",'Missing required element: SampledData.period']); }
-    if (this["_period"]) { results.push(...this._period.doModelValidation()); }
-    if (this["_factor"]) { results.push(...this._factor.doModelValidation()); }
-    if (this["_lowerLimit"]) { results.push(...this._lowerLimit.doModelValidation()); }
-    if (this["_upperLimit"]) { results.push(...this._upperLimit.doModelValidation()); }
-    if (!this["dimensions"]) { results.push(["dimensions",'Missing required element: SampledData.dimensions']); }
-    if (this["_dimensions"]) { results.push(...this._dimensions.doModelValidation()); }
-    if (this["_data"]) { results.push(...this._data.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['origin']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property origin:fhir.Quantity fhir: SampledData.origin:Quantity", }));
+    }
+    if (this["origin"]) { outcome.issue!.push(...this.origin.doModelValidation().issue!); }
+    if (!this['period']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property period:fhir.FhirDecimal fhir: SampledData.period:decimal", }));
+    }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    if (this["factor"]) { outcome.issue!.push(...this.factor.doModelValidation().issue!); }
+    if (this["lowerLimit"]) { outcome.issue!.push(...this.lowerLimit.doModelValidation().issue!); }
+    if (this["upperLimit"]) { outcome.issue!.push(...this.upperLimit.doModelValidation().issue!); }
+    if (!this['dimensions']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property dimensions:fhir.FhirPositiveInt fhir: SampledData.dimensions:positiveInt", }));
+    }
+    if (this["dimensions"]) { outcome.issue!.push(...this.dimensions.doModelValidation().issue!); }
+    if (this["data"]) { outcome.issue!.push(...this.data.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

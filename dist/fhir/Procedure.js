@@ -3,18 +3,20 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Procedure
 import * as fhir from '../fhir.js';
-import { PerformerRoleValueSet } from '../fhirValueSets/PerformerRoleValueSet.js';
-import { DeviceActionValueSet } from '../fhirValueSets/DeviceActionValueSet.js';
-import { EventStatusValueSet } from '../fhirValueSets/EventStatusValueSet.js';
-import { ProcedureNotPerformedReasonValueSet } from '../fhirValueSets/ProcedureNotPerformedReasonValueSet.js';
-import { ProcedureCategoryValueSet } from '../fhirValueSets/ProcedureCategoryValueSet.js';
-import { ProcedureCodeValueSet } from '../fhirValueSets/ProcedureCodeValueSet.js';
-import { ProcedureReasonValueSet } from '../fhirValueSets/ProcedureReasonValueSet.js';
-import { BodySiteValueSet } from '../fhirValueSets/BodySiteValueSet.js';
-import { ProcedureOutcomeValueSet } from '../fhirValueSets/ProcedureOutcomeValueSet.js';
-import { ConditionCodeValueSet } from '../fhirValueSets/ConditionCodeValueSet.js';
-import { ProcedureFollowupValueSet } from '../fhirValueSets/ProcedureFollowupValueSet.js';
-import { DeviceKindValueSet } from '../fhirValueSets/DeviceKindValueSet.js';
+import { PerformerRoleValueSet, } from '../fhirValueSets/PerformerRoleValueSet.js';
+import { DeviceActionValueSet, } from '../fhirValueSets/DeviceActionValueSet.js';
+import { EventStatusValueSet, } from '../fhirValueSets/EventStatusValueSet.js';
+import { ProcedureNotPerformedReasonValueSet, } from '../fhirValueSets/ProcedureNotPerformedReasonValueSet.js';
+import { ProcedureCategoryValueSet, } from '../fhirValueSets/ProcedureCategoryValueSet.js';
+import { ProcedureCodeValueSet, } from '../fhirValueSets/ProcedureCodeValueSet.js';
+import { ProcedureReasonValueSet, } from '../fhirValueSets/ProcedureReasonValueSet.js';
+import { BodySiteValueSet, } from '../fhirValueSets/BodySiteValueSet.js';
+import { ProcedureOutcomeValueSet, } from '../fhirValueSets/ProcedureOutcomeValueSet.js';
+import { ConditionCodeValueSet, } from '../fhirValueSets/ConditionCodeValueSet.js';
+import { ProcedureFollowupValueSet, } from '../fhirValueSets/ProcedureFollowupValueSet.js';
+import { DeviceKindValueSet, } from '../fhirValueSets/DeviceKindValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Limited to "real" people rather than equipment.
  */
@@ -22,8 +24,9 @@ export class ProcedurePerformer extends fhir.BackboneElement {
     /**
      * Default constructor for ProcedurePerformer - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ProcedurePerformer';
         if (source['function']) {
             this.function = new fhir.CodeableConcept(source.function);
         }
@@ -47,20 +50,26 @@ export class ProcedurePerformer extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["function"]) {
-            results.push(...this.function.doModelValidation());
+            outcome.issue.push(...this.function.doModelValidation().issue);
         }
-        if (!this["actor"]) {
-            results.push(["actor", 'Missing required element: Procedure.performer.actor']);
+        if (!this['actor']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property actor:fhir.Reference fhir: Procedure.performer.actor:Reference", }));
         }
         if (this["actor"]) {
-            results.push(...this.actor.doModelValidation());
+            outcome.issue.push(...this.actor.doModelValidation().issue);
         }
         if (this["onBehalfOf"]) {
-            results.push(...this.onBehalfOf.doModelValidation());
+            outcome.issue.push(...this.onBehalfOf.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -70,8 +79,9 @@ export class ProcedureFocalDevice extends fhir.BackboneElement {
     /**
      * Default constructor for ProcedureFocalDevice - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ProcedureFocalDevice';
         if (source['action']) {
             this.action = new fhir.CodeableConcept(source.action);
         }
@@ -92,17 +102,23 @@ export class ProcedureFocalDevice extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["action"]) {
-            results.push(...this.action.doModelValidation());
+            outcome.issue.push(...this.action.doModelValidation().issue);
         }
-        if (!this["manipulated"]) {
-            results.push(["manipulated", 'Missing required element: Procedure.focalDevice.manipulated']);
+        if (!this['manipulated']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property manipulated:fhir.Reference fhir: Procedure.focalDevice.manipulated:Reference", }));
         }
         if (this["manipulated"]) {
-            results.push(...this.manipulated.doModelValidation());
+            outcome.issue.push(...this.manipulated.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -112,23 +128,88 @@ export class Procedure extends fhir.DomainResource {
     /**
      * Default constructor for Procedure - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Procedure';
+        /**
+         * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and Person resource instances might share the same social insurance number.
+         */
+        this.identifier = [];
+        /**
+         * The URL pointing to a FHIR-defined protocol, guideline, order set or other definition that is adhered to in whole or in part by this Procedure.
+         */
+        this.instantiatesCanonical = [];
+        /**
+         * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
+         */
+        this.instantiatesUri = [];
+        /**
+         * A reference to a resource that contains details of the request for this procedure.
+         */
+        this.basedOn = [];
+        /**
+         * The MedicationAdministration resource has a partOf reference to Procedure, but this is not a circular reference.   For example, the anesthesia MedicationAdministration is part of the surgical Procedure (MedicationAdministration.partOf = Procedure).  For example, the procedure to insert the IV port for an IV medication administration is part of the medication administration (Procedure.partOf = MedicationAdministration).
+         */
+        this.partOf = [];
+        this.__performedIsChoice = true;
+        /**
+         * Limited to "real" people rather than equipment.
+         */
+        this.performer = [];
+        /**
+         * Use Procedure.reasonCode when a code sufficiently describes the reason.  Use Procedure.reasonReference when referencing a resource, which allows more information to be conveyed, such as onset date. Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.
+         */
+        this.reasonCode = [];
+        /**
+         * It is possible for a procedure to be a reason (such as C-Section) for another procedure (such as an epidural). Other examples include endoscopy for dilatation and biopsy (a combination of diagnostic and therapeutic use).
+         * Use Procedure.reasonCode when a code sufficiently describes the reason.  Use Procedure.reasonReference when referencing a resource, which allows more information to be conveyed, such as onset date. Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.
+         */
+        this.reasonReference = [];
+        /**
+         * If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [procedure-targetbodystructure](extension-procedure-targetbodystructure.html).
+         */
+        this.bodySite = [];
+        /**
+         * There could potentially be multiple reports - e.g. if this was a procedure which took multiple biopsies resulting in a number of anatomical pathology reports.
+         */
+        this.report = [];
+        /**
+         * If complications are only expressed by the narrative text, they can be captured using the CodeableConcept.text.
+         */
+        this.complication = [];
+        /**
+         * Any complications that occurred during the procedure, or in the immediate post-performance period.
+         */
+        this.complicationDetail = [];
+        /**
+         * If the procedure required specific follow up - e.g. removal of sutures. The follow up may be represented as a simple note or could potentially be more complex, in which case the CarePlan resource can be used.
+         */
+        this.followUp = [];
+        /**
+         * Any other notes and comments about the procedure.
+         */
+        this.note = [];
+        /**
+         * A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.
+         */
+        this.focalDevice = [];
+        /**
+         * For devices actually implanted or removed, use Procedure.device.
+         */
+        this.usedReference = [];
+        /**
+         * For devices actually implanted or removed, use Procedure.device.
+         */
+        this.usedCode = [];
         this.resourceType = 'Procedure';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['instantiatesCanonical']) {
-            this.instantiatesCanonical = source.instantiatesCanonical.map((x) => (x));
-        }
-        if (source['_instantiatesCanonical']) {
-            this._instantiatesCanonical = source._instantiatesCanonical.map((x) => new fhir.FhirElement(x));
+            this.instantiatesCanonical = source.instantiatesCanonical.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['instantiatesUri']) {
-            this.instantiatesUri = source.instantiatesUri.map((x) => (x));
-        }
-        if (source['_instantiatesUri']) {
-            this._instantiatesUri = source._instantiatesUri.map((x) => new fhir.FhirElement(x));
+            this.instantiatesUri = source.instantiatesUri.map((x) => new fhir.FhirUri({ value: x }));
         }
         if (source['basedOn']) {
             this.basedOn = source.basedOn.map((x) => new fhir.Reference(x));
@@ -141,9 +222,6 @@ export class Procedure extends fhir.DomainResource {
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['statusReason']) {
             this.statusReason = new fhir.CodeableConcept(source.statusReason);
@@ -163,26 +241,23 @@ export class Procedure extends fhir.DomainResource {
         if (source['encounter']) {
             this.encounter = new fhir.Reference(source.encounter);
         }
-        if (source['performedDateTime']) {
-            this.performedDateTime = source.performedDateTime;
+        if (source['performed']) {
+            this.performed = source.performed;
         }
-        if (source['_performedDateTime']) {
-            this._performedDateTime = new fhir.FhirElement(source._performedDateTime);
+        else if (source['performedDateTime']) {
+            this.performed = new fhir.FhirDateTime({ value: source.performedDateTime });
         }
-        if (source['performedPeriod']) {
-            this.performedPeriod = new fhir.Period(source.performedPeriod);
+        else if (source['performedPeriod']) {
+            this.performed = new fhir.Period(source.performedPeriod);
         }
-        if (source['performedString']) {
-            this.performedString = source.performedString;
+        else if (source['performedString']) {
+            this.performed = new fhir.FhirString({ value: source.performedString });
         }
-        if (source['_performedString']) {
-            this._performedString = new fhir.FhirElement(source._performedString);
+        else if (source['performedAge']) {
+            this.performed = new fhir.Age(source.performedAge);
         }
-        if (source['performedAge']) {
-            this.performedAge = new fhir.Age(source.performedAge);
-        }
-        if (source['performedRange']) {
-            this.performedRange = new fhir.Range(source.performedRange);
+        else if (source['performedRange']) {
+            this.performed = new fhir.Range(source.performedRange);
         }
         if (source['recorder']) {
             this.recorder = new fhir.Reference(source.recorder);
@@ -297,113 +372,101 @@ export class Procedure extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Procedure.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Procedure' fhir: Procedure.resourceType:'Procedure'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instantiatesCanonical"]) {
-            this._instantiatesCanonical.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["instantiatesCanonical"]) {
+            this.instantiatesCanonical.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instantiatesUri"]) {
-            this._instantiatesUri.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["instantiatesUri"]) {
+            this.instantiatesUri.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["partOf"]) {
-            this.partOf.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.partOf.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Procedure.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:EventStatusValueSetEnum fhir: Procedure.status:code", }));
         }
         if (this["statusReason"]) {
-            results.push(...this.statusReason.doModelValidation());
+            outcome.issue.push(...this.statusReason.doModelValidation().issue);
         }
         if (this["category"]) {
-            results.push(...this.category.doModelValidation());
+            outcome.issue.push(...this.category.doModelValidation().issue);
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (!this["subject"]) {
-            results.push(["subject", 'Missing required element: Procedure.subject']);
+        if (!this['subject']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property subject:fhir.Reference fhir: Procedure.subject:Reference", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
-        }
-        if (this["_performedDateTime"]) {
-            results.push(...this._performedDateTime.doModelValidation());
-        }
-        if (this["performedPeriod"]) {
-            results.push(...this.performedPeriod.doModelValidation());
-        }
-        if (this["_performedString"]) {
-            results.push(...this._performedString.doModelValidation());
-        }
-        if (this["performedAge"]) {
-            results.push(...this.performedAge.doModelValidation());
-        }
-        if (this["performedRange"]) {
-            results.push(...this.performedRange.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
         if (this["recorder"]) {
-            results.push(...this.recorder.doModelValidation());
+            outcome.issue.push(...this.recorder.doModelValidation().issue);
         }
         if (this["asserter"]) {
-            results.push(...this.asserter.doModelValidation());
+            outcome.issue.push(...this.asserter.doModelValidation().issue);
         }
         if (this["performer"]) {
-            this.performer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.performer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["location"]) {
-            results.push(...this.location.doModelValidation());
+            outcome.issue.push(...this.location.doModelValidation().issue);
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["bodySite"]) {
-            this.bodySite.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.bodySite.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["outcome"]) {
-            results.push(...this.outcome.doModelValidation());
+            outcome.issue.push(...this.outcome.doModelValidation().issue);
         }
         if (this["report"]) {
-            this.report.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.report.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["complication"]) {
-            this.complication.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.complication.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["complicationDetail"]) {
-            this.complicationDetail.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.complicationDetail.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["followUp"]) {
-            this.followUp.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.followUp.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["focalDevice"]) {
-            this.focalDevice.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.focalDevice.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["usedReference"]) {
-            this.usedReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.usedReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["usedCode"]) {
-            this.usedCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.usedCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Procedure.js.map

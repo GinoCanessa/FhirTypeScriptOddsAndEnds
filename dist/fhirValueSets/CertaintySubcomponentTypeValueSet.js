@@ -75,39 +75,4 @@ export const CertaintySubcomponentTypeValueSet = {
 /**
  * The subcomponent classification of quality of evidence rating systems.
  */
-export var CertaintySubcomponentTypeValueSetEnum;
-(function (CertaintySubcomponentTypeValueSetEnum) {
-    /**
-     * DoseResponseGradient: higher certainty due to dose response relationship.
-     */
-    CertaintySubcomponentTypeValueSetEnum["DoseResponseGradient"] = "DoseResponseGradient";
-    /**
-     * Imprecision: High quality evidence.
-     */
-    CertaintySubcomponentTypeValueSetEnum["Imprecision"] = "Imprecision";
-    /**
-     * Inconsistency: concerns that findings are not similar enough to support certainty.
-     */
-    CertaintySubcomponentTypeValueSetEnum["Inconsistency"] = "Inconsistency";
-    /**
-     * Indirectness: concerns reducing external validity.
-     */
-    CertaintySubcomponentTypeValueSetEnum["Indirectness"] = "Indirectness";
-    /**
-     * LargeEffect: higher certainty due to large effect size.
-     */
-    CertaintySubcomponentTypeValueSetEnum["LargeEffect"] = "LargeEffect";
-    /**
-     * PlausibleConfounding: higher certainty due to risk of bias in opposite direction.
-     */
-    CertaintySubcomponentTypeValueSetEnum["PlausibleConfounding"] = "PlausibleConfounding";
-    /**
-     * PublicationBias: likelihood that what is published misrepresents what is available to publish.
-     */
-    CertaintySubcomponentTypeValueSetEnum["PublicationBias"] = "PublicationBias";
-    /**
-     * RiskOfBias: methodologic concerns reducing internal validity.
-     */
-    CertaintySubcomponentTypeValueSetEnum["RiskOfBias"] = "RiskOfBias";
-})(CertaintySubcomponentTypeValueSetEnum || (CertaintySubcomponentTypeValueSetEnum = {}));
 //# sourceMappingURL=CertaintySubcomponentTypeValueSet.js.map

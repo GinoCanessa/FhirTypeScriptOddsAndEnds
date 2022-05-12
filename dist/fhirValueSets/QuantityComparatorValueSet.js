@@ -43,23 +43,4 @@ export const QuantityComparatorValueSet = {
 /**
  * How the Quantity should be understood and represented.
  */
-export var QuantityComparatorValueSetEnum;
-(function (QuantityComparatorValueSetEnum) {
-    /**
-     * &lt;: The actual value is less than the given value.
-     */
-    QuantityComparatorValueSetEnum["LessThan"] = "<";
-    /**
-     * &lt;=: The actual value is less than or equal to the given value.
-     */
-    QuantityComparatorValueSetEnum["LessOrEqualTo"] = "<=";
-    /**
-     * &gt;: The actual value is greater than the given value.
-     */
-    QuantityComparatorValueSetEnum["GreaterThan"] = ">";
-    /**
-     * &gt;=: The actual value is greater than or equal to the given value.
-     */
-    QuantityComparatorValueSetEnum["GreaterOrEqualTo"] = ">=";
-})(QuantityComparatorValueSetEnum || (QuantityComparatorValueSetEnum = {}));
 //# sourceMappingURL=QuantityComparatorValueSet.js.map

@@ -3,11 +3,13 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: CommunicationRequest
 import * as fhir from '../fhir.js';
-import { RequestStatusValueSet } from '../fhirValueSets/RequestStatusValueSet.js';
-import { CommunicationCategoryValueSet } from '../fhirValueSets/CommunicationCategoryValueSet.js';
-import { RequestPriorityValueSet } from '../fhirValueSets/RequestPriorityValueSet.js';
-import { V3ParticipationModeValueSet } from '../fhirValueSets/V3ParticipationModeValueSet.js';
-import { V3ActReasonValueSet } from '../fhirValueSets/V3ActReasonValueSet.js';
+import { RequestStatusValueSet, } from '../fhirValueSets/RequestStatusValueSet.js';
+import { CommunicationCategoryValueSet, } from '../fhirValueSets/CommunicationCategoryValueSet.js';
+import { RequestPriorityValueSet, } from '../fhirValueSets/RequestPriorityValueSet.js';
+import { V3ParticipationModeValueSet, } from '../fhirValueSets/V3ParticipationModeValueSet.js';
+import { V3ActReasonValueSet, } from '../fhirValueSets/V3ActReasonValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Text, attachment(s), or resource(s) to be communicated to the recipient.
  */
@@ -15,36 +17,41 @@ export class CommunicationRequestPayload extends fhir.BackboneElement {
     /**
      * Default constructor for CommunicationRequestPayload - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['contentString']) {
-            this.contentString = source.contentString;
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CommunicationRequestPayload';
+        this.__contentIsChoice = true;
+        if (source['content']) {
+            this.content = source.content;
         }
-        if (source['_contentString']) {
-            this._contentString = new fhir.FhirElement(source._contentString);
+        else if (source['contentString']) {
+            this.content = new fhir.FhirString({ value: source.contentString });
         }
-        if (source['contentAttachment']) {
-            this.contentAttachment = new fhir.Attachment(source.contentAttachment);
+        else if (source['contentAttachment']) {
+            this.content = new fhir.Attachment(source.contentAttachment);
         }
-        if (source['contentReference']) {
-            this.contentReference = new fhir.Reference(source.contentReference);
+        else if (source['contentReference']) {
+            this.content = new fhir.Reference(source.contentReference);
+        }
+        else {
+            this.content = null;
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_contentString"]) {
-            results.push(...this._contentString.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['content']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property content: fhir: CommunicationRequest.payload.content[x]:", }));
         }
-        if (this["contentAttachment"]) {
-            results.push(...this.contentAttachment.doModelValidation());
-        }
-        if (this["contentReference"]) {
-            results.push(...this.contentReference.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -54,8 +61,54 @@ export class CommunicationRequest extends fhir.DomainResource {
     /**
      * Default constructor for CommunicationRequest - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CommunicationRequest';
+        /**
+         * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+         */
+        this.identifier = [];
+        /**
+         * A plan or proposal that is fulfilled in whole or in part by this request.
+         */
+        this.basedOn = [];
+        /**
+         * The replacement could be because the initial request was immediately rejected (due to an issue) or because the previous request was completed, but the need for the action described by the request remains ongoing.
+         */
+        this.replaces = [];
+        /**
+         * There may be multiple axes of categorization and one communication request may serve multiple purposes.
+         */
+        this.category = [];
+        /**
+         * A channel that was used for this communication (e.g. email, fax).
+         */
+        this.medium = [];
+        /**
+         * Don't use CommunicationRequest.about element when a more specific element exists, such as basedOn, reasonReference, or replaces.
+         */
+        this.about = [];
+        /**
+         * Text, attachment(s), or resource(s) to be communicated to the recipient.
+         */
+        this.payload = [];
+        this.__occurrenceIsChoice = true;
+        /**
+         * The entity (e.g. person, organization, clinical information system, device, group, or care team) which is the intended target of the communication.
+         */
+        this.recipient = [];
+        /**
+         * Textual reasons can be captured using reasonCode.text.
+         */
+        this.reasonCode = [];
+        /**
+         * Indicates another resource whose existence justifies this request.
+         */
+        this.reasonReference = [];
+        /**
+         * Comments made about the request by the requester, sender, recipient, subject or other participants.
+         */
+        this.note = [];
         this.resourceType = 'CommunicationRequest';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -75,9 +128,6 @@ export class CommunicationRequest extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['statusReason']) {
             this.statusReason = new fhir.CodeableConcept(source.statusReason);
         }
@@ -87,14 +137,8 @@ export class CommunicationRequest extends fhir.DomainResource {
         if (source['priority']) {
             this.priority = source.priority;
         }
-        if (source['_priority']) {
-            this._priority = new fhir.FhirElement(source._priority);
-        }
         if (source['doNotPerform']) {
-            this.doNotPerform = source.doNotPerform;
-        }
-        if (source['_doNotPerform']) {
-            this._doNotPerform = new fhir.FhirElement(source._doNotPerform);
+            this.doNotPerform = new fhir.FhirBoolean({ value: source.doNotPerform });
         }
         if (source['medium']) {
             this.medium = source.medium.map((x) => new fhir.CodeableConcept(x));
@@ -111,20 +155,17 @@ export class CommunicationRequest extends fhir.DomainResource {
         if (source['payload']) {
             this.payload = source.payload.map((x) => new fhir.CommunicationRequestPayload(x));
         }
-        if (source['occurrenceDateTime']) {
-            this.occurrenceDateTime = source.occurrenceDateTime;
+        if (source['occurrence']) {
+            this.occurrence = source.occurrence;
         }
-        if (source['_occurrenceDateTime']) {
-            this._occurrenceDateTime = new fhir.FhirElement(source._occurrenceDateTime);
+        else if (source['occurrenceDateTime']) {
+            this.occurrence = new fhir.FhirDateTime({ value: source.occurrenceDateTime });
         }
-        if (source['occurrencePeriod']) {
-            this.occurrencePeriod = new fhir.Period(source.occurrencePeriod);
+        else if (source['occurrencePeriod']) {
+            this.occurrence = new fhir.Period(source.occurrencePeriod);
         }
         if (source['authoredOn']) {
-            this.authoredOn = source.authoredOn;
-        }
-        if (source['_authoredOn']) {
-            this._authoredOn = new fhir.FhirElement(source._authoredOn);
+            this.authoredOn = new fhir.FhirDateTime({ value: source.authoredOn });
         }
         if (source['requester']) {
             this.requester = new fhir.Reference(source.requester);
@@ -179,83 +220,77 @@ export class CommunicationRequest extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: CommunicationRequest.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'CommunicationRequest' fhir: CommunicationRequest.resourceType:'CommunicationRequest'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["replaces"]) {
-            this.replaces.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.replaces.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["groupIdentifier"]) {
-            results.push(...this.groupIdentifier.doModelValidation());
+            outcome.issue.push(...this.groupIdentifier.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: CommunicationRequest.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:RequestStatusValueSetEnum fhir: CommunicationRequest.status:code", }));
         }
         if (this["statusReason"]) {
-            results.push(...this.statusReason.doModelValidation());
+            outcome.issue.push(...this.statusReason.doModelValidation().issue);
         }
         if (this["category"]) {
-            this.category.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.category.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_priority"]) {
-            results.push(...this._priority.doModelValidation());
-        }
-        if (this["_doNotPerform"]) {
-            results.push(...this._doNotPerform.doModelValidation());
+        if (this["doNotPerform"]) {
+            outcome.issue.push(...this.doNotPerform.doModelValidation().issue);
         }
         if (this["medium"]) {
-            this.medium.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.medium.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["about"]) {
-            this.about.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.about.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
         if (this["payload"]) {
-            this.payload.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.payload.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_occurrenceDateTime"]) {
-            results.push(...this._occurrenceDateTime.doModelValidation());
-        }
-        if (this["occurrencePeriod"]) {
-            results.push(...this.occurrencePeriod.doModelValidation());
-        }
-        if (this["_authoredOn"]) {
-            results.push(...this._authoredOn.doModelValidation());
+        if (this["authoredOn"]) {
+            outcome.issue.push(...this.authoredOn.doModelValidation().issue);
         }
         if (this["requester"]) {
-            results.push(...this.requester.doModelValidation());
+            outcome.issue.push(...this.requester.doModelValidation().issue);
         }
         if (this["recipient"]) {
-            this.recipient.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.recipient.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["sender"]) {
-            results.push(...this.sender.doModelValidation());
+            outcome.issue.push(...this.sender.doModelValidation().issue);
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=CommunicationRequest.js.map

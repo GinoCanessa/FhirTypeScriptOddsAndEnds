@@ -35,19 +35,4 @@ export const DocumentReferenceStatusValueSet = {
 /**
  * The status of the document reference.
  */
-export var DocumentReferenceStatusValueSetEnum;
-(function (DocumentReferenceStatusValueSetEnum) {
-    /**
-     * current: This is the current reference for this document.
-     */
-    DocumentReferenceStatusValueSetEnum["Current"] = "current";
-    /**
-     * entered-in-error: This reference was created in error.
-     */
-    DocumentReferenceStatusValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * superseded: This reference has been superseded by another reference.
-     */
-    DocumentReferenceStatusValueSetEnum["Superseded"] = "superseded";
-})(DocumentReferenceStatusValueSetEnum || (DocumentReferenceStatusValueSetEnum = {}));
 //# sourceMappingURL=DocumentReferenceStatusValueSet.js.map

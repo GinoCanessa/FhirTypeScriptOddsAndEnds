@@ -3,7 +3,9 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: GuidanceResponse
 import * as fhir from '../fhir.js';
-import { GuidanceResponseStatusValueSet } from '../fhirValueSets/GuidanceResponseStatusValueSet.js';
+import { GuidanceResponseStatusValueSet, } from '../fhirValueSets/GuidanceResponseStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A guidance response is the formal response to a guidance request, including any output parameters returned by the evaluation, as well as the description of any proposed actions to be taken.
  */
@@ -11,8 +13,34 @@ export class GuidanceResponse extends fhir.DomainResource {
     /**
      * Default constructor for GuidanceResponse - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'GuidanceResponse';
+        /**
+         * Allows a service to provide  unique, business identifiers for the response.
+         */
+        this.identifier = [];
+        this.__moduleIsChoice = true;
+        /**
+         * Describes the reason for the guidance response in coded or textual form.
+         */
+        this.reasonCode = [];
+        /**
+         * Indicates the reason the request was initiated. This is typically provided as a parameter to the evaluation and echoed by the service, although for some use cases, such as subscription- or event-based scenarios, it may provide an indication of the cause for the response.
+         */
+        this.reasonReference = [];
+        /**
+         * Provides a mechanism to communicate additional information about the response.
+         */
+        this.note = [];
+        /**
+         * Messages resulting from the evaluation of the artifact or artifacts. As part of evaluating the request, the engine may produce informational or warning messages. These messages will be provided by this element.
+         */
+        this.evaluationMessage = [];
+        /**
+         * If the evaluation could not be completed due to lack of information, or additional information would potentially result in a more accurate response, this element will a description of the data required in order to proceed with the evaluation. A subsequent request to the service should include this data.
+         */
+        this.dataRequirement = [];
         this.resourceType = 'GuidanceResponse';
         if (source['requestIdentifier']) {
             this.requestIdentifier = new fhir.Identifier(source.requestIdentifier);
@@ -20,29 +48,26 @@ export class GuidanceResponse extends fhir.DomainResource {
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
-        if (source['moduleUri']) {
-            this.moduleUri = source.moduleUri;
+        if (source['module']) {
+            this.module = source.module;
         }
-        if (source['_moduleUri']) {
-            this._moduleUri = new fhir.FhirElement(source._moduleUri);
+        else if (source['moduleUri']) {
+            this.module = new fhir.FhirUri({ value: source.moduleUri });
         }
-        if (source['moduleCanonical']) {
-            this.moduleCanonical = source.moduleCanonical;
+        else if (source['moduleCanonical']) {
+            this.module = new fhir.FhirCanonical({ value: source.moduleCanonical });
         }
-        if (source['_moduleCanonical']) {
-            this._moduleCanonical = new fhir.FhirElement(source._moduleCanonical);
+        else if (source['moduleCodeableConcept']) {
+            this.module = new fhir.CodeableConcept(source.moduleCodeableConcept);
         }
-        if (source['moduleCodeableConcept']) {
-            this.moduleCodeableConcept = new fhir.CodeableConcept(source.moduleCodeableConcept);
+        else {
+            this.module = null;
         }
         if (source['status']) {
             this.status = source.status;
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['subject']) {
             this.subject = new fhir.Reference(source.subject);
@@ -51,10 +76,7 @@ export class GuidanceResponse extends fhir.DomainResource {
             this.encounter = new fhir.Reference(source.encounter);
         }
         if (source['occurrenceDateTime']) {
-            this.occurrenceDateTime = source.occurrenceDateTime;
-        }
-        if (source['_occurrenceDateTime']) {
-            this._occurrenceDateTime = new fhir.FhirElement(source._occurrenceDateTime);
+            this.occurrenceDateTime = new fhir.FhirDateTime({ value: source.occurrenceDateTime });
         }
         if (source['performer']) {
             this.performer = new fhir.Reference(source.performer);
@@ -91,65 +113,62 @@ export class GuidanceResponse extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: GuidanceResponse.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'GuidanceResponse' fhir: GuidanceResponse.resourceType:'GuidanceResponse'", }));
         }
         if (this["requestIdentifier"]) {
-            results.push(...this.requestIdentifier.doModelValidation());
+            outcome.issue.push(...this.requestIdentifier.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_moduleUri"]) {
-            results.push(...this._moduleUri.doModelValidation());
+        if (!this['module']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property module: fhir: GuidanceResponse.module[x]:", }));
         }
-        if (this["_moduleCanonical"]) {
-            results.push(...this._moduleCanonical.doModelValidation());
-        }
-        if (this["moduleCodeableConcept"]) {
-            results.push(...this.moduleCodeableConcept.doModelValidation());
-        }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: GuidanceResponse.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:GuidanceResponseStatusValueSetEnum fhir: GuidanceResponse.status:code", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_occurrenceDateTime"]) {
-            results.push(...this._occurrenceDateTime.doModelValidation());
+        if (this["occurrenceDateTime"]) {
+            outcome.issue.push(...this.occurrenceDateTime.doModelValidation().issue);
         }
         if (this["performer"]) {
-            results.push(...this.performer.doModelValidation());
+            outcome.issue.push(...this.performer.doModelValidation().issue);
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["evaluationMessage"]) {
-            this.evaluationMessage.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.evaluationMessage.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["outputParameters"]) {
-            results.push(...this.outputParameters.doModelValidation());
+            outcome.issue.push(...this.outputParameters.doModelValidation().issue);
         }
         if (this["result"]) {
-            results.push(...this.result.doModelValidation());
+            outcome.issue.push(...this.result.doModelValidation().issue);
         }
         if (this["dataRequirement"]) {
-            this.dataRequirement.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.dataRequirement.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=GuidanceResponse.js.map

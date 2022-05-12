@@ -27,15 +27,4 @@ export const SupplyrequestReasonValueSet = {
 /**
  * The reason why the supply item was requested.
  */
-export var SupplyrequestReasonValueSetEnum;
-(function (SupplyrequestReasonValueSetEnum) {
-    /**
-     * patient-care: The supply has been requested for use in direct patient care.
-     */
-    SupplyrequestReasonValueSetEnum["PatientCare"] = "patient-care";
-    /**
-     * ward-stock: The supply has been requested for creating or replenishing ward stock.
-     */
-    SupplyrequestReasonValueSetEnum["WardStock"] = "ward-stock";
-})(SupplyrequestReasonValueSetEnum || (SupplyrequestReasonValueSetEnum = {}));
 //# sourceMappingURL=SupplyrequestReasonValueSet.js.map

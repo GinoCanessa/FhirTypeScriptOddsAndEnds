@@ -59,31 +59,4 @@ export const CommunicationTopicValueSet = {
 /**
  * Codes describing the purpose or content of the communication.
  */
-export var CommunicationTopicValueSetEnum;
-(function (CommunicationTopicValueSetEnum) {
-    /**
-     * appointment-reminder: The purpose or content of the communication is an appointment reminder.
-     */
-    CommunicationTopicValueSetEnum["AppointmentReminder"] = "appointment-reminder";
-    /**
-     * phone-consult: The purpose or content of the communication is a phone consult.
-     */
-    CommunicationTopicValueSetEnum["PhoneConsult"] = "phone-consult";
-    /**
-     * prescription-refill-request: The purpose or content of the communication is a prescription refill request.
-     */
-    CommunicationTopicValueSetEnum["PrescriptionRefillRequest"] = "prescription-refill-request";
-    /**
-     * progress-update: The purpose or content of the communication is a progress update.
-     */
-    CommunicationTopicValueSetEnum["ProgressUpdate"] = "progress-update";
-    /**
-     * report-labs: The purpose or content of the communication is to report labs.
-     */
-    CommunicationTopicValueSetEnum["ReportLabs"] = "report-labs";
-    /**
-     * summary-report: The purpose or content of the communication is a summary report.
-     */
-    CommunicationTopicValueSetEnum["SummaryReport"] = "summary-report";
-})(CommunicationTopicValueSetEnum || (CommunicationTopicValueSetEnum = {}));
 //# sourceMappingURL=CommunicationTopicValueSet.js.map

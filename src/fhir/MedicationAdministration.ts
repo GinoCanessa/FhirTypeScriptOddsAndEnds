@@ -3,181 +3,45 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MedicationAdministration
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { MedAdminPerformFunctionValueSet, MedAdminPerformFunctionValueSetType, MedAdminPerformFunctionValueSetEnum } from '../fhirValueSets/MedAdminPerformFunctionValueSet.js'
-import { ApproachSiteCodesValueSet, ApproachSiteCodesValueSetType, ApproachSiteCodesValueSetEnum } from '../fhirValueSets/ApproachSiteCodesValueSet.js'
-import { RouteCodesValueSet, RouteCodesValueSetType, RouteCodesValueSetEnum } from '../fhirValueSets/RouteCodesValueSet.js'
-import { AdministrationMethodCodesValueSet, AdministrationMethodCodesValueSetType, AdministrationMethodCodesValueSetEnum } from '../fhirValueSets/AdministrationMethodCodesValueSet.js'
-import { MedicationAdminStatusValueSet, MedicationAdminStatusValueSetType, MedicationAdminStatusValueSetEnum } from '../fhirValueSets/MedicationAdminStatusValueSet.js'
-import { ReasonMedicationNotGivenCodesValueSet, ReasonMedicationNotGivenCodesValueSetType, ReasonMedicationNotGivenCodesValueSetEnum } from '../fhirValueSets/ReasonMedicationNotGivenCodesValueSet.js'
-import { MedicationAdminCategoryValueSet, MedicationAdminCategoryValueSetType, MedicationAdminCategoryValueSetEnum } from '../fhirValueSets/MedicationAdminCategoryValueSet.js'
-import { MedicationCodesValueSet, MedicationCodesValueSetType, MedicationCodesValueSetEnum } from '../fhirValueSets/MedicationCodesValueSet.js'
-import { ReasonMedicationGivenCodesValueSet, ReasonMedicationGivenCodesValueSetType, ReasonMedicationGivenCodesValueSetEnum } from '../fhirValueSets/ReasonMedicationGivenCodesValueSet.js'
-
+import { MedAdminPerformFunctionValueSet, MedAdminPerformFunctionValueSetType,} from '../fhirValueSets/MedAdminPerformFunctionValueSet.js';
+import { MedAdminPerformFunctionValueSetEnum } from '../valueSetEnums.js';
+import { ApproachSiteCodesValueSet, ApproachSiteCodesValueSetType,} from '../fhirValueSets/ApproachSiteCodesValueSet.js';
+import { ApproachSiteCodesValueSetEnum } from '../valueSetEnums.js';
+import { RouteCodesValueSet, RouteCodesValueSetType,} from '../fhirValueSets/RouteCodesValueSet.js';
+import { RouteCodesValueSetEnum } from '../valueSetEnums.js';
+import { AdministrationMethodCodesValueSet, AdministrationMethodCodesValueSetType,} from '../fhirValueSets/AdministrationMethodCodesValueSet.js';
+import { AdministrationMethodCodesValueSetEnum } from '../valueSetEnums.js';
+import { MedicationAdminStatusValueSet, MedicationAdminStatusValueSetType,} from '../fhirValueSets/MedicationAdminStatusValueSet.js';
+import { MedicationAdminStatusValueSetEnum } from '../valueSetEnums.js';
+import { ReasonMedicationNotGivenCodesValueSet, ReasonMedicationNotGivenCodesValueSetType,} from '../fhirValueSets/ReasonMedicationNotGivenCodesValueSet.js';
+import { ReasonMedicationNotGivenCodesValueSetEnum } from '../valueSetEnums.js';
+import { MedicationAdminCategoryValueSet, MedicationAdminCategoryValueSetType,} from '../fhirValueSets/MedicationAdminCategoryValueSet.js';
+import { MedicationAdminCategoryValueSetEnum } from '../valueSetEnums.js';
+import { ReasonMedicationGivenCodesValueSet, ReasonMedicationGivenCodesValueSetType,} from '../fhirValueSets/ReasonMedicationGivenCodesValueSet.js';
+import { ReasonMedicationGivenCodesValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Indicates who or what performed the medication administration and how they were involved.
+ * Valid arguments for the MedicationAdministrationPerformer type.
  */
-export type IMedicationAdministrationPerformer = fhir.IBackboneElement & { 
+export interface MedicationAdministrationPerformerArgs extends fhir.BackboneElementArgs {
   /**
    * Distinguishes the type of involvement of the performer in the medication administration.
    */
-  function?: fhir.ICodeableConcept|undefined;
+  function?: fhir.CodeableConceptArgs|undefined;
   /**
    * Indicates who or what performed the medication administration.
    */
-  actor: fhir.IReference|null;
-}
-
-/**
- * Describes the medication dosage information details e.g. dose, rate, site, route, etc.
- */
-export type IMedicationAdministrationDosage = fhir.IBackboneElement & { 
-  /**
-   * Free text dosage can be used for cases where the dosage administered is too complex to code. When coded dosage is present, the free text dosage may still be present for display to humans.
-   * The dosage instructions should reflect the dosage of the medication that was administered.
-   */
-  text?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationAdministration.dosage.text
-   */
-  _text?: fhir.IFhirElement|undefined;
-  /**
-   * If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.
-   */
-  site?: fhir.ICodeableConcept|undefined;
-  /**
-   * A code specifying the route or physiological path of administration of a therapeutic agent into or onto the patient.  For example, topical, intravenous, etc.
-   */
-  route?: fhir.ICodeableConcept|undefined;
-  /**
-   * One of the reasons this attribute is not used often, is that the method is often pre-coordinated with the route and/or form of administration.  This means the codes used in route or form may pre-coordinate the method in the route code or the form code.  The implementation decision about what coding system to use for route or form code will determine how frequently the method code will be populated e.g. if route or form code pre-coordinate method code, then this attribute will not be populated often; if there is no pre-coordination then method code may  be used frequently.
-   */
-  method?: fhir.ICodeableConcept|undefined;
-  /**
-   * If the administration is not instantaneous (rate is present), this can be specified to convey the total amount administered over period of time of a single administration.
-   */
-  dose?: fhir.IQuantity|undefined;
-  /**
-   * If the rate changes over time, and you want to capture this in MedicationAdministration, then each change should be captured as a distinct MedicationAdministration, with a specific MedicationAdministration.dosage.rate, and the date time when the rate change occurred. Typically, the MedicationAdministration.dosage.rate element is not used to convey an average rate.
-   */
-  rateRatio?: fhir.IRatio|undefined;
-  /**
-   * If the rate changes over time, and you want to capture this in MedicationAdministration, then each change should be captured as a distinct MedicationAdministration, with a specific MedicationAdministration.dosage.rate, and the date time when the rate change occurred. Typically, the MedicationAdministration.dosage.rate element is not used to convey an average rate.
-   */
-  rateQuantity?: fhir.IQuantity|undefined;
-}
-
-/**
- * Describes the event of a patient consuming or otherwise being administered a medication.  This may be as simple as swallowing a tablet or it may be a long running infusion.  Related resources tie this event to the authorizing prescription, and the specific encounter between patient and health care practitioner.
- */
-export type IMedicationAdministration = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "MedicationAdministration";
-  /**
-   * This is a business identifier, not a resource identifier.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * A protocol, guideline, orderset, or other definition that was adhered to in whole or in part by this event.
-   */
-  instantiates?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: MedicationAdministration.instantiates
-   */
-  _instantiates?: fhir.IFhirElement[]|undefined;
-  /**
-   * A larger event of which this particular event is a component or step.
-   */
-  partOf?: fhir.IReference[]|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-   */
-  status: MedicationAdminStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: MedicationAdministration.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * A code indicating why the administration was not performed.
-   */
-  statusReason?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Indicates where the medication is expected to be consumed or administered.
-   */
-  category?: fhir.ICodeableConcept|undefined;
-  /**
-   * If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.
-   */
-  medicationCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.
-   */
-  medicationReference?: fhir.IReference|undefined;
-  /**
-   * The person or animal or group receiving the medication.
-   */
-  subject: fhir.IReference|null;
-  /**
-   * The visit, admission, or other contact between patient and health care provider during which the medication administration was performed.
-   */
-  context?: fhir.IReference|undefined;
-  /**
-   * Additional information (for example, patient height and weight) that supports the administration of the medication.
-   */
-  supportingInformation?: fhir.IReference[]|undefined;
-  /**
-   * A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
-   */
-  effectiveDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationAdministration.effective[x]
-   */
-  _effectiveDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
-   */
-  effectivePeriod?: fhir.IPeriod|undefined;
-  /**
-   * Indicates who or what performed the medication administration and how they were involved.
-   */
-  performer?: fhir.IMedicationAdministrationPerformer[]|undefined;
-  /**
-   * A code indicating why the medication was given.
-   */
-  reasonCode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * This is a reference to a condition that is the reason for the medication request.  If only a code exists, use reasonCode.
-   */
-  reasonReference?: fhir.IReference[]|undefined;
-  /**
-   * This is a reference to the MedicationRequest  where the intent is either order or instance-order.  It should not reference MedicationRequests where the intent is any other value.
-   */
-  request?: fhir.IReference|undefined;
-  /**
-   * The device used in administering the medication to the patient.  For example, a particular infusion pump.
-   */
-  device?: fhir.IReference[]|undefined;
-  /**
-   * Extra information about the medication administration that is not conveyed by the other attributes.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-  /**
-   * Describes the medication dosage information details e.g. dose, rate, site, route, etc.
-   */
-  dosage?: fhir.IMedicationAdministrationDosage|undefined;
-  /**
-   * This might not include provenances for all versions of the request – only those deemed “relevant” or important. This SHALL NOT include the Provenance associated with this current version of the resource. (If that provenance is deemed to be a “relevant” change, it will need to be added as part of a later update. Until then, it can be queried directly as the Provenance that points to this version using _revinclude All Provenances should have some historical version of this Request as their subject.
-   */
-  eventHistory?: fhir.IReference[]|undefined;
+  actor: fhir.ReferenceArgs|null;
 }
 
 /**
  * Indicates who or what performed the medication administration and how they were involved.
  */
-export class MedicationAdministrationPerformer extends fhir.BackboneElement implements IMedicationAdministrationPerformer {
+export class MedicationAdministrationPerformer extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationAdministrationPerformer';
   /**
    * Distinguishes the type of involvement of the performer in the medication administration.
    */
@@ -189,10 +53,10 @@ export class MedicationAdministrationPerformer extends fhir.BackboneElement impl
   /**
    * Default constructor for MedicationAdministrationPerformer - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationAdministrationPerformer> = { }) {
-    super(source);
-    if (source['function']) { this.function = new fhir.CodeableConcept(source.function!); }
-    if (source['actor']) { this.actor = new fhir.Reference(source.actor!); }
+  constructor(source:Partial<MedicationAdministrationPerformerArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['function']) { this.function = new fhir.CodeableConcept(source.function); }
+    if (source['actor']) { this.actor = new fhir.Reference(source.actor); }
     else { this.actor = null; }
   }
   /**
@@ -204,28 +68,71 @@ export class MedicationAdministrationPerformer extends fhir.BackboneElement impl
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["function"]) { results.push(...this.function.doModelValidation()); }
-    if (!this["actor"]) { results.push(["actor",'Missing required element: MedicationAdministration.performer.actor']); }
-    if (this["actor"]) { results.push(...this.actor.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["function"]) { outcome.issue!.push(...this.function.doModelValidation().issue!); }
+    if (!this['actor']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property actor:fhir.Reference fhir: MedicationAdministration.performer.actor:Reference", }));
+    }
+    if (this["actor"]) { outcome.issue!.push(...this.actor.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationAdministrationDosage type.
+ */
+export interface MedicationAdministrationDosageArgs extends fhir.BackboneElementArgs {
+  /**
+   * Free text dosage can be used for cases where the dosage administered is too complex to code. When coded dosage is present, the free text dosage may still be present for display to humans.
+   * The dosage instructions should reflect the dosage of the medication that was administered.
+   */
+  text?: fhir.FhirString|string|undefined;
+  /**
+   * If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.
+   */
+  site?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * A code specifying the route or physiological path of administration of a therapeutic agent into or onto the patient.  For example, topical, intravenous, etc.
+   */
+  route?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * One of the reasons this attribute is not used often, is that the method is often pre-coordinated with the route and/or form of administration.  This means the codes used in route or form may pre-coordinate the method in the route code or the form code.  The implementation decision about what coding system to use for route or form code will determine how frequently the method code will be populated e.g. if route or form code pre-coordinate method code, then this attribute will not be populated often; if there is no pre-coordination then method code may  be used frequently.
+   */
+  method?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * If the administration is not instantaneous (rate is present), this can be specified to convey the total amount administered over period of time of a single administration.
+   */
+  dose?: fhir.QuantityArgs|undefined;
+  /**
+   * If the rate changes over time, and you want to capture this in MedicationAdministration, then each change should be captured as a distinct MedicationAdministration, with a specific MedicationAdministration.dosage.rate, and the date time when the rate change occurred. Typically, the MedicationAdministration.dosage.rate element is not used to convey an average rate.
+   */
+  rate?: fhir.Ratio|fhir.Quantity|undefined;
+  /**
+   * If the rate changes over time, and you want to capture this in MedicationAdministration, then each change should be captured as a distinct MedicationAdministration, with a specific MedicationAdministration.dosage.rate, and the date time when the rate change occurred. Typically, the MedicationAdministration.dosage.rate element is not used to convey an average rate.
+   */
+  rateRatio?: fhir.RatioArgs|undefined;
+  /**
+   * If the rate changes over time, and you want to capture this in MedicationAdministration, then each change should be captured as a distinct MedicationAdministration, with a specific MedicationAdministration.dosage.rate, and the date time when the rate change occurred. Typically, the MedicationAdministration.dosage.rate element is not used to convey an average rate.
+   */
+  rateQuantity?: fhir.QuantityArgs|undefined;
 }
 
 /**
  * Describes the medication dosage information details e.g. dose, rate, site, route, etc.
  */
-export class MedicationAdministrationDosage extends fhir.BackboneElement implements IMedicationAdministrationDosage {
+export class MedicationAdministrationDosage extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationAdministrationDosage';
   /**
    * Free text dosage can be used for cases where the dosage administered is too complex to code. When coded dosage is present, the free text dosage may still be present for display to humans.
    * The dosage instructions should reflect the dosage of the medication that was administered.
    */
-  public text?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationAdministration.dosage.text
-   */
-  public _text?: fhir.FhirElement|undefined;
+  public text?: fhir.FhirString|undefined;
   /**
    * If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.
    */
@@ -245,24 +152,21 @@ export class MedicationAdministrationDosage extends fhir.BackboneElement impleme
   /**
    * If the rate changes over time, and you want to capture this in MedicationAdministration, then each change should be captured as a distinct MedicationAdministration, with a specific MedicationAdministration.dosage.rate, and the date time when the rate change occurred. Typically, the MedicationAdministration.dosage.rate element is not used to convey an average rate.
    */
-  public rateRatio?: fhir.Ratio|undefined;
-  /**
-   * If the rate changes over time, and you want to capture this in MedicationAdministration, then each change should be captured as a distinct MedicationAdministration, with a specific MedicationAdministration.dosage.rate, and the date time when the rate change occurred. Typically, the MedicationAdministration.dosage.rate element is not used to convey an average rate.
-   */
-  public rateQuantity?: fhir.Quantity|undefined;
+  public rate?: (fhir.Ratio|fhir.Quantity)|undefined;
+  readonly __rateIsChoice:true = true;
   /**
    * Default constructor for MedicationAdministrationDosage - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationAdministrationDosage> = { }) {
-    super(source);
-    if (source['text']) { this.text = source.text; }
-    if (source['_text']) { this._text = new fhir.FhirElement(source._text!); }
-    if (source['site']) { this.site = new fhir.CodeableConcept(source.site!); }
-    if (source['route']) { this.route = new fhir.CodeableConcept(source.route!); }
-    if (source['method']) { this.method = new fhir.CodeableConcept(source.method!); }
-    if (source['dose']) { this.dose = new fhir.Quantity(source.dose!); }
-    if (source['rateRatio']) { this.rateRatio = new fhir.Ratio(source.rateRatio!); }
-    if (source['rateQuantity']) { this.rateQuantity = new fhir.Quantity(source.rateQuantity!); }
+  constructor(source:Partial<MedicationAdministrationDosageArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['text']) { this.text = new fhir.FhirString({value: source.text}); }
+    if (source['site']) { this.site = new fhir.CodeableConcept(source.site); }
+    if (source['route']) { this.route = new fhir.CodeableConcept(source.route); }
+    if (source['method']) { this.method = new fhir.CodeableConcept(source.method); }
+    if (source['dose']) { this.dose = new fhir.Quantity(source.dose); }
+    if (source['rate']) { this.rate = source.rate; }
+    else if (source['rateRatio']) { this.rate = new fhir.Ratio(source.rateRatio); }
+    else if (source['rateQuantity']) { this.rate = new fhir.Quantity(source.rateQuantity); }
   }
   /**
    * Example-bound Value Set for site
@@ -285,23 +189,129 @@ export class MedicationAdministrationDosage extends fhir.BackboneElement impleme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_text"]) { results.push(...this._text.doModelValidation()); }
-    if (this["site"]) { results.push(...this.site.doModelValidation()); }
-    if (this["route"]) { results.push(...this.route.doModelValidation()); }
-    if (this["method"]) { results.push(...this.method.doModelValidation()); }
-    if (this["dose"]) { results.push(...this.dose.doModelValidation()); }
-    if (this["rateRatio"]) { results.push(...this.rateRatio.doModelValidation()); }
-    if (this["rateQuantity"]) { results.push(...this.rateQuantity.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["text"]) { outcome.issue!.push(...this.text.doModelValidation().issue!); }
+    if (this["site"]) { outcome.issue!.push(...this.site.doModelValidation().issue!); }
+    if (this["route"]) { outcome.issue!.push(...this.route.doModelValidation().issue!); }
+    if (this["method"]) { outcome.issue!.push(...this.method.doModelValidation().issue!); }
+    if (this["dose"]) { outcome.issue!.push(...this.dose.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationAdministration type.
+ */
+export interface MedicationAdministrationArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "MedicationAdministration"|undefined;
+  /**
+   * This is a business identifier, not a resource identifier.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * A protocol, guideline, orderset, or other definition that was adhered to in whole or in part by this event.
+   */
+  instantiates?: fhir.FhirUri[]|string[]|undefined;
+  /**
+   * A larger event of which this particular event is a component or step.
+   */
+  partOf?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+   */
+  status: MedicationAdminStatusValueSetEnum|null;
+  /**
+   * A code indicating why the administration was not performed.
+   */
+  statusReason?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Indicates where the medication is expected to be consumed or administered.
+   */
+  category?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.
+   */
+  medication?: fhir.CodeableConcept|fhir.Reference|undefined;
+  /**
+   * If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.
+   */
+  medicationCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.
+   */
+  medicationReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * The person or animal or group receiving the medication.
+   */
+  subject: fhir.ReferenceArgs|null;
+  /**
+   * The visit, admission, or other contact between patient and health care provider during which the medication administration was performed.
+   */
+  context?: fhir.ReferenceArgs|undefined;
+  /**
+   * Additional information (for example, patient height and weight) that supports the administration of the medication.
+   */
+  supportingInformation?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
+   */
+  effective?: fhir.FhirDateTime|fhir.Period|undefined;
+  /**
+   * A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
+   */
+  effectiveDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
+   */
+  effectivePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * Indicates who or what performed the medication administration and how they were involved.
+   */
+  performer?: fhir.MedicationAdministrationPerformerArgs[]|undefined;
+  /**
+   * A code indicating why the medication was given.
+   */
+  reasonCode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * This is a reference to a condition that is the reason for the medication request.  If only a code exists, use reasonCode.
+   */
+  reasonReference?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * This is a reference to the MedicationRequest  where the intent is either order or instance-order.  It should not reference MedicationRequests where the intent is any other value.
+   */
+  request?: fhir.ReferenceArgs|undefined;
+  /**
+   * The device used in administering the medication to the patient.  For example, a particular infusion pump.
+   */
+  device?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Extra information about the medication administration that is not conveyed by the other attributes.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
+  /**
+   * Describes the medication dosage information details e.g. dose, rate, site, route, etc.
+   */
+  dosage?: fhir.MedicationAdministrationDosageArgs|undefined;
+  /**
+   * This might not include provenances for all versions of the request – only those deemed “relevant” or important. This SHALL NOT include the Provenance associated with this current version of the resource. (If that provenance is deemed to be a “relevant” change, it will need to be added as part of a later update. Until then, it can be queried directly as the Provenance that points to this version using _revinclude All Provenances should have some historical version of this Request as their subject.
+   */
+  eventHistory?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * Describes the event of a patient consuming or otherwise being administered a medication.  This may be as simple as swallowing a tablet or it may be a long running infusion.  Related resources tie this event to the authorizing prescription, and the specific encounter between patient and health care practitioner.
  */
-export class MedicationAdministration extends fhir.DomainResource implements IMedicationAdministration {
+export class MedicationAdministration extends fhir.DomainResource {
+  readonly __dataType:string = 'MedicationAdministration';
   /**
    * Resource Type Name
    */
@@ -309,31 +319,23 @@ export class MedicationAdministration extends fhir.DomainResource implements IMe
   /**
    * This is a business identifier, not a resource identifier.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * A protocol, guideline, orderset, or other definition that was adhered to in whole or in part by this event.
    */
-  public instantiates?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: MedicationAdministration.instantiates
-   */
-  public _instantiates?: fhir.FhirElement[]|undefined;
+  public instantiates?: fhir.FhirUri[]|undefined = [];
   /**
    * A larger event of which this particular event is a component or step.
    */
-  public partOf?: fhir.Reference[]|undefined;
+  public partOf?: fhir.Reference[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
   public status: MedicationAdminStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: MedicationAdministration.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * A code indicating why the administration was not performed.
    */
-  public statusReason?: fhir.CodeableConcept[]|undefined;
+  public statusReason?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Indicates where the medication is expected to be consumed or administered.
    */
@@ -341,11 +343,8 @@ export class MedicationAdministration extends fhir.DomainResource implements IMe
   /**
    * If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.
    */
-  public medicationCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.
-   */
-  public medicationReference?: fhir.Reference|undefined;
+  public medication: (fhir.CodeableConcept|fhir.Reference)|null;
+  readonly __medicationIsChoice:true = true;
   /**
    * The person or animal or group receiving the medication.
    */
@@ -357,31 +356,24 @@ export class MedicationAdministration extends fhir.DomainResource implements IMe
   /**
    * Additional information (for example, patient height and weight) that supports the administration of the medication.
    */
-  public supportingInformation?: fhir.Reference[]|undefined;
+  public supportingInformation?: fhir.Reference[]|undefined = [];
   /**
    * A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
    */
-  public effectiveDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicationAdministration.effective[x]
-   */
-  public _effectiveDateTime?: fhir.FhirElement|undefined;
-  /**
-   * A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.
-   */
-  public effectivePeriod?: fhir.Period|undefined;
+  public effective: (fhir.FhirDateTime|fhir.Period)|null;
+  readonly __effectiveIsChoice:true = true;
   /**
    * Indicates who or what performed the medication administration and how they were involved.
    */
-  public performer?: fhir.MedicationAdministrationPerformer[]|undefined;
+  public performer?: fhir.MedicationAdministrationPerformer[]|undefined = [];
   /**
    * A code indicating why the medication was given.
    */
-  public reasonCode?: fhir.CodeableConcept[]|undefined;
+  public reasonCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * This is a reference to a condition that is the reason for the medication request.  If only a code exists, use reasonCode.
    */
-  public reasonReference?: fhir.Reference[]|undefined;
+  public reasonReference?: fhir.Reference[]|undefined = [];
   /**
    * This is a reference to the MedicationRequest  where the intent is either order or instance-order.  It should not reference MedicationRequests where the intent is any other value.
    */
@@ -389,11 +381,11 @@ export class MedicationAdministration extends fhir.DomainResource implements IMe
   /**
    * The device used in administering the medication to the patient.  For example, a particular infusion pump.
    */
-  public device?: fhir.Reference[]|undefined;
+  public device?: fhir.Reference[]|undefined = [];
   /**
    * Extra information about the medication administration that is not conveyed by the other attributes.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Describes the medication dosage information details e.g. dose, rate, site, route, etc.
    */
@@ -401,38 +393,39 @@ export class MedicationAdministration extends fhir.DomainResource implements IMe
   /**
    * This might not include provenances for all versions of the request – only those deemed “relevant” or important. This SHALL NOT include the Provenance associated with this current version of the resource. (If that provenance is deemed to be a “relevant” change, it will need to be added as part of a later update. Until then, it can be queried directly as the Provenance that points to this version using _revinclude All Provenances should have some historical version of this Request as their subject.
    */
-  public eventHistory?: fhir.Reference[]|undefined;
+  public eventHistory?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for MedicationAdministration - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationAdministration> = { }) {
-    super(source);
+  constructor(source:Partial<MedicationAdministrationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'MedicationAdministration';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['instantiates']) { this.instantiates = source.instantiates.map((x) => (x)); }
-    if (source['_instantiates']) { this._instantiates = source._instantiates.map((x) => new fhir.FhirElement(x)); }
+    if (source['instantiates']) { this.instantiates = source.instantiates.map((x) => new fhir.FhirUri({value: x})); }
     if (source['partOf']) { this.partOf = source.partOf.map((x) => new fhir.Reference(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
     if (source['statusReason']) { this.statusReason = source.statusReason.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['category']) { this.category = new fhir.CodeableConcept(source.category!); }
-    if (source['medicationCodeableConcept']) { this.medicationCodeableConcept = new fhir.CodeableConcept(source.medicationCodeableConcept!); }
-    if (source['medicationReference']) { this.medicationReference = new fhir.Reference(source.medicationReference!); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
+    if (source['category']) { this.category = new fhir.CodeableConcept(source.category); }
+    if (source['medication']) { this.medication = source.medication; }
+    else if (source['medicationCodeableConcept']) { this.medication = new fhir.CodeableConcept(source.medicationCodeableConcept); }
+    else if (source['medicationReference']) { this.medication = new fhir.Reference(source.medicationReference); }
+    else { this.medication = null; }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
     else { this.subject = null; }
-    if (source['context']) { this.context = new fhir.Reference(source.context!); }
+    if (source['context']) { this.context = new fhir.Reference(source.context); }
     if (source['supportingInformation']) { this.supportingInformation = source.supportingInformation.map((x) => new fhir.Reference(x)); }
-    if (source['effectiveDateTime']) { this.effectiveDateTime = source.effectiveDateTime; }
-    if (source['_effectiveDateTime']) { this._effectiveDateTime = new fhir.FhirElement(source._effectiveDateTime!); }
-    if (source['effectivePeriod']) { this.effectivePeriod = new fhir.Period(source.effectivePeriod!); }
+    if (source['effective']) { this.effective = source.effective; }
+    else if (source['effectiveDateTime']) { this.effective = new fhir.FhirDateTime({value: source.effectiveDateTime}); }
+    else if (source['effectivePeriod']) { this.effective = new fhir.Period(source.effectivePeriod); }
+    else { this.effective = null; }
     if (source['performer']) { this.performer = source.performer.map((x) => new fhir.MedicationAdministrationPerformer(x)); }
     if (source['reasonCode']) { this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x)); }
     if (source['reasonReference']) { this.reasonReference = source.reasonReference.map((x) => new fhir.Reference(x)); }
-    if (source['request']) { this.request = new fhir.Reference(source.request!); }
+    if (source['request']) { this.request = new fhir.Reference(source.request); }
     if (source['device']) { this.device = source.device.map((x) => new fhir.Reference(x)); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
-    if (source['dosage']) { this.dosage = new fhir.MedicationAdministrationDosage(source.dosage!); }
+    if (source['dosage']) { this.dosage = new fhir.MedicationAdministrationDosage(source.dosage); }
     if (source['eventHistory']) { this.eventHistory = source.eventHistory.map((x) => new fhir.Reference(x)); }
   }
   /**
@@ -454,18 +447,6 @@ export class MedicationAdministration extends fhir.DomainResource implements IMe
     return MedicationAdminCategoryValueSet;
   }
   /**
-   * Example-bound Value Set for medicationCodeableConcept
-   */
-  public static medicationCodeableConceptExampleValueSet():MedicationCodesValueSetType {
-    return MedicationCodesValueSet;
-  }
-  /**
-   * Example-bound Value Set for medicationReference
-   */
-  public static medicationReferenceExampleValueSet():MedicationCodesValueSetType {
-    return MedicationCodesValueSet;
-  }
-  /**
    * Example-bound Value Set for reasonCode
    */
   public static reasonCodeExampleValueSet():ReasonMedicationGivenCodesValueSetType {
@@ -474,32 +455,45 @@ export class MedicationAdministration extends fhir.DomainResource implements IMe
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: MedicationAdministration.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_instantiates"]) { this._instantiates.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["partOf"]) { this.partOf.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: MedicationAdministration.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["statusReason"]) { this.statusReason.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["category"]) { results.push(...this.category.doModelValidation()); }
-    if (this["medicationCodeableConcept"]) { results.push(...this.medicationCodeableConcept.doModelValidation()); }
-    if (this["medicationReference"]) { results.push(...this.medicationReference.doModelValidation()); }
-    if (!this["subject"]) { results.push(["subject",'Missing required element: MedicationAdministration.subject']); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["context"]) { results.push(...this.context.doModelValidation()); }
-    if (this["supportingInformation"]) { this.supportingInformation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_effectiveDateTime"]) { results.push(...this._effectiveDateTime.doModelValidation()); }
-    if (this["effectivePeriod"]) { results.push(...this.effectivePeriod.doModelValidation()); }
-    if (this["performer"]) { this.performer.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["request"]) { results.push(...this.request.doModelValidation()); }
-    if (this["device"]) { this.device.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["dosage"]) { results.push(...this.dosage.doModelValidation()); }
-    if (this["eventHistory"]) { this.eventHistory.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'MedicationAdministration' fhir: MedicationAdministration.resourceType:'MedicationAdministration'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instantiates"]) { this.instantiates.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["partOf"]) { this.partOf.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:MedicationAdminStatusValueSetEnum fhir: MedicationAdministration.status:code", }));
+    }
+    if (this["statusReason"]) { this.statusReason.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["category"]) { outcome.issue!.push(...this.category.doModelValidation().issue!); }
+    if (!this['medication']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property medication: fhir: MedicationAdministration.medication[x]:", }));
+    }
+    if (!this['subject']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property subject:fhir.Reference fhir: MedicationAdministration.subject:Reference", }));
+    }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["context"]) { outcome.issue!.push(...this.context.doModelValidation().issue!); }
+    if (this["supportingInformation"]) { this.supportingInformation.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['effective']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property effective: fhir: MedicationAdministration.effective[x]:", }));
+    }
+    if (this["performer"]) { this.performer.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["request"]) { outcome.issue!.push(...this.request.doModelValidation().issue!); }
+    if (this["device"]) { this.device.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["dosage"]) { outcome.issue!.push(...this.dosage.doModelValidation().issue!); }
+    if (this["eventHistory"]) { this.eventHistory.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

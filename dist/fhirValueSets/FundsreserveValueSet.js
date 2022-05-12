@@ -35,19 +35,4 @@ export const FundsreserveValueSet = {
 /**
  * This value set includes sample funds reservation type codes.
  */
-export var FundsreserveValueSetEnum;
-(function (FundsreserveValueSetEnum) {
-    /**
-     * none: The payor is not being requested to reserve any funds for the settlement of future claims.
-     */
-    FundsreserveValueSetEnum["None"] = "none";
-    /**
-     * patient: The payor is requested to reserve funds for the provision of the named services by any provider for settlement of future claims related to this request.
-     */
-    FundsreserveValueSetEnum["Patient"] = "patient";
-    /**
-     * provider: The payor is requested to reserve funds solely for the named provider for settlement of future claims related to this request.
-     */
-    FundsreserveValueSetEnum["Provider"] = "provider";
-})(FundsreserveValueSetEnum || (FundsreserveValueSetEnum = {}));
 //# sourceMappingURL=FundsreserveValueSet.js.map

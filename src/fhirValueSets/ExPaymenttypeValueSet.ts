@@ -35,13 +35,3 @@ export type ExPaymenttypeValueSetType = typeof ExPaymenttypeValueSet;
 /**
  * This value set includes example Payment Type codes.
  */
-export enum ExPaymenttypeValueSetEnum {
-  /**
-   * complete: Complete (final) payment of the benefit under the Claim less any adjustments.
-   */
-  Complete = "complete",
-  /**
-   * partial: Partial payment of the benefit under the Claim less any adjustments.
-   */
-  Partial = "partial",
-}

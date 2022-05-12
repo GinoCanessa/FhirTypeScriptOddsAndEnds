@@ -43,23 +43,4 @@ export const ExProgramCodeValueSet = {
 /**
  * This value set includes sample Program Reason Span codes.
  */
-export var ExProgramCodeValueSetEnum;
-(function (ExProgramCodeValueSetEnum) {
-    /**
-     * as: Child Asthma Program
-     */
-    ExProgramCodeValueSetEnum["ChildAsthma"] = "as";
-    /**
-     * auscr: Autism Screening Program.
-     */
-    ExProgramCodeValueSetEnum["AutismScreening"] = "auscr";
-    /**
-     * hd: Hemodialysis Program.
-     */
-    ExProgramCodeValueSetEnum["Hemodialysis"] = "hd";
-    /**
-     * none: No program code applies.
-     */
-    ExProgramCodeValueSetEnum["None"] = "none";
-})(ExProgramCodeValueSetEnum || (ExProgramCodeValueSetEnum = {}));
 //# sourceMappingURL=ExProgramCodeValueSet.js.map

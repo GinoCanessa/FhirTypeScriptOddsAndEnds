@@ -3,12 +3,14 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Location
 import * as fhir from '../fhir.js';
-import { DaysOfWeekValueSet } from '../fhirValueSets/DaysOfWeekValueSet.js';
-import { LocationStatusValueSet } from '../fhirValueSets/LocationStatusValueSet.js';
-import { V20116ValueSet } from '../fhirValueSets/V20116ValueSet.js';
-import { LocationModeValueSet } from '../fhirValueSets/LocationModeValueSet.js';
-import { V3ServiceDeliveryLocationRoleTypeValueSet } from '../fhirValueSets/V3ServiceDeliveryLocationRoleTypeValueSet.js';
-import { LocationPhysicalTypeValueSet } from '../fhirValueSets/LocationPhysicalTypeValueSet.js';
+import { DaysOfWeekValueSet, } from '../fhirValueSets/DaysOfWeekValueSet.js';
+import { LocationStatusValueSet, } from '../fhirValueSets/LocationStatusValueSet.js';
+import { V20116ValueSet, } from '../fhirValueSets/V20116ValueSet.js';
+import { LocationModeValueSet, } from '../fhirValueSets/LocationModeValueSet.js';
+import { V3ServiceDeliveryLocationRoleTypeValueSet, } from '../fhirValueSets/V3ServiceDeliveryLocationRoleTypeValueSet.js';
+import { LocationPhysicalTypeValueSet, } from '../fhirValueSets/LocationPhysicalTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML).
  */
@@ -16,54 +18,52 @@ export class LocationPosition extends fhir.BackboneElement {
     /**
      * Default constructor for LocationPosition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'LocationPosition';
         if (source['longitude']) {
-            this.longitude = source.longitude;
+            this.longitude = new fhir.FhirDecimal({ value: source.longitude });
         }
         else {
             this.longitude = null;
         }
-        if (source['_longitude']) {
-            this._longitude = new fhir.FhirElement(source._longitude);
-        }
         if (source['latitude']) {
-            this.latitude = source.latitude;
+            this.latitude = new fhir.FhirDecimal({ value: source.latitude });
         }
         else {
             this.latitude = null;
         }
-        if (source['_latitude']) {
-            this._latitude = new fhir.FhirElement(source._latitude);
-        }
         if (source['altitude']) {
-            this.altitude = source.altitude;
-        }
-        if (source['_altitude']) {
-            this._altitude = new fhir.FhirElement(source._altitude);
+            this.altitude = new fhir.FhirDecimal({ value: source.altitude });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["longitude"]) {
-            results.push(["longitude", 'Missing required element: Location.position.longitude']);
+        var outcome = super.doModelValidation();
+        if (!this['longitude']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property longitude:fhir.FhirDecimal fhir: Location.position.longitude:decimal", }));
         }
-        if (this["_longitude"]) {
-            results.push(...this._longitude.doModelValidation());
+        if (this["longitude"]) {
+            outcome.issue.push(...this.longitude.doModelValidation().issue);
         }
-        if (!this["latitude"]) {
-            results.push(["latitude", 'Missing required element: Location.position.latitude']);
+        if (!this['latitude']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property latitude:fhir.FhirDecimal fhir: Location.position.latitude:decimal", }));
         }
-        if (this["_latitude"]) {
-            results.push(...this._latitude.doModelValidation());
+        if (this["latitude"]) {
+            outcome.issue.push(...this.latitude.doModelValidation().issue);
         }
-        if (this["_altitude"]) {
-            results.push(...this._altitude.doModelValidation());
+        if (this["altitude"]) {
+            outcome.issue.push(...this.altitude.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -74,31 +74,24 @@ export class LocationHoursOfOperation extends fhir.BackboneElement {
     /**
      * Default constructor for LocationHoursOfOperation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'LocationHoursOfOperation';
+        /**
+         * Indicates which days of the week are available between the start and end Times.
+         */
+        this.daysOfWeek = [];
         if (source['daysOfWeek']) {
-            this.daysOfWeek = source.daysOfWeek.map((x) => (x));
-        }
-        if (source['_daysOfWeek']) {
-            this._daysOfWeek = source._daysOfWeek.map((x) => new fhir.FhirElement(x));
+            this.daysOfWeek = source.daysOfWeek.map((x) => x);
         }
         if (source['allDay']) {
-            this.allDay = source.allDay;
-        }
-        if (source['_allDay']) {
-            this._allDay = new fhir.FhirElement(source._allDay);
+            this.allDay = new fhir.FhirBoolean({ value: source.allDay });
         }
         if (source['openingTime']) {
-            this.openingTime = source.openingTime;
-        }
-        if (source['_openingTime']) {
-            this._openingTime = new fhir.FhirElement(source._openingTime);
+            this.openingTime = new fhir.FhirTime({ value: source.openingTime });
         }
         if (source['closingTime']) {
-            this.closingTime = source.closingTime;
-        }
-        if (source['_closingTime']) {
-            this._closingTime = new fhir.FhirElement(source._closingTime);
+            this.closingTime = new fhir.FhirTime({ value: source.closingTime });
         }
     }
     /**
@@ -111,20 +104,23 @@ export class LocationHoursOfOperation extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_daysOfWeek"]) {
-            this._daysOfWeek.forEach((x) => { results.push(...x.doModelValidation()); });
+        var outcome = super.doModelValidation();
+        if (this["allDay"]) {
+            outcome.issue.push(...this.allDay.doModelValidation().issue);
         }
-        if (this["_allDay"]) {
-            results.push(...this._allDay.doModelValidation());
+        if (this["openingTime"]) {
+            outcome.issue.push(...this.openingTime.doModelValidation().issue);
         }
-        if (this["_openingTime"]) {
-            results.push(...this._openingTime.doModelValidation());
+        if (this["closingTime"]) {
+            outcome.issue.push(...this.closingTime.doModelValidation().issue);
         }
-        if (this["_closingTime"]) {
-            results.push(...this._closingTime.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -134,8 +130,34 @@ export class Location extends fhir.DomainResource {
     /**
      * Default constructor for Location - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Location';
+        /**
+         * Unique code or number identifying the location to its users.
+         */
+        this.identifier = [];
+        /**
+         * There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the location.
+         */
+        this.alias = [];
+        /**
+         * Indicates the type of function performed at the location.
+         */
+        this.type = [];
+        /**
+         * The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites.
+         */
+        this.telecom = [];
+        /**
+         * This type of information is commonly found published in directories and on websites informing customers when the facility is available.
+         * Specific services within the location may have their own hours which could be shorter (or longer) than the locations hours.
+         */
+        this.hoursOfOperation = [];
+        /**
+         * Technical endpoints providing access to services operated for the location.
+         */
+        this.endpoint = [];
         this.resourceType = 'Location';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -143,35 +165,20 @@ export class Location extends fhir.DomainResource {
         if (source['status']) {
             this.status = source.status;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['operationalStatus']) {
             this.operationalStatus = new fhir.Coding(source.operationalStatus);
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['alias']) {
-            this.alias = source.alias.map((x) => (x));
-        }
-        if (source['_alias']) {
-            this._alias = source._alias.map((x) => new fhir.FhirElement(x));
+            this.alias = source.alias.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['mode']) {
             this.mode = source.mode;
-        }
-        if (source['_mode']) {
-            this._mode = new fhir.FhirElement(source._mode);
         }
         if (source['type']) {
             this.type = source.type.map((x) => new fhir.CodeableConcept(x));
@@ -198,10 +205,7 @@ export class Location extends fhir.DomainResource {
             this.hoursOfOperation = source.hoursOfOperation.map((x) => new fhir.LocationHoursOfOperation(x));
         }
         if (source['availabilityExceptions']) {
-            this.availabilityExceptions = source.availabilityExceptions;
-        }
-        if (source['_availabilityExceptions']) {
-            this._availabilityExceptions = new fhir.FhirElement(source._availabilityExceptions);
+            this.availabilityExceptions = new fhir.FhirString({ value: source.availabilityExceptions });
         }
         if (source['endpoint']) {
             this.endpoint = source.endpoint.map((x) => new fhir.Reference(x));
@@ -241,62 +245,62 @@ export class Location extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Location.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Location' fhir: Location.resourceType:'Location'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["operationalStatus"]) {
-            results.push(...this.operationalStatus.doModelValidation());
+            outcome.issue.push(...this.operationalStatus.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_alias"]) {
-            this._alias.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["alias"]) {
+            this.alias.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
-        }
-        if (this["_mode"]) {
-            results.push(...this._mode.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["type"]) {
-            this.type.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.type.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["telecom"]) {
-            this.telecom.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.telecom.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["address"]) {
-            results.push(...this.address.doModelValidation());
+            outcome.issue.push(...this.address.doModelValidation().issue);
         }
         if (this["physicalType"]) {
-            results.push(...this.physicalType.doModelValidation());
+            outcome.issue.push(...this.physicalType.doModelValidation().issue);
         }
         if (this["position"]) {
-            results.push(...this.position.doModelValidation());
+            outcome.issue.push(...this.position.doModelValidation().issue);
         }
         if (this["managingOrganization"]) {
-            results.push(...this.managingOrganization.doModelValidation());
+            outcome.issue.push(...this.managingOrganization.doModelValidation().issue);
         }
         if (this["partOf"]) {
-            results.push(...this.partOf.doModelValidation());
+            outcome.issue.push(...this.partOf.doModelValidation().issue);
         }
         if (this["hoursOfOperation"]) {
-            this.hoursOfOperation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.hoursOfOperation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_availabilityExceptions"]) {
-            results.push(...this._availabilityExceptions.doModelValidation());
+        if (this["availabilityExceptions"]) {
+            outcome.issue.push(...this.availabilityExceptions.doModelValidation().issue);
         }
         if (this["endpoint"]) {
-            this.endpoint.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.endpoint.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Location.js.map

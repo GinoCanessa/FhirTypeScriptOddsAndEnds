@@ -3,10 +3,12 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: DiagnosticReport
 import * as fhir from '../fhir.js';
-import { DiagnosticReportStatusValueSet } from '../fhirValueSets/DiagnosticReportStatusValueSet.js';
-import { DiagnosticServiceSectionsValueSet } from '../fhirValueSets/DiagnosticServiceSectionsValueSet.js';
-import { ReportCodesValueSet } from '../fhirValueSets/ReportCodesValueSet.js';
-import { ClinicalFindingsValueSet } from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { DiagnosticReportStatusValueSet, } from '../fhirValueSets/DiagnosticReportStatusValueSet.js';
+import { DiagnosticServiceSectionsValueSet, } from '../fhirValueSets/DiagnosticServiceSectionsValueSet.js';
+import { ReportCodesValueSet, } from '../fhirValueSets/ReportCodesValueSet.js';
+import { ClinicalFindingsValueSet, } from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).
  */
@@ -14,13 +16,11 @@ export class DiagnosticReportMedia extends fhir.BackboneElement {
     /**
      * Default constructor for DiagnosticReportMedia - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DiagnosticReportMedia';
         if (source['comment']) {
-            this.comment = source.comment;
-        }
-        if (source['_comment']) {
-            this._comment = new fhir.FhirElement(source._comment);
+            this.comment = new fhir.FhirString({ value: source.comment });
         }
         if (source['link']) {
             this.link = new fhir.Reference(source.link);
@@ -33,17 +33,23 @@ export class DiagnosticReportMedia extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_comment"]) {
-            results.push(...this._comment.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["comment"]) {
+            outcome.issue.push(...this.comment.doModelValidation().issue);
         }
-        if (!this["link"]) {
-            results.push(["link", 'Missing required element: DiagnosticReport.media.link']);
+        if (!this['link']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property link:fhir.Reference fhir: DiagnosticReport.media.link:Reference", }));
         }
         if (this["link"]) {
-            results.push(...this.link.doModelValidation());
+            outcome.issue.push(...this.link.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -53,8 +59,54 @@ export class DiagnosticReport extends fhir.DomainResource {
     /**
      * Default constructor for DiagnosticReport - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DiagnosticReport';
+        /**
+         * Usually assigned by the Information System of the diagnostic service provider (filler id).
+         */
+        this.identifier = [];
+        /**
+         * Note: Usually there is one test request for each result, however in some circumstances multiple test requests may be represented using a single test result resource. Note that there are also cases where one request leads to multiple reports.
+         */
+        this.basedOn = [];
+        /**
+         * Multiple categories are allowed using various categorization schemes.   The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code.
+         */
+        this.category = [];
+        this.__effectiveIsChoice = true;
+        /**
+         * This is not necessarily the source of the atomic data items or the entity that interpreted the results. It is the entity that takes responsibility for the clinical report.
+         */
+        this.performer = [];
+        /**
+         * Might not be the same entity that takes responsibility for the clinical report.
+         */
+        this.resultsInterpreter = [];
+        /**
+         * If the specimen is sufficiently specified with a code in the test result name, then this additional data may be redundant. If there are multiple specimens, these may be represented per observation or group.
+         */
+        this.specimen = [];
+        /**
+         * Observations can contain observations.
+         */
+        this.result = [];
+        /**
+         * ImagingStudy and the image element are somewhat overlapping - typically, the list of image references in the image element will also be found in one of the imaging study resources. However, each caters to different types of displays for different types of purposes. Neither, either, or both may be provided.
+         */
+        this.imagingStudy = [];
+        /**
+         * A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).
+         */
+        this.media = [];
+        /**
+         * One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.
+         */
+        this.conclusionCode = [];
+        /**
+         * "application/pdf" is recommended as the most reliable and interoperable in this context.
+         */
+        this.presentedForm = [];
         this.resourceType = 'DiagnosticReport';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -67,9 +119,6 @@ export class DiagnosticReport extends fhir.DomainResource {
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['category']) {
             this.category = source.category.map((x) => new fhir.CodeableConcept(x));
@@ -86,20 +135,17 @@ export class DiagnosticReport extends fhir.DomainResource {
         if (source['encounter']) {
             this.encounter = new fhir.Reference(source.encounter);
         }
-        if (source['effectiveDateTime']) {
-            this.effectiveDateTime = source.effectiveDateTime;
+        if (source['effective']) {
+            this.effective = source.effective;
         }
-        if (source['_effectiveDateTime']) {
-            this._effectiveDateTime = new fhir.FhirElement(source._effectiveDateTime);
+        else if (source['effectiveDateTime']) {
+            this.effective = new fhir.FhirDateTime({ value: source.effectiveDateTime });
         }
-        if (source['effectivePeriod']) {
-            this.effectivePeriod = new fhir.Period(source.effectivePeriod);
+        else if (source['effectivePeriod']) {
+            this.effective = new fhir.Period(source.effectivePeriod);
         }
         if (source['issued']) {
-            this.issued = source.issued;
-        }
-        if (source['_issued']) {
-            this._issued = new fhir.FhirElement(source._issued);
+            this.issued = new fhir.FhirInstant({ value: source.issued });
         }
         if (source['performer']) {
             this.performer = source.performer.map((x) => new fhir.Reference(x));
@@ -120,10 +166,7 @@ export class DiagnosticReport extends fhir.DomainResource {
             this.media = source.media.map((x) => new fhir.DiagnosticReportMedia(x));
         }
         if (source['conclusion']) {
-            this.conclusion = source.conclusion;
-        }
-        if (source['_conclusion']) {
-            this._conclusion = new fhir.FhirElement(source._conclusion);
+            this.conclusion = new fhir.FhirString({ value: source.conclusion });
         }
         if (source['conclusionCode']) {
             this.conclusionCode = source.conclusionCode.map((x) => new fhir.CodeableConcept(x));
@@ -160,74 +203,71 @@ export class DiagnosticReport extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: DiagnosticReport.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'DiagnosticReport' fhir: DiagnosticReport.resourceType:'DiagnosticReport'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: DiagnosticReport.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:DiagnosticReportStatusValueSetEnum fhir: DiagnosticReport.status:code", }));
         }
         if (this["category"]) {
-            this.category.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.category.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: DiagnosticReport.code']);
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.CodeableConcept fhir: DiagnosticReport.code:CodeableConcept", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_effectiveDateTime"]) {
-            results.push(...this._effectiveDateTime.doModelValidation());
-        }
-        if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
-        }
-        if (this["_issued"]) {
-            results.push(...this._issued.doModelValidation());
+        if (this["issued"]) {
+            outcome.issue.push(...this.issued.doModelValidation().issue);
         }
         if (this["performer"]) {
-            this.performer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.performer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["resultsInterpreter"]) {
-            this.resultsInterpreter.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.resultsInterpreter.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["specimen"]) {
-            this.specimen.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.specimen.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["result"]) {
-            this.result.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.result.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["imagingStudy"]) {
-            this.imagingStudy.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.imagingStudy.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["media"]) {
-            this.media.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.media.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_conclusion"]) {
-            results.push(...this._conclusion.doModelValidation());
+        if (this["conclusion"]) {
+            outcome.issue.push(...this.conclusion.doModelValidation().issue);
         }
         if (this["conclusionCode"]) {
-            this.conclusionCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.conclusionCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["presentedForm"]) {
-            this.presentedForm.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.presentedForm.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=DiagnosticReport.js.map

@@ -27,15 +27,4 @@ export const ContractSubtypeValueSet = {
 /**
  * This value set includes sample Contract Subtype codes.
  */
-export var ContractSubtypeValueSetEnum;
-(function (ContractSubtypeValueSetEnum) {
-    /**
-     * disclosure-ca: Canadian health information disclosure policy.
-     */
-    ContractSubtypeValueSetEnum["DisclosureCA"] = "disclosure-ca";
-    /**
-     * disclosure-us: United States health information disclosure policy.
-     */
-    ContractSubtypeValueSetEnum["DisclosureUS"] = "disclosure-us";
-})(ContractSubtypeValueSetEnum || (ContractSubtypeValueSetEnum = {}));
 //# sourceMappingURL=ContractSubtypeValueSet.js.map

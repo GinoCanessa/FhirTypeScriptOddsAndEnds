@@ -35,19 +35,4 @@ export const ActionConditionKindValueSet = {
 /**
  * Defines the kinds of conditions that can appear on actions.
  */
-export var ActionConditionKindValueSetEnum;
-(function (ActionConditionKindValueSetEnum) {
-    /**
-     * applicability: The condition describes whether or not a given action is applicable.
-     */
-    ActionConditionKindValueSetEnum["Applicability"] = "applicability";
-    /**
-     * start: The condition is a starting condition for the action.
-     */
-    ActionConditionKindValueSetEnum["Start"] = "start";
-    /**
-     * stop: The condition is a stop, or exit condition for the action.
-     */
-    ActionConditionKindValueSetEnum["Stop"] = "stop";
-})(ActionConditionKindValueSetEnum || (ActionConditionKindValueSetEnum = {}));
 //# sourceMappingURL=ActionConditionKindValueSet.js.map

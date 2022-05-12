@@ -3,12 +3,14 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ResearchStudy
 import * as fhir from '../fhir.js';
-import { ResearchStudyObjectiveTypeValueSet } from '../fhirValueSets/ResearchStudyObjectiveTypeValueSet.js';
-import { ResearchStudyStatusValueSet } from '../fhirValueSets/ResearchStudyStatusValueSet.js';
-import { ResearchStudyPrimPurpTypeValueSet } from '../fhirValueSets/ResearchStudyPrimPurpTypeValueSet.js';
-import { ResearchStudyPhaseValueSet } from '../fhirValueSets/ResearchStudyPhaseValueSet.js';
-import { ConditionCodeValueSet } from '../fhirValueSets/ConditionCodeValueSet.js';
-import { ResearchStudyReasonStoppedValueSet } from '../fhirValueSets/ResearchStudyReasonStoppedValueSet.js';
+import { ResearchStudyObjectiveTypeValueSet, } from '../fhirValueSets/ResearchStudyObjectiveTypeValueSet.js';
+import { ResearchStudyStatusValueSet, } from '../fhirValueSets/ResearchStudyStatusValueSet.js';
+import { ResearchStudyPrimPurpTypeValueSet, } from '../fhirValueSets/ResearchStudyPrimPurpTypeValueSet.js';
+import { ResearchStudyPhaseValueSet, } from '../fhirValueSets/ResearchStudyPhaseValueSet.js';
+import { ConditionCodeValueSet, } from '../fhirValueSets/ConditionCodeValueSet.js';
+import { ResearchStudyReasonStoppedValueSet, } from '../fhirValueSets/ResearchStudyReasonStoppedValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Describes an expected sequence of events for one of the participants of a study.  E.g. Exposure to drug A, wash-out, exposure to drug B, wash-out, follow-up.
  */
@@ -16,45 +18,46 @@ export class ResearchStudyArm extends fhir.BackboneElement {
     /**
      * Default constructor for ResearchStudyArm - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ResearchStudyArm';
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirString({ value: source.name });
         }
         else {
             this.name = null;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
         }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: ResearchStudy.arm.name']);
+        var outcome = super.doModelValidation();
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirString fhir: ResearchStudy.arm.name:string", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -64,13 +67,11 @@ export class ResearchStudyObjective extends fhir.BackboneElement {
     /**
      * Default constructor for ResearchStudyObjective - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ResearchStudyObjective';
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
@@ -86,14 +87,20 @@ export class ResearchStudyObjective extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -103,17 +110,75 @@ export class ResearchStudy extends fhir.DomainResource {
     /**
      * Default constructor for ResearchStudy - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ResearchStudy';
+        /**
+         * Identifiers assigned to this research study by the sponsor or other systems.
+         */
+        this.identifier = [];
+        /**
+         * The set of steps expected to be performed as part of the execution of the study.
+         */
+        this.protocol = [];
+        /**
+         * A larger research study of which this particular study is a component or step.
+         */
+        this.partOf = [];
+        /**
+         * Codes categorizing the type of study such as investigational vs. observational, type of blinding, type of randomization, safety vs. efficacy, etc.
+         */
+        this.category = [];
+        /**
+         * The medication(s), food(s), therapy(ies), device(s) or other concerns or interventions that the study is seeking to gain more information about.
+         */
+        this.focus = [];
+        /**
+         * The condition that is the focus of the study.  For example, In a study to examine risk factors for Lupus, might have as an inclusion criterion "healthy volunteer", but the target condition code would be a Lupus SNOMED code.
+         */
+        this.condition = [];
+        /**
+         * Contact details to assist a user in learning more about or engaging with the study.
+         */
+        this.contact = [];
+        /**
+         * Citations, references and other related documents.
+         */
+        this.relatedArtifact = [];
+        /**
+         * Key terms to aid in searching for or filtering the study.
+         */
+        this.keyword = [];
+        /**
+         * Indicates a country, state or other region where the study is taking place.
+         */
+        this.location = [];
+        /**
+         * The Group referenced should not generally enumerate specific subjects.  Subjects will be linked to the study using the ResearchSubject resource.
+         */
+        this.enrollment = [];
+        /**
+         * A facility in which study activities are conducted.
+         */
+        this.site = [];
+        /**
+         * Comments made about the study by the performer, subject or other participants.
+         */
+        this.note = [];
+        /**
+         * Describes an expected sequence of events for one of the participants of a study.  E.g. Exposure to drug A, wash-out, exposure to drug B, wash-out, follow-up.
+         */
+        this.arm = [];
+        /**
+         * A goal that the study is aiming to achieve in terms of a scientific question to be answered by the analysis of data collected during the study.
+         */
+        this.objective = [];
         this.resourceType = 'ResearchStudy';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['protocol']) {
             this.protocol = source.protocol.map((x) => new fhir.Reference(x));
@@ -126,9 +191,6 @@ export class ResearchStudy extends fhir.DomainResource {
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['primaryPurposeType']) {
             this.primaryPurposeType = new fhir.CodeableConcept(source.primaryPurposeType);
@@ -158,10 +220,7 @@ export class ResearchStudy extends fhir.DomainResource {
             this.location = source.location.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['enrollment']) {
             this.enrollment = source.enrollment.map((x) => new fhir.Reference(x));
@@ -225,86 +284,89 @@ export class ResearchStudy extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: ResearchStudy.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'ResearchStudy' fhir: ResearchStudy.resourceType:'ResearchStudy'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
         if (this["protocol"]) {
-            this.protocol.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.protocol.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["partOf"]) {
-            this.partOf.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.partOf.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: ResearchStudy.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:ResearchStudyStatusValueSetEnum fhir: ResearchStudy.status:code", }));
         }
         if (this["primaryPurposeType"]) {
-            results.push(...this.primaryPurposeType.doModelValidation());
+            outcome.issue.push(...this.primaryPurposeType.doModelValidation().issue);
         }
         if (this["phase"]) {
-            results.push(...this.phase.doModelValidation());
+            outcome.issue.push(...this.phase.doModelValidation().issue);
         }
         if (this["category"]) {
-            this.category.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.category.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["focus"]) {
-            this.focus.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.focus.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["condition"]) {
-            this.condition.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.condition.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relatedArtifact"]) {
-            this.relatedArtifact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relatedArtifact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["keyword"]) {
-            this.keyword.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.keyword.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["location"]) {
-            this.location.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.location.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["enrollment"]) {
-            this.enrollment.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.enrollment.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
         if (this["sponsor"]) {
-            results.push(...this.sponsor.doModelValidation());
+            outcome.issue.push(...this.sponsor.doModelValidation().issue);
         }
         if (this["principalInvestigator"]) {
-            results.push(...this.principalInvestigator.doModelValidation());
+            outcome.issue.push(...this.principalInvestigator.doModelValidation().issue);
         }
         if (this["site"]) {
-            this.site.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.site.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonStopped"]) {
-            results.push(...this.reasonStopped.doModelValidation());
+            outcome.issue.push(...this.reasonStopped.doModelValidation().issue);
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["arm"]) {
-            this.arm.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.arm.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["objective"]) {
-            this.objective.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.objective.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ResearchStudy.js.map

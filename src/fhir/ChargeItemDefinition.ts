@@ -3,312 +3,110 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ChargeItemDefinition
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { InvoicePriceComponentTypeValueSet, InvoicePriceComponentTypeValueSetType, InvoicePriceComponentTypeValueSetEnum } from '../fhirValueSets/InvoicePriceComponentTypeValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-import { ChargeitemBillingcodesValueSet, ChargeitemBillingcodesValueSetType, ChargeitemBillingcodesValueSetEnum } from '../fhirValueSets/ChargeitemBillingcodesValueSet.js'
-
+import { InvoicePriceComponentTypeValueSet, InvoicePriceComponentTypeValueSetType,} from '../fhirValueSets/InvoicePriceComponentTypeValueSet.js';
+import { InvoicePriceComponentTypeValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { ChargeitemBillingcodesValueSet, ChargeitemBillingcodesValueSetType,} from '../fhirValueSets/ChargeitemBillingcodesValueSet.js';
+import { ChargeitemBillingcodesValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.
+ * Valid arguments for the ChargeItemDefinitionApplicability type.
  */
-export type IChargeItemDefinitionApplicability = fhir.IBackboneElement & { 
+export interface ChargeItemDefinitionApplicabilityArgs extends fhir.BackboneElementArgs {
   /**
    * A brief, natural language description of the condition that effectively communicates the intended semantics.
    */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.applicability.description
-   */
-  _description?: fhir.IFhirElement|undefined;
+  description?: fhir.FhirString|string|undefined;
   /**
    * The media type of the language for the expression, e.g. "text/cql" for Clinical Query Language expressions or "text/fhirpath" for FHIRPath expressions.
    */
-  language?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.applicability.language
-   */
-  _language?: fhir.IFhirElement|undefined;
+  language?: fhir.FhirString|string|undefined;
   /**
    * Please note that FHIRPath Expressions can only be evaluated in the scope of the current ChargeItem resource to which this definition is being applied.
    * FHIRPath expressions can traverse into other resources linked from the ChargeItem resource, however, testing rules such as that a billing code may be billed only once per encounter need a wider scope. In such scenarios, CQL may be the appropriate choice.
    */
-  expression?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.applicability.expression
-   */
-  _expression?: fhir.IFhirElement|undefined;
+  expression?: fhir.FhirString|string|undefined;
 }
 
 /**
- * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the prices have been calculated.
+ * The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.
  */
-export type IChargeItemDefinitionPropertyGroupPriceComponent = fhir.IBackboneElement & { 
+export class ChargeItemDefinitionApplicability extends fhir.BackboneElement {
+  readonly __dataType:string = 'ChargeItemDefinitionApplicability';
+  /**
+   * A brief, natural language description of the condition that effectively communicates the intended semantics.
+   */
+  public description?: fhir.FhirString|undefined;
+  /**
+   * The media type of the language for the expression, e.g. "text/cql" for Clinical Query Language expressions or "text/fhirpath" for FHIRPath expressions.
+   */
+  public language?: fhir.FhirString|undefined;
+  /**
+   * Please note that FHIRPath Expressions can only be evaluated in the scope of the current ChargeItem resource to which this definition is being applied.
+   * FHIRPath expressions can traverse into other resources linked from the ChargeItem resource, however, testing rules such as that a billing code may be billed only once per encounter need a wider scope. In such scenarios, CQL may be the appropriate choice.
+   */
+  public expression?: fhir.FhirString|undefined;
+  /**
+   * Default constructor for ChargeItemDefinitionApplicability - initializes any required elements to null if a value is not provided.
+   */
+  constructor(source:Partial<ChargeItemDefinitionApplicabilityArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['language']) { this.language = new fhir.FhirString({value: source.language}); }
+    if (source['expression']) { this.expression = new fhir.FhirString({value: source.expression}); }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["language"]) { outcome.issue!.push(...this.language.doModelValidation().issue!); }
+    if (this["expression"]) { outcome.issue!.push(...this.expression.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ChargeItemDefinitionPropertyGroupPriceComponent type.
+ */
+export interface ChargeItemDefinitionPropertyGroupPriceComponentArgs extends fhir.BackboneElementArgs {
   /**
    * This code identifies the type of the component.
    */
   type: InvoicePriceComponentTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ChargeItemDefinition.propertyGroup.priceComponent.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
    * A code that identifies the component. Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc.
    */
-  code?: fhir.ICodeableConcept|undefined;
+  code?: fhir.CodeableConceptArgs|undefined;
   /**
    * The factor that has been applied on the base price for calculating this component.
    */
-  factor?: number|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.propertyGroup.priceComponent.factor
-   */
-  _factor?: fhir.IFhirElement|undefined;
+  factor?: fhir.FhirDecimal|number|undefined;
   /**
    * The amount calculated for this component.
    */
-  amount?: fhir.IMoney|undefined;
-}
-
-/**
- * Group of properties which are applicable under the same conditions. If no applicability rules are established for the group, then all properties always apply.
- */
-export type IChargeItemDefinitionPropertyGroup = fhir.IBackboneElement & { 
-  /**
-   * The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.
-   */
-  applicability?: fhir.IChargeItemDefinitionApplicability[]|undefined;
-  /**
-   * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the prices have been calculated.
-   */
-  priceComponent?: fhir.IChargeItemDefinitionPropertyGroupPriceComponent[]|undefined;
-}
-
-/**
- * The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
- */
-export type IChargeItemDefinition = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "ChargeItemDefinition";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url: string|null;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this charge item definition outside of FHIR, where it is not possible to use the logical URI.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * There may be different charge item definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the charge item definition with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * The URL pointing to an externally-defined charge item definition that is adhered to in whole or in part by this definition.
-   */
-  derivedFromUri?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.derivedFromUri
-   */
-  _derivedFromUri?: fhir.IFhirElement[]|undefined;
-  /**
-   * A larger definition of which this particular definition is a component or step.
-   */
-  partOf?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.partOf
-   */
-  _partOf?: fhir.IFhirElement[]|undefined;
-  /**
-   * As new versions of a protocol or guideline are defined, allows identification of what versions are replaced by a new instance.
-   */
-  replaces?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.replaces
-   */
-  _replaces?: fhir.IFhirElement[]|undefined;
-  /**
-   * Allows filtering of charge item definitions that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of charge item definitions that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the charge item definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the charge item definition is the organization or individual primarily responsible for the maintenance and upkeep of the charge item definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the charge item definition. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the charge item definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the charge item definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the charge item definition is presumed to be the predominant language in the place the charge item definition was created).
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the charge item definition to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * A copyright statement relating to the charge item definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the charge item definition.
-   */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-  /**
-   * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
-   */
-  approvalDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.approvalDate
-   */
-  _approvalDate?: fhir.IFhirElement|undefined;
-  /**
-   * If specified, this date follows the original approval date.
-   */
-  lastReviewDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.lastReviewDate
-   */
-  _lastReviewDate?: fhir.IFhirElement|undefined;
-  /**
-   * The effective period for a charge item definition  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
-   */
-  effectivePeriod?: fhir.IPeriod|undefined;
-  /**
-   * The defined billing details in this resource pertain to the given billing code.
-   */
-  code?: fhir.ICodeableConcept|undefined;
-  /**
-   * In case of highly customized, individually produced or fitted devices/substances, the pricing information may be different for each instance of the product. This reference links pricing details to specific product instances.
-   */
-  instance?: fhir.IReference[]|undefined;
-  /**
-   * The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.
-   */
-  applicability?: fhir.IChargeItemDefinitionApplicability[]|undefined;
-  /**
-   * Group of properties which are applicable under the same conditions. If no applicability rules are established for the group, then all properties always apply.
-   */
-  propertyGroup?: fhir.IChargeItemDefinitionPropertyGroup[]|undefined;
-}
-
-/**
- * The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.
- */
-export class ChargeItemDefinitionApplicability extends fhir.BackboneElement implements IChargeItemDefinitionApplicability {
-  /**
-   * A brief, natural language description of the condition that effectively communicates the intended semantics.
-   */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.applicability.description
-   */
-  public _description?: fhir.FhirElement|undefined;
-  /**
-   * The media type of the language for the expression, e.g. "text/cql" for Clinical Query Language expressions or "text/fhirpath" for FHIRPath expressions.
-   */
-  public language?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.applicability.language
-   */
-  public _language?: fhir.FhirElement|undefined;
-  /**
-   * Please note that FHIRPath Expressions can only be evaluated in the scope of the current ChargeItem resource to which this definition is being applied.
-   * FHIRPath expressions can traverse into other resources linked from the ChargeItem resource, however, testing rules such as that a billing code may be billed only once per encounter need a wider scope. In such scenarios, CQL may be the appropriate choice.
-   */
-  public expression?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.applicability.expression
-   */
-  public _expression?: fhir.FhirElement|undefined;
-  /**
-   * Default constructor for ChargeItemDefinitionApplicability - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<IChargeItemDefinitionApplicability> = { }) {
-    super(source);
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['language']) { this.language = source.language; }
-    if (source['_language']) { this._language = new fhir.FhirElement(source._language!); }
-    if (source['expression']) { this.expression = source.expression; }
-    if (source['_expression']) { this._expression = new fhir.FhirElement(source._expression!); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_language"]) { results.push(...this._language.doModelValidation()); }
-    if (this["_expression"]) { results.push(...this._expression.doModelValidation()); }
-    return results;
-  }
+  amount?: fhir.MoneyArgs|undefined;
 }
 
 /**
  * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the prices have been calculated.
  */
-export class ChargeItemDefinitionPropertyGroupPriceComponent extends fhir.BackboneElement implements IChargeItemDefinitionPropertyGroupPriceComponent {
+export class ChargeItemDefinitionPropertyGroupPriceComponent extends fhir.BackboneElement {
+  readonly __dataType:string = 'ChargeItemDefinitionPropertyGroupPriceComponent';
   /**
    * This code identifies the type of the component.
    */
   public type: InvoicePriceComponentTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.propertyGroup.priceComponent.type
-   */
-  public _type?: fhir.FhirElement|undefined;
   /**
    * A code that identifies the component. Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc.
    */
@@ -316,11 +114,7 @@ export class ChargeItemDefinitionPropertyGroupPriceComponent extends fhir.Backbo
   /**
    * The factor that has been applied on the base price for calculating this component.
    */
-  public factor?: number|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.propertyGroup.priceComponent.factor
-   */
-  public _factor?: fhir.FhirElement|undefined;
+  public factor?: fhir.FhirDecimal|undefined;
   /**
    * The amount calculated for this component.
    */
@@ -328,15 +122,13 @@ export class ChargeItemDefinitionPropertyGroupPriceComponent extends fhir.Backbo
   /**
    * Default constructor for ChargeItemDefinitionPropertyGroupPriceComponent - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IChargeItemDefinitionPropertyGroupPriceComponent> = { }) {
-    super(source);
+  constructor(source:Partial<ChargeItemDefinitionPropertyGroupPriceComponentArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
-    if (source['factor']) { this.factor = source.factor; }
-    if (source['_factor']) { this._factor = new fhir.FhirElement(source._factor!); }
-    if (source['amount']) { this.amount = new fhir.Money(source.amount!); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
+    if (source['factor']) { this.factor = new fhir.FhirDecimal({value: source.factor}); }
+    if (source['amount']) { this.amount = new fhir.Money(source.amount); }
   }
   /**
    * Required-bound Value Set for type
@@ -347,52 +139,183 @@ export class ChargeItemDefinitionPropertyGroupPriceComponent extends fhir.Backbo
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: ChargeItemDefinition.propertyGroup.priceComponent.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["_factor"]) { results.push(...this._factor.doModelValidation()); }
-    if (this["amount"]) { results.push(...this.amount.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:InvoicePriceComponentTypeValueSetEnum fhir: ChargeItemDefinition.propertyGroup.priceComponent.type:code", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["factor"]) { outcome.issue!.push(...this.factor.doModelValidation().issue!); }
+    if (this["amount"]) { outcome.issue!.push(...this.amount.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ChargeItemDefinitionPropertyGroup type.
+ */
+export interface ChargeItemDefinitionPropertyGroupArgs extends fhir.BackboneElementArgs {
+  /**
+   * The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.
+   */
+  applicability?: fhir.ChargeItemDefinitionApplicabilityArgs[]|undefined;
+  /**
+   * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the prices have been calculated.
+   */
+  priceComponent?: fhir.ChargeItemDefinitionPropertyGroupPriceComponentArgs[]|undefined;
 }
 
 /**
  * Group of properties which are applicable under the same conditions. If no applicability rules are established for the group, then all properties always apply.
  */
-export class ChargeItemDefinitionPropertyGroup extends fhir.BackboneElement implements IChargeItemDefinitionPropertyGroup {
+export class ChargeItemDefinitionPropertyGroup extends fhir.BackboneElement {
+  readonly __dataType:string = 'ChargeItemDefinitionPropertyGroup';
   /**
    * The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.
    */
-  public applicability?: fhir.ChargeItemDefinitionApplicability[]|undefined;
+  public applicability?: fhir.ChargeItemDefinitionApplicability[]|undefined = [];
   /**
    * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the prices have been calculated.
    */
-  public priceComponent?: fhir.ChargeItemDefinitionPropertyGroupPriceComponent[]|undefined;
+  public priceComponent?: fhir.ChargeItemDefinitionPropertyGroupPriceComponent[]|undefined = [];
   /**
    * Default constructor for ChargeItemDefinitionPropertyGroup - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IChargeItemDefinitionPropertyGroup> = { }) {
-    super(source);
+  constructor(source:Partial<ChargeItemDefinitionPropertyGroupArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['applicability']) { this.applicability = source.applicability.map((x) => new fhir.ChargeItemDefinitionApplicability(x)); }
     if (source['priceComponent']) { this.priceComponent = source.priceComponent.map((x) => new fhir.ChargeItemDefinitionPropertyGroupPriceComponent(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["applicability"]) { this.applicability.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["priceComponent"]) { this.priceComponent.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["applicability"]) { this.applicability.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["priceComponent"]) { this.priceComponent.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ChargeItemDefinition type.
+ */
+export interface ChargeItemDefinitionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "ChargeItemDefinition"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url: fhir.FhirUri|string|undefined;
+  /**
+   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this charge item definition outside of FHIR, where it is not possible to use the logical URI.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * There may be different charge item definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the charge item definition with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * The URL pointing to an externally-defined charge item definition that is adhered to in whole or in part by this definition.
+   */
+  derivedFromUri?: fhir.FhirUri[]|string[]|undefined;
+  /**
+   * A larger definition of which this particular definition is a component or step.
+   */
+  partOf?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * As new versions of a protocol or guideline are defined, allows identification of what versions are replaced by a new instance.
+   */
+  replaces?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * Allows filtering of charge item definitions that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Allows filtering of charge item definitions that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the charge item definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the charge item definition is the organization or individual primarily responsible for the maintenance and upkeep of the charge item definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the charge item definition. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the charge item definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the charge item definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the charge item definition is presumed to be the predominant language in the place the charge item definition was created).
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the charge item definition to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * A copyright statement relating to the charge item definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the charge item definition.
+   */
+  copyright?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
+   */
+  approvalDate?: fhir.FhirDate|string|undefined;
+  /**
+   * If specified, this date follows the original approval date.
+   */
+  lastReviewDate?: fhir.FhirDate|string|undefined;
+  /**
+   * The effective period for a charge item definition  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
+   */
+  effectivePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * The defined billing details in this resource pertain to the given billing code.
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * In case of highly customized, individually produced or fitted devices/substances, the pricing information may be different for each instance of the product. This reference links pricing details to specific product instances.
+   */
+  instance?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.
+   */
+  applicability?: fhir.ChargeItemDefinitionApplicabilityArgs[]|undefined;
+  /**
+   * Group of properties which are applicable under the same conditions. If no applicability rules are established for the group, then all properties always apply.
+   */
+  propertyGroup?: fhir.ChargeItemDefinitionPropertyGroupArgs[]|undefined;
 }
 
 /**
  * The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
  */
-export class ChargeItemDefinition extends fhir.DomainResource implements IChargeItemDefinition {
+export class ChargeItemDefinition extends fhir.DomainResource {
+  readonly __dataType:string = 'ChargeItemDefinition';
   /**
    * Resource Type Name
    */
@@ -402,131 +325,75 @@ export class ChargeItemDefinition extends fhir.DomainResource implements ICharge
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url: string|null;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url: fhir.FhirUri|null;
   /**
    * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this charge item definition outside of FHIR, where it is not possible to use the logical URI.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * There may be different charge item definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the charge item definition with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * The URL pointing to an externally-defined charge item definition that is adhered to in whole or in part by this definition.
    */
-  public derivedFromUri?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.derivedFromUri
-   */
-  public _derivedFromUri?: fhir.FhirElement[]|undefined;
+  public derivedFromUri?: fhir.FhirUri[]|undefined = [];
   /**
    * A larger definition of which this particular definition is a component or step.
    */
-  public partOf?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.partOf
-   */
-  public _partOf?: fhir.FhirElement[]|undefined;
+  public partOf?: fhir.FhirCanonical[]|undefined = [];
   /**
    * As new versions of a protocol or guideline are defined, allows identification of what versions are replaced by a new instance.
    */
-  public replaces?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.replaces
-   */
-  public _replaces?: fhir.FhirElement[]|undefined;
+  public replaces?: fhir.FhirCanonical[]|undefined = [];
   /**
    * Allows filtering of charge item definitions that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ChargeItemDefinition.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of charge item definitions that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the charge item definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the charge item definition is the organization or individual primarily responsible for the maintenance and upkeep of the charge item definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the charge item definition. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the charge item definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the charge item definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the charge item definition is presumed to be the predominant language in the place the charge item definition was created).
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the charge item definition to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * A copyright statement relating to the charge item definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the charge item definition.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
    */
-  public approvalDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.approvalDate
-   */
-  public _approvalDate?: fhir.FhirElement|undefined;
+  public approvalDate?: fhir.FhirDate|undefined;
   /**
    * If specified, this date follows the original approval date.
    */
-  public lastReviewDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ChargeItemDefinition.lastReviewDate
-   */
-  public _lastReviewDate?: fhir.FhirElement|undefined;
+  public lastReviewDate?: fhir.FhirDate|undefined;
   /**
    * The effective period for a charge item definition  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
    */
@@ -538,57 +405,43 @@ export class ChargeItemDefinition extends fhir.DomainResource implements ICharge
   /**
    * In case of highly customized, individually produced or fitted devices/substances, the pricing information may be different for each instance of the product. This reference links pricing details to specific product instances.
    */
-  public instance?: fhir.Reference[]|undefined;
+  public instance?: fhir.Reference[]|undefined = [];
   /**
    * The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.
    */
-  public applicability?: fhir.ChargeItemDefinitionApplicability[]|undefined;
+  public applicability?: fhir.ChargeItemDefinitionApplicability[]|undefined = [];
   /**
    * Group of properties which are applicable under the same conditions. If no applicability rules are established for the group, then all properties always apply.
    */
-  public propertyGroup?: fhir.ChargeItemDefinitionPropertyGroup[]|undefined;
+  public propertyGroup?: fhir.ChargeItemDefinitionPropertyGroup[]|undefined = [];
   /**
    * Default constructor for ChargeItemDefinition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IChargeItemDefinition> = { }) {
-    super(source);
+  constructor(source:Partial<ChargeItemDefinitionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'ChargeItemDefinition';
-    if (source['url']) { this.url = source.url; }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     else { this.url = null; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
-    if (source['derivedFromUri']) { this.derivedFromUri = source.derivedFromUri.map((x) => (x)); }
-    if (source['_derivedFromUri']) { this._derivedFromUri = source._derivedFromUri.map((x) => new fhir.FhirElement(x)); }
-    if (source['partOf']) { this.partOf = source.partOf.map((x) => (x)); }
-    if (source['_partOf']) { this._partOf = source._partOf.map((x) => new fhir.FhirElement(x)); }
-    if (source['replaces']) { this.replaces = source.replaces.map((x) => (x)); }
-    if (source['_replaces']) { this._replaces = source._replaces.map((x) => new fhir.FhirElement(x)); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
+    if (source['derivedFromUri']) { this.derivedFromUri = source.derivedFromUri.map((x) => new fhir.FhirUri({value: x})); }
+    if (source['partOf']) { this.partOf = source.partOf.map((x) => new fhir.FhirCanonical({value: x})); }
+    if (source['replaces']) { this.replaces = source.replaces.map((x) => new fhir.FhirCanonical({value: x})); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
-    if (source['approvalDate']) { this.approvalDate = source.approvalDate; }
-    if (source['_approvalDate']) { this._approvalDate = new fhir.FhirElement(source._approvalDate!); }
-    if (source['lastReviewDate']) { this.lastReviewDate = source.lastReviewDate; }
-    if (source['_lastReviewDate']) { this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate!); }
-    if (source['effectivePeriod']) { this.effectivePeriod = new fhir.Period(source.effectivePeriod!); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
+    if (source['approvalDate']) { this.approvalDate = new fhir.FhirDate({value: source.approvalDate}); }
+    if (source['lastReviewDate']) { this.lastReviewDate = new fhir.FhirDate({value: source.lastReviewDate}); }
+    if (source['effectivePeriod']) { this.effectivePeriod = new fhir.Period(source.effectivePeriod); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
     if (source['instance']) { this.instance = source.instance.map((x) => new fhir.Reference(x)); }
     if (source['applicability']) { this.applicability = source.applicability.map((x) => new fhir.ChargeItemDefinitionApplicability(x)); }
     if (source['propertyGroup']) { this.propertyGroup = source.propertyGroup.map((x) => new fhir.ChargeItemDefinitionPropertyGroup(x)); }
@@ -608,34 +461,45 @@ export class ChargeItemDefinition extends fhir.DomainResource implements ICharge
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: ChargeItemDefinition.resourceType']); }
-    if (!this["url"]) { results.push(["url",'Missing required element: ChargeItemDefinition.url']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (this["_derivedFromUri"]) { this._derivedFromUri.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_partOf"]) { this._partOf.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_replaces"]) { this._replaces.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: ChargeItemDefinition.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (this["_approvalDate"]) { results.push(...this._approvalDate.doModelValidation()); }
-    if (this["_lastReviewDate"]) { results.push(...this._lastReviewDate.doModelValidation()); }
-    if (this["effectivePeriod"]) { results.push(...this.effectivePeriod.doModelValidation()); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["instance"]) { this.instance.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["applicability"]) { this.applicability.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["propertyGroup"]) { this.propertyGroup.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'ChargeItemDefinition' fhir: ChargeItemDefinition.resourceType:'ChargeItemDefinition'", }));
+    }
+    if (!this['url']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property url:fhir.FhirUri fhir: ChargeItemDefinition.url:uri", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (this["derivedFromUri"]) { this.derivedFromUri.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["partOf"]) { this.partOf.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["replaces"]) { this.replaces.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: ChargeItemDefinition.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (this["approvalDate"]) { outcome.issue!.push(...this.approvalDate.doModelValidation().issue!); }
+    if (this["lastReviewDate"]) { outcome.issue!.push(...this.lastReviewDate.doModelValidation().issue!); }
+    if (this["effectivePeriod"]) { outcome.issue!.push(...this.effectivePeriod.doModelValidation().issue!); }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["instance"]) { this.instance.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["applicability"]) { this.applicability.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["propertyGroup"]) { this.propertyGroup.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

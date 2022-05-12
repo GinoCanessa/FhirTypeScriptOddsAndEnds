@@ -27,15 +27,4 @@ export const VisionProductValueSet = {
 /**
  * This value set includes a smattering of Prescription Product codes.
  */
-export var VisionProductValueSetEnum;
-(function (VisionProductValueSetEnum) {
-    /**
-     * contact: A lens to be fitted for wearing directly on an eye.
-     */
-    VisionProductValueSetEnum["ContactLens"] = "contact";
-    /**
-     * lens: A lens to be fitted to a frame to comprise a pair of glasses.
-     */
-    VisionProductValueSetEnum["Lens"] = "lens";
-})(VisionProductValueSetEnum || (VisionProductValueSetEnum = {}));
 //# sourceMappingURL=VisionProductValueSet.js.map

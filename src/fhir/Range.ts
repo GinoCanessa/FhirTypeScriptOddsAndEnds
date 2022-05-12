@@ -3,27 +3,29 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Range
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A set of ordered Quantities defined by a low and high limit.
+ * Valid arguments for the Range type.
  */
-export type IRange = fhir.IFhirElement & { 
+export interface RangeArgs extends fhir.FhirElementArgs {
   /**
    * If the low element is missing, the low boundary is not known.
    */
-  low?: fhir.IQuantity|undefined;
+  low?: fhir.QuantityArgs|undefined;
   /**
    * If the high element is missing, the high boundary is not known.
    */
-  high?: fhir.IQuantity|undefined;
+  high?: fhir.QuantityArgs|undefined;
 }
 
 /**
  * A set of ordered Quantities defined by a low and high limit.
  */
-export class Range extends fhir.FhirElement implements IRange {
+export class Range extends fhir.FhirElement {
+  readonly __dataType:string = 'Range';
   /**
    * If the low element is missing, the low boundary is not known.
    */
@@ -35,18 +37,24 @@ export class Range extends fhir.FhirElement implements IRange {
   /**
    * Default constructor for Range - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IRange> = { }) {
-    super(source);
-    if (source['low']) { this.low = new fhir.Quantity(source.low!); }
-    if (source['high']) { this.high = new fhir.Quantity(source.high!); }
+  constructor(source:Partial<RangeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['low']) { this.low = new fhir.Quantity(source.low); }
+    if (source['high']) { this.high = new fhir.Quantity(source.high); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["low"]) { results.push(...this.low.doModelValidation()); }
-    if (this["high"]) { results.push(...this.high.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["low"]) { outcome.issue!.push(...this.low.doModelValidation().issue!); }
+    if (this["high"]) { outcome.issue!.push(...this.high.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -3,9 +3,11 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: CompartmentDefinition
 import * as fhir from '../fhir.js';
-import { ResourceTypesValueSet } from '../fhirValueSets/ResourceTypesValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { CompartmentTypeValueSet } from '../fhirValueSets/CompartmentTypeValueSet.js';
+import { ResourceTypesValueSet, } from '../fhirValueSets/ResourceTypesValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { CompartmentTypeValueSet, } from '../fhirValueSets/CompartmentTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Information about how a resource is related to the compartment.
  */
@@ -13,28 +15,24 @@ export class CompartmentDefinitionResource extends fhir.BackboneElement {
     /**
      * Default constructor for CompartmentDefinitionResource - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CompartmentDefinitionResource';
+        /**
+         * If no search parameters are listed, then the resource is not linked to the compartment.
+         */
+        this.param = [];
         if (source['code']) {
-            this.code = source.code;
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         else {
             this.code = null;
         }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
-        }
         if (source['param']) {
-            this.param = source.param.map((x) => (x));
-        }
-        if (source['_param']) {
-            this._param = source._param.map((x) => new fhir.FhirElement(x));
+            this.param = source.param.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['documentation']) {
-            this.documentation = source.documentation;
-        }
-        if (source['_documentation']) {
-            this._documentation = new fhir.FhirElement(source._documentation);
+            this.documentation = new fhir.FhirString({ value: source.documentation });
         }
     }
     /**
@@ -47,20 +45,26 @@ export class CompartmentDefinitionResource extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: CompartmentDefinition.resource.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.FhirCode fhir: CompartmentDefinition.resource.code:code", }));
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_param"]) {
-            this._param.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["param"]) {
+            this.param.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_documentation"]) {
-            results.push(...this._documentation.doModelValidation());
+        if (this["documentation"]) {
+            outcome.issue.push(...this.documentation.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -70,32 +74,36 @@ export class CompartmentDefinition extends fhir.DomainResource {
     /**
      * Default constructor for CompartmentDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CompartmentDefinition';
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * Information about how a resource is related to the compartment.
+         */
+        this.resource = [];
         this.resourceType = 'CompartmentDefinition';
         if (source['url']) {
-            this.url = source.url;
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         else {
             this.url = null;
         }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
-        }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirString({ value: source.name });
         }
         else {
             this.name = null;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
         }
         if (source['status']) {
             this.status = source.status;
@@ -103,44 +111,26 @@ export class CompartmentDefinition extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
-        }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['code']) {
             this.code = source.code;
@@ -148,17 +138,11 @@ export class CompartmentDefinition extends fhir.DomainResource {
         else {
             this.code = null;
         }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
-        }
         if (source['search']) {
-            this.search = source.search;
+            this.search = new fhir.FhirBoolean({ value: source.search });
         }
         else {
             this.search = null;
-        }
-        if (source['_search']) {
-            this._search = new fhir.FhirElement(source._search);
         }
         if (source['resource']) {
             this.resource = source.resource.map((x) => new fhir.CompartmentDefinitionResource(x));
@@ -180,68 +164,68 @@ export class CompartmentDefinition extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: CompartmentDefinition.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'CompartmentDefinition' fhir: CompartmentDefinition.resourceType:'CompartmentDefinition'", }));
         }
-        if (!this["url"]) {
-            results.push(["url", 'Missing required element: CompartmentDefinition.url']);
+        if (!this['url']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property url:fhir.FhirUri fhir: CompartmentDefinition.url:uri", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: CompartmentDefinition.name']);
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirString fhir: CompartmentDefinition.name:string", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: CompartmentDefinition.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: CompartmentDefinition.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: CompartmentDefinition.code']);
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:CompartmentTypeValueSetEnum fhir: CompartmentDefinition.code:code", }));
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (!this['search']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property search:fhir.FhirBoolean fhir: CompartmentDefinition.search:boolean", }));
         }
-        if (!this["search"]) {
-            results.push(["search", 'Missing required element: CompartmentDefinition.search']);
-        }
-        if (this["_search"]) {
-            results.push(...this._search.doModelValidation());
+        if (this["search"]) {
+            outcome.issue.push(...this.search.doModelValidation().issue);
         }
         if (this["resource"]) {
-            this.resource.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.resource.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=CompartmentDefinition.js.map

@@ -35,19 +35,4 @@ export const ReactionEventSeverityValueSet = {
 /**
  * Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations.
  */
-export var ReactionEventSeverityValueSetEnum;
-(function (ReactionEventSeverityValueSetEnum) {
-    /**
-     * mild: Causes mild physiological effects.
-     */
-    ReactionEventSeverityValueSetEnum["Mild"] = "mild";
-    /**
-     * moderate: Causes moderate physiological effects.
-     */
-    ReactionEventSeverityValueSetEnum["Moderate"] = "moderate";
-    /**
-     * severe: Causes severe physiological effects.
-     */
-    ReactionEventSeverityValueSetEnum["Severe"] = "severe";
-})(ReactionEventSeverityValueSetEnum || (ReactionEventSeverityValueSetEnum = {}));
 //# sourceMappingURL=ReactionEventSeverityValueSet.js.map

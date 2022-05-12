@@ -3,43 +3,45 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MedicinalProductUndesirableEffect
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Describe the undesirable effects of the medicinal product.
+ * Valid arguments for the MedicinalProductUndesirableEffect type.
  */
-export type IMedicinalProductUndesirableEffect = fhir.IDomainResource & { 
+export interface MedicinalProductUndesirableEffectArgs extends fhir.DomainResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "MedicinalProductUndesirableEffect";
+  resourceType: "MedicinalProductUndesirableEffect"|undefined;
   /**
    * The medication for which this is an indication.
    */
-  subject?: fhir.IReference[]|undefined;
+  subject?: fhir.ReferenceArgs[]|undefined;
   /**
    * The symptom, condition or undesirable effect.
    */
-  symptomConditionEffect?: fhir.ICodeableConcept|undefined;
+  symptomConditionEffect?: fhir.CodeableConceptArgs|undefined;
   /**
    * Classification of the effect.
    */
-  classification?: fhir.ICodeableConcept|undefined;
+  classification?: fhir.CodeableConceptArgs|undefined;
   /**
    * The frequency of occurrence of the effect.
    */
-  frequencyOfOccurrence?: fhir.ICodeableConcept|undefined;
+  frequencyOfOccurrence?: fhir.CodeableConceptArgs|undefined;
   /**
    * The population group to which this applies.
    */
-  population?: fhir.IPopulation[]|undefined;
+  population?: fhir.PopulationArgs[]|undefined;
 }
 
 /**
  * Describe the undesirable effects of the medicinal product.
  */
-export class MedicinalProductUndesirableEffect extends fhir.DomainResource implements IMedicinalProductUndesirableEffect {
+export class MedicinalProductUndesirableEffect extends fhir.DomainResource {
+  readonly __dataType:string = 'MedicinalProductUndesirableEffect';
   /**
    * Resource Type Name
    */
@@ -47,7 +49,7 @@ export class MedicinalProductUndesirableEffect extends fhir.DomainResource imple
   /**
    * The medication for which this is an indication.
    */
-  public subject?: fhir.Reference[]|undefined;
+  public subject?: fhir.Reference[]|undefined = [];
   /**
    * The symptom, condition or undesirable effect.
    */
@@ -63,30 +65,38 @@ export class MedicinalProductUndesirableEffect extends fhir.DomainResource imple
   /**
    * The population group to which this applies.
    */
-  public population?: fhir.Population[]|undefined;
+  public population?: fhir.Population[]|undefined = [];
   /**
    * Default constructor for MedicinalProductUndesirableEffect - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicinalProductUndesirableEffect> = { }) {
-    super(source);
+  constructor(source:Partial<MedicinalProductUndesirableEffectArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'MedicinalProductUndesirableEffect';
     if (source['subject']) { this.subject = source.subject.map((x) => new fhir.Reference(x)); }
-    if (source['symptomConditionEffect']) { this.symptomConditionEffect = new fhir.CodeableConcept(source.symptomConditionEffect!); }
-    if (source['classification']) { this.classification = new fhir.CodeableConcept(source.classification!); }
-    if (source['frequencyOfOccurrence']) { this.frequencyOfOccurrence = new fhir.CodeableConcept(source.frequencyOfOccurrence!); }
+    if (source['symptomConditionEffect']) { this.symptomConditionEffect = new fhir.CodeableConcept(source.symptomConditionEffect); }
+    if (source['classification']) { this.classification = new fhir.CodeableConcept(source.classification); }
+    if (source['frequencyOfOccurrence']) { this.frequencyOfOccurrence = new fhir.CodeableConcept(source.frequencyOfOccurrence); }
     if (source['population']) { this.population = source.population.map((x) => new fhir.Population(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: MedicinalProductUndesirableEffect.resourceType']); }
-    if (this["subject"]) { this.subject.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["symptomConditionEffect"]) { results.push(...this.symptomConditionEffect.doModelValidation()); }
-    if (this["classification"]) { results.push(...this.classification.doModelValidation()); }
-    if (this["frequencyOfOccurrence"]) { results.push(...this.frequencyOfOccurrence.doModelValidation()); }
-    if (this["population"]) { this.population.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'MedicinalProductUndesirableEffect' fhir: MedicinalProductUndesirableEffect.resourceType:'MedicinalProductUndesirableEffect'", }));
+    }
+    if (this["subject"]) { this.subject.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["symptomConditionEffect"]) { outcome.issue!.push(...this.symptomConditionEffect.doModelValidation().issue!); }
+    if (this["classification"]) { outcome.issue!.push(...this.classification.doModelValidation().issue!); }
+    if (this["frequencyOfOccurrence"]) { outcome.issue!.push(...this.frequencyOfOccurrence.doModelValidation().issue!); }
+    if (this["population"]) { this.population.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

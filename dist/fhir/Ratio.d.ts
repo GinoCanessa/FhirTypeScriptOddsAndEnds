@@ -1,21 +1,22 @@
 import * as fhir from '../fhir.js';
 /**
- * A relationship of two Quantity values - expressed as a numerator and a denominator.
+ * Valid arguments for the Ratio type.
  */
-export declare type IRatio = fhir.IFhirElement & {
+export interface RatioArgs extends fhir.FhirElementArgs {
     /**
      * The value of the numerator.
      */
-    numerator?: fhir.IQuantity | undefined;
+    numerator?: fhir.QuantityArgs | undefined;
     /**
      * The value of the denominator.
      */
-    denominator?: fhir.IQuantity | undefined;
-};
+    denominator?: fhir.QuantityArgs | undefined;
+}
 /**
  * A relationship of two Quantity values - expressed as a numerator and a denominator.
  */
-export declare class Ratio extends fhir.FhirElement implements IRatio {
+export declare class Ratio extends fhir.FhirElement {
+    readonly __dataType: string;
     /**
      * The value of the numerator.
      */
@@ -27,10 +28,14 @@ export declare class Ratio extends fhir.FhirElement implements IRatio {
     /**
      * Default constructor for Ratio - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IRatio>);
+    constructor(source?: Partial<RatioArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Ratio.d.ts.map

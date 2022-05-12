@@ -3,12 +3,14 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ImplementationGuide
 import * as fhir from '../fhir.js';
-import { ResourceTypesValueSet } from '../fhirValueSets/ResourceTypesValueSet.js';
-import { FHIRVersionValueSet } from '../fhirValueSets/FHIRVersionValueSet.js';
-import { GuidePageGenerationValueSet } from '../fhirValueSets/GuidePageGenerationValueSet.js';
-import { GuideParameterCodeValueSet } from '../fhirValueSets/GuideParameterCodeValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { SpdxLicenseValueSet } from '../fhirValueSets/SpdxLicenseValueSet.js';
+import { ResourceTypesValueSet, } from '../fhirValueSets/ResourceTypesValueSet.js';
+import { FHIRVersionValueSet, } from '../fhirValueSets/FHIRVersionValueSet.js';
+import { GuidePageGenerationValueSet, } from '../fhirValueSets/GuidePageGenerationValueSet.js';
+import { GuideParameterCodeValueSet, } from '../fhirValueSets/GuideParameterCodeValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { SpdxLicenseValueSet, } from '../fhirValueSets/SpdxLicenseValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Another implementation guide that this implementation depends on. Typically, an implementation guide uses value sets, profiles etc.defined in other implementation guides.
  */
@@ -16,48 +18,46 @@ export class ImplementationGuideDependsOn extends fhir.BackboneElement {
     /**
      * Default constructor for ImplementationGuideDependsOn - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImplementationGuideDependsOn';
         if (source['uri']) {
-            this.uri = source.uri;
+            this.uri = new fhir.FhirCanonical({ value: source.uri });
         }
         else {
             this.uri = null;
         }
-        if (source['_uri']) {
-            this._uri = new fhir.FhirElement(source._uri);
-        }
         if (source['packageId']) {
-            this.packageId = source.packageId;
-        }
-        if (source['_packageId']) {
-            this._packageId = new fhir.FhirElement(source._packageId);
+            this.packageId = new fhir.FhirId({ value: source.packageId });
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["uri"]) {
-            results.push(["uri", 'Missing required element: ImplementationGuide.dependsOn.uri']);
+        var outcome = super.doModelValidation();
+        if (!this['uri']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property uri:fhir.FhirCanonical fhir: ImplementationGuide.dependsOn.uri:canonical", }));
         }
-        if (this["_uri"]) {
-            results.push(...this._uri.doModelValidation());
+        if (this["uri"]) {
+            outcome.issue.push(...this.uri.doModelValidation().issue);
         }
-        if (this["_packageId"]) {
-            results.push(...this._packageId.doModelValidation());
+        if (this["packageId"]) {
+            outcome.issue.push(...this.packageId.doModelValidation().issue);
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -67,25 +67,20 @@ export class ImplementationGuideGlobal extends fhir.BackboneElement {
     /**
      * Default constructor for ImplementationGuideGlobal - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImplementationGuideGlobal';
         if (source['type']) {
-            this.type = source.type;
+            this.type = new fhir.FhirCode({ value: source.type });
         }
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['profile']) {
-            this.profile = source.profile;
+            this.profile = new fhir.FhirCanonical({ value: source.profile });
         }
         else {
             this.profile = null;
-        }
-        if (source['_profile']) {
-            this._profile = new fhir.FhirElement(source._profile);
         }
     }
     /**
@@ -98,20 +93,26 @@ export class ImplementationGuideGlobal extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: ImplementationGuide.global.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.FhirCode fhir: ImplementationGuide.global.type:code", }));
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (this["type"]) {
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (!this["profile"]) {
-            results.push(["profile", 'Missing required element: ImplementationGuide.global.profile']);
+        if (!this['profile']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property profile:fhir.FhirCanonical fhir: ImplementationGuide.global.profile:canonical", }));
         }
-        if (this["_profile"]) {
-            results.push(...this._profile.doModelValidation());
+        if (this["profile"]) {
+            outcome.issue.push(...this.profile.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -121,39 +122,40 @@ export class ImplementationGuideDefinitionGrouping extends fhir.BackboneElement 
     /**
      * Default constructor for ImplementationGuideDefinitionGrouping - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImplementationGuideDefinitionGrouping';
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirString({ value: source.name });
         }
         else {
             this.name = null;
         }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
-        }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: ImplementationGuide.definition.grouping.name']);
+        var outcome = super.doModelValidation();
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirString fhir: ImplementationGuide.definition.grouping.name:string", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -163,8 +165,14 @@ export class ImplementationGuideDefinitionResource extends fhir.BackboneElement 
     /**
      * Default constructor for ImplementationGuideDefinitionResource - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImplementationGuideDefinitionResource';
+        /**
+         * The resource SHALL be valid against all the versions it is specified to apply to. If the resource referred to is a StructureDefinition, the fhirVersion stated in the StructureDefinition cannot disagree with the version specified here; the specified versions SHALL include the version specified by the StructureDefinition, and may include additional versions using the [applicable-version](extension-structuredefinition-applicable-version.html) extension.
+         */
+        this.fhirVersion = [];
+        this.__exampleIsChoice = true;
         if (source['reference']) {
             this.reference = new fhir.Reference(source.reference);
         }
@@ -172,40 +180,25 @@ export class ImplementationGuideDefinitionResource extends fhir.BackboneElement 
             this.reference = null;
         }
         if (source['fhirVersion']) {
-            this.fhirVersion = source.fhirVersion.map((x) => (x));
-        }
-        if (source['_fhirVersion']) {
-            this._fhirVersion = source._fhirVersion.map((x) => new fhir.FhirElement(x));
+            this.fhirVersion = source.fhirVersion.map((x) => new fhir.FhirCode({ value: x }));
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['description']) {
-            this.description = source.description;
+            this.description = new fhir.FhirString({ value: source.description });
         }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+        if (source['example']) {
+            this.example = source.example;
         }
-        if (source['exampleBoolean']) {
-            this.exampleBoolean = source.exampleBoolean;
+        else if (source['exampleBoolean']) {
+            this.example = new fhir.FhirBoolean({ value: source.exampleBoolean });
         }
-        if (source['_exampleBoolean']) {
-            this._exampleBoolean = new fhir.FhirElement(source._exampleBoolean);
-        }
-        if (source['exampleCanonical']) {
-            this.exampleCanonical = source.exampleCanonical;
-        }
-        if (source['_exampleCanonical']) {
-            this._exampleCanonical = new fhir.FhirElement(source._exampleCanonical);
+        else if (source['exampleCanonical']) {
+            this.example = new fhir.FhirCanonical({ value: source.exampleCanonical });
         }
         if (source['groupingId']) {
-            this.groupingId = source.groupingId;
-        }
-        if (source['_groupingId']) {
-            this._groupingId = new fhir.FhirElement(source._groupingId);
+            this.groupingId = new fhir.FhirId({ value: source.groupingId });
         }
     }
     /**
@@ -218,32 +211,32 @@ export class ImplementationGuideDefinitionResource extends fhir.BackboneElement 
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["reference"]) {
-            results.push(["reference", 'Missing required element: ImplementationGuide.definition.resource.reference']);
+        var outcome = super.doModelValidation();
+        if (!this['reference']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property reference:fhir.Reference fhir: ImplementationGuide.definition.resource.reference:Reference", }));
         }
         if (this["reference"]) {
-            results.push(...this.reference.doModelValidation());
+            outcome.issue.push(...this.reference.doModelValidation().issue);
         }
-        if (this["_fhirVersion"]) {
-            this._fhirVersion.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["fhirVersion"]) {
+            this.fhirVersion.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_exampleBoolean"]) {
-            results.push(...this._exampleBoolean.doModelValidation());
+        if (this["groupingId"]) {
+            outcome.issue.push(...this.groupingId.doModelValidation().issue);
         }
-        if (this["_exampleCanonical"]) {
-            results.push(...this._exampleCanonical.doModelValidation());
-        }
-        if (this["_groupingId"]) {
-            results.push(...this._groupingId.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -253,34 +246,37 @@ export class ImplementationGuideDefinitionPage extends fhir.BackboneElement {
     /**
      * Default constructor for ImplementationGuideDefinitionPage - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['nameUrl']) {
-            this.nameUrl = source.nameUrl;
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImplementationGuideDefinitionPage';
+        this.__nameIsChoice = true;
+        /**
+         * The implementation guide breadcrumbs are generated from this structure.
+         */
+        this.page = [];
+        if (source['name']) {
+            this.name = source.name;
         }
-        if (source['_nameUrl']) {
-            this._nameUrl = new fhir.FhirElement(source._nameUrl);
+        else if (source['nameUrl']) {
+            this.name = new fhir.FhirUrl({ value: source.nameUrl });
         }
-        if (source['nameReference']) {
-            this.nameReference = new fhir.Reference(source.nameReference);
+        else if (source['nameReference']) {
+            this.name = new fhir.Reference(source.nameReference);
+        }
+        else {
+            this.name = null;
         }
         if (source['title']) {
-            this.title = source.title;
+            this.title = new fhir.FhirString({ value: source.title });
         }
         else {
             this.title = null;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
         }
         if (source['generation']) {
             this.generation = source.generation;
         }
         else {
             this.generation = null;
-        }
-        if (source['_generation']) {
-            this._generation = new fhir.FhirElement(source._generation);
         }
         if (source['page']) {
             this.page = source.page.map((x) => new fhir.ImplementationGuideDefinitionPage(x));
@@ -296,29 +292,29 @@ export class ImplementationGuideDefinitionPage extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_nameUrl"]) {
-            results.push(...this._nameUrl.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name: fhir: ImplementationGuide.definition.page.name[x]:", }));
         }
-        if (this["nameReference"]) {
-            results.push(...this.nameReference.doModelValidation());
+        if (!this['title']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property title:fhir.FhirString fhir: ImplementationGuide.definition.page.title:string", }));
         }
-        if (!this["title"]) {
-            results.push(["title", 'Missing required element: ImplementationGuide.definition.page.title']);
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
-        }
-        if (!this["generation"]) {
-            results.push(["generation", 'Missing required element: ImplementationGuide.definition.page.generation']);
-        }
-        if (this["_generation"]) {
-            results.push(...this._generation.doModelValidation());
+        if (!this['generation']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property generation:GuidePageGenerationValueSetEnum fhir: ImplementationGuide.definition.page.generation:code", }));
         }
         if (this["page"]) {
-            this.page.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.page.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -328,25 +324,20 @@ export class ImplementationGuideDefinitionParameter extends fhir.BackboneElement
     /**
      * Default constructor for ImplementationGuideDefinitionParameter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImplementationGuideDefinitionParameter';
         if (source['code']) {
             this.code = source.code;
         }
         else {
             this.code = null;
         }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
-        }
         if (source['value']) {
-            this.value = source.value;
+            this.value = new fhir.FhirString({ value: source.value });
         }
         else {
             this.value = null;
-        }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
         }
     }
     /**
@@ -359,20 +350,23 @@ export class ImplementationGuideDefinitionParameter extends fhir.BackboneElement
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: ImplementationGuide.definition.parameter.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:GuideParameterCodeValueSetEnum fhir: ImplementationGuide.definition.parameter.code:code", }));
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value:fhir.FhirString fhir: ImplementationGuide.definition.parameter.value:string", }));
         }
-        if (!this["value"]) {
-            results.push(["value", 'Missing required element: ImplementationGuide.definition.parameter.value']);
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
         }
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -382,54 +376,52 @@ export class ImplementationGuideDefinitionTemplate extends fhir.BackboneElement 
     /**
      * Default constructor for ImplementationGuideDefinitionTemplate - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImplementationGuideDefinitionTemplate';
         if (source['code']) {
-            this.code = source.code;
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         else {
             this.code = null;
         }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
-        }
         if (source['source']) {
-            this.source = source.source;
+            this.source = new fhir.FhirString({ value: source.source });
         }
         else {
             this.source = null;
         }
-        if (source['_source']) {
-            this._source = new fhir.FhirElement(source._source);
-        }
         if (source['scope']) {
-            this.scope = source.scope;
-        }
-        if (source['_scope']) {
-            this._scope = new fhir.FhirElement(source._scope);
+            this.scope = new fhir.FhirString({ value: source.scope });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: ImplementationGuide.definition.template.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.FhirCode fhir: ImplementationGuide.definition.template.code:code", }));
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (!this["source"]) {
-            results.push(["source", 'Missing required element: ImplementationGuide.definition.template.source']);
+        if (!this['source']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property source:fhir.FhirString fhir: ImplementationGuide.definition.template.source:string", }));
         }
-        if (this["_source"]) {
-            results.push(...this._source.doModelValidation());
+        if (this["source"]) {
+            outcome.issue.push(...this.source.doModelValidation().issue);
         }
-        if (this["_scope"]) {
-            results.push(...this._scope.doModelValidation());
+        if (this["scope"]) {
+            outcome.issue.push(...this.scope.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -439,8 +431,25 @@ export class ImplementationGuideDefinition extends fhir.BackboneElement {
     /**
      * Default constructor for ImplementationGuideDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImplementationGuideDefinition';
+        /**
+         * Groupings are arbitrary sub-divisions of content. Typically, they are used to help build Table of Contents automatically.
+         */
+        this.grouping = [];
+        /**
+         * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
+         */
+        this.resource = [];
+        /**
+         * Defines how IG is built by tools.
+         */
+        this.parameter = [];
+        /**
+         * A template for building resources.
+         */
+        this.template = [];
         if (source['grouping']) {
             this.grouping = source.grouping.map((x) => new fhir.ImplementationGuideDefinitionGrouping(x));
         }
@@ -464,26 +473,38 @@ export class ImplementationGuideDefinition extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["grouping"]) {
-            this.grouping.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.grouping.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if ((!this["resource"]) || (this["resource"].length === 0)) {
-            results.push(["resource", 'Missing required element: ImplementationGuide.definition.resource']);
+        if (!this['resource']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resource:fhir.ImplementationGuideDefinitionResource[] fhir: ImplementationGuide.definition.resource:resource", }));
+        }
+        else if (!Array.isArray(this.resource)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property resource:fhir.ImplementationGuideDefinitionResource[] fhir: ImplementationGuide.definition.resource:resource", }));
+        }
+        else if (this.resource.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resource:fhir.ImplementationGuideDefinitionResource[] fhir: ImplementationGuide.definition.resource:resource", }));
         }
         if (this["resource"]) {
-            this.resource.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.resource.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["page"]) {
-            results.push(...this.page.doModelValidation());
+            outcome.issue.push(...this.page.doModelValidation().issue);
         }
         if (this["parameter"]) {
-            this.parameter.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.parameter.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["template"]) {
-            this.template.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.template.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -493,54 +514,50 @@ export class ImplementationGuideManifestResource extends fhir.BackboneElement {
     /**
      * Default constructor for ImplementationGuideManifestResource - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImplementationGuideManifestResource';
+        this.__exampleIsChoice = true;
         if (source['reference']) {
             this.reference = new fhir.Reference(source.reference);
         }
         else {
             this.reference = null;
         }
-        if (source['exampleBoolean']) {
-            this.exampleBoolean = source.exampleBoolean;
+        if (source['example']) {
+            this.example = source.example;
         }
-        if (source['_exampleBoolean']) {
-            this._exampleBoolean = new fhir.FhirElement(source._exampleBoolean);
+        else if (source['exampleBoolean']) {
+            this.example = new fhir.FhirBoolean({ value: source.exampleBoolean });
         }
-        if (source['exampleCanonical']) {
-            this.exampleCanonical = source.exampleCanonical;
-        }
-        if (source['_exampleCanonical']) {
-            this._exampleCanonical = new fhir.FhirElement(source._exampleCanonical);
+        else if (source['exampleCanonical']) {
+            this.example = new fhir.FhirCanonical({ value: source.exampleCanonical });
         }
         if (source['relativePath']) {
-            this.relativePath = source.relativePath;
-        }
-        if (source['_relativePath']) {
-            this._relativePath = new fhir.FhirElement(source._relativePath);
+            this.relativePath = new fhir.FhirUrl({ value: source.relativePath });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["reference"]) {
-            results.push(["reference", 'Missing required element: ImplementationGuide.manifest.resource.reference']);
+        var outcome = super.doModelValidation();
+        if (!this['reference']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property reference:fhir.Reference fhir: ImplementationGuide.manifest.resource.reference:Reference", }));
         }
         if (this["reference"]) {
-            results.push(...this.reference.doModelValidation());
+            outcome.issue.push(...this.reference.doModelValidation().issue);
         }
-        if (this["_exampleBoolean"]) {
-            results.push(...this._exampleBoolean.doModelValidation());
+        if (this["relativePath"]) {
+            outcome.issue.push(...this.relativePath.doModelValidation().issue);
         }
-        if (this["_exampleCanonical"]) {
-            results.push(...this._exampleCanonical.doModelValidation());
-        }
-        if (this["_relativePath"]) {
-            results.push(...this._relativePath.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -550,48 +567,50 @@ export class ImplementationGuideManifestPage extends fhir.BackboneElement {
     /**
      * Default constructor for ImplementationGuideManifestPage - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImplementationGuideManifestPage';
+        /**
+         * Appending 'rendering' + "/" + page.name + "#" + page.anchor should resolve to the anchor.
+         */
+        this.anchor = [];
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirString({ value: source.name });
         }
         else {
             this.name = null;
         }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
-        }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['anchor']) {
-            this.anchor = source.anchor.map((x) => (x));
-        }
-        if (source['_anchor']) {
-            this._anchor = source._anchor.map((x) => new fhir.FhirElement(x));
+            this.anchor = source.anchor.map((x) => new fhir.FhirString({ value: x }));
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: ImplementationGuide.manifest.page.name']);
+        var outcome = super.doModelValidation();
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirString fhir: ImplementationGuide.manifest.page.name:string", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_anchor"]) {
-            this._anchor.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["anchor"]) {
+            this.anchor.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -601,13 +620,27 @@ export class ImplementationGuideManifest extends fhir.BackboneElement {
     /**
      * Default constructor for ImplementationGuideManifest - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImplementationGuideManifest';
+        /**
+         * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
+         */
+        this.resource = [];
+        /**
+         * Information about a page within the IG.
+         */
+        this.page = [];
+        /**
+         * Indicates a relative path to an image that exists within the IG.
+         */
+        this.image = [];
+        /**
+         * Indicates the relative path of an additional non-page, non-image file that is part of the IG - e.g. zip, jar and similar files that could be the target of a hyperlink in a derived IG.
+         */
+        this.other = [];
         if (source['rendering']) {
-            this.rendering = source.rendering;
-        }
-        if (source['_rendering']) {
-            this._rendering = new fhir.FhirElement(source._rendering);
+            this.rendering = new fhir.FhirUrl({ value: source.rendering });
         }
         if (source['resource']) {
             this.resource = source.resource.map((x) => new fhir.ImplementationGuideManifestResource(x));
@@ -619,42 +652,48 @@ export class ImplementationGuideManifest extends fhir.BackboneElement {
             this.page = source.page.map((x) => new fhir.ImplementationGuideManifestPage(x));
         }
         if (source['image']) {
-            this.image = source.image.map((x) => (x));
-        }
-        if (source['_image']) {
-            this._image = source._image.map((x) => new fhir.FhirElement(x));
+            this.image = source.image.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['other']) {
-            this.other = source.other.map((x) => (x));
-        }
-        if (source['_other']) {
-            this._other = source._other.map((x) => new fhir.FhirElement(x));
+            this.other = source.other.map((x) => new fhir.FhirString({ value: x }));
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_rendering"]) {
-            results.push(...this._rendering.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["rendering"]) {
+            outcome.issue.push(...this.rendering.doModelValidation().issue);
         }
-        if ((!this["resource"]) || (this["resource"].length === 0)) {
-            results.push(["resource", 'Missing required element: ImplementationGuide.manifest.resource']);
+        if (!this['resource']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resource:fhir.ImplementationGuideManifestResource[] fhir: ImplementationGuide.manifest.resource:resource", }));
+        }
+        else if (!Array.isArray(this.resource)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property resource:fhir.ImplementationGuideManifestResource[] fhir: ImplementationGuide.manifest.resource:resource", }));
+        }
+        else if (this.resource.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resource:fhir.ImplementationGuideManifestResource[] fhir: ImplementationGuide.manifest.resource:resource", }));
         }
         if (this["resource"]) {
-            this.resource.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.resource.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["page"]) {
-            this.page.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.page.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_image"]) {
-            this._image.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["image"]) {
+            this.image.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_other"]) {
-            this._other.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["other"]) {
+            this.other.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -664,38 +703,51 @@ export class ImplementationGuide extends fhir.DomainResource {
     /**
      * Default constructor for ImplementationGuide - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImplementationGuide';
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the implementation guide to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * Most implementation guides target a single version - e.g. they describe how to use a particular version, and the profiles and examples etc are valid for that version. But some implementation guides describe how to use multiple different versions of FHIR to solve the same problem, or in concert with each other. Typically, the requirement to support multiple versions arises as implementation matures and different implementation communities are stuck at different versions by regulation or market dynamics.
+         */
+        this.fhirVersion = [];
+        /**
+         * Another implementation guide that this implementation depends on. Typically, an implementation guide uses value sets, profiles etc.defined in other implementation guides.
+         */
+        this.dependsOn = [];
+        /**
+         * See [Default Profiles](implementationguide.html#default) for a discussion of which resources are 'covered' by an implementation guide.
+         */
+        this.global = [];
         this.resourceType = 'ImplementationGuide';
         if (source['url']) {
-            this.url = source.url;
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         else {
             this.url = null;
         }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
-        }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirString({ value: source.name });
         }
         else {
             this.name = null;
         }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
-        }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['status']) {
             this.status = source.status;
@@ -703,35 +755,20 @@ export class ImplementationGuide extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
-        }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -740,34 +777,22 @@ export class ImplementationGuide extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['packageId']) {
-            this.packageId = source.packageId;
+            this.packageId = new fhir.FhirId({ value: source.packageId });
         }
         else {
             this.packageId = null;
         }
-        if (source['_packageId']) {
-            this._packageId = new fhir.FhirElement(source._packageId);
-        }
         if (source['license']) {
-            this.license = source.license;
-        }
-        if (source['_license']) {
-            this._license = new fhir.FhirElement(source._license);
+            this.license = new fhir.FhirCode({ value: source.license });
         }
         if (source['fhirVersion']) {
-            this.fhirVersion = source.fhirVersion.map((x) => (x));
+            this.fhirVersion = source.fhirVersion.map((x) => new fhir.FhirCode({ value: x }));
         }
         else {
             this.fhirVersion = null;
-        }
-        if (source['_fhirVersion']) {
-            this._fhirVersion = source._fhirVersion.map((x) => new fhir.FhirElement(x));
         }
         if (source['dependsOn']) {
             this.dependsOn = source.dependsOn.map((x) => new fhir.ImplementationGuideDependsOn(x));
@@ -804,86 +829,95 @@ export class ImplementationGuide extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: ImplementationGuide.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'ImplementationGuide' fhir: ImplementationGuide.resourceType:'ImplementationGuide'", }));
         }
-        if (!this["url"]) {
-            results.push(["url", 'Missing required element: ImplementationGuide.url']);
+        if (!this['url']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property url:fhir.FhirUri fhir: ImplementationGuide.url:uri", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: ImplementationGuide.name']);
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirString fhir: ImplementationGuide.name:string", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: ImplementationGuide.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: ImplementationGuide.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
-        if (!this["packageId"]) {
-            results.push(["packageId", 'Missing required element: ImplementationGuide.packageId']);
+        if (!this['packageId']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property packageId:fhir.FhirId fhir: ImplementationGuide.packageId:id", }));
         }
-        if (this["_packageId"]) {
-            results.push(...this._packageId.doModelValidation());
+        if (this["packageId"]) {
+            outcome.issue.push(...this.packageId.doModelValidation().issue);
         }
-        if (this["_license"]) {
-            results.push(...this._license.doModelValidation());
+        if (this["license"]) {
+            outcome.issue.push(...this.license.doModelValidation().issue);
         }
-        if ((!this["fhirVersion"]) || (this["fhirVersion"].length === 0)) {
-            results.push(["fhirVersion", 'Missing required element: ImplementationGuide.fhirVersion']);
+        if (!this['fhirVersion']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property fhirVersion:fhir.FhirCode[] fhir: ImplementationGuide.fhirVersion:code", }));
         }
-        if (this["_fhirVersion"]) {
-            this._fhirVersion.forEach((x) => { results.push(...x.doModelValidation()); });
+        else if (!Array.isArray(this.fhirVersion)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property fhirVersion:fhir.FhirCode[] fhir: ImplementationGuide.fhirVersion:code", }));
+        }
+        else if (this.fhirVersion.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property fhirVersion:fhir.FhirCode[] fhir: ImplementationGuide.fhirVersion:code", }));
+        }
+        if (this["fhirVersion"]) {
+            this.fhirVersion.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["dependsOn"]) {
-            this.dependsOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.dependsOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["global"]) {
-            this.global.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.global.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["definition"]) {
-            results.push(...this.definition.doModelValidation());
+            outcome.issue.push(...this.definition.doModelValidation().issue);
         }
         if (this["manifest"]) {
-            results.push(...this.manifest.doModelValidation());
+            outcome.issue.push(...this.manifest.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ImplementationGuide.js.map

@@ -51,21 +51,3 @@ export type MissingToothReasonValueSetType = typeof MissingToothReasonValueSet;
 /**
  * This value set includes sample Missing Tooth Reason codes.
  */
-export enum MissingToothReasonValueSetEnum {
-  /**
-   * c: Congenital
-   */
-  C = "c",
-  /**
-   * e: Extraction
-   */
-  E = "e",
-  /**
-   * o: Other
-   */
-  O = "o",
-  /**
-   * u: Unknown
-   */
-  U = "u",
-}

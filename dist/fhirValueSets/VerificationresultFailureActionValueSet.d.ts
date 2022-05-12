@@ -27,22 +27,4 @@ export declare type VerificationresultFailureActionValueSetType = typeof Verific
 /**
  * The result if validation fails
  */
-export declare enum VerificationresultFailureActionValueSetEnum {
-    /**
-     * Code: fatal
-     */
-    Fatal = "fatal",
-    /**
-     * Code: none
-     */
-    None = "none",
-    /**
-     * Code: rec-only
-     */
-    RecordOnly = "rec-only",
-    /**
-     * Code: warn
-     */
-    Warning = "warn"
-}
 //# sourceMappingURL=VerificationresultFailureActionValueSet.d.ts.map

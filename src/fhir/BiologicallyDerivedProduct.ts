@@ -3,204 +3,49 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: BiologicallyDerivedProduct
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ProcedureCodeValueSet, ProcedureCodeValueSetType, ProcedureCodeValueSetEnum } from '../fhirValueSets/ProcedureCodeValueSet.js'
-import { ProductStorageScaleValueSet, ProductStorageScaleValueSetType, ProductStorageScaleValueSetEnum } from '../fhirValueSets/ProductStorageScaleValueSet.js'
-import { ProductCategoryValueSet, ProductCategoryValueSetType, ProductCategoryValueSetEnum } from '../fhirValueSets/ProductCategoryValueSet.js'
-import { ProductStatusValueSet, ProductStatusValueSetType, ProductStatusValueSetEnum } from '../fhirValueSets/ProductStatusValueSet.js'
-
+import { ProcedureCodeValueSet, ProcedureCodeValueSetType,} from '../fhirValueSets/ProcedureCodeValueSet.js';
+import { ProcedureCodeValueSetEnum } from '../valueSetEnums.js';
+import { ProductStorageScaleValueSet, ProductStorageScaleValueSetType,} from '../fhirValueSets/ProductStorageScaleValueSet.js';
+import { ProductStorageScaleValueSetEnum } from '../valueSetEnums.js';
+import { ProductCategoryValueSet, ProductCategoryValueSetType,} from '../fhirValueSets/ProductCategoryValueSet.js';
+import { ProductCategoryValueSetEnum } from '../valueSetEnums.js';
+import { ProductStatusValueSet, ProductStatusValueSetType,} from '../fhirValueSets/ProductStatusValueSet.js';
+import { ProductStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * How this product was collected.
+ * Valid arguments for the BiologicallyDerivedProductCollection type.
  */
-export type IBiologicallyDerivedProductCollection = fhir.IBackboneElement & { 
+export interface BiologicallyDerivedProductCollectionArgs extends fhir.BackboneElementArgs {
   /**
    * Healthcare professional who is performing the collection.
    */
-  collector?: fhir.IReference|undefined;
+  collector?: fhir.ReferenceArgs|undefined;
   /**
    * The patient or entity, such as a hospital or vendor in the case of a processed/manipulated/manufactured product, providing the product.
    */
-  source?: fhir.IReference|undefined;
+  source?: fhir.ReferenceArgs|undefined;
   /**
    * Time of product collection.
    */
-  collectedDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.collection.collected[x]
-   */
-  _collectedDateTime?: fhir.IFhirElement|undefined;
+  collected?: fhir.FhirDateTime|fhir.Period|undefined;
   /**
    * Time of product collection.
    */
-  collectedPeriod?: fhir.IPeriod|undefined;
-}
-
-/**
- * Any processing of the product during collection that does not change the fundamental nature of the product. For example adding anti-coagulants during the collection of Peripheral Blood Stem Cells.
- */
-export type IBiologicallyDerivedProductProcessing = fhir.IBackboneElement & { 
+  collectedDateTime?: fhir.FhirDateTime|string|undefined;
   /**
-   * Description of of processing.
+   * Time of product collection.
    */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.processing.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Procesing code.
-   */
-  procedure?: fhir.ICodeableConcept|undefined;
-  /**
-   * Substance added during processing.
-   */
-  additive?: fhir.IReference|undefined;
-  /**
-   * Time of processing.
-   */
-  timeDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.processing.time[x]
-   */
-  _timeDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * Time of processing.
-   */
-  timePeriod?: fhir.IPeriod|undefined;
-}
-
-/**
- * Any manipulation of product post-collection that is intended to alter the product.  For example a buffy-coat enrichment or CD8 reduction of Peripheral Blood Stem Cells to make it more suitable for infusion.
- */
-export type IBiologicallyDerivedProductManipulation = fhir.IBackboneElement & { 
-  /**
-   * Description of manipulation.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.manipulation.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Time of manipulation.
-   */
-  timeDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.manipulation.time[x]
-   */
-  _timeDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * Time of manipulation.
-   */
-  timePeriod?: fhir.IPeriod|undefined;
-}
-
-/**
- * Product storage.
- */
-export type IBiologicallyDerivedProductStorage = fhir.IBackboneElement & { 
-  /**
-   * Description of storage.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.storage.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Storage temperature.
-   */
-  temperature?: number|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.storage.temperature
-   */
-  _temperature?: fhir.IFhirElement|undefined;
-  /**
-   * Temperature scale used.
-   */
-  scale?: ProductStorageScaleValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.storage.scale
-   */
-  _scale?: fhir.IFhirElement|undefined;
-  /**
-   * Storage timeperiod.
-   */
-  duration?: fhir.IPeriod|undefined;
-}
-
-/**
- * A material substance originating from a biological entity intended to be transplanted or infused
- * into another (possibly the same) biological entity.
- */
-export type IBiologicallyDerivedProduct = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "BiologicallyDerivedProduct";
-  /**
-   * This records identifiers associated with this biologically derived product instance that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * Broad category of this product.
-   */
-  productCategory?: ProductCategoryValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.productCategory
-   */
-  _productCategory?: fhir.IFhirElement|undefined;
-  /**
-   * A code that identifies the kind of this biologically derived product (SNOMED Ctcode).
-   */
-  productCode?: fhir.ICodeableConcept|undefined;
-  /**
-   * Whether the product is currently available.
-   */
-  status?: ProductStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Procedure request to obtain this biologically derived product.
-   */
-  request?: fhir.IReference[]|undefined;
-  /**
-   * Number of discrete units within this product.
-   */
-  quantity?: number|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.quantity
-   */
-  _quantity?: fhir.IFhirElement|undefined;
-  /**
-   * For products that have multiple collections. For example Peripheral Blood Stem Cells may be collected over several days from a single donor and the donation split into in multiple containers which must be linked to the parent donation.
-   */
-  parent?: fhir.IReference[]|undefined;
-  /**
-   * How this product was collected.
-   */
-  collection?: fhir.IBiologicallyDerivedProductCollection|undefined;
-  /**
-   * Any processing of the product during collection that does not change the fundamental nature of the product. For example adding anti-coagulants during the collection of Peripheral Blood Stem Cells.
-   */
-  processing?: fhir.IBiologicallyDerivedProductProcessing[]|undefined;
-  /**
-   * Any manipulation of product post-collection that is intended to alter the product.  For example a buffy-coat enrichment or CD8 reduction of Peripheral Blood Stem Cells to make it more suitable for infusion.
-   */
-  manipulation?: fhir.IBiologicallyDerivedProductManipulation|undefined;
-  /**
-   * Product storage.
-   */
-  storage?: fhir.IBiologicallyDerivedProductStorage[]|undefined;
+  collectedPeriod?: fhir.PeriodArgs|undefined;
 }
 
 /**
  * How this product was collected.
  */
-export class BiologicallyDerivedProductCollection extends fhir.BackboneElement implements IBiologicallyDerivedProductCollection {
+export class BiologicallyDerivedProductCollection extends fhir.BackboneElement {
+  readonly __dataType:string = 'BiologicallyDerivedProductCollection';
   /**
    * Healthcare professional who is performing the collection.
    */
@@ -212,51 +57,74 @@ export class BiologicallyDerivedProductCollection extends fhir.BackboneElement i
   /**
    * Time of product collection.
    */
-  public collectedDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.collection.collected[x]
-   */
-  public _collectedDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Time of product collection.
-   */
-  public collectedPeriod?: fhir.Period|undefined;
+  public collected?: (fhir.FhirDateTime|fhir.Period)|undefined;
+  readonly __collectedIsChoice:true = true;
   /**
    * Default constructor for BiologicallyDerivedProductCollection - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IBiologicallyDerivedProductCollection> = { }) {
-    super(source);
-    if (source['collector']) { this.collector = new fhir.Reference(source.collector!); }
-    if (source['source']) { this.source = new fhir.Reference(source.source!); }
-    if (source['collectedDateTime']) { this.collectedDateTime = source.collectedDateTime; }
-    if (source['_collectedDateTime']) { this._collectedDateTime = new fhir.FhirElement(source._collectedDateTime!); }
-    if (source['collectedPeriod']) { this.collectedPeriod = new fhir.Period(source.collectedPeriod!); }
+  constructor(source:Partial<BiologicallyDerivedProductCollectionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['collector']) { this.collector = new fhir.Reference(source.collector); }
+    if (source['source']) { this.source = new fhir.Reference(source.source); }
+    if (source['collected']) { this.collected = source.collected; }
+    else if (source['collectedDateTime']) { this.collected = new fhir.FhirDateTime({value: source.collectedDateTime}); }
+    else if (source['collectedPeriod']) { this.collected = new fhir.Period(source.collectedPeriod); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["collector"]) { results.push(...this.collector.doModelValidation()); }
-    if (this["source"]) { results.push(...this.source.doModelValidation()); }
-    if (this["_collectedDateTime"]) { results.push(...this._collectedDateTime.doModelValidation()); }
-    if (this["collectedPeriod"]) { results.push(...this.collectedPeriod.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["collector"]) { outcome.issue!.push(...this.collector.doModelValidation().issue!); }
+    if (this["source"]) { outcome.issue!.push(...this.source.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the BiologicallyDerivedProductProcessing type.
+ */
+export interface BiologicallyDerivedProductProcessingArgs extends fhir.BackboneElementArgs {
+  /**
+   * Description of of processing.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * Procesing code.
+   */
+  procedure?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Substance added during processing.
+   */
+  additive?: fhir.ReferenceArgs|undefined;
+  /**
+   * Time of processing.
+   */
+  time?: fhir.FhirDateTime|fhir.Period|undefined;
+  /**
+   * Time of processing.
+   */
+  timeDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Time of processing.
+   */
+  timePeriod?: fhir.PeriodArgs|undefined;
 }
 
 /**
  * Any processing of the product during collection that does not change the fundamental nature of the product. For example adding anti-coagulants during the collection of Peripheral Blood Stem Cells.
  */
-export class BiologicallyDerivedProductProcessing extends fhir.BackboneElement implements IBiologicallyDerivedProductProcessing {
+export class BiologicallyDerivedProductProcessing extends fhir.BackboneElement {
+  readonly __dataType:string = 'BiologicallyDerivedProductProcessing';
   /**
    * Description of of processing.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.processing.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Procesing code.
    */
@@ -268,27 +136,19 @@ export class BiologicallyDerivedProductProcessing extends fhir.BackboneElement i
   /**
    * Time of processing.
    */
-  public timeDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.processing.time[x]
-   */
-  public _timeDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Time of processing.
-   */
-  public timePeriod?: fhir.Period|undefined;
+  public time?: (fhir.FhirDateTime|fhir.Period)|undefined;
+  readonly __timeIsChoice:true = true;
   /**
    * Default constructor for BiologicallyDerivedProductProcessing - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IBiologicallyDerivedProductProcessing> = { }) {
-    super(source);
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['procedure']) { this.procedure = new fhir.CodeableConcept(source.procedure!); }
-    if (source['additive']) { this.additive = new fhir.Reference(source.additive!); }
-    if (source['timeDateTime']) { this.timeDateTime = source.timeDateTime; }
-    if (source['_timeDateTime']) { this._timeDateTime = new fhir.FhirElement(source._timeDateTime!); }
-    if (source['timePeriod']) { this.timePeriod = new fhir.Period(source.timePeriod!); }
+  constructor(source:Partial<BiologicallyDerivedProductProcessingArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['procedure']) { this.procedure = new fhir.CodeableConcept(source.procedure); }
+    if (source['additive']) { this.additive = new fhir.Reference(source.additive); }
+    if (source['time']) { this.time = source.time; }
+    else if (source['timeDateTime']) { this.time = new fhir.FhirDateTime({value: source.timeDateTime}); }
+    else if (source['timePeriod']) { this.time = new fhir.Period(source.timePeriod); }
   }
   /**
    * Example-bound Value Set for procedure
@@ -299,92 +159,120 @@ export class BiologicallyDerivedProductProcessing extends fhir.BackboneElement i
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["procedure"]) { results.push(...this.procedure.doModelValidation()); }
-    if (this["additive"]) { results.push(...this.additive.doModelValidation()); }
-    if (this["_timeDateTime"]) { results.push(...this._timeDateTime.doModelValidation()); }
-    if (this["timePeriod"]) { results.push(...this.timePeriod.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["procedure"]) { outcome.issue!.push(...this.procedure.doModelValidation().issue!); }
+    if (this["additive"]) { outcome.issue!.push(...this.additive.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the BiologicallyDerivedProductManipulation type.
+ */
+export interface BiologicallyDerivedProductManipulationArgs extends fhir.BackboneElementArgs {
+  /**
+   * Description of manipulation.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * Time of manipulation.
+   */
+  time?: fhir.FhirDateTime|fhir.Period|undefined;
+  /**
+   * Time of manipulation.
+   */
+  timeDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Time of manipulation.
+   */
+  timePeriod?: fhir.PeriodArgs|undefined;
 }
 
 /**
  * Any manipulation of product post-collection that is intended to alter the product.  For example a buffy-coat enrichment or CD8 reduction of Peripheral Blood Stem Cells to make it more suitable for infusion.
  */
-export class BiologicallyDerivedProductManipulation extends fhir.BackboneElement implements IBiologicallyDerivedProductManipulation {
+export class BiologicallyDerivedProductManipulation extends fhir.BackboneElement {
+  readonly __dataType:string = 'BiologicallyDerivedProductManipulation';
   /**
    * Description of manipulation.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.manipulation.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Time of manipulation.
    */
-  public timeDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.manipulation.time[x]
-   */
-  public _timeDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Time of manipulation.
-   */
-  public timePeriod?: fhir.Period|undefined;
+  public time?: (fhir.FhirDateTime|fhir.Period)|undefined;
+  readonly __timeIsChoice:true = true;
   /**
    * Default constructor for BiologicallyDerivedProductManipulation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IBiologicallyDerivedProductManipulation> = { }) {
-    super(source);
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['timeDateTime']) { this.timeDateTime = source.timeDateTime; }
-    if (source['_timeDateTime']) { this._timeDateTime = new fhir.FhirElement(source._timeDateTime!); }
-    if (source['timePeriod']) { this.timePeriod = new fhir.Period(source.timePeriod!); }
+  constructor(source:Partial<BiologicallyDerivedProductManipulationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['time']) { this.time = source.time; }
+    else if (source['timeDateTime']) { this.time = new fhir.FhirDateTime({value: source.timeDateTime}); }
+    else if (source['timePeriod']) { this.time = new fhir.Period(source.timePeriod); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_timeDateTime"]) { results.push(...this._timeDateTime.doModelValidation()); }
-    if (this["timePeriod"]) { results.push(...this.timePeriod.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the BiologicallyDerivedProductStorage type.
+ */
+export interface BiologicallyDerivedProductStorageArgs extends fhir.BackboneElementArgs {
+  /**
+   * Description of storage.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * Storage temperature.
+   */
+  temperature?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Temperature scale used.
+   */
+  scale?: ProductStorageScaleValueSetEnum|undefined;
+  /**
+   * Storage timeperiod.
+   */
+  duration?: fhir.PeriodArgs|undefined;
 }
 
 /**
  * Product storage.
  */
-export class BiologicallyDerivedProductStorage extends fhir.BackboneElement implements IBiologicallyDerivedProductStorage {
+export class BiologicallyDerivedProductStorage extends fhir.BackboneElement {
+  readonly __dataType:string = 'BiologicallyDerivedProductStorage';
   /**
    * Description of storage.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.storage.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Storage temperature.
    */
-  public temperature?: number|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.storage.temperature
-   */
-  public _temperature?: fhir.FhirElement|undefined;
+  public temperature?: fhir.FhirDecimal|undefined;
   /**
    * Temperature scale used.
    */
   public scale?: ProductStorageScaleValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.storage.scale
-   */
-  public _scale?: fhir.FhirElement|undefined;
   /**
    * Storage timeperiod.
    */
@@ -392,15 +280,12 @@ export class BiologicallyDerivedProductStorage extends fhir.BackboneElement impl
   /**
    * Default constructor for BiologicallyDerivedProductStorage - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IBiologicallyDerivedProductStorage> = { }) {
-    super(source);
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['temperature']) { this.temperature = source.temperature; }
-    if (source['_temperature']) { this._temperature = new fhir.FhirElement(source._temperature!); }
+  constructor(source:Partial<BiologicallyDerivedProductStorageArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['temperature']) { this.temperature = new fhir.FhirDecimal({value: source.temperature}); }
     if (source['scale']) { this.scale = source.scale; }
-    if (source['_scale']) { this._scale = new fhir.FhirElement(source._scale!); }
-    if (source['duration']) { this.duration = new fhir.Period(source.duration!); }
+    if (source['duration']) { this.duration = new fhir.Period(source.duration); }
   }
   /**
    * Required-bound Value Set for scale
@@ -411,21 +296,80 @@ export class BiologicallyDerivedProductStorage extends fhir.BackboneElement impl
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_temperature"]) { results.push(...this._temperature.doModelValidation()); }
-    if (this["_scale"]) { results.push(...this._scale.doModelValidation()); }
-    if (this["duration"]) { results.push(...this.duration.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["temperature"]) { outcome.issue!.push(...this.temperature.doModelValidation().issue!); }
+    if (this["duration"]) { outcome.issue!.push(...this.duration.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the BiologicallyDerivedProduct type.
+ */
+export interface BiologicallyDerivedProductArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "BiologicallyDerivedProduct"|undefined;
+  /**
+   * This records identifiers associated with this biologically derived product instance that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * Broad category of this product.
+   */
+  productCategory?: ProductCategoryValueSetEnum|undefined;
+  /**
+   * A code that identifies the kind of this biologically derived product (SNOMED Ctcode).
+   */
+  productCode?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Whether the product is currently available.
+   */
+  status?: ProductStatusValueSetEnum|undefined;
+  /**
+   * Procedure request to obtain this biologically derived product.
+   */
+  request?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Number of discrete units within this product.
+   */
+  quantity?: fhir.FhirInteger|number|undefined;
+  /**
+   * For products that have multiple collections. For example Peripheral Blood Stem Cells may be collected over several days from a single donor and the donation split into in multiple containers which must be linked to the parent donation.
+   */
+  parent?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * How this product was collected.
+   */
+  collection?: fhir.BiologicallyDerivedProductCollectionArgs|undefined;
+  /**
+   * Any processing of the product during collection that does not change the fundamental nature of the product. For example adding anti-coagulants during the collection of Peripheral Blood Stem Cells.
+   */
+  processing?: fhir.BiologicallyDerivedProductProcessingArgs[]|undefined;
+  /**
+   * Any manipulation of product post-collection that is intended to alter the product.  For example a buffy-coat enrichment or CD8 reduction of Peripheral Blood Stem Cells to make it more suitable for infusion.
+   */
+  manipulation?: fhir.BiologicallyDerivedProductManipulationArgs|undefined;
+  /**
+   * Product storage.
+   */
+  storage?: fhir.BiologicallyDerivedProductStorageArgs[]|undefined;
 }
 
 /**
  * A material substance originating from a biological entity intended to be transplanted or infused
  * into another (possibly the same) biological entity.
  */
-export class BiologicallyDerivedProduct extends fhir.DomainResource implements IBiologicallyDerivedProduct {
+export class BiologicallyDerivedProduct extends fhir.DomainResource {
+  readonly __dataType:string = 'BiologicallyDerivedProduct';
   /**
    * Resource Type Name
    */
@@ -433,15 +377,11 @@ export class BiologicallyDerivedProduct extends fhir.DomainResource implements I
   /**
    * This records identifiers associated with this biologically derived product instance that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Broad category of this product.
    */
   public productCategory?: ProductCategoryValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.productCategory
-   */
-  public _productCategory?: fhir.FhirElement|undefined;
   /**
    * A code that identifies the kind of this biologically derived product (SNOMED Ctcode).
    */
@@ -451,25 +391,17 @@ export class BiologicallyDerivedProduct extends fhir.DomainResource implements I
    */
   public status?: ProductStatusValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Procedure request to obtain this biologically derived product.
    */
-  public request?: fhir.Reference[]|undefined;
+  public request?: fhir.Reference[]|undefined = [];
   /**
    * Number of discrete units within this product.
    */
-  public quantity?: number|undefined;
-  /**
-   * Extended properties for primitive element: BiologicallyDerivedProduct.quantity
-   */
-  public _quantity?: fhir.FhirElement|undefined;
+  public quantity?: fhir.FhirInteger|undefined;
   /**
    * For products that have multiple collections. For example Peripheral Blood Stem Cells may be collected over several days from a single donor and the donation split into in multiple containers which must be linked to the parent donation.
    */
-  public parent?: fhir.Reference[]|undefined;
+  public parent?: fhir.Reference[]|undefined = [];
   /**
    * How this product was collected.
    */
@@ -477,7 +409,7 @@ export class BiologicallyDerivedProduct extends fhir.DomainResource implements I
   /**
    * Any processing of the product during collection that does not change the fundamental nature of the product. For example adding anti-coagulants during the collection of Peripheral Blood Stem Cells.
    */
-  public processing?: fhir.BiologicallyDerivedProductProcessing[]|undefined;
+  public processing?: fhir.BiologicallyDerivedProductProcessing[]|undefined = [];
   /**
    * Any manipulation of product post-collection that is intended to alter the product.  For example a buffy-coat enrichment or CD8 reduction of Peripheral Blood Stem Cells to make it more suitable for infusion.
    */
@@ -485,26 +417,23 @@ export class BiologicallyDerivedProduct extends fhir.DomainResource implements I
   /**
    * Product storage.
    */
-  public storage?: fhir.BiologicallyDerivedProductStorage[]|undefined;
+  public storage?: fhir.BiologicallyDerivedProductStorage[]|undefined = [];
   /**
    * Default constructor for BiologicallyDerivedProduct - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IBiologicallyDerivedProduct> = { }) {
-    super(source);
+  constructor(source:Partial<BiologicallyDerivedProductArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'BiologicallyDerivedProduct';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['productCategory']) { this.productCategory = source.productCategory; }
-    if (source['_productCategory']) { this._productCategory = new fhir.FhirElement(source._productCategory!); }
-    if (source['productCode']) { this.productCode = new fhir.CodeableConcept(source.productCode!); }
+    if (source['productCode']) { this.productCode = new fhir.CodeableConcept(source.productCode); }
     if (source['status']) { this.status = source.status; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
     if (source['request']) { this.request = source.request.map((x) => new fhir.Reference(x)); }
-    if (source['quantity']) { this.quantity = source.quantity; }
-    if (source['_quantity']) { this._quantity = new fhir.FhirElement(source._quantity!); }
+    if (source['quantity']) { this.quantity = new fhir.FhirInteger({value: source.quantity}); }
     if (source['parent']) { this.parent = source.parent.map((x) => new fhir.Reference(x)); }
-    if (source['collection']) { this.collection = new fhir.BiologicallyDerivedProductCollection(source.collection!); }
+    if (source['collection']) { this.collection = new fhir.BiologicallyDerivedProductCollection(source.collection); }
     if (source['processing']) { this.processing = source.processing.map((x) => new fhir.BiologicallyDerivedProductProcessing(x)); }
-    if (source['manipulation']) { this.manipulation = new fhir.BiologicallyDerivedProductManipulation(source.manipulation!); }
+    if (source['manipulation']) { this.manipulation = new fhir.BiologicallyDerivedProductManipulation(source.manipulation); }
     if (source['storage']) { this.storage = source.storage.map((x) => new fhir.BiologicallyDerivedProductStorage(x)); }
   }
   /**
@@ -522,20 +451,26 @@ export class BiologicallyDerivedProduct extends fhir.DomainResource implements I
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: BiologicallyDerivedProduct.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_productCategory"]) { results.push(...this._productCategory.doModelValidation()); }
-    if (this["productCode"]) { results.push(...this.productCode.doModelValidation()); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["request"]) { this.request.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_quantity"]) { results.push(...this._quantity.doModelValidation()); }
-    if (this["parent"]) { this.parent.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["collection"]) { results.push(...this.collection.doModelValidation()); }
-    if (this["processing"]) { this.processing.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["manipulation"]) { results.push(...this.manipulation.doModelValidation()); }
-    if (this["storage"]) { this.storage.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'BiologicallyDerivedProduct' fhir: BiologicallyDerivedProduct.resourceType:'BiologicallyDerivedProduct'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["productCode"]) { outcome.issue!.push(...this.productCode.doModelValidation().issue!); }
+    if (this["request"]) { this.request.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["quantity"]) { outcome.issue!.push(...this.quantity.doModelValidation().issue!); }
+    if (this["parent"]) { this.parent.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["collection"]) { outcome.issue!.push(...this.collection.doModelValidation().issue!); }
+    if (this["processing"]) { this.processing.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["manipulation"]) { outcome.issue!.push(...this.manipulation.doModelValidation().issue!); }
+    if (this["storage"]) { this.storage.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

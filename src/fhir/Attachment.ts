@@ -3,169 +3,100 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Attachment
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { LanguagesValueSet, LanguagesValueSetType, LanguagesValueSetEnum } from '../fhirValueSets/LanguagesValueSet.js'
-
+import { LanguagesValueSet, LanguagesValueSetType,} from '../fhirValueSets/LanguagesValueSet.js';
+import { LanguagesValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * For referring to data content defined in other formats.
+ * Valid arguments for the Attachment type.
  */
-export type IAttachment = fhir.IFhirElement & { 
+export interface AttachmentArgs extends fhir.FhirElementArgs {
   /**
    * Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate.
    */
-  contentType?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.contentType
-   */
-  _contentType?: fhir.IFhirElement|undefined;
+  contentType?: fhir.FhirCode|string|undefined;
   /**
    * The human language of the content. The value can be any valid value according to BCP 47.
    */
-  language?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.language
-   */
-  _language?: fhir.IFhirElement|undefined;
+  language?: fhir.FhirCode|string|undefined;
   /**
    * The base64-encoded data SHALL be expressed in the same character set as the base resource XML or JSON.
    */
-  data?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.data
-   */
-  _data?: fhir.IFhirElement|undefined;
+  data?: fhir.FhirBase64Binary|string|undefined;
   /**
    * If both data and url are provided, the url SHALL point to the same content as the data contains. Urls may be relative references or may reference transient locations such as a wrapping envelope using cid: though this has ramifications for using signatures. Relative URLs are interpreted relative to the service url, like a resource reference, rather than relative to the resource itself. If a URL is provided, it SHALL resolve to actual data.
    */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.url
-   */
-  _url?: fhir.IFhirElement|undefined;
+  url?: fhir.FhirUrl|string|undefined;
   /**
    * The number of bytes is redundant if the data is provided as a base64binary, but is useful if the data is provided as a url reference.
    */
-  size?: number|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.size
-   */
-  _size?: fhir.IFhirElement|undefined;
+  size?: fhir.FhirUnsignedInt|number|undefined;
   /**
    * The hash is calculated on the data prior to base64 encoding, if the data is based64 encoded. The hash is not intended to support digital signatures. Where protection against malicious threats a digital signature should be considered, see [Provenance.signature](provenance-definitions.html#Provenance.signature) for mechanism to protect a resource with a digital signature.
    */
-  hash?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.hash
-   */
-  _hash?: fhir.IFhirElement|undefined;
+  hash?: fhir.FhirBase64Binary|string|undefined;
   /**
    * A label or set of text to display in place of the data.
    */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.title
-   */
-  _title?: fhir.IFhirElement|undefined;
+  title?: fhir.FhirString|string|undefined;
   /**
    * The date that the attachment was first created.
    */
-  creation?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.creation
-   */
-  _creation?: fhir.IFhirElement|undefined;
+  creation?: fhir.FhirDateTime|string|undefined;
 }
 
 /**
  * For referring to data content defined in other formats.
  */
-export class Attachment extends fhir.FhirElement implements IAttachment {
+export class Attachment extends fhir.FhirElement {
+  readonly __dataType:string = 'Attachment';
   /**
    * Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate.
    */
-  public contentType?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.contentType
-   */
-  public _contentType?: fhir.FhirElement|undefined;
+  public contentType?: fhir.FhirCode|undefined;
   /**
    * The human language of the content. The value can be any valid value according to BCP 47.
    */
-  public language?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.language
-   */
-  public _language?: fhir.FhirElement|undefined;
+  public language?: fhir.FhirCode|undefined;
   /**
    * The base64-encoded data SHALL be expressed in the same character set as the base resource XML or JSON.
    */
-  public data?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.data
-   */
-  public _data?: fhir.FhirElement|undefined;
+  public data?: fhir.FhirBase64Binary|undefined;
   /**
    * If both data and url are provided, the url SHALL point to the same content as the data contains. Urls may be relative references or may reference transient locations such as a wrapping envelope using cid: though this has ramifications for using signatures. Relative URLs are interpreted relative to the service url, like a resource reference, rather than relative to the resource itself. If a URL is provided, it SHALL resolve to actual data.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUrl|undefined;
   /**
    * The number of bytes is redundant if the data is provided as a base64binary, but is useful if the data is provided as a url reference.
    */
-  public size?: number|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.size
-   */
-  public _size?: fhir.FhirElement|undefined;
+  public size?: fhir.FhirUnsignedInt|undefined;
   /**
    * The hash is calculated on the data prior to base64 encoding, if the data is based64 encoded. The hash is not intended to support digital signatures. Where protection against malicious threats a digital signature should be considered, see [Provenance.signature](provenance-definitions.html#Provenance.signature) for mechanism to protect a resource with a digital signature.
    */
-  public hash?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.hash
-   */
-  public _hash?: fhir.FhirElement|undefined;
+  public hash?: fhir.FhirBase64Binary|undefined;
   /**
    * A label or set of text to display in place of the data.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * The date that the attachment was first created.
    */
-  public creation?: string|undefined;
-  /**
-   * Extended properties for primitive element: Attachment.creation
-   */
-  public _creation?: fhir.FhirElement|undefined;
+  public creation?: fhir.FhirDateTime|undefined;
   /**
    * Default constructor for Attachment - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAttachment> = { }) {
-    super(source);
-    if (source['contentType']) { this.contentType = source.contentType; }
-    if (source['_contentType']) { this._contentType = new fhir.FhirElement(source._contentType!); }
-    if (source['language']) { this.language = source.language; }
-    if (source['_language']) { this._language = new fhir.FhirElement(source._language!); }
-    if (source['data']) { this.data = source.data; }
-    if (source['_data']) { this._data = new fhir.FhirElement(source._data!); }
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['size']) { this.size = source.size; }
-    if (source['_size']) { this._size = new fhir.FhirElement(source._size!); }
-    if (source['hash']) { this.hash = source.hash; }
-    if (source['_hash']) { this._hash = new fhir.FhirElement(source._hash!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
-    if (source['creation']) { this.creation = source.creation; }
-    if (source['_creation']) { this._creation = new fhir.FhirElement(source._creation!); }
+  constructor(source:Partial<AttachmentArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['contentType']) { this.contentType = new fhir.FhirCode({value: source.contentType}); }
+    if (source['language']) { this.language = new fhir.FhirCode({value: source.language}); }
+    if (source['data']) { this.data = new fhir.FhirBase64Binary({value: source.data}); }
+    if (source['url']) { this.url = new fhir.FhirUrl({value: source.url}); }
+    if (source['size']) { this.size = new fhir.FhirUnsignedInt({value: source.size}); }
+    if (source['hash']) { this.hash = new fhir.FhirBase64Binary({value: source.hash}); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
+    if (source['creation']) { this.creation = new fhir.FhirDateTime({value: source.creation}); }
   }
   /**
    * Preferred-bound Value Set for language
@@ -176,16 +107,22 @@ export class Attachment extends fhir.FhirElement implements IAttachment {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_contentType"]) { results.push(...this._contentType.doModelValidation()); }
-    if (this["_language"]) { results.push(...this._language.doModelValidation()); }
-    if (this["_data"]) { results.push(...this._data.doModelValidation()); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["_size"]) { results.push(...this._size.doModelValidation()); }
-    if (this["_hash"]) { results.push(...this._hash.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (this["_creation"]) { results.push(...this._creation.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["contentType"]) { outcome.issue!.push(...this.contentType.doModelValidation().issue!); }
+    if (this["language"]) { outcome.issue!.push(...this.language.doModelValidation().issue!); }
+    if (this["data"]) { outcome.issue!.push(...this.data.doModelValidation().issue!); }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["size"]) { outcome.issue!.push(...this.size.doModelValidation().issue!); }
+    if (this["hash"]) { outcome.issue!.push(...this.hash.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (this["creation"]) { outcome.issue!.push(...this.creation.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -3,102 +3,41 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Organization
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ContactentityTypeValueSet, ContactentityTypeValueSetType, ContactentityTypeValueSetEnum } from '../fhirValueSets/ContactentityTypeValueSet.js'
-import { OrganizationTypeValueSet, OrganizationTypeValueSetType, OrganizationTypeValueSetEnum } from '../fhirValueSets/OrganizationTypeValueSet.js'
-
+import { ContactentityTypeValueSet, ContactentityTypeValueSetType,} from '../fhirValueSets/ContactentityTypeValueSet.js';
+import { ContactentityTypeValueSetEnum } from '../valueSetEnums.js';
+import { OrganizationTypeValueSet, OrganizationTypeValueSetType,} from '../fhirValueSets/OrganizationTypeValueSet.js';
+import { OrganizationTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Where multiple contacts for the same purpose are provided there is a standard extension that can be used to determine which one is the preferred contact to use.
+ * Valid arguments for the OrganizationContact type.
  */
-export type IOrganizationContact = fhir.IBackboneElement & { 
+export interface OrganizationContactArgs extends fhir.BackboneElementArgs {
   /**
    * Indicates a purpose for which the contact can be reached.
    */
-  purpose?: fhir.ICodeableConcept|undefined;
+  purpose?: fhir.CodeableConceptArgs|undefined;
   /**
    * A name associated with the contact.
    */
-  name?: fhir.IHumanName|undefined;
+  name?: fhir.HumanNameArgs|undefined;
   /**
    * A contact detail (e.g. a telephone number or an email address) by which the party may be contacted.
    */
-  telecom?: fhir.IContactPoint[]|undefined;
+  telecom?: fhir.ContactPointArgs[]|undefined;
   /**
    * Visiting or postal addresses for the contact.
    */
-  address?: fhir.IAddress|undefined;
-}
-
-/**
- * A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.
- */
-export type IOrganization = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Organization";
-  /**
-   * Identifier for the organization that is used to identify the organization across multiple disparate systems.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * This active flag is not intended to be used to mark an organization as temporarily closed or under construction. Instead the Location(s) within the Organization should have the suspended status. If further details of the reason for the suspension are required, then an extension on this element should be used.
-   * This element is labeled as a modifier because it may be used to mark that the resource was created in error.
-   */
-  active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Organization.active
-   */
-  _active?: fhir.IFhirElement|undefined;
-  /**
-   * Organizations can be corporations, wards, sections, clinical teams, government departments, etc. Note that code is generally a classifier of the type of organization; in many applications, codes are used to identity a particular organization (say, ward) as opposed to another of the same type - these are identifiers, not codes
-   * When considering if multiple types are appropriate, you should evaluate if child organizations would be a more appropriate use of the concept, as different types likely are in different sub-areas of the organization. This is most likely to be used where type values have orthogonal values, such as a religious, academic and medical center.
-   * We expect that some jurisdictions will profile this optionality to be a single cardinality.
-   */
-  type?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Organization.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the organization.
-   */
-  alias?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Organization.alias
-   */
-  _alias?: fhir.IFhirElement[]|undefined;
-  /**
-   * The use code 'home' is not to be used. Note that these contacts are not the contact details of people who are employed by or represent the organization, but official contacts for the organization itself.
-   */
-  telecom?: fhir.IContactPoint[]|undefined;
-  /**
-   * Organization may have multiple addresses with different uses or applicable periods. The use code 'home' is not to be used.
-   */
-  address?: fhir.IAddress[]|undefined;
-  /**
-   * The organization of which this organization forms a part.
-   */
-  partOf?: fhir.IReference|undefined;
-  /**
-   * Where multiple contacts for the same purpose are provided there is a standard extension that can be used to determine which one is the preferred contact to use.
-   */
-  contact?: fhir.IOrganizationContact[]|undefined;
-  /**
-   * Technical endpoints providing access to services operated for the organization.
-   */
-  endpoint?: fhir.IReference[]|undefined;
+  address?: fhir.AddressArgs|undefined;
 }
 
 /**
  * Where multiple contacts for the same purpose are provided there is a standard extension that can be used to determine which one is the preferred contact to use.
  */
-export class OrganizationContact extends fhir.BackboneElement implements IOrganizationContact {
+export class OrganizationContact extends fhir.BackboneElement {
+  readonly __dataType:string = 'OrganizationContact';
   /**
    * Indicates a purpose for which the contact can be reached.
    */
@@ -110,7 +49,7 @@ export class OrganizationContact extends fhir.BackboneElement implements IOrgani
   /**
    * A contact detail (e.g. a telephone number or an email address) by which the party may be contacted.
    */
-  public telecom?: fhir.ContactPoint[]|undefined;
+  public telecom?: fhir.ContactPoint[]|undefined = [];
   /**
    * Visiting or postal addresses for the contact.
    */
@@ -118,12 +57,12 @@ export class OrganizationContact extends fhir.BackboneElement implements IOrgani
   /**
    * Default constructor for OrganizationContact - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IOrganizationContact> = { }) {
-    super(source);
-    if (source['purpose']) { this.purpose = new fhir.CodeableConcept(source.purpose!); }
-    if (source['name']) { this.name = new fhir.HumanName(source.name!); }
+  constructor(source:Partial<OrganizationContactArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['purpose']) { this.purpose = new fhir.CodeableConcept(source.purpose); }
+    if (source['name']) { this.name = new fhir.HumanName(source.name); }
     if (source['telecom']) { this.telecom = source.telecom.map((x) => new fhir.ContactPoint(x)); }
-    if (source['address']) { this.address = new fhir.Address(source.address!); }
+    if (source['address']) { this.address = new fhir.Address(source.address); }
   }
   /**
    * Extensible-bound Value Set for purpose
@@ -134,20 +73,79 @@ export class OrganizationContact extends fhir.BackboneElement implements IOrgani
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["purpose"]) { results.push(...this.purpose.doModelValidation()); }
-    if (this["name"]) { results.push(...this.name.doModelValidation()); }
-    if (this["telecom"]) { this.telecom.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["address"]) { results.push(...this.address.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["telecom"]) { this.telecom.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["address"]) { outcome.issue!.push(...this.address.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Organization type.
+ */
+export interface OrganizationArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Organization"|undefined;
+  /**
+   * Identifier for the organization that is used to identify the organization across multiple disparate systems.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * This active flag is not intended to be used to mark an organization as temporarily closed or under construction. Instead the Location(s) within the Organization should have the suspended status. If further details of the reason for the suspension are required, then an extension on this element should be used.
+   * This element is labeled as a modifier because it may be used to mark that the resource was created in error.
+   */
+  active?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Organizations can be corporations, wards, sections, clinical teams, government departments, etc. Note that code is generally a classifier of the type of organization; in many applications, codes are used to identity a particular organization (say, ward) as opposed to another of the same type - these are identifiers, not codes
+   * When considering if multiple types are appropriate, you should evaluate if child organizations would be a more appropriate use of the concept, as different types likely are in different sub-areas of the organization. This is most likely to be used where type values have orthogonal values, such as a religious, academic and medical center.
+   * We expect that some jurisdictions will profile this optionality to be a single cardinality.
+   */
+  type?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the organization.
+   */
+  alias?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * The use code 'home' is not to be used. Note that these contacts are not the contact details of people who are employed by or represent the organization, but official contacts for the organization itself.
+   */
+  telecom?: fhir.ContactPointArgs[]|undefined;
+  /**
+   * Organization may have multiple addresses with different uses or applicable periods. The use code 'home' is not to be used.
+   */
+  address?: fhir.AddressArgs[]|undefined;
+  /**
+   * The organization of which this organization forms a part.
+   */
+  partOf?: fhir.ReferenceArgs|undefined;
+  /**
+   * Where multiple contacts for the same purpose are provided there is a standard extension that can be used to determine which one is the preferred contact to use.
+   */
+  contact?: fhir.OrganizationContactArgs[]|undefined;
+  /**
+   * Technical endpoints providing access to services operated for the organization.
+   */
+  endpoint?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.
  */
-export class Organization extends fhir.DomainResource implements IOrganization {
+export class Organization extends fhir.DomainResource {
+  readonly __dataType:string = 'Organization';
   /**
    * Resource Type Name
    */
@@ -155,46 +153,34 @@ export class Organization extends fhir.DomainResource implements IOrganization {
   /**
    * Identifier for the organization that is used to identify the organization across multiple disparate systems.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This active flag is not intended to be used to mark an organization as temporarily closed or under construction. Instead the Location(s) within the Organization should have the suspended status. If further details of the reason for the suspension are required, then an extension on this element should be used.
    * This element is labeled as a modifier because it may be used to mark that the resource was created in error.
    */
-  public active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Organization.active
-   */
-  public _active?: fhir.FhirElement|undefined;
+  public active?: fhir.FhirBoolean|undefined;
   /**
    * Organizations can be corporations, wards, sections, clinical teams, government departments, etc. Note that code is generally a classifier of the type of organization; in many applications, codes are used to identity a particular organization (say, ward) as opposed to another of the same type - these are identifiers, not codes
    * When considering if multiple types are appropriate, you should evaluate if child organizations would be a more appropriate use of the concept, as different types likely are in different sub-areas of the organization. This is most likely to be used where type values have orthogonal values, such as a religious, academic and medical center.
    * We expect that some jurisdictions will profile this optionality to be a single cardinality.
    */
-  public type?: fhir.CodeableConcept[]|undefined;
+  public type?: fhir.CodeableConcept[]|undefined = [];
   /**
    * If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Organization.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the organization.
    */
-  public alias?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Organization.alias
-   */
-  public _alias?: fhir.FhirElement[]|undefined;
+  public alias?: fhir.FhirString[]|undefined = [];
   /**
    * The use code 'home' is not to be used. Note that these contacts are not the contact details of people who are employed by or represent the organization, but official contacts for the organization itself.
    */
-  public telecom?: fhir.ContactPoint[]|undefined;
+  public telecom?: fhir.ContactPoint[]|undefined = [];
   /**
    * Organization may have multiple addresses with different uses or applicable periods. The use code 'home' is not to be used.
    */
-  public address?: fhir.Address[]|undefined;
+  public address?: fhir.Address[]|undefined = [];
   /**
    * The organization of which this organization forms a part.
    */
@@ -202,28 +188,25 @@ export class Organization extends fhir.DomainResource implements IOrganization {
   /**
    * Where multiple contacts for the same purpose are provided there is a standard extension that can be used to determine which one is the preferred contact to use.
    */
-  public contact?: fhir.OrganizationContact[]|undefined;
+  public contact?: fhir.OrganizationContact[]|undefined = [];
   /**
    * Technical endpoints providing access to services operated for the organization.
    */
-  public endpoint?: fhir.Reference[]|undefined;
+  public endpoint?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for Organization - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IOrganization> = { }) {
-    super(source);
+  constructor(source:Partial<OrganizationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Organization';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['active']) { this.active = source.active; }
-    if (source['_active']) { this._active = new fhir.FhirElement(source._active!); }
+    if (source['active']) { this.active = new fhir.FhirBoolean({value: source.active}); }
     if (source['type']) { this.type = source.type.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['alias']) { this.alias = source.alias.map((x) => (x)); }
-    if (source['_alias']) { this._alias = source._alias.map((x) => new fhir.FhirElement(x)); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['alias']) { this.alias = source.alias.map((x) => new fhir.FhirString({value: x})); }
     if (source['telecom']) { this.telecom = source.telecom.map((x) => new fhir.ContactPoint(x)); }
     if (source['address']) { this.address = source.address.map((x) => new fhir.Address(x)); }
-    if (source['partOf']) { this.partOf = new fhir.Reference(source.partOf!); }
+    if (source['partOf']) { this.partOf = new fhir.Reference(source.partOf); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.OrganizationContact(x)); }
     if (source['endpoint']) { this.endpoint = source.endpoint.map((x) => new fhir.Reference(x)); }
   }
@@ -236,19 +219,27 @@ export class Organization extends fhir.DomainResource implements IOrganization {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Organization.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_active"]) { results.push(...this._active.doModelValidation()); }
-    if (this["type"]) { this.type.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_alias"]) { this._alias.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["telecom"]) { this.telecom.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["address"]) { this.address.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["partOf"]) { results.push(...this.partOf.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["endpoint"]) { this.endpoint.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Organization' fhir: Organization.resourceType:'Organization'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["active"]) { outcome.issue!.push(...this.active.doModelValidation().issue!); }
+    if (this["type"]) { this.type.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["alias"]) { this.alias.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["telecom"]) { this.telecom.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["address"]) { this.address.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["partOf"]) { outcome.issue!.push(...this.partOf.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["endpoint"]) { this.endpoint.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

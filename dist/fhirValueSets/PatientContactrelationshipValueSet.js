@@ -67,35 +67,4 @@ export const PatientContactrelationshipValueSet = {
 /**
  * The nature of the relationship between the patient and the contact person.
  */
-export var PatientContactrelationshipValueSetEnum;
-(function (PatientContactrelationshipValueSetEnum) {
-    /**
-     * Code: C
-     */
-    PatientContactrelationshipValueSetEnum["EmergencyContact"] = "C";
-    /**
-     * Code: E
-     */
-    PatientContactrelationshipValueSetEnum["Employer"] = "E";
-    /**
-     * Code: F
-     */
-    PatientContactrelationshipValueSetEnum["FederalAgency"] = "F";
-    /**
-     * Code: I
-     */
-    PatientContactrelationshipValueSetEnum["InsuranceCompany"] = "I";
-    /**
-     * Code: N
-     */
-    PatientContactrelationshipValueSetEnum["NextOfKin"] = "N";
-    /**
-     * Code: S
-     */
-    PatientContactrelationshipValueSetEnum["StateAgency"] = "S";
-    /**
-     * Code: U
-     */
-    PatientContactrelationshipValueSetEnum["Unknown"] = "U";
-})(PatientContactrelationshipValueSetEnum || (PatientContactrelationshipValueSetEnum = {}));
 //# sourceMappingURL=PatientContactrelationshipValueSet.js.map

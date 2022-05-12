@@ -3,11 +3,13 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Task
 import * as fhir from '../fhir.js';
-import { TaskStatusValueSet } from '../fhirValueSets/TaskStatusValueSet.js';
-import { TaskIntentValueSet } from '../fhirValueSets/TaskIntentValueSet.js';
-import { RequestPriorityValueSet } from '../fhirValueSets/RequestPriorityValueSet.js';
-import { TaskCodeValueSet } from '../fhirValueSets/TaskCodeValueSet.js';
-import { PerformerRoleValueSet } from '../fhirValueSets/PerformerRoleValueSet.js';
+import { TaskStatusValueSet, } from '../fhirValueSets/TaskStatusValueSet.js';
+import { TaskIntentValueSet, } from '../fhirValueSets/TaskIntentValueSet.js';
+import { RequestPriorityValueSet, } from '../fhirValueSets/RequestPriorityValueSet.js';
+import { TaskCodeValueSet, } from '../fhirValueSets/TaskCodeValueSet.js';
+import { PerformerRoleValueSet, } from '../fhirValueSets/PerformerRoleValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.
  */
@@ -15,13 +17,15 @@ export class TaskRestriction extends fhir.BackboneElement {
     /**
      * Default constructor for TaskRestriction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TaskRestriction';
+        /**
+         * For requests that are targeted to more than on potential recipient/target, for whom is fulfillment sought?
+         */
+        this.recipient = [];
         if (source['repetitions']) {
-            this.repetitions = source.repetitions;
-        }
-        if (source['_repetitions']) {
-            this._repetitions = new fhir.FhirElement(source._repetitions);
+            this.repetitions = new fhir.FhirPositiveInt({ value: source.repetitions });
         }
         if (source['period']) {
             this.period = new fhir.Period(source.period);
@@ -34,17 +38,23 @@ export class TaskRestriction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_repetitions"]) {
-            results.push(...this._repetitions.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["repetitions"]) {
+            outcome.issue.push(...this.repetitions.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
         if (this["recipient"]) {
-            this.recipient.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.recipient.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -54,384 +64,194 @@ export class TaskInput extends fhir.BackboneElement {
     /**
      * Default constructor for TaskInput - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TaskInput';
+        this.__valueIsChoice = true;
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
         else {
             this.type = null;
         }
-        if (source['valueBase64Binary']) {
-            this.valueBase64Binary = source.valueBase64Binary;
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['_valueBase64Binary']) {
-            this._valueBase64Binary = new fhir.FhirElement(source._valueBase64Binary);
+        else if (source['valueBase64Binary']) {
+            this.value = new fhir.FhirBase64Binary({ value: source.valueBase64Binary });
         }
-        if (source['valueBoolean']) {
-            this.valueBoolean = source.valueBoolean;
+        else if (source['valueBoolean']) {
+            this.value = new fhir.FhirBoolean({ value: source.valueBoolean });
         }
-        if (source['_valueBoolean']) {
-            this._valueBoolean = new fhir.FhirElement(source._valueBoolean);
+        else if (source['valueCanonical']) {
+            this.value = new fhir.FhirCanonical({ value: source.valueCanonical });
         }
-        if (source['valueCanonical']) {
-            this.valueCanonical = source.valueCanonical;
+        else if (source['valueCode']) {
+            this.value = new fhir.FhirCode({ value: source.valueCode });
         }
-        if (source['_valueCanonical']) {
-            this._valueCanonical = new fhir.FhirElement(source._valueCanonical);
+        else if (source['valueDate']) {
+            this.value = new fhir.FhirDate({ value: source.valueDate });
         }
-        if (source['valueCode']) {
-            this.valueCode = source.valueCode;
+        else if (source['valueDateTime']) {
+            this.value = new fhir.FhirDateTime({ value: source.valueDateTime });
         }
-        if (source['_valueCode']) {
-            this._valueCode = new fhir.FhirElement(source._valueCode);
+        else if (source['valueDecimal']) {
+            this.value = new fhir.FhirDecimal({ value: source.valueDecimal });
         }
-        if (source['valueDate']) {
-            this.valueDate = source.valueDate;
+        else if (source['valueId']) {
+            this.value = new fhir.FhirId({ value: source.valueId });
         }
-        if (source['_valueDate']) {
-            this._valueDate = new fhir.FhirElement(source._valueDate);
+        else if (source['valueInstant']) {
+            this.value = new fhir.FhirInstant({ value: source.valueInstant });
         }
-        if (source['valueDateTime']) {
-            this.valueDateTime = source.valueDateTime;
+        else if (source['valueInteger']) {
+            this.value = new fhir.FhirInteger({ value: source.valueInteger });
         }
-        if (source['_valueDateTime']) {
-            this._valueDateTime = new fhir.FhirElement(source._valueDateTime);
+        else if (source['valueMarkdown']) {
+            this.value = new fhir.FhirMarkdown({ value: source.valueMarkdown });
         }
-        if (source['valueDecimal']) {
-            this.valueDecimal = source.valueDecimal;
+        else if (source['valueOid']) {
+            this.value = new fhir.FhirOid({ value: source.valueOid });
         }
-        if (source['_valueDecimal']) {
-            this._valueDecimal = new fhir.FhirElement(source._valueDecimal);
+        else if (source['valuePositiveInt']) {
+            this.value = new fhir.FhirPositiveInt({ value: source.valuePositiveInt });
         }
-        if (source['valueId']) {
-            this.valueId = source.valueId;
+        else if (source['valueString']) {
+            this.value = new fhir.FhirString({ value: source.valueString });
         }
-        if (source['_valueId']) {
-            this._valueId = new fhir.FhirElement(source._valueId);
+        else if (source['valueTime']) {
+            this.value = new fhir.FhirTime({ value: source.valueTime });
         }
-        if (source['valueInstant']) {
-            this.valueInstant = source.valueInstant;
+        else if (source['valueUnsignedInt']) {
+            this.value = new fhir.FhirUnsignedInt({ value: source.valueUnsignedInt });
         }
-        if (source['_valueInstant']) {
-            this._valueInstant = new fhir.FhirElement(source._valueInstant);
+        else if (source['valueUri']) {
+            this.value = new fhir.FhirUri({ value: source.valueUri });
         }
-        if (source['valueInteger']) {
-            this.valueInteger = source.valueInteger;
+        else if (source['valueUrl']) {
+            this.value = new fhir.FhirUrl({ value: source.valueUrl });
         }
-        if (source['_valueInteger']) {
-            this._valueInteger = new fhir.FhirElement(source._valueInteger);
+        else if (source['valueUuid']) {
+            this.value = new fhir.FhirUuid({ value: source.valueUuid });
         }
-        if (source['valueMarkdown']) {
-            this.valueMarkdown = source.valueMarkdown;
+        else if (source['valueAddress']) {
+            this.value = new fhir.Address(source.valueAddress);
         }
-        if (source['_valueMarkdown']) {
-            this._valueMarkdown = new fhir.FhirElement(source._valueMarkdown);
+        else if (source['valueAge']) {
+            this.value = new fhir.Age(source.valueAge);
         }
-        if (source['valueOid']) {
-            this.valueOid = source.valueOid;
+        else if (source['valueAnnotation']) {
+            this.value = new fhir.Annotation(source.valueAnnotation);
         }
-        if (source['_valueOid']) {
-            this._valueOid = new fhir.FhirElement(source._valueOid);
+        else if (source['valueAttachment']) {
+            this.value = new fhir.Attachment(source.valueAttachment);
         }
-        if (source['valuePositiveInt']) {
-            this.valuePositiveInt = source.valuePositiveInt;
+        else if (source['valueCodeableConcept']) {
+            this.value = new fhir.CodeableConcept(source.valueCodeableConcept);
         }
-        if (source['_valuePositiveInt']) {
-            this._valuePositiveInt = new fhir.FhirElement(source._valuePositiveInt);
+        else if (source['valueCoding']) {
+            this.value = new fhir.Coding(source.valueCoding);
         }
-        if (source['valueString']) {
-            this.valueString = source.valueString;
+        else if (source['valueContactPoint']) {
+            this.value = new fhir.ContactPoint(source.valueContactPoint);
         }
-        if (source['_valueString']) {
-            this._valueString = new fhir.FhirElement(source._valueString);
+        else if (source['valueCount']) {
+            this.value = new fhir.Count(source.valueCount);
         }
-        if (source['valueTime']) {
-            this.valueTime = source.valueTime;
+        else if (source['valueDistance']) {
+            this.value = new fhir.Distance(source.valueDistance);
         }
-        if (source['_valueTime']) {
-            this._valueTime = new fhir.FhirElement(source._valueTime);
+        else if (source['valueDuration']) {
+            this.value = new fhir.Duration(source.valueDuration);
         }
-        if (source['valueUnsignedInt']) {
-            this.valueUnsignedInt = source.valueUnsignedInt;
+        else if (source['valueHumanName']) {
+            this.value = new fhir.HumanName(source.valueHumanName);
         }
-        if (source['_valueUnsignedInt']) {
-            this._valueUnsignedInt = new fhir.FhirElement(source._valueUnsignedInt);
+        else if (source['valueIdentifier']) {
+            this.value = new fhir.Identifier(source.valueIdentifier);
         }
-        if (source['valueUri']) {
-            this.valueUri = source.valueUri;
+        else if (source['valueMoney']) {
+            this.value = new fhir.Money(source.valueMoney);
         }
-        if (source['_valueUri']) {
-            this._valueUri = new fhir.FhirElement(source._valueUri);
+        else if (source['valuePeriod']) {
+            this.value = new fhir.Period(source.valuePeriod);
         }
-        if (source['valueUrl']) {
-            this.valueUrl = source.valueUrl;
+        else if (source['valueQuantity']) {
+            this.value = new fhir.Quantity(source.valueQuantity);
         }
-        if (source['_valueUrl']) {
-            this._valueUrl = new fhir.FhirElement(source._valueUrl);
+        else if (source['valueRange']) {
+            this.value = new fhir.Range(source.valueRange);
         }
-        if (source['valueUuid']) {
-            this.valueUuid = source.valueUuid;
+        else if (source['valueRatio']) {
+            this.value = new fhir.Ratio(source.valueRatio);
         }
-        if (source['_valueUuid']) {
-            this._valueUuid = new fhir.FhirElement(source._valueUuid);
+        else if (source['valueReference']) {
+            this.value = new fhir.Reference(source.valueReference);
         }
-        if (source['valueAddress']) {
-            this.valueAddress = new fhir.Address(source.valueAddress);
+        else if (source['valueSampledData']) {
+            this.value = new fhir.SampledData(source.valueSampledData);
         }
-        if (source['valueAge']) {
-            this.valueAge = new fhir.Age(source.valueAge);
+        else if (source['valueSignature']) {
+            this.value = new fhir.Signature(source.valueSignature);
         }
-        if (source['valueAnnotation']) {
-            this.valueAnnotation = new fhir.Annotation(source.valueAnnotation);
+        else if (source['valueTiming']) {
+            this.value = new fhir.Timing(source.valueTiming);
         }
-        if (source['valueAttachment']) {
-            this.valueAttachment = new fhir.Attachment(source.valueAttachment);
+        else if (source['valueContactDetail']) {
+            this.value = new fhir.ContactDetail(source.valueContactDetail);
         }
-        if (source['valueCodeableConcept']) {
-            this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept);
+        else if (source['valueContributor']) {
+            this.value = new fhir.Contributor(source.valueContributor);
         }
-        if (source['valueCoding']) {
-            this.valueCoding = new fhir.Coding(source.valueCoding);
+        else if (source['valueDataRequirement']) {
+            this.value = new fhir.DataRequirement(source.valueDataRequirement);
         }
-        if (source['valueContactPoint']) {
-            this.valueContactPoint = new fhir.ContactPoint(source.valueContactPoint);
+        else if (source['valueExpression']) {
+            this.value = new fhir.Expression(source.valueExpression);
         }
-        if (source['valueCount']) {
-            this.valueCount = new fhir.Count(source.valueCount);
+        else if (source['valueParameterDefinition']) {
+            this.value = new fhir.ParameterDefinition(source.valueParameterDefinition);
         }
-        if (source['valueDistance']) {
-            this.valueDistance = new fhir.Distance(source.valueDistance);
+        else if (source['valueRelatedArtifact']) {
+            this.value = new fhir.RelatedArtifact(source.valueRelatedArtifact);
         }
-        if (source['valueDuration']) {
-            this.valueDuration = new fhir.Duration(source.valueDuration);
+        else if (source['valueTriggerDefinition']) {
+            this.value = new fhir.TriggerDefinition(source.valueTriggerDefinition);
         }
-        if (source['valueHumanName']) {
-            this.valueHumanName = new fhir.HumanName(source.valueHumanName);
+        else if (source['valueUsageContext']) {
+            this.value = new fhir.UsageContext(source.valueUsageContext);
         }
-        if (source['valueIdentifier']) {
-            this.valueIdentifier = new fhir.Identifier(source.valueIdentifier);
+        else if (source['valueDosage']) {
+            this.value = new fhir.Dosage(source.valueDosage);
         }
-        if (source['valueMoney']) {
-            this.valueMoney = new fhir.Money(source.valueMoney);
+        else if (source['valueMeta']) {
+            this.value = new fhir.Meta(source.valueMeta);
         }
-        if (source['valuePeriod']) {
-            this.valuePeriod = new fhir.Period(source.valuePeriod);
-        }
-        if (source['valueQuantity']) {
-            this.valueQuantity = new fhir.Quantity(source.valueQuantity);
-        }
-        if (source['valueRange']) {
-            this.valueRange = new fhir.Range(source.valueRange);
-        }
-        if (source['valueRatio']) {
-            this.valueRatio = new fhir.Ratio(source.valueRatio);
-        }
-        if (source['valueReference']) {
-            this.valueReference = new fhir.Reference(source.valueReference);
-        }
-        if (source['valueSampledData']) {
-            this.valueSampledData = new fhir.SampledData(source.valueSampledData);
-        }
-        if (source['valueSignature']) {
-            this.valueSignature = new fhir.Signature(source.valueSignature);
-        }
-        if (source['valueTiming']) {
-            this.valueTiming = new fhir.Timing(source.valueTiming);
-        }
-        if (source['valueContactDetail']) {
-            this.valueContactDetail = new fhir.ContactDetail(source.valueContactDetail);
-        }
-        if (source['valueContributor']) {
-            this.valueContributor = new fhir.Contributor(source.valueContributor);
-        }
-        if (source['valueDataRequirement']) {
-            this.valueDataRequirement = new fhir.DataRequirement(source.valueDataRequirement);
-        }
-        if (source['valueExpression']) {
-            this.valueExpression = new fhir.Expression(source.valueExpression);
-        }
-        if (source['valueParameterDefinition']) {
-            this.valueParameterDefinition = new fhir.ParameterDefinition(source.valueParameterDefinition);
-        }
-        if (source['valueRelatedArtifact']) {
-            this.valueRelatedArtifact = new fhir.RelatedArtifact(source.valueRelatedArtifact);
-        }
-        if (source['valueTriggerDefinition']) {
-            this.valueTriggerDefinition = new fhir.TriggerDefinition(source.valueTriggerDefinition);
-        }
-        if (source['valueUsageContext']) {
-            this.valueUsageContext = new fhir.UsageContext(source.valueUsageContext);
-        }
-        if (source['valueDosage']) {
-            this.valueDosage = new fhir.Dosage(source.valueDosage);
-        }
-        if (source['valueMeta']) {
-            this.valueMeta = new fhir.Meta(source.valueMeta);
+        else {
+            this.value = null;
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: Task.input.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.CodeableConcept fhir: Task.input.type:CodeableConcept", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_valueBase64Binary"]) {
-            results.push(...this._valueBase64Binary.doModelValidation());
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value: fhir: Task.input.value[x]:", }));
         }
-        if (this["_valueBoolean"]) {
-            results.push(...this._valueBoolean.doModelValidation());
-        }
-        if (this["_valueCanonical"]) {
-            results.push(...this._valueCanonical.doModelValidation());
-        }
-        if (this["_valueCode"]) {
-            results.push(...this._valueCode.doModelValidation());
-        }
-        if (this["_valueDate"]) {
-            results.push(...this._valueDate.doModelValidation());
-        }
-        if (this["_valueDateTime"]) {
-            results.push(...this._valueDateTime.doModelValidation());
-        }
-        if (this["_valueDecimal"]) {
-            results.push(...this._valueDecimal.doModelValidation());
-        }
-        if (this["_valueId"]) {
-            results.push(...this._valueId.doModelValidation());
-        }
-        if (this["_valueInstant"]) {
-            results.push(...this._valueInstant.doModelValidation());
-        }
-        if (this["_valueInteger"]) {
-            results.push(...this._valueInteger.doModelValidation());
-        }
-        if (this["_valueMarkdown"]) {
-            results.push(...this._valueMarkdown.doModelValidation());
-        }
-        if (this["_valueOid"]) {
-            results.push(...this._valueOid.doModelValidation());
-        }
-        if (this["_valuePositiveInt"]) {
-            results.push(...this._valuePositiveInt.doModelValidation());
-        }
-        if (this["_valueString"]) {
-            results.push(...this._valueString.doModelValidation());
-        }
-        if (this["_valueTime"]) {
-            results.push(...this._valueTime.doModelValidation());
-        }
-        if (this["_valueUnsignedInt"]) {
-            results.push(...this._valueUnsignedInt.doModelValidation());
-        }
-        if (this["_valueUri"]) {
-            results.push(...this._valueUri.doModelValidation());
-        }
-        if (this["_valueUrl"]) {
-            results.push(...this._valueUrl.doModelValidation());
-        }
-        if (this["_valueUuid"]) {
-            results.push(...this._valueUuid.doModelValidation());
-        }
-        if (this["valueAddress"]) {
-            results.push(...this.valueAddress.doModelValidation());
-        }
-        if (this["valueAge"]) {
-            results.push(...this.valueAge.doModelValidation());
-        }
-        if (this["valueAnnotation"]) {
-            results.push(...this.valueAnnotation.doModelValidation());
-        }
-        if (this["valueAttachment"]) {
-            results.push(...this.valueAttachment.doModelValidation());
-        }
-        if (this["valueCodeableConcept"]) {
-            results.push(...this.valueCodeableConcept.doModelValidation());
-        }
-        if (this["valueCoding"]) {
-            results.push(...this.valueCoding.doModelValidation());
-        }
-        if (this["valueContactPoint"]) {
-            results.push(...this.valueContactPoint.doModelValidation());
-        }
-        if (this["valueCount"]) {
-            results.push(...this.valueCount.doModelValidation());
-        }
-        if (this["valueDistance"]) {
-            results.push(...this.valueDistance.doModelValidation());
-        }
-        if (this["valueDuration"]) {
-            results.push(...this.valueDuration.doModelValidation());
-        }
-        if (this["valueHumanName"]) {
-            results.push(...this.valueHumanName.doModelValidation());
-        }
-        if (this["valueIdentifier"]) {
-            results.push(...this.valueIdentifier.doModelValidation());
-        }
-        if (this["valueMoney"]) {
-            results.push(...this.valueMoney.doModelValidation());
-        }
-        if (this["valuePeriod"]) {
-            results.push(...this.valuePeriod.doModelValidation());
-        }
-        if (this["valueQuantity"]) {
-            results.push(...this.valueQuantity.doModelValidation());
-        }
-        if (this["valueRange"]) {
-            results.push(...this.valueRange.doModelValidation());
-        }
-        if (this["valueRatio"]) {
-            results.push(...this.valueRatio.doModelValidation());
-        }
-        if (this["valueReference"]) {
-            results.push(...this.valueReference.doModelValidation());
-        }
-        if (this["valueSampledData"]) {
-            results.push(...this.valueSampledData.doModelValidation());
-        }
-        if (this["valueSignature"]) {
-            results.push(...this.valueSignature.doModelValidation());
-        }
-        if (this["valueTiming"]) {
-            results.push(...this.valueTiming.doModelValidation());
-        }
-        if (this["valueContactDetail"]) {
-            results.push(...this.valueContactDetail.doModelValidation());
-        }
-        if (this["valueContributor"]) {
-            results.push(...this.valueContributor.doModelValidation());
-        }
-        if (this["valueDataRequirement"]) {
-            results.push(...this.valueDataRequirement.doModelValidation());
-        }
-        if (this["valueExpression"]) {
-            results.push(...this.valueExpression.doModelValidation());
-        }
-        if (this["valueParameterDefinition"]) {
-            results.push(...this.valueParameterDefinition.doModelValidation());
-        }
-        if (this["valueRelatedArtifact"]) {
-            results.push(...this.valueRelatedArtifact.doModelValidation());
-        }
-        if (this["valueTriggerDefinition"]) {
-            results.push(...this.valueTriggerDefinition.doModelValidation());
-        }
-        if (this["valueUsageContext"]) {
-            results.push(...this.valueUsageContext.doModelValidation());
-        }
-        if (this["valueDosage"]) {
-            results.push(...this.valueDosage.doModelValidation());
-        }
-        if (this["valueMeta"]) {
-            results.push(...this.valueMeta.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -441,384 +261,194 @@ export class TaskOutput extends fhir.BackboneElement {
     /**
      * Default constructor for TaskOutput - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TaskOutput';
+        this.__valueIsChoice = true;
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
         else {
             this.type = null;
         }
-        if (source['valueBase64Binary']) {
-            this.valueBase64Binary = source.valueBase64Binary;
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['_valueBase64Binary']) {
-            this._valueBase64Binary = new fhir.FhirElement(source._valueBase64Binary);
+        else if (source['valueBase64Binary']) {
+            this.value = new fhir.FhirBase64Binary({ value: source.valueBase64Binary });
         }
-        if (source['valueBoolean']) {
-            this.valueBoolean = source.valueBoolean;
+        else if (source['valueBoolean']) {
+            this.value = new fhir.FhirBoolean({ value: source.valueBoolean });
         }
-        if (source['_valueBoolean']) {
-            this._valueBoolean = new fhir.FhirElement(source._valueBoolean);
+        else if (source['valueCanonical']) {
+            this.value = new fhir.FhirCanonical({ value: source.valueCanonical });
         }
-        if (source['valueCanonical']) {
-            this.valueCanonical = source.valueCanonical;
+        else if (source['valueCode']) {
+            this.value = new fhir.FhirCode({ value: source.valueCode });
         }
-        if (source['_valueCanonical']) {
-            this._valueCanonical = new fhir.FhirElement(source._valueCanonical);
+        else if (source['valueDate']) {
+            this.value = new fhir.FhirDate({ value: source.valueDate });
         }
-        if (source['valueCode']) {
-            this.valueCode = source.valueCode;
+        else if (source['valueDateTime']) {
+            this.value = new fhir.FhirDateTime({ value: source.valueDateTime });
         }
-        if (source['_valueCode']) {
-            this._valueCode = new fhir.FhirElement(source._valueCode);
+        else if (source['valueDecimal']) {
+            this.value = new fhir.FhirDecimal({ value: source.valueDecimal });
         }
-        if (source['valueDate']) {
-            this.valueDate = source.valueDate;
+        else if (source['valueId']) {
+            this.value = new fhir.FhirId({ value: source.valueId });
         }
-        if (source['_valueDate']) {
-            this._valueDate = new fhir.FhirElement(source._valueDate);
+        else if (source['valueInstant']) {
+            this.value = new fhir.FhirInstant({ value: source.valueInstant });
         }
-        if (source['valueDateTime']) {
-            this.valueDateTime = source.valueDateTime;
+        else if (source['valueInteger']) {
+            this.value = new fhir.FhirInteger({ value: source.valueInteger });
         }
-        if (source['_valueDateTime']) {
-            this._valueDateTime = new fhir.FhirElement(source._valueDateTime);
+        else if (source['valueMarkdown']) {
+            this.value = new fhir.FhirMarkdown({ value: source.valueMarkdown });
         }
-        if (source['valueDecimal']) {
-            this.valueDecimal = source.valueDecimal;
+        else if (source['valueOid']) {
+            this.value = new fhir.FhirOid({ value: source.valueOid });
         }
-        if (source['_valueDecimal']) {
-            this._valueDecimal = new fhir.FhirElement(source._valueDecimal);
+        else if (source['valuePositiveInt']) {
+            this.value = new fhir.FhirPositiveInt({ value: source.valuePositiveInt });
         }
-        if (source['valueId']) {
-            this.valueId = source.valueId;
+        else if (source['valueString']) {
+            this.value = new fhir.FhirString({ value: source.valueString });
         }
-        if (source['_valueId']) {
-            this._valueId = new fhir.FhirElement(source._valueId);
+        else if (source['valueTime']) {
+            this.value = new fhir.FhirTime({ value: source.valueTime });
         }
-        if (source['valueInstant']) {
-            this.valueInstant = source.valueInstant;
+        else if (source['valueUnsignedInt']) {
+            this.value = new fhir.FhirUnsignedInt({ value: source.valueUnsignedInt });
         }
-        if (source['_valueInstant']) {
-            this._valueInstant = new fhir.FhirElement(source._valueInstant);
+        else if (source['valueUri']) {
+            this.value = new fhir.FhirUri({ value: source.valueUri });
         }
-        if (source['valueInteger']) {
-            this.valueInteger = source.valueInteger;
+        else if (source['valueUrl']) {
+            this.value = new fhir.FhirUrl({ value: source.valueUrl });
         }
-        if (source['_valueInteger']) {
-            this._valueInteger = new fhir.FhirElement(source._valueInteger);
+        else if (source['valueUuid']) {
+            this.value = new fhir.FhirUuid({ value: source.valueUuid });
         }
-        if (source['valueMarkdown']) {
-            this.valueMarkdown = source.valueMarkdown;
+        else if (source['valueAddress']) {
+            this.value = new fhir.Address(source.valueAddress);
         }
-        if (source['_valueMarkdown']) {
-            this._valueMarkdown = new fhir.FhirElement(source._valueMarkdown);
+        else if (source['valueAge']) {
+            this.value = new fhir.Age(source.valueAge);
         }
-        if (source['valueOid']) {
-            this.valueOid = source.valueOid;
+        else if (source['valueAnnotation']) {
+            this.value = new fhir.Annotation(source.valueAnnotation);
         }
-        if (source['_valueOid']) {
-            this._valueOid = new fhir.FhirElement(source._valueOid);
+        else if (source['valueAttachment']) {
+            this.value = new fhir.Attachment(source.valueAttachment);
         }
-        if (source['valuePositiveInt']) {
-            this.valuePositiveInt = source.valuePositiveInt;
+        else if (source['valueCodeableConcept']) {
+            this.value = new fhir.CodeableConcept(source.valueCodeableConcept);
         }
-        if (source['_valuePositiveInt']) {
-            this._valuePositiveInt = new fhir.FhirElement(source._valuePositiveInt);
+        else if (source['valueCoding']) {
+            this.value = new fhir.Coding(source.valueCoding);
         }
-        if (source['valueString']) {
-            this.valueString = source.valueString;
+        else if (source['valueContactPoint']) {
+            this.value = new fhir.ContactPoint(source.valueContactPoint);
         }
-        if (source['_valueString']) {
-            this._valueString = new fhir.FhirElement(source._valueString);
+        else if (source['valueCount']) {
+            this.value = new fhir.Count(source.valueCount);
         }
-        if (source['valueTime']) {
-            this.valueTime = source.valueTime;
+        else if (source['valueDistance']) {
+            this.value = new fhir.Distance(source.valueDistance);
         }
-        if (source['_valueTime']) {
-            this._valueTime = new fhir.FhirElement(source._valueTime);
+        else if (source['valueDuration']) {
+            this.value = new fhir.Duration(source.valueDuration);
         }
-        if (source['valueUnsignedInt']) {
-            this.valueUnsignedInt = source.valueUnsignedInt;
+        else if (source['valueHumanName']) {
+            this.value = new fhir.HumanName(source.valueHumanName);
         }
-        if (source['_valueUnsignedInt']) {
-            this._valueUnsignedInt = new fhir.FhirElement(source._valueUnsignedInt);
+        else if (source['valueIdentifier']) {
+            this.value = new fhir.Identifier(source.valueIdentifier);
         }
-        if (source['valueUri']) {
-            this.valueUri = source.valueUri;
+        else if (source['valueMoney']) {
+            this.value = new fhir.Money(source.valueMoney);
         }
-        if (source['_valueUri']) {
-            this._valueUri = new fhir.FhirElement(source._valueUri);
+        else if (source['valuePeriod']) {
+            this.value = new fhir.Period(source.valuePeriod);
         }
-        if (source['valueUrl']) {
-            this.valueUrl = source.valueUrl;
+        else if (source['valueQuantity']) {
+            this.value = new fhir.Quantity(source.valueQuantity);
         }
-        if (source['_valueUrl']) {
-            this._valueUrl = new fhir.FhirElement(source._valueUrl);
+        else if (source['valueRange']) {
+            this.value = new fhir.Range(source.valueRange);
         }
-        if (source['valueUuid']) {
-            this.valueUuid = source.valueUuid;
+        else if (source['valueRatio']) {
+            this.value = new fhir.Ratio(source.valueRatio);
         }
-        if (source['_valueUuid']) {
-            this._valueUuid = new fhir.FhirElement(source._valueUuid);
+        else if (source['valueReference']) {
+            this.value = new fhir.Reference(source.valueReference);
         }
-        if (source['valueAddress']) {
-            this.valueAddress = new fhir.Address(source.valueAddress);
+        else if (source['valueSampledData']) {
+            this.value = new fhir.SampledData(source.valueSampledData);
         }
-        if (source['valueAge']) {
-            this.valueAge = new fhir.Age(source.valueAge);
+        else if (source['valueSignature']) {
+            this.value = new fhir.Signature(source.valueSignature);
         }
-        if (source['valueAnnotation']) {
-            this.valueAnnotation = new fhir.Annotation(source.valueAnnotation);
+        else if (source['valueTiming']) {
+            this.value = new fhir.Timing(source.valueTiming);
         }
-        if (source['valueAttachment']) {
-            this.valueAttachment = new fhir.Attachment(source.valueAttachment);
+        else if (source['valueContactDetail']) {
+            this.value = new fhir.ContactDetail(source.valueContactDetail);
         }
-        if (source['valueCodeableConcept']) {
-            this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept);
+        else if (source['valueContributor']) {
+            this.value = new fhir.Contributor(source.valueContributor);
         }
-        if (source['valueCoding']) {
-            this.valueCoding = new fhir.Coding(source.valueCoding);
+        else if (source['valueDataRequirement']) {
+            this.value = new fhir.DataRequirement(source.valueDataRequirement);
         }
-        if (source['valueContactPoint']) {
-            this.valueContactPoint = new fhir.ContactPoint(source.valueContactPoint);
+        else if (source['valueExpression']) {
+            this.value = new fhir.Expression(source.valueExpression);
         }
-        if (source['valueCount']) {
-            this.valueCount = new fhir.Count(source.valueCount);
+        else if (source['valueParameterDefinition']) {
+            this.value = new fhir.ParameterDefinition(source.valueParameterDefinition);
         }
-        if (source['valueDistance']) {
-            this.valueDistance = new fhir.Distance(source.valueDistance);
+        else if (source['valueRelatedArtifact']) {
+            this.value = new fhir.RelatedArtifact(source.valueRelatedArtifact);
         }
-        if (source['valueDuration']) {
-            this.valueDuration = new fhir.Duration(source.valueDuration);
+        else if (source['valueTriggerDefinition']) {
+            this.value = new fhir.TriggerDefinition(source.valueTriggerDefinition);
         }
-        if (source['valueHumanName']) {
-            this.valueHumanName = new fhir.HumanName(source.valueHumanName);
+        else if (source['valueUsageContext']) {
+            this.value = new fhir.UsageContext(source.valueUsageContext);
         }
-        if (source['valueIdentifier']) {
-            this.valueIdentifier = new fhir.Identifier(source.valueIdentifier);
+        else if (source['valueDosage']) {
+            this.value = new fhir.Dosage(source.valueDosage);
         }
-        if (source['valueMoney']) {
-            this.valueMoney = new fhir.Money(source.valueMoney);
+        else if (source['valueMeta']) {
+            this.value = new fhir.Meta(source.valueMeta);
         }
-        if (source['valuePeriod']) {
-            this.valuePeriod = new fhir.Period(source.valuePeriod);
-        }
-        if (source['valueQuantity']) {
-            this.valueQuantity = new fhir.Quantity(source.valueQuantity);
-        }
-        if (source['valueRange']) {
-            this.valueRange = new fhir.Range(source.valueRange);
-        }
-        if (source['valueRatio']) {
-            this.valueRatio = new fhir.Ratio(source.valueRatio);
-        }
-        if (source['valueReference']) {
-            this.valueReference = new fhir.Reference(source.valueReference);
-        }
-        if (source['valueSampledData']) {
-            this.valueSampledData = new fhir.SampledData(source.valueSampledData);
-        }
-        if (source['valueSignature']) {
-            this.valueSignature = new fhir.Signature(source.valueSignature);
-        }
-        if (source['valueTiming']) {
-            this.valueTiming = new fhir.Timing(source.valueTiming);
-        }
-        if (source['valueContactDetail']) {
-            this.valueContactDetail = new fhir.ContactDetail(source.valueContactDetail);
-        }
-        if (source['valueContributor']) {
-            this.valueContributor = new fhir.Contributor(source.valueContributor);
-        }
-        if (source['valueDataRequirement']) {
-            this.valueDataRequirement = new fhir.DataRequirement(source.valueDataRequirement);
-        }
-        if (source['valueExpression']) {
-            this.valueExpression = new fhir.Expression(source.valueExpression);
-        }
-        if (source['valueParameterDefinition']) {
-            this.valueParameterDefinition = new fhir.ParameterDefinition(source.valueParameterDefinition);
-        }
-        if (source['valueRelatedArtifact']) {
-            this.valueRelatedArtifact = new fhir.RelatedArtifact(source.valueRelatedArtifact);
-        }
-        if (source['valueTriggerDefinition']) {
-            this.valueTriggerDefinition = new fhir.TriggerDefinition(source.valueTriggerDefinition);
-        }
-        if (source['valueUsageContext']) {
-            this.valueUsageContext = new fhir.UsageContext(source.valueUsageContext);
-        }
-        if (source['valueDosage']) {
-            this.valueDosage = new fhir.Dosage(source.valueDosage);
-        }
-        if (source['valueMeta']) {
-            this.valueMeta = new fhir.Meta(source.valueMeta);
+        else {
+            this.value = null;
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: Task.output.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.CodeableConcept fhir: Task.output.type:CodeableConcept", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_valueBase64Binary"]) {
-            results.push(...this._valueBase64Binary.doModelValidation());
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value: fhir: Task.output.value[x]:", }));
         }
-        if (this["_valueBoolean"]) {
-            results.push(...this._valueBoolean.doModelValidation());
-        }
-        if (this["_valueCanonical"]) {
-            results.push(...this._valueCanonical.doModelValidation());
-        }
-        if (this["_valueCode"]) {
-            results.push(...this._valueCode.doModelValidation());
-        }
-        if (this["_valueDate"]) {
-            results.push(...this._valueDate.doModelValidation());
-        }
-        if (this["_valueDateTime"]) {
-            results.push(...this._valueDateTime.doModelValidation());
-        }
-        if (this["_valueDecimal"]) {
-            results.push(...this._valueDecimal.doModelValidation());
-        }
-        if (this["_valueId"]) {
-            results.push(...this._valueId.doModelValidation());
-        }
-        if (this["_valueInstant"]) {
-            results.push(...this._valueInstant.doModelValidation());
-        }
-        if (this["_valueInteger"]) {
-            results.push(...this._valueInteger.doModelValidation());
-        }
-        if (this["_valueMarkdown"]) {
-            results.push(...this._valueMarkdown.doModelValidation());
-        }
-        if (this["_valueOid"]) {
-            results.push(...this._valueOid.doModelValidation());
-        }
-        if (this["_valuePositiveInt"]) {
-            results.push(...this._valuePositiveInt.doModelValidation());
-        }
-        if (this["_valueString"]) {
-            results.push(...this._valueString.doModelValidation());
-        }
-        if (this["_valueTime"]) {
-            results.push(...this._valueTime.doModelValidation());
-        }
-        if (this["_valueUnsignedInt"]) {
-            results.push(...this._valueUnsignedInt.doModelValidation());
-        }
-        if (this["_valueUri"]) {
-            results.push(...this._valueUri.doModelValidation());
-        }
-        if (this["_valueUrl"]) {
-            results.push(...this._valueUrl.doModelValidation());
-        }
-        if (this["_valueUuid"]) {
-            results.push(...this._valueUuid.doModelValidation());
-        }
-        if (this["valueAddress"]) {
-            results.push(...this.valueAddress.doModelValidation());
-        }
-        if (this["valueAge"]) {
-            results.push(...this.valueAge.doModelValidation());
-        }
-        if (this["valueAnnotation"]) {
-            results.push(...this.valueAnnotation.doModelValidation());
-        }
-        if (this["valueAttachment"]) {
-            results.push(...this.valueAttachment.doModelValidation());
-        }
-        if (this["valueCodeableConcept"]) {
-            results.push(...this.valueCodeableConcept.doModelValidation());
-        }
-        if (this["valueCoding"]) {
-            results.push(...this.valueCoding.doModelValidation());
-        }
-        if (this["valueContactPoint"]) {
-            results.push(...this.valueContactPoint.doModelValidation());
-        }
-        if (this["valueCount"]) {
-            results.push(...this.valueCount.doModelValidation());
-        }
-        if (this["valueDistance"]) {
-            results.push(...this.valueDistance.doModelValidation());
-        }
-        if (this["valueDuration"]) {
-            results.push(...this.valueDuration.doModelValidation());
-        }
-        if (this["valueHumanName"]) {
-            results.push(...this.valueHumanName.doModelValidation());
-        }
-        if (this["valueIdentifier"]) {
-            results.push(...this.valueIdentifier.doModelValidation());
-        }
-        if (this["valueMoney"]) {
-            results.push(...this.valueMoney.doModelValidation());
-        }
-        if (this["valuePeriod"]) {
-            results.push(...this.valuePeriod.doModelValidation());
-        }
-        if (this["valueQuantity"]) {
-            results.push(...this.valueQuantity.doModelValidation());
-        }
-        if (this["valueRange"]) {
-            results.push(...this.valueRange.doModelValidation());
-        }
-        if (this["valueRatio"]) {
-            results.push(...this.valueRatio.doModelValidation());
-        }
-        if (this["valueReference"]) {
-            results.push(...this.valueReference.doModelValidation());
-        }
-        if (this["valueSampledData"]) {
-            results.push(...this.valueSampledData.doModelValidation());
-        }
-        if (this["valueSignature"]) {
-            results.push(...this.valueSignature.doModelValidation());
-        }
-        if (this["valueTiming"]) {
-            results.push(...this.valueTiming.doModelValidation());
-        }
-        if (this["valueContactDetail"]) {
-            results.push(...this.valueContactDetail.doModelValidation());
-        }
-        if (this["valueContributor"]) {
-            results.push(...this.valueContributor.doModelValidation());
-        }
-        if (this["valueDataRequirement"]) {
-            results.push(...this.valueDataRequirement.doModelValidation());
-        }
-        if (this["valueExpression"]) {
-            results.push(...this.valueExpression.doModelValidation());
-        }
-        if (this["valueParameterDefinition"]) {
-            results.push(...this.valueParameterDefinition.doModelValidation());
-        }
-        if (this["valueRelatedArtifact"]) {
-            results.push(...this.valueRelatedArtifact.doModelValidation());
-        }
-        if (this["valueTriggerDefinition"]) {
-            results.push(...this.valueTriggerDefinition.doModelValidation());
-        }
-        if (this["valueUsageContext"]) {
-            results.push(...this.valueUsageContext.doModelValidation());
-        }
-        if (this["valueDosage"]) {
-            results.push(...this.valueDosage.doModelValidation());
-        }
-        if (this["valueMeta"]) {
-            results.push(...this.valueMeta.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -828,23 +458,54 @@ export class Task extends fhir.DomainResource {
     /**
      * Default constructor for Task - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Task';
+        /**
+         * The business identifier for this task.
+         */
+        this.identifier = [];
+        /**
+         * BasedOn refers to a higher-level authorization that triggered the creation of the task.  It references a "request" resource such as a ServiceRequest, MedicationRequest, ServiceRequest, CarePlan, etc. which is distinct from the "request" resource the task is seeking to fulfill.  This latter resource is referenced by FocusOn.  For example, based on a ServiceRequest (= BasedOn), a task is created to fulfill a procedureRequest ( = FocusOn ) to collect a specimen from a patient.
+         */
+        this.basedOn = [];
+        /**
+         * This should usually be 0..1.
+         */
+        this.partOf = [];
+        /**
+         * The kind of participant that should perform the task.
+         */
+        this.performerType = [];
+        /**
+         * Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be relevant to the Task.
+         */
+        this.insurance = [];
+        /**
+         * Free-text information captured about the task as it progresses.
+         */
+        this.note = [];
+        /**
+         * This element does not point to the Provenance associated with the *current* version of the resource - as it would be created after this version existed.  The Provenance for the current version can be retrieved with a _revinclude.
+         */
+        this.relevantHistory = [];
+        /**
+         * Additional information that may be needed in the execution of the task.
+         */
+        this.input = [];
+        /**
+         * Outputs produced by the Task.
+         */
+        this.output = [];
         this.resourceType = 'Task';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['instantiatesCanonical']) {
-            this.instantiatesCanonical = source.instantiatesCanonical;
-        }
-        if (source['_instantiatesCanonical']) {
-            this._instantiatesCanonical = new fhir.FhirElement(source._instantiatesCanonical);
+            this.instantiatesCanonical = new fhir.FhirCanonical({ value: source.instantiatesCanonical });
         }
         if (source['instantiatesUri']) {
-            this.instantiatesUri = source.instantiatesUri;
-        }
-        if (source['_instantiatesUri']) {
-            this._instantiatesUri = new fhir.FhirElement(source._instantiatesUri);
+            this.instantiatesUri = new fhir.FhirUri({ value: source.instantiatesUri });
         }
         if (source['basedOn']) {
             this.basedOn = source.basedOn.map((x) => new fhir.Reference(x));
@@ -861,9 +522,6 @@ export class Task extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['statusReason']) {
             this.statusReason = new fhir.CodeableConcept(source.statusReason);
         }
@@ -876,23 +534,14 @@ export class Task extends fhir.DomainResource {
         else {
             this.intent = null;
         }
-        if (source['_intent']) {
-            this._intent = new fhir.FhirElement(source._intent);
-        }
         if (source['priority']) {
             this.priority = source.priority;
-        }
-        if (source['_priority']) {
-            this._priority = new fhir.FhirElement(source._priority);
         }
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['focus']) {
             this.focus = new fhir.Reference(source.focus);
@@ -907,16 +556,10 @@ export class Task extends fhir.DomainResource {
             this.executionPeriod = new fhir.Period(source.executionPeriod);
         }
         if (source['authoredOn']) {
-            this.authoredOn = source.authoredOn;
-        }
-        if (source['_authoredOn']) {
-            this._authoredOn = new fhir.FhirElement(source._authoredOn);
+            this.authoredOn = new fhir.FhirDateTime({ value: source.authoredOn });
         }
         if (source['lastModified']) {
-            this.lastModified = source.lastModified;
-        }
-        if (source['_lastModified']) {
-            this._lastModified = new fhir.FhirElement(source._lastModified);
+            this.lastModified = new fhir.FhirDateTime({ value: source.lastModified });
         }
         if (source['requester']) {
             this.requester = new fhir.Reference(source.requester);
@@ -989,110 +632,107 @@ export class Task extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Task.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Task' fhir: Task.resourceType:'Task'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instantiatesCanonical"]) {
-            results.push(...this._instantiatesCanonical.doModelValidation());
+        if (this["instantiatesCanonical"]) {
+            outcome.issue.push(...this.instantiatesCanonical.doModelValidation().issue);
         }
-        if (this["_instantiatesUri"]) {
-            results.push(...this._instantiatesUri.doModelValidation());
+        if (this["instantiatesUri"]) {
+            outcome.issue.push(...this.instantiatesUri.doModelValidation().issue);
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["groupIdentifier"]) {
-            results.push(...this.groupIdentifier.doModelValidation());
+            outcome.issue.push(...this.groupIdentifier.doModelValidation().issue);
         }
         if (this["partOf"]) {
-            this.partOf.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.partOf.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Task.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:TaskStatusValueSetEnum fhir: Task.status:code", }));
         }
         if (this["statusReason"]) {
-            results.push(...this.statusReason.doModelValidation());
+            outcome.issue.push(...this.statusReason.doModelValidation().issue);
         }
         if (this["businessStatus"]) {
-            results.push(...this.businessStatus.doModelValidation());
+            outcome.issue.push(...this.businessStatus.doModelValidation().issue);
         }
-        if (!this["intent"]) {
-            results.push(["intent", 'Missing required element: Task.intent']);
-        }
-        if (this["_intent"]) {
-            results.push(...this._intent.doModelValidation());
-        }
-        if (this["_priority"]) {
-            results.push(...this._priority.doModelValidation());
+        if (!this['intent']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property intent:TaskIntentValueSetEnum fhir: Task.intent:code", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["focus"]) {
-            results.push(...this.focus.doModelValidation());
+            outcome.issue.push(...this.focus.doModelValidation().issue);
         }
         if (this["for"]) {
-            results.push(...this.for.doModelValidation());
+            outcome.issue.push(...this.for.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
         if (this["executionPeriod"]) {
-            results.push(...this.executionPeriod.doModelValidation());
+            outcome.issue.push(...this.executionPeriod.doModelValidation().issue);
         }
-        if (this["_authoredOn"]) {
-            results.push(...this._authoredOn.doModelValidation());
+        if (this["authoredOn"]) {
+            outcome.issue.push(...this.authoredOn.doModelValidation().issue);
         }
-        if (this["_lastModified"]) {
-            results.push(...this._lastModified.doModelValidation());
+        if (this["lastModified"]) {
+            outcome.issue.push(...this.lastModified.doModelValidation().issue);
         }
         if (this["requester"]) {
-            results.push(...this.requester.doModelValidation());
+            outcome.issue.push(...this.requester.doModelValidation().issue);
         }
         if (this["performerType"]) {
-            this.performerType.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.performerType.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["owner"]) {
-            results.push(...this.owner.doModelValidation());
+            outcome.issue.push(...this.owner.doModelValidation().issue);
         }
         if (this["location"]) {
-            results.push(...this.location.doModelValidation());
+            outcome.issue.push(...this.location.doModelValidation().issue);
         }
         if (this["reasonCode"]) {
-            results.push(...this.reasonCode.doModelValidation());
+            outcome.issue.push(...this.reasonCode.doModelValidation().issue);
         }
         if (this["reasonReference"]) {
-            results.push(...this.reasonReference.doModelValidation());
+            outcome.issue.push(...this.reasonReference.doModelValidation().issue);
         }
         if (this["insurance"]) {
-            this.insurance.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.insurance.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relevantHistory"]) {
-            this.relevantHistory.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relevantHistory.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["restriction"]) {
-            results.push(...this.restriction.doModelValidation());
+            outcome.issue.push(...this.restriction.doModelValidation().issue);
         }
         if (this["input"]) {
-            this.input.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.input.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["output"]) {
-            this.output.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.output.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Task.js.map

@@ -3,43 +3,37 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Binary
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A resource that represents the data of a single raw artifact as digital content accessible in its native format.  A Binary resource can contain any content, whether text, image, pdf, zip archive, etc.
+ * Valid arguments for the Binary type.
  */
-export type IBinary = fhir.IResource & { 
+export interface BinaryArgs extends fhir.ResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "Binary";
+  resourceType: "Binary"|undefined;
   /**
    * MimeType of the binary content represented as a standard MimeType (BCP 13).
    */
-  contentType: string|null;
-  /**
-   * Extended properties for primitive element: Binary.contentType
-   */
-  _contentType?: fhir.IFhirElement|undefined;
+  contentType: fhir.FhirCode|string|undefined;
   /**
    * Very often, a server will also know of a resource that references the binary, and can automatically apply the appropriate access rules based on that reference. However, there are some circumstances where this is not appropriate, e.g. the binary is uploaded directly to the server without any linking resource, the binary is referred to from multiple different resources, and/or the binary is content such as an application logo that has less protection than any of the resources that reference it.
    */
-  securityContext?: fhir.IReference|undefined;
+  securityContext?: fhir.ReferenceArgs|undefined;
   /**
    * If the content type is itself base64 encoding, then this will be base64 encoded twice - what is created by un-base64ing the content must be the specified content type.
    */
-  data?: string|undefined;
-  /**
-   * Extended properties for primitive element: Binary.data
-   */
-  _data?: fhir.IFhirElement|undefined;
+  data?: fhir.FhirBase64Binary|string|undefined;
 }
 
 /**
  * A resource that represents the data of a single raw artifact as digital content accessible in its native format.  A Binary resource can contain any content, whether text, image, pdf, zip archive, etc.
  */
-export class Binary extends fhir.Resource implements IBinary {
+export class Binary extends fhir.Resource {
+  readonly __dataType:string = 'Binary';
   /**
    * Resource Type Name
    */
@@ -47,11 +41,7 @@ export class Binary extends fhir.Resource implements IBinary {
   /**
    * MimeType of the binary content represented as a standard MimeType (BCP 13).
    */
-  public contentType: string|null;
-  /**
-   * Extended properties for primitive element: Binary.contentType
-   */
-  public _contentType?: fhir.FhirElement|undefined;
+  public contentType: fhir.FhirCode|null;
   /**
    * Very often, a server will also know of a resource that references the binary, and can automatically apply the appropriate access rules based on that reference. However, there are some circumstances where this is not appropriate, e.g. the binary is uploaded directly to the server without any linking resource, the binary is referred to from multiple different resources, and/or the binary is content such as an application logo that has less protection than any of the resources that reference it.
    */
@@ -59,34 +49,38 @@ export class Binary extends fhir.Resource implements IBinary {
   /**
    * If the content type is itself base64 encoding, then this will be base64 encoded twice - what is created by un-base64ing the content must be the specified content type.
    */
-  public data?: string|undefined;
-  /**
-   * Extended properties for primitive element: Binary.data
-   */
-  public _data?: fhir.FhirElement|undefined;
+  public data?: fhir.FhirBase64Binary|undefined;
   /**
    * Default constructor for Binary - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IBinary> = { }) {
-    super(source);
+  constructor(source:Partial<BinaryArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Binary';
-    if (source['contentType']) { this.contentType = source.contentType; }
+    if (source['contentType']) { this.contentType = new fhir.FhirCode({value: source.contentType}); }
     else { this.contentType = null; }
-    if (source['_contentType']) { this._contentType = new fhir.FhirElement(source._contentType!); }
-    if (source['securityContext']) { this.securityContext = new fhir.Reference(source.securityContext!); }
-    if (source['data']) { this.data = source.data; }
-    if (source['_data']) { this._data = new fhir.FhirElement(source._data!); }
+    if (source['securityContext']) { this.securityContext = new fhir.Reference(source.securityContext); }
+    if (source['data']) { this.data = new fhir.FhirBase64Binary({value: source.data}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Binary.resourceType']); }
-    if (!this["contentType"]) { results.push(["contentType",'Missing required element: Binary.contentType']); }
-    if (this["_contentType"]) { results.push(...this._contentType.doModelValidation()); }
-    if (this["securityContext"]) { results.push(...this.securityContext.doModelValidation()); }
-    if (this["_data"]) { results.push(...this._data.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Binary' fhir: Binary.resourceType:'Binary'", }));
+    }
+    if (!this['contentType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property contentType:fhir.FhirCode fhir: Binary.contentType:code", }));
+    }
+    if (this["contentType"]) { outcome.issue!.push(...this.contentType.doModelValidation().issue!); }
+    if (this["securityContext"]) { outcome.issue!.push(...this.securityContext.doModelValidation().issue!); }
+    if (this["data"]) { outcome.issue!.push(...this.data.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

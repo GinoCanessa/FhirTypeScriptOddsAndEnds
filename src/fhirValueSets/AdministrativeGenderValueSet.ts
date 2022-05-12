@@ -51,21 +51,3 @@ export type AdministrativeGenderValueSetType = typeof AdministrativeGenderValueS
 /**
  * The gender of a person used for administrative purposes.
  */
-export enum AdministrativeGenderValueSetEnum {
-  /**
-   * female: Female.
-   */
-  Female = "female",
-  /**
-   * male: Male.
-   */
-  Male = "male",
-  /**
-   * other: Other.
-   */
-  Other = "other",
-  /**
-   * unknown: Unknown.
-   */
-  Unknown = "unknown",
-}

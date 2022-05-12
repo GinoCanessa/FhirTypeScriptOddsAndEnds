@@ -3,9 +3,11 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ChargeItemDefinition
 import * as fhir from '../fhir.js';
-import { InvoicePriceComponentTypeValueSet } from '../fhirValueSets/InvoicePriceComponentTypeValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { ChargeitemBillingcodesValueSet } from '../fhirValueSets/ChargeitemBillingcodesValueSet.js';
+import { InvoicePriceComponentTypeValueSet, } from '../fhirValueSets/InvoicePriceComponentTypeValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { ChargeitemBillingcodesValueSet, } from '../fhirValueSets/ChargeitemBillingcodesValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.
  */
@@ -13,42 +15,40 @@ export class ChargeItemDefinitionApplicability extends fhir.BackboneElement {
     /**
      * Default constructor for ChargeItemDefinitionApplicability - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ChargeItemDefinitionApplicability';
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['language']) {
-            this.language = source.language;
-        }
-        if (source['_language']) {
-            this._language = new fhir.FhirElement(source._language);
+            this.language = new fhir.FhirString({ value: source.language });
         }
         if (source['expression']) {
-            this.expression = source.expression;
-        }
-        if (source['_expression']) {
-            this._expression = new fhir.FhirElement(source._expression);
+            this.expression = new fhir.FhirString({ value: source.expression });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_language"]) {
-            results.push(...this._language.doModelValidation());
+        if (this["language"]) {
+            outcome.issue.push(...this.language.doModelValidation().issue);
         }
-        if (this["_expression"]) {
-            results.push(...this._expression.doModelValidation());
+        if (this["expression"]) {
+            outcome.issue.push(...this.expression.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -58,25 +58,20 @@ export class ChargeItemDefinitionPropertyGroupPriceComponent extends fhir.Backbo
     /**
      * Default constructor for ChargeItemDefinitionPropertyGroupPriceComponent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ChargeItemDefinitionPropertyGroupPriceComponent';
         if (source['type']) {
             this.type = source.type;
         }
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
         if (source['factor']) {
-            this.factor = source.factor;
-        }
-        if (source['_factor']) {
-            this._factor = new fhir.FhirElement(source._factor);
+            this.factor = new fhir.FhirDecimal({ value: source.factor });
         }
         if (source['amount']) {
             this.amount = new fhir.Money(source.amount);
@@ -92,23 +87,26 @@ export class ChargeItemDefinitionPropertyGroupPriceComponent extends fhir.Backbo
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: ChargeItemDefinition.propertyGroup.priceComponent.type']);
-        }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:InvoicePriceComponentTypeValueSetEnum fhir: ChargeItemDefinition.propertyGroup.priceComponent.type:code", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_factor"]) {
-            results.push(...this._factor.doModelValidation());
+        if (this["factor"]) {
+            outcome.issue.push(...this.factor.doModelValidation().issue);
         }
         if (this["amount"]) {
-            results.push(...this.amount.doModelValidation());
+            outcome.issue.push(...this.amount.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -118,8 +116,17 @@ export class ChargeItemDefinitionPropertyGroup extends fhir.BackboneElement {
     /**
      * Default constructor for ChargeItemDefinitionPropertyGroup - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ChargeItemDefinitionPropertyGroup';
+        /**
+         * The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.
+         */
+        this.applicability = [];
+        /**
+         * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the prices have been calculated.
+         */
+        this.priceComponent = [];
         if (source['applicability']) {
             this.applicability = source.applicability.map((x) => new fhir.ChargeItemDefinitionApplicability(x));
         }
@@ -131,14 +138,20 @@ export class ChargeItemDefinitionPropertyGroup extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["applicability"]) {
-            this.applicability.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.applicability.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["priceComponent"]) {
-            this.priceComponent.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.priceComponent.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -148,50 +161,73 @@ export class ChargeItemDefinition extends fhir.DomainResource {
     /**
      * Default constructor for ChargeItemDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ChargeItemDefinition';
+        /**
+         * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this charge item definition outside of FHIR, where it is not possible to use the logical URI.
+         */
+        this.identifier = [];
+        /**
+         * The URL pointing to an externally-defined charge item definition that is adhered to in whole or in part by this definition.
+         */
+        this.derivedFromUri = [];
+        /**
+         * A larger definition of which this particular definition is a component or step.
+         */
+        this.partOf = [];
+        /**
+         * As new versions of a protocol or guideline are defined, allows identification of what versions are replaced by a new instance.
+         */
+        this.replaces = [];
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the charge item definition to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * In case of highly customized, individually produced or fitted devices/substances, the pricing information may be different for each instance of the product. This reference links pricing details to specific product instances.
+         */
+        this.instance = [];
+        /**
+         * The applicability conditions can be used to ascertain whether a billing item is allowed in a specific context. E.g. some billing codes may only be applicable in out-patient settings, only to male/female patients or only to children.
+         */
+        this.applicability = [];
+        /**
+         * Group of properties which are applicable under the same conditions. If no applicability rules are established for the group, then all properties always apply.
+         */
+        this.propertyGroup = [];
         this.resourceType = 'ChargeItemDefinition';
         if (source['url']) {
-            this.url = source.url;
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         else {
             this.url = null;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
         }
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['derivedFromUri']) {
-            this.derivedFromUri = source.derivedFromUri.map((x) => (x));
-        }
-        if (source['_derivedFromUri']) {
-            this._derivedFromUri = source._derivedFromUri.map((x) => new fhir.FhirElement(x));
+            this.derivedFromUri = source.derivedFromUri.map((x) => new fhir.FhirUri({ value: x }));
         }
         if (source['partOf']) {
-            this.partOf = source.partOf.map((x) => (x));
-        }
-        if (source['_partOf']) {
-            this._partOf = source._partOf.map((x) => new fhir.FhirElement(x));
+            this.partOf = source.partOf.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['replaces']) {
-            this.replaces = source.replaces.map((x) => (x));
-        }
-        if (source['_replaces']) {
-            this._replaces = source._replaces.map((x) => new fhir.FhirElement(x));
+            this.replaces = source.replaces.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['status']) {
             this.status = source.status;
@@ -199,35 +235,20 @@ export class ChargeItemDefinition extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
-        }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -236,22 +257,13 @@ export class ChargeItemDefinition extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['approvalDate']) {
-            this.approvalDate = source.approvalDate;
-        }
-        if (source['_approvalDate']) {
-            this._approvalDate = new fhir.FhirElement(source._approvalDate);
+            this.approvalDate = new fhir.FhirDate({ value: source.approvalDate });
         }
         if (source['lastReviewDate']) {
-            this.lastReviewDate = source.lastReviewDate;
-        }
-        if (source['_lastReviewDate']) {
-            this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate);
+            this.lastReviewDate = new fhir.FhirDate({ value: source.lastReviewDate });
         }
         if (source['effectivePeriod']) {
             this.effectivePeriod = new fhir.Period(source.effectivePeriod);
@@ -285,86 +297,89 @@ export class ChargeItemDefinition extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: ChargeItemDefinition.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'ChargeItemDefinition' fhir: ChargeItemDefinition.resourceType:'ChargeItemDefinition'", }));
         }
-        if (!this["url"]) {
-            results.push(["url", 'Missing required element: ChargeItemDefinition.url']);
+        if (!this['url']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property url:fhir.FhirUri fhir: ChargeItemDefinition.url:uri", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_derivedFromUri"]) {
-            this._derivedFromUri.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["derivedFromUri"]) {
+            this.derivedFromUri.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_partOf"]) {
-            this._partOf.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["partOf"]) {
+            this.partOf.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_replaces"]) {
-            this._replaces.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["replaces"]) {
+            this.replaces.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: ChargeItemDefinition.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: ChargeItemDefinition.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
-        if (this["_approvalDate"]) {
-            results.push(...this._approvalDate.doModelValidation());
+        if (this["approvalDate"]) {
+            outcome.issue.push(...this.approvalDate.doModelValidation().issue);
         }
-        if (this["_lastReviewDate"]) {
-            results.push(...this._lastReviewDate.doModelValidation());
+        if (this["lastReviewDate"]) {
+            outcome.issue.push(...this.lastReviewDate.doModelValidation().issue);
         }
         if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
+            outcome.issue.push(...this.effectivePeriod.doModelValidation().issue);
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["instance"]) {
-            this.instance.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.instance.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["applicability"]) {
-            this.applicability.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.applicability.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["propertyGroup"]) {
-            this.propertyGroup.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.propertyGroup.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ChargeItemDefinition.js.map

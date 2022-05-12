@@ -43,23 +43,4 @@ export const SupplydeliveryStatusValueSet = {
 /**
  * Status of the supply delivery.
  */
-export var SupplydeliveryStatusValueSetEnum;
-(function (SupplydeliveryStatusValueSetEnum) {
-    /**
-     * abandoned: Delivery was not completed.
-     */
-    SupplydeliveryStatusValueSetEnum["Abandoned"] = "abandoned";
-    /**
-     * completed: Supply has been delivered ("completed").
-     */
-    SupplydeliveryStatusValueSetEnum["Delivered"] = "completed";
-    /**
-     * entered-in-error: This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be "abandoned" rather than "entered-in-error".).
-     */
-    SupplydeliveryStatusValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * in-progress: Supply has been requested, but not delivered.
-     */
-    SupplydeliveryStatusValueSetEnum["InProgress"] = "in-progress";
-})(SupplydeliveryStatusValueSetEnum || (SupplydeliveryStatusValueSetEnum = {}));
 //# sourceMappingURL=SupplydeliveryStatusValueSet.js.map

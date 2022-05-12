@@ -3,120 +3,75 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: HumanName
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { NameUseValueSet, NameUseValueSetType, NameUseValueSetEnum } from '../fhirValueSets/NameUseValueSet.js'
-
+import { NameUseValueSet, NameUseValueSetType,} from '../fhirValueSets/NameUseValueSet.js';
+import { NameUseValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A human's name with the ability to identify parts and usage.
+ * Valid arguments for the HumanName type.
  */
-export type IHumanName = fhir.IFhirElement & { 
+export interface HumanNameArgs extends fhir.FhirElementArgs {
   /**
    * Applications can assume that a name is current unless it explicitly says that it is temporary or old.
    */
   use?: NameUseValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: HumanName.use
-   */
-  _use?: fhir.IFhirElement|undefined;
-  /**
    * Can provide both a text representation and parts. Applications updating a name SHALL ensure that when both text and parts are present,  no content is included in the text that isn't found in a part.
    */
-  text?: string|undefined;
-  /**
-   * Extended properties for primitive element: HumanName.text
-   */
-  _text?: fhir.IFhirElement|undefined;
+  text?: fhir.FhirString|string|undefined;
   /**
    * Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).
    */
-  family?: string|undefined;
-  /**
-   * Extended properties for primitive element: HumanName.family
-   */
-  _family?: fhir.IFhirElement|undefined;
+  family?: fhir.FhirString|string|undefined;
   /**
    * If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations.  This element is not called "first name" since given names do not always come first.
    */
-  given?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: HumanName.given
-   */
-  _given?: fhir.IFhirElement[]|undefined;
+  given?: fhir.FhirString[]|string[]|undefined;
   /**
    * Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.
    */
-  prefix?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: HumanName.prefix
-   */
-  _prefix?: fhir.IFhirElement[]|undefined;
+  prefix?: fhir.FhirString[]|string[]|undefined;
   /**
    * Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.
    */
-  suffix?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: HumanName.suffix
-   */
-  _suffix?: fhir.IFhirElement[]|undefined;
+  suffix?: fhir.FhirString[]|string[]|undefined;
   /**
    * Indicates the period of time when this name was valid for the named person.
    */
-  period?: fhir.IPeriod|undefined;
+  period?: fhir.PeriodArgs|undefined;
 }
 
 /**
  * A human's name with the ability to identify parts and usage.
  */
-export class HumanName extends fhir.FhirElement implements IHumanName {
+export class HumanName extends fhir.FhirElement {
+  readonly __dataType:string = 'HumanName';
   /**
    * Applications can assume that a name is current unless it explicitly says that it is temporary or old.
    */
   public use?: NameUseValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: HumanName.use
-   */
-  public _use?: fhir.FhirElement|undefined;
-  /**
    * Can provide both a text representation and parts. Applications updating a name SHALL ensure that when both text and parts are present,  no content is included in the text that isn't found in a part.
    */
-  public text?: string|undefined;
-  /**
-   * Extended properties for primitive element: HumanName.text
-   */
-  public _text?: fhir.FhirElement|undefined;
+  public text?: fhir.FhirString|undefined;
   /**
    * Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).
    */
-  public family?: string|undefined;
-  /**
-   * Extended properties for primitive element: HumanName.family
-   */
-  public _family?: fhir.FhirElement|undefined;
+  public family?: fhir.FhirString|undefined;
   /**
    * If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations.  This element is not called "first name" since given names do not always come first.
    */
-  public given?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: HumanName.given
-   */
-  public _given?: fhir.FhirElement[]|undefined;
+  public given?: fhir.FhirString[]|undefined = [];
   /**
    * Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.
    */
-  public prefix?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: HumanName.prefix
-   */
-  public _prefix?: fhir.FhirElement[]|undefined;
+  public prefix?: fhir.FhirString[]|undefined = [];
   /**
    * Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.
    */
-  public suffix?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: HumanName.suffix
-   */
-  public _suffix?: fhir.FhirElement[]|undefined;
+  public suffix?: fhir.FhirString[]|undefined = [];
   /**
    * Indicates the period of time when this name was valid for the named person.
    */
@@ -124,21 +79,15 @@ export class HumanName extends fhir.FhirElement implements IHumanName {
   /**
    * Default constructor for HumanName - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IHumanName> = { }) {
-    super(source);
+  constructor(source:Partial<HumanNameArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['use']) { this.use = source.use; }
-    if (source['_use']) { this._use = new fhir.FhirElement(source._use!); }
-    if (source['text']) { this.text = source.text; }
-    if (source['_text']) { this._text = new fhir.FhirElement(source._text!); }
-    if (source['family']) { this.family = source.family; }
-    if (source['_family']) { this._family = new fhir.FhirElement(source._family!); }
-    if (source['given']) { this.given = source.given.map((x) => (x)); }
-    if (source['_given']) { this._given = source._given.map((x) => new fhir.FhirElement(x)); }
-    if (source['prefix']) { this.prefix = source.prefix.map((x) => (x)); }
-    if (source['_prefix']) { this._prefix = source._prefix.map((x) => new fhir.FhirElement(x)); }
-    if (source['suffix']) { this.suffix = source.suffix.map((x) => (x)); }
-    if (source['_suffix']) { this._suffix = source._suffix.map((x) => new fhir.FhirElement(x)); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
+    if (source['text']) { this.text = new fhir.FhirString({value: source.text}); }
+    if (source['family']) { this.family = new fhir.FhirString({value: source.family}); }
+    if (source['given']) { this.given = source.given.map((x) => new fhir.FhirString({value: x})); }
+    if (source['prefix']) { this.prefix = source.prefix.map((x) => new fhir.FhirString({value: x})); }
+    if (source['suffix']) { this.suffix = source.suffix.map((x) => new fhir.FhirString({value: x})); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
   }
   /**
    * Required-bound Value Set for use
@@ -149,16 +98,21 @@ export class HumanName extends fhir.FhirElement implements IHumanName {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_use"]) { results.push(...this._use.doModelValidation()); }
-    if (this["_text"]) { results.push(...this._text.doModelValidation()); }
-    if (this["_family"]) { results.push(...this._family.doModelValidation()); }
-    if (this["_given"]) { this._given.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_prefix"]) { this._prefix.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_suffix"]) { this._suffix.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["text"]) { outcome.issue!.push(...this.text.doModelValidation().issue!); }
+    if (this["family"]) { outcome.issue!.push(...this.family.doModelValidation().issue!); }
+    if (this["given"]) { this.given.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["prefix"]) { this.prefix.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["suffix"]) { this.suffix.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 
 /**
@@ -166,14 +120,14 @@ export class HumanName extends fhir.FhirElement implements IHumanName {
  */
 toDisplay(familyFirst:boolean = true, includeAnnotations:boolean = false):string {
   if ((this.text) && (this.text.length > 0)) {
-    return this.text;
+    return this.text.toString();
   }
 
   var val:string = '';
 
   if (familyFirst) {
     if (this.family) {
-      val = this.family;
+      val = this.family.toString();
     }
 
     if (this.given) {

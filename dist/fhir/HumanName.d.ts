@@ -1,114 +1,68 @@
 import * as fhir from '../fhir.js';
-import { NameUseValueSetType, NameUseValueSetEnum } from '../fhirValueSets/NameUseValueSet.js';
+import { NameUseValueSetType } from '../fhirValueSets/NameUseValueSet.js';
+import { NameUseValueSetEnum } from '../valueSetEnums.js';
 /**
- * A human's name with the ability to identify parts and usage.
+ * Valid arguments for the HumanName type.
  */
-export declare type IHumanName = fhir.IFhirElement & {
+export interface HumanNameArgs extends fhir.FhirElementArgs {
     /**
      * Applications can assume that a name is current unless it explicitly says that it is temporary or old.
      */
     use?: NameUseValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: HumanName.use
-     */
-    _use?: fhir.IFhirElement | undefined;
-    /**
      * Can provide both a text representation and parts. Applications updating a name SHALL ensure that when both text and parts are present,  no content is included in the text that isn't found in a part.
      */
-    text?: string | undefined;
-    /**
-     * Extended properties for primitive element: HumanName.text
-     */
-    _text?: fhir.IFhirElement | undefined;
+    text?: fhir.FhirString | string | undefined;
     /**
      * Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).
      */
-    family?: string | undefined;
-    /**
-     * Extended properties for primitive element: HumanName.family
-     */
-    _family?: fhir.IFhirElement | undefined;
+    family?: fhir.FhirString | string | undefined;
     /**
      * If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations.  This element is not called "first name" since given names do not always come first.
      */
-    given?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: HumanName.given
-     */
-    _given?: fhir.IFhirElement[] | undefined;
+    given?: fhir.FhirString[] | string[] | undefined;
     /**
      * Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.
      */
-    prefix?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: HumanName.prefix
-     */
-    _prefix?: fhir.IFhirElement[] | undefined;
+    prefix?: fhir.FhirString[] | string[] | undefined;
     /**
      * Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.
      */
-    suffix?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: HumanName.suffix
-     */
-    _suffix?: fhir.IFhirElement[] | undefined;
+    suffix?: fhir.FhirString[] | string[] | undefined;
     /**
      * Indicates the period of time when this name was valid for the named person.
      */
-    period?: fhir.IPeriod | undefined;
-};
+    period?: fhir.PeriodArgs | undefined;
+}
 /**
  * A human's name with the ability to identify parts and usage.
  */
-export declare class HumanName extends fhir.FhirElement implements IHumanName {
+export declare class HumanName extends fhir.FhirElement {
+    readonly __dataType: string;
     /**
      * Applications can assume that a name is current unless it explicitly says that it is temporary or old.
      */
     use?: NameUseValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: HumanName.use
-     */
-    _use?: fhir.FhirElement | undefined;
-    /**
      * Can provide both a text representation and parts. Applications updating a name SHALL ensure that when both text and parts are present,  no content is included in the text that isn't found in a part.
      */
-    text?: string | undefined;
-    /**
-     * Extended properties for primitive element: HumanName.text
-     */
-    _text?: fhir.FhirElement | undefined;
+    text?: fhir.FhirString | undefined;
     /**
      * Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).
      */
-    family?: string | undefined;
-    /**
-     * Extended properties for primitive element: HumanName.family
-     */
-    _family?: fhir.FhirElement | undefined;
+    family?: fhir.FhirString | undefined;
     /**
      * If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations.  This element is not called "first name" since given names do not always come first.
      */
-    given?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: HumanName.given
-     */
-    _given?: fhir.FhirElement[] | undefined;
+    given?: fhir.FhirString[] | undefined;
     /**
      * Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.
      */
-    prefix?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: HumanName.prefix
-     */
-    _prefix?: fhir.FhirElement[] | undefined;
+    prefix?: fhir.FhirString[] | undefined;
     /**
      * Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.
      */
-    suffix?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: HumanName.suffix
-     */
-    _suffix?: fhir.FhirElement[] | undefined;
+    suffix?: fhir.FhirString[] | undefined;
     /**
      * Indicates the period of time when this name was valid for the named person.
      */
@@ -116,7 +70,7 @@ export declare class HumanName extends fhir.FhirElement implements IHumanName {
     /**
      * Default constructor for HumanName - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IHumanName>);
+    constructor(source?: Partial<HumanNameArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for use
      */
@@ -124,7 +78,11 @@ export declare class HumanName extends fhir.FhirElement implements IHumanName {
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
     /**
      * Convert a HumanName into a displayable string
      */

@@ -19,11 +19,4 @@ export const ContractExpirationTypeValueSet = {
 /**
  * This value set contract specific codes for status.
  */
-export var ContractExpirationTypeValueSetEnum;
-(function (ContractExpirationTypeValueSetEnum) {
-    /**
-     * breach: To be completed
-     */
-    ContractExpirationTypeValueSetEnum["Breach"] = "breach";
-})(ContractExpirationTypeValueSetEnum || (ContractExpirationTypeValueSetEnum = {}));
 //# sourceMappingURL=ContractExpirationTypeValueSet.js.map

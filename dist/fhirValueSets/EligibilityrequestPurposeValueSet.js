@@ -43,23 +43,4 @@ export const EligibilityrequestPurposeValueSet = {
 /**
  * A code specifying the types of information being requested.
  */
-export var EligibilityrequestPurposeValueSetEnum;
-(function (EligibilityrequestPurposeValueSetEnum) {
-    /**
-     * auth-requirements: The prior authorization requirements for the listed, or discovered if specified, converages for the categories of service and/or specifed biling codes are requested.
-     */
-    EligibilityrequestPurposeValueSetEnum["CoverageAuthRequirements"] = "auth-requirements";
-    /**
-     * benefits: The plan benefits and optionally benefits consumed  for the listed, or discovered if specified, converages are requested.
-     */
-    EligibilityrequestPurposeValueSetEnum["CoverageBenefits"] = "benefits";
-    /**
-     * discovery: The insurer is requested to report on any coverages which they are aware of in addition to any specifed.
-     */
-    EligibilityrequestPurposeValueSetEnum["CoverageDiscovery"] = "discovery";
-    /**
-     * validation: A check that the specified coverages are in-force is requested.
-     */
-    EligibilityrequestPurposeValueSetEnum["CoverageValidation"] = "validation";
-})(EligibilityrequestPurposeValueSetEnum || (EligibilityrequestPurposeValueSetEnum = {}));
 //# sourceMappingURL=EligibilityrequestPurposeValueSet.js.map

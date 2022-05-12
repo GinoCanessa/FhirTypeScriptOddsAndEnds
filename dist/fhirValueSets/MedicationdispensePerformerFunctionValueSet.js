@@ -43,23 +43,4 @@ export const MedicationdispensePerformerFunctionValueSet = {
 /**
  * MedicationDispense Performer Function Codes
  */
-export var MedicationdispensePerformerFunctionValueSetEnum;
-(function (MedicationdispensePerformerFunctionValueSetEnum) {
-    /**
-     * checker: Performed initial quality assurance on the prepared medication
-     */
-    MedicationdispensePerformerFunctionValueSetEnum["Checker"] = "checker";
-    /**
-     * dataenterer: Recorded the details of the request
-     */
-    MedicationdispensePerformerFunctionValueSetEnum["DataEnterer"] = "dataenterer";
-    /**
-     * finalchecker: Performed the final quality assurance on the prepared medication against the request. Typically, this is a pharmacist function.
-     */
-    MedicationdispensePerformerFunctionValueSetEnum["FinalChecker"] = "finalchecker";
-    /**
-     * packager: Prepared the medication.
-     */
-    MedicationdispensePerformerFunctionValueSetEnum["Packager"] = "packager";
-})(MedicationdispensePerformerFunctionValueSetEnum || (MedicationdispensePerformerFunctionValueSetEnum = {}));
 //# sourceMappingURL=MedicationdispensePerformerFunctionValueSet.js.map

@@ -1,778 +1,38 @@
 import * as fhir from '../fhir.js';
-import { TaskStatusValueSetType, TaskStatusValueSetEnum } from '../fhirValueSets/TaskStatusValueSet.js';
-import { TaskIntentValueSetType, TaskIntentValueSetEnum } from '../fhirValueSets/TaskIntentValueSet.js';
-import { RequestPriorityValueSetType, RequestPriorityValueSetEnum } from '../fhirValueSets/RequestPriorityValueSet.js';
+import { TaskStatusValueSetType } from '../fhirValueSets/TaskStatusValueSet.js';
+import { TaskStatusValueSetEnum } from '../valueSetEnums.js';
+import { TaskIntentValueSetType } from '../fhirValueSets/TaskIntentValueSet.js';
+import { TaskIntentValueSetEnum } from '../valueSetEnums.js';
+import { RequestPriorityValueSetType } from '../fhirValueSets/RequestPriorityValueSet.js';
+import { RequestPriorityValueSetEnum } from '../valueSetEnums.js';
 import { TaskCodeValueSetType } from '../fhirValueSets/TaskCodeValueSet.js';
 import { PerformerRoleValueSetType } from '../fhirValueSets/PerformerRoleValueSet.js';
 /**
- * If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.
+ * Valid arguments for the TaskRestriction type.
  */
-export declare type ITaskRestriction = fhir.IBackboneElement & {
+export interface TaskRestrictionArgs extends fhir.BackboneElementArgs {
     /**
      * Indicates the number of times the requested action should occur.
      */
-    repetitions?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.restriction.repetitions
-     */
-    _repetitions?: fhir.IFhirElement | undefined;
+    repetitions?: fhir.FhirPositiveInt | number | undefined;
     /**
      * Note that period.high is the due date representing the time by which the task should be completed.
      */
-    period?: fhir.IPeriod | undefined;
+    period?: fhir.PeriodArgs | undefined;
     /**
      * For requests that are targeted to more than on potential recipient/target, for whom is fulfillment sought?
      */
-    recipient?: fhir.IReference[] | undefined;
-};
-/**
- * Additional information that may be needed in the execution of the task.
- */
-export declare type ITaskInput = fhir.IBackboneElement & {
-    /**
-     * If referencing a BPMN workflow or Protocol, the "system" is the URL for the workflow definition and the code is the "name" of the required input.
-     */
-    type: fhir.ICodeableConcept | null;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueBase64Binary?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueBase64Binary?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueBoolean?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueBoolean?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueCanonical?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueCanonical?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueCode?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueCode?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueDate?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueDateTime?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDecimal?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueDecimal?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueId?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueId?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueInstant?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueInstant?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueInteger?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueInteger?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueMarkdown?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueMarkdown?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueOid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueOid?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valuePositiveInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valuePositiveInt?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueString?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueString?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueTime?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueUnsignedInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueUnsignedInt?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueUri?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueUri?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueUrl?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueUrl?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueUuid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueUuid?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueAddress?: fhir.IAddress | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueAge?: fhir.IAge | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueAnnotation?: fhir.IAnnotation | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueAttachment?: fhir.IAttachment | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueCodeableConcept?: fhir.ICodeableConcept | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueCoding?: fhir.ICoding | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueContactPoint?: fhir.IContactPoint | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueCount?: fhir.ICount | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDistance?: fhir.IDistance | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDuration?: fhir.IDuration | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueHumanName?: fhir.IHumanName | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueIdentifier?: fhir.IIdentifier | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueMoney?: fhir.IMoney | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valuePeriod?: fhir.IPeriod | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueQuantity?: fhir.IQuantity | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueRange?: fhir.IRange | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueRatio?: fhir.IRatio | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueReference?: fhir.IReference | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueSampledData?: fhir.ISampledData | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueSignature?: fhir.ISignature | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueTiming?: fhir.ITiming | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueContactDetail?: fhir.IContactDetail | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueContributor?: fhir.IContributor | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDataRequirement?: fhir.IDataRequirement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueExpression?: fhir.IExpression | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueParameterDefinition?: fhir.IParameterDefinition | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueRelatedArtifact?: fhir.IRelatedArtifact | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueTriggerDefinition?: fhir.ITriggerDefinition | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueUsageContext?: fhir.IUsageContext | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDosage?: fhir.IDosage | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueMeta?: fhir.IMeta | undefined;
-};
-/**
- * Outputs produced by the Task.
- */
-export declare type ITaskOutput = fhir.IBackboneElement & {
-    /**
-     * The name of the Output parameter.
-     */
-    type: fhir.ICodeableConcept | null;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueBase64Binary?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueBase64Binary?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueBoolean?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueBoolean?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueCanonical?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueCanonical?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueCode?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueCode?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueDate?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueDateTime?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDecimal?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueDecimal?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueId?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueId?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueInstant?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueInstant?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueInteger?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueInteger?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueMarkdown?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueMarkdown?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueOid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueOid?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valuePositiveInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valuePositiveInt?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueString?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueString?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueTime?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueUnsignedInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueUnsignedInt?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueUri?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueUri?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueUrl?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueUrl?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueUuid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueUuid?: fhir.IFhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueAddress?: fhir.IAddress | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueAge?: fhir.IAge | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueAnnotation?: fhir.IAnnotation | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueAttachment?: fhir.IAttachment | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueCodeableConcept?: fhir.ICodeableConcept | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueCoding?: fhir.ICoding | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueContactPoint?: fhir.IContactPoint | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueCount?: fhir.ICount | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDistance?: fhir.IDistance | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDuration?: fhir.IDuration | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueHumanName?: fhir.IHumanName | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueIdentifier?: fhir.IIdentifier | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueMoney?: fhir.IMoney | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valuePeriod?: fhir.IPeriod | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueQuantity?: fhir.IQuantity | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueRange?: fhir.IRange | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueRatio?: fhir.IRatio | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueReference?: fhir.IReference | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueSampledData?: fhir.ISampledData | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueSignature?: fhir.ISignature | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueTiming?: fhir.ITiming | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueContactDetail?: fhir.IContactDetail | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueContributor?: fhir.IContributor | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDataRequirement?: fhir.IDataRequirement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueExpression?: fhir.IExpression | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueParameterDefinition?: fhir.IParameterDefinition | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueRelatedArtifact?: fhir.IRelatedArtifact | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueTriggerDefinition?: fhir.ITriggerDefinition | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueUsageContext?: fhir.IUsageContext | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDosage?: fhir.IDosage | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueMeta?: fhir.IMeta | undefined;
-};
-/**
- * A task to be performed.
- */
-export declare type ITask = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "Task";
-    /**
-     * The business identifier for this task.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * The URL pointing to a *FHIR*-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
-     */
-    instantiatesCanonical?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.instantiatesCanonical
-     */
-    _instantiatesCanonical?: fhir.IFhirElement | undefined;
-    /**
-     * The URL pointing to an *externally* maintained  protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
-     */
-    instantiatesUri?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.instantiatesUri
-     */
-    _instantiatesUri?: fhir.IFhirElement | undefined;
-    /**
-     * BasedOn refers to a higher-level authorization that triggered the creation of the task.  It references a "request" resource such as a ServiceRequest, MedicationRequest, ServiceRequest, CarePlan, etc. which is distinct from the "request" resource the task is seeking to fulfill.  This latter resource is referenced by FocusOn.  For example, based on a ServiceRequest (= BasedOn), a task is created to fulfill a procedureRequest ( = FocusOn ) to collect a specimen from a patient.
-     */
-    basedOn?: fhir.IReference[] | undefined;
-    /**
-     * An identifier that links together multiple tasks and other requests that were created in the same context.
-     */
-    groupIdentifier?: fhir.IIdentifier | undefined;
-    /**
-     * This should usually be 0..1.
-     */
-    partOf?: fhir.IReference[] | undefined;
-    /**
-     * The current status of the task.
-     */
-    status: TaskStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: Task.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * This applies to the current status.  Look at the history of the task to see reasons for past statuses.
-     */
-    statusReason?: fhir.ICodeableConcept | undefined;
-    /**
-     * Contains business-specific nuances of the business state.
-     */
-    businessStatus?: fhir.ICodeableConcept | undefined;
-    /**
-     * This element is immutable.  Proposed tasks, planned tasks, etc. must be distinct instances.
-     * In most cases, Tasks will have an intent of "order".
-     */
-    intent: TaskIntentValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: Task.intent
-     */
-    _intent?: fhir.IFhirElement | undefined;
-    /**
-     * Indicates how quickly the Task should be addressed with respect to other requests.
-     */
-    priority?: RequestPriorityValueSetEnum | undefined;
-    /**
-     * Extended properties for primitive element: Task.priority
-     */
-    _priority?: fhir.IFhirElement | undefined;
-    /**
-     * The title (eg "My Tasks", "Outstanding Tasks for Patient X") should go into the code.
-     */
-    code?: fhir.ICodeableConcept | undefined;
-    /**
-     * A free-text description of what is to be performed.
-     */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.description
-     */
-    _description?: fhir.IFhirElement | undefined;
-    /**
-     * If multiple resources need to be manipulated, use sub-tasks.  (This ensures that status can be tracked independently for each referenced resource.).
-     */
-    focus?: fhir.IReference | undefined;
-    /**
-     * The entity who benefits from the performance of the service specified in the task (e.g., the patient).
-     */
-    for?: fhir.IReference | undefined;
-    /**
-     * The healthcare event  (e.g. a patient and healthcare provider interaction) during which this task was created.
-     */
-    encounter?: fhir.IReference | undefined;
-    /**
-     * Identifies the time action was first taken against the task (start) and/or the time final action was taken against the task prior to marking it as completed (end).
-     */
-    executionPeriod?: fhir.IPeriod | undefined;
-    /**
-     * The date and time this task was created.
-     */
-    authoredOn?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.authoredOn
-     */
-    _authoredOn?: fhir.IFhirElement | undefined;
-    /**
-     * The date and time of last modification to this task.
-     */
-    lastModified?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.lastModified
-     */
-    _lastModified?: fhir.IFhirElement | undefined;
-    /**
-     * The creator of the task.
-     */
-    requester?: fhir.IReference | undefined;
-    /**
-     * The kind of participant that should perform the task.
-     */
-    performerType?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Tasks may be created with an owner not yet identified.
-     */
-    owner?: fhir.IReference | undefined;
-    /**
-     * Principal physical location where the this task is performed.
-     */
-    location?: fhir.IReference | undefined;
-    /**
-     * This should only be included if there is no focus or if it differs from the reason indicated on the focus.
-     */
-    reasonCode?: fhir.ICodeableConcept | undefined;
-    /**
-     * Tasks might be justified based on an Observation, a Condition, a past or planned procedure, etc.   This should only be included if there is no focus or if it differs from the reason indicated on the focus.    Use the CodeableConcept text element in `Task.reasonCode` if the data is free (uncoded) text.
-     */
-    reasonReference?: fhir.IReference | undefined;
-    /**
-     * Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be relevant to the Task.
-     */
-    insurance?: fhir.IReference[] | undefined;
-    /**
-     * Free-text information captured about the task as it progresses.
-     */
-    note?: fhir.IAnnotation[] | undefined;
-    /**
-     * This element does not point to the Provenance associated with the *current* version of the resource - as it would be created after this version existed.  The Provenance for the current version can be retrieved with a _revinclude.
-     */
-    relevantHistory?: fhir.IReference[] | undefined;
-    /**
-     * If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.
-     */
-    restriction?: fhir.ITaskRestriction | undefined;
-    /**
-     * Additional information that may be needed in the execution of the task.
-     */
-    input?: fhir.ITaskInput[] | undefined;
-    /**
-     * Outputs produced by the Task.
-     */
-    output?: fhir.ITaskOutput[] | undefined;
-};
+    recipient?: fhir.ReferenceArgs[] | undefined;
+}
 /**
  * If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.
  */
-export declare class TaskRestriction extends fhir.BackboneElement implements ITaskRestriction {
+export declare class TaskRestriction extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Indicates the number of times the requested action should occur.
      */
-    repetitions?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.restriction.repetitions
-     */
-    _repetitions?: fhir.FhirElement | undefined;
+    repetitions?: fhir.FhirPositiveInt | undefined;
     /**
      * Note that period.high is the due date representing the time by which the task should be completed.
      */
@@ -784,16 +44,234 @@ export declare class TaskRestriction extends fhir.BackboneElement implements ITa
     /**
      * Default constructor for TaskRestriction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITaskRestriction>);
+    constructor(source?: Partial<TaskRestrictionArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the TaskInput type.
+ */
+export interface TaskInputArgs extends fhir.BackboneElementArgs {
+    /**
+     * If referencing a BPMN workflow or Protocol, the "system" is the URL for the workflow definition and the code is the "name" of the required input.
+     */
+    type: fhir.CodeableConceptArgs | null;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    value?: fhir.FhirBase64Binary | fhir.FhirBoolean | fhir.FhirCanonical | fhir.FhirCode | fhir.FhirDate | fhir.FhirDateTime | fhir.FhirDecimal | fhir.FhirId | fhir.FhirInstant | fhir.FhirInteger | fhir.FhirMarkdown | fhir.FhirOid | fhir.FhirPositiveInt | fhir.FhirString | fhir.FhirTime | fhir.FhirUnsignedInt | fhir.FhirUri | fhir.FhirUrl | fhir.FhirUuid | fhir.Address | fhir.Age | fhir.Annotation | fhir.Attachment | fhir.CodeableConcept | fhir.Coding | fhir.ContactPoint | fhir.Count | fhir.Distance | fhir.Duration | fhir.HumanName | fhir.Identifier | fhir.Money | fhir.Period | fhir.Quantity | fhir.Range | fhir.Ratio | fhir.Reference | fhir.SampledData | fhir.Signature | fhir.Timing | fhir.ContactDetail | fhir.Contributor | fhir.DataRequirement | fhir.Expression | fhir.ParameterDefinition | fhir.RelatedArtifact | fhir.TriggerDefinition | fhir.UsageContext | fhir.Dosage | fhir.Meta | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueBase64Binary?: fhir.FhirBase64Binary | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueBoolean?: fhir.FhirBoolean | boolean | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueCanonical?: fhir.FhirCanonical | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueCode?: fhir.FhirCode | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueDate?: fhir.FhirDate | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueDateTime?: fhir.FhirDateTime | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueDecimal?: fhir.FhirDecimal | number | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueId?: fhir.FhirId | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueInstant?: fhir.FhirInstant | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueInteger?: fhir.FhirInteger | number | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueMarkdown?: fhir.FhirMarkdown | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueOid?: fhir.FhirOid | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valuePositiveInt?: fhir.FhirPositiveInt | number | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueString?: fhir.FhirString | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueTime?: fhir.FhirTime | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueUnsignedInt?: fhir.FhirUnsignedInt | number | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueUri?: fhir.FhirUri | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueUrl?: fhir.FhirUrl | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueUuid?: fhir.FhirUuid | string | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueAddress?: fhir.AddressArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueAge?: fhir.AgeArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueAnnotation?: fhir.AnnotationArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueAttachment?: fhir.AttachmentArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueCodeableConcept?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueCoding?: fhir.CodingArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueContactPoint?: fhir.ContactPointArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueCount?: fhir.CountArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueDistance?: fhir.DistanceArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueDuration?: fhir.DurationArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueHumanName?: fhir.HumanNameArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueIdentifier?: fhir.IdentifierArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueMoney?: fhir.MoneyArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valuePeriod?: fhir.PeriodArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueQuantity?: fhir.QuantityArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueRange?: fhir.RangeArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueRatio?: fhir.RatioArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueReference?: fhir.ReferenceArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueSampledData?: fhir.SampledDataArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueSignature?: fhir.SignatureArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueTiming?: fhir.TimingArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueContactDetail?: fhir.ContactDetailArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueContributor?: fhir.ContributorArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueDataRequirement?: fhir.DataRequirementArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueExpression?: fhir.ExpressionArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueParameterDefinition?: fhir.ParameterDefinitionArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueRelatedArtifact?: fhir.RelatedArtifactArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueTriggerDefinition?: fhir.TriggerDefinitionArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueUsageContext?: fhir.UsageContextArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueDosage?: fhir.DosageArgs | undefined;
+    /**
+     * The value of the input parameter as a basic type.
+     */
+    valueMeta?: fhir.MetaArgs | undefined;
 }
 /**
  * Additional information that may be needed in the execution of the task.
  */
-export declare class TaskInput extends fhir.BackboneElement implements ITaskInput {
+export declare class TaskInput extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * If referencing a BPMN workflow or Protocol, the "system" is the URL for the workflow definition and the code is the "name" of the required input.
      */
@@ -801,292 +279,239 @@ export declare class TaskInput extends fhir.BackboneElement implements ITaskInpu
     /**
      * The value of the input parameter as a basic type.
      */
-    valueBase64Binary?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueBase64Binary?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueBoolean?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueBoolean?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueCanonical?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueCanonical?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueCode?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueCode?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueDate?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueDateTime?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDecimal?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueDecimal?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueId?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueId?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueInstant?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueInstant?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueInteger?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueInteger?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueMarkdown?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueMarkdown?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueOid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueOid?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valuePositiveInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valuePositiveInt?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueString?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueString?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueTime?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueUnsignedInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueUnsignedInt?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueUri?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueUri?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueUrl?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueUrl?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueUuid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.input.value[x]
-     */
-    _valueUuid?: fhir.FhirElement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueAddress?: fhir.Address | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueAge?: fhir.Age | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueAnnotation?: fhir.Annotation | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueAttachment?: fhir.Attachment | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueCodeableConcept?: fhir.CodeableConcept | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueCoding?: fhir.Coding | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueContactPoint?: fhir.ContactPoint | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueCount?: fhir.Count | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDistance?: fhir.Distance | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDuration?: fhir.Duration | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueHumanName?: fhir.HumanName | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueIdentifier?: fhir.Identifier | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueMoney?: fhir.Money | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valuePeriod?: fhir.Period | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueQuantity?: fhir.Quantity | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueRange?: fhir.Range | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueRatio?: fhir.Ratio | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueReference?: fhir.Reference | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueSampledData?: fhir.SampledData | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueSignature?: fhir.Signature | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueTiming?: fhir.Timing | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueContactDetail?: fhir.ContactDetail | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueContributor?: fhir.Contributor | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDataRequirement?: fhir.DataRequirement | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueExpression?: fhir.Expression | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueParameterDefinition?: fhir.ParameterDefinition | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueRelatedArtifact?: fhir.RelatedArtifact | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueTriggerDefinition?: fhir.TriggerDefinition | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueUsageContext?: fhir.UsageContext | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueDosage?: fhir.Dosage | undefined;
-    /**
-     * The value of the input parameter as a basic type.
-     */
-    valueMeta?: fhir.Meta | undefined;
+    value: (fhir.FhirBase64Binary | fhir.FhirBoolean | fhir.FhirCanonical | fhir.FhirCode | fhir.FhirDate | fhir.FhirDateTime | fhir.FhirDecimal | fhir.FhirId | fhir.FhirInstant | fhir.FhirInteger | fhir.FhirMarkdown | fhir.FhirOid | fhir.FhirPositiveInt | fhir.FhirString | fhir.FhirTime | fhir.FhirUnsignedInt | fhir.FhirUri | fhir.FhirUrl | fhir.FhirUuid | fhir.Address | fhir.Age | fhir.Annotation | fhir.Attachment | fhir.CodeableConcept | fhir.Coding | fhir.ContactPoint | fhir.Count | fhir.Distance | fhir.Duration | fhir.HumanName | fhir.Identifier | fhir.Money | fhir.Period | fhir.Quantity | fhir.Range | fhir.Ratio | fhir.Reference | fhir.SampledData | fhir.Signature | fhir.Timing | fhir.ContactDetail | fhir.Contributor | fhir.DataRequirement | fhir.Expression | fhir.ParameterDefinition | fhir.RelatedArtifact | fhir.TriggerDefinition | fhir.UsageContext | fhir.Dosage | fhir.Meta) | null;
+    readonly __valueIsChoice: true;
     /**
      * Default constructor for TaskInput - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITaskInput>);
+    constructor(source?: Partial<TaskInputArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the TaskOutput type.
+ */
+export interface TaskOutputArgs extends fhir.BackboneElementArgs {
+    /**
+     * The name of the Output parameter.
+     */
+    type: fhir.CodeableConceptArgs | null;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    value?: fhir.FhirBase64Binary | fhir.FhirBoolean | fhir.FhirCanonical | fhir.FhirCode | fhir.FhirDate | fhir.FhirDateTime | fhir.FhirDecimal | fhir.FhirId | fhir.FhirInstant | fhir.FhirInteger | fhir.FhirMarkdown | fhir.FhirOid | fhir.FhirPositiveInt | fhir.FhirString | fhir.FhirTime | fhir.FhirUnsignedInt | fhir.FhirUri | fhir.FhirUrl | fhir.FhirUuid | fhir.Address | fhir.Age | fhir.Annotation | fhir.Attachment | fhir.CodeableConcept | fhir.Coding | fhir.ContactPoint | fhir.Count | fhir.Distance | fhir.Duration | fhir.HumanName | fhir.Identifier | fhir.Money | fhir.Period | fhir.Quantity | fhir.Range | fhir.Ratio | fhir.Reference | fhir.SampledData | fhir.Signature | fhir.Timing | fhir.ContactDetail | fhir.Contributor | fhir.DataRequirement | fhir.Expression | fhir.ParameterDefinition | fhir.RelatedArtifact | fhir.TriggerDefinition | fhir.UsageContext | fhir.Dosage | fhir.Meta | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueBase64Binary?: fhir.FhirBase64Binary | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueBoolean?: fhir.FhirBoolean | boolean | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueCanonical?: fhir.FhirCanonical | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueCode?: fhir.FhirCode | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueDate?: fhir.FhirDate | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueDateTime?: fhir.FhirDateTime | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueDecimal?: fhir.FhirDecimal | number | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueId?: fhir.FhirId | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueInstant?: fhir.FhirInstant | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueInteger?: fhir.FhirInteger | number | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueMarkdown?: fhir.FhirMarkdown | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueOid?: fhir.FhirOid | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valuePositiveInt?: fhir.FhirPositiveInt | number | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueString?: fhir.FhirString | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueTime?: fhir.FhirTime | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueUnsignedInt?: fhir.FhirUnsignedInt | number | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueUri?: fhir.FhirUri | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueUrl?: fhir.FhirUrl | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueUuid?: fhir.FhirUuid | string | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueAddress?: fhir.AddressArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueAge?: fhir.AgeArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueAnnotation?: fhir.AnnotationArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueAttachment?: fhir.AttachmentArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueCodeableConcept?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueCoding?: fhir.CodingArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueContactPoint?: fhir.ContactPointArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueCount?: fhir.CountArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueDistance?: fhir.DistanceArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueDuration?: fhir.DurationArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueHumanName?: fhir.HumanNameArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueIdentifier?: fhir.IdentifierArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueMoney?: fhir.MoneyArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valuePeriod?: fhir.PeriodArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueQuantity?: fhir.QuantityArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueRange?: fhir.RangeArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueRatio?: fhir.RatioArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueReference?: fhir.ReferenceArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueSampledData?: fhir.SampledDataArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueSignature?: fhir.SignatureArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueTiming?: fhir.TimingArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueContactDetail?: fhir.ContactDetailArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueContributor?: fhir.ContributorArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueDataRequirement?: fhir.DataRequirementArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueExpression?: fhir.ExpressionArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueParameterDefinition?: fhir.ParameterDefinitionArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueRelatedArtifact?: fhir.RelatedArtifactArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueTriggerDefinition?: fhir.TriggerDefinitionArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueUsageContext?: fhir.UsageContextArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueDosage?: fhir.DosageArgs | undefined;
+    /**
+     * The value of the Output parameter as a basic type.
+     */
+    valueMeta?: fhir.MetaArgs | undefined;
 }
 /**
  * Outputs produced by the Task.
  */
-export declare class TaskOutput extends fhir.BackboneElement implements ITaskOutput {
+export declare class TaskOutput extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The name of the Output parameter.
      */
@@ -1094,292 +519,160 @@ export declare class TaskOutput extends fhir.BackboneElement implements ITaskOut
     /**
      * The value of the Output parameter as a basic type.
      */
-    valueBase64Binary?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueBase64Binary?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueBoolean?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueBoolean?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueCanonical?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueCanonical?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueCode?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueCode?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueDate?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueDateTime?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDecimal?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueDecimal?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueId?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueId?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueInstant?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueInstant?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueInteger?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueInteger?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueMarkdown?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueMarkdown?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueOid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueOid?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valuePositiveInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valuePositiveInt?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueString?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueString?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueTime?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueUnsignedInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueUnsignedInt?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueUri?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueUri?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueUrl?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueUrl?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueUuid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.output.value[x]
-     */
-    _valueUuid?: fhir.FhirElement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueAddress?: fhir.Address | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueAge?: fhir.Age | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueAnnotation?: fhir.Annotation | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueAttachment?: fhir.Attachment | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueCodeableConcept?: fhir.CodeableConcept | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueCoding?: fhir.Coding | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueContactPoint?: fhir.ContactPoint | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueCount?: fhir.Count | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDistance?: fhir.Distance | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDuration?: fhir.Duration | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueHumanName?: fhir.HumanName | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueIdentifier?: fhir.Identifier | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueMoney?: fhir.Money | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valuePeriod?: fhir.Period | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueQuantity?: fhir.Quantity | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueRange?: fhir.Range | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueRatio?: fhir.Ratio | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueReference?: fhir.Reference | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueSampledData?: fhir.SampledData | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueSignature?: fhir.Signature | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueTiming?: fhir.Timing | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueContactDetail?: fhir.ContactDetail | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueContributor?: fhir.Contributor | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDataRequirement?: fhir.DataRequirement | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueExpression?: fhir.Expression | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueParameterDefinition?: fhir.ParameterDefinition | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueRelatedArtifact?: fhir.RelatedArtifact | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueTriggerDefinition?: fhir.TriggerDefinition | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueUsageContext?: fhir.UsageContext | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueDosage?: fhir.Dosage | undefined;
-    /**
-     * The value of the Output parameter as a basic type.
-     */
-    valueMeta?: fhir.Meta | undefined;
+    value: (fhir.FhirBase64Binary | fhir.FhirBoolean | fhir.FhirCanonical | fhir.FhirCode | fhir.FhirDate | fhir.FhirDateTime | fhir.FhirDecimal | fhir.FhirId | fhir.FhirInstant | fhir.FhirInteger | fhir.FhirMarkdown | fhir.FhirOid | fhir.FhirPositiveInt | fhir.FhirString | fhir.FhirTime | fhir.FhirUnsignedInt | fhir.FhirUri | fhir.FhirUrl | fhir.FhirUuid | fhir.Address | fhir.Age | fhir.Annotation | fhir.Attachment | fhir.CodeableConcept | fhir.Coding | fhir.ContactPoint | fhir.Count | fhir.Distance | fhir.Duration | fhir.HumanName | fhir.Identifier | fhir.Money | fhir.Period | fhir.Quantity | fhir.Range | fhir.Ratio | fhir.Reference | fhir.SampledData | fhir.Signature | fhir.Timing | fhir.ContactDetail | fhir.Contributor | fhir.DataRequirement | fhir.Expression | fhir.ParameterDefinition | fhir.RelatedArtifact | fhir.TriggerDefinition | fhir.UsageContext | fhir.Dosage | fhir.Meta) | null;
+    readonly __valueIsChoice: true;
     /**
      * Default constructor for TaskOutput - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITaskOutput>);
+    constructor(source?: Partial<TaskOutputArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the Task type.
+ */
+export interface TaskArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "Task" | undefined;
+    /**
+     * The business identifier for this task.
+     */
+    identifier?: fhir.IdentifierArgs[] | undefined;
+    /**
+     * The URL pointing to a *FHIR*-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
+     */
+    instantiatesCanonical?: fhir.FhirCanonical | string | undefined;
+    /**
+     * The URL pointing to an *externally* maintained  protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
+     */
+    instantiatesUri?: fhir.FhirUri | string | undefined;
+    /**
+     * BasedOn refers to a higher-level authorization that triggered the creation of the task.  It references a "request" resource such as a ServiceRequest, MedicationRequest, ServiceRequest, CarePlan, etc. which is distinct from the "request" resource the task is seeking to fulfill.  This latter resource is referenced by FocusOn.  For example, based on a ServiceRequest (= BasedOn), a task is created to fulfill a procedureRequest ( = FocusOn ) to collect a specimen from a patient.
+     */
+    basedOn?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * An identifier that links together multiple tasks and other requests that were created in the same context.
+     */
+    groupIdentifier?: fhir.IdentifierArgs | undefined;
+    /**
+     * This should usually be 0..1.
+     */
+    partOf?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * The current status of the task.
+     */
+    status: TaskStatusValueSetEnum | null;
+    /**
+     * This applies to the current status.  Look at the history of the task to see reasons for past statuses.
+     */
+    statusReason?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Contains business-specific nuances of the business state.
+     */
+    businessStatus?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * This element is immutable.  Proposed tasks, planned tasks, etc. must be distinct instances.
+     * In most cases, Tasks will have an intent of "order".
+     */
+    intent: TaskIntentValueSetEnum | null;
+    /**
+     * Indicates how quickly the Task should be addressed with respect to other requests.
+     */
+    priority?: RequestPriorityValueSetEnum | undefined;
+    /**
+     * The title (eg "My Tasks", "Outstanding Tasks for Patient X") should go into the code.
+     */
+    code?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * A free-text description of what is to be performed.
+     */
+    description?: fhir.FhirString | string | undefined;
+    /**
+     * If multiple resources need to be manipulated, use sub-tasks.  (This ensures that status can be tracked independently for each referenced resource.).
+     */
+    focus?: fhir.ReferenceArgs | undefined;
+    /**
+     * The entity who benefits from the performance of the service specified in the task (e.g., the patient).
+     */
+    for?: fhir.ReferenceArgs | undefined;
+    /**
+     * The healthcare event  (e.g. a patient and healthcare provider interaction) during which this task was created.
+     */
+    encounter?: fhir.ReferenceArgs | undefined;
+    /**
+     * Identifies the time action was first taken against the task (start) and/or the time final action was taken against the task prior to marking it as completed (end).
+     */
+    executionPeriod?: fhir.PeriodArgs | undefined;
+    /**
+     * The date and time this task was created.
+     */
+    authoredOn?: fhir.FhirDateTime | string | undefined;
+    /**
+     * The date and time of last modification to this task.
+     */
+    lastModified?: fhir.FhirDateTime | string | undefined;
+    /**
+     * The creator of the task.
+     */
+    requester?: fhir.ReferenceArgs | undefined;
+    /**
+     * The kind of participant that should perform the task.
+     */
+    performerType?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * Tasks may be created with an owner not yet identified.
+     */
+    owner?: fhir.ReferenceArgs | undefined;
+    /**
+     * Principal physical location where the this task is performed.
+     */
+    location?: fhir.ReferenceArgs | undefined;
+    /**
+     * This should only be included if there is no focus or if it differs from the reason indicated on the focus.
+     */
+    reasonCode?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Tasks might be justified based on an Observation, a Condition, a past or planned procedure, etc.   This should only be included if there is no focus or if it differs from the reason indicated on the focus.    Use the CodeableConcept text element in `Task.reasonCode` if the data is free (uncoded) text.
+     */
+    reasonReference?: fhir.ReferenceArgs | undefined;
+    /**
+     * Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be relevant to the Task.
+     */
+    insurance?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * Free-text information captured about the task as it progresses.
+     */
+    note?: fhir.AnnotationArgs[] | undefined;
+    /**
+     * This element does not point to the Provenance associated with the *current* version of the resource - as it would be created after this version existed.  The Provenance for the current version can be retrieved with a _revinclude.
+     */
+    relevantHistory?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.
+     */
+    restriction?: fhir.TaskRestrictionArgs | undefined;
+    /**
+     * Additional information that may be needed in the execution of the task.
+     */
+    input?: fhir.TaskInputArgs[] | undefined;
+    /**
+     * Outputs produced by the Task.
+     */
+    output?: fhir.TaskOutputArgs[] | undefined;
 }
 /**
  * A task to be performed.
  */
-export declare class Task extends fhir.DomainResource implements ITask {
+export declare class Task extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -1391,19 +684,11 @@ export declare class Task extends fhir.DomainResource implements ITask {
     /**
      * The URL pointing to a *FHIR*-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
      */
-    instantiatesCanonical?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.instantiatesCanonical
-     */
-    _instantiatesCanonical?: fhir.FhirElement | undefined;
+    instantiatesCanonical?: fhir.FhirCanonical | undefined;
     /**
      * The URL pointing to an *externally* maintained  protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
      */
-    instantiatesUri?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.instantiatesUri
-     */
-    _instantiatesUri?: fhir.FhirElement | undefined;
+    instantiatesUri?: fhir.FhirUri | undefined;
     /**
      * BasedOn refers to a higher-level authorization that triggered the creation of the task.  It references a "request" resource such as a ServiceRequest, MedicationRequest, ServiceRequest, CarePlan, etc. which is distinct from the "request" resource the task is seeking to fulfill.  This latter resource is referenced by FocusOn.  For example, based on a ServiceRequest (= BasedOn), a task is created to fulfill a procedureRequest ( = FocusOn ) to collect a specimen from a patient.
      */
@@ -1421,10 +706,6 @@ export declare class Task extends fhir.DomainResource implements ITask {
      */
     status: TaskStatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: Task.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * This applies to the current status.  Look at the history of the task to see reasons for past statuses.
      */
     statusReason?: fhir.CodeableConcept | undefined;
@@ -1438,17 +719,9 @@ export declare class Task extends fhir.DomainResource implements ITask {
      */
     intent: TaskIntentValueSetEnum | null;
     /**
-     * Extended properties for primitive element: Task.intent
-     */
-    _intent?: fhir.FhirElement | undefined;
-    /**
      * Indicates how quickly the Task should be addressed with respect to other requests.
      */
     priority?: RequestPriorityValueSetEnum | undefined;
-    /**
-     * Extended properties for primitive element: Task.priority
-     */
-    _priority?: fhir.FhirElement | undefined;
     /**
      * The title (eg "My Tasks", "Outstanding Tasks for Patient X") should go into the code.
      */
@@ -1456,11 +729,7 @@ export declare class Task extends fhir.DomainResource implements ITask {
     /**
      * A free-text description of what is to be performed.
      */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.description
-     */
-    _description?: fhir.FhirElement | undefined;
+    description?: fhir.FhirString | undefined;
     /**
      * If multiple resources need to be manipulated, use sub-tasks.  (This ensures that status can be tracked independently for each referenced resource.).
      */
@@ -1480,19 +749,11 @@ export declare class Task extends fhir.DomainResource implements ITask {
     /**
      * The date and time this task was created.
      */
-    authoredOn?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.authoredOn
-     */
-    _authoredOn?: fhir.FhirElement | undefined;
+    authoredOn?: fhir.FhirDateTime | undefined;
     /**
      * The date and time of last modification to this task.
      */
-    lastModified?: string | undefined;
-    /**
-     * Extended properties for primitive element: Task.lastModified
-     */
-    _lastModified?: fhir.FhirElement | undefined;
+    lastModified?: fhir.FhirDateTime | undefined;
     /**
      * The creator of the task.
      */
@@ -1544,7 +805,7 @@ export declare class Task extends fhir.DomainResource implements ITask {
     /**
      * Default constructor for Task - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ITask>);
+    constructor(source?: Partial<TaskArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -1568,6 +829,10 @@ export declare class Task extends fhir.DomainResource implements ITask {
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Task.d.ts.map

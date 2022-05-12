@@ -35,19 +35,4 @@ export const Icd10ProceduresValueSet = {
 /**
  * This value set includes sample ICD-10 Procedure codes.
  */
-export var Icd10ProceduresValueSetEnum;
-(function (Icd10ProceduresValueSetEnum) {
-    /**
-     * 123001: Procedure 1
-     */
-    Icd10ProceduresValueSetEnum["PROC1"] = "123001";
-    /**
-     * 123002: Procedure 2
-     */
-    Icd10ProceduresValueSetEnum["PROC2"] = "123002";
-    /**
-     * 123003: Procedure 3
-     */
-    Icd10ProceduresValueSetEnum["PROC3"] = "123003";
-})(Icd10ProceduresValueSetEnum || (Icd10ProceduresValueSetEnum = {}));
 //# sourceMappingURL=Icd10ProceduresValueSet.js.map

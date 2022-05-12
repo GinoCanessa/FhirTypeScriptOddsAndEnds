@@ -35,19 +35,4 @@ export const NamingsystemTypeValueSet = {
 /**
  * Identifies the purpose of the naming system.
  */
-export var NamingsystemTypeValueSetEnum;
-(function (NamingsystemTypeValueSetEnum) {
-    /**
-     * codesystem: The naming system is used to define concepts and symbols to represent those concepts; e.g. UCUM, LOINC, NDC code, local lab codes, etc.
-     */
-    NamingsystemTypeValueSetEnum["CodeSystem"] = "codesystem";
-    /**
-     * identifier: The naming system is used to manage identifiers (e.g. license numbers, order numbers, etc.).
-     */
-    NamingsystemTypeValueSetEnum["Identifier"] = "identifier";
-    /**
-     * root: The naming system is used as the root for other identifiers and naming systems.
-     */
-    NamingsystemTypeValueSetEnum["Root"] = "root";
-})(NamingsystemTypeValueSetEnum || (NamingsystemTypeValueSetEnum = {}));
 //# sourceMappingURL=NamingsystemTypeValueSet.js.map

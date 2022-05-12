@@ -3,11 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Dosage
 import * as fhir from '../fhir.js';
-import { DoseRateTypeValueSet } from '../fhirValueSets/DoseRateTypeValueSet.js';
-import { MedicationAsNeededReasonValueSet } from '../fhirValueSets/MedicationAsNeededReasonValueSet.js';
-import { ApproachSiteCodesValueSet } from '../fhirValueSets/ApproachSiteCodesValueSet.js';
-import { RouteCodesValueSet } from '../fhirValueSets/RouteCodesValueSet.js';
-import { AdministrationMethodCodesValueSet } from '../fhirValueSets/AdministrationMethodCodesValueSet.js';
+import { DoseRateTypeValueSet, } from '../fhirValueSets/DoseRateTypeValueSet.js';
+import { ApproachSiteCodesValueSet, } from '../fhirValueSets/ApproachSiteCodesValueSet.js';
+import { RouteCodesValueSet, } from '../fhirValueSets/RouteCodesValueSet.js';
+import { AdministrationMethodCodesValueSet, } from '../fhirValueSets/AdministrationMethodCodesValueSet.js';
 /**
  * The amount of medication administered.
  */
@@ -15,25 +14,34 @@ export class DosageDoseAndRate extends fhir.FhirElement {
     /**
      * Default constructor for DosageDoseAndRate - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DosageDoseAndRate';
+        this.__doseIsChoice = true;
+        this.__rateIsChoice = true;
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
-        if (source['doseRange']) {
-            this.doseRange = new fhir.Range(source.doseRange);
+        if (source['dose']) {
+            this.dose = source.dose;
         }
-        if (source['doseQuantity']) {
-            this.doseQuantity = new fhir.Quantity(source.doseQuantity);
+        else if (source['doseRange']) {
+            this.dose = new fhir.Range(source.doseRange);
         }
-        if (source['rateRatio']) {
-            this.rateRatio = new fhir.Ratio(source.rateRatio);
+        else if (source['doseQuantity']) {
+            this.dose = new fhir.Quantity(source.doseQuantity);
         }
-        if (source['rateRange']) {
-            this.rateRange = new fhir.Range(source.rateRange);
+        if (source['rate']) {
+            this.rate = source.rate;
         }
-        if (source['rateQuantity']) {
-            this.rateQuantity = new fhir.Quantity(source.rateQuantity);
+        else if (source['rateRatio']) {
+            this.rate = new fhir.Ratio(source.rateRatio);
+        }
+        else if (source['rateRange']) {
+            this.rate = new fhir.Range(source.rateRange);
+        }
+        else if (source['rateQuantity']) {
+            this.rate = new fhir.Quantity(source.rateQuantity);
         }
     }
     /**
@@ -46,26 +54,17 @@ export class DosageDoseAndRate extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["doseRange"]) {
-            results.push(...this.doseRange.doModelValidation());
-        }
-        if (this["doseQuantity"]) {
-            results.push(...this.doseQuantity.doModelValidation());
-        }
-        if (this["rateRatio"]) {
-            results.push(...this.rateRatio.doModelValidation());
-        }
-        if (this["rateRange"]) {
-            results.push(...this.rateRange.doModelValidation());
-        }
-        if (this["rateQuantity"]) {
-            results.push(...this.rateQuantity.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -75,40 +74,41 @@ export class Dosage extends fhir.BackboneElement {
     /**
      * Default constructor for Dosage - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Dosage';
+        /**
+         * Information about administration or preparation of the medication (e.g. "infuse as rapidly as possibly via intraperitoneal port" or "immediately following drug x") should be populated in dosage.text.
+         */
+        this.additionalInstruction = [];
+        this.__asNeededIsChoice = true;
+        /**
+         * The amount of medication administered.
+         */
+        this.doseAndRate = [];
         if (source['sequence']) {
-            this.sequence = source.sequence;
-        }
-        if (source['_sequence']) {
-            this._sequence = new fhir.FhirElement(source._sequence);
+            this.sequence = new fhir.FhirInteger({ value: source.sequence });
         }
         if (source['text']) {
-            this.text = source.text;
-        }
-        if (source['_text']) {
-            this._text = new fhir.FhirElement(source._text);
+            this.text = new fhir.FhirString({ value: source.text });
         }
         if (source['additionalInstruction']) {
             this.additionalInstruction = source.additionalInstruction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['patientInstruction']) {
-            this.patientInstruction = source.patientInstruction;
-        }
-        if (source['_patientInstruction']) {
-            this._patientInstruction = new fhir.FhirElement(source._patientInstruction);
+            this.patientInstruction = new fhir.FhirString({ value: source.patientInstruction });
         }
         if (source['timing']) {
             this.timing = new fhir.Timing(source.timing);
         }
-        if (source['asNeededBoolean']) {
-            this.asNeededBoolean = source.asNeededBoolean;
+        if (source['asNeeded']) {
+            this.asNeeded = source.asNeeded;
         }
-        if (source['_asNeededBoolean']) {
-            this._asNeededBoolean = new fhir.FhirElement(source._asNeededBoolean);
+        else if (source['asNeededBoolean']) {
+            this.asNeeded = new fhir.FhirBoolean({ value: source.asNeededBoolean });
         }
-        if (source['asNeededCodeableConcept']) {
-            this.asNeededCodeableConcept = new fhir.CodeableConcept(source.asNeededCodeableConcept);
+        else if (source['asNeededCodeableConcept']) {
+            this.asNeeded = new fhir.CodeableConcept(source.asNeededCodeableConcept);
         }
         if (source['site']) {
             this.site = new fhir.CodeableConcept(source.site);
@@ -133,18 +133,6 @@ export class Dosage extends fhir.BackboneElement {
         }
     }
     /**
-     * Example-bound Value Set for asNeededBoolean
-     */
-    static asNeededBooleanExampleValueSet() {
-        return MedicationAsNeededReasonValueSet;
-    }
-    /**
-     * Example-bound Value Set for asNeededCodeableConcept
-     */
-    static asNeededCodeableConceptExampleValueSet() {
-        return MedicationAsNeededReasonValueSet;
-    }
-    /**
      * Example-bound Value Set for site
      */
     static siteExampleValueSet() {
@@ -166,50 +154,50 @@ export class Dosage extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_sequence"]) {
-            results.push(...this._sequence.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["sequence"]) {
+            outcome.issue.push(...this.sequence.doModelValidation().issue);
         }
-        if (this["_text"]) {
-            results.push(...this._text.doModelValidation());
+        if (this["text"]) {
+            outcome.issue.push(...this.text.doModelValidation().issue);
         }
         if (this["additionalInstruction"]) {
-            this.additionalInstruction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.additionalInstruction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_patientInstruction"]) {
-            results.push(...this._patientInstruction.doModelValidation());
+        if (this["patientInstruction"]) {
+            outcome.issue.push(...this.patientInstruction.doModelValidation().issue);
         }
         if (this["timing"]) {
-            results.push(...this.timing.doModelValidation());
-        }
-        if (this["_asNeededBoolean"]) {
-            results.push(...this._asNeededBoolean.doModelValidation());
-        }
-        if (this["asNeededCodeableConcept"]) {
-            results.push(...this.asNeededCodeableConcept.doModelValidation());
+            outcome.issue.push(...this.timing.doModelValidation().issue);
         }
         if (this["site"]) {
-            results.push(...this.site.doModelValidation());
+            outcome.issue.push(...this.site.doModelValidation().issue);
         }
         if (this["route"]) {
-            results.push(...this.route.doModelValidation());
+            outcome.issue.push(...this.route.doModelValidation().issue);
         }
         if (this["method"]) {
-            results.push(...this.method.doModelValidation());
+            outcome.issue.push(...this.method.doModelValidation().issue);
         }
         if (this["doseAndRate"]) {
-            this.doseAndRate.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.doseAndRate.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["maxDosePerPeriod"]) {
-            results.push(...this.maxDosePerPeriod.doModelValidation());
+            outcome.issue.push(...this.maxDosePerPeriod.doModelValidation().issue);
         }
         if (this["maxDosePerAdministration"]) {
-            results.push(...this.maxDosePerAdministration.doModelValidation());
+            outcome.issue.push(...this.maxDosePerAdministration.doModelValidation().issue);
         }
         if (this["maxDosePerLifetime"]) {
-            results.push(...this.maxDosePerLifetime.doModelValidation());
+            outcome.issue.push(...this.maxDosePerLifetime.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Dosage.js.map

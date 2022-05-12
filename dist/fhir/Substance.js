@@ -3,9 +3,11 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Substance
 import * as fhir from '../fhir.js';
-import { SubstanceCodeValueSet } from '../fhirValueSets/SubstanceCodeValueSet.js';
-import { SubstanceStatusValueSet } from '../fhirValueSets/SubstanceStatusValueSet.js';
-import { SubstanceCategoryValueSet } from '../fhirValueSets/SubstanceCategoryValueSet.js';
+import { SubstanceStatusValueSet, } from '../fhirValueSets/SubstanceStatusValueSet.js';
+import { SubstanceCategoryValueSet, } from '../fhirValueSets/SubstanceCategoryValueSet.js';
+import { SubstanceCodeValueSet, } from '../fhirValueSets/SubstanceCodeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Substance may be used to describe a kind of substance, or a specific package/container of the substance: an instance.
  */
@@ -13,16 +15,14 @@ export class SubstanceInstance extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceInstance - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceInstance';
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
         }
         if (source['expiry']) {
-            this.expiry = source.expiry;
-        }
-        if (source['_expiry']) {
-            this._expiry = new fhir.FhirElement(source._expiry);
+            this.expiry = new fhir.FhirDateTime({ value: source.expiry });
         }
         if (source['quantity']) {
             this.quantity = new fhir.Quantity(source.quantity);
@@ -32,17 +32,23 @@ export class SubstanceInstance extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (this["_expiry"]) {
-            results.push(...this._expiry.doModelValidation());
+        if (this["expiry"]) {
+            outcome.issue.push(...this.expiry.doModelValidation().issue);
         }
         if (this["quantity"]) {
-            results.push(...this.quantity.doModelValidation());
+            outcome.issue.push(...this.quantity.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -52,45 +58,44 @@ export class SubstanceIngredient extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceIngredient - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceIngredient';
+        this.__substanceIsChoice = true;
         if (source['quantity']) {
             this.quantity = new fhir.Ratio(source.quantity);
         }
-        if (source['substanceCodeableConcept']) {
-            this.substanceCodeableConcept = new fhir.CodeableConcept(source.substanceCodeableConcept);
+        if (source['substance']) {
+            this.substance = source.substance;
         }
-        if (source['substanceReference']) {
-            this.substanceReference = new fhir.Reference(source.substanceReference);
+        else if (source['substanceCodeableConcept']) {
+            this.substance = new fhir.CodeableConcept(source.substanceCodeableConcept);
         }
-    }
-    /**
-     * Example-bound Value Set for substanceCodeableConcept
-     */
-    static substanceCodeableConceptExampleValueSet() {
-        return SubstanceCodeValueSet;
-    }
-    /**
-     * Example-bound Value Set for substanceReference
-     */
-    static substanceReferenceExampleValueSet() {
-        return SubstanceCodeValueSet;
+        else if (source['substanceReference']) {
+            this.substance = new fhir.Reference(source.substanceReference);
+        }
+        else {
+            this.substance = null;
+        }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["quantity"]) {
-            results.push(...this.quantity.doModelValidation());
+            outcome.issue.push(...this.quantity.doModelValidation().issue);
         }
-        if (this["substanceCodeableConcept"]) {
-            results.push(...this.substanceCodeableConcept.doModelValidation());
+        if (!this['substance']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property substance: fhir: Substance.ingredient.substance[x]:", }));
         }
-        if (this["substanceReference"]) {
-            results.push(...this.substanceReference.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -100,17 +105,31 @@ export class Substance extends fhir.DomainResource {
     /**
      * Default constructor for Substance - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Substance';
+        /**
+         * This identifier is associated with the kind of substance in contrast to the  Substance.instance.identifier which is associated with the package/container.
+         */
+        this.identifier = [];
+        /**
+         * The level of granularity is defined by the category concepts in the value set.   More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in Substance.code.
+         */
+        this.category = [];
+        /**
+         * Substance may be used to describe a kind of substance, or a specific package/container of the substance: an instance.
+         */
+        this.instance = [];
+        /**
+         * A substance can be composed of other substances.
+         */
+        this.ingredient = [];
         this.resourceType = 'Substance';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['status']) {
             this.status = source.status;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['category']) {
             this.category = source.category.map((x) => new fhir.CodeableConcept(x));
@@ -122,10 +141,7 @@ export class Substance extends fhir.DomainResource {
             this.code = null;
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['instance']) {
             this.instance = source.instance.map((x) => new fhir.SubstanceInstance(x));
@@ -156,35 +172,38 @@ export class Substance extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Substance.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Substance' fhir: Substance.resourceType:'Substance'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["category"]) {
-            this.category.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.category.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: Substance.code']);
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.CodeableConcept fhir: Substance.code:CodeableConcept", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["instance"]) {
-            this.instance.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.instance.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["ingredient"]) {
-            this.ingredient.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.ingredient.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Substance.js.map

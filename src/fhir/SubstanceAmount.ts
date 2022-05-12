@@ -3,65 +3,29 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: SubstanceAmount
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Reference range of possible or expected values.
+ * Valid arguments for the SubstanceAmountReferenceRange type.
  */
-export type ISubstanceAmountReferenceRange = fhir.IFhirElement & { 
+export interface SubstanceAmountReferenceRangeArgs extends fhir.FhirElementArgs {
   /**
    * Lower limit possible or expected.
    */
-  lowLimit?: fhir.IQuantity|undefined;
+  lowLimit?: fhir.QuantityArgs|undefined;
   /**
    * Upper limit possible or expected.
    */
-  highLimit?: fhir.IQuantity|undefined;
-}
-
-/**
- * Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.
- */
-export type ISubstanceAmount = fhir.IBackboneElement & { 
-  /**
-   * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
-   */
-  amountQuantity?: fhir.IQuantity|undefined;
-  /**
-   * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
-   */
-  amountRange?: fhir.IRange|undefined;
-  /**
-   * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
-   */
-  amountString?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceAmount.amount[x]
-   */
-  _amountString?: fhir.IFhirElement|undefined;
-  /**
-   * Most elements that require a quantitative value will also have a field called amount type. Amount type should always be specified because the actual value of the amount is often dependent on it. EXAMPLE: In capturing the actual relative amounts of substances or molecular fragments it is essential to indicate whether the amount refers to a mole ratio or weight ratio. For any given element an effort should be made to use same the amount type for all related definitional elements.
-   */
-  amountType?: fhir.ICodeableConcept|undefined;
-  /**
-   * A textual comment on a numeric value.
-   */
-  amountText?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceAmount.amountText
-   */
-  _amountText?: fhir.IFhirElement|undefined;
-  /**
-   * Reference range of possible or expected values.
-   */
-  referenceRange?: fhir.ISubstanceAmountReferenceRange|undefined;
+  highLimit?: fhir.QuantityArgs|undefined;
 }
 
 /**
  * Reference range of possible or expected values.
  */
-export class SubstanceAmountReferenceRange extends fhir.FhirElement implements ISubstanceAmountReferenceRange {
+export class SubstanceAmountReferenceRange extends fhir.FhirElement {
+  readonly __dataType:string = 'SubstanceAmountReferenceRange';
   /**
    * Lower limit possible or expected.
    */
@@ -73,42 +37,71 @@ export class SubstanceAmountReferenceRange extends fhir.FhirElement implements I
   /**
    * Default constructor for SubstanceAmountReferenceRange - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceAmountReferenceRange> = { }) {
-    super(source);
-    if (source['lowLimit']) { this.lowLimit = new fhir.Quantity(source.lowLimit!); }
-    if (source['highLimit']) { this.highLimit = new fhir.Quantity(source.highLimit!); }
+  constructor(source:Partial<SubstanceAmountReferenceRangeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['lowLimit']) { this.lowLimit = new fhir.Quantity(source.lowLimit); }
+    if (source['highLimit']) { this.highLimit = new fhir.Quantity(source.highLimit); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["lowLimit"]) { results.push(...this.lowLimit.doModelValidation()); }
-    if (this["highLimit"]) { results.push(...this.highLimit.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["lowLimit"]) { outcome.issue!.push(...this.lowLimit.doModelValidation().issue!); }
+    if (this["highLimit"]) { outcome.issue!.push(...this.highLimit.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceAmount type.
+ */
+export interface SubstanceAmountArgs extends fhir.BackboneElementArgs {
+  /**
+   * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
+   */
+  amount?: fhir.Quantity|fhir.Range|fhir.FhirString|undefined;
+  /**
+   * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
+   */
+  amountQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
+   */
+  amountRange?: fhir.RangeArgs|undefined;
+  /**
+   * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
+   */
+  amountString?: fhir.FhirString|string|undefined;
+  /**
+   * Most elements that require a quantitative value will also have a field called amount type. Amount type should always be specified because the actual value of the amount is often dependent on it. EXAMPLE: In capturing the actual relative amounts of substances or molecular fragments it is essential to indicate whether the amount refers to a mole ratio or weight ratio. For any given element an effort should be made to use same the amount type for all related definitional elements.
+   */
+  amountType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * A textual comment on a numeric value.
+   */
+  amountText?: fhir.FhirString|string|undefined;
+  /**
+   * Reference range of possible or expected values.
+   */
+  referenceRange?: fhir.SubstanceAmountReferenceRangeArgs|undefined;
 }
 
 /**
  * Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.
  */
-export class SubstanceAmount extends fhir.BackboneElement implements ISubstanceAmount {
+export class SubstanceAmount extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceAmount';
   /**
    * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
    */
-  public amountQuantity?: fhir.Quantity|undefined;
-  /**
-   * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
-   */
-  public amountRange?: fhir.Range|undefined;
-  /**
-   * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
-   */
-  public amountString?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceAmount.amount[x]
-   */
-  public _amountString?: fhir.FhirElement|undefined;
+  public amount?: (fhir.Quantity|fhir.Range|fhir.FhirString)|undefined;
+  readonly __amountIsChoice:true = true;
   /**
    * Most elements that require a quantitative value will also have a field called amount type. Amount type should always be specified because the actual value of the amount is often dependent on it. EXAMPLE: In capturing the actual relative amounts of substances or molecular fragments it is essential to indicate whether the amount refers to a mole ratio or weight ratio. For any given element an effort should be made to use same the amount type for all related definitional elements.
    */
@@ -116,11 +109,7 @@ export class SubstanceAmount extends fhir.BackboneElement implements ISubstanceA
   /**
    * A textual comment on a numeric value.
    */
-  public amountText?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceAmount.amountText
-   */
-  public _amountText?: fhir.FhirElement|undefined;
+  public amountText?: fhir.FhirString|undefined;
   /**
    * Reference range of possible or expected values.
    */
@@ -128,28 +117,30 @@ export class SubstanceAmount extends fhir.BackboneElement implements ISubstanceA
   /**
    * Default constructor for SubstanceAmount - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceAmount> = { }) {
-    super(source);
-    if (source['amountQuantity']) { this.amountQuantity = new fhir.Quantity(source.amountQuantity!); }
-    if (source['amountRange']) { this.amountRange = new fhir.Range(source.amountRange!); }
-    if (source['amountString']) { this.amountString = source.amountString; }
-    if (source['_amountString']) { this._amountString = new fhir.FhirElement(source._amountString!); }
-    if (source['amountType']) { this.amountType = new fhir.CodeableConcept(source.amountType!); }
-    if (source['amountText']) { this.amountText = source.amountText; }
-    if (source['_amountText']) { this._amountText = new fhir.FhirElement(source._amountText!); }
-    if (source['referenceRange']) { this.referenceRange = new fhir.SubstanceAmountReferenceRange(source.referenceRange!); }
+  constructor(source:Partial<SubstanceAmountArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['amount']) { this.amount = source.amount; }
+    else if (source['amountQuantity']) { this.amount = new fhir.Quantity(source.amountQuantity); }
+    else if (source['amountRange']) { this.amount = new fhir.Range(source.amountRange); }
+    else if (source['amountString']) { this.amount = new fhir.FhirString({value: source.amountString}); }
+    if (source['amountType']) { this.amountType = new fhir.CodeableConcept(source.amountType); }
+    if (source['amountText']) { this.amountText = new fhir.FhirString({value: source.amountText}); }
+    if (source['referenceRange']) { this.referenceRange = new fhir.SubstanceAmountReferenceRange(source.referenceRange); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["amountQuantity"]) { results.push(...this.amountQuantity.doModelValidation()); }
-    if (this["amountRange"]) { results.push(...this.amountRange.doModelValidation()); }
-    if (this["_amountString"]) { results.push(...this._amountString.doModelValidation()); }
-    if (this["amountType"]) { results.push(...this.amountType.doModelValidation()); }
-    if (this["_amountText"]) { results.push(...this._amountText.doModelValidation()); }
-    if (this["referenceRange"]) { results.push(...this.referenceRange.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["amountType"]) { outcome.issue!.push(...this.amountType.doModelValidation().issue!); }
+    if (this["amountText"]) { outcome.issue!.push(...this.amountText.doModelValidation().issue!); }
+    if (this["referenceRange"]) { outcome.issue!.push(...this.referenceRange.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

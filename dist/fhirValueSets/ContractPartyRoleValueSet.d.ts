@@ -15,10 +15,4 @@ export declare type ContractPartyRoleValueSetType = typeof ContractPartyRoleValu
 /**
  * This value set contract specific codes for offer party participation.
  */
-export declare enum ContractPartyRoleValueSetEnum {
-    /**
-     * flunky: To be completed
-     */
-    FLunky = "flunky"
-}
 //# sourceMappingURL=ContractPartyRoleValueSet.d.ts.map

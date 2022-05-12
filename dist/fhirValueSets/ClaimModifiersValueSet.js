@@ -59,31 +59,4 @@ export const ClaimModifiersValueSet = {
 /**
  * This value set includes sample Modifier type codes.
  */
-export var ClaimModifiersValueSetEnum;
-(function (ClaimModifiersValueSetEnum) {
-    /**
-     * a: Repair of prior service or installation.
-     */
-    ClaimModifiersValueSetEnum["RepairOfPriorServiceOrInstallation"] = "a";
-    /**
-     * b: Temporary service or installation.
-     */
-    ClaimModifiersValueSetEnum["TemporaryServiceOrInstallation"] = "b";
-    /**
-     * c: Treatment associated with TMJ.
-     */
-    ClaimModifiersValueSetEnum["TMJTreatment"] = "c";
-    /**
-     * e: Implant or associated with an implant.
-     */
-    ClaimModifiersValueSetEnum["ImplantOrAssociatedWithAnImplant"] = "e";
-    /**
-     * rooh: A Rush service or service performed outside of normal office hours.
-     */
-    ClaimModifiersValueSetEnum["RushOrOutsideOfOfficeHours"] = "rooh";
-    /**
-     * x: None.
-     */
-    ClaimModifiersValueSetEnum["None"] = "x";
-})(ClaimModifiersValueSetEnum || (ClaimModifiersValueSetEnum = {}));
 //# sourceMappingURL=ClaimModifiersValueSet.js.map

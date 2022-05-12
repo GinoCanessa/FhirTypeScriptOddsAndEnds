@@ -3,61 +3,46 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Money
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { CurrenciesValueSet, CurrenciesValueSetType, CurrenciesValueSetEnum } from '../fhirValueSets/CurrenciesValueSet.js'
-
+import { CurrenciesValueSet, CurrenciesValueSetType,} from '../fhirValueSets/CurrenciesValueSet.js';
+import { CurrenciesValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * An amount of economic utility in some recognized currency.
+ * Valid arguments for the Money type.
  */
-export type IMoney = fhir.IFhirElement & { 
+export interface MoneyArgs extends fhir.FhirElementArgs {
   /**
    * Monetary values have their own rules for handling precision (refer to standard accounting text books).
    */
-  value?: number|undefined;
-  /**
-   * Extended properties for primitive element: Money.value
-   */
-  _value?: fhir.IFhirElement|undefined;
+  value?: fhir.FhirDecimal|number|undefined;
   /**
    * ISO 4217 Currency Code.
    */
-  currency?: string|undefined;
-  /**
-   * Extended properties for primitive element: Money.currency
-   */
-  _currency?: fhir.IFhirElement|undefined;
+  currency?: fhir.FhirCode|string|undefined;
 }
 
 /**
  * An amount of economic utility in some recognized currency.
  */
-export class Money extends fhir.FhirElement implements IMoney {
+export class Money extends fhir.FhirElement {
+  readonly __dataType:string = 'Money';
   /**
    * Monetary values have their own rules for handling precision (refer to standard accounting text books).
    */
-  public value?: number|undefined;
-  /**
-   * Extended properties for primitive element: Money.value
-   */
-  public _value?: fhir.FhirElement|undefined;
+  public value?: fhir.FhirDecimal|undefined;
   /**
    * ISO 4217 Currency Code.
    */
-  public currency?: string|undefined;
-  /**
-   * Extended properties for primitive element: Money.currency
-   */
-  public _currency?: fhir.FhirElement|undefined;
+  public currency?: fhir.FhirCode|undefined;
   /**
    * Default constructor for Money - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMoney> = { }) {
-    super(source);
-    if (source['value']) { this.value = source.value; }
-    if (source['_value']) { this._value = new fhir.FhirElement(source._value!); }
-    if (source['currency']) { this.currency = source.currency; }
-    if (source['_currency']) { this._currency = new fhir.FhirElement(source._currency!); }
+  constructor(source:Partial<MoneyArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['value']) { this.value = new fhir.FhirDecimal({value: source.value}); }
+    if (source['currency']) { this.currency = new fhir.FhirCode({value: source.currency}); }
   }
   /**
    * Required-bound Value Set for currency
@@ -68,10 +53,16 @@ export class Money extends fhir.FhirElement implements IMoney {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_value"]) { results.push(...this._value.doModelValidation()); }
-    if (this["_currency"]) { results.push(...this._currency.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["value"]) { outcome.issue!.push(...this.value.doModelValidation().issue!); }
+    if (this["currency"]) { outcome.issue!.push(...this.currency.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

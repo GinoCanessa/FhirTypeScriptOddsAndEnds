@@ -43,23 +43,4 @@ export const MetricCategoryValueSet = {
 /**
  * Describes the category of the metric.
  */
-export var MetricCategoryValueSetEnum;
-(function (MetricCategoryValueSetEnum) {
-    /**
-     * calculation: DeviceObservations generated for this DeviceMetric are calculated.
-     */
-    MetricCategoryValueSetEnum["Calculation"] = "calculation";
-    /**
-     * measurement: DeviceObservations generated for this DeviceMetric are measured.
-     */
-    MetricCategoryValueSetEnum["Measurement"] = "measurement";
-    /**
-     * setting: DeviceObservations generated for this DeviceMetric is a setting that will influence the behavior of the Device.
-     */
-    MetricCategoryValueSetEnum["Setting"] = "setting";
-    /**
-     * unspecified: The category of this DeviceMetric is unspecified.
-     */
-    MetricCategoryValueSetEnum["Unspecified"] = "unspecified";
-})(MetricCategoryValueSetEnum || (MetricCategoryValueSetEnum = {}));
 //# sourceMappingURL=MetricCategoryValueSet.js.map

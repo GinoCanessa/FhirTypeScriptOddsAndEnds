@@ -3,127 +3,49 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: List
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ListItemFlagValueSet, ListItemFlagValueSetType, ListItemFlagValueSetEnum } from '../fhirValueSets/ListItemFlagValueSet.js'
-import { ListStatusValueSet, ListStatusValueSetType, ListStatusValueSetEnum } from '../fhirValueSets/ListStatusValueSet.js'
-import { ListModeValueSet, ListModeValueSetType, ListModeValueSetEnum } from '../fhirValueSets/ListModeValueSet.js'
-import { ListExampleCodesValueSet, ListExampleCodesValueSetType, ListExampleCodesValueSetEnum } from '../fhirValueSets/ListExampleCodesValueSet.js'
-import { ListOrderValueSet, ListOrderValueSetType, ListOrderValueSetEnum } from '../fhirValueSets/ListOrderValueSet.js'
-import { ListEmptyReasonValueSet, ListEmptyReasonValueSetType, ListEmptyReasonValueSetEnum } from '../fhirValueSets/ListEmptyReasonValueSet.js'
-
+import { ListItemFlagValueSet, ListItemFlagValueSetType,} from '../fhirValueSets/ListItemFlagValueSet.js';
+import { ListItemFlagValueSetEnum } from '../valueSetEnums.js';
+import { ListStatusValueSet, ListStatusValueSetType,} from '../fhirValueSets/ListStatusValueSet.js';
+import { ListStatusValueSetEnum } from '../valueSetEnums.js';
+import { ListModeValueSet, ListModeValueSetType,} from '../fhirValueSets/ListModeValueSet.js';
+import { ListModeValueSetEnum } from '../valueSetEnums.js';
+import { ListExampleCodesValueSet, ListExampleCodesValueSetType,} from '../fhirValueSets/ListExampleCodesValueSet.js';
+import { ListExampleCodesValueSetEnum } from '../valueSetEnums.js';
+import { ListOrderValueSet, ListOrderValueSetType,} from '../fhirValueSets/ListOrderValueSet.js';
+import { ListOrderValueSetEnum } from '../valueSetEnums.js';
+import { ListEmptyReasonValueSet, ListEmptyReasonValueSetType,} from '../fhirValueSets/ListEmptyReasonValueSet.js';
+import { ListEmptyReasonValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * If there are no entries in the list, an emptyReason SHOULD be provided.
+ * Valid arguments for the ListEntry type.
  */
-export type IListEntry = fhir.IBackboneElement & { 
+export interface ListEntryArgs extends fhir.BackboneElementArgs {
   /**
    * The flag can only be understood in the context of the List.code. If the flag means that the entry has actually been deleted from the list, the deleted element SHALL be true. Deleted can only be used if the List.mode is "changes".
    */
-  flag?: fhir.ICodeableConcept|undefined;
+  flag?: fhir.CodeableConceptArgs|undefined;
   /**
    * If the flag means that the entry has actually been deleted from the list, the deleted element SHALL be true. Both flag and deleted can only be used if the List.mode is "changes". A deleted entry should be displayed in narrative as deleted.  This element is labeled as a modifier because it indicates that an item is (to be) no longer in the list.
    */
-  deleted?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: List.entry.deleted
-   */
-  _deleted?: fhir.IFhirElement|undefined;
+  deleted?: fhir.FhirBoolean|boolean|undefined;
   /**
    * When this item was added to the list.
    */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: List.entry.date
-   */
-  _date?: fhir.IFhirElement|undefined;
+  date?: fhir.FhirDateTime|string|undefined;
   /**
    * A reference to the actual resource from which data was derived.
    */
-  item: fhir.IReference|null;
-}
-
-/**
- * A list is a curated collection of resources.
- */
-export type IList = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "List";
-  /**
-   * Identifier for the List assigned for business purposes outside the context of FHIR.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-   */
-  status: ListStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: List.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * This element is labeled as a modifier because a change list must not be misunderstood as a complete list.
-   */
-  mode: ListModeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: List.mode
-   */
-  _mode?: fhir.IFhirElement|undefined;
-  /**
-   * A label for the list assigned by the author.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: List.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * If there is no code, the purpose of the list is implied where it is used, such as in a document section using Document.section.code.
-   */
-  code?: fhir.ICodeableConcept|undefined;
-  /**
-   * Some purely arbitrary lists do not have a common subject, so this is optional.
-   */
-  subject?: fhir.IReference|undefined;
-  /**
-   * The encounter that is the context in which this list was created.
-   */
-  encounter?: fhir.IReference|undefined;
-  /**
-   * The actual important date is the date of currency of the resources that were summarized, but it is usually assumed that these are current when the preparation occurs.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: List.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * The primary source is the entity that made the decisions what items are in the list. This may be software or user.
-   */
-  source?: fhir.IReference|undefined;
-  /**
-   * Applications SHOULD render ordered lists in the order provided, but MAY allow users to re-order based on their own preferences as well. If there is no order specified, the order is unknown, though there may still be some order.
-   */
-  orderedBy?: fhir.ICodeableConcept|undefined;
-  /**
-   * Comments that apply to the overall list.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-  /**
-   * If there are no entries in the list, an emptyReason SHOULD be provided.
-   */
-  entry?: fhir.IListEntry[]|undefined;
-  /**
-   * The various reasons for an empty list make a significant interpretation to its interpretation. Note that this code is for use when the entire list has been suppressed, and not for when individual items are omitted - implementers may consider using a text note or a flag on an entry in these cases.
-   */
-  emptyReason?: fhir.ICodeableConcept|undefined;
+  item: fhir.ReferenceArgs|null;
 }
 
 /**
  * If there are no entries in the list, an emptyReason SHOULD be provided.
  */
-export class ListEntry extends fhir.BackboneElement implements IListEntry {
+export class ListEntry extends fhir.BackboneElement {
+  readonly __dataType:string = 'ListEntry';
   /**
    * The flag can only be understood in the context of the List.code. If the flag means that the entry has actually been deleted from the list, the deleted element SHALL be true. Deleted can only be used if the List.mode is "changes".
    */
@@ -131,19 +53,11 @@ export class ListEntry extends fhir.BackboneElement implements IListEntry {
   /**
    * If the flag means that the entry has actually been deleted from the list, the deleted element SHALL be true. Both flag and deleted can only be used if the List.mode is "changes". A deleted entry should be displayed in narrative as deleted.  This element is labeled as a modifier because it indicates that an item is (to be) no longer in the list.
    */
-  public deleted?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: List.entry.deleted
-   */
-  public _deleted?: fhir.FhirElement|undefined;
+  public deleted?: fhir.FhirBoolean|undefined;
   /**
    * When this item was added to the list.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: List.entry.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * A reference to the actual resource from which data was derived.
    */
@@ -151,14 +65,12 @@ export class ListEntry extends fhir.BackboneElement implements IListEntry {
   /**
    * Default constructor for ListEntry - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IListEntry> = { }) {
-    super(source);
-    if (source['flag']) { this.flag = new fhir.CodeableConcept(source.flag!); }
-    if (source['deleted']) { this.deleted = source.deleted; }
-    if (source['_deleted']) { this._deleted = new fhir.FhirElement(source._deleted!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['item']) { this.item = new fhir.Reference(source.item!); }
+  constructor(source:Partial<ListEntryArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['flag']) { this.flag = new fhir.CodeableConcept(source.flag); }
+    if (source['deleted']) { this.deleted = new fhir.FhirBoolean({value: source.deleted}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['item']) { this.item = new fhir.Reference(source.item); }
     else { this.item = null; }
   }
   /**
@@ -170,21 +82,91 @@ export class ListEntry extends fhir.BackboneElement implements IListEntry {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["flag"]) { results.push(...this.flag.doModelValidation()); }
-    if (this["_deleted"]) { results.push(...this._deleted.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (!this["item"]) { results.push(["item",'Missing required element: List.entry.item']); }
-    if (this["item"]) { results.push(...this.item.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["flag"]) { outcome.issue!.push(...this.flag.doModelValidation().issue!); }
+    if (this["deleted"]) { outcome.issue!.push(...this.deleted.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (!this['item']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property item:fhir.Reference fhir: List.entry.item:Reference", }));
+    }
+    if (this["item"]) { outcome.issue!.push(...this.item.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the List type.
+ */
+export interface ListArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "List"|undefined;
+  /**
+   * Identifier for the List assigned for business purposes outside the context of FHIR.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+   */
+  status: ListStatusValueSetEnum|null;
+  /**
+   * This element is labeled as a modifier because a change list must not be misunderstood as a complete list.
+   */
+  mode: ListModeValueSetEnum|null;
+  /**
+   * A label for the list assigned by the author.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * If there is no code, the purpose of the list is implied where it is used, such as in a document section using Document.section.code.
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Some purely arbitrary lists do not have a common subject, so this is optional.
+   */
+  subject?: fhir.ReferenceArgs|undefined;
+  /**
+   * The encounter that is the context in which this list was created.
+   */
+  encounter?: fhir.ReferenceArgs|undefined;
+  /**
+   * The actual important date is the date of currency of the resources that were summarized, but it is usually assumed that these are current when the preparation occurs.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * The primary source is the entity that made the decisions what items are in the list. This may be software or user.
+   */
+  source?: fhir.ReferenceArgs|undefined;
+  /**
+   * Applications SHOULD render ordered lists in the order provided, but MAY allow users to re-order based on their own preferences as well. If there is no order specified, the order is unknown, though there may still be some order.
+   */
+  orderedBy?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Comments that apply to the overall list.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
+  /**
+   * If there are no entries in the list, an emptyReason SHOULD be provided.
+   */
+  entry?: fhir.ListEntryArgs[]|undefined;
+  /**
+   * The various reasons for an empty list make a significant interpretation to its interpretation. Note that this code is for use when the entire list has been suppressed, and not for when individual items are omitted - implementers may consider using a text note or a flag on an entry in these cases.
+   */
+  emptyReason?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * A list is a curated collection of resources.
  */
-export class List extends fhir.DomainResource implements IList {
+export class List extends fhir.DomainResource {
+  readonly __dataType:string = 'List';
   /**
    * Resource Type Name
    */
@@ -192,31 +174,19 @@ export class List extends fhir.DomainResource implements IList {
   /**
    * Identifier for the List assigned for business purposes outside the context of FHIR.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
   public status: ListStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: List.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * This element is labeled as a modifier because a change list must not be misunderstood as a complete list.
    */
   public mode: ListModeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: List.mode
-   */
-  public _mode?: fhir.FhirElement|undefined;
-  /**
    * A label for the list assigned by the author.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: List.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * If there is no code, the purpose of the list is implied where it is used, such as in a document section using Document.section.code.
    */
@@ -232,11 +202,7 @@ export class List extends fhir.DomainResource implements IList {
   /**
    * The actual important date is the date of currency of the resources that were summarized, but it is usually assumed that these are current when the preparation occurs.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: List.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * The primary source is the entity that made the decisions what items are in the list. This may be software or user.
    */
@@ -248,11 +214,11 @@ export class List extends fhir.DomainResource implements IList {
   /**
    * Comments that apply to the overall list.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * If there are no entries in the list, an emptyReason SHOULD be provided.
    */
-  public entry?: fhir.ListEntry[]|undefined;
+  public entry?: fhir.ListEntry[]|undefined = [];
   /**
    * The various reasons for an empty list make a significant interpretation to its interpretation. Note that this code is for use when the entire list has been suppressed, and not for when individual items are omitted - implementers may consider using a text note or a flag on an entry in these cases.
    */
@@ -260,28 +226,24 @@ export class List extends fhir.DomainResource implements IList {
   /**
    * Default constructor for List - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IList> = { }) {
-    super(source);
+  constructor(source:Partial<ListArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'List';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
     if (source['mode']) { this.mode = source.mode; }
     else { this.mode = null; }
-    if (source['_mode']) { this._mode = new fhir.FhirElement(source._mode!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['source']) { this.source = new fhir.Reference(source.source!); }
-    if (source['orderedBy']) { this.orderedBy = new fhir.CodeableConcept(source.orderedBy!); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['source']) { this.source = new fhir.Reference(source.source); }
+    if (source['orderedBy']) { this.orderedBy = new fhir.CodeableConcept(source.orderedBy); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
     if (source['entry']) { this.entry = source.entry.map((x) => new fhir.ListEntry(x)); }
-    if (source['emptyReason']) { this.emptyReason = new fhir.CodeableConcept(source.emptyReason!); }
+    if (source['emptyReason']) { this.emptyReason = new fhir.CodeableConcept(source.emptyReason); }
   }
   /**
    * Required-bound Value Set for status
@@ -316,24 +278,34 @@ export class List extends fhir.DomainResource implements IList {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: List.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: List.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (!this["mode"]) { results.push(["mode",'Missing required element: List.mode']); }
-    if (this["_mode"]) { results.push(...this._mode.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["source"]) { results.push(...this.source.doModelValidation()); }
-    if (this["orderedBy"]) { results.push(...this.orderedBy.doModelValidation()); }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["entry"]) { this.entry.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["emptyReason"]) { results.push(...this.emptyReason.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'List' fhir: List.resourceType:'List'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:ListStatusValueSetEnum fhir: List.status:code", }));
+    }
+    if (!this['mode']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property mode:ListModeValueSetEnum fhir: List.mode:code", }));
+    }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["source"]) { outcome.issue!.push(...this.source.doModelValidation().issue!); }
+    if (this["orderedBy"]) { outcome.issue!.push(...this.orderedBy.doModelValidation().issue!); }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["entry"]) { this.entry.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["emptyReason"]) { outcome.issue!.push(...this.emptyReason.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

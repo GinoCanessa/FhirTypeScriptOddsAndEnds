@@ -27,9 +27,3 @@ export type ContractSecurityClassificationValueSetType = typeof ContractSecurity
 /**
  * This value set contract specific codes for security classification.
  */
-export enum ContractSecurityClassificationValueSetEnum {
-  /**
-   * policy: To be completed
-   */
-  Policy = "policy",
-}

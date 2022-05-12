@@ -59,31 +59,4 @@ export const V20116ValueSet = {
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0116 ( BED STATUS)
  */
-export var V20116ValueSetEnum;
-(function (V20116ValueSetEnum) {
-    /**
-     * Code: C
-     */
-    V20116ValueSetEnum["Closed"] = "C";
-    /**
-     * Code: H
-     */
-    V20116ValueSetEnum["Housekeeping"] = "H";
-    /**
-     * Code: I
-     */
-    V20116ValueSetEnum["Isolated"] = "I";
-    /**
-     * Code: K
-     */
-    V20116ValueSetEnum["Contaminated"] = "K";
-    /**
-     * Code: O
-     */
-    V20116ValueSetEnum["Occupied"] = "O";
-    /**
-     * Code: U
-     */
-    V20116ValueSetEnum["Unoccupied"] = "U";
-})(V20116ValueSetEnum || (V20116ValueSetEnum = {}));
 //# sourceMappingURL=V20116ValueSet.js.map

@@ -35,19 +35,4 @@ export const BenefitTermValueSet = {
 /**
  * This value set includes a smattering of Benefit Term codes.
  */
-export var BenefitTermValueSetEnum;
-(function (BenefitTermValueSetEnum) {
-    /**
-     * annual: Annual, renewing on the anniversary
-     */
-    BenefitTermValueSetEnum["Annual"] = "annual";
-    /**
-     * day: Per day
-     */
-    BenefitTermValueSetEnum["Day"] = "day";
-    /**
-     * lifetime: For the total term, lifetime, of the policy or coverage
-     */
-    BenefitTermValueSetEnum["Lifetime"] = "lifetime";
-})(BenefitTermValueSetEnum || (BenefitTermValueSetEnum = {}));
 //# sourceMappingURL=BenefitTermValueSet.js.map

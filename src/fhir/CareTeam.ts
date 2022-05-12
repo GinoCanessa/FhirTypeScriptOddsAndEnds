@@ -3,113 +3,48 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: CareTeam
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ParticipantRoleValueSet, ParticipantRoleValueSetType, ParticipantRoleValueSetEnum } from '../fhirValueSets/ParticipantRoleValueSet.js'
-import { CareTeamStatusValueSet, CareTeamStatusValueSetType, CareTeamStatusValueSetEnum } from '../fhirValueSets/CareTeamStatusValueSet.js'
-import { ClinicalFindingsValueSet, ClinicalFindingsValueSetType, ClinicalFindingsValueSetEnum } from '../fhirValueSets/ClinicalFindingsValueSet.js'
-
+import { ParticipantRoleValueSet, ParticipantRoleValueSetType,} from '../fhirValueSets/ParticipantRoleValueSet.js';
+import { ParticipantRoleValueSetEnum } from '../valueSetEnums.js';
+import { CareTeamStatusValueSet, CareTeamStatusValueSetType,} from '../fhirValueSets/CareTeamStatusValueSet.js';
+import { CareTeamStatusValueSetEnum } from '../valueSetEnums.js';
+import { ClinicalFindingsValueSet, ClinicalFindingsValueSetType,} from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { ClinicalFindingsValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Identifies all people and organizations who are expected to be involved in the care team.
+ * Valid arguments for the CareTeamParticipant type.
  */
-export type ICareTeamParticipant = fhir.IBackboneElement & { 
+export interface CareTeamParticipantArgs extends fhir.BackboneElementArgs {
   /**
    * Roles may sometimes be inferred by type of Practitioner.  These are relationships that hold only within the context of the care team.  General relationships should be handled as properties of the Patient resource directly.
    */
-  role?: fhir.ICodeableConcept[]|undefined;
+  role?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * Patient only needs to be listed if they have a role other than "subject of care".
    * Member is optional because some participants may be known only by their role, particularly in draft plans.
    */
-  member?: fhir.IReference|undefined;
+  member?: fhir.ReferenceArgs|undefined;
   /**
    * The organization of the practitioner.
    */
-  onBehalfOf?: fhir.IReference|undefined;
+  onBehalfOf?: fhir.ReferenceArgs|undefined;
   /**
    * Indicates when the specific member or organization did (or is intended to) come into effect and end.
    */
-  period?: fhir.IPeriod|undefined;
-}
-
-/**
- * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.
- */
-export type ICareTeam = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "CareTeam";
-  /**
-   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains the code entered-in-error that marks the care team as not currently valid.
-   */
-  status?: CareTeamStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: CareTeam.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * There may be multiple axis of categorization and one team may serve multiple purposes.
-   */
-  category?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The meaning/purpose of the team is conveyed in CareTeam.category.  This element may also convey semantics of the team (e.g. "Red trauma team"), but its primary purpose is to distinguish between identical teams in a human-friendly way.  ("Team 18735" isn't as friendly.).
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: CareTeam.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Identifies the patient or group whose intended care is handled by the team.
-   */
-  subject?: fhir.IReference|undefined;
-  /**
-   * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.
-   */
-  encounter?: fhir.IReference|undefined;
-  /**
-   * Indicates when the team did (or is intended to) come into effect and end.
-   */
-  period?: fhir.IPeriod|undefined;
-  /**
-   * Identifies all people and organizations who are expected to be involved in the care team.
-   */
-  participant?: fhir.ICareTeamParticipant[]|undefined;
-  /**
-   * Describes why the care team exists.
-   */
-  reasonCode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Condition(s) that this care team addresses.
-   */
-  reasonReference?: fhir.IReference[]|undefined;
-  /**
-   * The organization responsible for the care team.
-   */
-  managingOrganization?: fhir.IReference[]|undefined;
-  /**
-   * The ContactPoint.use code of home is not appropriate to use. These contacts are not the contact details of individual care team members.
-   */
-  telecom?: fhir.IContactPoint[]|undefined;
-  /**
-   * Comments made about the CareTeam.
-   */
-  note?: fhir.IAnnotation[]|undefined;
+  period?: fhir.PeriodArgs|undefined;
 }
 
 /**
  * Identifies all people and organizations who are expected to be involved in the care team.
  */
-export class CareTeamParticipant extends fhir.BackboneElement implements ICareTeamParticipant {
+export class CareTeamParticipant extends fhir.BackboneElement {
+  readonly __dataType:string = 'CareTeamParticipant';
   /**
    * Roles may sometimes be inferred by type of Practitioner.  These are relationships that hold only within the context of the care team.  General relationships should be handled as properties of the Patient resource directly.
    */
-  public role?: fhir.CodeableConcept[]|undefined;
+  public role?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Patient only needs to be listed if they have a role other than "subject of care".
    * Member is optional because some participants may be known only by their role, particularly in draft plans.
@@ -126,12 +61,12 @@ export class CareTeamParticipant extends fhir.BackboneElement implements ICareTe
   /**
    * Default constructor for CareTeamParticipant - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICareTeamParticipant> = { }) {
-    super(source);
+  constructor(source:Partial<CareTeamParticipantArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['role']) { this.role = source.role.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['member']) { this.member = new fhir.Reference(source.member!); }
-    if (source['onBehalfOf']) { this.onBehalfOf = new fhir.Reference(source.onBehalfOf!); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
+    if (source['member']) { this.member = new fhir.Reference(source.member); }
+    if (source['onBehalfOf']) { this.onBehalfOf = new fhir.Reference(source.onBehalfOf); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
   }
   /**
    * Example-bound Value Set for role
@@ -142,20 +77,88 @@ export class CareTeamParticipant extends fhir.BackboneElement implements ICareTe
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["role"]) { this.role.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["member"]) { results.push(...this.member.doModelValidation()); }
-    if (this["onBehalfOf"]) { results.push(...this.onBehalfOf.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["role"]) { this.role.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["member"]) { outcome.issue!.push(...this.member.doModelValidation().issue!); }
+    if (this["onBehalfOf"]) { outcome.issue!.push(...this.onBehalfOf.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CareTeam type.
+ */
+export interface CareTeamArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "CareTeam"|undefined;
+  /**
+   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains the code entered-in-error that marks the care team as not currently valid.
+   */
+  status?: CareTeamStatusValueSetEnum|undefined;
+  /**
+   * There may be multiple axis of categorization and one team may serve multiple purposes.
+   */
+  category?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The meaning/purpose of the team is conveyed in CareTeam.category.  This element may also convey semantics of the team (e.g. "Red trauma team"), but its primary purpose is to distinguish between identical teams in a human-friendly way.  ("Team 18735" isn't as friendly.).
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * Identifies the patient or group whose intended care is handled by the team.
+   */
+  subject?: fhir.ReferenceArgs|undefined;
+  /**
+   * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.
+   */
+  encounter?: fhir.ReferenceArgs|undefined;
+  /**
+   * Indicates when the team did (or is intended to) come into effect and end.
+   */
+  period?: fhir.PeriodArgs|undefined;
+  /**
+   * Identifies all people and organizations who are expected to be involved in the care team.
+   */
+  participant?: fhir.CareTeamParticipantArgs[]|undefined;
+  /**
+   * Describes why the care team exists.
+   */
+  reasonCode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Condition(s) that this care team addresses.
+   */
+  reasonReference?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The organization responsible for the care team.
+   */
+  managingOrganization?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The ContactPoint.use code of home is not appropriate to use. These contacts are not the contact details of individual care team members.
+   */
+  telecom?: fhir.ContactPointArgs[]|undefined;
+  /**
+   * Comments made about the CareTeam.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
 }
 
 /**
  * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.
  */
-export class CareTeam extends fhir.DomainResource implements ICareTeam {
+export class CareTeam extends fhir.DomainResource {
+  readonly __dataType:string = 'CareTeam';
   /**
    * Resource Type Name
    */
@@ -163,27 +166,19 @@ export class CareTeam extends fhir.DomainResource implements ICareTeam {
   /**
    * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains the code entered-in-error that marks the care team as not currently valid.
    */
   public status?: CareTeamStatusValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: CareTeam.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * There may be multiple axis of categorization and one team may serve multiple purposes.
    */
-  public category?: fhir.CodeableConcept[]|undefined;
+  public category?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The meaning/purpose of the team is conveyed in CareTeam.category.  This element may also convey semantics of the team (e.g. "Red trauma team"), but its primary purpose is to distinguish between identical teams in a human-friendly way.  ("Team 18735" isn't as friendly.).
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: CareTeam.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Identifies the patient or group whose intended care is handled by the team.
    */
@@ -199,42 +194,40 @@ export class CareTeam extends fhir.DomainResource implements ICareTeam {
   /**
    * Identifies all people and organizations who are expected to be involved in the care team.
    */
-  public participant?: fhir.CareTeamParticipant[]|undefined;
+  public participant?: fhir.CareTeamParticipant[]|undefined = [];
   /**
    * Describes why the care team exists.
    */
-  public reasonCode?: fhir.CodeableConcept[]|undefined;
+  public reasonCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Condition(s) that this care team addresses.
    */
-  public reasonReference?: fhir.Reference[]|undefined;
+  public reasonReference?: fhir.Reference[]|undefined = [];
   /**
    * The organization responsible for the care team.
    */
-  public managingOrganization?: fhir.Reference[]|undefined;
+  public managingOrganization?: fhir.Reference[]|undefined = [];
   /**
    * The ContactPoint.use code of home is not appropriate to use. These contacts are not the contact details of individual care team members.
    */
-  public telecom?: fhir.ContactPoint[]|undefined;
+  public telecom?: fhir.ContactPoint[]|undefined = [];
   /**
    * Comments made about the CareTeam.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Default constructor for CareTeam - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICareTeam> = { }) {
-    super(source);
+  constructor(source:Partial<CareTeamArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'CareTeam';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
     if (source['category']) { this.category = source.category.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
     if (source['participant']) { this.participant = source.participant.map((x) => new fhir.CareTeamParticipant(x)); }
     if (source['reasonCode']) { this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x)); }
     if (source['reasonReference']) { this.reasonReference = source.reasonReference.map((x) => new fhir.Reference(x)); }
@@ -257,22 +250,29 @@ export class CareTeam extends fhir.DomainResource implements ICareTeam {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: CareTeam.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["category"]) { this.category.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    if (this["participant"]) { this.participant.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["managingOrganization"]) { this.managingOrganization.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["telecom"]) { this.telecom.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'CareTeam' fhir: CareTeam.resourceType:'CareTeam'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["category"]) { this.category.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    if (this["participant"]) { this.participant.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["managingOrganization"]) { this.managingOrganization.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["telecom"]) { this.telecom.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

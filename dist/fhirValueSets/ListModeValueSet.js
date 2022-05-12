@@ -35,19 +35,4 @@ export const ListModeValueSet = {
 /**
  * The processing mode that applies to this list.
  */
-export var ListModeValueSetEnum;
-(function (ListModeValueSetEnum) {
-    /**
-     * changes: A point-in-time list that shows what changes have been made or recommended.  E.g. a discharge medication list showing what was added and removed during an encounter.
-     */
-    ListModeValueSetEnum["ChangeList"] = "changes";
-    /**
-     * snapshot: This list was prepared as a snapshot. It should not be assumed to be current.
-     */
-    ListModeValueSetEnum["SnapshotList"] = "snapshot";
-    /**
-     * working: This list is the master list, maintained in an ongoing fashion with regular updates as the real world list it is tracking changes.
-     */
-    ListModeValueSetEnum["WorkingList"] = "working";
-})(ListModeValueSetEnum || (ListModeValueSetEnum = {}));
 //# sourceMappingURL=ListModeValueSet.js.map

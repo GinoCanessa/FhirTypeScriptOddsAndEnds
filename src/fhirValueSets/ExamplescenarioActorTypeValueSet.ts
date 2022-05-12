@@ -35,13 +35,3 @@ export type ExamplescenarioActorTypeValueSetType = typeof ExamplescenarioActorTy
 /**
  * The type of actor - system or human.
  */
-export enum ExamplescenarioActorTypeValueSetEnum {
-  /**
-   * entity: A system.
-   */
-  System = "entity",
-  /**
-   * person: A person.
-   */
-  Person = "person",
-}

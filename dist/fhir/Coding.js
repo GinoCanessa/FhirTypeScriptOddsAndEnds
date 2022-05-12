@@ -10,60 +10,52 @@ export class Coding extends fhir.FhirElement {
     /**
      * Default constructor for Coding - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Coding';
         if (source['system']) {
-            this.system = source.system;
-        }
-        if (source['_system']) {
-            this._system = new fhir.FhirElement(source._system);
+            this.system = new fhir.FhirUri({ value: source.system });
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['code']) {
-            this.code = source.code;
-        }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         if (source['display']) {
-            this.display = source.display;
-        }
-        if (source['_display']) {
-            this._display = new fhir.FhirElement(source._display);
+            this.display = new fhir.FhirString({ value: source.display });
         }
         if (source['userSelected']) {
-            this.userSelected = source.userSelected;
-        }
-        if (source['_userSelected']) {
-            this._userSelected = new fhir.FhirElement(source._userSelected);
+            this.userSelected = new fhir.FhirBoolean({ value: source.userSelected });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_system"]) {
-            results.push(...this._system.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["system"]) {
+            outcome.issue.push(...this.system.doModelValidation().issue);
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_display"]) {
-            results.push(...this._display.doModelValidation());
+        if (this["display"]) {
+            outcome.issue.push(...this.display.doModelValidation().issue);
         }
-        if (this["_userSelected"]) {
-            results.push(...this._userSelected.doModelValidation());
+        if (this["userSelected"]) {
+            outcome.issue.push(...this.userSelected.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Coding.js.map

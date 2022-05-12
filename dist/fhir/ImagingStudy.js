@@ -3,12 +3,14 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ImagingStudy
 import * as fhir from '../fhir.js';
-import { SeriesPerformerFunctionValueSet } from '../fhirValueSets/SeriesPerformerFunctionValueSet.js';
-import { DicomCid29AcquisitionModalityValueSet } from '../fhirValueSets/DicomCid29AcquisitionModalityValueSet.js';
-import { BodySiteValueSet } from '../fhirValueSets/BodySiteValueSet.js';
-import { BodysiteLateralityValueSet } from '../fhirValueSets/BodysiteLateralityValueSet.js';
-import { ImagingstudyStatusValueSet } from '../fhirValueSets/ImagingstudyStatusValueSet.js';
-import { ProcedureReasonValueSet } from '../fhirValueSets/ProcedureReasonValueSet.js';
+import { SeriesPerformerFunctionValueSet, } from '../fhirValueSets/SeriesPerformerFunctionValueSet.js';
+import { DicomCid29AcquisitionModalityValueSet, } from '../fhirValueSets/DicomCid29AcquisitionModalityValueSet.js';
+import { BodySiteValueSet, } from '../fhirValueSets/BodySiteValueSet.js';
+import { BodysiteLateralityValueSet, } from '../fhirValueSets/BodysiteLateralityValueSet.js';
+import { ImagingstudyStatusValueSet, } from '../fhirValueSets/ImagingstudyStatusValueSet.js';
+import { ProcedureReasonValueSet, } from '../fhirValueSets/ProcedureReasonValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * If the person who performed the series is not known, their Organization may be recorded. A patient, or related person, may be the performer, e.g. for patient-captured images.
  */
@@ -16,8 +18,9 @@ export class ImagingStudySeriesPerformer extends fhir.BackboneElement {
     /**
      * Default constructor for ImagingStudySeriesPerformer - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImagingStudySeriesPerformer';
         if (source['function']) {
             this.function = new fhir.CodeableConcept(source.function);
         }
@@ -38,17 +41,23 @@ export class ImagingStudySeriesPerformer extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["function"]) {
-            results.push(...this.function.doModelValidation());
+            outcome.issue.push(...this.function.doModelValidation().issue);
         }
-        if (!this["actor"]) {
-            results.push(["actor", 'Missing required element: ImagingStudy.series.performer.actor']);
+        if (!this['actor']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property actor:fhir.Reference fhir: ImagingStudy.series.performer.actor:Reference", }));
         }
         if (this["actor"]) {
-            results.push(...this.actor.doModelValidation());
+            outcome.issue.push(...this.actor.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -58,16 +67,14 @@ export class ImagingStudySeriesInstance extends fhir.BackboneElement {
     /**
      * Default constructor for ImagingStudySeriesInstance - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImagingStudySeriesInstance';
         if (source['uid']) {
-            this.uid = source.uid;
+            this.uid = new fhir.FhirId({ value: source.uid });
         }
         else {
             this.uid = null;
-        }
-        if (source['_uid']) {
-            this._uid = new fhir.FhirElement(source._uid);
         }
         if (source['sopClass']) {
             this.sopClass = new fhir.Coding(source.sopClass);
@@ -76,42 +83,42 @@ export class ImagingStudySeriesInstance extends fhir.BackboneElement {
             this.sopClass = null;
         }
         if (source['number']) {
-            this.number = source.number;
-        }
-        if (source['_number']) {
-            this._number = new fhir.FhirElement(source._number);
+            this.number = new fhir.FhirUnsignedInt({ value: source.number });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["uid"]) {
-            results.push(["uid", 'Missing required element: ImagingStudy.series.instance.uid']);
+        var outcome = super.doModelValidation();
+        if (!this['uid']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property uid:fhir.FhirId fhir: ImagingStudy.series.instance.uid:id", }));
         }
-        if (this["_uid"]) {
-            results.push(...this._uid.doModelValidation());
+        if (this["uid"]) {
+            outcome.issue.push(...this.uid.doModelValidation().issue);
         }
-        if (!this["sopClass"]) {
-            results.push(["sopClass", 'Missing required element: ImagingStudy.series.instance.sopClass']);
+        if (!this['sopClass']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property sopClass:fhir.Coding fhir: ImagingStudy.series.instance.sopClass:Coding", }));
         }
         if (this["sopClass"]) {
-            results.push(...this.sopClass.doModelValidation());
+            outcome.issue.push(...this.sopClass.doModelValidation().issue);
         }
-        if (this["_number"]) {
-            results.push(...this._number.doModelValidation());
+        if (this["number"]) {
+            outcome.issue.push(...this.number.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -121,22 +128,33 @@ export class ImagingStudySeries extends fhir.BackboneElement {
     /**
      * Default constructor for ImagingStudySeries - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImagingStudySeries';
+        /**
+         * Typical endpoint types include DICOM WADO-RS, which is used to retrieve DICOM instances in native or rendered (e.g., JPG, PNG) formats using a RESTful API; DICOM WADO-URI, which can similarly retrieve native or rendered instances, except using an HTTP query-based approach; and DICOM QIDO-RS, which allows RESTful query for DICOM information without retrieving the actual instances.
+         */
+        this.endpoint = [];
+        /**
+         * The specimen imaged, e.g., for whole slide imaging of a biopsy.
+         */
+        this.specimen = [];
+        /**
+         * If the person who performed the series is not known, their Organization may be recorded. A patient, or related person, may be the performer, e.g. for patient-captured images.
+         */
+        this.performer = [];
+        /**
+         * A single SOP instance within the series, e.g. an image, or presentation state.
+         */
+        this.instance = [];
         if (source['uid']) {
-            this.uid = source.uid;
+            this.uid = new fhir.FhirId({ value: source.uid });
         }
         else {
             this.uid = null;
         }
-        if (source['_uid']) {
-            this._uid = new fhir.FhirElement(source._uid);
-        }
         if (source['number']) {
-            this.number = source.number;
-        }
-        if (source['_number']) {
-            this._number = new fhir.FhirElement(source._number);
+            this.number = new fhir.FhirUnsignedInt({ value: source.number });
         }
         if (source['modality']) {
             this.modality = new fhir.Coding(source.modality);
@@ -145,16 +163,10 @@ export class ImagingStudySeries extends fhir.BackboneElement {
             this.modality = null;
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['numberOfInstances']) {
-            this.numberOfInstances = source.numberOfInstances;
-        }
-        if (source['_numberOfInstances']) {
-            this._numberOfInstances = new fhir.FhirElement(source._numberOfInstances);
+            this.numberOfInstances = new fhir.FhirUnsignedInt({ value: source.numberOfInstances });
         }
         if (source['endpoint']) {
             this.endpoint = source.endpoint.map((x) => new fhir.Reference(x));
@@ -169,10 +181,7 @@ export class ImagingStudySeries extends fhir.BackboneElement {
             this.specimen = source.specimen.map((x) => new fhir.Reference(x));
         }
         if (source['started']) {
-            this.started = source.started;
-        }
-        if (source['_started']) {
-            this._started = new fhir.FhirElement(source._started);
+            this.started = new fhir.FhirDateTime({ value: source.started });
         }
         if (source['performer']) {
             this.performer = source.performer.map((x) => new fhir.ImagingStudySeriesPerformer(x));
@@ -203,50 +212,56 @@ export class ImagingStudySeries extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["uid"]) {
-            results.push(["uid", 'Missing required element: ImagingStudy.series.uid']);
+        var outcome = super.doModelValidation();
+        if (!this['uid']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property uid:fhir.FhirId fhir: ImagingStudy.series.uid:id", }));
         }
-        if (this["_uid"]) {
-            results.push(...this._uid.doModelValidation());
+        if (this["uid"]) {
+            outcome.issue.push(...this.uid.doModelValidation().issue);
         }
-        if (this["_number"]) {
-            results.push(...this._number.doModelValidation());
+        if (this["number"]) {
+            outcome.issue.push(...this.number.doModelValidation().issue);
         }
-        if (!this["modality"]) {
-            results.push(["modality", 'Missing required element: ImagingStudy.series.modality']);
+        if (!this['modality']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property modality:fhir.Coding fhir: ImagingStudy.series.modality:Coding", }));
         }
         if (this["modality"]) {
-            results.push(...this.modality.doModelValidation());
+            outcome.issue.push(...this.modality.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_numberOfInstances"]) {
-            results.push(...this._numberOfInstances.doModelValidation());
+        if (this["numberOfInstances"]) {
+            outcome.issue.push(...this.numberOfInstances.doModelValidation().issue);
         }
         if (this["endpoint"]) {
-            this.endpoint.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.endpoint.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["bodySite"]) {
-            results.push(...this.bodySite.doModelValidation());
+            outcome.issue.push(...this.bodySite.doModelValidation().issue);
         }
         if (this["laterality"]) {
-            results.push(...this.laterality.doModelValidation());
+            outcome.issue.push(...this.laterality.doModelValidation().issue);
         }
         if (this["specimen"]) {
-            this.specimen.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.specimen.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_started"]) {
-            results.push(...this._started.doModelValidation());
+        if (this["started"]) {
+            outcome.issue.push(...this.started.doModelValidation().issue);
         }
         if (this["performer"]) {
-            this.performer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.performer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["instance"]) {
-            this.instance.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.instance.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -256,8 +271,49 @@ export class ImagingStudy extends fhir.DomainResource {
     /**
      * Default constructor for ImagingStudy - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImagingStudy';
+        /**
+         * See discussion under [Imaging Study Implementation Notes](imagingstudy.html#notes) for encoding of DICOM Study Instance UID. Accession Number should use ACSN Identifier type.
+         */
+        this.identifier = [];
+        /**
+         * A list of all the series.modality values that are actual acquisition modalities, i.e. those in the DICOM Context Group 29 (value set OID 1.2.840.10008.6.1.19).
+         */
+        this.modality = [];
+        /**
+         * A list of the diagnostic requests that resulted in this imaging study being performed.
+         */
+        this.basedOn = [];
+        /**
+         * Who read the study and interpreted the images or other content.
+         */
+        this.interpreter = [];
+        /**
+         * Typical endpoint types include DICOM WADO-RS, which is used to retrieve DICOM instances in native or rendered (e.g., JPG, PNG), formats using a RESTful API; DICOM WADO-URI, which can similarly retrieve native or rendered instances, except using an HTTP query-based approach; DICOM QIDO-RS, which allows RESTful query for DICOM information without retrieving the actual instances; or IHE Invoke Image Display (IID), which provides standard invocation of an imaging web viewer.
+         */
+        this.endpoint = [];
+        /**
+         * The code for the performed procedure type.
+         */
+        this.procedureCode = [];
+        /**
+         * Description of clinical condition indicating why the ImagingStudy was requested.
+         */
+        this.reasonCode = [];
+        /**
+         * Indicates another resource whose existence justifies this Study.
+         */
+        this.reasonReference = [];
+        /**
+         * Per the recommended DICOM mapping, this element is derived from the Study Description attribute (0008,1030). Observations or findings about the imaging study should be recorded in another resource, e.g. Observation, and not in this element.
+         */
+        this.note = [];
+        /**
+         * Each study has one or more series of images or other content.
+         */
+        this.series = [];
         this.resourceType = 'ImagingStudy';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -267,9 +323,6 @@ export class ImagingStudy extends fhir.DomainResource {
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['modality']) {
             this.modality = source.modality.map((x) => new fhir.Coding(x));
@@ -284,10 +337,7 @@ export class ImagingStudy extends fhir.DomainResource {
             this.encounter = new fhir.Reference(source.encounter);
         }
         if (source['started']) {
-            this.started = source.started;
-        }
-        if (source['_started']) {
-            this._started = new fhir.FhirElement(source._started);
+            this.started = new fhir.FhirDateTime({ value: source.started });
         }
         if (source['basedOn']) {
             this.basedOn = source.basedOn.map((x) => new fhir.Reference(x));
@@ -302,16 +352,10 @@ export class ImagingStudy extends fhir.DomainResource {
             this.endpoint = source.endpoint.map((x) => new fhir.Reference(x));
         }
         if (source['numberOfSeries']) {
-            this.numberOfSeries = source.numberOfSeries;
-        }
-        if (source['_numberOfSeries']) {
-            this._numberOfSeries = new fhir.FhirElement(source._numberOfSeries);
+            this.numberOfSeries = new fhir.FhirUnsignedInt({ value: source.numberOfSeries });
         }
         if (source['numberOfInstances']) {
-            this.numberOfInstances = source.numberOfInstances;
-        }
-        if (source['_numberOfInstances']) {
-            this._numberOfInstances = new fhir.FhirElement(source._numberOfInstances);
+            this.numberOfInstances = new fhir.FhirUnsignedInt({ value: source.numberOfInstances });
         }
         if (source['procedureReference']) {
             this.procedureReference = new fhir.Reference(source.procedureReference);
@@ -332,10 +376,7 @@ export class ImagingStudy extends fhir.DomainResource {
             this.note = source.note.map((x) => new fhir.Annotation(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['series']) {
             this.series = source.series.map((x) => new fhir.ImagingStudySeries(x));
@@ -363,77 +404,80 @@ export class ImagingStudy extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: ImagingStudy.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'ImagingStudy' fhir: ImagingStudy.resourceType:'ImagingStudy'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: ImagingStudy.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:ImagingstudyStatusValueSetEnum fhir: ImagingStudy.status:code", }));
         }
         if (this["modality"]) {
-            this.modality.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.modality.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["subject"]) {
-            results.push(["subject", 'Missing required element: ImagingStudy.subject']);
+        if (!this['subject']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property subject:fhir.Reference fhir: ImagingStudy.subject:Reference", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_started"]) {
-            results.push(...this._started.doModelValidation());
+        if (this["started"]) {
+            outcome.issue.push(...this.started.doModelValidation().issue);
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["referrer"]) {
-            results.push(...this.referrer.doModelValidation());
+            outcome.issue.push(...this.referrer.doModelValidation().issue);
         }
         if (this["interpreter"]) {
-            this.interpreter.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.interpreter.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["endpoint"]) {
-            this.endpoint.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.endpoint.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_numberOfSeries"]) {
-            results.push(...this._numberOfSeries.doModelValidation());
+        if (this["numberOfSeries"]) {
+            outcome.issue.push(...this.numberOfSeries.doModelValidation().issue);
         }
-        if (this["_numberOfInstances"]) {
-            results.push(...this._numberOfInstances.doModelValidation());
+        if (this["numberOfInstances"]) {
+            outcome.issue.push(...this.numberOfInstances.doModelValidation().issue);
         }
         if (this["procedureReference"]) {
-            results.push(...this.procedureReference.doModelValidation());
+            outcome.issue.push(...this.procedureReference.doModelValidation().issue);
         }
         if (this["procedureCode"]) {
-            this.procedureCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.procedureCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["location"]) {
-            results.push(...this.location.doModelValidation());
+            outcome.issue.push(...this.location.doModelValidation().issue);
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["series"]) {
-            this.series.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.series.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ImagingStudy.js.map

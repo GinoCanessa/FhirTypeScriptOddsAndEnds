@@ -27,15 +27,4 @@ export const SupplyrequestKindValueSet = {
 /**
  * This value sets refers to a Category of supply.
  */
-export var SupplyrequestKindValueSetEnum;
-(function (SupplyrequestKindValueSetEnum) {
-    /**
-     * central: Supply is stored and requested from central supply.
-     */
-    SupplyrequestKindValueSetEnum["CentralSupply"] = "central";
-    /**
-     * nonstock: Supply is not onsite and must be requested from an outside vendor using a non-stock requisition.
-     */
-    SupplyrequestKindValueSetEnum["NonStock"] = "nonstock";
-})(SupplyrequestKindValueSetEnum || (SupplyrequestKindValueSetEnum = {}));
 //# sourceMappingURL=SupplyrequestKindValueSet.js.map

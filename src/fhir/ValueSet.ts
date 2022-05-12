@@ -3,488 +3,45 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ValueSet
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { LanguagesValueSet, LanguagesValueSetType, LanguagesValueSetEnum } from '../fhirValueSets/LanguagesValueSet.js'
-import { DesignationUseValueSet, DesignationUseValueSetType, DesignationUseValueSetEnum } from '../fhirValueSets/DesignationUseValueSet.js'
-import { FilterOperatorValueSet, FilterOperatorValueSetType, FilterOperatorValueSetEnum } from '../fhirValueSets/FilterOperatorValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-
+import { LanguagesValueSet, LanguagesValueSetType,} from '../fhirValueSets/LanguagesValueSet.js';
+import { LanguagesValueSetEnum } from '../valueSetEnums.js';
+import { DesignationUseValueSet, DesignationUseValueSetType,} from '../fhirValueSets/DesignationUseValueSet.js';
+import { DesignationUseValueSetEnum } from '../valueSetEnums.js';
+import { FilterOperatorValueSet, FilterOperatorValueSetType,} from '../fhirValueSets/FilterOperatorValueSet.js';
+import { FilterOperatorValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Concepts have both a ```display``` and an array of ```designation```. The display is equivalent to a special designation with an implied ```designation.use``` of "primary code" and a language equal to the [Resource Language](resource.html#language).
+ * Valid arguments for the ValueSetComposeIncludeConceptDesignation type.
  */
-export type IValueSetComposeIncludeConceptDesignation = fhir.IBackboneElement & { 
+export interface ValueSetComposeIncludeConceptDesignationArgs extends fhir.BackboneElementArgs {
   /**
    * In the absence of a language, the resource language applies.
    */
-  language?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.concept.designation.language
-   */
-  _language?: fhir.IFhirElement|undefined;
+  language?: fhir.FhirCode|string|undefined;
   /**
    * If no use is provided, the designation can be assumed to be suitable for general display to a human user.
    */
-  use?: fhir.ICoding|undefined;
+  use?: fhir.CodingArgs|undefined;
   /**
    * The text value for this designation.
    */
-  value: string|null;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.concept.designation.value
-   */
-  _value?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The list of concepts is considered ordered, though the order might not have any particular significance. Typically, the order of an expansion follows that defined in the compose element.
- */
-export type IValueSetComposeIncludeConcept = fhir.IBackboneElement & { 
-  /**
-   * Expressions are allowed if defined by the underlying code system.
-   */
-  code: string|null;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.concept.code
-   */
-  _code?: fhir.IFhirElement|undefined;
-  /**
-   * The value set resource allows for an alternative display to be specified for when this concept is used in this particular value set. See notes in the value set narrative about the correct use of this element.
-   */
-  display?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.concept.display
-   */
-  _display?: fhir.IFhirElement|undefined;
-  /**
-   * Concepts have both a ```display``` and an array of ```designation```. The display is equivalent to a special designation with an implied ```designation.use``` of "primary code" and a language equal to the [Resource Language](resource.html#language).
-   */
-  designation?: fhir.IValueSetComposeIncludeConceptDesignation[]|undefined;
-}
-
-/**
- * Selecting codes by specifying filters based on properties is only possible where the underlying code system defines appropriate properties. Note that in some cases, the underlying code system defines the logical concepts but not the literal codes for the concepts. In such cases, the literal definitions may be provided by a third party.
- */
-export type IValueSetComposeIncludeFilter = fhir.IBackboneElement & { 
-  /**
-   * A code that identifies a property or a filter defined in the code system.
-   */
-  property: string|null;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.filter.property
-   */
-  _property?: fhir.IFhirElement|undefined;
-  /**
-   * In case filter.property represents a property of the system, the operation applies to the selected property. In case filter.property represents a filter of the system, the operation SHALL match one of the CodeSystem.filter.operator values.
-   */
-  op: FilterOperatorValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.filter.op
-   */
-  _op?: fhir.IFhirElement|undefined;
-  /**
-   * Use regex matching with care - full regex matching on every SNOMED CT term is prohibitive, for example.
-   */
-  value: string|null;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.filter.value
-   */
-  _value?: fhir.IFhirElement|undefined;
-}
-
-/**
- * All the conditions in an include must be true. If a system is listed, all the codes from the system are listed. If one or more filters are listed, all of the filters must apply. If one or more value sets are listed, the codes must be in all the value sets. E.g. each include is 'include all the codes that meet all these conditions'.
- */
-export type IValueSetComposeInclude = fhir.IBackboneElement & { 
-  /**
-   * If there are no codes or filters, the entire code system is included. Note that the set of codes that are included may contain abstract codes. See ''Coding.system'' for further documentation about the correct value for the system element.
-   */
-  system?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.system
-   */
-  _system?: fhir.IFhirElement|undefined;
-  /**
-   * This is used when selecting the descendants of a concept - they may change between versions. If no version is specified, then the exact contents of the value set might not be known until a context of use binds it to a particular version. The special value '*' means all versions; It is at server discretion regarding expansions and which versions must be supported.
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The list of concepts is considered ordered, though the order might not have any particular significance. Typically, the order of an expansion follows that defined in the compose element.
-   */
-  concept?: fhir.IValueSetComposeIncludeConcept[]|undefined;
-  /**
-   * Selecting codes by specifying filters based on properties is only possible where the underlying code system defines appropriate properties. Note that in some cases, the underlying code system defines the logical concepts but not the literal codes for the concepts. In such cases, the literal definitions may be provided by a third party.
-   */
-  filter?: fhir.IValueSetComposeIncludeFilter[]|undefined;
-  /**
-   * The value set URI is either a logical reference to a defined value set such as a [SNOMED CT reference set](snomedct.html#implicit), or a direct reference to a value set definition using ValueSet.url. The reference might not refer to an actual FHIR ValueSet resource; in this case, whatever is referred to is an implicit definition of a value set that needs to be clear about how versions are resolved.
-   */
-  valueSet?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.valueSet
-   */
-  _valueSet?: fhir.IFhirElement[]|undefined;
-}
-
-/**
- * A set of criteria that define the contents of the value set by including or excluding codes selected from the specified code system(s) that the value set draws from. This is also known as the Content Logical Definition (CLD).
- */
-export type IValueSetCompose = fhir.IBackboneElement & { 
-  /**
-   * With a defined lockedDate the value set is considered "Locked". Otherwise, the value set may have different expansions as underlying code systems and/or value sets evolve.  The interpretation of lockedDate is often dependent on the context - e.g. a SNOMED CT derived value set with a lockedDate will have a different expansion in USA than in UK.  If a value set specifies a version for include and exclude statements, and also specifies a locked date, the specified versions need to be available that date, or the value set will not be usable.
-   */
-  lockedDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.lockedDate
-   */
-  _lockedDate?: fhir.IFhirElement|undefined;
-  /**
-   * Note that in the FHIR terminology framework, "deprecated" does not mean inactive, but in some code systems, e.g. LOINC, "deprecated" does mean inactive. Code systems should define what codes are considered to be inactive. If this is not clearly defined (including in the FHIR code system resource), then all codes are assumed to be active.
-   * The Value Set Definition specification defines an ActiveOnly element, which is the reverse of this element e.g. (ValueSet.compose.inactive=FALSE) is the same as (VSD.ActiveOnly=TRUE).
-   */
-  inactive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.inactive
-   */
-  _inactive?: fhir.IFhirElement|undefined;
-  /**
-   * All the conditions in an include must be true. If a system is listed, all the codes from the system are listed. If one or more filters are listed, all of the filters must apply. If one or more value sets are listed, the codes must be in all the value sets. E.g. each include is 'include all the codes that meet all these conditions'.
-   */
-  include: fhir.IValueSetComposeInclude[]|null;
-  /**
-   * Usually this is used to selectively exclude codes that were included by subsumption in the inclusions. Any display names specified for the codes are ignored.
-   */
-  exclude?: fhir.IValueSetComposeInclude[]|undefined;
-}
-
-/**
- * The server decides which parameters to include here, but at a minimum, the list SHOULD include all of the parameters that affect the $expand operation. If the expansion will be persisted all of these parameters SHALL be included. If the codeSystem on the server has a specified version then this version SHALL be provided as a parameter in the expansion (note that not all code systems have a version).
- */
-export type IValueSetExpansionParameter = fhir.IBackboneElement & { 
-  /**
-   * The names are assigned at the discretion of the server.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * The value of the parameter.
-   */
-  valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  _valueString?: fhir.IFhirElement|undefined;
-  /**
-   * The value of the parameter.
-   */
-  valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  _valueBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * The value of the parameter.
-   */
-  valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  _valueInteger?: fhir.IFhirElement|undefined;
-  /**
-   * The value of the parameter.
-   */
-  valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  _valueDecimal?: fhir.IFhirElement|undefined;
-  /**
-   * The value of the parameter.
-   */
-  valueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  _valueUri?: fhir.IFhirElement|undefined;
-  /**
-   * The value of the parameter.
-   */
-  valueCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  _valueCode?: fhir.IFhirElement|undefined;
-  /**
-   * The value of the parameter.
-   */
-  valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  _valueDateTime?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The codes that are contained in the value set expansion.
- */
-export type IValueSetExpansionContains = fhir.IBackboneElement & { 
-  /**
-   * An absolute URI which is the code system in which the code for this item in the expansion is defined.
-   */
-  system?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.contains.system
-   */
-  _system?: fhir.IFhirElement|undefined;
-  /**
-   * This should not be understood to exclude its use for searching (e.g. by subsumption testing). The client should know whether it is appropriate for the user to select an abstract code or not.
-   */
-  abstract?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.contains.abstract
-   */
-  _abstract?: fhir.IFhirElement|undefined;
-  /**
-   * This should only have a value if the concept is inactive.
-   */
-  inactive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.contains.inactive
-   */
-  _inactive?: fhir.IFhirElement|undefined;
-  /**
-   * The exact value of the version string is specified by the system from which the code is derived.
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.contains.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The code for this item in the expansion hierarchy. If this code is missing the entry in the hierarchy is a place holder (abstract) and does not represent a valid code in the value set.
-   */
-  code?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.contains.code
-   */
-  _code?: fhir.IFhirElement|undefined;
-  /**
-   * The recommended display for this item in the expansion.
-   */
-  display?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.contains.display
-   */
-  _display?: fhir.IFhirElement|undefined;
-  /**
-   * The designations provided must be based on the value set and code system definitions.
-   */
-  designation?: fhir.IValueSetComposeIncludeConceptDesignation[]|undefined;
-  /**
-   * If the expansion uses this element, there is  no implication about the logical relationship between them, and the  structure cannot be used for logical inferencing. The structure  exists to provide navigational assistance for helping human users to  locate codes in the expansion.
-   */
-  contains?: fhir.IValueSetExpansionContains[]|undefined;
-}
-
-/**
- * Expansion is performed to produce a collection of codes that are ready to use for data entry or validation. Value set expansions are always considered to be stateless - they are a record of the set of codes in the value set at a point in time under a given set of conditions, and are not subject to ongoing maintenance.
- * Expansion.parameter is  a simplified list of parameters - a subset of the features of the [Parameters](parameters.html) resource.
- */
-export type IValueSetExpansion = fhir.IBackboneElement & { 
-  /**
-   * Typically, this uri is a UUID (e.g. urn:uuid:8230ff20-c97a-4167-a59d-dc2cb9df16dd).
-   */
-  identifier?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.identifier
-   */
-  _identifier?: fhir.IFhirElement|undefined;
-  /**
-   * This SHOULD be a fully populated instant, but in some circumstances, value sets are expanded by hand, and the expansion is published without that precision.
-   */
-  timestamp: string|null;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.timestamp
-   */
-  _timestamp?: fhir.IFhirElement|undefined;
-  /**
-   * Paging only applies to flat expansions.
-   */
-  total?: number|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.total
-   */
-  _total?: fhir.IFhirElement|undefined;
-  /**
-   * Paging only applies to flat expansions. If a filter is applied, the count is the number of concepts that matched the filter, not the number of concepts in an unfiltered view of the expansion.
-   */
-  offset?: number|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.offset
-   */
-  _offset?: fhir.IFhirElement|undefined;
-  /**
-   * The server decides which parameters to include here, but at a minimum, the list SHOULD include all of the parameters that affect the $expand operation. If the expansion will be persisted all of these parameters SHALL be included. If the codeSystem on the server has a specified version then this version SHALL be provided as a parameter in the expansion (note that not all code systems have a version).
-   */
-  parameter?: fhir.IValueSetExpansionParameter[]|undefined;
-  /**
-   * The codes that are contained in the value set expansion.
-   */
-  contains?: fhir.IValueSetExpansionContains[]|undefined;
-}
-
-/**
- * A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
- */
-export type IValueSet = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "ValueSet";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this value set outside of FHIR, where it is not possible to use the logical URI.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * There may be different value set instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the value set with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.A name should be provided unless the value set is a contained resource (e.g. an anonymous value set in a profile). Most registries will require a name.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of value sets that are appropriate for use versus not.See also the [valueset-workflowStatus](extension-valueset-workflowstatus.html) extension for additional status information related to the editorial process.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ValueSet.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of value sets that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the value set. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the value set is the organization or individual primarily responsible for the maintenance and upkeep of the value set. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the value set. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the value set was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the value set as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the value set is presumed to be the predominant language in the place the value set was created).The description is not intended to describe the semantics of the Value Set - there are no intrinsic semantics separate from the codes contained in its expansion. The description should capture its intended use, which is needed for ensuring integrity for its use in models across future changes. A description should be provided unless the value set is a contained resource (e.g. an anonymous value set in a profile). Most registries will require a description.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the value set to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Normally immutability is set to 'false', which is the default assumption if it is not populated.  Note that the implication is that if this is set to 'true', there may be only one ValueSet version for this definition. Immutability tends to be set to 'true' in one of two cases: - Where the value set, by the nature of its usage, cannot change.  For example "All specializations of ACT in ActClassCode" - Where there's no safe way to express the "Purpose" such that someone else could safely make changes to the value set definition. Source workflow control must guarantee that the same URI always yields the same definition.
-   */
-  immutable?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.immutable
-   */
-  _immutable?: fhir.IFhirElement|undefined;
-  /**
-   * This element does not describe the usage of the value set. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this value set.
-   */
-  purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.purpose
-   */
-  _purpose?: fhir.IFhirElement|undefined;
-  /**
-   * nullFrequently, the copyright differs between the value set and the codes that are included. The copyright statement should clearly differentiate between these when required.
-   */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-  /**
-   * A set of criteria that define the contents of the value set by including or excluding codes selected from the specified code system(s) that the value set draws from. This is also known as the Content Logical Definition (CLD).
-   */
-  compose?: fhir.IValueSetCompose|undefined;
-  /**
-   * Expansion is performed to produce a collection of codes that are ready to use for data entry or validation. Value set expansions are always considered to be stateless - they are a record of the set of codes in the value set at a point in time under a given set of conditions, and are not subject to ongoing maintenance.
-   * Expansion.parameter is  a simplified list of parameters - a subset of the features of the [Parameters](parameters.html) resource.
-   */
-  expansion?: fhir.IValueSetExpansion|undefined;
+  value: fhir.FhirString|string|undefined;
 }
 
 /**
  * Concepts have both a ```display``` and an array of ```designation```. The display is equivalent to a special designation with an implied ```designation.use``` of "primary code" and a language equal to the [Resource Language](resource.html#language).
  */
-export class ValueSetComposeIncludeConceptDesignation extends fhir.BackboneElement implements IValueSetComposeIncludeConceptDesignation {
+export class ValueSetComposeIncludeConceptDesignation extends fhir.BackboneElement {
+  readonly __dataType:string = 'ValueSetComposeIncludeConceptDesignation';
   /**
    * In the absence of a language, the resource language applies.
    */
-  public language?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.concept.designation.language
-   */
-  public _language?: fhir.FhirElement|undefined;
+  public language?: fhir.FhirCode|undefined;
   /**
    * If no use is provided, the designation can be assumed to be suitable for general display to a human user.
    */
@@ -492,22 +49,16 @@ export class ValueSetComposeIncludeConceptDesignation extends fhir.BackboneEleme
   /**
    * The text value for this designation.
    */
-  public value: string|null;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.concept.designation.value
-   */
-  public _value?: fhir.FhirElement|undefined;
+  public value: fhir.FhirString|null;
   /**
    * Default constructor for ValueSetComposeIncludeConceptDesignation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IValueSetComposeIncludeConceptDesignation> = { }) {
-    super(source);
-    if (source['language']) { this.language = source.language; }
-    if (source['_language']) { this._language = new fhir.FhirElement(source._language!); }
-    if (source['use']) { this.use = new fhir.Coding(source.use!); }
-    if (source['value']) { this.value = source.value; }
+  constructor(source:Partial<ValueSetComposeIncludeConceptDesignationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['language']) { this.language = new fhir.FhirCode({value: source.language}); }
+    if (source['use']) { this.use = new fhir.Coding(source.use); }
+    if (source['value']) { this.value = new fhir.FhirString({value: source.value}); }
     else { this.value = null; }
-    if (source['_value']) { this._value = new fhir.FhirElement(source._value!); }
   }
   /**
    * Preferred-bound Value Set for language
@@ -524,107 +75,134 @@ export class ValueSetComposeIncludeConceptDesignation extends fhir.BackboneEleme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_language"]) { results.push(...this._language.doModelValidation()); }
-    if (this["use"]) { results.push(...this.use.doModelValidation()); }
-    if (!this["value"]) { results.push(["value",'Missing required element: ValueSet.compose.include.concept.designation.value']); }
-    if (this["_value"]) { results.push(...this._value.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["language"]) { outcome.issue!.push(...this.language.doModelValidation().issue!); }
+    if (this["use"]) { outcome.issue!.push(...this.use.doModelValidation().issue!); }
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value:fhir.FhirString fhir: ValueSet.compose.include.concept.designation.value:string", }));
+    }
+    if (this["value"]) { outcome.issue!.push(...this.value.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ValueSetComposeIncludeConcept type.
+ */
+export interface ValueSetComposeIncludeConceptArgs extends fhir.BackboneElementArgs {
+  /**
+   * Expressions are allowed if defined by the underlying code system.
+   */
+  code: fhir.FhirCode|string|undefined;
+  /**
+   * The value set resource allows for an alternative display to be specified for when this concept is used in this particular value set. See notes in the value set narrative about the correct use of this element.
+   */
+  display?: fhir.FhirString|string|undefined;
+  /**
+   * Concepts have both a ```display``` and an array of ```designation```. The display is equivalent to a special designation with an implied ```designation.use``` of "primary code" and a language equal to the [Resource Language](resource.html#language).
+   */
+  designation?: fhir.ValueSetComposeIncludeConceptDesignationArgs[]|undefined;
 }
 
 /**
  * The list of concepts is considered ordered, though the order might not have any particular significance. Typically, the order of an expansion follows that defined in the compose element.
  */
-export class ValueSetComposeIncludeConcept extends fhir.BackboneElement implements IValueSetComposeIncludeConcept {
+export class ValueSetComposeIncludeConcept extends fhir.BackboneElement {
+  readonly __dataType:string = 'ValueSetComposeIncludeConcept';
   /**
    * Expressions are allowed if defined by the underlying code system.
    */
-  public code: string|null;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.concept.code
-   */
-  public _code?: fhir.FhirElement|undefined;
+  public code: fhir.FhirCode|null;
   /**
    * The value set resource allows for an alternative display to be specified for when this concept is used in this particular value set. See notes in the value set narrative about the correct use of this element.
    */
-  public display?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.concept.display
-   */
-  public _display?: fhir.FhirElement|undefined;
+  public display?: fhir.FhirString|undefined;
   /**
    * Concepts have both a ```display``` and an array of ```designation```. The display is equivalent to a special designation with an implied ```designation.use``` of "primary code" and a language equal to the [Resource Language](resource.html#language).
    */
-  public designation?: fhir.ValueSetComposeIncludeConceptDesignation[]|undefined;
+  public designation?: fhir.ValueSetComposeIncludeConceptDesignation[]|undefined = [];
   /**
    * Default constructor for ValueSetComposeIncludeConcept - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IValueSetComposeIncludeConcept> = { }) {
-    super(source);
-    if (source['code']) { this.code = source.code; }
+  constructor(source:Partial<ValueSetComposeIncludeConceptArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.FhirCode({value: source.code}); }
     else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['display']) { this.display = source.display; }
-    if (source['_display']) { this._display = new fhir.FhirElement(source._display!); }
+    if (source['display']) { this.display = new fhir.FhirString({value: source.display}); }
     if (source['designation']) { this.designation = source.designation.map((x) => new fhir.ValueSetComposeIncludeConceptDesignation(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: ValueSet.compose.include.concept.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["_display"]) { results.push(...this._display.doModelValidation()); }
-    if (this["designation"]) { this.designation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.FhirCode fhir: ValueSet.compose.include.concept.code:code", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["display"]) { outcome.issue!.push(...this.display.doModelValidation().issue!); }
+    if (this["designation"]) { this.designation.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ValueSetComposeIncludeFilter type.
+ */
+export interface ValueSetComposeIncludeFilterArgs extends fhir.BackboneElementArgs {
+  /**
+   * A code that identifies a property or a filter defined in the code system.
+   */
+  property: fhir.FhirCode|string|undefined;
+  /**
+   * In case filter.property represents a property of the system, the operation applies to the selected property. In case filter.property represents a filter of the system, the operation SHALL match one of the CodeSystem.filter.operator values.
+   */
+  op: FilterOperatorValueSetEnum|null;
+  /**
+   * Use regex matching with care - full regex matching on every SNOMED CT term is prohibitive, for example.
+   */
+  value: fhir.FhirString|string|undefined;
 }
 
 /**
  * Selecting codes by specifying filters based on properties is only possible where the underlying code system defines appropriate properties. Note that in some cases, the underlying code system defines the logical concepts but not the literal codes for the concepts. In such cases, the literal definitions may be provided by a third party.
  */
-export class ValueSetComposeIncludeFilter extends fhir.BackboneElement implements IValueSetComposeIncludeFilter {
+export class ValueSetComposeIncludeFilter extends fhir.BackboneElement {
+  readonly __dataType:string = 'ValueSetComposeIncludeFilter';
   /**
    * A code that identifies a property or a filter defined in the code system.
    */
-  public property: string|null;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.filter.property
-   */
-  public _property?: fhir.FhirElement|undefined;
+  public property: fhir.FhirCode|null;
   /**
    * In case filter.property represents a property of the system, the operation applies to the selected property. In case filter.property represents a filter of the system, the operation SHALL match one of the CodeSystem.filter.operator values.
    */
   public op: FilterOperatorValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ValueSet.compose.include.filter.op
-   */
-  public _op?: fhir.FhirElement|undefined;
-  /**
    * Use regex matching with care - full regex matching on every SNOMED CT term is prohibitive, for example.
    */
-  public value: string|null;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.filter.value
-   */
-  public _value?: fhir.FhirElement|undefined;
+  public value: fhir.FhirString|null;
   /**
    * Default constructor for ValueSetComposeIncludeFilter - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IValueSetComposeIncludeFilter> = { }) {
-    super(source);
-    if (source['property']) { this.property = source.property; }
+  constructor(source:Partial<ValueSetComposeIncludeFilterArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['property']) { this.property = new fhir.FhirCode({value: source.property}); }
     else { this.property = null; }
-    if (source['_property']) { this._property = new fhir.FhirElement(source._property!); }
     if (source['op']) { this.op = source.op; }
     else { this.op = null; }
-    if (source['_op']) { this._op = new fhir.FhirElement(source._op!); }
-    if (source['value']) { this.value = source.value; }
+    if (source['value']) { this.value = new fhir.FhirString({value: source.value}); }
     else { this.value = null; }
-    if (source['_value']) { this._value = new fhir.FhirElement(source._value!); }
   }
   /**
    * Required-bound Value Set for op
@@ -635,120 +213,161 @@ export class ValueSetComposeIncludeFilter extends fhir.BackboneElement implement
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["property"]) { results.push(["property",'Missing required element: ValueSet.compose.include.filter.property']); }
-    if (this["_property"]) { results.push(...this._property.doModelValidation()); }
-    if (!this["op"]) { results.push(["op",'Missing required element: ValueSet.compose.include.filter.op']); }
-    if (this["_op"]) { results.push(...this._op.doModelValidation()); }
-    if (!this["value"]) { results.push(["value",'Missing required element: ValueSet.compose.include.filter.value']); }
-    if (this["_value"]) { results.push(...this._value.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['property']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property property:fhir.FhirCode fhir: ValueSet.compose.include.filter.property:code", }));
+    }
+    if (this["property"]) { outcome.issue!.push(...this.property.doModelValidation().issue!); }
+    if (!this['op']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property op:FilterOperatorValueSetEnum fhir: ValueSet.compose.include.filter.op:code", }));
+    }
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value:fhir.FhirString fhir: ValueSet.compose.include.filter.value:string", }));
+    }
+    if (this["value"]) { outcome.issue!.push(...this.value.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ValueSetComposeInclude type.
+ */
+export interface ValueSetComposeIncludeArgs extends fhir.BackboneElementArgs {
+  /**
+   * If there are no codes or filters, the entire code system is included. Note that the set of codes that are included may contain abstract codes. See ''Coding.system'' for further documentation about the correct value for the system element.
+   */
+  system?: fhir.FhirUri|string|undefined;
+  /**
+   * This is used when selecting the descendants of a concept - they may change between versions. If no version is specified, then the exact contents of the value set might not be known until a context of use binds it to a particular version. The special value '*' means all versions; It is at server discretion regarding expansions and which versions must be supported.
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The list of concepts is considered ordered, though the order might not have any particular significance. Typically, the order of an expansion follows that defined in the compose element.
+   */
+  concept?: fhir.ValueSetComposeIncludeConceptArgs[]|undefined;
+  /**
+   * Selecting codes by specifying filters based on properties is only possible where the underlying code system defines appropriate properties. Note that in some cases, the underlying code system defines the logical concepts but not the literal codes for the concepts. In such cases, the literal definitions may be provided by a third party.
+   */
+  filter?: fhir.ValueSetComposeIncludeFilterArgs[]|undefined;
+  /**
+   * The value set URI is either a logical reference to a defined value set such as a [SNOMED CT reference set](snomedct.html#implicit), or a direct reference to a value set definition using ValueSet.url. The reference might not refer to an actual FHIR ValueSet resource; in this case, whatever is referred to is an implicit definition of a value set that needs to be clear about how versions are resolved.
+   */
+  valueSet?: fhir.FhirCanonical[]|string[]|undefined;
 }
 
 /**
  * All the conditions in an include must be true. If a system is listed, all the codes from the system are listed. If one or more filters are listed, all of the filters must apply. If one or more value sets are listed, the codes must be in all the value sets. E.g. each include is 'include all the codes that meet all these conditions'.
  */
-export class ValueSetComposeInclude extends fhir.BackboneElement implements IValueSetComposeInclude {
+export class ValueSetComposeInclude extends fhir.BackboneElement {
+  readonly __dataType:string = 'ValueSetComposeInclude';
   /**
    * If there are no codes or filters, the entire code system is included. Note that the set of codes that are included may contain abstract codes. See ''Coding.system'' for further documentation about the correct value for the system element.
    */
-  public system?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.system
-   */
-  public _system?: fhir.FhirElement|undefined;
+  public system?: fhir.FhirUri|undefined;
   /**
    * This is used when selecting the descendants of a concept - they may change between versions. If no version is specified, then the exact contents of the value set might not be known until a context of use binds it to a particular version. The special value '*' means all versions; It is at server discretion regarding expansions and which versions must be supported.
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The list of concepts is considered ordered, though the order might not have any particular significance. Typically, the order of an expansion follows that defined in the compose element.
    */
-  public concept?: fhir.ValueSetComposeIncludeConcept[]|undefined;
+  public concept?: fhir.ValueSetComposeIncludeConcept[]|undefined = [];
   /**
    * Selecting codes by specifying filters based on properties is only possible where the underlying code system defines appropriate properties. Note that in some cases, the underlying code system defines the logical concepts but not the literal codes for the concepts. In such cases, the literal definitions may be provided by a third party.
    */
-  public filter?: fhir.ValueSetComposeIncludeFilter[]|undefined;
+  public filter?: fhir.ValueSetComposeIncludeFilter[]|undefined = [];
   /**
    * The value set URI is either a logical reference to a defined value set such as a [SNOMED CT reference set](snomedct.html#implicit), or a direct reference to a value set definition using ValueSet.url. The reference might not refer to an actual FHIR ValueSet resource; in this case, whatever is referred to is an implicit definition of a value set that needs to be clear about how versions are resolved.
    */
-  public valueSet?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.include.valueSet
-   */
-  public _valueSet?: fhir.FhirElement[]|undefined;
+  public valueSet?: fhir.FhirCanonical[]|undefined = [];
   /**
    * Default constructor for ValueSetComposeInclude - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IValueSetComposeInclude> = { }) {
-    super(source);
-    if (source['system']) { this.system = source.system; }
-    if (source['_system']) { this._system = new fhir.FhirElement(source._system!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
+  constructor(source:Partial<ValueSetComposeIncludeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['system']) { this.system = new fhir.FhirUri({value: source.system}); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
     if (source['concept']) { this.concept = source.concept.map((x) => new fhir.ValueSetComposeIncludeConcept(x)); }
     if (source['filter']) { this.filter = source.filter.map((x) => new fhir.ValueSetComposeIncludeFilter(x)); }
-    if (source['valueSet']) { this.valueSet = source.valueSet.map((x) => (x)); }
-    if (source['_valueSet']) { this._valueSet = source._valueSet.map((x) => new fhir.FhirElement(x)); }
+    if (source['valueSet']) { this.valueSet = source.valueSet.map((x) => new fhir.FhirCanonical({value: x})); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_system"]) { results.push(...this._system.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["concept"]) { this.concept.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["filter"]) { this.filter.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_valueSet"]) { this._valueSet.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["system"]) { outcome.issue!.push(...this.system.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["concept"]) { this.concept.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["filter"]) { this.filter.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["valueSet"]) { this.valueSet.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ValueSetCompose type.
+ */
+export interface ValueSetComposeArgs extends fhir.BackboneElementArgs {
+  /**
+   * With a defined lockedDate the value set is considered "Locked". Otherwise, the value set may have different expansions as underlying code systems and/or value sets evolve.  The interpretation of lockedDate is often dependent on the context - e.g. a SNOMED CT derived value set with a lockedDate will have a different expansion in USA than in UK.  If a value set specifies a version for include and exclude statements, and also specifies a locked date, the specified versions need to be available that date, or the value set will not be usable.
+   */
+  lockedDate?: fhir.FhirDate|string|undefined;
+  /**
+   * Note that in the FHIR terminology framework, "deprecated" does not mean inactive, but in some code systems, e.g. LOINC, "deprecated" does mean inactive. Code systems should define what codes are considered to be inactive. If this is not clearly defined (including in the FHIR code system resource), then all codes are assumed to be active.
+   * The Value Set Definition specification defines an ActiveOnly element, which is the reverse of this element e.g. (ValueSet.compose.inactive=FALSE) is the same as (VSD.ActiveOnly=TRUE).
+   */
+  inactive?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * All the conditions in an include must be true. If a system is listed, all the codes from the system are listed. If one or more filters are listed, all of the filters must apply. If one or more value sets are listed, the codes must be in all the value sets. E.g. each include is 'include all the codes that meet all these conditions'.
+   */
+  include: fhir.ValueSetComposeIncludeArgs[]|null;
+  /**
+   * Usually this is used to selectively exclude codes that were included by subsumption in the inclusions. Any display names specified for the codes are ignored.
+   */
+  exclude?: fhir.ValueSetComposeIncludeArgs[]|undefined;
 }
 
 /**
  * A set of criteria that define the contents of the value set by including or excluding codes selected from the specified code system(s) that the value set draws from. This is also known as the Content Logical Definition (CLD).
  */
-export class ValueSetCompose extends fhir.BackboneElement implements IValueSetCompose {
+export class ValueSetCompose extends fhir.BackboneElement {
+  readonly __dataType:string = 'ValueSetCompose';
   /**
    * With a defined lockedDate the value set is considered "Locked". Otherwise, the value set may have different expansions as underlying code systems and/or value sets evolve.  The interpretation of lockedDate is often dependent on the context - e.g. a SNOMED CT derived value set with a lockedDate will have a different expansion in USA than in UK.  If a value set specifies a version for include and exclude statements, and also specifies a locked date, the specified versions need to be available that date, or the value set will not be usable.
    */
-  public lockedDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.lockedDate
-   */
-  public _lockedDate?: fhir.FhirElement|undefined;
+  public lockedDate?: fhir.FhirDate|undefined;
   /**
    * Note that in the FHIR terminology framework, "deprecated" does not mean inactive, but in some code systems, e.g. LOINC, "deprecated" does mean inactive. Code systems should define what codes are considered to be inactive. If this is not clearly defined (including in the FHIR code system resource), then all codes are assumed to be active.
    * The Value Set Definition specification defines an ActiveOnly element, which is the reverse of this element e.g. (ValueSet.compose.inactive=FALSE) is the same as (VSD.ActiveOnly=TRUE).
    */
-  public inactive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.compose.inactive
-   */
-  public _inactive?: fhir.FhirElement|undefined;
+  public inactive?: fhir.FhirBoolean|undefined;
   /**
    * All the conditions in an include must be true. If a system is listed, all the codes from the system are listed. If one or more filters are listed, all of the filters must apply. If one or more value sets are listed, the codes must be in all the value sets. E.g. each include is 'include all the codes that meet all these conditions'.
    */
-  public include: fhir.ValueSetComposeInclude[]|null;
+  public include: fhir.ValueSetComposeInclude[]|null = [];
   /**
    * Usually this is used to selectively exclude codes that were included by subsumption in the inclusions. Any display names specified for the codes are ignored.
    */
-  public exclude?: fhir.ValueSetComposeInclude[]|undefined;
+  public exclude?: fhir.ValueSetComposeInclude[]|undefined = [];
   /**
    * Default constructor for ValueSetCompose - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IValueSetCompose> = { }) {
-    super(source);
-    if (source['lockedDate']) { this.lockedDate = source.lockedDate; }
-    if (source['_lockedDate']) { this._lockedDate = new fhir.FhirElement(source._lockedDate!); }
-    if (source['inactive']) { this.inactive = source.inactive; }
-    if (source['_inactive']) { this._inactive = new fhir.FhirElement(source._inactive!); }
+  constructor(source:Partial<ValueSetComposeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['lockedDate']) { this.lockedDate = new fhir.FhirDate({value: source.lockedDate}); }
+    if (source['inactive']) { this.inactive = new fhir.FhirBoolean({value: source.inactive}); }
     if (source['include']) { this.include = source.include.map((x) => new fhir.ValueSetComposeInclude(x)); }
     else { this.include = null; }
     if (source['exclude']) { this.exclude = source.exclude.map((x) => new fhir.ValueSetComposeInclude(x)); }
@@ -756,305 +375,415 @@ export class ValueSetCompose extends fhir.BackboneElement implements IValueSetCo
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_lockedDate"]) { results.push(...this._lockedDate.doModelValidation()); }
-    if (this["_inactive"]) { results.push(...this._inactive.doModelValidation()); }
-    if ((!this["include"]) || (this["include"].length === 0)) { results.push(["include",'Missing required element: ValueSet.compose.include']); }
-    if (this["include"]) { this.include.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["exclude"]) { this.exclude.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["lockedDate"]) { outcome.issue!.push(...this.lockedDate.doModelValidation().issue!); }
+    if (this["inactive"]) { outcome.issue!.push(...this.inactive.doModelValidation().issue!); }
+    if (!this['include']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property include:fhir.ValueSetComposeInclude[] fhir: ValueSet.compose.include:include", }));
+    } else if (!Array.isArray(this.include)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property include:fhir.ValueSetComposeInclude[] fhir: ValueSet.compose.include:include", }));
+    } else if (this.include.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property include:fhir.ValueSetComposeInclude[] fhir: ValueSet.compose.include:include", }));
+    }
+    if (this["include"]) { this.include.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["exclude"]) { this.exclude.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ValueSetExpansionParameter type.
+ */
+export interface ValueSetExpansionParameterArgs extends fhir.BackboneElementArgs {
+  /**
+   * The names are assigned at the discretion of the server.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * The value of the parameter.
+   */
+  value?: fhir.FhirString|fhir.FhirBoolean|fhir.FhirInteger|fhir.FhirDecimal|fhir.FhirUri|fhir.FhirCode|fhir.FhirDateTime|undefined;
+  /**
+   * The value of the parameter.
+   */
+  valueString?: fhir.FhirString|string|undefined;
+  /**
+   * The value of the parameter.
+   */
+  valueBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * The value of the parameter.
+   */
+  valueInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * The value of the parameter.
+   */
+  valueDecimal?: fhir.FhirDecimal|number|undefined;
+  /**
+   * The value of the parameter.
+   */
+  valueUri?: fhir.FhirUri|string|undefined;
+  /**
+   * The value of the parameter.
+   */
+  valueCode?: fhir.FhirCode|string|undefined;
+  /**
+   * The value of the parameter.
+   */
+  valueDateTime?: fhir.FhirDateTime|string|undefined;
 }
 
 /**
  * The server decides which parameters to include here, but at a minimum, the list SHOULD include all of the parameters that affect the $expand operation. If the expansion will be persisted all of these parameters SHALL be included. If the codeSystem on the server has a specified version then this version SHALL be provided as a parameter in the expansion (note that not all code systems have a version).
  */
-export class ValueSetExpansionParameter extends fhir.BackboneElement implements IValueSetExpansionParameter {
+export class ValueSetExpansionParameter extends fhir.BackboneElement {
+  readonly __dataType:string = 'ValueSetExpansionParameter';
   /**
    * The names are assigned at the discretion of the server.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * The value of the parameter.
    */
-  public valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  public _valueString?: fhir.FhirElement|undefined;
-  /**
-   * The value of the parameter.
-   */
-  public valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  public _valueBoolean?: fhir.FhirElement|undefined;
-  /**
-   * The value of the parameter.
-   */
-  public valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  public _valueInteger?: fhir.FhirElement|undefined;
-  /**
-   * The value of the parameter.
-   */
-  public valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  public _valueDecimal?: fhir.FhirElement|undefined;
-  /**
-   * The value of the parameter.
-   */
-  public valueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  public _valueUri?: fhir.FhirElement|undefined;
-  /**
-   * The value of the parameter.
-   */
-  public valueCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  public _valueCode?: fhir.FhirElement|undefined;
-  /**
-   * The value of the parameter.
-   */
-  public valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.parameter.value[x]
-   */
-  public _valueDateTime?: fhir.FhirElement|undefined;
+  public value?: (fhir.FhirString|fhir.FhirBoolean|fhir.FhirInteger|fhir.FhirDecimal|fhir.FhirUri|fhir.FhirCode|fhir.FhirDateTime)|undefined;
+  readonly __valueIsChoice:true = true;
   /**
    * Default constructor for ValueSetExpansionParameter - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IValueSetExpansionParameter> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<ValueSetExpansionParameterArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['valueString']) { this.valueString = source.valueString; }
-    if (source['_valueString']) { this._valueString = new fhir.FhirElement(source._valueString!); }
-    if (source['valueBoolean']) { this.valueBoolean = source.valueBoolean; }
-    if (source['_valueBoolean']) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
-    if (source['valueInteger']) { this.valueInteger = source.valueInteger; }
-    if (source['_valueInteger']) { this._valueInteger = new fhir.FhirElement(source._valueInteger!); }
-    if (source['valueDecimal']) { this.valueDecimal = source.valueDecimal; }
-    if (source['_valueDecimal']) { this._valueDecimal = new fhir.FhirElement(source._valueDecimal!); }
-    if (source['valueUri']) { this.valueUri = source.valueUri; }
-    if (source['_valueUri']) { this._valueUri = new fhir.FhirElement(source._valueUri!); }
-    if (source['valueCode']) { this.valueCode = source.valueCode; }
-    if (source['_valueCode']) { this._valueCode = new fhir.FhirElement(source._valueCode!); }
-    if (source['valueDateTime']) { this.valueDateTime = source.valueDateTime; }
-    if (source['_valueDateTime']) { this._valueDateTime = new fhir.FhirElement(source._valueDateTime!); }
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueString']) { this.value = new fhir.FhirString({value: source.valueString}); }
+    else if (source['valueBoolean']) { this.value = new fhir.FhirBoolean({value: source.valueBoolean}); }
+    else if (source['valueInteger']) { this.value = new fhir.FhirInteger({value: source.valueInteger}); }
+    else if (source['valueDecimal']) { this.value = new fhir.FhirDecimal({value: source.valueDecimal}); }
+    else if (source['valueUri']) { this.value = new fhir.FhirUri({value: source.valueUri}); }
+    else if (source['valueCode']) { this.value = new fhir.FhirCode({value: source.valueCode}); }
+    else if (source['valueDateTime']) { this.value = new fhir.FhirDateTime({value: source.valueDateTime}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: ValueSet.expansion.parameter.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_valueString"]) { results.push(...this._valueString.doModelValidation()); }
-    if (this["_valueBoolean"]) { results.push(...this._valueBoolean.doModelValidation()); }
-    if (this["_valueInteger"]) { results.push(...this._valueInteger.doModelValidation()); }
-    if (this["_valueDecimal"]) { results.push(...this._valueDecimal.doModelValidation()); }
-    if (this["_valueUri"]) { results.push(...this._valueUri.doModelValidation()); }
-    if (this["_valueCode"]) { results.push(...this._valueCode.doModelValidation()); }
-    if (this["_valueDateTime"]) { results.push(...this._valueDateTime.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: ValueSet.expansion.parameter.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ValueSetExpansionContains type.
+ */
+export interface ValueSetExpansionContainsArgs extends fhir.BackboneElementArgs {
+  /**
+   * An absolute URI which is the code system in which the code for this item in the expansion is defined.
+   */
+  system?: fhir.FhirUri|string|undefined;
+  /**
+   * This should not be understood to exclude its use for searching (e.g. by subsumption testing). The client should know whether it is appropriate for the user to select an abstract code or not.
+   */
+  abstract?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * This should only have a value if the concept is inactive.
+   */
+  inactive?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * The exact value of the version string is specified by the system from which the code is derived.
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The code for this item in the expansion hierarchy. If this code is missing the entry in the hierarchy is a place holder (abstract) and does not represent a valid code in the value set.
+   */
+  code?: fhir.FhirCode|string|undefined;
+  /**
+   * The recommended display for this item in the expansion.
+   */
+  display?: fhir.FhirString|string|undefined;
+  /**
+   * The designations provided must be based on the value set and code system definitions.
+   */
+  designation?: fhir.ValueSetComposeIncludeConceptDesignationArgs[]|undefined;
+  /**
+   * If the expansion uses this element, there is  no implication about the logical relationship between them, and the  structure cannot be used for logical inferencing. The structure  exists to provide navigational assistance for helping human users to  locate codes in the expansion.
+   */
+  contains?: fhir.ValueSetExpansionContainsArgs[]|undefined;
 }
 
 /**
  * The codes that are contained in the value set expansion.
  */
-export class ValueSetExpansionContains extends fhir.BackboneElement implements IValueSetExpansionContains {
+export class ValueSetExpansionContains extends fhir.BackboneElement {
+  readonly __dataType:string = 'ValueSetExpansionContains';
   /**
    * An absolute URI which is the code system in which the code for this item in the expansion is defined.
    */
-  public system?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.contains.system
-   */
-  public _system?: fhir.FhirElement|undefined;
+  public system?: fhir.FhirUri|undefined;
   /**
    * This should not be understood to exclude its use for searching (e.g. by subsumption testing). The client should know whether it is appropriate for the user to select an abstract code or not.
    */
-  public abstract?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.contains.abstract
-   */
-  public _abstract?: fhir.FhirElement|undefined;
+  public abstract?: fhir.FhirBoolean|undefined;
   /**
    * This should only have a value if the concept is inactive.
    */
-  public inactive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.contains.inactive
-   */
-  public _inactive?: fhir.FhirElement|undefined;
+  public inactive?: fhir.FhirBoolean|undefined;
   /**
    * The exact value of the version string is specified by the system from which the code is derived.
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.contains.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The code for this item in the expansion hierarchy. If this code is missing the entry in the hierarchy is a place holder (abstract) and does not represent a valid code in the value set.
    */
-  public code?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.contains.code
-   */
-  public _code?: fhir.FhirElement|undefined;
+  public code?: fhir.FhirCode|undefined;
   /**
    * The recommended display for this item in the expansion.
    */
-  public display?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.contains.display
-   */
-  public _display?: fhir.FhirElement|undefined;
+  public display?: fhir.FhirString|undefined;
   /**
    * The designations provided must be based on the value set and code system definitions.
    */
-  public designation?: fhir.ValueSetComposeIncludeConceptDesignation[]|undefined;
+  public designation?: fhir.ValueSetComposeIncludeConceptDesignation[]|undefined = [];
   /**
    * If the expansion uses this element, there is  no implication about the logical relationship between them, and the  structure cannot be used for logical inferencing. The structure  exists to provide navigational assistance for helping human users to  locate codes in the expansion.
    */
-  public contains?: fhir.ValueSetExpansionContains[]|undefined;
+  public contains?: fhir.ValueSetExpansionContains[]|undefined = [];
   /**
    * Default constructor for ValueSetExpansionContains - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IValueSetExpansionContains> = { }) {
-    super(source);
-    if (source['system']) { this.system = source.system; }
-    if (source['_system']) { this._system = new fhir.FhirElement(source._system!); }
-    if (source['abstract']) { this.abstract = source.abstract; }
-    if (source['_abstract']) { this._abstract = new fhir.FhirElement(source._abstract!); }
-    if (source['inactive']) { this.inactive = source.inactive; }
-    if (source['_inactive']) { this._inactive = new fhir.FhirElement(source._inactive!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['code']) { this.code = source.code; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['display']) { this.display = source.display; }
-    if (source['_display']) { this._display = new fhir.FhirElement(source._display!); }
+  constructor(source:Partial<ValueSetExpansionContainsArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['system']) { this.system = new fhir.FhirUri({value: source.system}); }
+    if (source['abstract']) { this.abstract = new fhir.FhirBoolean({value: source.abstract}); }
+    if (source['inactive']) { this.inactive = new fhir.FhirBoolean({value: source.inactive}); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['code']) { this.code = new fhir.FhirCode({value: source.code}); }
+    if (source['display']) { this.display = new fhir.FhirString({value: source.display}); }
     if (source['designation']) { this.designation = source.designation.map((x) => new fhir.ValueSetComposeIncludeConceptDesignation(x)); }
     if (source['contains']) { this.contains = source.contains.map((x) => new fhir.ValueSetExpansionContains(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_system"]) { results.push(...this._system.doModelValidation()); }
-    if (this["_abstract"]) { results.push(...this._abstract.doModelValidation()); }
-    if (this["_inactive"]) { results.push(...this._inactive.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["_display"]) { results.push(...this._display.doModelValidation()); }
-    if (this["designation"]) { this.designation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["contains"]) { this.contains.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["system"]) { outcome.issue!.push(...this.system.doModelValidation().issue!); }
+    if (this["abstract"]) { outcome.issue!.push(...this.abstract.doModelValidation().issue!); }
+    if (this["inactive"]) { outcome.issue!.push(...this.inactive.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["display"]) { outcome.issue!.push(...this.display.doModelValidation().issue!); }
+    if (this["designation"]) { this.designation.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["contains"]) { this.contains.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ValueSetExpansion type.
+ */
+export interface ValueSetExpansionArgs extends fhir.BackboneElementArgs {
+  /**
+   * Typically, this uri is a UUID (e.g. urn:uuid:8230ff20-c97a-4167-a59d-dc2cb9df16dd).
+   */
+  identifier?: fhir.FhirUri|string|undefined;
+  /**
+   * This SHOULD be a fully populated instant, but in some circumstances, value sets are expanded by hand, and the expansion is published without that precision.
+   */
+  timestamp: fhir.FhirDateTime|string|undefined;
+  /**
+   * Paging only applies to flat expansions.
+   */
+  total?: fhir.FhirInteger|number|undefined;
+  /**
+   * Paging only applies to flat expansions. If a filter is applied, the count is the number of concepts that matched the filter, not the number of concepts in an unfiltered view of the expansion.
+   */
+  offset?: fhir.FhirInteger|number|undefined;
+  /**
+   * The server decides which parameters to include here, but at a minimum, the list SHOULD include all of the parameters that affect the $expand operation. If the expansion will be persisted all of these parameters SHALL be included. If the codeSystem on the server has a specified version then this version SHALL be provided as a parameter in the expansion (note that not all code systems have a version).
+   */
+  parameter?: fhir.ValueSetExpansionParameterArgs[]|undefined;
+  /**
+   * The codes that are contained in the value set expansion.
+   */
+  contains?: fhir.ValueSetExpansionContainsArgs[]|undefined;
 }
 
 /**
  * Expansion is performed to produce a collection of codes that are ready to use for data entry or validation. Value set expansions are always considered to be stateless - they are a record of the set of codes in the value set at a point in time under a given set of conditions, and are not subject to ongoing maintenance.
  * Expansion.parameter is  a simplified list of parameters - a subset of the features of the [Parameters](parameters.html) resource.
  */
-export class ValueSetExpansion extends fhir.BackboneElement implements IValueSetExpansion {
+export class ValueSetExpansion extends fhir.BackboneElement {
+  readonly __dataType:string = 'ValueSetExpansion';
   /**
    * Typically, this uri is a UUID (e.g. urn:uuid:8230ff20-c97a-4167-a59d-dc2cb9df16dd).
    */
-  public identifier?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.identifier
-   */
-  public _identifier?: fhir.FhirElement|undefined;
+  public identifier?: fhir.FhirUri|undefined;
   /**
    * This SHOULD be a fully populated instant, but in some circumstances, value sets are expanded by hand, and the expansion is published without that precision.
    */
-  public timestamp: string|null;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.timestamp
-   */
-  public _timestamp?: fhir.FhirElement|undefined;
+  public timestamp: fhir.FhirDateTime|null;
   /**
    * Paging only applies to flat expansions.
    */
-  public total?: number|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.total
-   */
-  public _total?: fhir.FhirElement|undefined;
+  public total?: fhir.FhirInteger|undefined;
   /**
    * Paging only applies to flat expansions. If a filter is applied, the count is the number of concepts that matched the filter, not the number of concepts in an unfiltered view of the expansion.
    */
-  public offset?: number|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.expansion.offset
-   */
-  public _offset?: fhir.FhirElement|undefined;
+  public offset?: fhir.FhirInteger|undefined;
   /**
    * The server decides which parameters to include here, but at a minimum, the list SHOULD include all of the parameters that affect the $expand operation. If the expansion will be persisted all of these parameters SHALL be included. If the codeSystem on the server has a specified version then this version SHALL be provided as a parameter in the expansion (note that not all code systems have a version).
    */
-  public parameter?: fhir.ValueSetExpansionParameter[]|undefined;
+  public parameter?: fhir.ValueSetExpansionParameter[]|undefined = [];
   /**
    * The codes that are contained in the value set expansion.
    */
-  public contains?: fhir.ValueSetExpansionContains[]|undefined;
+  public contains?: fhir.ValueSetExpansionContains[]|undefined = [];
   /**
    * Default constructor for ValueSetExpansion - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IValueSetExpansion> = { }) {
-    super(source);
-    if (source['identifier']) { this.identifier = source.identifier; }
-    if (source['_identifier']) { this._identifier = new fhir.FhirElement(source._identifier!); }
-    if (source['timestamp']) { this.timestamp = source.timestamp; }
+  constructor(source:Partial<ValueSetExpansionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['identifier']) { this.identifier = new fhir.FhirUri({value: source.identifier}); }
+    if (source['timestamp']) { this.timestamp = new fhir.FhirDateTime({value: source.timestamp}); }
     else { this.timestamp = null; }
-    if (source['_timestamp']) { this._timestamp = new fhir.FhirElement(source._timestamp!); }
-    if (source['total']) { this.total = source.total; }
-    if (source['_total']) { this._total = new fhir.FhirElement(source._total!); }
-    if (source['offset']) { this.offset = source.offset; }
-    if (source['_offset']) { this._offset = new fhir.FhirElement(source._offset!); }
+    if (source['total']) { this.total = new fhir.FhirInteger({value: source.total}); }
+    if (source['offset']) { this.offset = new fhir.FhirInteger({value: source.offset}); }
     if (source['parameter']) { this.parameter = source.parameter.map((x) => new fhir.ValueSetExpansionParameter(x)); }
     if (source['contains']) { this.contains = source.contains.map((x) => new fhir.ValueSetExpansionContains(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_identifier"]) { results.push(...this._identifier.doModelValidation()); }
-    if (!this["timestamp"]) { results.push(["timestamp",'Missing required element: ValueSet.expansion.timestamp']); }
-    if (this["_timestamp"]) { results.push(...this._timestamp.doModelValidation()); }
-    if (this["_total"]) { results.push(...this._total.doModelValidation()); }
-    if (this["_offset"]) { results.push(...this._offset.doModelValidation()); }
-    if (this["parameter"]) { this.parameter.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["contains"]) { this.contains.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (!this['timestamp']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property timestamp:fhir.FhirDateTime fhir: ValueSet.expansion.timestamp:dateTime", }));
+    }
+    if (this["timestamp"]) { outcome.issue!.push(...this.timestamp.doModelValidation().issue!); }
+    if (this["total"]) { outcome.issue!.push(...this.total.doModelValidation().issue!); }
+    if (this["offset"]) { outcome.issue!.push(...this.offset.doModelValidation().issue!); }
+    if (this["parameter"]) { this.parameter.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["contains"]) { this.contains.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ValueSet type.
+ */
+export interface ValueSetArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "ValueSet"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this value set outside of FHIR, where it is not possible to use the logical URI.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * There may be different value set instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the value set with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.A name should be provided unless the value set is a contained resource (e.g. an anonymous value set in a profile). Most registries will require a name.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * Allows filtering of value sets that are appropriate for use versus not.See also the [valueset-workflowStatus](extension-valueset-workflowstatus.html) extension for additional status information related to the editorial process.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Allows filtering of value sets that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the value set. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the value set is the organization or individual primarily responsible for the maintenance and upkeep of the value set. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the value set. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the value set was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the value set as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the value set is presumed to be the predominant language in the place the value set was created).The description is not intended to describe the semantics of the Value Set - there are no intrinsic semantics separate from the codes contained in its expansion. The description should capture its intended use, which is needed for ensuring integrity for its use in models across future changes. A description should be provided unless the value set is a contained resource (e.g. an anonymous value set in a profile). Most registries will require a description.
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the value set to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Normally immutability is set to 'false', which is the default assumption if it is not populated.  Note that the implication is that if this is set to 'true', there may be only one ValueSet version for this definition. Immutability tends to be set to 'true' in one of two cases: - Where the value set, by the nature of its usage, cannot change.  For example "All specializations of ACT in ActClassCode" - Where there's no safe way to express the "Purpose" such that someone else could safely make changes to the value set definition. Source workflow control must guarantee that the same URI always yields the same definition.
+   */
+  immutable?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * This element does not describe the usage of the value set. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this value set.
+   */
+  purpose?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * nullFrequently, the copyright differs between the value set and the codes that are included. The copyright statement should clearly differentiate between these when required.
+   */
+  copyright?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * A set of criteria that define the contents of the value set by including or excluding codes selected from the specified code system(s) that the value set draws from. This is also known as the Content Logical Definition (CLD).
+   */
+  compose?: fhir.ValueSetComposeArgs|undefined;
+  /**
+   * Expansion is performed to produce a collection of codes that are ready to use for data entry or validation. Value set expansions are always considered to be stateless - they are a record of the set of codes in the value set at a point in time under a given set of conditions, and are not subject to ongoing maintenance.
+   * Expansion.parameter is  a simplified list of parameters - a subset of the features of the [Parameters](parameters.html) resource.
+   */
+  expansion?: fhir.ValueSetExpansionArgs|undefined;
 }
 
 /**
  * A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
  */
-export class ValueSet extends fhir.DomainResource implements IValueSet {
+export class ValueSet extends fhir.DomainResource {
+  readonly __dataType:string = 'ValueSet';
   /**
    * Resource Type Name
    */
@@ -1064,115 +793,67 @@ export class ValueSet extends fhir.DomainResource implements IValueSet {
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this value set outside of FHIR, where it is not possible to use the logical URI.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * There may be different value set instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the value set with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.A name should be provided unless the value set is a contained resource (e.g. an anonymous value set in a profile). Most registries will require a name.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * Allows filtering of value sets that are appropriate for use versus not.See also the [valueset-workflowStatus](extension-valueset-workflowstatus.html) extension for additional status information related to the editorial process.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ValueSet.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of value sets that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the value set. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the value set is the organization or individual primarily responsible for the maintenance and upkeep of the value set. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the value set. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the value set was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the value set as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the value set is presumed to be the predominant language in the place the value set was created).The description is not intended to describe the semantics of the Value Set - there are no intrinsic semantics separate from the codes contained in its expansion. The description should capture its intended use, which is needed for ensuring integrity for its use in models across future changes. A description should be provided unless the value set is a contained resource (e.g. an anonymous value set in a profile). Most registries will require a description.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the value set to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Normally immutability is set to 'false', which is the default assumption if it is not populated.  Note that the implication is that if this is set to 'true', there may be only one ValueSet version for this definition. Immutability tends to be set to 'true' in one of two cases: - Where the value set, by the nature of its usage, cannot change.  For example "All specializations of ACT in ActClassCode" - Where there's no safe way to express the "Purpose" such that someone else could safely make changes to the value set definition. Source workflow control must guarantee that the same URI always yields the same definition.
    */
-  public immutable?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.immutable
-   */
-  public _immutable?: fhir.FhirElement|undefined;
+  public immutable?: fhir.FhirBoolean|undefined;
   /**
    * This element does not describe the usage of the value set. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this value set.
    */
-  public purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.purpose
-   */
-  public _purpose?: fhir.FhirElement|undefined;
+  public purpose?: fhir.FhirMarkdown|undefined;
   /**
    * nullFrequently, the copyright differs between the value set and the codes that are included. The copyright statement should clearly differentiate between these when required.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: ValueSet.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * A set of criteria that define the contents of the value set by including or excluding codes selected from the specified code system(s) that the value set draws from. This is also known as the Content Logical Definition (CLD).
    */
@@ -1185,40 +866,28 @@ export class ValueSet extends fhir.DomainResource implements IValueSet {
   /**
    * Default constructor for ValueSet - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IValueSet> = { }) {
-    super(source);
+  constructor(source:Partial<ValueSetArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'ValueSet';
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['immutable']) { this.immutable = source.immutable; }
-    if (source['_immutable']) { this._immutable = new fhir.FhirElement(source._immutable!); }
-    if (source['purpose']) { this.purpose = source.purpose; }
-    if (source['_purpose']) { this._purpose = new fhir.FhirElement(source._purpose!); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
-    if (source['compose']) { this.compose = new fhir.ValueSetCompose(source.compose!); }
-    if (source['expansion']) { this.expansion = new fhir.ValueSetExpansion(source.expansion!); }
+    if (source['immutable']) { this.immutable = new fhir.FhirBoolean({value: source.immutable}); }
+    if (source['purpose']) { this.purpose = new fhir.FhirMarkdown({value: source.purpose}); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
+    if (source['compose']) { this.compose = new fhir.ValueSetCompose(source.compose); }
+    if (source['expansion']) { this.expansion = new fhir.ValueSetExpansion(source.expansion); }
   }
   /**
    * Required-bound Value Set for status
@@ -1229,28 +898,37 @@ export class ValueSet extends fhir.DomainResource implements IValueSet {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: ValueSet.resourceType']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: ValueSet.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_immutable"]) { results.push(...this._immutable.doModelValidation()); }
-    if (this["_purpose"]) { results.push(...this._purpose.doModelValidation()); }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (this["compose"]) { results.push(...this.compose.doModelValidation()); }
-    if (this["expansion"]) { results.push(...this.expansion.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'ValueSet' fhir: ValueSet.resourceType:'ValueSet'", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: ValueSet.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["immutable"]) { outcome.issue!.push(...this.immutable.doModelValidation().issue!); }
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (this["compose"]) { outcome.issue!.push(...this.compose.doModelValidation().issue!); }
+    if (this["expansion"]) { outcome.issue!.push(...this.expansion.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

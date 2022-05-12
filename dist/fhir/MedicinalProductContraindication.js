@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MedicinalProductContraindication
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Information about the use of the medicinal product in relation to other therapies described as part of the indication.
  */
@@ -10,39 +12,50 @@ export class MedicinalProductContraindicationOtherTherapy extends fhir.BackboneE
     /**
      * Default constructor for MedicinalProductContraindicationOtherTherapy - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicinalProductContraindicationOtherTherapy';
+        this.__medicationIsChoice = true;
         if (source['therapyRelationshipType']) {
             this.therapyRelationshipType = new fhir.CodeableConcept(source.therapyRelationshipType);
         }
         else {
             this.therapyRelationshipType = null;
         }
-        if (source['medicationCodeableConcept']) {
-            this.medicationCodeableConcept = new fhir.CodeableConcept(source.medicationCodeableConcept);
+        if (source['medication']) {
+            this.medication = source.medication;
         }
-        if (source['medicationReference']) {
-            this.medicationReference = new fhir.Reference(source.medicationReference);
+        else if (source['medicationCodeableConcept']) {
+            this.medication = new fhir.CodeableConcept(source.medicationCodeableConcept);
+        }
+        else if (source['medicationReference']) {
+            this.medication = new fhir.Reference(source.medicationReference);
+        }
+        else {
+            this.medication = null;
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["therapyRelationshipType"]) {
-            results.push(["therapyRelationshipType", 'Missing required element: MedicinalProductContraindication.otherTherapy.therapyRelationshipType']);
+        var outcome = super.doModelValidation();
+        if (!this['therapyRelationshipType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property therapyRelationshipType:fhir.CodeableConcept fhir: MedicinalProductContraindication.otherTherapy.therapyRelationshipType:CodeableConcept", }));
         }
         if (this["therapyRelationshipType"]) {
-            results.push(...this.therapyRelationshipType.doModelValidation());
+            outcome.issue.push(...this.therapyRelationshipType.doModelValidation().issue);
         }
-        if (this["medicationCodeableConcept"]) {
-            results.push(...this.medicationCodeableConcept.doModelValidation());
+        if (!this['medication']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property medication: fhir: MedicinalProductContraindication.otherTherapy.medication[x]:", }));
         }
-        if (this["medicationReference"]) {
-            results.push(...this.medicationReference.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -52,8 +65,29 @@ export class MedicinalProductContraindication extends fhir.DomainResource {
     /**
      * Default constructor for MedicinalProductContraindication - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicinalProductContraindication';
+        /**
+         * The medication for which this is an indication.
+         */
+        this.subject = [];
+        /**
+         * A comorbidity (concurrent condition) or coinfection.
+         */
+        this.comorbidity = [];
+        /**
+         * Information about the use of the medicinal product in relation to other therapies as part of the indication.
+         */
+        this.therapeuticIndication = [];
+        /**
+         * Information about the use of the medicinal product in relation to other therapies described as part of the indication.
+         */
+        this.otherTherapy = [];
+        /**
+         * The population group to which this applies.
+         */
+        this.population = [];
         this.resourceType = 'MedicinalProductContraindication';
         if (source['subject']) {
             this.subject = source.subject.map((x) => new fhir.Reference(x));
@@ -81,32 +115,38 @@ export class MedicinalProductContraindication extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: MedicinalProductContraindication.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'MedicinalProductContraindication' fhir: MedicinalProductContraindication.resourceType:'MedicinalProductContraindication'", }));
         }
         if (this["subject"]) {
-            this.subject.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.subject.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["disease"]) {
-            results.push(...this.disease.doModelValidation());
+            outcome.issue.push(...this.disease.doModelValidation().issue);
         }
         if (this["diseaseStatus"]) {
-            results.push(...this.diseaseStatus.doModelValidation());
+            outcome.issue.push(...this.diseaseStatus.doModelValidation().issue);
         }
         if (this["comorbidity"]) {
-            this.comorbidity.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.comorbidity.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["therapeuticIndication"]) {
-            this.therapeuticIndication.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.therapeuticIndication.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["otherTherapy"]) {
-            this.otherTherapy.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.otherTherapy.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["population"]) {
-            this.population.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.population.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=MedicinalProductContraindication.js.map

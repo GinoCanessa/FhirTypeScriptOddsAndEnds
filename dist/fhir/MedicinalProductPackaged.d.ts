@@ -1,123 +1,22 @@
 import * as fhir from '../fhir.js';
 /**
- * Batch numbering.
+ * Valid arguments for the MedicinalProductPackagedBatchIdentifier type.
  */
-export declare type IMedicinalProductPackagedBatchIdentifier = fhir.IBackboneElement & {
+export interface MedicinalProductPackagedBatchIdentifierArgs extends fhir.BackboneElementArgs {
     /**
      * A number appearing on the outer packaging of a specific batch.
      */
-    outerPackaging: fhir.IIdentifier | null;
+    outerPackaging: fhir.IdentifierArgs | null;
     /**
      * A number appearing on the immediate packaging (and not the outer packaging).
      */
-    immediatePackaging?: fhir.IIdentifier | undefined;
-};
-/**
- * A packaging item, as a contained for medicine, possibly with other packaging items within.
- */
-export declare type IMedicinalProductPackagedPackageItem = fhir.IBackboneElement & {
-    /**
-     * Including possibly Data Carrier Identifier.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * The physical type of the container of the medicine.
-     */
-    type: fhir.ICodeableConcept | null;
-    /**
-     * The quantity of this package in the medicinal product, at the current level of packaging. The outermost is always 1.
-     */
-    quantity: fhir.IQuantity | null;
-    /**
-     * Material type of the package item.
-     */
-    material?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * A possible alternate material for the packaging.
-     */
-    alternateMaterial?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * A device accompanying a medicinal product.
-     */
-    device?: fhir.IReference[] | undefined;
-    /**
-     * The manufactured item as contained in the packaged medicinal product.
-     */
-    manufacturedItem?: fhir.IReference[] | undefined;
-    /**
-     * Allows containers within containers.
-     */
-    packageItem?: fhir.IMedicinalProductPackagedPackageItem[] | undefined;
-    /**
-     * Dimensions, color etc.
-     */
-    physicalCharacteristics?: fhir.IProdCharacteristic | undefined;
-    /**
-     * Other codeable characteristics.
-     */
-    otherCharacteristics?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Shelf Life and storage information.
-     */
-    shelfLifeStorage?: fhir.IProductShelfLife[] | undefined;
-    /**
-     * Manufacturer of this Package Item.
-     */
-    manufacturer?: fhir.IReference[] | undefined;
-};
-/**
- * A medicinal product in a container or package.
- */
-export declare type IMedicinalProductPackaged = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "MedicinalProductPackaged";
-    /**
-     * Unique identifier.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * The product with this is a pack for.
-     */
-    subject?: fhir.IReference[] | undefined;
-    /**
-     * Textual description.
-     */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: MedicinalProductPackaged.description
-     */
-    _description?: fhir.IFhirElement | undefined;
-    /**
-     * The legal status of supply of the medicinal product as classified by the regulator.
-     */
-    legalStatusOfSupply?: fhir.ICodeableConcept | undefined;
-    /**
-     * Marketing information.
-     */
-    marketingStatus?: fhir.IMarketingStatus[] | undefined;
-    /**
-     * Manufacturer of this Package Item.
-     */
-    marketingAuthorization?: fhir.IReference | undefined;
-    /**
-     * Manufacturer of this Package Item.
-     */
-    manufacturer?: fhir.IReference[] | undefined;
-    /**
-     * Batch numbering.
-     */
-    batchIdentifier?: fhir.IMedicinalProductPackagedBatchIdentifier[] | undefined;
-    /**
-     * A packaging item, as a contained for medicine, possibly with other packaging items within.
-     */
-    packageItem: fhir.IMedicinalProductPackagedPackageItem[] | null;
-};
+    immediatePackaging?: fhir.IdentifierArgs | undefined;
+}
 /**
  * Batch numbering.
  */
-export declare class MedicinalProductPackagedBatchIdentifier extends fhir.BackboneElement implements IMedicinalProductPackagedBatchIdentifier {
+export declare class MedicinalProductPackagedBatchIdentifier extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * A number appearing on the outer packaging of a specific batch.
      */
@@ -129,16 +28,74 @@ export declare class MedicinalProductPackagedBatchIdentifier extends fhir.Backbo
     /**
      * Default constructor for MedicinalProductPackagedBatchIdentifier - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMedicinalProductPackagedBatchIdentifier>);
+    constructor(source?: Partial<MedicinalProductPackagedBatchIdentifierArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the MedicinalProductPackagedPackageItem type.
+ */
+export interface MedicinalProductPackagedPackageItemArgs extends fhir.BackboneElementArgs {
+    /**
+     * Including possibly Data Carrier Identifier.
+     */
+    identifier?: fhir.IdentifierArgs[] | undefined;
+    /**
+     * The physical type of the container of the medicine.
+     */
+    type: fhir.CodeableConceptArgs | null;
+    /**
+     * The quantity of this package in the medicinal product, at the current level of packaging. The outermost is always 1.
+     */
+    quantity: fhir.QuantityArgs | null;
+    /**
+     * Material type of the package item.
+     */
+    material?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * A possible alternate material for the packaging.
+     */
+    alternateMaterial?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * A device accompanying a medicinal product.
+     */
+    device?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * The manufactured item as contained in the packaged medicinal product.
+     */
+    manufacturedItem?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * Allows containers within containers.
+     */
+    packageItem?: fhir.MedicinalProductPackagedPackageItemArgs[] | undefined;
+    /**
+     * Dimensions, color etc.
+     */
+    physicalCharacteristics?: fhir.ProdCharacteristicArgs | undefined;
+    /**
+     * Other codeable characteristics.
+     */
+    otherCharacteristics?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * Shelf Life and storage information.
+     */
+    shelfLifeStorage?: fhir.ProductShelfLifeArgs[] | undefined;
+    /**
+     * Manufacturer of this Package Item.
+     */
+    manufacturer?: fhir.ReferenceArgs[] | undefined;
 }
 /**
  * A packaging item, as a contained for medicine, possibly with other packaging items within.
  */
-export declare class MedicinalProductPackagedPackageItem extends fhir.BackboneElement implements IMedicinalProductPackagedPackageItem {
+export declare class MedicinalProductPackagedPackageItem extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Including possibly Data Carrier Identifier.
      */
@@ -190,16 +147,66 @@ export declare class MedicinalProductPackagedPackageItem extends fhir.BackboneEl
     /**
      * Default constructor for MedicinalProductPackagedPackageItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMedicinalProductPackagedPackageItem>);
+    constructor(source?: Partial<MedicinalProductPackagedPackageItemArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the MedicinalProductPackaged type.
+ */
+export interface MedicinalProductPackagedArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "MedicinalProductPackaged" | undefined;
+    /**
+     * Unique identifier.
+     */
+    identifier?: fhir.IdentifierArgs[] | undefined;
+    /**
+     * The product with this is a pack for.
+     */
+    subject?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * Textual description.
+     */
+    description?: fhir.FhirString | string | undefined;
+    /**
+     * The legal status of supply of the medicinal product as classified by the regulator.
+     */
+    legalStatusOfSupply?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Marketing information.
+     */
+    marketingStatus?: fhir.MarketingStatusArgs[] | undefined;
+    /**
+     * Manufacturer of this Package Item.
+     */
+    marketingAuthorization?: fhir.ReferenceArgs | undefined;
+    /**
+     * Manufacturer of this Package Item.
+     */
+    manufacturer?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * Batch numbering.
+     */
+    batchIdentifier?: fhir.MedicinalProductPackagedBatchIdentifierArgs[] | undefined;
+    /**
+     * A packaging item, as a contained for medicine, possibly with other packaging items within.
+     */
+    packageItem: fhir.MedicinalProductPackagedPackageItemArgs[] | null;
 }
 /**
  * A medicinal product in a container or package.
  */
-export declare class MedicinalProductPackaged extends fhir.DomainResource implements IMedicinalProductPackaged {
+export declare class MedicinalProductPackaged extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -215,11 +222,7 @@ export declare class MedicinalProductPackaged extends fhir.DomainResource implem
     /**
      * Textual description.
      */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: MedicinalProductPackaged.description
-     */
-    _description?: fhir.FhirElement | undefined;
+    description?: fhir.FhirString | undefined;
     /**
      * The legal status of supply of the medicinal product as classified by the regulator.
      */
@@ -247,10 +250,14 @@ export declare class MedicinalProductPackaged extends fhir.DomainResource implem
     /**
      * Default constructor for MedicinalProductPackaged - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMedicinalProductPackaged>);
+    constructor(source?: Partial<MedicinalProductPackagedArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=MedicinalProductPackaged.d.ts.map

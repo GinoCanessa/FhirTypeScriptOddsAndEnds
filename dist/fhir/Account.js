@@ -3,8 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Account
 import * as fhir from '../fhir.js';
-import { AccountStatusValueSet } from '../fhirValueSets/AccountStatusValueSet.js';
-import { AccountTypeValueSet } from '../fhirValueSets/AccountTypeValueSet.js';
+import { AccountStatusValueSet, } from '../fhirValueSets/AccountStatusValueSet.js';
+import { AccountTypeValueSet, } from '../fhirValueSets/AccountTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Typically. this may be some form of insurance, internal charges, or self-pay.
  * Local or jurisdictional business rules may determine which coverage covers which types of billable items charged to the account, and in which order.
@@ -14,8 +16,9 @@ export class AccountCoverage extends fhir.BackboneElement {
     /**
      * Default constructor for AccountCoverage - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AccountCoverage';
         if (source['coverage']) {
             this.coverage = new fhir.Reference(source.coverage);
         }
@@ -23,27 +26,30 @@ export class AccountCoverage extends fhir.BackboneElement {
             this.coverage = null;
         }
         if (source['priority']) {
-            this.priority = source.priority;
-        }
-        if (source['_priority']) {
-            this._priority = new fhir.FhirElement(source._priority);
+            this.priority = new fhir.FhirPositiveInt({ value: source.priority });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["coverage"]) {
-            results.push(["coverage", 'Missing required element: Account.coverage.coverage']);
+        var outcome = super.doModelValidation();
+        if (!this['coverage']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property coverage:fhir.Reference fhir: Account.coverage.coverage:Reference", }));
         }
         if (this["coverage"]) {
-            results.push(...this.coverage.doModelValidation());
+            outcome.issue.push(...this.coverage.doModelValidation().issue);
         }
-        if (this["_priority"]) {
-            results.push(...this._priority.doModelValidation());
+        if (this["priority"]) {
+            outcome.issue.push(...this.priority.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -53,8 +59,9 @@ export class AccountGuarantor extends fhir.BackboneElement {
     /**
      * Default constructor for AccountGuarantor - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AccountGuarantor';
         if (source['party']) {
             this.party = new fhir.Reference(source.party);
         }
@@ -62,10 +69,7 @@ export class AccountGuarantor extends fhir.BackboneElement {
             this.party = null;
         }
         if (source['onHold']) {
-            this.onHold = source.onHold;
-        }
-        if (source['_onHold']) {
-            this._onHold = new fhir.FhirElement(source._onHold);
+            this.onHold = new fhir.FhirBoolean({ value: source.onHold });
         }
         if (source['period']) {
             this.period = new fhir.Period(source.period);
@@ -75,20 +79,26 @@ export class AccountGuarantor extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["party"]) {
-            results.push(["party", 'Missing required element: Account.guarantor.party']);
+        var outcome = super.doModelValidation();
+        if (!this['party']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property party:fhir.Reference fhir: Account.guarantor.party:Reference", }));
         }
         if (this["party"]) {
-            results.push(...this.party.doModelValidation());
+            outcome.issue.push(...this.party.doModelValidation().issue);
         }
-        if (this["_onHold"]) {
-            results.push(...this._onHold.doModelValidation());
+        if (this["onHold"]) {
+            outcome.issue.push(...this.onHold.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -98,8 +108,27 @@ export class Account extends fhir.DomainResource {
     /**
      * Default constructor for Account - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Account';
+        /**
+         * Unique identifier used to reference the account.  Might or might not be intended for human use (e.g. credit card number).
+         */
+        this.identifier = [];
+        /**
+         * Accounts can be applied to non-patients for tracking other non-patient related activities, such as group services (patients not tracked, and costs charged to another body), or might not be allocated.
+         */
+        this.subject = [];
+        /**
+         * Typically. this may be some form of insurance, internal charges, or self-pay.
+         * Local or jurisdictional business rules may determine which coverage covers which types of billable items charged to the account, and in which order.
+         * Where the order is important, a local/jurisdictional extension may be defined to specify the order for the type of charge.
+         */
+        this.coverage = [];
+        /**
+         * The parties responsible for balancing the account if other payment options fall short.
+         */
+        this.guarantor = [];
         this.resourceType = 'Account';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -110,17 +139,11 @@ export class Account extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['subject']) {
             this.subject = source.subject.map((x) => new fhir.Reference(x));
@@ -135,10 +158,7 @@ export class Account extends fhir.DomainResource {
             this.owner = new fhir.Reference(source.owner);
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['guarantor']) {
             this.guarantor = source.guarantor.map((x) => new fhir.AccountGuarantor(x));
@@ -163,47 +183,50 @@ export class Account extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Account.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Account' fhir: Account.resourceType:'Account'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Account.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:AccountStatusValueSetEnum fhir: Account.status:code", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
         if (this["subject"]) {
-            this.subject.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.subject.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["servicePeriod"]) {
-            results.push(...this.servicePeriod.doModelValidation());
+            outcome.issue.push(...this.servicePeriod.doModelValidation().issue);
         }
         if (this["coverage"]) {
-            this.coverage.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.coverage.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["owner"]) {
-            results.push(...this.owner.doModelValidation());
+            outcome.issue.push(...this.owner.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["guarantor"]) {
-            this.guarantor.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.guarantor.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["partOf"]) {
-            results.push(...this.partOf.doModelValidation());
+            outcome.issue.push(...this.partOf.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Account.js.map

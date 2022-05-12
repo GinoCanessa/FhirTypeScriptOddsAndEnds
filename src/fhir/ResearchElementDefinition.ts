@@ -3,402 +3,142 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ResearchElementDefinition
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { UcumUnitsValueSet, UcumUnitsValueSetType, UcumUnitsValueSetEnum } from '../fhirValueSets/UcumUnitsValueSet.js'
-import { GroupMeasureValueSet, GroupMeasureValueSetType, GroupMeasureValueSetEnum } from '../fhirValueSets/GroupMeasureValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-import { SubjectTypeValueSet, SubjectTypeValueSetType, SubjectTypeValueSetEnum } from '../fhirValueSets/SubjectTypeValueSet.js'
-import { DefinitionTopicValueSet, DefinitionTopicValueSetType, DefinitionTopicValueSetEnum } from '../fhirValueSets/DefinitionTopicValueSet.js'
-import { ResearchElementTypeValueSet, ResearchElementTypeValueSetType, ResearchElementTypeValueSetEnum } from '../fhirValueSets/ResearchElementTypeValueSet.js'
-import { VariableTypeValueSet, VariableTypeValueSetType, VariableTypeValueSetEnum } from '../fhirValueSets/VariableTypeValueSet.js'
-
+import { UcumUnitsValueSet, UcumUnitsValueSetType,} from '../fhirValueSets/UcumUnitsValueSet.js';
+import { UcumUnitsValueSetEnum } from '../valueSetEnums.js';
+import { GroupMeasureValueSet, GroupMeasureValueSetType,} from '../fhirValueSets/GroupMeasureValueSet.js';
+import { GroupMeasureValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { DefinitionTopicValueSet, DefinitionTopicValueSetType,} from '../fhirValueSets/DefinitionTopicValueSet.js';
+import { DefinitionTopicValueSetEnum } from '../valueSetEnums.js';
+import { ResearchElementTypeValueSet, ResearchElementTypeValueSetType,} from '../fhirValueSets/ResearchElementTypeValueSet.js';
+import { ResearchElementTypeValueSetEnum } from '../valueSetEnums.js';
+import { VariableTypeValueSet, VariableTypeValueSetType,} from '../fhirValueSets/VariableTypeValueSet.js';
+import { VariableTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
+ * Valid arguments for the ResearchElementDefinitionCharacteristic type.
  */
-export type IResearchElementDefinitionCharacteristic = fhir.IBackboneElement & { 
+export interface ResearchElementDefinitionCharacteristicArgs extends fhir.BackboneElementArgs {
   /**
    * Define members of the research element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
    */
-  definitionCodeableConcept?: fhir.ICodeableConcept|undefined;
+  definition?: fhir.CodeableConcept|fhir.FhirCanonical|fhir.Expression|fhir.DataRequirement|undefined;
   /**
    * Define members of the research element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
    */
-  definitionCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.definition[x]
-   */
-  _definitionCanonical?: fhir.IFhirElement|undefined;
+  definitionCodeableConcept?: fhir.CodeableConceptArgs|undefined;
   /**
    * Define members of the research element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
    */
-  definitionExpression?: fhir.IExpression|undefined;
+  definitionCanonical?: fhir.FhirCanonical|string|undefined;
   /**
    * Define members of the research element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
    */
-  definitionDataRequirement?: fhir.IDataRequirement|undefined;
+  definitionExpression?: fhir.ExpressionArgs|undefined;
+  /**
+   * Define members of the research element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
+   */
+  definitionDataRequirement?: fhir.DataRequirementArgs|undefined;
   /**
    * Use UsageContext to define the members of the population, such as Age Ranges, Genders, Settings.
    */
-  usageContext?: fhir.IUsageContext[]|undefined;
+  usageContext?: fhir.UsageContextArgs[]|undefined;
   /**
    * When true, members with this characteristic are excluded from the element.
    */
-  exclude?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.exclude
-   */
-  _exclude?: fhir.IFhirElement|undefined;
+  exclude?: fhir.FhirBoolean|boolean|undefined;
   /**
    * Specifies the UCUM unit for the outcome.
    */
-  unitOfMeasure?: fhir.ICodeableConcept|undefined;
+  unitOfMeasure?: fhir.CodeableConceptArgs|undefined;
   /**
    * A narrative description of the time period the study covers.
    */
-  studyEffectiveDescription?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.studyEffectiveDescription
-   */
-  _studyEffectiveDescription?: fhir.IFhirElement|undefined;
+  studyEffectiveDescription?: fhir.FhirString|string|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  studyEffectiveDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.studyEffective[x]
-   */
-  _studyEffectiveDateTime?: fhir.IFhirElement|undefined;
+  studyEffective?: fhir.FhirDateTime|fhir.Period|fhir.Duration|fhir.Timing|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  studyEffectivePeriod?: fhir.IPeriod|undefined;
+  studyEffectiveDateTime?: fhir.FhirDateTime|string|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  studyEffectiveDuration?: fhir.IDuration|undefined;
+  studyEffectivePeriod?: fhir.PeriodArgs|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  studyEffectiveTiming?: fhir.ITiming|undefined;
+  studyEffectiveDuration?: fhir.DurationArgs|undefined;
+  /**
+   * Indicates what effective period the study covers.
+   */
+  studyEffectiveTiming?: fhir.TimingArgs|undefined;
   /**
    * Indicates duration from the study initiation.
    */
-  studyEffectiveTimeFromStart?: fhir.IDuration|undefined;
+  studyEffectiveTimeFromStart?: fhir.DurationArgs|undefined;
   /**
    * Indicates how elements are aggregated within the study effective period.
    */
   studyEffectiveGroupMeasure?: GroupMeasureValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.studyEffectiveGroupMeasure
-   */
-  _studyEffectiveGroupMeasure?: fhir.IFhirElement|undefined;
-  /**
    * A narrative description of the time period the study covers.
    */
-  participantEffectiveDescription?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.participantEffectiveDescription
-   */
-  _participantEffectiveDescription?: fhir.IFhirElement|undefined;
+  participantEffectiveDescription?: fhir.FhirString|string|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  participantEffectiveDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.participantEffective[x]
-   */
-  _participantEffectiveDateTime?: fhir.IFhirElement|undefined;
+  participantEffective?: fhir.FhirDateTime|fhir.Period|fhir.Duration|fhir.Timing|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  participantEffectivePeriod?: fhir.IPeriod|undefined;
+  participantEffectiveDateTime?: fhir.FhirDateTime|string|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  participantEffectiveDuration?: fhir.IDuration|undefined;
+  participantEffectivePeriod?: fhir.PeriodArgs|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  participantEffectiveTiming?: fhir.ITiming|undefined;
+  participantEffectiveDuration?: fhir.DurationArgs|undefined;
+  /**
+   * Indicates what effective period the study covers.
+   */
+  participantEffectiveTiming?: fhir.TimingArgs|undefined;
   /**
    * Indicates duration from the participant's study entry.
    */
-  participantEffectiveTimeFromStart?: fhir.IDuration|undefined;
+  participantEffectiveTimeFromStart?: fhir.DurationArgs|undefined;
   /**
    * Indicates how elements are aggregated within the study effective period.
    */
   participantEffectiveGroupMeasure?: GroupMeasureValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.participantEffectiveGroupMeasure
-   */
-  _participantEffectiveGroupMeasure?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The ResearchElementDefinition resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
- */
-export type IResearchElementDefinition = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "ResearchElementDefinition";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this research element definition outside of FHIR, where it is not possible to use the logical URI.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * There may be different research element definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the research element definition with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * The short title provides an alternate title for use in informal descriptive contexts where the full, formal title is not necessary.
-   */
-  shortTitle?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.shortTitle
-   */
-  _shortTitle?: fhir.IFhirElement|undefined;
-  /**
-   * An explanatory or alternate title for the ResearchElementDefinition giving additional information about its content.
-   */
-  subtitle?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.subtitle
-   */
-  _subtitle?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of research element definitions that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of research element definitions that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * The subject of the ResearchElementDefinition is critical in interpreting the criteria definitions, as the logic in the ResearchElementDefinitions is evaluated with respect to a particular subject. This corresponds roughly to the notion of a Compartment in that it limits what content is available based on its relationship to the subject. In CQL, this corresponds to the context declaration.
-   */
-  subjectCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * The subject of the ResearchElementDefinition is critical in interpreting the criteria definitions, as the logic in the ResearchElementDefinitions is evaluated with respect to a particular subject. This corresponds roughly to the notion of a Compartment in that it limits what content is available based on its relationship to the subject. In CQL, this corresponds to the context declaration.
-   */
-  subjectReference?: fhir.IReference|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the research element definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the research element definition is the organization or individual primarily responsible for the maintenance and upkeep of the research element definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the research element definition. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the research element definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the research element definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the research element definition is presumed to be the predominant language in the place the research element definition was created).
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * A human-readable string to clarify or explain concepts about the resource.
-   */
-  comment?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.comment
-   */
-  _comment?: fhir.IFhirElement[]|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the research element definition to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * This element does not describe the usage of the research element definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this research element definition.
-   */
-  purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.purpose
-   */
-  _purpose?: fhir.IFhirElement|undefined;
-  /**
-   * A detailed description, from a clinical perspective, of how the ResearchElementDefinition is used.
-   */
-  usage?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.usage
-   */
-  _usage?: fhir.IFhirElement|undefined;
-  /**
-   * A copyright statement relating to the research element definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the research element definition.
-   */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-  /**
-   * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
-   */
-  approvalDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.approvalDate
-   */
-  _approvalDate?: fhir.IFhirElement|undefined;
-  /**
-   * If specified, this date follows the original approval date.
-   */
-  lastReviewDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.lastReviewDate
-   */
-  _lastReviewDate?: fhir.IFhirElement|undefined;
-  /**
-   * The effective period for a research element definition  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
-   */
-  effectivePeriod?: fhir.IPeriod|undefined;
-  /**
-   * Descriptive topics related to the content of the ResearchElementDefinition. Topics provide a high-level categorization grouping types of ResearchElementDefinitions that can be useful for filtering and searching.
-   */
-  topic?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * An individiual or organization primarily involved in the creation and maintenance of the content.
-   */
-  author?: fhir.IContactDetail[]|undefined;
-  /**
-   * An individual or organization primarily responsible for internal coherence of the content.
-   */
-  editor?: fhir.IContactDetail[]|undefined;
-  /**
-   * An individual or organization primarily responsible for review of some aspect of the content.
-   */
-  reviewer?: fhir.IContactDetail[]|undefined;
-  /**
-   * An individual or organization responsible for officially endorsing the content for use in some setting.
-   */
-  endorser?: fhir.IContactDetail[]|undefined;
-  /**
-   * Each related artifact is either an attachment, or a reference to another resource, but not both.
-   */
-  relatedArtifact?: fhir.IRelatedArtifact[]|undefined;
-  /**
-   * A reference to a Library resource containing the formal logic used by the ResearchElementDefinition.
-   */
-  library?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.library
-   */
-  _library?: fhir.IFhirElement[]|undefined;
-  /**
-   * The type of research element, a population, an exposure, or an outcome.
-   */
-  type: ResearchElementTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * The type of the outcome (e.g. Dichotomous, Continuous, or Descriptive).
-   */
-  variableType?: VariableTypeValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.variableType
-   */
-  _variableType?: fhir.IFhirElement|undefined;
-  /**
-   * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
-   */
-  characteristic: fhir.IResearchElementDefinitionCharacteristic[]|null;
 }
 
 /**
  * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
  */
-export class ResearchElementDefinitionCharacteristic extends fhir.BackboneElement implements IResearchElementDefinitionCharacteristic {
+export class ResearchElementDefinitionCharacteristic extends fhir.BackboneElement {
+  readonly __dataType:string = 'ResearchElementDefinitionCharacteristic';
   /**
    * Define members of the research element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
    */
-  public definitionCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * Define members of the research element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
-   */
-  public definitionCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.definition[x]
-   */
-  public _definitionCanonical?: fhir.FhirElement|undefined;
-  /**
-   * Define members of the research element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
-   */
-  public definitionExpression?: fhir.Expression|undefined;
-  /**
-   * Define members of the research element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).
-   */
-  public definitionDataRequirement?: fhir.DataRequirement|undefined;
+  public definition: (fhir.CodeableConcept|fhir.FhirCanonical|fhir.Expression|fhir.DataRequirement)|null;
+  readonly __definitionIsChoice:true = true;
   /**
    * Use UsageContext to define the members of the population, such as Age Ranges, Genders, Settings.
    */
-  public usageContext?: fhir.UsageContext[]|undefined;
+  public usageContext?: fhir.UsageContext[]|undefined = [];
   /**
    * When true, members with this characteristic are excluded from the element.
    */
-  public exclude?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.exclude
-   */
-  public _exclude?: fhir.FhirElement|undefined;
+  public exclude?: fhir.FhirBoolean|undefined;
   /**
    * Specifies the UCUM unit for the outcome.
    */
@@ -406,31 +146,12 @@ export class ResearchElementDefinitionCharacteristic extends fhir.BackboneElemen
   /**
    * A narrative description of the time period the study covers.
    */
-  public studyEffectiveDescription?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.studyEffectiveDescription
-   */
-  public _studyEffectiveDescription?: fhir.FhirElement|undefined;
+  public studyEffectiveDescription?: fhir.FhirString|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  public studyEffectiveDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.studyEffective[x]
-   */
-  public _studyEffectiveDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Indicates what effective period the study covers.
-   */
-  public studyEffectivePeriod?: fhir.Period|undefined;
-  /**
-   * Indicates what effective period the study covers.
-   */
-  public studyEffectiveDuration?: fhir.Duration|undefined;
-  /**
-   * Indicates what effective period the study covers.
-   */
-  public studyEffectiveTiming?: fhir.Timing|undefined;
+  public studyEffective?: (fhir.FhirDateTime|fhir.Period|fhir.Duration|fhir.Timing)|undefined;
+  readonly __studyEffectiveIsChoice:true = true;
   /**
    * Indicates duration from the study initiation.
    */
@@ -440,37 +161,14 @@ export class ResearchElementDefinitionCharacteristic extends fhir.BackboneElemen
    */
   public studyEffectiveGroupMeasure?: GroupMeasureValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.studyEffectiveGroupMeasure
-   */
-  public _studyEffectiveGroupMeasure?: fhir.FhirElement|undefined;
-  /**
    * A narrative description of the time period the study covers.
    */
-  public participantEffectiveDescription?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.participantEffectiveDescription
-   */
-  public _participantEffectiveDescription?: fhir.FhirElement|undefined;
+  public participantEffectiveDescription?: fhir.FhirString|undefined;
   /**
    * Indicates what effective period the study covers.
    */
-  public participantEffectiveDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.participantEffective[x]
-   */
-  public _participantEffectiveDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Indicates what effective period the study covers.
-   */
-  public participantEffectivePeriod?: fhir.Period|undefined;
-  /**
-   * Indicates what effective period the study covers.
-   */
-  public participantEffectiveDuration?: fhir.Duration|undefined;
-  /**
-   * Indicates what effective period the study covers.
-   */
-  public participantEffectiveTiming?: fhir.Timing|undefined;
+  public participantEffective?: (fhir.FhirDateTime|fhir.Period|fhir.Duration|fhir.Timing)|undefined;
+  readonly __participantEffectiveIsChoice:true = true;
   /**
    * Indicates duration from the participant's study entry.
    */
@@ -480,43 +178,35 @@ export class ResearchElementDefinitionCharacteristic extends fhir.BackboneElemen
    */
   public participantEffectiveGroupMeasure?: GroupMeasureValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: ResearchElementDefinition.characteristic.participantEffectiveGroupMeasure
-   */
-  public _participantEffectiveGroupMeasure?: fhir.FhirElement|undefined;
-  /**
    * Default constructor for ResearchElementDefinitionCharacteristic - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IResearchElementDefinitionCharacteristic> = { }) {
-    super(source);
-    if (source['definitionCodeableConcept']) { this.definitionCodeableConcept = new fhir.CodeableConcept(source.definitionCodeableConcept!); }
-    if (source['definitionCanonical']) { this.definitionCanonical = source.definitionCanonical; }
-    if (source['_definitionCanonical']) { this._definitionCanonical = new fhir.FhirElement(source._definitionCanonical!); }
-    if (source['definitionExpression']) { this.definitionExpression = new fhir.Expression(source.definitionExpression!); }
-    if (source['definitionDataRequirement']) { this.definitionDataRequirement = new fhir.DataRequirement(source.definitionDataRequirement!); }
+  constructor(source:Partial<ResearchElementDefinitionCharacteristicArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['definition']) { this.definition = source.definition; }
+    else if (source['definitionCodeableConcept']) { this.definition = new fhir.CodeableConcept(source.definitionCodeableConcept); }
+    else if (source['definitionCanonical']) { this.definition = new fhir.FhirCanonical({value: source.definitionCanonical}); }
+    else if (source['definitionExpression']) { this.definition = new fhir.Expression(source.definitionExpression); }
+    else if (source['definitionDataRequirement']) { this.definition = new fhir.DataRequirement(source.definitionDataRequirement); }
+    else { this.definition = null; }
     if (source['usageContext']) { this.usageContext = source.usageContext.map((x) => new fhir.UsageContext(x)); }
-    if (source['exclude']) { this.exclude = source.exclude; }
-    if (source['_exclude']) { this._exclude = new fhir.FhirElement(source._exclude!); }
-    if (source['unitOfMeasure']) { this.unitOfMeasure = new fhir.CodeableConcept(source.unitOfMeasure!); }
-    if (source['studyEffectiveDescription']) { this.studyEffectiveDescription = source.studyEffectiveDescription; }
-    if (source['_studyEffectiveDescription']) { this._studyEffectiveDescription = new fhir.FhirElement(source._studyEffectiveDescription!); }
-    if (source['studyEffectiveDateTime']) { this.studyEffectiveDateTime = source.studyEffectiveDateTime; }
-    if (source['_studyEffectiveDateTime']) { this._studyEffectiveDateTime = new fhir.FhirElement(source._studyEffectiveDateTime!); }
-    if (source['studyEffectivePeriod']) { this.studyEffectivePeriod = new fhir.Period(source.studyEffectivePeriod!); }
-    if (source['studyEffectiveDuration']) { this.studyEffectiveDuration = new fhir.Duration(source.studyEffectiveDuration!); }
-    if (source['studyEffectiveTiming']) { this.studyEffectiveTiming = new fhir.Timing(source.studyEffectiveTiming!); }
-    if (source['studyEffectiveTimeFromStart']) { this.studyEffectiveTimeFromStart = new fhir.Duration(source.studyEffectiveTimeFromStart!); }
+    if (source['exclude']) { this.exclude = new fhir.FhirBoolean({value: source.exclude}); }
+    if (source['unitOfMeasure']) { this.unitOfMeasure = new fhir.CodeableConcept(source.unitOfMeasure); }
+    if (source['studyEffectiveDescription']) { this.studyEffectiveDescription = new fhir.FhirString({value: source.studyEffectiveDescription}); }
+    if (source['studyEffective']) { this.studyEffective = source.studyEffective; }
+    else if (source['studyEffectiveDateTime']) { this.studyEffective = new fhir.FhirDateTime({value: source.studyEffectiveDateTime}); }
+    else if (source['studyEffectivePeriod']) { this.studyEffective = new fhir.Period(source.studyEffectivePeriod); }
+    else if (source['studyEffectiveDuration']) { this.studyEffective = new fhir.Duration(source.studyEffectiveDuration); }
+    else if (source['studyEffectiveTiming']) { this.studyEffective = new fhir.Timing(source.studyEffectiveTiming); }
+    if (source['studyEffectiveTimeFromStart']) { this.studyEffectiveTimeFromStart = new fhir.Duration(source.studyEffectiveTimeFromStart); }
     if (source['studyEffectiveGroupMeasure']) { this.studyEffectiveGroupMeasure = source.studyEffectiveGroupMeasure; }
-    if (source['_studyEffectiveGroupMeasure']) { this._studyEffectiveGroupMeasure = new fhir.FhirElement(source._studyEffectiveGroupMeasure!); }
-    if (source['participantEffectiveDescription']) { this.participantEffectiveDescription = source.participantEffectiveDescription; }
-    if (source['_participantEffectiveDescription']) { this._participantEffectiveDescription = new fhir.FhirElement(source._participantEffectiveDescription!); }
-    if (source['participantEffectiveDateTime']) { this.participantEffectiveDateTime = source.participantEffectiveDateTime; }
-    if (source['_participantEffectiveDateTime']) { this._participantEffectiveDateTime = new fhir.FhirElement(source._participantEffectiveDateTime!); }
-    if (source['participantEffectivePeriod']) { this.participantEffectivePeriod = new fhir.Period(source.participantEffectivePeriod!); }
-    if (source['participantEffectiveDuration']) { this.participantEffectiveDuration = new fhir.Duration(source.participantEffectiveDuration!); }
-    if (source['participantEffectiveTiming']) { this.participantEffectiveTiming = new fhir.Timing(source.participantEffectiveTiming!); }
-    if (source['participantEffectiveTimeFromStart']) { this.participantEffectiveTimeFromStart = new fhir.Duration(source.participantEffectiveTimeFromStart!); }
+    if (source['participantEffectiveDescription']) { this.participantEffectiveDescription = new fhir.FhirString({value: source.participantEffectiveDescription}); }
+    if (source['participantEffective']) { this.participantEffective = source.participantEffective; }
+    else if (source['participantEffectiveDateTime']) { this.participantEffective = new fhir.FhirDateTime({value: source.participantEffectiveDateTime}); }
+    else if (source['participantEffectivePeriod']) { this.participantEffective = new fhir.Period(source.participantEffectivePeriod); }
+    else if (source['participantEffectiveDuration']) { this.participantEffective = new fhir.Duration(source.participantEffectiveDuration); }
+    else if (source['participantEffectiveTiming']) { this.participantEffective = new fhir.Timing(source.participantEffectiveTiming); }
+    if (source['participantEffectiveTimeFromStart']) { this.participantEffectiveTimeFromStart = new fhir.Duration(source.participantEffectiveTimeFromStart); }
     if (source['participantEffectiveGroupMeasure']) { this.participantEffectiveGroupMeasure = source.participantEffectiveGroupMeasure; }
-    if (source['_participantEffectiveGroupMeasure']) { this._participantEffectiveGroupMeasure = new fhir.FhirElement(source._participantEffectiveGroupMeasure!); }
   }
   /**
    * Required-bound Value Set for unitOfMeasure
@@ -539,37 +229,184 @@ export class ResearchElementDefinitionCharacteristic extends fhir.BackboneElemen
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["definitionCodeableConcept"]) { results.push(...this.definitionCodeableConcept.doModelValidation()); }
-    if (this["_definitionCanonical"]) { results.push(...this._definitionCanonical.doModelValidation()); }
-    if (this["definitionExpression"]) { results.push(...this.definitionExpression.doModelValidation()); }
-    if (this["definitionDataRequirement"]) { results.push(...this.definitionDataRequirement.doModelValidation()); }
-    if (this["usageContext"]) { this.usageContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_exclude"]) { results.push(...this._exclude.doModelValidation()); }
-    if (this["unitOfMeasure"]) { results.push(...this.unitOfMeasure.doModelValidation()); }
-    if (this["_studyEffectiveDescription"]) { results.push(...this._studyEffectiveDescription.doModelValidation()); }
-    if (this["_studyEffectiveDateTime"]) { results.push(...this._studyEffectiveDateTime.doModelValidation()); }
-    if (this["studyEffectivePeriod"]) { results.push(...this.studyEffectivePeriod.doModelValidation()); }
-    if (this["studyEffectiveDuration"]) { results.push(...this.studyEffectiveDuration.doModelValidation()); }
-    if (this["studyEffectiveTiming"]) { results.push(...this.studyEffectiveTiming.doModelValidation()); }
-    if (this["studyEffectiveTimeFromStart"]) { results.push(...this.studyEffectiveTimeFromStart.doModelValidation()); }
-    if (this["_studyEffectiveGroupMeasure"]) { results.push(...this._studyEffectiveGroupMeasure.doModelValidation()); }
-    if (this["_participantEffectiveDescription"]) { results.push(...this._participantEffectiveDescription.doModelValidation()); }
-    if (this["_participantEffectiveDateTime"]) { results.push(...this._participantEffectiveDateTime.doModelValidation()); }
-    if (this["participantEffectivePeriod"]) { results.push(...this.participantEffectivePeriod.doModelValidation()); }
-    if (this["participantEffectiveDuration"]) { results.push(...this.participantEffectiveDuration.doModelValidation()); }
-    if (this["participantEffectiveTiming"]) { results.push(...this.participantEffectiveTiming.doModelValidation()); }
-    if (this["participantEffectiveTimeFromStart"]) { results.push(...this.participantEffectiveTimeFromStart.doModelValidation()); }
-    if (this["_participantEffectiveGroupMeasure"]) { results.push(...this._participantEffectiveGroupMeasure.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['definition']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property definition: fhir: ResearchElementDefinition.characteristic.definition[x]:", }));
+    }
+    if (this["usageContext"]) { this.usageContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["exclude"]) { outcome.issue!.push(...this.exclude.doModelValidation().issue!); }
+    if (this["unitOfMeasure"]) { outcome.issue!.push(...this.unitOfMeasure.doModelValidation().issue!); }
+    if (this["studyEffectiveDescription"]) { outcome.issue!.push(...this.studyEffectiveDescription.doModelValidation().issue!); }
+    if (this["studyEffectiveTimeFromStart"]) { outcome.issue!.push(...this.studyEffectiveTimeFromStart.doModelValidation().issue!); }
+    if (this["participantEffectiveDescription"]) { outcome.issue!.push(...this.participantEffectiveDescription.doModelValidation().issue!); }
+    if (this["participantEffectiveTimeFromStart"]) { outcome.issue!.push(...this.participantEffectiveTimeFromStart.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ResearchElementDefinition type.
+ */
+export interface ResearchElementDefinitionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "ResearchElementDefinition"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this research element definition outside of FHIR, where it is not possible to use the logical URI.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * There may be different research element definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the research element definition with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * The short title provides an alternate title for use in informal descriptive contexts where the full, formal title is not necessary.
+   */
+  shortTitle?: fhir.FhirString|string|undefined;
+  /**
+   * An explanatory or alternate title for the ResearchElementDefinition giving additional information about its content.
+   */
+  subtitle?: fhir.FhirString|string|undefined;
+  /**
+   * Allows filtering of research element definitions that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Allows filtering of research element definitions that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * The subject of the ResearchElementDefinition is critical in interpreting the criteria definitions, as the logic in the ResearchElementDefinitions is evaluated with respect to a particular subject. This corresponds roughly to the notion of a Compartment in that it limits what content is available based on its relationship to the subject. In CQL, this corresponds to the context declaration.
+   */
+  subject?: fhir.CodeableConcept|fhir.Reference|undefined;
+  /**
+   * The subject of the ResearchElementDefinition is critical in interpreting the criteria definitions, as the logic in the ResearchElementDefinitions is evaluated with respect to a particular subject. This corresponds roughly to the notion of a Compartment in that it limits what content is available based on its relationship to the subject. In CQL, this corresponds to the context declaration.
+   */
+  subjectCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The subject of the ResearchElementDefinition is critical in interpreting the criteria definitions, as the logic in the ResearchElementDefinitions is evaluated with respect to a particular subject. This corresponds roughly to the notion of a Compartment in that it limits what content is available based on its relationship to the subject. In CQL, this corresponds to the context declaration.
+   */
+  subjectReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the research element definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the research element definition is the organization or individual primarily responsible for the maintenance and upkeep of the research element definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the research element definition. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the research element definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the research element definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the research element definition is presumed to be the predominant language in the place the research element definition was created).
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * A human-readable string to clarify or explain concepts about the resource.
+   */
+  comment?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the research element definition to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * This element does not describe the usage of the research element definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this research element definition.
+   */
+  purpose?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * A detailed description, from a clinical perspective, of how the ResearchElementDefinition is used.
+   */
+  usage?: fhir.FhirString|string|undefined;
+  /**
+   * A copyright statement relating to the research element definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the research element definition.
+   */
+  copyright?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
+   */
+  approvalDate?: fhir.FhirDate|string|undefined;
+  /**
+   * If specified, this date follows the original approval date.
+   */
+  lastReviewDate?: fhir.FhirDate|string|undefined;
+  /**
+   * The effective period for a research element definition  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
+   */
+  effectivePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * Descriptive topics related to the content of the ResearchElementDefinition. Topics provide a high-level categorization grouping types of ResearchElementDefinitions that can be useful for filtering and searching.
+   */
+  topic?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * An individiual or organization primarily involved in the creation and maintenance of the content.
+   */
+  author?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * An individual or organization primarily responsible for internal coherence of the content.
+   */
+  editor?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * An individual or organization primarily responsible for review of some aspect of the content.
+   */
+  reviewer?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * An individual or organization responsible for officially endorsing the content for use in some setting.
+   */
+  endorser?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * Each related artifact is either an attachment, or a reference to another resource, but not both.
+   */
+  relatedArtifact?: fhir.RelatedArtifactArgs[]|undefined;
+  /**
+   * A reference to a Library resource containing the formal logic used by the ResearchElementDefinition.
+   */
+  library?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * The type of research element, a population, an exposure, or an outcome.
+   */
+  type: ResearchElementTypeValueSetEnum|null;
+  /**
+   * The type of the outcome (e.g. Dichotomous, Continuous, or Descriptive).
+   */
+  variableType?: VariableTypeValueSetEnum|undefined;
+  /**
+   * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
+   */
+  characteristic: fhir.ResearchElementDefinitionCharacteristicArgs[]|null;
 }
 
 /**
  * The ResearchElementDefinition resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
  */
-export class ResearchElementDefinition extends fhir.DomainResource implements IResearchElementDefinition {
+export class ResearchElementDefinition extends fhir.DomainResource {
+  readonly __dataType:string = 'ResearchElementDefinition';
   /**
    * Resource Type Name
    */
@@ -579,163 +416,92 @@ export class ResearchElementDefinition extends fhir.DomainResource implements IR
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this research element definition outside of FHIR, where it is not possible to use the logical URI.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * There may be different research element definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the research element definition with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * The short title provides an alternate title for use in informal descriptive contexts where the full, formal title is not necessary.
    */
-  public shortTitle?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.shortTitle
-   */
-  public _shortTitle?: fhir.FhirElement|undefined;
+  public shortTitle?: fhir.FhirString|undefined;
   /**
    * An explanatory or alternate title for the ResearchElementDefinition giving additional information about its content.
    */
-  public subtitle?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.subtitle
-   */
-  public _subtitle?: fhir.FhirElement|undefined;
+  public subtitle?: fhir.FhirString|undefined;
   /**
    * Allows filtering of research element definitions that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ResearchElementDefinition.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of research element definitions that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * The subject of the ResearchElementDefinition is critical in interpreting the criteria definitions, as the logic in the ResearchElementDefinitions is evaluated with respect to a particular subject. This corresponds roughly to the notion of a Compartment in that it limits what content is available based on its relationship to the subject. In CQL, this corresponds to the context declaration.
    */
-  public subjectCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * The subject of the ResearchElementDefinition is critical in interpreting the criteria definitions, as the logic in the ResearchElementDefinitions is evaluated with respect to a particular subject. This corresponds roughly to the notion of a Compartment in that it limits what content is available based on its relationship to the subject. In CQL, this corresponds to the context declaration.
-   */
-  public subjectReference?: fhir.Reference|undefined;
+  public subject?: (fhir.CodeableConcept|fhir.Reference)|undefined;
+  readonly __subjectIsChoice:true = true;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the research element definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the research element definition is the organization or individual primarily responsible for the maintenance and upkeep of the research element definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the research element definition. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the research element definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the research element definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the research element definition is presumed to be the predominant language in the place the research element definition was created).
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * A human-readable string to clarify or explain concepts about the resource.
    */
-  public comment?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.comment
-   */
-  public _comment?: fhir.FhirElement[]|undefined;
+  public comment?: fhir.FhirString[]|undefined = [];
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the research element definition to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * This element does not describe the usage of the research element definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this research element definition.
    */
-  public purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.purpose
-   */
-  public _purpose?: fhir.FhirElement|undefined;
+  public purpose?: fhir.FhirMarkdown|undefined;
   /**
    * A detailed description, from a clinical perspective, of how the ResearchElementDefinition is used.
    */
-  public usage?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.usage
-   */
-  public _usage?: fhir.FhirElement|undefined;
+  public usage?: fhir.FhirString|undefined;
   /**
    * A copyright statement relating to the research element definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the research element definition.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
    */
-  public approvalDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.approvalDate
-   */
-  public _approvalDate?: fhir.FhirElement|undefined;
+  public approvalDate?: fhir.FhirDate|undefined;
   /**
    * If specified, this date follows the original approval date.
    */
-  public lastReviewDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.lastReviewDate
-   */
-  public _lastReviewDate?: fhir.FhirElement|undefined;
+  public lastReviewDate?: fhir.FhirDate|undefined;
   /**
    * The effective period for a research element definition  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
    */
@@ -743,116 +509,85 @@ export class ResearchElementDefinition extends fhir.DomainResource implements IR
   /**
    * Descriptive topics related to the content of the ResearchElementDefinition. Topics provide a high-level categorization grouping types of ResearchElementDefinitions that can be useful for filtering and searching.
    */
-  public topic?: fhir.CodeableConcept[]|undefined;
+  public topic?: fhir.CodeableConcept[]|undefined = [];
   /**
    * An individiual or organization primarily involved in the creation and maintenance of the content.
    */
-  public author?: fhir.ContactDetail[]|undefined;
+  public author?: fhir.ContactDetail[]|undefined = [];
   /**
    * An individual or organization primarily responsible for internal coherence of the content.
    */
-  public editor?: fhir.ContactDetail[]|undefined;
+  public editor?: fhir.ContactDetail[]|undefined = [];
   /**
    * An individual or organization primarily responsible for review of some aspect of the content.
    */
-  public reviewer?: fhir.ContactDetail[]|undefined;
+  public reviewer?: fhir.ContactDetail[]|undefined = [];
   /**
    * An individual or organization responsible for officially endorsing the content for use in some setting.
    */
-  public endorser?: fhir.ContactDetail[]|undefined;
+  public endorser?: fhir.ContactDetail[]|undefined = [];
   /**
    * Each related artifact is either an attachment, or a reference to another resource, but not both.
    */
-  public relatedArtifact?: fhir.RelatedArtifact[]|undefined;
+  public relatedArtifact?: fhir.RelatedArtifact[]|undefined = [];
   /**
    * A reference to a Library resource containing the formal logic used by the ResearchElementDefinition.
    */
-  public library?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ResearchElementDefinition.library
-   */
-  public _library?: fhir.FhirElement[]|undefined;
+  public library?: fhir.FhirCanonical[]|undefined = [];
   /**
    * The type of research element, a population, an exposure, or an outcome.
    */
   public type: ResearchElementTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ResearchElementDefinition.type
-   */
-  public _type?: fhir.FhirElement|undefined;
-  /**
    * The type of the outcome (e.g. Dichotomous, Continuous, or Descriptive).
    */
   public variableType?: VariableTypeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: ResearchElementDefinition.variableType
-   */
-  public _variableType?: fhir.FhirElement|undefined;
-  /**
    * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
    */
-  public characteristic: fhir.ResearchElementDefinitionCharacteristic[]|null;
+  public characteristic: fhir.ResearchElementDefinitionCharacteristic[]|null = [];
   /**
    * Default constructor for ResearchElementDefinition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IResearchElementDefinition> = { }) {
-    super(source);
+  constructor(source:Partial<ResearchElementDefinitionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'ResearchElementDefinition';
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
-    if (source['shortTitle']) { this.shortTitle = source.shortTitle; }
-    if (source['_shortTitle']) { this._shortTitle = new fhir.FhirElement(source._shortTitle!); }
-    if (source['subtitle']) { this.subtitle = source.subtitle; }
-    if (source['_subtitle']) { this._subtitle = new fhir.FhirElement(source._subtitle!); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
+    if (source['shortTitle']) { this.shortTitle = new fhir.FhirString({value: source.shortTitle}); }
+    if (source['subtitle']) { this.subtitle = new fhir.FhirString({value: source.subtitle}); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['subjectCodeableConcept']) { this.subjectCodeableConcept = new fhir.CodeableConcept(source.subjectCodeableConcept!); }
-    if (source['subjectReference']) { this.subjectReference = new fhir.Reference(source.subjectReference!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['subject']) { this.subject = source.subject; }
+    else if (source['subjectCodeableConcept']) { this.subject = new fhir.CodeableConcept(source.subjectCodeableConcept); }
+    else if (source['subjectReference']) { this.subject = new fhir.Reference(source.subjectReference); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['comment']) { this.comment = source.comment.map((x) => (x)); }
-    if (source['_comment']) { this._comment = source._comment.map((x) => new fhir.FhirElement(x)); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
+    if (source['comment']) { this.comment = source.comment.map((x) => new fhir.FhirString({value: x})); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['purpose']) { this.purpose = source.purpose; }
-    if (source['_purpose']) { this._purpose = new fhir.FhirElement(source._purpose!); }
-    if (source['usage']) { this.usage = source.usage; }
-    if (source['_usage']) { this._usage = new fhir.FhirElement(source._usage!); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
-    if (source['approvalDate']) { this.approvalDate = source.approvalDate; }
-    if (source['_approvalDate']) { this._approvalDate = new fhir.FhirElement(source._approvalDate!); }
-    if (source['lastReviewDate']) { this.lastReviewDate = source.lastReviewDate; }
-    if (source['_lastReviewDate']) { this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate!); }
-    if (source['effectivePeriod']) { this.effectivePeriod = new fhir.Period(source.effectivePeriod!); }
+    if (source['purpose']) { this.purpose = new fhir.FhirMarkdown({value: source.purpose}); }
+    if (source['usage']) { this.usage = new fhir.FhirString({value: source.usage}); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
+    if (source['approvalDate']) { this.approvalDate = new fhir.FhirDate({value: source.approvalDate}); }
+    if (source['lastReviewDate']) { this.lastReviewDate = new fhir.FhirDate({value: source.lastReviewDate}); }
+    if (source['effectivePeriod']) { this.effectivePeriod = new fhir.Period(source.effectivePeriod); }
     if (source['topic']) { this.topic = source.topic.map((x) => new fhir.CodeableConcept(x)); }
     if (source['author']) { this.author = source.author.map((x) => new fhir.ContactDetail(x)); }
     if (source['editor']) { this.editor = source.editor.map((x) => new fhir.ContactDetail(x)); }
     if (source['reviewer']) { this.reviewer = source.reviewer.map((x) => new fhir.ContactDetail(x)); }
     if (source['endorser']) { this.endorser = source.endorser.map((x) => new fhir.ContactDetail(x)); }
     if (source['relatedArtifact']) { this.relatedArtifact = source.relatedArtifact.map((x) => new fhir.RelatedArtifact(x)); }
-    if (source['library']) { this.library = source.library.map((x) => (x)); }
-    if (source['_library']) { this._library = source._library.map((x) => new fhir.FhirElement(x)); }
+    if (source['library']) { this.library = source.library.map((x) => new fhir.FhirCanonical({value: x})); }
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
     if (source['variableType']) { this.variableType = source.variableType; }
-    if (source['_variableType']) { this._variableType = new fhir.FhirElement(source._variableType!); }
     if (source['characteristic']) { this.characteristic = source.characteristic.map((x) => new fhir.ResearchElementDefinitionCharacteristic(x)); }
     else { this.characteristic = null; }
   }
@@ -861,18 +596,6 @@ export class ResearchElementDefinition extends fhir.DomainResource implements IR
    */
   public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
-  }
-  /**
-   * Extensible-bound Value Set for subjectCodeableConcept
-   */
-  public static subjectCodeableConceptExtensibleValueSet():SubjectTypeValueSetType {
-    return SubjectTypeValueSet;
-  }
-  /**
-   * Extensible-bound Value Set for subjectReference
-   */
-  public static subjectReferenceExtensibleValueSet():SubjectTypeValueSetType {
-    return SubjectTypeValueSet;
   }
   /**
    * Example-bound Value Set for topic
@@ -895,46 +618,59 @@ export class ResearchElementDefinition extends fhir.DomainResource implements IR
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: ResearchElementDefinition.resourceType']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (this["_shortTitle"]) { results.push(...this._shortTitle.doModelValidation()); }
-    if (this["_subtitle"]) { results.push(...this._subtitle.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: ResearchElementDefinition.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (this["subjectCodeableConcept"]) { results.push(...this.subjectCodeableConcept.doModelValidation()); }
-    if (this["subjectReference"]) { results.push(...this.subjectReference.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_comment"]) { this._comment.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_purpose"]) { results.push(...this._purpose.doModelValidation()); }
-    if (this["_usage"]) { results.push(...this._usage.doModelValidation()); }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (this["_approvalDate"]) { results.push(...this._approvalDate.doModelValidation()); }
-    if (this["_lastReviewDate"]) { results.push(...this._lastReviewDate.doModelValidation()); }
-    if (this["effectivePeriod"]) { results.push(...this.effectivePeriod.doModelValidation()); }
-    if (this["topic"]) { this.topic.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["author"]) { this.author.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["editor"]) { this.editor.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reviewer"]) { this.reviewer.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["endorser"]) { this.endorser.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["relatedArtifact"]) { this.relatedArtifact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_library"]) { this._library.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["type"]) { results.push(["type",'Missing required element: ResearchElementDefinition.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_variableType"]) { results.push(...this._variableType.doModelValidation()); }
-    if ((!this["characteristic"]) || (this["characteristic"].length === 0)) { results.push(["characteristic",'Missing required element: ResearchElementDefinition.characteristic']); }
-    if (this["characteristic"]) { this.characteristic.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'ResearchElementDefinition' fhir: ResearchElementDefinition.resourceType:'ResearchElementDefinition'", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (this["shortTitle"]) { outcome.issue!.push(...this.shortTitle.doModelValidation().issue!); }
+    if (this["subtitle"]) { outcome.issue!.push(...this.subtitle.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: ResearchElementDefinition.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["comment"]) { this.comment.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (this["usage"]) { outcome.issue!.push(...this.usage.doModelValidation().issue!); }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (this["approvalDate"]) { outcome.issue!.push(...this.approvalDate.doModelValidation().issue!); }
+    if (this["lastReviewDate"]) { outcome.issue!.push(...this.lastReviewDate.doModelValidation().issue!); }
+    if (this["effectivePeriod"]) { outcome.issue!.push(...this.effectivePeriod.doModelValidation().issue!); }
+    if (this["topic"]) { this.topic.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["author"]) { this.author.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["editor"]) { this.editor.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reviewer"]) { this.reviewer.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["endorser"]) { this.endorser.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["relatedArtifact"]) { this.relatedArtifact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["library"]) { this.library.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:ResearchElementTypeValueSetEnum fhir: ResearchElementDefinition.type:code", }));
+    }
+    if (!this['characteristic']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property characteristic:fhir.ResearchElementDefinitionCharacteristic[] fhir: ResearchElementDefinition.characteristic:characteristic", }));
+    } else if (!Array.isArray(this.characteristic)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property characteristic:fhir.ResearchElementDefinitionCharacteristic[] fhir: ResearchElementDefinition.characteristic:characteristic", }));
+    } else if (this.characteristic.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property characteristic:fhir.ResearchElementDefinitionCharacteristic[] fhir: ResearchElementDefinition.characteristic:characteristic", }));
+    }
+    if (this["characteristic"]) { this.characteristic.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -3,119 +3,101 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ImmunizationEvaluation
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ImmunizationEvaluationStatusValueSet, ImmunizationEvaluationStatusValueSetType, ImmunizationEvaluationStatusValueSetEnum } from '../fhirValueSets/ImmunizationEvaluationStatusValueSet.js'
-import { ImmunizationEvaluationTargetDiseaseValueSet, ImmunizationEvaluationTargetDiseaseValueSetType, ImmunizationEvaluationTargetDiseaseValueSetEnum } from '../fhirValueSets/ImmunizationEvaluationTargetDiseaseValueSet.js'
-import { ImmunizationEvaluationDoseStatusValueSet, ImmunizationEvaluationDoseStatusValueSetType, ImmunizationEvaluationDoseStatusValueSetEnum } from '../fhirValueSets/ImmunizationEvaluationDoseStatusValueSet.js'
-import { ImmunizationEvaluationDoseStatusReasonValueSet, ImmunizationEvaluationDoseStatusReasonValueSetType, ImmunizationEvaluationDoseStatusReasonValueSetEnum } from '../fhirValueSets/ImmunizationEvaluationDoseStatusReasonValueSet.js'
-
+import { ImmunizationEvaluationStatusValueSet, ImmunizationEvaluationStatusValueSetType,} from '../fhirValueSets/ImmunizationEvaluationStatusValueSet.js';
+import { ImmunizationEvaluationStatusValueSetEnum } from '../valueSetEnums.js';
+import { ImmunizationEvaluationTargetDiseaseValueSet, ImmunizationEvaluationTargetDiseaseValueSetType,} from '../fhirValueSets/ImmunizationEvaluationTargetDiseaseValueSet.js';
+import { ImmunizationEvaluationTargetDiseaseValueSetEnum } from '../valueSetEnums.js';
+import { ImmunizationEvaluationDoseStatusValueSet, ImmunizationEvaluationDoseStatusValueSetType,} from '../fhirValueSets/ImmunizationEvaluationDoseStatusValueSet.js';
+import { ImmunizationEvaluationDoseStatusValueSetEnum } from '../valueSetEnums.js';
+import { ImmunizationEvaluationDoseStatusReasonValueSet, ImmunizationEvaluationDoseStatusReasonValueSetType,} from '../fhirValueSets/ImmunizationEvaluationDoseStatusReasonValueSet.js';
+import { ImmunizationEvaluationDoseStatusReasonValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Describes a comparison of an immunization event against published recommendations to determine if the administration is "valid" in relation to those  recommendations.
+ * Valid arguments for the ImmunizationEvaluation type.
  */
-export type IImmunizationEvaluation = fhir.IDomainResource & { 
+export interface ImmunizationEvaluationArgs extends fhir.DomainResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "ImmunizationEvaluation";
+  resourceType: "ImmunizationEvaluation"|undefined;
   /**
    * A unique identifier assigned to this immunization evaluation record.
    */
-  identifier?: fhir.IIdentifier[]|undefined;
+  identifier?: fhir.IdentifierArgs[]|undefined;
   /**
    * Indicates the current status of the evaluation of the vaccination administration event.
    */
   status: ImmunizationEvaluationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ImmunizationEvaluation.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
    * The individual for whom the evaluation is being done.
    */
-  patient: fhir.IReference|null;
+  patient: fhir.ReferenceArgs|null;
   /**
    * The date the evaluation of the vaccine administration event was performed.
    */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.date
-   */
-  _date?: fhir.IFhirElement|undefined;
+  date?: fhir.FhirDateTime|string|undefined;
   /**
    * Indicates the authority who published the protocol (e.g. ACIP).
    */
-  authority?: fhir.IReference|undefined;
+  authority?: fhir.ReferenceArgs|undefined;
   /**
    * The vaccine preventable disease the dose is being evaluated against.
    */
-  targetDisease: fhir.ICodeableConcept|null;
+  targetDisease: fhir.CodeableConceptArgs|null;
   /**
    * The vaccine administration event being evaluated.
    */
-  immunizationEvent: fhir.IReference|null;
+  immunizationEvent: fhir.ReferenceArgs|null;
   /**
    * Indicates if the dose is valid or not valid with respect to the published recommendations.
    */
-  doseStatus: fhir.ICodeableConcept|null;
+  doseStatus: fhir.CodeableConceptArgs|null;
   /**
    * Provides an explanation as to why the vaccine administration event is valid or not relative to the published recommendations.
    */
-  doseStatusReason?: fhir.ICodeableConcept[]|undefined;
+  doseStatusReason?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * Additional information about the evaluation.
    */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.description
-   */
-  _description?: fhir.IFhirElement|undefined;
+  description?: fhir.FhirString|string|undefined;
   /**
    * One possible path to achieve presumed immunity against a disease - within the context of an authority.
    */
-  series?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.series
-   */
-  _series?: fhir.IFhirElement|undefined;
+  series?: fhir.FhirString|string|undefined;
   /**
    * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
    */
-  doseNumberPositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.doseNumber[x]
-   */
-  _doseNumberPositiveInt?: fhir.IFhirElement|undefined;
+  doseNumber?: fhir.FhirPositiveInt|fhir.FhirString|undefined;
   /**
    * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
    */
-  doseNumberString?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.doseNumber[x]
-   */
-  _doseNumberString?: fhir.IFhirElement|undefined;
+  doseNumberPositiveInt?: fhir.FhirPositiveInt|number|undefined;
   /**
    * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
    */
-  seriesDosesPositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.seriesDoses[x]
-   */
-  _seriesDosesPositiveInt?: fhir.IFhirElement|undefined;
+  doseNumberString?: fhir.FhirString|string|undefined;
   /**
    * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
    */
-  seriesDosesString?: string|undefined;
+  seriesDoses?: fhir.FhirPositiveInt|fhir.FhirString|undefined;
   /**
-   * Extended properties for primitive element: ImmunizationEvaluation.seriesDoses[x]
+   * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
    */
-  _seriesDosesString?: fhir.IFhirElement|undefined;
+  seriesDosesPositiveInt?: fhir.FhirPositiveInt|number|undefined;
+  /**
+   * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
+   */
+  seriesDosesString?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Describes a comparison of an immunization event against published recommendations to determine if the administration is "valid" in relation to those  recommendations.
  */
-export class ImmunizationEvaluation extends fhir.DomainResource implements IImmunizationEvaluation {
+export class ImmunizationEvaluation extends fhir.DomainResource {
+  readonly __dataType:string = 'ImmunizationEvaluation';
   /**
    * Resource Type Name
    */
@@ -123,15 +105,11 @@ export class ImmunizationEvaluation extends fhir.DomainResource implements IImmu
   /**
    * A unique identifier assigned to this immunization evaluation record.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Indicates the current status of the evaluation of the vaccination administration event.
    */
   public status: ImmunizationEvaluationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * The individual for whom the evaluation is being done.
    */
@@ -139,11 +117,7 @@ export class ImmunizationEvaluation extends fhir.DomainResource implements IImmu
   /**
    * The date the evaluation of the vaccine administration event was performed.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Indicates the authority who published the protocol (e.g. ACIP).
    */
@@ -163,89 +137,53 @@ export class ImmunizationEvaluation extends fhir.DomainResource implements IImmu
   /**
    * Provides an explanation as to why the vaccine administration event is valid or not relative to the published recommendations.
    */
-  public doseStatusReason?: fhir.CodeableConcept[]|undefined;
+  public doseStatusReason?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Additional information about the evaluation.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * One possible path to achieve presumed immunity against a disease - within the context of an authority.
    */
-  public series?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.series
-   */
-  public _series?: fhir.FhirElement|undefined;
+  public series?: fhir.FhirString|undefined;
   /**
    * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
    */
-  public doseNumberPositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.doseNumber[x]
-   */
-  public _doseNumberPositiveInt?: fhir.FhirElement|undefined;
+  public doseNumber?: (fhir.FhirPositiveInt|fhir.FhirString)|undefined;
+  readonly __doseNumberIsChoice:true = true;
   /**
    * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
    */
-  public doseNumberString?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.doseNumber[x]
-   */
-  public _doseNumberString?: fhir.FhirElement|undefined;
-  /**
-   * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
-   */
-  public seriesDosesPositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.seriesDoses[x]
-   */
-  public _seriesDosesPositiveInt?: fhir.FhirElement|undefined;
-  /**
-   * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
-   */
-  public seriesDosesString?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImmunizationEvaluation.seriesDoses[x]
-   */
-  public _seriesDosesString?: fhir.FhirElement|undefined;
+  public seriesDoses?: (fhir.FhirPositiveInt|fhir.FhirString)|undefined;
+  readonly __seriesDosesIsChoice:true = true;
   /**
    * Default constructor for ImmunizationEvaluation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImmunizationEvaluation> = { }) {
-    super(source);
+  constructor(source:Partial<ImmunizationEvaluationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'ImmunizationEvaluation';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['patient']) { this.patient = new fhir.Reference(source.patient!); }
+    if (source['patient']) { this.patient = new fhir.Reference(source.patient); }
     else { this.patient = null; }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['authority']) { this.authority = new fhir.Reference(source.authority!); }
-    if (source['targetDisease']) { this.targetDisease = new fhir.CodeableConcept(source.targetDisease!); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['authority']) { this.authority = new fhir.Reference(source.authority); }
+    if (source['targetDisease']) { this.targetDisease = new fhir.CodeableConcept(source.targetDisease); }
     else { this.targetDisease = null; }
-    if (source['immunizationEvent']) { this.immunizationEvent = new fhir.Reference(source.immunizationEvent!); }
+    if (source['immunizationEvent']) { this.immunizationEvent = new fhir.Reference(source.immunizationEvent); }
     else { this.immunizationEvent = null; }
-    if (source['doseStatus']) { this.doseStatus = new fhir.CodeableConcept(source.doseStatus!); }
+    if (source['doseStatus']) { this.doseStatus = new fhir.CodeableConcept(source.doseStatus); }
     else { this.doseStatus = null; }
     if (source['doseStatusReason']) { this.doseStatusReason = source.doseStatusReason.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['series']) { this.series = source.series; }
-    if (source['_series']) { this._series = new fhir.FhirElement(source._series!); }
-    if (source['doseNumberPositiveInt']) { this.doseNumberPositiveInt = source.doseNumberPositiveInt; }
-    if (source['_doseNumberPositiveInt']) { this._doseNumberPositiveInt = new fhir.FhirElement(source._doseNumberPositiveInt!); }
-    if (source['doseNumberString']) { this.doseNumberString = source.doseNumberString; }
-    if (source['_doseNumberString']) { this._doseNumberString = new fhir.FhirElement(source._doseNumberString!); }
-    if (source['seriesDosesPositiveInt']) { this.seriesDosesPositiveInt = source.seriesDosesPositiveInt; }
-    if (source['_seriesDosesPositiveInt']) { this._seriesDosesPositiveInt = new fhir.FhirElement(source._seriesDosesPositiveInt!); }
-    if (source['seriesDosesString']) { this.seriesDosesString = source.seriesDosesString; }
-    if (source['_seriesDosesString']) { this._seriesDosesString = new fhir.FhirElement(source._seriesDosesString!); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['series']) { this.series = new fhir.FhirString({value: source.series}); }
+    if (source['doseNumber']) { this.doseNumber = source.doseNumber; }
+    else if (source['doseNumberPositiveInt']) { this.doseNumber = new fhir.FhirPositiveInt({value: source.doseNumberPositiveInt}); }
+    else if (source['doseNumberString']) { this.doseNumber = new fhir.FhirString({value: source.doseNumberString}); }
+    if (source['seriesDoses']) { this.seriesDoses = source.seriesDoses; }
+    else if (source['seriesDosesPositiveInt']) { this.seriesDoses = new fhir.FhirPositiveInt({value: source.seriesDosesPositiveInt}); }
+    else if (source['seriesDosesString']) { this.seriesDoses = new fhir.FhirString({value: source.seriesDosesString}); }
   }
   /**
    * Required-bound Value Set for status
@@ -274,29 +212,42 @@ export class ImmunizationEvaluation extends fhir.DomainResource implements IImmu
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: ImmunizationEvaluation.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: ImmunizationEvaluation.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (!this["patient"]) { results.push(["patient",'Missing required element: ImmunizationEvaluation.patient']); }
-    if (this["patient"]) { results.push(...this.patient.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["authority"]) { results.push(...this.authority.doModelValidation()); }
-    if (!this["targetDisease"]) { results.push(["targetDisease",'Missing required element: ImmunizationEvaluation.targetDisease']); }
-    if (this["targetDisease"]) { results.push(...this.targetDisease.doModelValidation()); }
-    if (!this["immunizationEvent"]) { results.push(["immunizationEvent",'Missing required element: ImmunizationEvaluation.immunizationEvent']); }
-    if (this["immunizationEvent"]) { results.push(...this.immunizationEvent.doModelValidation()); }
-    if (!this["doseStatus"]) { results.push(["doseStatus",'Missing required element: ImmunizationEvaluation.doseStatus']); }
-    if (this["doseStatus"]) { results.push(...this.doseStatus.doModelValidation()); }
-    if (this["doseStatusReason"]) { this.doseStatusReason.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_series"]) { results.push(...this._series.doModelValidation()); }
-    if (this["_doseNumberPositiveInt"]) { results.push(...this._doseNumberPositiveInt.doModelValidation()); }
-    if (this["_doseNumberString"]) { results.push(...this._doseNumberString.doModelValidation()); }
-    if (this["_seriesDosesPositiveInt"]) { results.push(...this._seriesDosesPositiveInt.doModelValidation()); }
-    if (this["_seriesDosesString"]) { results.push(...this._seriesDosesString.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'ImmunizationEvaluation' fhir: ImmunizationEvaluation.resourceType:'ImmunizationEvaluation'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:ImmunizationEvaluationStatusValueSetEnum fhir: ImmunizationEvaluation.status:code", }));
+    }
+    if (!this['patient']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property patient:fhir.Reference fhir: ImmunizationEvaluation.patient:Reference", }));
+    }
+    if (this["patient"]) { outcome.issue!.push(...this.patient.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["authority"]) { outcome.issue!.push(...this.authority.doModelValidation().issue!); }
+    if (!this['targetDisease']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property targetDisease:fhir.CodeableConcept fhir: ImmunizationEvaluation.targetDisease:CodeableConcept", }));
+    }
+    if (this["targetDisease"]) { outcome.issue!.push(...this.targetDisease.doModelValidation().issue!); }
+    if (!this['immunizationEvent']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property immunizationEvent:fhir.Reference fhir: ImmunizationEvaluation.immunizationEvent:Reference", }));
+    }
+    if (this["immunizationEvent"]) { outcome.issue!.push(...this.immunizationEvent.doModelValidation().issue!); }
+    if (!this['doseStatus']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property doseStatus:fhir.CodeableConcept fhir: ImmunizationEvaluation.doseStatus:CodeableConcept", }));
+    }
+    if (this["doseStatus"]) { outcome.issue!.push(...this.doseStatus.doModelValidation().issue!); }
+    if (this["doseStatusReason"]) { this.doseStatusReason.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["series"]) { outcome.issue!.push(...this.series.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

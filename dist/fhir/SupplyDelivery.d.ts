@@ -1,98 +1,33 @@
 import * as fhir from '../fhir.js';
-import { SupplyItemValueSetType } from '../fhirValueSets/SupplyItemValueSet.js';
-import { SupplydeliveryStatusValueSetType, SupplydeliveryStatusValueSetEnum } from '../fhirValueSets/SupplydeliveryStatusValueSet.js';
+import { SupplydeliveryStatusValueSetType } from '../fhirValueSets/SupplydeliveryStatusValueSet.js';
+import { SupplydeliveryStatusValueSetEnum } from '../valueSetEnums.js';
 import { SupplydeliveryTypeValueSetType } from '../fhirValueSets/SupplydeliveryTypeValueSet.js';
 /**
- * The item that is being delivered or has been supplied.
+ * Valid arguments for the SupplyDeliverySuppliedItem type.
  */
-export declare type ISupplyDeliverySuppliedItem = fhir.IBackboneElement & {
+export interface SupplyDeliverySuppliedItemArgs extends fhir.BackboneElementArgs {
     /**
      * The amount of supply that has been dispensed. Includes unit of measure.
      */
-    quantity?: fhir.IQuantity | undefined;
+    quantity?: fhir.QuantityArgs | undefined;
     /**
      * Identifies the medication, substance or device being dispensed. This is either a link to a resource representing the details of the item or a code that identifies the item from a known list.
      */
-    itemCodeableConcept?: fhir.ICodeableConcept | undefined;
+    item?: fhir.CodeableConcept | fhir.Reference | undefined;
     /**
      * Identifies the medication, substance or device being dispensed. This is either a link to a resource representing the details of the item or a code that identifies the item from a known list.
      */
-    itemReference?: fhir.IReference | undefined;
-};
-/**
- * Record of delivery of what is supplied.
- */
-export declare type ISupplyDelivery = fhir.IDomainResource & {
+    itemCodeableConcept?: fhir.CodeableConceptArgs | undefined;
     /**
-     * Resource Type Name
+     * Identifies the medication, substance or device being dispensed. This is either a link to a resource representing the details of the item or a code that identifies the item from a known list.
      */
-    resourceType: "SupplyDelivery";
-    /**
-     * This identifier is typically assigned by the dispenser, and may be used to reference the delivery when exchanging information about it with other systems.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * A plan, proposal or order that is fulfilled in whole or in part by this event.
-     */
-    basedOn?: fhir.IReference[] | undefined;
-    /**
-     * Not to be used to link an event to an Encounter - use Event.context for that.
-     * [The allowed reference resources may be adjusted as appropriate for the event resource].
-     */
-    partOf?: fhir.IReference[] | undefined;
-    /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-     */
-    status?: SupplydeliveryStatusValueSetEnum | undefined;
-    /**
-     * Extended properties for primitive element: SupplyDelivery.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * A link to a resource representing the person whom the delivered item is for.
-     */
-    patient?: fhir.IReference | undefined;
-    /**
-     * Indicates the type of dispensing event that is performed. Examples include: Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.
-     */
-    type?: fhir.ICodeableConcept | undefined;
-    /**
-     * The item that is being delivered or has been supplied.
-     */
-    suppliedItem?: fhir.ISupplyDeliverySuppliedItem | undefined;
-    /**
-     * [The list of types may be constrained as appropriate for the type of event].
-     */
-    occurrenceDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: SupplyDelivery.occurrence[x]
-     */
-    _occurrenceDateTime?: fhir.IFhirElement | undefined;
-    /**
-     * [The list of types may be constrained as appropriate for the type of event].
-     */
-    occurrencePeriod?: fhir.IPeriod | undefined;
-    /**
-     * [The list of types may be constrained as appropriate for the type of event].
-     */
-    occurrenceTiming?: fhir.ITiming | undefined;
-    /**
-     * The individual responsible for dispensing the medication, supplier or device.
-     */
-    supplier?: fhir.IReference | undefined;
-    /**
-     * Identification of the facility/location where the Supply was shipped to, as part of the dispense event.
-     */
-    destination?: fhir.IReference | undefined;
-    /**
-     * Identifies the person who picked up the Supply.
-     */
-    receiver?: fhir.IReference[] | undefined;
-};
+    itemReference?: fhir.ReferenceArgs | undefined;
+}
 /**
  * The item that is being delivered or has been supplied.
  */
-export declare class SupplyDeliverySuppliedItem extends fhir.BackboneElement implements ISupplyDeliverySuppliedItem {
+export declare class SupplyDeliverySuppliedItem extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The amount of supply that has been dispensed. Includes unit of measure.
      */
@@ -100,32 +35,92 @@ export declare class SupplyDeliverySuppliedItem extends fhir.BackboneElement imp
     /**
      * Identifies the medication, substance or device being dispensed. This is either a link to a resource representing the details of the item or a code that identifies the item from a known list.
      */
-    itemCodeableConcept?: fhir.CodeableConcept | undefined;
-    /**
-     * Identifies the medication, substance or device being dispensed. This is either a link to a resource representing the details of the item or a code that identifies the item from a known list.
-     */
-    itemReference?: fhir.Reference | undefined;
+    item?: (fhir.CodeableConcept | fhir.Reference) | undefined;
+    readonly __itemIsChoice: true;
     /**
      * Default constructor for SupplyDeliverySuppliedItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISupplyDeliverySuppliedItem>);
-    /**
-     * Example-bound Value Set for itemCodeableConcept
-     */
-    static itemCodeableConceptExampleValueSet(): SupplyItemValueSetType;
-    /**
-     * Example-bound Value Set for itemReference
-     */
-    static itemReferenceExampleValueSet(): SupplyItemValueSetType;
+    constructor(source?: Partial<SupplyDeliverySuppliedItemArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the SupplyDelivery type.
+ */
+export interface SupplyDeliveryArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "SupplyDelivery" | undefined;
+    /**
+     * This identifier is typically assigned by the dispenser, and may be used to reference the delivery when exchanging information about it with other systems.
+     */
+    identifier?: fhir.IdentifierArgs[] | undefined;
+    /**
+     * A plan, proposal or order that is fulfilled in whole or in part by this event.
+     */
+    basedOn?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * Not to be used to link an event to an Encounter - use Event.context for that.
+     * [The allowed reference resources may be adjusted as appropriate for the event resource].
+     */
+    partOf?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+     */
+    status?: SupplydeliveryStatusValueSetEnum | undefined;
+    /**
+     * A link to a resource representing the person whom the delivered item is for.
+     */
+    patient?: fhir.ReferenceArgs | undefined;
+    /**
+     * Indicates the type of dispensing event that is performed. Examples include: Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.
+     */
+    type?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * The item that is being delivered or has been supplied.
+     */
+    suppliedItem?: fhir.SupplyDeliverySuppliedItemArgs | undefined;
+    /**
+     * [The list of types may be constrained as appropriate for the type of event].
+     */
+    occurrence?: fhir.FhirDateTime | fhir.Period | fhir.Timing | undefined;
+    /**
+     * [The list of types may be constrained as appropriate for the type of event].
+     */
+    occurrenceDateTime?: fhir.FhirDateTime | string | undefined;
+    /**
+     * [The list of types may be constrained as appropriate for the type of event].
+     */
+    occurrencePeriod?: fhir.PeriodArgs | undefined;
+    /**
+     * [The list of types may be constrained as appropriate for the type of event].
+     */
+    occurrenceTiming?: fhir.TimingArgs | undefined;
+    /**
+     * The individual responsible for dispensing the medication, supplier or device.
+     */
+    supplier?: fhir.ReferenceArgs | undefined;
+    /**
+     * Identification of the facility/location where the Supply was shipped to, as part of the dispense event.
+     */
+    destination?: fhir.ReferenceArgs | undefined;
+    /**
+     * Identifies the person who picked up the Supply.
+     */
+    receiver?: fhir.ReferenceArgs[] | undefined;
 }
 /**
  * Record of delivery of what is supplied.
  */
-export declare class SupplyDelivery extends fhir.DomainResource implements ISupplyDelivery {
+export declare class SupplyDelivery extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -148,10 +143,6 @@ export declare class SupplyDelivery extends fhir.DomainResource implements ISupp
      */
     status?: SupplydeliveryStatusValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: SupplyDelivery.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * A link to a resource representing the person whom the delivered item is for.
      */
     patient?: fhir.Reference | undefined;
@@ -166,19 +157,8 @@ export declare class SupplyDelivery extends fhir.DomainResource implements ISupp
     /**
      * [The list of types may be constrained as appropriate for the type of event].
      */
-    occurrenceDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: SupplyDelivery.occurrence[x]
-     */
-    _occurrenceDateTime?: fhir.FhirElement | undefined;
-    /**
-     * [The list of types may be constrained as appropriate for the type of event].
-     */
-    occurrencePeriod?: fhir.Period | undefined;
-    /**
-     * [The list of types may be constrained as appropriate for the type of event].
-     */
-    occurrenceTiming?: fhir.Timing | undefined;
+    occurrence?: (fhir.FhirDateTime | fhir.Period | fhir.Timing) | undefined;
+    readonly __occurrenceIsChoice: true;
     /**
      * The individual responsible for dispensing the medication, supplier or device.
      */
@@ -194,7 +174,7 @@ export declare class SupplyDelivery extends fhir.DomainResource implements ISupp
     /**
      * Default constructor for SupplyDelivery - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISupplyDelivery>);
+    constructor(source?: Partial<SupplyDeliveryArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -206,6 +186,10 @@ export declare class SupplyDelivery extends fhir.DomainResource implements ISupp
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=SupplyDelivery.d.ts.map

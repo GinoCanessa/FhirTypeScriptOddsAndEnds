@@ -51,27 +51,4 @@ export const ConsentActionValueSet = {
 /**
  * This value set includes sample Consent Action codes.
  */
-export var ConsentActionValueSetEnum;
-(function (ConsentActionValueSetEnum) {
-    /**
-     * access: Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or disclosure (view-only access)
-     */
-    ConsentActionValueSetEnum["Access"] = "access";
-    /**
-     * collect: Gather retrieved information for storage
-     */
-    ConsentActionValueSetEnum["Collect"] = "collect";
-    /**
-     * correct: Allow retrieval of a patient's information for the purpose of update or rectify
-     */
-    ConsentActionValueSetEnum["AccessAndCorrect"] = "correct";
-    /**
-     * disclose: Transfer retrieved information
-     */
-    ConsentActionValueSetEnum["Disclose"] = "disclose";
-    /**
-     * use: Utilize the retrieved information
-     */
-    ConsentActionValueSetEnum["Use"] = "use";
-})(ConsentActionValueSetEnum || (ConsentActionValueSetEnum = {}));
 //# sourceMappingURL=ConsentActionValueSet.js.map

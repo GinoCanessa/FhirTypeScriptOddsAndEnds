@@ -27,15 +27,4 @@ export const MeasureDataUsageValueSet = {
 /**
  * The intended usage for supplemental data elements in the measure.
  */
-export var MeasureDataUsageValueSetEnum;
-(function (MeasureDataUsageValueSetEnum) {
-    /**
-     * risk-adjustment-factor: The data is intended to be used to calculate and apply a risk adjustment model for the measure.
-     */
-    MeasureDataUsageValueSetEnum["RiskAdjustmentFactor"] = "risk-adjustment-factor";
-    /**
-     * supplemental-data: The data is intended to be provided as additional information alongside the measure results.
-     */
-    MeasureDataUsageValueSetEnum["SupplementalData"] = "supplemental-data";
-})(MeasureDataUsageValueSetEnum || (MeasureDataUsageValueSetEnum = {}));
 //# sourceMappingURL=MeasureDataUsageValueSet.js.map

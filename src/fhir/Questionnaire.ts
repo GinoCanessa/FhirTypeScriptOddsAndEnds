@@ -3,635 +3,119 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Questionnaire
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { QuestionnaireEnableOperatorValueSet, QuestionnaireEnableOperatorValueSetType, QuestionnaireEnableOperatorValueSetEnum } from '../fhirValueSets/QuestionnaireEnableOperatorValueSet.js'
-import { QuestionnaireQuestionsValueSet, QuestionnaireQuestionsValueSetType, QuestionnaireQuestionsValueSetEnum } from '../fhirValueSets/QuestionnaireQuestionsValueSet.js'
-import { ItemTypeValueSet, ItemTypeValueSetType, ItemTypeValueSetEnum } from '../fhirValueSets/ItemTypeValueSet.js'
-import { QuestionnaireEnableBehaviorValueSet, QuestionnaireEnableBehaviorValueSetType, QuestionnaireEnableBehaviorValueSetEnum } from '../fhirValueSets/QuestionnaireEnableBehaviorValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-import { ResourceTypesValueSet, ResourceTypesValueSetType, ResourceTypesValueSetEnum } from '../fhirValueSets/ResourceTypesValueSet.js'
-
+import { QuestionnaireEnableOperatorValueSet, QuestionnaireEnableOperatorValueSetType,} from '../fhirValueSets/QuestionnaireEnableOperatorValueSet.js';
+import { QuestionnaireEnableOperatorValueSetEnum } from '../valueSetEnums.js';
+import { QuestionnaireQuestionsValueSet, QuestionnaireQuestionsValueSetType,} from '../fhirValueSets/QuestionnaireQuestionsValueSet.js';
+import { QuestionnaireQuestionsValueSetEnum } from '../valueSetEnums.js';
+import { ItemTypeValueSet, ItemTypeValueSetType,} from '../fhirValueSets/ItemTypeValueSet.js';
+import { ItemTypeValueSetEnum } from '../valueSetEnums.js';
+import { QuestionnaireEnableBehaviorValueSet, QuestionnaireEnableBehaviorValueSetType,} from '../fhirValueSets/QuestionnaireEnableBehaviorValueSet.js';
+import { QuestionnaireEnableBehaviorValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { ResourceTypesValueSet, ResourceTypesValueSetType,} from '../fhirValueSets/ResourceTypesValueSet.js';
+import { ResourceTypesValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * If multiple repetitions of this extension are present, the item should be enabled when the condition for *any* of the repetitions is true.  I.e. treat "enableWhen"s as being joined by an "or" clause.  This element is a modifier because if enableWhen is present for an item, "required" is ignored unless one of the enableWhen conditions is met. When an item is disabled, all of its descendants are disabled, regardless of what their own enableWhen logic might evaluate to.
+ * Valid arguments for the QuestionnaireItemEnableWhen type.
  */
-export type IQuestionnaireItemEnableWhen = fhir.IBackboneElement & { 
+export interface QuestionnaireItemEnableWhenArgs extends fhir.BackboneElementArgs {
   /**
    * If multiple question occurrences are present for the same question (same linkId), then this refers to the nearest question occurrence reachable by tracing first the "ancestor" axis and then the "preceding" axis and then the "following" axis.
    */
-  question: string|null;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.question
-   */
-  _question?: fhir.IFhirElement|undefined;
+  question: fhir.FhirString|string|undefined;
   /**
    * Specifies the criteria by which the question is enabled.
    */
   operator: QuestionnaireEnableOperatorValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.operator
+   * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
    */
-  _operator?: fhir.IFhirElement|undefined;
+  answer?: fhir.FhirBoolean|fhir.FhirDecimal|fhir.FhirInteger|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirTime|fhir.FhirString|fhir.Coding|fhir.Quantity|fhir.Reference|undefined;
   /**
    * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
    */
-  answerBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  _answerBoolean?: fhir.IFhirElement|undefined;
+  answerBoolean?: fhir.FhirBoolean|boolean|undefined;
   /**
    * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
    */
-  answerDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  _answerDecimal?: fhir.IFhirElement|undefined;
+  answerDecimal?: fhir.FhirDecimal|number|undefined;
   /**
    * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
    */
-  answerInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  _answerInteger?: fhir.IFhirElement|undefined;
+  answerInteger?: fhir.FhirInteger|number|undefined;
   /**
    * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
    */
-  answerDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  _answerDate?: fhir.IFhirElement|undefined;
+  answerDate?: fhir.FhirDate|string|undefined;
   /**
    * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
    */
-  answerDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  _answerDateTime?: fhir.IFhirElement|undefined;
+  answerDateTime?: fhir.FhirDateTime|string|undefined;
   /**
    * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
    */
-  answerTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  _answerTime?: fhir.IFhirElement|undefined;
+  answerTime?: fhir.FhirTime|string|undefined;
   /**
    * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
    */
-  answerString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  _answerString?: fhir.IFhirElement|undefined;
+  answerString?: fhir.FhirString|string|undefined;
   /**
    * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
    */
-  answerCoding?: fhir.ICoding|undefined;
+  answerCoding?: fhir.CodingArgs|undefined;
   /**
    * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
    */
-  answerQuantity?: fhir.IQuantity|undefined;
+  answerQuantity?: fhir.QuantityArgs|undefined;
   /**
    * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
    */
-  answerReference?: fhir.IReference|undefined;
-}
-
-/**
- * This element can be used when the value set machinery of answerValueSet is deemed too cumbersome or when there's a need to capture possible answers that are not codes.
- */
-export type IQuestionnaireItemAnswerOption = fhir.IBackboneElement & { 
-  /**
-   * The data type of the value must agree with the item.type.
-   */
-  valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.answerOption.value[x]
-   */
-  _valueInteger?: fhir.IFhirElement|undefined;
-  /**
-   * The data type of the value must agree with the item.type.
-   */
-  valueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.answerOption.value[x]
-   */
-  _valueDate?: fhir.IFhirElement|undefined;
-  /**
-   * The data type of the value must agree with the item.type.
-   */
-  valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.answerOption.value[x]
-   */
-  _valueTime?: fhir.IFhirElement|undefined;
-  /**
-   * The data type of the value must agree with the item.type.
-   */
-  valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.answerOption.value[x]
-   */
-  _valueString?: fhir.IFhirElement|undefined;
-  /**
-   * The data type of the value must agree with the item.type.
-   */
-  valueCoding?: fhir.ICoding|undefined;
-  /**
-   * The data type of the value must agree with the item.type.
-   */
-  valueReference?: fhir.IReference|undefined;
-  /**
-   * Use this instead of initial[v] if answerValueSet is present.
-   */
-  initialSelected?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.answerOption.initialSelected
-   */
-  _initialSelected?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The user is allowed to change the value and override the default (unless marked as read-only). If the user doesn't change the value, then this initial value will be persisted when the QuestionnaireResponse is initially created.  Note that initial values can influence results.  The data type of initial[x] must agree with the item.type, and only repeating items can have more then one initial value.
- */
-export type IQuestionnaireItemInitial = fhir.IBackboneElement & { 
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  _valueBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  _valueDecimal?: fhir.IFhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  _valueInteger?: fhir.IFhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  valueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  _valueDate?: fhir.IFhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  _valueDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  _valueTime?: fhir.IFhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  _valueString?: fhir.IFhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  valueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  _valueUri?: fhir.IFhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  valueAttachment?: fhir.IAttachment|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  valueCoding?: fhir.ICoding|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  valueQuantity?: fhir.IQuantity|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  valueReference?: fhir.IReference|undefined;
-}
-
-/**
- * The content of the questionnaire is constructed from an ordered, hierarchical collection of items.
- */
-export type IQuestionnaireItem = fhir.IBackboneElement & { 
-  /**
-   * This ''can'' be a meaningful identifier (e.g. a LOINC code) but is not intended to have any meaning.  GUIDs or sequential numbers are appropriate here.
-   */
-  linkId: string|null;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.linkId
-   */
-  _linkId?: fhir.IFhirElement|undefined;
-  /**
-   * The uri refers to an ElementDefinition in a [StructureDefinition](structuredefinition.html#) and always starts with the [canonical URL](references.html#canonical) for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](element-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition.
-   */
-  definition?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.definition
-   */
-  _definition?: fhir.IFhirElement|undefined;
-  /**
-   * The value may come from the ElementDefinition referred to by .definition.
-   */
-  code?: fhir.ICoding[]|undefined;
-  /**
-   * These are generally unique within a questionnaire, though this is not guaranteed. Some questionnaires may have multiple questions with the same label with logic to control which gets exposed.  Typically, these won't be used for "display" items, though such use is not prohibited.  Systems SHOULD NOT generate their own prefixes if prefixes are defined for any items within a Questionnaire.
-   */
-  prefix?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.prefix
-   */
-  _prefix?: fhir.IFhirElement|undefined;
-  /**
-   * When using this element to represent the name of a section, use group type item and also make sure to limit the text element to a short string suitable for display as a section heading.  Group item instructions should be included as a display type item within the group.
-   */
-  text?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.text
-   */
-  _text?: fhir.IFhirElement|undefined;
-  /**
-   * Additional constraints on the type of answer can be conveyed by extensions. The value may come from the ElementDefinition referred to by .definition.
-   */
-  type: ItemTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * If multiple repetitions of this extension are present, the item should be enabled when the condition for *any* of the repetitions is true.  I.e. treat "enableWhen"s as being joined by an "or" clause.  This element is a modifier because if enableWhen is present for an item, "required" is ignored unless one of the enableWhen conditions is met. When an item is disabled, all of its descendants are disabled, regardless of what their own enableWhen logic might evaluate to.
-   */
-  enableWhen?: fhir.IQuestionnaireItemEnableWhen[]|undefined;
-  /**
-   * This element must be specified if more than one enableWhen value is provided.
-   */
-  enableBehavior?: QuestionnaireEnableBehaviorValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableBehavior
-   */
-  _enableBehavior?: fhir.IFhirElement|undefined;
-  /**
-   * Questionnaire.item.required only has meaning for elements that are conditionally enabled with enableWhen if the condition evaluates to true.  If an item that contains other items is marked as required, that does not automatically make the contained elements required (though required groups must contain at least one child element). The value may come from the ElementDefinition referred to by .definition.
-   */
-  required?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.required
-   */
-  _required?: fhir.IFhirElement|undefined;
-  /**
-   * If a question is marked as repeats=true, then multiple answers can be provided for the question in the corresponding QuestionnaireResponse.  When rendering the questionnaire, it is up to the rendering software whether to render the question text for each answer repetition (i.e. "repeat the question") or to simply allow entry/selection of multiple answers for the question (repeat the answers).  Which is most appropriate visually may depend on the type of answer as well as whether there are nested items.
-   * The resulting QuestionnaireResponse will be populated the same way regardless of rendering - one 'question' item with multiple answer values.
-   *  The value may come from the ElementDefinition referred to by .definition.
-   */
-  repeats?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.repeats
-   */
-  _repeats?: fhir.IFhirElement|undefined;
-  /**
-   * The value of readOnly elements can be established by asserting  extensions for defaultValues, linkages that support pre-population and/or extensions that support calculation based on other answers.
-   */
-  readOnly?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.readOnly
-   */
-  _readOnly?: fhir.IFhirElement|undefined;
-  /**
-   * For base64binary, reflects the number of characters representing the encoded data, not the number of bytes of the binary data. The value may come from the ElementDefinition referred to by .definition.
-   */
-  maxLength?: number|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.maxLength
-   */
-  _maxLength?: fhir.IFhirElement|undefined;
-  /**
-   * LOINC defines many useful value sets for questionnaire responses. See [LOINC Answer Lists](loinc.html#alist). The value may come from the ElementDefinition referred to by .definition.
-   */
-  answerValueSet?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.answerValueSet
-   */
-  _answerValueSet?: fhir.IFhirElement|undefined;
-  /**
-   * This element can be used when the value set machinery of answerValueSet is deemed too cumbersome or when there's a need to capture possible answers that are not codes.
-   */
-  answerOption?: fhir.IQuestionnaireItemAnswerOption[]|undefined;
-  /**
-   * The user is allowed to change the value and override the default (unless marked as read-only). If the user doesn't change the value, then this initial value will be persisted when the QuestionnaireResponse is initially created.  Note that initial values can influence results.  The data type of initial[x] must agree with the item.type, and only repeating items can have more then one initial value.
-   */
-  initial?: fhir.IQuestionnaireItemInitial[]|undefined;
-  /**
-   * There is no specified limit to the depth of nesting.  However, Questionnaire authors are encouraged to consider the impact on the user and user interface of overly deep nesting.
-   */
-  item?: fhir.IQuestionnaireItem[]|undefined;
-}
-
-/**
- * A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection.
- */
-export type IQuestionnaire = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Questionnaire";
-  /**
-   * The name of the referenced questionnaire can be conveyed using the http://hl7.org/fhir/StructureDefinition/display extension.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this questionnaire outside of FHIR, where it is not possible to use the logical URI.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * There may be different questionnaire instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the questionnaire with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * The URL of a Questionnaire that this Questionnaire is based on.
-   */
-  derivedFrom?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.derivedFrom
-   */
-  _derivedFrom?: fhir.IFhirElement[]|undefined;
-  /**
-   * Allows filtering of questionnaires that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Questionnaire.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of questionnaires that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * If none are specified, then the subject is unlimited.
-   */
-  subjectType?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.subjectType
-   */
-  _subjectType?: fhir.IFhirElement[]|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the questionnaire. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the questionnaire is the organization or individual primarily responsible for the maintenance and upkeep of the questionnaire. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the questionnaire. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the questionnaire was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the questionnaire as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the questionnaire is presumed to be the predominant language in the place the questionnaire was created).
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the questionnaire to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * This element does not describe the usage of the questionnaire. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this questionnaire.
-   */
-  purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.purpose
-   */
-  _purpose?: fhir.IFhirElement|undefined;
-  /**
-   * A copyright statement relating to the questionnaire and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the questionnaire.
-   */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-  /**
-   * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
-   */
-  approvalDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.approvalDate
-   */
-  _approvalDate?: fhir.IFhirElement|undefined;
-  /**
-   * If specified, this date follows the original approval date.
-   */
-  lastReviewDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.lastReviewDate
-   */
-  _lastReviewDate?: fhir.IFhirElement|undefined;
-  /**
-   * The effective period for a questionnaire  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
-   */
-  effectivePeriod?: fhir.IPeriod|undefined;
-  /**
-   * An identifier for this question or group of questions in a particular terminology such as LOINC.
-   */
-  code?: fhir.ICoding[]|undefined;
-  /**
-   * The content of the questionnaire is constructed from an ordered, hierarchical collection of items.
-   */
-  item?: fhir.IQuestionnaireItem[]|undefined;
+  answerReference?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * If multiple repetitions of this extension are present, the item should be enabled when the condition for *any* of the repetitions is true.  I.e. treat "enableWhen"s as being joined by an "or" clause.  This element is a modifier because if enableWhen is present for an item, "required" is ignored unless one of the enableWhen conditions is met. When an item is disabled, all of its descendants are disabled, regardless of what their own enableWhen logic might evaluate to.
  */
-export class QuestionnaireItemEnableWhen extends fhir.BackboneElement implements IQuestionnaireItemEnableWhen {
+export class QuestionnaireItemEnableWhen extends fhir.BackboneElement {
+  readonly __dataType:string = 'QuestionnaireItemEnableWhen';
   /**
    * If multiple question occurrences are present for the same question (same linkId), then this refers to the nearest question occurrence reachable by tracing first the "ancestor" axis and then the "preceding" axis and then the "following" axis.
    */
-  public question: string|null;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.question
-   */
-  public _question?: fhir.FhirElement|undefined;
+  public question: fhir.FhirString|null;
   /**
    * Specifies the criteria by which the question is enabled.
    */
   public operator: QuestionnaireEnableOperatorValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.operator
-   */
-  public _operator?: fhir.FhirElement|undefined;
-  /**
    * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
    */
-  public answerBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  public _answerBoolean?: fhir.FhirElement|undefined;
-  /**
-   * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
-   */
-  public answerDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  public _answerDecimal?: fhir.FhirElement|undefined;
-  /**
-   * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
-   */
-  public answerInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  public _answerInteger?: fhir.FhirElement|undefined;
-  /**
-   * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
-   */
-  public answerDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  public _answerDate?: fhir.FhirElement|undefined;
-  /**
-   * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
-   */
-  public answerDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  public _answerDateTime?: fhir.FhirElement|undefined;
-  /**
-   * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
-   */
-  public answerTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  public _answerTime?: fhir.FhirElement|undefined;
-  /**
-   * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
-   */
-  public answerString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableWhen.answer[x]
-   */
-  public _answerString?: fhir.FhirElement|undefined;
-  /**
-   * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
-   */
-  public answerCoding?: fhir.Coding|undefined;
-  /**
-   * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
-   */
-  public answerQuantity?: fhir.Quantity|undefined;
-  /**
-   * A value that the referenced question is tested using the specified operator in order for the item to be enabled.
-   */
-  public answerReference?: fhir.Reference|undefined;
+  public answer: (fhir.FhirBoolean|fhir.FhirDecimal|fhir.FhirInteger|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirTime|fhir.FhirString|fhir.Coding|fhir.Quantity|fhir.Reference)|null;
+  readonly __answerIsChoice:true = true;
   /**
    * Default constructor for QuestionnaireItemEnableWhen - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IQuestionnaireItemEnableWhen> = { }) {
-    super(source);
-    if (source['question']) { this.question = source.question; }
+  constructor(source:Partial<QuestionnaireItemEnableWhenArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['question']) { this.question = new fhir.FhirString({value: source.question}); }
     else { this.question = null; }
-    if (source['_question']) { this._question = new fhir.FhirElement(source._question!); }
     if (source['operator']) { this.operator = source.operator; }
     else { this.operator = null; }
-    if (source['_operator']) { this._operator = new fhir.FhirElement(source._operator!); }
-    if (source['answerBoolean']) { this.answerBoolean = source.answerBoolean; }
-    if (source['_answerBoolean']) { this._answerBoolean = new fhir.FhirElement(source._answerBoolean!); }
-    if (source['answerDecimal']) { this.answerDecimal = source.answerDecimal; }
-    if (source['_answerDecimal']) { this._answerDecimal = new fhir.FhirElement(source._answerDecimal!); }
-    if (source['answerInteger']) { this.answerInteger = source.answerInteger; }
-    if (source['_answerInteger']) { this._answerInteger = new fhir.FhirElement(source._answerInteger!); }
-    if (source['answerDate']) { this.answerDate = source.answerDate; }
-    if (source['_answerDate']) { this._answerDate = new fhir.FhirElement(source._answerDate!); }
-    if (source['answerDateTime']) { this.answerDateTime = source.answerDateTime; }
-    if (source['_answerDateTime']) { this._answerDateTime = new fhir.FhirElement(source._answerDateTime!); }
-    if (source['answerTime']) { this.answerTime = source.answerTime; }
-    if (source['_answerTime']) { this._answerTime = new fhir.FhirElement(source._answerTime!); }
-    if (source['answerString']) { this.answerString = source.answerString; }
-    if (source['_answerString']) { this._answerString = new fhir.FhirElement(source._answerString!); }
-    if (source['answerCoding']) { this.answerCoding = new fhir.Coding(source.answerCoding!); }
-    if (source['answerQuantity']) { this.answerQuantity = new fhir.Quantity(source.answerQuantity!); }
-    if (source['answerReference']) { this.answerReference = new fhir.Reference(source.answerReference!); }
+    if (source['answer']) { this.answer = source.answer; }
+    else if (source['answerBoolean']) { this.answer = new fhir.FhirBoolean({value: source.answerBoolean}); }
+    else if (source['answerDecimal']) { this.answer = new fhir.FhirDecimal({value: source.answerDecimal}); }
+    else if (source['answerInteger']) { this.answer = new fhir.FhirInteger({value: source.answerInteger}); }
+    else if (source['answerDate']) { this.answer = new fhir.FhirDate({value: source.answerDate}); }
+    else if (source['answerDateTime']) { this.answer = new fhir.FhirDateTime({value: source.answerDateTime}); }
+    else if (source['answerTime']) { this.answer = new fhir.FhirTime({value: source.answerTime}); }
+    else if (source['answerString']) { this.answer = new fhir.FhirString({value: source.answerString}); }
+    else if (source['answerCoding']) { this.answer = new fhir.Coding(source.answerCoding); }
+    else if (source['answerQuantity']) { this.answer = new fhir.Quantity(source.answerQuantity); }
+    else if (source['answerReference']) { this.answer = new fhir.Reference(source.answerReference); }
+    else { this.answer = null; }
   }
   /**
    * Required-bound Value Set for operator
@@ -642,388 +126,380 @@ export class QuestionnaireItemEnableWhen extends fhir.BackboneElement implements
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["question"]) { results.push(["question",'Missing required element: Questionnaire.item.enableWhen.question']); }
-    if (this["_question"]) { results.push(...this._question.doModelValidation()); }
-    if (!this["operator"]) { results.push(["operator",'Missing required element: Questionnaire.item.enableWhen.operator']); }
-    if (this["_operator"]) { results.push(...this._operator.doModelValidation()); }
-    if (this["_answerBoolean"]) { results.push(...this._answerBoolean.doModelValidation()); }
-    if (this["_answerDecimal"]) { results.push(...this._answerDecimal.doModelValidation()); }
-    if (this["_answerInteger"]) { results.push(...this._answerInteger.doModelValidation()); }
-    if (this["_answerDate"]) { results.push(...this._answerDate.doModelValidation()); }
-    if (this["_answerDateTime"]) { results.push(...this._answerDateTime.doModelValidation()); }
-    if (this["_answerTime"]) { results.push(...this._answerTime.doModelValidation()); }
-    if (this["_answerString"]) { results.push(...this._answerString.doModelValidation()); }
-    if (this["answerCoding"]) { results.push(...this.answerCoding.doModelValidation()); }
-    if (this["answerQuantity"]) { results.push(...this.answerQuantity.doModelValidation()); }
-    if (this["answerReference"]) { results.push(...this.answerReference.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['question']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property question:fhir.FhirString fhir: Questionnaire.item.enableWhen.question:string", }));
+    }
+    if (this["question"]) { outcome.issue!.push(...this.question.doModelValidation().issue!); }
+    if (!this['operator']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property operator:QuestionnaireEnableOperatorValueSetEnum fhir: Questionnaire.item.enableWhen.operator:code", }));
+    }
+    if (!this['answer']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property answer: fhir: Questionnaire.item.enableWhen.answer[x]:", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the QuestionnaireItemAnswerOption type.
+ */
+export interface QuestionnaireItemAnswerOptionArgs extends fhir.BackboneElementArgs {
+  /**
+   * The data type of the value must agree with the item.type.
+   */
+  value?: fhir.FhirInteger|fhir.FhirDate|fhir.FhirTime|fhir.FhirString|fhir.Coding|fhir.Reference|undefined;
+  /**
+   * The data type of the value must agree with the item.type.
+   */
+  valueInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * The data type of the value must agree with the item.type.
+   */
+  valueDate?: fhir.FhirDate|string|undefined;
+  /**
+   * The data type of the value must agree with the item.type.
+   */
+  valueTime?: fhir.FhirTime|string|undefined;
+  /**
+   * The data type of the value must agree with the item.type.
+   */
+  valueString?: fhir.FhirString|string|undefined;
+  /**
+   * The data type of the value must agree with the item.type.
+   */
+  valueCoding?: fhir.CodingArgs|undefined;
+  /**
+   * The data type of the value must agree with the item.type.
+   */
+  valueReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * Use this instead of initial[v] if answerValueSet is present.
+   */
+  initialSelected?: fhir.FhirBoolean|boolean|undefined;
 }
 
 /**
  * This element can be used when the value set machinery of answerValueSet is deemed too cumbersome or when there's a need to capture possible answers that are not codes.
  */
-export class QuestionnaireItemAnswerOption extends fhir.BackboneElement implements IQuestionnaireItemAnswerOption {
+export class QuestionnaireItemAnswerOption extends fhir.BackboneElement {
+  readonly __dataType:string = 'QuestionnaireItemAnswerOption';
   /**
    * The data type of the value must agree with the item.type.
    */
-  public valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.answerOption.value[x]
-   */
-  public _valueInteger?: fhir.FhirElement|undefined;
-  /**
-   * The data type of the value must agree with the item.type.
-   */
-  public valueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.answerOption.value[x]
-   */
-  public _valueDate?: fhir.FhirElement|undefined;
-  /**
-   * The data type of the value must agree with the item.type.
-   */
-  public valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.answerOption.value[x]
-   */
-  public _valueTime?: fhir.FhirElement|undefined;
-  /**
-   * The data type of the value must agree with the item.type.
-   */
-  public valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.answerOption.value[x]
-   */
-  public _valueString?: fhir.FhirElement|undefined;
-  /**
-   * The data type of the value must agree with the item.type.
-   */
-  public valueCoding?: fhir.Coding|undefined;
-  /**
-   * The data type of the value must agree with the item.type.
-   */
-  public valueReference?: fhir.Reference|undefined;
+  public value: (fhir.FhirInteger|fhir.FhirDate|fhir.FhirTime|fhir.FhirString|fhir.Coding|fhir.Reference)|null;
+  readonly __valueIsChoice:true = true;
   /**
    * Use this instead of initial[v] if answerValueSet is present.
    */
-  public initialSelected?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.answerOption.initialSelected
-   */
-  public _initialSelected?: fhir.FhirElement|undefined;
+  public initialSelected?: fhir.FhirBoolean|undefined;
   /**
    * Default constructor for QuestionnaireItemAnswerOption - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IQuestionnaireItemAnswerOption> = { }) {
-    super(source);
-    if (source['valueInteger']) { this.valueInteger = source.valueInteger; }
-    if (source['_valueInteger']) { this._valueInteger = new fhir.FhirElement(source._valueInteger!); }
-    if (source['valueDate']) { this.valueDate = source.valueDate; }
-    if (source['_valueDate']) { this._valueDate = new fhir.FhirElement(source._valueDate!); }
-    if (source['valueTime']) { this.valueTime = source.valueTime; }
-    if (source['_valueTime']) { this._valueTime = new fhir.FhirElement(source._valueTime!); }
-    if (source['valueString']) { this.valueString = source.valueString; }
-    if (source['_valueString']) { this._valueString = new fhir.FhirElement(source._valueString!); }
-    if (source['valueCoding']) { this.valueCoding = new fhir.Coding(source.valueCoding!); }
-    if (source['valueReference']) { this.valueReference = new fhir.Reference(source.valueReference!); }
-    if (source['initialSelected']) { this.initialSelected = source.initialSelected; }
-    if (source['_initialSelected']) { this._initialSelected = new fhir.FhirElement(source._initialSelected!); }
+  constructor(source:Partial<QuestionnaireItemAnswerOptionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueInteger']) { this.value = new fhir.FhirInteger({value: source.valueInteger}); }
+    else if (source['valueDate']) { this.value = new fhir.FhirDate({value: source.valueDate}); }
+    else if (source['valueTime']) { this.value = new fhir.FhirTime({value: source.valueTime}); }
+    else if (source['valueString']) { this.value = new fhir.FhirString({value: source.valueString}); }
+    else if (source['valueCoding']) { this.value = new fhir.Coding(source.valueCoding); }
+    else if (source['valueReference']) { this.value = new fhir.Reference(source.valueReference); }
+    else { this.value = null; }
+    if (source['initialSelected']) { this.initialSelected = new fhir.FhirBoolean({value: source.initialSelected}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_valueInteger"]) { results.push(...this._valueInteger.doModelValidation()); }
-    if (this["_valueDate"]) { results.push(...this._valueDate.doModelValidation()); }
-    if (this["_valueTime"]) { results.push(...this._valueTime.doModelValidation()); }
-    if (this["_valueString"]) { results.push(...this._valueString.doModelValidation()); }
-    if (this["valueCoding"]) { results.push(...this.valueCoding.doModelValidation()); }
-    if (this["valueReference"]) { results.push(...this.valueReference.doModelValidation()); }
-    if (this["_initialSelected"]) { results.push(...this._initialSelected.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value: fhir: Questionnaire.item.answerOption.value[x]:", }));
+    }
+    if (this["initialSelected"]) { outcome.issue!.push(...this.initialSelected.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the QuestionnaireItemInitial type.
+ */
+export interface QuestionnaireItemInitialArgs extends fhir.BackboneElementArgs {
+  /**
+   * The type of the initial value must be consistent with the type of the item.
+   */
+  value?: fhir.FhirBoolean|fhir.FhirDecimal|fhir.FhirInteger|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirTime|fhir.FhirString|fhir.FhirUri|fhir.Attachment|fhir.Coding|fhir.Quantity|fhir.Reference|undefined;
+  /**
+   * The type of the initial value must be consistent with the type of the item.
+   */
+  valueBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * The type of the initial value must be consistent with the type of the item.
+   */
+  valueDecimal?: fhir.FhirDecimal|number|undefined;
+  /**
+   * The type of the initial value must be consistent with the type of the item.
+   */
+  valueInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * The type of the initial value must be consistent with the type of the item.
+   */
+  valueDate?: fhir.FhirDate|string|undefined;
+  /**
+   * The type of the initial value must be consistent with the type of the item.
+   */
+  valueDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * The type of the initial value must be consistent with the type of the item.
+   */
+  valueTime?: fhir.FhirTime|string|undefined;
+  /**
+   * The type of the initial value must be consistent with the type of the item.
+   */
+  valueString?: fhir.FhirString|string|undefined;
+  /**
+   * The type of the initial value must be consistent with the type of the item.
+   */
+  valueUri?: fhir.FhirUri|string|undefined;
+  /**
+   * The type of the initial value must be consistent with the type of the item.
+   */
+  valueAttachment?: fhir.AttachmentArgs|undefined;
+  /**
+   * The type of the initial value must be consistent with the type of the item.
+   */
+  valueCoding?: fhir.CodingArgs|undefined;
+  /**
+   * The type of the initial value must be consistent with the type of the item.
+   */
+  valueQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * The type of the initial value must be consistent with the type of the item.
+   */
+  valueReference?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * The user is allowed to change the value and override the default (unless marked as read-only). If the user doesn't change the value, then this initial value will be persisted when the QuestionnaireResponse is initially created.  Note that initial values can influence results.  The data type of initial[x] must agree with the item.type, and only repeating items can have more then one initial value.
  */
-export class QuestionnaireItemInitial extends fhir.BackboneElement implements IQuestionnaireItemInitial {
+export class QuestionnaireItemInitial extends fhir.BackboneElement {
+  readonly __dataType:string = 'QuestionnaireItemInitial';
   /**
    * The type of the initial value must be consistent with the type of the item.
    */
-  public valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  public _valueBoolean?: fhir.FhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  public valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  public _valueDecimal?: fhir.FhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  public valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  public _valueInteger?: fhir.FhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  public valueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  public _valueDate?: fhir.FhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  public valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  public _valueDateTime?: fhir.FhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  public valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  public _valueTime?: fhir.FhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  public valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  public _valueString?: fhir.FhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  public valueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.initial.value[x]
-   */
-  public _valueUri?: fhir.FhirElement|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  public valueAttachment?: fhir.Attachment|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  public valueCoding?: fhir.Coding|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  public valueQuantity?: fhir.Quantity|undefined;
-  /**
-   * The type of the initial value must be consistent with the type of the item.
-   */
-  public valueReference?: fhir.Reference|undefined;
+  public value: (fhir.FhirBoolean|fhir.FhirDecimal|fhir.FhirInteger|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirTime|fhir.FhirString|fhir.FhirUri|fhir.Attachment|fhir.Coding|fhir.Quantity|fhir.Reference)|null;
+  readonly __valueIsChoice:true = true;
   /**
    * Default constructor for QuestionnaireItemInitial - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IQuestionnaireItemInitial> = { }) {
-    super(source);
-    if (source['valueBoolean']) { this.valueBoolean = source.valueBoolean; }
-    if (source['_valueBoolean']) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
-    if (source['valueDecimal']) { this.valueDecimal = source.valueDecimal; }
-    if (source['_valueDecimal']) { this._valueDecimal = new fhir.FhirElement(source._valueDecimal!); }
-    if (source['valueInteger']) { this.valueInteger = source.valueInteger; }
-    if (source['_valueInteger']) { this._valueInteger = new fhir.FhirElement(source._valueInteger!); }
-    if (source['valueDate']) { this.valueDate = source.valueDate; }
-    if (source['_valueDate']) { this._valueDate = new fhir.FhirElement(source._valueDate!); }
-    if (source['valueDateTime']) { this.valueDateTime = source.valueDateTime; }
-    if (source['_valueDateTime']) { this._valueDateTime = new fhir.FhirElement(source._valueDateTime!); }
-    if (source['valueTime']) { this.valueTime = source.valueTime; }
-    if (source['_valueTime']) { this._valueTime = new fhir.FhirElement(source._valueTime!); }
-    if (source['valueString']) { this.valueString = source.valueString; }
-    if (source['_valueString']) { this._valueString = new fhir.FhirElement(source._valueString!); }
-    if (source['valueUri']) { this.valueUri = source.valueUri; }
-    if (source['_valueUri']) { this._valueUri = new fhir.FhirElement(source._valueUri!); }
-    if (source['valueAttachment']) { this.valueAttachment = new fhir.Attachment(source.valueAttachment!); }
-    if (source['valueCoding']) { this.valueCoding = new fhir.Coding(source.valueCoding!); }
-    if (source['valueQuantity']) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
-    if (source['valueReference']) { this.valueReference = new fhir.Reference(source.valueReference!); }
+  constructor(source:Partial<QuestionnaireItemInitialArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueBoolean']) { this.value = new fhir.FhirBoolean({value: source.valueBoolean}); }
+    else if (source['valueDecimal']) { this.value = new fhir.FhirDecimal({value: source.valueDecimal}); }
+    else if (source['valueInteger']) { this.value = new fhir.FhirInteger({value: source.valueInteger}); }
+    else if (source['valueDate']) { this.value = new fhir.FhirDate({value: source.valueDate}); }
+    else if (source['valueDateTime']) { this.value = new fhir.FhirDateTime({value: source.valueDateTime}); }
+    else if (source['valueTime']) { this.value = new fhir.FhirTime({value: source.valueTime}); }
+    else if (source['valueString']) { this.value = new fhir.FhirString({value: source.valueString}); }
+    else if (source['valueUri']) { this.value = new fhir.FhirUri({value: source.valueUri}); }
+    else if (source['valueAttachment']) { this.value = new fhir.Attachment(source.valueAttachment); }
+    else if (source['valueCoding']) { this.value = new fhir.Coding(source.valueCoding); }
+    else if (source['valueQuantity']) { this.value = new fhir.Quantity(source.valueQuantity); }
+    else if (source['valueReference']) { this.value = new fhir.Reference(source.valueReference); }
+    else { this.value = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_valueBoolean"]) { results.push(...this._valueBoolean.doModelValidation()); }
-    if (this["_valueDecimal"]) { results.push(...this._valueDecimal.doModelValidation()); }
-    if (this["_valueInteger"]) { results.push(...this._valueInteger.doModelValidation()); }
-    if (this["_valueDate"]) { results.push(...this._valueDate.doModelValidation()); }
-    if (this["_valueDateTime"]) { results.push(...this._valueDateTime.doModelValidation()); }
-    if (this["_valueTime"]) { results.push(...this._valueTime.doModelValidation()); }
-    if (this["_valueString"]) { results.push(...this._valueString.doModelValidation()); }
-    if (this["_valueUri"]) { results.push(...this._valueUri.doModelValidation()); }
-    if (this["valueAttachment"]) { results.push(...this.valueAttachment.doModelValidation()); }
-    if (this["valueCoding"]) { results.push(...this.valueCoding.doModelValidation()); }
-    if (this["valueQuantity"]) { results.push(...this.valueQuantity.doModelValidation()); }
-    if (this["valueReference"]) { results.push(...this.valueReference.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value: fhir: Questionnaire.item.initial.value[x]:", }));
+    }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }
-
 /**
- * The content of the questionnaire is constructed from an ordered, hierarchical collection of items.
+ * Valid arguments for the QuestionnaireItem type.
  */
-export class QuestionnaireItem extends fhir.BackboneElement implements IQuestionnaireItem {
+export interface QuestionnaireItemArgs extends fhir.BackboneElementArgs {
   /**
    * This ''can'' be a meaningful identifier (e.g. a LOINC code) but is not intended to have any meaning.  GUIDs or sequential numbers are appropriate here.
    */
-  public linkId: string|null;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.linkId
-   */
-  public _linkId?: fhir.FhirElement|undefined;
+  linkId: fhir.FhirString|string|undefined;
   /**
    * The uri refers to an ElementDefinition in a [StructureDefinition](structuredefinition.html#) and always starts with the [canonical URL](references.html#canonical) for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](element-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition.
    */
-  public definition?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.definition
-   */
-  public _definition?: fhir.FhirElement|undefined;
+  definition?: fhir.FhirUri|string|undefined;
   /**
    * The value may come from the ElementDefinition referred to by .definition.
    */
-  public code?: fhir.Coding[]|undefined;
+  code?: fhir.CodingArgs[]|undefined;
   /**
    * These are generally unique within a questionnaire, though this is not guaranteed. Some questionnaires may have multiple questions with the same label with logic to control which gets exposed.  Typically, these won't be used for "display" items, though such use is not prohibited.  Systems SHOULD NOT generate their own prefixes if prefixes are defined for any items within a Questionnaire.
    */
-  public prefix?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.prefix
-   */
-  public _prefix?: fhir.FhirElement|undefined;
+  prefix?: fhir.FhirString|string|undefined;
   /**
    * When using this element to represent the name of a section, use group type item and also make sure to limit the text element to a short string suitable for display as a section heading.  Group item instructions should be included as a display type item within the group.
    */
-  public text?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.text
-   */
-  public _text?: fhir.FhirElement|undefined;
+  text?: fhir.FhirString|string|undefined;
   /**
    * Additional constraints on the type of answer can be conveyed by extensions. The value may come from the ElementDefinition referred to by .definition.
    */
-  public type: ItemTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.type
-   */
-  public _type?: fhir.FhirElement|undefined;
+  type: ItemTypeValueSetEnum|null;
   /**
    * If multiple repetitions of this extension are present, the item should be enabled when the condition for *any* of the repetitions is true.  I.e. treat "enableWhen"s as being joined by an "or" clause.  This element is a modifier because if enableWhen is present for an item, "required" is ignored unless one of the enableWhen conditions is met. When an item is disabled, all of its descendants are disabled, regardless of what their own enableWhen logic might evaluate to.
    */
-  public enableWhen?: fhir.QuestionnaireItemEnableWhen[]|undefined;
+  enableWhen?: fhir.QuestionnaireItemEnableWhenArgs[]|undefined;
   /**
    * This element must be specified if more than one enableWhen value is provided.
    */
-  public enableBehavior?: QuestionnaireEnableBehaviorValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.enableBehavior
-   */
-  public _enableBehavior?: fhir.FhirElement|undefined;
+  enableBehavior?: QuestionnaireEnableBehaviorValueSetEnum|undefined;
   /**
    * Questionnaire.item.required only has meaning for elements that are conditionally enabled with enableWhen if the condition evaluates to true.  If an item that contains other items is marked as required, that does not automatically make the contained elements required (though required groups must contain at least one child element). The value may come from the ElementDefinition referred to by .definition.
    */
-  public required?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.required
-   */
-  public _required?: fhir.FhirElement|undefined;
+  required?: fhir.FhirBoolean|boolean|undefined;
   /**
    * If a question is marked as repeats=true, then multiple answers can be provided for the question in the corresponding QuestionnaireResponse.  When rendering the questionnaire, it is up to the rendering software whether to render the question text for each answer repetition (i.e. "repeat the question") or to simply allow entry/selection of multiple answers for the question (repeat the answers).  Which is most appropriate visually may depend on the type of answer as well as whether there are nested items.
    * The resulting QuestionnaireResponse will be populated the same way regardless of rendering - one 'question' item with multiple answer values.
    *  The value may come from the ElementDefinition referred to by .definition.
    */
-  public repeats?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.repeats
-   */
-  public _repeats?: fhir.FhirElement|undefined;
+  repeats?: fhir.FhirBoolean|boolean|undefined;
   /**
    * The value of readOnly elements can be established by asserting  extensions for defaultValues, linkages that support pre-population and/or extensions that support calculation based on other answers.
    */
-  public readOnly?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.readOnly
-   */
-  public _readOnly?: fhir.FhirElement|undefined;
+  readOnly?: fhir.FhirBoolean|boolean|undefined;
   /**
    * For base64binary, reflects the number of characters representing the encoded data, not the number of bytes of the binary data. The value may come from the ElementDefinition referred to by .definition.
    */
-  public maxLength?: number|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.maxLength
-   */
-  public _maxLength?: fhir.FhirElement|undefined;
+  maxLength?: fhir.FhirInteger|number|undefined;
   /**
    * LOINC defines many useful value sets for questionnaire responses. See [LOINC Answer Lists](loinc.html#alist). The value may come from the ElementDefinition referred to by .definition.
    */
-  public answerValueSet?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.item.answerValueSet
-   */
-  public _answerValueSet?: fhir.FhirElement|undefined;
+  answerValueSet?: fhir.FhirCanonical|string|undefined;
   /**
    * This element can be used when the value set machinery of answerValueSet is deemed too cumbersome or when there's a need to capture possible answers that are not codes.
    */
-  public answerOption?: fhir.QuestionnaireItemAnswerOption[]|undefined;
+  answerOption?: fhir.QuestionnaireItemAnswerOptionArgs[]|undefined;
   /**
    * The user is allowed to change the value and override the default (unless marked as read-only). If the user doesn't change the value, then this initial value will be persisted when the QuestionnaireResponse is initially created.  Note that initial values can influence results.  The data type of initial[x] must agree with the item.type, and only repeating items can have more then one initial value.
    */
-  public initial?: fhir.QuestionnaireItemInitial[]|undefined;
+  initial?: fhir.QuestionnaireItemInitialArgs[]|undefined;
   /**
    * There is no specified limit to the depth of nesting.  However, Questionnaire authors are encouraged to consider the impact on the user and user interface of overly deep nesting.
    */
-  public item?: fhir.QuestionnaireItem[]|undefined;
+  item?: fhir.QuestionnaireItemArgs[]|undefined;
+}
+
+/**
+ * The content of the questionnaire is constructed from an ordered, hierarchical collection of items.
+ */
+export class QuestionnaireItem extends fhir.BackboneElement {
+  readonly __dataType:string = 'QuestionnaireItem';
+  /**
+   * This ''can'' be a meaningful identifier (e.g. a LOINC code) but is not intended to have any meaning.  GUIDs or sequential numbers are appropriate here.
+   */
+  public linkId: fhir.FhirString|null;
+  /**
+   * The uri refers to an ElementDefinition in a [StructureDefinition](structuredefinition.html#) and always starts with the [canonical URL](references.html#canonical) for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](element-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition.
+   */
+  public definition?: fhir.FhirUri|undefined;
+  /**
+   * The value may come from the ElementDefinition referred to by .definition.
+   */
+  public code?: fhir.Coding[]|undefined = [];
+  /**
+   * These are generally unique within a questionnaire, though this is not guaranteed. Some questionnaires may have multiple questions with the same label with logic to control which gets exposed.  Typically, these won't be used for "display" items, though such use is not prohibited.  Systems SHOULD NOT generate their own prefixes if prefixes are defined for any items within a Questionnaire.
+   */
+  public prefix?: fhir.FhirString|undefined;
+  /**
+   * When using this element to represent the name of a section, use group type item and also make sure to limit the text element to a short string suitable for display as a section heading.  Group item instructions should be included as a display type item within the group.
+   */
+  public text?: fhir.FhirString|undefined;
+  /**
+   * Additional constraints on the type of answer can be conveyed by extensions. The value may come from the ElementDefinition referred to by .definition.
+   */
+  public type: ItemTypeValueSetEnum|null;
+  /**
+   * If multiple repetitions of this extension are present, the item should be enabled when the condition for *any* of the repetitions is true.  I.e. treat "enableWhen"s as being joined by an "or" clause.  This element is a modifier because if enableWhen is present for an item, "required" is ignored unless one of the enableWhen conditions is met. When an item is disabled, all of its descendants are disabled, regardless of what their own enableWhen logic might evaluate to.
+   */
+  public enableWhen?: fhir.QuestionnaireItemEnableWhen[]|undefined = [];
+  /**
+   * This element must be specified if more than one enableWhen value is provided.
+   */
+  public enableBehavior?: QuestionnaireEnableBehaviorValueSetEnum|undefined;
+  /**
+   * Questionnaire.item.required only has meaning for elements that are conditionally enabled with enableWhen if the condition evaluates to true.  If an item that contains other items is marked as required, that does not automatically make the contained elements required (though required groups must contain at least one child element). The value may come from the ElementDefinition referred to by .definition.
+   */
+  public required?: fhir.FhirBoolean|undefined;
+  /**
+   * If a question is marked as repeats=true, then multiple answers can be provided for the question in the corresponding QuestionnaireResponse.  When rendering the questionnaire, it is up to the rendering software whether to render the question text for each answer repetition (i.e. "repeat the question") or to simply allow entry/selection of multiple answers for the question (repeat the answers).  Which is most appropriate visually may depend on the type of answer as well as whether there are nested items.
+   * The resulting QuestionnaireResponse will be populated the same way regardless of rendering - one 'question' item with multiple answer values.
+   *  The value may come from the ElementDefinition referred to by .definition.
+   */
+  public repeats?: fhir.FhirBoolean|undefined;
+  /**
+   * The value of readOnly elements can be established by asserting  extensions for defaultValues, linkages that support pre-population and/or extensions that support calculation based on other answers.
+   */
+  public readOnly?: fhir.FhirBoolean|undefined;
+  /**
+   * For base64binary, reflects the number of characters representing the encoded data, not the number of bytes of the binary data. The value may come from the ElementDefinition referred to by .definition.
+   */
+  public maxLength?: fhir.FhirInteger|undefined;
+  /**
+   * LOINC defines many useful value sets for questionnaire responses. See [LOINC Answer Lists](loinc.html#alist). The value may come from the ElementDefinition referred to by .definition.
+   */
+  public answerValueSet?: fhir.FhirCanonical|undefined;
+  /**
+   * This element can be used when the value set machinery of answerValueSet is deemed too cumbersome or when there's a need to capture possible answers that are not codes.
+   */
+  public answerOption?: fhir.QuestionnaireItemAnswerOption[]|undefined = [];
+  /**
+   * The user is allowed to change the value and override the default (unless marked as read-only). If the user doesn't change the value, then this initial value will be persisted when the QuestionnaireResponse is initially created.  Note that initial values can influence results.  The data type of initial[x] must agree with the item.type, and only repeating items can have more then one initial value.
+   */
+  public initial?: fhir.QuestionnaireItemInitial[]|undefined = [];
+  /**
+   * There is no specified limit to the depth of nesting.  However, Questionnaire authors are encouraged to consider the impact on the user and user interface of overly deep nesting.
+   */
+  public item?: fhir.QuestionnaireItem[]|undefined = [];
   /**
    * Default constructor for QuestionnaireItem - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IQuestionnaireItem> = { }) {
-    super(source);
-    if (source['linkId']) { this.linkId = source.linkId; }
+  constructor(source:Partial<QuestionnaireItemArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['linkId']) { this.linkId = new fhir.FhirString({value: source.linkId}); }
     else { this.linkId = null; }
-    if (source['_linkId']) { this._linkId = new fhir.FhirElement(source._linkId!); }
-    if (source['definition']) { this.definition = source.definition; }
-    if (source['_definition']) { this._definition = new fhir.FhirElement(source._definition!); }
+    if (source['definition']) { this.definition = new fhir.FhirUri({value: source.definition}); }
     if (source['code']) { this.code = source.code.map((x) => new fhir.Coding(x)); }
-    if (source['prefix']) { this.prefix = source.prefix; }
-    if (source['_prefix']) { this._prefix = new fhir.FhirElement(source._prefix!); }
-    if (source['text']) { this.text = source.text; }
-    if (source['_text']) { this._text = new fhir.FhirElement(source._text!); }
+    if (source['prefix']) { this.prefix = new fhir.FhirString({value: source.prefix}); }
+    if (source['text']) { this.text = new fhir.FhirString({value: source.text}); }
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
     if (source['enableWhen']) { this.enableWhen = source.enableWhen.map((x) => new fhir.QuestionnaireItemEnableWhen(x)); }
     if (source['enableBehavior']) { this.enableBehavior = source.enableBehavior; }
-    if (source['_enableBehavior']) { this._enableBehavior = new fhir.FhirElement(source._enableBehavior!); }
-    if (source['required']) { this.required = source.required; }
-    if (source['_required']) { this._required = new fhir.FhirElement(source._required!); }
-    if (source['repeats']) { this.repeats = source.repeats; }
-    if (source['_repeats']) { this._repeats = new fhir.FhirElement(source._repeats!); }
-    if (source['readOnly']) { this.readOnly = source.readOnly; }
-    if (source['_readOnly']) { this._readOnly = new fhir.FhirElement(source._readOnly!); }
-    if (source['maxLength']) { this.maxLength = source.maxLength; }
-    if (source['_maxLength']) { this._maxLength = new fhir.FhirElement(source._maxLength!); }
-    if (source['answerValueSet']) { this.answerValueSet = source.answerValueSet; }
-    if (source['_answerValueSet']) { this._answerValueSet = new fhir.FhirElement(source._answerValueSet!); }
+    if (source['required']) { this.required = new fhir.FhirBoolean({value: source.required}); }
+    if (source['repeats']) { this.repeats = new fhir.FhirBoolean({value: source.repeats}); }
+    if (source['readOnly']) { this.readOnly = new fhir.FhirBoolean({value: source.readOnly}); }
+    if (source['maxLength']) { this.maxLength = new fhir.FhirInteger({value: source.maxLength}); }
+    if (source['answerValueSet']) { this.answerValueSet = new fhir.FhirCanonical({value: source.answerValueSet}); }
     if (source['answerOption']) { this.answerOption = source.answerOption.map((x) => new fhir.QuestionnaireItemAnswerOption(x)); }
     if (source['initial']) { this.initial = source.initial.map((x) => new fhir.QuestionnaireItemInitial(x)); }
     if (source['item']) { this.item = source.item.map((x) => new fhir.QuestionnaireItem(x)); }
@@ -1049,34 +525,140 @@ export class QuestionnaireItem extends fhir.BackboneElement implements IQuestion
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["linkId"]) { results.push(["linkId",'Missing required element: Questionnaire.item.linkId']); }
-    if (this["_linkId"]) { results.push(...this._linkId.doModelValidation()); }
-    if (this["_definition"]) { results.push(...this._definition.doModelValidation()); }
-    if (this["code"]) { this.code.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_prefix"]) { results.push(...this._prefix.doModelValidation()); }
-    if (this["_text"]) { results.push(...this._text.doModelValidation()); }
-    if (!this["type"]) { results.push(["type",'Missing required element: Questionnaire.item.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["enableWhen"]) { this.enableWhen.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_enableBehavior"]) { results.push(...this._enableBehavior.doModelValidation()); }
-    if (this["_required"]) { results.push(...this._required.doModelValidation()); }
-    if (this["_repeats"]) { results.push(...this._repeats.doModelValidation()); }
-    if (this["_readOnly"]) { results.push(...this._readOnly.doModelValidation()); }
-    if (this["_maxLength"]) { results.push(...this._maxLength.doModelValidation()); }
-    if (this["_answerValueSet"]) { results.push(...this._answerValueSet.doModelValidation()); }
-    if (this["answerOption"]) { this.answerOption.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["initial"]) { this.initial.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["item"]) { this.item.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['linkId']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property linkId:fhir.FhirString fhir: Questionnaire.item.linkId:string", }));
+    }
+    if (this["linkId"]) { outcome.issue!.push(...this.linkId.doModelValidation().issue!); }
+    if (this["definition"]) { outcome.issue!.push(...this.definition.doModelValidation().issue!); }
+    if (this["code"]) { this.code.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["prefix"]) { outcome.issue!.push(...this.prefix.doModelValidation().issue!); }
+    if (this["text"]) { outcome.issue!.push(...this.text.doModelValidation().issue!); }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:ItemTypeValueSetEnum fhir: Questionnaire.item.type:code", }));
+    }
+    if (this["enableWhen"]) { this.enableWhen.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["required"]) { outcome.issue!.push(...this.required.doModelValidation().issue!); }
+    if (this["repeats"]) { outcome.issue!.push(...this.repeats.doModelValidation().issue!); }
+    if (this["readOnly"]) { outcome.issue!.push(...this.readOnly.doModelValidation().issue!); }
+    if (this["maxLength"]) { outcome.issue!.push(...this.maxLength.doModelValidation().issue!); }
+    if (this["answerValueSet"]) { outcome.issue!.push(...this.answerValueSet.doModelValidation().issue!); }
+    if (this["answerOption"]) { this.answerOption.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["initial"]) { this.initial.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["item"]) { this.item.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Questionnaire type.
+ */
+export interface QuestionnaireArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Questionnaire"|undefined;
+  /**
+   * The name of the referenced questionnaire can be conveyed using the http://hl7.org/fhir/StructureDefinition/display extension.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this questionnaire outside of FHIR, where it is not possible to use the logical URI.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * There may be different questionnaire instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the questionnaire with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * The URL of a Questionnaire that this Questionnaire is based on.
+   */
+  derivedFrom?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * Allows filtering of questionnaires that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Allows filtering of questionnaires that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * If none are specified, then the subject is unlimited.
+   */
+  subjectType?: fhir.FhirCode[]|string[]|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the questionnaire. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the questionnaire is the organization or individual primarily responsible for the maintenance and upkeep of the questionnaire. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the questionnaire. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the questionnaire was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the questionnaire as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the questionnaire is presumed to be the predominant language in the place the questionnaire was created).
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the questionnaire to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * This element does not describe the usage of the questionnaire. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this questionnaire.
+   */
+  purpose?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * A copyright statement relating to the questionnaire and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the questionnaire.
+   */
+  copyright?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
+   */
+  approvalDate?: fhir.FhirDate|string|undefined;
+  /**
+   * If specified, this date follows the original approval date.
+   */
+  lastReviewDate?: fhir.FhirDate|string|undefined;
+  /**
+   * The effective period for a questionnaire  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
+   */
+  effectivePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * An identifier for this question or group of questions in a particular terminology such as LOINC.
+   */
+  code?: fhir.CodingArgs[]|undefined;
+  /**
+   * The content of the questionnaire is constructed from an ordered, hierarchical collection of items.
+   */
+  item?: fhir.QuestionnaireItemArgs[]|undefined;
 }
 
 /**
  * A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection.
  */
-export class Questionnaire extends fhir.DomainResource implements IQuestionnaire {
+export class Questionnaire extends fhir.DomainResource {
+  readonly __dataType:string = 'Questionnaire';
   /**
    * Resource Type Name
    */
@@ -1084,139 +666,79 @@ export class Questionnaire extends fhir.DomainResource implements IQuestionnaire
   /**
    * The name of the referenced questionnaire can be conveyed using the http://hl7.org/fhir/StructureDefinition/display extension.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this questionnaire outside of FHIR, where it is not possible to use the logical URI.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * There may be different questionnaire instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the questionnaire with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * The URL of a Questionnaire that this Questionnaire is based on.
    */
-  public derivedFrom?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.derivedFrom
-   */
-  public _derivedFrom?: fhir.FhirElement[]|undefined;
+  public derivedFrom?: fhir.FhirCanonical[]|undefined = [];
   /**
    * Allows filtering of questionnaires that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Questionnaire.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of questionnaires that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * If none are specified, then the subject is unlimited.
    */
-  public subjectType?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.subjectType
-   */
-  public _subjectType?: fhir.FhirElement[]|undefined;
+  public subjectType?: fhir.FhirCode[]|undefined = [];
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the questionnaire. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the questionnaire is the organization or individual primarily responsible for the maintenance and upkeep of the questionnaire. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the questionnaire. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the questionnaire was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the questionnaire as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the questionnaire is presumed to be the predominant language in the place the questionnaire was created).
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the questionnaire to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * This element does not describe the usage of the questionnaire. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this questionnaire.
    */
-  public purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.purpose
-   */
-  public _purpose?: fhir.FhirElement|undefined;
+  public purpose?: fhir.FhirMarkdown|undefined;
   /**
    * A copyright statement relating to the questionnaire and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the questionnaire.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
    */
-  public approvalDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.approvalDate
-   */
-  public _approvalDate?: fhir.FhirElement|undefined;
+  public approvalDate?: fhir.FhirDate|undefined;
   /**
    * If specified, this date follows the original approval date.
    */
-  public lastReviewDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Questionnaire.lastReviewDate
-   */
-  public _lastReviewDate?: fhir.FhirElement|undefined;
+  public lastReviewDate?: fhir.FhirDate|undefined;
   /**
    * The effective period for a questionnaire  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
    */
@@ -1224,53 +746,38 @@ export class Questionnaire extends fhir.DomainResource implements IQuestionnaire
   /**
    * An identifier for this question or group of questions in a particular terminology such as LOINC.
    */
-  public code?: fhir.Coding[]|undefined;
+  public code?: fhir.Coding[]|undefined = [];
   /**
    * The content of the questionnaire is constructed from an ordered, hierarchical collection of items.
    */
-  public item?: fhir.QuestionnaireItem[]|undefined;
+  public item?: fhir.QuestionnaireItem[]|undefined = [];
   /**
    * Default constructor for Questionnaire - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IQuestionnaire> = { }) {
-    super(source);
+  constructor(source:Partial<QuestionnaireArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Questionnaire';
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
-    if (source['derivedFrom']) { this.derivedFrom = source.derivedFrom.map((x) => (x)); }
-    if (source['_derivedFrom']) { this._derivedFrom = source._derivedFrom.map((x) => new fhir.FhirElement(x)); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
+    if (source['derivedFrom']) { this.derivedFrom = source.derivedFrom.map((x) => new fhir.FhirCanonical({value: x})); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['subjectType']) { this.subjectType = source.subjectType.map((x) => (x)); }
-    if (source['_subjectType']) { this._subjectType = source._subjectType.map((x) => new fhir.FhirElement(x)); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['subjectType']) { this.subjectType = source.subjectType.map((x) => new fhir.FhirCode({value: x})); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['purpose']) { this.purpose = source.purpose; }
-    if (source['_purpose']) { this._purpose = new fhir.FhirElement(source._purpose!); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
-    if (source['approvalDate']) { this.approvalDate = source.approvalDate; }
-    if (source['_approvalDate']) { this._approvalDate = new fhir.FhirElement(source._approvalDate!); }
-    if (source['lastReviewDate']) { this.lastReviewDate = source.lastReviewDate; }
-    if (source['_lastReviewDate']) { this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate!); }
-    if (source['effectivePeriod']) { this.effectivePeriod = new fhir.Period(source.effectivePeriod!); }
+    if (source['purpose']) { this.purpose = new fhir.FhirMarkdown({value: source.purpose}); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
+    if (source['approvalDate']) { this.approvalDate = new fhir.FhirDate({value: source.approvalDate}); }
+    if (source['lastReviewDate']) { this.lastReviewDate = new fhir.FhirDate({value: source.lastReviewDate}); }
+    if (source['effectivePeriod']) { this.effectivePeriod = new fhir.Period(source.effectivePeriod); }
     if (source['code']) { this.code = source.code.map((x) => new fhir.Coding(x)); }
     if (source['item']) { this.item = source.item.map((x) => new fhir.QuestionnaireItem(x)); }
   }
@@ -1295,32 +802,41 @@ export class Questionnaire extends fhir.DomainResource implements IQuestionnaire
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Questionnaire.resourceType']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (this["_derivedFrom"]) { this._derivedFrom.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: Questionnaire.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (this["_subjectType"]) { this._subjectType.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_purpose"]) { results.push(...this._purpose.doModelValidation()); }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (this["_approvalDate"]) { results.push(...this._approvalDate.doModelValidation()); }
-    if (this["_lastReviewDate"]) { results.push(...this._lastReviewDate.doModelValidation()); }
-    if (this["effectivePeriod"]) { results.push(...this.effectivePeriod.doModelValidation()); }
-    if (this["code"]) { this.code.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["item"]) { this.item.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Questionnaire' fhir: Questionnaire.resourceType:'Questionnaire'", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (this["derivedFrom"]) { this.derivedFrom.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: Questionnaire.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (this["subjectType"]) { this.subjectType.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (this["approvalDate"]) { outcome.issue!.push(...this.approvalDate.doModelValidation().issue!); }
+    if (this["lastReviewDate"]) { outcome.issue!.push(...this.lastReviewDate.doModelValidation().issue!); }
+    if (this["effectivePeriod"]) { outcome.issue!.push(...this.effectivePeriod.doModelValidation().issue!); }
+    if (this["code"]) { this.code.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["item"]) { this.item.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -67,35 +67,4 @@ export const MedicationknowledgeCharacteristicValueSet = {
 /**
  * MedicationKnowledge Characteristic Codes
  */
-export var MedicationknowledgeCharacteristicValueSetEnum;
-(function (MedicationknowledgeCharacteristicValueSetEnum) {
-    /**
-     * coating: Description of the coating of the product
-     */
-    MedicationknowledgeCharacteristicValueSetEnum["Coating"] = "coating";
-    /**
-     * color: Description of the color of the product
-     */
-    MedicationknowledgeCharacteristicValueSetEnum["Color"] = "color";
-    /**
-     * imprintcd: Identyifying marks on product
-     */
-    MedicationknowledgeCharacteristicValueSetEnum["ImprintCode"] = "imprintcd";
-    /**
-     * logo: Description of the Logo of the product
-     */
-    MedicationknowledgeCharacteristicValueSetEnum["Logo"] = "logo";
-    /**
-     * scoring: Description of the scoring of the product
-     */
-    MedicationknowledgeCharacteristicValueSetEnum["Scoring"] = "scoring";
-    /**
-     * shape: Description of the shape of the product
-     */
-    MedicationknowledgeCharacteristicValueSetEnum["Shape"] = "shape";
-    /**
-     * size: Description of size of the product
-     */
-    MedicationknowledgeCharacteristicValueSetEnum["Size"] = "size";
-})(MedicationknowledgeCharacteristicValueSetEnum || (MedicationknowledgeCharacteristicValueSetEnum = {}));
 //# sourceMappingURL=MedicationknowledgeCharacteristicValueSet.js.map

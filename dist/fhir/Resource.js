@@ -3,7 +3,9 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Resource
 import * as fhir from '../fhir.js';
-import { LanguagesValueSet } from '../fhirValueSets/LanguagesValueSet.js';
+import { LanguagesValueSet, } from '../fhirValueSets/LanguagesValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * This is the base resource type for everything.
  */
@@ -11,28 +13,23 @@ export class Resource {
     /**
      * Default constructor for Resource - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
+    constructor(source = {}, options = {}) {
+        this.__dataType = 'Resource';
+        if (options.allowUnknownElements === true) {
+            Object.assign(this, source);
+        }
         this.resourceType = 'Resource';
         if (source['id']) {
-            this.id = source.id;
-        }
-        if (source['_id']) {
-            this._id = new fhir.FhirElement(source._id);
+            this.id = new fhir.FhirId({ value: source.id });
         }
         if (source['meta']) {
             this.meta = new fhir.Meta(source.meta);
         }
         if (source['implicitRules']) {
-            this.implicitRules = source.implicitRules;
-        }
-        if (source['_implicitRules']) {
-            this._implicitRules = new fhir.FhirElement(source._implicitRules);
+            this.implicitRules = new fhir.FhirUri({ value: source.implicitRules });
         }
         if (source['language']) {
-            this.language = source.language;
-        }
-        if (source['_language']) {
-            this._language = new fhir.FhirElement(source._language);
+            this.language = new fhir.FhirCode({ value: source.language });
         }
     }
     /**
@@ -45,23 +42,29 @@ export class Resource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = [];
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Resource.resourceType']);
+        var outcome = new fhir.OperationOutcome({ issue: [] });
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:string fhir: Resource.resourceType:string", }));
         }
-        if (this["_id"]) {
-            results.push(...this._id.doModelValidation());
+        if (this["id"]) {
+            outcome.issue.push(...this.id.doModelValidation().issue);
         }
         if (this["meta"]) {
-            results.push(...this.meta.doModelValidation());
+            outcome.issue.push(...this.meta.doModelValidation().issue);
         }
-        if (this["_implicitRules"]) {
-            results.push(...this._implicitRules.doModelValidation());
+        if (this["implicitRules"]) {
+            outcome.issue.push(...this.implicitRules.doModelValidation().issue);
         }
-        if (this["_language"]) {
-            results.push(...this._language.doModelValidation());
+        if (this["language"]) {
+            outcome.issue.push(...this.language.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Resource.js.map

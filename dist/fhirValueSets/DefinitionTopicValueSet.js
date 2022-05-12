@@ -35,19 +35,4 @@ export const DefinitionTopicValueSet = {
 /**
  * High-level categorization of the definition, used for searching, sorting, and filtering.
  */
-export var DefinitionTopicValueSetEnum;
-(function (DefinitionTopicValueSetEnum) {
-    /**
-     * assessment: The definition is related to assessment of the patient.
-     */
-    DefinitionTopicValueSetEnum["Assessment"] = "assessment";
-    /**
-     * education: The definition is related to education of the patient.
-     */
-    DefinitionTopicValueSetEnum["Education"] = "education";
-    /**
-     * treatment: The definition is related to treatment of the patient.
-     */
-    DefinitionTopicValueSetEnum["Treatment"] = "treatment";
-})(DefinitionTopicValueSetEnum || (DefinitionTopicValueSetEnum = {}));
 //# sourceMappingURL=DefinitionTopicValueSet.js.map

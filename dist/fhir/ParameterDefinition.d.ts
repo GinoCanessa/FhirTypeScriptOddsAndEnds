@@ -1,131 +1,77 @@
 import * as fhir from '../fhir.js';
-import { OperationParameterUseValueSetType, OperationParameterUseValueSetEnum } from '../fhirValueSets/OperationParameterUseValueSet.js';
+import { OperationParameterUseValueSetType } from '../fhirValueSets/OperationParameterUseValueSet.js';
+import { OperationParameterUseValueSetEnum } from '../valueSetEnums.js';
 import { AllTypesValueSetType } from '../fhirValueSets/AllTypesValueSet.js';
 /**
- * The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
+ * Valid arguments for the ParameterDefinition type.
  */
-export declare type IParameterDefinition = fhir.IFhirElement & {
+export interface ParameterDefinitionArgs extends fhir.FhirElementArgs {
     /**
      * The name of the parameter used to allow access to the value of the parameter in evaluation contexts.
      */
-    name?: string | undefined;
-    /**
-     * Extended properties for primitive element: ParameterDefinition.name
-     */
-    _name?: fhir.IFhirElement | undefined;
+    name?: fhir.FhirCode | string | undefined;
     /**
      * Whether the parameter is input or output for the module.
      */
     use: OperationParameterUseValueSetEnum | null;
     /**
-     * Extended properties for primitive element: ParameterDefinition.use
-     */
-    _use?: fhir.IFhirElement | undefined;
-    /**
      * The minimum number of times this parameter SHALL appear in the request or response.
      */
-    min?: number | undefined;
-    /**
-     * Extended properties for primitive element: ParameterDefinition.min
-     */
-    _min?: fhir.IFhirElement | undefined;
+    min?: fhir.FhirInteger | number | undefined;
     /**
      * The maximum number of times this element is permitted to appear in the request or response.
      */
-    max?: string | undefined;
-    /**
-     * Extended properties for primitive element: ParameterDefinition.max
-     */
-    _max?: fhir.IFhirElement | undefined;
+    max?: fhir.FhirString | string | undefined;
     /**
      * A brief discussion of what the parameter is for and how it is used by the module.
      */
-    documentation?: string | undefined;
-    /**
-     * Extended properties for primitive element: ParameterDefinition.documentation
-     */
-    _documentation?: fhir.IFhirElement | undefined;
+    documentation?: fhir.FhirString | string | undefined;
     /**
      * The type of the parameter.
      */
-    type: string | null;
-    /**
-     * Extended properties for primitive element: ParameterDefinition.type
-     */
-    _type?: fhir.IFhirElement | undefined;
+    type: fhir.FhirCode | string | undefined;
     /**
      * If specified, this indicates a profile that the input data must conform to, or that the output data will conform to.
      */
-    profile?: string | undefined;
-    /**
-     * Extended properties for primitive element: ParameterDefinition.profile
-     */
-    _profile?: fhir.IFhirElement | undefined;
-};
+    profile?: fhir.FhirCanonical | string | undefined;
+}
 /**
  * The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
  */
-export declare class ParameterDefinition extends fhir.FhirElement implements IParameterDefinition {
+export declare class ParameterDefinition extends fhir.FhirElement {
+    readonly __dataType: string;
     /**
      * The name of the parameter used to allow access to the value of the parameter in evaluation contexts.
      */
-    name?: string | undefined;
-    /**
-     * Extended properties for primitive element: ParameterDefinition.name
-     */
-    _name?: fhir.FhirElement | undefined;
+    name?: fhir.FhirCode | undefined;
     /**
      * Whether the parameter is input or output for the module.
      */
     use: OperationParameterUseValueSetEnum | null;
     /**
-     * Extended properties for primitive element: ParameterDefinition.use
-     */
-    _use?: fhir.FhirElement | undefined;
-    /**
      * The minimum number of times this parameter SHALL appear in the request or response.
      */
-    min?: number | undefined;
-    /**
-     * Extended properties for primitive element: ParameterDefinition.min
-     */
-    _min?: fhir.FhirElement | undefined;
+    min?: fhir.FhirInteger | undefined;
     /**
      * The maximum number of times this element is permitted to appear in the request or response.
      */
-    max?: string | undefined;
-    /**
-     * Extended properties for primitive element: ParameterDefinition.max
-     */
-    _max?: fhir.FhirElement | undefined;
+    max?: fhir.FhirString | undefined;
     /**
      * A brief discussion of what the parameter is for and how it is used by the module.
      */
-    documentation?: string | undefined;
-    /**
-     * Extended properties for primitive element: ParameterDefinition.documentation
-     */
-    _documentation?: fhir.FhirElement | undefined;
+    documentation?: fhir.FhirString | undefined;
     /**
      * The type of the parameter.
      */
-    type: string | null;
-    /**
-     * Extended properties for primitive element: ParameterDefinition.type
-     */
-    _type?: fhir.FhirElement | undefined;
+    type: fhir.FhirCode | null;
     /**
      * If specified, this indicates a profile that the input data must conform to, or that the output data will conform to.
      */
-    profile?: string | undefined;
-    /**
-     * Extended properties for primitive element: ParameterDefinition.profile
-     */
-    _profile?: fhir.FhirElement | undefined;
+    profile?: fhir.FhirCanonical | undefined;
     /**
      * Default constructor for ParameterDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IParameterDefinition>);
+    constructor(source?: Partial<ParameterDefinitionArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for use
      */
@@ -137,6 +83,10 @@ export declare class ParameterDefinition extends fhir.FhirElement implements IPa
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=ParameterDefinition.d.ts.map

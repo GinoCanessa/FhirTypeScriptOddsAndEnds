@@ -1,602 +1,239 @@
 import * as fhir from '../fhir.js';
 /**
- * A parameter passed to or received from the operation.
+ * Valid arguments for the ParametersParameter type.
  */
-export declare type IParametersParameter = fhir.IBackboneElement & {
+export interface ParametersParameterArgs extends fhir.BackboneElementArgs {
     /**
      * The name of the parameter (reference to the operation definition).
      */
-    name: string | null;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.name
-     */
-    _name?: fhir.IFhirElement | undefined;
+    name: fhir.FhirString | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueBase64Binary?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueBase64Binary?: fhir.IFhirElement | undefined;
+    value?: fhir.FhirBase64Binary | fhir.FhirBoolean | fhir.FhirCanonical | fhir.FhirCode | fhir.FhirDate | fhir.FhirDateTime | fhir.FhirDecimal | fhir.FhirId | fhir.FhirInstant | fhir.FhirInteger | fhir.FhirMarkdown | fhir.FhirOid | fhir.FhirPositiveInt | fhir.FhirString | fhir.FhirTime | fhir.FhirUnsignedInt | fhir.FhirUri | fhir.FhirUrl | fhir.FhirUuid | fhir.Address | fhir.Age | fhir.Annotation | fhir.Attachment | fhir.CodeableConcept | fhir.Coding | fhir.ContactPoint | fhir.Count | fhir.Distance | fhir.Duration | fhir.HumanName | fhir.Identifier | fhir.Money | fhir.Period | fhir.Quantity | fhir.Range | fhir.Ratio | fhir.Reference | fhir.SampledData | fhir.Signature | fhir.Timing | fhir.ContactDetail | fhir.Contributor | fhir.DataRequirement | fhir.Expression | fhir.ParameterDefinition | fhir.RelatedArtifact | fhir.TriggerDefinition | fhir.UsageContext | fhir.Dosage | fhir.Meta | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueBoolean?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueBoolean?: fhir.IFhirElement | undefined;
+    valueBase64Binary?: fhir.FhirBase64Binary | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueCanonical?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueCanonical?: fhir.IFhirElement | undefined;
+    valueBoolean?: fhir.FhirBoolean | boolean | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueCode?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueCode?: fhir.IFhirElement | undefined;
+    valueCanonical?: fhir.FhirCanonical | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueDate?: fhir.IFhirElement | undefined;
+    valueCode?: fhir.FhirCode | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueDateTime?: fhir.IFhirElement | undefined;
+    valueDate?: fhir.FhirDate | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueDecimal?: number | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueDecimal?: fhir.IFhirElement | undefined;
+    valueDateTime?: fhir.FhirDateTime | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueId?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueId?: fhir.IFhirElement | undefined;
+    valueDecimal?: fhir.FhirDecimal | number | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueInstant?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueInstant?: fhir.IFhirElement | undefined;
+    valueId?: fhir.FhirId | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueInteger?: number | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueInteger?: fhir.IFhirElement | undefined;
+    valueInstant?: fhir.FhirInstant | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueMarkdown?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueMarkdown?: fhir.IFhirElement | undefined;
+    valueInteger?: fhir.FhirInteger | number | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueOid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueOid?: fhir.IFhirElement | undefined;
+    valueMarkdown?: fhir.FhirMarkdown | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valuePositiveInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valuePositiveInt?: fhir.IFhirElement | undefined;
+    valueOid?: fhir.FhirOid | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueString?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueString?: fhir.IFhirElement | undefined;
+    valuePositiveInt?: fhir.FhirPositiveInt | number | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueTime?: fhir.IFhirElement | undefined;
+    valueString?: fhir.FhirString | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueUnsignedInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueUnsignedInt?: fhir.IFhirElement | undefined;
+    valueTime?: fhir.FhirTime | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueUri?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueUri?: fhir.IFhirElement | undefined;
+    valueUnsignedInt?: fhir.FhirUnsignedInt | number | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueUrl?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueUrl?: fhir.IFhirElement | undefined;
+    valueUri?: fhir.FhirUri | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueUuid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueUuid?: fhir.IFhirElement | undefined;
+    valueUrl?: fhir.FhirUrl | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueAddress?: fhir.IAddress | undefined;
+    valueUuid?: fhir.FhirUuid | string | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueAge?: fhir.IAge | undefined;
+    valueAddress?: fhir.AddressArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueAnnotation?: fhir.IAnnotation | undefined;
+    valueAge?: fhir.AgeArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueAttachment?: fhir.IAttachment | undefined;
+    valueAnnotation?: fhir.AnnotationArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueCodeableConcept?: fhir.ICodeableConcept | undefined;
+    valueAttachment?: fhir.AttachmentArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueCoding?: fhir.ICoding | undefined;
+    valueCodeableConcept?: fhir.CodeableConceptArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueContactPoint?: fhir.IContactPoint | undefined;
+    valueCoding?: fhir.CodingArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueCount?: fhir.ICount | undefined;
+    valueContactPoint?: fhir.ContactPointArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueDistance?: fhir.IDistance | undefined;
+    valueCount?: fhir.CountArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueDuration?: fhir.IDuration | undefined;
+    valueDistance?: fhir.DistanceArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueHumanName?: fhir.IHumanName | undefined;
+    valueDuration?: fhir.DurationArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueIdentifier?: fhir.IIdentifier | undefined;
+    valueHumanName?: fhir.HumanNameArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueMoney?: fhir.IMoney | undefined;
+    valueIdentifier?: fhir.IdentifierArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valuePeriod?: fhir.IPeriod | undefined;
+    valueMoney?: fhir.MoneyArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueQuantity?: fhir.IQuantity | undefined;
+    valuePeriod?: fhir.PeriodArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueRange?: fhir.IRange | undefined;
+    valueQuantity?: fhir.QuantityArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueRatio?: fhir.IRatio | undefined;
+    valueRange?: fhir.RangeArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueReference?: fhir.IReference | undefined;
+    valueRatio?: fhir.RatioArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueSampledData?: fhir.ISampledData | undefined;
+    valueReference?: fhir.ReferenceArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueSignature?: fhir.ISignature | undefined;
+    valueSampledData?: fhir.SampledDataArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueTiming?: fhir.ITiming | undefined;
+    valueSignature?: fhir.SignatureArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueContactDetail?: fhir.IContactDetail | undefined;
+    valueTiming?: fhir.TimingArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueContributor?: fhir.IContributor | undefined;
+    valueContactDetail?: fhir.ContactDetailArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueDataRequirement?: fhir.IDataRequirement | undefined;
+    valueContributor?: fhir.ContributorArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueExpression?: fhir.IExpression | undefined;
+    valueDataRequirement?: fhir.DataRequirementArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueParameterDefinition?: fhir.IParameterDefinition | undefined;
+    valueExpression?: fhir.ExpressionArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueRelatedArtifact?: fhir.IRelatedArtifact | undefined;
+    valueParameterDefinition?: fhir.ParameterDefinitionArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueTriggerDefinition?: fhir.ITriggerDefinition | undefined;
+    valueRelatedArtifact?: fhir.RelatedArtifactArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueUsageContext?: fhir.IUsageContext | undefined;
+    valueTriggerDefinition?: fhir.TriggerDefinitionArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueDosage?: fhir.IDosage | undefined;
+    valueUsageContext?: fhir.UsageContextArgs | undefined;
     /**
      * If the parameter is a data type.
      */
-    valueMeta?: fhir.IMeta | undefined;
+    valueDosage?: fhir.DosageArgs | undefined;
+    /**
+     * If the parameter is a data type.
+     */
+    valueMeta?: fhir.MetaArgs | undefined;
     /**
      * When resolving references in resources, the operation definition may specify how references may be resolved between parameters. If a reference cannot be resolved between the parameters, the application should fall back to it's general resource resolution methods.
      */
-    resource?: fhir.IFhirResource | undefined;
+    resource?: fhir.ResourceArgs | any | undefined;
     /**
      * Only one level of nested parameters is allowed.
      */
-    part?: fhir.IParametersParameter[] | undefined;
-};
-/**
- * This resource is a non-persisted resource used to pass information into and back from an [operation](operations.html). It has no other use, and there is no RESTful endpoint associated with it.
- */
-export declare type IParameters = fhir.IResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "Parameters";
-    /**
-     * A parameter passed to or received from the operation.
-     */
-    parameter?: fhir.IParametersParameter[] | undefined;
-};
+    part?: fhir.ParametersParameterArgs[] | undefined;
+}
 /**
  * A parameter passed to or received from the operation.
  */
-export declare class ParametersParameter extends fhir.BackboneElement implements IParametersParameter {
+export declare class ParametersParameter extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The name of the parameter (reference to the operation definition).
      */
-    name: string | null;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.name
-     */
-    _name?: fhir.FhirElement | undefined;
+    name: fhir.FhirString | null;
     /**
      * If the parameter is a data type.
      */
-    valueBase64Binary?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueBase64Binary?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueBoolean?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueBoolean?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueCanonical?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueCanonical?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueCode?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueCode?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueDate?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueDateTime?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueDecimal?: number | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueDecimal?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueId?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueId?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueInstant?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueInstant?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueInteger?: number | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueInteger?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueMarkdown?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueMarkdown?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueOid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueOid?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valuePositiveInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valuePositiveInt?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueString?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueString?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueTime?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueUnsignedInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueUnsignedInt?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueUri?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueUri?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueUrl?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueUrl?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueUuid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Parameters.parameter.value[x]
-     */
-    _valueUuid?: fhir.FhirElement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueAddress?: fhir.Address | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueAge?: fhir.Age | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueAnnotation?: fhir.Annotation | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueAttachment?: fhir.Attachment | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueCodeableConcept?: fhir.CodeableConcept | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueCoding?: fhir.Coding | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueContactPoint?: fhir.ContactPoint | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueCount?: fhir.Count | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueDistance?: fhir.Distance | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueDuration?: fhir.Duration | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueHumanName?: fhir.HumanName | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueIdentifier?: fhir.Identifier | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueMoney?: fhir.Money | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valuePeriod?: fhir.Period | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueQuantity?: fhir.Quantity | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueRange?: fhir.Range | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueRatio?: fhir.Ratio | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueReference?: fhir.Reference | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueSampledData?: fhir.SampledData | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueSignature?: fhir.Signature | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueTiming?: fhir.Timing | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueContactDetail?: fhir.ContactDetail | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueContributor?: fhir.Contributor | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueDataRequirement?: fhir.DataRequirement | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueExpression?: fhir.Expression | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueParameterDefinition?: fhir.ParameterDefinition | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueRelatedArtifact?: fhir.RelatedArtifact | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueTriggerDefinition?: fhir.TriggerDefinition | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueUsageContext?: fhir.UsageContext | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueDosage?: fhir.Dosage | undefined;
-    /**
-     * If the parameter is a data type.
-     */
-    valueMeta?: fhir.Meta | undefined;
+    value?: (fhir.FhirBase64Binary | fhir.FhirBoolean | fhir.FhirCanonical | fhir.FhirCode | fhir.FhirDate | fhir.FhirDateTime | fhir.FhirDecimal | fhir.FhirId | fhir.FhirInstant | fhir.FhirInteger | fhir.FhirMarkdown | fhir.FhirOid | fhir.FhirPositiveInt | fhir.FhirString | fhir.FhirTime | fhir.FhirUnsignedInt | fhir.FhirUri | fhir.FhirUrl | fhir.FhirUuid | fhir.Address | fhir.Age | fhir.Annotation | fhir.Attachment | fhir.CodeableConcept | fhir.Coding | fhir.ContactPoint | fhir.Count | fhir.Distance | fhir.Duration | fhir.HumanName | fhir.Identifier | fhir.Money | fhir.Period | fhir.Quantity | fhir.Range | fhir.Ratio | fhir.Reference | fhir.SampledData | fhir.Signature | fhir.Timing | fhir.ContactDetail | fhir.Contributor | fhir.DataRequirement | fhir.Expression | fhir.ParameterDefinition | fhir.RelatedArtifact | fhir.TriggerDefinition | fhir.UsageContext | fhir.Dosage | fhir.Meta) | undefined;
+    readonly __valueIsChoice: true;
     /**
      * When resolving references in resources, the operation definition may specify how references may be resolved between parameters. If a reference cannot be resolved between the parameters, the application should fall back to it's general resource resolution methods.
      */
@@ -608,16 +245,34 @@ export declare class ParametersParameter extends fhir.BackboneElement implements
     /**
      * Default constructor for ParametersParameter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IParametersParameter>);
+    constructor(source?: Partial<ParametersParameterArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the Parameters type.
+ */
+export interface ParametersArgs extends fhir.ResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "Parameters" | undefined;
+    /**
+     * A parameter passed to or received from the operation.
+     */
+    parameter?: fhir.ParametersParameterArgs[] | undefined;
 }
 /**
  * This resource is a non-persisted resource used to pass information into and back from an [operation](operations.html). It has no other use, and there is no RESTful endpoint associated with it.
  */
-export declare class Parameters extends fhir.Resource implements IParameters {
+export declare class Parameters extends fhir.Resource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -629,10 +284,14 @@ export declare class Parameters extends fhir.Resource implements IParameters {
     /**
      * Default constructor for Parameters - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IParameters>);
+    constructor(source?: Partial<ParametersArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Parameters.d.ts.map

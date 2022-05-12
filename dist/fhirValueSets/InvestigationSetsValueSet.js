@@ -27,15 +27,4 @@ export const InvestigationSetsValueSet = {
 /**
  * Example value set for investigation type.
  */
-export var InvestigationSetsValueSetEnum;
-(function (InvestigationSetsValueSetEnum) {
-    /**
-     * Code: 160237006
-     */
-    InvestigationSetsValueSetEnum["HistorySymptoms"] = "160237006";
-    /**
-     * Code: 271336007
-     */
-    InvestigationSetsValueSetEnum["ExaminationSigns"] = "271336007";
-})(InvestigationSetsValueSetEnum || (InvestigationSetsValueSetEnum = {}));
 //# sourceMappingURL=InvestigationSetsValueSet.js.map

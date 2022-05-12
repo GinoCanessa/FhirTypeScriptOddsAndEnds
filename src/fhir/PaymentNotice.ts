@@ -3,85 +3,77 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: PaymentNotice
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { FmStatusValueSet, FmStatusValueSetType, FmStatusValueSetEnum } from '../fhirValueSets/FmStatusValueSet.js'
-import { PaymentStatusValueSet, PaymentStatusValueSetType, PaymentStatusValueSetEnum } from '../fhirValueSets/PaymentStatusValueSet.js'
-
+import { FmStatusValueSet, FmStatusValueSetType,} from '../fhirValueSets/FmStatusValueSet.js';
+import { FmStatusValueSetEnum } from '../valueSetEnums.js';
+import { PaymentStatusValueSet, PaymentStatusValueSetType,} from '../fhirValueSets/PaymentStatusValueSet.js';
+import { PaymentStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * This resource provides the status of the payment for goods and services rendered, and the request and response resource references.
+ * Valid arguments for the PaymentNotice type.
  */
-export type IPaymentNotice = fhir.IDomainResource & { 
+export interface PaymentNoticeArgs extends fhir.DomainResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "PaymentNotice";
+  resourceType: "PaymentNotice"|undefined;
   /**
    * A unique identifier assigned to this payment notice.
    */
-  identifier?: fhir.IIdentifier[]|undefined;
+  identifier?: fhir.IdentifierArgs[]|undefined;
   /**
    * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
   status: FmStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: PaymentNotice.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
    * Reference of resource for which payment is being made.
    */
-  request?: fhir.IReference|undefined;
+  request?: fhir.ReferenceArgs|undefined;
   /**
    * Reference of response to resource for which payment is being made.
    */
-  response?: fhir.IReference|undefined;
+  response?: fhir.ReferenceArgs|undefined;
   /**
    * The date when this resource was created.
    */
-  created: string|null;
-  /**
-   * Extended properties for primitive element: PaymentNotice.created
-   */
-  _created?: fhir.IFhirElement|undefined;
+  created: fhir.FhirDateTime|string|undefined;
   /**
    * The practitioner who is responsible for the services rendered to the patient.
    */
-  provider?: fhir.IReference|undefined;
+  provider?: fhir.ReferenceArgs|undefined;
   /**
    * A reference to the payment which is the subject of this notice.
    */
-  payment: fhir.IReference|null;
+  payment: fhir.ReferenceArgs|null;
   /**
    * The date when the above payment action occurred.
    */
-  paymentDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: PaymentNotice.paymentDate
-   */
-  _paymentDate?: fhir.IFhirElement|undefined;
+  paymentDate?: fhir.FhirDate|string|undefined;
   /**
    * The party who will receive or has received payment that is the subject of this notification.
    */
-  payee?: fhir.IReference|undefined;
+  payee?: fhir.ReferenceArgs|undefined;
   /**
    * The party who is notified of the payment status.
    */
-  recipient: fhir.IReference|null;
+  recipient: fhir.ReferenceArgs|null;
   /**
    * The amount sent to the payee.
    */
-  amount: fhir.IMoney|null;
+  amount: fhir.MoneyArgs|null;
   /**
    * Typically paid: payment sent, cleared: payment received.
    */
-  paymentStatus?: fhir.ICodeableConcept|undefined;
+  paymentStatus?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * This resource provides the status of the payment for goods and services rendered, and the request and response resource references.
  */
-export class PaymentNotice extends fhir.DomainResource implements IPaymentNotice {
+export class PaymentNotice extends fhir.DomainResource {
+  readonly __dataType:string = 'PaymentNotice';
   /**
    * Resource Type Name
    */
@@ -89,15 +81,11 @@ export class PaymentNotice extends fhir.DomainResource implements IPaymentNotice
   /**
    * A unique identifier assigned to this payment notice.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
   public status: FmStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: PaymentNotice.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * Reference of resource for which payment is being made.
    */
@@ -109,11 +97,7 @@ export class PaymentNotice extends fhir.DomainResource implements IPaymentNotice
   /**
    * The date when this resource was created.
    */
-  public created: string|null;
-  /**
-   * Extended properties for primitive element: PaymentNotice.created
-   */
-  public _created?: fhir.FhirElement|undefined;
+  public created: fhir.FhirDateTime|null;
   /**
    * The practitioner who is responsible for the services rendered to the patient.
    */
@@ -125,11 +109,7 @@ export class PaymentNotice extends fhir.DomainResource implements IPaymentNotice
   /**
    * The date when the above payment action occurred.
    */
-  public paymentDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: PaymentNotice.paymentDate
-   */
-  public _paymentDate?: fhir.FhirElement|undefined;
+  public paymentDate?: fhir.FhirDate|undefined;
   /**
    * The party who will receive or has received payment that is the subject of this notification.
    */
@@ -149,29 +129,26 @@ export class PaymentNotice extends fhir.DomainResource implements IPaymentNotice
   /**
    * Default constructor for PaymentNotice - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IPaymentNotice> = { }) {
-    super(source);
+  constructor(source:Partial<PaymentNoticeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'PaymentNotice';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['request']) { this.request = new fhir.Reference(source.request!); }
-    if (source['response']) { this.response = new fhir.Reference(source.response!); }
-    if (source['created']) { this.created = source.created; }
+    if (source['request']) { this.request = new fhir.Reference(source.request); }
+    if (source['response']) { this.response = new fhir.Reference(source.response); }
+    if (source['created']) { this.created = new fhir.FhirDateTime({value: source.created}); }
     else { this.created = null; }
-    if (source['_created']) { this._created = new fhir.FhirElement(source._created!); }
-    if (source['provider']) { this.provider = new fhir.Reference(source.provider!); }
-    if (source['payment']) { this.payment = new fhir.Reference(source.payment!); }
+    if (source['provider']) { this.provider = new fhir.Reference(source.provider); }
+    if (source['payment']) { this.payment = new fhir.Reference(source.payment); }
     else { this.payment = null; }
-    if (source['paymentDate']) { this.paymentDate = source.paymentDate; }
-    if (source['_paymentDate']) { this._paymentDate = new fhir.FhirElement(source._paymentDate!); }
-    if (source['payee']) { this.payee = new fhir.Reference(source.payee!); }
-    if (source['recipient']) { this.recipient = new fhir.Reference(source.recipient!); }
+    if (source['paymentDate']) { this.paymentDate = new fhir.FhirDate({value: source.paymentDate}); }
+    if (source['payee']) { this.payee = new fhir.Reference(source.payee); }
+    if (source['recipient']) { this.recipient = new fhir.Reference(source.recipient); }
     else { this.recipient = null; }
-    if (source['amount']) { this.amount = new fhir.Money(source.amount!); }
+    if (source['amount']) { this.amount = new fhir.Money(source.amount); }
     else { this.amount = null; }
-    if (source['paymentStatus']) { this.paymentStatus = new fhir.CodeableConcept(source.paymentStatus!); }
+    if (source['paymentStatus']) { this.paymentStatus = new fhir.CodeableConcept(source.paymentStatus); }
   }
   /**
    * Required-bound Value Set for status
@@ -188,26 +165,43 @@ export class PaymentNotice extends fhir.DomainResource implements IPaymentNotice
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: PaymentNotice.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: PaymentNotice.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["request"]) { results.push(...this.request.doModelValidation()); }
-    if (this["response"]) { results.push(...this.response.doModelValidation()); }
-    if (!this["created"]) { results.push(["created",'Missing required element: PaymentNotice.created']); }
-    if (this["_created"]) { results.push(...this._created.doModelValidation()); }
-    if (this["provider"]) { results.push(...this.provider.doModelValidation()); }
-    if (!this["payment"]) { results.push(["payment",'Missing required element: PaymentNotice.payment']); }
-    if (this["payment"]) { results.push(...this.payment.doModelValidation()); }
-    if (this["_paymentDate"]) { results.push(...this._paymentDate.doModelValidation()); }
-    if (this["payee"]) { results.push(...this.payee.doModelValidation()); }
-    if (!this["recipient"]) { results.push(["recipient",'Missing required element: PaymentNotice.recipient']); }
-    if (this["recipient"]) { results.push(...this.recipient.doModelValidation()); }
-    if (!this["amount"]) { results.push(["amount",'Missing required element: PaymentNotice.amount']); }
-    if (this["amount"]) { results.push(...this.amount.doModelValidation()); }
-    if (this["paymentStatus"]) { results.push(...this.paymentStatus.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'PaymentNotice' fhir: PaymentNotice.resourceType:'PaymentNotice'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:FmStatusValueSetEnum fhir: PaymentNotice.status:code", }));
+    }
+    if (this["request"]) { outcome.issue!.push(...this.request.doModelValidation().issue!); }
+    if (this["response"]) { outcome.issue!.push(...this.response.doModelValidation().issue!); }
+    if (!this['created']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property created:fhir.FhirDateTime fhir: PaymentNotice.created:dateTime", }));
+    }
+    if (this["created"]) { outcome.issue!.push(...this.created.doModelValidation().issue!); }
+    if (this["provider"]) { outcome.issue!.push(...this.provider.doModelValidation().issue!); }
+    if (!this['payment']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property payment:fhir.Reference fhir: PaymentNotice.payment:Reference", }));
+    }
+    if (this["payment"]) { outcome.issue!.push(...this.payment.doModelValidation().issue!); }
+    if (this["paymentDate"]) { outcome.issue!.push(...this.paymentDate.doModelValidation().issue!); }
+    if (this["payee"]) { outcome.issue!.push(...this.payee.doModelValidation().issue!); }
+    if (!this['recipient']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property recipient:fhir.Reference fhir: PaymentNotice.recipient:Reference", }));
+    }
+    if (this["recipient"]) { outcome.issue!.push(...this.recipient.doModelValidation().issue!); }
+    if (!this['amount']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property amount:fhir.Money fhir: PaymentNotice.amount:Money", }));
+    }
+    if (this["amount"]) { outcome.issue!.push(...this.amount.doModelValidation().issue!); }
+    if (this["paymentStatus"]) { outcome.issue!.push(...this.paymentStatus.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

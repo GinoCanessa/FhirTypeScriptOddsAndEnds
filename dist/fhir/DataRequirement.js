@@ -3,9 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: DataRequirement
 import * as fhir from '../fhir.js';
-import { SortDirectionValueSet } from '../fhirValueSets/SortDirectionValueSet.js';
-import { AllTypesValueSet } from '../fhirValueSets/AllTypesValueSet.js';
-import { SubjectTypeValueSet } from '../fhirValueSets/SubjectTypeValueSet.js';
+import { SortDirectionValueSet, } from '../fhirValueSets/SortDirectionValueSet.js';
+import { AllTypesValueSet, } from '../fhirValueSets/AllTypesValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Code filters specify additional constraints on the data, specifying the value set of interest for a particular element of the data. Each code filter defines an additional constraint on the data, i.e. code filters are AND'ed, not OR'ed.
  */
@@ -13,25 +14,21 @@ export class DataRequirementCodeFilter extends fhir.FhirElement {
     /**
      * Default constructor for DataRequirementCodeFilter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DataRequirementCodeFilter';
+        /**
+         * The codes for the code filter. If values are given, the filter will return only those data items for which the code-valued attribute specified by the path has a value that is one of the specified codes. If codes are specified in addition to a value set, the filter returns items matching a code in the value set or one of the specified codes.
+         */
+        this.code = [];
         if (source['path']) {
-            this.path = source.path;
-        }
-        if (source['_path']) {
-            this._path = new fhir.FhirElement(source._path);
+            this.path = new fhir.FhirString({ value: source.path });
         }
         if (source['searchParam']) {
-            this.searchParam = source.searchParam;
-        }
-        if (source['_searchParam']) {
-            this._searchParam = new fhir.FhirElement(source._searchParam);
+            this.searchParam = new fhir.FhirString({ value: source.searchParam });
         }
         if (source['valueSet']) {
-            this.valueSet = source.valueSet;
-        }
-        if (source['_valueSet']) {
-            this._valueSet = new fhir.FhirElement(source._valueSet);
+            this.valueSet = new fhir.FhirCanonical({ value: source.valueSet });
         }
         if (source['code']) {
             this.code = source.code.map((x) => new fhir.Coding(x));
@@ -41,20 +38,26 @@ export class DataRequirementCodeFilter extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_path"]) {
-            results.push(...this._path.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["path"]) {
+            outcome.issue.push(...this.path.doModelValidation().issue);
         }
-        if (this["_searchParam"]) {
-            results.push(...this._searchParam.doModelValidation());
+        if (this["searchParam"]) {
+            outcome.issue.push(...this.searchParam.doModelValidation().issue);
         }
-        if (this["_valueSet"]) {
-            results.push(...this._valueSet.doModelValidation());
+        if (this["valueSet"]) {
+            outcome.issue.push(...this.valueSet.doModelValidation().issue);
         }
         if (this["code"]) {
-            this.code.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.code.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -64,54 +67,47 @@ export class DataRequirementDateFilter extends fhir.FhirElement {
     /**
      * Default constructor for DataRequirementDateFilter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DataRequirementDateFilter';
+        this.__valueIsChoice = true;
         if (source['path']) {
-            this.path = source.path;
-        }
-        if (source['_path']) {
-            this._path = new fhir.FhirElement(source._path);
+            this.path = new fhir.FhirString({ value: source.path });
         }
         if (source['searchParam']) {
-            this.searchParam = source.searchParam;
+            this.searchParam = new fhir.FhirString({ value: source.searchParam });
         }
-        if (source['_searchParam']) {
-            this._searchParam = new fhir.FhirElement(source._searchParam);
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['valueDateTime']) {
-            this.valueDateTime = source.valueDateTime;
+        else if (source['valueDateTime']) {
+            this.value = new fhir.FhirDateTime({ value: source.valueDateTime });
         }
-        if (source['_valueDateTime']) {
-            this._valueDateTime = new fhir.FhirElement(source._valueDateTime);
+        else if (source['valuePeriod']) {
+            this.value = new fhir.Period(source.valuePeriod);
         }
-        if (source['valuePeriod']) {
-            this.valuePeriod = new fhir.Period(source.valuePeriod);
-        }
-        if (source['valueDuration']) {
-            this.valueDuration = new fhir.Duration(source.valueDuration);
+        else if (source['valueDuration']) {
+            this.value = new fhir.Duration(source.valueDuration);
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_path"]) {
-            results.push(...this._path.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["path"]) {
+            outcome.issue.push(...this.path.doModelValidation().issue);
         }
-        if (this["_searchParam"]) {
-            results.push(...this._searchParam.doModelValidation());
+        if (this["searchParam"]) {
+            outcome.issue.push(...this.searchParam.doModelValidation().issue);
         }
-        if (this["_valueDateTime"]) {
-            results.push(...this._valueDateTime.doModelValidation());
-        }
-        if (this["valuePeriod"]) {
-            results.push(...this.valuePeriod.doModelValidation());
-        }
-        if (this["valueDuration"]) {
-            results.push(...this.valueDuration.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -121,25 +117,20 @@ export class DataRequirementSort extends fhir.FhirElement {
     /**
      * Default constructor for DataRequirementSort - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DataRequirementSort';
         if (source['path']) {
-            this.path = source.path;
+            this.path = new fhir.FhirString({ value: source.path });
         }
         else {
             this.path = null;
-        }
-        if (source['_path']) {
-            this._path = new fhir.FhirElement(source._path);
         }
         if (source['direction']) {
             this.direction = source.direction;
         }
         else {
             this.direction = null;
-        }
-        if (source['_direction']) {
-            this._direction = new fhir.FhirElement(source._direction);
         }
     }
     /**
@@ -152,20 +143,23 @@ export class DataRequirementSort extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["path"]) {
-            results.push(["path", 'Missing required element: DataRequirement.sort.path']);
+        var outcome = super.doModelValidation();
+        if (!this['path']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property path:fhir.FhirString fhir: DataRequirement.sort.path:string", }));
         }
-        if (this["_path"]) {
-            results.push(...this._path.doModelValidation());
+        if (this["path"]) {
+            outcome.issue.push(...this.path.doModelValidation().issue);
         }
-        if (!this["direction"]) {
-            results.push(["direction", 'Missing required element: DataRequirement.sort.direction']);
+        if (!this['direction']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property direction:SortDirectionValueSetEnum fhir: DataRequirement.sort.direction:code", }));
         }
-        if (this["_direction"]) {
-            results.push(...this._direction.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -175,34 +169,51 @@ export class DataRequirement extends fhir.FhirElement {
     /**
      * Default constructor for DataRequirement - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DataRequirement';
+        /**
+         * The profile of the required data, specified as the uri of the profile definition.
+         */
+        this.profile = [];
+        this.__subjectIsChoice = true;
+        /**
+         * Indicates that specific elements of the type are referenced by the knowledge module and must be supported by the consumer in order to obtain an effective evaluation. This does not mean that a value is required for this element, only that the consuming system must understand the element and be able to provide values for it if they are available.
+         * The value of mustSupport SHALL be a FHIRPath resolveable on the type of the DataRequirement. The path SHALL consist only of identifiers, constant indexers, and .resolve() (see the [Simple FHIRPath Profile](fhirpath.html#simple) for full details).
+         */
+        this.mustSupport = [];
+        /**
+         * Code filters specify additional constraints on the data, specifying the value set of interest for a particular element of the data. Each code filter defines an additional constraint on the data, i.e. code filters are AND'ed, not OR'ed.
+         */
+        this.codeFilter = [];
+        /**
+         * Date filters specify additional constraints on the data in terms of the applicable date range for specific elements. Each date filter specifies an additional constraint on the data, i.e. date filters are AND'ed, not OR'ed.
+         */
+        this.dateFilter = [];
+        /**
+         * This element can be used in combination with the sort element to specify quota requirements such as "the most recent 5" or "the highest 5". When multiple sorts are specified, they are applied in the order they appear in the resource.
+         */
+        this.sort = [];
         if (source['type']) {
-            this.type = source.type;
+            this.type = new fhir.FhirCode({ value: source.type });
         }
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['profile']) {
-            this.profile = source.profile.map((x) => (x));
+            this.profile = source.profile.map((x) => new fhir.FhirCanonical({ value: x }));
         }
-        if (source['_profile']) {
-            this._profile = source._profile.map((x) => new fhir.FhirElement(x));
+        if (source['subject']) {
+            this.subject = source.subject;
         }
-        if (source['subjectCodeableConcept']) {
-            this.subjectCodeableConcept = new fhir.CodeableConcept(source.subjectCodeableConcept);
+        else if (source['subjectCodeableConcept']) {
+            this.subject = new fhir.CodeableConcept(source.subjectCodeableConcept);
         }
-        if (source['subjectReference']) {
-            this.subjectReference = new fhir.Reference(source.subjectReference);
+        else if (source['subjectReference']) {
+            this.subject = new fhir.Reference(source.subjectReference);
         }
         if (source['mustSupport']) {
-            this.mustSupport = source.mustSupport.map((x) => (x));
-        }
-        if (source['_mustSupport']) {
-            this._mustSupport = source._mustSupport.map((x) => new fhir.FhirElement(x));
+            this.mustSupport = source.mustSupport.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['codeFilter']) {
             this.codeFilter = source.codeFilter.map((x) => new fhir.DataRequirementCodeFilter(x));
@@ -211,10 +222,7 @@ export class DataRequirement extends fhir.FhirElement {
             this.dateFilter = source.dateFilter.map((x) => new fhir.DataRequirementDateFilter(x));
         }
         if (source['limit']) {
-            this.limit = source.limit;
-        }
-        if (source['_limit']) {
-            this._limit = new fhir.FhirElement(source._limit);
+            this.limit = new fhir.FhirPositiveInt({ value: source.limit });
         }
         if (source['sort']) {
             this.sort = source.sort.map((x) => new fhir.DataRequirementSort(x));
@@ -227,53 +235,41 @@ export class DataRequirement extends fhir.FhirElement {
         return AllTypesValueSet;
     }
     /**
-     * Extensible-bound Value Set for subjectCodeableConcept
-     */
-    static subjectCodeableConceptExtensibleValueSet() {
-        return SubjectTypeValueSet;
-    }
-    /**
-     * Extensible-bound Value Set for subjectReference
-     */
-    static subjectReferenceExtensibleValueSet() {
-        return SubjectTypeValueSet;
-    }
-    /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: DataRequirement.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.FhirCode fhir: DataRequirement.type:code", }));
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (this["type"]) {
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_profile"]) {
-            this._profile.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["profile"]) {
+            this.profile.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["subjectCodeableConcept"]) {
-            results.push(...this.subjectCodeableConcept.doModelValidation());
-        }
-        if (this["subjectReference"]) {
-            results.push(...this.subjectReference.doModelValidation());
-        }
-        if (this["_mustSupport"]) {
-            this._mustSupport.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["mustSupport"]) {
+            this.mustSupport.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["codeFilter"]) {
-            this.codeFilter.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.codeFilter.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["dateFilter"]) {
-            this.dateFilter.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.dateFilter.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_limit"]) {
-            results.push(...this._limit.doModelValidation());
+        if (this["limit"]) {
+            outcome.issue.push(...this.limit.doModelValidation().issue);
         }
         if (this["sort"]) {
-            this.sort.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.sort.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=DataRequirement.js.map

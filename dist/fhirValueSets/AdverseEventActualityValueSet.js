@@ -27,15 +27,4 @@ export const AdverseEventActualityValueSet = {
 /**
  * Overall nature of the adverse event, e.g. real or potential.
  */
-export var AdverseEventActualityValueSetEnum;
-(function (AdverseEventActualityValueSetEnum) {
-    /**
-     * actual: The adverse event actually happened regardless of whether anyone was affected or harmed.
-     */
-    AdverseEventActualityValueSetEnum["AdverseEvent"] = "actual";
-    /**
-     * potential: A potential adverse event.
-     */
-    AdverseEventActualityValueSetEnum["PotentialAdverseEvent"] = "potential";
-})(AdverseEventActualityValueSetEnum || (AdverseEventActualityValueSetEnum = {}));
 //# sourceMappingURL=AdverseEventActualityValueSet.js.map

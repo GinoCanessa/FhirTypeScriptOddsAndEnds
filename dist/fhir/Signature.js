@@ -3,7 +3,9 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Signature
 import * as fhir from '../fhir.js';
-import { SignatureTypeValueSet } from '../fhirValueSets/SignatureTypeValueSet.js';
+import { SignatureTypeValueSet, } from '../fhirValueSets/SignatureTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A signature along with supporting context. The signature may be a digital signature that is cryptographic in nature, or some other signature acceptable to the domain. This other signature may be as simple as a graphical image representing a hand-written signature, or a signature ceremony Different signature approaches have different utilities.
  */
@@ -11,8 +13,13 @@ export class Signature extends fhir.FhirElement {
     /**
      * Default constructor for Signature - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Signature';
+        /**
+         * Examples include attesting to: authorship, correct transcription, and witness of specific event. Also known as a &amp;quot;Commitment Type Indication&amp;quot;.
+         */
+        this.type = [];
         if (source['type']) {
             this.type = source.type.map((x) => new fhir.Coding(x));
         }
@@ -20,13 +27,10 @@ export class Signature extends fhir.FhirElement {
             this.type = null;
         }
         if (source['when']) {
-            this.when = source.when;
+            this.when = new fhir.FhirInstant({ value: source.when });
         }
         else {
             this.when = null;
-        }
-        if (source['_when']) {
-            this._when = new fhir.FhirElement(source._when);
         }
         if (source['who']) {
             this.who = new fhir.Reference(source.who);
@@ -38,22 +42,13 @@ export class Signature extends fhir.FhirElement {
             this.onBehalfOf = new fhir.Reference(source.onBehalfOf);
         }
         if (source['targetFormat']) {
-            this.targetFormat = source.targetFormat;
-        }
-        if (source['_targetFormat']) {
-            this._targetFormat = new fhir.FhirElement(source._targetFormat);
+            this.targetFormat = new fhir.FhirCode({ value: source.targetFormat });
         }
         if (source['sigFormat']) {
-            this.sigFormat = source.sigFormat;
-        }
-        if (source['_sigFormat']) {
-            this._sigFormat = new fhir.FhirElement(source._sigFormat);
+            this.sigFormat = new fhir.FhirCode({ value: source.sigFormat });
         }
         if (source['data']) {
-            this.data = source.data;
-        }
-        if (source['_data']) {
-            this._data = new fhir.FhirElement(source._data);
+            this.data = new fhir.FhirBase64Binary({ value: source.data });
         }
     }
     /**
@@ -66,38 +61,50 @@ export class Signature extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if ((!this["type"]) || (this["type"].length === 0)) {
-            results.push(["type", 'Missing required element: Signature.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.Coding[] fhir: Signature.type:Coding", }));
+        }
+        else if (!Array.isArray(this.type)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property type:fhir.Coding[] fhir: Signature.type:Coding", }));
+        }
+        else if (this.type.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.Coding[] fhir: Signature.type:Coding", }));
         }
         if (this["type"]) {
-            this.type.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.type.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["when"]) {
-            results.push(["when", 'Missing required element: Signature.when']);
+        if (!this['when']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property when:fhir.FhirInstant fhir: Signature.when:instant", }));
         }
-        if (this["_when"]) {
-            results.push(...this._when.doModelValidation());
+        if (this["when"]) {
+            outcome.issue.push(...this.when.doModelValidation().issue);
         }
-        if (!this["who"]) {
-            results.push(["who", 'Missing required element: Signature.who']);
+        if (!this['who']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property who:fhir.Reference fhir: Signature.who:Reference", }));
         }
         if (this["who"]) {
-            results.push(...this.who.doModelValidation());
+            outcome.issue.push(...this.who.doModelValidation().issue);
         }
         if (this["onBehalfOf"]) {
-            results.push(...this.onBehalfOf.doModelValidation());
+            outcome.issue.push(...this.onBehalfOf.doModelValidation().issue);
         }
-        if (this["_targetFormat"]) {
-            results.push(...this._targetFormat.doModelValidation());
+        if (this["targetFormat"]) {
+            outcome.issue.push(...this.targetFormat.doModelValidation().issue);
         }
-        if (this["_sigFormat"]) {
-            results.push(...this._sigFormat.doModelValidation());
+        if (this["sigFormat"]) {
+            outcome.issue.push(...this.sigFormat.doModelValidation().issue);
         }
-        if (this["_data"]) {
-            results.push(...this._data.doModelValidation());
+        if (this["data"]) {
+            outcome.issue.push(...this.data.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Signature.js.map

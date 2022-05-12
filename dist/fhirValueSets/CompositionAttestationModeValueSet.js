@@ -43,23 +43,4 @@ export const CompositionAttestationModeValueSet = {
 /**
  * The way in which a person authenticated a composition.
  */
-export var CompositionAttestationModeValueSetEnum;
-(function (CompositionAttestationModeValueSetEnum) {
-    /**
-     * legal: The person authenticated the content and accepted legal responsibility for its content.
-     */
-    CompositionAttestationModeValueSetEnum["Legal"] = "legal";
-    /**
-     * official: The organization authenticated the content as consistent with their policies and procedures.
-     */
-    CompositionAttestationModeValueSetEnum["Official"] = "official";
-    /**
-     * personal: The person authenticated the content in their personal capacity.
-     */
-    CompositionAttestationModeValueSetEnum["Personal"] = "personal";
-    /**
-     * professional: The person authenticated the content in their professional capacity.
-     */
-    CompositionAttestationModeValueSetEnum["Professional"] = "professional";
-})(CompositionAttestationModeValueSetEnum || (CompositionAttestationModeValueSetEnum = {}));
 //# sourceMappingURL=CompositionAttestationModeValueSet.js.map

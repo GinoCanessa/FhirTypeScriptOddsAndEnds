@@ -75,33 +75,3 @@ export type UnitsOfTimeValueSetType = typeof UnitsOfTimeValueSet;
 /**
  * A unit of time (units from UCUM).
  */
-export enum UnitsOfTimeValueSetEnum {
-  /**
-   * Code: a
-   */
-  Year = "a",
-  /**
-   * Code: d
-   */
-  Day = "d",
-  /**
-   * Code: h
-   */
-  Hour = "h",
-  /**
-   * Code: min
-   */
-  Minute = "min",
-  /**
-   * Code: mo
-   */
-  Month = "mo",
-  /**
-   * Code: s
-   */
-  Second = "s",
-  /**
-   * Code: wk
-   */
-  Week = "wk",
-}

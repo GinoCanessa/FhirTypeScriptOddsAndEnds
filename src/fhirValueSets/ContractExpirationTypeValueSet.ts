@@ -27,9 +27,3 @@ export type ContractExpirationTypeValueSetType = typeof ContractExpirationTypeVa
 /**
  * This value set contract specific codes for status.
  */
-export enum ContractExpirationTypeValueSetEnum {
-  /**
-   * breach: To be completed
-   */
-  Breach = "breach",
-}

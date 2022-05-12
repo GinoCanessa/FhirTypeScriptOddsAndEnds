@@ -3,62 +3,63 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Flag
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { FlagStatusValueSet, FlagStatusValueSetType, FlagStatusValueSetEnum } from '../fhirValueSets/FlagStatusValueSet.js'
-import { FlagCategoryValueSet, FlagCategoryValueSetType, FlagCategoryValueSetEnum } from '../fhirValueSets/FlagCategoryValueSet.js'
-import { FlagCodeValueSet, FlagCodeValueSetType, FlagCodeValueSetEnum } from '../fhirValueSets/FlagCodeValueSet.js'
-
+import { FlagStatusValueSet, FlagStatusValueSetType,} from '../fhirValueSets/FlagStatusValueSet.js';
+import { FlagStatusValueSetEnum } from '../valueSetEnums.js';
+import { FlagCategoryValueSet, FlagCategoryValueSetType,} from '../fhirValueSets/FlagCategoryValueSet.js';
+import { FlagCategoryValueSetEnum } from '../valueSetEnums.js';
+import { FlagCodeValueSet, FlagCodeValueSetType,} from '../fhirValueSets/FlagCodeValueSet.js';
+import { FlagCodeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Prospective warnings of potential issues when providing care to the patient.
+ * Valid arguments for the Flag type.
  */
-export type IFlag = fhir.IDomainResource & { 
+export interface FlagArgs extends fhir.DomainResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "Flag";
+  resourceType: "Flag"|undefined;
   /**
    * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
    */
-  identifier?: fhir.IIdentifier[]|undefined;
+  identifier?: fhir.IdentifierArgs[]|undefined;
   /**
    * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
   status: FlagStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Flag.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
    * The value set will often need to be adjusted based on local business rules and usage context.
    */
-  category?: fhir.ICodeableConcept[]|undefined;
+  category?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * If non-coded, use CodeableConcept.text.  This element should always be included in the narrative.
    */
-  code: fhir.ICodeableConcept|null;
+  code: fhir.CodeableConceptArgs|null;
   /**
    * The patient, location, group, organization, or practitioner etc. this is about record this flag is associated with.
    */
-  subject: fhir.IReference|null;
+  subject: fhir.ReferenceArgs|null;
   /**
    * The period of time from the activation of the flag to inactivation of the flag. If the flag is active, the end of the period should be unspecified.
    */
-  period?: fhir.IPeriod|undefined;
+  period?: fhir.PeriodArgs|undefined;
   /**
    * If both Flag.encounter and Flag.period are valued, then Flag.period.start shall not be before Encounter.period.start and Flag.period.end shall not be after Encounter.period.end.
    */
-  encounter?: fhir.IReference|undefined;
+  encounter?: fhir.ReferenceArgs|undefined;
   /**
    * The person, organization or device that created the flag.
    */
-  author?: fhir.IReference|undefined;
+  author?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * Prospective warnings of potential issues when providing care to the patient.
  */
-export class Flag extends fhir.DomainResource implements IFlag {
+export class Flag extends fhir.DomainResource {
+  readonly __dataType:string = 'Flag';
   /**
    * Resource Type Name
    */
@@ -66,19 +67,15 @@ export class Flag extends fhir.DomainResource implements IFlag {
   /**
    * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
   public status: FlagStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Flag.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * The value set will often need to be adjusted based on local business rules and usage context.
    */
-  public category?: fhir.CodeableConcept[]|undefined;
+  public category?: fhir.CodeableConcept[]|undefined = [];
   /**
    * If non-coded, use CodeableConcept.text.  This element should always be included in the narrative.
    */
@@ -102,21 +99,20 @@ export class Flag extends fhir.DomainResource implements IFlag {
   /**
    * Default constructor for Flag - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IFlag> = { }) {
-    super(source);
+  constructor(source:Partial<FlagArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Flag';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
     if (source['category']) { this.category = source.category.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
     else { this.code = null; }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
     else { this.subject = null; }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['author']) { this.author = new fhir.Reference(source.author!); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['author']) { this.author = new fhir.Reference(source.author); }
   }
   /**
    * Required-bound Value Set for status
@@ -139,20 +135,33 @@ export class Flag extends fhir.DomainResource implements IFlag {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Flag.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: Flag.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["category"]) { this.category.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["code"]) { results.push(["code",'Missing required element: Flag.code']); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (!this["subject"]) { results.push(["subject",'Missing required element: Flag.subject']); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (this["author"]) { results.push(...this.author.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Flag' fhir: Flag.resourceType:'Flag'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:FlagStatusValueSetEnum fhir: Flag.status:code", }));
+    }
+    if (this["category"]) { this.category.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.CodeableConcept fhir: Flag.code:CodeableConcept", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (!this['subject']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property subject:fhir.Reference fhir: Flag.subject:Reference", }));
+    }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (this["author"]) { outcome.issue!.push(...this.author.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -3,60 +3,55 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: EnrollmentRequest
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { FmStatusValueSet, FmStatusValueSetType, FmStatusValueSetEnum } from '../fhirValueSets/FmStatusValueSet.js'
-
+import { FmStatusValueSet, FmStatusValueSetType,} from '../fhirValueSets/FmStatusValueSet.js';
+import { FmStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * This resource provides the insurance enrollment details to the insurer regarding a specified coverage.
+ * Valid arguments for the EnrollmentRequest type.
  */
-export type IEnrollmentRequest = fhir.IDomainResource & { 
+export interface EnrollmentRequestArgs extends fhir.DomainResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "EnrollmentRequest";
+  resourceType: "EnrollmentRequest"|undefined;
   /**
    * The Response business identifier.
    */
-  identifier?: fhir.IIdentifier[]|undefined;
+  identifier?: fhir.IdentifierArgs[]|undefined;
   /**
    * This element is labeled as a modifier because the status contains codes that mark the request as not currently valid.
    */
   status?: FmStatusValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: EnrollmentRequest.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
    * The date when this resource was created.
    */
-  created?: string|undefined;
-  /**
-   * Extended properties for primitive element: EnrollmentRequest.created
-   */
-  _created?: fhir.IFhirElement|undefined;
+  created?: fhir.FhirDateTime|string|undefined;
   /**
    * The Insurer who is target  of the request.
    */
-  insurer?: fhir.IReference|undefined;
+  insurer?: fhir.ReferenceArgs|undefined;
   /**
    * The practitioner who is responsible for the services rendered to the patient.
    */
-  provider?: fhir.IReference|undefined;
+  provider?: fhir.ReferenceArgs|undefined;
   /**
    * Patient Resource.
    */
-  candidate?: fhir.IReference|undefined;
+  candidate?: fhir.ReferenceArgs|undefined;
   /**
    * Reference to the program or plan identification, underwriter or payor.
    */
-  coverage?: fhir.IReference|undefined;
+  coverage?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * This resource provides the insurance enrollment details to the insurer regarding a specified coverage.
  */
-export class EnrollmentRequest extends fhir.DomainResource implements IEnrollmentRequest {
+export class EnrollmentRequest extends fhir.DomainResource {
+  readonly __dataType:string = 'EnrollmentRequest';
   /**
    * Resource Type Name
    */
@@ -64,23 +59,15 @@ export class EnrollmentRequest extends fhir.DomainResource implements IEnrollmen
   /**
    * The Response business identifier.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains codes that mark the request as not currently valid.
    */
   public status?: FmStatusValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: EnrollmentRequest.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * The date when this resource was created.
    */
-  public created?: string|undefined;
-  /**
-   * Extended properties for primitive element: EnrollmentRequest.created
-   */
-  public _created?: fhir.FhirElement|undefined;
+  public created?: fhir.FhirDateTime|undefined;
   /**
    * The Insurer who is target  of the request.
    */
@@ -100,18 +87,16 @@ export class EnrollmentRequest extends fhir.DomainResource implements IEnrollmen
   /**
    * Default constructor for EnrollmentRequest - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IEnrollmentRequest> = { }) {
-    super(source);
+  constructor(source:Partial<EnrollmentRequestArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'EnrollmentRequest';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['created']) { this.created = source.created; }
-    if (source['_created']) { this._created = new fhir.FhirElement(source._created!); }
-    if (source['insurer']) { this.insurer = new fhir.Reference(source.insurer!); }
-    if (source['provider']) { this.provider = new fhir.Reference(source.provider!); }
-    if (source['candidate']) { this.candidate = new fhir.Reference(source.candidate!); }
-    if (source['coverage']) { this.coverage = new fhir.Reference(source.coverage!); }
+    if (source['created']) { this.created = new fhir.FhirDateTime({value: source.created}); }
+    if (source['insurer']) { this.insurer = new fhir.Reference(source.insurer); }
+    if (source['provider']) { this.provider = new fhir.Reference(source.provider); }
+    if (source['candidate']) { this.candidate = new fhir.Reference(source.candidate); }
+    if (source['coverage']) { this.coverage = new fhir.Reference(source.coverage); }
   }
   /**
    * Required-bound Value Set for status
@@ -122,16 +107,23 @@ export class EnrollmentRequest extends fhir.DomainResource implements IEnrollmen
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: EnrollmentRequest.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_created"]) { results.push(...this._created.doModelValidation()); }
-    if (this["insurer"]) { results.push(...this.insurer.doModelValidation()); }
-    if (this["provider"]) { results.push(...this.provider.doModelValidation()); }
-    if (this["candidate"]) { results.push(...this.candidate.doModelValidation()); }
-    if (this["coverage"]) { results.push(...this.coverage.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'EnrollmentRequest' fhir: EnrollmentRequest.resourceType:'EnrollmentRequest'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["created"]) { outcome.issue!.push(...this.created.doModelValidation().issue!); }
+    if (this["insurer"]) { outcome.issue!.push(...this.insurer.doModelValidation().issue!); }
+    if (this["provider"]) { outcome.issue!.push(...this.provider.doModelValidation().issue!); }
+    if (this["candidate"]) { outcome.issue!.push(...this.candidate.doModelValidation().issue!); }
+    if (this["coverage"]) { outcome.issue!.push(...this.coverage.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

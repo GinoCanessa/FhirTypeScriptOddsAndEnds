@@ -3,10 +3,12 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: BiologicallyDerivedProduct
 import * as fhir from '../fhir.js';
-import { ProcedureCodeValueSet } from '../fhirValueSets/ProcedureCodeValueSet.js';
-import { ProductStorageScaleValueSet } from '../fhirValueSets/ProductStorageScaleValueSet.js';
-import { ProductCategoryValueSet } from '../fhirValueSets/ProductCategoryValueSet.js';
-import { ProductStatusValueSet } from '../fhirValueSets/ProductStatusValueSet.js';
+import { ProcedureCodeValueSet, } from '../fhirValueSets/ProcedureCodeValueSet.js';
+import { ProductStorageScaleValueSet, } from '../fhirValueSets/ProductStorageScaleValueSet.js';
+import { ProductCategoryValueSet, } from '../fhirValueSets/ProductCategoryValueSet.js';
+import { ProductStatusValueSet, } from '../fhirValueSets/ProductStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * How this product was collected.
  */
@@ -14,42 +16,44 @@ export class BiologicallyDerivedProductCollection extends fhir.BackboneElement {
     /**
      * Default constructor for BiologicallyDerivedProductCollection - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'BiologicallyDerivedProductCollection';
+        this.__collectedIsChoice = true;
         if (source['collector']) {
             this.collector = new fhir.Reference(source.collector);
         }
         if (source['source']) {
             this.source = new fhir.Reference(source.source);
         }
-        if (source['collectedDateTime']) {
-            this.collectedDateTime = source.collectedDateTime;
+        if (source['collected']) {
+            this.collected = source.collected;
         }
-        if (source['_collectedDateTime']) {
-            this._collectedDateTime = new fhir.FhirElement(source._collectedDateTime);
+        else if (source['collectedDateTime']) {
+            this.collected = new fhir.FhirDateTime({ value: source.collectedDateTime });
         }
-        if (source['collectedPeriod']) {
-            this.collectedPeriod = new fhir.Period(source.collectedPeriod);
+        else if (source['collectedPeriod']) {
+            this.collected = new fhir.Period(source.collectedPeriod);
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["collector"]) {
-            results.push(...this.collector.doModelValidation());
+            outcome.issue.push(...this.collector.doModelValidation().issue);
         }
         if (this["source"]) {
-            results.push(...this.source.doModelValidation());
+            outcome.issue.push(...this.source.doModelValidation().issue);
         }
-        if (this["_collectedDateTime"]) {
-            results.push(...this._collectedDateTime.doModelValidation());
-        }
-        if (this["collectedPeriod"]) {
-            results.push(...this.collectedPeriod.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -59,13 +63,12 @@ export class BiologicallyDerivedProductProcessing extends fhir.BackboneElement {
     /**
      * Default constructor for BiologicallyDerivedProductProcessing - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'BiologicallyDerivedProductProcessing';
+        this.__timeIsChoice = true;
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['procedure']) {
             this.procedure = new fhir.CodeableConcept(source.procedure);
@@ -73,14 +76,14 @@ export class BiologicallyDerivedProductProcessing extends fhir.BackboneElement {
         if (source['additive']) {
             this.additive = new fhir.Reference(source.additive);
         }
-        if (source['timeDateTime']) {
-            this.timeDateTime = source.timeDateTime;
+        if (source['time']) {
+            this.time = source.time;
         }
-        if (source['_timeDateTime']) {
-            this._timeDateTime = new fhir.FhirElement(source._timeDateTime);
+        else if (source['timeDateTime']) {
+            this.time = new fhir.FhirDateTime({ value: source.timeDateTime });
         }
-        if (source['timePeriod']) {
-            this.timePeriod = new fhir.Period(source.timePeriod);
+        else if (source['timePeriod']) {
+            this.time = new fhir.Period(source.timePeriod);
         }
     }
     /**
@@ -93,23 +96,23 @@ export class BiologicallyDerivedProductProcessing extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["procedure"]) {
-            results.push(...this.procedure.doModelValidation());
+            outcome.issue.push(...this.procedure.doModelValidation().issue);
         }
         if (this["additive"]) {
-            results.push(...this.additive.doModelValidation());
+            outcome.issue.push(...this.additive.doModelValidation().issue);
         }
-        if (this["_timeDateTime"]) {
-            results.push(...this._timeDateTime.doModelValidation());
-        }
-        if (this["timePeriod"]) {
-            results.push(...this.timePeriod.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -119,39 +122,38 @@ export class BiologicallyDerivedProductManipulation extends fhir.BackboneElement
     /**
      * Default constructor for BiologicallyDerivedProductManipulation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'BiologicallyDerivedProductManipulation';
+        this.__timeIsChoice = true;
         if (source['description']) {
-            this.description = source.description;
+            this.description = new fhir.FhirString({ value: source.description });
         }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+        if (source['time']) {
+            this.time = source.time;
         }
-        if (source['timeDateTime']) {
-            this.timeDateTime = source.timeDateTime;
+        else if (source['timeDateTime']) {
+            this.time = new fhir.FhirDateTime({ value: source.timeDateTime });
         }
-        if (source['_timeDateTime']) {
-            this._timeDateTime = new fhir.FhirElement(source._timeDateTime);
-        }
-        if (source['timePeriod']) {
-            this.timePeriod = new fhir.Period(source.timePeriod);
+        else if (source['timePeriod']) {
+            this.time = new fhir.Period(source.timePeriod);
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_timeDateTime"]) {
-            results.push(...this._timeDateTime.doModelValidation());
-        }
-        if (this["timePeriod"]) {
-            results.push(...this.timePeriod.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -161,25 +163,17 @@ export class BiologicallyDerivedProductStorage extends fhir.BackboneElement {
     /**
      * Default constructor for BiologicallyDerivedProductStorage - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'BiologicallyDerivedProductStorage';
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['temperature']) {
-            this.temperature = source.temperature;
-        }
-        if (source['_temperature']) {
-            this._temperature = new fhir.FhirElement(source._temperature);
+            this.temperature = new fhir.FhirDecimal({ value: source.temperature });
         }
         if (source['scale']) {
             this.scale = source.scale;
-        }
-        if (source['_scale']) {
-            this._scale = new fhir.FhirElement(source._scale);
         }
         if (source['duration']) {
             this.duration = new fhir.Period(source.duration);
@@ -195,20 +189,23 @@ export class BiologicallyDerivedProductStorage extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_temperature"]) {
-            results.push(...this._temperature.doModelValidation());
-        }
-        if (this["_scale"]) {
-            results.push(...this._scale.doModelValidation());
+        if (this["temperature"]) {
+            outcome.issue.push(...this.temperature.doModelValidation().issue);
         }
         if (this["duration"]) {
-            results.push(...this.duration.doModelValidation());
+            outcome.issue.push(...this.duration.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -219,8 +216,29 @@ export class BiologicallyDerivedProduct extends fhir.DomainResource {
     /**
      * Default constructor for BiologicallyDerivedProduct - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'BiologicallyDerivedProduct';
+        /**
+         * This records identifiers associated with this biologically derived product instance that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).
+         */
+        this.identifier = [];
+        /**
+         * Procedure request to obtain this biologically derived product.
+         */
+        this.request = [];
+        /**
+         * For products that have multiple collections. For example Peripheral Blood Stem Cells may be collected over several days from a single donor and the donation split into in multiple containers which must be linked to the parent donation.
+         */
+        this.parent = [];
+        /**
+         * Any processing of the product during collection that does not change the fundamental nature of the product. For example adding anti-coagulants during the collection of Peripheral Blood Stem Cells.
+         */
+        this.processing = [];
+        /**
+         * Product storage.
+         */
+        this.storage = [];
         this.resourceType = 'BiologicallyDerivedProduct';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -228,26 +246,17 @@ export class BiologicallyDerivedProduct extends fhir.DomainResource {
         if (source['productCategory']) {
             this.productCategory = source.productCategory;
         }
-        if (source['_productCategory']) {
-            this._productCategory = new fhir.FhirElement(source._productCategory);
-        }
         if (source['productCode']) {
             this.productCode = new fhir.CodeableConcept(source.productCode);
         }
         if (source['status']) {
             this.status = source.status;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['request']) {
             this.request = source.request.map((x) => new fhir.Reference(x));
         }
         if (source['quantity']) {
-            this.quantity = source.quantity;
-        }
-        if (source['_quantity']) {
-            this._quantity = new fhir.FhirElement(source._quantity);
+            this.quantity = new fhir.FhirInteger({ value: source.quantity });
         }
         if (source['parent']) {
             this.parent = source.parent.map((x) => new fhir.Reference(x));
@@ -281,44 +290,44 @@ export class BiologicallyDerivedProduct extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: BiologicallyDerivedProduct.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'BiologicallyDerivedProduct' fhir: BiologicallyDerivedProduct.resourceType:'BiologicallyDerivedProduct'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_productCategory"]) {
-            results.push(...this._productCategory.doModelValidation());
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["productCode"]) {
-            results.push(...this.productCode.doModelValidation());
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+            outcome.issue.push(...this.productCode.doModelValidation().issue);
         }
         if (this["request"]) {
-            this.request.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.request.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_quantity"]) {
-            results.push(...this._quantity.doModelValidation());
+        if (this["quantity"]) {
+            outcome.issue.push(...this.quantity.doModelValidation().issue);
         }
         if (this["parent"]) {
-            this.parent.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.parent.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["collection"]) {
-            results.push(...this.collection.doModelValidation());
+            outcome.issue.push(...this.collection.doModelValidation().issue);
         }
         if (this["processing"]) {
-            this.processing.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.processing.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["manipulation"]) {
-            results.push(...this.manipulation.doModelValidation());
+            outcome.issue.push(...this.manipulation.doModelValidation().issue);
         }
         if (this["storage"]) {
-            this.storage.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.storage.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=BiologicallyDerivedProduct.js.map

@@ -3,7 +3,7 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: HumanName
 import * as fhir from '../fhir.js';
-import { NameUseValueSet } from '../fhirValueSets/NameUseValueSet.js';
+import { NameUseValueSet, } from '../fhirValueSets/NameUseValueSet.js';
 /**
  * A human's name with the ability to identify parts and usage.
  */
@@ -11,43 +11,38 @@ export class HumanName extends fhir.FhirElement {
     /**
      * Default constructor for HumanName - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'HumanName';
+        /**
+         * If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations.  This element is not called "first name" since given names do not always come first.
+         */
+        this.given = [];
+        /**
+         * Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.
+         */
+        this.prefix = [];
+        /**
+         * Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.
+         */
+        this.suffix = [];
         if (source['use']) {
             this.use = source.use;
         }
-        if (source['_use']) {
-            this._use = new fhir.FhirElement(source._use);
-        }
         if (source['text']) {
-            this.text = source.text;
-        }
-        if (source['_text']) {
-            this._text = new fhir.FhirElement(source._text);
+            this.text = new fhir.FhirString({ value: source.text });
         }
         if (source['family']) {
-            this.family = source.family;
-        }
-        if (source['_family']) {
-            this._family = new fhir.FhirElement(source._family);
+            this.family = new fhir.FhirString({ value: source.family });
         }
         if (source['given']) {
-            this.given = source.given.map((x) => (x));
-        }
-        if (source['_given']) {
-            this._given = source._given.map((x) => new fhir.FhirElement(x));
+            this.given = source.given.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['prefix']) {
-            this.prefix = source.prefix.map((x) => (x));
-        }
-        if (source['_prefix']) {
-            this._prefix = source._prefix.map((x) => new fhir.FhirElement(x));
+            this.prefix = source.prefix.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['suffix']) {
-            this.suffix = source.suffix.map((x) => (x));
-        }
-        if (source['_suffix']) {
-            this._suffix = source._suffix.map((x) => new fhir.FhirElement(x));
+            this.suffix = source.suffix.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['period']) {
             this.period = new fhir.Period(source.period);
@@ -63,41 +58,44 @@ export class HumanName extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_use"]) {
-            results.push(...this._use.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["text"]) {
+            outcome.issue.push(...this.text.doModelValidation().issue);
         }
-        if (this["_text"]) {
-            results.push(...this._text.doModelValidation());
+        if (this["family"]) {
+            outcome.issue.push(...this.family.doModelValidation().issue);
         }
-        if (this["_family"]) {
-            results.push(...this._family.doModelValidation());
+        if (this["given"]) {
+            this.given.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_given"]) {
-            this._given.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["prefix"]) {
+            this.prefix.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_prefix"]) {
-            this._prefix.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_suffix"]) {
-            this._suffix.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["suffix"]) {
+            this.suffix.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
     /**
      * Convert a HumanName into a displayable string
      */
     toDisplay(familyFirst = true, includeAnnotations = false) {
         if ((this.text) && (this.text.length > 0)) {
-            return this.text;
+            return this.text.toString();
         }
         var val = '';
         if (familyFirst) {
             if (this.family) {
-                val = this.family;
+                val = this.family.toString();
             }
             if (this.given) {
                 val += (val.length > 0 ? ', ' : '') + this.given.join(' ');

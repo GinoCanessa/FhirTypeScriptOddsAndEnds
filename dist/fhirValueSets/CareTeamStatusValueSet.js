@@ -51,27 +51,4 @@ export const CareTeamStatusValueSet = {
 /**
  * Indicates the status of the care team.
  */
-export var CareTeamStatusValueSetEnum;
-(function (CareTeamStatusValueSetEnum) {
-    /**
-     * active: The care team is currently participating in the coordination and delivery of care.
-     */
-    CareTeamStatusValueSetEnum["Active"] = "active";
-    /**
-     * entered-in-error: The care team should have never existed.
-     */
-    CareTeamStatusValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * inactive: The care team was, but is no longer, participating in the coordination and delivery of care.
-     */
-    CareTeamStatusValueSetEnum["Inactive"] = "inactive";
-    /**
-     * proposed: The care team has been drafted and proposed, but not yet participating in the coordination and delivery of patient care.
-     */
-    CareTeamStatusValueSetEnum["Proposed"] = "proposed";
-    /**
-     * suspended: The care team is temporarily on hold or suspended and not participating in the coordination and delivery of care.
-     */
-    CareTeamStatusValueSetEnum["Suspended"] = "suspended";
-})(CareTeamStatusValueSetEnum || (CareTeamStatusValueSetEnum = {}));
 //# sourceMappingURL=CareTeamStatusValueSet.js.map

@@ -19,11 +19,4 @@ export const ContractAssettypeValueSet = {
 /**
  * This value set contract specific codes for asset type.
  */
-export var ContractAssettypeValueSetEnum;
-(function (ContractAssettypeValueSetEnum) {
-    /**
-     * participation: To be completed
-     */
-    ContractAssettypeValueSetEnum["Participation"] = "participation";
-})(ContractAssettypeValueSetEnum || (ContractAssettypeValueSetEnum = {}));
 //# sourceMappingURL=ContractAssettypeValueSet.js.map

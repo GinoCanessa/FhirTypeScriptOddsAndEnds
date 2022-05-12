@@ -59,31 +59,4 @@ export const ClinicalimpressionPrognosisValueSet = {
 /**
  * Example value set for clinical impression prognosis.
  */
-export var ClinicalimpressionPrognosisValueSetEnum;
-(function (ClinicalimpressionPrognosisValueSetEnum) {
-    /**
-     * Code: 170968001
-     */
-    ClinicalimpressionPrognosisValueSetEnum["GoodPrognosis"] = "170968001";
-    /**
-     * Code: 170969009
-     */
-    ClinicalimpressionPrognosisValueSetEnum["PoorPrognosis"] = "170969009";
-    /**
-     * Code: 170970005
-     */
-    ClinicalimpressionPrognosisValueSetEnum["PrognosisUncertain"] = "170970005";
-    /**
-     * Code: 60484009
-     */
-    ClinicalimpressionPrognosisValueSetEnum["ConditionalPrognosis"] = "60484009";
-    /**
-     * Code: 65872000
-     */
-    ClinicalimpressionPrognosisValueSetEnum["FairPrognosis"] = "65872000";
-    /**
-     * Code: 67334001
-     */
-    ClinicalimpressionPrognosisValueSetEnum["GuardedPrognosis"] = "67334001";
-})(ClinicalimpressionPrognosisValueSetEnum || (ClinicalimpressionPrognosisValueSetEnum = {}));
 //# sourceMappingURL=ClinicalimpressionPrognosisValueSet.js.map

@@ -43,23 +43,4 @@ export const MetricCalibrationTypeValueSet = {
 /**
  * Describes the type of a metric calibration.
  */
-export var MetricCalibrationTypeValueSetEnum;
-(function (MetricCalibrationTypeValueSetEnum) {
-    /**
-     * gain: Gain metric calibration method.
-     */
-    MetricCalibrationTypeValueSetEnum["Gain"] = "gain";
-    /**
-     * offset: Offset metric calibration method.
-     */
-    MetricCalibrationTypeValueSetEnum["Offset"] = "offset";
-    /**
-     * two-point: Two-point metric calibration method.
-     */
-    MetricCalibrationTypeValueSetEnum["TwoPoint"] = "two-point";
-    /**
-     * unspecified: Metric calibration method has not been identified.
-     */
-    MetricCalibrationTypeValueSetEnum["Unspecified"] = "unspecified";
-})(MetricCalibrationTypeValueSetEnum || (MetricCalibrationTypeValueSetEnum = {}));
 //# sourceMappingURL=MetricCalibrationTypeValueSet.js.map

@@ -3,10 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Timing
 import * as fhir from '../fhir.js';
-import { UnitsOfTimeValueSet } from '../fhirValueSets/UnitsOfTimeValueSet.js';
-import { DaysOfWeekValueSet } from '../fhirValueSets/DaysOfWeekValueSet.js';
-import { EventTimingValueSet } from '../fhirValueSets/EventTimingValueSet.js';
-import { TimingAbbreviationValueSet } from '../fhirValueSets/TimingAbbreviationValueSet.js';
+import { UnitsOfTimeValueSet, } from '../fhirValueSets/UnitsOfTimeValueSet.js';
+import { DaysOfWeekValueSet, } from '../fhirValueSets/DaysOfWeekValueSet.js';
+import { EventTimingValueSet, } from '../fhirValueSets/EventTimingValueSet.js';
+import { TimingAbbreviationValueSet, } from '../fhirValueSets/TimingAbbreviationValueSet.js';
 /**
  * A set of rules that describe when the event is scheduled.
  */
@@ -14,100 +14,75 @@ export class TimingRepeat extends fhir.FhirElement {
     /**
      * Default constructor for TimingRepeat - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['boundsDuration']) {
-            this.boundsDuration = new fhir.Duration(source.boundsDuration);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TimingRepeat';
+        this.__boundsIsChoice = true;
+        /**
+         * If no days are specified, the action is assumed to happen every day as otherwise specified. The elements frequency and period cannot be used as well as dayOfWeek.
+         */
+        this.dayOfWeek = [];
+        /**
+         * When time of day is specified, it is inferred that the action happens every day (as filtered by dayofWeek) on the specified times. The elements when, frequency and period cannot be used as well as timeOfDay.
+         */
+        this.timeOfDay = [];
+        /**
+         * When more than one event is listed, the event is tied to the union of the specified events.
+         */
+        this.when = [];
+        if (source['bounds']) {
+            this.bounds = source.bounds;
         }
-        if (source['boundsRange']) {
-            this.boundsRange = new fhir.Range(source.boundsRange);
+        else if (source['boundsDuration']) {
+            this.bounds = new fhir.Duration(source.boundsDuration);
         }
-        if (source['boundsPeriod']) {
-            this.boundsPeriod = new fhir.Period(source.boundsPeriod);
+        else if (source['boundsRange']) {
+            this.bounds = new fhir.Range(source.boundsRange);
+        }
+        else if (source['boundsPeriod']) {
+            this.bounds = new fhir.Period(source.boundsPeriod);
         }
         if (source['count']) {
-            this.count = source.count;
-        }
-        if (source['_count']) {
-            this._count = new fhir.FhirElement(source._count);
+            this.count = new fhir.FhirPositiveInt({ value: source.count });
         }
         if (source['countMax']) {
-            this.countMax = source.countMax;
-        }
-        if (source['_countMax']) {
-            this._countMax = new fhir.FhirElement(source._countMax);
+            this.countMax = new fhir.FhirPositiveInt({ value: source.countMax });
         }
         if (source['duration']) {
-            this.duration = source.duration;
-        }
-        if (source['_duration']) {
-            this._duration = new fhir.FhirElement(source._duration);
+            this.duration = new fhir.FhirDecimal({ value: source.duration });
         }
         if (source['durationMax']) {
-            this.durationMax = source.durationMax;
-        }
-        if (source['_durationMax']) {
-            this._durationMax = new fhir.FhirElement(source._durationMax);
+            this.durationMax = new fhir.FhirDecimal({ value: source.durationMax });
         }
         if (source['durationUnit']) {
             this.durationUnit = source.durationUnit;
         }
-        if (source['_durationUnit']) {
-            this._durationUnit = new fhir.FhirElement(source._durationUnit);
-        }
         if (source['frequency']) {
-            this.frequency = source.frequency;
-        }
-        if (source['_frequency']) {
-            this._frequency = new fhir.FhirElement(source._frequency);
+            this.frequency = new fhir.FhirPositiveInt({ value: source.frequency });
         }
         if (source['frequencyMax']) {
-            this.frequencyMax = source.frequencyMax;
-        }
-        if (source['_frequencyMax']) {
-            this._frequencyMax = new fhir.FhirElement(source._frequencyMax);
+            this.frequencyMax = new fhir.FhirPositiveInt({ value: source.frequencyMax });
         }
         if (source['period']) {
-            this.period = source.period;
-        }
-        if (source['_period']) {
-            this._period = new fhir.FhirElement(source._period);
+            this.period = new fhir.FhirDecimal({ value: source.period });
         }
         if (source['periodMax']) {
-            this.periodMax = source.periodMax;
-        }
-        if (source['_periodMax']) {
-            this._periodMax = new fhir.FhirElement(source._periodMax);
+            this.periodMax = new fhir.FhirDecimal({ value: source.periodMax });
         }
         if (source['periodUnit']) {
             this.periodUnit = source.periodUnit;
         }
-        if (source['_periodUnit']) {
-            this._periodUnit = new fhir.FhirElement(source._periodUnit);
-        }
         if (source['dayOfWeek']) {
-            this.dayOfWeek = source.dayOfWeek.map((x) => (x));
-        }
-        if (source['_dayOfWeek']) {
-            this._dayOfWeek = source._dayOfWeek.map((x) => new fhir.FhirElement(x));
+            this.dayOfWeek = source.dayOfWeek.map((x) => x);
         }
         if (source['timeOfDay']) {
-            this.timeOfDay = source.timeOfDay.map((x) => (x));
-        }
-        if (source['_timeOfDay']) {
-            this._timeOfDay = source._timeOfDay.map((x) => new fhir.FhirElement(x));
+            this.timeOfDay = source.timeOfDay.map((x) => new fhir.FhirTime({ value: x }));
         }
         if (source['when']) {
-            this.when = source.when.map((x) => (x));
-        }
-        if (source['_when']) {
-            this._when = source._when.map((x) => new fhir.FhirElement(x));
+            this.when = source.when.map((x) => new fhir.FhirCode({ value: x }));
         }
         if (source['offset']) {
-            this.offset = source.offset;
-        }
-        if (source['_offset']) {
-            this._offset = new fhir.FhirElement(source._offset);
+            this.offset = new fhir.FhirUnsignedInt({ value: source.offset });
         }
     }
     /**
@@ -138,59 +113,47 @@ export class TimingRepeat extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["boundsDuration"]) {
-            results.push(...this.boundsDuration.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["count"]) {
+            outcome.issue.push(...this.count.doModelValidation().issue);
         }
-        if (this["boundsRange"]) {
-            results.push(...this.boundsRange.doModelValidation());
+        if (this["countMax"]) {
+            outcome.issue.push(...this.countMax.doModelValidation().issue);
         }
-        if (this["boundsPeriod"]) {
-            results.push(...this.boundsPeriod.doModelValidation());
+        if (this["duration"]) {
+            outcome.issue.push(...this.duration.doModelValidation().issue);
         }
-        if (this["_count"]) {
-            results.push(...this._count.doModelValidation());
+        if (this["durationMax"]) {
+            outcome.issue.push(...this.durationMax.doModelValidation().issue);
         }
-        if (this["_countMax"]) {
-            results.push(...this._countMax.doModelValidation());
+        if (this["frequency"]) {
+            outcome.issue.push(...this.frequency.doModelValidation().issue);
         }
-        if (this["_duration"]) {
-            results.push(...this._duration.doModelValidation());
+        if (this["frequencyMax"]) {
+            outcome.issue.push(...this.frequencyMax.doModelValidation().issue);
         }
-        if (this["_durationMax"]) {
-            results.push(...this._durationMax.doModelValidation());
+        if (this["period"]) {
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        if (this["_durationUnit"]) {
-            results.push(...this._durationUnit.doModelValidation());
+        if (this["periodMax"]) {
+            outcome.issue.push(...this.periodMax.doModelValidation().issue);
         }
-        if (this["_frequency"]) {
-            results.push(...this._frequency.doModelValidation());
+        if (this["timeOfDay"]) {
+            this.timeOfDay.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_frequencyMax"]) {
-            results.push(...this._frequencyMax.doModelValidation());
+        if (this["when"]) {
+            this.when.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_period"]) {
-            results.push(...this._period.doModelValidation());
+        if (this["offset"]) {
+            outcome.issue.push(...this.offset.doModelValidation().issue);
         }
-        if (this["_periodMax"]) {
-            results.push(...this._periodMax.doModelValidation());
-        }
-        if (this["_periodUnit"]) {
-            results.push(...this._periodUnit.doModelValidation());
-        }
-        if (this["_dayOfWeek"]) {
-            this._dayOfWeek.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_timeOfDay"]) {
-            this._timeOfDay.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_when"]) {
-            this._when.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_offset"]) {
-            results.push(...this._offset.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -200,13 +163,15 @@ export class Timing extends fhir.BackboneElement {
     /**
      * Default constructor for Timing - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Timing';
+        /**
+         * Identifies specific times when the event occurs.
+         */
+        this.event = [];
         if (source['event']) {
-            this.event = source.event.map((x) => (x));
-        }
-        if (source['_event']) {
-            this._event = source._event.map((x) => new fhir.FhirElement(x));
+            this.event = source.event.map((x) => new fhir.FhirDateTime({ value: x }));
         }
         if (source['repeat']) {
             this.repeat = new fhir.TimingRepeat(source.repeat);
@@ -225,17 +190,23 @@ export class Timing extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_event"]) {
-            this._event.forEach((x) => { results.push(...x.doModelValidation()); });
+        var outcome = super.doModelValidation();
+        if (this["event"]) {
+            this.event.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["repeat"]) {
-            results.push(...this.repeat.doModelValidation());
+            outcome.issue.push(...this.repeat.doModelValidation().issue);
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Timing.js.map

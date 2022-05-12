@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SubstanceProtein
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * This subclause refers to the description of each subunit constituting the SubstanceProtein. A subunit is a linear sequence of amino acids linked through peptide bonds. The Subunit information shall be provided when the finished SubstanceProtein is a complex of multiple sequences; subunits are not used to delineate domains within a single sequence. Subunits are listed in order of decreasing length; sequences of the same length will be ordered by decreasing molecular weight; subunits that have identical sequences will be repeated multiple times.
  */
@@ -10,25 +12,17 @@ export class SubstanceProteinSubunit extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceProteinSubunit - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceProteinSubunit';
         if (source['subunit']) {
-            this.subunit = source.subunit;
-        }
-        if (source['_subunit']) {
-            this._subunit = new fhir.FhirElement(source._subunit);
+            this.subunit = new fhir.FhirInteger({ value: source.subunit });
         }
         if (source['sequence']) {
-            this.sequence = source.sequence;
-        }
-        if (source['_sequence']) {
-            this._sequence = new fhir.FhirElement(source._sequence);
+            this.sequence = new fhir.FhirString({ value: source.sequence });
         }
         if (source['length']) {
-            this.length = source.length;
-        }
-        if (source['_length']) {
-            this._length = new fhir.FhirElement(source._length);
+            this.length = new fhir.FhirInteger({ value: source.length });
         }
         if (source['sequenceAttachment']) {
             this.sequenceAttachment = new fhir.Attachment(source.sequenceAttachment);
@@ -37,51 +31,51 @@ export class SubstanceProteinSubunit extends fhir.BackboneElement {
             this.nTerminalModificationId = new fhir.Identifier(source.nTerminalModificationId);
         }
         if (source['nTerminalModification']) {
-            this.nTerminalModification = source.nTerminalModification;
-        }
-        if (source['_nTerminalModification']) {
-            this._nTerminalModification = new fhir.FhirElement(source._nTerminalModification);
+            this.nTerminalModification = new fhir.FhirString({ value: source.nTerminalModification });
         }
         if (source['cTerminalModificationId']) {
             this.cTerminalModificationId = new fhir.Identifier(source.cTerminalModificationId);
         }
         if (source['cTerminalModification']) {
-            this.cTerminalModification = source.cTerminalModification;
-        }
-        if (source['_cTerminalModification']) {
-            this._cTerminalModification = new fhir.FhirElement(source._cTerminalModification);
+            this.cTerminalModification = new fhir.FhirString({ value: source.cTerminalModification });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_subunit"]) {
-            results.push(...this._subunit.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["subunit"]) {
+            outcome.issue.push(...this.subunit.doModelValidation().issue);
         }
-        if (this["_sequence"]) {
-            results.push(...this._sequence.doModelValidation());
+        if (this["sequence"]) {
+            outcome.issue.push(...this.sequence.doModelValidation().issue);
         }
-        if (this["_length"]) {
-            results.push(...this._length.doModelValidation());
+        if (this["length"]) {
+            outcome.issue.push(...this.length.doModelValidation().issue);
         }
         if (this["sequenceAttachment"]) {
-            results.push(...this.sequenceAttachment.doModelValidation());
+            outcome.issue.push(...this.sequenceAttachment.doModelValidation().issue);
         }
         if (this["nTerminalModificationId"]) {
-            results.push(...this.nTerminalModificationId.doModelValidation());
+            outcome.issue.push(...this.nTerminalModificationId.doModelValidation().issue);
         }
-        if (this["_nTerminalModification"]) {
-            results.push(...this._nTerminalModification.doModelValidation());
+        if (this["nTerminalModification"]) {
+            outcome.issue.push(...this.nTerminalModification.doModelValidation().issue);
         }
         if (this["cTerminalModificationId"]) {
-            results.push(...this.cTerminalModificationId.doModelValidation());
+            outcome.issue.push(...this.cTerminalModificationId.doModelValidation().issue);
         }
-        if (this["_cTerminalModification"]) {
-            results.push(...this._cTerminalModification.doModelValidation());
+        if (this["cTerminalModification"]) {
+            outcome.issue.push(...this.cTerminalModification.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -91,23 +85,26 @@ export class SubstanceProtein extends fhir.DomainResource {
     /**
      * Default constructor for SubstanceProtein - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceProtein';
+        /**
+         * The disulphide bond between two cysteine residues either on the same subunit or on two different subunits shall be described. The position of the disulfide bonds in the SubstanceProtein shall be listed in increasing order of subunit number and position within subunit followed by the abbreviation of the amino acids involved. The disulfide linkage positions shall actually contain the amino acid Cysteine at the respective positions.
+         */
+        this.disulfideLinkage = [];
+        /**
+         * This subclause refers to the description of each subunit constituting the SubstanceProtein. A subunit is a linear sequence of amino acids linked through peptide bonds. The Subunit information shall be provided when the finished SubstanceProtein is a complex of multiple sequences; subunits are not used to delineate domains within a single sequence. Subunits are listed in order of decreasing length; sequences of the same length will be ordered by decreasing molecular weight; subunits that have identical sequences will be repeated multiple times.
+         */
+        this.subunit = [];
         this.resourceType = 'SubstanceProtein';
         if (source['sequenceType']) {
             this.sequenceType = new fhir.CodeableConcept(source.sequenceType);
         }
         if (source['numberOfSubunits']) {
-            this.numberOfSubunits = source.numberOfSubunits;
-        }
-        if (source['_numberOfSubunits']) {
-            this._numberOfSubunits = new fhir.FhirElement(source._numberOfSubunits);
+            this.numberOfSubunits = new fhir.FhirInteger({ value: source.numberOfSubunits });
         }
         if (source['disulfideLinkage']) {
-            this.disulfideLinkage = source.disulfideLinkage.map((x) => (x));
-        }
-        if (source['_disulfideLinkage']) {
-            this._disulfideLinkage = source._disulfideLinkage.map((x) => new fhir.FhirElement(x));
+            this.disulfideLinkage = source.disulfideLinkage.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['subunit']) {
             this.subunit = source.subunit.map((x) => new fhir.SubstanceProteinSubunit(x));
@@ -117,23 +114,29 @@ export class SubstanceProtein extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: SubstanceProtein.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'SubstanceProtein' fhir: SubstanceProtein.resourceType:'SubstanceProtein'", }));
         }
         if (this["sequenceType"]) {
-            results.push(...this.sequenceType.doModelValidation());
+            outcome.issue.push(...this.sequenceType.doModelValidation().issue);
         }
-        if (this["_numberOfSubunits"]) {
-            results.push(...this._numberOfSubunits.doModelValidation());
+        if (this["numberOfSubunits"]) {
+            outcome.issue.push(...this.numberOfSubunits.doModelValidation().issue);
         }
-        if (this["_disulfideLinkage"]) {
-            this._disulfideLinkage.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["disulfideLinkage"]) {
+            this.disulfideLinkage.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["subunit"]) {
-            this.subunit.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.subunit.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=SubstanceProtein.js.map

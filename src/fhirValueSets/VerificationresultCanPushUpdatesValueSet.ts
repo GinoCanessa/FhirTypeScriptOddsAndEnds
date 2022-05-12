@@ -43,17 +43,3 @@ export type VerificationresultCanPushUpdatesValueSetType = typeof Verificationre
 /**
  * Ability of the primary source to push updates/alerts
  */
-export enum VerificationresultCanPushUpdatesValueSetEnum {
-  /**
-   * Code: no
-   */
-  No = "no",
-  /**
-   * Code: undetermined
-   */
-  Undetermined = "undetermined",
-  /**
-   * Code: yes
-   */
-  Yes = "yes",
-}

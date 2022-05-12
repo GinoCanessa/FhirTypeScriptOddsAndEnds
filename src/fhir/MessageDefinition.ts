@@ -3,308 +3,72 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MessageDefinition
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ResourceTypesValueSet, ResourceTypesValueSetType, ResourceTypesValueSetEnum } from '../fhirValueSets/ResourceTypesValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-import { MessageSignificanceCategoryValueSet, MessageSignificanceCategoryValueSetType, MessageSignificanceCategoryValueSetEnum } from '../fhirValueSets/MessageSignificanceCategoryValueSet.js'
-import { MessageheaderResponseRequestValueSet, MessageheaderResponseRequestValueSetType, MessageheaderResponseRequestValueSetEnum } from '../fhirValueSets/MessageheaderResponseRequestValueSet.js'
-
+import { ResourceTypesValueSet, ResourceTypesValueSetType,} from '../fhirValueSets/ResourceTypesValueSet.js';
+import { ResourceTypesValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { MessageSignificanceCategoryValueSet, MessageSignificanceCategoryValueSetType,} from '../fhirValueSets/MessageSignificanceCategoryValueSet.js';
+import { MessageSignificanceCategoryValueSetEnum } from '../valueSetEnums.js';
+import { MessageheaderResponseRequestValueSet, MessageheaderResponseRequestValueSetType,} from '../fhirValueSets/MessageheaderResponseRequestValueSet.js';
+import { MessageheaderResponseRequestValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Identifies the resource (or resources) that are being addressed by the event.  For example, the Encounter for an admit message or two Account records for a merge.
+ * Valid arguments for the MessageDefinitionFocus type.
  */
-export type IMessageDefinitionFocus = fhir.IBackboneElement & { 
+export interface MessageDefinitionFocusArgs extends fhir.BackboneElementArgs {
   /**
    * Multiple focuses addressing different resources may occasionally occur.  E.g. to link or unlink a resource from a particular account or encounter, etc.
    */
-  code: string|null;
-  /**
-   * Extended properties for primitive element: MessageDefinition.focus.code
-   */
-  _code?: fhir.IFhirElement|undefined;
+  code: fhir.FhirCode|string|undefined;
   /**
    * This should be present for most message definitions.  However, if the message focus is only a single resource and there is no need to include referenced resources or otherwise enforce the presence of particular elements, it can be omitted.
    */
-  profile?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.focus.profile
-   */
-  _profile?: fhir.IFhirElement|undefined;
+  profile?: fhir.FhirCanonical|string|undefined;
   /**
    * Identifies the minimum number of resources of this type that must be pointed to by a message in order for it to be valid against this MessageDefinition.
    */
-  min: number|null;
-  /**
-   * Extended properties for primitive element: MessageDefinition.focus.min
-   */
-  _min?: fhir.IFhirElement|undefined;
+  min: fhir.FhirUnsignedInt|number|undefined;
   /**
    * Identifies the maximum number of resources of this type that must be pointed to by a message in order for it to be valid against this MessageDefinition.
    */
-  max?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.focus.max
-   */
-  _max?: fhir.IFhirElement|undefined;
-}
-
-/**
- * This indicates an application level response to "close" a transaction implicit in a particular request message.  To define a complete workflow scenario, look to the [[PlanDefinition]] resource which allows the definition of complex orchestrations, conditionality, etc.
- */
-export type IMessageDefinitionAllowedResponse = fhir.IBackboneElement & { 
-  /**
-   * A reference to the message definition that must be adhered to by this supported response.
-   */
-  message: string|null;
-  /**
-   * Extended properties for primitive element: MessageDefinition.allowedResponse.message
-   */
-  _message?: fhir.IFhirElement|undefined;
-  /**
-   * Provides a description of the circumstances in which this response should be used (as opposed to one of the alternative responses).
-   */
-  situation?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.allowedResponse.situation
-   */
-  _situation?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
- */
-export type IMessageDefinition = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "MessageDefinition";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this message definition outside of FHIR, where it is not possible to use the logical URI.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * There may be different message definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the message definition with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * A MessageDefinition that is superseded by this definition.
-   */
-  replaces?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.replaces
-   */
-  _replaces?: fhir.IFhirElement[]|undefined;
-  /**
-   * Allows filtering of message definitions that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: MessageDefinition.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of message definitions that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the message definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date: string|null;
-  /**
-   * Extended properties for primitive element: MessageDefinition.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the message definition is the organization or individual primarily responsible for the maintenance and upkeep of the message definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the message definition. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the message definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the message definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the message definition is presumed to be the predominant language in the place the message definition was created).
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the message definition to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * This element does not describe the usage of the message definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this message definition.
-   */
-  purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.purpose
-   */
-  _purpose?: fhir.IFhirElement|undefined;
-  /**
-   * A copyright statement relating to the message definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the message definition.
-   */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-  /**
-   * The MessageDefinition that is the basis for the contents of this resource.
-   */
-  base?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.base
-   */
-  _base?: fhir.IFhirElement|undefined;
-  /**
-   * It should be possible to use MessageDefinition to describe a message to be used by certain steps in a particular protocol as part of a PlanDefinition or ActivityDefinition.
-   */
-  parent?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.parent
-   */
-  _parent?: fhir.IFhirElement[]|undefined;
-  /**
-   * Event code or link to the EventDefinition.
-   */
-  eventCoding?: fhir.ICoding|undefined;
-  /**
-   * Event code or link to the EventDefinition.
-   */
-  eventUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.event[x]
-   */
-  _eventUri?: fhir.IFhirElement|undefined;
-  /**
-   * The impact of the content of the message.
-   */
-  category?: MessageSignificanceCategoryValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.category
-   */
-  _category?: fhir.IFhirElement|undefined;
-  /**
-   * Identifies the resource (or resources) that are being addressed by the event.  For example, the Encounter for an admit message or two Account records for a merge.
-   */
-  focus?: fhir.IMessageDefinitionFocus[]|undefined;
-  /**
-   * This enables the capability currently available through MSH-16 (Application Level acknowledgement) in HL7 Version 2 to declare at a message instance level whether a response is required or only upon error or success, or never.
-   */
-  responseRequired?: MessageheaderResponseRequestValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.responseRequired
-   */
-  _responseRequired?: fhir.IFhirElement|undefined;
-  /**
-   * This indicates an application level response to "close" a transaction implicit in a particular request message.  To define a complete workflow scenario, look to the [[PlanDefinition]] resource which allows the definition of complex orchestrations, conditionality, etc.
-   */
-  allowedResponse?: fhir.IMessageDefinitionAllowedResponse[]|undefined;
-  /**
-   * Canonical reference to a GraphDefinition. If a URL is provided, it is the canonical reference to a [GraphDefinition](graphdefinition.html) that it controls what resources are to be added to the bundle when building the document. The GraphDefinition can also specify profiles that apply to the various resources.
-   */
-  graph?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.graph
-   */
-  _graph?: fhir.IFhirElement[]|undefined;
+  max?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Identifies the resource (or resources) that are being addressed by the event.  For example, the Encounter for an admit message or two Account records for a merge.
  */
-export class MessageDefinitionFocus extends fhir.BackboneElement implements IMessageDefinitionFocus {
+export class MessageDefinitionFocus extends fhir.BackboneElement {
+  readonly __dataType:string = 'MessageDefinitionFocus';
   /**
    * Multiple focuses addressing different resources may occasionally occur.  E.g. to link or unlink a resource from a particular account or encounter, etc.
    */
-  public code: string|null;
-  /**
-   * Extended properties for primitive element: MessageDefinition.focus.code
-   */
-  public _code?: fhir.FhirElement|undefined;
+  public code: fhir.FhirCode|null;
   /**
    * This should be present for most message definitions.  However, if the message focus is only a single resource and there is no need to include referenced resources or otherwise enforce the presence of particular elements, it can be omitted.
    */
-  public profile?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.focus.profile
-   */
-  public _profile?: fhir.FhirElement|undefined;
+  public profile?: fhir.FhirCanonical|undefined;
   /**
    * Identifies the minimum number of resources of this type that must be pointed to by a message in order for it to be valid against this MessageDefinition.
    */
-  public min: number|null;
-  /**
-   * Extended properties for primitive element: MessageDefinition.focus.min
-   */
-  public _min?: fhir.FhirElement|undefined;
+  public min: fhir.FhirUnsignedInt|null;
   /**
    * Identifies the maximum number of resources of this type that must be pointed to by a message in order for it to be valid against this MessageDefinition.
    */
-  public max?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.focus.max
-   */
-  public _max?: fhir.FhirElement|undefined;
+  public max?: fhir.FhirString|undefined;
   /**
    * Default constructor for MessageDefinitionFocus - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMessageDefinitionFocus> = { }) {
-    super(source);
-    if (source['code']) { this.code = source.code; }
+  constructor(source:Partial<MessageDefinitionFocusArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.FhirCode({value: source.code}); }
     else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['profile']) { this.profile = source.profile; }
-    if (source['_profile']) { this._profile = new fhir.FhirElement(source._profile!); }
-    if (source['min']) { this.min = source.min; }
+    if (source['profile']) { this.profile = new fhir.FhirCanonical({value: source.profile}); }
+    if (source['min']) { this.min = new fhir.FhirUnsignedInt({value: source.min}); }
     else { this.min = null; }
-    if (source['_min']) { this._min = new fhir.FhirElement(source._min!); }
-    if (source['max']) { this.max = source.max; }
-    if (source['_max']) { this._max = new fhir.FhirElement(source._max!); }
+    if (source['max']) { this.max = new fhir.FhirString({value: source.max}); }
   }
   /**
    * Required-bound Value Set for code
@@ -315,65 +79,203 @@ export class MessageDefinitionFocus extends fhir.BackboneElement implements IMes
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: MessageDefinition.focus.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["_profile"]) { results.push(...this._profile.doModelValidation()); }
-    if (!this["min"]) { results.push(["min",'Missing required element: MessageDefinition.focus.min']); }
-    if (this["_min"]) { results.push(...this._min.doModelValidation()); }
-    if (this["_max"]) { results.push(...this._max.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.FhirCode fhir: MessageDefinition.focus.code:code", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["profile"]) { outcome.issue!.push(...this.profile.doModelValidation().issue!); }
+    if (!this['min']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property min:fhir.FhirUnsignedInt fhir: MessageDefinition.focus.min:unsignedInt", }));
+    }
+    if (this["min"]) { outcome.issue!.push(...this.min.doModelValidation().issue!); }
+    if (this["max"]) { outcome.issue!.push(...this.max.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MessageDefinitionAllowedResponse type.
+ */
+export interface MessageDefinitionAllowedResponseArgs extends fhir.BackboneElementArgs {
+  /**
+   * A reference to the message definition that must be adhered to by this supported response.
+   */
+  message: fhir.FhirCanonical|string|undefined;
+  /**
+   * Provides a description of the circumstances in which this response should be used (as opposed to one of the alternative responses).
+   */
+  situation?: fhir.FhirMarkdown|string|undefined;
 }
 
 /**
  * This indicates an application level response to "close" a transaction implicit in a particular request message.  To define a complete workflow scenario, look to the [[PlanDefinition]] resource which allows the definition of complex orchestrations, conditionality, etc.
  */
-export class MessageDefinitionAllowedResponse extends fhir.BackboneElement implements IMessageDefinitionAllowedResponse {
+export class MessageDefinitionAllowedResponse extends fhir.BackboneElement {
+  readonly __dataType:string = 'MessageDefinitionAllowedResponse';
   /**
    * A reference to the message definition that must be adhered to by this supported response.
    */
-  public message: string|null;
-  /**
-   * Extended properties for primitive element: MessageDefinition.allowedResponse.message
-   */
-  public _message?: fhir.FhirElement|undefined;
+  public message: fhir.FhirCanonical|null;
   /**
    * Provides a description of the circumstances in which this response should be used (as opposed to one of the alternative responses).
    */
-  public situation?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.allowedResponse.situation
-   */
-  public _situation?: fhir.FhirElement|undefined;
+  public situation?: fhir.FhirMarkdown|undefined;
   /**
    * Default constructor for MessageDefinitionAllowedResponse - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMessageDefinitionAllowedResponse> = { }) {
-    super(source);
-    if (source['message']) { this.message = source.message; }
+  constructor(source:Partial<MessageDefinitionAllowedResponseArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['message']) { this.message = new fhir.FhirCanonical({value: source.message}); }
     else { this.message = null; }
-    if (source['_message']) { this._message = new fhir.FhirElement(source._message!); }
-    if (source['situation']) { this.situation = source.situation; }
-    if (source['_situation']) { this._situation = new fhir.FhirElement(source._situation!); }
+    if (source['situation']) { this.situation = new fhir.FhirMarkdown({value: source.situation}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["message"]) { results.push(["message",'Missing required element: MessageDefinition.allowedResponse.message']); }
-    if (this["_message"]) { results.push(...this._message.doModelValidation()); }
-    if (this["_situation"]) { results.push(...this._situation.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['message']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property message:fhir.FhirCanonical fhir: MessageDefinition.allowedResponse.message:canonical", }));
+    }
+    if (this["message"]) { outcome.issue!.push(...this.message.doModelValidation().issue!); }
+    if (this["situation"]) { outcome.issue!.push(...this.situation.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MessageDefinition type.
+ */
+export interface MessageDefinitionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "MessageDefinition"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this message definition outside of FHIR, where it is not possible to use the logical URI.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * There may be different message definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the message definition with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * A MessageDefinition that is superseded by this definition.
+   */
+  replaces?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * Allows filtering of message definitions that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Allows filtering of message definitions that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the message definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the message definition is the organization or individual primarily responsible for the maintenance and upkeep of the message definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the message definition. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the message definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the message definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the message definition is presumed to be the predominant language in the place the message definition was created).
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the message definition to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * This element does not describe the usage of the message definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this message definition.
+   */
+  purpose?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * A copyright statement relating to the message definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the message definition.
+   */
+  copyright?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * The MessageDefinition that is the basis for the contents of this resource.
+   */
+  base?: fhir.FhirCanonical|string|undefined;
+  /**
+   * It should be possible to use MessageDefinition to describe a message to be used by certain steps in a particular protocol as part of a PlanDefinition or ActivityDefinition.
+   */
+  parent?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * Event code or link to the EventDefinition.
+   */
+  event?: fhir.Coding|fhir.FhirUri|undefined;
+  /**
+   * Event code or link to the EventDefinition.
+   */
+  eventCoding?: fhir.CodingArgs|undefined;
+  /**
+   * Event code or link to the EventDefinition.
+   */
+  eventUri?: fhir.FhirUri|string|undefined;
+  /**
+   * The impact of the content of the message.
+   */
+  category?: MessageSignificanceCategoryValueSetEnum|undefined;
+  /**
+   * Identifies the resource (or resources) that are being addressed by the event.  For example, the Encounter for an admit message or two Account records for a merge.
+   */
+  focus?: fhir.MessageDefinitionFocusArgs[]|undefined;
+  /**
+   * This enables the capability currently available through MSH-16 (Application Level acknowledgement) in HL7 Version 2 to declare at a message instance level whether a response is required or only upon error or success, or never.
+   */
+  responseRequired?: MessageheaderResponseRequestValueSetEnum|undefined;
+  /**
+   * This indicates an application level response to "close" a transaction implicit in a particular request message.  To define a complete workflow scenario, look to the [[PlanDefinition]] resource which allows the definition of complex orchestrations, conditionality, etc.
+   */
+  allowedResponse?: fhir.MessageDefinitionAllowedResponseArgs[]|undefined;
+  /**
+   * Canonical reference to a GraphDefinition. If a URL is provided, it is the canonical reference to a [GraphDefinition](graphdefinition.html) that it controls what resources are to be added to the bundle when building the document. The GraphDefinition can also specify profiles that apply to the various resources.
+   */
+  graph?: fhir.FhirCanonical[]|string[]|undefined;
 }
 
 /**
  * Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
  */
-export class MessageDefinition extends fhir.DomainResource implements IMessageDefinition {
+export class MessageDefinition extends fhir.DomainResource {
+  readonly __dataType:string = 'MessageDefinition';
   /**
    * Resource Type Name
    */
@@ -383,226 +285,135 @@ export class MessageDefinition extends fhir.DomainResource implements IMessageDe
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this message definition outside of FHIR, where it is not possible to use the logical URI.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * There may be different message definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the message definition with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * A MessageDefinition that is superseded by this definition.
    */
-  public replaces?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.replaces
-   */
-  public _replaces?: fhir.FhirElement[]|undefined;
+  public replaces?: fhir.FhirCanonical[]|undefined = [];
   /**
    * Allows filtering of message definitions that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: MessageDefinition.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of message definitions that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the message definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date: string|null;
-  /**
-   * Extended properties for primitive element: MessageDefinition.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date: fhir.FhirDateTime|null;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the message definition is the organization or individual primarily responsible for the maintenance and upkeep of the message definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the message definition. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the message definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the message definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the message definition is presumed to be the predominant language in the place the message definition was created).
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the message definition to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * This element does not describe the usage of the message definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this message definition.
    */
-  public purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.purpose
-   */
-  public _purpose?: fhir.FhirElement|undefined;
+  public purpose?: fhir.FhirMarkdown|undefined;
   /**
    * A copyright statement relating to the message definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the message definition.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * The MessageDefinition that is the basis for the contents of this resource.
    */
-  public base?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.base
-   */
-  public _base?: fhir.FhirElement|undefined;
+  public base?: fhir.FhirCanonical|undefined;
   /**
    * It should be possible to use MessageDefinition to describe a message to be used by certain steps in a particular protocol as part of a PlanDefinition or ActivityDefinition.
    */
-  public parent?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.parent
-   */
-  public _parent?: fhir.FhirElement[]|undefined;
+  public parent?: fhir.FhirCanonical[]|undefined = [];
   /**
    * Event code or link to the EventDefinition.
    */
-  public eventCoding?: fhir.Coding|undefined;
-  /**
-   * Event code or link to the EventDefinition.
-   */
-  public eventUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.event[x]
-   */
-  public _eventUri?: fhir.FhirElement|undefined;
+  public event: (fhir.Coding|fhir.FhirUri)|null;
+  readonly __eventIsChoice:true = true;
   /**
    * The impact of the content of the message.
    */
   public category?: MessageSignificanceCategoryValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: MessageDefinition.category
-   */
-  public _category?: fhir.FhirElement|undefined;
-  /**
    * Identifies the resource (or resources) that are being addressed by the event.  For example, the Encounter for an admit message or two Account records for a merge.
    */
-  public focus?: fhir.MessageDefinitionFocus[]|undefined;
+  public focus?: fhir.MessageDefinitionFocus[]|undefined = [];
   /**
    * This enables the capability currently available through MSH-16 (Application Level acknowledgement) in HL7 Version 2 to declare at a message instance level whether a response is required or only upon error or success, or never.
    */
   public responseRequired?: MessageheaderResponseRequestValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: MessageDefinition.responseRequired
-   */
-  public _responseRequired?: fhir.FhirElement|undefined;
-  /**
    * This indicates an application level response to "close" a transaction implicit in a particular request message.  To define a complete workflow scenario, look to the [[PlanDefinition]] resource which allows the definition of complex orchestrations, conditionality, etc.
    */
-  public allowedResponse?: fhir.MessageDefinitionAllowedResponse[]|undefined;
+  public allowedResponse?: fhir.MessageDefinitionAllowedResponse[]|undefined = [];
   /**
    * Canonical reference to a GraphDefinition. If a URL is provided, it is the canonical reference to a [GraphDefinition](graphdefinition.html) that it controls what resources are to be added to the bundle when building the document. The GraphDefinition can also specify profiles that apply to the various resources.
    */
-  public graph?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: MessageDefinition.graph
-   */
-  public _graph?: fhir.FhirElement[]|undefined;
+  public graph?: fhir.FhirCanonical[]|undefined = [];
   /**
    * Default constructor for MessageDefinition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMessageDefinition> = { }) {
-    super(source);
+  constructor(source:Partial<MessageDefinitionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'MessageDefinition';
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
-    if (source['replaces']) { this.replaces = source.replaces.map((x) => (x)); }
-    if (source['_replaces']) { this._replaces = source._replaces.map((x) => new fhir.FhirElement(x)); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
+    if (source['replaces']) { this.replaces = source.replaces.map((x) => new fhir.FhirCanonical({value: x})); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['date']) { this.date = source.date; }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
     else { this.date = null; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['purpose']) { this.purpose = source.purpose; }
-    if (source['_purpose']) { this._purpose = new fhir.FhirElement(source._purpose!); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
-    if (source['base']) { this.base = source.base; }
-    if (source['_base']) { this._base = new fhir.FhirElement(source._base!); }
-    if (source['parent']) { this.parent = source.parent.map((x) => (x)); }
-    if (source['_parent']) { this._parent = source._parent.map((x) => new fhir.FhirElement(x)); }
-    if (source['eventCoding']) { this.eventCoding = new fhir.Coding(source.eventCoding!); }
-    if (source['eventUri']) { this.eventUri = source.eventUri; }
-    if (source['_eventUri']) { this._eventUri = new fhir.FhirElement(source._eventUri!); }
+    if (source['purpose']) { this.purpose = new fhir.FhirMarkdown({value: source.purpose}); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
+    if (source['base']) { this.base = new fhir.FhirCanonical({value: source.base}); }
+    if (source['parent']) { this.parent = source.parent.map((x) => new fhir.FhirCanonical({value: x})); }
+    if (source['event']) { this.event = source.event; }
+    else if (source['eventCoding']) { this.event = new fhir.Coding(source.eventCoding); }
+    else if (source['eventUri']) { this.event = new fhir.FhirUri({value: source.eventUri}); }
+    else { this.event = null; }
     if (source['category']) { this.category = source.category; }
-    if (source['_category']) { this._category = new fhir.FhirElement(source._category!); }
     if (source['focus']) { this.focus = source.focus.map((x) => new fhir.MessageDefinitionFocus(x)); }
     if (source['responseRequired']) { this.responseRequired = source.responseRequired; }
-    if (source['_responseRequired']) { this._responseRequired = new fhir.FhirElement(source._responseRequired!); }
     if (source['allowedResponse']) { this.allowedResponse = source.allowedResponse.map((x) => new fhir.MessageDefinitionAllowedResponse(x)); }
-    if (source['graph']) { this.graph = source.graph.map((x) => (x)); }
-    if (source['_graph']) { this._graph = source._graph.map((x) => new fhir.FhirElement(x)); }
+    if (source['graph']) { this.graph = source.graph.map((x) => new fhir.FhirCanonical({value: x})); }
   }
   /**
    * Required-bound Value Set for status
@@ -625,36 +436,46 @@ export class MessageDefinition extends fhir.DomainResource implements IMessageDe
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: MessageDefinition.resourceType']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (this["_replaces"]) { this._replaces.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: MessageDefinition.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (!this["date"]) { results.push(["date",'Missing required element: MessageDefinition.date']); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_purpose"]) { results.push(...this._purpose.doModelValidation()); }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (this["_base"]) { results.push(...this._base.doModelValidation()); }
-    if (this["_parent"]) { this._parent.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["eventCoding"]) { results.push(...this.eventCoding.doModelValidation()); }
-    if (this["_eventUri"]) { results.push(...this._eventUri.doModelValidation()); }
-    if (this["_category"]) { results.push(...this._category.doModelValidation()); }
-    if (this["focus"]) { this.focus.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_responseRequired"]) { results.push(...this._responseRequired.doModelValidation()); }
-    if (this["allowedResponse"]) { this.allowedResponse.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_graph"]) { this._graph.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'MessageDefinition' fhir: MessageDefinition.resourceType:'MessageDefinition'", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (this["replaces"]) { this.replaces.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: MessageDefinition.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (!this['date']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property date:fhir.FhirDateTime fhir: MessageDefinition.date:dateTime", }));
+    }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (this["base"]) { outcome.issue!.push(...this.base.doModelValidation().issue!); }
+    if (this["parent"]) { this.parent.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['event']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property event: fhir: MessageDefinition.event[x]:", }));
+    }
+    if (this["focus"]) { this.focus.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["allowedResponse"]) { this.allowedResponse.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["graph"]) { this.graph.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

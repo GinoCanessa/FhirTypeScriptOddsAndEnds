@@ -51,27 +51,4 @@ export const AddressUseValueSet = {
 /**
  * The use of an address.
  */
-export var AddressUseValueSetEnum;
-(function (AddressUseValueSetEnum) {
-    /**
-     * billing: An address to be used to send bills, invoices, receipts etc.
-     */
-    AddressUseValueSetEnum["Billing"] = "billing";
-    /**
-     * home: A communication address at a home.
-     */
-    AddressUseValueSetEnum["Home"] = "home";
-    /**
-     * old: This address is no longer in use (or was never correct but retained for records).
-     */
-    AddressUseValueSetEnum["OldIncorrect"] = "old";
-    /**
-     * temp: A temporary address. The period can provide more detailed information.
-     */
-    AddressUseValueSetEnum["Temporary"] = "temp";
-    /**
-     * work: An office address. First choice for business related contacts during business hours.
-     */
-    AddressUseValueSetEnum["Work"] = "work";
-})(AddressUseValueSetEnum || (AddressUseValueSetEnum = {}));
 //# sourceMappingURL=AddressUseValueSet.js.map

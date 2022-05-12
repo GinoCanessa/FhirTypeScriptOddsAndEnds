@@ -35,19 +35,4 @@ export const ReportParticipantTypeValueSet = {
 /**
  * The type of participant.
  */
-export var ReportParticipantTypeValueSetEnum;
-(function (ReportParticipantTypeValueSetEnum) {
-    /**
-     * client: A FHIR Client.
-     */
-    ReportParticipantTypeValueSetEnum["Client"] = "client";
-    /**
-     * server: A FHIR Server.
-     */
-    ReportParticipantTypeValueSetEnum["Server"] = "server";
-    /**
-     * test-engine: The test execution engine.
-     */
-    ReportParticipantTypeValueSetEnum["TestEngine"] = "test-engine";
-})(ReportParticipantTypeValueSetEnum || (ReportParticipantTypeValueSetEnum = {}));
 //# sourceMappingURL=ReportParticipantTypeValueSet.js.map

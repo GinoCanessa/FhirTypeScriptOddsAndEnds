@@ -3,7 +3,9 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: EnrollmentRequest
 import * as fhir from '../fhir.js';
-import { FmStatusValueSet } from '../fhirValueSets/FmStatusValueSet.js';
+import { FmStatusValueSet, } from '../fhirValueSets/FmStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * This resource provides the insurance enrollment details to the insurer regarding a specified coverage.
  */
@@ -11,8 +13,13 @@ export class EnrollmentRequest extends fhir.DomainResource {
     /**
      * Default constructor for EnrollmentRequest - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EnrollmentRequest';
+        /**
+         * The Response business identifier.
+         */
+        this.identifier = [];
         this.resourceType = 'EnrollmentRequest';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -20,14 +27,8 @@ export class EnrollmentRequest extends fhir.DomainResource {
         if (source['status']) {
             this.status = source.status;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['created']) {
-            this.created = source.created;
-        }
-        if (source['_created']) {
-            this._created = new fhir.FhirElement(source._created);
+            this.created = new fhir.FhirDateTime({ value: source.created });
         }
         if (source['insurer']) {
             this.insurer = new fhir.Reference(source.insurer);
@@ -52,32 +53,35 @@ export class EnrollmentRequest extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: EnrollmentRequest.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'EnrollmentRequest' fhir: EnrollmentRequest.resourceType:'EnrollmentRequest'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
-        }
-        if (this["_created"]) {
-            results.push(...this._created.doModelValidation());
+        if (this["created"]) {
+            outcome.issue.push(...this.created.doModelValidation().issue);
         }
         if (this["insurer"]) {
-            results.push(...this.insurer.doModelValidation());
+            outcome.issue.push(...this.insurer.doModelValidation().issue);
         }
         if (this["provider"]) {
-            results.push(...this.provider.doModelValidation());
+            outcome.issue.push(...this.provider.doModelValidation().issue);
         }
         if (this["candidate"]) {
-            results.push(...this.candidate.doModelValidation());
+            outcome.issue.push(...this.candidate.doModelValidation().issue);
         }
         if (this["coverage"]) {
-            results.push(...this.coverage.doModelValidation());
+            outcome.issue.push(...this.coverage.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=EnrollmentRequest.js.map

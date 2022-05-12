@@ -75,39 +75,4 @@ export const DurationUnitsValueSet = {
 /**
  * Unified Code for Units of Measure (UCUM). This value set includes all UCUM codes
  */
-export var DurationUnitsValueSetEnum;
-(function (DurationUnitsValueSetEnum) {
-    /**
-     * Code: a
-     */
-    DurationUnitsValueSetEnum["Years"] = "a";
-    /**
-     * Code: d
-     */
-    DurationUnitsValueSetEnum["Days"] = "d";
-    /**
-     * Code: h
-     */
-    DurationUnitsValueSetEnum["Hours"] = "h";
-    /**
-     * Code: min
-     */
-    DurationUnitsValueSetEnum["Minutes"] = "min";
-    /**
-     * Code: mo
-     */
-    DurationUnitsValueSetEnum["Months"] = "mo";
-    /**
-     * Code: ms
-     */
-    DurationUnitsValueSetEnum["Milliseconds"] = "ms";
-    /**
-     * Code: s
-     */
-    DurationUnitsValueSetEnum["Seconds"] = "s";
-    /**
-     * Code: wk
-     */
-    DurationUnitsValueSetEnum["Weeks"] = "wk";
-})(DurationUnitsValueSetEnum || (DurationUnitsValueSetEnum = {}));
 //# sourceMappingURL=DurationUnitsValueSet.js.map

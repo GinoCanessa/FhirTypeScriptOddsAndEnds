@@ -3,529 +3,69 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MolecularSequence
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ChromosomeHumanValueSet, ChromosomeHumanValueSetType, ChromosomeHumanValueSetEnum } from '../fhirValueSets/ChromosomeHumanValueSet.js'
-import { OrientationTypeValueSet, OrientationTypeValueSetType, OrientationTypeValueSetEnum } from '../fhirValueSets/OrientationTypeValueSet.js'
-import { StrandTypeValueSet, StrandTypeValueSetType, StrandTypeValueSetEnum } from '../fhirValueSets/StrandTypeValueSet.js'
-import { QualityTypeValueSet, QualityTypeValueSetType, QualityTypeValueSetEnum } from '../fhirValueSets/QualityTypeValueSet.js'
-import { RepositoryTypeValueSet, RepositoryTypeValueSetType, RepositoryTypeValueSetEnum } from '../fhirValueSets/RepositoryTypeValueSet.js'
-import { SequenceTypeValueSet, SequenceTypeValueSetType, SequenceTypeValueSetEnum } from '../fhirValueSets/SequenceTypeValueSet.js'
-
+import { ChromosomeHumanValueSet, ChromosomeHumanValueSetType,} from '../fhirValueSets/ChromosomeHumanValueSet.js';
+import { ChromosomeHumanValueSetEnum } from '../valueSetEnums.js';
+import { OrientationTypeValueSet, OrientationTypeValueSetType,} from '../fhirValueSets/OrientationTypeValueSet.js';
+import { OrientationTypeValueSetEnum } from '../valueSetEnums.js';
+import { StrandTypeValueSet, StrandTypeValueSetType,} from '../fhirValueSets/StrandTypeValueSet.js';
+import { StrandTypeValueSetEnum } from '../valueSetEnums.js';
+import { QualityTypeValueSet, QualityTypeValueSetType,} from '../fhirValueSets/QualityTypeValueSet.js';
+import { QualityTypeValueSetEnum } from '../valueSetEnums.js';
+import { RepositoryTypeValueSet, RepositoryTypeValueSetType,} from '../fhirValueSets/RepositoryTypeValueSet.js';
+import { RepositoryTypeValueSetEnum } from '../valueSetEnums.js';
+import { SequenceTypeValueSet, SequenceTypeValueSetType,} from '../fhirValueSets/SequenceTypeValueSet.js';
+import { SequenceTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A sequence that is used as a reference to describe variants that are present in a sequence analyzed.
+ * Valid arguments for the MolecularSequenceReferenceSeq type.
  */
-export type IMolecularSequenceReferenceSeq = fhir.IBackboneElement & { 
+export interface MolecularSequenceReferenceSeqArgs extends fhir.BackboneElementArgs {
   /**
    * Structural unit composed of a nucleic acid molecule which controls its own replication through the interaction of specific proteins at one or more origins of replication ([SO:0000340](http://www.sequenceontology.org/browser/current_svn/term/SO:0000340)).
    */
-  chromosome?: fhir.ICodeableConcept|undefined;
+  chromosome?: fhir.CodeableConceptArgs|undefined;
   /**
    * The Genome Build used for reference, following GRCh build versions e.g. 'GRCh 37'.  Version number must be included if a versioned release of a primary build was used.
    */
-  genomeBuild?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.referenceSeq.genomeBuild
-   */
-  _genomeBuild?: fhir.IFhirElement|undefined;
+  genomeBuild?: fhir.FhirString|string|undefined;
   /**
    * A relative reference to a DNA strand based on gene orientation. The strand that contains the open reading frame of the gene is the "sense" strand, and the opposite complementary strand is the "antisense" strand.
    */
   orientation?: OrientationTypeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: MolecularSequence.referenceSeq.orientation
-   */
-  _orientation?: fhir.IFhirElement|undefined;
-  /**
    * Reference identifier of reference sequence submitted to NCBI. It must match the type in the MolecularSequence.type field. For example, the prefix, “NG_” identifies reference sequence for genes, “NM_” for messenger RNA transcripts, and “NP_” for amino acid sequences.
    */
-  referenceSeqId?: fhir.ICodeableConcept|undefined;
+  referenceSeqId?: fhir.CodeableConceptArgs|undefined;
   /**
    * A pointer to another MolecularSequence entity as reference sequence.
    */
-  referenceSeqPointer?: fhir.IReference|undefined;
+  referenceSeqPointer?: fhir.ReferenceArgs|undefined;
   /**
    * A string like "ACGT".
    */
-  referenceSeqString?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.referenceSeq.referenceSeqString
-   */
-  _referenceSeqString?: fhir.IFhirElement|undefined;
+  referenceSeqString?: fhir.FhirString|string|undefined;
   /**
    * An absolute reference to a strand. The Watson strand is the strand whose 5'-end is on the short arm of the chromosome, and the Crick strand as the one whose 5'-end is on the long arm.
    */
   strand?: StrandTypeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: MolecularSequence.referenceSeq.strand
-   */
-  _strand?: fhir.IFhirElement|undefined;
-  /**
    * Start position of the window on the reference sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
    */
-  windowStart?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.referenceSeq.windowStart
-   */
-  _windowStart?: fhir.IFhirElement|undefined;
+  windowStart?: fhir.FhirInteger|number|undefined;
   /**
    * End position of the window on the reference sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
    */
-  windowEnd?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.referenceSeq.windowEnd
-   */
-  _windowEnd?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The definition of variant here originates from Sequence ontology ([variant_of](http://www.sequenceontology.org/browser/current_svn/term/variant_of)). This element can represent amino acid or nucleic sequence change(including insertion,deletion,SNP,etc.)  It can represent some complex mutation or segment variation with the assist of CIGAR string.
- */
-export type IMolecularSequenceVariant = fhir.IBackboneElement & { 
-  /**
-   * Start position of the variant on the  reference sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
-   */
-  start?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.variant.start
-   */
-  _start?: fhir.IFhirElement|undefined;
-  /**
-   * End position of the variant on the reference sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
-   */
-  end?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.variant.end
-   */
-  _end?: fhir.IFhirElement|undefined;
-  /**
-   * An allele is one of a set of coexisting sequence variants of a gene ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).  Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the observed  sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.
-   */
-  observedAllele?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.variant.observedAllele
-   */
-  _observedAllele?: fhir.IFhirElement|undefined;
-  /**
-   * An allele is one of a set of coexisting sequence variants of a gene ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)). Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the reference sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.
-   */
-  referenceAllele?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.variant.referenceAllele
-   */
-  _referenceAllele?: fhir.IFhirElement|undefined;
-  /**
-   * Extended CIGAR string for aligning the sequence with reference bases. See detailed documentation [here](http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_ExtendedCIGARFormat.htm).
-   */
-  cigar?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.variant.cigar
-   */
-  _cigar?: fhir.IFhirElement|undefined;
-  /**
-   * A pointer to an Observation containing variant information.
-   */
-  variantPointer?: fhir.IReference|undefined;
-}
-
-/**
- * Receiver Operator Characteristic (ROC) Curve  to give sensitivity/specificity tradeoff.
- */
-export type IMolecularSequenceQualityRoc = fhir.IBackboneElement & { 
-  /**
-   * Invidual data point representing the GQ (genotype quality) score threshold.
-   */
-  score?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.score
-   */
-  _score?: fhir.IFhirElement[]|undefined;
-  /**
-   * The number of true positives if the GQ score threshold was set to "score" field value.
-   */
-  numTP?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.numTP
-   */
-  _numTP?: fhir.IFhirElement[]|undefined;
-  /**
-   * The number of false positives if the GQ score threshold was set to "score" field value.
-   */
-  numFP?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.numFP
-   */
-  _numFP?: fhir.IFhirElement[]|undefined;
-  /**
-   * The number of false negatives if the GQ score threshold was set to "score" field value.
-   */
-  numFN?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.numFN
-   */
-  _numFN?: fhir.IFhirElement[]|undefined;
-  /**
-   * Calculated precision if the GQ score threshold was set to "score" field value.
-   */
-  precision?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.precision
-   */
-  _precision?: fhir.IFhirElement[]|undefined;
-  /**
-   * Calculated sensitivity if the GQ score threshold was set to "score" field value.
-   */
-  sensitivity?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.sensitivity
-   */
-  _sensitivity?: fhir.IFhirElement[]|undefined;
-  /**
-   * Calculated fScore if the GQ score threshold was set to "score" field value.
-   */
-  fMeasure?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.fMeasure
-   */
-  _fMeasure?: fhir.IFhirElement[]|undefined;
-}
-
-/**
- * An experimental feature attribute that defines the quality of the feature in a quantitative way, such as a phred quality score ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).
- */
-export type IMolecularSequenceQuality = fhir.IBackboneElement & { 
-  /**
-   * INDEL / SNP / Undefined variant.
-   */
-  type: QualityTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * Gold standard sequence used for comparing against.
-   */
-  standardSequence?: fhir.ICodeableConcept|undefined;
-  /**
-   * Start position of the sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
-   */
-  start?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.start
-   */
-  _start?: fhir.IFhirElement|undefined;
-  /**
-   * End position of the sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
-   */
-  end?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.end
-   */
-  _end?: fhir.IFhirElement|undefined;
-  /**
-   * The score of an experimentally derived feature such as a p-value ([SO:0001685](http://www.sequenceontology.org/browser/current_svn/term/SO:0001685)).
-   */
-  score?: fhir.IQuantity|undefined;
-  /**
-   * Which method is used to get sequence quality.
-   */
-  method?: fhir.ICodeableConcept|undefined;
-  /**
-   * True positives, from the perspective of the truth data, i.e. the number of sites in the Truth Call Set for which there are paths through the Query Call Set that are consistent with all of the alleles at this site, and for which there is an accurate genotype call for the event.
-   */
-  truthTP?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.truthTP
-   */
-  _truthTP?: fhir.IFhirElement|undefined;
-  /**
-   * True positives, from the perspective of the query data, i.e. the number of sites in the Query Call Set for which there are paths through the Truth Call Set that are consistent with all of the alleles at this site, and for which there is an accurate genotype call for the event.
-   */
-  queryTP?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.queryTP
-   */
-  _queryTP?: fhir.IFhirElement|undefined;
-  /**
-   * False negatives, i.e. the number of sites in the Truth Call Set for which there is no path through the Query Call Set that is consistent with all of the alleles at this site, or sites for which there is an inaccurate genotype call for the event. Sites with correct variant but incorrect genotype are counted here.
-   */
-  truthFN?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.truthFN
-   */
-  _truthFN?: fhir.IFhirElement|undefined;
-  /**
-   * False positives, i.e. the number of sites in the Query Call Set for which there is no path through the Truth Call Set that is consistent with this site. Sites with correct variant but incorrect genotype are counted here.
-   */
-  queryFP?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.queryFP
-   */
-  _queryFP?: fhir.IFhirElement|undefined;
-  /**
-   * The number of false positives where the non-REF alleles in the Truth and Query Call Sets match (i.e. cases where the truth is 1/1 and the query is 0/1 or similar).
-   */
-  gtFP?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.gtFP
-   */
-  _gtFP?: fhir.IFhirElement|undefined;
-  /**
-   * QUERY.TP / (QUERY.TP + QUERY.FP).
-   */
-  precision?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.precision
-   */
-  _precision?: fhir.IFhirElement|undefined;
-  /**
-   * TRUTH.TP / (TRUTH.TP + TRUTH.FN).
-   */
-  recall?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.recall
-   */
-  _recall?: fhir.IFhirElement|undefined;
-  /**
-   * Harmonic mean of Recall and Precision, computed as: 2 * precision * recall / (precision + recall).
-   */
-  fScore?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.fScore
-   */
-  _fScore?: fhir.IFhirElement|undefined;
-  /**
-   * Receiver Operator Characteristic (ROC) Curve  to give sensitivity/specificity tradeoff.
-   */
-  roc?: fhir.IMolecularSequenceQualityRoc|undefined;
-}
-
-/**
- * Configurations of the external repository. The repository shall store target's observedSeq or records related with target's observedSeq.
- */
-export type IMolecularSequenceRepository = fhir.IBackboneElement & { 
-  /**
-   * Click and see / RESTful API / Need login to see / RESTful API with authentication / Other ways to see resource.
-   */
-  type: RepositoryTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: MolecularSequence.repository.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * URI of an external repository which contains further details about the genetics data.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.repository.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * URI of an external repository which contains further details about the genetics data.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.repository.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Id of the variant in this external repository. The server will understand how to use this id to call for more info about datasets in external repository.
-   */
-  datasetId?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.repository.datasetId
-   */
-  _datasetId?: fhir.IFhirElement|undefined;
-  /**
-   * Id of the variantset in this external repository. The server will understand how to use this id to call for more info about variantsets in external repository.
-   */
-  variantsetId?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.repository.variantsetId
-   */
-  _variantsetId?: fhir.IFhirElement|undefined;
-  /**
-   * Id of the read in this external repository.
-   */
-  readsetId?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.repository.readsetId
-   */
-  _readsetId?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Structural variant outer.
- */
-export type IMolecularSequenceStructureVariantOuter = fhir.IBackboneElement & { 
-  /**
-   * Structural variant outer start. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
-   */
-  start?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.structureVariant.outer.start
-   */
-  _start?: fhir.IFhirElement|undefined;
-  /**
-   * Structural variant outer end. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
-   */
-  end?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.structureVariant.outer.end
-   */
-  _end?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Structural variant inner.
- */
-export type IMolecularSequenceStructureVariantInner = fhir.IBackboneElement & { 
-  /**
-   * Structural variant inner start. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
-   */
-  start?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.structureVariant.inner.start
-   */
-  _start?: fhir.IFhirElement|undefined;
-  /**
-   * Structural variant inner end. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
-   */
-  end?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.structureVariant.inner.end
-   */
-  _end?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Information about chromosome structure variation.
- */
-export type IMolecularSequenceStructureVariant = fhir.IBackboneElement & { 
-  /**
-   * Information about chromosome structure variation DNA change type.
-   */
-  variantType?: fhir.ICodeableConcept|undefined;
-  /**
-   * Used to indicate if the outer and inner start-end values have the same meaning.
-   */
-  exact?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.structureVariant.exact
-   */
-  _exact?: fhir.IFhirElement|undefined;
-  /**
-   * Length of the variant chromosome.
-   */
-  length?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.structureVariant.length
-   */
-  _length?: fhir.IFhirElement|undefined;
-  /**
-   * Structural variant outer.
-   */
-  outer?: fhir.IMolecularSequenceStructureVariantOuter|undefined;
-  /**
-   * Structural variant inner.
-   */
-  inner?: fhir.IMolecularSequenceStructureVariantInner|undefined;
-}
-
-/**
- * Raw data describing a biological sequence.
- */
-export type IMolecularSequence = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "MolecularSequence";
-  /**
-   * A unique identifier for this particular sequence instance. This is a FHIR-defined id.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * Amino Acid Sequence/ DNA Sequence / RNA Sequence.
-   */
-  type?: SequenceTypeValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * Whether the sequence is numbered starting at 0 (0-based numbering or coordinates, inclusive start, exclusive end) or starting at 1 (1-based numbering, inclusive start and inclusive end).
-   */
-  coordinateSystem: number|null;
-  /**
-   * Extended properties for primitive element: MolecularSequence.coordinateSystem
-   */
-  _coordinateSystem?: fhir.IFhirElement|undefined;
-  /**
-   * The patient whose sequencing results are described by this resource.
-   */
-  patient?: fhir.IReference|undefined;
-  /**
-   * Specimen used for sequencing.
-   */
-  specimen?: fhir.IReference|undefined;
-  /**
-   * The method for sequencing, for example, chip information.
-   */
-  device?: fhir.IReference|undefined;
-  /**
-   * The organization or lab that should be responsible for this result.
-   */
-  performer?: fhir.IReference|undefined;
-  /**
-   * The number of copies of the sequence of interest. (RNASeq).
-   */
-  quantity?: fhir.IQuantity|undefined;
-  /**
-   * A sequence that is used as a reference to describe variants that are present in a sequence analyzed.
-   */
-  referenceSeq?: fhir.IMolecularSequenceReferenceSeq|undefined;
-  /**
-   * The definition of variant here originates from Sequence ontology ([variant_of](http://www.sequenceontology.org/browser/current_svn/term/variant_of)). This element can represent amino acid or nucleic sequence change(including insertion,deletion,SNP,etc.)  It can represent some complex mutation or segment variation with the assist of CIGAR string.
-   */
-  variant?: fhir.IMolecularSequenceVariant[]|undefined;
-  /**
-   * Sequence that was observed. It is the result marked by referenceSeq along with variant records on referenceSeq. This shall start from referenceSeq.windowStart and end by referenceSeq.windowEnd.
-   */
-  observedSeq?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.observedSeq
-   */
-  _observedSeq?: fhir.IFhirElement|undefined;
-  /**
-   * An experimental feature attribute that defines the quality of the feature in a quantitative way, such as a phred quality score ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).
-   */
-  quality?: fhir.IMolecularSequenceQuality[]|undefined;
-  /**
-   * Coverage (read depth or depth) is the average number of reads representing a given nucleotide in the reconstructed sequence.
-   */
-  readCoverage?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.readCoverage
-   */
-  _readCoverage?: fhir.IFhirElement|undefined;
-  /**
-   * Configurations of the external repository. The repository shall store target's observedSeq or records related with target's observedSeq.
-   */
-  repository?: fhir.IMolecularSequenceRepository[]|undefined;
-  /**
-   * Pointer to next atomic sequence which at most contains one variant.
-   */
-  pointer?: fhir.IReference[]|undefined;
-  /**
-   * Information about chromosome structure variation.
-   */
-  structureVariant?: fhir.IMolecularSequenceStructureVariant[]|undefined;
+  windowEnd?: fhir.FhirInteger|number|undefined;
 }
 
 /**
  * A sequence that is used as a reference to describe variants that are present in a sequence analyzed.
  */
-export class MolecularSequenceReferenceSeq extends fhir.BackboneElement implements IMolecularSequenceReferenceSeq {
+export class MolecularSequenceReferenceSeq extends fhir.BackboneElement {
+  readonly __dataType:string = 'MolecularSequenceReferenceSeq';
   /**
    * Structural unit composed of a nucleic acid molecule which controls its own replication through the interaction of specific proteins at one or more origins of replication ([SO:0000340](http://www.sequenceontology.org/browser/current_svn/term/SO:0000340)).
    */
@@ -533,19 +73,11 @@ export class MolecularSequenceReferenceSeq extends fhir.BackboneElement implemen
   /**
    * The Genome Build used for reference, following GRCh build versions e.g. 'GRCh 37'.  Version number must be included if a versioned release of a primary build was used.
    */
-  public genomeBuild?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.referenceSeq.genomeBuild
-   */
-  public _genomeBuild?: fhir.FhirElement|undefined;
+  public genomeBuild?: fhir.FhirString|undefined;
   /**
    * A relative reference to a DNA strand based on gene orientation. The strand that contains the open reading frame of the gene is the "sense" strand, and the opposite complementary strand is the "antisense" strand.
    */
   public orientation?: OrientationTypeValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.referenceSeq.orientation
-   */
-  public _orientation?: fhir.FhirElement|undefined;
   /**
    * Reference identifier of reference sequence submitted to NCBI. It must match the type in the MolecularSequence.type field. For example, the prefix, “NG_” identifies reference sequence for genes, “NM_” for messenger RNA transcripts, and “NP_” for amino acid sequences.
    */
@@ -557,55 +89,33 @@ export class MolecularSequenceReferenceSeq extends fhir.BackboneElement implemen
   /**
    * A string like "ACGT".
    */
-  public referenceSeqString?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.referenceSeq.referenceSeqString
-   */
-  public _referenceSeqString?: fhir.FhirElement|undefined;
+  public referenceSeqString?: fhir.FhirString|undefined;
   /**
    * An absolute reference to a strand. The Watson strand is the strand whose 5'-end is on the short arm of the chromosome, and the Crick strand as the one whose 5'-end is on the long arm.
    */
   public strand?: StrandTypeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: MolecularSequence.referenceSeq.strand
-   */
-  public _strand?: fhir.FhirElement|undefined;
-  /**
    * Start position of the window on the reference sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
    */
-  public windowStart?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.referenceSeq.windowStart
-   */
-  public _windowStart?: fhir.FhirElement|undefined;
+  public windowStart?: fhir.FhirInteger|undefined;
   /**
    * End position of the window on the reference sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
    */
-  public windowEnd?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.referenceSeq.windowEnd
-   */
-  public _windowEnd?: fhir.FhirElement|undefined;
+  public windowEnd?: fhir.FhirInteger|undefined;
   /**
    * Default constructor for MolecularSequenceReferenceSeq - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMolecularSequenceReferenceSeq> = { }) {
-    super(source);
-    if (source['chromosome']) { this.chromosome = new fhir.CodeableConcept(source.chromosome!); }
-    if (source['genomeBuild']) { this.genomeBuild = source.genomeBuild; }
-    if (source['_genomeBuild']) { this._genomeBuild = new fhir.FhirElement(source._genomeBuild!); }
+  constructor(source:Partial<MolecularSequenceReferenceSeqArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['chromosome']) { this.chromosome = new fhir.CodeableConcept(source.chromosome); }
+    if (source['genomeBuild']) { this.genomeBuild = new fhir.FhirString({value: source.genomeBuild}); }
     if (source['orientation']) { this.orientation = source.orientation; }
-    if (source['_orientation']) { this._orientation = new fhir.FhirElement(source._orientation!); }
-    if (source['referenceSeqId']) { this.referenceSeqId = new fhir.CodeableConcept(source.referenceSeqId!); }
-    if (source['referenceSeqPointer']) { this.referenceSeqPointer = new fhir.Reference(source.referenceSeqPointer!); }
-    if (source['referenceSeqString']) { this.referenceSeqString = source.referenceSeqString; }
-    if (source['_referenceSeqString']) { this._referenceSeqString = new fhir.FhirElement(source._referenceSeqString!); }
+    if (source['referenceSeqId']) { this.referenceSeqId = new fhir.CodeableConcept(source.referenceSeqId); }
+    if (source['referenceSeqPointer']) { this.referenceSeqPointer = new fhir.Reference(source.referenceSeqPointer); }
+    if (source['referenceSeqString']) { this.referenceSeqString = new fhir.FhirString({value: source.referenceSeqString}); }
     if (source['strand']) { this.strand = source.strand; }
-    if (source['_strand']) { this._strand = new fhir.FhirElement(source._strand!); }
-    if (source['windowStart']) { this.windowStart = source.windowStart; }
-    if (source['_windowStart']) { this._windowStart = new fhir.FhirElement(source._windowStart!); }
-    if (source['windowEnd']) { this.windowEnd = source.windowEnd; }
-    if (source['_windowEnd']) { this._windowEnd = new fhir.FhirElement(source._windowEnd!); }
+    if (source['windowStart']) { this.windowStart = new fhir.FhirInteger({value: source.windowStart}); }
+    if (source['windowEnd']) { this.windowEnd = new fhir.FhirInteger({value: source.windowEnd}); }
   }
   /**
    * Example-bound Value Set for chromosome
@@ -628,65 +138,79 @@ export class MolecularSequenceReferenceSeq extends fhir.BackboneElement implemen
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["chromosome"]) { results.push(...this.chromosome.doModelValidation()); }
-    if (this["_genomeBuild"]) { results.push(...this._genomeBuild.doModelValidation()); }
-    if (this["_orientation"]) { results.push(...this._orientation.doModelValidation()); }
-    if (this["referenceSeqId"]) { results.push(...this.referenceSeqId.doModelValidation()); }
-    if (this["referenceSeqPointer"]) { results.push(...this.referenceSeqPointer.doModelValidation()); }
-    if (this["_referenceSeqString"]) { results.push(...this._referenceSeqString.doModelValidation()); }
-    if (this["_strand"]) { results.push(...this._strand.doModelValidation()); }
-    if (this["_windowStart"]) { results.push(...this._windowStart.doModelValidation()); }
-    if (this["_windowEnd"]) { results.push(...this._windowEnd.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["chromosome"]) { outcome.issue!.push(...this.chromosome.doModelValidation().issue!); }
+    if (this["genomeBuild"]) { outcome.issue!.push(...this.genomeBuild.doModelValidation().issue!); }
+    if (this["referenceSeqId"]) { outcome.issue!.push(...this.referenceSeqId.doModelValidation().issue!); }
+    if (this["referenceSeqPointer"]) { outcome.issue!.push(...this.referenceSeqPointer.doModelValidation().issue!); }
+    if (this["referenceSeqString"]) { outcome.issue!.push(...this.referenceSeqString.doModelValidation().issue!); }
+    if (this["windowStart"]) { outcome.issue!.push(...this.windowStart.doModelValidation().issue!); }
+    if (this["windowEnd"]) { outcome.issue!.push(...this.windowEnd.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MolecularSequenceVariant type.
+ */
+export interface MolecularSequenceVariantArgs extends fhir.BackboneElementArgs {
+  /**
+   * Start position of the variant on the  reference sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
+   */
+  start?: fhir.FhirInteger|number|undefined;
+  /**
+   * End position of the variant on the reference sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
+   */
+  end?: fhir.FhirInteger|number|undefined;
+  /**
+   * An allele is one of a set of coexisting sequence variants of a gene ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).  Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the observed  sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.
+   */
+  observedAllele?: fhir.FhirString|string|undefined;
+  /**
+   * An allele is one of a set of coexisting sequence variants of a gene ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)). Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the reference sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.
+   */
+  referenceAllele?: fhir.FhirString|string|undefined;
+  /**
+   * Extended CIGAR string for aligning the sequence with reference bases. See detailed documentation [here](http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_ExtendedCIGARFormat.htm).
+   */
+  cigar?: fhir.FhirString|string|undefined;
+  /**
+   * A pointer to an Observation containing variant information.
+   */
+  variantPointer?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * The definition of variant here originates from Sequence ontology ([variant_of](http://www.sequenceontology.org/browser/current_svn/term/variant_of)). This element can represent amino acid or nucleic sequence change(including insertion,deletion,SNP,etc.)  It can represent some complex mutation or segment variation with the assist of CIGAR string.
  */
-export class MolecularSequenceVariant extends fhir.BackboneElement implements IMolecularSequenceVariant {
+export class MolecularSequenceVariant extends fhir.BackboneElement {
+  readonly __dataType:string = 'MolecularSequenceVariant';
   /**
    * Start position of the variant on the  reference sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
    */
-  public start?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.variant.start
-   */
-  public _start?: fhir.FhirElement|undefined;
+  public start?: fhir.FhirInteger|undefined;
   /**
    * End position of the variant on the reference sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
    */
-  public end?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.variant.end
-   */
-  public _end?: fhir.FhirElement|undefined;
+  public end?: fhir.FhirInteger|undefined;
   /**
    * An allele is one of a set of coexisting sequence variants of a gene ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).  Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the observed  sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.
    */
-  public observedAllele?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.variant.observedAllele
-   */
-  public _observedAllele?: fhir.FhirElement|undefined;
+  public observedAllele?: fhir.FhirString|undefined;
   /**
    * An allele is one of a set of coexisting sequence variants of a gene ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)). Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the reference sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.
    */
-  public referenceAllele?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.variant.referenceAllele
-   */
-  public _referenceAllele?: fhir.FhirElement|undefined;
+  public referenceAllele?: fhir.FhirString|undefined;
   /**
    * Extended CIGAR string for aligning the sequence with reference bases. See detailed documentation [here](http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_ExtendedCIGARFormat.htm).
    */
-  public cigar?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.variant.cigar
-   */
-  public _cigar?: fhir.FhirElement|undefined;
+  public cigar?: fhir.FhirString|undefined;
   /**
    * A pointer to an Observation containing variant information.
    */
@@ -694,143 +218,211 @@ export class MolecularSequenceVariant extends fhir.BackboneElement implements IM
   /**
    * Default constructor for MolecularSequenceVariant - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMolecularSequenceVariant> = { }) {
-    super(source);
-    if (source['start']) { this.start = source.start; }
-    if (source['_start']) { this._start = new fhir.FhirElement(source._start!); }
-    if (source['end']) { this.end = source.end; }
-    if (source['_end']) { this._end = new fhir.FhirElement(source._end!); }
-    if (source['observedAllele']) { this.observedAllele = source.observedAllele; }
-    if (source['_observedAllele']) { this._observedAllele = new fhir.FhirElement(source._observedAllele!); }
-    if (source['referenceAllele']) { this.referenceAllele = source.referenceAllele; }
-    if (source['_referenceAllele']) { this._referenceAllele = new fhir.FhirElement(source._referenceAllele!); }
-    if (source['cigar']) { this.cigar = source.cigar; }
-    if (source['_cigar']) { this._cigar = new fhir.FhirElement(source._cigar!); }
-    if (source['variantPointer']) { this.variantPointer = new fhir.Reference(source.variantPointer!); }
+  constructor(source:Partial<MolecularSequenceVariantArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['start']) { this.start = new fhir.FhirInteger({value: source.start}); }
+    if (source['end']) { this.end = new fhir.FhirInteger({value: source.end}); }
+    if (source['observedAllele']) { this.observedAllele = new fhir.FhirString({value: source.observedAllele}); }
+    if (source['referenceAllele']) { this.referenceAllele = new fhir.FhirString({value: source.referenceAllele}); }
+    if (source['cigar']) { this.cigar = new fhir.FhirString({value: source.cigar}); }
+    if (source['variantPointer']) { this.variantPointer = new fhir.Reference(source.variantPointer); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_start"]) { results.push(...this._start.doModelValidation()); }
-    if (this["_end"]) { results.push(...this._end.doModelValidation()); }
-    if (this["_observedAllele"]) { results.push(...this._observedAllele.doModelValidation()); }
-    if (this["_referenceAllele"]) { results.push(...this._referenceAllele.doModelValidation()); }
-    if (this["_cigar"]) { results.push(...this._cigar.doModelValidation()); }
-    if (this["variantPointer"]) { results.push(...this.variantPointer.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["start"]) { outcome.issue!.push(...this.start.doModelValidation().issue!); }
+    if (this["end"]) { outcome.issue!.push(...this.end.doModelValidation().issue!); }
+    if (this["observedAllele"]) { outcome.issue!.push(...this.observedAllele.doModelValidation().issue!); }
+    if (this["referenceAllele"]) { outcome.issue!.push(...this.referenceAllele.doModelValidation().issue!); }
+    if (this["cigar"]) { outcome.issue!.push(...this.cigar.doModelValidation().issue!); }
+    if (this["variantPointer"]) { outcome.issue!.push(...this.variantPointer.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MolecularSequenceQualityRoc type.
+ */
+export interface MolecularSequenceQualityRocArgs extends fhir.BackboneElementArgs {
+  /**
+   * Invidual data point representing the GQ (genotype quality) score threshold.
+   */
+  score?: fhir.FhirInteger[]|number[]|undefined;
+  /**
+   * The number of true positives if the GQ score threshold was set to "score" field value.
+   */
+  numTP?: fhir.FhirInteger[]|number[]|undefined;
+  /**
+   * The number of false positives if the GQ score threshold was set to "score" field value.
+   */
+  numFP?: fhir.FhirInteger[]|number[]|undefined;
+  /**
+   * The number of false negatives if the GQ score threshold was set to "score" field value.
+   */
+  numFN?: fhir.FhirInteger[]|number[]|undefined;
+  /**
+   * Calculated precision if the GQ score threshold was set to "score" field value.
+   */
+  precision?: fhir.FhirDecimal[]|number[]|undefined;
+  /**
+   * Calculated sensitivity if the GQ score threshold was set to "score" field value.
+   */
+  sensitivity?: fhir.FhirDecimal[]|number[]|undefined;
+  /**
+   * Calculated fScore if the GQ score threshold was set to "score" field value.
+   */
+  fMeasure?: fhir.FhirDecimal[]|number[]|undefined;
 }
 
 /**
  * Receiver Operator Characteristic (ROC) Curve  to give sensitivity/specificity tradeoff.
  */
-export class MolecularSequenceQualityRoc extends fhir.BackboneElement implements IMolecularSequenceQualityRoc {
+export class MolecularSequenceQualityRoc extends fhir.BackboneElement {
+  readonly __dataType:string = 'MolecularSequenceQualityRoc';
   /**
    * Invidual data point representing the GQ (genotype quality) score threshold.
    */
-  public score?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.score
-   */
-  public _score?: fhir.FhirElement[]|undefined;
+  public score?: fhir.FhirInteger[]|undefined = [];
   /**
    * The number of true positives if the GQ score threshold was set to "score" field value.
    */
-  public numTP?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.numTP
-   */
-  public _numTP?: fhir.FhirElement[]|undefined;
+  public numTP?: fhir.FhirInteger[]|undefined = [];
   /**
    * The number of false positives if the GQ score threshold was set to "score" field value.
    */
-  public numFP?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.numFP
-   */
-  public _numFP?: fhir.FhirElement[]|undefined;
+  public numFP?: fhir.FhirInteger[]|undefined = [];
   /**
    * The number of false negatives if the GQ score threshold was set to "score" field value.
    */
-  public numFN?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.numFN
-   */
-  public _numFN?: fhir.FhirElement[]|undefined;
+  public numFN?: fhir.FhirInteger[]|undefined = [];
   /**
    * Calculated precision if the GQ score threshold was set to "score" field value.
    */
-  public precision?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.precision
-   */
-  public _precision?: fhir.FhirElement[]|undefined;
+  public precision?: fhir.FhirDecimal[]|undefined = [];
   /**
    * Calculated sensitivity if the GQ score threshold was set to "score" field value.
    */
-  public sensitivity?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.sensitivity
-   */
-  public _sensitivity?: fhir.FhirElement[]|undefined;
+  public sensitivity?: fhir.FhirDecimal[]|undefined = [];
   /**
    * Calculated fScore if the GQ score threshold was set to "score" field value.
    */
-  public fMeasure?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.roc.fMeasure
-   */
-  public _fMeasure?: fhir.FhirElement[]|undefined;
+  public fMeasure?: fhir.FhirDecimal[]|undefined = [];
   /**
    * Default constructor for MolecularSequenceQualityRoc - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMolecularSequenceQualityRoc> = { }) {
-    super(source);
-    if (source['score']) { this.score = source.score.map((x) => (x)); }
-    if (source['_score']) { this._score = source._score.map((x) => new fhir.FhirElement(x)); }
-    if (source['numTP']) { this.numTP = source.numTP.map((x) => (x)); }
-    if (source['_numTP']) { this._numTP = source._numTP.map((x) => new fhir.FhirElement(x)); }
-    if (source['numFP']) { this.numFP = source.numFP.map((x) => (x)); }
-    if (source['_numFP']) { this._numFP = source._numFP.map((x) => new fhir.FhirElement(x)); }
-    if (source['numFN']) { this.numFN = source.numFN.map((x) => (x)); }
-    if (source['_numFN']) { this._numFN = source._numFN.map((x) => new fhir.FhirElement(x)); }
-    if (source['precision']) { this.precision = source.precision.map((x) => (x)); }
-    if (source['_precision']) { this._precision = source._precision.map((x) => new fhir.FhirElement(x)); }
-    if (source['sensitivity']) { this.sensitivity = source.sensitivity.map((x) => (x)); }
-    if (source['_sensitivity']) { this._sensitivity = source._sensitivity.map((x) => new fhir.FhirElement(x)); }
-    if (source['fMeasure']) { this.fMeasure = source.fMeasure.map((x) => (x)); }
-    if (source['_fMeasure']) { this._fMeasure = source._fMeasure.map((x) => new fhir.FhirElement(x)); }
+  constructor(source:Partial<MolecularSequenceQualityRocArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['score']) { this.score = source.score.map((x) => new fhir.FhirInteger({value: x})); }
+    if (source['numTP']) { this.numTP = source.numTP.map((x) => new fhir.FhirInteger({value: x})); }
+    if (source['numFP']) { this.numFP = source.numFP.map((x) => new fhir.FhirInteger({value: x})); }
+    if (source['numFN']) { this.numFN = source.numFN.map((x) => new fhir.FhirInteger({value: x})); }
+    if (source['precision']) { this.precision = source.precision.map((x) => new fhir.FhirDecimal({value: x})); }
+    if (source['sensitivity']) { this.sensitivity = source.sensitivity.map((x) => new fhir.FhirDecimal({value: x})); }
+    if (source['fMeasure']) { this.fMeasure = source.fMeasure.map((x) => new fhir.FhirDecimal({value: x})); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_score"]) { this._score.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_numTP"]) { this._numTP.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_numFP"]) { this._numFP.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_numFN"]) { this._numFN.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_precision"]) { this._precision.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_sensitivity"]) { this._sensitivity.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_fMeasure"]) { this._fMeasure.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["score"]) { this.score.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["numTP"]) { this.numTP.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["numFP"]) { this.numFP.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["numFN"]) { this.numFN.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["precision"]) { this.precision.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["sensitivity"]) { this.sensitivity.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["fMeasure"]) { this.fMeasure.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MolecularSequenceQuality type.
+ */
+export interface MolecularSequenceQualityArgs extends fhir.BackboneElementArgs {
+  /**
+   * INDEL / SNP / Undefined variant.
+   */
+  type: QualityTypeValueSetEnum|null;
+  /**
+   * Gold standard sequence used for comparing against.
+   */
+  standardSequence?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Start position of the sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
+   */
+  start?: fhir.FhirInteger|number|undefined;
+  /**
+   * End position of the sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
+   */
+  end?: fhir.FhirInteger|number|undefined;
+  /**
+   * The score of an experimentally derived feature such as a p-value ([SO:0001685](http://www.sequenceontology.org/browser/current_svn/term/SO:0001685)).
+   */
+  score?: fhir.QuantityArgs|undefined;
+  /**
+   * Which method is used to get sequence quality.
+   */
+  method?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * True positives, from the perspective of the truth data, i.e. the number of sites in the Truth Call Set for which there are paths through the Query Call Set that are consistent with all of the alleles at this site, and for which there is an accurate genotype call for the event.
+   */
+  truthTP?: fhir.FhirDecimal|number|undefined;
+  /**
+   * True positives, from the perspective of the query data, i.e. the number of sites in the Query Call Set for which there are paths through the Truth Call Set that are consistent with all of the alleles at this site, and for which there is an accurate genotype call for the event.
+   */
+  queryTP?: fhir.FhirDecimal|number|undefined;
+  /**
+   * False negatives, i.e. the number of sites in the Truth Call Set for which there is no path through the Query Call Set that is consistent with all of the alleles at this site, or sites for which there is an inaccurate genotype call for the event. Sites with correct variant but incorrect genotype are counted here.
+   */
+  truthFN?: fhir.FhirDecimal|number|undefined;
+  /**
+   * False positives, i.e. the number of sites in the Query Call Set for which there is no path through the Truth Call Set that is consistent with this site. Sites with correct variant but incorrect genotype are counted here.
+   */
+  queryFP?: fhir.FhirDecimal|number|undefined;
+  /**
+   * The number of false positives where the non-REF alleles in the Truth and Query Call Sets match (i.e. cases where the truth is 1/1 and the query is 0/1 or similar).
+   */
+  gtFP?: fhir.FhirDecimal|number|undefined;
+  /**
+   * QUERY.TP / (QUERY.TP + QUERY.FP).
+   */
+  precision?: fhir.FhirDecimal|number|undefined;
+  /**
+   * TRUTH.TP / (TRUTH.TP + TRUTH.FN).
+   */
+  recall?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Harmonic mean of Recall and Precision, computed as: 2 * precision * recall / (precision + recall).
+   */
+  fScore?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Receiver Operator Characteristic (ROC) Curve  to give sensitivity/specificity tradeoff.
+   */
+  roc?: fhir.MolecularSequenceQualityRocArgs|undefined;
 }
 
 /**
  * An experimental feature attribute that defines the quality of the feature in a quantitative way, such as a phred quality score ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).
  */
-export class MolecularSequenceQuality extends fhir.BackboneElement implements IMolecularSequenceQuality {
+export class MolecularSequenceQuality extends fhir.BackboneElement {
+  readonly __dataType:string = 'MolecularSequenceQuality';
   /**
    * INDEL / SNP / Undefined variant.
    */
   public type: QualityTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.type
-   */
-  public _type?: fhir.FhirElement|undefined;
   /**
    * Gold standard sequence used for comparing against.
    */
@@ -838,19 +430,11 @@ export class MolecularSequenceQuality extends fhir.BackboneElement implements IM
   /**
    * Start position of the sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
    */
-  public start?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.start
-   */
-  public _start?: fhir.FhirElement|undefined;
+  public start?: fhir.FhirInteger|undefined;
   /**
    * End position of the sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
    */
-  public end?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.end
-   */
-  public _end?: fhir.FhirElement|undefined;
+  public end?: fhir.FhirInteger|undefined;
   /**
    * The score of an experimentally derived feature such as a p-value ([SO:0001685](http://www.sequenceontology.org/browser/current_svn/term/SO:0001685)).
    */
@@ -862,67 +446,35 @@ export class MolecularSequenceQuality extends fhir.BackboneElement implements IM
   /**
    * True positives, from the perspective of the truth data, i.e. the number of sites in the Truth Call Set for which there are paths through the Query Call Set that are consistent with all of the alleles at this site, and for which there is an accurate genotype call for the event.
    */
-  public truthTP?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.truthTP
-   */
-  public _truthTP?: fhir.FhirElement|undefined;
+  public truthTP?: fhir.FhirDecimal|undefined;
   /**
    * True positives, from the perspective of the query data, i.e. the number of sites in the Query Call Set for which there are paths through the Truth Call Set that are consistent with all of the alleles at this site, and for which there is an accurate genotype call for the event.
    */
-  public queryTP?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.queryTP
-   */
-  public _queryTP?: fhir.FhirElement|undefined;
+  public queryTP?: fhir.FhirDecimal|undefined;
   /**
    * False negatives, i.e. the number of sites in the Truth Call Set for which there is no path through the Query Call Set that is consistent with all of the alleles at this site, or sites for which there is an inaccurate genotype call for the event. Sites with correct variant but incorrect genotype are counted here.
    */
-  public truthFN?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.truthFN
-   */
-  public _truthFN?: fhir.FhirElement|undefined;
+  public truthFN?: fhir.FhirDecimal|undefined;
   /**
    * False positives, i.e. the number of sites in the Query Call Set for which there is no path through the Truth Call Set that is consistent with this site. Sites with correct variant but incorrect genotype are counted here.
    */
-  public queryFP?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.queryFP
-   */
-  public _queryFP?: fhir.FhirElement|undefined;
+  public queryFP?: fhir.FhirDecimal|undefined;
   /**
    * The number of false positives where the non-REF alleles in the Truth and Query Call Sets match (i.e. cases where the truth is 1/1 and the query is 0/1 or similar).
    */
-  public gtFP?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.gtFP
-   */
-  public _gtFP?: fhir.FhirElement|undefined;
+  public gtFP?: fhir.FhirDecimal|undefined;
   /**
    * QUERY.TP / (QUERY.TP + QUERY.FP).
    */
-  public precision?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.precision
-   */
-  public _precision?: fhir.FhirElement|undefined;
+  public precision?: fhir.FhirDecimal|undefined;
   /**
    * TRUTH.TP / (TRUTH.TP + TRUTH.FN).
    */
-  public recall?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.recall
-   */
-  public _recall?: fhir.FhirElement|undefined;
+  public recall?: fhir.FhirDecimal|undefined;
   /**
    * Harmonic mean of Recall and Precision, computed as: 2 * precision * recall / (precision + recall).
    */
-  public fScore?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.quality.fScore
-   */
-  public _fScore?: fhir.FhirElement|undefined;
+  public fScore?: fhir.FhirDecimal|undefined;
   /**
    * Receiver Operator Characteristic (ROC) Curve  to give sensitivity/specificity tradeoff.
    */
@@ -930,35 +482,24 @@ export class MolecularSequenceQuality extends fhir.BackboneElement implements IM
   /**
    * Default constructor for MolecularSequenceQuality - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMolecularSequenceQuality> = { }) {
-    super(source);
+  constructor(source:Partial<MolecularSequenceQualityArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['standardSequence']) { this.standardSequence = new fhir.CodeableConcept(source.standardSequence!); }
-    if (source['start']) { this.start = source.start; }
-    if (source['_start']) { this._start = new fhir.FhirElement(source._start!); }
-    if (source['end']) { this.end = source.end; }
-    if (source['_end']) { this._end = new fhir.FhirElement(source._end!); }
-    if (source['score']) { this.score = new fhir.Quantity(source.score!); }
-    if (source['method']) { this.method = new fhir.CodeableConcept(source.method!); }
-    if (source['truthTP']) { this.truthTP = source.truthTP; }
-    if (source['_truthTP']) { this._truthTP = new fhir.FhirElement(source._truthTP!); }
-    if (source['queryTP']) { this.queryTP = source.queryTP; }
-    if (source['_queryTP']) { this._queryTP = new fhir.FhirElement(source._queryTP!); }
-    if (source['truthFN']) { this.truthFN = source.truthFN; }
-    if (source['_truthFN']) { this._truthFN = new fhir.FhirElement(source._truthFN!); }
-    if (source['queryFP']) { this.queryFP = source.queryFP; }
-    if (source['_queryFP']) { this._queryFP = new fhir.FhirElement(source._queryFP!); }
-    if (source['gtFP']) { this.gtFP = source.gtFP; }
-    if (source['_gtFP']) { this._gtFP = new fhir.FhirElement(source._gtFP!); }
-    if (source['precision']) { this.precision = source.precision; }
-    if (source['_precision']) { this._precision = new fhir.FhirElement(source._precision!); }
-    if (source['recall']) { this.recall = source.recall; }
-    if (source['_recall']) { this._recall = new fhir.FhirElement(source._recall!); }
-    if (source['fScore']) { this.fScore = source.fScore; }
-    if (source['_fScore']) { this._fScore = new fhir.FhirElement(source._fScore!); }
-    if (source['roc']) { this.roc = new fhir.MolecularSequenceQualityRoc(source.roc!); }
+    if (source['standardSequence']) { this.standardSequence = new fhir.CodeableConcept(source.standardSequence); }
+    if (source['start']) { this.start = new fhir.FhirInteger({value: source.start}); }
+    if (source['end']) { this.end = new fhir.FhirInteger({value: source.end}); }
+    if (source['score']) { this.score = new fhir.Quantity(source.score); }
+    if (source['method']) { this.method = new fhir.CodeableConcept(source.method); }
+    if (source['truthTP']) { this.truthTP = new fhir.FhirDecimal({value: source.truthTP}); }
+    if (source['queryTP']) { this.queryTP = new fhir.FhirDecimal({value: source.queryTP}); }
+    if (source['truthFN']) { this.truthFN = new fhir.FhirDecimal({value: source.truthFN}); }
+    if (source['queryFP']) { this.queryFP = new fhir.FhirDecimal({value: source.queryFP}); }
+    if (source['gtFP']) { this.gtFP = new fhir.FhirDecimal({value: source.gtFP}); }
+    if (source['precision']) { this.precision = new fhir.FhirDecimal({value: source.precision}); }
+    if (source['recall']) { this.recall = new fhir.FhirDecimal({value: source.recall}); }
+    if (source['fScore']) { this.fScore = new fhir.FhirDecimal({value: source.fScore}); }
+    if (source['roc']) { this.roc = new fhir.MolecularSequenceQualityRoc(source.roc); }
   }
   /**
    * Required-bound Value Set for type
@@ -969,98 +510,105 @@ export class MolecularSequenceQuality extends fhir.BackboneElement implements IM
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: MolecularSequence.quality.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["standardSequence"]) { results.push(...this.standardSequence.doModelValidation()); }
-    if (this["_start"]) { results.push(...this._start.doModelValidation()); }
-    if (this["_end"]) { results.push(...this._end.doModelValidation()); }
-    if (this["score"]) { results.push(...this.score.doModelValidation()); }
-    if (this["method"]) { results.push(...this.method.doModelValidation()); }
-    if (this["_truthTP"]) { results.push(...this._truthTP.doModelValidation()); }
-    if (this["_queryTP"]) { results.push(...this._queryTP.doModelValidation()); }
-    if (this["_truthFN"]) { results.push(...this._truthFN.doModelValidation()); }
-    if (this["_queryFP"]) { results.push(...this._queryFP.doModelValidation()); }
-    if (this["_gtFP"]) { results.push(...this._gtFP.doModelValidation()); }
-    if (this["_precision"]) { results.push(...this._precision.doModelValidation()); }
-    if (this["_recall"]) { results.push(...this._recall.doModelValidation()); }
-    if (this["_fScore"]) { results.push(...this._fScore.doModelValidation()); }
-    if (this["roc"]) { results.push(...this.roc.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:QualityTypeValueSetEnum fhir: MolecularSequence.quality.type:code", }));
+    }
+    if (this["standardSequence"]) { outcome.issue!.push(...this.standardSequence.doModelValidation().issue!); }
+    if (this["start"]) { outcome.issue!.push(...this.start.doModelValidation().issue!); }
+    if (this["end"]) { outcome.issue!.push(...this.end.doModelValidation().issue!); }
+    if (this["score"]) { outcome.issue!.push(...this.score.doModelValidation().issue!); }
+    if (this["method"]) { outcome.issue!.push(...this.method.doModelValidation().issue!); }
+    if (this["truthTP"]) { outcome.issue!.push(...this.truthTP.doModelValidation().issue!); }
+    if (this["queryTP"]) { outcome.issue!.push(...this.queryTP.doModelValidation().issue!); }
+    if (this["truthFN"]) { outcome.issue!.push(...this.truthFN.doModelValidation().issue!); }
+    if (this["queryFP"]) { outcome.issue!.push(...this.queryFP.doModelValidation().issue!); }
+    if (this["gtFP"]) { outcome.issue!.push(...this.gtFP.doModelValidation().issue!); }
+    if (this["precision"]) { outcome.issue!.push(...this.precision.doModelValidation().issue!); }
+    if (this["recall"]) { outcome.issue!.push(...this.recall.doModelValidation().issue!); }
+    if (this["fScore"]) { outcome.issue!.push(...this.fScore.doModelValidation().issue!); }
+    if (this["roc"]) { outcome.issue!.push(...this.roc.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MolecularSequenceRepository type.
+ */
+export interface MolecularSequenceRepositoryArgs extends fhir.BackboneElementArgs {
+  /**
+   * Click and see / RESTful API / Need login to see / RESTful API with authentication / Other ways to see resource.
+   */
+  type: RepositoryTypeValueSetEnum|null;
+  /**
+   * URI of an external repository which contains further details about the genetics data.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * URI of an external repository which contains further details about the genetics data.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * Id of the variant in this external repository. The server will understand how to use this id to call for more info about datasets in external repository.
+   */
+  datasetId?: fhir.FhirString|string|undefined;
+  /**
+   * Id of the variantset in this external repository. The server will understand how to use this id to call for more info about variantsets in external repository.
+   */
+  variantsetId?: fhir.FhirString|string|undefined;
+  /**
+   * Id of the read in this external repository.
+   */
+  readsetId?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Configurations of the external repository. The repository shall store target's observedSeq or records related with target's observedSeq.
  */
-export class MolecularSequenceRepository extends fhir.BackboneElement implements IMolecularSequenceRepository {
+export class MolecularSequenceRepository extends fhir.BackboneElement {
+  readonly __dataType:string = 'MolecularSequenceRepository';
   /**
    * Click and see / RESTful API / Need login to see / RESTful API with authentication / Other ways to see resource.
    */
   public type: RepositoryTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: MolecularSequence.repository.type
+   * URI of an external repository which contains further details about the genetics data.
    */
-  public _type?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * URI of an external repository which contains further details about the genetics data.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.repository.url
-   */
-  public _url?: fhir.FhirElement|undefined;
-  /**
-   * URI of an external repository which contains further details about the genetics data.
-   */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.repository.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Id of the variant in this external repository. The server will understand how to use this id to call for more info about datasets in external repository.
    */
-  public datasetId?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.repository.datasetId
-   */
-  public _datasetId?: fhir.FhirElement|undefined;
+  public datasetId?: fhir.FhirString|undefined;
   /**
    * Id of the variantset in this external repository. The server will understand how to use this id to call for more info about variantsets in external repository.
    */
-  public variantsetId?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.repository.variantsetId
-   */
-  public _variantsetId?: fhir.FhirElement|undefined;
+  public variantsetId?: fhir.FhirString|undefined;
   /**
    * Id of the read in this external repository.
    */
-  public readsetId?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.repository.readsetId
-   */
-  public _readsetId?: fhir.FhirElement|undefined;
+  public readsetId?: fhir.FhirString|undefined;
   /**
    * Default constructor for MolecularSequenceRepository - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMolecularSequenceRepository> = { }) {
-    super(source);
+  constructor(source:Partial<MolecularSequenceRepositoryArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['datasetId']) { this.datasetId = source.datasetId; }
-    if (source['_datasetId']) { this._datasetId = new fhir.FhirElement(source._datasetId!); }
-    if (source['variantsetId']) { this.variantsetId = source.variantsetId; }
-    if (source['_variantsetId']) { this._variantsetId = new fhir.FhirElement(source._variantsetId!); }
-    if (source['readsetId']) { this.readsetId = source.readsetId; }
-    if (source['_readsetId']) { this._readsetId = new fhir.FhirElement(source._readsetId!); }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['datasetId']) { this.datasetId = new fhir.FhirString({value: source.datasetId}); }
+    if (source['variantsetId']) { this.variantsetId = new fhir.FhirString({value: source.variantsetId}); }
+    if (source['readsetId']) { this.readsetId = new fhir.FhirString({value: source.readsetId}); }
   }
   /**
    * Required-bound Value Set for type
@@ -1071,105 +619,158 @@ export class MolecularSequenceRepository extends fhir.BackboneElement implements
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: MolecularSequence.repository.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_datasetId"]) { results.push(...this._datasetId.doModelValidation()); }
-    if (this["_variantsetId"]) { results.push(...this._variantsetId.doModelValidation()); }
-    if (this["_readsetId"]) { results.push(...this._readsetId.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:RepositoryTypeValueSetEnum fhir: MolecularSequence.repository.type:code", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["datasetId"]) { outcome.issue!.push(...this.datasetId.doModelValidation().issue!); }
+    if (this["variantsetId"]) { outcome.issue!.push(...this.variantsetId.doModelValidation().issue!); }
+    if (this["readsetId"]) { outcome.issue!.push(...this.readsetId.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MolecularSequenceStructureVariantOuter type.
+ */
+export interface MolecularSequenceStructureVariantOuterArgs extends fhir.BackboneElementArgs {
+  /**
+   * Structural variant outer start. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
+   */
+  start?: fhir.FhirInteger|number|undefined;
+  /**
+   * Structural variant outer end. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
+   */
+  end?: fhir.FhirInteger|number|undefined;
 }
 
 /**
  * Structural variant outer.
  */
-export class MolecularSequenceStructureVariantOuter extends fhir.BackboneElement implements IMolecularSequenceStructureVariantOuter {
+export class MolecularSequenceStructureVariantOuter extends fhir.BackboneElement {
+  readonly __dataType:string = 'MolecularSequenceStructureVariantOuter';
   /**
    * Structural variant outer start. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
    */
-  public start?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.structureVariant.outer.start
-   */
-  public _start?: fhir.FhirElement|undefined;
+  public start?: fhir.FhirInteger|undefined;
   /**
    * Structural variant outer end. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
    */
-  public end?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.structureVariant.outer.end
-   */
-  public _end?: fhir.FhirElement|undefined;
+  public end?: fhir.FhirInteger|undefined;
   /**
    * Default constructor for MolecularSequenceStructureVariantOuter - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMolecularSequenceStructureVariantOuter> = { }) {
-    super(source);
-    if (source['start']) { this.start = source.start; }
-    if (source['_start']) { this._start = new fhir.FhirElement(source._start!); }
-    if (source['end']) { this.end = source.end; }
-    if (source['_end']) { this._end = new fhir.FhirElement(source._end!); }
+  constructor(source:Partial<MolecularSequenceStructureVariantOuterArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['start']) { this.start = new fhir.FhirInteger({value: source.start}); }
+    if (source['end']) { this.end = new fhir.FhirInteger({value: source.end}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_start"]) { results.push(...this._start.doModelValidation()); }
-    if (this["_end"]) { results.push(...this._end.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["start"]) { outcome.issue!.push(...this.start.doModelValidation().issue!); }
+    if (this["end"]) { outcome.issue!.push(...this.end.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MolecularSequenceStructureVariantInner type.
+ */
+export interface MolecularSequenceStructureVariantInnerArgs extends fhir.BackboneElementArgs {
+  /**
+   * Structural variant inner start. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
+   */
+  start?: fhir.FhirInteger|number|undefined;
+  /**
+   * Structural variant inner end. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
+   */
+  end?: fhir.FhirInteger|number|undefined;
 }
 
 /**
  * Structural variant inner.
  */
-export class MolecularSequenceStructureVariantInner extends fhir.BackboneElement implements IMolecularSequenceStructureVariantInner {
+export class MolecularSequenceStructureVariantInner extends fhir.BackboneElement {
+  readonly __dataType:string = 'MolecularSequenceStructureVariantInner';
   /**
    * Structural variant inner start. If the coordinate system is either 0-based or 1-based, then start position is inclusive.
    */
-  public start?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.structureVariant.inner.start
-   */
-  public _start?: fhir.FhirElement|undefined;
+  public start?: fhir.FhirInteger|undefined;
   /**
    * Structural variant inner end. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.
    */
-  public end?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.structureVariant.inner.end
-   */
-  public _end?: fhir.FhirElement|undefined;
+  public end?: fhir.FhirInteger|undefined;
   /**
    * Default constructor for MolecularSequenceStructureVariantInner - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMolecularSequenceStructureVariantInner> = { }) {
-    super(source);
-    if (source['start']) { this.start = source.start; }
-    if (source['_start']) { this._start = new fhir.FhirElement(source._start!); }
-    if (source['end']) { this.end = source.end; }
-    if (source['_end']) { this._end = new fhir.FhirElement(source._end!); }
+  constructor(source:Partial<MolecularSequenceStructureVariantInnerArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['start']) { this.start = new fhir.FhirInteger({value: source.start}); }
+    if (source['end']) { this.end = new fhir.FhirInteger({value: source.end}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_start"]) { results.push(...this._start.doModelValidation()); }
-    if (this["_end"]) { results.push(...this._end.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["start"]) { outcome.issue!.push(...this.start.doModelValidation().issue!); }
+    if (this["end"]) { outcome.issue!.push(...this.end.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MolecularSequenceStructureVariant type.
+ */
+export interface MolecularSequenceStructureVariantArgs extends fhir.BackboneElementArgs {
+  /**
+   * Information about chromosome structure variation DNA change type.
+   */
+  variantType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Used to indicate if the outer and inner start-end values have the same meaning.
+   */
+  exact?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Length of the variant chromosome.
+   */
+  length?: fhir.FhirInteger|number|undefined;
+  /**
+   * Structural variant outer.
+   */
+  outer?: fhir.MolecularSequenceStructureVariantOuterArgs|undefined;
+  /**
+   * Structural variant inner.
+   */
+  inner?: fhir.MolecularSequenceStructureVariantInnerArgs|undefined;
 }
 
 /**
  * Information about chromosome structure variation.
  */
-export class MolecularSequenceStructureVariant extends fhir.BackboneElement implements IMolecularSequenceStructureVariant {
+export class MolecularSequenceStructureVariant extends fhir.BackboneElement {
+  readonly __dataType:string = 'MolecularSequenceStructureVariant';
   /**
    * Information about chromosome structure variation DNA change type.
    */
@@ -1177,19 +778,11 @@ export class MolecularSequenceStructureVariant extends fhir.BackboneElement impl
   /**
    * Used to indicate if the outer and inner start-end values have the same meaning.
    */
-  public exact?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.structureVariant.exact
-   */
-  public _exact?: fhir.FhirElement|undefined;
+  public exact?: fhir.FhirBoolean|undefined;
   /**
    * Length of the variant chromosome.
    */
-  public length?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.structureVariant.length
-   */
-  public _length?: fhir.FhirElement|undefined;
+  public length?: fhir.FhirInteger|undefined;
   /**
    * Structural variant outer.
    */
@@ -1201,34 +794,112 @@ export class MolecularSequenceStructureVariant extends fhir.BackboneElement impl
   /**
    * Default constructor for MolecularSequenceStructureVariant - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMolecularSequenceStructureVariant> = { }) {
-    super(source);
-    if (source['variantType']) { this.variantType = new fhir.CodeableConcept(source.variantType!); }
-    if (source['exact']) { this.exact = source.exact; }
-    if (source['_exact']) { this._exact = new fhir.FhirElement(source._exact!); }
-    if (source['length']) { this.length = source.length; }
-    if (source['_length']) { this._length = new fhir.FhirElement(source._length!); }
-    if (source['outer']) { this.outer = new fhir.MolecularSequenceStructureVariantOuter(source.outer!); }
-    if (source['inner']) { this.inner = new fhir.MolecularSequenceStructureVariantInner(source.inner!); }
+  constructor(source:Partial<MolecularSequenceStructureVariantArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['variantType']) { this.variantType = new fhir.CodeableConcept(source.variantType); }
+    if (source['exact']) { this.exact = new fhir.FhirBoolean({value: source.exact}); }
+    if (source['length']) { this.length = new fhir.FhirInteger({value: source.length}); }
+    if (source['outer']) { this.outer = new fhir.MolecularSequenceStructureVariantOuter(source.outer); }
+    if (source['inner']) { this.inner = new fhir.MolecularSequenceStructureVariantInner(source.inner); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["variantType"]) { results.push(...this.variantType.doModelValidation()); }
-    if (this["_exact"]) { results.push(...this._exact.doModelValidation()); }
-    if (this["_length"]) { results.push(...this._length.doModelValidation()); }
-    if (this["outer"]) { results.push(...this.outer.doModelValidation()); }
-    if (this["inner"]) { results.push(...this.inner.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["variantType"]) { outcome.issue!.push(...this.variantType.doModelValidation().issue!); }
+    if (this["exact"]) { outcome.issue!.push(...this.exact.doModelValidation().issue!); }
+    if (this["length"]) { outcome.issue!.push(...this.length.doModelValidation().issue!); }
+    if (this["outer"]) { outcome.issue!.push(...this.outer.doModelValidation().issue!); }
+    if (this["inner"]) { outcome.issue!.push(...this.inner.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MolecularSequence type.
+ */
+export interface MolecularSequenceArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "MolecularSequence"|undefined;
+  /**
+   * A unique identifier for this particular sequence instance. This is a FHIR-defined id.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * Amino Acid Sequence/ DNA Sequence / RNA Sequence.
+   */
+  type?: SequenceTypeValueSetEnum|undefined;
+  /**
+   * Whether the sequence is numbered starting at 0 (0-based numbering or coordinates, inclusive start, exclusive end) or starting at 1 (1-based numbering, inclusive start and inclusive end).
+   */
+  coordinateSystem: fhir.FhirInteger|number|undefined;
+  /**
+   * The patient whose sequencing results are described by this resource.
+   */
+  patient?: fhir.ReferenceArgs|undefined;
+  /**
+   * Specimen used for sequencing.
+   */
+  specimen?: fhir.ReferenceArgs|undefined;
+  /**
+   * The method for sequencing, for example, chip information.
+   */
+  device?: fhir.ReferenceArgs|undefined;
+  /**
+   * The organization or lab that should be responsible for this result.
+   */
+  performer?: fhir.ReferenceArgs|undefined;
+  /**
+   * The number of copies of the sequence of interest. (RNASeq).
+   */
+  quantity?: fhir.QuantityArgs|undefined;
+  /**
+   * A sequence that is used as a reference to describe variants that are present in a sequence analyzed.
+   */
+  referenceSeq?: fhir.MolecularSequenceReferenceSeqArgs|undefined;
+  /**
+   * The definition of variant here originates from Sequence ontology ([variant_of](http://www.sequenceontology.org/browser/current_svn/term/variant_of)). This element can represent amino acid or nucleic sequence change(including insertion,deletion,SNP,etc.)  It can represent some complex mutation or segment variation with the assist of CIGAR string.
+   */
+  variant?: fhir.MolecularSequenceVariantArgs[]|undefined;
+  /**
+   * Sequence that was observed. It is the result marked by referenceSeq along with variant records on referenceSeq. This shall start from referenceSeq.windowStart and end by referenceSeq.windowEnd.
+   */
+  observedSeq?: fhir.FhirString|string|undefined;
+  /**
+   * An experimental feature attribute that defines the quality of the feature in a quantitative way, such as a phred quality score ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).
+   */
+  quality?: fhir.MolecularSequenceQualityArgs[]|undefined;
+  /**
+   * Coverage (read depth or depth) is the average number of reads representing a given nucleotide in the reconstructed sequence.
+   */
+  readCoverage?: fhir.FhirInteger|number|undefined;
+  /**
+   * Configurations of the external repository. The repository shall store target's observedSeq or records related with target's observedSeq.
+   */
+  repository?: fhir.MolecularSequenceRepositoryArgs[]|undefined;
+  /**
+   * Pointer to next atomic sequence which at most contains one variant.
+   */
+  pointer?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Information about chromosome structure variation.
+   */
+  structureVariant?: fhir.MolecularSequenceStructureVariantArgs[]|undefined;
 }
 
 /**
  * Raw data describing a biological sequence.
  */
-export class MolecularSequence extends fhir.DomainResource implements IMolecularSequence {
+export class MolecularSequence extends fhir.DomainResource {
+  readonly __dataType:string = 'MolecularSequence';
   /**
    * Resource Type Name
    */
@@ -1236,23 +907,15 @@ export class MolecularSequence extends fhir.DomainResource implements IMolecular
   /**
    * A unique identifier for this particular sequence instance. This is a FHIR-defined id.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Amino Acid Sequence/ DNA Sequence / RNA Sequence.
    */
   public type?: SequenceTypeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: MolecularSequence.type
-   */
-  public _type?: fhir.FhirElement|undefined;
-  /**
    * Whether the sequence is numbered starting at 0 (0-based numbering or coordinates, inclusive start, exclusive end) or starting at 1 (1-based numbering, inclusive start and inclusive end).
    */
-  public coordinateSystem: number|null;
-  /**
-   * Extended properties for primitive element: MolecularSequence.coordinateSystem
-   */
-  public _coordinateSystem?: fhir.FhirElement|undefined;
+  public coordinateSystem: fhir.FhirInteger|null;
   /**
    * The patient whose sequencing results are described by this resource.
    */
@@ -1280,63 +943,51 @@ export class MolecularSequence extends fhir.DomainResource implements IMolecular
   /**
    * The definition of variant here originates from Sequence ontology ([variant_of](http://www.sequenceontology.org/browser/current_svn/term/variant_of)). This element can represent amino acid or nucleic sequence change(including insertion,deletion,SNP,etc.)  It can represent some complex mutation or segment variation with the assist of CIGAR string.
    */
-  public variant?: fhir.MolecularSequenceVariant[]|undefined;
+  public variant?: fhir.MolecularSequenceVariant[]|undefined = [];
   /**
    * Sequence that was observed. It is the result marked by referenceSeq along with variant records on referenceSeq. This shall start from referenceSeq.windowStart and end by referenceSeq.windowEnd.
    */
-  public observedSeq?: string|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.observedSeq
-   */
-  public _observedSeq?: fhir.FhirElement|undefined;
+  public observedSeq?: fhir.FhirString|undefined;
   /**
    * An experimental feature attribute that defines the quality of the feature in a quantitative way, such as a phred quality score ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).
    */
-  public quality?: fhir.MolecularSequenceQuality[]|undefined;
+  public quality?: fhir.MolecularSequenceQuality[]|undefined = [];
   /**
    * Coverage (read depth or depth) is the average number of reads representing a given nucleotide in the reconstructed sequence.
    */
-  public readCoverage?: number|undefined;
-  /**
-   * Extended properties for primitive element: MolecularSequence.readCoverage
-   */
-  public _readCoverage?: fhir.FhirElement|undefined;
+  public readCoverage?: fhir.FhirInteger|undefined;
   /**
    * Configurations of the external repository. The repository shall store target's observedSeq or records related with target's observedSeq.
    */
-  public repository?: fhir.MolecularSequenceRepository[]|undefined;
+  public repository?: fhir.MolecularSequenceRepository[]|undefined = [];
   /**
    * Pointer to next atomic sequence which at most contains one variant.
    */
-  public pointer?: fhir.Reference[]|undefined;
+  public pointer?: fhir.Reference[]|undefined = [];
   /**
    * Information about chromosome structure variation.
    */
-  public structureVariant?: fhir.MolecularSequenceStructureVariant[]|undefined;
+  public structureVariant?: fhir.MolecularSequenceStructureVariant[]|undefined = [];
   /**
    * Default constructor for MolecularSequence - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMolecularSequence> = { }) {
-    super(source);
+  constructor(source:Partial<MolecularSequenceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'MolecularSequence';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['type']) { this.type = source.type; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['coordinateSystem']) { this.coordinateSystem = source.coordinateSystem; }
+    if (source['coordinateSystem']) { this.coordinateSystem = new fhir.FhirInteger({value: source.coordinateSystem}); }
     else { this.coordinateSystem = null; }
-    if (source['_coordinateSystem']) { this._coordinateSystem = new fhir.FhirElement(source._coordinateSystem!); }
-    if (source['patient']) { this.patient = new fhir.Reference(source.patient!); }
-    if (source['specimen']) { this.specimen = new fhir.Reference(source.specimen!); }
-    if (source['device']) { this.device = new fhir.Reference(source.device!); }
-    if (source['performer']) { this.performer = new fhir.Reference(source.performer!); }
-    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity!); }
-    if (source['referenceSeq']) { this.referenceSeq = new fhir.MolecularSequenceReferenceSeq(source.referenceSeq!); }
+    if (source['patient']) { this.patient = new fhir.Reference(source.patient); }
+    if (source['specimen']) { this.specimen = new fhir.Reference(source.specimen); }
+    if (source['device']) { this.device = new fhir.Reference(source.device); }
+    if (source['performer']) { this.performer = new fhir.Reference(source.performer); }
+    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity); }
+    if (source['referenceSeq']) { this.referenceSeq = new fhir.MolecularSequenceReferenceSeq(source.referenceSeq); }
     if (source['variant']) { this.variant = source.variant.map((x) => new fhir.MolecularSequenceVariant(x)); }
-    if (source['observedSeq']) { this.observedSeq = source.observedSeq; }
-    if (source['_observedSeq']) { this._observedSeq = new fhir.FhirElement(source._observedSeq!); }
+    if (source['observedSeq']) { this.observedSeq = new fhir.FhirString({value: source.observedSeq}); }
     if (source['quality']) { this.quality = source.quality.map((x) => new fhir.MolecularSequenceQuality(x)); }
-    if (source['readCoverage']) { this.readCoverage = source.readCoverage; }
-    if (source['_readCoverage']) { this._readCoverage = new fhir.FhirElement(source._readCoverage!); }
+    if (source['readCoverage']) { this.readCoverage = new fhir.FhirInteger({value: source.readCoverage}); }
     if (source['repository']) { this.repository = source.repository.map((x) => new fhir.MolecularSequenceRepository(x)); }
     if (source['pointer']) { this.pointer = source.pointer.map((x) => new fhir.Reference(x)); }
     if (source['structureVariant']) { this.structureVariant = source.structureVariant.map((x) => new fhir.MolecularSequenceStructureVariant(x)); }
@@ -1350,26 +1001,35 @@ export class MolecularSequence extends fhir.DomainResource implements IMolecular
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: MolecularSequence.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (!this["coordinateSystem"]) { results.push(["coordinateSystem",'Missing required element: MolecularSequence.coordinateSystem']); }
-    if (this["_coordinateSystem"]) { results.push(...this._coordinateSystem.doModelValidation()); }
-    if (this["patient"]) { results.push(...this.patient.doModelValidation()); }
-    if (this["specimen"]) { results.push(...this.specimen.doModelValidation()); }
-    if (this["device"]) { results.push(...this.device.doModelValidation()); }
-    if (this["performer"]) { results.push(...this.performer.doModelValidation()); }
-    if (this["quantity"]) { results.push(...this.quantity.doModelValidation()); }
-    if (this["referenceSeq"]) { results.push(...this.referenceSeq.doModelValidation()); }
-    if (this["variant"]) { this.variant.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_observedSeq"]) { results.push(...this._observedSeq.doModelValidation()); }
-    if (this["quality"]) { this.quality.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_readCoverage"]) { results.push(...this._readCoverage.doModelValidation()); }
-    if (this["repository"]) { this.repository.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["pointer"]) { this.pointer.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["structureVariant"]) { this.structureVariant.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'MolecularSequence' fhir: MolecularSequence.resourceType:'MolecularSequence'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['coordinateSystem']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property coordinateSystem:fhir.FhirInteger fhir: MolecularSequence.coordinateSystem:integer", }));
+    }
+    if (this["coordinateSystem"]) { outcome.issue!.push(...this.coordinateSystem.doModelValidation().issue!); }
+    if (this["patient"]) { outcome.issue!.push(...this.patient.doModelValidation().issue!); }
+    if (this["specimen"]) { outcome.issue!.push(...this.specimen.doModelValidation().issue!); }
+    if (this["device"]) { outcome.issue!.push(...this.device.doModelValidation().issue!); }
+    if (this["performer"]) { outcome.issue!.push(...this.performer.doModelValidation().issue!); }
+    if (this["quantity"]) { outcome.issue!.push(...this.quantity.doModelValidation().issue!); }
+    if (this["referenceSeq"]) { outcome.issue!.push(...this.referenceSeq.doModelValidation().issue!); }
+    if (this["variant"]) { this.variant.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["observedSeq"]) { outcome.issue!.push(...this.observedSeq.doModelValidation().issue!); }
+    if (this["quality"]) { this.quality.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["readCoverage"]) { outcome.issue!.push(...this.readCoverage.doModelValidation().issue!); }
+    if (this["repository"]) { this.repository.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["pointer"]) { this.pointer.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["structureVariant"]) { this.structureVariant.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

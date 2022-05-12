@@ -43,23 +43,4 @@ export const ConsentScopeValueSet = {
 /**
  * This value set includes the four Consent scope codes.
  */
-export var ConsentScopeValueSetEnum;
-(function (ConsentScopeValueSetEnum) {
-    /**
-     * adr: Actions to be taken if they are no longer able to make decisions for themselves
-     */
-    ConsentScopeValueSetEnum["AdvancedCareDirective"] = "adr";
-    /**
-     * patient-privacy: Agreement to collect, access, use or disclose (share) information
-     */
-    ConsentScopeValueSetEnum["PrivacyConsent"] = "patient-privacy";
-    /**
-     * research: Consent to participate in research protocol and information sharing required
-     */
-    ConsentScopeValueSetEnum["Research"] = "research";
-    /**
-     * treatment: Consent to undergo a specific treatment
-     */
-    ConsentScopeValueSetEnum["Treatment"] = "treatment";
-})(ConsentScopeValueSetEnum || (ConsentScopeValueSetEnum = {}));
 //# sourceMappingURL=ConsentScopeValueSet.js.map

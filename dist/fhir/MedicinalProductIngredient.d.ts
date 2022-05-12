@@ -1,145 +1,34 @@
 import * as fhir from '../fhir.js';
 /**
- * Strength expressed in terms of a reference substance.
+ * Valid arguments for the MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength type.
  */
-export declare type IMedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength = fhir.IBackboneElement & {
+export interface MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrengthArgs extends fhir.BackboneElementArgs {
     /**
      * Relevant reference substance.
      */
-    substance?: fhir.ICodeableConcept | undefined;
+    substance?: fhir.CodeableConceptArgs | undefined;
     /**
      * Strength expressed in terms of a reference substance.
      */
-    strength: fhir.IRatio | null;
+    strength: fhir.RatioArgs | null;
     /**
      * Strength expressed in terms of a reference substance.
      */
-    strengthLowLimit?: fhir.IRatio | undefined;
+    strengthLowLimit?: fhir.RatioArgs | undefined;
     /**
      * For when strength is measured at a particular point or distance.
      */
-    measurementPoint?: string | undefined;
-    /**
-     * Extended properties for primitive element: MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.measurementPoint
-     */
-    _measurementPoint?: fhir.IFhirElement | undefined;
+    measurementPoint?: fhir.FhirString | string | undefined;
     /**
      * The country or countries for which the strength range applies.
      */
-    country?: fhir.ICodeableConcept[] | undefined;
-};
-/**
- * Quantity of the substance or specified substance present in the manufactured item or pharmaceutical product.
- */
-export declare type IMedicinalProductIngredientSpecifiedSubstanceStrength = fhir.IBackboneElement & {
-    /**
-     * The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item.
-     */
-    presentation: fhir.IRatio | null;
-    /**
-     * A lower limit for the quantity of substance in the unit of presentation. For use when there is a range of strengths, this is the lower limit, with the presentation attribute becoming the upper limit.
-     */
-    presentationLowLimit?: fhir.IRatio | undefined;
-    /**
-     * The strength per unitary volume (or mass).
-     */
-    concentration?: fhir.IRatio | undefined;
-    /**
-     * A lower limit for the strength per unitary volume (or mass), for when there is a range. The concentration attribute then becomes the upper limit.
-     */
-    concentrationLowLimit?: fhir.IRatio | undefined;
-    /**
-     * For when strength is measured at a particular point or distance.
-     */
-    measurementPoint?: string | undefined;
-    /**
-     * Extended properties for primitive element: MedicinalProductIngredient.specifiedSubstance.strength.measurementPoint
-     */
-    _measurementPoint?: fhir.IFhirElement | undefined;
-    /**
-     * The country or countries for which the strength range applies.
-     */
-    country?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Strength expressed in terms of a reference substance.
-     */
-    referenceStrength?: fhir.IMedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength[] | undefined;
-};
-/**
- * A specified substance that comprises this ingredient.
- */
-export declare type IMedicinalProductIngredientSpecifiedSubstance = fhir.IBackboneElement & {
-    /**
-     * The specified substance.
-     */
-    code: fhir.ICodeableConcept | null;
-    /**
-     * The group of specified substance, e.g. group 1 to 4.
-     */
-    group: fhir.ICodeableConcept | null;
-    /**
-     * Confidentiality level of the specified substance as the ingredient.
-     */
-    confidentiality?: fhir.ICodeableConcept | undefined;
-    /**
-     * Quantity of the substance or specified substance present in the manufactured item or pharmaceutical product.
-     */
-    strength?: fhir.IMedicinalProductIngredientSpecifiedSubstanceStrength[] | undefined;
-};
-/**
- * The ingredient substance.
- */
-export declare type IMedicinalProductIngredientSubstance = fhir.IBackboneElement & {
-    /**
-     * The ingredient substance.
-     */
-    code: fhir.ICodeableConcept | null;
-    /**
-     * Quantity of the substance or specified substance present in the manufactured item or pharmaceutical product.
-     */
-    strength?: fhir.IMedicinalProductIngredientSpecifiedSubstanceStrength[] | undefined;
-};
-/**
- * An ingredient of a manufactured item or pharmaceutical product.
- */
-export declare type IMedicinalProductIngredient = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "MedicinalProductIngredient";
-    /**
-     * The identifier(s) of this Ingredient that are assigned by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.
-     */
-    identifier?: fhir.IIdentifier | undefined;
-    /**
-     * Ingredient role e.g. Active ingredient, excipient.
-     */
-    role: fhir.ICodeableConcept | null;
-    /**
-     * If the ingredient is a known or suspected allergen.
-     */
-    allergenicIndicator?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: MedicinalProductIngredient.allergenicIndicator
-     */
-    _allergenicIndicator?: fhir.IFhirElement | undefined;
-    /**
-     * Manufacturer of this Ingredient.
-     */
-    manufacturer?: fhir.IReference[] | undefined;
-    /**
-     * A specified substance that comprises this ingredient.
-     */
-    specifiedSubstance?: fhir.IMedicinalProductIngredientSpecifiedSubstance[] | undefined;
-    /**
-     * The ingredient substance.
-     */
-    substance?: fhir.IMedicinalProductIngredientSubstance | undefined;
-};
+    country?: fhir.CodeableConceptArgs[] | undefined;
+}
 /**
  * Strength expressed in terms of a reference substance.
  */
-export declare class MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength extends fhir.BackboneElement implements IMedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength {
+export declare class MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Relevant reference substance.
      */
@@ -155,11 +44,7 @@ export declare class MedicinalProductIngredientSpecifiedSubstanceStrengthReferen
     /**
      * For when strength is measured at a particular point or distance.
      */
-    measurementPoint?: string | undefined;
-    /**
-     * Extended properties for primitive element: MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.measurementPoint
-     */
-    _measurementPoint?: fhir.FhirElement | undefined;
+    measurementPoint?: fhir.FhirString | undefined;
     /**
      * The country or countries for which the strength range applies.
      */
@@ -167,16 +52,54 @@ export declare class MedicinalProductIngredientSpecifiedSubstanceStrengthReferen
     /**
      * Default constructor for MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength>);
+    constructor(source?: Partial<MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrengthArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the MedicinalProductIngredientSpecifiedSubstanceStrength type.
+ */
+export interface MedicinalProductIngredientSpecifiedSubstanceStrengthArgs extends fhir.BackboneElementArgs {
+    /**
+     * The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item.
+     */
+    presentation: fhir.RatioArgs | null;
+    /**
+     * A lower limit for the quantity of substance in the unit of presentation. For use when there is a range of strengths, this is the lower limit, with the presentation attribute becoming the upper limit.
+     */
+    presentationLowLimit?: fhir.RatioArgs | undefined;
+    /**
+     * The strength per unitary volume (or mass).
+     */
+    concentration?: fhir.RatioArgs | undefined;
+    /**
+     * A lower limit for the strength per unitary volume (or mass), for when there is a range. The concentration attribute then becomes the upper limit.
+     */
+    concentrationLowLimit?: fhir.RatioArgs | undefined;
+    /**
+     * For when strength is measured at a particular point or distance.
+     */
+    measurementPoint?: fhir.FhirString | string | undefined;
+    /**
+     * The country or countries for which the strength range applies.
+     */
+    country?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * Strength expressed in terms of a reference substance.
+     */
+    referenceStrength?: fhir.MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrengthArgs[] | undefined;
 }
 /**
  * Quantity of the substance or specified substance present in the manufactured item or pharmaceutical product.
  */
-export declare class MedicinalProductIngredientSpecifiedSubstanceStrength extends fhir.BackboneElement implements IMedicinalProductIngredientSpecifiedSubstanceStrength {
+export declare class MedicinalProductIngredientSpecifiedSubstanceStrength extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item.
      */
@@ -196,11 +119,7 @@ export declare class MedicinalProductIngredientSpecifiedSubstanceStrength extend
     /**
      * For when strength is measured at a particular point or distance.
      */
-    measurementPoint?: string | undefined;
-    /**
-     * Extended properties for primitive element: MedicinalProductIngredient.specifiedSubstance.strength.measurementPoint
-     */
-    _measurementPoint?: fhir.FhirElement | undefined;
+    measurementPoint?: fhir.FhirString | undefined;
     /**
      * The country or countries for which the strength range applies.
      */
@@ -212,16 +131,42 @@ export declare class MedicinalProductIngredientSpecifiedSubstanceStrength extend
     /**
      * Default constructor for MedicinalProductIngredientSpecifiedSubstanceStrength - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMedicinalProductIngredientSpecifiedSubstanceStrength>);
+    constructor(source?: Partial<MedicinalProductIngredientSpecifiedSubstanceStrengthArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the MedicinalProductIngredientSpecifiedSubstance type.
+ */
+export interface MedicinalProductIngredientSpecifiedSubstanceArgs extends fhir.BackboneElementArgs {
+    /**
+     * The specified substance.
+     */
+    code: fhir.CodeableConceptArgs | null;
+    /**
+     * The group of specified substance, e.g. group 1 to 4.
+     */
+    group: fhir.CodeableConceptArgs | null;
+    /**
+     * Confidentiality level of the specified substance as the ingredient.
+     */
+    confidentiality?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Quantity of the substance or specified substance present in the manufactured item or pharmaceutical product.
+     */
+    strength?: fhir.MedicinalProductIngredientSpecifiedSubstanceStrengthArgs[] | undefined;
 }
 /**
  * A specified substance that comprises this ingredient.
  */
-export declare class MedicinalProductIngredientSpecifiedSubstance extends fhir.BackboneElement implements IMedicinalProductIngredientSpecifiedSubstance {
+export declare class MedicinalProductIngredientSpecifiedSubstance extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The specified substance.
      */
@@ -241,16 +186,34 @@ export declare class MedicinalProductIngredientSpecifiedSubstance extends fhir.B
     /**
      * Default constructor for MedicinalProductIngredientSpecifiedSubstance - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMedicinalProductIngredientSpecifiedSubstance>);
+    constructor(source?: Partial<MedicinalProductIngredientSpecifiedSubstanceArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the MedicinalProductIngredientSubstance type.
+ */
+export interface MedicinalProductIngredientSubstanceArgs extends fhir.BackboneElementArgs {
+    /**
+     * The ingredient substance.
+     */
+    code: fhir.CodeableConceptArgs | null;
+    /**
+     * Quantity of the substance or specified substance present in the manufactured item or pharmaceutical product.
+     */
+    strength?: fhir.MedicinalProductIngredientSpecifiedSubstanceStrengthArgs[] | undefined;
 }
 /**
  * The ingredient substance.
  */
-export declare class MedicinalProductIngredientSubstance extends fhir.BackboneElement implements IMedicinalProductIngredientSubstance {
+export declare class MedicinalProductIngredientSubstance extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The ingredient substance.
      */
@@ -262,16 +225,54 @@ export declare class MedicinalProductIngredientSubstance extends fhir.BackboneEl
     /**
      * Default constructor for MedicinalProductIngredientSubstance - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMedicinalProductIngredientSubstance>);
+    constructor(source?: Partial<MedicinalProductIngredientSubstanceArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the MedicinalProductIngredient type.
+ */
+export interface MedicinalProductIngredientArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "MedicinalProductIngredient" | undefined;
+    /**
+     * The identifier(s) of this Ingredient that are assigned by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.
+     */
+    identifier?: fhir.IdentifierArgs | undefined;
+    /**
+     * Ingredient role e.g. Active ingredient, excipient.
+     */
+    role: fhir.CodeableConceptArgs | null;
+    /**
+     * If the ingredient is a known or suspected allergen.
+     */
+    allergenicIndicator?: fhir.FhirBoolean | boolean | undefined;
+    /**
+     * Manufacturer of this Ingredient.
+     */
+    manufacturer?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * A specified substance that comprises this ingredient.
+     */
+    specifiedSubstance?: fhir.MedicinalProductIngredientSpecifiedSubstanceArgs[] | undefined;
+    /**
+     * The ingredient substance.
+     */
+    substance?: fhir.MedicinalProductIngredientSubstanceArgs | undefined;
 }
 /**
  * An ingredient of a manufactured item or pharmaceutical product.
  */
-export declare class MedicinalProductIngredient extends fhir.DomainResource implements IMedicinalProductIngredient {
+export declare class MedicinalProductIngredient extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -287,11 +288,7 @@ export declare class MedicinalProductIngredient extends fhir.DomainResource impl
     /**
      * If the ingredient is a known or suspected allergen.
      */
-    allergenicIndicator?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: MedicinalProductIngredient.allergenicIndicator
-     */
-    _allergenicIndicator?: fhir.FhirElement | undefined;
+    allergenicIndicator?: fhir.FhirBoolean | undefined;
     /**
      * Manufacturer of this Ingredient.
      */
@@ -307,10 +304,14 @@ export declare class MedicinalProductIngredient extends fhir.DomainResource impl
     /**
      * Default constructor for MedicinalProductIngredient - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMedicinalProductIngredient>);
+    constructor(source?: Partial<MedicinalProductIngredientArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=MedicinalProductIngredient.d.ts.map

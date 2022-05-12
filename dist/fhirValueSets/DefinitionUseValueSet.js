@@ -59,31 +59,4 @@ export const DefinitionUseValueSet = {
 /**
  * Structure Definition Use Codes / Keywords
  */
-export var DefinitionUseValueSetEnum;
-(function (DefinitionUseValueSetEnum) {
-    /**
-     * archetype: This structure captures an analysis of a domain
-     */
-    DefinitionUseValueSetEnum["DomainAnalysisModel"] = "archetype";
-    /**
-     * custom-resource: This structure is intended to be treated like a FHIR resource (e.g. on the FHIR API)
-     */
-    DefinitionUseValueSetEnum["CustomResource"] = "custom-resource";
-    /**
-     * dam: This structure captures an analysis of a domain
-     */
-    DefinitionUseValueSetEnum["DomainAnalysisModelDam"] = "dam";
-    /**
-     * fhir-structure: This structure is defined as part of the base FHIR Specification
-     */
-    DefinitionUseValueSetEnum["FHIRStructure"] = "fhir-structure";
-    /**
-     * template: This structure is a template (n.b: 'template' has many meanings)
-     */
-    DefinitionUseValueSetEnum["Template"] = "template";
-    /**
-     * wire-format: This structure represents and existing structure (e.g. CDA, HL7 v2)
-     */
-    DefinitionUseValueSetEnum["WireFormat"] = "wire-format";
-})(DefinitionUseValueSetEnum || (DefinitionUseValueSetEnum = {}));
 //# sourceMappingURL=DefinitionUseValueSet.js.map

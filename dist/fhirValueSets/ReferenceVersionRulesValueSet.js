@@ -35,19 +35,4 @@ export const ReferenceVersionRulesValueSet = {
 /**
  * Whether a reference needs to be version specific or version independent, or whether either can be used.
  */
-export var ReferenceVersionRulesValueSetEnum;
-(function (ReferenceVersionRulesValueSetEnum) {
-    /**
-     * either: The reference may be either version independent or version specific.
-     */
-    ReferenceVersionRulesValueSetEnum["EitherSpecificOrIndependent"] = "either";
-    /**
-     * independent: The reference must be version independent.
-     */
-    ReferenceVersionRulesValueSetEnum["VersionIndependent"] = "independent";
-    /**
-     * specific: The reference must be version specific.
-     */
-    ReferenceVersionRulesValueSetEnum["VersionSpecific"] = "specific";
-})(ReferenceVersionRulesValueSetEnum || (ReferenceVersionRulesValueSetEnum = {}));
 //# sourceMappingURL=ReferenceVersionRulesValueSet.js.map

@@ -35,19 +35,4 @@ export const VerificationresultValidationTypeValueSet = {
 /**
  * What the target is validated against
  */
-export var VerificationresultValidationTypeValueSetEnum;
-(function (VerificationresultValidationTypeValueSetEnum) {
-    /**
-     * Code: multiple
-     */
-    VerificationresultValidationTypeValueSetEnum["MultipleSources"] = "multiple";
-    /**
-     * Code: nothing
-     */
-    VerificationresultValidationTypeValueSetEnum["Nothing"] = "nothing";
-    /**
-     * Code: primary
-     */
-    VerificationresultValidationTypeValueSetEnum["PrimarySource"] = "primary";
-})(VerificationresultValidationTypeValueSetEnum || (VerificationresultValidationTypeValueSetEnum = {}));
 //# sourceMappingURL=VerificationresultValidationTypeValueSet.js.map

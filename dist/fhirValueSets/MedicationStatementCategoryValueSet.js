@@ -43,23 +43,4 @@ export const MedicationStatementCategoryValueSet = {
 /**
  * Medication Status Codes
  */
-export var MedicationStatementCategoryValueSetEnum;
-(function (MedicationStatementCategoryValueSetEnum) {
-    /**
-     * community: Includes orders for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
-     */
-    MedicationStatementCategoryValueSetEnum["Community"] = "community";
-    /**
-     * inpatient: Includes orders for medications to be administered or consumed in an inpatient or acute care setting
-     */
-    MedicationStatementCategoryValueSetEnum["Inpatient"] = "inpatient";
-    /**
-     * outpatient: Includes orders for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
-     */
-    MedicationStatementCategoryValueSetEnum["Outpatient"] = "outpatient";
-    /**
-     * patientspecified: Includes statements about medication use, including over the counter medication, provided by the patient, agent or another provider
-     */
-    MedicationStatementCategoryValueSetEnum["PatientSpecified"] = "patientspecified";
-})(MedicationStatementCategoryValueSetEnum || (MedicationStatementCategoryValueSetEnum = {}));
 //# sourceMappingURL=MedicationStatementCategoryValueSet.js.map

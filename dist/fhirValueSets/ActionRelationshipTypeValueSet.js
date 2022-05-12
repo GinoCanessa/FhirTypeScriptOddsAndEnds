@@ -83,43 +83,4 @@ export const ActionRelationshipTypeValueSet = {
 /**
  * Defines the types of relationships between actions.
  */
-export var ActionRelationshipTypeValueSetEnum;
-(function (ActionRelationshipTypeValueSetEnum) {
-    /**
-     * after: The action must be performed after the related action.
-     */
-    ActionRelationshipTypeValueSetEnum["After"] = "after";
-    /**
-     * after-end: The action must be performed after the end of the related action.
-     */
-    ActionRelationshipTypeValueSetEnum["AfterEnd"] = "after-end";
-    /**
-     * after-start: The action must be performed after the start of the related action.
-     */
-    ActionRelationshipTypeValueSetEnum["AfterStart"] = "after-start";
-    /**
-     * before: The action must be performed before the related action.
-     */
-    ActionRelationshipTypeValueSetEnum["Before"] = "before";
-    /**
-     * before-end: The action must be performed before the end of the related action.
-     */
-    ActionRelationshipTypeValueSetEnum["BeforeEnd"] = "before-end";
-    /**
-     * before-start: The action must be performed before the start of the related action.
-     */
-    ActionRelationshipTypeValueSetEnum["BeforeStart"] = "before-start";
-    /**
-     * concurrent: The action must be performed concurrent with the related action.
-     */
-    ActionRelationshipTypeValueSetEnum["Concurrent"] = "concurrent";
-    /**
-     * concurrent-with-end: The action must be performed concurrent with the end of the related action.
-     */
-    ActionRelationshipTypeValueSetEnum["ConcurrentWithEnd"] = "concurrent-with-end";
-    /**
-     * concurrent-with-start: The action must be performed concurrent with the start of the related action.
-     */
-    ActionRelationshipTypeValueSetEnum["ConcurrentWithStart"] = "concurrent-with-start";
-})(ActionRelationshipTypeValueSetEnum || (ActionRelationshipTypeValueSetEnum = {}));
 //# sourceMappingURL=ActionRelationshipTypeValueSet.js.map

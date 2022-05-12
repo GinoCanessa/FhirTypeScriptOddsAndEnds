@@ -43,23 +43,4 @@ export const FmStatusValueSet = {
 /**
  * This value set includes Status codes.
  */
-export var FmStatusValueSetEnum;
-(function (FmStatusValueSetEnum) {
-    /**
-     * active: The instance is currently in-force.
-     */
-    FmStatusValueSetEnum["Active"] = "active";
-    /**
-     * cancelled: The instance is withdrawn, rescinded or reversed.
-     */
-    FmStatusValueSetEnum["Cancelled"] = "cancelled";
-    /**
-     * draft: A new instance the contents of which is not complete.
-     */
-    FmStatusValueSetEnum["Draft"] = "draft";
-    /**
-     * entered-in-error: The instance was entered in error.
-     */
-    FmStatusValueSetEnum["EnteredInError"] = "entered-in-error";
-})(FmStatusValueSetEnum || (FmStatusValueSetEnum = {}));
 //# sourceMappingURL=FmStatusValueSet.js.map

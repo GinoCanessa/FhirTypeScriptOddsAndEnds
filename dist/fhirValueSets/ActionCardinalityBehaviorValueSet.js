@@ -27,15 +27,4 @@ export const ActionCardinalityBehaviorValueSet = {
 /**
  * Defines behavior for an action or a group for how many times that item may be repeated.
  */
-export var ActionCardinalityBehaviorValueSetEnum;
-(function (ActionCardinalityBehaviorValueSetEnum) {
-    /**
-     * multiple: The action may be selected multiple times.
-     */
-    ActionCardinalityBehaviorValueSetEnum["Multiple"] = "multiple";
-    /**
-     * single: The action may only be selected one time.
-     */
-    ActionCardinalityBehaviorValueSetEnum["Single"] = "single";
-})(ActionCardinalityBehaviorValueSetEnum || (ActionCardinalityBehaviorValueSetEnum = {}));
 //# sourceMappingURL=ActionCardinalityBehaviorValueSet.js.map

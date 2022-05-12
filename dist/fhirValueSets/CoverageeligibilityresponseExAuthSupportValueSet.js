@@ -75,39 +75,4 @@ export const CoverageeligibilityresponseExAuthSupportValueSet = {
 /**
  * This value set includes CoverageEligibilityResponse Auth Support codes.
  */
-export var CoverageeligibilityresponseExAuthSupportValueSetEnum;
-(function (CoverageeligibilityresponseExAuthSupportValueSetEnum) {
-    /**
-     * accidentreport: A formal accident report as would be filed with police or a simlar official body.
-     */
-    CoverageeligibilityresponseExAuthSupportValueSetEnum["AccidentReport"] = "accidentreport";
-    /**
-     * diagnosticimageorder: A request or authorization for diagnostic imaging.
-     */
-    CoverageeligibilityresponseExAuthSupportValueSetEnum["DiagnosticImageOrder"] = "diagnosticimageorder";
-    /**
-     * diagnosticimagereport: A report on diagnostic image(s).
-     */
-    CoverageeligibilityresponseExAuthSupportValueSetEnum["DiagnosticImageReport"] = "diagnosticimagereport";
-    /**
-     * laborder: A request or authorization for laboratory diagnostic tests.
-     */
-    CoverageeligibilityresponseExAuthSupportValueSetEnum["LabOrder"] = "laborder";
-    /**
-     * labreport: A report on laboratory diagnostic test(s).
-     */
-    CoverageeligibilityresponseExAuthSupportValueSetEnum["LabReport"] = "labreport";
-    /**
-     * model: A physical model of the affected area.
-     */
-    CoverageeligibilityresponseExAuthSupportValueSetEnum["Model"] = "model";
-    /**
-     * picture: A photograph of the affected area.
-     */
-    CoverageeligibilityresponseExAuthSupportValueSetEnum["Picture"] = "picture";
-    /**
-     * professionalreport: A report from a licensed professional regarding the siutation, condition or proposed treatment.
-     */
-    CoverageeligibilityresponseExAuthSupportValueSetEnum["ProfessionalReport"] = "professionalreport";
-})(CoverageeligibilityresponseExAuthSupportValueSetEnum || (CoverageeligibilityresponseExAuthSupportValueSetEnum = {}));
 //# sourceMappingURL=CoverageeligibilityresponseExAuthSupportValueSet.js.map

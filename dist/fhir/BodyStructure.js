@@ -3,9 +3,11 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: BodyStructure
 import * as fhir from '../fhir.js';
-import { BodystructureCodeValueSet } from '../fhirValueSets/BodystructureCodeValueSet.js';
-import { BodySiteValueSet } from '../fhirValueSets/BodySiteValueSet.js';
-import { BodystructureRelativeLocationValueSet } from '../fhirValueSets/BodystructureRelativeLocationValueSet.js';
+import { BodystructureCodeValueSet, } from '../fhirValueSets/BodystructureCodeValueSet.js';
+import { BodySiteValueSet, } from '../fhirValueSets/BodySiteValueSet.js';
+import { BodystructureRelativeLocationValueSet, } from '../fhirValueSets/BodystructureRelativeLocationValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
  */
@@ -13,17 +15,27 @@ export class BodyStructure extends fhir.DomainResource {
     /**
      * Default constructor for BodyStructure - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'BodyStructure';
+        /**
+         * Identifier for this instance of the anatomical structure.
+         */
+        this.identifier = [];
+        /**
+         * Qualifier to refine the anatomical location.  These include qualifiers for laterality, relative location, directionality, number, and plane.
+         */
+        this.locationQualifier = [];
+        /**
+         * Image or images used to identify a location.
+         */
+        this.image = [];
         this.resourceType = 'BodyStructure';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['active']) {
-            this.active = source.active;
-        }
-        if (source['_active']) {
-            this._active = new fhir.FhirElement(source._active);
+            this.active = new fhir.FhirBoolean({ value: source.active });
         }
         if (source['morphology']) {
             this.morphology = new fhir.CodeableConcept(source.morphology);
@@ -35,10 +47,7 @@ export class BodyStructure extends fhir.DomainResource {
             this.locationQualifier = source.locationQualifier.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['image']) {
             this.image = source.image.map((x) => new fhir.Attachment(x));
@@ -72,38 +81,44 @@ export class BodyStructure extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: BodyStructure.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'BodyStructure' fhir: BodyStructure.resourceType:'BodyStructure'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_active"]) {
-            results.push(...this._active.doModelValidation());
+        if (this["active"]) {
+            outcome.issue.push(...this.active.doModelValidation().issue);
         }
         if (this["morphology"]) {
-            results.push(...this.morphology.doModelValidation());
+            outcome.issue.push(...this.morphology.doModelValidation().issue);
         }
         if (this["location"]) {
-            results.push(...this.location.doModelValidation());
+            outcome.issue.push(...this.location.doModelValidation().issue);
         }
         if (this["locationQualifier"]) {
-            this.locationQualifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.locationQualifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["image"]) {
-            this.image.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.image.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["patient"]) {
-            results.push(["patient", 'Missing required element: BodyStructure.patient']);
+        if (!this['patient']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property patient:fhir.Reference fhir: BodyStructure.patient:Reference", }));
         }
         if (this["patient"]) {
-            results.push(...this.patient.doModelValidation());
+            outcome.issue.push(...this.patient.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=BodyStructure.js.map

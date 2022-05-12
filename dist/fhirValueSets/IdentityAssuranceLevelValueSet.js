@@ -43,23 +43,4 @@ export const IdentityAssuranceLevelValueSet = {
 /**
  * The level of confidence that this link represents the same actual person, based on NIST Authentication Levels.
  */
-export var IdentityAssuranceLevelValueSetEnum;
-(function (IdentityAssuranceLevelValueSetEnum) {
-    /**
-     * level1: Little or no confidence in the asserted identity's accuracy.
-     */
-    IdentityAssuranceLevelValueSetEnum["Level1"] = "level1";
-    /**
-     * level2: Some confidence in the asserted identity's accuracy.
-     */
-    IdentityAssuranceLevelValueSetEnum["Level2"] = "level2";
-    /**
-     * level3: High confidence in the asserted identity's accuracy.
-     */
-    IdentityAssuranceLevelValueSetEnum["Level3"] = "level3";
-    /**
-     * level4: Very high confidence in the asserted identity's accuracy.
-     */
-    IdentityAssuranceLevelValueSetEnum["Level4"] = "level4";
-})(IdentityAssuranceLevelValueSetEnum || (IdentityAssuranceLevelValueSetEnum = {}));
 //# sourceMappingURL=IdentityAssuranceLevelValueSet.js.map

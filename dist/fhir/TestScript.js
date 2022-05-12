@@ -3,15 +3,17 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: TestScript
 import * as fhir from '../fhir.js';
-import { TestscriptProfileOriginTypesValueSet } from '../fhirValueSets/TestscriptProfileOriginTypesValueSet.js';
-import { TestscriptProfileDestinationTypesValueSet } from '../fhirValueSets/TestscriptProfileDestinationTypesValueSet.js';
-import { TestscriptOperationCodesValueSet } from '../fhirValueSets/TestscriptOperationCodesValueSet.js';
-import { DefinedTypesValueSet } from '../fhirValueSets/DefinedTypesValueSet.js';
-import { HttpOperationsValueSet } from '../fhirValueSets/HttpOperationsValueSet.js';
-import { AssertDirectionCodesValueSet } from '../fhirValueSets/AssertDirectionCodesValueSet.js';
-import { AssertOperatorCodesValueSet } from '../fhirValueSets/AssertOperatorCodesValueSet.js';
-import { AssertResponseCodeTypesValueSet } from '../fhirValueSets/AssertResponseCodeTypesValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { TestscriptProfileOriginTypesValueSet, } from '../fhirValueSets/TestscriptProfileOriginTypesValueSet.js';
+import { TestscriptProfileDestinationTypesValueSet, } from '../fhirValueSets/TestscriptProfileDestinationTypesValueSet.js';
+import { TestscriptOperationCodesValueSet, } from '../fhirValueSets/TestscriptOperationCodesValueSet.js';
+import { DefinedTypesValueSet, } from '../fhirValueSets/DefinedTypesValueSet.js';
+import { HttpOperationsValueSet, } from '../fhirValueSets/HttpOperationsValueSet.js';
+import { AssertDirectionCodesValueSet, } from '../fhirValueSets/AssertDirectionCodesValueSet.js';
+import { AssertOperatorCodesValueSet, } from '../fhirValueSets/AssertOperatorCodesValueSet.js';
+import { AssertResponseCodeTypesValueSet, } from '../fhirValueSets/AssertResponseCodeTypesValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The purpose of this element is to define the profile of an origin element used elsewhere in the script.  Test engines could then use the origin-profile mapping to offer a filtered list of test systems that can serve as the sender for the interaction.
  */
@@ -19,16 +21,14 @@ export class TestScriptOrigin extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptOrigin - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptOrigin';
         if (source['index']) {
-            this.index = source.index;
+            this.index = new fhir.FhirInteger({ value: source.index });
         }
         else {
             this.index = null;
-        }
-        if (source['_index']) {
-            this._index = new fhir.FhirElement(source._index);
         }
         if (source['profile']) {
             this.profile = new fhir.Coding(source.profile);
@@ -47,20 +47,26 @@ export class TestScriptOrigin extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["index"]) {
-            results.push(["index", 'Missing required element: TestScript.origin.index']);
+        var outcome = super.doModelValidation();
+        if (!this['index']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property index:fhir.FhirInteger fhir: TestScript.origin.index:integer", }));
         }
-        if (this["_index"]) {
-            results.push(...this._index.doModelValidation());
+        if (this["index"]) {
+            outcome.issue.push(...this.index.doModelValidation().issue);
         }
-        if (!this["profile"]) {
-            results.push(["profile", 'Missing required element: TestScript.origin.profile']);
+        if (!this['profile']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property profile:fhir.Coding fhir: TestScript.origin.profile:Coding", }));
         }
         if (this["profile"]) {
-            results.push(...this.profile.doModelValidation());
+            outcome.issue.push(...this.profile.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -70,16 +76,14 @@ export class TestScriptDestination extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptDestination - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptDestination';
         if (source['index']) {
-            this.index = source.index;
+            this.index = new fhir.FhirInteger({ value: source.index });
         }
         else {
             this.index = null;
-        }
-        if (source['_index']) {
-            this._index = new fhir.FhirElement(source._index);
         }
         if (source['profile']) {
             this.profile = new fhir.Coding(source.profile);
@@ -98,20 +102,26 @@ export class TestScriptDestination extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["index"]) {
-            results.push(["index", 'Missing required element: TestScript.destination.index']);
+        var outcome = super.doModelValidation();
+        if (!this['index']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property index:fhir.FhirInteger fhir: TestScript.destination.index:integer", }));
         }
-        if (this["_index"]) {
-            results.push(...this._index.doModelValidation());
+        if (this["index"]) {
+            outcome.issue.push(...this.index.doModelValidation().issue);
         }
-        if (!this["profile"]) {
-            results.push(["profile", 'Missing required element: TestScript.destination.profile']);
+        if (!this['profile']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property profile:fhir.Coding fhir: TestScript.destination.profile:Coding", }));
         }
         if (this["profile"]) {
-            results.push(...this.profile.doModelValidation());
+            outcome.issue.push(...this.profile.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -121,39 +131,40 @@ export class TestScriptMetadataLink extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptMetadataLink - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptMetadataLink';
         if (source['url']) {
-            this.url = source.url;
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         else {
             this.url = null;
         }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
-        }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["url"]) {
-            results.push(["url", 'Missing required element: TestScript.metadata.link.url']);
+        var outcome = super.doModelValidation();
+        if (!this['url']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property url:fhir.FhirUri fhir: TestScript.metadata.link.url:uri", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -163,96 +174,90 @@ export class TestScriptMetadataCapability extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptMetadataCapability - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptMetadataCapability';
+        /**
+         * Which origin server these requirements apply to.
+         */
+        this.origin = [];
+        /**
+         * Links to the FHIR specification that describes this interaction and the resources involved in more detail.
+         */
+        this.link = [];
         if (source['required']) {
-            this.required = source.required;
+            this.required = new fhir.FhirBoolean({ value: source.required });
         }
         else {
             this.required = null;
         }
-        if (source['_required']) {
-            this._required = new fhir.FhirElement(source._required);
-        }
         if (source['validated']) {
-            this.validated = source.validated;
+            this.validated = new fhir.FhirBoolean({ value: source.validated });
         }
         else {
             this.validated = null;
         }
-        if (source['_validated']) {
-            this._validated = new fhir.FhirElement(source._validated);
-        }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['origin']) {
-            this.origin = source.origin.map((x) => (x));
-        }
-        if (source['_origin']) {
-            this._origin = source._origin.map((x) => new fhir.FhirElement(x));
+            this.origin = source.origin.map((x) => new fhir.FhirInteger({ value: x }));
         }
         if (source['destination']) {
-            this.destination = source.destination;
-        }
-        if (source['_destination']) {
-            this._destination = new fhir.FhirElement(source._destination);
+            this.destination = new fhir.FhirInteger({ value: source.destination });
         }
         if (source['link']) {
-            this.link = source.link.map((x) => (x));
-        }
-        if (source['_link']) {
-            this._link = source._link.map((x) => new fhir.FhirElement(x));
+            this.link = source.link.map((x) => new fhir.FhirUri({ value: x }));
         }
         if (source['capabilities']) {
-            this.capabilities = source.capabilities;
+            this.capabilities = new fhir.FhirCanonical({ value: source.capabilities });
         }
         else {
             this.capabilities = null;
-        }
-        if (source['_capabilities']) {
-            this._capabilities = new fhir.FhirElement(source._capabilities);
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["required"]) {
-            results.push(["required", 'Missing required element: TestScript.metadata.capability.required']);
+        var outcome = super.doModelValidation();
+        if (!this['required']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property required:fhir.FhirBoolean fhir: TestScript.metadata.capability.required:boolean", }));
         }
-        if (this["_required"]) {
-            results.push(...this._required.doModelValidation());
+        if (this["required"]) {
+            outcome.issue.push(...this.required.doModelValidation().issue);
         }
-        if (!this["validated"]) {
-            results.push(["validated", 'Missing required element: TestScript.metadata.capability.validated']);
+        if (!this['validated']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property validated:fhir.FhirBoolean fhir: TestScript.metadata.capability.validated:boolean", }));
         }
-        if (this["_validated"]) {
-            results.push(...this._validated.doModelValidation());
+        if (this["validated"]) {
+            outcome.issue.push(...this.validated.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_origin"]) {
-            this._origin.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["origin"]) {
+            this.origin.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_destination"]) {
-            results.push(...this._destination.doModelValidation());
+        if (this["destination"]) {
+            outcome.issue.push(...this.destination.doModelValidation().issue);
         }
-        if (this["_link"]) {
-            this._link.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["link"]) {
+            this.link.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["capabilities"]) {
-            results.push(["capabilities", 'Missing required element: TestScript.metadata.capability.capabilities']);
+        if (!this['capabilities']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property capabilities:fhir.FhirCanonical fhir: TestScript.metadata.capability.capabilities:canonical", }));
         }
-        if (this["_capabilities"]) {
-            results.push(...this._capabilities.doModelValidation());
+        if (this["capabilities"]) {
+            outcome.issue.push(...this.capabilities.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -262,8 +267,17 @@ export class TestScriptMetadata extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptMetadata - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptMetadata';
+        /**
+         * A link to the FHIR specification that this test is covering.
+         */
+        this.link = [];
+        /**
+         * When the metadata capabilities section is defined at TestScript.metadata or at TestScript.setup.metadata, and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then all the tests in the TestScript are skipped.  When the metadata capabilities section is defined at TestScript.test.metadata and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then only that test is skipped.  The "metadata.capabilities.required" and "metadata.capabilities.validated" elements only indicate whether the capabilities are the primary focus of the test script or not.  They do not impact the skipping logic.  Capabilities whose "metadata.capabilities.validated" flag is true are the primary focus of the test script.
+         */
+        this.capability = [];
         if (source['link']) {
             this.link = source.link.map((x) => new fhir.TestScriptMetadataLink(x));
         }
@@ -278,17 +292,29 @@ export class TestScriptMetadata extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["link"]) {
-            this.link.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.link.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if ((!this["capability"]) || (this["capability"].length === 0)) {
-            results.push(["capability", 'Missing required element: TestScript.metadata.capability']);
+        if (!this['capability']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property capability:fhir.TestScriptMetadataCapability[] fhir: TestScript.metadata.capability:capability", }));
+        }
+        else if (!Array.isArray(this.capability)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property capability:fhir.TestScriptMetadataCapability[] fhir: TestScript.metadata.capability:capability", }));
+        }
+        else if (this.capability.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property capability:fhir.TestScriptMetadataCapability[] fhir: TestScript.metadata.capability:capability", }));
         }
         if (this["capability"]) {
-            this.capability.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.capability.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -298,25 +324,20 @@ export class TestScriptFixture extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptFixture - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptFixture';
         if (source['autocreate']) {
-            this.autocreate = source.autocreate;
+            this.autocreate = new fhir.FhirBoolean({ value: source.autocreate });
         }
         else {
             this.autocreate = null;
         }
-        if (source['_autocreate']) {
-            this._autocreate = new fhir.FhirElement(source._autocreate);
-        }
         if (source['autodelete']) {
-            this.autodelete = source.autodelete;
+            this.autodelete = new fhir.FhirBoolean({ value: source.autodelete });
         }
         else {
             this.autodelete = null;
-        }
-        if (source['_autodelete']) {
-            this._autodelete = new fhir.FhirElement(source._autodelete);
         }
         if (source['resource']) {
             this.resource = new fhir.Reference(source.resource);
@@ -326,23 +347,29 @@ export class TestScriptFixture extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["autocreate"]) {
-            results.push(["autocreate", 'Missing required element: TestScript.fixture.autocreate']);
+        var outcome = super.doModelValidation();
+        if (!this['autocreate']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property autocreate:fhir.FhirBoolean fhir: TestScript.fixture.autocreate:boolean", }));
         }
-        if (this["_autocreate"]) {
-            results.push(...this._autocreate.doModelValidation());
+        if (this["autocreate"]) {
+            outcome.issue.push(...this.autocreate.doModelValidation().issue);
         }
-        if (!this["autodelete"]) {
-            results.push(["autodelete", 'Missing required element: TestScript.fixture.autodelete']);
+        if (!this['autodelete']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property autodelete:fhir.FhirBoolean fhir: TestScript.fixture.autodelete:boolean", }));
         }
-        if (this["_autodelete"]) {
-            results.push(...this._autodelete.doModelValidation());
+        if (this["autodelete"]) {
+            outcome.issue.push(...this.autodelete.doModelValidation().issue);
         }
         if (this["resource"]) {
-            results.push(...this.resource.doModelValidation());
+            outcome.issue.push(...this.resource.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -352,93 +379,76 @@ export class TestScriptVariable extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptVariable - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptVariable';
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirString({ value: source.name });
         }
         else {
             this.name = null;
         }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
-        }
         if (source['defaultValue']) {
-            this.defaultValue = source.defaultValue;
-        }
-        if (source['_defaultValue']) {
-            this._defaultValue = new fhir.FhirElement(source._defaultValue);
+            this.defaultValue = new fhir.FhirString({ value: source.defaultValue });
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['expression']) {
-            this.expression = source.expression;
-        }
-        if (source['_expression']) {
-            this._expression = new fhir.FhirElement(source._expression);
+            this.expression = new fhir.FhirString({ value: source.expression });
         }
         if (source['headerField']) {
-            this.headerField = source.headerField;
-        }
-        if (source['_headerField']) {
-            this._headerField = new fhir.FhirElement(source._headerField);
+            this.headerField = new fhir.FhirString({ value: source.headerField });
         }
         if (source['hint']) {
-            this.hint = source.hint;
-        }
-        if (source['_hint']) {
-            this._hint = new fhir.FhirElement(source._hint);
+            this.hint = new fhir.FhirString({ value: source.hint });
         }
         if (source['path']) {
-            this.path = source.path;
-        }
-        if (source['_path']) {
-            this._path = new fhir.FhirElement(source._path);
+            this.path = new fhir.FhirString({ value: source.path });
         }
         if (source['sourceId']) {
-            this.sourceId = source.sourceId;
-        }
-        if (source['_sourceId']) {
-            this._sourceId = new fhir.FhirElement(source._sourceId);
+            this.sourceId = new fhir.FhirId({ value: source.sourceId });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: TestScript.variable.name']);
+        var outcome = super.doModelValidation();
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirString fhir: TestScript.variable.name:string", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_defaultValue"]) {
-            results.push(...this._defaultValue.doModelValidation());
+        if (this["defaultValue"]) {
+            outcome.issue.push(...this.defaultValue.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_expression"]) {
-            results.push(...this._expression.doModelValidation());
+        if (this["expression"]) {
+            outcome.issue.push(...this.expression.doModelValidation().issue);
         }
-        if (this["_headerField"]) {
-            results.push(...this._headerField.doModelValidation());
+        if (this["headerField"]) {
+            outcome.issue.push(...this.headerField.doModelValidation().issue);
         }
-        if (this["_hint"]) {
-            results.push(...this._hint.doModelValidation());
+        if (this["hint"]) {
+            outcome.issue.push(...this.hint.doModelValidation().issue);
         }
-        if (this["_path"]) {
-            results.push(...this._path.doModelValidation());
+        if (this["path"]) {
+            outcome.issue.push(...this.path.doModelValidation().issue);
         }
-        if (this["_sourceId"]) {
-            results.push(...this._sourceId.doModelValidation());
+        if (this["sourceId"]) {
+            outcome.issue.push(...this.sourceId.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -448,45 +458,46 @@ export class TestScriptSetupActionOperationRequestHeader extends fhir.BackboneEl
     /**
      * Default constructor for TestScriptSetupActionOperationRequestHeader - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptSetupActionOperationRequestHeader';
         if (source['field']) {
-            this.field = source.field;
+            this.field = new fhir.FhirString({ value: source.field });
         }
         else {
             this.field = null;
         }
-        if (source['_field']) {
-            this._field = new fhir.FhirElement(source._field);
-        }
         if (source['value']) {
-            this.value = source.value;
+            this.value = new fhir.FhirString({ value: source.value });
         }
         else {
             this.value = null;
-        }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["field"]) {
-            results.push(["field", 'Missing required element: TestScript.setup.action.operation.requestHeader.field']);
+        var outcome = super.doModelValidation();
+        if (!this['field']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property field:fhir.FhirString fhir: TestScript.setup.action.operation.requestHeader.field:string", }));
         }
-        if (this["_field"]) {
-            results.push(...this._field.doModelValidation());
+        if (this["field"]) {
+            outcome.issue.push(...this.field.doModelValidation().issue);
         }
-        if (!this["value"]) {
-            results.push(["value", 'Missing required element: TestScript.setup.action.operation.requestHeader.value']);
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value:fhir.FhirString fhir: TestScript.setup.action.operation.requestHeader.value:string", }));
         }
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -496,106 +507,66 @@ export class TestScriptSetupActionOperation extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptSetupActionOperation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptSetupActionOperation';
+        /**
+         * This gives control to test-script writers to set headers explicitly based on test requirements.  It will allow for testing using:  - "If-Modified-Since" and "If-None-Match" headers.  See http://build.fhir.org/http.html#2.1.0.5.1 - "If-Match" header.  See http://build.fhir.org/http.html#2.1.0.11 - Conditional Create using "If-None-Exist".  See http://build.fhir.org/http.html#2.1.0.13.1 - Invalid "Content-Type" header for negative testing. - etc.
+         */
+        this.requestHeader = [];
         if (source['type']) {
             this.type = new fhir.Coding(source.type);
         }
         if (source['resource']) {
-            this.resource = source.resource;
-        }
-        if (source['_resource']) {
-            this._resource = new fhir.FhirElement(source._resource);
+            this.resource = new fhir.FhirCode({ value: source.resource });
         }
         if (source['label']) {
-            this.label = source.label;
-        }
-        if (source['_label']) {
-            this._label = new fhir.FhirElement(source._label);
+            this.label = new fhir.FhirString({ value: source.label });
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['accept']) {
-            this.accept = source.accept;
-        }
-        if (source['_accept']) {
-            this._accept = new fhir.FhirElement(source._accept);
+            this.accept = new fhir.FhirCode({ value: source.accept });
         }
         if (source['contentType']) {
-            this.contentType = source.contentType;
-        }
-        if (source['_contentType']) {
-            this._contentType = new fhir.FhirElement(source._contentType);
+            this.contentType = new fhir.FhirCode({ value: source.contentType });
         }
         if (source['destination']) {
-            this.destination = source.destination;
-        }
-        if (source['_destination']) {
-            this._destination = new fhir.FhirElement(source._destination);
+            this.destination = new fhir.FhirInteger({ value: source.destination });
         }
         if (source['encodeRequestUrl']) {
-            this.encodeRequestUrl = source.encodeRequestUrl;
+            this.encodeRequestUrl = new fhir.FhirBoolean({ value: source.encodeRequestUrl });
         }
         else {
             this.encodeRequestUrl = null;
         }
-        if (source['_encodeRequestUrl']) {
-            this._encodeRequestUrl = new fhir.FhirElement(source._encodeRequestUrl);
-        }
         if (source['method']) {
             this.method = source.method;
         }
-        if (source['_method']) {
-            this._method = new fhir.FhirElement(source._method);
-        }
         if (source['origin']) {
-            this.origin = source.origin;
-        }
-        if (source['_origin']) {
-            this._origin = new fhir.FhirElement(source._origin);
+            this.origin = new fhir.FhirInteger({ value: source.origin });
         }
         if (source['params']) {
-            this.params = source.params;
-        }
-        if (source['_params']) {
-            this._params = new fhir.FhirElement(source._params);
+            this.params = new fhir.FhirString({ value: source.params });
         }
         if (source['requestHeader']) {
             this.requestHeader = source.requestHeader.map((x) => new fhir.TestScriptSetupActionOperationRequestHeader(x));
         }
         if (source['requestId']) {
-            this.requestId = source.requestId;
-        }
-        if (source['_requestId']) {
-            this._requestId = new fhir.FhirElement(source._requestId);
+            this.requestId = new fhir.FhirId({ value: source.requestId });
         }
         if (source['responseId']) {
-            this.responseId = source.responseId;
-        }
-        if (source['_responseId']) {
-            this._responseId = new fhir.FhirElement(source._responseId);
+            this.responseId = new fhir.FhirId({ value: source.responseId });
         }
         if (source['sourceId']) {
-            this.sourceId = source.sourceId;
-        }
-        if (source['_sourceId']) {
-            this._sourceId = new fhir.FhirElement(source._sourceId);
+            this.sourceId = new fhir.FhirId({ value: source.sourceId });
         }
         if (source['targetId']) {
-            this.targetId = source.targetId;
-        }
-        if (source['_targetId']) {
-            this._targetId = new fhir.FhirElement(source._targetId);
+            this.targetId = new fhir.FhirId({ value: source.targetId });
         }
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirString({ value: source.url });
         }
     }
     /**
@@ -620,62 +591,65 @@ export class TestScriptSetupActionOperation extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_resource"]) {
-            results.push(...this._resource.doModelValidation());
+        if (this["resource"]) {
+            outcome.issue.push(...this.resource.doModelValidation().issue);
         }
-        if (this["_label"]) {
-            results.push(...this._label.doModelValidation());
+        if (this["label"]) {
+            outcome.issue.push(...this.label.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_accept"]) {
-            results.push(...this._accept.doModelValidation());
+        if (this["accept"]) {
+            outcome.issue.push(...this.accept.doModelValidation().issue);
         }
-        if (this["_contentType"]) {
-            results.push(...this._contentType.doModelValidation());
+        if (this["contentType"]) {
+            outcome.issue.push(...this.contentType.doModelValidation().issue);
         }
-        if (this["_destination"]) {
-            results.push(...this._destination.doModelValidation());
+        if (this["destination"]) {
+            outcome.issue.push(...this.destination.doModelValidation().issue);
         }
-        if (!this["encodeRequestUrl"]) {
-            results.push(["encodeRequestUrl", 'Missing required element: TestScript.setup.action.operation.encodeRequestUrl']);
+        if (!this['encodeRequestUrl']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property encodeRequestUrl:fhir.FhirBoolean fhir: TestScript.setup.action.operation.encodeRequestUrl:boolean", }));
         }
-        if (this["_encodeRequestUrl"]) {
-            results.push(...this._encodeRequestUrl.doModelValidation());
+        if (this["encodeRequestUrl"]) {
+            outcome.issue.push(...this.encodeRequestUrl.doModelValidation().issue);
         }
-        if (this["_method"]) {
-            results.push(...this._method.doModelValidation());
+        if (this["origin"]) {
+            outcome.issue.push(...this.origin.doModelValidation().issue);
         }
-        if (this["_origin"]) {
-            results.push(...this._origin.doModelValidation());
-        }
-        if (this["_params"]) {
-            results.push(...this._params.doModelValidation());
+        if (this["params"]) {
+            outcome.issue.push(...this.params.doModelValidation().issue);
         }
         if (this["requestHeader"]) {
-            this.requestHeader.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.requestHeader.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_requestId"]) {
-            results.push(...this._requestId.doModelValidation());
+        if (this["requestId"]) {
+            outcome.issue.push(...this.requestId.doModelValidation().issue);
         }
-        if (this["_responseId"]) {
-            results.push(...this._responseId.doModelValidation());
+        if (this["responseId"]) {
+            outcome.issue.push(...this.responseId.doModelValidation().issue);
         }
-        if (this["_sourceId"]) {
-            results.push(...this._sourceId.doModelValidation());
+        if (this["sourceId"]) {
+            outcome.issue.push(...this.sourceId.doModelValidation().issue);
         }
-        if (this["_targetId"]) {
-            results.push(...this._targetId.doModelValidation());
+        if (this["targetId"]) {
+            outcome.issue.push(...this.targetId.doModelValidation().issue);
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -685,142 +659,77 @@ export class TestScriptSetupActionAssert extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptSetupActionAssert - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptSetupActionAssert';
         if (source['label']) {
-            this.label = source.label;
-        }
-        if (source['_label']) {
-            this._label = new fhir.FhirElement(source._label);
+            this.label = new fhir.FhirString({ value: source.label });
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['direction']) {
             this.direction = source.direction;
         }
-        if (source['_direction']) {
-            this._direction = new fhir.FhirElement(source._direction);
-        }
         if (source['compareToSourceId']) {
-            this.compareToSourceId = source.compareToSourceId;
-        }
-        if (source['_compareToSourceId']) {
-            this._compareToSourceId = new fhir.FhirElement(source._compareToSourceId);
+            this.compareToSourceId = new fhir.FhirString({ value: source.compareToSourceId });
         }
         if (source['compareToSourceExpression']) {
-            this.compareToSourceExpression = source.compareToSourceExpression;
-        }
-        if (source['_compareToSourceExpression']) {
-            this._compareToSourceExpression = new fhir.FhirElement(source._compareToSourceExpression);
+            this.compareToSourceExpression = new fhir.FhirString({ value: source.compareToSourceExpression });
         }
         if (source['compareToSourcePath']) {
-            this.compareToSourcePath = source.compareToSourcePath;
-        }
-        if (source['_compareToSourcePath']) {
-            this._compareToSourcePath = new fhir.FhirElement(source._compareToSourcePath);
+            this.compareToSourcePath = new fhir.FhirString({ value: source.compareToSourcePath });
         }
         if (source['contentType']) {
-            this.contentType = source.contentType;
-        }
-        if (source['_contentType']) {
-            this._contentType = new fhir.FhirElement(source._contentType);
+            this.contentType = new fhir.FhirCode({ value: source.contentType });
         }
         if (source['expression']) {
-            this.expression = source.expression;
-        }
-        if (source['_expression']) {
-            this._expression = new fhir.FhirElement(source._expression);
+            this.expression = new fhir.FhirString({ value: source.expression });
         }
         if (source['headerField']) {
-            this.headerField = source.headerField;
-        }
-        if (source['_headerField']) {
-            this._headerField = new fhir.FhirElement(source._headerField);
+            this.headerField = new fhir.FhirString({ value: source.headerField });
         }
         if (source['minimumId']) {
-            this.minimumId = source.minimumId;
-        }
-        if (source['_minimumId']) {
-            this._minimumId = new fhir.FhirElement(source._minimumId);
+            this.minimumId = new fhir.FhirString({ value: source.minimumId });
         }
         if (source['navigationLinks']) {
-            this.navigationLinks = source.navigationLinks;
-        }
-        if (source['_navigationLinks']) {
-            this._navigationLinks = new fhir.FhirElement(source._navigationLinks);
+            this.navigationLinks = new fhir.FhirBoolean({ value: source.navigationLinks });
         }
         if (source['operator']) {
             this.operator = source.operator;
         }
-        if (source['_operator']) {
-            this._operator = new fhir.FhirElement(source._operator);
-        }
         if (source['path']) {
-            this.path = source.path;
-        }
-        if (source['_path']) {
-            this._path = new fhir.FhirElement(source._path);
+            this.path = new fhir.FhirString({ value: source.path });
         }
         if (source['requestMethod']) {
             this.requestMethod = source.requestMethod;
         }
-        if (source['_requestMethod']) {
-            this._requestMethod = new fhir.FhirElement(source._requestMethod);
-        }
         if (source['requestURL']) {
-            this.requestURL = source.requestURL;
-        }
-        if (source['_requestURL']) {
-            this._requestURL = new fhir.FhirElement(source._requestURL);
+            this.requestURL = new fhir.FhirString({ value: source.requestURL });
         }
         if (source['resource']) {
-            this.resource = source.resource;
-        }
-        if (source['_resource']) {
-            this._resource = new fhir.FhirElement(source._resource);
+            this.resource = new fhir.FhirCode({ value: source.resource });
         }
         if (source['response']) {
             this.response = source.response;
         }
-        if (source['_response']) {
-            this._response = new fhir.FhirElement(source._response);
-        }
         if (source['responseCode']) {
-            this.responseCode = source.responseCode;
-        }
-        if (source['_responseCode']) {
-            this._responseCode = new fhir.FhirElement(source._responseCode);
+            this.responseCode = new fhir.FhirString({ value: source.responseCode });
         }
         if (source['sourceId']) {
-            this.sourceId = source.sourceId;
-        }
-        if (source['_sourceId']) {
-            this._sourceId = new fhir.FhirElement(source._sourceId);
+            this.sourceId = new fhir.FhirId({ value: source.sourceId });
         }
         if (source['validateProfileId']) {
-            this.validateProfileId = source.validateProfileId;
-        }
-        if (source['_validateProfileId']) {
-            this._validateProfileId = new fhir.FhirElement(source._validateProfileId);
+            this.validateProfileId = new fhir.FhirId({ value: source.validateProfileId });
         }
         if (source['value']) {
-            this.value = source.value;
-        }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
+            this.value = new fhir.FhirString({ value: source.value });
         }
         if (source['warningOnly']) {
-            this.warningOnly = source.warningOnly;
+            this.warningOnly = new fhir.FhirBoolean({ value: source.warningOnly });
         }
         else {
             this.warningOnly = null;
-        }
-        if (source['_warningOnly']) {
-            this._warningOnly = new fhir.FhirElement(source._warningOnly);
         }
     }
     /**
@@ -857,77 +766,71 @@ export class TestScriptSetupActionAssert extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_label"]) {
-            results.push(...this._label.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["label"]) {
+            outcome.issue.push(...this.label.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_direction"]) {
-            results.push(...this._direction.doModelValidation());
+        if (this["compareToSourceId"]) {
+            outcome.issue.push(...this.compareToSourceId.doModelValidation().issue);
         }
-        if (this["_compareToSourceId"]) {
-            results.push(...this._compareToSourceId.doModelValidation());
+        if (this["compareToSourceExpression"]) {
+            outcome.issue.push(...this.compareToSourceExpression.doModelValidation().issue);
         }
-        if (this["_compareToSourceExpression"]) {
-            results.push(...this._compareToSourceExpression.doModelValidation());
+        if (this["compareToSourcePath"]) {
+            outcome.issue.push(...this.compareToSourcePath.doModelValidation().issue);
         }
-        if (this["_compareToSourcePath"]) {
-            results.push(...this._compareToSourcePath.doModelValidation());
+        if (this["contentType"]) {
+            outcome.issue.push(...this.contentType.doModelValidation().issue);
         }
-        if (this["_contentType"]) {
-            results.push(...this._contentType.doModelValidation());
+        if (this["expression"]) {
+            outcome.issue.push(...this.expression.doModelValidation().issue);
         }
-        if (this["_expression"]) {
-            results.push(...this._expression.doModelValidation());
+        if (this["headerField"]) {
+            outcome.issue.push(...this.headerField.doModelValidation().issue);
         }
-        if (this["_headerField"]) {
-            results.push(...this._headerField.doModelValidation());
+        if (this["minimumId"]) {
+            outcome.issue.push(...this.minimumId.doModelValidation().issue);
         }
-        if (this["_minimumId"]) {
-            results.push(...this._minimumId.doModelValidation());
+        if (this["navigationLinks"]) {
+            outcome.issue.push(...this.navigationLinks.doModelValidation().issue);
         }
-        if (this["_navigationLinks"]) {
-            results.push(...this._navigationLinks.doModelValidation());
+        if (this["path"]) {
+            outcome.issue.push(...this.path.doModelValidation().issue);
         }
-        if (this["_operator"]) {
-            results.push(...this._operator.doModelValidation());
+        if (this["requestURL"]) {
+            outcome.issue.push(...this.requestURL.doModelValidation().issue);
         }
-        if (this["_path"]) {
-            results.push(...this._path.doModelValidation());
+        if (this["resource"]) {
+            outcome.issue.push(...this.resource.doModelValidation().issue);
         }
-        if (this["_requestMethod"]) {
-            results.push(...this._requestMethod.doModelValidation());
+        if (this["responseCode"]) {
+            outcome.issue.push(...this.responseCode.doModelValidation().issue);
         }
-        if (this["_requestURL"]) {
-            results.push(...this._requestURL.doModelValidation());
+        if (this["sourceId"]) {
+            outcome.issue.push(...this.sourceId.doModelValidation().issue);
         }
-        if (this["_resource"]) {
-            results.push(...this._resource.doModelValidation());
+        if (this["validateProfileId"]) {
+            outcome.issue.push(...this.validateProfileId.doModelValidation().issue);
         }
-        if (this["_response"]) {
-            results.push(...this._response.doModelValidation());
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
         }
-        if (this["_responseCode"]) {
-            results.push(...this._responseCode.doModelValidation());
+        if (!this['warningOnly']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property warningOnly:fhir.FhirBoolean fhir: TestScript.setup.action.assert.warningOnly:boolean", }));
         }
-        if (this["_sourceId"]) {
-            results.push(...this._sourceId.doModelValidation());
+        if (this["warningOnly"]) {
+            outcome.issue.push(...this.warningOnly.doModelValidation().issue);
         }
-        if (this["_validateProfileId"]) {
-            results.push(...this._validateProfileId.doModelValidation());
-        }
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
-        }
-        if (!this["warningOnly"]) {
-            results.push(["warningOnly", 'Missing required element: TestScript.setup.action.assert.warningOnly']);
-        }
-        if (this["_warningOnly"]) {
-            results.push(...this._warningOnly.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -937,8 +840,9 @@ export class TestScriptSetupAction extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptSetupAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptSetupAction';
         if (source['operation']) {
             this.operation = new fhir.TestScriptSetupActionOperation(source.operation);
         }
@@ -950,14 +854,20 @@ export class TestScriptSetupAction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["operation"]) {
-            results.push(...this.operation.doModelValidation());
+            outcome.issue.push(...this.operation.doModelValidation().issue);
         }
         if (this["assert"]) {
-            results.push(...this.assert.doModelValidation());
+            outcome.issue.push(...this.assert.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -967,8 +877,13 @@ export class TestScriptSetup extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptSetup - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptSetup';
+        /**
+         * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
+         */
+        this.action = [];
         if (source['action']) {
             this.action = source.action.map((x) => new fhir.TestScriptSetupAction(x));
         }
@@ -980,14 +895,26 @@ export class TestScriptSetup extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if ((!this["action"]) || (this["action"].length === 0)) {
-            results.push(["action", 'Missing required element: TestScript.setup.action']);
+        var outcome = super.doModelValidation();
+        if (!this['action']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property action:fhir.TestScriptSetupAction[] fhir: TestScript.setup.action:action", }));
+        }
+        else if (!Array.isArray(this.action)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property action:fhir.TestScriptSetupAction[] fhir: TestScript.setup.action:action", }));
+        }
+        else if (this.action.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property action:fhir.TestScriptSetupAction[] fhir: TestScript.setup.action:action", }));
         }
         if (this["action"]) {
-            this.action.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.action.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -997,8 +924,9 @@ export class TestScriptTestAction extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptTestAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptTestAction';
         if (source['operation']) {
             this.operation = new fhir.TestScriptSetupActionOperation(source.operation);
         }
@@ -1010,14 +938,20 @@ export class TestScriptTestAction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["operation"]) {
-            results.push(...this.operation.doModelValidation());
+            outcome.issue.push(...this.operation.doModelValidation().issue);
         }
         if (this["assert"]) {
-            results.push(...this.assert.doModelValidation());
+            outcome.issue.push(...this.assert.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -1027,19 +961,18 @@ export class TestScriptTest extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptTest - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptTest';
+        /**
+         * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
+         */
+        this.action = [];
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['action']) {
             this.action = source.action.map((x) => new fhir.TestScriptTestAction(x));
@@ -1052,20 +985,32 @@ export class TestScriptTest extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if ((!this["action"]) || (this["action"].length === 0)) {
-            results.push(["action", 'Missing required element: TestScript.test.action']);
+        if (!this['action']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property action:fhir.TestScriptTestAction[] fhir: TestScript.test.action:action", }));
+        }
+        else if (!Array.isArray(this.action)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property action:fhir.TestScriptTestAction[] fhir: TestScript.test.action:action", }));
+        }
+        else if (this.action.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property action:fhir.TestScriptTestAction[] fhir: TestScript.test.action:action", }));
         }
         if (this["action"]) {
-            this.action.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.action.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -1075,8 +1020,9 @@ export class TestScriptTeardownAction extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptTeardownAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptTeardownAction';
         if (source['operation']) {
             this.operation = new fhir.TestScriptSetupActionOperation(source.operation);
         }
@@ -1088,14 +1034,20 @@ export class TestScriptTeardownAction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["operation"]) {
-            results.push(["operation", 'Missing required element: TestScript.teardown.action.operation']);
+        var outcome = super.doModelValidation();
+        if (!this['operation']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property operation:fhir.TestScriptSetupActionOperation fhir: TestScript.teardown.action.operation:TestScript.setup.action.operation", }));
         }
         if (this["operation"]) {
-            results.push(...this.operation.doModelValidation());
+            outcome.issue.push(...this.operation.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -1105,8 +1057,13 @@ export class TestScriptTeardown extends fhir.BackboneElement {
     /**
      * Default constructor for TestScriptTeardown - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScriptTeardown';
+        /**
+         * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
+         */
+        this.action = [];
         if (source['action']) {
             this.action = source.action.map((x) => new fhir.TestScriptTeardownAction(x));
         }
@@ -1118,14 +1075,26 @@ export class TestScriptTeardown extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if ((!this["action"]) || (this["action"].length === 0)) {
-            results.push(["action", 'Missing required element: TestScript.teardown.action']);
+        var outcome = super.doModelValidation();
+        if (!this['action']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property action:fhir.TestScriptTeardownAction[] fhir: TestScript.teardown.action:action", }));
+        }
+        else if (!Array.isArray(this.action)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property action:fhir.TestScriptTeardownAction[] fhir: TestScript.teardown.action:action", }));
+        }
+        else if (this.action.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property action:fhir.TestScriptTeardownAction[] fhir: TestScript.teardown.action:action", }));
         }
         if (this["action"]) {
-            this.action.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.action.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -1135,41 +1104,66 @@ export class TestScript extends fhir.DomainResource {
     /**
      * Default constructor for TestScript - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestScript';
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the test script to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * The purpose of this element is to define the profile of an origin element used elsewhere in the script.  Test engines could then use the origin-profile mapping to offer a filtered list of test systems that can serve as the sender for the interaction.
+         */
+        this.origin = [];
+        /**
+         * The purpose of this element is to define the profile of a destination element used elsewhere in the script.  Test engines could then use the destination-profile mapping to offer a filtered list of test systems that can serve as the receiver for the interaction.
+         */
+        this.destination = [];
+        /**
+         * Fixture in the test script - by reference (uri). All fixtures are required for the test script to execute.
+         */
+        this.fixture = [];
+        /**
+         * See http://build.fhir.org/resourcelist.html for complete list of resource types.
+         */
+        this.profile = [];
+        /**
+         * Variables would be set based either on XPath/JSONPath expressions against fixtures (static and response), or headerField evaluations against response headers. If variable evaluates to nodelist or anything other than a primitive value, then test engine would report an error.  Variables would be used to perform clean replacements in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations. This limits the places that test engines would need to look for placeholders "${}".  Variables are scoped to the whole script. They are NOT evaluated at declaration. They are evaluated by test engine when used for substitutions in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations.  See example testscript-search.xml.
+         */
+        this.variable = [];
+        /**
+         * A test in this script.
+         */
+        this.test = [];
         this.resourceType = 'TestScript';
         if (source['url']) {
-            this.url = source.url;
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         else {
             this.url = null;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
         }
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirString({ value: source.name });
         }
         else {
             this.name = null;
         }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
-        }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['status']) {
             this.status = source.status;
@@ -1177,35 +1171,20 @@ export class TestScript extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
-        }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -1214,16 +1193,10 @@ export class TestScript extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['origin']) {
             this.origin = source.origin.map((x) => new fhir.TestScriptOrigin(x));
@@ -1263,92 +1236,95 @@ export class TestScript extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: TestScript.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'TestScript' fhir: TestScript.resourceType:'TestScript'", }));
         }
-        if (!this["url"]) {
-            results.push(["url", 'Missing required element: TestScript.url']);
+        if (!this['url']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property url:fhir.FhirUri fhir: TestScript.url:uri", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: TestScript.name']);
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirString fhir: TestScript.name:string", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: TestScript.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: TestScript.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
         if (this["origin"]) {
-            this.origin.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.origin.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["destination"]) {
-            this.destination.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.destination.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["metadata"]) {
-            results.push(...this.metadata.doModelValidation());
+            outcome.issue.push(...this.metadata.doModelValidation().issue);
         }
         if (this["fixture"]) {
-            this.fixture.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.fixture.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["profile"]) {
-            this.profile.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.profile.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["variable"]) {
-            this.variable.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.variable.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["setup"]) {
-            results.push(...this.setup.doModelValidation());
+            outcome.issue.push(...this.setup.doModelValidation().issue);
         }
         if (this["test"]) {
-            this.test.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.test.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["teardown"]) {
-            results.push(...this.teardown.doModelValidation());
+            outcome.issue.push(...this.teardown.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=TestScript.js.map

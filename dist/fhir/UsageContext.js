@@ -3,7 +3,9 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: UsageContext
 import * as fhir from '../fhir.js';
-import { UsageContextTypeValueSet } from '../fhirValueSets/UsageContextTypeValueSet.js';
+import { UsageContextTypeValueSet, } from '../fhirValueSets/UsageContextTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
  */
@@ -11,25 +13,33 @@ export class UsageContext extends fhir.FhirElement {
     /**
      * Default constructor for UsageContext - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'UsageContext';
+        this.__valueIsChoice = true;
         if (source['code']) {
             this.code = new fhir.Coding(source.code);
         }
         else {
             this.code = null;
         }
-        if (source['valueCodeableConcept']) {
-            this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept);
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['valueQuantity']) {
-            this.valueQuantity = new fhir.Quantity(source.valueQuantity);
+        else if (source['valueCodeableConcept']) {
+            this.value = new fhir.CodeableConcept(source.valueCodeableConcept);
         }
-        if (source['valueRange']) {
-            this.valueRange = new fhir.Range(source.valueRange);
+        else if (source['valueQuantity']) {
+            this.value = new fhir.Quantity(source.valueQuantity);
         }
-        if (source['valueReference']) {
-            this.valueReference = new fhir.Reference(source.valueReference);
+        else if (source['valueRange']) {
+            this.value = new fhir.Range(source.valueRange);
+        }
+        else if (source['valueReference']) {
+            this.value = new fhir.Reference(source.valueReference);
+        }
+        else {
+            this.value = null;
         }
     }
     /**
@@ -42,26 +52,23 @@ export class UsageContext extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: UsageContext.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.Coding fhir: UsageContext.code:Coding", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["valueCodeableConcept"]) {
-            results.push(...this.valueCodeableConcept.doModelValidation());
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value: fhir: UsageContext.value[x]:", }));
         }
-        if (this["valueQuantity"]) {
-            results.push(...this.valueQuantity.doModelValidation());
-        }
-        if (this["valueRange"]) {
-            results.push(...this.valueRange.doModelValidation());
-        }
-        if (this["valueReference"]) {
-            results.push(...this.valueReference.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=UsageContext.js.map

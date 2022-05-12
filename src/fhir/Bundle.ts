@@ -3,327 +3,113 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Bundle
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { SearchEntryModeValueSet, SearchEntryModeValueSetType, SearchEntryModeValueSetEnum } from '../fhirValueSets/SearchEntryModeValueSet.js'
-import { HttpVerbValueSet, HttpVerbValueSetType, HttpVerbValueSetEnum } from '../fhirValueSets/HttpVerbValueSet.js'
-import { BundleTypeValueSet, BundleTypeValueSetType, BundleTypeValueSetEnum } from '../fhirValueSets/BundleTypeValueSet.js'
+import { SearchEntryModeValueSet, SearchEntryModeValueSetType,} from '../fhirValueSets/SearchEntryModeValueSet.js';
+import { SearchEntryModeValueSetEnum } from '../valueSetEnums.js';
+import { HttpVerbValueSet, HttpVerbValueSetType,} from '../fhirValueSets/HttpVerbValueSet.js';
+import { HttpVerbValueSetEnum } from '../valueSetEnums.js';
+import { BundleTypeValueSet, BundleTypeValueSetType,} from '../fhirValueSets/BundleTypeValueSet.js';
+import { BundleTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
+/**
+ * Valid arguments for the BundleLink type.
+ */
+export interface BundleLinkArgs extends fhir.BackboneElementArgs {
+  /**
+   * A name which details the functional use for this link - see [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).
+   */
+  relation: fhir.FhirString|string|undefined;
+  /**
+   * The reference details for the link.
+   */
+  url: fhir.FhirUri|string|undefined;
+}
 
 /**
  * Both Bundle.link and Bundle.entry.link are defined to support providing additional context when Bundles are used (e.g. [HATEOAS](http://en.wikipedia.org/wiki/HATEOAS)). 
  * Bundle.entry.link corresponds to links found in the HTTP header if the resource in the entry was [read](http.html#read) directly.
  * This specification defines some specific uses of Bundle.link for [searching](search.html#conformance) and [paging](http.html#paging), but no specific uses for Bundle.entry.link, and no defined function in a transaction - the meaning is implementation specific.
  */
-export type IBundleLink = fhir.IBackboneElement & { 
+export class BundleLink extends fhir.BackboneElement {
+  readonly __dataType:string = 'BundleLink';
   /**
    * A name which details the functional use for this link - see [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).
    */
-  relation: string|null;
-  /**
-   * Extended properties for primitive element: Bundle.link.relation
-   */
-  _relation?: fhir.IFhirElement|undefined;
+  public relation: fhir.FhirString|null;
   /**
    * The reference details for the link.
    */
-  url: string|null;
+  public url: fhir.FhirUri|null;
   /**
-   * Extended properties for primitive element: Bundle.link.url
+   * Default constructor for BundleLink - initializes any required elements to null if a value is not provided.
    */
-  _url?: fhir.IFhirElement|undefined;
+  constructor(source:Partial<BundleLinkArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['relation']) { this.relation = new fhir.FhirString({value: source.relation}); }
+    else { this.relation = null; }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
+    else { this.url = null; }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['relation']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property relation:fhir.FhirString fhir: Bundle.link.relation:string", }));
+    }
+    if (this["relation"]) { outcome.issue!.push(...this.relation.doModelValidation().issue!); }
+    if (!this['url']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property url:fhir.FhirUri fhir: Bundle.link.url:uri", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
 }
-
 /**
- * Information about the search process that lead to the creation of this entry.
+ * Valid arguments for the BundleEntrySearch type.
  */
-export type IBundleEntrySearch = fhir.IBackboneElement & { 
+export interface BundleEntrySearchArgs extends fhir.BackboneElementArgs {
   /**
    * There is only one mode. In some corner cases, a resource may be included because it is both a match and an include. In these circumstances, 'match' takes precedence.
    */
   mode?: SearchEntryModeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Bundle.entry.search.mode
-   */
-  _mode?: fhir.IFhirElement|undefined;
-  /**
    * Servers are not required to return a ranking score. 1 is most relevant, and 0 is least relevant. Often, search results are sorted by score, but the client may specify a different sort order.
    * See [Patient Match](patient-operation-match.html) for the EMPI search which relates to this element.
    */
-  score?: number|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.search.score
-   */
-  _score?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Additional information about how this entry should be processed as part of a transaction or batch.  For history, it shows how the entry was processed to create the version contained in the entry.
- */
-export type IBundleEntryRequest = fhir.IBackboneElement & { 
-  /**
-   * In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.
-   */
-  method: HttpVerbValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Bundle.entry.request.method
-   */
-  _method?: fhir.IFhirElement|undefined;
-  /**
-   * E.g. for a Patient Create, the method would be "POST" and the URL would be "Patient". For a Patient Update, the method would be PUT and the URL would be "Patient/[id]".
-   */
-  url: string|null;
-  /**
-   * Extended properties for primitive element: Bundle.entry.request.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * If the ETag values match, return a 304 Not Modified status. See the API documentation for ["Conditional Read"](http.html#cread).
-   */
-  ifNoneMatch?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.request.ifNoneMatch
-   */
-  _ifNoneMatch?: fhir.IFhirElement|undefined;
-  /**
-   * Only perform the operation if the last updated date matches. See the API documentation for ["Conditional Read"](http.html#cread).
-   */
-  ifModifiedSince?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.request.ifModifiedSince
-   */
-  _ifModifiedSince?: fhir.IFhirElement|undefined;
-  /**
-   * Only perform the operation if the Etag value matches. For more information, see the API section ["Managing Resource Contention"](http.html#concurrency).
-   */
-  ifMatch?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.request.ifMatch
-   */
-  _ifMatch?: fhir.IFhirElement|undefined;
-  /**
-   * Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for ["Conditional Create"](http.html#ccreate). This is just the query portion of the URL - what follows the "?" (not including the "?").
-   */
-  ifNoneExist?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.request.ifNoneExist
-   */
-  _ifNoneExist?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Indicates the results of processing the corresponding 'request' entry in the batch or transaction being responded to or what the results of an operation where when returning history.
- */
-export type IBundleEntryResponse = fhir.IBackboneElement & { 
-  /**
-   * The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.
-   */
-  status: string|null;
-  /**
-   * Extended properties for primitive element: Bundle.entry.response.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * The location header created by processing this operation, populated if the operation returns a location.
-   */
-  location?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.response.location
-   */
-  _location?: fhir.IFhirElement|undefined;
-  /**
-   * Etags match the Resource.meta.versionId. The ETag has to match the version id in the header if a resource is included.
-   */
-  etag?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.response.etag
-   */
-  _etag?: fhir.IFhirElement|undefined;
-  /**
-   * This has to match the same time in the meta header (meta.lastUpdated) if a resource is included.
-   */
-  lastModified?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.response.lastModified
-   */
-  _lastModified?: fhir.IFhirElement|undefined;
-  /**
-   * For a POST/PUT operation, this is the equivalent outcome that would be returned for prefer = operationoutcome - except that the resource is always returned whether or not the outcome is returned.
-   * This outcome is not used for error responses in batch/transaction, only for hints and warnings. In a batch operation, the error will be in Bundle.entry.response, and for transaction, there will be a single OperationOutcome instead of a bundle in the case of an error.
-   */
-  outcome?: fhir.IFhirResource|undefined;
-}
-
-/**
- * An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).
- */
-export type IBundleEntry = fhir.IBackboneElement & { 
-  /**
-   * A series of links that provide context to this entry.
-   */
-  link?: fhir.IBundleLink[]|undefined;
-  /**
-   * fullUrl might not be [unique in the context of a resource](bundle.html#bundle-unique). Note that since [FHIR resources do not need to be served through the FHIR API](references.html), the fullURL might be a URN or an absolute URL that does not end with the logical id of the resource (Resource.id). However, but if the fullUrl does look like a RESTful server URL (e.g. meets the [regex](references.html#regex), then the 'id' portion of the fullUrl SHALL end with the Resource.id.
-   * Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).
-   */
-  fullUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.fullUrl
-   */
-  _fullUrl?: fhir.IFhirElement|undefined;
-  /**
-   * The Resource for the entry. The purpose/meaning of the resource is determined by the Bundle.type.
-   */
-  resource?: fhir.IFhirResource|undefined;
-  /**
-   * Information about the search process that lead to the creation of this entry.
-   */
-  search?: fhir.IBundleEntrySearch|undefined;
-  /**
-   * Additional information about how this entry should be processed as part of a transaction or batch.  For history, it shows how the entry was processed to create the version contained in the entry.
-   */
-  request?: fhir.IBundleEntryRequest|undefined;
-  /**
-   * Indicates the results of processing the corresponding 'request' entry in the batch or transaction being responded to or what the results of an operation where when returning history.
-   */
-  response?: fhir.IBundleEntryResponse|undefined;
-}
-
-/**
- * A container for a collection of resources.
- */
-export type IBundle = fhir.IResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Bundle";
-  /**
-   * Persistent identity generally only matters for batches of type Document, Message, and Collection. It would not normally be populated for search and history results and servers ignore Bundle.identifier when processing batches and transactions. For Documents  the .identifier SHALL be populated such that the .identifier is globally unique.
-   */
-  identifier?: fhir.IIdentifier|undefined;
-  /**
-   * It's possible to use a bundle for other purposes (e.g. a document can be accepted as a transaction). This is primarily defined so that there can be specific rules for some of the bundle types.
-   */
-  type: BundleTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Bundle.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * For many bundles, the timestamp is equal to .meta.lastUpdated, because they are not stored (e.g. search results). When a bundle is placed in a persistent store, .meta.lastUpdated will be usually be changed by the server. When the bundle is a message, a middleware agent altering the message (even if not stored) SHOULD update .meta.lastUpdated. .timestamp is used to track the original time of the Bundle, and SHOULD be populated.  
-   * Usage:
-   * * document : the date the document was created. Note: the composition may predate the document, or be associated with multiple documents. The date of the composition - the authoring time - may be earlier than the document assembly time
-   * * message : the date that the content of the message was assembled. This date is not changed by middleware engines unless they add additional data that changes the meaning of the time of the message
-   * * history : the date that the history was assembled. This time would be used as the _since time to ask for subsequent updates
-   * * searchset : the time that the search set was assembled. Note that different pages MAY have different timestamps but need not. Having different timestamps does not imply that subsequent pages will represent or include changes made since the initial query
-   * * transaction | transaction-response | batch | batch-response | collection : no particular assigned meaning
-   * The timestamp value should be greater than the lastUpdated and other timestamps in the resources in the bundle, and it should be equal or earlier than the .meta.lastUpdated on the Bundle itself.
-   */
-  timestamp?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.timestamp
-   */
-  _timestamp?: fhir.IFhirElement|undefined;
-  /**
-   * Only used if the bundle is a search result set. The total does not include resources such as OperationOutcome and included resources, only the total number of matching resources.
-   */
-  total?: number|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.total
-   */
-  _total?: fhir.IFhirElement|undefined;
-  /**
-   * Both Bundle.link and Bundle.entry.link are defined to support providing additional context when Bundles are used (e.g. [HATEOAS](http://en.wikipedia.org/wiki/HATEOAS)). 
-   * Bundle.entry.link corresponds to links found in the HTTP header if the resource in the entry was [read](http.html#read) directly.
-   * This specification defines some specific uses of Bundle.link for [searching](search.html#conformance) and [paging](http.html#paging), but no specific uses for Bundle.entry.link, and no defined function in a transaction - the meaning is implementation specific.
-   */
-  link?: fhir.IBundleLink[]|undefined;
-  /**
-   * An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).
-   */
-  entry?: fhir.IBundleEntry[]|undefined;
-  /**
-   * The signature could be created by the "author" of the bundle or by the originating device.   Requirements around inclusion of a signature, verification of signatures and treatment of signed/non-signed bundles is implementation-environment specific.
-   */
-  signature?: fhir.ISignature|undefined;
-}
-
-/**
- * Both Bundle.link and Bundle.entry.link are defined to support providing additional context when Bundles are used (e.g. [HATEOAS](http://en.wikipedia.org/wiki/HATEOAS)). 
- * Bundle.entry.link corresponds to links found in the HTTP header if the resource in the entry was [read](http.html#read) directly.
- * This specification defines some specific uses of Bundle.link for [searching](search.html#conformance) and [paging](http.html#paging), but no specific uses for Bundle.entry.link, and no defined function in a transaction - the meaning is implementation specific.
- */
-export class BundleLink extends fhir.BackboneElement implements IBundleLink {
-  /**
-   * A name which details the functional use for this link - see [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).
-   */
-  public relation: string|null;
-  /**
-   * Extended properties for primitive element: Bundle.link.relation
-   */
-  public _relation?: fhir.FhirElement|undefined;
-  /**
-   * The reference details for the link.
-   */
-  public url: string|null;
-  /**
-   * Extended properties for primitive element: Bundle.link.url
-   */
-  public _url?: fhir.FhirElement|undefined;
-  /**
-   * Default constructor for BundleLink - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<IBundleLink> = { }) {
-    super(source);
-    if (source['relation']) { this.relation = source.relation; }
-    else { this.relation = null; }
-    if (source['_relation']) { this._relation = new fhir.FhirElement(source._relation!); }
-    if (source['url']) { this.url = source.url; }
-    else { this.url = null; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["relation"]) { results.push(["relation",'Missing required element: Bundle.link.relation']); }
-    if (this["_relation"]) { results.push(...this._relation.doModelValidation()); }
-    if (!this["url"]) { results.push(["url",'Missing required element: Bundle.link.url']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    return results;
-  }
+  score?: fhir.FhirDecimal|number|undefined;
 }
 
 /**
  * Information about the search process that lead to the creation of this entry.
  */
-export class BundleEntrySearch extends fhir.BackboneElement implements IBundleEntrySearch {
+export class BundleEntrySearch extends fhir.BackboneElement {
+  readonly __dataType:string = 'BundleEntrySearch';
   /**
    * There is only one mode. In some corner cases, a resource may be included because it is both a match and an include. In these circumstances, 'match' takes precedence.
    */
   public mode?: SearchEntryModeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Bundle.entry.search.mode
-   */
-  public _mode?: fhir.FhirElement|undefined;
-  /**
    * Servers are not required to return a ranking score. 1 is most relevant, and 0 is least relevant. Often, search results are sorted by score, but the client may specify a different sort order.
    * See [Patient Match](patient-operation-match.html) for the EMPI search which relates to this element.
    */
-  public score?: number|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.search.score
-   */
-  public _score?: fhir.FhirElement|undefined;
+  public score?: fhir.FhirDecimal|undefined;
   /**
    * Default constructor for BundleEntrySearch - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IBundleEntrySearch> = { }) {
-    super(source);
+  constructor(source:Partial<BundleEntrySearchArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['mode']) { this.mode = source.mode; }
-    if (source['_mode']) { this._mode = new fhir.FhirElement(source._mode!); }
-    if (source['score']) { this.score = source.score; }
-    if (source['_score']) { this._score = new fhir.FhirElement(source._score!); }
+    if (source['score']) { this.score = new fhir.FhirDecimal({value: source.score}); }
   }
   /**
    * Required-bound Value Set for mode
@@ -334,85 +120,90 @@ export class BundleEntrySearch extends fhir.BackboneElement implements IBundleEn
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_mode"]) { results.push(...this._mode.doModelValidation()); }
-    if (this["_score"]) { results.push(...this._score.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["score"]) { outcome.issue!.push(...this.score.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the BundleEntryRequest type.
+ */
+export interface BundleEntryRequestArgs extends fhir.BackboneElementArgs {
+  /**
+   * In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.
+   */
+  method: HttpVerbValueSetEnum|null;
+  /**
+   * E.g. for a Patient Create, the method would be "POST" and the URL would be "Patient". For a Patient Update, the method would be PUT and the URL would be "Patient/[id]".
+   */
+  url: fhir.FhirUri|string|undefined;
+  /**
+   * If the ETag values match, return a 304 Not Modified status. See the API documentation for ["Conditional Read"](http.html#cread).
+   */
+  ifNoneMatch?: fhir.FhirString|string|undefined;
+  /**
+   * Only perform the operation if the last updated date matches. See the API documentation for ["Conditional Read"](http.html#cread).
+   */
+  ifModifiedSince?: fhir.FhirInstant|string|undefined;
+  /**
+   * Only perform the operation if the Etag value matches. For more information, see the API section ["Managing Resource Contention"](http.html#concurrency).
+   */
+  ifMatch?: fhir.FhirString|string|undefined;
+  /**
+   * Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for ["Conditional Create"](http.html#ccreate). This is just the query portion of the URL - what follows the "?" (not including the "?").
+   */
+  ifNoneExist?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Additional information about how this entry should be processed as part of a transaction or batch.  For history, it shows how the entry was processed to create the version contained in the entry.
  */
-export class BundleEntryRequest extends fhir.BackboneElement implements IBundleEntryRequest {
+export class BundleEntryRequest extends fhir.BackboneElement {
+  readonly __dataType:string = 'BundleEntryRequest';
   /**
    * In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.
    */
   public method: HttpVerbValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Bundle.entry.request.method
-   */
-  public _method?: fhir.FhirElement|undefined;
-  /**
    * E.g. for a Patient Create, the method would be "POST" and the URL would be "Patient". For a Patient Update, the method would be PUT and the URL would be "Patient/[id]".
    */
-  public url: string|null;
-  /**
-   * Extended properties for primitive element: Bundle.entry.request.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url: fhir.FhirUri|null;
   /**
    * If the ETag values match, return a 304 Not Modified status. See the API documentation for ["Conditional Read"](http.html#cread).
    */
-  public ifNoneMatch?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.request.ifNoneMatch
-   */
-  public _ifNoneMatch?: fhir.FhirElement|undefined;
+  public ifNoneMatch?: fhir.FhirString|undefined;
   /**
    * Only perform the operation if the last updated date matches. See the API documentation for ["Conditional Read"](http.html#cread).
    */
-  public ifModifiedSince?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.request.ifModifiedSince
-   */
-  public _ifModifiedSince?: fhir.FhirElement|undefined;
+  public ifModifiedSince?: fhir.FhirInstant|undefined;
   /**
    * Only perform the operation if the Etag value matches. For more information, see the API section ["Managing Resource Contention"](http.html#concurrency).
    */
-  public ifMatch?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.request.ifMatch
-   */
-  public _ifMatch?: fhir.FhirElement|undefined;
+  public ifMatch?: fhir.FhirString|undefined;
   /**
    * Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for ["Conditional Create"](http.html#ccreate). This is just the query portion of the URL - what follows the "?" (not including the "?").
    */
-  public ifNoneExist?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.request.ifNoneExist
-   */
-  public _ifNoneExist?: fhir.FhirElement|undefined;
+  public ifNoneExist?: fhir.FhirString|undefined;
   /**
    * Default constructor for BundleEntryRequest - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IBundleEntryRequest> = { }) {
-    super(source);
+  constructor(source:Partial<BundleEntryRequestArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['method']) { this.method = source.method; }
     else { this.method = null; }
-    if (source['_method']) { this._method = new fhir.FhirElement(source._method!); }
-    if (source['url']) { this.url = source.url; }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     else { this.url = null; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['ifNoneMatch']) { this.ifNoneMatch = source.ifNoneMatch; }
-    if (source['_ifNoneMatch']) { this._ifNoneMatch = new fhir.FhirElement(source._ifNoneMatch!); }
-    if (source['ifModifiedSince']) { this.ifModifiedSince = source.ifModifiedSince; }
-    if (source['_ifModifiedSince']) { this._ifModifiedSince = new fhir.FhirElement(source._ifModifiedSince!); }
-    if (source['ifMatch']) { this.ifMatch = source.ifMatch; }
-    if (source['_ifMatch']) { this._ifMatch = new fhir.FhirElement(source._ifMatch!); }
-    if (source['ifNoneExist']) { this.ifNoneExist = source.ifNoneExist; }
-    if (source['_ifNoneExist']) { this._ifNoneExist = new fhir.FhirElement(source._ifNoneExist!); }
+    if (source['ifNoneMatch']) { this.ifNoneMatch = new fhir.FhirString({value: source.ifNoneMatch}); }
+    if (source['ifModifiedSince']) { this.ifModifiedSince = new fhir.FhirInstant({value: source.ifModifiedSince}); }
+    if (source['ifMatch']) { this.ifMatch = new fhir.FhirString({value: source.ifMatch}); }
+    if (source['ifNoneExist']) { this.ifNoneExist = new fhir.FhirString({value: source.ifNoneExist}); }
   }
   /**
    * Required-bound Value Set for method
@@ -423,56 +214,76 @@ export class BundleEntryRequest extends fhir.BackboneElement implements IBundleE
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["method"]) { results.push(["method",'Missing required element: Bundle.entry.request.method']); }
-    if (this["_method"]) { results.push(...this._method.doModelValidation()); }
-    if (!this["url"]) { results.push(["url",'Missing required element: Bundle.entry.request.url']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["_ifNoneMatch"]) { results.push(...this._ifNoneMatch.doModelValidation()); }
-    if (this["_ifModifiedSince"]) { results.push(...this._ifModifiedSince.doModelValidation()); }
-    if (this["_ifMatch"]) { results.push(...this._ifMatch.doModelValidation()); }
-    if (this["_ifNoneExist"]) { results.push(...this._ifNoneExist.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['method']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property method:HttpVerbValueSetEnum fhir: Bundle.entry.request.method:code", }));
+    }
+    if (!this['url']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property url:fhir.FhirUri fhir: Bundle.entry.request.url:uri", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["ifNoneMatch"]) { outcome.issue!.push(...this.ifNoneMatch.doModelValidation().issue!); }
+    if (this["ifModifiedSince"]) { outcome.issue!.push(...this.ifModifiedSince.doModelValidation().issue!); }
+    if (this["ifMatch"]) { outcome.issue!.push(...this.ifMatch.doModelValidation().issue!); }
+    if (this["ifNoneExist"]) { outcome.issue!.push(...this.ifNoneExist.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the BundleEntryResponse type.
+ */
+export interface BundleEntryResponseArgs extends fhir.BackboneElementArgs {
+  /**
+   * The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.
+   */
+  status: fhir.FhirString|string|undefined;
+  /**
+   * The location header created by processing this operation, populated if the operation returns a location.
+   */
+  location?: fhir.FhirUri|string|undefined;
+  /**
+   * Etags match the Resource.meta.versionId. The ETag has to match the version id in the header if a resource is included.
+   */
+  etag?: fhir.FhirString|string|undefined;
+  /**
+   * This has to match the same time in the meta header (meta.lastUpdated) if a resource is included.
+   */
+  lastModified?: fhir.FhirInstant|string|undefined;
+  /**
+   * For a POST/PUT operation, this is the equivalent outcome that would be returned for prefer = operationoutcome - except that the resource is always returned whether or not the outcome is returned.
+   * This outcome is not used for error responses in batch/transaction, only for hints and warnings. In a batch operation, the error will be in Bundle.entry.response, and for transaction, there will be a single OperationOutcome instead of a bundle in the case of an error.
+   */
+  outcome?: fhir.ResourceArgs|any|undefined;
 }
 
 /**
  * Indicates the results of processing the corresponding 'request' entry in the batch or transaction being responded to or what the results of an operation where when returning history.
  */
-export class BundleEntryResponse extends fhir.BackboneElement implements IBundleEntryResponse {
+export class BundleEntryResponse extends fhir.BackboneElement {
+  readonly __dataType:string = 'BundleEntryResponse';
   /**
    * The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.
    */
-  public status: string|null;
-  /**
-   * Extended properties for primitive element: Bundle.entry.response.status
-   */
-  public _status?: fhir.FhirElement|undefined;
+  public status: fhir.FhirString|null;
   /**
    * The location header created by processing this operation, populated if the operation returns a location.
    */
-  public location?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.response.location
-   */
-  public _location?: fhir.FhirElement|undefined;
+  public location?: fhir.FhirUri|undefined;
   /**
    * Etags match the Resource.meta.versionId. The ETag has to match the version id in the header if a resource is included.
    */
-  public etag?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.response.etag
-   */
-  public _etag?: fhir.FhirElement|undefined;
+  public etag?: fhir.FhirString|undefined;
   /**
    * This has to match the same time in the meta header (meta.lastUpdated) if a resource is included.
    */
-  public lastModified?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.response.lastModified
-   */
-  public _lastModified?: fhir.FhirElement|undefined;
+  public lastModified?: fhir.FhirInstant|undefined;
   /**
    * For a POST/PUT operation, this is the equivalent outcome that would be returned for prefer = operationoutcome - except that the resource is always returned whether or not the outcome is returned.
    * This outcome is not used for error responses in batch/transaction, only for hints and warnings. In a batch operation, the error will be in Bundle.entry.response, and for transaction, there will be a single OperationOutcome instead of a bundle in the case of an error.
@@ -481,51 +292,82 @@ export class BundleEntryResponse extends fhir.BackboneElement implements IBundle
   /**
    * Default constructor for BundleEntryResponse - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IBundleEntryResponse> = { }) {
-    super(source);
-    if (source['status']) { this.status = source.status; }
+  constructor(source:Partial<BundleEntryResponseArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['status']) { this.status = new fhir.FhirString({value: source.status}); }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['location']) { this.location = source.location; }
-    if (source['_location']) { this._location = new fhir.FhirElement(source._location!); }
-    if (source['etag']) { this.etag = source.etag; }
-    if (source['_etag']) { this._etag = new fhir.FhirElement(source._etag!); }
-    if (source['lastModified']) { this.lastModified = source.lastModified; }
-    if (source['_lastModified']) { this._lastModified = new fhir.FhirElement(source._lastModified!); }
+    if (source['location']) { this.location = new fhir.FhirUri({value: source.location}); }
+    if (source['etag']) { this.etag = new fhir.FhirString({value: source.etag}); }
+    if (source['lastModified']) { this.lastModified = new fhir.FhirInstant({value: source.lastModified}); }
     if (source['outcome']) { this.outcome = (fhir.resourceFactory(source.outcome) ?? undefined); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["status"]) { results.push(["status",'Missing required element: Bundle.entry.response.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_location"]) { results.push(...this._location.doModelValidation()); }
-    if (this["_etag"]) { results.push(...this._etag.doModelValidation()); }
-    if (this["_lastModified"]) { results.push(...this._lastModified.doModelValidation()); }
-    if (this["outcome"]) { results.push(...this.outcome.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:fhir.FhirString fhir: Bundle.entry.response.status:string", }));
+    }
+    if (this["status"]) { outcome.issue!.push(...this.status.doModelValidation().issue!); }
+    if (this["location"]) { outcome.issue!.push(...this.location.doModelValidation().issue!); }
+    if (this["etag"]) { outcome.issue!.push(...this.etag.doModelValidation().issue!); }
+    if (this["lastModified"]) { outcome.issue!.push(...this.lastModified.doModelValidation().issue!); }
+    if (this["outcome"]) { outcome.issue!.push(...this.outcome.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the BundleEntry type.
+ */
+export interface BundleEntryArgs extends fhir.BackboneElementArgs {
+  /**
+   * A series of links that provide context to this entry.
+   */
+  link?: fhir.BundleLinkArgs[]|undefined;
+  /**
+   * fullUrl might not be [unique in the context of a resource](bundle.html#bundle-unique). Note that since [FHIR resources do not need to be served through the FHIR API](references.html), the fullURL might be a URN or an absolute URL that does not end with the logical id of the resource (Resource.id). However, but if the fullUrl does look like a RESTful server URL (e.g. meets the [regex](references.html#regex), then the 'id' portion of the fullUrl SHALL end with the Resource.id.
+   * Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).
+   */
+  fullUrl?: fhir.FhirUri|string|undefined;
+  /**
+   * The Resource for the entry. The purpose/meaning of the resource is determined by the Bundle.type.
+   */
+  resource?: fhir.ResourceArgs|any|undefined;
+  /**
+   * Information about the search process that lead to the creation of this entry.
+   */
+  search?: fhir.BundleEntrySearchArgs|undefined;
+  /**
+   * Additional information about how this entry should be processed as part of a transaction or batch.  For history, it shows how the entry was processed to create the version contained in the entry.
+   */
+  request?: fhir.BundleEntryRequestArgs|undefined;
+  /**
+   * Indicates the results of processing the corresponding 'request' entry in the batch or transaction being responded to or what the results of an operation where when returning history.
+   */
+  response?: fhir.BundleEntryResponseArgs|undefined;
 }
 
 /**
  * An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).
  */
-export class BundleEntry extends fhir.BackboneElement implements IBundleEntry {
+export class BundleEntry extends fhir.BackboneElement {
+  readonly __dataType:string = 'BundleEntry';
   /**
    * A series of links that provide context to this entry.
    */
-  public link?: fhir.BundleLink[]|undefined;
+  public link?: fhir.BundleLink[]|undefined = [];
   /**
    * fullUrl might not be [unique in the context of a resource](bundle.html#bundle-unique). Note that since [FHIR resources do not need to be served through the FHIR API](references.html), the fullURL might be a URN or an absolute URL that does not end with the logical id of the resource (Resource.id). However, but if the fullUrl does look like a RESTful server URL (e.g. meets the [regex](references.html#regex), then the 'id' portion of the fullUrl SHALL end with the Resource.id.
    * Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).
    */
-  public fullUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.entry.fullUrl
-   */
-  public _fullUrl?: fhir.FhirElement|undefined;
+  public fullUrl?: fhir.FhirUri|undefined;
   /**
    * The Resource for the entry. The purpose/meaning of the resource is determined by the Bundle.type.
    */
@@ -545,42 +387,94 @@ export class BundleEntry extends fhir.BackboneElement implements IBundleEntry {
   /**
    * Default constructor for BundleEntry - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IBundleEntry> = { }) {
-    super(source);
+  constructor(source:Partial<BundleEntryArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['link']) { this.link = source.link.map((x) => new fhir.BundleLink(x)); }
-    if (source['fullUrl']) { this.fullUrl = source.fullUrl; }
-    if (source['_fullUrl']) { this._fullUrl = new fhir.FhirElement(source._fullUrl!); }
+    if (source['fullUrl']) { this.fullUrl = new fhir.FhirUri({value: source.fullUrl}); }
     if (source['resource']) { this.resource = (fhir.resourceFactory(source.resource) ?? undefined); }
-    if (source['search']) { this.search = new fhir.BundleEntrySearch(source.search!); }
-    if (source['request']) { this.request = new fhir.BundleEntryRequest(source.request!); }
-    if (source['response']) { this.response = new fhir.BundleEntryResponse(source.response!); }
+    if (source['search']) { this.search = new fhir.BundleEntrySearch(source.search); }
+    if (source['request']) { this.request = new fhir.BundleEntryRequest(source.request); }
+    if (source['response']) { this.response = new fhir.BundleEntryResponse(source.response); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["link"]) { this.link.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_fullUrl"]) { results.push(...this._fullUrl.doModelValidation()); }
-    if (this["resource"]) { results.push(...this.resource.doModelValidation()); }
-    if (this["search"]) { results.push(...this.search.doModelValidation()); }
-    if (this["request"]) { results.push(...this.request.doModelValidation()); }
-    if (this["response"]) { results.push(...this.response.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["link"]) { this.link.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["fullUrl"]) { outcome.issue!.push(...this.fullUrl.doModelValidation().issue!); }
+    if (this["resource"]) { outcome.issue!.push(...this.resource.doModelValidation().issue!); }
+    if (this["search"]) { outcome.issue!.push(...this.search.doModelValidation().issue!); }
+    if (this["request"]) { outcome.issue!.push(...this.request.doModelValidation().issue!); }
+    if (this["response"]) { outcome.issue!.push(...this.response.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 
 /**
  * Access a bundle.entry[].resource as a typed resource
  */
-  resourceAs<BundeContentType = fhir.IFhirResource>(): BundeContentType|unknown {
+  resourceAs<BundeContentType = fhir.FhirResource>(): BundeContentType|unknown {
     return this.resource as unknown as BundeContentType;
   }
+}
+/**
+ * Valid arguments for the Bundle type.
+ */
+export interface BundleArgs extends fhir.ResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Bundle"|undefined;
+  /**
+   * Persistent identity generally only matters for batches of type Document, Message, and Collection. It would not normally be populated for search and history results and servers ignore Bundle.identifier when processing batches and transactions. For Documents  the .identifier SHALL be populated such that the .identifier is globally unique.
+   */
+  identifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * It's possible to use a bundle for other purposes (e.g. a document can be accepted as a transaction). This is primarily defined so that there can be specific rules for some of the bundle types.
+   */
+  type: BundleTypeValueSetEnum|null;
+  /**
+   * For many bundles, the timestamp is equal to .meta.lastUpdated, because they are not stored (e.g. search results). When a bundle is placed in a persistent store, .meta.lastUpdated will be usually be changed by the server. When the bundle is a message, a middleware agent altering the message (even if not stored) SHOULD update .meta.lastUpdated. .timestamp is used to track the original time of the Bundle, and SHOULD be populated.  
+   * Usage:
+   * * document : the date the document was created. Note: the composition may predate the document, or be associated with multiple documents. The date of the composition - the authoring time - may be earlier than the document assembly time
+   * * message : the date that the content of the message was assembled. This date is not changed by middleware engines unless they add additional data that changes the meaning of the time of the message
+   * * history : the date that the history was assembled. This time would be used as the _since time to ask for subsequent updates
+   * * searchset : the time that the search set was assembled. Note that different pages MAY have different timestamps but need not. Having different timestamps does not imply that subsequent pages will represent or include changes made since the initial query
+   * * transaction | transaction-response | batch | batch-response | collection : no particular assigned meaning
+   * The timestamp value should be greater than the lastUpdated and other timestamps in the resources in the bundle, and it should be equal or earlier than the .meta.lastUpdated on the Bundle itself.
+   */
+  timestamp?: fhir.FhirInstant|string|undefined;
+  /**
+   * Only used if the bundle is a search result set. The total does not include resources such as OperationOutcome and included resources, only the total number of matching resources.
+   */
+  total?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * Both Bundle.link and Bundle.entry.link are defined to support providing additional context when Bundles are used (e.g. [HATEOAS](http://en.wikipedia.org/wiki/HATEOAS)). 
+   * Bundle.entry.link corresponds to links found in the HTTP header if the resource in the entry was [read](http.html#read) directly.
+   * This specification defines some specific uses of Bundle.link for [searching](search.html#conformance) and [paging](http.html#paging), but no specific uses for Bundle.entry.link, and no defined function in a transaction - the meaning is implementation specific.
+   */
+  link?: fhir.BundleLinkArgs[]|undefined;
+  /**
+   * An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).
+   */
+  entry?: fhir.BundleEntryArgs[]|undefined;
+  /**
+   * The signature could be created by the "author" of the bundle or by the originating device.   Requirements around inclusion of a signature, verification of signatures and treatment of signed/non-signed bundles is implementation-environment specific.
+   */
+  signature?: fhir.SignatureArgs|undefined;
 }
 
 /**
  * A container for a collection of resources.
  */
-export class Bundle extends fhir.Resource implements IBundle {
+export class Bundle extends fhir.Resource {
+  readonly __dataType:string = 'Bundle';
   /**
    * Resource Type Name
    */
@@ -594,10 +488,6 @@ export class Bundle extends fhir.Resource implements IBundle {
    */
   public type: BundleTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Bundle.type
-   */
-  public _type?: fhir.FhirElement|undefined;
-  /**
    * For many bundles, the timestamp is equal to .meta.lastUpdated, because they are not stored (e.g. search results). When a bundle is placed in a persistent store, .meta.lastUpdated will be usually be changed by the server. When the bundle is a message, a middleware agent altering the message (even if not stored) SHOULD update .meta.lastUpdated. .timestamp is used to track the original time of the Bundle, and SHOULD be populated.  
    * Usage:
    * * document : the date the document was created. Note: the composition may predate the document, or be associated with multiple documents. The date of the composition - the authoring time - may be earlier than the document assembly time
@@ -607,29 +497,21 @@ export class Bundle extends fhir.Resource implements IBundle {
    * * transaction | transaction-response | batch | batch-response | collection : no particular assigned meaning
    * The timestamp value should be greater than the lastUpdated and other timestamps in the resources in the bundle, and it should be equal or earlier than the .meta.lastUpdated on the Bundle itself.
    */
-  public timestamp?: string|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.timestamp
-   */
-  public _timestamp?: fhir.FhirElement|undefined;
+  public timestamp?: fhir.FhirInstant|undefined;
   /**
    * Only used if the bundle is a search result set. The total does not include resources such as OperationOutcome and included resources, only the total number of matching resources.
    */
-  public total?: number|undefined;
-  /**
-   * Extended properties for primitive element: Bundle.total
-   */
-  public _total?: fhir.FhirElement|undefined;
+  public total?: fhir.FhirUnsignedInt|undefined;
   /**
    * Both Bundle.link and Bundle.entry.link are defined to support providing additional context when Bundles are used (e.g. [HATEOAS](http://en.wikipedia.org/wiki/HATEOAS)). 
    * Bundle.entry.link corresponds to links found in the HTTP header if the resource in the entry was [read](http.html#read) directly.
    * This specification defines some specific uses of Bundle.link for [searching](search.html#conformance) and [paging](http.html#paging), but no specific uses for Bundle.entry.link, and no defined function in a transaction - the meaning is implementation specific.
    */
-  public link?: fhir.BundleLink[]|undefined;
+  public link?: fhir.BundleLink[]|undefined = [];
   /**
    * An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).
    */
-  public entry?: fhir.BundleEntry[]|undefined;
+  public entry?: fhir.BundleEntry[]|undefined = [];
   /**
    * The signature could be created by the "author" of the bundle or by the originating device.   Requirements around inclusion of a signature, verification of signatures and treatment of signed/non-signed bundles is implementation-environment specific.
    */
@@ -637,20 +519,17 @@ export class Bundle extends fhir.Resource implements IBundle {
   /**
    * Default constructor for Bundle - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IBundle> = { }) {
-    super(source);
+  constructor(source:Partial<BundleArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Bundle';
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['timestamp']) { this.timestamp = source.timestamp; }
-    if (source['_timestamp']) { this._timestamp = new fhir.FhirElement(source._timestamp!); }
-    if (source['total']) { this.total = source.total; }
-    if (source['_total']) { this._total = new fhir.FhirElement(source._total!); }
+    if (source['timestamp']) { this.timestamp = new fhir.FhirInstant({value: source.timestamp}); }
+    if (source['total']) { this.total = new fhir.FhirUnsignedInt({value: source.total}); }
     if (source['link']) { this.link = source.link.map((x) => new fhir.BundleLink(x)); }
     if (source['entry']) { this.entry = source.entry.map((x) => new fhir.BundleEntry(x)); }
-    if (source['signature']) { this.signature = new fhir.Signature(source.signature!); }
+    if (source['signature']) { this.signature = new fhir.Signature(source.signature); }
   }
   /**
    * Required-bound Value Set for type
@@ -661,17 +540,26 @@ export class Bundle extends fhir.Resource implements IBundle {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Bundle.resourceType']); }
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (!this["type"]) { results.push(["type",'Missing required element: Bundle.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_timestamp"]) { results.push(...this._timestamp.doModelValidation()); }
-    if (this["_total"]) { results.push(...this._total.doModelValidation()); }
-    if (this["link"]) { this.link.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["entry"]) { this.entry.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["signature"]) { results.push(...this.signature.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Bundle' fhir: Bundle.resourceType:'Bundle'", }));
+    }
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:BundleTypeValueSetEnum fhir: Bundle.type:code", }));
+    }
+    if (this["timestamp"]) { outcome.issue!.push(...this.timestamp.doModelValidation().issue!); }
+    if (this["total"]) { outcome.issue!.push(...this.total.doModelValidation().issue!); }
+    if (this["link"]) { this.link.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["entry"]) { this.entry.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["signature"]) { outcome.issue!.push(...this.signature.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

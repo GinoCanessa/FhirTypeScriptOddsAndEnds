@@ -35,19 +35,4 @@ export const ExpressionLanguageValueSet = {
 /**
  * The media type of the expression language.
  */
-export var ExpressionLanguageValueSetEnum;
-(function (ExpressionLanguageValueSetEnum) {
-    /**
-     * application/x-fhir-query: FHIR's RESTful query syntax - typically independent of base URL.
-     */
-    ExpressionLanguageValueSetEnum["FHIRQuery"] = "application/x-fhir-query";
-    /**
-     * text/cql: Clinical Quality Language.
-     */
-    ExpressionLanguageValueSetEnum["CQL"] = "text/cql";
-    /**
-     * text/fhirpath: FHIRPath.
-     */
-    ExpressionLanguageValueSetEnum["FHIRPath"] = "text/fhirpath";
-})(ExpressionLanguageValueSetEnum || (ExpressionLanguageValueSetEnum = {}));
 //# sourceMappingURL=ExpressionLanguageValueSet.js.map

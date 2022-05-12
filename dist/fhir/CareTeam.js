@@ -3,9 +3,11 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: CareTeam
 import * as fhir from '../fhir.js';
-import { ParticipantRoleValueSet } from '../fhirValueSets/ParticipantRoleValueSet.js';
-import { CareTeamStatusValueSet } from '../fhirValueSets/CareTeamStatusValueSet.js';
-import { ClinicalFindingsValueSet } from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { ParticipantRoleValueSet, } from '../fhirValueSets/ParticipantRoleValueSet.js';
+import { CareTeamStatusValueSet, } from '../fhirValueSets/CareTeamStatusValueSet.js';
+import { ClinicalFindingsValueSet, } from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Identifies all people and organizations who are expected to be involved in the care team.
  */
@@ -13,8 +15,13 @@ export class CareTeamParticipant extends fhir.BackboneElement {
     /**
      * Default constructor for CareTeamParticipant - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CareTeamParticipant';
+        /**
+         * Roles may sometimes be inferred by type of Practitioner.  These are relationships that hold only within the context of the care team.  General relationships should be handled as properties of the Patient resource directly.
+         */
+        this.role = [];
         if (source['role']) {
             this.role = source.role.map((x) => new fhir.CodeableConcept(x));
         }
@@ -38,20 +45,26 @@ export class CareTeamParticipant extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["role"]) {
-            this.role.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.role.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["member"]) {
-            results.push(...this.member.doModelValidation());
+            outcome.issue.push(...this.member.doModelValidation().issue);
         }
         if (this["onBehalfOf"]) {
-            results.push(...this.onBehalfOf.doModelValidation());
+            outcome.issue.push(...this.onBehalfOf.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -61,8 +74,41 @@ export class CareTeam extends fhir.DomainResource {
     /**
      * Default constructor for CareTeam - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CareTeam';
+        /**
+         * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+         */
+        this.identifier = [];
+        /**
+         * There may be multiple axis of categorization and one team may serve multiple purposes.
+         */
+        this.category = [];
+        /**
+         * Identifies all people and organizations who are expected to be involved in the care team.
+         */
+        this.participant = [];
+        /**
+         * Describes why the care team exists.
+         */
+        this.reasonCode = [];
+        /**
+         * Condition(s) that this care team addresses.
+         */
+        this.reasonReference = [];
+        /**
+         * The organization responsible for the care team.
+         */
+        this.managingOrganization = [];
+        /**
+         * The ContactPoint.use code of home is not appropriate to use. These contacts are not the contact details of individual care team members.
+         */
+        this.telecom = [];
+        /**
+         * Comments made about the CareTeam.
+         */
+        this.note = [];
         this.resourceType = 'CareTeam';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -70,17 +116,11 @@ export class CareTeam extends fhir.DomainResource {
         if (source['status']) {
             this.status = source.status;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['category']) {
             this.category = source.category.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['subject']) {
             this.subject = new fhir.Reference(source.subject);
@@ -126,50 +166,53 @@ export class CareTeam extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: CareTeam.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'CareTeam' fhir: CareTeam.resourceType:'CareTeam'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["category"]) {
-            this.category.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.category.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
         if (this["participant"]) {
-            this.participant.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.participant.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["managingOrganization"]) {
-            this.managingOrganization.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.managingOrganization.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["telecom"]) {
-            this.telecom.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.telecom.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=CareTeam.js.map

@@ -35,19 +35,4 @@ export const VerificationresultPushTypeAvailableValueSet = {
 /**
  * Type of alerts/updates the primary source can send
  */
-export var VerificationresultPushTypeAvailableValueSetEnum;
-(function (VerificationresultPushTypeAvailableValueSetEnum) {
-    /**
-     * Code: any
-     */
-    VerificationresultPushTypeAvailableValueSetEnum["AnyChanges"] = "any";
-    /**
-     * Code: source
-     */
-    VerificationresultPushTypeAvailableValueSetEnum["AsDefinedBySource"] = "source";
-    /**
-     * Code: specific
-     */
-    VerificationresultPushTypeAvailableValueSetEnum["SpecificRequestedChanges"] = "specific";
-})(VerificationresultPushTypeAvailableValueSetEnum || (VerificationresultPushTypeAvailableValueSetEnum = {}));
 //# sourceMappingURL=VerificationresultPushTypeAvailableValueSet.js.map

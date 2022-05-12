@@ -3,7 +3,9 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: TriggerDefinition
 import * as fhir from '../fhir.js';
-import { TriggerTypeValueSet } from '../fhirValueSets/TriggerTypeValueSet.js';
+import { TriggerTypeValueSet, } from '../fhirValueSets/TriggerTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.
  */
@@ -11,40 +13,37 @@ export class TriggerDefinition extends fhir.FhirElement {
     /**
      * Default constructor for TriggerDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TriggerDefinition';
+        this.__timingIsChoice = true;
+        /**
+         * This element shall be present for any data type trigger.
+         */
+        this.data = [];
         if (source['type']) {
             this.type = source.type;
         }
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirString({ value: source.name });
         }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+        if (source['timing']) {
+            this.timing = source.timing;
         }
-        if (source['timingTiming']) {
-            this.timingTiming = new fhir.Timing(source.timingTiming);
+        else if (source['timingTiming']) {
+            this.timing = new fhir.Timing(source.timingTiming);
         }
-        if (source['timingReference']) {
-            this.timingReference = new fhir.Reference(source.timingReference);
+        else if (source['timingReference']) {
+            this.timing = new fhir.Reference(source.timingReference);
         }
-        if (source['timingDate']) {
-            this.timingDate = source.timingDate;
+        else if (source['timingDate']) {
+            this.timing = new fhir.FhirDate({ value: source.timingDate });
         }
-        if (source['_timingDate']) {
-            this._timingDate = new fhir.FhirElement(source._timingDate);
-        }
-        if (source['timingDateTime']) {
-            this.timingDateTime = source.timingDateTime;
-        }
-        if (source['_timingDateTime']) {
-            this._timingDateTime = new fhir.FhirElement(source._timingDateTime);
+        else if (source['timingDateTime']) {
+            this.timing = new fhir.FhirDateTime({ value: source.timingDateTime });
         }
         if (source['data']) {
             this.data = source.data.map((x) => new fhir.DataRequirement(x));
@@ -63,35 +62,26 @@ export class TriggerDefinition extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: TriggerDefinition.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:TriggerTypeValueSetEnum fhir: TriggerDefinition.type:code", }));
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
-        }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
-        }
-        if (this["timingTiming"]) {
-            results.push(...this.timingTiming.doModelValidation());
-        }
-        if (this["timingReference"]) {
-            results.push(...this.timingReference.doModelValidation());
-        }
-        if (this["_timingDate"]) {
-            results.push(...this._timingDate.doModelValidation());
-        }
-        if (this["_timingDateTime"]) {
-            results.push(...this._timingDateTime.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
         if (this["data"]) {
-            this.data.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.data.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["condition"]) {
-            results.push(...this.condition.doModelValidation());
+            outcome.issue.push(...this.condition.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=TriggerDefinition.js.map

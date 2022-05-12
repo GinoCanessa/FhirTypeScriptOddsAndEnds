@@ -59,31 +59,4 @@ export const EndpointStatusValueSet = {
 /**
  * The status of the endpoint.
  */
-export var EndpointStatusValueSetEnum;
-(function (EndpointStatusValueSetEnum) {
-    /**
-     * active: This endpoint is expected to be active and can be used.
-     */
-    EndpointStatusValueSetEnum["Active"] = "active";
-    /**
-     * entered-in-error: This instance should not have been part of this patient's medical record.
-     */
-    EndpointStatusValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * error: This endpoint has exceeded connectivity thresholds and is considered in an error state and should no longer be attempted to connect to until corrective action is taken.
-     */
-    EndpointStatusValueSetEnum["Error"] = "error";
-    /**
-     * off: This endpoint is no longer to be used.
-     */
-    EndpointStatusValueSetEnum["Off"] = "off";
-    /**
-     * suspended: This endpoint is temporarily unavailable.
-     */
-    EndpointStatusValueSetEnum["Suspended"] = "suspended";
-    /**
-     * test: This endpoint is not intended for production usage.
-     */
-    EndpointStatusValueSetEnum["Test"] = "test";
-})(EndpointStatusValueSetEnum || (EndpointStatusValueSetEnum = {}));
 //# sourceMappingURL=EndpointStatusValueSet.js.map

@@ -75,39 +75,4 @@ export const DeviceStatusReasonValueSet = {
 /**
  * The availability status reason of the device.
  */
-export var DeviceStatusReasonValueSetEnum;
-(function (DeviceStatusReasonValueSetEnum) {
-    /**
-     * hw-discon: The device hardware is disconnected.
-     */
-    DeviceStatusReasonValueSetEnum["HardwareDisconnected"] = "hw-discon";
-    /**
-     * not-ready: The device is not ready.
-     */
-    DeviceStatusReasonValueSetEnum["NotReady"] = "not-ready";
-    /**
-     * off: The device is off.
-     */
-    DeviceStatusReasonValueSetEnum["Off"] = "off";
-    /**
-     * offline: The device is offline.
-     */
-    DeviceStatusReasonValueSetEnum["Offline"] = "offline";
-    /**
-     * online: The device is off.
-     */
-    DeviceStatusReasonValueSetEnum["Online"] = "online";
-    /**
-     * paused: The device is paused.
-     */
-    DeviceStatusReasonValueSetEnum["Paused"] = "paused";
-    /**
-     * standby: The device is ready but not actively operating.
-     */
-    DeviceStatusReasonValueSetEnum["Standby"] = "standby";
-    /**
-     * transduc-discon: The device transducer is disconnected.
-     */
-    DeviceStatusReasonValueSetEnum["TransducerDisconnected"] = "transduc-discon";
-})(DeviceStatusReasonValueSetEnum || (DeviceStatusReasonValueSetEnum = {}));
 //# sourceMappingURL=DeviceStatusReasonValueSet.js.map

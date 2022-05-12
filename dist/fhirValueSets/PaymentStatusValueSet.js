@@ -27,15 +27,4 @@ export const PaymentStatusValueSet = {
 /**
  * This value set includes a sample set of Payment Status codes.
  */
-export var PaymentStatusValueSetEnum;
-(function (PaymentStatusValueSetEnum) {
-    /**
-     * cleared: The payment has been received by the payee.
-     */
-    PaymentStatusValueSetEnum["Cleared"] = "cleared";
-    /**
-     * paid: The payment has been sent physically or electronically.
-     */
-    PaymentStatusValueSetEnum["Paid"] = "paid";
-})(PaymentStatusValueSetEnum || (PaymentStatusValueSetEnum = {}));
 //# sourceMappingURL=PaymentStatusValueSet.js.map

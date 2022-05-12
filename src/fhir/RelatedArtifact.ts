@@ -3,112 +3,71 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: RelatedArtifact
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { RelatedArtifactTypeValueSet, RelatedArtifactTypeValueSetType, RelatedArtifactTypeValueSetEnum } from '../fhirValueSets/RelatedArtifactTypeValueSet.js'
-
+import { RelatedArtifactTypeValueSet, RelatedArtifactTypeValueSetType,} from '../fhirValueSets/RelatedArtifactTypeValueSet.js';
+import { RelatedArtifactTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Related artifacts such as additional documentation, justification, or bibliographic references.
+ * Valid arguments for the RelatedArtifact type.
  */
-export type IRelatedArtifact = fhir.IFhirElement & { 
+export interface RelatedArtifactArgs extends fhir.FhirElementArgs {
   /**
    * The type of relationship to the related artifact.
    */
   type: RelatedArtifactTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: RelatedArtifact.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
    * A short label that can be used to reference the citation from elsewhere in the containing artifact, such as a footnote index.
    */
-  label?: string|undefined;
-  /**
-   * Extended properties for primitive element: RelatedArtifact.label
-   */
-  _label?: fhir.IFhirElement|undefined;
+  label?: fhir.FhirString|string|undefined;
   /**
    * A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.
    */
-  display?: string|undefined;
-  /**
-   * Extended properties for primitive element: RelatedArtifact.display
-   */
-  _display?: fhir.IFhirElement|undefined;
+  display?: fhir.FhirString|string|undefined;
   /**
    * Additional structured information about citations should be captured as extensions.
    */
-  citation?: string|undefined;
-  /**
-   * Extended properties for primitive element: RelatedArtifact.citation
-   */
-  _citation?: fhir.IFhirElement|undefined;
+  citation?: fhir.FhirMarkdown|string|undefined;
   /**
    * If a document or resource element is present, this element SHALL NOT be provided (use the url or reference in the Attachment or resource reference).
    */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: RelatedArtifact.url
-   */
-  _url?: fhir.IFhirElement|undefined;
+  url?: fhir.FhirUrl|string|undefined;
   /**
    * The document being referenced, represented as an attachment. This is exclusive with the resource element.
    */
-  document?: fhir.IAttachment|undefined;
+  document?: fhir.AttachmentArgs|undefined;
   /**
    * If the type is predecessor, this is a reference to the succeeding knowledge resource. If the type is successor, this is a reference to the prior knowledge resource.
    */
-  resource?: string|undefined;
-  /**
-   * Extended properties for primitive element: RelatedArtifact.resource
-   */
-  _resource?: fhir.IFhirElement|undefined;
+  resource?: fhir.FhirCanonical|string|undefined;
 }
 
 /**
  * Related artifacts such as additional documentation, justification, or bibliographic references.
  */
-export class RelatedArtifact extends fhir.FhirElement implements IRelatedArtifact {
+export class RelatedArtifact extends fhir.FhirElement {
+  readonly __dataType:string = 'RelatedArtifact';
   /**
    * The type of relationship to the related artifact.
    */
   public type: RelatedArtifactTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: RelatedArtifact.type
-   */
-  public _type?: fhir.FhirElement|undefined;
-  /**
    * A short label that can be used to reference the citation from elsewhere in the containing artifact, such as a footnote index.
    */
-  public label?: string|undefined;
-  /**
-   * Extended properties for primitive element: RelatedArtifact.label
-   */
-  public _label?: fhir.FhirElement|undefined;
+  public label?: fhir.FhirString|undefined;
   /**
    * A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.
    */
-  public display?: string|undefined;
-  /**
-   * Extended properties for primitive element: RelatedArtifact.display
-   */
-  public _display?: fhir.FhirElement|undefined;
+  public display?: fhir.FhirString|undefined;
   /**
    * Additional structured information about citations should be captured as extensions.
    */
-  public citation?: string|undefined;
-  /**
-   * Extended properties for primitive element: RelatedArtifact.citation
-   */
-  public _citation?: fhir.FhirElement|undefined;
+  public citation?: fhir.FhirMarkdown|undefined;
   /**
    * If a document or resource element is present, this element SHALL NOT be provided (use the url or reference in the Attachment or resource reference).
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: RelatedArtifact.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUrl|undefined;
   /**
    * The document being referenced, represented as an attachment. This is exclusive with the resource element.
    */
@@ -116,30 +75,20 @@ export class RelatedArtifact extends fhir.FhirElement implements IRelatedArtifac
   /**
    * If the type is predecessor, this is a reference to the succeeding knowledge resource. If the type is successor, this is a reference to the prior knowledge resource.
    */
-  public resource?: string|undefined;
-  /**
-   * Extended properties for primitive element: RelatedArtifact.resource
-   */
-  public _resource?: fhir.FhirElement|undefined;
+  public resource?: fhir.FhirCanonical|undefined;
   /**
    * Default constructor for RelatedArtifact - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IRelatedArtifact> = { }) {
-    super(source);
+  constructor(source:Partial<RelatedArtifactArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['label']) { this.label = source.label; }
-    if (source['_label']) { this._label = new fhir.FhirElement(source._label!); }
-    if (source['display']) { this.display = source.display; }
-    if (source['_display']) { this._display = new fhir.FhirElement(source._display!); }
-    if (source['citation']) { this.citation = source.citation; }
-    if (source['_citation']) { this._citation = new fhir.FhirElement(source._citation!); }
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['document']) { this.document = new fhir.Attachment(source.document!); }
-    if (source['resource']) { this.resource = source.resource; }
-    if (source['_resource']) { this._resource = new fhir.FhirElement(source._resource!); }
+    if (source['label']) { this.label = new fhir.FhirString({value: source.label}); }
+    if (source['display']) { this.display = new fhir.FhirString({value: source.display}); }
+    if (source['citation']) { this.citation = new fhir.FhirMarkdown({value: source.citation}); }
+    if (source['url']) { this.url = new fhir.FhirUrl({value: source.url}); }
+    if (source['document']) { this.document = new fhir.Attachment(source.document); }
+    if (source['resource']) { this.resource = new fhir.FhirCanonical({value: source.resource}); }
   }
   /**
    * Required-bound Value Set for type
@@ -150,16 +99,23 @@ export class RelatedArtifact extends fhir.FhirElement implements IRelatedArtifac
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: RelatedArtifact.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_label"]) { results.push(...this._label.doModelValidation()); }
-    if (this["_display"]) { results.push(...this._display.doModelValidation()); }
-    if (this["_citation"]) { results.push(...this._citation.doModelValidation()); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["document"]) { results.push(...this.document.doModelValidation()); }
-    if (this["_resource"]) { results.push(...this._resource.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:RelatedArtifactTypeValueSetEnum fhir: RelatedArtifact.type:code", }));
+    }
+    if (this["label"]) { outcome.issue!.push(...this.label.doModelValidation().issue!); }
+    if (this["display"]) { outcome.issue!.push(...this.display.doModelValidation().issue!); }
+    if (this["citation"]) { outcome.issue!.push(...this.citation.doModelValidation().issue!); }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["document"]) { outcome.issue!.push(...this.document.doModelValidation().issue!); }
+    if (this["resource"]) { outcome.issue!.push(...this.resource.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

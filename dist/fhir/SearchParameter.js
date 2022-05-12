@@ -3,12 +3,14 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SearchParameter
 import * as fhir from '../fhir.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { ResourceTypesValueSet } from '../fhirValueSets/ResourceTypesValueSet.js';
-import { SearchParamTypeValueSet } from '../fhirValueSets/SearchParamTypeValueSet.js';
-import { SearchXpathUsageValueSet } from '../fhirValueSets/SearchXpathUsageValueSet.js';
-import { SearchComparatorValueSet } from '../fhirValueSets/SearchComparatorValueSet.js';
-import { SearchModifierCodeValueSet } from '../fhirValueSets/SearchModifierCodeValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { ResourceTypesValueSet, } from '../fhirValueSets/ResourceTypesValueSet.js';
+import { SearchParamTypeValueSet, } from '../fhirValueSets/SearchParamTypeValueSet.js';
+import { SearchXpathUsageValueSet, } from '../fhirValueSets/SearchXpathUsageValueSet.js';
+import { SearchComparatorValueSet, } from '../fhirValueSets/SearchComparatorValueSet.js';
+import { SearchModifierCodeValueSet, } from '../fhirValueSets/SearchModifierCodeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Used to define the parts of a composite search parameter.
  */
@@ -16,45 +18,46 @@ export class SearchParameterComponent extends fhir.BackboneElement {
     /**
      * Default constructor for SearchParameterComponent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SearchParameterComponent';
         if (source['definition']) {
-            this.definition = source.definition;
+            this.definition = new fhir.FhirCanonical({ value: source.definition });
         }
         else {
             this.definition = null;
         }
-        if (source['_definition']) {
-            this._definition = new fhir.FhirElement(source._definition);
-        }
         if (source['expression']) {
-            this.expression = source.expression;
+            this.expression = new fhir.FhirString({ value: source.expression });
         }
         else {
             this.expression = null;
-        }
-        if (source['_expression']) {
-            this._expression = new fhir.FhirElement(source._expression);
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["definition"]) {
-            results.push(["definition", 'Missing required element: SearchParameter.component.definition']);
+        var outcome = super.doModelValidation();
+        if (!this['definition']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property definition:fhir.FhirCanonical fhir: SearchParameter.component.definition:canonical", }));
         }
-        if (this["_definition"]) {
-            results.push(...this._definition.doModelValidation());
+        if (this["definition"]) {
+            outcome.issue.push(...this.definition.doModelValidation().issue);
         }
-        if (!this["expression"]) {
-            results.push(["expression", 'Missing required element: SearchParameter.component.expression']);
+        if (!this['expression']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property expression:fhir.FhirString fhir: SearchParameter.component.expression:string", }));
         }
-        if (this["_expression"]) {
-            results.push(...this._expression.doModelValidation());
+        if (this["expression"]) {
+            outcome.issue.push(...this.expression.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -64,38 +67,63 @@ export class SearchParameter extends fhir.DomainResource {
     /**
      * Default constructor for SearchParameter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SearchParameter';
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the search parameter to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * A search parameter must always apply to at least one resource type. When search parameters apply to more than one resource type, they can be used against any of the listed resource types, or in a cross-type search (see [Cross Resource Search](http.html#xres-search)).
+         */
+        this.base = [];
+        /**
+         * Types of resource (if a resource is referenced).
+         */
+        this.target = [];
+        /**
+         * If no comparators are listed, clients should not expect servers to support any comparators.
+         */
+        this.comparator = [];
+        /**
+         * A modifier supported for the search parameter.
+         */
+        this.modifier = [];
+        /**
+         * Systems are not required to list all the chain names they support, but if they don't list them, clients might not know to use them.
+         */
+        this.chain = [];
+        /**
+         * Used to define the parts of a composite search parameter.
+         */
+        this.component = [];
         this.resourceType = 'SearchParameter';
         if (source['url']) {
-            this.url = source.url;
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         else {
             this.url = null;
         }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
-        }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirString({ value: source.name });
         }
         else {
             this.name = null;
         }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
-        }
         if (source['derivedFrom']) {
-            this.derivedFrom = source.derivedFrom;
-        }
-        if (source['_derivedFrom']) {
-            this._derivedFrom = new fhir.FhirElement(source._derivedFrom);
+            this.derivedFrom = new fhir.FhirCanonical({ value: source.derivedFrom });
         }
         if (source['status']) {
             this.status = source.status;
@@ -103,38 +131,23 @@ export class SearchParameter extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
-        }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         else {
             this.description = null;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -143,28 +156,19 @@ export class SearchParameter extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['code']) {
-            this.code = source.code;
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         else {
             this.code = null;
         }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
-        }
         if (source['base']) {
-            this.base = source.base.map((x) => (x));
+            this.base = source.base.map((x) => new fhir.FhirCode({ value: x }));
         }
         else {
             this.base = null;
-        }
-        if (source['_base']) {
-            this._base = source._base.map((x) => new fhir.FhirElement(x));
         }
         if (source['type']) {
             this.type = source.type;
@@ -172,62 +176,32 @@ export class SearchParameter extends fhir.DomainResource {
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['expression']) {
-            this.expression = source.expression;
-        }
-        if (source['_expression']) {
-            this._expression = new fhir.FhirElement(source._expression);
+            this.expression = new fhir.FhirString({ value: source.expression });
         }
         if (source['xpath']) {
-            this.xpath = source.xpath;
-        }
-        if (source['_xpath']) {
-            this._xpath = new fhir.FhirElement(source._xpath);
+            this.xpath = new fhir.FhirString({ value: source.xpath });
         }
         if (source['xpathUsage']) {
             this.xpathUsage = source.xpathUsage;
         }
-        if (source['_xpathUsage']) {
-            this._xpathUsage = new fhir.FhirElement(source._xpathUsage);
-        }
         if (source['target']) {
-            this.target = source.target.map((x) => (x));
-        }
-        if (source['_target']) {
-            this._target = source._target.map((x) => new fhir.FhirElement(x));
+            this.target = source.target.map((x) => new fhir.FhirCode({ value: x }));
         }
         if (source['multipleOr']) {
-            this.multipleOr = source.multipleOr;
-        }
-        if (source['_multipleOr']) {
-            this._multipleOr = new fhir.FhirElement(source._multipleOr);
+            this.multipleOr = new fhir.FhirBoolean({ value: source.multipleOr });
         }
         if (source['multipleAnd']) {
-            this.multipleAnd = source.multipleAnd;
-        }
-        if (source['_multipleAnd']) {
-            this._multipleAnd = new fhir.FhirElement(source._multipleAnd);
+            this.multipleAnd = new fhir.FhirBoolean({ value: source.multipleAnd });
         }
         if (source['comparator']) {
-            this.comparator = source.comparator.map((x) => (x));
-        }
-        if (source['_comparator']) {
-            this._comparator = source._comparator.map((x) => new fhir.FhirElement(x));
+            this.comparator = source.comparator.map((x) => x);
         }
         if (source['modifier']) {
-            this.modifier = source.modifier.map((x) => (x));
-        }
-        if (source['_modifier']) {
-            this._modifier = source._modifier.map((x) => new fhir.FhirElement(x));
+            this.modifier = source.modifier.map((x) => x);
         }
         if (source['chain']) {
-            this.chain = source.chain.map((x) => (x));
-        }
-        if (source['_chain']) {
-            this._chain = source._chain.map((x) => new fhir.FhirElement(x));
+            this.chain = source.chain.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['component']) {
             this.component = source.component.map((x) => new fhir.SearchParameterComponent(x));
@@ -279,110 +253,107 @@ export class SearchParameter extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: SearchParameter.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'SearchParameter' fhir: SearchParameter.resourceType:'SearchParameter'", }));
         }
-        if (!this["url"]) {
-            results.push(["url", 'Missing required element: SearchParameter.url']);
+        if (!this['url']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property url:fhir.FhirUri fhir: SearchParameter.url:uri", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: SearchParameter.name']);
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirString fhir: SearchParameter.name:string", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_derivedFrom"]) {
-            results.push(...this._derivedFrom.doModelValidation());
+        if (this["derivedFrom"]) {
+            outcome.issue.push(...this.derivedFrom.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: SearchParameter.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: SearchParameter.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["description"]) {
-            results.push(["description", 'Missing required element: SearchParameter.description']);
+        if (!this['description']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property description:fhir.FhirMarkdown fhir: SearchParameter.description:markdown", }));
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: SearchParameter.code']);
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.FhirCode fhir: SearchParameter.code:code", }));
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if ((!this["base"]) || (this["base"].length === 0)) {
-            results.push(["base", 'Missing required element: SearchParameter.base']);
+        if (!this['base']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property base:fhir.FhirCode[] fhir: SearchParameter.base:code", }));
         }
-        if (this["_base"]) {
-            this._base.forEach((x) => { results.push(...x.doModelValidation()); });
+        else if (!Array.isArray(this.base)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property base:fhir.FhirCode[] fhir: SearchParameter.base:code", }));
         }
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: SearchParameter.type']);
+        else if (this.base.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property base:fhir.FhirCode[] fhir: SearchParameter.base:code", }));
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (this["base"]) {
+            this.base.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_expression"]) {
-            results.push(...this._expression.doModelValidation());
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:SearchParamTypeValueSetEnum fhir: SearchParameter.type:code", }));
         }
-        if (this["_xpath"]) {
-            results.push(...this._xpath.doModelValidation());
+        if (this["expression"]) {
+            outcome.issue.push(...this.expression.doModelValidation().issue);
         }
-        if (this["_xpathUsage"]) {
-            results.push(...this._xpathUsage.doModelValidation());
+        if (this["xpath"]) {
+            outcome.issue.push(...this.xpath.doModelValidation().issue);
         }
-        if (this["_target"]) {
-            this._target.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["target"]) {
+            this.target.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_multipleOr"]) {
-            results.push(...this._multipleOr.doModelValidation());
+        if (this["multipleOr"]) {
+            outcome.issue.push(...this.multipleOr.doModelValidation().issue);
         }
-        if (this["_multipleAnd"]) {
-            results.push(...this._multipleAnd.doModelValidation());
+        if (this["multipleAnd"]) {
+            outcome.issue.push(...this.multipleAnd.doModelValidation().issue);
         }
-        if (this["_comparator"]) {
-            this._comparator.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_modifier"]) {
-            this._modifier.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_chain"]) {
-            this._chain.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["chain"]) {
+            this.chain.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["component"]) {
-            this.component.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.component.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=SearchParameter.js.map

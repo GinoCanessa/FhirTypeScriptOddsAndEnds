@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MedicinalProductUndesirableEffect
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Describe the undesirable effects of the medicinal product.
  */
@@ -10,8 +12,17 @@ export class MedicinalProductUndesirableEffect extends fhir.DomainResource {
     /**
      * Default constructor for MedicinalProductUndesirableEffect - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicinalProductUndesirableEffect';
+        /**
+         * The medication for which this is an indication.
+         */
+        this.subject = [];
+        /**
+         * The population group to which this applies.
+         */
+        this.population = [];
         this.resourceType = 'MedicinalProductUndesirableEffect';
         if (source['subject']) {
             this.subject = source.subject.map((x) => new fhir.Reference(x));
@@ -33,26 +44,32 @@ export class MedicinalProductUndesirableEffect extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: MedicinalProductUndesirableEffect.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'MedicinalProductUndesirableEffect' fhir: MedicinalProductUndesirableEffect.resourceType:'MedicinalProductUndesirableEffect'", }));
         }
         if (this["subject"]) {
-            this.subject.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.subject.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["symptomConditionEffect"]) {
-            results.push(...this.symptomConditionEffect.doModelValidation());
+            outcome.issue.push(...this.symptomConditionEffect.doModelValidation().issue);
         }
         if (this["classification"]) {
-            results.push(...this.classification.doModelValidation());
+            outcome.issue.push(...this.classification.doModelValidation().issue);
         }
         if (this["frequencyOfOccurrence"]) {
-            results.push(...this.frequencyOfOccurrence.doModelValidation());
+            outcome.issue.push(...this.frequencyOfOccurrence.doModelValidation().issue);
         }
         if (this["population"]) {
-            this.population.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.population.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=MedicinalProductUndesirableEffect.js.map

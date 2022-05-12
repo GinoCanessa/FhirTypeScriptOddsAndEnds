@@ -3,8 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Identifier
 import * as fhir from '../fhir.js';
-import { IdentifierUseValueSet } from '../fhirValueSets/IdentifierUseValueSet.js';
-import { IdentifierTypeValueSet } from '../fhirValueSets/IdentifierTypeValueSet.js';
+import { IdentifierUseValueSet, } from '../fhirValueSets/IdentifierUseValueSet.js';
+import { IdentifierTypeValueSet, } from '../fhirValueSets/IdentifierTypeValueSet.js';
 /**
  * An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.
  */
@@ -12,28 +12,20 @@ export class Identifier extends fhir.FhirElement {
     /**
      * Default constructor for Identifier - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Identifier';
         if (source['use']) {
             this.use = source.use;
-        }
-        if (source['_use']) {
-            this._use = new fhir.FhirElement(source._use);
         }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
         if (source['system']) {
-            this.system = source.system;
-        }
-        if (source['_system']) {
-            this._system = new fhir.FhirElement(source._system);
+            this.system = new fhir.FhirUri({ value: source.system });
         }
         if (source['value']) {
-            this.value = source.value;
-        }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
+            this.value = new fhir.FhirString({ value: source.value });
         }
         if (source['period']) {
             this.period = new fhir.Period(source.period);
@@ -58,26 +50,29 @@ export class Identifier extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_use"]) {
-            results.push(...this._use.doModelValidation());
-        }
+        var outcome = super.doModelValidation();
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_system"]) {
-            results.push(...this._system.doModelValidation());
+        if (this["system"]) {
+            outcome.issue.push(...this.system.doModelValidation().issue);
         }
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
         if (this["assigner"]) {
-            results.push(...this.assigner.doModelValidation());
+            outcome.issue.push(...this.assigner.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Identifier.js.map

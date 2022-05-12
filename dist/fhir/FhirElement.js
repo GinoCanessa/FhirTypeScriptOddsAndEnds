@@ -10,12 +10,17 @@ export class FhirElement {
     /**
      * Default constructor for FhirElement - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        if (source['id']) {
-            this.id = source.id;
+    constructor(source = {}, options = {}) {
+        this.__dataType = 'Element';
+        /**
+         * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+         */
+        this.extension = [];
+        if (options.allowUnknownElements === true) {
+            Object.assign(this, source);
         }
-        if (source['_id']) {
-            this._id = new fhir.FhirElement(source._id);
+        if (source['id']) {
+            this.id = new fhir.FhirString({ value: source.id });
         }
         if (source['extension']) {
             this.extension = source.extension.map((x) => new fhir.Extension(x));
@@ -25,14 +30,20 @@ export class FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = [];
-        if (this["_id"]) {
-            results.push(...this._id.doModelValidation());
+        var outcome = new fhir.OperationOutcome({ issue: [] });
+        if (this["id"]) {
+            outcome.issue.push(...this.id.doModelValidation().issue);
         }
         if (this["extension"]) {
-            this.extension.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.extension.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=FhirElement.js.map

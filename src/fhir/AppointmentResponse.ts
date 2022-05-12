@@ -3,75 +3,63 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: AppointmentResponse
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { EncounterParticipantTypeValueSet, EncounterParticipantTypeValueSetType, EncounterParticipantTypeValueSetEnum } from '../fhirValueSets/EncounterParticipantTypeValueSet.js'
-import { ParticipationstatusValueSet, ParticipationstatusValueSetType, ParticipationstatusValueSetEnum } from '../fhirValueSets/ParticipationstatusValueSet.js'
-
+import { EncounterParticipantTypeValueSet, EncounterParticipantTypeValueSetType,} from '../fhirValueSets/EncounterParticipantTypeValueSet.js';
+import { EncounterParticipantTypeValueSetEnum } from '../valueSetEnums.js';
+import { ParticipationstatusValueSet, ParticipationstatusValueSetType,} from '../fhirValueSets/ParticipationstatusValueSet.js';
+import { ParticipationstatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.
+ * Valid arguments for the AppointmentResponse type.
  */
-export type IAppointmentResponse = fhir.IDomainResource & { 
+export interface AppointmentResponseArgs extends fhir.DomainResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "AppointmentResponse";
+  resourceType: "AppointmentResponse"|undefined;
   /**
    * This records identifiers associated with this appointment response concern that are defined by business processes and/ or used to refer to it when a direct URL reference to the resource itself is not appropriate.
    */
-  identifier?: fhir.IIdentifier[]|undefined;
+  identifier?: fhir.IdentifierArgs[]|undefined;
   /**
    * Appointment that this response is replying to.
    */
-  appointment: fhir.IReference|null;
+  appointment: fhir.ReferenceArgs|null;
   /**
    * This may be either the same as the appointment request to confirm the details of the appointment, or alternately a new time to request a re-negotiation of the start time.
    */
-  start?: string|undefined;
-  /**
-   * Extended properties for primitive element: AppointmentResponse.start
-   */
-  _start?: fhir.IFhirElement|undefined;
+  start?: fhir.FhirInstant|string|undefined;
   /**
    * This may be either the same as the appointment request to confirm the details of the appointment, or alternately a new time to request a re-negotiation of the end time.
    */
-  end?: string|undefined;
-  /**
-   * Extended properties for primitive element: AppointmentResponse.end
-   */
-  _end?: fhir.IFhirElement|undefined;
+  end?: fhir.FhirInstant|string|undefined;
   /**
    * The role of the participant can be used to declare what the actor will be doing in the scope of the referenced appointment.
    * If the actor is not specified, then it is expected that the actor will be filled in at a later stage of planning.
    * This value SHALL be the same as specified on the referenced Appointment so that they can be matched, and subsequently updated.
    */
-  participantType?: fhir.ICodeableConcept[]|undefined;
+  participantType?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * A Person, Location, HealthcareService, or Device that is participating in the appointment.
    */
-  actor?: fhir.IReference|undefined;
+  actor?: fhir.ReferenceArgs|undefined;
   /**
    * This element is labeled as a modifier because the status contains the code entered-in-error that marks the participant as not currently valid.
    */
   participantStatus: ParticipationstatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: AppointmentResponse.participantStatus
-   */
-  _participantStatus?: fhir.IFhirElement|undefined;
-  /**
    * This comment is particularly important when the responder is declining, tentatively accepting or requesting another time to indicate the reasons why.
    */
-  comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: AppointmentResponse.comment
-   */
-  _comment?: fhir.IFhirElement|undefined;
+  comment?: fhir.FhirString|string|undefined;
 }
 
 /**
  * A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.
  */
-export class AppointmentResponse extends fhir.DomainResource implements IAppointmentResponse {
+export class AppointmentResponse extends fhir.DomainResource {
+  readonly __dataType:string = 'AppointmentResponse';
   /**
    * Resource Type Name
    */
@@ -79,7 +67,7 @@ export class AppointmentResponse extends fhir.DomainResource implements IAppoint
   /**
    * This records identifiers associated with this appointment response concern that are defined by business processes and/ or used to refer to it when a direct URL reference to the resource itself is not appropriate.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Appointment that this response is replying to.
    */
@@ -87,25 +75,17 @@ export class AppointmentResponse extends fhir.DomainResource implements IAppoint
   /**
    * This may be either the same as the appointment request to confirm the details of the appointment, or alternately a new time to request a re-negotiation of the start time.
    */
-  public start?: string|undefined;
-  /**
-   * Extended properties for primitive element: AppointmentResponse.start
-   */
-  public _start?: fhir.FhirElement|undefined;
+  public start?: fhir.FhirInstant|undefined;
   /**
    * This may be either the same as the appointment request to confirm the details of the appointment, or alternately a new time to request a re-negotiation of the end time.
    */
-  public end?: string|undefined;
-  /**
-   * Extended properties for primitive element: AppointmentResponse.end
-   */
-  public _end?: fhir.FhirElement|undefined;
+  public end?: fhir.FhirInstant|undefined;
   /**
    * The role of the participant can be used to declare what the actor will be doing in the scope of the referenced appointment.
    * If the actor is not specified, then it is expected that the actor will be filled in at a later stage of planning.
    * This value SHALL be the same as specified on the referenced Appointment so that they can be matched, and subsequently updated.
    */
-  public participantType?: fhir.CodeableConcept[]|undefined;
+  public participantType?: fhir.CodeableConcept[]|undefined = [];
   /**
    * A Person, Location, HealthcareService, or Device that is participating in the appointment.
    */
@@ -115,37 +95,25 @@ export class AppointmentResponse extends fhir.DomainResource implements IAppoint
    */
   public participantStatus: ParticipationstatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: AppointmentResponse.participantStatus
-   */
-  public _participantStatus?: fhir.FhirElement|undefined;
-  /**
    * This comment is particularly important when the responder is declining, tentatively accepting or requesting another time to indicate the reasons why.
    */
-  public comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: AppointmentResponse.comment
-   */
-  public _comment?: fhir.FhirElement|undefined;
+  public comment?: fhir.FhirString|undefined;
   /**
    * Default constructor for AppointmentResponse - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAppointmentResponse> = { }) {
-    super(source);
+  constructor(source:Partial<AppointmentResponseArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'AppointmentResponse';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['appointment']) { this.appointment = new fhir.Reference(source.appointment!); }
+    if (source['appointment']) { this.appointment = new fhir.Reference(source.appointment); }
     else { this.appointment = null; }
-    if (source['start']) { this.start = source.start; }
-    if (source['_start']) { this._start = new fhir.FhirElement(source._start!); }
-    if (source['end']) { this.end = source.end; }
-    if (source['_end']) { this._end = new fhir.FhirElement(source._end!); }
+    if (source['start']) { this.start = new fhir.FhirInstant({value: source.start}); }
+    if (source['end']) { this.end = new fhir.FhirInstant({value: source.end}); }
     if (source['participantType']) { this.participantType = source.participantType.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['actor']) { this.actor = new fhir.Reference(source.actor!); }
+    if (source['actor']) { this.actor = new fhir.Reference(source.actor); }
     if (source['participantStatus']) { this.participantStatus = source.participantStatus; }
     else { this.participantStatus = null; }
-    if (source['_participantStatus']) { this._participantStatus = new fhir.FhirElement(source._participantStatus!); }
-    if (source['comment']) { this.comment = source.comment; }
-    if (source['_comment']) { this._comment = new fhir.FhirElement(source._comment!); }
+    if (source['comment']) { this.comment = new fhir.FhirString({value: source.comment}); }
   }
   /**
    * Extensible-bound Value Set for participantType
@@ -162,19 +130,30 @@ export class AppointmentResponse extends fhir.DomainResource implements IAppoint
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: AppointmentResponse.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["appointment"]) { results.push(["appointment",'Missing required element: AppointmentResponse.appointment']); }
-    if (this["appointment"]) { results.push(...this.appointment.doModelValidation()); }
-    if (this["_start"]) { results.push(...this._start.doModelValidation()); }
-    if (this["_end"]) { results.push(...this._end.doModelValidation()); }
-    if (this["participantType"]) { this.participantType.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["actor"]) { results.push(...this.actor.doModelValidation()); }
-    if (!this["participantStatus"]) { results.push(["participantStatus",'Missing required element: AppointmentResponse.participantStatus']); }
-    if (this["_participantStatus"]) { results.push(...this._participantStatus.doModelValidation()); }
-    if (this["_comment"]) { results.push(...this._comment.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'AppointmentResponse' fhir: AppointmentResponse.resourceType:'AppointmentResponse'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['appointment']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property appointment:fhir.Reference fhir: AppointmentResponse.appointment:Reference", }));
+    }
+    if (this["appointment"]) { outcome.issue!.push(...this.appointment.doModelValidation().issue!); }
+    if (this["start"]) { outcome.issue!.push(...this.start.doModelValidation().issue!); }
+    if (this["end"]) { outcome.issue!.push(...this.end.doModelValidation().issue!); }
+    if (this["participantType"]) { this.participantType.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["actor"]) { outcome.issue!.push(...this.actor.doModelValidation().issue!); }
+    if (!this['participantStatus']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property participantStatus:ParticipationstatusValueSetEnum fhir: AppointmentResponse.participantStatus:code", }));
+    }
+    if (this["comment"]) { outcome.issue!.push(...this.comment.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

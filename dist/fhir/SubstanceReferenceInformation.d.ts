@@ -1,145 +1,26 @@
 import * as fhir from '../fhir.js';
 /**
- * Todo.
+ * Valid arguments for the SubstanceReferenceInformationGene type.
  */
-export declare type ISubstanceReferenceInformationGene = fhir.IBackboneElement & {
+export interface SubstanceReferenceInformationGeneArgs extends fhir.BackboneElementArgs {
     /**
      * Todo.
      */
-    geneSequenceOrigin?: fhir.ICodeableConcept | undefined;
+    geneSequenceOrigin?: fhir.CodeableConceptArgs | undefined;
     /**
      * Todo.
      */
-    gene?: fhir.ICodeableConcept | undefined;
+    gene?: fhir.CodeableConceptArgs | undefined;
     /**
      * Todo.
      */
-    source?: fhir.IReference[] | undefined;
-};
+    source?: fhir.ReferenceArgs[] | undefined;
+}
 /**
  * Todo.
  */
-export declare type ISubstanceReferenceInformationGeneElement = fhir.IBackboneElement & {
-    /**
-     * Todo.
-     */
-    type?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    element?: fhir.IIdentifier | undefined;
-    /**
-     * Todo.
-     */
-    source?: fhir.IReference[] | undefined;
-};
-/**
- * Todo.
- */
-export declare type ISubstanceReferenceInformationClassification = fhir.IBackboneElement & {
-    /**
-     * Todo.
-     */
-    domain?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    classification?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    subtype?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Todo.
-     */
-    source?: fhir.IReference[] | undefined;
-};
-/**
- * Todo.
- */
-export declare type ISubstanceReferenceInformationTarget = fhir.IBackboneElement & {
-    /**
-     * Todo.
-     */
-    target?: fhir.IIdentifier | undefined;
-    /**
-     * Todo.
-     */
-    type?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    interaction?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    organism?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    organismType?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    amountQuantity?: fhir.IQuantity | undefined;
-    /**
-     * Todo.
-     */
-    amountRange?: fhir.IRange | undefined;
-    /**
-     * Todo.
-     */
-    amountString?: string | undefined;
-    /**
-     * Extended properties for primitive element: SubstanceReferenceInformation.target.amount[x]
-     */
-    _amountString?: fhir.IFhirElement | undefined;
-    /**
-     * Todo.
-     */
-    amountType?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    source?: fhir.IReference[] | undefined;
-};
-/**
- * Todo.
- */
-export declare type ISubstanceReferenceInformation = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "SubstanceReferenceInformation";
-    /**
-     * Todo.
-     */
-    comment?: string | undefined;
-    /**
-     * Extended properties for primitive element: SubstanceReferenceInformation.comment
-     */
-    _comment?: fhir.IFhirElement | undefined;
-    /**
-     * Todo.
-     */
-    gene?: fhir.ISubstanceReferenceInformationGene[] | undefined;
-    /**
-     * Todo.
-     */
-    geneElement?: fhir.ISubstanceReferenceInformationGeneElement[] | undefined;
-    /**
-     * Todo.
-     */
-    classification?: fhir.ISubstanceReferenceInformationClassification[] | undefined;
-    /**
-     * Todo.
-     */
-    target?: fhir.ISubstanceReferenceInformationTarget[] | undefined;
-};
-/**
- * Todo.
- */
-export declare class SubstanceReferenceInformationGene extends fhir.BackboneElement implements ISubstanceReferenceInformationGene {
+export declare class SubstanceReferenceInformationGene extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Todo.
      */
@@ -155,16 +36,38 @@ export declare class SubstanceReferenceInformationGene extends fhir.BackboneElem
     /**
      * Default constructor for SubstanceReferenceInformationGene - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISubstanceReferenceInformationGene>);
+    constructor(source?: Partial<SubstanceReferenceInformationGeneArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the SubstanceReferenceInformationGeneElement type.
+ */
+export interface SubstanceReferenceInformationGeneElementArgs extends fhir.BackboneElementArgs {
+    /**
+     * Todo.
+     */
+    type?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    element?: fhir.IdentifierArgs | undefined;
+    /**
+     * Todo.
+     */
+    source?: fhir.ReferenceArgs[] | undefined;
 }
 /**
  * Todo.
  */
-export declare class SubstanceReferenceInformationGeneElement extends fhir.BackboneElement implements ISubstanceReferenceInformationGeneElement {
+export declare class SubstanceReferenceInformationGeneElement extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Todo.
      */
@@ -180,16 +83,42 @@ export declare class SubstanceReferenceInformationGeneElement extends fhir.Backb
     /**
      * Default constructor for SubstanceReferenceInformationGeneElement - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISubstanceReferenceInformationGeneElement>);
+    constructor(source?: Partial<SubstanceReferenceInformationGeneElementArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the SubstanceReferenceInformationClassification type.
+ */
+export interface SubstanceReferenceInformationClassificationArgs extends fhir.BackboneElementArgs {
+    /**
+     * Todo.
+     */
+    domain?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    classification?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    subtype?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * Todo.
+     */
+    source?: fhir.ReferenceArgs[] | undefined;
 }
 /**
  * Todo.
  */
-export declare class SubstanceReferenceInformationClassification extends fhir.BackboneElement implements ISubstanceReferenceInformationClassification {
+export declare class SubstanceReferenceInformationClassification extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Todo.
      */
@@ -209,16 +138,70 @@ export declare class SubstanceReferenceInformationClassification extends fhir.Ba
     /**
      * Default constructor for SubstanceReferenceInformationClassification - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISubstanceReferenceInformationClassification>);
+    constructor(source?: Partial<SubstanceReferenceInformationClassificationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the SubstanceReferenceInformationTarget type.
+ */
+export interface SubstanceReferenceInformationTargetArgs extends fhir.BackboneElementArgs {
+    /**
+     * Todo.
+     */
+    target?: fhir.IdentifierArgs | undefined;
+    /**
+     * Todo.
+     */
+    type?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    interaction?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    organism?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    organismType?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    amount?: fhir.Quantity | fhir.Range | fhir.FhirString | undefined;
+    /**
+     * Todo.
+     */
+    amountQuantity?: fhir.QuantityArgs | undefined;
+    /**
+     * Todo.
+     */
+    amountRange?: fhir.RangeArgs | undefined;
+    /**
+     * Todo.
+     */
+    amountString?: fhir.FhirString | string | undefined;
+    /**
+     * Todo.
+     */
+    amountType?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    source?: fhir.ReferenceArgs[] | undefined;
 }
 /**
  * Todo.
  */
-export declare class SubstanceReferenceInformationTarget extends fhir.BackboneElement implements ISubstanceReferenceInformationTarget {
+export declare class SubstanceReferenceInformationTarget extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Todo.
      */
@@ -242,19 +225,8 @@ export declare class SubstanceReferenceInformationTarget extends fhir.BackboneEl
     /**
      * Todo.
      */
-    amountQuantity?: fhir.Quantity | undefined;
-    /**
-     * Todo.
-     */
-    amountRange?: fhir.Range | undefined;
-    /**
-     * Todo.
-     */
-    amountString?: string | undefined;
-    /**
-     * Extended properties for primitive element: SubstanceReferenceInformation.target.amount[x]
-     */
-    _amountString?: fhir.FhirElement | undefined;
+    amount?: (fhir.Quantity | fhir.Range | fhir.FhirString) | undefined;
+    readonly __amountIsChoice: true;
     /**
      * Todo.
      */
@@ -266,16 +238,50 @@ export declare class SubstanceReferenceInformationTarget extends fhir.BackboneEl
     /**
      * Default constructor for SubstanceReferenceInformationTarget - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISubstanceReferenceInformationTarget>);
+    constructor(source?: Partial<SubstanceReferenceInformationTargetArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the SubstanceReferenceInformation type.
+ */
+export interface SubstanceReferenceInformationArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "SubstanceReferenceInformation" | undefined;
+    /**
+     * Todo.
+     */
+    comment?: fhir.FhirString | string | undefined;
+    /**
+     * Todo.
+     */
+    gene?: fhir.SubstanceReferenceInformationGeneArgs[] | undefined;
+    /**
+     * Todo.
+     */
+    geneElement?: fhir.SubstanceReferenceInformationGeneElementArgs[] | undefined;
+    /**
+     * Todo.
+     */
+    classification?: fhir.SubstanceReferenceInformationClassificationArgs[] | undefined;
+    /**
+     * Todo.
+     */
+    target?: fhir.SubstanceReferenceInformationTargetArgs[] | undefined;
 }
 /**
  * Todo.
  */
-export declare class SubstanceReferenceInformation extends fhir.DomainResource implements ISubstanceReferenceInformation {
+export declare class SubstanceReferenceInformation extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -283,11 +289,7 @@ export declare class SubstanceReferenceInformation extends fhir.DomainResource i
     /**
      * Todo.
      */
-    comment?: string | undefined;
-    /**
-     * Extended properties for primitive element: SubstanceReferenceInformation.comment
-     */
-    _comment?: fhir.FhirElement | undefined;
+    comment?: fhir.FhirString | undefined;
     /**
      * Todo.
      */
@@ -307,10 +309,14 @@ export declare class SubstanceReferenceInformation extends fhir.DomainResource i
     /**
      * Default constructor for SubstanceReferenceInformation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISubstanceReferenceInformation>);
+    constructor(source?: Partial<SubstanceReferenceInformationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=SubstanceReferenceInformation.d.ts.map

@@ -59,31 +59,4 @@ export const VerificationresultValidationProcessValueSet = {
 /**
  * The primary process by which the target is validated
  */
-export var VerificationresultValidationProcessValueSetEnum;
-(function (VerificationresultValidationProcessValueSetEnum) {
-    /**
-     * Code: edit-check
-     */
-    VerificationresultValidationProcessValueSetEnum["EditCheck"] = "edit-check";
-    /**
-     * Code: in-context
-     */
-    VerificationresultValidationProcessValueSetEnum["InContext"] = "in-context";
-    /**
-     * Code: multi
-     */
-    VerificationresultValidationProcessValueSetEnum["MultipleSources"] = "multi";
-    /**
-     * Code: primary
-     */
-    VerificationresultValidationProcessValueSetEnum["PrimarySource"] = "primary";
-    /**
-     * Code: standalone
-     */
-    VerificationresultValidationProcessValueSetEnum["Standalone"] = "standalone";
-    /**
-     * Code: valueset
-     */
-    VerificationresultValidationProcessValueSetEnum["ValueSet"] = "valueset";
-})(VerificationresultValidationProcessValueSetEnum || (VerificationresultValidationProcessValueSetEnum = {}));
 //# sourceMappingURL=VerificationresultValidationProcessValueSet.js.map

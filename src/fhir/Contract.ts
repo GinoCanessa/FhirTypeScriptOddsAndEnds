@@ -3,937 +3,107 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Contract
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ContractDefinitionTypeValueSet, ContractDefinitionTypeValueSetType, ContractDefinitionTypeValueSetEnum } from '../fhirValueSets/ContractDefinitionTypeValueSet.js'
-import { ContractDefinitionSubtypeValueSet, ContractDefinitionSubtypeValueSetType, ContractDefinitionSubtypeValueSetEnum } from '../fhirValueSets/ContractDefinitionSubtypeValueSet.js'
-import { ContractPublicationstatusValueSet, ContractPublicationstatusValueSetType, ContractPublicationstatusValueSetEnum } from '../fhirValueSets/ContractPublicationstatusValueSet.js'
-import { ContractSecurityClassificationValueSet, ContractSecurityClassificationValueSetType, ContractSecurityClassificationValueSetEnum } from '../fhirValueSets/ContractSecurityClassificationValueSet.js'
-import { ContractSecurityCategoryValueSet, ContractSecurityCategoryValueSetType, ContractSecurityCategoryValueSetEnum } from '../fhirValueSets/ContractSecurityCategoryValueSet.js'
-import { ContractSecurityControlValueSet, ContractSecurityControlValueSetType, ContractSecurityControlValueSetEnum } from '../fhirValueSets/ContractSecurityControlValueSet.js'
-import { ContractPartyRoleValueSet, ContractPartyRoleValueSetType, ContractPartyRoleValueSetEnum } from '../fhirValueSets/ContractPartyRoleValueSet.js'
-import { ContractTermTypeValueSet, ContractTermTypeValueSetType, ContractTermTypeValueSetEnum } from '../fhirValueSets/ContractTermTypeValueSet.js'
-import { V3ActConsentDirectiveValueSet, V3ActConsentDirectiveValueSetType, V3ActConsentDirectiveValueSetEnum } from '../fhirValueSets/V3ActConsentDirectiveValueSet.js'
-import { ContractDecisionModeValueSet, ContractDecisionModeValueSetType, ContractDecisionModeValueSetEnum } from '../fhirValueSets/ContractDecisionModeValueSet.js'
-import { ContractAssetcontextValueSet, ContractAssetcontextValueSetType, ContractAssetcontextValueSetEnum } from '../fhirValueSets/ContractAssetcontextValueSet.js'
-import { ContractAssetscopeValueSet, ContractAssetscopeValueSetType, ContractAssetscopeValueSetEnum } from '../fhirValueSets/ContractAssetscopeValueSet.js'
-import { ContractAssettypeValueSet, ContractAssettypeValueSetType, ContractAssettypeValueSetEnum } from '../fhirValueSets/ContractAssettypeValueSet.js'
-import { ContractAssetsubtypeValueSet, ContractAssetsubtypeValueSetType, ContractAssetsubtypeValueSetEnum } from '../fhirValueSets/ContractAssetsubtypeValueSet.js'
-import { ConsentContentClassValueSet, ConsentContentClassValueSetType, ConsentContentClassValueSetEnum } from '../fhirValueSets/ConsentContentClassValueSet.js'
-import { AssetAvailabilityValueSet, AssetAvailabilityValueSetType, AssetAvailabilityValueSetEnum } from '../fhirValueSets/AssetAvailabilityValueSet.js'
-import { ContractActorroleValueSet, ContractActorroleValueSetType, ContractActorroleValueSetEnum } from '../fhirValueSets/ContractActorroleValueSet.js'
-import { ContractActionValueSet, ContractActionValueSetType, ContractActionValueSetEnum } from '../fhirValueSets/ContractActionValueSet.js'
-import { V3PurposeOfUseValueSet, V3PurposeOfUseValueSetType, V3PurposeOfUseValueSetEnum } from '../fhirValueSets/V3PurposeOfUseValueSet.js'
-import { ContractActionstatusValueSet, ContractActionstatusValueSetType, ContractActionstatusValueSetEnum } from '../fhirValueSets/ContractActionstatusValueSet.js'
-import { ProvenanceAgentTypeValueSet, ProvenanceAgentTypeValueSetType, ProvenanceAgentTypeValueSetEnum } from '../fhirValueSets/ProvenanceAgentTypeValueSet.js'
-import { ProvenanceAgentRoleValueSet, ProvenanceAgentRoleValueSetType, ProvenanceAgentRoleValueSetEnum } from '../fhirValueSets/ProvenanceAgentRoleValueSet.js'
-import { ContractTermSubtypeValueSet, ContractTermSubtypeValueSetType, ContractTermSubtypeValueSetEnum } from '../fhirValueSets/ContractTermSubtypeValueSet.js'
-import { ContractSignerTypeValueSet, ContractSignerTypeValueSetType, ContractSignerTypeValueSetEnum } from '../fhirValueSets/ContractSignerTypeValueSet.js'
-import { ContractStatusValueSet, ContractStatusValueSetType, ContractStatusValueSetEnum } from '../fhirValueSets/ContractStatusValueSet.js'
-import { ContractLegalstateValueSet, ContractLegalstateValueSetType, ContractLegalstateValueSetEnum } from '../fhirValueSets/ContractLegalstateValueSet.js'
-import { ContractContentDerivativeValueSet, ContractContentDerivativeValueSetType, ContractContentDerivativeValueSetEnum } from '../fhirValueSets/ContractContentDerivativeValueSet.js'
-import { ContractExpirationTypeValueSet, ContractExpirationTypeValueSetType, ContractExpirationTypeValueSetEnum } from '../fhirValueSets/ContractExpirationTypeValueSet.js'
-import { ContractScopeValueSet, ContractScopeValueSetType, ContractScopeValueSetEnum } from '../fhirValueSets/ContractScopeValueSet.js'
-import { ContractTypeValueSet, ContractTypeValueSetType, ContractTypeValueSetEnum } from '../fhirValueSets/ContractTypeValueSet.js'
-import { ContractSubtypeValueSet, ContractSubtypeValueSetType, ContractSubtypeValueSetEnum } from '../fhirValueSets/ContractSubtypeValueSet.js'
-
+import { ContractDefinitionTypeValueSet, ContractDefinitionTypeValueSetType,} from '../fhirValueSets/ContractDefinitionTypeValueSet.js';
+import { ContractDefinitionTypeValueSetEnum } from '../valueSetEnums.js';
+import { ContractDefinitionSubtypeValueSet, ContractDefinitionSubtypeValueSetType,} from '../fhirValueSets/ContractDefinitionSubtypeValueSet.js';
+import { ContractDefinitionSubtypeValueSetEnum } from '../valueSetEnums.js';
+import { ContractPublicationstatusValueSet, ContractPublicationstatusValueSetType,} from '../fhirValueSets/ContractPublicationstatusValueSet.js';
+import { ContractPublicationstatusValueSetEnum } from '../valueSetEnums.js';
+import { ContractSecurityClassificationValueSet, ContractSecurityClassificationValueSetType,} from '../fhirValueSets/ContractSecurityClassificationValueSet.js';
+import { ContractSecurityClassificationValueSetEnum } from '../valueSetEnums.js';
+import { ContractSecurityCategoryValueSet, ContractSecurityCategoryValueSetType,} from '../fhirValueSets/ContractSecurityCategoryValueSet.js';
+import { ContractSecurityCategoryValueSetEnum } from '../valueSetEnums.js';
+import { ContractSecurityControlValueSet, ContractSecurityControlValueSetType,} from '../fhirValueSets/ContractSecurityControlValueSet.js';
+import { ContractSecurityControlValueSetEnum } from '../valueSetEnums.js';
+import { ContractPartyRoleValueSet, ContractPartyRoleValueSetType,} from '../fhirValueSets/ContractPartyRoleValueSet.js';
+import { ContractPartyRoleValueSetEnum } from '../valueSetEnums.js';
+import { ContractTermTypeValueSet, ContractTermTypeValueSetType,} from '../fhirValueSets/ContractTermTypeValueSet.js';
+import { ContractTermTypeValueSetEnum } from '../valueSetEnums.js';
+import { V3ActConsentDirectiveValueSet, V3ActConsentDirectiveValueSetType,} from '../fhirValueSets/V3ActConsentDirectiveValueSet.js';
+import { V3ActConsentDirectiveValueSetEnum } from '../valueSetEnums.js';
+import { ContractDecisionModeValueSet, ContractDecisionModeValueSetType,} from '../fhirValueSets/ContractDecisionModeValueSet.js';
+import { ContractDecisionModeValueSetEnum } from '../valueSetEnums.js';
+import { ContractAssetcontextValueSet, ContractAssetcontextValueSetType,} from '../fhirValueSets/ContractAssetcontextValueSet.js';
+import { ContractAssetcontextValueSetEnum } from '../valueSetEnums.js';
+import { ContractAssetscopeValueSet, ContractAssetscopeValueSetType,} from '../fhirValueSets/ContractAssetscopeValueSet.js';
+import { ContractAssetscopeValueSetEnum } from '../valueSetEnums.js';
+import { ContractAssettypeValueSet, ContractAssettypeValueSetType,} from '../fhirValueSets/ContractAssettypeValueSet.js';
+import { ContractAssettypeValueSetEnum } from '../valueSetEnums.js';
+import { ContractAssetsubtypeValueSet, ContractAssetsubtypeValueSetType,} from '../fhirValueSets/ContractAssetsubtypeValueSet.js';
+import { ContractAssetsubtypeValueSetEnum } from '../valueSetEnums.js';
+import { ConsentContentClassValueSet, ConsentContentClassValueSetType,} from '../fhirValueSets/ConsentContentClassValueSet.js';
+import { ConsentContentClassValueSetEnum } from '../valueSetEnums.js';
+import { AssetAvailabilityValueSet, AssetAvailabilityValueSetType,} from '../fhirValueSets/AssetAvailabilityValueSet.js';
+import { AssetAvailabilityValueSetEnum } from '../valueSetEnums.js';
+import { ContractActorroleValueSet, ContractActorroleValueSetType,} from '../fhirValueSets/ContractActorroleValueSet.js';
+import { ContractActorroleValueSetEnum } from '../valueSetEnums.js';
+import { ContractActionValueSet, ContractActionValueSetType,} from '../fhirValueSets/ContractActionValueSet.js';
+import { ContractActionValueSetEnum } from '../valueSetEnums.js';
+import { V3PurposeOfUseValueSet, V3PurposeOfUseValueSetType,} from '../fhirValueSets/V3PurposeOfUseValueSet.js';
+import { V3PurposeOfUseValueSetEnum } from '../valueSetEnums.js';
+import { ContractActionstatusValueSet, ContractActionstatusValueSetType,} from '../fhirValueSets/ContractActionstatusValueSet.js';
+import { ContractActionstatusValueSetEnum } from '../valueSetEnums.js';
+import { ProvenanceAgentTypeValueSet, ProvenanceAgentTypeValueSetType,} from '../fhirValueSets/ProvenanceAgentTypeValueSet.js';
+import { ProvenanceAgentTypeValueSetEnum } from '../valueSetEnums.js';
+import { ProvenanceAgentRoleValueSet, ProvenanceAgentRoleValueSetType,} from '../fhirValueSets/ProvenanceAgentRoleValueSet.js';
+import { ProvenanceAgentRoleValueSetEnum } from '../valueSetEnums.js';
+import { ContractTermSubtypeValueSet, ContractTermSubtypeValueSetType,} from '../fhirValueSets/ContractTermSubtypeValueSet.js';
+import { ContractTermSubtypeValueSetEnum } from '../valueSetEnums.js';
+import { ContractSignerTypeValueSet, ContractSignerTypeValueSetType,} from '../fhirValueSets/ContractSignerTypeValueSet.js';
+import { ContractSignerTypeValueSetEnum } from '../valueSetEnums.js';
+import { ContractStatusValueSet, ContractStatusValueSetType,} from '../fhirValueSets/ContractStatusValueSet.js';
+import { ContractStatusValueSetEnum } from '../valueSetEnums.js';
+import { ContractLegalstateValueSet, ContractLegalstateValueSetType,} from '../fhirValueSets/ContractLegalstateValueSet.js';
+import { ContractLegalstateValueSetEnum } from '../valueSetEnums.js';
+import { ContractContentDerivativeValueSet, ContractContentDerivativeValueSetType,} from '../fhirValueSets/ContractContentDerivativeValueSet.js';
+import { ContractContentDerivativeValueSetEnum } from '../valueSetEnums.js';
+import { ContractExpirationTypeValueSet, ContractExpirationTypeValueSetType,} from '../fhirValueSets/ContractExpirationTypeValueSet.js';
+import { ContractExpirationTypeValueSetEnum } from '../valueSetEnums.js';
+import { ContractScopeValueSet, ContractScopeValueSetType,} from '../fhirValueSets/ContractScopeValueSet.js';
+import { ContractScopeValueSetEnum } from '../valueSetEnums.js';
+import { ContractTypeValueSet, ContractTypeValueSetType,} from '../fhirValueSets/ContractTypeValueSet.js';
+import { ContractTypeValueSetEnum } from '../valueSetEnums.js';
+import { ContractSubtypeValueSet, ContractSubtypeValueSetType,} from '../fhirValueSets/ContractSubtypeValueSet.js';
+import { ContractSubtypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Precusory content developed with a focus and intent of supporting the formation a Contract instance, which may be associated with and transformable into a Contract.
+ * Valid arguments for the ContractContentDefinition type.
  */
-export type IContractContentDefinition = fhir.IBackboneElement & { 
+export interface ContractContentDefinitionArgs extends fhir.BackboneElementArgs {
   /**
    * Precusory content structure and use, i.e., a boilerplate, template, application for a contract such as an insurance policy or benefits under a program, e.g., workers compensation.
    */
-  type: fhir.ICodeableConcept|null;
+  type: fhir.CodeableConceptArgs|null;
   /**
    * Detailed Precusory content type.
    */
-  subType?: fhir.ICodeableConcept|undefined;
+  subType?: fhir.CodeableConceptArgs|undefined;
   /**
    * The  individual or organization that published the Contract precursor content.
    */
-  publisher?: fhir.IReference|undefined;
+  publisher?: fhir.ReferenceArgs|undefined;
   /**
    * The date (and optionally time) when the contract was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the contract changes.
    */
-  publicationDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.contentDefinition.publicationDate
-   */
-  _publicationDate?: fhir.IFhirElement|undefined;
+  publicationDate?: fhir.FhirDateTime|string|undefined;
   /**
    * amended | appended | cancelled | disputed | entered-in-error | executable | executed | negotiable | offered | policy | rejected | renewed | revoked | resolved | terminated.
    */
   publicationStatus: ContractPublicationstatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Contract.contentDefinition.publicationStatus
-   */
-  _publicationStatus?: fhir.IFhirElement|undefined;
-  /**
    * A copyright statement relating to Contract precursor content. Copyright statements are generally legal restrictions on the use and publishing of the Contract precursor content.
    */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.contentDefinition.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Security labels that protect the handling of information about the term and its elements, which may be specifically identified..
- */
-export type IContractTermSecurityLabel = fhir.IBackboneElement & { 
-  /**
-   * Number used to link this term or term element to the applicable Security Label.
-   */
-  number?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.securityLabel.number
-   */
-  _number?: fhir.IFhirElement[]|undefined;
-  /**
-   * Security label privacy tag that species the level of confidentiality protection required for this term and/or term elements.
-   */
-  classification: fhir.ICoding|null;
-  /**
-   * Security label privacy tag that species the applicable privacy and security policies governing this term and/or term elements.
-   */
-  category?: fhir.ICoding[]|undefined;
-  /**
-   * Security label privacy tag that species the manner in which term and/or term elements are to be protected.
-   */
-  control?: fhir.ICoding[]|undefined;
-}
-
-/**
- * Offer Recipient.
- */
-export type IContractTermOfferParty = fhir.IBackboneElement & { 
-  /**
-   * Participant in the offer.
-   */
-  reference: fhir.IReference[]|null;
-  /**
-   * How the party participates in the offer.
-   */
-  role: fhir.ICodeableConcept|null;
-}
-
-/**
- * Response to offer text.
- */
-export type IContractTermOfferAnswer = fhir.IBackboneElement & { 
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  _valueBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  _valueDecimal?: fhir.IFhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  _valueInteger?: fhir.IFhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  valueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  _valueDate?: fhir.IFhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  _valueDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  _valueTime?: fhir.IFhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  _valueString?: fhir.IFhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  valueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  _valueUri?: fhir.IFhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  valueAttachment?: fhir.IAttachment|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  valueCoding?: fhir.ICoding|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  valueQuantity?: fhir.IQuantity|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  valueReference?: fhir.IReference|undefined;
-}
-
-/**
- * The matter of concern in the context of this provision of the agrement.
- */
-export type IContractTermOffer = fhir.IBackboneElement & { 
-  /**
-   * Unique identifier for this particular Contract Provision.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * Offer Recipient.
-   */
-  party?: fhir.IContractTermOfferParty[]|undefined;
-  /**
-   * The Contract.topic may be an application for or offer of a policy or service (e.g., uri to a consent directive form or a health insurance policy), which becomes the Contract once accepted by both the grantor and grantee. 
-   * The Contract Resource may function simply as the computable representation of the executed contract, which may be the attached to the Contract Resource as the “binding” or as the “friendly” electronic form.  For example, a Contract Resource may be automatically populated with the values expressed in a related QuestionnaireResponse. 
-   * However, the Contract Resource may be considered the legally binding contract if it is the only “executed” form of this contract, and includes the signatures as *The Contract Resource may function as the computable representation of an application or offer in a pre-executed Contract if the grantor has not entered any values.  In this case, it is populated with values in a “legal” form of the application or offer or by the values in an associated Questionnaire.  If the grantor has filled in the legal form or the associated Questionnaire Response, then these values are used to populate a pre-executed Contract Resource.
-   * If the Contract.topic is considered an application or offer, then the policy is often required to be attached as the “legal” basis for the application to ensure “informed consent” to the contract, and that any discrepancy between the application and the policy are interpreted against the policy.  Implementers should check organizational and jurisdictional policies to determine the relationship among multiple representations of a contract pre- and post-execution.
-   */
-  topic?: fhir.IReference|undefined;
-  /**
-   * Type of Contract Provision such as specific requirements, purposes for actions, obligations, prohibitions, e.g. life time maximum benefit.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Type of choice made by accepting party with respect to an offer made by an offeror/ grantee.
-   */
-  decision?: fhir.ICodeableConcept|undefined;
-  /**
-   * How the decision about a Contract was conveyed.
-   */
-  decisionMode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Response to offer text.
-   */
-  answer?: fhir.IContractTermOfferAnswer[]|undefined;
-  /**
-   * Human readable form of this Contract Offer.
-   */
-  text?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.text
-   */
-  _text?: fhir.IFhirElement|undefined;
-  /**
-   * The id of the clause or question text of the offer in the referenced questionnaire/response.
-   */
-  linkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.linkId
-   */
-  _linkId?: fhir.IFhirElement[]|undefined;
-  /**
-   * Security labels that protects the offer.
-   */
-  securityLabelNumber?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.securityLabelNumber
-   */
-  _securityLabelNumber?: fhir.IFhirElement[]|undefined;
-}
-
-/**
- * Circumstance of the asset.
- */
-export type IContractTermAssetContext = fhir.IBackboneElement & { 
-  /**
-   * Asset context reference may include the creator, custodian, or owning Person or Organization (e.g., bank, repository),  location held, e.g., building,  jurisdiction.
-   */
-  reference?: fhir.IReference|undefined;
-  /**
-   * Coded representation of the context generally or of the Referenced entity, such as the asset holder type or location.
-   */
-  code?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Context description.
-   */
-  text?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.context.text
-   */
-  _text?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Contract Valued Item List.
- */
-export type IContractTermAssetValuedItem = fhir.IBackboneElement & { 
-  /**
-   * Specific type of Contract Valued Item that may be priced.
-   */
-  entityCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * Specific type of Contract Valued Item that may be priced.
-   */
-  entityReference?: fhir.IReference|undefined;
-  /**
-   * Identifies a Contract Valued Item instance.
-   */
-  identifier?: fhir.IIdentifier|undefined;
-  /**
-   * Indicates the time during which this Contract ValuedItem information is effective.
-   */
-  effectiveTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.effectiveTime
-   */
-  _effectiveTime?: fhir.IFhirElement|undefined;
-  /**
-   * Specifies the units by which the Contract Valued Item is measured or counted, and quantifies the countable or measurable Contract Valued Item instances.
-   */
-  quantity?: fhir.IQuantity|undefined;
-  /**
-   * A Contract Valued Item unit valuation measure.
-   */
-  unitPrice?: fhir.IMoney|undefined;
-  /**
-   * A real number that represents a multiplier used in determining the overall value of the Contract Valued Item delivered. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
-   */
-  factor?: number|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.factor
-   */
-  _factor?: fhir.IFhirElement|undefined;
-  /**
-   * An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the Contract Valued Item delivered. The concept of Points allows for assignment of point values for a Contract Valued Item, such that a monetary amount can be assigned to each point.
-   */
-  points?: number|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.points
-   */
-  _points?: fhir.IFhirElement|undefined;
-  /**
-   * Expresses the product of the Contract Valued Item unitQuantity and the unitPriceAmt. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.
-   */
-  net?: fhir.IMoney|undefined;
-  /**
-   * Terms of valuation.
-   */
-  payment?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.payment
-   */
-  _payment?: fhir.IFhirElement|undefined;
-  /**
-   * When payment is due.
-   */
-  paymentDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.paymentDate
-   */
-  _paymentDate?: fhir.IFhirElement|undefined;
-  /**
-   * Who will make payment.
-   */
-  responsible?: fhir.IReference|undefined;
-  /**
-   * Who will receive payment.
-   */
-  recipient?: fhir.IReference|undefined;
-  /**
-   * Id  of the clause or question text related to the context of this valuedItem in the referenced form or QuestionnaireResponse.
-   */
-  linkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.linkId
-   */
-  _linkId?: fhir.IFhirElement[]|undefined;
-  /**
-   * A set of security labels that define which terms are controlled by this condition.
-   */
-  securityLabelNumber?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.securityLabelNumber
-   */
-  _securityLabelNumber?: fhir.IFhirElement[]|undefined;
-}
-
-/**
- * Contract Term Asset List.
- */
-export type IContractTermAsset = fhir.IBackboneElement & { 
-  /**
-   * Differentiates the kind of the asset .
-   */
-  scope?: fhir.ICodeableConcept|undefined;
-  /**
-   * Target entity type about which the term may be concerned.
-   */
-  type?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Associated entities.
-   */
-  typeReference?: fhir.IReference[]|undefined;
-  /**
-   * May be a subtype or part of an offered asset.
-   */
-  subtype?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Specifies the applicability of the term to an asset resource instance, and instances it refers to orinstances that refer to it, and/or are owned by the offeree.
-   */
-  relationship?: fhir.ICoding|undefined;
-  /**
-   * Circumstance of the asset.
-   */
-  context?: fhir.IContractTermAssetContext[]|undefined;
-  /**
-   * Description of the quality and completeness of the asset that imay be a factor in its valuation.
-   */
-  condition?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.condition
-   */
-  _condition?: fhir.IFhirElement|undefined;
-  /**
-   * Type of Asset availability for use or ownership.
-   */
-  periodType?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Asset relevant contractual time period.
-   */
-  period?: fhir.IPeriod[]|undefined;
-  /**
-   * Time period of asset use.
-   */
-  usePeriod?: fhir.IPeriod[]|undefined;
-  /**
-   * Clause or question text (Prose Object) concerning the asset in a linked form, such as a QuestionnaireResponse used in the formation of the contract.
-   */
-  text?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.text
-   */
-  _text?: fhir.IFhirElement|undefined;
-  /**
-   * Id [identifier??] of the clause or question text about the asset in the referenced form or QuestionnaireResponse.
-   */
-  linkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.linkId
-   */
-  _linkId?: fhir.IFhirElement[]|undefined;
-  /**
-   * Response to assets.
-   */
-  answer?: fhir.IContractTermOfferAnswer[]|undefined;
-  /**
-   * Security labels that protects the asset.
-   */
-  securityLabelNumber?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.securityLabelNumber
-   */
-  _securityLabelNumber?: fhir.IFhirElement[]|undefined;
-  /**
-   * Contract Valued Item List.
-   */
-  valuedItem?: fhir.IContractTermAssetValuedItem[]|undefined;
-}
-
-/**
- * Entity of the action.
- */
-export type IContractTermActionSubject = fhir.IBackboneElement & { 
-  /**
-   * The entity the action is performed or not performed on or for.
-   */
-  reference: fhir.IReference[]|null;
-  /**
-   * Role type of agent assigned roles in this Contract.
-   */
-  role?: fhir.ICodeableConcept|undefined;
-}
-
-/**
- * Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa.
- * For example, in cases of actions initiated by one user for other users, or in events that involve more than one user, hardware device, software, or system process. However, only one user may be the initiator/requestor for the event.
- */
-export type IContractTermAction = fhir.IBackboneElement & { 
-  /**
-   * True if the term prohibits the  action.
-   */
-  doNotPerform?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.doNotPerform
-   */
-  _doNotPerform?: fhir.IFhirElement|undefined;
-  /**
-   * Activity or service obligation to be done or not done, performed or not performed, effectuated or not by this Contract term.
-   */
-  type: fhir.ICodeableConcept|null;
-  /**
-   * Entity of the action.
-   */
-  subject?: fhir.IContractTermActionSubject[]|undefined;
-  /**
-   * Reason or purpose for the action stipulated by this Contract Provision.
-   */
-  intent: fhir.ICodeableConcept|null;
-  /**
-   * Id [identifier??] of the clause or question text related to this action in the referenced form or QuestionnaireResponse.
-   */
-  linkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.linkId
-   */
-  _linkId?: fhir.IFhirElement[]|undefined;
-  /**
-   * Current state of the term action.
-   */
-  status: fhir.ICodeableConcept|null;
-  /**
-   * Encounter or Episode with primary association to specified term activity.
-   */
-  context?: fhir.IReference|undefined;
-  /**
-   * Id [identifier??] of the clause or question text related to the requester of this action in the referenced form or QuestionnaireResponse.
-   */
-  contextLinkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.contextLinkId
-   */
-  _contextLinkId?: fhir.IFhirElement[]|undefined;
-  /**
-   * When action happens.
-   */
-  occurrenceDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.occurrence[x]
-   */
-  _occurrenceDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * When action happens.
-   */
-  occurrencePeriod?: fhir.IPeriod|undefined;
-  /**
-   * When action happens.
-   */
-  occurrenceTiming?: fhir.ITiming|undefined;
-  /**
-   * Who or what initiated the action and has responsibility for its activation.
-   */
-  requester?: fhir.IReference[]|undefined;
-  /**
-   * Id [identifier??] of the clause or question text related to the requester of this action in the referenced form or QuestionnaireResponse.
-   */
-  requesterLinkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.requesterLinkId
-   */
-  _requesterLinkId?: fhir.IFhirElement[]|undefined;
-  /**
-   * The type of individual that is desired or required to perform or not perform the action.
-   */
-  performerType?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The type of role or competency of an individual desired or required to perform or not perform the action.
-   */
-  performerRole?: fhir.ICodeableConcept|undefined;
-  /**
-   * Indicates who or what is being asked to perform (or not perform) the ction.
-   */
-  performer?: fhir.IReference|undefined;
-  /**
-   * Id [identifier??] of the clause or question text related to the reason type or reference of this  action in the referenced form or QuestionnaireResponse.
-   */
-  performerLinkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.performerLinkId
-   */
-  _performerLinkId?: fhir.IFhirElement[]|undefined;
-  /**
-   * Rationale for the action to be performed or not performed. Describes why the action is permitted or prohibited.
-   */
-  reasonCode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Indicates another resource whose existence justifies permitting or not permitting this action.
-   */
-  reasonReference?: fhir.IReference[]|undefined;
-  /**
-   * Describes why the action is to be performed or not performed in textual form.
-   */
-  reason?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.reason
-   */
-  _reason?: fhir.IFhirElement[]|undefined;
-  /**
-   * Id [identifier??] of the clause or question text related to the reason type or reference of this  action in the referenced form or QuestionnaireResponse.
-   */
-  reasonLinkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.reasonLinkId
-   */
-  _reasonLinkId?: fhir.IFhirElement[]|undefined;
-  /**
-   * Comments made about the term action made by the requester, performer, subject or other participants.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-  /**
-   * Security labels that protects the action.
-   */
-  securityLabelNumber?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.securityLabelNumber
-   */
-  _securityLabelNumber?: fhir.IFhirElement[]|undefined;
-}
-
-/**
- * One or more Contract Provisions, which may be related and conveyed as a group, and may contain nested groups.
- */
-export type IContractTerm = fhir.IBackboneElement & { 
-  /**
-   * Unique identifier for this particular Contract Provision.
-   */
-  identifier?: fhir.IIdentifier|undefined;
-  /**
-   * When this Contract Provision was issued.
-   */
-  issued?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.issued
-   */
-  _issued?: fhir.IFhirElement|undefined;
-  /**
-   * Relevant time or time-period when this Contract Provision is applicable.
-   */
-  applies?: fhir.IPeriod|undefined;
-  /**
-   * The entity that the term applies to.
-   */
-  topicCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * The entity that the term applies to.
-   */
-  topicReference?: fhir.IReference|undefined;
-  /**
-   * A legal clause or condition contained within a contract that requires one or both parties to perform a particular requirement by some specified time or prevents one or both parties from performing a particular requirement by some specified time.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * A specialized legal clause or condition based on overarching contract type.
-   */
-  subType?: fhir.ICodeableConcept|undefined;
-  /**
-   * Statement of a provision in a policy or a contract.
-   */
-  text?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.text
-   */
-  _text?: fhir.IFhirElement|undefined;
-  /**
-   * Security labels that protect the handling of information about the term and its elements, which may be specifically identified..
-   */
-  securityLabel?: fhir.IContractTermSecurityLabel[]|undefined;
-  /**
-   * The matter of concern in the context of this provision of the agrement.
-   */
-  offer: fhir.IContractTermOffer|null;
-  /**
-   * Contract Term Asset List.
-   */
-  asset?: fhir.IContractTermAsset[]|undefined;
-  /**
-   * Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa.
-   * For example, in cases of actions initiated by one user for other users, or in events that involve more than one user, hardware device, software, or system process. However, only one user may be the initiator/requestor for the event.
-   */
-  action?: fhir.IContractTermAction[]|undefined;
-  /**
-   * Nested group of Contract Provisions.
-   */
-  group?: fhir.IContractTerm[]|undefined;
-}
-
-/**
- * Signers who are principal parties to the contract are bound by the Contract.activity related to the Contract.topic, and the Contract.term(s), which either extend or restrict the overall action on the topic by, for example, stipulating specific policies or obligations constraining actions, action reason, or agents with respect to some or all of the topic.
- * For example, specifying how policies or obligations shall constrain actions and action reasons permitted or denied on all or a subset of the Contract.topic (e.g., all or a portion of property being transferred by the contract), agents (e.g., who can resell, assign interests, or alter the property being transferred by the contract), actions, and action reasons; or with respect to Contract.terms, stipulating, extending, or limiting the Contract.period of applicability or valuation of items under consideration.
- */
-export type IContractSigner = fhir.IBackboneElement & { 
-  /**
-   * Role of this Contract signer, e.g. notary, grantee.
-   */
-  type: fhir.ICoding|null;
-  /**
-   * Party which is a signator to this Contract.
-   */
-  party: fhir.IReference|null;
-  /**
-   * Legally binding Contract DSIG signature contents in Base64.
-   */
-  signature: fhir.ISignature[]|null;
-}
-
-/**
- * The "patient friendly language" versionof the Contract in whole or in parts. "Patient friendly language" means the representation of the Contract and Contract Provisions in a manner that is readily accessible and understandable by a layperson in accordance with best practices for communication styles that ensure that those agreeing to or signing the Contract understand the roles, actions, obligations, responsibilities, and implication of the agreement.
- */
-export type IContractFriendly = fhir.IBackboneElement & { 
-  /**
-   * Human readable rendering of this Contract in a format and representation intended to enhance comprehension and ensure understandability.
-   */
-  contentAttachment?: fhir.IAttachment|undefined;
-  /**
-   * Human readable rendering of this Contract in a format and representation intended to enhance comprehension and ensure understandability.
-   */
-  contentReference?: fhir.IReference|undefined;
-}
-
-/**
- * List of Legal expressions or representations of this Contract.
- */
-export type IContractLegal = fhir.IBackboneElement & { 
-  /**
-   * Contract legal text in human renderable form.
-   */
-  contentAttachment?: fhir.IAttachment|undefined;
-  /**
-   * Contract legal text in human renderable form.
-   */
-  contentReference?: fhir.IReference|undefined;
-}
-
-/**
- * List of Computable Policy Rule Language Representations of this Contract.
- */
-export type IContractRule = fhir.IBackboneElement & { 
-  /**
-   * Computable Contract conveyed using a policy rule language (e.g. XACML, DKAL, SecPal).
-   */
-  contentAttachment?: fhir.IAttachment|undefined;
-  /**
-   * Computable Contract conveyed using a policy rule language (e.g. XACML, DKAL, SecPal).
-   */
-  contentReference?: fhir.IReference|undefined;
-}
-
-/**
- * Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
- */
-export type IContract = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Contract";
-  /**
-   * Unique identifier for this Contract or a derivative that references a Source Contract.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * Used in a domain that uses a supplied contract repository.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Note -  This is a business versionId, not a resource version id (see discussion http://build.fhir.org/resource.html#versions) 
-   * Comments - There may be different contract instances that have the same identifier but different versions. The version can be appended to the url in a reference to allow a reference to a particular business version of the plan definition with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains codes that mark the contract as not currently valid or active.
-   */
-  status?: ContractStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: Contract.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Legal states of the formation of a legal instrument, which is a formally executed written document that can be formally attributed to its author, records and formally expresses a legally enforceable act, process, or contractual duty, obligation, or right, and therefore evidences that act, process, or agreement.
-   */
-  legalState?: fhir.ICodeableConcept|undefined;
-  /**
-   * The URL pointing to a FHIR-defined Contract Definition that is adhered to in whole or part by this Contract.
-   */
-  instantiatesCanonical?: fhir.IReference|undefined;
-  /**
-   * The URL pointing to an externally maintained definition that is adhered to in whole or in part by this Contract.
-   */
-  instantiatesUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.instantiatesUri
-   */
-  _instantiatesUri?: fhir.IFhirElement|undefined;
-  /**
-   * The minimal content derived from the basal information source at a specific stage in its lifecycle.
-   */
-  contentDerivative?: fhir.ICodeableConcept|undefined;
-  /**
-   * When this  Contract was issued.
-   */
-  issued?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.issued
-   */
-  _issued?: fhir.IFhirElement|undefined;
-  /**
-   * Relevant time or time-period when this Contract is applicable.
-   */
-  applies?: fhir.IPeriod|undefined;
-  /**
-   * Event resulting in discontinuation or termination of this Contract instance by one or more parties to the contract.
-   */
-  expirationType?: fhir.ICodeableConcept|undefined;
-  /**
-   * The Contract.subject is an entity that has some role with respect to the Contract.topic and Contract.topic.term, which is of focal interest to the parties to the contract and likely impacted in a significant way by the Contract.action/Contract.action.reason and the Contract.term.action/Contract.action.reason. 
-   * In many cases, the Contract.subject is a Contract.signer if the subject is an adult; has a legal interest in the contract; and incompetent to participate in the contract agreement.
-   */
-  subject?: fhir.IReference[]|undefined;
-  /**
-   * A formally or informally recognized grouping of people, principals, organizations, or jurisdictions formed for the purpose of achieving some form of collective action such as the promulgation, administration and enforcement of contracts and policies.
-   */
-  authority?: fhir.IReference[]|undefined;
-  /**
-   * Recognized governance framework or system operating with a circumscribed scope in accordance with specified principles, policies, processes or procedures for managing rights, actions, or behaviors of parties or principals relative to resources.
-   */
-  domain?: fhir.IReference[]|undefined;
-  /**
-   * Sites in which the contract is complied with,  exercised, or in force.
-   */
-  site?: fhir.IReference[]|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * A short, descriptive, user-friendly title for this Contract definition, derivative, or instance in any legal state.t giving additional information about its content.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * An explanatory or alternate user-friendly title for this Contract definition, derivative, or instance in any legal state.t giving additional information about its content.
-   */
-  subtitle?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.subtitle
-   */
-  _subtitle?: fhir.IFhirElement|undefined;
-  /**
-   * Alternative representation of the title for this Contract definition, derivative, or instance in any legal state., e.g., a domain specific contract number related to legislation.
-   */
-  alias?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.alias
-   */
-  _alias?: fhir.IFhirElement[]|undefined;
-  /**
-   * The individual or organization that authored the Contract definition, derivative, or instance in any legal state.
-   */
-  author?: fhir.IReference|undefined;
-  /**
-   * A selector of legal concerns for this Contract definition, derivative, or instance in any legal state.
-   */
-  scope?: fhir.ICodeableConcept|undefined;
-  /**
-   * Narrows the range of legal concerns to focus on the achievement of specific contractual objectives.
-   */
-  topicCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * Narrows the range of legal concerns to focus on the achievement of specific contractual objectives.
-   */
-  topicReference?: fhir.IReference|undefined;
-  /**
-   * A high-level category for the legal instrument, whether constructed as a Contract definition, derivative, or instance in any legal state.  Provides additional information about its content within the context of the Contract's scope to distinguish the kinds of systems that would be interested in the contract.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Sub-category for the Contract that distinguishes the kinds of systems that would be interested in the Contract within the context of the Contract's scope.
-   */
-  subType?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Precusory content developed with a focus and intent of supporting the formation a Contract instance, which may be associated with and transformable into a Contract.
-   */
-  contentDefinition?: fhir.IContractContentDefinition|undefined;
-  /**
-   * One or more Contract Provisions, which may be related and conveyed as a group, and may contain nested groups.
-   */
-  term?: fhir.IContractTerm[]|undefined;
-  /**
-   * Information that may be needed by/relevant to the performer in their execution of this term action.
-   */
-  supportingInfo?: fhir.IReference[]|undefined;
-  /**
-   * Links to Provenance records for past versions of this Contract definition, derivative, or instance, which identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the Contract.  The Provence.entity indicates the target that was changed in the update. http://build.fhir.org/provenance-definitions.html#Provenance.entity.
-   */
-  relevantHistory?: fhir.IReference[]|undefined;
-  /**
-   * Signers who are principal parties to the contract are bound by the Contract.activity related to the Contract.topic, and the Contract.term(s), which either extend or restrict the overall action on the topic by, for example, stipulating specific policies or obligations constraining actions, action reason, or agents with respect to some or all of the topic.
-   * For example, specifying how policies or obligations shall constrain actions and action reasons permitted or denied on all or a subset of the Contract.topic (e.g., all or a portion of property being transferred by the contract), agents (e.g., who can resell, assign interests, or alter the property being transferred by the contract), actions, and action reasons; or with respect to Contract.terms, stipulating, extending, or limiting the Contract.period of applicability or valuation of items under consideration.
-   */
-  signer?: fhir.IContractSigner[]|undefined;
-  /**
-   * The "patient friendly language" versionof the Contract in whole or in parts. "Patient friendly language" means the representation of the Contract and Contract Provisions in a manner that is readily accessible and understandable by a layperson in accordance with best practices for communication styles that ensure that those agreeing to or signing the Contract understand the roles, actions, obligations, responsibilities, and implication of the agreement.
-   */
-  friendly?: fhir.IContractFriendly[]|undefined;
-  /**
-   * List of Legal expressions or representations of this Contract.
-   */
-  legal?: fhir.IContractLegal[]|undefined;
-  /**
-   * List of Computable Policy Rule Language Representations of this Contract.
-   */
-  rule?: fhir.IContractRule[]|undefined;
-  /**
-   * Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the "source of truth" and which would be the basis for legal action related to enforcement of this Contract.
-   */
-  legallyBindingAttachment?: fhir.IAttachment|undefined;
-  /**
-   * Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the "source of truth" and which would be the basis for legal action related to enforcement of this Contract.
-   */
-  legallyBindingReference?: fhir.IReference|undefined;
+  copyright?: fhir.FhirMarkdown|string|undefined;
 }
 
 /**
  * Precusory content developed with a focus and intent of supporting the formation a Contract instance, which may be associated with and transformable into a Contract.
  */
-export class ContractContentDefinition extends fhir.BackboneElement implements IContractContentDefinition {
+export class ContractContentDefinition extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractContentDefinition';
   /**
    * Precusory content structure and use, i.e., a boilerplate, template, application for a contract such as an insurance policy or benefits under a program, e.g., workers compensation.
    */
@@ -949,43 +119,28 @@ export class ContractContentDefinition extends fhir.BackboneElement implements I
   /**
    * The date (and optionally time) when the contract was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the contract changes.
    */
-  public publicationDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.contentDefinition.publicationDate
-   */
-  public _publicationDate?: fhir.FhirElement|undefined;
+  public publicationDate?: fhir.FhirDateTime|undefined;
   /**
    * amended | appended | cancelled | disputed | entered-in-error | executable | executed | negotiable | offered | policy | rejected | renewed | revoked | resolved | terminated.
    */
   public publicationStatus: ContractPublicationstatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Contract.contentDefinition.publicationStatus
-   */
-  public _publicationStatus?: fhir.FhirElement|undefined;
-  /**
    * A copyright statement relating to Contract precursor content. Copyright statements are generally legal restrictions on the use and publishing of the Contract precursor content.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.contentDefinition.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * Default constructor for ContractContentDefinition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractContentDefinition> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<ContractContentDefinitionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
-    if (source['subType']) { this.subType = new fhir.CodeableConcept(source.subType!); }
-    if (source['publisher']) { this.publisher = new fhir.Reference(source.publisher!); }
-    if (source['publicationDate']) { this.publicationDate = source.publicationDate; }
-    if (source['_publicationDate']) { this._publicationDate = new fhir.FhirElement(source._publicationDate!); }
+    if (source['subType']) { this.subType = new fhir.CodeableConcept(source.subType); }
+    if (source['publisher']) { this.publisher = new fhir.Reference(source.publisher); }
+    if (source['publicationDate']) { this.publicationDate = new fhir.FhirDateTime({value: source.publicationDate}); }
     if (source['publicationStatus']) { this.publicationStatus = source.publicationStatus; }
     else { this.publicationStatus = null; }
-    if (source['_publicationStatus']) { this._publicationStatus = new fhir.FhirElement(source._publicationStatus!); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
   }
   /**
    * Example-bound Value Set for type
@@ -1008,32 +163,59 @@ export class ContractContentDefinition extends fhir.BackboneElement implements I
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: Contract.contentDefinition.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["subType"]) { results.push(...this.subType.doModelValidation()); }
-    if (this["publisher"]) { results.push(...this.publisher.doModelValidation()); }
-    if (this["_publicationDate"]) { results.push(...this._publicationDate.doModelValidation()); }
-    if (!this["publicationStatus"]) { results.push(["publicationStatus",'Missing required element: Contract.contentDefinition.publicationStatus']); }
-    if (this["_publicationStatus"]) { results.push(...this._publicationStatus.doModelValidation()); }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: Contract.contentDefinition.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["subType"]) { outcome.issue!.push(...this.subType.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["publicationDate"]) { outcome.issue!.push(...this.publicationDate.doModelValidation().issue!); }
+    if (!this['publicationStatus']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property publicationStatus:ContractPublicationstatusValueSetEnum fhir: Contract.contentDefinition.publicationStatus:code", }));
+    }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractTermSecurityLabel type.
+ */
+export interface ContractTermSecurityLabelArgs extends fhir.BackboneElementArgs {
+  /**
+   * Number used to link this term or term element to the applicable Security Label.
+   */
+  number?: fhir.FhirUnsignedInt[]|number[]|undefined;
+  /**
+   * Security label privacy tag that species the level of confidentiality protection required for this term and/or term elements.
+   */
+  classification: fhir.CodingArgs|null;
+  /**
+   * Security label privacy tag that species the applicable privacy and security policies governing this term and/or term elements.
+   */
+  category?: fhir.CodingArgs[]|undefined;
+  /**
+   * Security label privacy tag that species the manner in which term and/or term elements are to be protected.
+   */
+  control?: fhir.CodingArgs[]|undefined;
 }
 
 /**
  * Security labels that protect the handling of information about the term and its elements, which may be specifically identified..
  */
-export class ContractTermSecurityLabel extends fhir.BackboneElement implements IContractTermSecurityLabel {
+export class ContractTermSecurityLabel extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractTermSecurityLabel';
   /**
    * Number used to link this term or term element to the applicable Security Label.
    */
-  public number?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.securityLabel.number
-   */
-  public _number?: fhir.FhirElement[]|undefined;
+  public number?: fhir.FhirUnsignedInt[]|undefined = [];
   /**
    * Security label privacy tag that species the level of confidentiality protection required for this term and/or term elements.
    */
@@ -1041,19 +223,18 @@ export class ContractTermSecurityLabel extends fhir.BackboneElement implements I
   /**
    * Security label privacy tag that species the applicable privacy and security policies governing this term and/or term elements.
    */
-  public category?: fhir.Coding[]|undefined;
+  public category?: fhir.Coding[]|undefined = [];
   /**
    * Security label privacy tag that species the manner in which term and/or term elements are to be protected.
    */
-  public control?: fhir.Coding[]|undefined;
+  public control?: fhir.Coding[]|undefined = [];
   /**
    * Default constructor for ContractTermSecurityLabel - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractTermSecurityLabel> = { }) {
-    super(source);
-    if (source['number']) { this.number = source.number.map((x) => (x)); }
-    if (source['_number']) { this._number = source._number.map((x) => new fhir.FhirElement(x)); }
-    if (source['classification']) { this.classification = new fhir.Coding(source.classification!); }
+  constructor(source:Partial<ContractTermSecurityLabelArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['number']) { this.number = source.number.map((x) => new fhir.FhirUnsignedInt({value: x})); }
+    if (source['classification']) { this.classification = new fhir.Coding(source.classification); }
     else { this.classification = null; }
     if (source['category']) { this.category = source.category.map((x) => new fhir.Coding(x)); }
     if (source['control']) { this.control = source.control.map((x) => new fhir.Coding(x)); }
@@ -1079,25 +260,47 @@ export class ContractTermSecurityLabel extends fhir.BackboneElement implements I
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_number"]) { this._number.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["classification"]) { results.push(["classification",'Missing required element: Contract.term.securityLabel.classification']); }
-    if (this["classification"]) { results.push(...this.classification.doModelValidation()); }
-    if (this["category"]) { this.category.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["control"]) { this.control.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["number"]) { this.number.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['classification']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property classification:fhir.Coding fhir: Contract.term.securityLabel.classification:Coding", }));
+    }
+    if (this["classification"]) { outcome.issue!.push(...this.classification.doModelValidation().issue!); }
+    if (this["category"]) { this.category.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["control"]) { this.control.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractTermOfferParty type.
+ */
+export interface ContractTermOfferPartyArgs extends fhir.BackboneElementArgs {
+  /**
+   * Participant in the offer.
+   */
+  reference: fhir.ReferenceArgs[]|null;
+  /**
+   * How the party participates in the offer.
+   */
+  role: fhir.CodeableConceptArgs|null;
 }
 
 /**
  * Offer Recipient.
  */
-export class ContractTermOfferParty extends fhir.BackboneElement implements IContractTermOfferParty {
+export class ContractTermOfferParty extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractTermOfferParty';
   /**
    * Participant in the offer.
    */
-  public reference: fhir.Reference[]|null;
+  public reference: fhir.Reference[]|null = [];
   /**
    * How the party participates in the offer.
    */
@@ -1105,11 +308,11 @@ export class ContractTermOfferParty extends fhir.BackboneElement implements ICon
   /**
    * Default constructor for ContractTermOfferParty - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractTermOfferParty> = { }) {
-    super(source);
+  constructor(source:Partial<ContractTermOfferPartyArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['reference']) { this.reference = source.reference.map((x) => new fhir.Reference(x)); }
     else { this.reference = null; }
-    if (source['role']) { this.role = new fhir.CodeableConcept(source.role!); }
+    if (source['role']) { this.role = new fhir.CodeableConcept(source.role); }
     else { this.role = null; }
   }
   /**
@@ -1121,159 +324,196 @@ export class ContractTermOfferParty extends fhir.BackboneElement implements ICon
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if ((!this["reference"]) || (this["reference"].length === 0)) { results.push(["reference",'Missing required element: Contract.term.offer.party.reference']); }
-    if (this["reference"]) { this.reference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["role"]) { results.push(["role",'Missing required element: Contract.term.offer.party.role']); }
-    if (this["role"]) { results.push(...this.role.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['reference']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property reference:fhir.Reference[] fhir: Contract.term.offer.party.reference:Reference", }));
+    } else if (!Array.isArray(this.reference)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property reference:fhir.Reference[] fhir: Contract.term.offer.party.reference:Reference", }));
+    } else if (this.reference.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property reference:fhir.Reference[] fhir: Contract.term.offer.party.reference:Reference", }));
+    }
+    if (this["reference"]) { this.reference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['role']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property role:fhir.CodeableConcept fhir: Contract.term.offer.party.role:CodeableConcept", }));
+    }
+    if (this["role"]) { outcome.issue!.push(...this.role.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractTermOfferAnswer type.
+ */
+export interface ContractTermOfferAnswerArgs extends fhir.BackboneElementArgs {
+  /**
+   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
+   */
+  value?: fhir.FhirBoolean|fhir.FhirDecimal|fhir.FhirInteger|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirTime|fhir.FhirString|fhir.FhirUri|fhir.Attachment|fhir.Coding|fhir.Quantity|fhir.Reference|undefined;
+  /**
+   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
+   */
+  valueBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
+   */
+  valueDecimal?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
+   */
+  valueInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
+   */
+  valueDate?: fhir.FhirDate|string|undefined;
+  /**
+   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
+   */
+  valueDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
+   */
+  valueTime?: fhir.FhirTime|string|undefined;
+  /**
+   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
+   */
+  valueString?: fhir.FhirString|string|undefined;
+  /**
+   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
+   */
+  valueUri?: fhir.FhirUri|string|undefined;
+  /**
+   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
+   */
+  valueAttachment?: fhir.AttachmentArgs|undefined;
+  /**
+   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
+   */
+  valueCoding?: fhir.CodingArgs|undefined;
+  /**
+   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
+   */
+  valueQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
+   */
+  valueReference?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * Response to offer text.
  */
-export class ContractTermOfferAnswer extends fhir.BackboneElement implements IContractTermOfferAnswer {
+export class ContractTermOfferAnswer extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractTermOfferAnswer';
   /**
    * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
    */
-  public valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  public _valueBoolean?: fhir.FhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  public valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  public _valueDecimal?: fhir.FhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  public valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  public _valueInteger?: fhir.FhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  public valueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  public _valueDate?: fhir.FhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  public valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  public _valueDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  public valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  public _valueTime?: fhir.FhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  public valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  public _valueString?: fhir.FhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  public valueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.answer.value[x]
-   */
-  public _valueUri?: fhir.FhirElement|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  public valueAttachment?: fhir.Attachment|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  public valueCoding?: fhir.Coding|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  public valueQuantity?: fhir.Quantity|undefined;
-  /**
-   * Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research.
-   */
-  public valueReference?: fhir.Reference|undefined;
+  public value: (fhir.FhirBoolean|fhir.FhirDecimal|fhir.FhirInteger|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirTime|fhir.FhirString|fhir.FhirUri|fhir.Attachment|fhir.Coding|fhir.Quantity|fhir.Reference)|null;
+  readonly __valueIsChoice:true = true;
   /**
    * Default constructor for ContractTermOfferAnswer - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractTermOfferAnswer> = { }) {
-    super(source);
-    if (source['valueBoolean']) { this.valueBoolean = source.valueBoolean; }
-    if (source['_valueBoolean']) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
-    if (source['valueDecimal']) { this.valueDecimal = source.valueDecimal; }
-    if (source['_valueDecimal']) { this._valueDecimal = new fhir.FhirElement(source._valueDecimal!); }
-    if (source['valueInteger']) { this.valueInteger = source.valueInteger; }
-    if (source['_valueInteger']) { this._valueInteger = new fhir.FhirElement(source._valueInteger!); }
-    if (source['valueDate']) { this.valueDate = source.valueDate; }
-    if (source['_valueDate']) { this._valueDate = new fhir.FhirElement(source._valueDate!); }
-    if (source['valueDateTime']) { this.valueDateTime = source.valueDateTime; }
-    if (source['_valueDateTime']) { this._valueDateTime = new fhir.FhirElement(source._valueDateTime!); }
-    if (source['valueTime']) { this.valueTime = source.valueTime; }
-    if (source['_valueTime']) { this._valueTime = new fhir.FhirElement(source._valueTime!); }
-    if (source['valueString']) { this.valueString = source.valueString; }
-    if (source['_valueString']) { this._valueString = new fhir.FhirElement(source._valueString!); }
-    if (source['valueUri']) { this.valueUri = source.valueUri; }
-    if (source['_valueUri']) { this._valueUri = new fhir.FhirElement(source._valueUri!); }
-    if (source['valueAttachment']) { this.valueAttachment = new fhir.Attachment(source.valueAttachment!); }
-    if (source['valueCoding']) { this.valueCoding = new fhir.Coding(source.valueCoding!); }
-    if (source['valueQuantity']) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
-    if (source['valueReference']) { this.valueReference = new fhir.Reference(source.valueReference!); }
+  constructor(source:Partial<ContractTermOfferAnswerArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueBoolean']) { this.value = new fhir.FhirBoolean({value: source.valueBoolean}); }
+    else if (source['valueDecimal']) { this.value = new fhir.FhirDecimal({value: source.valueDecimal}); }
+    else if (source['valueInteger']) { this.value = new fhir.FhirInteger({value: source.valueInteger}); }
+    else if (source['valueDate']) { this.value = new fhir.FhirDate({value: source.valueDate}); }
+    else if (source['valueDateTime']) { this.value = new fhir.FhirDateTime({value: source.valueDateTime}); }
+    else if (source['valueTime']) { this.value = new fhir.FhirTime({value: source.valueTime}); }
+    else if (source['valueString']) { this.value = new fhir.FhirString({value: source.valueString}); }
+    else if (source['valueUri']) { this.value = new fhir.FhirUri({value: source.valueUri}); }
+    else if (source['valueAttachment']) { this.value = new fhir.Attachment(source.valueAttachment); }
+    else if (source['valueCoding']) { this.value = new fhir.Coding(source.valueCoding); }
+    else if (source['valueQuantity']) { this.value = new fhir.Quantity(source.valueQuantity); }
+    else if (source['valueReference']) { this.value = new fhir.Reference(source.valueReference); }
+    else { this.value = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_valueBoolean"]) { results.push(...this._valueBoolean.doModelValidation()); }
-    if (this["_valueDecimal"]) { results.push(...this._valueDecimal.doModelValidation()); }
-    if (this["_valueInteger"]) { results.push(...this._valueInteger.doModelValidation()); }
-    if (this["_valueDate"]) { results.push(...this._valueDate.doModelValidation()); }
-    if (this["_valueDateTime"]) { results.push(...this._valueDateTime.doModelValidation()); }
-    if (this["_valueTime"]) { results.push(...this._valueTime.doModelValidation()); }
-    if (this["_valueString"]) { results.push(...this._valueString.doModelValidation()); }
-    if (this["_valueUri"]) { results.push(...this._valueUri.doModelValidation()); }
-    if (this["valueAttachment"]) { results.push(...this.valueAttachment.doModelValidation()); }
-    if (this["valueCoding"]) { results.push(...this.valueCoding.doModelValidation()); }
-    if (this["valueQuantity"]) { results.push(...this.valueQuantity.doModelValidation()); }
-    if (this["valueReference"]) { results.push(...this.valueReference.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value: fhir: Contract.term.offer.answer.value[x]:", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractTermOffer type.
+ */
+export interface ContractTermOfferArgs extends fhir.BackboneElementArgs {
+  /**
+   * Unique identifier for this particular Contract Provision.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * Offer Recipient.
+   */
+  party?: fhir.ContractTermOfferPartyArgs[]|undefined;
+  /**
+   * The Contract.topic may be an application for or offer of a policy or service (e.g., uri to a consent directive form or a health insurance policy), which becomes the Contract once accepted by both the grantor and grantee. 
+   * The Contract Resource may function simply as the computable representation of the executed contract, which may be the attached to the Contract Resource as the “binding” or as the “friendly” electronic form.  For example, a Contract Resource may be automatically populated with the values expressed in a related QuestionnaireResponse. 
+   * However, the Contract Resource may be considered the legally binding contract if it is the only “executed” form of this contract, and includes the signatures as *The Contract Resource may function as the computable representation of an application or offer in a pre-executed Contract if the grantor has not entered any values.  In this case, it is populated with values in a “legal” form of the application or offer or by the values in an associated Questionnaire.  If the grantor has filled in the legal form or the associated Questionnaire Response, then these values are used to populate a pre-executed Contract Resource.
+   * If the Contract.topic is considered an application or offer, then the policy is often required to be attached as the “legal” basis for the application to ensure “informed consent” to the contract, and that any discrepancy between the application and the policy are interpreted against the policy.  Implementers should check organizational and jurisdictional policies to determine the relationship among multiple representations of a contract pre- and post-execution.
+   */
+  topic?: fhir.ReferenceArgs|undefined;
+  /**
+   * Type of Contract Provision such as specific requirements, purposes for actions, obligations, prohibitions, e.g. life time maximum benefit.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Type of choice made by accepting party with respect to an offer made by an offeror/ grantee.
+   */
+  decision?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * How the decision about a Contract was conveyed.
+   */
+  decisionMode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Response to offer text.
+   */
+  answer?: fhir.ContractTermOfferAnswerArgs[]|undefined;
+  /**
+   * Human readable form of this Contract Offer.
+   */
+  text?: fhir.FhirString|string|undefined;
+  /**
+   * The id of the clause or question text of the offer in the referenced questionnaire/response.
+   */
+  linkId?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * Security labels that protects the offer.
+   */
+  securityLabelNumber?: fhir.FhirUnsignedInt[]|number[]|undefined;
 }
 
 /**
  * The matter of concern in the context of this provision of the agrement.
  */
-export class ContractTermOffer extends fhir.BackboneElement implements IContractTermOffer {
+export class ContractTermOffer extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractTermOffer';
   /**
    * Unique identifier for this particular Contract Provision.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Offer Recipient.
    */
-  public party?: fhir.ContractTermOfferParty[]|undefined;
+  public party?: fhir.ContractTermOfferParty[]|undefined = [];
   /**
    * The Contract.topic may be an application for or offer of a policy or service (e.g., uri to a consent directive form or a health insurance policy), which becomes the Contract once accepted by both the grantor and grantee. 
    * The Contract Resource may function simply as the computable representation of the executed contract, which may be the attached to the Contract Resource as the “binding” or as the “friendly” electronic form.  For example, a Contract Resource may be automatically populated with the values expressed in a related QuestionnaireResponse. 
@@ -1292,53 +532,38 @@ export class ContractTermOffer extends fhir.BackboneElement implements IContract
   /**
    * How the decision about a Contract was conveyed.
    */
-  public decisionMode?: fhir.CodeableConcept[]|undefined;
+  public decisionMode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Response to offer text.
    */
-  public answer?: fhir.ContractTermOfferAnswer[]|undefined;
+  public answer?: fhir.ContractTermOfferAnswer[]|undefined = [];
   /**
    * Human readable form of this Contract Offer.
    */
-  public text?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.text
-   */
-  public _text?: fhir.FhirElement|undefined;
+  public text?: fhir.FhirString|undefined;
   /**
    * The id of the clause or question text of the offer in the referenced questionnaire/response.
    */
-  public linkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.linkId
-   */
-  public _linkId?: fhir.FhirElement[]|undefined;
+  public linkId?: fhir.FhirString[]|undefined = [];
   /**
    * Security labels that protects the offer.
    */
-  public securityLabelNumber?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.offer.securityLabelNumber
-   */
-  public _securityLabelNumber?: fhir.FhirElement[]|undefined;
+  public securityLabelNumber?: fhir.FhirUnsignedInt[]|undefined = [];
   /**
    * Default constructor for ContractTermOffer - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractTermOffer> = { }) {
-    super(source);
+  constructor(source:Partial<ContractTermOfferArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['party']) { this.party = source.party.map((x) => new fhir.ContractTermOfferParty(x)); }
-    if (source['topic']) { this.topic = new fhir.Reference(source.topic!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['decision']) { this.decision = new fhir.CodeableConcept(source.decision!); }
+    if (source['topic']) { this.topic = new fhir.Reference(source.topic); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['decision']) { this.decision = new fhir.CodeableConcept(source.decision); }
     if (source['decisionMode']) { this.decisionMode = source.decisionMode.map((x) => new fhir.CodeableConcept(x)); }
     if (source['answer']) { this.answer = source.answer.map((x) => new fhir.ContractTermOfferAnswer(x)); }
-    if (source['text']) { this.text = source.text; }
-    if (source['_text']) { this._text = new fhir.FhirElement(source._text!); }
-    if (source['linkId']) { this.linkId = source.linkId.map((x) => (x)); }
-    if (source['_linkId']) { this._linkId = source._linkId.map((x) => new fhir.FhirElement(x)); }
-    if (source['securityLabelNumber']) { this.securityLabelNumber = source.securityLabelNumber.map((x) => (x)); }
-    if (source['_securityLabelNumber']) { this._securityLabelNumber = source._securityLabelNumber.map((x) => new fhir.FhirElement(x)); }
+    if (source['text']) { this.text = new fhir.FhirString({value: source.text}); }
+    if (source['linkId']) { this.linkId = source.linkId.map((x) => new fhir.FhirString({value: x})); }
+    if (source['securityLabelNumber']) { this.securityLabelNumber = source.securityLabelNumber.map((x) => new fhir.FhirUnsignedInt({value: x})); }
   }
   /**
    * Example-bound Value Set for type
@@ -1361,26 +586,50 @@ export class ContractTermOffer extends fhir.BackboneElement implements IContract
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["party"]) { this.party.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["topic"]) { results.push(...this.topic.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["decision"]) { results.push(...this.decision.doModelValidation()); }
-    if (this["decisionMode"]) { this.decisionMode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["answer"]) { this.answer.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_text"]) { results.push(...this._text.doModelValidation()); }
-    if (this["_linkId"]) { this._linkId.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_securityLabelNumber"]) { this._securityLabelNumber.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["party"]) { this.party.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["topic"]) { outcome.issue!.push(...this.topic.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["decision"]) { outcome.issue!.push(...this.decision.doModelValidation().issue!); }
+    if (this["decisionMode"]) { this.decisionMode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["answer"]) { this.answer.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["text"]) { outcome.issue!.push(...this.text.doModelValidation().issue!); }
+    if (this["linkId"]) { this.linkId.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["securityLabelNumber"]) { this.securityLabelNumber.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractTermAssetContext type.
+ */
+export interface ContractTermAssetContextArgs extends fhir.BackboneElementArgs {
+  /**
+   * Asset context reference may include the creator, custodian, or owning Person or Organization (e.g., bank, repository),  location held, e.g., building,  jurisdiction.
+   */
+  reference?: fhir.ReferenceArgs|undefined;
+  /**
+   * Coded representation of the context generally or of the Referenced entity, such as the asset holder type or location.
+   */
+  code?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Context description.
+   */
+  text?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Circumstance of the asset.
  */
-export class ContractTermAssetContext extends fhir.BackboneElement implements IContractTermAssetContext {
+export class ContractTermAssetContext extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractTermAssetContext';
   /**
    * Asset context reference may include the creator, custodian, or owning Person or Organization (e.g., bank, repository),  location held, e.g., building,  jurisdiction.
    */
@@ -1388,24 +637,19 @@ export class ContractTermAssetContext extends fhir.BackboneElement implements IC
   /**
    * Coded representation of the context generally or of the Referenced entity, such as the asset holder type or location.
    */
-  public code?: fhir.CodeableConcept[]|undefined;
+  public code?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Context description.
    */
-  public text?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.context.text
-   */
-  public _text?: fhir.FhirElement|undefined;
+  public text?: fhir.FhirString|undefined;
   /**
    * Default constructor for ContractTermAssetContext - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractTermAssetContext> = { }) {
-    super(source);
-    if (source['reference']) { this.reference = new fhir.Reference(source.reference!); }
+  constructor(source:Partial<ContractTermAssetContextArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['reference']) { this.reference = new fhir.Reference(source.reference); }
     if (source['code']) { this.code = source.code.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['text']) { this.text = source.text; }
-    if (source['_text']) { this._text = new fhir.FhirElement(source._text!); }
+    if (source['text']) { this.text = new fhir.FhirString({value: source.text}); }
   }
   /**
    * Example-bound Value Set for code
@@ -1416,27 +660,100 @@ export class ContractTermAssetContext extends fhir.BackboneElement implements IC
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["reference"]) { results.push(...this.reference.doModelValidation()); }
-    if (this["code"]) { this.code.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_text"]) { results.push(...this._text.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["reference"]) { outcome.issue!.push(...this.reference.doModelValidation().issue!); }
+    if (this["code"]) { this.code.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["text"]) { outcome.issue!.push(...this.text.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractTermAssetValuedItem type.
+ */
+export interface ContractTermAssetValuedItemArgs extends fhir.BackboneElementArgs {
+  /**
+   * Specific type of Contract Valued Item that may be priced.
+   */
+  entity?: fhir.CodeableConcept|fhir.Reference|undefined;
+  /**
+   * Specific type of Contract Valued Item that may be priced.
+   */
+  entityCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Specific type of Contract Valued Item that may be priced.
+   */
+  entityReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * Identifies a Contract Valued Item instance.
+   */
+  identifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * Indicates the time during which this Contract ValuedItem information is effective.
+   */
+  effectiveTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Specifies the units by which the Contract Valued Item is measured or counted, and quantifies the countable or measurable Contract Valued Item instances.
+   */
+  quantity?: fhir.QuantityArgs|undefined;
+  /**
+   * A Contract Valued Item unit valuation measure.
+   */
+  unitPrice?: fhir.MoneyArgs|undefined;
+  /**
+   * A real number that represents a multiplier used in determining the overall value of the Contract Valued Item delivered. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
+   */
+  factor?: fhir.FhirDecimal|number|undefined;
+  /**
+   * An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the Contract Valued Item delivered. The concept of Points allows for assignment of point values for a Contract Valued Item, such that a monetary amount can be assigned to each point.
+   */
+  points?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Expresses the product of the Contract Valued Item unitQuantity and the unitPriceAmt. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.
+   */
+  net?: fhir.MoneyArgs|undefined;
+  /**
+   * Terms of valuation.
+   */
+  payment?: fhir.FhirString|string|undefined;
+  /**
+   * When payment is due.
+   */
+  paymentDate?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Who will make payment.
+   */
+  responsible?: fhir.ReferenceArgs|undefined;
+  /**
+   * Who will receive payment.
+   */
+  recipient?: fhir.ReferenceArgs|undefined;
+  /**
+   * Id  of the clause or question text related to the context of this valuedItem in the referenced form or QuestionnaireResponse.
+   */
+  linkId?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * A set of security labels that define which terms are controlled by this condition.
+   */
+  securityLabelNumber?: fhir.FhirUnsignedInt[]|number[]|undefined;
 }
 
 /**
  * Contract Valued Item List.
  */
-export class ContractTermAssetValuedItem extends fhir.BackboneElement implements IContractTermAssetValuedItem {
+export class ContractTermAssetValuedItem extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractTermAssetValuedItem';
   /**
    * Specific type of Contract Valued Item that may be priced.
    */
-  public entityCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * Specific type of Contract Valued Item that may be priced.
-   */
-  public entityReference?: fhir.Reference|undefined;
+  public entity?: (fhir.CodeableConcept|fhir.Reference)|undefined;
+  readonly __entityIsChoice:true = true;
   /**
    * Identifies a Contract Valued Item instance.
    */
@@ -1444,11 +761,7 @@ export class ContractTermAssetValuedItem extends fhir.BackboneElement implements
   /**
    * Indicates the time during which this Contract ValuedItem information is effective.
    */
-  public effectiveTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.effectiveTime
-   */
-  public _effectiveTime?: fhir.FhirElement|undefined;
+  public effectiveTime?: fhir.FhirDateTime|undefined;
   /**
    * Specifies the units by which the Contract Valued Item is measured or counted, and quantifies the countable or measurable Contract Valued Item instances.
    */
@@ -1460,19 +773,11 @@ export class ContractTermAssetValuedItem extends fhir.BackboneElement implements
   /**
    * A real number that represents a multiplier used in determining the overall value of the Contract Valued Item delivered. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.
    */
-  public factor?: number|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.factor
-   */
-  public _factor?: fhir.FhirElement|undefined;
+  public factor?: fhir.FhirDecimal|undefined;
   /**
    * An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the Contract Valued Item delivered. The concept of Points allows for assignment of point values for a Contract Valued Item, such that a monetary amount can be assigned to each point.
    */
-  public points?: number|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.points
-   */
-  public _points?: fhir.FhirElement|undefined;
+  public points?: fhir.FhirDecimal|undefined;
   /**
    * Expresses the product of the Contract Valued Item unitQuantity and the unitPriceAmt. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.
    */
@@ -1480,19 +785,11 @@ export class ContractTermAssetValuedItem extends fhir.BackboneElement implements
   /**
    * Terms of valuation.
    */
-  public payment?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.payment
-   */
-  public _payment?: fhir.FhirElement|undefined;
+  public payment?: fhir.FhirString|undefined;
   /**
    * When payment is due.
    */
-  public paymentDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.paymentDate
-   */
-  public _paymentDate?: fhir.FhirElement|undefined;
+  public paymentDate?: fhir.FhirDateTime|undefined;
   /**
    * Who will make payment.
    */
@@ -1504,75 +801,131 @@ export class ContractTermAssetValuedItem extends fhir.BackboneElement implements
   /**
    * Id  of the clause or question text related to the context of this valuedItem in the referenced form or QuestionnaireResponse.
    */
-  public linkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.linkId
-   */
-  public _linkId?: fhir.FhirElement[]|undefined;
+  public linkId?: fhir.FhirString[]|undefined = [];
   /**
    * A set of security labels that define which terms are controlled by this condition.
    */
-  public securityLabelNumber?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.valuedItem.securityLabelNumber
-   */
-  public _securityLabelNumber?: fhir.FhirElement[]|undefined;
+  public securityLabelNumber?: fhir.FhirUnsignedInt[]|undefined = [];
   /**
    * Default constructor for ContractTermAssetValuedItem - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractTermAssetValuedItem> = { }) {
-    super(source);
-    if (source['entityCodeableConcept']) { this.entityCodeableConcept = new fhir.CodeableConcept(source.entityCodeableConcept!); }
-    if (source['entityReference']) { this.entityReference = new fhir.Reference(source.entityReference!); }
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
-    if (source['effectiveTime']) { this.effectiveTime = source.effectiveTime; }
-    if (source['_effectiveTime']) { this._effectiveTime = new fhir.FhirElement(source._effectiveTime!); }
-    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity!); }
-    if (source['unitPrice']) { this.unitPrice = new fhir.Money(source.unitPrice!); }
-    if (source['factor']) { this.factor = source.factor; }
-    if (source['_factor']) { this._factor = new fhir.FhirElement(source._factor!); }
-    if (source['points']) { this.points = source.points; }
-    if (source['_points']) { this._points = new fhir.FhirElement(source._points!); }
-    if (source['net']) { this.net = new fhir.Money(source.net!); }
-    if (source['payment']) { this.payment = source.payment; }
-    if (source['_payment']) { this._payment = new fhir.FhirElement(source._payment!); }
-    if (source['paymentDate']) { this.paymentDate = source.paymentDate; }
-    if (source['_paymentDate']) { this._paymentDate = new fhir.FhirElement(source._paymentDate!); }
-    if (source['responsible']) { this.responsible = new fhir.Reference(source.responsible!); }
-    if (source['recipient']) { this.recipient = new fhir.Reference(source.recipient!); }
-    if (source['linkId']) { this.linkId = source.linkId.map((x) => (x)); }
-    if (source['_linkId']) { this._linkId = source._linkId.map((x) => new fhir.FhirElement(x)); }
-    if (source['securityLabelNumber']) { this.securityLabelNumber = source.securityLabelNumber.map((x) => (x)); }
-    if (source['_securityLabelNumber']) { this._securityLabelNumber = source._securityLabelNumber.map((x) => new fhir.FhirElement(x)); }
+  constructor(source:Partial<ContractTermAssetValuedItemArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['entity']) { this.entity = source.entity; }
+    else if (source['entityCodeableConcept']) { this.entity = new fhir.CodeableConcept(source.entityCodeableConcept); }
+    else if (source['entityReference']) { this.entity = new fhir.Reference(source.entityReference); }
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
+    if (source['effectiveTime']) { this.effectiveTime = new fhir.FhirDateTime({value: source.effectiveTime}); }
+    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity); }
+    if (source['unitPrice']) { this.unitPrice = new fhir.Money(source.unitPrice); }
+    if (source['factor']) { this.factor = new fhir.FhirDecimal({value: source.factor}); }
+    if (source['points']) { this.points = new fhir.FhirDecimal({value: source.points}); }
+    if (source['net']) { this.net = new fhir.Money(source.net); }
+    if (source['payment']) { this.payment = new fhir.FhirString({value: source.payment}); }
+    if (source['paymentDate']) { this.paymentDate = new fhir.FhirDateTime({value: source.paymentDate}); }
+    if (source['responsible']) { this.responsible = new fhir.Reference(source.responsible); }
+    if (source['recipient']) { this.recipient = new fhir.Reference(source.recipient); }
+    if (source['linkId']) { this.linkId = source.linkId.map((x) => new fhir.FhirString({value: x})); }
+    if (source['securityLabelNumber']) { this.securityLabelNumber = source.securityLabelNumber.map((x) => new fhir.FhirUnsignedInt({value: x})); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["entityCodeableConcept"]) { results.push(...this.entityCodeableConcept.doModelValidation()); }
-    if (this["entityReference"]) { results.push(...this.entityReference.doModelValidation()); }
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (this["_effectiveTime"]) { results.push(...this._effectiveTime.doModelValidation()); }
-    if (this["quantity"]) { results.push(...this.quantity.doModelValidation()); }
-    if (this["unitPrice"]) { results.push(...this.unitPrice.doModelValidation()); }
-    if (this["_factor"]) { results.push(...this._factor.doModelValidation()); }
-    if (this["_points"]) { results.push(...this._points.doModelValidation()); }
-    if (this["net"]) { results.push(...this.net.doModelValidation()); }
-    if (this["_payment"]) { results.push(...this._payment.doModelValidation()); }
-    if (this["_paymentDate"]) { results.push(...this._paymentDate.doModelValidation()); }
-    if (this["responsible"]) { results.push(...this.responsible.doModelValidation()); }
-    if (this["recipient"]) { results.push(...this.recipient.doModelValidation()); }
-    if (this["_linkId"]) { this._linkId.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_securityLabelNumber"]) { this._securityLabelNumber.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (this["effectiveTime"]) { outcome.issue!.push(...this.effectiveTime.doModelValidation().issue!); }
+    if (this["quantity"]) { outcome.issue!.push(...this.quantity.doModelValidation().issue!); }
+    if (this["unitPrice"]) { outcome.issue!.push(...this.unitPrice.doModelValidation().issue!); }
+    if (this["factor"]) { outcome.issue!.push(...this.factor.doModelValidation().issue!); }
+    if (this["points"]) { outcome.issue!.push(...this.points.doModelValidation().issue!); }
+    if (this["net"]) { outcome.issue!.push(...this.net.doModelValidation().issue!); }
+    if (this["payment"]) { outcome.issue!.push(...this.payment.doModelValidation().issue!); }
+    if (this["paymentDate"]) { outcome.issue!.push(...this.paymentDate.doModelValidation().issue!); }
+    if (this["responsible"]) { outcome.issue!.push(...this.responsible.doModelValidation().issue!); }
+    if (this["recipient"]) { outcome.issue!.push(...this.recipient.doModelValidation().issue!); }
+    if (this["linkId"]) { this.linkId.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["securityLabelNumber"]) { this.securityLabelNumber.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractTermAsset type.
+ */
+export interface ContractTermAssetArgs extends fhir.BackboneElementArgs {
+  /**
+   * Differentiates the kind of the asset .
+   */
+  scope?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Target entity type about which the term may be concerned.
+   */
+  type?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Associated entities.
+   */
+  typeReference?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * May be a subtype or part of an offered asset.
+   */
+  subtype?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Specifies the applicability of the term to an asset resource instance, and instances it refers to orinstances that refer to it, and/or are owned by the offeree.
+   */
+  relationship?: fhir.CodingArgs|undefined;
+  /**
+   * Circumstance of the asset.
+   */
+  context?: fhir.ContractTermAssetContextArgs[]|undefined;
+  /**
+   * Description of the quality and completeness of the asset that imay be a factor in its valuation.
+   */
+  condition?: fhir.FhirString|string|undefined;
+  /**
+   * Type of Asset availability for use or ownership.
+   */
+  periodType?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Asset relevant contractual time period.
+   */
+  period?: fhir.PeriodArgs[]|undefined;
+  /**
+   * Time period of asset use.
+   */
+  usePeriod?: fhir.PeriodArgs[]|undefined;
+  /**
+   * Clause or question text (Prose Object) concerning the asset in a linked form, such as a QuestionnaireResponse used in the formation of the contract.
+   */
+  text?: fhir.FhirString|string|undefined;
+  /**
+   * Id [identifier??] of the clause or question text about the asset in the referenced form or QuestionnaireResponse.
+   */
+  linkId?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * Response to assets.
+   */
+  answer?: fhir.ContractTermOfferAnswerArgs[]|undefined;
+  /**
+   * Security labels that protects the asset.
+   */
+  securityLabelNumber?: fhir.FhirUnsignedInt[]|number[]|undefined;
+  /**
+   * Contract Valued Item List.
+   */
+  valuedItem?: fhir.ContractTermAssetValuedItemArgs[]|undefined;
 }
 
 /**
  * Contract Term Asset List.
  */
-export class ContractTermAsset extends fhir.BackboneElement implements IContractTermAsset {
+export class ContractTermAsset extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractTermAsset';
   /**
    * Differentiates the kind of the asset .
    */
@@ -1580,15 +933,15 @@ export class ContractTermAsset extends fhir.BackboneElement implements IContract
   /**
    * Target entity type about which the term may be concerned.
    */
-  public type?: fhir.CodeableConcept[]|undefined;
+  public type?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Associated entities.
    */
-  public typeReference?: fhir.Reference[]|undefined;
+  public typeReference?: fhir.Reference[]|undefined = [];
   /**
    * May be a subtype or part of an offered asset.
    */
-  public subtype?: fhir.CodeableConcept[]|undefined;
+  public subtype?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Specifies the applicability of the term to an asset resource instance, and instances it refers to orinstances that refer to it, and/or are owned by the offeree.
    */
@@ -1596,82 +949,62 @@ export class ContractTermAsset extends fhir.BackboneElement implements IContract
   /**
    * Circumstance of the asset.
    */
-  public context?: fhir.ContractTermAssetContext[]|undefined;
+  public context?: fhir.ContractTermAssetContext[]|undefined = [];
   /**
    * Description of the quality and completeness of the asset that imay be a factor in its valuation.
    */
-  public condition?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.condition
-   */
-  public _condition?: fhir.FhirElement|undefined;
+  public condition?: fhir.FhirString|undefined;
   /**
    * Type of Asset availability for use or ownership.
    */
-  public periodType?: fhir.CodeableConcept[]|undefined;
+  public periodType?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Asset relevant contractual time period.
    */
-  public period?: fhir.Period[]|undefined;
+  public period?: fhir.Period[]|undefined = [];
   /**
    * Time period of asset use.
    */
-  public usePeriod?: fhir.Period[]|undefined;
+  public usePeriod?: fhir.Period[]|undefined = [];
   /**
    * Clause or question text (Prose Object) concerning the asset in a linked form, such as a QuestionnaireResponse used in the formation of the contract.
    */
-  public text?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.text
-   */
-  public _text?: fhir.FhirElement|undefined;
+  public text?: fhir.FhirString|undefined;
   /**
    * Id [identifier??] of the clause or question text about the asset in the referenced form or QuestionnaireResponse.
    */
-  public linkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.linkId
-   */
-  public _linkId?: fhir.FhirElement[]|undefined;
+  public linkId?: fhir.FhirString[]|undefined = [];
   /**
    * Response to assets.
    */
-  public answer?: fhir.ContractTermOfferAnswer[]|undefined;
+  public answer?: fhir.ContractTermOfferAnswer[]|undefined = [];
   /**
    * Security labels that protects the asset.
    */
-  public securityLabelNumber?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.asset.securityLabelNumber
-   */
-  public _securityLabelNumber?: fhir.FhirElement[]|undefined;
+  public securityLabelNumber?: fhir.FhirUnsignedInt[]|undefined = [];
   /**
    * Contract Valued Item List.
    */
-  public valuedItem?: fhir.ContractTermAssetValuedItem[]|undefined;
+  public valuedItem?: fhir.ContractTermAssetValuedItem[]|undefined = [];
   /**
    * Default constructor for ContractTermAsset - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractTermAsset> = { }) {
-    super(source);
-    if (source['scope']) { this.scope = new fhir.CodeableConcept(source.scope!); }
+  constructor(source:Partial<ContractTermAssetArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['scope']) { this.scope = new fhir.CodeableConcept(source.scope); }
     if (source['type']) { this.type = source.type.map((x) => new fhir.CodeableConcept(x)); }
     if (source['typeReference']) { this.typeReference = source.typeReference.map((x) => new fhir.Reference(x)); }
     if (source['subtype']) { this.subtype = source.subtype.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['relationship']) { this.relationship = new fhir.Coding(source.relationship!); }
+    if (source['relationship']) { this.relationship = new fhir.Coding(source.relationship); }
     if (source['context']) { this.context = source.context.map((x) => new fhir.ContractTermAssetContext(x)); }
-    if (source['condition']) { this.condition = source.condition; }
-    if (source['_condition']) { this._condition = new fhir.FhirElement(source._condition!); }
+    if (source['condition']) { this.condition = new fhir.FhirString({value: source.condition}); }
     if (source['periodType']) { this.periodType = source.periodType.map((x) => new fhir.CodeableConcept(x)); }
     if (source['period']) { this.period = source.period.map((x) => new fhir.Period(x)); }
     if (source['usePeriod']) { this.usePeriod = source.usePeriod.map((x) => new fhir.Period(x)); }
-    if (source['text']) { this.text = source.text; }
-    if (source['_text']) { this._text = new fhir.FhirElement(source._text!); }
-    if (source['linkId']) { this.linkId = source.linkId.map((x) => (x)); }
-    if (source['_linkId']) { this._linkId = source._linkId.map((x) => new fhir.FhirElement(x)); }
+    if (source['text']) { this.text = new fhir.FhirString({value: source.text}); }
+    if (source['linkId']) { this.linkId = source.linkId.map((x) => new fhir.FhirString({value: x})); }
     if (source['answer']) { this.answer = source.answer.map((x) => new fhir.ContractTermOfferAnswer(x)); }
-    if (source['securityLabelNumber']) { this.securityLabelNumber = source.securityLabelNumber.map((x) => (x)); }
-    if (source['_securityLabelNumber']) { this._securityLabelNumber = source._securityLabelNumber.map((x) => new fhir.FhirElement(x)); }
+    if (source['securityLabelNumber']) { this.securityLabelNumber = source.securityLabelNumber.map((x) => new fhir.FhirUnsignedInt({value: x})); }
     if (source['valuedItem']) { this.valuedItem = source.valuedItem.map((x) => new fhir.ContractTermAssetValuedItem(x)); }
   }
   /**
@@ -1707,35 +1040,55 @@ export class ContractTermAsset extends fhir.BackboneElement implements IContract
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["scope"]) { results.push(...this.scope.doModelValidation()); }
-    if (this["type"]) { this.type.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["typeReference"]) { this.typeReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["subtype"]) { this.subtype.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["relationship"]) { results.push(...this.relationship.doModelValidation()); }
-    if (this["context"]) { this.context.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_condition"]) { results.push(...this._condition.doModelValidation()); }
-    if (this["periodType"]) { this.periodType.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["period"]) { this.period.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["usePeriod"]) { this.usePeriod.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_text"]) { results.push(...this._text.doModelValidation()); }
-    if (this["_linkId"]) { this._linkId.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["answer"]) { this.answer.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_securityLabelNumber"]) { this._securityLabelNumber.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["valuedItem"]) { this.valuedItem.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["scope"]) { outcome.issue!.push(...this.scope.doModelValidation().issue!); }
+    if (this["type"]) { this.type.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["typeReference"]) { this.typeReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["subtype"]) { this.subtype.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["relationship"]) { outcome.issue!.push(...this.relationship.doModelValidation().issue!); }
+    if (this["context"]) { this.context.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["condition"]) { outcome.issue!.push(...this.condition.doModelValidation().issue!); }
+    if (this["periodType"]) { this.periodType.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["period"]) { this.period.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["usePeriod"]) { this.usePeriod.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["text"]) { outcome.issue!.push(...this.text.doModelValidation().issue!); }
+    if (this["linkId"]) { this.linkId.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["answer"]) { this.answer.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["securityLabelNumber"]) { this.securityLabelNumber.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["valuedItem"]) { this.valuedItem.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractTermActionSubject type.
+ */
+export interface ContractTermActionSubjectArgs extends fhir.BackboneElementArgs {
+  /**
+   * The entity the action is performed or not performed on or for.
+   */
+  reference: fhir.ReferenceArgs[]|null;
+  /**
+   * Role type of agent assigned roles in this Contract.
+   */
+  role?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * Entity of the action.
  */
-export class ContractTermActionSubject extends fhir.BackboneElement implements IContractTermActionSubject {
+export class ContractTermActionSubject extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractTermActionSubject';
   /**
    * The entity the action is performed or not performed on or for.
    */
-  public reference: fhir.Reference[]|null;
+  public reference: fhir.Reference[]|null = [];
   /**
    * Role type of agent assigned roles in this Contract.
    */
@@ -1743,11 +1096,11 @@ export class ContractTermActionSubject extends fhir.BackboneElement implements I
   /**
    * Default constructor for ContractTermActionSubject - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractTermActionSubject> = { }) {
-    super(source);
+  constructor(source:Partial<ContractTermActionSubjectArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['reference']) { this.reference = source.reference.map((x) => new fhir.Reference(x)); }
     else { this.reference = null; }
-    if (source['role']) { this.role = new fhir.CodeableConcept(source.role!); }
+    if (source['role']) { this.role = new fhir.CodeableConcept(source.role); }
   }
   /**
    * Example-bound Value Set for role
@@ -1758,28 +1111,138 @@ export class ContractTermActionSubject extends fhir.BackboneElement implements I
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if ((!this["reference"]) || (this["reference"].length === 0)) { results.push(["reference",'Missing required element: Contract.term.action.subject.reference']); }
-    if (this["reference"]) { this.reference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["role"]) { results.push(...this.role.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['reference']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property reference:fhir.Reference[] fhir: Contract.term.action.subject.reference:Reference", }));
+    } else if (!Array.isArray(this.reference)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property reference:fhir.Reference[] fhir: Contract.term.action.subject.reference:Reference", }));
+    } else if (this.reference.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property reference:fhir.Reference[] fhir: Contract.term.action.subject.reference:Reference", }));
+    }
+    if (this["reference"]) { this.reference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["role"]) { outcome.issue!.push(...this.role.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractTermAction type.
+ */
+export interface ContractTermActionArgs extends fhir.BackboneElementArgs {
+  /**
+   * True if the term prohibits the  action.
+   */
+  doNotPerform?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Activity or service obligation to be done or not done, performed or not performed, effectuated or not by this Contract term.
+   */
+  type: fhir.CodeableConceptArgs|null;
+  /**
+   * Entity of the action.
+   */
+  subject?: fhir.ContractTermActionSubjectArgs[]|undefined;
+  /**
+   * Reason or purpose for the action stipulated by this Contract Provision.
+   */
+  intent: fhir.CodeableConceptArgs|null;
+  /**
+   * Id [identifier??] of the clause or question text related to this action in the referenced form or QuestionnaireResponse.
+   */
+  linkId?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * Current state of the term action.
+   */
+  status: fhir.CodeableConceptArgs|null;
+  /**
+   * Encounter or Episode with primary association to specified term activity.
+   */
+  context?: fhir.ReferenceArgs|undefined;
+  /**
+   * Id [identifier??] of the clause or question text related to the requester of this action in the referenced form or QuestionnaireResponse.
+   */
+  contextLinkId?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * When action happens.
+   */
+  occurrence?: fhir.FhirDateTime|fhir.Period|fhir.Timing|undefined;
+  /**
+   * When action happens.
+   */
+  occurrenceDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * When action happens.
+   */
+  occurrencePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * When action happens.
+   */
+  occurrenceTiming?: fhir.TimingArgs|undefined;
+  /**
+   * Who or what initiated the action and has responsibility for its activation.
+   */
+  requester?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Id [identifier??] of the clause or question text related to the requester of this action in the referenced form or QuestionnaireResponse.
+   */
+  requesterLinkId?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * The type of individual that is desired or required to perform or not perform the action.
+   */
+  performerType?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The type of role or competency of an individual desired or required to perform or not perform the action.
+   */
+  performerRole?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Indicates who or what is being asked to perform (or not perform) the ction.
+   */
+  performer?: fhir.ReferenceArgs|undefined;
+  /**
+   * Id [identifier??] of the clause or question text related to the reason type or reference of this  action in the referenced form or QuestionnaireResponse.
+   */
+  performerLinkId?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * Rationale for the action to be performed or not performed. Describes why the action is permitted or prohibited.
+   */
+  reasonCode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Indicates another resource whose existence justifies permitting or not permitting this action.
+   */
+  reasonReference?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Describes why the action is to be performed or not performed in textual form.
+   */
+  reason?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * Id [identifier??] of the clause or question text related to the reason type or reference of this  action in the referenced form or QuestionnaireResponse.
+   */
+  reasonLinkId?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * Comments made about the term action made by the requester, performer, subject or other participants.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
+  /**
+   * Security labels that protects the action.
+   */
+  securityLabelNumber?: fhir.FhirUnsignedInt[]|number[]|undefined;
 }
 
 /**
  * Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa.
  * For example, in cases of actions initiated by one user for other users, or in events that involve more than one user, hardware device, software, or system process. However, only one user may be the initiator/requestor for the event.
  */
-export class ContractTermAction extends fhir.BackboneElement implements IContractTermAction {
+export class ContractTermAction extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractTermAction';
   /**
    * True if the term prohibits the  action.
    */
-  public doNotPerform?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.doNotPerform
-   */
-  public _doNotPerform?: fhir.FhirElement|undefined;
+  public doNotPerform?: fhir.FhirBoolean|undefined;
   /**
    * Activity or service obligation to be done or not done, performed or not performed, effectuated or not by this Contract term.
    */
@@ -1787,7 +1250,7 @@ export class ContractTermAction extends fhir.BackboneElement implements IContrac
   /**
    * Entity of the action.
    */
-  public subject?: fhir.ContractTermActionSubject[]|undefined;
+  public subject?: fhir.ContractTermActionSubject[]|undefined = [];
   /**
    * Reason or purpose for the action stipulated by this Contract Provision.
    */
@@ -1795,11 +1258,7 @@ export class ContractTermAction extends fhir.BackboneElement implements IContrac
   /**
    * Id [identifier??] of the clause or question text related to this action in the referenced form or QuestionnaireResponse.
    */
-  public linkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.linkId
-   */
-  public _linkId?: fhir.FhirElement[]|undefined;
+  public linkId?: fhir.FhirString[]|undefined = [];
   /**
    * Current state of the term action.
    */
@@ -1811,43 +1270,24 @@ export class ContractTermAction extends fhir.BackboneElement implements IContrac
   /**
    * Id [identifier??] of the clause or question text related to the requester of this action in the referenced form or QuestionnaireResponse.
    */
-  public contextLinkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.contextLinkId
-   */
-  public _contextLinkId?: fhir.FhirElement[]|undefined;
+  public contextLinkId?: fhir.FhirString[]|undefined = [];
   /**
    * When action happens.
    */
-  public occurrenceDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.occurrence[x]
-   */
-  public _occurrenceDateTime?: fhir.FhirElement|undefined;
-  /**
-   * When action happens.
-   */
-  public occurrencePeriod?: fhir.Period|undefined;
-  /**
-   * When action happens.
-   */
-  public occurrenceTiming?: fhir.Timing|undefined;
+  public occurrence?: (fhir.FhirDateTime|fhir.Period|fhir.Timing)|undefined;
+  readonly __occurrenceIsChoice:true = true;
   /**
    * Who or what initiated the action and has responsibility for its activation.
    */
-  public requester?: fhir.Reference[]|undefined;
+  public requester?: fhir.Reference[]|undefined = [];
   /**
    * Id [identifier??] of the clause or question text related to the requester of this action in the referenced form or QuestionnaireResponse.
    */
-  public requesterLinkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.requesterLinkId
-   */
-  public _requesterLinkId?: fhir.FhirElement[]|undefined;
+  public requesterLinkId?: fhir.FhirString[]|undefined = [];
   /**
    * The type of individual that is desired or required to perform or not perform the action.
    */
-  public performerType?: fhir.CodeableConcept[]|undefined;
+  public performerType?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The type of role or competency of an individual desired or required to perform or not perform the action.
    */
@@ -1859,87 +1299,63 @@ export class ContractTermAction extends fhir.BackboneElement implements IContrac
   /**
    * Id [identifier??] of the clause or question text related to the reason type or reference of this  action in the referenced form or QuestionnaireResponse.
    */
-  public performerLinkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.performerLinkId
-   */
-  public _performerLinkId?: fhir.FhirElement[]|undefined;
+  public performerLinkId?: fhir.FhirString[]|undefined = [];
   /**
    * Rationale for the action to be performed or not performed. Describes why the action is permitted or prohibited.
    */
-  public reasonCode?: fhir.CodeableConcept[]|undefined;
+  public reasonCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Indicates another resource whose existence justifies permitting or not permitting this action.
    */
-  public reasonReference?: fhir.Reference[]|undefined;
+  public reasonReference?: fhir.Reference[]|undefined = [];
   /**
    * Describes why the action is to be performed or not performed in textual form.
    */
-  public reason?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.reason
-   */
-  public _reason?: fhir.FhirElement[]|undefined;
+  public reason?: fhir.FhirString[]|undefined = [];
   /**
    * Id [identifier??] of the clause or question text related to the reason type or reference of this  action in the referenced form or QuestionnaireResponse.
    */
-  public reasonLinkId?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.reasonLinkId
-   */
-  public _reasonLinkId?: fhir.FhirElement[]|undefined;
+  public reasonLinkId?: fhir.FhirString[]|undefined = [];
   /**
    * Comments made about the term action made by the requester, performer, subject or other participants.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Security labels that protects the action.
    */
-  public securityLabelNumber?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.action.securityLabelNumber
-   */
-  public _securityLabelNumber?: fhir.FhirElement[]|undefined;
+  public securityLabelNumber?: fhir.FhirUnsignedInt[]|undefined = [];
   /**
    * Default constructor for ContractTermAction - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractTermAction> = { }) {
-    super(source);
-    if (source['doNotPerform']) { this.doNotPerform = source.doNotPerform; }
-    if (source['_doNotPerform']) { this._doNotPerform = new fhir.FhirElement(source._doNotPerform!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<ContractTermActionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['doNotPerform']) { this.doNotPerform = new fhir.FhirBoolean({value: source.doNotPerform}); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
     if (source['subject']) { this.subject = source.subject.map((x) => new fhir.ContractTermActionSubject(x)); }
-    if (source['intent']) { this.intent = new fhir.CodeableConcept(source.intent!); }
+    if (source['intent']) { this.intent = new fhir.CodeableConcept(source.intent); }
     else { this.intent = null; }
-    if (source['linkId']) { this.linkId = source.linkId.map((x) => (x)); }
-    if (source['_linkId']) { this._linkId = source._linkId.map((x) => new fhir.FhirElement(x)); }
-    if (source['status']) { this.status = new fhir.CodeableConcept(source.status!); }
+    if (source['linkId']) { this.linkId = source.linkId.map((x) => new fhir.FhirString({value: x})); }
+    if (source['status']) { this.status = new fhir.CodeableConcept(source.status); }
     else { this.status = null; }
-    if (source['context']) { this.context = new fhir.Reference(source.context!); }
-    if (source['contextLinkId']) { this.contextLinkId = source.contextLinkId.map((x) => (x)); }
-    if (source['_contextLinkId']) { this._contextLinkId = source._contextLinkId.map((x) => new fhir.FhirElement(x)); }
-    if (source['occurrenceDateTime']) { this.occurrenceDateTime = source.occurrenceDateTime; }
-    if (source['_occurrenceDateTime']) { this._occurrenceDateTime = new fhir.FhirElement(source._occurrenceDateTime!); }
-    if (source['occurrencePeriod']) { this.occurrencePeriod = new fhir.Period(source.occurrencePeriod!); }
-    if (source['occurrenceTiming']) { this.occurrenceTiming = new fhir.Timing(source.occurrenceTiming!); }
+    if (source['context']) { this.context = new fhir.Reference(source.context); }
+    if (source['contextLinkId']) { this.contextLinkId = source.contextLinkId.map((x) => new fhir.FhirString({value: x})); }
+    if (source['occurrence']) { this.occurrence = source.occurrence; }
+    else if (source['occurrenceDateTime']) { this.occurrence = new fhir.FhirDateTime({value: source.occurrenceDateTime}); }
+    else if (source['occurrencePeriod']) { this.occurrence = new fhir.Period(source.occurrencePeriod); }
+    else if (source['occurrenceTiming']) { this.occurrence = new fhir.Timing(source.occurrenceTiming); }
     if (source['requester']) { this.requester = source.requester.map((x) => new fhir.Reference(x)); }
-    if (source['requesterLinkId']) { this.requesterLinkId = source.requesterLinkId.map((x) => (x)); }
-    if (source['_requesterLinkId']) { this._requesterLinkId = source._requesterLinkId.map((x) => new fhir.FhirElement(x)); }
+    if (source['requesterLinkId']) { this.requesterLinkId = source.requesterLinkId.map((x) => new fhir.FhirString({value: x})); }
     if (source['performerType']) { this.performerType = source.performerType.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['performerRole']) { this.performerRole = new fhir.CodeableConcept(source.performerRole!); }
-    if (source['performer']) { this.performer = new fhir.Reference(source.performer!); }
-    if (source['performerLinkId']) { this.performerLinkId = source.performerLinkId.map((x) => (x)); }
-    if (source['_performerLinkId']) { this._performerLinkId = source._performerLinkId.map((x) => new fhir.FhirElement(x)); }
+    if (source['performerRole']) { this.performerRole = new fhir.CodeableConcept(source.performerRole); }
+    if (source['performer']) { this.performer = new fhir.Reference(source.performer); }
+    if (source['performerLinkId']) { this.performerLinkId = source.performerLinkId.map((x) => new fhir.FhirString({value: x})); }
     if (source['reasonCode']) { this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x)); }
     if (source['reasonReference']) { this.reasonReference = source.reasonReference.map((x) => new fhir.Reference(x)); }
-    if (source['reason']) { this.reason = source.reason.map((x) => (x)); }
-    if (source['_reason']) { this._reason = source._reason.map((x) => new fhir.FhirElement(x)); }
-    if (source['reasonLinkId']) { this.reasonLinkId = source.reasonLinkId.map((x) => (x)); }
-    if (source['_reasonLinkId']) { this._reasonLinkId = source._reasonLinkId.map((x) => new fhir.FhirElement(x)); }
+    if (source['reason']) { this.reason = source.reason.map((x) => new fhir.FhirString({value: x})); }
+    if (source['reasonLinkId']) { this.reasonLinkId = source.reasonLinkId.map((x) => new fhir.FhirString({value: x})); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
-    if (source['securityLabelNumber']) { this.securityLabelNumber = source.securityLabelNumber.map((x) => (x)); }
-    if (source['_securityLabelNumber']) { this._securityLabelNumber = source._securityLabelNumber.map((x) => new fhir.FhirElement(x)); }
+    if (source['securityLabelNumber']) { this.securityLabelNumber = source.securityLabelNumber.map((x) => new fhir.FhirUnsignedInt({value: x})); }
   }
   /**
    * Example-bound Value Set for type
@@ -1980,42 +1396,114 @@ export class ContractTermAction extends fhir.BackboneElement implements IContrac
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_doNotPerform"]) { results.push(...this._doNotPerform.doModelValidation()); }
-    if (!this["type"]) { results.push(["type",'Missing required element: Contract.term.action.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["subject"]) { this.subject.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["intent"]) { results.push(["intent",'Missing required element: Contract.term.action.intent']); }
-    if (this["intent"]) { results.push(...this.intent.doModelValidation()); }
-    if (this["_linkId"]) { this._linkId.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: Contract.term.action.status']); }
-    if (this["status"]) { results.push(...this.status.doModelValidation()); }
-    if (this["context"]) { results.push(...this.context.doModelValidation()); }
-    if (this["_contextLinkId"]) { this._contextLinkId.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_occurrenceDateTime"]) { results.push(...this._occurrenceDateTime.doModelValidation()); }
-    if (this["occurrencePeriod"]) { results.push(...this.occurrencePeriod.doModelValidation()); }
-    if (this["occurrenceTiming"]) { results.push(...this.occurrenceTiming.doModelValidation()); }
-    if (this["requester"]) { this.requester.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_requesterLinkId"]) { this._requesterLinkId.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["performerType"]) { this.performerType.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["performerRole"]) { results.push(...this.performerRole.doModelValidation()); }
-    if (this["performer"]) { results.push(...this.performer.doModelValidation()); }
-    if (this["_performerLinkId"]) { this._performerLinkId.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_reason"]) { this._reason.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_reasonLinkId"]) { this._reasonLinkId.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_securityLabelNumber"]) { this._securityLabelNumber.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["doNotPerform"]) { outcome.issue!.push(...this.doNotPerform.doModelValidation().issue!); }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: Contract.term.action.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["subject"]) { this.subject.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['intent']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property intent:fhir.CodeableConcept fhir: Contract.term.action.intent:CodeableConcept", }));
+    }
+    if (this["intent"]) { outcome.issue!.push(...this.intent.doModelValidation().issue!); }
+    if (this["linkId"]) { this.linkId.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:fhir.CodeableConcept fhir: Contract.term.action.status:CodeableConcept", }));
+    }
+    if (this["status"]) { outcome.issue!.push(...this.status.doModelValidation().issue!); }
+    if (this["context"]) { outcome.issue!.push(...this.context.doModelValidation().issue!); }
+    if (this["contextLinkId"]) { this.contextLinkId.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["requester"]) { this.requester.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["requesterLinkId"]) { this.requesterLinkId.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["performerType"]) { this.performerType.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["performerRole"]) { outcome.issue!.push(...this.performerRole.doModelValidation().issue!); }
+    if (this["performer"]) { outcome.issue!.push(...this.performer.doModelValidation().issue!); }
+    if (this["performerLinkId"]) { this.performerLinkId.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reason"]) { this.reason.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonLinkId"]) { this.reasonLinkId.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["securityLabelNumber"]) { this.securityLabelNumber.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractTerm type.
+ */
+export interface ContractTermArgs extends fhir.BackboneElementArgs {
+  /**
+   * Unique identifier for this particular Contract Provision.
+   */
+  identifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * When this Contract Provision was issued.
+   */
+  issued?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Relevant time or time-period when this Contract Provision is applicable.
+   */
+  applies?: fhir.PeriodArgs|undefined;
+  /**
+   * The entity that the term applies to.
+   */
+  topic?: fhir.CodeableConcept|fhir.Reference|undefined;
+  /**
+   * The entity that the term applies to.
+   */
+  topicCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The entity that the term applies to.
+   */
+  topicReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * A legal clause or condition contained within a contract that requires one or both parties to perform a particular requirement by some specified time or prevents one or both parties from performing a particular requirement by some specified time.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * A specialized legal clause or condition based on overarching contract type.
+   */
+  subType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Statement of a provision in a policy or a contract.
+   */
+  text?: fhir.FhirString|string|undefined;
+  /**
+   * Security labels that protect the handling of information about the term and its elements, which may be specifically identified..
+   */
+  securityLabel?: fhir.ContractTermSecurityLabelArgs[]|undefined;
+  /**
+   * The matter of concern in the context of this provision of the agrement.
+   */
+  offer: fhir.ContractTermOfferArgs|null;
+  /**
+   * Contract Term Asset List.
+   */
+  asset?: fhir.ContractTermAssetArgs[]|undefined;
+  /**
+   * Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa.
+   * For example, in cases of actions initiated by one user for other users, or in events that involve more than one user, hardware device, software, or system process. However, only one user may be the initiator/requestor for the event.
+   */
+  action?: fhir.ContractTermActionArgs[]|undefined;
+  /**
+   * Nested group of Contract Provisions.
+   */
+  group?: fhir.ContractTermArgs[]|undefined;
 }
 
 /**
  * One or more Contract Provisions, which may be related and conveyed as a group, and may contain nested groups.
  */
-export class ContractTerm extends fhir.BackboneElement implements IContractTerm {
+export class ContractTerm extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractTerm';
   /**
    * Unique identifier for this particular Contract Provision.
    */
@@ -2023,11 +1511,7 @@ export class ContractTerm extends fhir.BackboneElement implements IContractTerm 
   /**
    * When this Contract Provision was issued.
    */
-  public issued?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.issued
-   */
-  public _issued?: fhir.FhirElement|undefined;
+  public issued?: fhir.FhirDateTime|undefined;
   /**
    * Relevant time or time-period when this Contract Provision is applicable.
    */
@@ -2035,11 +1519,8 @@ export class ContractTerm extends fhir.BackboneElement implements IContractTerm 
   /**
    * The entity that the term applies to.
    */
-  public topicCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * The entity that the term applies to.
-   */
-  public topicReference?: fhir.Reference|undefined;
+  public topic?: (fhir.CodeableConcept|fhir.Reference)|undefined;
+  readonly __topicIsChoice:true = true;
   /**
    * A legal clause or condition contained within a contract that requires one or both parties to perform a particular requirement by some specified time or prevents one or both parties from performing a particular requirement by some specified time.
    */
@@ -2051,15 +1532,11 @@ export class ContractTerm extends fhir.BackboneElement implements IContractTerm 
   /**
    * Statement of a provision in a policy or a contract.
    */
-  public text?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.term.text
-   */
-  public _text?: fhir.FhirElement|undefined;
+  public text?: fhir.FhirString|undefined;
   /**
    * Security labels that protect the handling of information about the term and its elements, which may be specifically identified..
    */
-  public securityLabel?: fhir.ContractTermSecurityLabel[]|undefined;
+  public securityLabel?: fhir.ContractTermSecurityLabel[]|undefined = [];
   /**
    * The matter of concern in the context of this provision of the agrement.
    */
@@ -2067,33 +1544,32 @@ export class ContractTerm extends fhir.BackboneElement implements IContractTerm 
   /**
    * Contract Term Asset List.
    */
-  public asset?: fhir.ContractTermAsset[]|undefined;
+  public asset?: fhir.ContractTermAsset[]|undefined = [];
   /**
    * Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa.
    * For example, in cases of actions initiated by one user for other users, or in events that involve more than one user, hardware device, software, or system process. However, only one user may be the initiator/requestor for the event.
    */
-  public action?: fhir.ContractTermAction[]|undefined;
+  public action?: fhir.ContractTermAction[]|undefined = [];
   /**
    * Nested group of Contract Provisions.
    */
-  public group?: fhir.ContractTerm[]|undefined;
+  public group?: fhir.ContractTerm[]|undefined = [];
   /**
    * Default constructor for ContractTerm - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractTerm> = { }) {
-    super(source);
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
-    if (source['issued']) { this.issued = source.issued; }
-    if (source['_issued']) { this._issued = new fhir.FhirElement(source._issued!); }
-    if (source['applies']) { this.applies = new fhir.Period(source.applies!); }
-    if (source['topicCodeableConcept']) { this.topicCodeableConcept = new fhir.CodeableConcept(source.topicCodeableConcept!); }
-    if (source['topicReference']) { this.topicReference = new fhir.Reference(source.topicReference!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['subType']) { this.subType = new fhir.CodeableConcept(source.subType!); }
-    if (source['text']) { this.text = source.text; }
-    if (source['_text']) { this._text = new fhir.FhirElement(source._text!); }
+  constructor(source:Partial<ContractTermArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
+    if (source['issued']) { this.issued = new fhir.FhirDateTime({value: source.issued}); }
+    if (source['applies']) { this.applies = new fhir.Period(source.applies); }
+    if (source['topic']) { this.topic = source.topic; }
+    else if (source['topicCodeableConcept']) { this.topic = new fhir.CodeableConcept(source.topicCodeableConcept); }
+    else if (source['topicReference']) { this.topic = new fhir.Reference(source.topicReference); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['subType']) { this.subType = new fhir.CodeableConcept(source.subType); }
+    if (source['text']) { this.text = new fhir.FhirString({value: source.text}); }
     if (source['securityLabel']) { this.securityLabel = source.securityLabel.map((x) => new fhir.ContractTermSecurityLabel(x)); }
-    if (source['offer']) { this.offer = new fhir.ContractTermOffer(source.offer!); }
+    if (source['offer']) { this.offer = new fhir.ContractTermOffer(source.offer); }
     else { this.offer = null; }
     if (source['asset']) { this.asset = source.asset.map((x) => new fhir.ContractTermAsset(x)); }
     if (source['action']) { this.action = source.action.map((x) => new fhir.ContractTermAction(x)); }
@@ -2114,31 +1590,55 @@ export class ContractTerm extends fhir.BackboneElement implements IContractTerm 
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (this["_issued"]) { results.push(...this._issued.doModelValidation()); }
-    if (this["applies"]) { results.push(...this.applies.doModelValidation()); }
-    if (this["topicCodeableConcept"]) { results.push(...this.topicCodeableConcept.doModelValidation()); }
-    if (this["topicReference"]) { results.push(...this.topicReference.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["subType"]) { results.push(...this.subType.doModelValidation()); }
-    if (this["_text"]) { results.push(...this._text.doModelValidation()); }
-    if (this["securityLabel"]) { this.securityLabel.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["offer"]) { results.push(["offer",'Missing required element: Contract.term.offer']); }
-    if (this["offer"]) { results.push(...this.offer.doModelValidation()); }
-    if (this["asset"]) { this.asset.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["action"]) { this.action.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["group"]) { this.group.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (this["issued"]) { outcome.issue!.push(...this.issued.doModelValidation().issue!); }
+    if (this["applies"]) { outcome.issue!.push(...this.applies.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["subType"]) { outcome.issue!.push(...this.subType.doModelValidation().issue!); }
+    if (this["text"]) { outcome.issue!.push(...this.text.doModelValidation().issue!); }
+    if (this["securityLabel"]) { this.securityLabel.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['offer']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property offer:fhir.ContractTermOffer fhir: Contract.term.offer:offer", }));
+    }
+    if (this["offer"]) { outcome.issue!.push(...this.offer.doModelValidation().issue!); }
+    if (this["asset"]) { this.asset.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["action"]) { this.action.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["group"]) { this.group.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractSigner type.
+ */
+export interface ContractSignerArgs extends fhir.BackboneElementArgs {
+  /**
+   * Role of this Contract signer, e.g. notary, grantee.
+   */
+  type: fhir.CodingArgs|null;
+  /**
+   * Party which is a signator to this Contract.
+   */
+  party: fhir.ReferenceArgs|null;
+  /**
+   * Legally binding Contract DSIG signature contents in Base64.
+   */
+  signature: fhir.SignatureArgs[]|null;
 }
 
 /**
  * Signers who are principal parties to the contract are bound by the Contract.activity related to the Contract.topic, and the Contract.term(s), which either extend or restrict the overall action on the topic by, for example, stipulating specific policies or obligations constraining actions, action reason, or agents with respect to some or all of the topic.
  * For example, specifying how policies or obligations shall constrain actions and action reasons permitted or denied on all or a subset of the Contract.topic (e.g., all or a portion of property being transferred by the contract), agents (e.g., who can resell, assign interests, or alter the property being transferred by the contract), actions, and action reasons; or with respect to Contract.terms, stipulating, extending, or limiting the Contract.period of applicability or valuation of items under consideration.
  */
-export class ContractSigner extends fhir.BackboneElement implements IContractSigner {
+export class ContractSigner extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractSigner';
   /**
    * Role of this Contract signer, e.g. notary, grantee.
    */
@@ -2150,15 +1650,15 @@ export class ContractSigner extends fhir.BackboneElement implements IContractSig
   /**
    * Legally binding Contract DSIG signature contents in Base64.
    */
-  public signature: fhir.Signature[]|null;
+  public signature: fhir.Signature[]|null = [];
   /**
    * Default constructor for ContractSigner - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractSigner> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.Coding(source.type!); }
+  constructor(source:Partial<ContractSignerArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.Coding(source.type); }
     else { this.type = null; }
-    if (source['party']) { this.party = new fhir.Reference(source.party!); }
+    if (source['party']) { this.party = new fhir.Reference(source.party); }
     else { this.party = null; }
     if (source['signature']) { this.signature = source.signature.map((x) => new fhir.Signature(x)); }
     else { this.signature = null; }
@@ -2172,115 +1672,364 @@ export class ContractSigner extends fhir.BackboneElement implements IContractSig
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: Contract.signer.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (!this["party"]) { results.push(["party",'Missing required element: Contract.signer.party']); }
-    if (this["party"]) { results.push(...this.party.doModelValidation()); }
-    if ((!this["signature"]) || (this["signature"].length === 0)) { results.push(["signature",'Missing required element: Contract.signer.signature']); }
-    if (this["signature"]) { this.signature.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.Coding fhir: Contract.signer.type:Coding", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (!this['party']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property party:fhir.Reference fhir: Contract.signer.party:Reference", }));
+    }
+    if (this["party"]) { outcome.issue!.push(...this.party.doModelValidation().issue!); }
+    if (!this['signature']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property signature:fhir.Signature[] fhir: Contract.signer.signature:Signature", }));
+    } else if (!Array.isArray(this.signature)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property signature:fhir.Signature[] fhir: Contract.signer.signature:Signature", }));
+    } else if (this.signature.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property signature:fhir.Signature[] fhir: Contract.signer.signature:Signature", }));
+    }
+    if (this["signature"]) { this.signature.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractFriendly type.
+ */
+export interface ContractFriendlyArgs extends fhir.BackboneElementArgs {
+  /**
+   * Human readable rendering of this Contract in a format and representation intended to enhance comprehension and ensure understandability.
+   */
+  content?: fhir.Attachment|fhir.Reference|undefined;
+  /**
+   * Human readable rendering of this Contract in a format and representation intended to enhance comprehension and ensure understandability.
+   */
+  contentAttachment?: fhir.AttachmentArgs|undefined;
+  /**
+   * Human readable rendering of this Contract in a format and representation intended to enhance comprehension and ensure understandability.
+   */
+  contentReference?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * The "patient friendly language" versionof the Contract in whole or in parts. "Patient friendly language" means the representation of the Contract and Contract Provisions in a manner that is readily accessible and understandable by a layperson in accordance with best practices for communication styles that ensure that those agreeing to or signing the Contract understand the roles, actions, obligations, responsibilities, and implication of the agreement.
  */
-export class ContractFriendly extends fhir.BackboneElement implements IContractFriendly {
+export class ContractFriendly extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractFriendly';
   /**
    * Human readable rendering of this Contract in a format and representation intended to enhance comprehension and ensure understandability.
    */
-  public contentAttachment?: fhir.Attachment|undefined;
-  /**
-   * Human readable rendering of this Contract in a format and representation intended to enhance comprehension and ensure understandability.
-   */
-  public contentReference?: fhir.Reference|undefined;
+  public content: (fhir.Attachment|fhir.Reference)|null;
+  readonly __contentIsChoice:true = true;
   /**
    * Default constructor for ContractFriendly - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractFriendly> = { }) {
-    super(source);
-    if (source['contentAttachment']) { this.contentAttachment = new fhir.Attachment(source.contentAttachment!); }
-    if (source['contentReference']) { this.contentReference = new fhir.Reference(source.contentReference!); }
+  constructor(source:Partial<ContractFriendlyArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['content']) { this.content = source.content; }
+    else if (source['contentAttachment']) { this.content = new fhir.Attachment(source.contentAttachment); }
+    else if (source['contentReference']) { this.content = new fhir.Reference(source.contentReference); }
+    else { this.content = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["contentAttachment"]) { results.push(...this.contentAttachment.doModelValidation()); }
-    if (this["contentReference"]) { results.push(...this.contentReference.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['content']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property content: fhir: Contract.friendly.content[x]:", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractLegal type.
+ */
+export interface ContractLegalArgs extends fhir.BackboneElementArgs {
+  /**
+   * Contract legal text in human renderable form.
+   */
+  content?: fhir.Attachment|fhir.Reference|undefined;
+  /**
+   * Contract legal text in human renderable form.
+   */
+  contentAttachment?: fhir.AttachmentArgs|undefined;
+  /**
+   * Contract legal text in human renderable form.
+   */
+  contentReference?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * List of Legal expressions or representations of this Contract.
  */
-export class ContractLegal extends fhir.BackboneElement implements IContractLegal {
+export class ContractLegal extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractLegal';
   /**
    * Contract legal text in human renderable form.
    */
-  public contentAttachment?: fhir.Attachment|undefined;
-  /**
-   * Contract legal text in human renderable form.
-   */
-  public contentReference?: fhir.Reference|undefined;
+  public content: (fhir.Attachment|fhir.Reference)|null;
+  readonly __contentIsChoice:true = true;
   /**
    * Default constructor for ContractLegal - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractLegal> = { }) {
-    super(source);
-    if (source['contentAttachment']) { this.contentAttachment = new fhir.Attachment(source.contentAttachment!); }
-    if (source['contentReference']) { this.contentReference = new fhir.Reference(source.contentReference!); }
+  constructor(source:Partial<ContractLegalArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['content']) { this.content = source.content; }
+    else if (source['contentAttachment']) { this.content = new fhir.Attachment(source.contentAttachment); }
+    else if (source['contentReference']) { this.content = new fhir.Reference(source.contentReference); }
+    else { this.content = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["contentAttachment"]) { results.push(...this.contentAttachment.doModelValidation()); }
-    if (this["contentReference"]) { results.push(...this.contentReference.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['content']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property content: fhir: Contract.legal.content[x]:", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ContractRule type.
+ */
+export interface ContractRuleArgs extends fhir.BackboneElementArgs {
+  /**
+   * Computable Contract conveyed using a policy rule language (e.g. XACML, DKAL, SecPal).
+   */
+  content?: fhir.Attachment|fhir.Reference|undefined;
+  /**
+   * Computable Contract conveyed using a policy rule language (e.g. XACML, DKAL, SecPal).
+   */
+  contentAttachment?: fhir.AttachmentArgs|undefined;
+  /**
+   * Computable Contract conveyed using a policy rule language (e.g. XACML, DKAL, SecPal).
+   */
+  contentReference?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * List of Computable Policy Rule Language Representations of this Contract.
  */
-export class ContractRule extends fhir.BackboneElement implements IContractRule {
+export class ContractRule extends fhir.BackboneElement {
+  readonly __dataType:string = 'ContractRule';
   /**
    * Computable Contract conveyed using a policy rule language (e.g. XACML, DKAL, SecPal).
    */
-  public contentAttachment?: fhir.Attachment|undefined;
-  /**
-   * Computable Contract conveyed using a policy rule language (e.g. XACML, DKAL, SecPal).
-   */
-  public contentReference?: fhir.Reference|undefined;
+  public content: (fhir.Attachment|fhir.Reference)|null;
+  readonly __contentIsChoice:true = true;
   /**
    * Default constructor for ContractRule - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContractRule> = { }) {
-    super(source);
-    if (source['contentAttachment']) { this.contentAttachment = new fhir.Attachment(source.contentAttachment!); }
-    if (source['contentReference']) { this.contentReference = new fhir.Reference(source.contentReference!); }
+  constructor(source:Partial<ContractRuleArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['content']) { this.content = source.content; }
+    else if (source['contentAttachment']) { this.content = new fhir.Attachment(source.contentAttachment); }
+    else if (source['contentReference']) { this.content = new fhir.Reference(source.contentReference); }
+    else { this.content = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["contentAttachment"]) { results.push(...this.contentAttachment.doModelValidation()); }
-    if (this["contentReference"]) { results.push(...this.contentReference.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['content']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property content: fhir: Contract.rule.content[x]:", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Contract type.
+ */
+export interface ContractArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Contract"|undefined;
+  /**
+   * Unique identifier for this Contract or a derivative that references a Source Contract.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * Used in a domain that uses a supplied contract repository.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * Note -  This is a business versionId, not a resource version id (see discussion http://build.fhir.org/resource.html#versions) 
+   * Comments - There may be different contract instances that have the same identifier but different versions. The version can be appended to the url in a reference to allow a reference to a particular business version of the plan definition with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains codes that mark the contract as not currently valid or active.
+   */
+  status?: ContractStatusValueSetEnum|undefined;
+  /**
+   * Legal states of the formation of a legal instrument, which is a formally executed written document that can be formally attributed to its author, records and formally expresses a legally enforceable act, process, or contractual duty, obligation, or right, and therefore evidences that act, process, or agreement.
+   */
+  legalState?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The URL pointing to a FHIR-defined Contract Definition that is adhered to in whole or part by this Contract.
+   */
+  instantiatesCanonical?: fhir.ReferenceArgs|undefined;
+  /**
+   * The URL pointing to an externally maintained definition that is adhered to in whole or in part by this Contract.
+   */
+  instantiatesUri?: fhir.FhirUri|string|undefined;
+  /**
+   * The minimal content derived from the basal information source at a specific stage in its lifecycle.
+   */
+  contentDerivative?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * When this  Contract was issued.
+   */
+  issued?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Relevant time or time-period when this Contract is applicable.
+   */
+  applies?: fhir.PeriodArgs|undefined;
+  /**
+   * Event resulting in discontinuation or termination of this Contract instance by one or more parties to the contract.
+   */
+  expirationType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The Contract.subject is an entity that has some role with respect to the Contract.topic and Contract.topic.term, which is of focal interest to the parties to the contract and likely impacted in a significant way by the Contract.action/Contract.action.reason and the Contract.term.action/Contract.action.reason. 
+   * In many cases, the Contract.subject is a Contract.signer if the subject is an adult; has a legal interest in the contract; and incompetent to participate in the contract agreement.
+   */
+  subject?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * A formally or informally recognized grouping of people, principals, organizations, or jurisdictions formed for the purpose of achieving some form of collective action such as the promulgation, administration and enforcement of contracts and policies.
+   */
+  authority?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Recognized governance framework or system operating with a circumscribed scope in accordance with specified principles, policies, processes or procedures for managing rights, actions, or behaviors of parties or principals relative to resources.
+   */
+  domain?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Sites in which the contract is complied with,  exercised, or in force.
+   */
+  site?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * A short, descriptive, user-friendly title for this Contract definition, derivative, or instance in any legal state.t giving additional information about its content.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * An explanatory or alternate user-friendly title for this Contract definition, derivative, or instance in any legal state.t giving additional information about its content.
+   */
+  subtitle?: fhir.FhirString|string|undefined;
+  /**
+   * Alternative representation of the title for this Contract definition, derivative, or instance in any legal state., e.g., a domain specific contract number related to legislation.
+   */
+  alias?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * The individual or organization that authored the Contract definition, derivative, or instance in any legal state.
+   */
+  author?: fhir.ReferenceArgs|undefined;
+  /**
+   * A selector of legal concerns for this Contract definition, derivative, or instance in any legal state.
+   */
+  scope?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Narrows the range of legal concerns to focus on the achievement of specific contractual objectives.
+   */
+  topic?: fhir.CodeableConcept|fhir.Reference|undefined;
+  /**
+   * Narrows the range of legal concerns to focus on the achievement of specific contractual objectives.
+   */
+  topicCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Narrows the range of legal concerns to focus on the achievement of specific contractual objectives.
+   */
+  topicReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * A high-level category for the legal instrument, whether constructed as a Contract definition, derivative, or instance in any legal state.  Provides additional information about its content within the context of the Contract's scope to distinguish the kinds of systems that would be interested in the contract.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Sub-category for the Contract that distinguishes the kinds of systems that would be interested in the Contract within the context of the Contract's scope.
+   */
+  subType?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Precusory content developed with a focus and intent of supporting the formation a Contract instance, which may be associated with and transformable into a Contract.
+   */
+  contentDefinition?: fhir.ContractContentDefinitionArgs|undefined;
+  /**
+   * One or more Contract Provisions, which may be related and conveyed as a group, and may contain nested groups.
+   */
+  term?: fhir.ContractTermArgs[]|undefined;
+  /**
+   * Information that may be needed by/relevant to the performer in their execution of this term action.
+   */
+  supportingInfo?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Links to Provenance records for past versions of this Contract definition, derivative, or instance, which identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the Contract.  The Provence.entity indicates the target that was changed in the update. http://build.fhir.org/provenance-definitions.html#Provenance.entity.
+   */
+  relevantHistory?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Signers who are principal parties to the contract are bound by the Contract.activity related to the Contract.topic, and the Contract.term(s), which either extend or restrict the overall action on the topic by, for example, stipulating specific policies or obligations constraining actions, action reason, or agents with respect to some or all of the topic.
+   * For example, specifying how policies or obligations shall constrain actions and action reasons permitted or denied on all or a subset of the Contract.topic (e.g., all or a portion of property being transferred by the contract), agents (e.g., who can resell, assign interests, or alter the property being transferred by the contract), actions, and action reasons; or with respect to Contract.terms, stipulating, extending, or limiting the Contract.period of applicability or valuation of items under consideration.
+   */
+  signer?: fhir.ContractSignerArgs[]|undefined;
+  /**
+   * The "patient friendly language" versionof the Contract in whole or in parts. "Patient friendly language" means the representation of the Contract and Contract Provisions in a manner that is readily accessible and understandable by a layperson in accordance with best practices for communication styles that ensure that those agreeing to or signing the Contract understand the roles, actions, obligations, responsibilities, and implication of the agreement.
+   */
+  friendly?: fhir.ContractFriendlyArgs[]|undefined;
+  /**
+   * List of Legal expressions or representations of this Contract.
+   */
+  legal?: fhir.ContractLegalArgs[]|undefined;
+  /**
+   * List of Computable Policy Rule Language Representations of this Contract.
+   */
+  rule?: fhir.ContractRuleArgs[]|undefined;
+  /**
+   * Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the "source of truth" and which would be the basis for legal action related to enforcement of this Contract.
+   */
+  legallyBinding?: fhir.Attachment|fhir.Reference|undefined;
+  /**
+   * Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the "source of truth" and which would be the basis for legal action related to enforcement of this Contract.
+   */
+  legallyBindingAttachment?: fhir.AttachmentArgs|undefined;
+  /**
+   * Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the "source of truth" and which would be the basis for legal action related to enforcement of this Contract.
+   */
+  legallyBindingReference?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
  */
-export class Contract extends fhir.DomainResource implements IContract {
+export class Contract extends fhir.DomainResource {
+  readonly __dataType:string = 'Contract';
   /**
    * Resource Type Name
    */
@@ -2288,32 +2037,20 @@ export class Contract extends fhir.DomainResource implements IContract {
   /**
    * Unique identifier for this Contract or a derivative that references a Source Contract.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Used in a domain that uses a supplied contract repository.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * Note -  This is a business versionId, not a resource version id (see discussion http://build.fhir.org/resource.html#versions) 
    * Comments - There may be different contract instances that have the same identifier but different versions. The version can be appended to the url in a reference to allow a reference to a particular business version of the plan definition with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * This element is labeled as a modifier because the status contains codes that mark the contract as not currently valid or active.
    */
   public status?: ContractStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: Contract.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * Legal states of the formation of a legal instrument, which is a formally executed written document that can be formally attributed to its author, records and formally expresses a legally enforceable act, process, or contractual duty, obligation, or right, and therefore evidences that act, process, or agreement.
    */
@@ -2325,11 +2062,7 @@ export class Contract extends fhir.DomainResource implements IContract {
   /**
    * The URL pointing to an externally maintained definition that is adhered to in whole or in part by this Contract.
    */
-  public instantiatesUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.instantiatesUri
-   */
-  public _instantiatesUri?: fhir.FhirElement|undefined;
+  public instantiatesUri?: fhir.FhirUri|undefined;
   /**
    * The minimal content derived from the basal information source at a specific stage in its lifecycle.
    */
@@ -2337,11 +2070,7 @@ export class Contract extends fhir.DomainResource implements IContract {
   /**
    * When this  Contract was issued.
    */
-  public issued?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.issued
-   */
-  public _issued?: fhir.FhirElement|undefined;
+  public issued?: fhir.FhirDateTime|undefined;
   /**
    * Relevant time or time-period when this Contract is applicable.
    */
@@ -2354,51 +2083,35 @@ export class Contract extends fhir.DomainResource implements IContract {
    * The Contract.subject is an entity that has some role with respect to the Contract.topic and Contract.topic.term, which is of focal interest to the parties to the contract and likely impacted in a significant way by the Contract.action/Contract.action.reason and the Contract.term.action/Contract.action.reason. 
    * In many cases, the Contract.subject is a Contract.signer if the subject is an adult; has a legal interest in the contract; and incompetent to participate in the contract agreement.
    */
-  public subject?: fhir.Reference[]|undefined;
+  public subject?: fhir.Reference[]|undefined = [];
   /**
    * A formally or informally recognized grouping of people, principals, organizations, or jurisdictions formed for the purpose of achieving some form of collective action such as the promulgation, administration and enforcement of contracts and policies.
    */
-  public authority?: fhir.Reference[]|undefined;
+  public authority?: fhir.Reference[]|undefined = [];
   /**
    * Recognized governance framework or system operating with a circumscribed scope in accordance with specified principles, policies, processes or procedures for managing rights, actions, or behaviors of parties or principals relative to resources.
    */
-  public domain?: fhir.Reference[]|undefined;
+  public domain?: fhir.Reference[]|undefined = [];
   /**
    * Sites in which the contract is complied with,  exercised, or in force.
    */
-  public site?: fhir.Reference[]|undefined;
+  public site?: fhir.Reference[]|undefined = [];
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * A short, descriptive, user-friendly title for this Contract definition, derivative, or instance in any legal state.t giving additional information about its content.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * An explanatory or alternate user-friendly title for this Contract definition, derivative, or instance in any legal state.t giving additional information about its content.
    */
-  public subtitle?: string|undefined;
-  /**
-   * Extended properties for primitive element: Contract.subtitle
-   */
-  public _subtitle?: fhir.FhirElement|undefined;
+  public subtitle?: fhir.FhirString|undefined;
   /**
    * Alternative representation of the title for this Contract definition, derivative, or instance in any legal state., e.g., a domain specific contract number related to legislation.
    */
-  public alias?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Contract.alias
-   */
-  public _alias?: fhir.FhirElement[]|undefined;
+  public alias?: fhir.FhirString[]|undefined = [];
   /**
    * The individual or organization that authored the Contract definition, derivative, or instance in any legal state.
    */
@@ -2410,11 +2123,8 @@ export class Contract extends fhir.DomainResource implements IContract {
   /**
    * Narrows the range of legal concerns to focus on the achievement of specific contractual objectives.
    */
-  public topicCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * Narrows the range of legal concerns to focus on the achievement of specific contractual objectives.
-   */
-  public topicReference?: fhir.Reference|undefined;
+  public topic?: (fhir.CodeableConcept|fhir.Reference)|undefined;
+  readonly __topicIsChoice:true = true;
   /**
    * A high-level category for the legal instrument, whether constructed as a Contract definition, derivative, or instance in any legal state.  Provides additional information about its content within the context of the Contract's scope to distinguish the kinds of systems that would be interested in the contract.
    */
@@ -2422,7 +2132,7 @@ export class Contract extends fhir.DomainResource implements IContract {
   /**
    * Sub-category for the Contract that distinguishes the kinds of systems that would be interested in the Contract within the context of the Contract's scope.
    */
-  public subType?: fhir.CodeableConcept[]|undefined;
+  public subType?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Precusory content developed with a focus and intent of supporting the formation a Contract instance, which may be associated with and transformable into a Contract.
    */
@@ -2430,81 +2140,70 @@ export class Contract extends fhir.DomainResource implements IContract {
   /**
    * One or more Contract Provisions, which may be related and conveyed as a group, and may contain nested groups.
    */
-  public term?: fhir.ContractTerm[]|undefined;
+  public term?: fhir.ContractTerm[]|undefined = [];
   /**
    * Information that may be needed by/relevant to the performer in their execution of this term action.
    */
-  public supportingInfo?: fhir.Reference[]|undefined;
+  public supportingInfo?: fhir.Reference[]|undefined = [];
   /**
    * Links to Provenance records for past versions of this Contract definition, derivative, or instance, which identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the Contract.  The Provence.entity indicates the target that was changed in the update. http://build.fhir.org/provenance-definitions.html#Provenance.entity.
    */
-  public relevantHistory?: fhir.Reference[]|undefined;
+  public relevantHistory?: fhir.Reference[]|undefined = [];
   /**
    * Signers who are principal parties to the contract are bound by the Contract.activity related to the Contract.topic, and the Contract.term(s), which either extend or restrict the overall action on the topic by, for example, stipulating specific policies or obligations constraining actions, action reason, or agents with respect to some or all of the topic.
    * For example, specifying how policies or obligations shall constrain actions and action reasons permitted or denied on all or a subset of the Contract.topic (e.g., all or a portion of property being transferred by the contract), agents (e.g., who can resell, assign interests, or alter the property being transferred by the contract), actions, and action reasons; or with respect to Contract.terms, stipulating, extending, or limiting the Contract.period of applicability or valuation of items under consideration.
    */
-  public signer?: fhir.ContractSigner[]|undefined;
+  public signer?: fhir.ContractSigner[]|undefined = [];
   /**
    * The "patient friendly language" versionof the Contract in whole or in parts. "Patient friendly language" means the representation of the Contract and Contract Provisions in a manner that is readily accessible and understandable by a layperson in accordance with best practices for communication styles that ensure that those agreeing to or signing the Contract understand the roles, actions, obligations, responsibilities, and implication of the agreement.
    */
-  public friendly?: fhir.ContractFriendly[]|undefined;
+  public friendly?: fhir.ContractFriendly[]|undefined = [];
   /**
    * List of Legal expressions or representations of this Contract.
    */
-  public legal?: fhir.ContractLegal[]|undefined;
+  public legal?: fhir.ContractLegal[]|undefined = [];
   /**
    * List of Computable Policy Rule Language Representations of this Contract.
    */
-  public rule?: fhir.ContractRule[]|undefined;
+  public rule?: fhir.ContractRule[]|undefined = [];
   /**
    * Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the "source of truth" and which would be the basis for legal action related to enforcement of this Contract.
    */
-  public legallyBindingAttachment?: fhir.Attachment|undefined;
-  /**
-   * Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the "source of truth" and which would be the basis for legal action related to enforcement of this Contract.
-   */
-  public legallyBindingReference?: fhir.Reference|undefined;
+  public legallyBinding?: (fhir.Attachment|fhir.Reference)|undefined;
+  readonly __legallyBindingIsChoice:true = true;
   /**
    * Default constructor for Contract - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContract> = { }) {
-    super(source);
+  constructor(source:Partial<ContractArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Contract';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
     if (source['status']) { this.status = source.status; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['legalState']) { this.legalState = new fhir.CodeableConcept(source.legalState!); }
-    if (source['instantiatesCanonical']) { this.instantiatesCanonical = new fhir.Reference(source.instantiatesCanonical!); }
-    if (source['instantiatesUri']) { this.instantiatesUri = source.instantiatesUri; }
-    if (source['_instantiatesUri']) { this._instantiatesUri = new fhir.FhirElement(source._instantiatesUri!); }
-    if (source['contentDerivative']) { this.contentDerivative = new fhir.CodeableConcept(source.contentDerivative!); }
-    if (source['issued']) { this.issued = source.issued; }
-    if (source['_issued']) { this._issued = new fhir.FhirElement(source._issued!); }
-    if (source['applies']) { this.applies = new fhir.Period(source.applies!); }
-    if (source['expirationType']) { this.expirationType = new fhir.CodeableConcept(source.expirationType!); }
+    if (source['legalState']) { this.legalState = new fhir.CodeableConcept(source.legalState); }
+    if (source['instantiatesCanonical']) { this.instantiatesCanonical = new fhir.Reference(source.instantiatesCanonical); }
+    if (source['instantiatesUri']) { this.instantiatesUri = new fhir.FhirUri({value: source.instantiatesUri}); }
+    if (source['contentDerivative']) { this.contentDerivative = new fhir.CodeableConcept(source.contentDerivative); }
+    if (source['issued']) { this.issued = new fhir.FhirDateTime({value: source.issued}); }
+    if (source['applies']) { this.applies = new fhir.Period(source.applies); }
+    if (source['expirationType']) { this.expirationType = new fhir.CodeableConcept(source.expirationType); }
     if (source['subject']) { this.subject = source.subject.map((x) => new fhir.Reference(x)); }
     if (source['authority']) { this.authority = source.authority.map((x) => new fhir.Reference(x)); }
     if (source['domain']) { this.domain = source.domain.map((x) => new fhir.Reference(x)); }
     if (source['site']) { this.site = source.site.map((x) => new fhir.Reference(x)); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
-    if (source['subtitle']) { this.subtitle = source.subtitle; }
-    if (source['_subtitle']) { this._subtitle = new fhir.FhirElement(source._subtitle!); }
-    if (source['alias']) { this.alias = source.alias.map((x) => (x)); }
-    if (source['_alias']) { this._alias = source._alias.map((x) => new fhir.FhirElement(x)); }
-    if (source['author']) { this.author = new fhir.Reference(source.author!); }
-    if (source['scope']) { this.scope = new fhir.CodeableConcept(source.scope!); }
-    if (source['topicCodeableConcept']) { this.topicCodeableConcept = new fhir.CodeableConcept(source.topicCodeableConcept!); }
-    if (source['topicReference']) { this.topicReference = new fhir.Reference(source.topicReference!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
+    if (source['subtitle']) { this.subtitle = new fhir.FhirString({value: source.subtitle}); }
+    if (source['alias']) { this.alias = source.alias.map((x) => new fhir.FhirString({value: x})); }
+    if (source['author']) { this.author = new fhir.Reference(source.author); }
+    if (source['scope']) { this.scope = new fhir.CodeableConcept(source.scope); }
+    if (source['topic']) { this.topic = source.topic; }
+    else if (source['topicCodeableConcept']) { this.topic = new fhir.CodeableConcept(source.topicCodeableConcept); }
+    else if (source['topicReference']) { this.topic = new fhir.Reference(source.topicReference); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     if (source['subType']) { this.subType = source.subType.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['contentDefinition']) { this.contentDefinition = new fhir.ContractContentDefinition(source.contentDefinition!); }
+    if (source['contentDefinition']) { this.contentDefinition = new fhir.ContractContentDefinition(source.contentDefinition); }
     if (source['term']) { this.term = source.term.map((x) => new fhir.ContractTerm(x)); }
     if (source['supportingInfo']) { this.supportingInfo = source.supportingInfo.map((x) => new fhir.Reference(x)); }
     if (source['relevantHistory']) { this.relevantHistory = source.relevantHistory.map((x) => new fhir.Reference(x)); }
@@ -2512,8 +2211,9 @@ export class Contract extends fhir.DomainResource implements IContract {
     if (source['friendly']) { this.friendly = source.friendly.map((x) => new fhir.ContractFriendly(x)); }
     if (source['legal']) { this.legal = source.legal.map((x) => new fhir.ContractLegal(x)); }
     if (source['rule']) { this.rule = source.rule.map((x) => new fhir.ContractRule(x)); }
-    if (source['legallyBindingAttachment']) { this.legallyBindingAttachment = new fhir.Attachment(source.legallyBindingAttachment!); }
-    if (source['legallyBindingReference']) { this.legallyBindingReference = new fhir.Reference(source.legallyBindingReference!); }
+    if (source['legallyBinding']) { this.legallyBinding = source.legallyBinding; }
+    else if (source['legallyBindingAttachment']) { this.legallyBinding = new fhir.Attachment(source.legallyBindingAttachment); }
+    else if (source['legallyBindingReference']) { this.legallyBinding = new fhir.Reference(source.legallyBindingReference); }
   }
   /**
    * Required-bound Value Set for status
@@ -2560,44 +2260,47 @@ export class Contract extends fhir.DomainResource implements IContract {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Contract.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["legalState"]) { results.push(...this.legalState.doModelValidation()); }
-    if (this["instantiatesCanonical"]) { results.push(...this.instantiatesCanonical.doModelValidation()); }
-    if (this["_instantiatesUri"]) { results.push(...this._instantiatesUri.doModelValidation()); }
-    if (this["contentDerivative"]) { results.push(...this.contentDerivative.doModelValidation()); }
-    if (this["_issued"]) { results.push(...this._issued.doModelValidation()); }
-    if (this["applies"]) { results.push(...this.applies.doModelValidation()); }
-    if (this["expirationType"]) { results.push(...this.expirationType.doModelValidation()); }
-    if (this["subject"]) { this.subject.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["authority"]) { this.authority.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["domain"]) { this.domain.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["site"]) { this.site.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (this["_subtitle"]) { results.push(...this._subtitle.doModelValidation()); }
-    if (this["_alias"]) { this._alias.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["author"]) { results.push(...this.author.doModelValidation()); }
-    if (this["scope"]) { results.push(...this.scope.doModelValidation()); }
-    if (this["topicCodeableConcept"]) { results.push(...this.topicCodeableConcept.doModelValidation()); }
-    if (this["topicReference"]) { results.push(...this.topicReference.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["subType"]) { this.subType.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["contentDefinition"]) { results.push(...this.contentDefinition.doModelValidation()); }
-    if (this["term"]) { this.term.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["supportingInfo"]) { this.supportingInfo.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["relevantHistory"]) { this.relevantHistory.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["signer"]) { this.signer.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["friendly"]) { this.friendly.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["legal"]) { this.legal.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["rule"]) { this.rule.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["legallyBindingAttachment"]) { results.push(...this.legallyBindingAttachment.doModelValidation()); }
-    if (this["legallyBindingReference"]) { results.push(...this.legallyBindingReference.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Contract' fhir: Contract.resourceType:'Contract'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["legalState"]) { outcome.issue!.push(...this.legalState.doModelValidation().issue!); }
+    if (this["instantiatesCanonical"]) { outcome.issue!.push(...this.instantiatesCanonical.doModelValidation().issue!); }
+    if (this["instantiatesUri"]) { outcome.issue!.push(...this.instantiatesUri.doModelValidation().issue!); }
+    if (this["contentDerivative"]) { outcome.issue!.push(...this.contentDerivative.doModelValidation().issue!); }
+    if (this["issued"]) { outcome.issue!.push(...this.issued.doModelValidation().issue!); }
+    if (this["applies"]) { outcome.issue!.push(...this.applies.doModelValidation().issue!); }
+    if (this["expirationType"]) { outcome.issue!.push(...this.expirationType.doModelValidation().issue!); }
+    if (this["subject"]) { this.subject.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["authority"]) { this.authority.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["domain"]) { this.domain.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["site"]) { this.site.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (this["subtitle"]) { outcome.issue!.push(...this.subtitle.doModelValidation().issue!); }
+    if (this["alias"]) { this.alias.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["author"]) { outcome.issue!.push(...this.author.doModelValidation().issue!); }
+    if (this["scope"]) { outcome.issue!.push(...this.scope.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["subType"]) { this.subType.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["contentDefinition"]) { outcome.issue!.push(...this.contentDefinition.doModelValidation().issue!); }
+    if (this["term"]) { this.term.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["supportingInfo"]) { this.supportingInfo.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["relevantHistory"]) { this.relevantHistory.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["signer"]) { this.signer.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["friendly"]) { this.friendly.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["legal"]) { this.legal.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["rule"]) { this.rule.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -35,13 +35,3 @@ export type AdjudicationErrorValueSetType = typeof AdjudicationErrorValueSet;
 /**
  * This value set includes a smattering of adjudication codes.
  */
-export enum AdjudicationErrorValueSetEnum {
-  /**
-   * a001: Missing Identifier
-   */
-  MissingIdentifier = "a001",
-  /**
-   * a002: Missing Creation Date
-   */
-  MissingCreationDate = "a002",
-}

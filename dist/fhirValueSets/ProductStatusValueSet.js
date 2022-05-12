@@ -27,15 +27,4 @@ export const ProductStatusValueSet = {
 /**
  * Biologically Derived Product Status.
  */
-export var ProductStatusValueSetEnum;
-(function (ProductStatusValueSetEnum) {
-    /**
-     * available: Product is currently available for use.
-     */
-    ProductStatusValueSetEnum["Available"] = "available";
-    /**
-     * unavailable: Product is not currently available for use.
-     */
-    ProductStatusValueSetEnum["Unavailable"] = "unavailable";
-})(ProductStatusValueSetEnum || (ProductStatusValueSetEnum = {}));
 //# sourceMappingURL=ProductStatusValueSet.js.map

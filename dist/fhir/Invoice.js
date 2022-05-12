@@ -3,8 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Invoice
 import * as fhir from '../fhir.js';
-import { InvoicePriceComponentTypeValueSet } from '../fhirValueSets/InvoicePriceComponentTypeValueSet.js';
-import { InvoiceStatusValueSet } from '../fhirValueSets/InvoiceStatusValueSet.js';
+import { InvoicePriceComponentTypeValueSet, } from '../fhirValueSets/InvoicePriceComponentTypeValueSet.js';
+import { InvoiceStatusValueSet, } from '../fhirValueSets/InvoiceStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Indicates who or what performed or participated in the charged service.
  */
@@ -12,8 +14,9 @@ export class InvoiceParticipant extends fhir.BackboneElement {
     /**
      * Default constructor for InvoiceParticipant - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'InvoiceParticipant';
         if (source['role']) {
             this.role = new fhir.CodeableConcept(source.role);
         }
@@ -28,17 +31,23 @@ export class InvoiceParticipant extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["role"]) {
-            results.push(...this.role.doModelValidation());
+            outcome.issue.push(...this.role.doModelValidation().issue);
         }
-        if (!this["actor"]) {
-            results.push(["actor", 'Missing required element: Invoice.participant.actor']);
+        if (!this['actor']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property actor:fhir.Reference fhir: Invoice.participant.actor:Reference", }));
         }
         if (this["actor"]) {
-            results.push(...this.actor.doModelValidation());
+            outcome.issue.push(...this.actor.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -48,25 +57,20 @@ export class InvoiceLineItemPriceComponent extends fhir.BackboneElement {
     /**
      * Default constructor for InvoiceLineItemPriceComponent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'InvoiceLineItemPriceComponent';
         if (source['type']) {
             this.type = source.type;
         }
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
         if (source['factor']) {
-            this.factor = source.factor;
-        }
-        if (source['_factor']) {
-            this._factor = new fhir.FhirElement(source._factor);
+            this.factor = new fhir.FhirDecimal({ value: source.factor });
         }
         if (source['amount']) {
             this.amount = new fhir.Money(source.amount);
@@ -82,23 +86,26 @@ export class InvoiceLineItemPriceComponent extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: Invoice.lineItem.priceComponent.type']);
-        }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:InvoicePriceComponentTypeValueSetEnum fhir: Invoice.lineItem.priceComponent.type:code", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_factor"]) {
-            results.push(...this._factor.doModelValidation());
+        if (this["factor"]) {
+            outcome.issue.push(...this.factor.doModelValidation().issue);
         }
         if (this["amount"]) {
-            results.push(...this.amount.doModelValidation());
+            outcome.issue.push(...this.amount.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -108,19 +115,28 @@ export class InvoiceLineItem extends fhir.BackboneElement {
     /**
      * Default constructor for InvoiceLineItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'InvoiceLineItem';
+        this.__chargeItemIsChoice = true;
+        /**
+         * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
+         */
+        this.priceComponent = [];
         if (source['sequence']) {
-            this.sequence = source.sequence;
+            this.sequence = new fhir.FhirPositiveInt({ value: source.sequence });
         }
-        if (source['_sequence']) {
-            this._sequence = new fhir.FhirElement(source._sequence);
+        if (source['chargeItem']) {
+            this.chargeItem = source.chargeItem;
         }
-        if (source['chargeItemReference']) {
-            this.chargeItemReference = new fhir.Reference(source.chargeItemReference);
+        else if (source['chargeItemReference']) {
+            this.chargeItem = new fhir.Reference(source.chargeItemReference);
         }
-        if (source['chargeItemCodeableConcept']) {
-            this.chargeItemCodeableConcept = new fhir.CodeableConcept(source.chargeItemCodeableConcept);
+        else if (source['chargeItemCodeableConcept']) {
+            this.chargeItem = new fhir.CodeableConcept(source.chargeItemCodeableConcept);
+        }
+        else {
+            this.chargeItem = null;
         }
         if (source['priceComponent']) {
             this.priceComponent = source.priceComponent.map((x) => new fhir.InvoiceLineItemPriceComponent(x));
@@ -130,20 +146,23 @@ export class InvoiceLineItem extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_sequence"]) {
-            results.push(...this._sequence.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["sequence"]) {
+            outcome.issue.push(...this.sequence.doModelValidation().issue);
         }
-        if (this["chargeItemReference"]) {
-            results.push(...this.chargeItemReference.doModelValidation());
-        }
-        if (this["chargeItemCodeableConcept"]) {
-            results.push(...this.chargeItemCodeableConcept.doModelValidation());
+        if (!this['chargeItem']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property chargeItem: fhir: Invoice.lineItem.chargeItem[x]:", }));
         }
         if (this["priceComponent"]) {
-            this.priceComponent.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.priceComponent.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -153,8 +172,29 @@ export class Invoice extends fhir.DomainResource {
     /**
      * Default constructor for Invoice - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Invoice';
+        /**
+         * Identifier of this Invoice, often used for reference in correspondence about this invoice or for tracking of payments.
+         */
+        this.identifier = [];
+        /**
+         * Indicates who or what performed or participated in the charged service.
+         */
+        this.participant = [];
+        /**
+         * Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.
+         */
+        this.lineItem = [];
+        /**
+         * The total amount for the Invoice may be calculated as the sum of the line items with surcharges/deductions that apply in certain conditions.  The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the total price was calculated.
+         */
+        this.totalPriceComponent = [];
+        /**
+         * Comments made about the invoice by the issuer, subject, or other participants.
+         */
+        this.note = [];
         this.resourceType = 'Invoice';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -165,14 +205,8 @@ export class Invoice extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['cancelledReason']) {
-            this.cancelledReason = source.cancelledReason;
-        }
-        if (source['_cancelledReason']) {
-            this._cancelledReason = new fhir.FhirElement(source._cancelledReason);
+            this.cancelledReason = new fhir.FhirString({ value: source.cancelledReason });
         }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
@@ -184,10 +218,7 @@ export class Invoice extends fhir.DomainResource {
             this.recipient = new fhir.Reference(source.recipient);
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['participant']) {
             this.participant = source.participant.map((x) => new fhir.InvoiceParticipant(x));
@@ -211,10 +242,7 @@ export class Invoice extends fhir.DomainResource {
             this.totalGross = new fhir.Money(source.totalGross);
         }
         if (source['paymentTerms']) {
-            this.paymentTerms = source.paymentTerms;
-        }
-        if (source['_paymentTerms']) {
-            this._paymentTerms = new fhir.FhirElement(source._paymentTerms);
+            this.paymentTerms = new fhir.FhirMarkdown({ value: source.paymentTerms });
         }
         if (source['note']) {
             this.note = source.note.map((x) => new fhir.Annotation(x));
@@ -230,62 +258,65 @@ export class Invoice extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Invoice.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Invoice' fhir: Invoice.resourceType:'Invoice'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Invoice.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:InvoiceStatusValueSetEnum fhir: Invoice.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
-        }
-        if (this["_cancelledReason"]) {
-            results.push(...this._cancelledReason.doModelValidation());
+        if (this["cancelledReason"]) {
+            outcome.issue.push(...this.cancelledReason.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["recipient"]) {
-            results.push(...this.recipient.doModelValidation());
+            outcome.issue.push(...this.recipient.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
         if (this["participant"]) {
-            this.participant.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.participant.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["issuer"]) {
-            results.push(...this.issuer.doModelValidation());
+            outcome.issue.push(...this.issuer.doModelValidation().issue);
         }
         if (this["account"]) {
-            results.push(...this.account.doModelValidation());
+            outcome.issue.push(...this.account.doModelValidation().issue);
         }
         if (this["lineItem"]) {
-            this.lineItem.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.lineItem.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["totalPriceComponent"]) {
-            this.totalPriceComponent.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.totalPriceComponent.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["totalNet"]) {
-            results.push(...this.totalNet.doModelValidation());
+            outcome.issue.push(...this.totalNet.doModelValidation().issue);
         }
         if (this["totalGross"]) {
-            results.push(...this.totalGross.doModelValidation());
+            outcome.issue.push(...this.totalGross.doModelValidation().issue);
         }
-        if (this["_paymentTerms"]) {
-            results.push(...this._paymentTerms.doModelValidation());
+        if (this["paymentTerms"]) {
+            outcome.issue.push(...this.paymentTerms.doModelValidation().issue);
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Invoice.js.map

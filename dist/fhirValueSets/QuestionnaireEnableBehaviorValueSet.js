@@ -27,15 +27,4 @@ export const QuestionnaireEnableBehaviorValueSet = {
 /**
  * Controls how multiple enableWhen values are interpreted -  whether all or any must be true.
  */
-export var QuestionnaireEnableBehaviorValueSetEnum;
-(function (QuestionnaireEnableBehaviorValueSetEnum) {
-    /**
-     * all: Enable the question when all the enableWhen criteria are satisfied.
-     */
-    QuestionnaireEnableBehaviorValueSetEnum["All"] = "all";
-    /**
-     * any: Enable the question when any of the enableWhen criteria are satisfied.
-     */
-    QuestionnaireEnableBehaviorValueSetEnum["Any"] = "any";
-})(QuestionnaireEnableBehaviorValueSetEnum || (QuestionnaireEnableBehaviorValueSetEnum = {}));
 //# sourceMappingURL=QuestionnaireEnableBehaviorValueSet.js.map

@@ -27,9 +27,3 @@ export type AssetAvailabilityValueSetType = typeof AssetAvailabilityValueSet;
 /**
  * This value set has asset availability codes.
  */
-export enum AssetAvailabilityValueSetEnum {
-  /**
-   * lease: To be completed
-   */
-  Lease = "lease",
-}

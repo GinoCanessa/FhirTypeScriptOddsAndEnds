@@ -3,126 +3,56 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Medication
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { MedicationCodesValueSet, MedicationCodesValueSetType, MedicationCodesValueSetEnum } from '../fhirValueSets/MedicationCodesValueSet.js'
-import { MedicationStatusValueSet, MedicationStatusValueSetType, MedicationStatusValueSetEnum } from '../fhirValueSets/MedicationStatusValueSet.js'
-import { MedicationFormCodesValueSet, MedicationFormCodesValueSetType, MedicationFormCodesValueSetEnum } from '../fhirValueSets/MedicationFormCodesValueSet.js'
-
+import { MedicationCodesValueSet, MedicationCodesValueSetType,} from '../fhirValueSets/MedicationCodesValueSet.js';
+import { MedicationCodesValueSetEnum } from '../valueSetEnums.js';
+import { MedicationStatusValueSet, MedicationStatusValueSetType,} from '../fhirValueSets/MedicationStatusValueSet.js';
+import { MedicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { MedicationFormCodesValueSet, MedicationFormCodesValueSetType,} from '../fhirValueSets/MedicationFormCodesValueSet.js';
+import { MedicationFormCodesValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * The ingredients need not be a complete list.  If an ingredient is not specified, this does not indicate whether an ingredient is present or absent.  If an ingredient is specified it does not mean that all ingredients are specified.  It is possible to specify both inactive and active ingredients.
+ * Valid arguments for the MedicationIngredient type.
  */
-export type IMedicationIngredient = fhir.IBackboneElement & { 
+export interface MedicationIngredientArgs extends fhir.BackboneElementArgs {
   /**
    * The actual ingredient - either a substance (simple ingredient) or another medication of a medication.
    */
-  itemCodeableConcept?: fhir.ICodeableConcept|undefined;
+  item?: fhir.CodeableConcept|fhir.Reference|undefined;
   /**
    * The actual ingredient - either a substance (simple ingredient) or another medication of a medication.
    */
-  itemReference?: fhir.IReference|undefined;
+  itemCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The actual ingredient - either a substance (simple ingredient) or another medication of a medication.
+   */
+  itemReference?: fhir.ReferenceArgs|undefined;
   /**
    * Indication of whether this ingredient affects the therapeutic action of the drug.
    */
-  isActive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Medication.ingredient.isActive
-   */
-  _isActive?: fhir.IFhirElement|undefined;
+  isActive?: fhir.FhirBoolean|boolean|undefined;
   /**
    * Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet.
    */
-  strength?: fhir.IRatio|undefined;
-}
-
-/**
- * Information that only applies to packages (not products).
- */
-export type IMedicationBatch = fhir.IBackboneElement & { 
-  /**
-   * The assigned lot number of a batch of the specified product.
-   */
-  lotNumber?: string|undefined;
-  /**
-   * Extended properties for primitive element: Medication.batch.lotNumber
-   */
-  _lotNumber?: fhir.IFhirElement|undefined;
-  /**
-   * When this specific batch of product will expire.
-   */
-  expirationDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Medication.batch.expirationDate
-   */
-  _expirationDate?: fhir.IFhirElement|undefined;
-}
-
-/**
- * This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.
- */
-export type IMedication = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Medication";
-  /**
-   * The serial number could be included as an identifier.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * Depending on the context of use, the code that was actually selected by the user (prescriber, dispenser, etc.) will have the coding.userSelected set to true.  As described in the coding datatype: "A coding may be marked as a "userSelected" if a user selected the particular coded value in a user interface (e.g. the user selects an item in a pick-list). If a user selected coding exists, it is the preferred choice for performing translations etc. Other codes can only be literal translations to alternative code systems, or codes at a lower level of granularity (e.g. a generic code for a vendor-specific primary one).
-   */
-  code?: fhir.ICodeableConcept|undefined;
-  /**
-   * This status is intended to identify if the medication in a local system is in active use within a drug database or inventory.  For example, a pharmacy system may create a new drug file record for a compounded product "ABC Hospital Special Cream" with an active status.  At some point in the future, it may be determined that the drug record was created with an error and the status is changed to "entered in error".   This status is not intended to specify if a medication is part of a particular formulary.  It is possible that the drug record may be referenced by multiple formularies or catalogues and each of those entries would have a separate status.
-   */
-  status?: MedicationStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: Medication.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.
-   */
-  manufacturer?: fhir.IReference|undefined;
-  /**
-   * When Medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When Medication is referenced within MedicationAdministration, this is administered form.
-   */
-  form?: fhir.ICodeableConcept|undefined;
-  /**
-   * Specific amount of the drug in the packaged product.  For example, when specifying a product that has the same strength (For example, Insulin glargine 100 unit per mL solution for injection), this attribute provides additional clarification of the package amount (For example, 3 mL, 10mL, etc.).
-   */
-  amount?: fhir.IRatio|undefined;
-  /**
-   * The ingredients need not be a complete list.  If an ingredient is not specified, this does not indicate whether an ingredient is present or absent.  If an ingredient is specified it does not mean that all ingredients are specified.  It is possible to specify both inactive and active ingredients.
-   */
-  ingredient?: fhir.IMedicationIngredient[]|undefined;
-  /**
-   * Information that only applies to packages (not products).
-   */
-  batch?: fhir.IMedicationBatch|undefined;
+  strength?: fhir.RatioArgs|undefined;
 }
 
 /**
  * The ingredients need not be a complete list.  If an ingredient is not specified, this does not indicate whether an ingredient is present or absent.  If an ingredient is specified it does not mean that all ingredients are specified.  It is possible to specify both inactive and active ingredients.
  */
-export class MedicationIngredient extends fhir.BackboneElement implements IMedicationIngredient {
+export class MedicationIngredient extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationIngredient';
   /**
    * The actual ingredient - either a substance (simple ingredient) or another medication of a medication.
    */
-  public itemCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * The actual ingredient - either a substance (simple ingredient) or another medication of a medication.
-   */
-  public itemReference?: fhir.Reference|undefined;
+  public item: (fhir.CodeableConcept|fhir.Reference)|null;
+  readonly __itemIsChoice:true = true;
   /**
    * Indication of whether this ingredient affects the therapeutic action of the drug.
    */
-  public isActive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Medication.ingredient.isActive
-   */
-  public _isActive?: fhir.FhirElement|undefined;
+  public isActive?: fhir.FhirBoolean|undefined;
   /**
    * Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet.
    */
@@ -130,72 +60,132 @@ export class MedicationIngredient extends fhir.BackboneElement implements IMedic
   /**
    * Default constructor for MedicationIngredient - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationIngredient> = { }) {
-    super(source);
-    if (source['itemCodeableConcept']) { this.itemCodeableConcept = new fhir.CodeableConcept(source.itemCodeableConcept!); }
-    if (source['itemReference']) { this.itemReference = new fhir.Reference(source.itemReference!); }
-    if (source['isActive']) { this.isActive = source.isActive; }
-    if (source['_isActive']) { this._isActive = new fhir.FhirElement(source._isActive!); }
-    if (source['strength']) { this.strength = new fhir.Ratio(source.strength!); }
+  constructor(source:Partial<MedicationIngredientArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['item']) { this.item = source.item; }
+    else if (source['itemCodeableConcept']) { this.item = new fhir.CodeableConcept(source.itemCodeableConcept); }
+    else if (source['itemReference']) { this.item = new fhir.Reference(source.itemReference); }
+    else { this.item = null; }
+    if (source['isActive']) { this.isActive = new fhir.FhirBoolean({value: source.isActive}); }
+    if (source['strength']) { this.strength = new fhir.Ratio(source.strength); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["itemCodeableConcept"]) { results.push(...this.itemCodeableConcept.doModelValidation()); }
-    if (this["itemReference"]) { results.push(...this.itemReference.doModelValidation()); }
-    if (this["_isActive"]) { results.push(...this._isActive.doModelValidation()); }
-    if (this["strength"]) { results.push(...this.strength.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['item']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property item: fhir: Medication.ingredient.item[x]:", }));
+    }
+    if (this["isActive"]) { outcome.issue!.push(...this.isActive.doModelValidation().issue!); }
+    if (this["strength"]) { outcome.issue!.push(...this.strength.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicationBatch type.
+ */
+export interface MedicationBatchArgs extends fhir.BackboneElementArgs {
+  /**
+   * The assigned lot number of a batch of the specified product.
+   */
+  lotNumber?: fhir.FhirString|string|undefined;
+  /**
+   * When this specific batch of product will expire.
+   */
+  expirationDate?: fhir.FhirDateTime|string|undefined;
 }
 
 /**
  * Information that only applies to packages (not products).
  */
-export class MedicationBatch extends fhir.BackboneElement implements IMedicationBatch {
+export class MedicationBatch extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicationBatch';
   /**
    * The assigned lot number of a batch of the specified product.
    */
-  public lotNumber?: string|undefined;
-  /**
-   * Extended properties for primitive element: Medication.batch.lotNumber
-   */
-  public _lotNumber?: fhir.FhirElement|undefined;
+  public lotNumber?: fhir.FhirString|undefined;
   /**
    * When this specific batch of product will expire.
    */
-  public expirationDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Medication.batch.expirationDate
-   */
-  public _expirationDate?: fhir.FhirElement|undefined;
+  public expirationDate?: fhir.FhirDateTime|undefined;
   /**
    * Default constructor for MedicationBatch - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicationBatch> = { }) {
-    super(source);
-    if (source['lotNumber']) { this.lotNumber = source.lotNumber; }
-    if (source['_lotNumber']) { this._lotNumber = new fhir.FhirElement(source._lotNumber!); }
-    if (source['expirationDate']) { this.expirationDate = source.expirationDate; }
-    if (source['_expirationDate']) { this._expirationDate = new fhir.FhirElement(source._expirationDate!); }
+  constructor(source:Partial<MedicationBatchArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['lotNumber']) { this.lotNumber = new fhir.FhirString({value: source.lotNumber}); }
+    if (source['expirationDate']) { this.expirationDate = new fhir.FhirDateTime({value: source.expirationDate}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_lotNumber"]) { results.push(...this._lotNumber.doModelValidation()); }
-    if (this["_expirationDate"]) { results.push(...this._expirationDate.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["lotNumber"]) { outcome.issue!.push(...this.lotNumber.doModelValidation().issue!); }
+    if (this["expirationDate"]) { outcome.issue!.push(...this.expirationDate.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Medication type.
+ */
+export interface MedicationArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Medication"|undefined;
+  /**
+   * The serial number could be included as an identifier.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * Depending on the context of use, the code that was actually selected by the user (prescriber, dispenser, etc.) will have the coding.userSelected set to true.  As described in the coding datatype: "A coding may be marked as a "userSelected" if a user selected the particular coded value in a user interface (e.g. the user selects an item in a pick-list). If a user selected coding exists, it is the preferred choice for performing translations etc. Other codes can only be literal translations to alternative code systems, or codes at a lower level of granularity (e.g. a generic code for a vendor-specific primary one).
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * This status is intended to identify if the medication in a local system is in active use within a drug database or inventory.  For example, a pharmacy system may create a new drug file record for a compounded product "ABC Hospital Special Cream" with an active status.  At some point in the future, it may be determined that the drug record was created with an error and the status is changed to "entered in error".   This status is not intended to specify if a medication is part of a particular formulary.  It is possible that the drug record may be referenced by multiple formularies or catalogues and each of those entries would have a separate status.
+   */
+  status?: MedicationStatusValueSetEnum|undefined;
+  /**
+   * Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.
+   */
+  manufacturer?: fhir.ReferenceArgs|undefined;
+  /**
+   * When Medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When Medication is referenced within MedicationAdministration, this is administered form.
+   */
+  form?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Specific amount of the drug in the packaged product.  For example, when specifying a product that has the same strength (For example, Insulin glargine 100 unit per mL solution for injection), this attribute provides additional clarification of the package amount (For example, 3 mL, 10mL, etc.).
+   */
+  amount?: fhir.RatioArgs|undefined;
+  /**
+   * The ingredients need not be a complete list.  If an ingredient is not specified, this does not indicate whether an ingredient is present or absent.  If an ingredient is specified it does not mean that all ingredients are specified.  It is possible to specify both inactive and active ingredients.
+   */
+  ingredient?: fhir.MedicationIngredientArgs[]|undefined;
+  /**
+   * Information that only applies to packages (not products).
+   */
+  batch?: fhir.MedicationBatchArgs|undefined;
 }
 
 /**
  * This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.
  */
-export class Medication extends fhir.DomainResource implements IMedication {
+export class Medication extends fhir.DomainResource {
+  readonly __dataType:string = 'Medication';
   /**
    * Resource Type Name
    */
@@ -203,7 +193,7 @@ export class Medication extends fhir.DomainResource implements IMedication {
   /**
    * The serial number could be included as an identifier.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Depending on the context of use, the code that was actually selected by the user (prescriber, dispenser, etc.) will have the coding.userSelected set to true.  As described in the coding datatype: "A coding may be marked as a "userSelected" if a user selected the particular coded value in a user interface (e.g. the user selects an item in a pick-list). If a user selected coding exists, it is the preferred choice for performing translations etc. Other codes can only be literal translations to alternative code systems, or codes at a lower level of granularity (e.g. a generic code for a vendor-specific primary one).
    */
@@ -212,10 +202,6 @@ export class Medication extends fhir.DomainResource implements IMedication {
    * This status is intended to identify if the medication in a local system is in active use within a drug database or inventory.  For example, a pharmacy system may create a new drug file record for a compounded product "ABC Hospital Special Cream" with an active status.  At some point in the future, it may be determined that the drug record was created with an error and the status is changed to "entered in error".   This status is not intended to specify if a medication is part of a particular formulary.  It is possible that the drug record may be referenced by multiple formularies or catalogues and each of those entries would have a separate status.
    */
   public status?: MedicationStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: Medication.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.
    */
@@ -231,7 +217,7 @@ export class Medication extends fhir.DomainResource implements IMedication {
   /**
    * The ingredients need not be a complete list.  If an ingredient is not specified, this does not indicate whether an ingredient is present or absent.  If an ingredient is specified it does not mean that all ingredients are specified.  It is possible to specify both inactive and active ingredients.
    */
-  public ingredient?: fhir.MedicationIngredient[]|undefined;
+  public ingredient?: fhir.MedicationIngredient[]|undefined = [];
   /**
    * Information that only applies to packages (not products).
    */
@@ -239,18 +225,17 @@ export class Medication extends fhir.DomainResource implements IMedication {
   /**
    * Default constructor for Medication - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedication> = { }) {
-    super(source);
+  constructor(source:Partial<MedicationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Medication';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
     if (source['status']) { this.status = source.status; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['manufacturer']) { this.manufacturer = new fhir.Reference(source.manufacturer!); }
-    if (source['form']) { this.form = new fhir.CodeableConcept(source.form!); }
-    if (source['amount']) { this.amount = new fhir.Ratio(source.amount!); }
+    if (source['manufacturer']) { this.manufacturer = new fhir.Reference(source.manufacturer); }
+    if (source['form']) { this.form = new fhir.CodeableConcept(source.form); }
+    if (source['amount']) { this.amount = new fhir.Ratio(source.amount); }
     if (source['ingredient']) { this.ingredient = source.ingredient.map((x) => new fhir.MedicationIngredient(x)); }
-    if (source['batch']) { this.batch = new fhir.MedicationBatch(source.batch!); }
+    if (source['batch']) { this.batch = new fhir.MedicationBatch(source.batch); }
   }
   /**
    * Example-bound Value Set for code
@@ -273,17 +258,24 @@ export class Medication extends fhir.DomainResource implements IMedication {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Medication.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["manufacturer"]) { results.push(...this.manufacturer.doModelValidation()); }
-    if (this["form"]) { results.push(...this.form.doModelValidation()); }
-    if (this["amount"]) { results.push(...this.amount.doModelValidation()); }
-    if (this["ingredient"]) { this.ingredient.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["batch"]) { results.push(...this.batch.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Medication' fhir: Medication.resourceType:'Medication'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["manufacturer"]) { outcome.issue!.push(...this.manufacturer.doModelValidation().issue!); }
+    if (this["form"]) { outcome.issue!.push(...this.form.doModelValidation().issue!); }
+    if (this["amount"]) { outcome.issue!.push(...this.amount.doModelValidation().issue!); }
+    if (this["ingredient"]) { this.ingredient.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["batch"]) { outcome.issue!.push(...this.batch.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

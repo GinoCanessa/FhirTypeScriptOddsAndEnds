@@ -3,8 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: AppointmentResponse
 import * as fhir from '../fhir.js';
-import { EncounterParticipantTypeValueSet } from '../fhirValueSets/EncounterParticipantTypeValueSet.js';
-import { ParticipationstatusValueSet } from '../fhirValueSets/ParticipationstatusValueSet.js';
+import { EncounterParticipantTypeValueSet, } from '../fhirValueSets/EncounterParticipantTypeValueSet.js';
+import { ParticipationstatusValueSet, } from '../fhirValueSets/ParticipationstatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.
  */
@@ -12,8 +14,19 @@ export class AppointmentResponse extends fhir.DomainResource {
     /**
      * Default constructor for AppointmentResponse - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AppointmentResponse';
+        /**
+         * This records identifiers associated with this appointment response concern that are defined by business processes and/ or used to refer to it when a direct URL reference to the resource itself is not appropriate.
+         */
+        this.identifier = [];
+        /**
+         * The role of the participant can be used to declare what the actor will be doing in the scope of the referenced appointment.
+         * If the actor is not specified, then it is expected that the actor will be filled in at a later stage of planning.
+         * This value SHALL be the same as specified on the referenced Appointment so that they can be matched, and subsequently updated.
+         */
+        this.participantType = [];
         this.resourceType = 'AppointmentResponse';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -25,16 +38,10 @@ export class AppointmentResponse extends fhir.DomainResource {
             this.appointment = null;
         }
         if (source['start']) {
-            this.start = source.start;
-        }
-        if (source['_start']) {
-            this._start = new fhir.FhirElement(source._start);
+            this.start = new fhir.FhirInstant({ value: source.start });
         }
         if (source['end']) {
-            this.end = source.end;
-        }
-        if (source['_end']) {
-            this._end = new fhir.FhirElement(source._end);
+            this.end = new fhir.FhirInstant({ value: source.end });
         }
         if (source['participantType']) {
             this.participantType = source.participantType.map((x) => new fhir.CodeableConcept(x));
@@ -48,14 +55,8 @@ export class AppointmentResponse extends fhir.DomainResource {
         else {
             this.participantStatus = null;
         }
-        if (source['_participantStatus']) {
-            this._participantStatus = new fhir.FhirElement(source._participantStatus);
-        }
         if (source['comment']) {
-            this.comment = source.comment;
-        }
-        if (source['_comment']) {
-            this._comment = new fhir.FhirElement(source._comment);
+            this.comment = new fhir.FhirString({ value: source.comment });
         }
     }
     /**
@@ -74,41 +75,44 @@ export class AppointmentResponse extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: AppointmentResponse.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'AppointmentResponse' fhir: AppointmentResponse.resourceType:'AppointmentResponse'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["appointment"]) {
-            results.push(["appointment", 'Missing required element: AppointmentResponse.appointment']);
+        if (!this['appointment']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property appointment:fhir.Reference fhir: AppointmentResponse.appointment:Reference", }));
         }
         if (this["appointment"]) {
-            results.push(...this.appointment.doModelValidation());
+            outcome.issue.push(...this.appointment.doModelValidation().issue);
         }
-        if (this["_start"]) {
-            results.push(...this._start.doModelValidation());
+        if (this["start"]) {
+            outcome.issue.push(...this.start.doModelValidation().issue);
         }
-        if (this["_end"]) {
-            results.push(...this._end.doModelValidation());
+        if (this["end"]) {
+            outcome.issue.push(...this.end.doModelValidation().issue);
         }
         if (this["participantType"]) {
-            this.participantType.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.participantType.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["actor"]) {
-            results.push(...this.actor.doModelValidation());
+            outcome.issue.push(...this.actor.doModelValidation().issue);
         }
-        if (!this["participantStatus"]) {
-            results.push(["participantStatus", 'Missing required element: AppointmentResponse.participantStatus']);
+        if (!this['participantStatus']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property participantStatus:ParticipationstatusValueSetEnum fhir: AppointmentResponse.participantStatus:code", }));
         }
-        if (this["_participantStatus"]) {
-            results.push(...this._participantStatus.doModelValidation());
+        if (this["comment"]) {
+            outcome.issue.push(...this.comment.doModelValidation().issue);
         }
-        if (this["_comment"]) {
-            results.push(...this._comment.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=AppointmentResponse.js.map

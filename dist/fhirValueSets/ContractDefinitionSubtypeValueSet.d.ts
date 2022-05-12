@@ -15,10 +15,4 @@ export declare type ContractDefinitionSubtypeValueSetType = typeof ContractDefin
 /**
  * This value set contract specific codes for status.
  */
-export declare enum ContractDefinitionSubtypeValueSetEnum {
-    /**
-     * temp: To be completed
-     */
-    TemporaryValue = "temp"
-}
 //# sourceMappingURL=ContractDefinitionSubtypeValueSet.d.ts.map

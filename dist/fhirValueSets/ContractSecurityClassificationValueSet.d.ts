@@ -15,10 +15,4 @@ export declare type ContractSecurityClassificationValueSetType = typeof Contract
 /**
  * This value set contract specific codes for security classification.
  */
-export declare enum ContractSecurityClassificationValueSetEnum {
-    /**
-     * policy: To be completed
-     */
-    Policy = "policy"
-}
 //# sourceMappingURL=ContractSecurityClassificationValueSet.d.ts.map

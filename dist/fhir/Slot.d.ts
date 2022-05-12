@@ -3,84 +3,66 @@ import { ServiceCategoryValueSetType } from '../fhirValueSets/ServiceCategoryVal
 import { ServiceTypeValueSetType } from '../fhirValueSets/ServiceTypeValueSet.js';
 import { C80PracticeCodesValueSetType } from '../fhirValueSets/C80PracticeCodesValueSet.js';
 import { V20276ValueSetType } from '../fhirValueSets/V20276ValueSet.js';
-import { SlotstatusValueSetType, SlotstatusValueSetEnum } from '../fhirValueSets/SlotstatusValueSet.js';
+import { SlotstatusValueSetType } from '../fhirValueSets/SlotstatusValueSet.js';
+import { SlotstatusValueSetEnum } from '../valueSetEnums.js';
 /**
- * A slot of time on a schedule that may be available for booking appointments.
+ * Valid arguments for the Slot type.
  */
-export declare type ISlot = fhir.IDomainResource & {
+export interface SlotArgs extends fhir.DomainResourceArgs {
     /**
      * Resource Type Name
      */
-    resourceType: "Slot";
+    resourceType: "Slot" | undefined;
     /**
      * External Ids for this item.
      */
-    identifier?: fhir.IIdentifier[] | undefined;
+    identifier?: fhir.IdentifierArgs[] | undefined;
     /**
      * A broad categorization of the service that is to be performed during this appointment.
      */
-    serviceCategory?: fhir.ICodeableConcept[] | undefined;
+    serviceCategory?: fhir.CodeableConceptArgs[] | undefined;
     /**
      * The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource.
      */
-    serviceType?: fhir.ICodeableConcept[] | undefined;
+    serviceType?: fhir.CodeableConceptArgs[] | undefined;
     /**
      * The specialty of a practitioner that would be required to perform the service requested in this appointment.
      */
-    specialty?: fhir.ICodeableConcept[] | undefined;
+    specialty?: fhir.CodeableConceptArgs[] | undefined;
     /**
      * The style of appointment or patient that may be booked in the slot (not service type).
      */
-    appointmentType?: fhir.ICodeableConcept | undefined;
+    appointmentType?: fhir.CodeableConceptArgs | undefined;
     /**
      * The schedule resource that this slot defines an interval of status information.
      */
-    schedule: fhir.IReference | null;
+    schedule: fhir.ReferenceArgs | null;
     /**
      * busy | free | busy-unavailable | busy-tentative | entered-in-error.
      */
     status: SlotstatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: Slot.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
      * Date/Time that the slot is to begin.
      */
-    start: string | null;
-    /**
-     * Extended properties for primitive element: Slot.start
-     */
-    _start?: fhir.IFhirElement | undefined;
+    start: fhir.FhirInstant | string | undefined;
     /**
      * Date/Time that the slot is to conclude.
      */
-    end: string | null;
-    /**
-     * Extended properties for primitive element: Slot.end
-     */
-    _end?: fhir.IFhirElement | undefined;
+    end: fhir.FhirInstant | string | undefined;
     /**
      * This slot has already been overbooked, appointments are unlikely to be accepted for this time.
      */
-    overbooked?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Slot.overbooked
-     */
-    _overbooked?: fhir.IFhirElement | undefined;
+    overbooked?: fhir.FhirBoolean | boolean | undefined;
     /**
      * Comments on the slot to describe any extended information. Such as custom constraints on the slot.
      */
-    comment?: string | undefined;
-    /**
-     * Extended properties for primitive element: Slot.comment
-     */
-    _comment?: fhir.IFhirElement | undefined;
-};
+    comment?: fhir.FhirString | string | undefined;
+}
 /**
  * A slot of time on a schedule that may be available for booking appointments.
  */
-export declare class Slot extends fhir.DomainResource implements ISlot {
+export declare class Slot extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -114,45 +96,25 @@ export declare class Slot extends fhir.DomainResource implements ISlot {
      */
     status: SlotstatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: Slot.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * Date/Time that the slot is to begin.
      */
-    start: string | null;
-    /**
-     * Extended properties for primitive element: Slot.start
-     */
-    _start?: fhir.FhirElement | undefined;
+    start: fhir.FhirInstant | null;
     /**
      * Date/Time that the slot is to conclude.
      */
-    end: string | null;
-    /**
-     * Extended properties for primitive element: Slot.end
-     */
-    _end?: fhir.FhirElement | undefined;
+    end: fhir.FhirInstant | null;
     /**
      * This slot has already been overbooked, appointments are unlikely to be accepted for this time.
      */
-    overbooked?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Slot.overbooked
-     */
-    _overbooked?: fhir.FhirElement | undefined;
+    overbooked?: fhir.FhirBoolean | undefined;
     /**
      * Comments on the slot to describe any extended information. Such as custom constraints on the slot.
      */
-    comment?: string | undefined;
-    /**
-     * Extended properties for primitive element: Slot.comment
-     */
-    _comment?: fhir.FhirElement | undefined;
+    comment?: fhir.FhirString | undefined;
     /**
      * Default constructor for Slot - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISlot>);
+    constructor(source?: Partial<SlotArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Example-bound Value Set for serviceCategory
      */
@@ -176,6 +138,10 @@ export declare class Slot extends fhir.DomainResource implements ISlot {
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Slot.d.ts.map

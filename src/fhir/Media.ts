@@ -3,155 +3,134 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Media
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { EventStatusValueSet, EventStatusValueSetType, EventStatusValueSetEnum } from '../fhirValueSets/EventStatusValueSet.js'
-import { MediaTypeValueSet, MediaTypeValueSetType, MediaTypeValueSetEnum } from '../fhirValueSets/MediaTypeValueSet.js'
-import { MediaViewValueSet, MediaViewValueSetType, MediaViewValueSetEnum } from '../fhirValueSets/MediaViewValueSet.js'
-import { ProcedureReasonValueSet, ProcedureReasonValueSetType, ProcedureReasonValueSetEnum } from '../fhirValueSets/ProcedureReasonValueSet.js'
-import { BodySiteValueSet, BodySiteValueSetType, BodySiteValueSetEnum } from '../fhirValueSets/BodySiteValueSet.js'
-
+import { EventStatusValueSet, EventStatusValueSetType,} from '../fhirValueSets/EventStatusValueSet.js';
+import { EventStatusValueSetEnum } from '../valueSetEnums.js';
+import { MediaTypeValueSet, MediaTypeValueSetType,} from '../fhirValueSets/MediaTypeValueSet.js';
+import { MediaTypeValueSetEnum } from '../valueSetEnums.js';
+import { MediaViewValueSet, MediaViewValueSetType,} from '../fhirValueSets/MediaViewValueSet.js';
+import { MediaViewValueSetEnum } from '../valueSetEnums.js';
+import { ProcedureReasonValueSet, ProcedureReasonValueSetType,} from '../fhirValueSets/ProcedureReasonValueSet.js';
+import { ProcedureReasonValueSetEnum } from '../valueSetEnums.js';
+import { BodySiteValueSet, BodySiteValueSetType,} from '../fhirValueSets/BodySiteValueSet.js';
+import { BodySiteValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.
+ * Valid arguments for the Media type.
  */
-export type IMedia = fhir.IDomainResource & { 
+export interface MediaArgs extends fhir.DomainResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "Media";
+  resourceType: "Media"|undefined;
   /**
    * The identifier label and use can be used to determine what kind of identifier it is.
    */
-  identifier?: fhir.IIdentifier[]|undefined;
+  identifier?: fhir.IdentifierArgs[]|undefined;
   /**
    * A procedure that is fulfilled in whole or in part by the creation of this media.
    */
-  basedOn?: fhir.IReference[]|undefined;
+  basedOn?: fhir.ReferenceArgs[]|undefined;
   /**
    * Not to be used to link an event to an Encounter - use Media.encounter for that.
    * [The allowed reference resources may be adjusted as appropriate for the event resource].
    */
-  partOf?: fhir.IReference[]|undefined;
+  partOf?: fhir.ReferenceArgs[]|undefined;
   /**
    * A nominal state-transition diagram can be found in the [[event.html#statemachine | Event pattern]] documentation
    * Unknown does not represent "other" - one of the defined statuses must apply.  Unknown is used when the authoring system is not sure what the current status is.
    */
   status: EventStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Media.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
    * A code that classifies whether the media is an image, video or audio recording or some other media category.
    */
-  type?: fhir.ICodeableConcept|undefined;
+  type?: fhir.CodeableConceptArgs|undefined;
   /**
    * Details of the type of the media - usually, how it was acquired (what type of device). If images sourced from a DICOM system, are wrapped in a Media resource, then this is the modality.
    */
-  modality?: fhir.ICodeableConcept|undefined;
+  modality?: fhir.CodeableConceptArgs|undefined;
   /**
    * The name of the imaging view e.g. Lateral or Antero-posterior (AP).
    */
-  view?: fhir.ICodeableConcept|undefined;
+  view?: fhir.CodeableConceptArgs|undefined;
   /**
    * Who/What this Media is a record of.
    */
-  subject?: fhir.IReference|undefined;
+  subject?: fhir.ReferenceArgs|undefined;
   /**
    * This will typically be the encounter the media occurred within.
    */
-  encounter?: fhir.IReference|undefined;
+  encounter?: fhir.ReferenceArgs|undefined;
   /**
    * The date and time(s) at which the media was collected.
    */
-  createdDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Media.created[x]
-   */
-  _createdDateTime?: fhir.IFhirElement|undefined;
+  created?: fhir.FhirDateTime|fhir.Period|undefined;
   /**
    * The date and time(s) at which the media was collected.
    */
-  createdPeriod?: fhir.IPeriod|undefined;
+  createdDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * The date and time(s) at which the media was collected.
+   */
+  createdPeriod?: fhir.PeriodArgs|undefined;
   /**
    * It may be the same as the [`lastUpdated` ](resource-definitions.html#Meta.lastUpdated) time of the resource itself.  For Observations that do require review and verification for certain updates, it might not be the same as the `lastUpdated` time of the resource itself due to a non-clinically significant update that does not require the new version to be reviewed and verified again.
    */
-  issued?: string|undefined;
-  /**
-   * Extended properties for primitive element: Media.issued
-   */
-  _issued?: fhir.IFhirElement|undefined;
+  issued?: fhir.FhirInstant|string|undefined;
   /**
    * The person who administered the collection of the image.
    */
-  operator?: fhir.IReference|undefined;
+  operator?: fhir.ReferenceArgs|undefined;
   /**
    * Textual reasons can be captured using reasonCode.text.
    */
-  reasonCode?: fhir.ICodeableConcept[]|undefined;
+  reasonCode?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * Only used if not implicit in code found in Observation.code.  In many systems, this may be represented as a related observation instead of an inline component.   
    * If the use case requires BodySite to be handled as a separate resource (e.g. to identify and track separately) then use the standard extension[ bodySite](extension-bodysite.html).
    */
-  bodySite?: fhir.ICodeableConcept|undefined;
+  bodySite?: fhir.CodeableConceptArgs|undefined;
   /**
    * The name of the device / manufacturer of the device  that was used to make the recording.
    */
-  deviceName?: string|undefined;
-  /**
-   * Extended properties for primitive element: Media.deviceName
-   */
-  _deviceName?: fhir.IFhirElement|undefined;
+  deviceName?: fhir.FhirString|string|undefined;
   /**
    * An extension should be used if further typing of the device is needed.  Secondary devices used to support collecting a media can be represented using either extension or through the Observation.related element.
    */
-  device?: fhir.IReference|undefined;
+  device?: fhir.ReferenceArgs|undefined;
   /**
    * Height of the image in pixels (photo/video).
    */
-  height?: number|undefined;
-  /**
-   * Extended properties for primitive element: Media.height
-   */
-  _height?: fhir.IFhirElement|undefined;
+  height?: fhir.FhirPositiveInt|number|undefined;
   /**
    * Width of the image in pixels (photo/video).
    */
-  width?: number|undefined;
-  /**
-   * Extended properties for primitive element: Media.width
-   */
-  _width?: fhir.IFhirElement|undefined;
+  width?: fhir.FhirPositiveInt|number|undefined;
   /**
    * if the number of frames is not supplied, the value may be unknown. Applications should not assume that there is only one frame unless it is explicitly stated.
    */
-  frames?: number|undefined;
-  /**
-   * Extended properties for primitive element: Media.frames
-   */
-  _frames?: fhir.IFhirElement|undefined;
+  frames?: fhir.FhirPositiveInt|number|undefined;
   /**
    * The duration might differ from occurrencePeriod if recording was paused.
    */
-  duration?: number|undefined;
-  /**
-   * Extended properties for primitive element: Media.duration
-   */
-  _duration?: fhir.IFhirElement|undefined;
+  duration?: fhir.FhirDecimal|number|undefined;
   /**
    * Recommended content types: image/jpeg, image/png, image/tiff, video/mpeg, audio/mp4, application/dicom. Application/dicom can contain the transfer syntax as a parameter.  For media that covers a period of time (video/sound), the content.creationTime is the end time. Creation time is used for tracking, organizing versions and searching.
    */
-  content: fhir.IAttachment|null;
+  content: fhir.AttachmentArgs|null;
   /**
    * Not to be used for observations, conclusions, etc. Instead use an [Observation](observation.html) based on the Media/ImagingStudy resource.
    */
-  note?: fhir.IAnnotation[]|undefined;
+  note?: fhir.AnnotationArgs[]|undefined;
 }
 
 /**
  * A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.
  */
-export class Media extends fhir.DomainResource implements IMedia {
+export class Media extends fhir.DomainResource {
+  readonly __dataType:string = 'Media';
   /**
    * Resource Type Name
    */
@@ -159,25 +138,21 @@ export class Media extends fhir.DomainResource implements IMedia {
   /**
    * The identifier label and use can be used to determine what kind of identifier it is.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * A procedure that is fulfilled in whole or in part by the creation of this media.
    */
-  public basedOn?: fhir.Reference[]|undefined;
+  public basedOn?: fhir.Reference[]|undefined = [];
   /**
    * Not to be used to link an event to an Encounter - use Media.encounter for that.
    * [The allowed reference resources may be adjusted as appropriate for the event resource].
    */
-  public partOf?: fhir.Reference[]|undefined;
+  public partOf?: fhir.Reference[]|undefined = [];
   /**
    * A nominal state-transition diagram can be found in the [[event.html#statemachine | Event pattern]] documentation
    * Unknown does not represent "other" - one of the defined statuses must apply.  Unknown is used when the authoring system is not sure what the current status is.
    */
   public status: EventStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Media.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * A code that classifies whether the media is an image, video or audio recording or some other media category.
    */
@@ -201,23 +176,12 @@ export class Media extends fhir.DomainResource implements IMedia {
   /**
    * The date and time(s) at which the media was collected.
    */
-  public createdDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Media.created[x]
-   */
-  public _createdDateTime?: fhir.FhirElement|undefined;
-  /**
-   * The date and time(s) at which the media was collected.
-   */
-  public createdPeriod?: fhir.Period|undefined;
+  public created?: (fhir.FhirDateTime|fhir.Period)|undefined;
+  readonly __createdIsChoice:true = true;
   /**
    * It may be the same as the [`lastUpdated` ](resource-definitions.html#Meta.lastUpdated) time of the resource itself.  For Observations that do require review and verification for certain updates, it might not be the same as the `lastUpdated` time of the resource itself due to a non-clinically significant update that does not require the new version to be reviewed and verified again.
    */
-  public issued?: string|undefined;
-  /**
-   * Extended properties for primitive element: Media.issued
-   */
-  public _issued?: fhir.FhirElement|undefined;
+  public issued?: fhir.FhirInstant|undefined;
   /**
    * The person who administered the collection of the image.
    */
@@ -225,7 +189,7 @@ export class Media extends fhir.DomainResource implements IMedia {
   /**
    * Textual reasons can be captured using reasonCode.text.
    */
-  public reasonCode?: fhir.CodeableConcept[]|undefined;
+  public reasonCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Only used if not implicit in code found in Observation.code.  In many systems, this may be represented as a related observation instead of an inline component.   
    * If the use case requires BodySite to be handled as a separate resource (e.g. to identify and track separately) then use the standard extension[ bodySite](extension-bodysite.html).
@@ -234,11 +198,7 @@ export class Media extends fhir.DomainResource implements IMedia {
   /**
    * The name of the device / manufacturer of the device  that was used to make the recording.
    */
-  public deviceName?: string|undefined;
-  /**
-   * Extended properties for primitive element: Media.deviceName
-   */
-  public _deviceName?: fhir.FhirElement|undefined;
+  public deviceName?: fhir.FhirString|undefined;
   /**
    * An extension should be used if further typing of the device is needed.  Secondary devices used to support collecting a media can be represented using either extension or through the Observation.related element.
    */
@@ -246,35 +206,19 @@ export class Media extends fhir.DomainResource implements IMedia {
   /**
    * Height of the image in pixels (photo/video).
    */
-  public height?: number|undefined;
-  /**
-   * Extended properties for primitive element: Media.height
-   */
-  public _height?: fhir.FhirElement|undefined;
+  public height?: fhir.FhirPositiveInt|undefined;
   /**
    * Width of the image in pixels (photo/video).
    */
-  public width?: number|undefined;
-  /**
-   * Extended properties for primitive element: Media.width
-   */
-  public _width?: fhir.FhirElement|undefined;
+  public width?: fhir.FhirPositiveInt|undefined;
   /**
    * if the number of frames is not supplied, the value may be unknown. Applications should not assume that there is only one frame unless it is explicitly stated.
    */
-  public frames?: number|undefined;
-  /**
-   * Extended properties for primitive element: Media.frames
-   */
-  public _frames?: fhir.FhirElement|undefined;
+  public frames?: fhir.FhirPositiveInt|undefined;
   /**
    * The duration might differ from occurrencePeriod if recording was paused.
    */
-  public duration?: number|undefined;
-  /**
-   * Extended properties for primitive element: Media.duration
-   */
-  public _duration?: fhir.FhirElement|undefined;
+  public duration?: fhir.FhirDecimal|undefined;
   /**
    * Recommended content types: image/jpeg, image/png, image/tiff, video/mpeg, audio/mp4, application/dicom. Application/dicom can contain the transfer syntax as a parameter.  For media that covers a period of time (video/sound), the content.creationTime is the end time. Creation time is used for tracking, organizing versions and searching.
    */
@@ -282,44 +226,37 @@ export class Media extends fhir.DomainResource implements IMedia {
   /**
    * Not to be used for observations, conclusions, etc. Instead use an [Observation](observation.html) based on the Media/ImagingStudy resource.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Default constructor for Media - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedia> = { }) {
-    super(source);
+  constructor(source:Partial<MediaArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Media';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['basedOn']) { this.basedOn = source.basedOn.map((x) => new fhir.Reference(x)); }
     if (source['partOf']) { this.partOf = source.partOf.map((x) => new fhir.Reference(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['modality']) { this.modality = new fhir.CodeableConcept(source.modality!); }
-    if (source['view']) { this.view = new fhir.CodeableConcept(source.view!); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['createdDateTime']) { this.createdDateTime = source.createdDateTime; }
-    if (source['_createdDateTime']) { this._createdDateTime = new fhir.FhirElement(source._createdDateTime!); }
-    if (source['createdPeriod']) { this.createdPeriod = new fhir.Period(source.createdPeriod!); }
-    if (source['issued']) { this.issued = source.issued; }
-    if (source['_issued']) { this._issued = new fhir.FhirElement(source._issued!); }
-    if (source['operator']) { this.operator = new fhir.Reference(source.operator!); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['modality']) { this.modality = new fhir.CodeableConcept(source.modality); }
+    if (source['view']) { this.view = new fhir.CodeableConcept(source.view); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['created']) { this.created = source.created; }
+    else if (source['createdDateTime']) { this.created = new fhir.FhirDateTime({value: source.createdDateTime}); }
+    else if (source['createdPeriod']) { this.created = new fhir.Period(source.createdPeriod); }
+    if (source['issued']) { this.issued = new fhir.FhirInstant({value: source.issued}); }
+    if (source['operator']) { this.operator = new fhir.Reference(source.operator); }
     if (source['reasonCode']) { this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['bodySite']) { this.bodySite = new fhir.CodeableConcept(source.bodySite!); }
-    if (source['deviceName']) { this.deviceName = source.deviceName; }
-    if (source['_deviceName']) { this._deviceName = new fhir.FhirElement(source._deviceName!); }
-    if (source['device']) { this.device = new fhir.Reference(source.device!); }
-    if (source['height']) { this.height = source.height; }
-    if (source['_height']) { this._height = new fhir.FhirElement(source._height!); }
-    if (source['width']) { this.width = source.width; }
-    if (source['_width']) { this._width = new fhir.FhirElement(source._width!); }
-    if (source['frames']) { this.frames = source.frames; }
-    if (source['_frames']) { this._frames = new fhir.FhirElement(source._frames!); }
-    if (source['duration']) { this.duration = source.duration; }
-    if (source['_duration']) { this._duration = new fhir.FhirElement(source._duration!); }
-    if (source['content']) { this.content = new fhir.Attachment(source.content!); }
+    if (source['bodySite']) { this.bodySite = new fhir.CodeableConcept(source.bodySite); }
+    if (source['deviceName']) { this.deviceName = new fhir.FhirString({value: source.deviceName}); }
+    if (source['device']) { this.device = new fhir.Reference(source.device); }
+    if (source['height']) { this.height = new fhir.FhirPositiveInt({value: source.height}); }
+    if (source['width']) { this.width = new fhir.FhirPositiveInt({value: source.width}); }
+    if (source['frames']) { this.frames = new fhir.FhirPositiveInt({value: source.frames}); }
+    if (source['duration']) { this.duration = new fhir.FhirDecimal({value: source.duration}); }
+    if (source['content']) { this.content = new fhir.Attachment(source.content); }
     else { this.content = null; }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
   }
@@ -356,34 +293,43 @@ export class Media extends fhir.DomainResource implements IMedia {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Media.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["basedOn"]) { this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["partOf"]) { this.partOf.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: Media.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["modality"]) { results.push(...this.modality.doModelValidation()); }
-    if (this["view"]) { results.push(...this.view.doModelValidation()); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (this["_createdDateTime"]) { results.push(...this._createdDateTime.doModelValidation()); }
-    if (this["createdPeriod"]) { results.push(...this.createdPeriod.doModelValidation()); }
-    if (this["_issued"]) { results.push(...this._issued.doModelValidation()); }
-    if (this["operator"]) { results.push(...this.operator.doModelValidation()); }
-    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["bodySite"]) { results.push(...this.bodySite.doModelValidation()); }
-    if (this["_deviceName"]) { results.push(...this._deviceName.doModelValidation()); }
-    if (this["device"]) { results.push(...this.device.doModelValidation()); }
-    if (this["_height"]) { results.push(...this._height.doModelValidation()); }
-    if (this["_width"]) { results.push(...this._width.doModelValidation()); }
-    if (this["_frames"]) { results.push(...this._frames.doModelValidation()); }
-    if (this["_duration"]) { results.push(...this._duration.doModelValidation()); }
-    if (!this["content"]) { results.push(["content",'Missing required element: Media.content']); }
-    if (this["content"]) { results.push(...this.content.doModelValidation()); }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Media' fhir: Media.resourceType:'Media'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["basedOn"]) { this.basedOn.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["partOf"]) { this.partOf.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:EventStatusValueSetEnum fhir: Media.status:code", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["modality"]) { outcome.issue!.push(...this.modality.doModelValidation().issue!); }
+    if (this["view"]) { outcome.issue!.push(...this.view.doModelValidation().issue!); }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (this["issued"]) { outcome.issue!.push(...this.issued.doModelValidation().issue!); }
+    if (this["operator"]) { outcome.issue!.push(...this.operator.doModelValidation().issue!); }
+    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["bodySite"]) { outcome.issue!.push(...this.bodySite.doModelValidation().issue!); }
+    if (this["deviceName"]) { outcome.issue!.push(...this.deviceName.doModelValidation().issue!); }
+    if (this["device"]) { outcome.issue!.push(...this.device.doModelValidation().issue!); }
+    if (this["height"]) { outcome.issue!.push(...this.height.doModelValidation().issue!); }
+    if (this["width"]) { outcome.issue!.push(...this.width.doModelValidation().issue!); }
+    if (this["frames"]) { outcome.issue!.push(...this.frames.doModelValidation().issue!); }
+    if (this["duration"]) { outcome.issue!.push(...this.duration.doModelValidation().issue!); }
+    if (!this['content']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property content:fhir.Attachment fhir: Media.content:Attachment", }));
+    }
+    if (this["content"]) { outcome.issue!.push(...this.content.doModelValidation().issue!); }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

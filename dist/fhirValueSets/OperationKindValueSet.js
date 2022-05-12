@@ -27,15 +27,4 @@ export const OperationKindValueSet = {
 /**
  * Whether an operation is a normal operation or a query.
  */
-export var OperationKindValueSetEnum;
-(function (OperationKindValueSetEnum) {
-    /**
-     * operation: This operation is invoked as an operation.
-     */
-    OperationKindValueSetEnum["Operation"] = "operation";
-    /**
-     * query: This operation is a named query, invoked using the search mechanism.
-     */
-    OperationKindValueSetEnum["Query"] = "query";
-})(OperationKindValueSetEnum || (OperationKindValueSetEnum = {}));
 //# sourceMappingURL=OperationKindValueSet.js.map

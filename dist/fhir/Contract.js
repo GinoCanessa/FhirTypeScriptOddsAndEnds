@@ -3,37 +3,39 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Contract
 import * as fhir from '../fhir.js';
-import { ContractDefinitionTypeValueSet } from '../fhirValueSets/ContractDefinitionTypeValueSet.js';
-import { ContractDefinitionSubtypeValueSet } from '../fhirValueSets/ContractDefinitionSubtypeValueSet.js';
-import { ContractPublicationstatusValueSet } from '../fhirValueSets/ContractPublicationstatusValueSet.js';
-import { ContractSecurityClassificationValueSet } from '../fhirValueSets/ContractSecurityClassificationValueSet.js';
-import { ContractSecurityCategoryValueSet } from '../fhirValueSets/ContractSecurityCategoryValueSet.js';
-import { ContractSecurityControlValueSet } from '../fhirValueSets/ContractSecurityControlValueSet.js';
-import { ContractPartyRoleValueSet } from '../fhirValueSets/ContractPartyRoleValueSet.js';
-import { ContractTermTypeValueSet } from '../fhirValueSets/ContractTermTypeValueSet.js';
-import { V3ActConsentDirectiveValueSet } from '../fhirValueSets/V3ActConsentDirectiveValueSet.js';
-import { ContractDecisionModeValueSet } from '../fhirValueSets/ContractDecisionModeValueSet.js';
-import { ContractAssetcontextValueSet } from '../fhirValueSets/ContractAssetcontextValueSet.js';
-import { ContractAssetscopeValueSet } from '../fhirValueSets/ContractAssetscopeValueSet.js';
-import { ContractAssettypeValueSet } from '../fhirValueSets/ContractAssettypeValueSet.js';
-import { ContractAssetsubtypeValueSet } from '../fhirValueSets/ContractAssetsubtypeValueSet.js';
-import { ConsentContentClassValueSet } from '../fhirValueSets/ConsentContentClassValueSet.js';
-import { AssetAvailabilityValueSet } from '../fhirValueSets/AssetAvailabilityValueSet.js';
-import { ContractActorroleValueSet } from '../fhirValueSets/ContractActorroleValueSet.js';
-import { ContractActionValueSet } from '../fhirValueSets/ContractActionValueSet.js';
-import { V3PurposeOfUseValueSet } from '../fhirValueSets/V3PurposeOfUseValueSet.js';
-import { ContractActionstatusValueSet } from '../fhirValueSets/ContractActionstatusValueSet.js';
-import { ProvenanceAgentTypeValueSet } from '../fhirValueSets/ProvenanceAgentTypeValueSet.js';
-import { ProvenanceAgentRoleValueSet } from '../fhirValueSets/ProvenanceAgentRoleValueSet.js';
-import { ContractTermSubtypeValueSet } from '../fhirValueSets/ContractTermSubtypeValueSet.js';
-import { ContractSignerTypeValueSet } from '../fhirValueSets/ContractSignerTypeValueSet.js';
-import { ContractStatusValueSet } from '../fhirValueSets/ContractStatusValueSet.js';
-import { ContractLegalstateValueSet } from '../fhirValueSets/ContractLegalstateValueSet.js';
-import { ContractContentDerivativeValueSet } from '../fhirValueSets/ContractContentDerivativeValueSet.js';
-import { ContractExpirationTypeValueSet } from '../fhirValueSets/ContractExpirationTypeValueSet.js';
-import { ContractScopeValueSet } from '../fhirValueSets/ContractScopeValueSet.js';
-import { ContractTypeValueSet } from '../fhirValueSets/ContractTypeValueSet.js';
-import { ContractSubtypeValueSet } from '../fhirValueSets/ContractSubtypeValueSet.js';
+import { ContractDefinitionTypeValueSet, } from '../fhirValueSets/ContractDefinitionTypeValueSet.js';
+import { ContractDefinitionSubtypeValueSet, } from '../fhirValueSets/ContractDefinitionSubtypeValueSet.js';
+import { ContractPublicationstatusValueSet, } from '../fhirValueSets/ContractPublicationstatusValueSet.js';
+import { ContractSecurityClassificationValueSet, } from '../fhirValueSets/ContractSecurityClassificationValueSet.js';
+import { ContractSecurityCategoryValueSet, } from '../fhirValueSets/ContractSecurityCategoryValueSet.js';
+import { ContractSecurityControlValueSet, } from '../fhirValueSets/ContractSecurityControlValueSet.js';
+import { ContractPartyRoleValueSet, } from '../fhirValueSets/ContractPartyRoleValueSet.js';
+import { ContractTermTypeValueSet, } from '../fhirValueSets/ContractTermTypeValueSet.js';
+import { V3ActConsentDirectiveValueSet, } from '../fhirValueSets/V3ActConsentDirectiveValueSet.js';
+import { ContractDecisionModeValueSet, } from '../fhirValueSets/ContractDecisionModeValueSet.js';
+import { ContractAssetcontextValueSet, } from '../fhirValueSets/ContractAssetcontextValueSet.js';
+import { ContractAssetscopeValueSet, } from '../fhirValueSets/ContractAssetscopeValueSet.js';
+import { ContractAssettypeValueSet, } from '../fhirValueSets/ContractAssettypeValueSet.js';
+import { ContractAssetsubtypeValueSet, } from '../fhirValueSets/ContractAssetsubtypeValueSet.js';
+import { ConsentContentClassValueSet, } from '../fhirValueSets/ConsentContentClassValueSet.js';
+import { AssetAvailabilityValueSet, } from '../fhirValueSets/AssetAvailabilityValueSet.js';
+import { ContractActorroleValueSet, } from '../fhirValueSets/ContractActorroleValueSet.js';
+import { ContractActionValueSet, } from '../fhirValueSets/ContractActionValueSet.js';
+import { V3PurposeOfUseValueSet, } from '../fhirValueSets/V3PurposeOfUseValueSet.js';
+import { ContractActionstatusValueSet, } from '../fhirValueSets/ContractActionstatusValueSet.js';
+import { ProvenanceAgentTypeValueSet, } from '../fhirValueSets/ProvenanceAgentTypeValueSet.js';
+import { ProvenanceAgentRoleValueSet, } from '../fhirValueSets/ProvenanceAgentRoleValueSet.js';
+import { ContractTermSubtypeValueSet, } from '../fhirValueSets/ContractTermSubtypeValueSet.js';
+import { ContractSignerTypeValueSet, } from '../fhirValueSets/ContractSignerTypeValueSet.js';
+import { ContractStatusValueSet, } from '../fhirValueSets/ContractStatusValueSet.js';
+import { ContractLegalstateValueSet, } from '../fhirValueSets/ContractLegalstateValueSet.js';
+import { ContractContentDerivativeValueSet, } from '../fhirValueSets/ContractContentDerivativeValueSet.js';
+import { ContractExpirationTypeValueSet, } from '../fhirValueSets/ContractExpirationTypeValueSet.js';
+import { ContractScopeValueSet, } from '../fhirValueSets/ContractScopeValueSet.js';
+import { ContractTypeValueSet, } from '../fhirValueSets/ContractTypeValueSet.js';
+import { ContractSubtypeValueSet, } from '../fhirValueSets/ContractSubtypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Precusory content developed with a focus and intent of supporting the formation a Contract instance, which may be associated with and transformable into a Contract.
  */
@@ -41,8 +43,9 @@ export class ContractContentDefinition extends fhir.BackboneElement {
     /**
      * Default constructor for ContractContentDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractContentDefinition';
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
@@ -56,10 +59,7 @@ export class ContractContentDefinition extends fhir.BackboneElement {
             this.publisher = new fhir.Reference(source.publisher);
         }
         if (source['publicationDate']) {
-            this.publicationDate = source.publicationDate;
-        }
-        if (source['_publicationDate']) {
-            this._publicationDate = new fhir.FhirElement(source._publicationDate);
+            this.publicationDate = new fhir.FhirDateTime({ value: source.publicationDate });
         }
         if (source['publicationStatus']) {
             this.publicationStatus = source.publicationStatus;
@@ -67,14 +67,8 @@ export class ContractContentDefinition extends fhir.BackboneElement {
         else {
             this.publicationStatus = null;
         }
-        if (source['_publicationStatus']) {
-            this._publicationStatus = new fhir.FhirElement(source._publicationStatus);
-        }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
     }
     /**
@@ -99,32 +93,35 @@ export class ContractContentDefinition extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: Contract.contentDefinition.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.CodeableConcept fhir: Contract.contentDefinition.type:CodeableConcept", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["subType"]) {
-            results.push(...this.subType.doModelValidation());
+            outcome.issue.push(...this.subType.doModelValidation().issue);
         }
         if (this["publisher"]) {
-            results.push(...this.publisher.doModelValidation());
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
-        if (this["_publicationDate"]) {
-            results.push(...this._publicationDate.doModelValidation());
+        if (this["publicationDate"]) {
+            outcome.issue.push(...this.publicationDate.doModelValidation().issue);
         }
-        if (!this["publicationStatus"]) {
-            results.push(["publicationStatus", 'Missing required element: Contract.contentDefinition.publicationStatus']);
+        if (!this['publicationStatus']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property publicationStatus:ContractPublicationstatusValueSetEnum fhir: Contract.contentDefinition.publicationStatus:code", }));
         }
-        if (this["_publicationStatus"]) {
-            results.push(...this._publicationStatus.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -134,13 +131,23 @@ export class ContractTermSecurityLabel extends fhir.BackboneElement {
     /**
      * Default constructor for ContractTermSecurityLabel - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractTermSecurityLabel';
+        /**
+         * Number used to link this term or term element to the applicable Security Label.
+         */
+        this.number = [];
+        /**
+         * Security label privacy tag that species the applicable privacy and security policies governing this term and/or term elements.
+         */
+        this.category = [];
+        /**
+         * Security label privacy tag that species the manner in which term and/or term elements are to be protected.
+         */
+        this.control = [];
         if (source['number']) {
-            this.number = source.number.map((x) => (x));
-        }
-        if (source['_number']) {
-            this._number = source._number.map((x) => new fhir.FhirElement(x));
+            this.number = source.number.map((x) => new fhir.FhirUnsignedInt({ value: x }));
         }
         if (source['classification']) {
             this.classification = new fhir.Coding(source.classification);
@@ -177,23 +184,29 @@ export class ContractTermSecurityLabel extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_number"]) {
-            this._number.forEach((x) => { results.push(...x.doModelValidation()); });
+        var outcome = super.doModelValidation();
+        if (this["number"]) {
+            this.number.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["classification"]) {
-            results.push(["classification", 'Missing required element: Contract.term.securityLabel.classification']);
+        if (!this['classification']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property classification:fhir.Coding fhir: Contract.term.securityLabel.classification:Coding", }));
         }
         if (this["classification"]) {
-            results.push(...this.classification.doModelValidation());
+            outcome.issue.push(...this.classification.doModelValidation().issue);
         }
         if (this["category"]) {
-            this.category.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.category.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["control"]) {
-            this.control.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.control.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -203,8 +216,13 @@ export class ContractTermOfferParty extends fhir.BackboneElement {
     /**
      * Default constructor for ContractTermOfferParty - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractTermOfferParty';
+        /**
+         * Participant in the offer.
+         */
+        this.reference = [];
         if (source['reference']) {
             this.reference = source.reference.map((x) => new fhir.Reference(x));
         }
@@ -228,20 +246,32 @@ export class ContractTermOfferParty extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if ((!this["reference"]) || (this["reference"].length === 0)) {
-            results.push(["reference", 'Missing required element: Contract.term.offer.party.reference']);
+        var outcome = super.doModelValidation();
+        if (!this['reference']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property reference:fhir.Reference[] fhir: Contract.term.offer.party.reference:Reference", }));
+        }
+        else if (!Array.isArray(this.reference)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property reference:fhir.Reference[] fhir: Contract.term.offer.party.reference:Reference", }));
+        }
+        else if (this.reference.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property reference:fhir.Reference[] fhir: Contract.term.offer.party.reference:Reference", }));
         }
         if (this["reference"]) {
-            this.reference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["role"]) {
-            results.push(["role", 'Missing required element: Contract.term.offer.party.role']);
+        if (!this['role']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property role:fhir.CodeableConcept fhir: Contract.term.offer.party.role:CodeableConcept", }));
         }
         if (this["role"]) {
-            results.push(...this.role.doModelValidation());
+            outcome.issue.push(...this.role.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -251,111 +281,68 @@ export class ContractTermOfferAnswer extends fhir.BackboneElement {
     /**
      * Default constructor for ContractTermOfferAnswer - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['valueBoolean']) {
-            this.valueBoolean = source.valueBoolean;
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractTermOfferAnswer';
+        this.__valueIsChoice = true;
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['_valueBoolean']) {
-            this._valueBoolean = new fhir.FhirElement(source._valueBoolean);
+        else if (source['valueBoolean']) {
+            this.value = new fhir.FhirBoolean({ value: source.valueBoolean });
         }
-        if (source['valueDecimal']) {
-            this.valueDecimal = source.valueDecimal;
+        else if (source['valueDecimal']) {
+            this.value = new fhir.FhirDecimal({ value: source.valueDecimal });
         }
-        if (source['_valueDecimal']) {
-            this._valueDecimal = new fhir.FhirElement(source._valueDecimal);
+        else if (source['valueInteger']) {
+            this.value = new fhir.FhirInteger({ value: source.valueInteger });
         }
-        if (source['valueInteger']) {
-            this.valueInteger = source.valueInteger;
+        else if (source['valueDate']) {
+            this.value = new fhir.FhirDate({ value: source.valueDate });
         }
-        if (source['_valueInteger']) {
-            this._valueInteger = new fhir.FhirElement(source._valueInteger);
+        else if (source['valueDateTime']) {
+            this.value = new fhir.FhirDateTime({ value: source.valueDateTime });
         }
-        if (source['valueDate']) {
-            this.valueDate = source.valueDate;
+        else if (source['valueTime']) {
+            this.value = new fhir.FhirTime({ value: source.valueTime });
         }
-        if (source['_valueDate']) {
-            this._valueDate = new fhir.FhirElement(source._valueDate);
+        else if (source['valueString']) {
+            this.value = new fhir.FhirString({ value: source.valueString });
         }
-        if (source['valueDateTime']) {
-            this.valueDateTime = source.valueDateTime;
+        else if (source['valueUri']) {
+            this.value = new fhir.FhirUri({ value: source.valueUri });
         }
-        if (source['_valueDateTime']) {
-            this._valueDateTime = new fhir.FhirElement(source._valueDateTime);
+        else if (source['valueAttachment']) {
+            this.value = new fhir.Attachment(source.valueAttachment);
         }
-        if (source['valueTime']) {
-            this.valueTime = source.valueTime;
+        else if (source['valueCoding']) {
+            this.value = new fhir.Coding(source.valueCoding);
         }
-        if (source['_valueTime']) {
-            this._valueTime = new fhir.FhirElement(source._valueTime);
+        else if (source['valueQuantity']) {
+            this.value = new fhir.Quantity(source.valueQuantity);
         }
-        if (source['valueString']) {
-            this.valueString = source.valueString;
+        else if (source['valueReference']) {
+            this.value = new fhir.Reference(source.valueReference);
         }
-        if (source['_valueString']) {
-            this._valueString = new fhir.FhirElement(source._valueString);
-        }
-        if (source['valueUri']) {
-            this.valueUri = source.valueUri;
-        }
-        if (source['_valueUri']) {
-            this._valueUri = new fhir.FhirElement(source._valueUri);
-        }
-        if (source['valueAttachment']) {
-            this.valueAttachment = new fhir.Attachment(source.valueAttachment);
-        }
-        if (source['valueCoding']) {
-            this.valueCoding = new fhir.Coding(source.valueCoding);
-        }
-        if (source['valueQuantity']) {
-            this.valueQuantity = new fhir.Quantity(source.valueQuantity);
-        }
-        if (source['valueReference']) {
-            this.valueReference = new fhir.Reference(source.valueReference);
+        else {
+            this.value = null;
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_valueBoolean"]) {
-            results.push(...this._valueBoolean.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value: fhir: Contract.term.offer.answer.value[x]:", }));
         }
-        if (this["_valueDecimal"]) {
-            results.push(...this._valueDecimal.doModelValidation());
-        }
-        if (this["_valueInteger"]) {
-            results.push(...this._valueInteger.doModelValidation());
-        }
-        if (this["_valueDate"]) {
-            results.push(...this._valueDate.doModelValidation());
-        }
-        if (this["_valueDateTime"]) {
-            results.push(...this._valueDateTime.doModelValidation());
-        }
-        if (this["_valueTime"]) {
-            results.push(...this._valueTime.doModelValidation());
-        }
-        if (this["_valueString"]) {
-            results.push(...this._valueString.doModelValidation());
-        }
-        if (this["_valueUri"]) {
-            results.push(...this._valueUri.doModelValidation());
-        }
-        if (this["valueAttachment"]) {
-            results.push(...this.valueAttachment.doModelValidation());
-        }
-        if (this["valueCoding"]) {
-            results.push(...this.valueCoding.doModelValidation());
-        }
-        if (this["valueQuantity"]) {
-            results.push(...this.valueQuantity.doModelValidation());
-        }
-        if (this["valueReference"]) {
-            results.push(...this.valueReference.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -365,8 +352,33 @@ export class ContractTermOffer extends fhir.BackboneElement {
     /**
      * Default constructor for ContractTermOffer - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractTermOffer';
+        /**
+         * Unique identifier for this particular Contract Provision.
+         */
+        this.identifier = [];
+        /**
+         * Offer Recipient.
+         */
+        this.party = [];
+        /**
+         * How the decision about a Contract was conveyed.
+         */
+        this.decisionMode = [];
+        /**
+         * Response to offer text.
+         */
+        this.answer = [];
+        /**
+         * The id of the clause or question text of the offer in the referenced questionnaire/response.
+         */
+        this.linkId = [];
+        /**
+         * Security labels that protects the offer.
+         */
+        this.securityLabelNumber = [];
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
@@ -389,22 +401,13 @@ export class ContractTermOffer extends fhir.BackboneElement {
             this.answer = source.answer.map((x) => new fhir.ContractTermOfferAnswer(x));
         }
         if (source['text']) {
-            this.text = source.text;
-        }
-        if (source['_text']) {
-            this._text = new fhir.FhirElement(source._text);
+            this.text = new fhir.FhirString({ value: source.text });
         }
         if (source['linkId']) {
-            this.linkId = source.linkId.map((x) => (x));
-        }
-        if (source['_linkId']) {
-            this._linkId = source._linkId.map((x) => new fhir.FhirElement(x));
+            this.linkId = source.linkId.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['securityLabelNumber']) {
-            this.securityLabelNumber = source.securityLabelNumber.map((x) => (x));
-        }
-        if (source['_securityLabelNumber']) {
-            this._securityLabelNumber = source._securityLabelNumber.map((x) => new fhir.FhirElement(x));
+            this.securityLabelNumber = source.securityLabelNumber.map((x) => new fhir.FhirUnsignedInt({ value: x }));
         }
     }
     /**
@@ -429,38 +432,44 @@ export class ContractTermOffer extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["party"]) {
-            this.party.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.party.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["topic"]) {
-            results.push(...this.topic.doModelValidation());
+            outcome.issue.push(...this.topic.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["decision"]) {
-            results.push(...this.decision.doModelValidation());
+            outcome.issue.push(...this.decision.doModelValidation().issue);
         }
         if (this["decisionMode"]) {
-            this.decisionMode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.decisionMode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["answer"]) {
-            this.answer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.answer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_text"]) {
-            results.push(...this._text.doModelValidation());
+        if (this["text"]) {
+            outcome.issue.push(...this.text.doModelValidation().issue);
         }
-        if (this["_linkId"]) {
-            this._linkId.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["linkId"]) {
+            this.linkId.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_securityLabelNumber"]) {
-            this._securityLabelNumber.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["securityLabelNumber"]) {
+            this.securityLabelNumber.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -470,8 +479,13 @@ export class ContractTermAssetContext extends fhir.BackboneElement {
     /**
      * Default constructor for ContractTermAssetContext - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractTermAssetContext';
+        /**
+         * Coded representation of the context generally or of the Referenced entity, such as the asset holder type or location.
+         */
+        this.code = [];
         if (source['reference']) {
             this.reference = new fhir.Reference(source.reference);
         }
@@ -479,10 +493,7 @@ export class ContractTermAssetContext extends fhir.BackboneElement {
             this.code = source.code.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['text']) {
-            this.text = source.text;
-        }
-        if (source['_text']) {
-            this._text = new fhir.FhirElement(source._text);
+            this.text = new fhir.FhirString({ value: source.text });
         }
     }
     /**
@@ -495,17 +506,23 @@ export class ContractTermAssetContext extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["reference"]) {
-            results.push(...this.reference.doModelValidation());
+            outcome.issue.push(...this.reference.doModelValidation().issue);
         }
         if (this["code"]) {
-            this.code.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.code.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_text"]) {
-            results.push(...this._text.doModelValidation());
+        if (this["text"]) {
+            outcome.issue.push(...this.text.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -515,22 +532,32 @@ export class ContractTermAssetValuedItem extends fhir.BackboneElement {
     /**
      * Default constructor for ContractTermAssetValuedItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['entityCodeableConcept']) {
-            this.entityCodeableConcept = new fhir.CodeableConcept(source.entityCodeableConcept);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractTermAssetValuedItem';
+        this.__entityIsChoice = true;
+        /**
+         * Id  of the clause or question text related to the context of this valuedItem in the referenced form or QuestionnaireResponse.
+         */
+        this.linkId = [];
+        /**
+         * A set of security labels that define which terms are controlled by this condition.
+         */
+        this.securityLabelNumber = [];
+        if (source['entity']) {
+            this.entity = source.entity;
         }
-        if (source['entityReference']) {
-            this.entityReference = new fhir.Reference(source.entityReference);
+        else if (source['entityCodeableConcept']) {
+            this.entity = new fhir.CodeableConcept(source.entityCodeableConcept);
+        }
+        else if (source['entityReference']) {
+            this.entity = new fhir.Reference(source.entityReference);
         }
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
         }
         if (source['effectiveTime']) {
-            this.effectiveTime = source.effectiveTime;
-        }
-        if (source['_effectiveTime']) {
-            this._effectiveTime = new fhir.FhirElement(source._effectiveTime);
+            this.effectiveTime = new fhir.FhirDateTime({ value: source.effectiveTime });
         }
         if (source['quantity']) {
             this.quantity = new fhir.Quantity(source.quantity);
@@ -539,31 +566,19 @@ export class ContractTermAssetValuedItem extends fhir.BackboneElement {
             this.unitPrice = new fhir.Money(source.unitPrice);
         }
         if (source['factor']) {
-            this.factor = source.factor;
-        }
-        if (source['_factor']) {
-            this._factor = new fhir.FhirElement(source._factor);
+            this.factor = new fhir.FhirDecimal({ value: source.factor });
         }
         if (source['points']) {
-            this.points = source.points;
-        }
-        if (source['_points']) {
-            this._points = new fhir.FhirElement(source._points);
+            this.points = new fhir.FhirDecimal({ value: source.points });
         }
         if (source['net']) {
             this.net = new fhir.Money(source.net);
         }
         if (source['payment']) {
-            this.payment = source.payment;
-        }
-        if (source['_payment']) {
-            this._payment = new fhir.FhirElement(source._payment);
+            this.payment = new fhir.FhirString({ value: source.payment });
         }
         if (source['paymentDate']) {
-            this.paymentDate = source.paymentDate;
-        }
-        if (source['_paymentDate']) {
-            this._paymentDate = new fhir.FhirElement(source._paymentDate);
+            this.paymentDate = new fhir.FhirDateTime({ value: source.paymentDate });
         }
         if (source['responsible']) {
             this.responsible = new fhir.Reference(source.responsible);
@@ -572,69 +587,63 @@ export class ContractTermAssetValuedItem extends fhir.BackboneElement {
             this.recipient = new fhir.Reference(source.recipient);
         }
         if (source['linkId']) {
-            this.linkId = source.linkId.map((x) => (x));
-        }
-        if (source['_linkId']) {
-            this._linkId = source._linkId.map((x) => new fhir.FhirElement(x));
+            this.linkId = source.linkId.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['securityLabelNumber']) {
-            this.securityLabelNumber = source.securityLabelNumber.map((x) => (x));
-        }
-        if (source['_securityLabelNumber']) {
-            this._securityLabelNumber = source._securityLabelNumber.map((x) => new fhir.FhirElement(x));
+            this.securityLabelNumber = source.securityLabelNumber.map((x) => new fhir.FhirUnsignedInt({ value: x }));
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["entityCodeableConcept"]) {
-            results.push(...this.entityCodeableConcept.doModelValidation());
-        }
-        if (this["entityReference"]) {
-            results.push(...this.entityReference.doModelValidation());
-        }
+        var outcome = super.doModelValidation();
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (this["_effectiveTime"]) {
-            results.push(...this._effectiveTime.doModelValidation());
+        if (this["effectiveTime"]) {
+            outcome.issue.push(...this.effectiveTime.doModelValidation().issue);
         }
         if (this["quantity"]) {
-            results.push(...this.quantity.doModelValidation());
+            outcome.issue.push(...this.quantity.doModelValidation().issue);
         }
         if (this["unitPrice"]) {
-            results.push(...this.unitPrice.doModelValidation());
+            outcome.issue.push(...this.unitPrice.doModelValidation().issue);
         }
-        if (this["_factor"]) {
-            results.push(...this._factor.doModelValidation());
+        if (this["factor"]) {
+            outcome.issue.push(...this.factor.doModelValidation().issue);
         }
-        if (this["_points"]) {
-            results.push(...this._points.doModelValidation());
+        if (this["points"]) {
+            outcome.issue.push(...this.points.doModelValidation().issue);
         }
         if (this["net"]) {
-            results.push(...this.net.doModelValidation());
+            outcome.issue.push(...this.net.doModelValidation().issue);
         }
-        if (this["_payment"]) {
-            results.push(...this._payment.doModelValidation());
+        if (this["payment"]) {
+            outcome.issue.push(...this.payment.doModelValidation().issue);
         }
-        if (this["_paymentDate"]) {
-            results.push(...this._paymentDate.doModelValidation());
+        if (this["paymentDate"]) {
+            outcome.issue.push(...this.paymentDate.doModelValidation().issue);
         }
         if (this["responsible"]) {
-            results.push(...this.responsible.doModelValidation());
+            outcome.issue.push(...this.responsible.doModelValidation().issue);
         }
         if (this["recipient"]) {
-            results.push(...this.recipient.doModelValidation());
+            outcome.issue.push(...this.recipient.doModelValidation().issue);
         }
-        if (this["_linkId"]) {
-            this._linkId.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["linkId"]) {
+            this.linkId.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_securityLabelNumber"]) {
-            this._securityLabelNumber.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["securityLabelNumber"]) {
+            this.securityLabelNumber.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -644,8 +653,53 @@ export class ContractTermAsset extends fhir.BackboneElement {
     /**
      * Default constructor for ContractTermAsset - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractTermAsset';
+        /**
+         * Target entity type about which the term may be concerned.
+         */
+        this.type = [];
+        /**
+         * Associated entities.
+         */
+        this.typeReference = [];
+        /**
+         * May be a subtype or part of an offered asset.
+         */
+        this.subtype = [];
+        /**
+         * Circumstance of the asset.
+         */
+        this.context = [];
+        /**
+         * Type of Asset availability for use or ownership.
+         */
+        this.periodType = [];
+        /**
+         * Asset relevant contractual time period.
+         */
+        this.period = [];
+        /**
+         * Time period of asset use.
+         */
+        this.usePeriod = [];
+        /**
+         * Id [identifier??] of the clause or question text about the asset in the referenced form or QuestionnaireResponse.
+         */
+        this.linkId = [];
+        /**
+         * Response to assets.
+         */
+        this.answer = [];
+        /**
+         * Security labels that protects the asset.
+         */
+        this.securityLabelNumber = [];
+        /**
+         * Contract Valued Item List.
+         */
+        this.valuedItem = [];
         if (source['scope']) {
             this.scope = new fhir.CodeableConcept(source.scope);
         }
@@ -665,10 +719,7 @@ export class ContractTermAsset extends fhir.BackboneElement {
             this.context = source.context.map((x) => new fhir.ContractTermAssetContext(x));
         }
         if (source['condition']) {
-            this.condition = source.condition;
-        }
-        if (source['_condition']) {
-            this._condition = new fhir.FhirElement(source._condition);
+            this.condition = new fhir.FhirString({ value: source.condition });
         }
         if (source['periodType']) {
             this.periodType = source.periodType.map((x) => new fhir.CodeableConcept(x));
@@ -680,25 +731,16 @@ export class ContractTermAsset extends fhir.BackboneElement {
             this.usePeriod = source.usePeriod.map((x) => new fhir.Period(x));
         }
         if (source['text']) {
-            this.text = source.text;
-        }
-        if (source['_text']) {
-            this._text = new fhir.FhirElement(source._text);
+            this.text = new fhir.FhirString({ value: source.text });
         }
         if (source['linkId']) {
-            this.linkId = source.linkId.map((x) => (x));
-        }
-        if (source['_linkId']) {
-            this._linkId = source._linkId.map((x) => new fhir.FhirElement(x));
+            this.linkId = source.linkId.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['answer']) {
             this.answer = source.answer.map((x) => new fhir.ContractTermOfferAnswer(x));
         }
         if (source['securityLabelNumber']) {
-            this.securityLabelNumber = source.securityLabelNumber.map((x) => (x));
-        }
-        if (source['_securityLabelNumber']) {
-            this._securityLabelNumber = source._securityLabelNumber.map((x) => new fhir.FhirElement(x));
+            this.securityLabelNumber = source.securityLabelNumber.map((x) => new fhir.FhirUnsignedInt({ value: x }));
         }
         if (source['valuedItem']) {
             this.valuedItem = source.valuedItem.map((x) => new fhir.ContractTermAssetValuedItem(x));
@@ -738,53 +780,59 @@ export class ContractTermAsset extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["scope"]) {
-            results.push(...this.scope.doModelValidation());
+            outcome.issue.push(...this.scope.doModelValidation().issue);
         }
         if (this["type"]) {
-            this.type.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.type.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["typeReference"]) {
-            this.typeReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.typeReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["subtype"]) {
-            this.subtype.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.subtype.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relationship"]) {
-            results.push(...this.relationship.doModelValidation());
+            outcome.issue.push(...this.relationship.doModelValidation().issue);
         }
         if (this["context"]) {
-            this.context.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.context.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_condition"]) {
-            results.push(...this._condition.doModelValidation());
+        if (this["condition"]) {
+            outcome.issue.push(...this.condition.doModelValidation().issue);
         }
         if (this["periodType"]) {
-            this.periodType.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.periodType.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["period"]) {
-            this.period.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.period.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["usePeriod"]) {
-            this.usePeriod.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.usePeriod.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_text"]) {
-            results.push(...this._text.doModelValidation());
+        if (this["text"]) {
+            outcome.issue.push(...this.text.doModelValidation().issue);
         }
-        if (this["_linkId"]) {
-            this._linkId.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["linkId"]) {
+            this.linkId.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["answer"]) {
-            this.answer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.answer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_securityLabelNumber"]) {
-            this._securityLabelNumber.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["securityLabelNumber"]) {
+            this.securityLabelNumber.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["valuedItem"]) {
-            this.valuedItem.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.valuedItem.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -794,8 +842,13 @@ export class ContractTermActionSubject extends fhir.BackboneElement {
     /**
      * Default constructor for ContractTermActionSubject - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractTermActionSubject';
+        /**
+         * The entity the action is performed or not performed on or for.
+         */
+        this.reference = [];
         if (source['reference']) {
             this.reference = source.reference.map((x) => new fhir.Reference(x));
         }
@@ -816,17 +869,29 @@ export class ContractTermActionSubject extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if ((!this["reference"]) || (this["reference"].length === 0)) {
-            results.push(["reference", 'Missing required element: Contract.term.action.subject.reference']);
+        var outcome = super.doModelValidation();
+        if (!this['reference']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property reference:fhir.Reference[] fhir: Contract.term.action.subject.reference:Reference", }));
+        }
+        else if (!Array.isArray(this.reference)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property reference:fhir.Reference[] fhir: Contract.term.action.subject.reference:Reference", }));
+        }
+        else if (this.reference.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property reference:fhir.Reference[] fhir: Contract.term.action.subject.reference:Reference", }));
         }
         if (this["reference"]) {
-            this.reference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["role"]) {
-            results.push(...this.role.doModelValidation());
+            outcome.issue.push(...this.role.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -837,13 +902,64 @@ export class ContractTermAction extends fhir.BackboneElement {
     /**
      * Default constructor for ContractTermAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractTermAction';
+        /**
+         * Entity of the action.
+         */
+        this.subject = [];
+        /**
+         * Id [identifier??] of the clause or question text related to this action in the referenced form or QuestionnaireResponse.
+         */
+        this.linkId = [];
+        /**
+         * Id [identifier??] of the clause or question text related to the requester of this action in the referenced form or QuestionnaireResponse.
+         */
+        this.contextLinkId = [];
+        this.__occurrenceIsChoice = true;
+        /**
+         * Who or what initiated the action and has responsibility for its activation.
+         */
+        this.requester = [];
+        /**
+         * Id [identifier??] of the clause or question text related to the requester of this action in the referenced form or QuestionnaireResponse.
+         */
+        this.requesterLinkId = [];
+        /**
+         * The type of individual that is desired or required to perform or not perform the action.
+         */
+        this.performerType = [];
+        /**
+         * Id [identifier??] of the clause or question text related to the reason type or reference of this  action in the referenced form or QuestionnaireResponse.
+         */
+        this.performerLinkId = [];
+        /**
+         * Rationale for the action to be performed or not performed. Describes why the action is permitted or prohibited.
+         */
+        this.reasonCode = [];
+        /**
+         * Indicates another resource whose existence justifies permitting or not permitting this action.
+         */
+        this.reasonReference = [];
+        /**
+         * Describes why the action is to be performed or not performed in textual form.
+         */
+        this.reason = [];
+        /**
+         * Id [identifier??] of the clause or question text related to the reason type or reference of this  action in the referenced form or QuestionnaireResponse.
+         */
+        this.reasonLinkId = [];
+        /**
+         * Comments made about the term action made by the requester, performer, subject or other participants.
+         */
+        this.note = [];
+        /**
+         * Security labels that protects the action.
+         */
+        this.securityLabelNumber = [];
         if (source['doNotPerform']) {
-            this.doNotPerform = source.doNotPerform;
-        }
-        if (source['_doNotPerform']) {
-            this._doNotPerform = new fhir.FhirElement(source._doNotPerform);
+            this.doNotPerform = new fhir.FhirBoolean({ value: source.doNotPerform });
         }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
@@ -861,10 +977,7 @@ export class ContractTermAction extends fhir.BackboneElement {
             this.intent = null;
         }
         if (source['linkId']) {
-            this.linkId = source.linkId.map((x) => (x));
-        }
-        if (source['_linkId']) {
-            this._linkId = source._linkId.map((x) => new fhir.FhirElement(x));
+            this.linkId = source.linkId.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['status']) {
             this.status = new fhir.CodeableConcept(source.status);
@@ -876,31 +989,25 @@ export class ContractTermAction extends fhir.BackboneElement {
             this.context = new fhir.Reference(source.context);
         }
         if (source['contextLinkId']) {
-            this.contextLinkId = source.contextLinkId.map((x) => (x));
+            this.contextLinkId = source.contextLinkId.map((x) => new fhir.FhirString({ value: x }));
         }
-        if (source['_contextLinkId']) {
-            this._contextLinkId = source._contextLinkId.map((x) => new fhir.FhirElement(x));
+        if (source['occurrence']) {
+            this.occurrence = source.occurrence;
         }
-        if (source['occurrenceDateTime']) {
-            this.occurrenceDateTime = source.occurrenceDateTime;
+        else if (source['occurrenceDateTime']) {
+            this.occurrence = new fhir.FhirDateTime({ value: source.occurrenceDateTime });
         }
-        if (source['_occurrenceDateTime']) {
-            this._occurrenceDateTime = new fhir.FhirElement(source._occurrenceDateTime);
+        else if (source['occurrencePeriod']) {
+            this.occurrence = new fhir.Period(source.occurrencePeriod);
         }
-        if (source['occurrencePeriod']) {
-            this.occurrencePeriod = new fhir.Period(source.occurrencePeriod);
-        }
-        if (source['occurrenceTiming']) {
-            this.occurrenceTiming = new fhir.Timing(source.occurrenceTiming);
+        else if (source['occurrenceTiming']) {
+            this.occurrence = new fhir.Timing(source.occurrenceTiming);
         }
         if (source['requester']) {
             this.requester = source.requester.map((x) => new fhir.Reference(x));
         }
         if (source['requesterLinkId']) {
-            this.requesterLinkId = source.requesterLinkId.map((x) => (x));
-        }
-        if (source['_requesterLinkId']) {
-            this._requesterLinkId = source._requesterLinkId.map((x) => new fhir.FhirElement(x));
+            this.requesterLinkId = source.requesterLinkId.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['performerType']) {
             this.performerType = source.performerType.map((x) => new fhir.CodeableConcept(x));
@@ -912,10 +1019,7 @@ export class ContractTermAction extends fhir.BackboneElement {
             this.performer = new fhir.Reference(source.performer);
         }
         if (source['performerLinkId']) {
-            this.performerLinkId = source.performerLinkId.map((x) => (x));
-        }
-        if (source['_performerLinkId']) {
-            this._performerLinkId = source._performerLinkId.map((x) => new fhir.FhirElement(x));
+            this.performerLinkId = source.performerLinkId.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['reasonCode']) {
             this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x));
@@ -924,25 +1028,16 @@ export class ContractTermAction extends fhir.BackboneElement {
             this.reasonReference = source.reasonReference.map((x) => new fhir.Reference(x));
         }
         if (source['reason']) {
-            this.reason = source.reason.map((x) => (x));
-        }
-        if (source['_reason']) {
-            this._reason = source._reason.map((x) => new fhir.FhirElement(x));
+            this.reason = source.reason.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['reasonLinkId']) {
-            this.reasonLinkId = source.reasonLinkId.map((x) => (x));
-        }
-        if (source['_reasonLinkId']) {
-            this._reasonLinkId = source._reasonLinkId.map((x) => new fhir.FhirElement(x));
+            this.reasonLinkId = source.reasonLinkId.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['note']) {
             this.note = source.note.map((x) => new fhir.Annotation(x));
         }
         if (source['securityLabelNumber']) {
-            this.securityLabelNumber = source.securityLabelNumber.map((x) => (x));
-        }
-        if (source['_securityLabelNumber']) {
-            this._securityLabelNumber = source._securityLabelNumber.map((x) => new fhir.FhirElement(x));
+            this.securityLabelNumber = source.securityLabelNumber.map((x) => new fhir.FhirUnsignedInt({ value: x }));
         }
     }
     /**
@@ -985,86 +1080,83 @@ export class ContractTermAction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_doNotPerform"]) {
-            results.push(...this._doNotPerform.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["doNotPerform"]) {
+            outcome.issue.push(...this.doNotPerform.doModelValidation().issue);
         }
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: Contract.term.action.type']);
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.CodeableConcept fhir: Contract.term.action.type:CodeableConcept", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["subject"]) {
-            this.subject.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.subject.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["intent"]) {
-            results.push(["intent", 'Missing required element: Contract.term.action.intent']);
+        if (!this['intent']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property intent:fhir.CodeableConcept fhir: Contract.term.action.intent:CodeableConcept", }));
         }
         if (this["intent"]) {
-            results.push(...this.intent.doModelValidation());
+            outcome.issue.push(...this.intent.doModelValidation().issue);
         }
-        if (this["_linkId"]) {
-            this._linkId.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["linkId"]) {
+            this.linkId.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Contract.term.action.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:fhir.CodeableConcept fhir: Contract.term.action.status:CodeableConcept", }));
         }
         if (this["status"]) {
-            results.push(...this.status.doModelValidation());
+            outcome.issue.push(...this.status.doModelValidation().issue);
         }
         if (this["context"]) {
-            results.push(...this.context.doModelValidation());
+            outcome.issue.push(...this.context.doModelValidation().issue);
         }
-        if (this["_contextLinkId"]) {
-            this._contextLinkId.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_occurrenceDateTime"]) {
-            results.push(...this._occurrenceDateTime.doModelValidation());
-        }
-        if (this["occurrencePeriod"]) {
-            results.push(...this.occurrencePeriod.doModelValidation());
-        }
-        if (this["occurrenceTiming"]) {
-            results.push(...this.occurrenceTiming.doModelValidation());
+        if (this["contextLinkId"]) {
+            this.contextLinkId.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["requester"]) {
-            this.requester.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.requester.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_requesterLinkId"]) {
-            this._requesterLinkId.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["requesterLinkId"]) {
+            this.requesterLinkId.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["performerType"]) {
-            this.performerType.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.performerType.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["performerRole"]) {
-            results.push(...this.performerRole.doModelValidation());
+            outcome.issue.push(...this.performerRole.doModelValidation().issue);
         }
         if (this["performer"]) {
-            results.push(...this.performer.doModelValidation());
+            outcome.issue.push(...this.performer.doModelValidation().issue);
         }
-        if (this["_performerLinkId"]) {
-            this._performerLinkId.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["performerLinkId"]) {
+            this.performerLinkId.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_reason"]) {
-            this._reason.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["reason"]) {
+            this.reason.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_reasonLinkId"]) {
-            this._reasonLinkId.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["reasonLinkId"]) {
+            this.reasonLinkId.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_securityLabelNumber"]) {
-            this._securityLabelNumber.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["securityLabelNumber"]) {
+            this.securityLabelNumber.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -1074,25 +1166,44 @@ export class ContractTerm extends fhir.BackboneElement {
     /**
      * Default constructor for ContractTerm - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractTerm';
+        this.__topicIsChoice = true;
+        /**
+         * Security labels that protect the handling of information about the term and its elements, which may be specifically identified..
+         */
+        this.securityLabel = [];
+        /**
+         * Contract Term Asset List.
+         */
+        this.asset = [];
+        /**
+         * Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa.
+         * For example, in cases of actions initiated by one user for other users, or in events that involve more than one user, hardware device, software, or system process. However, only one user may be the initiator/requestor for the event.
+         */
+        this.action = [];
+        /**
+         * Nested group of Contract Provisions.
+         */
+        this.group = [];
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
         }
         if (source['issued']) {
-            this.issued = source.issued;
-        }
-        if (source['_issued']) {
-            this._issued = new fhir.FhirElement(source._issued);
+            this.issued = new fhir.FhirDateTime({ value: source.issued });
         }
         if (source['applies']) {
             this.applies = new fhir.Period(source.applies);
         }
-        if (source['topicCodeableConcept']) {
-            this.topicCodeableConcept = new fhir.CodeableConcept(source.topicCodeableConcept);
+        if (source['topic']) {
+            this.topic = source.topic;
         }
-        if (source['topicReference']) {
-            this.topicReference = new fhir.Reference(source.topicReference);
+        else if (source['topicCodeableConcept']) {
+            this.topic = new fhir.CodeableConcept(source.topicCodeableConcept);
+        }
+        else if (source['topicReference']) {
+            this.topic = new fhir.Reference(source.topicReference);
         }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
@@ -1101,10 +1212,7 @@ export class ContractTerm extends fhir.BackboneElement {
             this.subType = new fhir.CodeableConcept(source.subType);
         }
         if (source['text']) {
-            this.text = source.text;
-        }
-        if (source['_text']) {
-            this._text = new fhir.FhirElement(source._text);
+            this.text = new fhir.FhirString({ value: source.text });
         }
         if (source['securityLabel']) {
             this.securityLabel = source.securityLabel.map((x) => new fhir.ContractTermSecurityLabel(x));
@@ -1141,50 +1249,50 @@ export class ContractTerm extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (this["_issued"]) {
-            results.push(...this._issued.doModelValidation());
+        if (this["issued"]) {
+            outcome.issue.push(...this.issued.doModelValidation().issue);
         }
         if (this["applies"]) {
-            results.push(...this.applies.doModelValidation());
-        }
-        if (this["topicCodeableConcept"]) {
-            results.push(...this.topicCodeableConcept.doModelValidation());
-        }
-        if (this["topicReference"]) {
-            results.push(...this.topicReference.doModelValidation());
+            outcome.issue.push(...this.applies.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["subType"]) {
-            results.push(...this.subType.doModelValidation());
+            outcome.issue.push(...this.subType.doModelValidation().issue);
         }
-        if (this["_text"]) {
-            results.push(...this._text.doModelValidation());
+        if (this["text"]) {
+            outcome.issue.push(...this.text.doModelValidation().issue);
         }
         if (this["securityLabel"]) {
-            this.securityLabel.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.securityLabel.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["offer"]) {
-            results.push(["offer", 'Missing required element: Contract.term.offer']);
+        if (!this['offer']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property offer:fhir.ContractTermOffer fhir: Contract.term.offer:offer", }));
         }
         if (this["offer"]) {
-            results.push(...this.offer.doModelValidation());
+            outcome.issue.push(...this.offer.doModelValidation().issue);
         }
         if (this["asset"]) {
-            this.asset.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.asset.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["action"]) {
-            this.action.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.action.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["group"]) {
-            this.group.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.group.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -1195,8 +1303,13 @@ export class ContractSigner extends fhir.BackboneElement {
     /**
      * Default constructor for ContractSigner - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractSigner';
+        /**
+         * Legally binding Contract DSIG signature contents in Base64.
+         */
+        this.signature = [];
         if (source['type']) {
             this.type = new fhir.Coding(source.type);
         }
@@ -1226,26 +1339,38 @@ export class ContractSigner extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: Contract.signer.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.Coding fhir: Contract.signer.type:Coding", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (!this["party"]) {
-            results.push(["party", 'Missing required element: Contract.signer.party']);
+        if (!this['party']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property party:fhir.Reference fhir: Contract.signer.party:Reference", }));
         }
         if (this["party"]) {
-            results.push(...this.party.doModelValidation());
+            outcome.issue.push(...this.party.doModelValidation().issue);
         }
-        if ((!this["signature"]) || (this["signature"].length === 0)) {
-            results.push(["signature", 'Missing required element: Contract.signer.signature']);
+        if (!this['signature']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property signature:fhir.Signature[] fhir: Contract.signer.signature:Signature", }));
+        }
+        else if (!Array.isArray(this.signature)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property signature:fhir.Signature[] fhir: Contract.signer.signature:Signature", }));
+        }
+        else if (this.signature.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property signature:fhir.Signature[] fhir: Contract.signer.signature:Signature", }));
         }
         if (this["signature"]) {
-            this.signature.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.signature.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -1255,27 +1380,38 @@ export class ContractFriendly extends fhir.BackboneElement {
     /**
      * Default constructor for ContractFriendly - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['contentAttachment']) {
-            this.contentAttachment = new fhir.Attachment(source.contentAttachment);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractFriendly';
+        this.__contentIsChoice = true;
+        if (source['content']) {
+            this.content = source.content;
         }
-        if (source['contentReference']) {
-            this.contentReference = new fhir.Reference(source.contentReference);
+        else if (source['contentAttachment']) {
+            this.content = new fhir.Attachment(source.contentAttachment);
+        }
+        else if (source['contentReference']) {
+            this.content = new fhir.Reference(source.contentReference);
+        }
+        else {
+            this.content = null;
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["contentAttachment"]) {
-            results.push(...this.contentAttachment.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['content']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property content: fhir: Contract.friendly.content[x]:", }));
         }
-        if (this["contentReference"]) {
-            results.push(...this.contentReference.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -1285,27 +1421,38 @@ export class ContractLegal extends fhir.BackboneElement {
     /**
      * Default constructor for ContractLegal - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['contentAttachment']) {
-            this.contentAttachment = new fhir.Attachment(source.contentAttachment);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractLegal';
+        this.__contentIsChoice = true;
+        if (source['content']) {
+            this.content = source.content;
         }
-        if (source['contentReference']) {
-            this.contentReference = new fhir.Reference(source.contentReference);
+        else if (source['contentAttachment']) {
+            this.content = new fhir.Attachment(source.contentAttachment);
+        }
+        else if (source['contentReference']) {
+            this.content = new fhir.Reference(source.contentReference);
+        }
+        else {
+            this.content = null;
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["contentAttachment"]) {
-            results.push(...this.contentAttachment.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['content']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property content: fhir: Contract.legal.content[x]:", }));
         }
-        if (this["contentReference"]) {
-            results.push(...this.contentReference.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -1315,27 +1462,38 @@ export class ContractRule extends fhir.BackboneElement {
     /**
      * Default constructor for ContractRule - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['contentAttachment']) {
-            this.contentAttachment = new fhir.Attachment(source.contentAttachment);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ContractRule';
+        this.__contentIsChoice = true;
+        if (source['content']) {
+            this.content = source.content;
         }
-        if (source['contentReference']) {
-            this.contentReference = new fhir.Reference(source.contentReference);
+        else if (source['contentAttachment']) {
+            this.content = new fhir.Attachment(source.contentAttachment);
+        }
+        else if (source['contentReference']) {
+            this.content = new fhir.Reference(source.contentReference);
+        }
+        else {
+            this.content = null;
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["contentAttachment"]) {
-            results.push(...this.contentAttachment.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['content']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property content: fhir: Contract.rule.content[x]:", }));
         }
-        if (this["contentReference"]) {
-            results.push(...this.contentReference.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -1345,29 +1503,81 @@ export class Contract extends fhir.DomainResource {
     /**
      * Default constructor for Contract - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Contract';
+        /**
+         * Unique identifier for this Contract or a derivative that references a Source Contract.
+         */
+        this.identifier = [];
+        /**
+         * The Contract.subject is an entity that has some role with respect to the Contract.topic and Contract.topic.term, which is of focal interest to the parties to the contract and likely impacted in a significant way by the Contract.action/Contract.action.reason and the Contract.term.action/Contract.action.reason.
+         * In many cases, the Contract.subject is a Contract.signer if the subject is an adult; has a legal interest in the contract; and incompetent to participate in the contract agreement.
+         */
+        this.subject = [];
+        /**
+         * A formally or informally recognized grouping of people, principals, organizations, or jurisdictions formed for the purpose of achieving some form of collective action such as the promulgation, administration and enforcement of contracts and policies.
+         */
+        this.authority = [];
+        /**
+         * Recognized governance framework or system operating with a circumscribed scope in accordance with specified principles, policies, processes or procedures for managing rights, actions, or behaviors of parties or principals relative to resources.
+         */
+        this.domain = [];
+        /**
+         * Sites in which the contract is complied with,  exercised, or in force.
+         */
+        this.site = [];
+        /**
+         * Alternative representation of the title for this Contract definition, derivative, or instance in any legal state., e.g., a domain specific contract number related to legislation.
+         */
+        this.alias = [];
+        this.__topicIsChoice = true;
+        /**
+         * Sub-category for the Contract that distinguishes the kinds of systems that would be interested in the Contract within the context of the Contract's scope.
+         */
+        this.subType = [];
+        /**
+         * One or more Contract Provisions, which may be related and conveyed as a group, and may contain nested groups.
+         */
+        this.term = [];
+        /**
+         * Information that may be needed by/relevant to the performer in their execution of this term action.
+         */
+        this.supportingInfo = [];
+        /**
+         * Links to Provenance records for past versions of this Contract definition, derivative, or instance, which identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the Contract.  The Provence.entity indicates the target that was changed in the update. http://build.fhir.org/provenance-definitions.html#Provenance.entity.
+         */
+        this.relevantHistory = [];
+        /**
+         * Signers who are principal parties to the contract are bound by the Contract.activity related to the Contract.topic, and the Contract.term(s), which either extend or restrict the overall action on the topic by, for example, stipulating specific policies or obligations constraining actions, action reason, or agents with respect to some or all of the topic.
+         * For example, specifying how policies or obligations shall constrain actions and action reasons permitted or denied on all or a subset of the Contract.topic (e.g., all or a portion of property being transferred by the contract), agents (e.g., who can resell, assign interests, or alter the property being transferred by the contract), actions, and action reasons; or with respect to Contract.terms, stipulating, extending, or limiting the Contract.period of applicability or valuation of items under consideration.
+         */
+        this.signer = [];
+        /**
+         * The "patient friendly language" versionof the Contract in whole or in parts. "Patient friendly language" means the representation of the Contract and Contract Provisions in a manner that is readily accessible and understandable by a layperson in accordance with best practices for communication styles that ensure that those agreeing to or signing the Contract understand the roles, actions, obligations, responsibilities, and implication of the agreement.
+         */
+        this.friendly = [];
+        /**
+         * List of Legal expressions or representations of this Contract.
+         */
+        this.legal = [];
+        /**
+         * List of Computable Policy Rule Language Representations of this Contract.
+         */
+        this.rule = [];
+        this.__legallyBindingIsChoice = true;
         this.resourceType = 'Contract';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['status']) {
             this.status = source.status;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['legalState']) {
             this.legalState = new fhir.CodeableConcept(source.legalState);
@@ -1376,19 +1586,13 @@ export class Contract extends fhir.DomainResource {
             this.instantiatesCanonical = new fhir.Reference(source.instantiatesCanonical);
         }
         if (source['instantiatesUri']) {
-            this.instantiatesUri = source.instantiatesUri;
-        }
-        if (source['_instantiatesUri']) {
-            this._instantiatesUri = new fhir.FhirElement(source._instantiatesUri);
+            this.instantiatesUri = new fhir.FhirUri({ value: source.instantiatesUri });
         }
         if (source['contentDerivative']) {
             this.contentDerivative = new fhir.CodeableConcept(source.contentDerivative);
         }
         if (source['issued']) {
-            this.issued = source.issued;
-        }
-        if (source['_issued']) {
-            this._issued = new fhir.FhirElement(source._issued);
+            this.issued = new fhir.FhirDateTime({ value: source.issued });
         }
         if (source['applies']) {
             this.applies = new fhir.Period(source.applies);
@@ -1409,28 +1613,16 @@ export class Contract extends fhir.DomainResource {
             this.site = source.site.map((x) => new fhir.Reference(x));
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['subtitle']) {
-            this.subtitle = source.subtitle;
-        }
-        if (source['_subtitle']) {
-            this._subtitle = new fhir.FhirElement(source._subtitle);
+            this.subtitle = new fhir.FhirString({ value: source.subtitle });
         }
         if (source['alias']) {
-            this.alias = source.alias.map((x) => (x));
-        }
-        if (source['_alias']) {
-            this._alias = source._alias.map((x) => new fhir.FhirElement(x));
+            this.alias = source.alias.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['author']) {
             this.author = new fhir.Reference(source.author);
@@ -1438,11 +1630,14 @@ export class Contract extends fhir.DomainResource {
         if (source['scope']) {
             this.scope = new fhir.CodeableConcept(source.scope);
         }
-        if (source['topicCodeableConcept']) {
-            this.topicCodeableConcept = new fhir.CodeableConcept(source.topicCodeableConcept);
+        if (source['topic']) {
+            this.topic = source.topic;
         }
-        if (source['topicReference']) {
-            this.topicReference = new fhir.Reference(source.topicReference);
+        else if (source['topicCodeableConcept']) {
+            this.topic = new fhir.CodeableConcept(source.topicCodeableConcept);
+        }
+        else if (source['topicReference']) {
+            this.topic = new fhir.Reference(source.topicReference);
         }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
@@ -1474,11 +1669,14 @@ export class Contract extends fhir.DomainResource {
         if (source['rule']) {
             this.rule = source.rule.map((x) => new fhir.ContractRule(x));
         }
-        if (source['legallyBindingAttachment']) {
-            this.legallyBindingAttachment = new fhir.Attachment(source.legallyBindingAttachment);
+        if (source['legallyBinding']) {
+            this.legallyBinding = source.legallyBinding;
         }
-        if (source['legallyBindingReference']) {
-            this.legallyBindingReference = new fhir.Reference(source.legallyBindingReference);
+        else if (source['legallyBindingAttachment']) {
+            this.legallyBinding = new fhir.Attachment(source.legallyBindingAttachment);
+        }
+        else if (source['legallyBindingReference']) {
+            this.legallyBinding = new fhir.Reference(source.legallyBindingReference);
         }
     }
     /**
@@ -1527,116 +1725,107 @@ export class Contract extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Contract.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Contract' fhir: Contract.resourceType:'Contract'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
         if (this["legalState"]) {
-            results.push(...this.legalState.doModelValidation());
+            outcome.issue.push(...this.legalState.doModelValidation().issue);
         }
         if (this["instantiatesCanonical"]) {
-            results.push(...this.instantiatesCanonical.doModelValidation());
+            outcome.issue.push(...this.instantiatesCanonical.doModelValidation().issue);
         }
-        if (this["_instantiatesUri"]) {
-            results.push(...this._instantiatesUri.doModelValidation());
+        if (this["instantiatesUri"]) {
+            outcome.issue.push(...this.instantiatesUri.doModelValidation().issue);
         }
         if (this["contentDerivative"]) {
-            results.push(...this.contentDerivative.doModelValidation());
+            outcome.issue.push(...this.contentDerivative.doModelValidation().issue);
         }
-        if (this["_issued"]) {
-            results.push(...this._issued.doModelValidation());
+        if (this["issued"]) {
+            outcome.issue.push(...this.issued.doModelValidation().issue);
         }
         if (this["applies"]) {
-            results.push(...this.applies.doModelValidation());
+            outcome.issue.push(...this.applies.doModelValidation().issue);
         }
         if (this["expirationType"]) {
-            results.push(...this.expirationType.doModelValidation());
+            outcome.issue.push(...this.expirationType.doModelValidation().issue);
         }
         if (this["subject"]) {
-            this.subject.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.subject.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["authority"]) {
-            this.authority.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.authority.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["domain"]) {
-            this.domain.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.domain.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["site"]) {
-            this.site.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.site.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_subtitle"]) {
-            results.push(...this._subtitle.doModelValidation());
+        if (this["subtitle"]) {
+            outcome.issue.push(...this.subtitle.doModelValidation().issue);
         }
-        if (this["_alias"]) {
-            this._alias.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["alias"]) {
+            this.alias.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["author"]) {
-            results.push(...this.author.doModelValidation());
+            outcome.issue.push(...this.author.doModelValidation().issue);
         }
         if (this["scope"]) {
-            results.push(...this.scope.doModelValidation());
-        }
-        if (this["topicCodeableConcept"]) {
-            results.push(...this.topicCodeableConcept.doModelValidation());
-        }
-        if (this["topicReference"]) {
-            results.push(...this.topicReference.doModelValidation());
+            outcome.issue.push(...this.scope.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["subType"]) {
-            this.subType.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.subType.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["contentDefinition"]) {
-            results.push(...this.contentDefinition.doModelValidation());
+            outcome.issue.push(...this.contentDefinition.doModelValidation().issue);
         }
         if (this["term"]) {
-            this.term.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.term.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["supportingInfo"]) {
-            this.supportingInfo.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.supportingInfo.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relevantHistory"]) {
-            this.relevantHistory.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relevantHistory.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["signer"]) {
-            this.signer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.signer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["friendly"]) {
-            this.friendly.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.friendly.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["legal"]) {
-            this.legal.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.legal.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["rule"]) {
-            this.rule.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.rule.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["legallyBindingAttachment"]) {
-            results.push(...this.legallyBindingAttachment.doModelValidation());
-        }
-        if (this["legallyBindingReference"]) {
-            results.push(...this.legallyBindingReference.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Contract.js.map

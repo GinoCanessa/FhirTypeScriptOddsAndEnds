@@ -35,19 +35,4 @@ export const ProviderQualificationValueSet = {
 /**
  * This value set includes sample Provider Qualification codes.
  */
-export var ProviderQualificationValueSetEnum;
-(function (ProviderQualificationValueSetEnum) {
-    /**
-     * 311405: Dentist General Practitioner (DDS, DDM).
-     */
-    ProviderQualificationValueSetEnum["Dentist"] = "311405";
-    /**
-     * 604210: Optometrist.
-     */
-    ProviderQualificationValueSetEnum["Optometrist"] = "604210";
-    /**
-     * 604215: Ophthalmologist.
-     */
-    ProviderQualificationValueSetEnum["Ophthalmologist"] = "604215";
-})(ProviderQualificationValueSetEnum || (ProviderQualificationValueSetEnum = {}));
 //# sourceMappingURL=ProviderQualificationValueSet.js.map

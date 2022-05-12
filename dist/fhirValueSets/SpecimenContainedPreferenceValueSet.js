@@ -27,15 +27,4 @@ export const SpecimenContainedPreferenceValueSet = {
 /**
  * Degree of preference of a type of conditioned specimen.
  */
-export var SpecimenContainedPreferenceValueSetEnum;
-(function (SpecimenContainedPreferenceValueSetEnum) {
-    /**
-     * alternate: This type of conditioned specimen is an alternate.
-     */
-    SpecimenContainedPreferenceValueSetEnum["Alternate"] = "alternate";
-    /**
-     * preferred: This type of contained specimen is preferred to collect this kind of specimen.
-     */
-    SpecimenContainedPreferenceValueSetEnum["Preferred"] = "preferred";
-})(SpecimenContainedPreferenceValueSetEnum || (SpecimenContainedPreferenceValueSetEnum = {}));
 //# sourceMappingURL=SpecimenContainedPreferenceValueSet.js.map

@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: ProductShelfLife
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The shelf-life and storage information for a medicinal product item or container can be described using this class.
  */
@@ -10,8 +12,13 @@ export class ProductShelfLife extends fhir.BackboneElement {
     /**
      * Default constructor for ProductShelfLife - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ProductShelfLife';
+        /**
+         * Special precautions for storage, if any, can be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.
+         */
+        this.specialPrecautionsForStorage = [];
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
         }
@@ -35,26 +42,32 @@ export class ProductShelfLife extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: ProductShelfLife.type']);
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.CodeableConcept fhir: ProductShelfLife.type:CodeableConcept", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (!this["period"]) {
-            results.push(["period", 'Missing required element: ProductShelfLife.period']);
+        if (!this['period']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property period:fhir.Quantity fhir: ProductShelfLife.period:Quantity", }));
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
         if (this["specialPrecautionsForStorage"]) {
-            this.specialPrecautionsForStorage.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.specialPrecautionsForStorage.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ProductShelfLife.js.map

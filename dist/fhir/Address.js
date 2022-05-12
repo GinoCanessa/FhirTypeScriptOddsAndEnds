@@ -3,8 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Address
 import * as fhir from '../fhir.js';
-import { AddressUseValueSet } from '../fhirValueSets/AddressUseValueSet.js';
-import { AddressTypeValueSet } from '../fhirValueSets/AddressTypeValueSet.js';
+import { AddressUseValueSet, } from '../fhirValueSets/AddressUseValueSet.js';
+import { AddressTypeValueSet, } from '../fhirValueSets/AddressTypeValueSet.js';
 /**
  * An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.
  */
@@ -12,61 +12,39 @@ export class Address extends fhir.FhirElement {
     /**
      * Default constructor for Address - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Address';
+        /**
+         * This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.
+         */
+        this.line = [];
         if (source['use']) {
             this.use = source.use;
-        }
-        if (source['_use']) {
-            this._use = new fhir.FhirElement(source._use);
         }
         if (source['type']) {
             this.type = source.type;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['text']) {
-            this.text = source.text;
-        }
-        if (source['_text']) {
-            this._text = new fhir.FhirElement(source._text);
+            this.text = new fhir.FhirString({ value: source.text });
         }
         if (source['line']) {
-            this.line = source.line.map((x) => (x));
-        }
-        if (source['_line']) {
-            this._line = source._line.map((x) => new fhir.FhirElement(x));
+            this.line = source.line.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['city']) {
-            this.city = source.city;
-        }
-        if (source['_city']) {
-            this._city = new fhir.FhirElement(source._city);
+            this.city = new fhir.FhirString({ value: source.city });
         }
         if (source['district']) {
-            this.district = source.district;
-        }
-        if (source['_district']) {
-            this._district = new fhir.FhirElement(source._district);
+            this.district = new fhir.FhirString({ value: source.district });
         }
         if (source['state']) {
-            this.state = source.state;
-        }
-        if (source['_state']) {
-            this._state = new fhir.FhirElement(source._state);
+            this.state = new fhir.FhirString({ value: source.state });
         }
         if (source['postalCode']) {
-            this.postalCode = source.postalCode;
-        }
-        if (source['_postalCode']) {
-            this._postalCode = new fhir.FhirElement(source._postalCode);
+            this.postalCode = new fhir.FhirString({ value: source.postalCode });
         }
         if (source['country']) {
-            this.country = source.country;
-        }
-        if (source['_country']) {
-            this._country = new fhir.FhirElement(source._country);
+            this.country = new fhir.FhirString({ value: source.country });
         }
         if (source['period']) {
             this.period = new fhir.Period(source.period);
@@ -88,38 +66,38 @@ export class Address extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_use"]) {
-            results.push(...this._use.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["text"]) {
+            outcome.issue.push(...this.text.doModelValidation().issue);
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (this["line"]) {
+            this.line.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_text"]) {
-            results.push(...this._text.doModelValidation());
+        if (this["city"]) {
+            outcome.issue.push(...this.city.doModelValidation().issue);
         }
-        if (this["_line"]) {
-            this._line.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["district"]) {
+            outcome.issue.push(...this.district.doModelValidation().issue);
         }
-        if (this["_city"]) {
-            results.push(...this._city.doModelValidation());
+        if (this["state"]) {
+            outcome.issue.push(...this.state.doModelValidation().issue);
         }
-        if (this["_district"]) {
-            results.push(...this._district.doModelValidation());
+        if (this["postalCode"]) {
+            outcome.issue.push(...this.postalCode.doModelValidation().issue);
         }
-        if (this["_state"]) {
-            results.push(...this._state.doModelValidation());
-        }
-        if (this["_postalCode"]) {
-            results.push(...this._postalCode.doModelValidation());
-        }
-        if (this["_country"]) {
-            results.push(...this._country.doModelValidation());
+        if (this["country"]) {
+            outcome.issue.push(...this.country.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Address.js.map

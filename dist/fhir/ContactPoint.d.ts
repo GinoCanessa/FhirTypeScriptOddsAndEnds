@@ -1,83 +1,54 @@
 import * as fhir from '../fhir.js';
-import { ContactPointSystemValueSetType, ContactPointSystemValueSetEnum } from '../fhirValueSets/ContactPointSystemValueSet.js';
-import { ContactPointUseValueSetType, ContactPointUseValueSetEnum } from '../fhirValueSets/ContactPointUseValueSet.js';
+import { ContactPointSystemValueSetType } from '../fhirValueSets/ContactPointSystemValueSet.js';
+import { ContactPointSystemValueSetEnum } from '../valueSetEnums.js';
+import { ContactPointUseValueSetType } from '../fhirValueSets/ContactPointUseValueSet.js';
+import { ContactPointUseValueSetEnum } from '../valueSetEnums.js';
 /**
- * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
+ * Valid arguments for the ContactPoint type.
  */
-export declare type IContactPoint = fhir.IFhirElement & {
+export interface ContactPointArgs extends fhir.FhirElementArgs {
     /**
      * Telecommunications form for contact point - what communications system is required to make use of the contact.
      */
     system?: ContactPointSystemValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: ContactPoint.system
-     */
-    _system?: fhir.IFhirElement | undefined;
-    /**
      * Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.
      */
-    value?: string | undefined;
-    /**
-     * Extended properties for primitive element: ContactPoint.value
-     */
-    _value?: fhir.IFhirElement | undefined;
+    value?: fhir.FhirString | string | undefined;
     /**
      * Applications can assume that a contact is current unless it explicitly says that it is temporary or old.
      */
     use?: ContactPointUseValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: ContactPoint.use
-     */
-    _use?: fhir.IFhirElement | undefined;
-    /**
      * Note that rank does not necessarily follow the order in which the contacts are represented in the instance.
      */
-    rank?: number | undefined;
-    /**
-     * Extended properties for primitive element: ContactPoint.rank
-     */
-    _rank?: fhir.IFhirElement | undefined;
+    rank?: fhir.FhirPositiveInt | number | undefined;
     /**
      * Time period when the contact point was/is in use.
      */
-    period?: fhir.IPeriod | undefined;
-};
+    period?: fhir.PeriodArgs | undefined;
+}
 /**
  * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
  */
-export declare class ContactPoint extends fhir.FhirElement implements IContactPoint {
+export declare class ContactPoint extends fhir.FhirElement {
+    readonly __dataType: string;
     /**
      * Telecommunications form for contact point - what communications system is required to make use of the contact.
      */
     system?: ContactPointSystemValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: ContactPoint.system
-     */
-    _system?: fhir.FhirElement | undefined;
-    /**
      * Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.
      */
-    value?: string | undefined;
-    /**
-     * Extended properties for primitive element: ContactPoint.value
-     */
-    _value?: fhir.FhirElement | undefined;
+    value?: fhir.FhirString | undefined;
     /**
      * Applications can assume that a contact is current unless it explicitly says that it is temporary or old.
      */
     use?: ContactPointUseValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: ContactPoint.use
-     */
-    _use?: fhir.FhirElement | undefined;
-    /**
      * Note that rank does not necessarily follow the order in which the contacts are represented in the instance.
      */
-    rank?: number | undefined;
-    /**
-     * Extended properties for primitive element: ContactPoint.rank
-     */
-    _rank?: fhir.FhirElement | undefined;
+    rank?: fhir.FhirPositiveInt | undefined;
     /**
      * Time period when the contact point was/is in use.
      */
@@ -85,7 +56,7 @@ export declare class ContactPoint extends fhir.FhirElement implements IContactPo
     /**
      * Default constructor for ContactPoint - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IContactPoint>);
+    constructor(source?: Partial<ContactPointArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for system
      */
@@ -97,6 +68,10 @@ export declare class ContactPoint extends fhir.FhirElement implements IContactPo
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=ContactPoint.d.ts.map

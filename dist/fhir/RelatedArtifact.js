@@ -3,7 +3,9 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: RelatedArtifact
 import * as fhir from '../fhir.js';
-import { RelatedArtifactTypeValueSet } from '../fhirValueSets/RelatedArtifactTypeValueSet.js';
+import { RelatedArtifactTypeValueSet, } from '../fhirValueSets/RelatedArtifactTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Related artifacts such as additional documentation, justification, or bibliographic references.
  */
@@ -11,49 +13,32 @@ export class RelatedArtifact extends fhir.FhirElement {
     /**
      * Default constructor for RelatedArtifact - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'RelatedArtifact';
         if (source['type']) {
             this.type = source.type;
         }
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['label']) {
-            this.label = source.label;
-        }
-        if (source['_label']) {
-            this._label = new fhir.FhirElement(source._label);
+            this.label = new fhir.FhirString({ value: source.label });
         }
         if (source['display']) {
-            this.display = source.display;
-        }
-        if (source['_display']) {
-            this._display = new fhir.FhirElement(source._display);
+            this.display = new fhir.FhirString({ value: source.display });
         }
         if (source['citation']) {
-            this.citation = source.citation;
-        }
-        if (source['_citation']) {
-            this._citation = new fhir.FhirElement(source._citation);
+            this.citation = new fhir.FhirMarkdown({ value: source.citation });
         }
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUrl({ value: source.url });
         }
         if (source['document']) {
             this.document = new fhir.Attachment(source.document);
         }
         if (source['resource']) {
-            this.resource = source.resource;
-        }
-        if (source['_resource']) {
-            this._resource = new fhir.FhirElement(source._resource);
+            this.resource = new fhir.FhirCanonical({ value: source.resource });
         }
     }
     /**
@@ -66,32 +51,35 @@ export class RelatedArtifact extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: RelatedArtifact.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:RelatedArtifactTypeValueSetEnum fhir: RelatedArtifact.type:code", }));
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (this["label"]) {
+            outcome.issue.push(...this.label.doModelValidation().issue);
         }
-        if (this["_label"]) {
-            results.push(...this._label.doModelValidation());
+        if (this["display"]) {
+            outcome.issue.push(...this.display.doModelValidation().issue);
         }
-        if (this["_display"]) {
-            results.push(...this._display.doModelValidation());
+        if (this["citation"]) {
+            outcome.issue.push(...this.citation.doModelValidation().issue);
         }
-        if (this["_citation"]) {
-            results.push(...this._citation.doModelValidation());
-        }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["document"]) {
-            results.push(...this.document.doModelValidation());
+            outcome.issue.push(...this.document.doModelValidation().issue);
         }
-        if (this["_resource"]) {
-            results.push(...this._resource.doModelValidation());
+        if (this["resource"]) {
+            outcome.issue.push(...this.resource.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=RelatedArtifact.js.map

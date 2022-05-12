@@ -51,27 +51,4 @@ export const RejectionCriteriaValueSet = {
 /**
  * Criterion for rejection of the specimen by laboratory.
  */
-export var RejectionCriteriaValueSetEnum;
-(function (RejectionCriteriaValueSetEnum) {
-    /**
-     * broken: specimen container broken.
-     */
-    RejectionCriteriaValueSetEnum["BrokenSpecimenContainer"] = "broken";
-    /**
-     * clotted: specimen clotted.
-     */
-    RejectionCriteriaValueSetEnum["SpecimenClotted"] = "clotted";
-    /**
-     * hemolized: blood specimen hemolized.
-     */
-    RejectionCriteriaValueSetEnum["HemolizedSpecimen"] = "hemolized";
-    /**
-     * insufficient: insufficient quantity of specimen.
-     */
-    RejectionCriteriaValueSetEnum["InsufficientSpecimenVolume"] = "insufficient";
-    /**
-     * wrong-temperature: specimen temperature inappropriate.
-     */
-    RejectionCriteriaValueSetEnum["SpecimenTemperatureInappropriate"] = "wrong-temperature";
-})(RejectionCriteriaValueSetEnum || (RejectionCriteriaValueSetEnum = {}));
 //# sourceMappingURL=RejectionCriteriaValueSet.js.map

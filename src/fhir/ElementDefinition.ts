@@ -3,1821 +3,64 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: ElementDefinition
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { DiscriminatorTypeValueSet, DiscriminatorTypeValueSetType, DiscriminatorTypeValueSetEnum } from '../fhirValueSets/DiscriminatorTypeValueSet.js'
-import { ResourceSlicingRulesValueSet, ResourceSlicingRulesValueSetType, ResourceSlicingRulesValueSetEnum } from '../fhirValueSets/ResourceSlicingRulesValueSet.js'
-import { DefinedTypesValueSet, DefinedTypesValueSetType, DefinedTypesValueSetEnum } from '../fhirValueSets/DefinedTypesValueSet.js'
-import { ResourceAggregationModeValueSet, ResourceAggregationModeValueSetType, ResourceAggregationModeValueSetEnum } from '../fhirValueSets/ResourceAggregationModeValueSet.js'
-import { ReferenceVersionRulesValueSet, ReferenceVersionRulesValueSetType, ReferenceVersionRulesValueSetEnum } from '../fhirValueSets/ReferenceVersionRulesValueSet.js'
-import { ConstraintSeverityValueSet, ConstraintSeverityValueSetType, ConstraintSeverityValueSetEnum } from '../fhirValueSets/ConstraintSeverityValueSet.js'
-import { BindingStrengthValueSet, BindingStrengthValueSetType, BindingStrengthValueSetEnum } from '../fhirValueSets/BindingStrengthValueSet.js'
-import { PropertyRepresentationValueSet, PropertyRepresentationValueSetType, PropertyRepresentationValueSetEnum } from '../fhirValueSets/PropertyRepresentationValueSet.js'
-import { ObservationCodesValueSet, ObservationCodesValueSetType, ObservationCodesValueSetEnum } from '../fhirValueSets/ObservationCodesValueSet.js'
-
+import { DiscriminatorTypeValueSet, DiscriminatorTypeValueSetType,} from '../fhirValueSets/DiscriminatorTypeValueSet.js';
+import { DiscriminatorTypeValueSetEnum } from '../valueSetEnums.js';
+import { ResourceSlicingRulesValueSet, ResourceSlicingRulesValueSetType,} from '../fhirValueSets/ResourceSlicingRulesValueSet.js';
+import { ResourceSlicingRulesValueSetEnum } from '../valueSetEnums.js';
+import { DefinedTypesValueSet, DefinedTypesValueSetType,} from '../fhirValueSets/DefinedTypesValueSet.js';
+import { DefinedTypesValueSetEnum } from '../valueSetEnums.js';
+import { ResourceAggregationModeValueSet, ResourceAggregationModeValueSetType,} from '../fhirValueSets/ResourceAggregationModeValueSet.js';
+import { ResourceAggregationModeValueSetEnum } from '../valueSetEnums.js';
+import { ReferenceVersionRulesValueSet, ReferenceVersionRulesValueSetType,} from '../fhirValueSets/ReferenceVersionRulesValueSet.js';
+import { ReferenceVersionRulesValueSetEnum } from '../valueSetEnums.js';
+import { ConstraintSeverityValueSet, ConstraintSeverityValueSetType,} from '../fhirValueSets/ConstraintSeverityValueSet.js';
+import { ConstraintSeverityValueSetEnum } from '../valueSetEnums.js';
+import { BindingStrengthValueSet, BindingStrengthValueSetType,} from '../fhirValueSets/BindingStrengthValueSet.js';
+import { BindingStrengthValueSetEnum } from '../valueSetEnums.js';
+import { PropertyRepresentationValueSet, PropertyRepresentationValueSetType,} from '../fhirValueSets/PropertyRepresentationValueSet.js';
+import { PropertyRepresentationValueSetEnum } from '../valueSetEnums.js';
+import { ObservationCodesValueSet, ObservationCodesValueSetType,} from '../fhirValueSets/ObservationCodesValueSet.js';
+import { ObservationCodesValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * If there is no discriminator, the content is hard to process, so this should be avoided.
+ * Valid arguments for the ElementDefinitionSlicingDiscriminator type.
  */
-export type IElementDefinitionSlicingDiscriminator = fhir.IFhirElement & { 
+export interface ElementDefinitionSlicingDiscriminatorArgs extends fhir.FhirElementArgs {
   /**
    * How the element value is interpreted when discrimination is evaluated.
    */
   type: DiscriminatorTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ElementDefinition.slicing.discriminator.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
    * The only FHIRPath functions that are allowed are as(type), resolve(), and extension(url).
    */
-  path: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.slicing.discriminator.path
-   */
-  _path?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element.
- */
-export type IElementDefinitionSlicing = fhir.IFhirElement & { 
-  /**
-   * If there is no discriminator, the content is hard to process, so this should be avoided.
-   */
-  discriminator?: fhir.IElementDefinitionSlicingDiscriminator[]|undefined;
-  /**
-   * If it's really not possible to differentiate them, the design should be re-evaluated to make the content usable.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.slicing.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Order should only be required when it is a pressing concern for presentation. Profile authors should consider making the order a feature of the rules about the narrative, not the rules about the data - requiring ordered data makes the profile much less re-usable.
-   */
-  ordered?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.slicing.ordered
-   */
-  _ordered?: fhir.IFhirElement|undefined;
-  /**
-   * Allowing additional elements makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile.
-   */
-  rules: ResourceSlicingRulesValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.slicing.rules
-   */
-  _rules?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. For tooling simplicity, the base information must always be populated in element definitions in snap shots, even if it is the same.
- */
-export type IElementDefinitionBase = fhir.IFhirElement & { 
-  /**
-   * The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a [StructureDefinition](structuredefinition.html#) without a StructureDefinition.base.
-   */
-  path: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.base.path
-   */
-  _path?: fhir.IFhirElement|undefined;
-  /**
-   * This is provided for consistency with max, and may affect code generation of mandatory elements of the base resource are generated differently (some reference implementations have done this).
-   */
-  min: number|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.base.min
-   */
-  _min?: fhir.IFhirElement|undefined;
-  /**
-   * This is provided to code generation, since the serialization representation in JSON differs depending on whether the base element has max &gt; 1. Also, some forms of code generation may differ.
-   */
-  max: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.base.max
-   */
-  _max?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice).
- */
-export type IElementDefinitionType = fhir.IFhirElement & { 
-  /**
-   * If the element is a reference to another resource, this element contains "Reference", and the targetProfile element defines what resources can be referenced. The targetProfile may be a reference to the general definition of a resource (e.g. http://hl7.org/fhir/StructureDefinition/Patient).
-   */
-  code: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.type.code
-   */
-  _code?: fhir.IFhirElement|undefined;
-  /**
-   * It is possible to profile  backbone element (e.g. part of a resource), using the [profile-element](extension-elementdefinition-profile-element.html) extension.
-   */
-  profile?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.type.profile
-   */
-  _profile?: fhir.IFhirElement[]|undefined;
-  /**
-   * Used when the type is "Reference" or "canonical", and identifies a profile structure or implementation Guide that applies to the target of the reference this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the target resource SHALL conform to at least one profile defined in the implementation guide.
-   */
-  targetProfile?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.type.targetProfile
-   */
-  _targetProfile?: fhir.IFhirElement[]|undefined;
-  /**
-   * See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.
-   */
-  aggregation?: ResourceAggregationModeValueSetEnum[]|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.type.aggregation
-   */
-  _aggregation?: fhir.IFhirElement[]|undefined;
-  /**
-   * The base specification never makes a rule as to which form is allowed, but implementation guides may do this. See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.
-   */
-  versioning?: ReferenceVersionRulesValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.type.versioning
-   */
-  _versioning?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Examples will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically.
- */
-export type IElementDefinitionExample = fhir.IFhirElement & { 
-  /**
-   * Describes the purpose of this example amoung the set of examples.
-   */
-  label: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.label
-   */
-  _label?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueBase64Binary?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueCanonical?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueCode?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueDate?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueDecimal?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueId?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueInstant?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueInteger?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueMarkdown?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueOid?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valuePositiveInt?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueString?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueTime?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueUnsignedInt?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueUri?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueUrl?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  _valueUuid?: fhir.IFhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueAddress?: fhir.IAddress|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueAge?: fhir.IAge|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueAnnotation?: fhir.IAnnotation|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueAttachment?: fhir.IAttachment|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueCoding?: fhir.ICoding|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueContactPoint?: fhir.IContactPoint|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueCount?: fhir.ICount|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueDistance?: fhir.IDistance|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueDuration?: fhir.IDuration|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueHumanName?: fhir.IHumanName|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueIdentifier?: fhir.IIdentifier|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueMoney?: fhir.IMoney|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valuePeriod?: fhir.IPeriod|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueQuantity?: fhir.IQuantity|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueRange?: fhir.IRange|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueRatio?: fhir.IRatio|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueReference?: fhir.IReference|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueSampledData?: fhir.ISampledData|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueSignature?: fhir.ISignature|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueTiming?: fhir.ITiming|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueContactDetail?: fhir.IContactDetail|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueContributor?: fhir.IContributor|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueDataRequirement?: fhir.IDataRequirement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueExpression?: fhir.IExpression|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueParameterDefinition?: fhir.IParameterDefinition|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueRelatedArtifact?: fhir.IRelatedArtifact|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueTriggerDefinition?: fhir.ITriggerDefinition|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueUsageContext?: fhir.IUsageContext|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueDosage?: fhir.IDosage|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  valueMeta?: fhir.IMeta|undefined;
-}
-
-/**
- * Constraints should be declared on the "context" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.
- */
-export type IElementDefinitionConstraint = fhir.IFhirElement & { 
-  /**
-   * Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.
-   */
-  key: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.constraint.key
-   */
-  _key?: fhir.IFhirElement|undefined;
-  /**
-   * To be used if the reason for the constraint might not be intuitive to all implementers.
-   */
-  requirements?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.constraint.requirements
-   */
-  _requirements?: fhir.IFhirElement|undefined;
-  /**
-   * This allows constraints to be asserted as "shall" (error) and "should" (warning).
-   */
-  severity: ConstraintSeverityValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.constraint.severity
-   */
-  _severity?: fhir.IFhirElement|undefined;
-  /**
-   * Should be expressed in business terms as much as possible.
-   */
-  human: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.constraint.human
-   */
-  _human?: fhir.IFhirElement|undefined;
-  /**
-   * In the absense of an expression, the expression is likely not enforceable by validators, and might be missed by many systems.
-   */
-  expression?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.constraint.expression
-   */
-  _expression?: fhir.IFhirElement|undefined;
-  /**
-   * Elements SHALL use "f" as the namespace prefix for the FHIR namespace, and "x" for the xhtml namespace, and SHALL NOT use any other prefixes.     Note: XPath is generally considered not useful because it does not apply to JSON and other formats and because of XSLT implementation issues, and may be removed in the future.
-   */
-  xpath?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.constraint.xpath
-   */
-  _xpath?: fhir.IFhirElement|undefined;
-  /**
-   * This is used when, e.g. rendering, where it is not useful to present inherited constraints when rendering the snapshot.
-   */
-  source?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.constraint.source
-   */
-  _source?: fhir.IFhirElement|undefined;
-}
-
-/**
- * For a CodeableConcept, when no codes are allowed - only text, use a binding of strength "required" with a description explaining that no coded values are allowed and what sort of information to put in the "text" element.
- */
-export type IElementDefinitionBinding = fhir.IFhirElement & { 
-  /**
-   * For further discussion, see [Using Terminologies](terminologies.html).
-   */
-  strength: BindingStrengthValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.binding.strength
-   */
-  _strength?: fhir.IFhirElement|undefined;
-  /**
-   * Describes the intended use of this particular set of codes.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.binding.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * The reference may be version-specific or not (e.g. have a |[version] at the end of the canonical URL).
-   */
-  valueSet?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.binding.valueSet
-   */
-  _valueSet?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Mappings are not necessarily specific enough for safe translation.
- */
-export type IElementDefinitionMapping = fhir.IFhirElement & { 
-  /**
-   * An internal reference to the definition of a mapping.
-   */
-  identity: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.mapping.identity
-   */
-  _identity?: fhir.IFhirElement|undefined;
-  /**
-   * If omitted, then there can be no expectation of computational interpretation of the mapping.
-   */
-  language?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.mapping.language
-   */
-  _language?: fhir.IFhirElement|undefined;
-  /**
-   * For most mappings, the syntax is undefined.  Syntax will be provided for mappings to the RIM.  Multiple mappings may be possible and may include constraints on other resource elements that identify when a particular mapping applies.
-   */
-  map: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.mapping.map
-   */
-  _map?: fhir.IFhirElement|undefined;
-  /**
-   * Comments that provide information about the mapping or its use.
-   */
-  comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.mapping.comment
-   */
-  _comment?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Captures constraints on each element within the resource, profile, or extension.
- */
-export type IElementDefinition = fhir.IBackboneElement & { 
-  /**
-   * The path identifies the element and is expressed as a "."-separated list of ancestor elements, beginning with the name of the resource or extension.
-   */
-  path: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.path
-   */
-  _path?: fhir.IFhirElement|undefined;
-  /**
-   * In resources, this is rarely used except for special cases where the representation deviates from the normal, and can only be done in the base standard (and profiles must reproduce what the base standard does). This element is used quite commonly in Logical models when the logical models represent a specific serialization format (e.g. CDA, v2 etc.).
-   */
-  representation?: PropertyRepresentationValueSetEnum[]|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.representation
-   */
-  _representation?: fhir.IFhirElement[]|undefined;
-  /**
-   * The name SHALL be unique within the structure within the context of the constrained resource element.  (Though to avoid confusion, uniqueness across all elements is recommended.).
-   */
-  sliceName?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.sliceName
-   */
-  _sliceName?: fhir.IFhirElement|undefined;
-  /**
-   * If set to true, an ancestor profile SHALL have a slicing definition with this name.  If set to false, no ancestor profile is permitted to have a slicing definition with this name.
-   */
-  sliceIsConstraining?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.sliceIsConstraining
-   */
-  _sliceIsConstraining?: fhir.IFhirElement|undefined;
-  /**
-   * See also the extension (http://hl7.org/fhir/StructureDefinition/elementdefinition-question)[extension-elementdefinition-question.html].
-   */
-  label?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.label
-   */
-  _label?: fhir.IFhirElement|undefined;
-  /**
-   * The concept SHALL be properly aligned with the data element definition and other constraints, as defined in the code system, including relationships, of any code listed here.  Where multiple codes exist in a terminology that could correspond to the data element, the most granular code(s) should be selected, so long as they are not more restrictive than the data element itself. The mappings may be used to provide more or less granular or structured equivalences in the code system.
-   */
-  code?: fhir.ICoding[]|undefined;
-  /**
-   * The first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element.
-   */
-  slicing?: fhir.IElementDefinitionSlicing|undefined;
-  /**
-   * It is easy for a different short definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing short definitions in a profile.
-   */
-  short?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.short
-   */
-  _short?: fhir.IFhirElement|undefined;
-  /**
-   * It is easy for a different definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing definitions in a profile.
-   */
-  definition?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.definition
-   */
-  _definition?: fhir.IFhirElement|undefined;
-  /**
-   * If it is possible to capture usage rules using constraints, that mechanism should be used in preference to this element.
-   */
-  comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.comment
-   */
-  _comment?: fhir.IFhirElement|undefined;
-  /**
-   * This element does not describe the usage of the element (that's done in comments), rather it's for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element.
-   */
-  requirements?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.requirements
-   */
-  _requirements?: fhir.IFhirElement|undefined;
-  /**
-   * Identifies additional names by which this element might also be known.
-   */
-  alias?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.alias
-   */
-  _alias?: fhir.IFhirElement[]|undefined;
-  /**
-   * The minimum number of times this element SHALL appear in the instance.
-   */
-  min?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.min
-   */
-  _min?: fhir.IFhirElement|undefined;
-  /**
-   * The maximum number of times this element is permitted to appear in the instance.
-   */
-  max?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.max
-   */
-  _max?: fhir.IFhirElement|undefined;
-  /**
-   * The base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. For tooling simplicity, the base information must always be populated in element definitions in snap shots, even if it is the same.
-   */
-  base?: fhir.IElementDefinitionBase|undefined;
-  /**
-   * ContentReferences can only be defined in specializations, not constrained types, and they cannot be changed and always reference the non-constrained definition.
-   */
-  contentReference?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.contentReference
-   */
-  _contentReference?: fhir.IFhirElement|undefined;
-  /**
-   * The Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice).
-   */
-  type?: fhir.IElementDefinitionType[]|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueBase64Binary?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueCanonical?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueCode?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueDate?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueDecimal?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueId?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueInstant?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueInteger?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueMarkdown?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueOid?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValuePositiveInt?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueString?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueTime?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueUnsignedInt?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueUri?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueUrl?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  _defaultValueUuid?: fhir.IFhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueAddress?: fhir.IAddress|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueAge?: fhir.IAge|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueAnnotation?: fhir.IAnnotation|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueAttachment?: fhir.IAttachment|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueCoding?: fhir.ICoding|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueContactPoint?: fhir.IContactPoint|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueCount?: fhir.ICount|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueDistance?: fhir.IDistance|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueDuration?: fhir.IDuration|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueHumanName?: fhir.IHumanName|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueIdentifier?: fhir.IIdentifier|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueMoney?: fhir.IMoney|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValuePeriod?: fhir.IPeriod|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueQuantity?: fhir.IQuantity|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueRange?: fhir.IRange|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueRatio?: fhir.IRatio|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueReference?: fhir.IReference|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueSampledData?: fhir.ISampledData|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueSignature?: fhir.ISignature|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueTiming?: fhir.ITiming|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueContactDetail?: fhir.IContactDetail|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueContributor?: fhir.IContributor|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueDataRequirement?: fhir.IDataRequirement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueExpression?: fhir.IExpression|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueParameterDefinition?: fhir.IParameterDefinition|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueRelatedArtifact?: fhir.IRelatedArtifact|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueTriggerDefinition?: fhir.ITriggerDefinition|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueUsageContext?: fhir.IUsageContext|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueDosage?: fhir.IDosage|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  defaultValueMeta?: fhir.IMeta|undefined;
-  /**
-   * Implicit meanings for missing values can only be specified on a resource, data type, or extension definition, and never in a profile that applies to one of these. An implicit meaning for a missing value can never be changed, and specifying one has the consequence that constraining its use in profiles eliminates use cases as possibilities, not merely moving them out of scope.
-   */
-  meaningWhenMissing?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.meaningWhenMissing
-   */
-  _meaningWhenMissing?: fhir.IFhirElement|undefined;
-  /**
-   * This element can only be asserted on repeating elements and can only be introduced when defining resources or data types.  It can be further refined profiled elements but if absent in the base type, a profile cannot assert meaning.
-   */
-  orderMeaning?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.orderMeaning
-   */
-  _orderMeaning?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedBase64Binary?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedCanonical?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedCode?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedDate?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedDecimal?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedId?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedInstant?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedInteger?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedMarkdown?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedOid?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedPositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedPositiveInt?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedString?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedString?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedTime?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedUnsignedInt?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedUri?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedUrl?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  _fixedUuid?: fhir.IFhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedAddress?: fhir.IAddress|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedAge?: fhir.IAge|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedAnnotation?: fhir.IAnnotation|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedAttachment?: fhir.IAttachment|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedCoding?: fhir.ICoding|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedContactPoint?: fhir.IContactPoint|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedCount?: fhir.ICount|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedDistance?: fhir.IDistance|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedDuration?: fhir.IDuration|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedHumanName?: fhir.IHumanName|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedIdentifier?: fhir.IIdentifier|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedMoney?: fhir.IMoney|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedPeriod?: fhir.IPeriod|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedQuantity?: fhir.IQuantity|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedRange?: fhir.IRange|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedRatio?: fhir.IRatio|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedReference?: fhir.IReference|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedSampledData?: fhir.ISampledData|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedSignature?: fhir.ISignature|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedTiming?: fhir.ITiming|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedContactDetail?: fhir.IContactDetail|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedContributor?: fhir.IContributor|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedDataRequirement?: fhir.IDataRequirement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedExpression?: fhir.IExpression|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedParameterDefinition?: fhir.IParameterDefinition|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedRelatedArtifact?: fhir.IRelatedArtifact|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedTriggerDefinition?: fhir.ITriggerDefinition|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedUsageContext?: fhir.IUsageContext|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedDosage?: fhir.IDosage|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  fixedMeta?: fhir.IMeta|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternBase64Binary?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternCanonical?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternCode?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternDate?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternDecimal?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternId?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternInstant?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternInteger?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternMarkdown?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternOid?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternPositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternPositiveInt?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternString?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternString?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternTime?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternUnsignedInt?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternUri?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternUrl?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  _patternUuid?: fhir.IFhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternAddress?: fhir.IAddress|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternAge?: fhir.IAge|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternAnnotation?: fhir.IAnnotation|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternAttachment?: fhir.IAttachment|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternCoding?: fhir.ICoding|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternContactPoint?: fhir.IContactPoint|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternCount?: fhir.ICount|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternDistance?: fhir.IDistance|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternDuration?: fhir.IDuration|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternHumanName?: fhir.IHumanName|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternIdentifier?: fhir.IIdentifier|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternMoney?: fhir.IMoney|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternPeriod?: fhir.IPeriod|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternQuantity?: fhir.IQuantity|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternRange?: fhir.IRange|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternRatio?: fhir.IRatio|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternReference?: fhir.IReference|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternSampledData?: fhir.ISampledData|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternSignature?: fhir.ISignature|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternTiming?: fhir.ITiming|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternContactDetail?: fhir.IContactDetail|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternContributor?: fhir.IContributor|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternDataRequirement?: fhir.IDataRequirement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternExpression?: fhir.IExpression|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternParameterDefinition?: fhir.IParameterDefinition|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternRelatedArtifact?: fhir.IRelatedArtifact|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternTriggerDefinition?: fhir.ITriggerDefinition|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternUsageContext?: fhir.IUsageContext|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternDosage?: fhir.IDosage|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  patternMeta?: fhir.IMeta|undefined;
-  /**
-   * Examples will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically.
-   */
-  example?: fhir.IElementDefinitionExample[]|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  minValueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  _minValueDate?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  minValueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  _minValueDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  minValueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  _minValueInstant?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  minValueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  _minValueTime?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  minValueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  _minValueDecimal?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  minValueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  _minValueInteger?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  minValuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  _minValuePositiveInt?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  minValueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  _minValueUnsignedInt?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  minValueQuantity?: fhir.IQuantity|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  maxValueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  _maxValueDate?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  maxValueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  _maxValueDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  maxValueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  _maxValueInstant?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  maxValueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  _maxValueTime?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  maxValueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  _maxValueDecimal?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  maxValueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  _maxValueInteger?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  maxValuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  _maxValuePositiveInt?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  maxValueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  _maxValueUnsignedInt?: fhir.IFhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  maxValueQuantity?: fhir.IQuantity|undefined;
-  /**
-   * Receivers are not required to reject instances that exceed the maximum length.  The full length could be stored.  In some cases, data might be truncated, though truncation should be undertaken with care and an understanding of the consequences of doing so. If not specified, there is no conformance expectation for length support.
-   */
-  maxLength?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxLength
-   */
-  _maxLength?: fhir.IFhirElement|undefined;
-  /**
-   * A reference to an invariant that may make additional statements about the cardinality or value in the instance.
-   */
-  condition?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.condition
-   */
-  _condition?: fhir.IFhirElement[]|undefined;
-  /**
-   * Constraints should be declared on the "context" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.
-   */
-  constraint?: fhir.IElementDefinitionConstraint[]|undefined;
-  /**
-   * "Something useful" is context dependent and impossible to describe in the base FHIR specification. For this reason, tue mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.  A profile on a type can always make musSupport = true if it is false in the base type but cannot make mustSupport = false if it is true in the base type.   This is done in [Resource Profiles](profiling.html#mustsupport), where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of "support" is required, as this can mean many things.    Note that an element that has the property IsModifier is not necessarily a "key" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.
-   */
-  mustSupport?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.mustSupport
-   */
-  _mustSupport?: fhir.IFhirElement|undefined;
-  /**
-   * Only the definition of an element can set IsModifier true - either the specification itself or where an extension is originally defined. Once set, it cannot be changed in derived profiles. An element/extension that has isModifier=true SHOULD also have a minimum cardinality of 1, so that there is no lack of clarity about what to do if it is missing. If it can be missing, the definition SHALL make the meaning of a missing element clear.
-   */
-  isModifier?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.isModifier
-   */
-  _isModifier?: fhir.IFhirElement|undefined;
-  /**
-   * Explains how that element affects the interpretation of the resource or element that contains it.
-   */
-  isModifierReason?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.isModifierReason
-   */
-  _isModifierReason?: fhir.IFhirElement|undefined;
-  /**
-   * Some resources include a set of simple metadata, and some very large data. This element is used to reduce the quantity of data returned in searches. Note that servers may pre-cache summarized resources for optimal performance, so servers might not support per-profile use of the isSummary flag. When a request is made with _summary=true, serailisers only include elements marked as 'isSummary = true'. Other than Attachment.data, all data type properties are included in the summary form. In resource and data type definitions, if an element is at the root or has a parent that is 'mustSupport' and the minimum cardinality is 1 or the element is a modifier, it must be marked as isSummary=true.
-   */
-  isSummary?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.isSummary
-   */
-  _isSummary?: fhir.IFhirElement|undefined;
-  /**
-   * For a CodeableConcept, when no codes are allowed - only text, use a binding of strength "required" with a description explaining that no coded values are allowed and what sort of information to put in the "text" element.
-   */
-  binding?: fhir.IElementDefinitionBinding|undefined;
-  /**
-   * Mappings are not necessarily specific enough for safe translation.
-   */
-  mapping?: fhir.IElementDefinitionMapping[]|undefined;
+  path: fhir.FhirString|string|undefined;
 }
 
 /**
  * If there is no discriminator, the content is hard to process, so this should be avoided.
  */
-export class ElementDefinitionSlicingDiscriminator extends fhir.FhirElement implements IElementDefinitionSlicingDiscriminator {
+export class ElementDefinitionSlicingDiscriminator extends fhir.FhirElement {
+  readonly __dataType:string = 'ElementDefinitionSlicingDiscriminator';
   /**
    * How the element value is interpreted when discrimination is evaluated.
    */
   public type: DiscriminatorTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ElementDefinition.slicing.discriminator.type
-   */
-  public _type?: fhir.FhirElement|undefined;
-  /**
    * The only FHIRPath functions that are allowed are as(type), resolve(), and extension(url).
    */
-  public path: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.slicing.discriminator.path
-   */
-  public _path?: fhir.FhirElement|undefined;
+  public path: fhir.FhirString|null;
   /**
    * Default constructor for ElementDefinitionSlicingDiscriminator - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IElementDefinitionSlicingDiscriminator> = { }) {
-    super(source);
+  constructor(source:Partial<ElementDefinitionSlicingDiscriminatorArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['path']) { this.path = source.path; }
+    if (source['path']) { this.path = new fhir.FhirString({value: source.path}); }
     else { this.path = null; }
-    if (source['_path']) { this._path = new fhir.FhirElement(source._path!); }
   }
   /**
    * Required-bound Value Set for type
@@ -1828,61 +71,77 @@ export class ElementDefinitionSlicingDiscriminator extends fhir.FhirElement impl
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: ElementDefinition.slicing.discriminator.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (!this["path"]) { results.push(["path",'Missing required element: ElementDefinition.slicing.discriminator.path']); }
-    if (this["_path"]) { results.push(...this._path.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:DiscriminatorTypeValueSetEnum fhir: ElementDefinition.slicing.discriminator.type:code", }));
+    }
+    if (!this['path']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property path:fhir.FhirString fhir: ElementDefinition.slicing.discriminator.path:string", }));
+    }
+    if (this["path"]) { outcome.issue!.push(...this.path.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ElementDefinitionSlicing type.
+ */
+export interface ElementDefinitionSlicingArgs extends fhir.FhirElementArgs {
+  /**
+   * If there is no discriminator, the content is hard to process, so this should be avoided.
+   */
+  discriminator?: fhir.ElementDefinitionSlicingDiscriminatorArgs[]|undefined;
+  /**
+   * If it's really not possible to differentiate them, the design should be re-evaluated to make the content usable.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * Order should only be required when it is a pressing concern for presentation. Profile authors should consider making the order a feature of the rules about the narrative, not the rules about the data - requiring ordered data makes the profile much less re-usable.
+   */
+  ordered?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Allowing additional elements makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile.
+   */
+  rules: ResourceSlicingRulesValueSetEnum|null;
 }
 
 /**
  * The first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element.
  */
-export class ElementDefinitionSlicing extends fhir.FhirElement implements IElementDefinitionSlicing {
+export class ElementDefinitionSlicing extends fhir.FhirElement {
+  readonly __dataType:string = 'ElementDefinitionSlicing';
   /**
    * If there is no discriminator, the content is hard to process, so this should be avoided.
    */
-  public discriminator?: fhir.ElementDefinitionSlicingDiscriminator[]|undefined;
+  public discriminator?: fhir.ElementDefinitionSlicingDiscriminator[]|undefined = [];
   /**
    * If it's really not possible to differentiate them, the design should be re-evaluated to make the content usable.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.slicing.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Order should only be required when it is a pressing concern for presentation. Profile authors should consider making the order a feature of the rules about the narrative, not the rules about the data - requiring ordered data makes the profile much less re-usable.
    */
-  public ordered?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.slicing.ordered
-   */
-  public _ordered?: fhir.FhirElement|undefined;
+  public ordered?: fhir.FhirBoolean|undefined;
   /**
    * Allowing additional elements makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile.
    */
   public rules: ResourceSlicingRulesValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ElementDefinition.slicing.rules
-   */
-  public _rules?: fhir.FhirElement|undefined;
-  /**
    * Default constructor for ElementDefinitionSlicing - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IElementDefinitionSlicing> = { }) {
-    super(source);
+  constructor(source:Partial<ElementDefinitionSlicingArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['discriminator']) { this.discriminator = source.discriminator.map((x) => new fhir.ElementDefinitionSlicingDiscriminator(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['ordered']) { this.ordered = source.ordered; }
-    if (source['_ordered']) { this._ordered = new fhir.FhirElement(source._ordered!); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['ordered']) { this.ordered = new fhir.FhirBoolean({value: source.ordered}); }
     if (source['rules']) { this.rules = source.rules; }
     else { this.rules = null; }
-    if (source['_rules']) { this._rules = new fhir.FhirElement(source._rules!); }
   }
   /**
    * Required-bound Value Set for rules
@@ -1893,135 +152,158 @@ export class ElementDefinitionSlicing extends fhir.FhirElement implements IEleme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["discriminator"]) { this.discriminator.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_ordered"]) { results.push(...this._ordered.doModelValidation()); }
-    if (!this["rules"]) { results.push(["rules",'Missing required element: ElementDefinition.slicing.rules']); }
-    if (this["_rules"]) { results.push(...this._rules.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["discriminator"]) { this.discriminator.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["ordered"]) { outcome.issue!.push(...this.ordered.doModelValidation().issue!); }
+    if (!this['rules']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property rules:ResourceSlicingRulesValueSetEnum fhir: ElementDefinition.slicing.rules:code", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ElementDefinitionBase type.
+ */
+export interface ElementDefinitionBaseArgs extends fhir.FhirElementArgs {
+  /**
+   * The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a [StructureDefinition](structuredefinition.html#) without a StructureDefinition.base.
+   */
+  path: fhir.FhirString|string|undefined;
+  /**
+   * This is provided for consistency with max, and may affect code generation of mandatory elements of the base resource are generated differently (some reference implementations have done this).
+   */
+  min: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * This is provided to code generation, since the serialization representation in JSON differs depending on whether the base element has max &gt; 1. Also, some forms of code generation may differ.
+   */
+  max: fhir.FhirString|string|undefined;
 }
 
 /**
  * The base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. For tooling simplicity, the base information must always be populated in element definitions in snap shots, even if it is the same.
  */
-export class ElementDefinitionBase extends fhir.FhirElement implements IElementDefinitionBase {
+export class ElementDefinitionBase extends fhir.FhirElement {
+  readonly __dataType:string = 'ElementDefinitionBase';
   /**
    * The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a [StructureDefinition](structuredefinition.html#) without a StructureDefinition.base.
    */
-  public path: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.base.path
-   */
-  public _path?: fhir.FhirElement|undefined;
+  public path: fhir.FhirString|null;
   /**
    * This is provided for consistency with max, and may affect code generation of mandatory elements of the base resource are generated differently (some reference implementations have done this).
    */
-  public min: number|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.base.min
-   */
-  public _min?: fhir.FhirElement|undefined;
+  public min: fhir.FhirUnsignedInt|null;
   /**
    * This is provided to code generation, since the serialization representation in JSON differs depending on whether the base element has max &gt; 1. Also, some forms of code generation may differ.
    */
-  public max: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.base.max
-   */
-  public _max?: fhir.FhirElement|undefined;
+  public max: fhir.FhirString|null;
   /**
    * Default constructor for ElementDefinitionBase - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IElementDefinitionBase> = { }) {
-    super(source);
-    if (source['path']) { this.path = source.path; }
+  constructor(source:Partial<ElementDefinitionBaseArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['path']) { this.path = new fhir.FhirString({value: source.path}); }
     else { this.path = null; }
-    if (source['_path']) { this._path = new fhir.FhirElement(source._path!); }
-    if (source['min']) { this.min = source.min; }
+    if (source['min']) { this.min = new fhir.FhirUnsignedInt({value: source.min}); }
     else { this.min = null; }
-    if (source['_min']) { this._min = new fhir.FhirElement(source._min!); }
-    if (source['max']) { this.max = source.max; }
+    if (source['max']) { this.max = new fhir.FhirString({value: source.max}); }
     else { this.max = null; }
-    if (source['_max']) { this._max = new fhir.FhirElement(source._max!); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["path"]) { results.push(["path",'Missing required element: ElementDefinition.base.path']); }
-    if (this["_path"]) { results.push(...this._path.doModelValidation()); }
-    if (!this["min"]) { results.push(["min",'Missing required element: ElementDefinition.base.min']); }
-    if (this["_min"]) { results.push(...this._min.doModelValidation()); }
-    if (!this["max"]) { results.push(["max",'Missing required element: ElementDefinition.base.max']); }
-    if (this["_max"]) { results.push(...this._max.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['path']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property path:fhir.FhirString fhir: ElementDefinition.base.path:string", }));
+    }
+    if (this["path"]) { outcome.issue!.push(...this.path.doModelValidation().issue!); }
+    if (!this['min']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property min:fhir.FhirUnsignedInt fhir: ElementDefinition.base.min:unsignedInt", }));
+    }
+    if (this["min"]) { outcome.issue!.push(...this.min.doModelValidation().issue!); }
+    if (!this['max']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property max:fhir.FhirString fhir: ElementDefinition.base.max:string", }));
+    }
+    if (this["max"]) { outcome.issue!.push(...this.max.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ElementDefinitionType type.
+ */
+export interface ElementDefinitionTypeArgs extends fhir.FhirElementArgs {
+  /**
+   * If the element is a reference to another resource, this element contains "Reference", and the targetProfile element defines what resources can be referenced. The targetProfile may be a reference to the general definition of a resource (e.g. http://hl7.org/fhir/StructureDefinition/Patient).
+   */
+  code: fhir.FhirUri|string|undefined;
+  /**
+   * It is possible to profile  backbone element (e.g. part of a resource), using the [profile-element](extension-elementdefinition-profile-element.html) extension.
+   */
+  profile?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * Used when the type is "Reference" or "canonical", and identifies a profile structure or implementation Guide that applies to the target of the reference this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the target resource SHALL conform to at least one profile defined in the implementation guide.
+   */
+  targetProfile?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.
+   */
+  aggregation?: ResourceAggregationModeValueSetEnum[]|undefined;
+  /**
+   * The base specification never makes a rule as to which form is allowed, but implementation guides may do this. See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.
+   */
+  versioning?: ReferenceVersionRulesValueSetEnum|undefined;
 }
 
 /**
  * The Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice).
  */
-export class ElementDefinitionType extends fhir.FhirElement implements IElementDefinitionType {
+export class ElementDefinitionType extends fhir.FhirElement {
+  readonly __dataType:string = 'ElementDefinitionType';
   /**
    * If the element is a reference to another resource, this element contains "Reference", and the targetProfile element defines what resources can be referenced. The targetProfile may be a reference to the general definition of a resource (e.g. http://hl7.org/fhir/StructureDefinition/Patient).
    */
-  public code: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.type.code
-   */
-  public _code?: fhir.FhirElement|undefined;
+  public code: fhir.FhirUri|null;
   /**
    * It is possible to profile  backbone element (e.g. part of a resource), using the [profile-element](extension-elementdefinition-profile-element.html) extension.
    */
-  public profile?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.type.profile
-   */
-  public _profile?: fhir.FhirElement[]|undefined;
+  public profile?: fhir.FhirCanonical[]|undefined = [];
   /**
    * Used when the type is "Reference" or "canonical", and identifies a profile structure or implementation Guide that applies to the target of the reference this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the target resource SHALL conform to at least one profile defined in the implementation guide.
    */
-  public targetProfile?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.type.targetProfile
-   */
-  public _targetProfile?: fhir.FhirElement[]|undefined;
+  public targetProfile?: fhir.FhirCanonical[]|undefined = [];
   /**
    * See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.
    */
-  public aggregation?: ResourceAggregationModeValueSetEnum[]|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.type.aggregation
-   */
-  public _aggregation?: fhir.FhirElement[]|undefined;
+  public aggregation?: ResourceAggregationModeValueSetEnum[]|undefined = [];
   /**
    * The base specification never makes a rule as to which form is allowed, but implementation guides may do this. See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.
    */
   public versioning?: ReferenceVersionRulesValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: ElementDefinition.type.versioning
-   */
-  public _versioning?: fhir.FhirElement|undefined;
-  /**
    * Default constructor for ElementDefinitionType - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IElementDefinitionType> = { }) {
-    super(source);
-    if (source['code']) { this.code = source.code; }
+  constructor(source:Partial<ElementDefinitionTypeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.FhirUri({value: source.code}); }
     else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['profile']) { this.profile = source.profile.map((x) => (x)); }
-    if (source['_profile']) { this._profile = source._profile.map((x) => new fhir.FhirElement(x)); }
-    if (source['targetProfile']) { this.targetProfile = source.targetProfile.map((x) => (x)); }
-    if (source['_targetProfile']) { this._targetProfile = source._targetProfile.map((x) => new fhir.FhirElement(x)); }
-    if (source['aggregation']) { this.aggregation = source.aggregation.map((x) => (x)); }
-    if (source['_aggregation']) { this._aggregation = source._aggregation.map((x) => new fhir.FhirElement(x)); }
+    if (source['profile']) { this.profile = source.profile.map((x) => new fhir.FhirCanonical({value: x})); }
+    if (source['targetProfile']) { this.targetProfile = source.targetProfile.map((x) => new fhir.FhirCanonical({value: x})); }
+    if (source['aggregation']) { this.aggregation = source.aggregation.map((x) => x); }
     if (source['versioning']) { this.versioning = source.versioning; }
-    if (source['_versioning']) { this._versioning = new fhir.FhirElement(source._versioning!); }
   }
   /**
    * Extensible-bound Value Set for code
@@ -2044,527 +326,414 @@ export class ElementDefinitionType extends fhir.FhirElement implements IElementD
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: ElementDefinition.type.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["_profile"]) { this._profile.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_targetProfile"]) { this._targetProfile.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_aggregation"]) { this._aggregation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_versioning"]) { results.push(...this._versioning.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.FhirUri fhir: ElementDefinition.type.code:uri", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["profile"]) { this.profile.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["targetProfile"]) { this.targetProfile.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ElementDefinitionExample type.
+ */
+export interface ElementDefinitionExampleArgs extends fhir.FhirElementArgs {
+  /**
+   * Describes the purpose of this example amoung the set of examples.
+   */
+  label: fhir.FhirString|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  value?: fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueBase64Binary?: fhir.FhirBase64Binary|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueCanonical?: fhir.FhirCanonical|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueCode?: fhir.FhirCode|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueDate?: fhir.FhirDate|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueDecimal?: fhir.FhirDecimal|number|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueId?: fhir.FhirId|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueInstant?: fhir.FhirInstant|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueMarkdown?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueOid?: fhir.FhirOid|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valuePositiveInt?: fhir.FhirPositiveInt|number|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueString?: fhir.FhirString|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueTime?: fhir.FhirTime|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueUnsignedInt?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueUri?: fhir.FhirUri|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueUrl?: fhir.FhirUrl|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueUuid?: fhir.FhirUuid|string|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueAddress?: fhir.AddressArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueAge?: fhir.AgeArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueAnnotation?: fhir.AnnotationArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueAttachment?: fhir.AttachmentArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueCoding?: fhir.CodingArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueContactPoint?: fhir.ContactPointArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueCount?: fhir.CountArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueDistance?: fhir.DistanceArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueDuration?: fhir.DurationArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueHumanName?: fhir.HumanNameArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueIdentifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueMoney?: fhir.MoneyArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valuePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueRange?: fhir.RangeArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueRatio?: fhir.RatioArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueSampledData?: fhir.SampledDataArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueSignature?: fhir.SignatureArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueTiming?: fhir.TimingArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueContactDetail?: fhir.ContactDetailArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueContributor?: fhir.ContributorArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueDataRequirement?: fhir.DataRequirementArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueExpression?: fhir.ExpressionArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueParameterDefinition?: fhir.ParameterDefinitionArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueRelatedArtifact?: fhir.RelatedArtifactArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueTriggerDefinition?: fhir.TriggerDefinitionArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueUsageContext?: fhir.UsageContextArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueDosage?: fhir.DosageArgs|undefined;
+  /**
+   * The actual value for the element, which must be one of the types allowed for this element.
+   */
+  valueMeta?: fhir.MetaArgs|undefined;
 }
 
 /**
  * Examples will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically.
  */
-export class ElementDefinitionExample extends fhir.FhirElement implements IElementDefinitionExample {
+export class ElementDefinitionExample extends fhir.FhirElement {
+  readonly __dataType:string = 'ElementDefinitionExample';
   /**
    * Describes the purpose of this example amoung the set of examples.
    */
-  public label: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.label
-   */
-  public _label?: fhir.FhirElement|undefined;
+  public label: fhir.FhirString|null;
   /**
    * The actual value for the element, which must be one of the types allowed for this element.
    */
-  public valueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueBase64Binary?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueBoolean?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueCanonical?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueCode?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueDate?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueDateTime?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueDecimal?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueId?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueInstant?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueInteger?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueMarkdown?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueOid?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valuePositiveInt?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueString?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueTime?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueUnsignedInt?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueUri?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueUrl?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.example.value[x]
-   */
-  public _valueUuid?: fhir.FhirElement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueAddress?: fhir.Address|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueAge?: fhir.Age|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueAnnotation?: fhir.Annotation|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueAttachment?: fhir.Attachment|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueCoding?: fhir.Coding|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueContactPoint?: fhir.ContactPoint|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueCount?: fhir.Count|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueDistance?: fhir.Distance|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueDuration?: fhir.Duration|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueHumanName?: fhir.HumanName|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueIdentifier?: fhir.Identifier|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueMoney?: fhir.Money|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valuePeriod?: fhir.Period|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueQuantity?: fhir.Quantity|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueRange?: fhir.Range|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueRatio?: fhir.Ratio|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueReference?: fhir.Reference|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueSampledData?: fhir.SampledData|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueSignature?: fhir.Signature|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueTiming?: fhir.Timing|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueContactDetail?: fhir.ContactDetail|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueContributor?: fhir.Contributor|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueDataRequirement?: fhir.DataRequirement|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueExpression?: fhir.Expression|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueParameterDefinition?: fhir.ParameterDefinition|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueRelatedArtifact?: fhir.RelatedArtifact|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueTriggerDefinition?: fhir.TriggerDefinition|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueUsageContext?: fhir.UsageContext|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueDosage?: fhir.Dosage|undefined;
-  /**
-   * The actual value for the element, which must be one of the types allowed for this element.
-   */
-  public valueMeta?: fhir.Meta|undefined;
+  public value: (fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta)|null;
+  readonly __valueIsChoice:true = true;
   /**
    * Default constructor for ElementDefinitionExample - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IElementDefinitionExample> = { }) {
-    super(source);
-    if (source['label']) { this.label = source.label; }
+  constructor(source:Partial<ElementDefinitionExampleArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['label']) { this.label = new fhir.FhirString({value: source.label}); }
     else { this.label = null; }
-    if (source['_label']) { this._label = new fhir.FhirElement(source._label!); }
-    if (source['valueBase64Binary']) { this.valueBase64Binary = source.valueBase64Binary; }
-    if (source['_valueBase64Binary']) { this._valueBase64Binary = new fhir.FhirElement(source._valueBase64Binary!); }
-    if (source['valueBoolean']) { this.valueBoolean = source.valueBoolean; }
-    if (source['_valueBoolean']) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
-    if (source['valueCanonical']) { this.valueCanonical = source.valueCanonical; }
-    if (source['_valueCanonical']) { this._valueCanonical = new fhir.FhirElement(source._valueCanonical!); }
-    if (source['valueCode']) { this.valueCode = source.valueCode; }
-    if (source['_valueCode']) { this._valueCode = new fhir.FhirElement(source._valueCode!); }
-    if (source['valueDate']) { this.valueDate = source.valueDate; }
-    if (source['_valueDate']) { this._valueDate = new fhir.FhirElement(source._valueDate!); }
-    if (source['valueDateTime']) { this.valueDateTime = source.valueDateTime; }
-    if (source['_valueDateTime']) { this._valueDateTime = new fhir.FhirElement(source._valueDateTime!); }
-    if (source['valueDecimal']) { this.valueDecimal = source.valueDecimal; }
-    if (source['_valueDecimal']) { this._valueDecimal = new fhir.FhirElement(source._valueDecimal!); }
-    if (source['valueId']) { this.valueId = source.valueId; }
-    if (source['_valueId']) { this._valueId = new fhir.FhirElement(source._valueId!); }
-    if (source['valueInstant']) { this.valueInstant = source.valueInstant; }
-    if (source['_valueInstant']) { this._valueInstant = new fhir.FhirElement(source._valueInstant!); }
-    if (source['valueInteger']) { this.valueInteger = source.valueInteger; }
-    if (source['_valueInteger']) { this._valueInteger = new fhir.FhirElement(source._valueInteger!); }
-    if (source['valueMarkdown']) { this.valueMarkdown = source.valueMarkdown; }
-    if (source['_valueMarkdown']) { this._valueMarkdown = new fhir.FhirElement(source._valueMarkdown!); }
-    if (source['valueOid']) { this.valueOid = source.valueOid; }
-    if (source['_valueOid']) { this._valueOid = new fhir.FhirElement(source._valueOid!); }
-    if (source['valuePositiveInt']) { this.valuePositiveInt = source.valuePositiveInt; }
-    if (source['_valuePositiveInt']) { this._valuePositiveInt = new fhir.FhirElement(source._valuePositiveInt!); }
-    if (source['valueString']) { this.valueString = source.valueString; }
-    if (source['_valueString']) { this._valueString = new fhir.FhirElement(source._valueString!); }
-    if (source['valueTime']) { this.valueTime = source.valueTime; }
-    if (source['_valueTime']) { this._valueTime = new fhir.FhirElement(source._valueTime!); }
-    if (source['valueUnsignedInt']) { this.valueUnsignedInt = source.valueUnsignedInt; }
-    if (source['_valueUnsignedInt']) { this._valueUnsignedInt = new fhir.FhirElement(source._valueUnsignedInt!); }
-    if (source['valueUri']) { this.valueUri = source.valueUri; }
-    if (source['_valueUri']) { this._valueUri = new fhir.FhirElement(source._valueUri!); }
-    if (source['valueUrl']) { this.valueUrl = source.valueUrl; }
-    if (source['_valueUrl']) { this._valueUrl = new fhir.FhirElement(source._valueUrl!); }
-    if (source['valueUuid']) { this.valueUuid = source.valueUuid; }
-    if (source['_valueUuid']) { this._valueUuid = new fhir.FhirElement(source._valueUuid!); }
-    if (source['valueAddress']) { this.valueAddress = new fhir.Address(source.valueAddress!); }
-    if (source['valueAge']) { this.valueAge = new fhir.Age(source.valueAge!); }
-    if (source['valueAnnotation']) { this.valueAnnotation = new fhir.Annotation(source.valueAnnotation!); }
-    if (source['valueAttachment']) { this.valueAttachment = new fhir.Attachment(source.valueAttachment!); }
-    if (source['valueCodeableConcept']) { this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept!); }
-    if (source['valueCoding']) { this.valueCoding = new fhir.Coding(source.valueCoding!); }
-    if (source['valueContactPoint']) { this.valueContactPoint = new fhir.ContactPoint(source.valueContactPoint!); }
-    if (source['valueCount']) { this.valueCount = new fhir.Count(source.valueCount!); }
-    if (source['valueDistance']) { this.valueDistance = new fhir.Distance(source.valueDistance!); }
-    if (source['valueDuration']) { this.valueDuration = new fhir.Duration(source.valueDuration!); }
-    if (source['valueHumanName']) { this.valueHumanName = new fhir.HumanName(source.valueHumanName!); }
-    if (source['valueIdentifier']) { this.valueIdentifier = new fhir.Identifier(source.valueIdentifier!); }
-    if (source['valueMoney']) { this.valueMoney = new fhir.Money(source.valueMoney!); }
-    if (source['valuePeriod']) { this.valuePeriod = new fhir.Period(source.valuePeriod!); }
-    if (source['valueQuantity']) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
-    if (source['valueRange']) { this.valueRange = new fhir.Range(source.valueRange!); }
-    if (source['valueRatio']) { this.valueRatio = new fhir.Ratio(source.valueRatio!); }
-    if (source['valueReference']) { this.valueReference = new fhir.Reference(source.valueReference!); }
-    if (source['valueSampledData']) { this.valueSampledData = new fhir.SampledData(source.valueSampledData!); }
-    if (source['valueSignature']) { this.valueSignature = new fhir.Signature(source.valueSignature!); }
-    if (source['valueTiming']) { this.valueTiming = new fhir.Timing(source.valueTiming!); }
-    if (source['valueContactDetail']) { this.valueContactDetail = new fhir.ContactDetail(source.valueContactDetail!); }
-    if (source['valueContributor']) { this.valueContributor = new fhir.Contributor(source.valueContributor!); }
-    if (source['valueDataRequirement']) { this.valueDataRequirement = new fhir.DataRequirement(source.valueDataRequirement!); }
-    if (source['valueExpression']) { this.valueExpression = new fhir.Expression(source.valueExpression!); }
-    if (source['valueParameterDefinition']) { this.valueParameterDefinition = new fhir.ParameterDefinition(source.valueParameterDefinition!); }
-    if (source['valueRelatedArtifact']) { this.valueRelatedArtifact = new fhir.RelatedArtifact(source.valueRelatedArtifact!); }
-    if (source['valueTriggerDefinition']) { this.valueTriggerDefinition = new fhir.TriggerDefinition(source.valueTriggerDefinition!); }
-    if (source['valueUsageContext']) { this.valueUsageContext = new fhir.UsageContext(source.valueUsageContext!); }
-    if (source['valueDosage']) { this.valueDosage = new fhir.Dosage(source.valueDosage!); }
-    if (source['valueMeta']) { this.valueMeta = new fhir.Meta(source.valueMeta!); }
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueBase64Binary']) { this.value = new fhir.FhirBase64Binary({value: source.valueBase64Binary}); }
+    else if (source['valueBoolean']) { this.value = new fhir.FhirBoolean({value: source.valueBoolean}); }
+    else if (source['valueCanonical']) { this.value = new fhir.FhirCanonical({value: source.valueCanonical}); }
+    else if (source['valueCode']) { this.value = new fhir.FhirCode({value: source.valueCode}); }
+    else if (source['valueDate']) { this.value = new fhir.FhirDate({value: source.valueDate}); }
+    else if (source['valueDateTime']) { this.value = new fhir.FhirDateTime({value: source.valueDateTime}); }
+    else if (source['valueDecimal']) { this.value = new fhir.FhirDecimal({value: source.valueDecimal}); }
+    else if (source['valueId']) { this.value = new fhir.FhirId({value: source.valueId}); }
+    else if (source['valueInstant']) { this.value = new fhir.FhirInstant({value: source.valueInstant}); }
+    else if (source['valueInteger']) { this.value = new fhir.FhirInteger({value: source.valueInteger}); }
+    else if (source['valueMarkdown']) { this.value = new fhir.FhirMarkdown({value: source.valueMarkdown}); }
+    else if (source['valueOid']) { this.value = new fhir.FhirOid({value: source.valueOid}); }
+    else if (source['valuePositiveInt']) { this.value = new fhir.FhirPositiveInt({value: source.valuePositiveInt}); }
+    else if (source['valueString']) { this.value = new fhir.FhirString({value: source.valueString}); }
+    else if (source['valueTime']) { this.value = new fhir.FhirTime({value: source.valueTime}); }
+    else if (source['valueUnsignedInt']) { this.value = new fhir.FhirUnsignedInt({value: source.valueUnsignedInt}); }
+    else if (source['valueUri']) { this.value = new fhir.FhirUri({value: source.valueUri}); }
+    else if (source['valueUrl']) { this.value = new fhir.FhirUrl({value: source.valueUrl}); }
+    else if (source['valueUuid']) { this.value = new fhir.FhirUuid({value: source.valueUuid}); }
+    else if (source['valueAddress']) { this.value = new fhir.Address(source.valueAddress); }
+    else if (source['valueAge']) { this.value = new fhir.Age(source.valueAge); }
+    else if (source['valueAnnotation']) { this.value = new fhir.Annotation(source.valueAnnotation); }
+    else if (source['valueAttachment']) { this.value = new fhir.Attachment(source.valueAttachment); }
+    else if (source['valueCodeableConcept']) { this.value = new fhir.CodeableConcept(source.valueCodeableConcept); }
+    else if (source['valueCoding']) { this.value = new fhir.Coding(source.valueCoding); }
+    else if (source['valueContactPoint']) { this.value = new fhir.ContactPoint(source.valueContactPoint); }
+    else if (source['valueCount']) { this.value = new fhir.Count(source.valueCount); }
+    else if (source['valueDistance']) { this.value = new fhir.Distance(source.valueDistance); }
+    else if (source['valueDuration']) { this.value = new fhir.Duration(source.valueDuration); }
+    else if (source['valueHumanName']) { this.value = new fhir.HumanName(source.valueHumanName); }
+    else if (source['valueIdentifier']) { this.value = new fhir.Identifier(source.valueIdentifier); }
+    else if (source['valueMoney']) { this.value = new fhir.Money(source.valueMoney); }
+    else if (source['valuePeriod']) { this.value = new fhir.Period(source.valuePeriod); }
+    else if (source['valueQuantity']) { this.value = new fhir.Quantity(source.valueQuantity); }
+    else if (source['valueRange']) { this.value = new fhir.Range(source.valueRange); }
+    else if (source['valueRatio']) { this.value = new fhir.Ratio(source.valueRatio); }
+    else if (source['valueReference']) { this.value = new fhir.Reference(source.valueReference); }
+    else if (source['valueSampledData']) { this.value = new fhir.SampledData(source.valueSampledData); }
+    else if (source['valueSignature']) { this.value = new fhir.Signature(source.valueSignature); }
+    else if (source['valueTiming']) { this.value = new fhir.Timing(source.valueTiming); }
+    else if (source['valueContactDetail']) { this.value = new fhir.ContactDetail(source.valueContactDetail); }
+    else if (source['valueContributor']) { this.value = new fhir.Contributor(source.valueContributor); }
+    else if (source['valueDataRequirement']) { this.value = new fhir.DataRequirement(source.valueDataRequirement); }
+    else if (source['valueExpression']) { this.value = new fhir.Expression(source.valueExpression); }
+    else if (source['valueParameterDefinition']) { this.value = new fhir.ParameterDefinition(source.valueParameterDefinition); }
+    else if (source['valueRelatedArtifact']) { this.value = new fhir.RelatedArtifact(source.valueRelatedArtifact); }
+    else if (source['valueTriggerDefinition']) { this.value = new fhir.TriggerDefinition(source.valueTriggerDefinition); }
+    else if (source['valueUsageContext']) { this.value = new fhir.UsageContext(source.valueUsageContext); }
+    else if (source['valueDosage']) { this.value = new fhir.Dosage(source.valueDosage); }
+    else if (source['valueMeta']) { this.value = new fhir.Meta(source.valueMeta); }
+    else { this.value = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["label"]) { results.push(["label",'Missing required element: ElementDefinition.example.label']); }
-    if (this["_label"]) { results.push(...this._label.doModelValidation()); }
-    if (this["_valueBase64Binary"]) { results.push(...this._valueBase64Binary.doModelValidation()); }
-    if (this["_valueBoolean"]) { results.push(...this._valueBoolean.doModelValidation()); }
-    if (this["_valueCanonical"]) { results.push(...this._valueCanonical.doModelValidation()); }
-    if (this["_valueCode"]) { results.push(...this._valueCode.doModelValidation()); }
-    if (this["_valueDate"]) { results.push(...this._valueDate.doModelValidation()); }
-    if (this["_valueDateTime"]) { results.push(...this._valueDateTime.doModelValidation()); }
-    if (this["_valueDecimal"]) { results.push(...this._valueDecimal.doModelValidation()); }
-    if (this["_valueId"]) { results.push(...this._valueId.doModelValidation()); }
-    if (this["_valueInstant"]) { results.push(...this._valueInstant.doModelValidation()); }
-    if (this["_valueInteger"]) { results.push(...this._valueInteger.doModelValidation()); }
-    if (this["_valueMarkdown"]) { results.push(...this._valueMarkdown.doModelValidation()); }
-    if (this["_valueOid"]) { results.push(...this._valueOid.doModelValidation()); }
-    if (this["_valuePositiveInt"]) { results.push(...this._valuePositiveInt.doModelValidation()); }
-    if (this["_valueString"]) { results.push(...this._valueString.doModelValidation()); }
-    if (this["_valueTime"]) { results.push(...this._valueTime.doModelValidation()); }
-    if (this["_valueUnsignedInt"]) { results.push(...this._valueUnsignedInt.doModelValidation()); }
-    if (this["_valueUri"]) { results.push(...this._valueUri.doModelValidation()); }
-    if (this["_valueUrl"]) { results.push(...this._valueUrl.doModelValidation()); }
-    if (this["_valueUuid"]) { results.push(...this._valueUuid.doModelValidation()); }
-    if (this["valueAddress"]) { results.push(...this.valueAddress.doModelValidation()); }
-    if (this["valueAge"]) { results.push(...this.valueAge.doModelValidation()); }
-    if (this["valueAnnotation"]) { results.push(...this.valueAnnotation.doModelValidation()); }
-    if (this["valueAttachment"]) { results.push(...this.valueAttachment.doModelValidation()); }
-    if (this["valueCodeableConcept"]) { results.push(...this.valueCodeableConcept.doModelValidation()); }
-    if (this["valueCoding"]) { results.push(...this.valueCoding.doModelValidation()); }
-    if (this["valueContactPoint"]) { results.push(...this.valueContactPoint.doModelValidation()); }
-    if (this["valueCount"]) { results.push(...this.valueCount.doModelValidation()); }
-    if (this["valueDistance"]) { results.push(...this.valueDistance.doModelValidation()); }
-    if (this["valueDuration"]) { results.push(...this.valueDuration.doModelValidation()); }
-    if (this["valueHumanName"]) { results.push(...this.valueHumanName.doModelValidation()); }
-    if (this["valueIdentifier"]) { results.push(...this.valueIdentifier.doModelValidation()); }
-    if (this["valueMoney"]) { results.push(...this.valueMoney.doModelValidation()); }
-    if (this["valuePeriod"]) { results.push(...this.valuePeriod.doModelValidation()); }
-    if (this["valueQuantity"]) { results.push(...this.valueQuantity.doModelValidation()); }
-    if (this["valueRange"]) { results.push(...this.valueRange.doModelValidation()); }
-    if (this["valueRatio"]) { results.push(...this.valueRatio.doModelValidation()); }
-    if (this["valueReference"]) { results.push(...this.valueReference.doModelValidation()); }
-    if (this["valueSampledData"]) { results.push(...this.valueSampledData.doModelValidation()); }
-    if (this["valueSignature"]) { results.push(...this.valueSignature.doModelValidation()); }
-    if (this["valueTiming"]) { results.push(...this.valueTiming.doModelValidation()); }
-    if (this["valueContactDetail"]) { results.push(...this.valueContactDetail.doModelValidation()); }
-    if (this["valueContributor"]) { results.push(...this.valueContributor.doModelValidation()); }
-    if (this["valueDataRequirement"]) { results.push(...this.valueDataRequirement.doModelValidation()); }
-    if (this["valueExpression"]) { results.push(...this.valueExpression.doModelValidation()); }
-    if (this["valueParameterDefinition"]) { results.push(...this.valueParameterDefinition.doModelValidation()); }
-    if (this["valueRelatedArtifact"]) { results.push(...this.valueRelatedArtifact.doModelValidation()); }
-    if (this["valueTriggerDefinition"]) { results.push(...this.valueTriggerDefinition.doModelValidation()); }
-    if (this["valueUsageContext"]) { results.push(...this.valueUsageContext.doModelValidation()); }
-    if (this["valueDosage"]) { results.push(...this.valueDosage.doModelValidation()); }
-    if (this["valueMeta"]) { results.push(...this.valueMeta.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['label']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property label:fhir.FhirString fhir: ElementDefinition.example.label:string", }));
+    }
+    if (this["label"]) { outcome.issue!.push(...this.label.doModelValidation().issue!); }
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value: fhir: ElementDefinition.example.value[x]:", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ElementDefinitionConstraint type.
+ */
+export interface ElementDefinitionConstraintArgs extends fhir.FhirElementArgs {
+  /**
+   * Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.
+   */
+  key: fhir.FhirId|string|undefined;
+  /**
+   * To be used if the reason for the constraint might not be intuitive to all implementers.
+   */
+  requirements?: fhir.FhirString|string|undefined;
+  /**
+   * This allows constraints to be asserted as "shall" (error) and "should" (warning).
+   */
+  severity: ConstraintSeverityValueSetEnum|null;
+  /**
+   * Should be expressed in business terms as much as possible.
+   */
+  human: fhir.FhirString|string|undefined;
+  /**
+   * In the absense of an expression, the expression is likely not enforceable by validators, and might be missed by many systems.
+   */
+  expression?: fhir.FhirString|string|undefined;
+  /**
+   * Elements SHALL use "f" as the namespace prefix for the FHIR namespace, and "x" for the xhtml namespace, and SHALL NOT use any other prefixes.     Note: XPath is generally considered not useful because it does not apply to JSON and other formats and because of XSLT implementation issues, and may be removed in the future.
+   */
+  xpath?: fhir.FhirString|string|undefined;
+  /**
+   * This is used when, e.g. rendering, where it is not useful to present inherited constraints when rendering the snapshot.
+   */
+  source?: fhir.FhirCanonical|string|undefined;
 }
 
 /**
  * Constraints should be declared on the "context" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.
  */
-export class ElementDefinitionConstraint extends fhir.FhirElement implements IElementDefinitionConstraint {
+export class ElementDefinitionConstraint extends fhir.FhirElement {
+  readonly __dataType:string = 'ElementDefinitionConstraint';
   /**
    * Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.
    */
-  public key: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.constraint.key
-   */
-  public _key?: fhir.FhirElement|undefined;
+  public key: fhir.FhirId|null;
   /**
    * To be used if the reason for the constraint might not be intuitive to all implementers.
    */
-  public requirements?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.constraint.requirements
-   */
-  public _requirements?: fhir.FhirElement|undefined;
+  public requirements?: fhir.FhirString|undefined;
   /**
    * This allows constraints to be asserted as "shall" (error) and "should" (warning).
    */
   public severity: ConstraintSeverityValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ElementDefinition.constraint.severity
-   */
-  public _severity?: fhir.FhirElement|undefined;
-  /**
    * Should be expressed in business terms as much as possible.
    */
-  public human: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.constraint.human
-   */
-  public _human?: fhir.FhirElement|undefined;
+  public human: fhir.FhirString|null;
   /**
    * In the absense of an expression, the expression is likely not enforceable by validators, and might be missed by many systems.
    */
-  public expression?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.constraint.expression
-   */
-  public _expression?: fhir.FhirElement|undefined;
+  public expression?: fhir.FhirString|undefined;
   /**
    * Elements SHALL use "f" as the namespace prefix for the FHIR namespace, and "x" for the xhtml namespace, and SHALL NOT use any other prefixes.     Note: XPath is generally considered not useful because it does not apply to JSON and other formats and because of XSLT implementation issues, and may be removed in the future.
    */
-  public xpath?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.constraint.xpath
-   */
-  public _xpath?: fhir.FhirElement|undefined;
+  public xpath?: fhir.FhirString|undefined;
   /**
    * This is used when, e.g. rendering, where it is not useful to present inherited constraints when rendering the snapshot.
    */
-  public source?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.constraint.source
-   */
-  public _source?: fhir.FhirElement|undefined;
+  public source?: fhir.FhirCanonical|undefined;
   /**
    * Default constructor for ElementDefinitionConstraint - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IElementDefinitionConstraint> = { }) {
-    super(source);
-    if (source['key']) { this.key = source.key; }
+  constructor(source:Partial<ElementDefinitionConstraintArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['key']) { this.key = new fhir.FhirId({value: source.key}); }
     else { this.key = null; }
-    if (source['_key']) { this._key = new fhir.FhirElement(source._key!); }
-    if (source['requirements']) { this.requirements = source.requirements; }
-    if (source['_requirements']) { this._requirements = new fhir.FhirElement(source._requirements!); }
+    if (source['requirements']) { this.requirements = new fhir.FhirString({value: source.requirements}); }
     if (source['severity']) { this.severity = source.severity; }
     else { this.severity = null; }
-    if (source['_severity']) { this._severity = new fhir.FhirElement(source._severity!); }
-    if (source['human']) { this.human = source.human; }
+    if (source['human']) { this.human = new fhir.FhirString({value: source.human}); }
     else { this.human = null; }
-    if (source['_human']) { this._human = new fhir.FhirElement(source._human!); }
-    if (source['expression']) { this.expression = source.expression; }
-    if (source['_expression']) { this._expression = new fhir.FhirElement(source._expression!); }
-    if (source['xpath']) { this.xpath = source.xpath; }
-    if (source['_xpath']) { this._xpath = new fhir.FhirElement(source._xpath!); }
-    if (source['source']) { this.source = source.source; }
-    if (source['_source']) { this._source = new fhir.FhirElement(source._source!); }
+    if (source['expression']) { this.expression = new fhir.FhirString({value: source.expression}); }
+    if (source['xpath']) { this.xpath = new fhir.FhirString({value: source.xpath}); }
+    if (source['source']) { this.source = new fhir.FhirCanonical({value: source.source}); }
   }
   /**
    * Required-bound Value Set for severity
@@ -2575,62 +744,76 @@ export class ElementDefinitionConstraint extends fhir.FhirElement implements IEl
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["key"]) { results.push(["key",'Missing required element: ElementDefinition.constraint.key']); }
-    if (this["_key"]) { results.push(...this._key.doModelValidation()); }
-    if (this["_requirements"]) { results.push(...this._requirements.doModelValidation()); }
-    if (!this["severity"]) { results.push(["severity",'Missing required element: ElementDefinition.constraint.severity']); }
-    if (this["_severity"]) { results.push(...this._severity.doModelValidation()); }
-    if (!this["human"]) { results.push(["human",'Missing required element: ElementDefinition.constraint.human']); }
-    if (this["_human"]) { results.push(...this._human.doModelValidation()); }
-    if (this["_expression"]) { results.push(...this._expression.doModelValidation()); }
-    if (this["_xpath"]) { results.push(...this._xpath.doModelValidation()); }
-    if (this["_source"]) { results.push(...this._source.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['key']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property key:fhir.FhirId fhir: ElementDefinition.constraint.key:id", }));
+    }
+    if (this["key"]) { outcome.issue!.push(...this.key.doModelValidation().issue!); }
+    if (this["requirements"]) { outcome.issue!.push(...this.requirements.doModelValidation().issue!); }
+    if (!this['severity']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property severity:ConstraintSeverityValueSetEnum fhir: ElementDefinition.constraint.severity:code", }));
+    }
+    if (!this['human']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property human:fhir.FhirString fhir: ElementDefinition.constraint.human:string", }));
+    }
+    if (this["human"]) { outcome.issue!.push(...this.human.doModelValidation().issue!); }
+    if (this["expression"]) { outcome.issue!.push(...this.expression.doModelValidation().issue!); }
+    if (this["xpath"]) { outcome.issue!.push(...this.xpath.doModelValidation().issue!); }
+    if (this["source"]) { outcome.issue!.push(...this.source.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ElementDefinitionBinding type.
+ */
+export interface ElementDefinitionBindingArgs extends fhir.FhirElementArgs {
+  /**
+   * For further discussion, see [Using Terminologies](terminologies.html).
+   */
+  strength: BindingStrengthValueSetEnum|null;
+  /**
+   * Describes the intended use of this particular set of codes.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * The reference may be version-specific or not (e.g. have a |[version] at the end of the canonical URL).
+   */
+  valueSet?: fhir.FhirCanonical|string|undefined;
 }
 
 /**
  * For a CodeableConcept, when no codes are allowed - only text, use a binding of strength "required" with a description explaining that no coded values are allowed and what sort of information to put in the "text" element.
  */
-export class ElementDefinitionBinding extends fhir.FhirElement implements IElementDefinitionBinding {
+export class ElementDefinitionBinding extends fhir.FhirElement {
+  readonly __dataType:string = 'ElementDefinitionBinding';
   /**
    * For further discussion, see [Using Terminologies](terminologies.html).
    */
   public strength: BindingStrengthValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ElementDefinition.binding.strength
-   */
-  public _strength?: fhir.FhirElement|undefined;
-  /**
    * Describes the intended use of this particular set of codes.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.binding.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * The reference may be version-specific or not (e.g. have a |[version] at the end of the canonical URL).
    */
-  public valueSet?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.binding.valueSet
-   */
-  public _valueSet?: fhir.FhirElement|undefined;
+  public valueSet?: fhir.FhirCanonical|undefined;
   /**
    * Default constructor for ElementDefinitionBinding - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IElementDefinitionBinding> = { }) {
-    super(source);
+  constructor(source:Partial<ElementDefinitionBindingArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['strength']) { this.strength = source.strength; }
     else { this.strength = null; }
-    if (source['_strength']) { this._strength = new fhir.FhirElement(source._strength!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['valueSet']) { this.valueSet = source.valueSet; }
-    if (source['_valueSet']) { this._valueSet = new fhir.FhirElement(source._valueSet!); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['valueSet']) { this.valueSet = new fhir.FhirCanonical({value: source.valueSet}); }
   }
   /**
    * Required-bound Value Set for strength
@@ -2641,131 +824,995 @@ export class ElementDefinitionBinding extends fhir.FhirElement implements IEleme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["strength"]) { results.push(["strength",'Missing required element: ElementDefinition.binding.strength']); }
-    if (this["_strength"]) { results.push(...this._strength.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_valueSet"]) { results.push(...this._valueSet.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['strength']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property strength:BindingStrengthValueSetEnum fhir: ElementDefinition.binding.strength:code", }));
+    }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["valueSet"]) { outcome.issue!.push(...this.valueSet.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ElementDefinitionMapping type.
+ */
+export interface ElementDefinitionMappingArgs extends fhir.FhirElementArgs {
+  /**
+   * An internal reference to the definition of a mapping.
+   */
+  identity: fhir.FhirId|string|undefined;
+  /**
+   * If omitted, then there can be no expectation of computational interpretation of the mapping.
+   */
+  language?: fhir.FhirCode|string|undefined;
+  /**
+   * For most mappings, the syntax is undefined.  Syntax will be provided for mappings to the RIM.  Multiple mappings may be possible and may include constraints on other resource elements that identify when a particular mapping applies.
+   */
+  map: fhir.FhirString|string|undefined;
+  /**
+   * Comments that provide information about the mapping or its use.
+   */
+  comment?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Mappings are not necessarily specific enough for safe translation.
  */
-export class ElementDefinitionMapping extends fhir.FhirElement implements IElementDefinitionMapping {
+export class ElementDefinitionMapping extends fhir.FhirElement {
+  readonly __dataType:string = 'ElementDefinitionMapping';
   /**
    * An internal reference to the definition of a mapping.
    */
-  public identity: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.mapping.identity
-   */
-  public _identity?: fhir.FhirElement|undefined;
+  public identity: fhir.FhirId|null;
   /**
    * If omitted, then there can be no expectation of computational interpretation of the mapping.
    */
-  public language?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.mapping.language
-   */
-  public _language?: fhir.FhirElement|undefined;
+  public language?: fhir.FhirCode|undefined;
   /**
    * For most mappings, the syntax is undefined.  Syntax will be provided for mappings to the RIM.  Multiple mappings may be possible and may include constraints on other resource elements that identify when a particular mapping applies.
    */
-  public map: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.mapping.map
-   */
-  public _map?: fhir.FhirElement|undefined;
+  public map: fhir.FhirString|null;
   /**
    * Comments that provide information about the mapping or its use.
    */
-  public comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.mapping.comment
-   */
-  public _comment?: fhir.FhirElement|undefined;
+  public comment?: fhir.FhirString|undefined;
   /**
    * Default constructor for ElementDefinitionMapping - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IElementDefinitionMapping> = { }) {
-    super(source);
-    if (source['identity']) { this.identity = source.identity; }
+  constructor(source:Partial<ElementDefinitionMappingArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['identity']) { this.identity = new fhir.FhirId({value: source.identity}); }
     else { this.identity = null; }
-    if (source['_identity']) { this._identity = new fhir.FhirElement(source._identity!); }
-    if (source['language']) { this.language = source.language; }
-    if (source['_language']) { this._language = new fhir.FhirElement(source._language!); }
-    if (source['map']) { this.map = source.map; }
+    if (source['language']) { this.language = new fhir.FhirCode({value: source.language}); }
+    if (source['map']) { this.map = new fhir.FhirString({value: source.map}); }
     else { this.map = null; }
-    if (source['_map']) { this._map = new fhir.FhirElement(source._map!); }
-    if (source['comment']) { this.comment = source.comment; }
-    if (source['_comment']) { this._comment = new fhir.FhirElement(source._comment!); }
+    if (source['comment']) { this.comment = new fhir.FhirString({value: source.comment}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["identity"]) { results.push(["identity",'Missing required element: ElementDefinition.mapping.identity']); }
-    if (this["_identity"]) { results.push(...this._identity.doModelValidation()); }
-    if (this["_language"]) { results.push(...this._language.doModelValidation()); }
-    if (!this["map"]) { results.push(["map",'Missing required element: ElementDefinition.mapping.map']); }
-    if (this["_map"]) { results.push(...this._map.doModelValidation()); }
-    if (this["_comment"]) { results.push(...this._comment.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['identity']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property identity:fhir.FhirId fhir: ElementDefinition.mapping.identity:id", }));
+    }
+    if (this["identity"]) { outcome.issue!.push(...this.identity.doModelValidation().issue!); }
+    if (this["language"]) { outcome.issue!.push(...this.language.doModelValidation().issue!); }
+    if (!this['map']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property map:fhir.FhirString fhir: ElementDefinition.mapping.map:string", }));
+    }
+    if (this["map"]) { outcome.issue!.push(...this.map.doModelValidation().issue!); }
+    if (this["comment"]) { outcome.issue!.push(...this.comment.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ElementDefinition type.
+ */
+export interface ElementDefinitionArgs extends fhir.BackboneElementArgs {
+  /**
+   * The path identifies the element and is expressed as a "."-separated list of ancestor elements, beginning with the name of the resource or extension.
+   */
+  path: fhir.FhirString|string|undefined;
+  /**
+   * In resources, this is rarely used except for special cases where the representation deviates from the normal, and can only be done in the base standard (and profiles must reproduce what the base standard does). This element is used quite commonly in Logical models when the logical models represent a specific serialization format (e.g. CDA, v2 etc.).
+   */
+  representation?: PropertyRepresentationValueSetEnum[]|undefined;
+  /**
+   * The name SHALL be unique within the structure within the context of the constrained resource element.  (Though to avoid confusion, uniqueness across all elements is recommended.).
+   */
+  sliceName?: fhir.FhirString|string|undefined;
+  /**
+   * If set to true, an ancestor profile SHALL have a slicing definition with this name.  If set to false, no ancestor profile is permitted to have a slicing definition with this name.
+   */
+  sliceIsConstraining?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * See also the extension (http://hl7.org/fhir/StructureDefinition/elementdefinition-question)[extension-elementdefinition-question.html].
+   */
+  label?: fhir.FhirString|string|undefined;
+  /**
+   * The concept SHALL be properly aligned with the data element definition and other constraints, as defined in the code system, including relationships, of any code listed here.  Where multiple codes exist in a terminology that could correspond to the data element, the most granular code(s) should be selected, so long as they are not more restrictive than the data element itself. The mappings may be used to provide more or less granular or structured equivalences in the code system.
+   */
+  code?: fhir.CodingArgs[]|undefined;
+  /**
+   * The first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element.
+   */
+  slicing?: fhir.ElementDefinitionSlicingArgs|undefined;
+  /**
+   * It is easy for a different short definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing short definitions in a profile.
+   */
+  short?: fhir.FhirString|string|undefined;
+  /**
+   * It is easy for a different definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing definitions in a profile.
+   */
+  definition?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * If it is possible to capture usage rules using constraints, that mechanism should be used in preference to this element.
+   */
+  comment?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * This element does not describe the usage of the element (that's done in comments), rather it's for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element.
+   */
+  requirements?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Identifies additional names by which this element might also be known.
+   */
+  alias?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * The minimum number of times this element SHALL appear in the instance.
+   */
+  min?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * The maximum number of times this element is permitted to appear in the instance.
+   */
+  max?: fhir.FhirString|string|undefined;
+  /**
+   * The base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. For tooling simplicity, the base information must always be populated in element definitions in snap shots, even if it is the same.
+   */
+  base?: fhir.ElementDefinitionBaseArgs|undefined;
+  /**
+   * ContentReferences can only be defined in specializations, not constrained types, and they cannot be changed and always reference the non-constrained definition.
+   */
+  contentReference?: fhir.FhirUri|string|undefined;
+  /**
+   * The Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice).
+   */
+  type?: fhir.ElementDefinitionTypeArgs[]|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValue?: fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueBase64Binary?: fhir.FhirBase64Binary|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueCanonical?: fhir.FhirCanonical|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueCode?: fhir.FhirCode|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueDate?: fhir.FhirDate|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueDecimal?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueId?: fhir.FhirId|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueInstant?: fhir.FhirInstant|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueMarkdown?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueOid?: fhir.FhirOid|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValuePositiveInt?: fhir.FhirPositiveInt|number|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueString?: fhir.FhirString|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueTime?: fhir.FhirTime|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueUnsignedInt?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueUri?: fhir.FhirUri|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueUrl?: fhir.FhirUrl|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueUuid?: fhir.FhirUuid|string|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueAddress?: fhir.AddressArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueAge?: fhir.AgeArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueAnnotation?: fhir.AnnotationArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueAttachment?: fhir.AttachmentArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueCoding?: fhir.CodingArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueContactPoint?: fhir.ContactPointArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueCount?: fhir.CountArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueDistance?: fhir.DistanceArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueDuration?: fhir.DurationArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueHumanName?: fhir.HumanNameArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueIdentifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueMoney?: fhir.MoneyArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValuePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueRange?: fhir.RangeArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueRatio?: fhir.RatioArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueSampledData?: fhir.SampledDataArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueSignature?: fhir.SignatureArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueTiming?: fhir.TimingArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueContactDetail?: fhir.ContactDetailArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueContributor?: fhir.ContributorArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueDataRequirement?: fhir.DataRequirementArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueExpression?: fhir.ExpressionArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueParameterDefinition?: fhir.ParameterDefinitionArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueRelatedArtifact?: fhir.RelatedArtifactArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueTriggerDefinition?: fhir.TriggerDefinitionArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueUsageContext?: fhir.UsageContextArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueDosage?: fhir.DosageArgs|undefined;
+  /**
+   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
+   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
+   */
+  defaultValueMeta?: fhir.MetaArgs|undefined;
+  /**
+   * Implicit meanings for missing values can only be specified on a resource, data type, or extension definition, and never in a profile that applies to one of these. An implicit meaning for a missing value can never be changed, and specifying one has the consequence that constraining its use in profiles eliminates use cases as possibilities, not merely moving them out of scope.
+   */
+  meaningWhenMissing?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * This element can only be asserted on repeating elements and can only be introduced when defining resources or data types.  It can be further refined profiled elements but if absent in the base type, a profile cannot assert meaning.
+   */
+  orderMeaning?: fhir.FhirString|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixed?: fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedBase64Binary?: fhir.FhirBase64Binary|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedCanonical?: fhir.FhirCanonical|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedCode?: fhir.FhirCode|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedDate?: fhir.FhirDate|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedDecimal?: fhir.FhirDecimal|number|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedId?: fhir.FhirId|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedInstant?: fhir.FhirInstant|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedMarkdown?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedOid?: fhir.FhirOid|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedPositiveInt?: fhir.FhirPositiveInt|number|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedString?: fhir.FhirString|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedTime?: fhir.FhirTime|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedUnsignedInt?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedUri?: fhir.FhirUri|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedUrl?: fhir.FhirUrl|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedUuid?: fhir.FhirUuid|string|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedAddress?: fhir.AddressArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedAge?: fhir.AgeArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedAnnotation?: fhir.AnnotationArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedAttachment?: fhir.AttachmentArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedCoding?: fhir.CodingArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedContactPoint?: fhir.ContactPointArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedCount?: fhir.CountArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedDistance?: fhir.DistanceArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedDuration?: fhir.DurationArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedHumanName?: fhir.HumanNameArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedIdentifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedMoney?: fhir.MoneyArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedPeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedRange?: fhir.RangeArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedRatio?: fhir.RatioArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedSampledData?: fhir.SampledDataArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedSignature?: fhir.SignatureArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedTiming?: fhir.TimingArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedContactDetail?: fhir.ContactDetailArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedContributor?: fhir.ContributorArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedDataRequirement?: fhir.DataRequirementArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedExpression?: fhir.ExpressionArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedParameterDefinition?: fhir.ParameterDefinitionArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedRelatedArtifact?: fhir.RelatedArtifactArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedTriggerDefinition?: fhir.TriggerDefinitionArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedUsageContext?: fhir.UsageContextArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedDosage?: fhir.DosageArgs|undefined;
+  /**
+   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+   */
+  fixedMeta?: fhir.MetaArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  pattern?: fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternBase64Binary?: fhir.FhirBase64Binary|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternCanonical?: fhir.FhirCanonical|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternCode?: fhir.FhirCode|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternDate?: fhir.FhirDate|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternDecimal?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternId?: fhir.FhirId|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternInstant?: fhir.FhirInstant|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternMarkdown?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternOid?: fhir.FhirOid|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternPositiveInt?: fhir.FhirPositiveInt|number|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternString?: fhir.FhirString|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternTime?: fhir.FhirTime|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternUnsignedInt?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternUri?: fhir.FhirUri|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternUrl?: fhir.FhirUrl|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternUuid?: fhir.FhirUuid|string|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternAddress?: fhir.AddressArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternAge?: fhir.AgeArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternAnnotation?: fhir.AnnotationArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternAttachment?: fhir.AttachmentArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternCoding?: fhir.CodingArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternContactPoint?: fhir.ContactPointArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternCount?: fhir.CountArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternDistance?: fhir.DistanceArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternDuration?: fhir.DurationArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternHumanName?: fhir.HumanNameArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternIdentifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternMoney?: fhir.MoneyArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternPeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternRange?: fhir.RangeArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternRatio?: fhir.RatioArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternSampledData?: fhir.SampledDataArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternSignature?: fhir.SignatureArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternTiming?: fhir.TimingArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternContactDetail?: fhir.ContactDetailArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternContributor?: fhir.ContributorArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternDataRequirement?: fhir.DataRequirementArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternExpression?: fhir.ExpressionArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternParameterDefinition?: fhir.ParameterDefinitionArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternRelatedArtifact?: fhir.RelatedArtifactArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternTriggerDefinition?: fhir.TriggerDefinitionArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternUsageContext?: fhir.UsageContextArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternDosage?: fhir.DosageArgs|undefined;
+  /**
+   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
+   */
+  patternMeta?: fhir.MetaArgs|undefined;
+  /**
+   * Examples will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically.
+   */
+  example?: fhir.ElementDefinitionExampleArgs[]|undefined;
+  /**
+   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+   */
+  minValue?: fhir.FhirDate|fhir.FhirDateTime|fhir.FhirInstant|fhir.FhirTime|fhir.FhirDecimal|fhir.FhirInteger|fhir.FhirPositiveInt|fhir.FhirUnsignedInt|fhir.Quantity|undefined;
+  /**
+   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+   */
+  minValueDate?: fhir.FhirDate|string|undefined;
+  /**
+   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+   */
+  minValueDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+   */
+  minValueInstant?: fhir.FhirInstant|string|undefined;
+  /**
+   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+   */
+  minValueTime?: fhir.FhirTime|string|undefined;
+  /**
+   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+   */
+  minValueDecimal?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+   */
+  minValueInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+   */
+  minValuePositiveInt?: fhir.FhirPositiveInt|number|undefined;
+  /**
+   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+   */
+  minValueUnsignedInt?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+   */
+  minValueQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+   */
+  maxValue?: fhir.FhirDate|fhir.FhirDateTime|fhir.FhirInstant|fhir.FhirTime|fhir.FhirDecimal|fhir.FhirInteger|fhir.FhirPositiveInt|fhir.FhirUnsignedInt|fhir.Quantity|undefined;
+  /**
+   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+   */
+  maxValueDate?: fhir.FhirDate|string|undefined;
+  /**
+   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+   */
+  maxValueDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+   */
+  maxValueInstant?: fhir.FhirInstant|string|undefined;
+  /**
+   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+   */
+  maxValueTime?: fhir.FhirTime|string|undefined;
+  /**
+   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+   */
+  maxValueDecimal?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+   */
+  maxValueInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+   */
+  maxValuePositiveInt?: fhir.FhirPositiveInt|number|undefined;
+  /**
+   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+   */
+  maxValueUnsignedInt?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+   */
+  maxValueQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * Receivers are not required to reject instances that exceed the maximum length.  The full length could be stored.  In some cases, data might be truncated, though truncation should be undertaken with care and an understanding of the consequences of doing so. If not specified, there is no conformance expectation for length support.
+   */
+  maxLength?: fhir.FhirInteger|number|undefined;
+  /**
+   * A reference to an invariant that may make additional statements about the cardinality or value in the instance.
+   */
+  condition?: fhir.FhirId[]|string[]|undefined;
+  /**
+   * Constraints should be declared on the "context" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.
+   */
+  constraint?: fhir.ElementDefinitionConstraintArgs[]|undefined;
+  /**
+   * "Something useful" is context dependent and impossible to describe in the base FHIR specification. For this reason, tue mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.  A profile on a type can always make musSupport = true if it is false in the base type but cannot make mustSupport = false if it is true in the base type.   This is done in [Resource Profiles](profiling.html#mustsupport), where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of "support" is required, as this can mean many things.    Note that an element that has the property IsModifier is not necessarily a "key" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.
+   */
+  mustSupport?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Only the definition of an element can set IsModifier true - either the specification itself or where an extension is originally defined. Once set, it cannot be changed in derived profiles. An element/extension that has isModifier=true SHOULD also have a minimum cardinality of 1, so that there is no lack of clarity about what to do if it is missing. If it can be missing, the definition SHALL make the meaning of a missing element clear.
+   */
+  isModifier?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Explains how that element affects the interpretation of the resource or element that contains it.
+   */
+  isModifierReason?: fhir.FhirString|string|undefined;
+  /**
+   * Some resources include a set of simple metadata, and some very large data. This element is used to reduce the quantity of data returned in searches. Note that servers may pre-cache summarized resources for optimal performance, so servers might not support per-profile use of the isSummary flag. When a request is made with _summary=true, serailisers only include elements marked as 'isSummary = true'. Other than Attachment.data, all data type properties are included in the summary form. In resource and data type definitions, if an element is at the root or has a parent that is 'mustSupport' and the minimum cardinality is 1 or the element is a modifier, it must be marked as isSummary=true.
+   */
+  isSummary?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * For a CodeableConcept, when no codes are allowed - only text, use a binding of strength "required" with a description explaining that no coded values are allowed and what sort of information to put in the "text" element.
+   */
+  binding?: fhir.ElementDefinitionBindingArgs|undefined;
+  /**
+   * Mappings are not necessarily specific enough for safe translation.
+   */
+  mapping?: fhir.ElementDefinitionMappingArgs[]|undefined;
 }
 
 /**
  * Captures constraints on each element within the resource, profile, or extension.
  */
-export class ElementDefinition extends fhir.BackboneElement implements IElementDefinition {
+export class ElementDefinition extends fhir.BackboneElement {
+  readonly __dataType:string = 'ElementDefinition';
   /**
    * The path identifies the element and is expressed as a "."-separated list of ancestor elements, beginning with the name of the resource or extension.
    */
-  public path: string|null;
-  /**
-   * Extended properties for primitive element: ElementDefinition.path
-   */
-  public _path?: fhir.FhirElement|undefined;
+  public path: fhir.FhirString|null;
   /**
    * In resources, this is rarely used except for special cases where the representation deviates from the normal, and can only be done in the base standard (and profiles must reproduce what the base standard does). This element is used quite commonly in Logical models when the logical models represent a specific serialization format (e.g. CDA, v2 etc.).
    */
-  public representation?: PropertyRepresentationValueSetEnum[]|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.representation
-   */
-  public _representation?: fhir.FhirElement[]|undefined;
+  public representation?: PropertyRepresentationValueSetEnum[]|undefined = [];
   /**
    * The name SHALL be unique within the structure within the context of the constrained resource element.  (Though to avoid confusion, uniqueness across all elements is recommended.).
    */
-  public sliceName?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.sliceName
-   */
-  public _sliceName?: fhir.FhirElement|undefined;
+  public sliceName?: fhir.FhirString|undefined;
   /**
    * If set to true, an ancestor profile SHALL have a slicing definition with this name.  If set to false, no ancestor profile is permitted to have a slicing definition with this name.
    */
-  public sliceIsConstraining?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.sliceIsConstraining
-   */
-  public _sliceIsConstraining?: fhir.FhirElement|undefined;
+  public sliceIsConstraining?: fhir.FhirBoolean|undefined;
   /**
    * See also the extension (http://hl7.org/fhir/StructureDefinition/elementdefinition-question)[extension-elementdefinition-question.html].
    */
-  public label?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.label
-   */
-  public _label?: fhir.FhirElement|undefined;
+  public label?: fhir.FhirString|undefined;
   /**
    * The concept SHALL be properly aligned with the data element definition and other constraints, as defined in the code system, including relationships, of any code listed here.  Where multiple codes exist in a terminology that could correspond to the data element, the most granular code(s) should be selected, so long as they are not more restrictive than the data element itself. The mappings may be used to provide more or less granular or structured equivalences in the code system.
    */
-  public code?: fhir.Coding[]|undefined;
+  public code?: fhir.Coding[]|undefined = [];
   /**
    * The first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element.
    */
@@ -2773,59 +1820,31 @@ export class ElementDefinition extends fhir.BackboneElement implements IElementD
   /**
    * It is easy for a different short definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing short definitions in a profile.
    */
-  public short?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.short
-   */
-  public _short?: fhir.FhirElement|undefined;
+  public short?: fhir.FhirString|undefined;
   /**
    * It is easy for a different definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing definitions in a profile.
    */
-  public definition?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.definition
-   */
-  public _definition?: fhir.FhirElement|undefined;
+  public definition?: fhir.FhirMarkdown|undefined;
   /**
    * If it is possible to capture usage rules using constraints, that mechanism should be used in preference to this element.
    */
-  public comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.comment
-   */
-  public _comment?: fhir.FhirElement|undefined;
+  public comment?: fhir.FhirMarkdown|undefined;
   /**
    * This element does not describe the usage of the element (that's done in comments), rather it's for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element.
    */
-  public requirements?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.requirements
-   */
-  public _requirements?: fhir.FhirElement|undefined;
+  public requirements?: fhir.FhirMarkdown|undefined;
   /**
    * Identifies additional names by which this element might also be known.
    */
-  public alias?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.alias
-   */
-  public _alias?: fhir.FhirElement[]|undefined;
+  public alias?: fhir.FhirString[]|undefined = [];
   /**
    * The minimum number of times this element SHALL appear in the instance.
    */
-  public min?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.min
-   */
-  public _min?: fhir.FhirElement|undefined;
+  public min?: fhir.FhirUnsignedInt|undefined;
   /**
    * The maximum number of times this element is permitted to appear in the instance.
    */
-  public max?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.max
-   */
-  public _max?: fhir.FhirElement|undefined;
+  public max?: fhir.FhirString|undefined;
   /**
    * The base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. For tooling simplicity, the base information must always be populated in element definitions in snap shots, even if it is the same.
    */
@@ -2833,1101 +1852,77 @@ export class ElementDefinition extends fhir.BackboneElement implements IElementD
   /**
    * ContentReferences can only be defined in specializations, not constrained types, and they cannot be changed and always reference the non-constrained definition.
    */
-  public contentReference?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.contentReference
-   */
-  public _contentReference?: fhir.FhirElement|undefined;
+  public contentReference?: fhir.FhirUri|undefined;
   /**
    * The Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice).
    */
-  public type?: fhir.ElementDefinitionType[]|undefined;
+  public type?: fhir.ElementDefinitionType[]|undefined = [];
   /**
    * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
    * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
    */
-  public defaultValueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueBase64Binary?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueBoolean?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueCanonical?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueCode?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueDate?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueDecimal?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueId?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueInstant?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueInteger?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueMarkdown?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueOid?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValuePositiveInt?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueString?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueTime?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueUnsignedInt?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueUri?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueUrl?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.defaultValue[x]
-   */
-  public _defaultValueUuid?: fhir.FhirElement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueAddress?: fhir.Address|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueAge?: fhir.Age|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueAnnotation?: fhir.Annotation|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueAttachment?: fhir.Attachment|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueCoding?: fhir.Coding|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueContactPoint?: fhir.ContactPoint|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueCount?: fhir.Count|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueDistance?: fhir.Distance|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueDuration?: fhir.Duration|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueHumanName?: fhir.HumanName|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueIdentifier?: fhir.Identifier|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueMoney?: fhir.Money|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValuePeriod?: fhir.Period|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueQuantity?: fhir.Quantity|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueRange?: fhir.Range|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueRatio?: fhir.Ratio|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueReference?: fhir.Reference|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueSampledData?: fhir.SampledData|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueSignature?: fhir.Signature|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueTiming?: fhir.Timing|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueContactDetail?: fhir.ContactDetail|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueContributor?: fhir.Contributor|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueDataRequirement?: fhir.DataRequirement|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueExpression?: fhir.Expression|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueParameterDefinition?: fhir.ParameterDefinition|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueRelatedArtifact?: fhir.RelatedArtifact|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueTriggerDefinition?: fhir.TriggerDefinition|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueUsageContext?: fhir.UsageContext|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueDosage?: fhir.Dosage|undefined;
-  /**
-   * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly. 
-   * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
-   */
-  public defaultValueMeta?: fhir.Meta|undefined;
+  public defaultValue?: (fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta)|undefined;
+  readonly __defaultValueIsChoice:true = true;
   /**
    * Implicit meanings for missing values can only be specified on a resource, data type, or extension definition, and never in a profile that applies to one of these. An implicit meaning for a missing value can never be changed, and specifying one has the consequence that constraining its use in profiles eliminates use cases as possibilities, not merely moving them out of scope.
    */
-  public meaningWhenMissing?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.meaningWhenMissing
-   */
-  public _meaningWhenMissing?: fhir.FhirElement|undefined;
+  public meaningWhenMissing?: fhir.FhirMarkdown|undefined;
   /**
    * This element can only be asserted on repeating elements and can only be introduced when defining resources or data types.  It can be further refined profiled elements but if absent in the base type, a profile cannot assert meaning.
    */
-  public orderMeaning?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.orderMeaning
-   */
-  public _orderMeaning?: fhir.FhirElement|undefined;
+  public orderMeaning?: fhir.FhirString|undefined;
   /**
    * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
    */
-  public fixedBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedBase64Binary?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedBoolean?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedCanonical?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedCode?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedDate?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedDateTime?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedDecimal?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedId?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedInstant?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedInteger?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedMarkdown?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedOid?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedPositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedPositiveInt?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedString?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedString?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedTime?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedUnsignedInt?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedUri?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedUrl?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.fixed[x]
-   */
-  public _fixedUuid?: fhir.FhirElement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedAddress?: fhir.Address|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedAge?: fhir.Age|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedAnnotation?: fhir.Annotation|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedAttachment?: fhir.Attachment|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedCoding?: fhir.Coding|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedContactPoint?: fhir.ContactPoint|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedCount?: fhir.Count|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedDistance?: fhir.Distance|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedDuration?: fhir.Duration|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedHumanName?: fhir.HumanName|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedIdentifier?: fhir.Identifier|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedMoney?: fhir.Money|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedPeriod?: fhir.Period|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedQuantity?: fhir.Quantity|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedRange?: fhir.Range|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedRatio?: fhir.Ratio|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedReference?: fhir.Reference|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedSampledData?: fhir.SampledData|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedSignature?: fhir.Signature|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedTiming?: fhir.Timing|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedContactDetail?: fhir.ContactDetail|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedContributor?: fhir.Contributor|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedDataRequirement?: fhir.DataRequirement|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedExpression?: fhir.Expression|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedParameterDefinition?: fhir.ParameterDefinition|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedRelatedArtifact?: fhir.RelatedArtifact|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedTriggerDefinition?: fhir.TriggerDefinition|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedUsageContext?: fhir.UsageContext|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedDosage?: fhir.Dosage|undefined;
-  /**
-   * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
-   */
-  public fixedMeta?: fhir.Meta|undefined;
+  public fixed?: (fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta)|undefined;
+  readonly __fixedIsChoice:true = true;
   /**
    * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
    */
-  public patternBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternBase64Binary?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternBoolean?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternCanonical?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternCode?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternDate?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternDecimal?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternId?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternInstant?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternInteger?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternMarkdown?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternOid?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternPositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternPositiveInt?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternString?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternString?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternTime?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternUnsignedInt?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternUri?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternUrl?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.pattern[x]
-   */
-  public _patternUuid?: fhir.FhirElement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternAddress?: fhir.Address|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternAge?: fhir.Age|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternAnnotation?: fhir.Annotation|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternAttachment?: fhir.Attachment|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternCoding?: fhir.Coding|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternContactPoint?: fhir.ContactPoint|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternCount?: fhir.Count|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternDistance?: fhir.Distance|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternDuration?: fhir.Duration|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternHumanName?: fhir.HumanName|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternIdentifier?: fhir.Identifier|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternMoney?: fhir.Money|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternPeriod?: fhir.Period|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternQuantity?: fhir.Quantity|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternRange?: fhir.Range|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternRatio?: fhir.Ratio|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternReference?: fhir.Reference|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternSampledData?: fhir.SampledData|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternSignature?: fhir.Signature|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternTiming?: fhir.Timing|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternContactDetail?: fhir.ContactDetail|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternContributor?: fhir.Contributor|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternDataRequirement?: fhir.DataRequirement|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternExpression?: fhir.Expression|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternParameterDefinition?: fhir.ParameterDefinition|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternRelatedArtifact?: fhir.RelatedArtifact|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternTriggerDefinition?: fhir.TriggerDefinition|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternUsageContext?: fhir.UsageContext|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternDosage?: fhir.Dosage|undefined;
-  /**
-   * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
-   */
-  public patternMeta?: fhir.Meta|undefined;
+  public pattern?: (fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta)|undefined;
+  readonly __patternIsChoice:true = true;
   /**
    * Examples will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically.
    */
-  public example?: fhir.ElementDefinitionExample[]|undefined;
+  public example?: fhir.ElementDefinitionExample[]|undefined = [];
   /**
    * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
    */
-  public minValueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  public _minValueDate?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  public minValueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  public _minValueDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  public minValueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  public _minValueInstant?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  public minValueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  public _minValueTime?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  public minValueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  public _minValueDecimal?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  public minValueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  public _minValueInteger?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  public minValuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  public _minValuePositiveInt?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  public minValueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.minValue[x]
-   */
-  public _minValueUnsignedInt?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-   */
-  public minValueQuantity?: fhir.Quantity|undefined;
+  public minValue?: (fhir.FhirDate|fhir.FhirDateTime|fhir.FhirInstant|fhir.FhirTime|fhir.FhirDecimal|fhir.FhirInteger|fhir.FhirPositiveInt|fhir.FhirUnsignedInt|fhir.Quantity)|undefined;
+  readonly __minValueIsChoice:true = true;
   /**
    * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
    */
-  public maxValueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  public _maxValueDate?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  public maxValueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  public _maxValueDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  public maxValueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  public _maxValueInstant?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  public maxValueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  public _maxValueTime?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  public maxValueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  public _maxValueDecimal?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  public maxValueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  public _maxValueInteger?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  public maxValuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  public _maxValuePositiveInt?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  public maxValueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxValue[x]
-   */
-  public _maxValueUnsignedInt?: fhir.FhirElement|undefined;
-  /**
-   * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-   */
-  public maxValueQuantity?: fhir.Quantity|undefined;
+  public maxValue?: (fhir.FhirDate|fhir.FhirDateTime|fhir.FhirInstant|fhir.FhirTime|fhir.FhirDecimal|fhir.FhirInteger|fhir.FhirPositiveInt|fhir.FhirUnsignedInt|fhir.Quantity)|undefined;
+  readonly __maxValueIsChoice:true = true;
   /**
    * Receivers are not required to reject instances that exceed the maximum length.  The full length could be stored.  In some cases, data might be truncated, though truncation should be undertaken with care and an understanding of the consequences of doing so. If not specified, there is no conformance expectation for length support.
    */
-  public maxLength?: number|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.maxLength
-   */
-  public _maxLength?: fhir.FhirElement|undefined;
+  public maxLength?: fhir.FhirInteger|undefined;
   /**
    * A reference to an invariant that may make additional statements about the cardinality or value in the instance.
    */
-  public condition?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.condition
-   */
-  public _condition?: fhir.FhirElement[]|undefined;
+  public condition?: fhir.FhirId[]|undefined = [];
   /**
    * Constraints should be declared on the "context" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.
    */
-  public constraint?: fhir.ElementDefinitionConstraint[]|undefined;
+  public constraint?: fhir.ElementDefinitionConstraint[]|undefined = [];
   /**
    * "Something useful" is context dependent and impossible to describe in the base FHIR specification. For this reason, tue mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.  A profile on a type can always make musSupport = true if it is false in the base type but cannot make mustSupport = false if it is true in the base type.   This is done in [Resource Profiles](profiling.html#mustsupport), where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of "support" is required, as this can mean many things.    Note that an element that has the property IsModifier is not necessarily a "key" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.
    */
-  public mustSupport?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.mustSupport
-   */
-  public _mustSupport?: fhir.FhirElement|undefined;
+  public mustSupport?: fhir.FhirBoolean|undefined;
   /**
    * Only the definition of an element can set IsModifier true - either the specification itself or where an extension is originally defined. Once set, it cannot be changed in derived profiles. An element/extension that has isModifier=true SHOULD also have a minimum cardinality of 1, so that there is no lack of clarity about what to do if it is missing. If it can be missing, the definition SHALL make the meaning of a missing element clear.
    */
-  public isModifier?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.isModifier
-   */
-  public _isModifier?: fhir.FhirElement|undefined;
+  public isModifier?: fhir.FhirBoolean|undefined;
   /**
    * Explains how that element affects the interpretation of the resource or element that contains it.
    */
-  public isModifierReason?: string|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.isModifierReason
-   */
-  public _isModifierReason?: fhir.FhirElement|undefined;
+  public isModifierReason?: fhir.FhirString|undefined;
   /**
    * Some resources include a set of simple metadata, and some very large data. This element is used to reduce the quantity of data returned in searches. Note that servers may pre-cache summarized resources for optimal performance, so servers might not support per-profile use of the isSummary flag. When a request is made with _summary=true, serailisers only include elements marked as 'isSummary = true'. Other than Attachment.data, all data type properties are included in the summary form. In resource and data type definitions, if an element is at the root or has a parent that is 'mustSupport' and the minimum cardinality is 1 or the element is a modifier, it must be marked as isSummary=true.
    */
-  public isSummary?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ElementDefinition.isSummary
-   */
-  public _isSummary?: fhir.FhirElement|undefined;
+  public isSummary?: fhir.FhirBoolean|undefined;
   /**
    * For a CodeableConcept, when no codes are allowed - only text, use a binding of strength "required" with a description explaining that no coded values are allowed and what sort of information to put in the "text" element.
    */
@@ -3935,303 +1930,214 @@ export class ElementDefinition extends fhir.BackboneElement implements IElementD
   /**
    * Mappings are not necessarily specific enough for safe translation.
    */
-  public mapping?: fhir.ElementDefinitionMapping[]|undefined;
+  public mapping?: fhir.ElementDefinitionMapping[]|undefined = [];
   /**
    * Default constructor for ElementDefinition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IElementDefinition> = { }) {
-    super(source);
-    if (source['path']) { this.path = source.path; }
+  constructor(source:Partial<ElementDefinitionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['path']) { this.path = new fhir.FhirString({value: source.path}); }
     else { this.path = null; }
-    if (source['_path']) { this._path = new fhir.FhirElement(source._path!); }
-    if (source['representation']) { this.representation = source.representation.map((x) => (x)); }
-    if (source['_representation']) { this._representation = source._representation.map((x) => new fhir.FhirElement(x)); }
-    if (source['sliceName']) { this.sliceName = source.sliceName; }
-    if (source['_sliceName']) { this._sliceName = new fhir.FhirElement(source._sliceName!); }
-    if (source['sliceIsConstraining']) { this.sliceIsConstraining = source.sliceIsConstraining; }
-    if (source['_sliceIsConstraining']) { this._sliceIsConstraining = new fhir.FhirElement(source._sliceIsConstraining!); }
-    if (source['label']) { this.label = source.label; }
-    if (source['_label']) { this._label = new fhir.FhirElement(source._label!); }
+    if (source['representation']) { this.representation = source.representation.map((x) => x); }
+    if (source['sliceName']) { this.sliceName = new fhir.FhirString({value: source.sliceName}); }
+    if (source['sliceIsConstraining']) { this.sliceIsConstraining = new fhir.FhirBoolean({value: source.sliceIsConstraining}); }
+    if (source['label']) { this.label = new fhir.FhirString({value: source.label}); }
     if (source['code']) { this.code = source.code.map((x) => new fhir.Coding(x)); }
-    if (source['slicing']) { this.slicing = new fhir.ElementDefinitionSlicing(source.slicing!); }
-    if (source['short']) { this.short = source.short; }
-    if (source['_short']) { this._short = new fhir.FhirElement(source._short!); }
-    if (source['definition']) { this.definition = source.definition; }
-    if (source['_definition']) { this._definition = new fhir.FhirElement(source._definition!); }
-    if (source['comment']) { this.comment = source.comment; }
-    if (source['_comment']) { this._comment = new fhir.FhirElement(source._comment!); }
-    if (source['requirements']) { this.requirements = source.requirements; }
-    if (source['_requirements']) { this._requirements = new fhir.FhirElement(source._requirements!); }
-    if (source['alias']) { this.alias = source.alias.map((x) => (x)); }
-    if (source['_alias']) { this._alias = source._alias.map((x) => new fhir.FhirElement(x)); }
-    if (source['min']) { this.min = source.min; }
-    if (source['_min']) { this._min = new fhir.FhirElement(source._min!); }
-    if (source['max']) { this.max = source.max; }
-    if (source['_max']) { this._max = new fhir.FhirElement(source._max!); }
-    if (source['base']) { this.base = new fhir.ElementDefinitionBase(source.base!); }
-    if (source['contentReference']) { this.contentReference = source.contentReference; }
-    if (source['_contentReference']) { this._contentReference = new fhir.FhirElement(source._contentReference!); }
+    if (source['slicing']) { this.slicing = new fhir.ElementDefinitionSlicing(source.slicing); }
+    if (source['short']) { this.short = new fhir.FhirString({value: source.short}); }
+    if (source['definition']) { this.definition = new fhir.FhirMarkdown({value: source.definition}); }
+    if (source['comment']) { this.comment = new fhir.FhirMarkdown({value: source.comment}); }
+    if (source['requirements']) { this.requirements = new fhir.FhirMarkdown({value: source.requirements}); }
+    if (source['alias']) { this.alias = source.alias.map((x) => new fhir.FhirString({value: x})); }
+    if (source['min']) { this.min = new fhir.FhirUnsignedInt({value: source.min}); }
+    if (source['max']) { this.max = new fhir.FhirString({value: source.max}); }
+    if (source['base']) { this.base = new fhir.ElementDefinitionBase(source.base); }
+    if (source['contentReference']) { this.contentReference = new fhir.FhirUri({value: source.contentReference}); }
     if (source['type']) { this.type = source.type.map((x) => new fhir.ElementDefinitionType(x)); }
-    if (source['defaultValueBase64Binary']) { this.defaultValueBase64Binary = source.defaultValueBase64Binary; }
-    if (source['_defaultValueBase64Binary']) { this._defaultValueBase64Binary = new fhir.FhirElement(source._defaultValueBase64Binary!); }
-    if (source['defaultValueBoolean']) { this.defaultValueBoolean = source.defaultValueBoolean; }
-    if (source['_defaultValueBoolean']) { this._defaultValueBoolean = new fhir.FhirElement(source._defaultValueBoolean!); }
-    if (source['defaultValueCanonical']) { this.defaultValueCanonical = source.defaultValueCanonical; }
-    if (source['_defaultValueCanonical']) { this._defaultValueCanonical = new fhir.FhirElement(source._defaultValueCanonical!); }
-    if (source['defaultValueCode']) { this.defaultValueCode = source.defaultValueCode; }
-    if (source['_defaultValueCode']) { this._defaultValueCode = new fhir.FhirElement(source._defaultValueCode!); }
-    if (source['defaultValueDate']) { this.defaultValueDate = source.defaultValueDate; }
-    if (source['_defaultValueDate']) { this._defaultValueDate = new fhir.FhirElement(source._defaultValueDate!); }
-    if (source['defaultValueDateTime']) { this.defaultValueDateTime = source.defaultValueDateTime; }
-    if (source['_defaultValueDateTime']) { this._defaultValueDateTime = new fhir.FhirElement(source._defaultValueDateTime!); }
-    if (source['defaultValueDecimal']) { this.defaultValueDecimal = source.defaultValueDecimal; }
-    if (source['_defaultValueDecimal']) { this._defaultValueDecimal = new fhir.FhirElement(source._defaultValueDecimal!); }
-    if (source['defaultValueId']) { this.defaultValueId = source.defaultValueId; }
-    if (source['_defaultValueId']) { this._defaultValueId = new fhir.FhirElement(source._defaultValueId!); }
-    if (source['defaultValueInstant']) { this.defaultValueInstant = source.defaultValueInstant; }
-    if (source['_defaultValueInstant']) { this._defaultValueInstant = new fhir.FhirElement(source._defaultValueInstant!); }
-    if (source['defaultValueInteger']) { this.defaultValueInteger = source.defaultValueInteger; }
-    if (source['_defaultValueInteger']) { this._defaultValueInteger = new fhir.FhirElement(source._defaultValueInteger!); }
-    if (source['defaultValueMarkdown']) { this.defaultValueMarkdown = source.defaultValueMarkdown; }
-    if (source['_defaultValueMarkdown']) { this._defaultValueMarkdown = new fhir.FhirElement(source._defaultValueMarkdown!); }
-    if (source['defaultValueOid']) { this.defaultValueOid = source.defaultValueOid; }
-    if (source['_defaultValueOid']) { this._defaultValueOid = new fhir.FhirElement(source._defaultValueOid!); }
-    if (source['defaultValuePositiveInt']) { this.defaultValuePositiveInt = source.defaultValuePositiveInt; }
-    if (source['_defaultValuePositiveInt']) { this._defaultValuePositiveInt = new fhir.FhirElement(source._defaultValuePositiveInt!); }
-    if (source['defaultValueString']) { this.defaultValueString = source.defaultValueString; }
-    if (source['_defaultValueString']) { this._defaultValueString = new fhir.FhirElement(source._defaultValueString!); }
-    if (source['defaultValueTime']) { this.defaultValueTime = source.defaultValueTime; }
-    if (source['_defaultValueTime']) { this._defaultValueTime = new fhir.FhirElement(source._defaultValueTime!); }
-    if (source['defaultValueUnsignedInt']) { this.defaultValueUnsignedInt = source.defaultValueUnsignedInt; }
-    if (source['_defaultValueUnsignedInt']) { this._defaultValueUnsignedInt = new fhir.FhirElement(source._defaultValueUnsignedInt!); }
-    if (source['defaultValueUri']) { this.defaultValueUri = source.defaultValueUri; }
-    if (source['_defaultValueUri']) { this._defaultValueUri = new fhir.FhirElement(source._defaultValueUri!); }
-    if (source['defaultValueUrl']) { this.defaultValueUrl = source.defaultValueUrl; }
-    if (source['_defaultValueUrl']) { this._defaultValueUrl = new fhir.FhirElement(source._defaultValueUrl!); }
-    if (source['defaultValueUuid']) { this.defaultValueUuid = source.defaultValueUuid; }
-    if (source['_defaultValueUuid']) { this._defaultValueUuid = new fhir.FhirElement(source._defaultValueUuid!); }
-    if (source['defaultValueAddress']) { this.defaultValueAddress = new fhir.Address(source.defaultValueAddress!); }
-    if (source['defaultValueAge']) { this.defaultValueAge = new fhir.Age(source.defaultValueAge!); }
-    if (source['defaultValueAnnotation']) { this.defaultValueAnnotation = new fhir.Annotation(source.defaultValueAnnotation!); }
-    if (source['defaultValueAttachment']) { this.defaultValueAttachment = new fhir.Attachment(source.defaultValueAttachment!); }
-    if (source['defaultValueCodeableConcept']) { this.defaultValueCodeableConcept = new fhir.CodeableConcept(source.defaultValueCodeableConcept!); }
-    if (source['defaultValueCoding']) { this.defaultValueCoding = new fhir.Coding(source.defaultValueCoding!); }
-    if (source['defaultValueContactPoint']) { this.defaultValueContactPoint = new fhir.ContactPoint(source.defaultValueContactPoint!); }
-    if (source['defaultValueCount']) { this.defaultValueCount = new fhir.Count(source.defaultValueCount!); }
-    if (source['defaultValueDistance']) { this.defaultValueDistance = new fhir.Distance(source.defaultValueDistance!); }
-    if (source['defaultValueDuration']) { this.defaultValueDuration = new fhir.Duration(source.defaultValueDuration!); }
-    if (source['defaultValueHumanName']) { this.defaultValueHumanName = new fhir.HumanName(source.defaultValueHumanName!); }
-    if (source['defaultValueIdentifier']) { this.defaultValueIdentifier = new fhir.Identifier(source.defaultValueIdentifier!); }
-    if (source['defaultValueMoney']) { this.defaultValueMoney = new fhir.Money(source.defaultValueMoney!); }
-    if (source['defaultValuePeriod']) { this.defaultValuePeriod = new fhir.Period(source.defaultValuePeriod!); }
-    if (source['defaultValueQuantity']) { this.defaultValueQuantity = new fhir.Quantity(source.defaultValueQuantity!); }
-    if (source['defaultValueRange']) { this.defaultValueRange = new fhir.Range(source.defaultValueRange!); }
-    if (source['defaultValueRatio']) { this.defaultValueRatio = new fhir.Ratio(source.defaultValueRatio!); }
-    if (source['defaultValueReference']) { this.defaultValueReference = new fhir.Reference(source.defaultValueReference!); }
-    if (source['defaultValueSampledData']) { this.defaultValueSampledData = new fhir.SampledData(source.defaultValueSampledData!); }
-    if (source['defaultValueSignature']) { this.defaultValueSignature = new fhir.Signature(source.defaultValueSignature!); }
-    if (source['defaultValueTiming']) { this.defaultValueTiming = new fhir.Timing(source.defaultValueTiming!); }
-    if (source['defaultValueContactDetail']) { this.defaultValueContactDetail = new fhir.ContactDetail(source.defaultValueContactDetail!); }
-    if (source['defaultValueContributor']) { this.defaultValueContributor = new fhir.Contributor(source.defaultValueContributor!); }
-    if (source['defaultValueDataRequirement']) { this.defaultValueDataRequirement = new fhir.DataRequirement(source.defaultValueDataRequirement!); }
-    if (source['defaultValueExpression']) { this.defaultValueExpression = new fhir.Expression(source.defaultValueExpression!); }
-    if (source['defaultValueParameterDefinition']) { this.defaultValueParameterDefinition = new fhir.ParameterDefinition(source.defaultValueParameterDefinition!); }
-    if (source['defaultValueRelatedArtifact']) { this.defaultValueRelatedArtifact = new fhir.RelatedArtifact(source.defaultValueRelatedArtifact!); }
-    if (source['defaultValueTriggerDefinition']) { this.defaultValueTriggerDefinition = new fhir.TriggerDefinition(source.defaultValueTriggerDefinition!); }
-    if (source['defaultValueUsageContext']) { this.defaultValueUsageContext = new fhir.UsageContext(source.defaultValueUsageContext!); }
-    if (source['defaultValueDosage']) { this.defaultValueDosage = new fhir.Dosage(source.defaultValueDosage!); }
-    if (source['defaultValueMeta']) { this.defaultValueMeta = new fhir.Meta(source.defaultValueMeta!); }
-    if (source['meaningWhenMissing']) { this.meaningWhenMissing = source.meaningWhenMissing; }
-    if (source['_meaningWhenMissing']) { this._meaningWhenMissing = new fhir.FhirElement(source._meaningWhenMissing!); }
-    if (source['orderMeaning']) { this.orderMeaning = source.orderMeaning; }
-    if (source['_orderMeaning']) { this._orderMeaning = new fhir.FhirElement(source._orderMeaning!); }
-    if (source['fixedBase64Binary']) { this.fixedBase64Binary = source.fixedBase64Binary; }
-    if (source['_fixedBase64Binary']) { this._fixedBase64Binary = new fhir.FhirElement(source._fixedBase64Binary!); }
-    if (source['fixedBoolean']) { this.fixedBoolean = source.fixedBoolean; }
-    if (source['_fixedBoolean']) { this._fixedBoolean = new fhir.FhirElement(source._fixedBoolean!); }
-    if (source['fixedCanonical']) { this.fixedCanonical = source.fixedCanonical; }
-    if (source['_fixedCanonical']) { this._fixedCanonical = new fhir.FhirElement(source._fixedCanonical!); }
-    if (source['fixedCode']) { this.fixedCode = source.fixedCode; }
-    if (source['_fixedCode']) { this._fixedCode = new fhir.FhirElement(source._fixedCode!); }
-    if (source['fixedDate']) { this.fixedDate = source.fixedDate; }
-    if (source['_fixedDate']) { this._fixedDate = new fhir.FhirElement(source._fixedDate!); }
-    if (source['fixedDateTime']) { this.fixedDateTime = source.fixedDateTime; }
-    if (source['_fixedDateTime']) { this._fixedDateTime = new fhir.FhirElement(source._fixedDateTime!); }
-    if (source['fixedDecimal']) { this.fixedDecimal = source.fixedDecimal; }
-    if (source['_fixedDecimal']) { this._fixedDecimal = new fhir.FhirElement(source._fixedDecimal!); }
-    if (source['fixedId']) { this.fixedId = source.fixedId; }
-    if (source['_fixedId']) { this._fixedId = new fhir.FhirElement(source._fixedId!); }
-    if (source['fixedInstant']) { this.fixedInstant = source.fixedInstant; }
-    if (source['_fixedInstant']) { this._fixedInstant = new fhir.FhirElement(source._fixedInstant!); }
-    if (source['fixedInteger']) { this.fixedInteger = source.fixedInteger; }
-    if (source['_fixedInteger']) { this._fixedInteger = new fhir.FhirElement(source._fixedInteger!); }
-    if (source['fixedMarkdown']) { this.fixedMarkdown = source.fixedMarkdown; }
-    if (source['_fixedMarkdown']) { this._fixedMarkdown = new fhir.FhirElement(source._fixedMarkdown!); }
-    if (source['fixedOid']) { this.fixedOid = source.fixedOid; }
-    if (source['_fixedOid']) { this._fixedOid = new fhir.FhirElement(source._fixedOid!); }
-    if (source['fixedPositiveInt']) { this.fixedPositiveInt = source.fixedPositiveInt; }
-    if (source['_fixedPositiveInt']) { this._fixedPositiveInt = new fhir.FhirElement(source._fixedPositiveInt!); }
-    if (source['fixedString']) { this.fixedString = source.fixedString; }
-    if (source['_fixedString']) { this._fixedString = new fhir.FhirElement(source._fixedString!); }
-    if (source['fixedTime']) { this.fixedTime = source.fixedTime; }
-    if (source['_fixedTime']) { this._fixedTime = new fhir.FhirElement(source._fixedTime!); }
-    if (source['fixedUnsignedInt']) { this.fixedUnsignedInt = source.fixedUnsignedInt; }
-    if (source['_fixedUnsignedInt']) { this._fixedUnsignedInt = new fhir.FhirElement(source._fixedUnsignedInt!); }
-    if (source['fixedUri']) { this.fixedUri = source.fixedUri; }
-    if (source['_fixedUri']) { this._fixedUri = new fhir.FhirElement(source._fixedUri!); }
-    if (source['fixedUrl']) { this.fixedUrl = source.fixedUrl; }
-    if (source['_fixedUrl']) { this._fixedUrl = new fhir.FhirElement(source._fixedUrl!); }
-    if (source['fixedUuid']) { this.fixedUuid = source.fixedUuid; }
-    if (source['_fixedUuid']) { this._fixedUuid = new fhir.FhirElement(source._fixedUuid!); }
-    if (source['fixedAddress']) { this.fixedAddress = new fhir.Address(source.fixedAddress!); }
-    if (source['fixedAge']) { this.fixedAge = new fhir.Age(source.fixedAge!); }
-    if (source['fixedAnnotation']) { this.fixedAnnotation = new fhir.Annotation(source.fixedAnnotation!); }
-    if (source['fixedAttachment']) { this.fixedAttachment = new fhir.Attachment(source.fixedAttachment!); }
-    if (source['fixedCodeableConcept']) { this.fixedCodeableConcept = new fhir.CodeableConcept(source.fixedCodeableConcept!); }
-    if (source['fixedCoding']) { this.fixedCoding = new fhir.Coding(source.fixedCoding!); }
-    if (source['fixedContactPoint']) { this.fixedContactPoint = new fhir.ContactPoint(source.fixedContactPoint!); }
-    if (source['fixedCount']) { this.fixedCount = new fhir.Count(source.fixedCount!); }
-    if (source['fixedDistance']) { this.fixedDistance = new fhir.Distance(source.fixedDistance!); }
-    if (source['fixedDuration']) { this.fixedDuration = new fhir.Duration(source.fixedDuration!); }
-    if (source['fixedHumanName']) { this.fixedHumanName = new fhir.HumanName(source.fixedHumanName!); }
-    if (source['fixedIdentifier']) { this.fixedIdentifier = new fhir.Identifier(source.fixedIdentifier!); }
-    if (source['fixedMoney']) { this.fixedMoney = new fhir.Money(source.fixedMoney!); }
-    if (source['fixedPeriod']) { this.fixedPeriod = new fhir.Period(source.fixedPeriod!); }
-    if (source['fixedQuantity']) { this.fixedQuantity = new fhir.Quantity(source.fixedQuantity!); }
-    if (source['fixedRange']) { this.fixedRange = new fhir.Range(source.fixedRange!); }
-    if (source['fixedRatio']) { this.fixedRatio = new fhir.Ratio(source.fixedRatio!); }
-    if (source['fixedReference']) { this.fixedReference = new fhir.Reference(source.fixedReference!); }
-    if (source['fixedSampledData']) { this.fixedSampledData = new fhir.SampledData(source.fixedSampledData!); }
-    if (source['fixedSignature']) { this.fixedSignature = new fhir.Signature(source.fixedSignature!); }
-    if (source['fixedTiming']) { this.fixedTiming = new fhir.Timing(source.fixedTiming!); }
-    if (source['fixedContactDetail']) { this.fixedContactDetail = new fhir.ContactDetail(source.fixedContactDetail!); }
-    if (source['fixedContributor']) { this.fixedContributor = new fhir.Contributor(source.fixedContributor!); }
-    if (source['fixedDataRequirement']) { this.fixedDataRequirement = new fhir.DataRequirement(source.fixedDataRequirement!); }
-    if (source['fixedExpression']) { this.fixedExpression = new fhir.Expression(source.fixedExpression!); }
-    if (source['fixedParameterDefinition']) { this.fixedParameterDefinition = new fhir.ParameterDefinition(source.fixedParameterDefinition!); }
-    if (source['fixedRelatedArtifact']) { this.fixedRelatedArtifact = new fhir.RelatedArtifact(source.fixedRelatedArtifact!); }
-    if (source['fixedTriggerDefinition']) { this.fixedTriggerDefinition = new fhir.TriggerDefinition(source.fixedTriggerDefinition!); }
-    if (source['fixedUsageContext']) { this.fixedUsageContext = new fhir.UsageContext(source.fixedUsageContext!); }
-    if (source['fixedDosage']) { this.fixedDosage = new fhir.Dosage(source.fixedDosage!); }
-    if (source['fixedMeta']) { this.fixedMeta = new fhir.Meta(source.fixedMeta!); }
-    if (source['patternBase64Binary']) { this.patternBase64Binary = source.patternBase64Binary; }
-    if (source['_patternBase64Binary']) { this._patternBase64Binary = new fhir.FhirElement(source._patternBase64Binary!); }
-    if (source['patternBoolean']) { this.patternBoolean = source.patternBoolean; }
-    if (source['_patternBoolean']) { this._patternBoolean = new fhir.FhirElement(source._patternBoolean!); }
-    if (source['patternCanonical']) { this.patternCanonical = source.patternCanonical; }
-    if (source['_patternCanonical']) { this._patternCanonical = new fhir.FhirElement(source._patternCanonical!); }
-    if (source['patternCode']) { this.patternCode = source.patternCode; }
-    if (source['_patternCode']) { this._patternCode = new fhir.FhirElement(source._patternCode!); }
-    if (source['patternDate']) { this.patternDate = source.patternDate; }
-    if (source['_patternDate']) { this._patternDate = new fhir.FhirElement(source._patternDate!); }
-    if (source['patternDateTime']) { this.patternDateTime = source.patternDateTime; }
-    if (source['_patternDateTime']) { this._patternDateTime = new fhir.FhirElement(source._patternDateTime!); }
-    if (source['patternDecimal']) { this.patternDecimal = source.patternDecimal; }
-    if (source['_patternDecimal']) { this._patternDecimal = new fhir.FhirElement(source._patternDecimal!); }
-    if (source['patternId']) { this.patternId = source.patternId; }
-    if (source['_patternId']) { this._patternId = new fhir.FhirElement(source._patternId!); }
-    if (source['patternInstant']) { this.patternInstant = source.patternInstant; }
-    if (source['_patternInstant']) { this._patternInstant = new fhir.FhirElement(source._patternInstant!); }
-    if (source['patternInteger']) { this.patternInteger = source.patternInteger; }
-    if (source['_patternInteger']) { this._patternInteger = new fhir.FhirElement(source._patternInteger!); }
-    if (source['patternMarkdown']) { this.patternMarkdown = source.patternMarkdown; }
-    if (source['_patternMarkdown']) { this._patternMarkdown = new fhir.FhirElement(source._patternMarkdown!); }
-    if (source['patternOid']) { this.patternOid = source.patternOid; }
-    if (source['_patternOid']) { this._patternOid = new fhir.FhirElement(source._patternOid!); }
-    if (source['patternPositiveInt']) { this.patternPositiveInt = source.patternPositiveInt; }
-    if (source['_patternPositiveInt']) { this._patternPositiveInt = new fhir.FhirElement(source._patternPositiveInt!); }
-    if (source['patternString']) { this.patternString = source.patternString; }
-    if (source['_patternString']) { this._patternString = new fhir.FhirElement(source._patternString!); }
-    if (source['patternTime']) { this.patternTime = source.patternTime; }
-    if (source['_patternTime']) { this._patternTime = new fhir.FhirElement(source._patternTime!); }
-    if (source['patternUnsignedInt']) { this.patternUnsignedInt = source.patternUnsignedInt; }
-    if (source['_patternUnsignedInt']) { this._patternUnsignedInt = new fhir.FhirElement(source._patternUnsignedInt!); }
-    if (source['patternUri']) { this.patternUri = source.patternUri; }
-    if (source['_patternUri']) { this._patternUri = new fhir.FhirElement(source._patternUri!); }
-    if (source['patternUrl']) { this.patternUrl = source.patternUrl; }
-    if (source['_patternUrl']) { this._patternUrl = new fhir.FhirElement(source._patternUrl!); }
-    if (source['patternUuid']) { this.patternUuid = source.patternUuid; }
-    if (source['_patternUuid']) { this._patternUuid = new fhir.FhirElement(source._patternUuid!); }
-    if (source['patternAddress']) { this.patternAddress = new fhir.Address(source.patternAddress!); }
-    if (source['patternAge']) { this.patternAge = new fhir.Age(source.patternAge!); }
-    if (source['patternAnnotation']) { this.patternAnnotation = new fhir.Annotation(source.patternAnnotation!); }
-    if (source['patternAttachment']) { this.patternAttachment = new fhir.Attachment(source.patternAttachment!); }
-    if (source['patternCodeableConcept']) { this.patternCodeableConcept = new fhir.CodeableConcept(source.patternCodeableConcept!); }
-    if (source['patternCoding']) { this.patternCoding = new fhir.Coding(source.patternCoding!); }
-    if (source['patternContactPoint']) { this.patternContactPoint = new fhir.ContactPoint(source.patternContactPoint!); }
-    if (source['patternCount']) { this.patternCount = new fhir.Count(source.patternCount!); }
-    if (source['patternDistance']) { this.patternDistance = new fhir.Distance(source.patternDistance!); }
-    if (source['patternDuration']) { this.patternDuration = new fhir.Duration(source.patternDuration!); }
-    if (source['patternHumanName']) { this.patternHumanName = new fhir.HumanName(source.patternHumanName!); }
-    if (source['patternIdentifier']) { this.patternIdentifier = new fhir.Identifier(source.patternIdentifier!); }
-    if (source['patternMoney']) { this.patternMoney = new fhir.Money(source.patternMoney!); }
-    if (source['patternPeriod']) { this.patternPeriod = new fhir.Period(source.patternPeriod!); }
-    if (source['patternQuantity']) { this.patternQuantity = new fhir.Quantity(source.patternQuantity!); }
-    if (source['patternRange']) { this.patternRange = new fhir.Range(source.patternRange!); }
-    if (source['patternRatio']) { this.patternRatio = new fhir.Ratio(source.patternRatio!); }
-    if (source['patternReference']) { this.patternReference = new fhir.Reference(source.patternReference!); }
-    if (source['patternSampledData']) { this.patternSampledData = new fhir.SampledData(source.patternSampledData!); }
-    if (source['patternSignature']) { this.patternSignature = new fhir.Signature(source.patternSignature!); }
-    if (source['patternTiming']) { this.patternTiming = new fhir.Timing(source.patternTiming!); }
-    if (source['patternContactDetail']) { this.patternContactDetail = new fhir.ContactDetail(source.patternContactDetail!); }
-    if (source['patternContributor']) { this.patternContributor = new fhir.Contributor(source.patternContributor!); }
-    if (source['patternDataRequirement']) { this.patternDataRequirement = new fhir.DataRequirement(source.patternDataRequirement!); }
-    if (source['patternExpression']) { this.patternExpression = new fhir.Expression(source.patternExpression!); }
-    if (source['patternParameterDefinition']) { this.patternParameterDefinition = new fhir.ParameterDefinition(source.patternParameterDefinition!); }
-    if (source['patternRelatedArtifact']) { this.patternRelatedArtifact = new fhir.RelatedArtifact(source.patternRelatedArtifact!); }
-    if (source['patternTriggerDefinition']) { this.patternTriggerDefinition = new fhir.TriggerDefinition(source.patternTriggerDefinition!); }
-    if (source['patternUsageContext']) { this.patternUsageContext = new fhir.UsageContext(source.patternUsageContext!); }
-    if (source['patternDosage']) { this.patternDosage = new fhir.Dosage(source.patternDosage!); }
-    if (source['patternMeta']) { this.patternMeta = new fhir.Meta(source.patternMeta!); }
+    if (source['defaultValue']) { this.defaultValue = source.defaultValue; }
+    else if (source['defaultValueBase64Binary']) { this.defaultValue = new fhir.FhirBase64Binary({value: source.defaultValueBase64Binary}); }
+    else if (source['defaultValueBoolean']) { this.defaultValue = new fhir.FhirBoolean({value: source.defaultValueBoolean}); }
+    else if (source['defaultValueCanonical']) { this.defaultValue = new fhir.FhirCanonical({value: source.defaultValueCanonical}); }
+    else if (source['defaultValueCode']) { this.defaultValue = new fhir.FhirCode({value: source.defaultValueCode}); }
+    else if (source['defaultValueDate']) { this.defaultValue = new fhir.FhirDate({value: source.defaultValueDate}); }
+    else if (source['defaultValueDateTime']) { this.defaultValue = new fhir.FhirDateTime({value: source.defaultValueDateTime}); }
+    else if (source['defaultValueDecimal']) { this.defaultValue = new fhir.FhirDecimal({value: source.defaultValueDecimal}); }
+    else if (source['defaultValueId']) { this.defaultValue = new fhir.FhirId({value: source.defaultValueId}); }
+    else if (source['defaultValueInstant']) { this.defaultValue = new fhir.FhirInstant({value: source.defaultValueInstant}); }
+    else if (source['defaultValueInteger']) { this.defaultValue = new fhir.FhirInteger({value: source.defaultValueInteger}); }
+    else if (source['defaultValueMarkdown']) { this.defaultValue = new fhir.FhirMarkdown({value: source.defaultValueMarkdown}); }
+    else if (source['defaultValueOid']) { this.defaultValue = new fhir.FhirOid({value: source.defaultValueOid}); }
+    else if (source['defaultValuePositiveInt']) { this.defaultValue = new fhir.FhirPositiveInt({value: source.defaultValuePositiveInt}); }
+    else if (source['defaultValueString']) { this.defaultValue = new fhir.FhirString({value: source.defaultValueString}); }
+    else if (source['defaultValueTime']) { this.defaultValue = new fhir.FhirTime({value: source.defaultValueTime}); }
+    else if (source['defaultValueUnsignedInt']) { this.defaultValue = new fhir.FhirUnsignedInt({value: source.defaultValueUnsignedInt}); }
+    else if (source['defaultValueUri']) { this.defaultValue = new fhir.FhirUri({value: source.defaultValueUri}); }
+    else if (source['defaultValueUrl']) { this.defaultValue = new fhir.FhirUrl({value: source.defaultValueUrl}); }
+    else if (source['defaultValueUuid']) { this.defaultValue = new fhir.FhirUuid({value: source.defaultValueUuid}); }
+    else if (source['defaultValueAddress']) { this.defaultValue = new fhir.Address(source.defaultValueAddress); }
+    else if (source['defaultValueAge']) { this.defaultValue = new fhir.Age(source.defaultValueAge); }
+    else if (source['defaultValueAnnotation']) { this.defaultValue = new fhir.Annotation(source.defaultValueAnnotation); }
+    else if (source['defaultValueAttachment']) { this.defaultValue = new fhir.Attachment(source.defaultValueAttachment); }
+    else if (source['defaultValueCodeableConcept']) { this.defaultValue = new fhir.CodeableConcept(source.defaultValueCodeableConcept); }
+    else if (source['defaultValueCoding']) { this.defaultValue = new fhir.Coding(source.defaultValueCoding); }
+    else if (source['defaultValueContactPoint']) { this.defaultValue = new fhir.ContactPoint(source.defaultValueContactPoint); }
+    else if (source['defaultValueCount']) { this.defaultValue = new fhir.Count(source.defaultValueCount); }
+    else if (source['defaultValueDistance']) { this.defaultValue = new fhir.Distance(source.defaultValueDistance); }
+    else if (source['defaultValueDuration']) { this.defaultValue = new fhir.Duration(source.defaultValueDuration); }
+    else if (source['defaultValueHumanName']) { this.defaultValue = new fhir.HumanName(source.defaultValueHumanName); }
+    else if (source['defaultValueIdentifier']) { this.defaultValue = new fhir.Identifier(source.defaultValueIdentifier); }
+    else if (source['defaultValueMoney']) { this.defaultValue = new fhir.Money(source.defaultValueMoney); }
+    else if (source['defaultValuePeriod']) { this.defaultValue = new fhir.Period(source.defaultValuePeriod); }
+    else if (source['defaultValueQuantity']) { this.defaultValue = new fhir.Quantity(source.defaultValueQuantity); }
+    else if (source['defaultValueRange']) { this.defaultValue = new fhir.Range(source.defaultValueRange); }
+    else if (source['defaultValueRatio']) { this.defaultValue = new fhir.Ratio(source.defaultValueRatio); }
+    else if (source['defaultValueReference']) { this.defaultValue = new fhir.Reference(source.defaultValueReference); }
+    else if (source['defaultValueSampledData']) { this.defaultValue = new fhir.SampledData(source.defaultValueSampledData); }
+    else if (source['defaultValueSignature']) { this.defaultValue = new fhir.Signature(source.defaultValueSignature); }
+    else if (source['defaultValueTiming']) { this.defaultValue = new fhir.Timing(source.defaultValueTiming); }
+    else if (source['defaultValueContactDetail']) { this.defaultValue = new fhir.ContactDetail(source.defaultValueContactDetail); }
+    else if (source['defaultValueContributor']) { this.defaultValue = new fhir.Contributor(source.defaultValueContributor); }
+    else if (source['defaultValueDataRequirement']) { this.defaultValue = new fhir.DataRequirement(source.defaultValueDataRequirement); }
+    else if (source['defaultValueExpression']) { this.defaultValue = new fhir.Expression(source.defaultValueExpression); }
+    else if (source['defaultValueParameterDefinition']) { this.defaultValue = new fhir.ParameterDefinition(source.defaultValueParameterDefinition); }
+    else if (source['defaultValueRelatedArtifact']) { this.defaultValue = new fhir.RelatedArtifact(source.defaultValueRelatedArtifact); }
+    else if (source['defaultValueTriggerDefinition']) { this.defaultValue = new fhir.TriggerDefinition(source.defaultValueTriggerDefinition); }
+    else if (source['defaultValueUsageContext']) { this.defaultValue = new fhir.UsageContext(source.defaultValueUsageContext); }
+    else if (source['defaultValueDosage']) { this.defaultValue = new fhir.Dosage(source.defaultValueDosage); }
+    else if (source['defaultValueMeta']) { this.defaultValue = new fhir.Meta(source.defaultValueMeta); }
+    if (source['meaningWhenMissing']) { this.meaningWhenMissing = new fhir.FhirMarkdown({value: source.meaningWhenMissing}); }
+    if (source['orderMeaning']) { this.orderMeaning = new fhir.FhirString({value: source.orderMeaning}); }
+    if (source['fixed']) { this.fixed = source.fixed; }
+    else if (source['fixedBase64Binary']) { this.fixed = new fhir.FhirBase64Binary({value: source.fixedBase64Binary}); }
+    else if (source['fixedBoolean']) { this.fixed = new fhir.FhirBoolean({value: source.fixedBoolean}); }
+    else if (source['fixedCanonical']) { this.fixed = new fhir.FhirCanonical({value: source.fixedCanonical}); }
+    else if (source['fixedCode']) { this.fixed = new fhir.FhirCode({value: source.fixedCode}); }
+    else if (source['fixedDate']) { this.fixed = new fhir.FhirDate({value: source.fixedDate}); }
+    else if (source['fixedDateTime']) { this.fixed = new fhir.FhirDateTime({value: source.fixedDateTime}); }
+    else if (source['fixedDecimal']) { this.fixed = new fhir.FhirDecimal({value: source.fixedDecimal}); }
+    else if (source['fixedId']) { this.fixed = new fhir.FhirId({value: source.fixedId}); }
+    else if (source['fixedInstant']) { this.fixed = new fhir.FhirInstant({value: source.fixedInstant}); }
+    else if (source['fixedInteger']) { this.fixed = new fhir.FhirInteger({value: source.fixedInteger}); }
+    else if (source['fixedMarkdown']) { this.fixed = new fhir.FhirMarkdown({value: source.fixedMarkdown}); }
+    else if (source['fixedOid']) { this.fixed = new fhir.FhirOid({value: source.fixedOid}); }
+    else if (source['fixedPositiveInt']) { this.fixed = new fhir.FhirPositiveInt({value: source.fixedPositiveInt}); }
+    else if (source['fixedString']) { this.fixed = new fhir.FhirString({value: source.fixedString}); }
+    else if (source['fixedTime']) { this.fixed = new fhir.FhirTime({value: source.fixedTime}); }
+    else if (source['fixedUnsignedInt']) { this.fixed = new fhir.FhirUnsignedInt({value: source.fixedUnsignedInt}); }
+    else if (source['fixedUri']) { this.fixed = new fhir.FhirUri({value: source.fixedUri}); }
+    else if (source['fixedUrl']) { this.fixed = new fhir.FhirUrl({value: source.fixedUrl}); }
+    else if (source['fixedUuid']) { this.fixed = new fhir.FhirUuid({value: source.fixedUuid}); }
+    else if (source['fixedAddress']) { this.fixed = new fhir.Address(source.fixedAddress); }
+    else if (source['fixedAge']) { this.fixed = new fhir.Age(source.fixedAge); }
+    else if (source['fixedAnnotation']) { this.fixed = new fhir.Annotation(source.fixedAnnotation); }
+    else if (source['fixedAttachment']) { this.fixed = new fhir.Attachment(source.fixedAttachment); }
+    else if (source['fixedCodeableConcept']) { this.fixed = new fhir.CodeableConcept(source.fixedCodeableConcept); }
+    else if (source['fixedCoding']) { this.fixed = new fhir.Coding(source.fixedCoding); }
+    else if (source['fixedContactPoint']) { this.fixed = new fhir.ContactPoint(source.fixedContactPoint); }
+    else if (source['fixedCount']) { this.fixed = new fhir.Count(source.fixedCount); }
+    else if (source['fixedDistance']) { this.fixed = new fhir.Distance(source.fixedDistance); }
+    else if (source['fixedDuration']) { this.fixed = new fhir.Duration(source.fixedDuration); }
+    else if (source['fixedHumanName']) { this.fixed = new fhir.HumanName(source.fixedHumanName); }
+    else if (source['fixedIdentifier']) { this.fixed = new fhir.Identifier(source.fixedIdentifier); }
+    else if (source['fixedMoney']) { this.fixed = new fhir.Money(source.fixedMoney); }
+    else if (source['fixedPeriod']) { this.fixed = new fhir.Period(source.fixedPeriod); }
+    else if (source['fixedQuantity']) { this.fixed = new fhir.Quantity(source.fixedQuantity); }
+    else if (source['fixedRange']) { this.fixed = new fhir.Range(source.fixedRange); }
+    else if (source['fixedRatio']) { this.fixed = new fhir.Ratio(source.fixedRatio); }
+    else if (source['fixedReference']) { this.fixed = new fhir.Reference(source.fixedReference); }
+    else if (source['fixedSampledData']) { this.fixed = new fhir.SampledData(source.fixedSampledData); }
+    else if (source['fixedSignature']) { this.fixed = new fhir.Signature(source.fixedSignature); }
+    else if (source['fixedTiming']) { this.fixed = new fhir.Timing(source.fixedTiming); }
+    else if (source['fixedContactDetail']) { this.fixed = new fhir.ContactDetail(source.fixedContactDetail); }
+    else if (source['fixedContributor']) { this.fixed = new fhir.Contributor(source.fixedContributor); }
+    else if (source['fixedDataRequirement']) { this.fixed = new fhir.DataRequirement(source.fixedDataRequirement); }
+    else if (source['fixedExpression']) { this.fixed = new fhir.Expression(source.fixedExpression); }
+    else if (source['fixedParameterDefinition']) { this.fixed = new fhir.ParameterDefinition(source.fixedParameterDefinition); }
+    else if (source['fixedRelatedArtifact']) { this.fixed = new fhir.RelatedArtifact(source.fixedRelatedArtifact); }
+    else if (source['fixedTriggerDefinition']) { this.fixed = new fhir.TriggerDefinition(source.fixedTriggerDefinition); }
+    else if (source['fixedUsageContext']) { this.fixed = new fhir.UsageContext(source.fixedUsageContext); }
+    else if (source['fixedDosage']) { this.fixed = new fhir.Dosage(source.fixedDosage); }
+    else if (source['fixedMeta']) { this.fixed = new fhir.Meta(source.fixedMeta); }
+    if (source['pattern']) { this.pattern = source.pattern; }
+    else if (source['patternBase64Binary']) { this.pattern = new fhir.FhirBase64Binary({value: source.patternBase64Binary}); }
+    else if (source['patternBoolean']) { this.pattern = new fhir.FhirBoolean({value: source.patternBoolean}); }
+    else if (source['patternCanonical']) { this.pattern = new fhir.FhirCanonical({value: source.patternCanonical}); }
+    else if (source['patternCode']) { this.pattern = new fhir.FhirCode({value: source.patternCode}); }
+    else if (source['patternDate']) { this.pattern = new fhir.FhirDate({value: source.patternDate}); }
+    else if (source['patternDateTime']) { this.pattern = new fhir.FhirDateTime({value: source.patternDateTime}); }
+    else if (source['patternDecimal']) { this.pattern = new fhir.FhirDecimal({value: source.patternDecimal}); }
+    else if (source['patternId']) { this.pattern = new fhir.FhirId({value: source.patternId}); }
+    else if (source['patternInstant']) { this.pattern = new fhir.FhirInstant({value: source.patternInstant}); }
+    else if (source['patternInteger']) { this.pattern = new fhir.FhirInteger({value: source.patternInteger}); }
+    else if (source['patternMarkdown']) { this.pattern = new fhir.FhirMarkdown({value: source.patternMarkdown}); }
+    else if (source['patternOid']) { this.pattern = new fhir.FhirOid({value: source.patternOid}); }
+    else if (source['patternPositiveInt']) { this.pattern = new fhir.FhirPositiveInt({value: source.patternPositiveInt}); }
+    else if (source['patternString']) { this.pattern = new fhir.FhirString({value: source.patternString}); }
+    else if (source['patternTime']) { this.pattern = new fhir.FhirTime({value: source.patternTime}); }
+    else if (source['patternUnsignedInt']) { this.pattern = new fhir.FhirUnsignedInt({value: source.patternUnsignedInt}); }
+    else if (source['patternUri']) { this.pattern = new fhir.FhirUri({value: source.patternUri}); }
+    else if (source['patternUrl']) { this.pattern = new fhir.FhirUrl({value: source.patternUrl}); }
+    else if (source['patternUuid']) { this.pattern = new fhir.FhirUuid({value: source.patternUuid}); }
+    else if (source['patternAddress']) { this.pattern = new fhir.Address(source.patternAddress); }
+    else if (source['patternAge']) { this.pattern = new fhir.Age(source.patternAge); }
+    else if (source['patternAnnotation']) { this.pattern = new fhir.Annotation(source.patternAnnotation); }
+    else if (source['patternAttachment']) { this.pattern = new fhir.Attachment(source.patternAttachment); }
+    else if (source['patternCodeableConcept']) { this.pattern = new fhir.CodeableConcept(source.patternCodeableConcept); }
+    else if (source['patternCoding']) { this.pattern = new fhir.Coding(source.patternCoding); }
+    else if (source['patternContactPoint']) { this.pattern = new fhir.ContactPoint(source.patternContactPoint); }
+    else if (source['patternCount']) { this.pattern = new fhir.Count(source.patternCount); }
+    else if (source['patternDistance']) { this.pattern = new fhir.Distance(source.patternDistance); }
+    else if (source['patternDuration']) { this.pattern = new fhir.Duration(source.patternDuration); }
+    else if (source['patternHumanName']) { this.pattern = new fhir.HumanName(source.patternHumanName); }
+    else if (source['patternIdentifier']) { this.pattern = new fhir.Identifier(source.patternIdentifier); }
+    else if (source['patternMoney']) { this.pattern = new fhir.Money(source.patternMoney); }
+    else if (source['patternPeriod']) { this.pattern = new fhir.Period(source.patternPeriod); }
+    else if (source['patternQuantity']) { this.pattern = new fhir.Quantity(source.patternQuantity); }
+    else if (source['patternRange']) { this.pattern = new fhir.Range(source.patternRange); }
+    else if (source['patternRatio']) { this.pattern = new fhir.Ratio(source.patternRatio); }
+    else if (source['patternReference']) { this.pattern = new fhir.Reference(source.patternReference); }
+    else if (source['patternSampledData']) { this.pattern = new fhir.SampledData(source.patternSampledData); }
+    else if (source['patternSignature']) { this.pattern = new fhir.Signature(source.patternSignature); }
+    else if (source['patternTiming']) { this.pattern = new fhir.Timing(source.patternTiming); }
+    else if (source['patternContactDetail']) { this.pattern = new fhir.ContactDetail(source.patternContactDetail); }
+    else if (source['patternContributor']) { this.pattern = new fhir.Contributor(source.patternContributor); }
+    else if (source['patternDataRequirement']) { this.pattern = new fhir.DataRequirement(source.patternDataRequirement); }
+    else if (source['patternExpression']) { this.pattern = new fhir.Expression(source.patternExpression); }
+    else if (source['patternParameterDefinition']) { this.pattern = new fhir.ParameterDefinition(source.patternParameterDefinition); }
+    else if (source['patternRelatedArtifact']) { this.pattern = new fhir.RelatedArtifact(source.patternRelatedArtifact); }
+    else if (source['patternTriggerDefinition']) { this.pattern = new fhir.TriggerDefinition(source.patternTriggerDefinition); }
+    else if (source['patternUsageContext']) { this.pattern = new fhir.UsageContext(source.patternUsageContext); }
+    else if (source['patternDosage']) { this.pattern = new fhir.Dosage(source.patternDosage); }
+    else if (source['patternMeta']) { this.pattern = new fhir.Meta(source.patternMeta); }
     if (source['example']) { this.example = source.example.map((x) => new fhir.ElementDefinitionExample(x)); }
-    if (source['minValueDate']) { this.minValueDate = source.minValueDate; }
-    if (source['_minValueDate']) { this._minValueDate = new fhir.FhirElement(source._minValueDate!); }
-    if (source['minValueDateTime']) { this.minValueDateTime = source.minValueDateTime; }
-    if (source['_minValueDateTime']) { this._minValueDateTime = new fhir.FhirElement(source._minValueDateTime!); }
-    if (source['minValueInstant']) { this.minValueInstant = source.minValueInstant; }
-    if (source['_minValueInstant']) { this._minValueInstant = new fhir.FhirElement(source._minValueInstant!); }
-    if (source['minValueTime']) { this.minValueTime = source.minValueTime; }
-    if (source['_minValueTime']) { this._minValueTime = new fhir.FhirElement(source._minValueTime!); }
-    if (source['minValueDecimal']) { this.minValueDecimal = source.minValueDecimal; }
-    if (source['_minValueDecimal']) { this._minValueDecimal = new fhir.FhirElement(source._minValueDecimal!); }
-    if (source['minValueInteger']) { this.minValueInteger = source.minValueInteger; }
-    if (source['_minValueInteger']) { this._minValueInteger = new fhir.FhirElement(source._minValueInteger!); }
-    if (source['minValuePositiveInt']) { this.minValuePositiveInt = source.minValuePositiveInt; }
-    if (source['_minValuePositiveInt']) { this._minValuePositiveInt = new fhir.FhirElement(source._minValuePositiveInt!); }
-    if (source['minValueUnsignedInt']) { this.minValueUnsignedInt = source.minValueUnsignedInt; }
-    if (source['_minValueUnsignedInt']) { this._minValueUnsignedInt = new fhir.FhirElement(source._minValueUnsignedInt!); }
-    if (source['minValueQuantity']) { this.minValueQuantity = new fhir.Quantity(source.minValueQuantity!); }
-    if (source['maxValueDate']) { this.maxValueDate = source.maxValueDate; }
-    if (source['_maxValueDate']) { this._maxValueDate = new fhir.FhirElement(source._maxValueDate!); }
-    if (source['maxValueDateTime']) { this.maxValueDateTime = source.maxValueDateTime; }
-    if (source['_maxValueDateTime']) { this._maxValueDateTime = new fhir.FhirElement(source._maxValueDateTime!); }
-    if (source['maxValueInstant']) { this.maxValueInstant = source.maxValueInstant; }
-    if (source['_maxValueInstant']) { this._maxValueInstant = new fhir.FhirElement(source._maxValueInstant!); }
-    if (source['maxValueTime']) { this.maxValueTime = source.maxValueTime; }
-    if (source['_maxValueTime']) { this._maxValueTime = new fhir.FhirElement(source._maxValueTime!); }
-    if (source['maxValueDecimal']) { this.maxValueDecimal = source.maxValueDecimal; }
-    if (source['_maxValueDecimal']) { this._maxValueDecimal = new fhir.FhirElement(source._maxValueDecimal!); }
-    if (source['maxValueInteger']) { this.maxValueInteger = source.maxValueInteger; }
-    if (source['_maxValueInteger']) { this._maxValueInteger = new fhir.FhirElement(source._maxValueInteger!); }
-    if (source['maxValuePositiveInt']) { this.maxValuePositiveInt = source.maxValuePositiveInt; }
-    if (source['_maxValuePositiveInt']) { this._maxValuePositiveInt = new fhir.FhirElement(source._maxValuePositiveInt!); }
-    if (source['maxValueUnsignedInt']) { this.maxValueUnsignedInt = source.maxValueUnsignedInt; }
-    if (source['_maxValueUnsignedInt']) { this._maxValueUnsignedInt = new fhir.FhirElement(source._maxValueUnsignedInt!); }
-    if (source['maxValueQuantity']) { this.maxValueQuantity = new fhir.Quantity(source.maxValueQuantity!); }
-    if (source['maxLength']) { this.maxLength = source.maxLength; }
-    if (source['_maxLength']) { this._maxLength = new fhir.FhirElement(source._maxLength!); }
-    if (source['condition']) { this.condition = source.condition.map((x) => (x)); }
-    if (source['_condition']) { this._condition = source._condition.map((x) => new fhir.FhirElement(x)); }
+    if (source['minValue']) { this.minValue = source.minValue; }
+    else if (source['minValueDate']) { this.minValue = new fhir.FhirDate({value: source.minValueDate}); }
+    else if (source['minValueDateTime']) { this.minValue = new fhir.FhirDateTime({value: source.minValueDateTime}); }
+    else if (source['minValueInstant']) { this.minValue = new fhir.FhirInstant({value: source.minValueInstant}); }
+    else if (source['minValueTime']) { this.minValue = new fhir.FhirTime({value: source.minValueTime}); }
+    else if (source['minValueDecimal']) { this.minValue = new fhir.FhirDecimal({value: source.minValueDecimal}); }
+    else if (source['minValueInteger']) { this.minValue = new fhir.FhirInteger({value: source.minValueInteger}); }
+    else if (source['minValuePositiveInt']) { this.minValue = new fhir.FhirPositiveInt({value: source.minValuePositiveInt}); }
+    else if (source['minValueUnsignedInt']) { this.minValue = new fhir.FhirUnsignedInt({value: source.minValueUnsignedInt}); }
+    else if (source['minValueQuantity']) { this.minValue = new fhir.Quantity(source.minValueQuantity); }
+    if (source['maxValue']) { this.maxValue = source.maxValue; }
+    else if (source['maxValueDate']) { this.maxValue = new fhir.FhirDate({value: source.maxValueDate}); }
+    else if (source['maxValueDateTime']) { this.maxValue = new fhir.FhirDateTime({value: source.maxValueDateTime}); }
+    else if (source['maxValueInstant']) { this.maxValue = new fhir.FhirInstant({value: source.maxValueInstant}); }
+    else if (source['maxValueTime']) { this.maxValue = new fhir.FhirTime({value: source.maxValueTime}); }
+    else if (source['maxValueDecimal']) { this.maxValue = new fhir.FhirDecimal({value: source.maxValueDecimal}); }
+    else if (source['maxValueInteger']) { this.maxValue = new fhir.FhirInteger({value: source.maxValueInteger}); }
+    else if (source['maxValuePositiveInt']) { this.maxValue = new fhir.FhirPositiveInt({value: source.maxValuePositiveInt}); }
+    else if (source['maxValueUnsignedInt']) { this.maxValue = new fhir.FhirUnsignedInt({value: source.maxValueUnsignedInt}); }
+    else if (source['maxValueQuantity']) { this.maxValue = new fhir.Quantity(source.maxValueQuantity); }
+    if (source['maxLength']) { this.maxLength = new fhir.FhirInteger({value: source.maxLength}); }
+    if (source['condition']) { this.condition = source.condition.map((x) => new fhir.FhirId({value: x})); }
     if (source['constraint']) { this.constraint = source.constraint.map((x) => new fhir.ElementDefinitionConstraint(x)); }
-    if (source['mustSupport']) { this.mustSupport = source.mustSupport; }
-    if (source['_mustSupport']) { this._mustSupport = new fhir.FhirElement(source._mustSupport!); }
-    if (source['isModifier']) { this.isModifier = source.isModifier; }
-    if (source['_isModifier']) { this._isModifier = new fhir.FhirElement(source._isModifier!); }
-    if (source['isModifierReason']) { this.isModifierReason = source.isModifierReason; }
-    if (source['_isModifierReason']) { this._isModifierReason = new fhir.FhirElement(source._isModifierReason!); }
-    if (source['isSummary']) { this.isSummary = source.isSummary; }
-    if (source['_isSummary']) { this._isSummary = new fhir.FhirElement(source._isSummary!); }
-    if (source['binding']) { this.binding = new fhir.ElementDefinitionBinding(source.binding!); }
+    if (source['mustSupport']) { this.mustSupport = new fhir.FhirBoolean({value: source.mustSupport}); }
+    if (source['isModifier']) { this.isModifier = new fhir.FhirBoolean({value: source.isModifier}); }
+    if (source['isModifierReason']) { this.isModifierReason = new fhir.FhirString({value: source.isModifierReason}); }
+    if (source['isSummary']) { this.isSummary = new fhir.FhirBoolean({value: source.isSummary}); }
+    if (source['binding']) { this.binding = new fhir.ElementDefinitionBinding(source.binding); }
     if (source['mapping']) { this.mapping = source.mapping.map((x) => new fhir.ElementDefinitionMapping(x)); }
   }
   /**
@@ -4249,206 +2155,45 @@ export class ElementDefinition extends fhir.BackboneElement implements IElementD
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["path"]) { results.push(["path",'Missing required element: ElementDefinition.path']); }
-    if (this["_path"]) { results.push(...this._path.doModelValidation()); }
-    if (this["_representation"]) { this._representation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_sliceName"]) { results.push(...this._sliceName.doModelValidation()); }
-    if (this["_sliceIsConstraining"]) { results.push(...this._sliceIsConstraining.doModelValidation()); }
-    if (this["_label"]) { results.push(...this._label.doModelValidation()); }
-    if (this["code"]) { this.code.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["slicing"]) { results.push(...this.slicing.doModelValidation()); }
-    if (this["_short"]) { results.push(...this._short.doModelValidation()); }
-    if (this["_definition"]) { results.push(...this._definition.doModelValidation()); }
-    if (this["_comment"]) { results.push(...this._comment.doModelValidation()); }
-    if (this["_requirements"]) { results.push(...this._requirements.doModelValidation()); }
-    if (this["_alias"]) { this._alias.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_min"]) { results.push(...this._min.doModelValidation()); }
-    if (this["_max"]) { results.push(...this._max.doModelValidation()); }
-    if (this["base"]) { results.push(...this.base.doModelValidation()); }
-    if (this["_contentReference"]) { results.push(...this._contentReference.doModelValidation()); }
-    if (this["type"]) { this.type.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_defaultValueBase64Binary"]) { results.push(...this._defaultValueBase64Binary.doModelValidation()); }
-    if (this["_defaultValueBoolean"]) { results.push(...this._defaultValueBoolean.doModelValidation()); }
-    if (this["_defaultValueCanonical"]) { results.push(...this._defaultValueCanonical.doModelValidation()); }
-    if (this["_defaultValueCode"]) { results.push(...this._defaultValueCode.doModelValidation()); }
-    if (this["_defaultValueDate"]) { results.push(...this._defaultValueDate.doModelValidation()); }
-    if (this["_defaultValueDateTime"]) { results.push(...this._defaultValueDateTime.doModelValidation()); }
-    if (this["_defaultValueDecimal"]) { results.push(...this._defaultValueDecimal.doModelValidation()); }
-    if (this["_defaultValueId"]) { results.push(...this._defaultValueId.doModelValidation()); }
-    if (this["_defaultValueInstant"]) { results.push(...this._defaultValueInstant.doModelValidation()); }
-    if (this["_defaultValueInteger"]) { results.push(...this._defaultValueInteger.doModelValidation()); }
-    if (this["_defaultValueMarkdown"]) { results.push(...this._defaultValueMarkdown.doModelValidation()); }
-    if (this["_defaultValueOid"]) { results.push(...this._defaultValueOid.doModelValidation()); }
-    if (this["_defaultValuePositiveInt"]) { results.push(...this._defaultValuePositiveInt.doModelValidation()); }
-    if (this["_defaultValueString"]) { results.push(...this._defaultValueString.doModelValidation()); }
-    if (this["_defaultValueTime"]) { results.push(...this._defaultValueTime.doModelValidation()); }
-    if (this["_defaultValueUnsignedInt"]) { results.push(...this._defaultValueUnsignedInt.doModelValidation()); }
-    if (this["_defaultValueUri"]) { results.push(...this._defaultValueUri.doModelValidation()); }
-    if (this["_defaultValueUrl"]) { results.push(...this._defaultValueUrl.doModelValidation()); }
-    if (this["_defaultValueUuid"]) { results.push(...this._defaultValueUuid.doModelValidation()); }
-    if (this["defaultValueAddress"]) { results.push(...this.defaultValueAddress.doModelValidation()); }
-    if (this["defaultValueAge"]) { results.push(...this.defaultValueAge.doModelValidation()); }
-    if (this["defaultValueAnnotation"]) { results.push(...this.defaultValueAnnotation.doModelValidation()); }
-    if (this["defaultValueAttachment"]) { results.push(...this.defaultValueAttachment.doModelValidation()); }
-    if (this["defaultValueCodeableConcept"]) { results.push(...this.defaultValueCodeableConcept.doModelValidation()); }
-    if (this["defaultValueCoding"]) { results.push(...this.defaultValueCoding.doModelValidation()); }
-    if (this["defaultValueContactPoint"]) { results.push(...this.defaultValueContactPoint.doModelValidation()); }
-    if (this["defaultValueCount"]) { results.push(...this.defaultValueCount.doModelValidation()); }
-    if (this["defaultValueDistance"]) { results.push(...this.defaultValueDistance.doModelValidation()); }
-    if (this["defaultValueDuration"]) { results.push(...this.defaultValueDuration.doModelValidation()); }
-    if (this["defaultValueHumanName"]) { results.push(...this.defaultValueHumanName.doModelValidation()); }
-    if (this["defaultValueIdentifier"]) { results.push(...this.defaultValueIdentifier.doModelValidation()); }
-    if (this["defaultValueMoney"]) { results.push(...this.defaultValueMoney.doModelValidation()); }
-    if (this["defaultValuePeriod"]) { results.push(...this.defaultValuePeriod.doModelValidation()); }
-    if (this["defaultValueQuantity"]) { results.push(...this.defaultValueQuantity.doModelValidation()); }
-    if (this["defaultValueRange"]) { results.push(...this.defaultValueRange.doModelValidation()); }
-    if (this["defaultValueRatio"]) { results.push(...this.defaultValueRatio.doModelValidation()); }
-    if (this["defaultValueReference"]) { results.push(...this.defaultValueReference.doModelValidation()); }
-    if (this["defaultValueSampledData"]) { results.push(...this.defaultValueSampledData.doModelValidation()); }
-    if (this["defaultValueSignature"]) { results.push(...this.defaultValueSignature.doModelValidation()); }
-    if (this["defaultValueTiming"]) { results.push(...this.defaultValueTiming.doModelValidation()); }
-    if (this["defaultValueContactDetail"]) { results.push(...this.defaultValueContactDetail.doModelValidation()); }
-    if (this["defaultValueContributor"]) { results.push(...this.defaultValueContributor.doModelValidation()); }
-    if (this["defaultValueDataRequirement"]) { results.push(...this.defaultValueDataRequirement.doModelValidation()); }
-    if (this["defaultValueExpression"]) { results.push(...this.defaultValueExpression.doModelValidation()); }
-    if (this["defaultValueParameterDefinition"]) { results.push(...this.defaultValueParameterDefinition.doModelValidation()); }
-    if (this["defaultValueRelatedArtifact"]) { results.push(...this.defaultValueRelatedArtifact.doModelValidation()); }
-    if (this["defaultValueTriggerDefinition"]) { results.push(...this.defaultValueTriggerDefinition.doModelValidation()); }
-    if (this["defaultValueUsageContext"]) { results.push(...this.defaultValueUsageContext.doModelValidation()); }
-    if (this["defaultValueDosage"]) { results.push(...this.defaultValueDosage.doModelValidation()); }
-    if (this["defaultValueMeta"]) { results.push(...this.defaultValueMeta.doModelValidation()); }
-    if (this["_meaningWhenMissing"]) { results.push(...this._meaningWhenMissing.doModelValidation()); }
-    if (this["_orderMeaning"]) { results.push(...this._orderMeaning.doModelValidation()); }
-    if (this["_fixedBase64Binary"]) { results.push(...this._fixedBase64Binary.doModelValidation()); }
-    if (this["_fixedBoolean"]) { results.push(...this._fixedBoolean.doModelValidation()); }
-    if (this["_fixedCanonical"]) { results.push(...this._fixedCanonical.doModelValidation()); }
-    if (this["_fixedCode"]) { results.push(...this._fixedCode.doModelValidation()); }
-    if (this["_fixedDate"]) { results.push(...this._fixedDate.doModelValidation()); }
-    if (this["_fixedDateTime"]) { results.push(...this._fixedDateTime.doModelValidation()); }
-    if (this["_fixedDecimal"]) { results.push(...this._fixedDecimal.doModelValidation()); }
-    if (this["_fixedId"]) { results.push(...this._fixedId.doModelValidation()); }
-    if (this["_fixedInstant"]) { results.push(...this._fixedInstant.doModelValidation()); }
-    if (this["_fixedInteger"]) { results.push(...this._fixedInteger.doModelValidation()); }
-    if (this["_fixedMarkdown"]) { results.push(...this._fixedMarkdown.doModelValidation()); }
-    if (this["_fixedOid"]) { results.push(...this._fixedOid.doModelValidation()); }
-    if (this["_fixedPositiveInt"]) { results.push(...this._fixedPositiveInt.doModelValidation()); }
-    if (this["_fixedString"]) { results.push(...this._fixedString.doModelValidation()); }
-    if (this["_fixedTime"]) { results.push(...this._fixedTime.doModelValidation()); }
-    if (this["_fixedUnsignedInt"]) { results.push(...this._fixedUnsignedInt.doModelValidation()); }
-    if (this["_fixedUri"]) { results.push(...this._fixedUri.doModelValidation()); }
-    if (this["_fixedUrl"]) { results.push(...this._fixedUrl.doModelValidation()); }
-    if (this["_fixedUuid"]) { results.push(...this._fixedUuid.doModelValidation()); }
-    if (this["fixedAddress"]) { results.push(...this.fixedAddress.doModelValidation()); }
-    if (this["fixedAge"]) { results.push(...this.fixedAge.doModelValidation()); }
-    if (this["fixedAnnotation"]) { results.push(...this.fixedAnnotation.doModelValidation()); }
-    if (this["fixedAttachment"]) { results.push(...this.fixedAttachment.doModelValidation()); }
-    if (this["fixedCodeableConcept"]) { results.push(...this.fixedCodeableConcept.doModelValidation()); }
-    if (this["fixedCoding"]) { results.push(...this.fixedCoding.doModelValidation()); }
-    if (this["fixedContactPoint"]) { results.push(...this.fixedContactPoint.doModelValidation()); }
-    if (this["fixedCount"]) { results.push(...this.fixedCount.doModelValidation()); }
-    if (this["fixedDistance"]) { results.push(...this.fixedDistance.doModelValidation()); }
-    if (this["fixedDuration"]) { results.push(...this.fixedDuration.doModelValidation()); }
-    if (this["fixedHumanName"]) { results.push(...this.fixedHumanName.doModelValidation()); }
-    if (this["fixedIdentifier"]) { results.push(...this.fixedIdentifier.doModelValidation()); }
-    if (this["fixedMoney"]) { results.push(...this.fixedMoney.doModelValidation()); }
-    if (this["fixedPeriod"]) { results.push(...this.fixedPeriod.doModelValidation()); }
-    if (this["fixedQuantity"]) { results.push(...this.fixedQuantity.doModelValidation()); }
-    if (this["fixedRange"]) { results.push(...this.fixedRange.doModelValidation()); }
-    if (this["fixedRatio"]) { results.push(...this.fixedRatio.doModelValidation()); }
-    if (this["fixedReference"]) { results.push(...this.fixedReference.doModelValidation()); }
-    if (this["fixedSampledData"]) { results.push(...this.fixedSampledData.doModelValidation()); }
-    if (this["fixedSignature"]) { results.push(...this.fixedSignature.doModelValidation()); }
-    if (this["fixedTiming"]) { results.push(...this.fixedTiming.doModelValidation()); }
-    if (this["fixedContactDetail"]) { results.push(...this.fixedContactDetail.doModelValidation()); }
-    if (this["fixedContributor"]) { results.push(...this.fixedContributor.doModelValidation()); }
-    if (this["fixedDataRequirement"]) { results.push(...this.fixedDataRequirement.doModelValidation()); }
-    if (this["fixedExpression"]) { results.push(...this.fixedExpression.doModelValidation()); }
-    if (this["fixedParameterDefinition"]) { results.push(...this.fixedParameterDefinition.doModelValidation()); }
-    if (this["fixedRelatedArtifact"]) { results.push(...this.fixedRelatedArtifact.doModelValidation()); }
-    if (this["fixedTriggerDefinition"]) { results.push(...this.fixedTriggerDefinition.doModelValidation()); }
-    if (this["fixedUsageContext"]) { results.push(...this.fixedUsageContext.doModelValidation()); }
-    if (this["fixedDosage"]) { results.push(...this.fixedDosage.doModelValidation()); }
-    if (this["fixedMeta"]) { results.push(...this.fixedMeta.doModelValidation()); }
-    if (this["_patternBase64Binary"]) { results.push(...this._patternBase64Binary.doModelValidation()); }
-    if (this["_patternBoolean"]) { results.push(...this._patternBoolean.doModelValidation()); }
-    if (this["_patternCanonical"]) { results.push(...this._patternCanonical.doModelValidation()); }
-    if (this["_patternCode"]) { results.push(...this._patternCode.doModelValidation()); }
-    if (this["_patternDate"]) { results.push(...this._patternDate.doModelValidation()); }
-    if (this["_patternDateTime"]) { results.push(...this._patternDateTime.doModelValidation()); }
-    if (this["_patternDecimal"]) { results.push(...this._patternDecimal.doModelValidation()); }
-    if (this["_patternId"]) { results.push(...this._patternId.doModelValidation()); }
-    if (this["_patternInstant"]) { results.push(...this._patternInstant.doModelValidation()); }
-    if (this["_patternInteger"]) { results.push(...this._patternInteger.doModelValidation()); }
-    if (this["_patternMarkdown"]) { results.push(...this._patternMarkdown.doModelValidation()); }
-    if (this["_patternOid"]) { results.push(...this._patternOid.doModelValidation()); }
-    if (this["_patternPositiveInt"]) { results.push(...this._patternPositiveInt.doModelValidation()); }
-    if (this["_patternString"]) { results.push(...this._patternString.doModelValidation()); }
-    if (this["_patternTime"]) { results.push(...this._patternTime.doModelValidation()); }
-    if (this["_patternUnsignedInt"]) { results.push(...this._patternUnsignedInt.doModelValidation()); }
-    if (this["_patternUri"]) { results.push(...this._patternUri.doModelValidation()); }
-    if (this["_patternUrl"]) { results.push(...this._patternUrl.doModelValidation()); }
-    if (this["_patternUuid"]) { results.push(...this._patternUuid.doModelValidation()); }
-    if (this["patternAddress"]) { results.push(...this.patternAddress.doModelValidation()); }
-    if (this["patternAge"]) { results.push(...this.patternAge.doModelValidation()); }
-    if (this["patternAnnotation"]) { results.push(...this.patternAnnotation.doModelValidation()); }
-    if (this["patternAttachment"]) { results.push(...this.patternAttachment.doModelValidation()); }
-    if (this["patternCodeableConcept"]) { results.push(...this.patternCodeableConcept.doModelValidation()); }
-    if (this["patternCoding"]) { results.push(...this.patternCoding.doModelValidation()); }
-    if (this["patternContactPoint"]) { results.push(...this.patternContactPoint.doModelValidation()); }
-    if (this["patternCount"]) { results.push(...this.patternCount.doModelValidation()); }
-    if (this["patternDistance"]) { results.push(...this.patternDistance.doModelValidation()); }
-    if (this["patternDuration"]) { results.push(...this.patternDuration.doModelValidation()); }
-    if (this["patternHumanName"]) { results.push(...this.patternHumanName.doModelValidation()); }
-    if (this["patternIdentifier"]) { results.push(...this.patternIdentifier.doModelValidation()); }
-    if (this["patternMoney"]) { results.push(...this.patternMoney.doModelValidation()); }
-    if (this["patternPeriod"]) { results.push(...this.patternPeriod.doModelValidation()); }
-    if (this["patternQuantity"]) { results.push(...this.patternQuantity.doModelValidation()); }
-    if (this["patternRange"]) { results.push(...this.patternRange.doModelValidation()); }
-    if (this["patternRatio"]) { results.push(...this.patternRatio.doModelValidation()); }
-    if (this["patternReference"]) { results.push(...this.patternReference.doModelValidation()); }
-    if (this["patternSampledData"]) { results.push(...this.patternSampledData.doModelValidation()); }
-    if (this["patternSignature"]) { results.push(...this.patternSignature.doModelValidation()); }
-    if (this["patternTiming"]) { results.push(...this.patternTiming.doModelValidation()); }
-    if (this["patternContactDetail"]) { results.push(...this.patternContactDetail.doModelValidation()); }
-    if (this["patternContributor"]) { results.push(...this.patternContributor.doModelValidation()); }
-    if (this["patternDataRequirement"]) { results.push(...this.patternDataRequirement.doModelValidation()); }
-    if (this["patternExpression"]) { results.push(...this.patternExpression.doModelValidation()); }
-    if (this["patternParameterDefinition"]) { results.push(...this.patternParameterDefinition.doModelValidation()); }
-    if (this["patternRelatedArtifact"]) { results.push(...this.patternRelatedArtifact.doModelValidation()); }
-    if (this["patternTriggerDefinition"]) { results.push(...this.patternTriggerDefinition.doModelValidation()); }
-    if (this["patternUsageContext"]) { results.push(...this.patternUsageContext.doModelValidation()); }
-    if (this["patternDosage"]) { results.push(...this.patternDosage.doModelValidation()); }
-    if (this["patternMeta"]) { results.push(...this.patternMeta.doModelValidation()); }
-    if (this["example"]) { this.example.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_minValueDate"]) { results.push(...this._minValueDate.doModelValidation()); }
-    if (this["_minValueDateTime"]) { results.push(...this._minValueDateTime.doModelValidation()); }
-    if (this["_minValueInstant"]) { results.push(...this._minValueInstant.doModelValidation()); }
-    if (this["_minValueTime"]) { results.push(...this._minValueTime.doModelValidation()); }
-    if (this["_minValueDecimal"]) { results.push(...this._minValueDecimal.doModelValidation()); }
-    if (this["_minValueInteger"]) { results.push(...this._minValueInteger.doModelValidation()); }
-    if (this["_minValuePositiveInt"]) { results.push(...this._minValuePositiveInt.doModelValidation()); }
-    if (this["_minValueUnsignedInt"]) { results.push(...this._minValueUnsignedInt.doModelValidation()); }
-    if (this["minValueQuantity"]) { results.push(...this.minValueQuantity.doModelValidation()); }
-    if (this["_maxValueDate"]) { results.push(...this._maxValueDate.doModelValidation()); }
-    if (this["_maxValueDateTime"]) { results.push(...this._maxValueDateTime.doModelValidation()); }
-    if (this["_maxValueInstant"]) { results.push(...this._maxValueInstant.doModelValidation()); }
-    if (this["_maxValueTime"]) { results.push(...this._maxValueTime.doModelValidation()); }
-    if (this["_maxValueDecimal"]) { results.push(...this._maxValueDecimal.doModelValidation()); }
-    if (this["_maxValueInteger"]) { results.push(...this._maxValueInteger.doModelValidation()); }
-    if (this["_maxValuePositiveInt"]) { results.push(...this._maxValuePositiveInt.doModelValidation()); }
-    if (this["_maxValueUnsignedInt"]) { results.push(...this._maxValueUnsignedInt.doModelValidation()); }
-    if (this["maxValueQuantity"]) { results.push(...this.maxValueQuantity.doModelValidation()); }
-    if (this["_maxLength"]) { results.push(...this._maxLength.doModelValidation()); }
-    if (this["_condition"]) { this._condition.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["constraint"]) { this.constraint.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_mustSupport"]) { results.push(...this._mustSupport.doModelValidation()); }
-    if (this["_isModifier"]) { results.push(...this._isModifier.doModelValidation()); }
-    if (this["_isModifierReason"]) { results.push(...this._isModifierReason.doModelValidation()); }
-    if (this["_isSummary"]) { results.push(...this._isSummary.doModelValidation()); }
-    if (this["binding"]) { results.push(...this.binding.doModelValidation()); }
-    if (this["mapping"]) { this.mapping.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['path']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property path:fhir.FhirString fhir: ElementDefinition.path:string", }));
+    }
+    if (this["path"]) { outcome.issue!.push(...this.path.doModelValidation().issue!); }
+    if (this["sliceName"]) { outcome.issue!.push(...this.sliceName.doModelValidation().issue!); }
+    if (this["sliceIsConstraining"]) { outcome.issue!.push(...this.sliceIsConstraining.doModelValidation().issue!); }
+    if (this["label"]) { outcome.issue!.push(...this.label.doModelValidation().issue!); }
+    if (this["code"]) { this.code.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["slicing"]) { outcome.issue!.push(...this.slicing.doModelValidation().issue!); }
+    if (this["short"]) { outcome.issue!.push(...this.short.doModelValidation().issue!); }
+    if (this["definition"]) { outcome.issue!.push(...this.definition.doModelValidation().issue!); }
+    if (this["comment"]) { outcome.issue!.push(...this.comment.doModelValidation().issue!); }
+    if (this["requirements"]) { outcome.issue!.push(...this.requirements.doModelValidation().issue!); }
+    if (this["alias"]) { this.alias.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["min"]) { outcome.issue!.push(...this.min.doModelValidation().issue!); }
+    if (this["max"]) { outcome.issue!.push(...this.max.doModelValidation().issue!); }
+    if (this["base"]) { outcome.issue!.push(...this.base.doModelValidation().issue!); }
+    if (this["contentReference"]) { outcome.issue!.push(...this.contentReference.doModelValidation().issue!); }
+    if (this["type"]) { this.type.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["meaningWhenMissing"]) { outcome.issue!.push(...this.meaningWhenMissing.doModelValidation().issue!); }
+    if (this["orderMeaning"]) { outcome.issue!.push(...this.orderMeaning.doModelValidation().issue!); }
+    if (this["example"]) { this.example.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["maxLength"]) { outcome.issue!.push(...this.maxLength.doModelValidation().issue!); }
+    if (this["condition"]) { this.condition.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["constraint"]) { this.constraint.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["mustSupport"]) { outcome.issue!.push(...this.mustSupport.doModelValidation().issue!); }
+    if (this["isModifier"]) { outcome.issue!.push(...this.isModifier.doModelValidation().issue!); }
+    if (this["isModifierReason"]) { outcome.issue!.push(...this.isModifierReason.doModelValidation().issue!); }
+    if (this["isSummary"]) { outcome.issue!.push(...this.isSummary.doModelValidation().issue!); }
+    if (this["binding"]) { outcome.issue!.push(...this.binding.doModelValidation().issue!); }
+    if (this["mapping"]) { this.mapping.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

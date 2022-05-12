@@ -3,17 +3,19 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: RequestGroup
 import * as fhir from '../fhir.js';
-import { ActionConditionKindValueSet } from '../fhirValueSets/ActionConditionKindValueSet.js';
-import { ActionRelationshipTypeValueSet } from '../fhirValueSets/ActionRelationshipTypeValueSet.js';
-import { RequestPriorityValueSet } from '../fhirValueSets/RequestPriorityValueSet.js';
-import { ActionTypeValueSet } from '../fhirValueSets/ActionTypeValueSet.js';
-import { ActionGroupingBehaviorValueSet } from '../fhirValueSets/ActionGroupingBehaviorValueSet.js';
-import { ActionSelectionBehaviorValueSet } from '../fhirValueSets/ActionSelectionBehaviorValueSet.js';
-import { ActionRequiredBehaviorValueSet } from '../fhirValueSets/ActionRequiredBehaviorValueSet.js';
-import { ActionPrecheckBehaviorValueSet } from '../fhirValueSets/ActionPrecheckBehaviorValueSet.js';
-import { ActionCardinalityBehaviorValueSet } from '../fhirValueSets/ActionCardinalityBehaviorValueSet.js';
-import { RequestStatusValueSet } from '../fhirValueSets/RequestStatusValueSet.js';
-import { RequestIntentValueSet } from '../fhirValueSets/RequestIntentValueSet.js';
+import { ActionConditionKindValueSet, } from '../fhirValueSets/ActionConditionKindValueSet.js';
+import { ActionRelationshipTypeValueSet, } from '../fhirValueSets/ActionRelationshipTypeValueSet.js';
+import { RequestPriorityValueSet, } from '../fhirValueSets/RequestPriorityValueSet.js';
+import { ActionTypeValueSet, } from '../fhirValueSets/ActionTypeValueSet.js';
+import { ActionGroupingBehaviorValueSet, } from '../fhirValueSets/ActionGroupingBehaviorValueSet.js';
+import { ActionSelectionBehaviorValueSet, } from '../fhirValueSets/ActionSelectionBehaviorValueSet.js';
+import { ActionRequiredBehaviorValueSet, } from '../fhirValueSets/ActionRequiredBehaviorValueSet.js';
+import { ActionPrecheckBehaviorValueSet, } from '../fhirValueSets/ActionPrecheckBehaviorValueSet.js';
+import { ActionCardinalityBehaviorValueSet, } from '../fhirValueSets/ActionCardinalityBehaviorValueSet.js';
+import { RequestStatusValueSet, } from '../fhirValueSets/RequestStatusValueSet.js';
+import { RequestIntentValueSet, } from '../fhirValueSets/RequestIntentValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * When multiple conditions of the same kind are present, the effects are combined using AND semantics, so the overall condition is true only if all of the conditions are true.
  */
@@ -21,16 +23,14 @@ export class RequestGroupActionCondition extends fhir.BackboneElement {
     /**
      * Default constructor for RequestGroupActionCondition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'RequestGroupActionCondition';
         if (source['kind']) {
             this.kind = source.kind;
         }
         else {
             this.kind = null;
-        }
-        if (source['_kind']) {
-            this._kind = new fhir.FhirElement(source._kind);
         }
         if (source['expression']) {
             this.expression = new fhir.Expression(source.expression);
@@ -46,17 +46,20 @@ export class RequestGroupActionCondition extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["kind"]) {
-            results.push(["kind", 'Missing required element: RequestGroup.action.condition.kind']);
-        }
-        if (this["_kind"]) {
-            results.push(...this._kind.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['kind']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property kind:ActionConditionKindValueSetEnum fhir: RequestGroup.action.condition.kind:code", }));
         }
         if (this["expression"]) {
-            results.push(...this.expression.doModelValidation());
+            outcome.issue.push(...this.expression.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -66,16 +69,15 @@ export class RequestGroupActionRelatedAction extends fhir.BackboneElement {
     /**
      * Default constructor for RequestGroupActionRelatedAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'RequestGroupActionRelatedAction';
+        this.__offsetIsChoice = true;
         if (source['actionId']) {
-            this.actionId = source.actionId;
+            this.actionId = new fhir.FhirId({ value: source.actionId });
         }
         else {
             this.actionId = null;
-        }
-        if (source['_actionId']) {
-            this._actionId = new fhir.FhirElement(source._actionId);
         }
         if (source['relationship']) {
             this.relationship = source.relationship;
@@ -83,14 +85,14 @@ export class RequestGroupActionRelatedAction extends fhir.BackboneElement {
         else {
             this.relationship = null;
         }
-        if (source['_relationship']) {
-            this._relationship = new fhir.FhirElement(source._relationship);
+        if (source['offset']) {
+            this.offset = source.offset;
         }
-        if (source['offsetDuration']) {
-            this.offsetDuration = new fhir.Duration(source.offsetDuration);
+        else if (source['offsetDuration']) {
+            this.offset = new fhir.Duration(source.offsetDuration);
         }
-        if (source['offsetRange']) {
-            this.offsetRange = new fhir.Range(source.offsetRange);
+        else if (source['offsetRange']) {
+            this.offset = new fhir.Range(source.offsetRange);
         }
     }
     /**
@@ -103,26 +105,23 @@ export class RequestGroupActionRelatedAction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["actionId"]) {
-            results.push(["actionId", 'Missing required element: RequestGroup.action.relatedAction.actionId']);
+        var outcome = super.doModelValidation();
+        if (!this['actionId']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property actionId:fhir.FhirId fhir: RequestGroup.action.relatedAction.actionId:id", }));
         }
-        if (this["_actionId"]) {
-            results.push(...this._actionId.doModelValidation());
+        if (this["actionId"]) {
+            outcome.issue.push(...this.actionId.doModelValidation().issue);
         }
-        if (!this["relationship"]) {
-            results.push(["relationship", 'Missing required element: RequestGroup.action.relatedAction.relationship']);
+        if (!this['relationship']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property relationship:ActionRelationshipTypeValueSetEnum fhir: RequestGroup.action.relatedAction.relationship:code", }));
         }
-        if (this["_relationship"]) {
-            results.push(...this._relationship.doModelValidation());
-        }
-        if (this["offsetDuration"]) {
-            results.push(...this.offsetDuration.doModelValidation());
-        }
-        if (this["offsetRange"]) {
-            results.push(...this.offsetRange.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -132,37 +131,48 @@ export class RequestGroupAction extends fhir.BackboneElement {
     /**
      * Default constructor for RequestGroupAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'RequestGroupAction';
+        /**
+         * A code that provides meaning for the action or action group. For example, a section may have a LOINC code for a section of a documentation template.
+         */
+        this.code = [];
+        /**
+         * Didactic or other informational resources associated with the action that can be provided to the CDS recipient. Information resources can include inline text commentary and links to web resources.
+         */
+        this.documentation = [];
+        /**
+         * When multiple conditions of the same kind are present, the effects are combined using AND semantics, so the overall condition is true only if all of the conditions are true.
+         */
+        this.condition = [];
+        /**
+         * A relationship to another action such as "before" or "30-60 minutes after start of".
+         */
+        this.relatedAction = [];
+        this.__timingIsChoice = true;
+        /**
+         * The participant that should perform or be responsible for this action.
+         */
+        this.participant = [];
+        /**
+         * Sub actions.
+         */
+        this.action = [];
         if (source['prefix']) {
-            this.prefix = source.prefix;
-        }
-        if (source['_prefix']) {
-            this._prefix = new fhir.FhirElement(source._prefix);
+            this.prefix = new fhir.FhirString({ value: source.prefix });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['textEquivalent']) {
-            this.textEquivalent = source.textEquivalent;
-        }
-        if (source['_textEquivalent']) {
-            this._textEquivalent = new fhir.FhirElement(source._textEquivalent);
+            this.textEquivalent = new fhir.FhirString({ value: source.textEquivalent });
         }
         if (source['priority']) {
             this.priority = source.priority;
-        }
-        if (source['_priority']) {
-            this._priority = new fhir.FhirElement(source._priority);
         }
         if (source['code']) {
             this.code = source.code.map((x) => new fhir.CodeableConcept(x));
@@ -176,26 +186,26 @@ export class RequestGroupAction extends fhir.BackboneElement {
         if (source['relatedAction']) {
             this.relatedAction = source.relatedAction.map((x) => new fhir.RequestGroupActionRelatedAction(x));
         }
-        if (source['timingDateTime']) {
-            this.timingDateTime = source.timingDateTime;
+        if (source['timing']) {
+            this.timing = source.timing;
         }
-        if (source['_timingDateTime']) {
-            this._timingDateTime = new fhir.FhirElement(source._timingDateTime);
+        else if (source['timingDateTime']) {
+            this.timing = new fhir.FhirDateTime({ value: source.timingDateTime });
         }
-        if (source['timingAge']) {
-            this.timingAge = new fhir.Age(source.timingAge);
+        else if (source['timingAge']) {
+            this.timing = new fhir.Age(source.timingAge);
         }
-        if (source['timingPeriod']) {
-            this.timingPeriod = new fhir.Period(source.timingPeriod);
+        else if (source['timingPeriod']) {
+            this.timing = new fhir.Period(source.timingPeriod);
         }
-        if (source['timingDuration']) {
-            this.timingDuration = new fhir.Duration(source.timingDuration);
+        else if (source['timingDuration']) {
+            this.timing = new fhir.Duration(source.timingDuration);
         }
-        if (source['timingRange']) {
-            this.timingRange = new fhir.Range(source.timingRange);
+        else if (source['timingRange']) {
+            this.timing = new fhir.Range(source.timingRange);
         }
-        if (source['timingTiming']) {
-            this.timingTiming = new fhir.Timing(source.timingTiming);
+        else if (source['timingTiming']) {
+            this.timing = new fhir.Timing(source.timingTiming);
         }
         if (source['participant']) {
             this.participant = source.participant.map((x) => new fhir.Reference(x));
@@ -206,32 +216,17 @@ export class RequestGroupAction extends fhir.BackboneElement {
         if (source['groupingBehavior']) {
             this.groupingBehavior = source.groupingBehavior;
         }
-        if (source['_groupingBehavior']) {
-            this._groupingBehavior = new fhir.FhirElement(source._groupingBehavior);
-        }
         if (source['selectionBehavior']) {
             this.selectionBehavior = source.selectionBehavior;
-        }
-        if (source['_selectionBehavior']) {
-            this._selectionBehavior = new fhir.FhirElement(source._selectionBehavior);
         }
         if (source['requiredBehavior']) {
             this.requiredBehavior = source.requiredBehavior;
         }
-        if (source['_requiredBehavior']) {
-            this._requiredBehavior = new fhir.FhirElement(source._requiredBehavior);
-        }
         if (source['precheckBehavior']) {
             this.precheckBehavior = source.precheckBehavior;
         }
-        if (source['_precheckBehavior']) {
-            this._precheckBehavior = new fhir.FhirElement(source._precheckBehavior);
-        }
         if (source['cardinalityBehavior']) {
             this.cardinalityBehavior = source.cardinalityBehavior;
-        }
-        if (source['_cardinalityBehavior']) {
-            this._cardinalityBehavior = new fhir.FhirElement(source._cardinalityBehavior);
         }
         if (source['resource']) {
             this.resource = new fhir.Reference(source.resource);
@@ -286,80 +281,50 @@ export class RequestGroupAction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_prefix"]) {
-            results.push(...this._prefix.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["prefix"]) {
+            outcome.issue.push(...this.prefix.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_textEquivalent"]) {
-            results.push(...this._textEquivalent.doModelValidation());
-        }
-        if (this["_priority"]) {
-            results.push(...this._priority.doModelValidation());
+        if (this["textEquivalent"]) {
+            outcome.issue.push(...this.textEquivalent.doModelValidation().issue);
         }
         if (this["code"]) {
-            this.code.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.code.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["documentation"]) {
-            this.documentation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.documentation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["condition"]) {
-            this.condition.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.condition.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relatedAction"]) {
-            this.relatedAction.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_timingDateTime"]) {
-            results.push(...this._timingDateTime.doModelValidation());
-        }
-        if (this["timingAge"]) {
-            results.push(...this.timingAge.doModelValidation());
-        }
-        if (this["timingPeriod"]) {
-            results.push(...this.timingPeriod.doModelValidation());
-        }
-        if (this["timingDuration"]) {
-            results.push(...this.timingDuration.doModelValidation());
-        }
-        if (this["timingRange"]) {
-            results.push(...this.timingRange.doModelValidation());
-        }
-        if (this["timingTiming"]) {
-            results.push(...this.timingTiming.doModelValidation());
+            this.relatedAction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["participant"]) {
-            this.participant.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.participant.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
-        }
-        if (this["_groupingBehavior"]) {
-            results.push(...this._groupingBehavior.doModelValidation());
-        }
-        if (this["_selectionBehavior"]) {
-            results.push(...this._selectionBehavior.doModelValidation());
-        }
-        if (this["_requiredBehavior"]) {
-            results.push(...this._requiredBehavior.doModelValidation());
-        }
-        if (this["_precheckBehavior"]) {
-            results.push(...this._precheckBehavior.doModelValidation());
-        }
-        if (this["_cardinalityBehavior"]) {
-            results.push(...this._cardinalityBehavior.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["resource"]) {
-            results.push(...this.resource.doModelValidation());
+            outcome.issue.push(...this.resource.doModelValidation().issue);
         }
         if (this["action"]) {
-            this.action.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.action.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -369,23 +334,54 @@ export class RequestGroup extends fhir.DomainResource {
     /**
      * Default constructor for RequestGroup - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'RequestGroup';
+        /**
+         * Allows a service to provide a unique, business identifier for the request.
+         */
+        this.identifier = [];
+        /**
+         * A canonical URL referencing a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this request.
+         */
+        this.instantiatesCanonical = [];
+        /**
+         * A URL referencing an externally defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this request.
+         */
+        this.instantiatesUri = [];
+        /**
+         * A plan, proposal or order that is fulfilled in whole or in part by this request.
+         */
+        this.basedOn = [];
+        /**
+         * The replacement could be because the initial request was immediately rejected (due to an issue) or because the previous request was completed, but the need for the action described by the request remains ongoing.
+         */
+        this.replaces = [];
+        /**
+         * Describes the reason for the request group in coded or textual form.
+         */
+        this.reasonCode = [];
+        /**
+         * Indicates another resource whose existence justifies this request group.
+         */
+        this.reasonReference = [];
+        /**
+         * Provides a mechanism to communicate additional information about the response.
+         */
+        this.note = [];
+        /**
+         * The actions, if any, produced by the evaluation of the artifact.
+         */
+        this.action = [];
         this.resourceType = 'RequestGroup';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['instantiatesCanonical']) {
-            this.instantiatesCanonical = source.instantiatesCanonical.map((x) => (x));
-        }
-        if (source['_instantiatesCanonical']) {
-            this._instantiatesCanonical = source._instantiatesCanonical.map((x) => new fhir.FhirElement(x));
+            this.instantiatesCanonical = source.instantiatesCanonical.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['instantiatesUri']) {
-            this.instantiatesUri = source.instantiatesUri.map((x) => (x));
-        }
-        if (source['_instantiatesUri']) {
-            this._instantiatesUri = source._instantiatesUri.map((x) => new fhir.FhirElement(x));
+            this.instantiatesUri = source.instantiatesUri.map((x) => new fhir.FhirUri({ value: x }));
         }
         if (source['basedOn']) {
             this.basedOn = source.basedOn.map((x) => new fhir.Reference(x));
@@ -402,23 +398,14 @@ export class RequestGroup extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['intent']) {
             this.intent = source.intent;
         }
         else {
             this.intent = null;
         }
-        if (source['_intent']) {
-            this._intent = new fhir.FhirElement(source._intent);
-        }
         if (source['priority']) {
             this.priority = source.priority;
-        }
-        if (source['_priority']) {
-            this._priority = new fhir.FhirElement(source._priority);
         }
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
@@ -430,10 +417,7 @@ export class RequestGroup extends fhir.DomainResource {
             this.encounter = new fhir.Reference(source.encounter);
         }
         if (source['authoredOn']) {
-            this.authoredOn = source.authoredOn;
-        }
-        if (source['_authoredOn']) {
-            this._authoredOn = new fhir.FhirElement(source._authoredOn);
+            this.authoredOn = new fhir.FhirDateTime({ value: source.authoredOn });
         }
         if (source['author']) {
             this.author = new fhir.Reference(source.author);
@@ -473,71 +457,68 @@ export class RequestGroup extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: RequestGroup.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'RequestGroup' fhir: RequestGroup.resourceType:'RequestGroup'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instantiatesCanonical"]) {
-            this._instantiatesCanonical.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["instantiatesCanonical"]) {
+            this.instantiatesCanonical.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_instantiatesUri"]) {
-            this._instantiatesUri.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["instantiatesUri"]) {
+            this.instantiatesUri.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["replaces"]) {
-            this.replaces.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.replaces.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["groupIdentifier"]) {
-            results.push(...this.groupIdentifier.doModelValidation());
+            outcome.issue.push(...this.groupIdentifier.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: RequestGroup.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:RequestStatusValueSetEnum fhir: RequestGroup.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
-        }
-        if (!this["intent"]) {
-            results.push(["intent", 'Missing required element: RequestGroup.intent']);
-        }
-        if (this["_intent"]) {
-            results.push(...this._intent.doModelValidation());
-        }
-        if (this["_priority"]) {
-            results.push(...this._priority.doModelValidation());
+        if (!this['intent']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property intent:RequestIntentValueSetEnum fhir: RequestGroup.intent:code", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_authoredOn"]) {
-            results.push(...this._authoredOn.doModelValidation());
+        if (this["authoredOn"]) {
+            outcome.issue.push(...this.authoredOn.doModelValidation().issue);
         }
         if (this["author"]) {
-            results.push(...this.author.doModelValidation());
+            outcome.issue.push(...this.author.doModelValidation().issue);
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["action"]) {
-            this.action.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.action.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=RequestGroup.js.map

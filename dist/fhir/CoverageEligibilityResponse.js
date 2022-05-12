@@ -3,19 +3,21 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: CoverageEligibilityResponse
 import * as fhir from '../fhir.js';
-import { BenefitTypeValueSet } from '../fhirValueSets/BenefitTypeValueSet.js';
-import { ExBenefitcategoryValueSet } from '../fhirValueSets/ExBenefitcategoryValueSet.js';
-import { ServiceUsclsValueSet } from '../fhirValueSets/ServiceUsclsValueSet.js';
-import { ClaimModifiersValueSet } from '../fhirValueSets/ClaimModifiersValueSet.js';
-import { BenefitNetworkValueSet } from '../fhirValueSets/BenefitNetworkValueSet.js';
-import { BenefitUnitValueSet } from '../fhirValueSets/BenefitUnitValueSet.js';
-import { BenefitTermValueSet } from '../fhirValueSets/BenefitTermValueSet.js';
-import { CoverageeligibilityresponseExAuthSupportValueSet } from '../fhirValueSets/CoverageeligibilityresponseExAuthSupportValueSet.js';
-import { AdjudicationErrorValueSet } from '../fhirValueSets/AdjudicationErrorValueSet.js';
-import { FmStatusValueSet } from '../fhirValueSets/FmStatusValueSet.js';
-import { EligibilityresponsePurposeValueSet } from '../fhirValueSets/EligibilityresponsePurposeValueSet.js';
-import { RemittanceOutcomeValueSet } from '../fhirValueSets/RemittanceOutcomeValueSet.js';
-import { FormsValueSet } from '../fhirValueSets/FormsValueSet.js';
+import { BenefitTypeValueSet, } from '../fhirValueSets/BenefitTypeValueSet.js';
+import { ExBenefitcategoryValueSet, } from '../fhirValueSets/ExBenefitcategoryValueSet.js';
+import { ServiceUsclsValueSet, } from '../fhirValueSets/ServiceUsclsValueSet.js';
+import { ClaimModifiersValueSet, } from '../fhirValueSets/ClaimModifiersValueSet.js';
+import { BenefitNetworkValueSet, } from '../fhirValueSets/BenefitNetworkValueSet.js';
+import { BenefitUnitValueSet, } from '../fhirValueSets/BenefitUnitValueSet.js';
+import { BenefitTermValueSet, } from '../fhirValueSets/BenefitTermValueSet.js';
+import { CoverageeligibilityresponseExAuthSupportValueSet, } from '../fhirValueSets/CoverageeligibilityresponseExAuthSupportValueSet.js';
+import { AdjudicationErrorValueSet, } from '../fhirValueSets/AdjudicationErrorValueSet.js';
+import { FmStatusValueSet, } from '../fhirValueSets/FmStatusValueSet.js';
+import { EligibilityresponsePurposeValueSet, } from '../fhirValueSets/EligibilityresponsePurposeValueSet.js';
+import { RemittanceOutcomeValueSet, } from '../fhirValueSets/RemittanceOutcomeValueSet.js';
+import { FormsValueSet, } from '../fhirValueSets/FormsValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Benefits used to date.
  */
@@ -23,43 +25,40 @@ export class CoverageEligibilityResponseInsuranceItemBenefit extends fhir.Backbo
     /**
      * Default constructor for CoverageEligibilityResponseInsuranceItemBenefit - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CoverageEligibilityResponseInsuranceItemBenefit';
+        this.__allowedIsChoice = true;
+        this.__usedIsChoice = true;
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
         else {
             this.type = null;
         }
-        if (source['allowedUnsignedInt']) {
-            this.allowedUnsignedInt = source.allowedUnsignedInt;
+        if (source['allowed']) {
+            this.allowed = source.allowed;
         }
-        if (source['_allowedUnsignedInt']) {
-            this._allowedUnsignedInt = new fhir.FhirElement(source._allowedUnsignedInt);
+        else if (source['allowedUnsignedInt']) {
+            this.allowed = new fhir.FhirUnsignedInt({ value: source.allowedUnsignedInt });
         }
-        if (source['allowedString']) {
-            this.allowedString = source.allowedString;
+        else if (source['allowedString']) {
+            this.allowed = new fhir.FhirString({ value: source.allowedString });
         }
-        if (source['_allowedString']) {
-            this._allowedString = new fhir.FhirElement(source._allowedString);
+        else if (source['allowedMoney']) {
+            this.allowed = new fhir.Money(source.allowedMoney);
         }
-        if (source['allowedMoney']) {
-            this.allowedMoney = new fhir.Money(source.allowedMoney);
+        if (source['used']) {
+            this.used = source.used;
         }
-        if (source['usedUnsignedInt']) {
-            this.usedUnsignedInt = source.usedUnsignedInt;
+        else if (source['usedUnsignedInt']) {
+            this.used = new fhir.FhirUnsignedInt({ value: source.usedUnsignedInt });
         }
-        if (source['_usedUnsignedInt']) {
-            this._usedUnsignedInt = new fhir.FhirElement(source._usedUnsignedInt);
+        else if (source['usedString']) {
+            this.used = new fhir.FhirString({ value: source.usedString });
         }
-        if (source['usedString']) {
-            this.usedString = source.usedString;
-        }
-        if (source['_usedString']) {
-            this._usedString = new fhir.FhirElement(source._usedString);
-        }
-        if (source['usedMoney']) {
-            this.usedMoney = new fhir.Money(source.usedMoney);
+        else if (source['usedMoney']) {
+            this.used = new fhir.Money(source.usedMoney);
         }
     }
     /**
@@ -72,32 +71,20 @@ export class CoverageEligibilityResponseInsuranceItemBenefit extends fhir.Backbo
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: CoverageEligibilityResponse.insurance.item.benefit.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.CodeableConcept fhir: CoverageEligibilityResponse.insurance.item.benefit.type:CodeableConcept", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_allowedUnsignedInt"]) {
-            results.push(...this._allowedUnsignedInt.doModelValidation());
-        }
-        if (this["_allowedString"]) {
-            results.push(...this._allowedString.doModelValidation());
-        }
-        if (this["allowedMoney"]) {
-            results.push(...this.allowedMoney.doModelValidation());
-        }
-        if (this["_usedUnsignedInt"]) {
-            results.push(...this._usedUnsignedInt.doModelValidation());
-        }
-        if (this["_usedString"]) {
-            results.push(...this._usedString.doModelValidation());
-        }
-        if (this["usedMoney"]) {
-            results.push(...this.usedMoney.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -107,8 +94,21 @@ export class CoverageEligibilityResponseInsuranceItem extends fhir.BackboneEleme
     /**
      * Default constructor for CoverageEligibilityResponseInsuranceItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CoverageEligibilityResponseInsuranceItem';
+        /**
+         * For example in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
+         */
+        this.modifier = [];
+        /**
+         * Benefits used to date.
+         */
+        this.benefit = [];
+        /**
+         * Codes or comments regarding information or actions associated with the preauthorization.
+         */
+        this.authorizationSupporting = [];
         if (source['category']) {
             this.category = new fhir.CodeableConcept(source.category);
         }
@@ -122,22 +122,13 @@ export class CoverageEligibilityResponseInsuranceItem extends fhir.BackboneEleme
             this.provider = new fhir.Reference(source.provider);
         }
         if (source['excluded']) {
-            this.excluded = source.excluded;
-        }
-        if (source['_excluded']) {
-            this._excluded = new fhir.FhirElement(source._excluded);
+            this.excluded = new fhir.FhirBoolean({ value: source.excluded });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['network']) {
             this.network = new fhir.CodeableConcept(source.network);
@@ -152,19 +143,13 @@ export class CoverageEligibilityResponseInsuranceItem extends fhir.BackboneEleme
             this.benefit = source.benefit.map((x) => new fhir.CoverageEligibilityResponseInsuranceItemBenefit(x));
         }
         if (source['authorizationRequired']) {
-            this.authorizationRequired = source.authorizationRequired;
-        }
-        if (source['_authorizationRequired']) {
-            this._authorizationRequired = new fhir.FhirElement(source._authorizationRequired);
+            this.authorizationRequired = new fhir.FhirBoolean({ value: source.authorizationRequired });
         }
         if (source['authorizationSupporting']) {
             this.authorizationSupporting = source.authorizationSupporting.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['authorizationUrl']) {
-            this.authorizationUrl = source.authorizationUrl;
-        }
-        if (source['_authorizationUrl']) {
-            this._authorizationUrl = new fhir.FhirElement(source._authorizationUrl);
+            this.authorizationUrl = new fhir.FhirUri({ value: source.authorizationUrl });
         }
     }
     /**
@@ -213,50 +198,56 @@ export class CoverageEligibilityResponseInsuranceItem extends fhir.BackboneEleme
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["category"]) {
-            results.push(...this.category.doModelValidation());
+            outcome.issue.push(...this.category.doModelValidation().issue);
         }
         if (this["productOrService"]) {
-            results.push(...this.productOrService.doModelValidation());
+            outcome.issue.push(...this.productOrService.doModelValidation().issue);
         }
         if (this["modifier"]) {
-            this.modifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.modifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["provider"]) {
-            results.push(...this.provider.doModelValidation());
+            outcome.issue.push(...this.provider.doModelValidation().issue);
         }
-        if (this["_excluded"]) {
-            results.push(...this._excluded.doModelValidation());
+        if (this["excluded"]) {
+            outcome.issue.push(...this.excluded.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["network"]) {
-            results.push(...this.network.doModelValidation());
+            outcome.issue.push(...this.network.doModelValidation().issue);
         }
         if (this["unit"]) {
-            results.push(...this.unit.doModelValidation());
+            outcome.issue.push(...this.unit.doModelValidation().issue);
         }
         if (this["term"]) {
-            results.push(...this.term.doModelValidation());
+            outcome.issue.push(...this.term.doModelValidation().issue);
         }
         if (this["benefit"]) {
-            this.benefit.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.benefit.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_authorizationRequired"]) {
-            results.push(...this._authorizationRequired.doModelValidation());
+        if (this["authorizationRequired"]) {
+            outcome.issue.push(...this.authorizationRequired.doModelValidation().issue);
         }
         if (this["authorizationSupporting"]) {
-            this.authorizationSupporting.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.authorizationSupporting.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_authorizationUrl"]) {
-            results.push(...this._authorizationUrl.doModelValidation());
+        if (this["authorizationUrl"]) {
+            outcome.issue.push(...this.authorizationUrl.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -266,8 +257,13 @@ export class CoverageEligibilityResponseInsurance extends fhir.BackboneElement {
     /**
      * Default constructor for CoverageEligibilityResponseInsurance - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CoverageEligibilityResponseInsurance';
+        /**
+         * Benefits and optionally current balances, and authorization details by category or service.
+         */
+        this.item = [];
         if (source['coverage']) {
             this.coverage = new fhir.Reference(source.coverage);
         }
@@ -275,10 +271,7 @@ export class CoverageEligibilityResponseInsurance extends fhir.BackboneElement {
             this.coverage = null;
         }
         if (source['inforce']) {
-            this.inforce = source.inforce;
-        }
-        if (source['_inforce']) {
-            this._inforce = new fhir.FhirElement(source._inforce);
+            this.inforce = new fhir.FhirBoolean({ value: source.inforce });
         }
         if (source['benefitPeriod']) {
             this.benefitPeriod = new fhir.Period(source.benefitPeriod);
@@ -291,23 +284,29 @@ export class CoverageEligibilityResponseInsurance extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["coverage"]) {
-            results.push(["coverage", 'Missing required element: CoverageEligibilityResponse.insurance.coverage']);
+        var outcome = super.doModelValidation();
+        if (!this['coverage']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property coverage:fhir.Reference fhir: CoverageEligibilityResponse.insurance.coverage:Reference", }));
         }
         if (this["coverage"]) {
-            results.push(...this.coverage.doModelValidation());
+            outcome.issue.push(...this.coverage.doModelValidation().issue);
         }
-        if (this["_inforce"]) {
-            results.push(...this._inforce.doModelValidation());
+        if (this["inforce"]) {
+            outcome.issue.push(...this.inforce.doModelValidation().issue);
         }
         if (this["benefitPeriod"]) {
-            results.push(...this.benefitPeriod.doModelValidation());
+            outcome.issue.push(...this.benefitPeriod.doModelValidation().issue);
         }
         if (this["item"]) {
-            this.item.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.item.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -317,8 +316,9 @@ export class CoverageEligibilityResponseError extends fhir.BackboneElement {
     /**
      * Default constructor for CoverageEligibilityResponseError - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CoverageEligibilityResponseError';
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
@@ -336,14 +336,20 @@ export class CoverageEligibilityResponseError extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: CoverageEligibilityResponse.error.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.CodeableConcept fhir: CoverageEligibilityResponse.error.code:CodeableConcept", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -353,8 +359,26 @@ export class CoverageEligibilityResponse extends fhir.DomainResource {
     /**
      * Default constructor for CoverageEligibilityResponse - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'CoverageEligibilityResponse';
+        /**
+         * A unique identifier assigned to this coverage eligiblity request.
+         */
+        this.identifier = [];
+        /**
+         * Code to specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for the patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.
+         */
+        this.purpose = [];
+        this.__servicedIsChoice = true;
+        /**
+         * All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.
+         */
+        this.insurance = [];
+        /**
+         * Errors encountered during the processing of the request.
+         */
+        this.error = [];
         this.resourceType = 'CoverageEligibilityResponse';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -365,17 +389,11 @@ export class CoverageEligibilityResponse extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['purpose']) {
-            this.purpose = source.purpose.map((x) => (x));
+            this.purpose = source.purpose.map((x) => x);
         }
         else {
             this.purpose = null;
-        }
-        if (source['_purpose']) {
-            this._purpose = source._purpose.map((x) => new fhir.FhirElement(x));
         }
         if (source['patient']) {
             this.patient = new fhir.Reference(source.patient);
@@ -383,23 +401,20 @@ export class CoverageEligibilityResponse extends fhir.DomainResource {
         else {
             this.patient = null;
         }
-        if (source['servicedDate']) {
-            this.servicedDate = source.servicedDate;
+        if (source['serviced']) {
+            this.serviced = source.serviced;
         }
-        if (source['_servicedDate']) {
-            this._servicedDate = new fhir.FhirElement(source._servicedDate);
+        else if (source['servicedDate']) {
+            this.serviced = new fhir.FhirDate({ value: source.servicedDate });
         }
-        if (source['servicedPeriod']) {
-            this.servicedPeriod = new fhir.Period(source.servicedPeriod);
+        else if (source['servicedPeriod']) {
+            this.serviced = new fhir.Period(source.servicedPeriod);
         }
         if (source['created']) {
-            this.created = source.created;
+            this.created = new fhir.FhirDateTime({ value: source.created });
         }
         else {
             this.created = null;
-        }
-        if (source['_created']) {
-            this._created = new fhir.FhirElement(source._created);
         }
         if (source['requestor']) {
             this.requestor = new fhir.Reference(source.requestor);
@@ -416,14 +431,8 @@ export class CoverageEligibilityResponse extends fhir.DomainResource {
         else {
             this.outcome = null;
         }
-        if (source['_outcome']) {
-            this._outcome = new fhir.FhirElement(source._outcome);
-        }
         if (source['disposition']) {
-            this.disposition = source.disposition;
-        }
-        if (source['_disposition']) {
-            this._disposition = new fhir.FhirElement(source._disposition);
+            this.disposition = new fhir.FhirString({ value: source.disposition });
         }
         if (source['insurer']) {
             this.insurer = new fhir.Reference(source.insurer);
@@ -435,10 +444,7 @@ export class CoverageEligibilityResponse extends fhir.DomainResource {
             this.insurance = source.insurance.map((x) => new fhir.CoverageEligibilityResponseInsurance(x));
         }
         if (source['preAuthRef']) {
-            this.preAuthRef = source.preAuthRef;
-        }
-        if (source['_preAuthRef']) {
-            this._preAuthRef = new fhir.FhirElement(source._preAuthRef);
+            this.preAuthRef = new fhir.FhirString({ value: source.preAuthRef });
         }
         if (source['form']) {
             this.form = new fhir.CodeableConcept(source.form);
@@ -475,80 +481,77 @@ export class CoverageEligibilityResponse extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: CoverageEligibilityResponse.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'CoverageEligibilityResponse' fhir: CoverageEligibilityResponse.resourceType:'CoverageEligibilityResponse'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: CoverageEligibilityResponse.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:FmStatusValueSetEnum fhir: CoverageEligibilityResponse.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['purpose']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property purpose:EligibilityresponsePurposeValueSetEnum[] fhir: CoverageEligibilityResponse.purpose:code", }));
         }
-        if ((!this["purpose"]) || (this["purpose"].length === 0)) {
-            results.push(["purpose", 'Missing required element: CoverageEligibilityResponse.purpose']);
+        else if (!Array.isArray(this.purpose)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property purpose:EligibilityresponsePurposeValueSetEnum[] fhir: CoverageEligibilityResponse.purpose:code", }));
         }
-        if (this["_purpose"]) {
-            this._purpose.forEach((x) => { results.push(...x.doModelValidation()); });
+        else if (this.purpose.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property purpose:EligibilityresponsePurposeValueSetEnum[] fhir: CoverageEligibilityResponse.purpose:code", }));
         }
-        if (!this["patient"]) {
-            results.push(["patient", 'Missing required element: CoverageEligibilityResponse.patient']);
+        if (!this['patient']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property patient:fhir.Reference fhir: CoverageEligibilityResponse.patient:Reference", }));
         }
         if (this["patient"]) {
-            results.push(...this.patient.doModelValidation());
+            outcome.issue.push(...this.patient.doModelValidation().issue);
         }
-        if (this["_servicedDate"]) {
-            results.push(...this._servicedDate.doModelValidation());
+        if (!this['created']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property created:fhir.FhirDateTime fhir: CoverageEligibilityResponse.created:dateTime", }));
         }
-        if (this["servicedPeriod"]) {
-            results.push(...this.servicedPeriod.doModelValidation());
-        }
-        if (!this["created"]) {
-            results.push(["created", 'Missing required element: CoverageEligibilityResponse.created']);
-        }
-        if (this["_created"]) {
-            results.push(...this._created.doModelValidation());
+        if (this["created"]) {
+            outcome.issue.push(...this.created.doModelValidation().issue);
         }
         if (this["requestor"]) {
-            results.push(...this.requestor.doModelValidation());
+            outcome.issue.push(...this.requestor.doModelValidation().issue);
         }
-        if (!this["request"]) {
-            results.push(["request", 'Missing required element: CoverageEligibilityResponse.request']);
+        if (!this['request']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property request:fhir.Reference fhir: CoverageEligibilityResponse.request:Reference", }));
         }
         if (this["request"]) {
-            results.push(...this.request.doModelValidation());
+            outcome.issue.push(...this.request.doModelValidation().issue);
         }
-        if (!this["outcome"]) {
-            results.push(["outcome", 'Missing required element: CoverageEligibilityResponse.outcome']);
+        if (!this['outcome']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property outcome:RemittanceOutcomeValueSetEnum fhir: CoverageEligibilityResponse.outcome:code", }));
         }
-        if (this["_outcome"]) {
-            results.push(...this._outcome.doModelValidation());
+        if (this["disposition"]) {
+            outcome.issue.push(...this.disposition.doModelValidation().issue);
         }
-        if (this["_disposition"]) {
-            results.push(...this._disposition.doModelValidation());
-        }
-        if (!this["insurer"]) {
-            results.push(["insurer", 'Missing required element: CoverageEligibilityResponse.insurer']);
+        if (!this['insurer']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property insurer:fhir.Reference fhir: CoverageEligibilityResponse.insurer:Reference", }));
         }
         if (this["insurer"]) {
-            results.push(...this.insurer.doModelValidation());
+            outcome.issue.push(...this.insurer.doModelValidation().issue);
         }
         if (this["insurance"]) {
-            this.insurance.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.insurance.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_preAuthRef"]) {
-            results.push(...this._preAuthRef.doModelValidation());
+        if (this["preAuthRef"]) {
+            outcome.issue.push(...this.preAuthRef.doModelValidation().issue);
         }
         if (this["form"]) {
-            results.push(...this.form.doModelValidation());
+            outcome.issue.push(...this.form.doModelValidation().issue);
         }
         if (this["error"]) {
-            this.error.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.error.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=CoverageEligibilityResponse.js.map

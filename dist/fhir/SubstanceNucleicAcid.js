@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SubstanceNucleicAcid
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The linkages between sugar residues will also be captured.
  */
@@ -10,48 +12,46 @@ export class SubstanceNucleicAcidSubunitLinkage extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceNucleicAcidSubunitLinkage - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceNucleicAcidSubunitLinkage';
         if (source['connectivity']) {
-            this.connectivity = source.connectivity;
-        }
-        if (source['_connectivity']) {
-            this._connectivity = new fhir.FhirElement(source._connectivity);
+            this.connectivity = new fhir.FhirString({ value: source.connectivity });
         }
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['residueSite']) {
-            this.residueSite = source.residueSite;
-        }
-        if (source['_residueSite']) {
-            this._residueSite = new fhir.FhirElement(source._residueSite);
+            this.residueSite = new fhir.FhirString({ value: source.residueSite });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_connectivity"]) {
-            results.push(...this._connectivity.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["connectivity"]) {
+            outcome.issue.push(...this.connectivity.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_residueSite"]) {
-            results.push(...this._residueSite.doModelValidation());
+        if (this["residueSite"]) {
+            outcome.issue.push(...this.residueSite.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -61,39 +61,40 @@ export class SubstanceNucleicAcidSubunitSugar extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceNucleicAcidSubunitSugar - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceNucleicAcidSubunitSugar';
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['residueSite']) {
-            this.residueSite = source.residueSite;
-        }
-        if (source['_residueSite']) {
-            this._residueSite = new fhir.FhirElement(source._residueSite);
+            this.residueSite = new fhir.FhirString({ value: source.residueSite });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_residueSite"]) {
-            results.push(...this._residueSite.doModelValidation());
+        if (this["residueSite"]) {
+            outcome.issue.push(...this.residueSite.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -103,25 +104,25 @@ export class SubstanceNucleicAcidSubunit extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceNucleicAcidSubunit - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceNucleicAcidSubunit';
+        /**
+         * The linkages between sugar residues will also be captured.
+         */
+        this.linkage = [];
+        /**
+         * 5.3.6.8.1 Sugar ID (Mandatory).
+         */
+        this.sugar = [];
         if (source['subunit']) {
-            this.subunit = source.subunit;
-        }
-        if (source['_subunit']) {
-            this._subunit = new fhir.FhirElement(source._subunit);
+            this.subunit = new fhir.FhirInteger({ value: source.subunit });
         }
         if (source['sequence']) {
-            this.sequence = source.sequence;
-        }
-        if (source['_sequence']) {
-            this._sequence = new fhir.FhirElement(source._sequence);
+            this.sequence = new fhir.FhirString({ value: source.sequence });
         }
         if (source['length']) {
-            this.length = source.length;
-        }
-        if (source['_length']) {
-            this._length = new fhir.FhirElement(source._length);
+            this.length = new fhir.FhirInteger({ value: source.length });
         }
         if (source['sequenceAttachment']) {
             this.sequenceAttachment = new fhir.Attachment(source.sequenceAttachment);
@@ -143,32 +144,38 @@ export class SubstanceNucleicAcidSubunit extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_subunit"]) {
-            results.push(...this._subunit.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["subunit"]) {
+            outcome.issue.push(...this.subunit.doModelValidation().issue);
         }
-        if (this["_sequence"]) {
-            results.push(...this._sequence.doModelValidation());
+        if (this["sequence"]) {
+            outcome.issue.push(...this.sequence.doModelValidation().issue);
         }
-        if (this["_length"]) {
-            results.push(...this._length.doModelValidation());
+        if (this["length"]) {
+            outcome.issue.push(...this.length.doModelValidation().issue);
         }
         if (this["sequenceAttachment"]) {
-            results.push(...this.sequenceAttachment.doModelValidation());
+            outcome.issue.push(...this.sequenceAttachment.doModelValidation().issue);
         }
         if (this["fivePrime"]) {
-            results.push(...this.fivePrime.doModelValidation());
+            outcome.issue.push(...this.fivePrime.doModelValidation().issue);
         }
         if (this["threePrime"]) {
-            results.push(...this.threePrime.doModelValidation());
+            outcome.issue.push(...this.threePrime.doModelValidation().issue);
         }
         if (this["linkage"]) {
-            this.linkage.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.linkage.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["sugar"]) {
-            this.sugar.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.sugar.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -178,23 +185,22 @@ export class SubstanceNucleicAcid extends fhir.DomainResource {
     /**
      * Default constructor for SubstanceNucleicAcid - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceNucleicAcid';
+        /**
+         * Subunits are listed in order of decreasing length; sequences of the same length will be ordered by molecular weight; subunits that have identical sequences will be repeated multiple times.
+         */
+        this.subunit = [];
         this.resourceType = 'SubstanceNucleicAcid';
         if (source['sequenceType']) {
             this.sequenceType = new fhir.CodeableConcept(source.sequenceType);
         }
         if (source['numberOfSubunits']) {
-            this.numberOfSubunits = source.numberOfSubunits;
-        }
-        if (source['_numberOfSubunits']) {
-            this._numberOfSubunits = new fhir.FhirElement(source._numberOfSubunits);
+            this.numberOfSubunits = new fhir.FhirInteger({ value: source.numberOfSubunits });
         }
         if (source['areaOfHybridisation']) {
-            this.areaOfHybridisation = source.areaOfHybridisation;
-        }
-        if (source['_areaOfHybridisation']) {
-            this._areaOfHybridisation = new fhir.FhirElement(source._areaOfHybridisation);
+            this.areaOfHybridisation = new fhir.FhirString({ value: source.areaOfHybridisation });
         }
         if (source['oligoNucleotideType']) {
             this.oligoNucleotideType = new fhir.CodeableConcept(source.oligoNucleotideType);
@@ -207,26 +213,32 @@ export class SubstanceNucleicAcid extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: SubstanceNucleicAcid.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'SubstanceNucleicAcid' fhir: SubstanceNucleicAcid.resourceType:'SubstanceNucleicAcid'", }));
         }
         if (this["sequenceType"]) {
-            results.push(...this.sequenceType.doModelValidation());
+            outcome.issue.push(...this.sequenceType.doModelValidation().issue);
         }
-        if (this["_numberOfSubunits"]) {
-            results.push(...this._numberOfSubunits.doModelValidation());
+        if (this["numberOfSubunits"]) {
+            outcome.issue.push(...this.numberOfSubunits.doModelValidation().issue);
         }
-        if (this["_areaOfHybridisation"]) {
-            results.push(...this._areaOfHybridisation.doModelValidation());
+        if (this["areaOfHybridisation"]) {
+            outcome.issue.push(...this.areaOfHybridisation.doModelValidation().issue);
         }
         if (this["oligoNucleotideType"]) {
-            results.push(...this.oligoNucleotideType.doModelValidation());
+            outcome.issue.push(...this.oligoNucleotideType.doModelValidation().issue);
         }
         if (this["subunit"]) {
-            this.subunit.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.subunit.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=SubstanceNucleicAcid.js.map

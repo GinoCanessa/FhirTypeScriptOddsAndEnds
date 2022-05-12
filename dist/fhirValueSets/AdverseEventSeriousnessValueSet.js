@@ -75,39 +75,4 @@ export const AdverseEventSeriousnessValueSet = {
 /**
  * Overall seriousness of this event for the patient.
  */
-export var AdverseEventSeriousnessValueSetEnum;
-(function (AdverseEventSeriousnessValueSetEnum) {
-    /**
-     * Non-serious: Non-serious.
-     */
-    AdverseEventSeriousnessValueSetEnum["NonSerious"] = "Non-serious";
-    /**
-     * Serious: Serious.
-     */
-    AdverseEventSeriousnessValueSetEnum["Serious"] = "Serious";
-    /**
-     * SeriousIsBirthDefect: Is a congenital anomaly/birth defect.
-     */
-    AdverseEventSeriousnessValueSetEnum["IsACongenitalAnomalyBirthDefect"] = "SeriousIsBirthDefect";
-    /**
-     * SeriousIsLifeThreatening: Is Life-threatening.
-     */
-    AdverseEventSeriousnessValueSetEnum["IsLifeThreatening"] = "SeriousIsLifeThreatening";
-    /**
-     * SeriousRequiresPreventImpairment: Requires intervention to prevent permanent impairment or damage (i.e., an important medical event that requires medical judgement).
-     */
-    AdverseEventSeriousnessValueSetEnum["RequiresInterventionToPreventPermanentImpairment"] = "SeriousRequiresPreventImpairment";
-    /**
-     * SeriousResultsInDeath: Results in death.
-     */
-    AdverseEventSeriousnessValueSetEnum["ResultsInDeath"] = "SeriousResultsInDeath";
-    /**
-     * SeriousResultsInDisability: Results in persistent or significant disability/incapacity.
-     */
-    AdverseEventSeriousnessValueSetEnum["ResultsInPersistentOrSignificantDisabilityIncapacity"] = "SeriousResultsInDisability";
-    /**
-     * SeriousResultsInHospitalization: Requires inpatient hospitalization or causes prolongation of existing hospitalization.
-     */
-    AdverseEventSeriousnessValueSetEnum["RequiresOrProlongsInpatientHospitalization"] = "SeriousResultsInHospitalization";
-})(AdverseEventSeriousnessValueSetEnum || (AdverseEventSeriousnessValueSetEnum = {}));
 //# sourceMappingURL=AdverseEventSeriousnessValueSet.js.map

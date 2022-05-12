@@ -35,13 +35,3 @@ export type OrientationTypeValueSetType = typeof OrientationTypeValueSet;
 /**
  * Type for orientation.
  */
-export enum OrientationTypeValueSetEnum {
-  /**
-   * antisense: Antisense orientation of reference sequence.
-   */
-  AntisenseOrientationOfReferenceSeq = "antisense",
-  /**
-   * sense: Sense orientation of reference sequence.
-   */
-  SenseOrientationOfReferenceSeq = "sense",
-}

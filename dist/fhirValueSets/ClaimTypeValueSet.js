@@ -51,27 +51,4 @@ export const ClaimTypeValueSet = {
 /**
  * This value set includes Claim Type codes.
  */
-export var ClaimTypeValueSetEnum;
-(function (ClaimTypeValueSetEnum) {
-    /**
-     * institutional: Hospital, clinic and typically inpatient claims.
-     */
-    ClaimTypeValueSetEnum["Institutional"] = "institutional";
-    /**
-     * oral: Dental, Denture and Hygiene claims.
-     */
-    ClaimTypeValueSetEnum["Oral"] = "oral";
-    /**
-     * pharmacy: Pharmacy claims for goods and services.
-     */
-    ClaimTypeValueSetEnum["Pharmacy"] = "pharmacy";
-    /**
-     * professional: Typically, outpatient claims from Physician, Psychological, Chiropractor, Physiotherapy, Speech Pathology, rehabilitative, consulting.
-     */
-    ClaimTypeValueSetEnum["Professional"] = "professional";
-    /**
-     * vision: Vision claims for professional services and products such as glasses and contact lenses.
-     */
-    ClaimTypeValueSetEnum["Vision"] = "vision";
-})(ClaimTypeValueSetEnum || (ClaimTypeValueSetEnum = {}));
 //# sourceMappingURL=ClaimTypeValueSet.js.map

@@ -91,47 +91,4 @@ export const SpecimenCollectionMethodValueSet = {
 /**
  *  This example value set defines a set of codes that can be used to indicate the method by which a specimen was collected.
  */
-export var SpecimenCollectionMethodValueSetEnum;
-(function (SpecimenCollectionMethodValueSetEnum) {
-    /**
-     * Code: 129300006
-     */
-    SpecimenCollectionMethodValueSetEnum["PunctureAction"] = "129300006";
-    /**
-     * Code: 129304002
-     */
-    SpecimenCollectionMethodValueSetEnum["ExcisionAction"] = "129304002";
-    /**
-     * Code: 129314006
-     */
-    SpecimenCollectionMethodValueSetEnum["BiopsyAction"] = "129314006";
-    /**
-     * Code: 129316008
-     */
-    SpecimenCollectionMethodValueSetEnum["AspirationAction"] = "129316008";
-    /**
-     * Code: 129323009
-     */
-    SpecimenCollectionMethodValueSetEnum["ScrapingAction"] = "129323009";
-    /**
-     * Code: 225113003
-     */
-    SpecimenCollectionMethodValueSetEnum["TimedUrineCollection"] = "225113003";
-    /**
-     * Code: 278450005
-     */
-    SpecimenCollectionMethodValueSetEnum["FingerPrickSampling"] = "278450005";
-    /**
-     * Code: 386089008
-     */
-    SpecimenCollectionMethodValueSetEnum["CollectionOfCoughedSputum"] = "386089008";
-    /**
-     * Code: 70777001
-     */
-    SpecimenCollectionMethodValueSetEnum["UrineSpecimenCollectionCatheterized"] = "70777001";
-    /**
-     * Code: 73416001
-     */
-    SpecimenCollectionMethodValueSetEnum["UrineSpecimenCollectionCleanCatch"] = "73416001";
-})(SpecimenCollectionMethodValueSetEnum || (SpecimenCollectionMethodValueSetEnum = {}));
 //# sourceMappingURL=SpecimenCollectionMethodValueSet.js.map

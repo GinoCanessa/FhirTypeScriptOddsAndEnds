@@ -27,15 +27,4 @@ export const StrandTypeValueSet = {
 /**
  * Type for strand.
  */
-export var StrandTypeValueSetEnum;
-(function (StrandTypeValueSetEnum) {
-    /**
-     * crick: Crick strand of reference sequence.
-     */
-    StrandTypeValueSetEnum["CrickStrandOfReferenceSeq"] = "crick";
-    /**
-     * watson: Watson strand of reference sequence.
-     */
-    StrandTypeValueSetEnum["WatsonStrandOfReferenceSeq"] = "watson";
-})(StrandTypeValueSetEnum || (StrandTypeValueSetEnum = {}));
 //# sourceMappingURL=StrandTypeValueSet.js.map

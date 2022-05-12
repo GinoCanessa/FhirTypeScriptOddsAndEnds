@@ -35,19 +35,4 @@ export const MessageSignificanceCategoryValueSet = {
 /**
  * The impact of the content of a message.
  */
-export var MessageSignificanceCategoryValueSetEnum;
-(function (MessageSignificanceCategoryValueSetEnum) {
-    /**
-     * consequence: The message represents/requests a change that should not be processed more than once; e.g., making a booking for an appointment.
-     */
-    MessageSignificanceCategoryValueSetEnum["Consequence"] = "consequence";
-    /**
-     * currency: The message represents a response to query for current information. Retrospective processing is wrong and/or wasteful.
-     */
-    MessageSignificanceCategoryValueSetEnum["Currency"] = "currency";
-    /**
-     * notification: The content is not necessarily intended to be current, and it can be reprocessed, though there may be version issues created by processing old notifications.
-     */
-    MessageSignificanceCategoryValueSetEnum["Notification"] = "notification";
-})(MessageSignificanceCategoryValueSetEnum || (MessageSignificanceCategoryValueSetEnum = {}));
 //# sourceMappingURL=MessageSignificanceCategoryValueSet.js.map

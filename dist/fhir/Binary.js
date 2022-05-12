@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Binary
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A resource that represents the data of a single raw artifact as digital content accessible in its native format.  A Binary resource can contain any content, whether text, image, pdf, zip archive, etc.
  */
@@ -10,49 +12,50 @@ export class Binary extends fhir.Resource {
     /**
      * Default constructor for Binary - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Binary';
         this.resourceType = 'Binary';
         if (source['contentType']) {
-            this.contentType = source.contentType;
+            this.contentType = new fhir.FhirCode({ value: source.contentType });
         }
         else {
             this.contentType = null;
-        }
-        if (source['_contentType']) {
-            this._contentType = new fhir.FhirElement(source._contentType);
         }
         if (source['securityContext']) {
             this.securityContext = new fhir.Reference(source.securityContext);
         }
         if (source['data']) {
-            this.data = source.data;
-        }
-        if (source['_data']) {
-            this._data = new fhir.FhirElement(source._data);
+            this.data = new fhir.FhirBase64Binary({ value: source.data });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Binary.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Binary' fhir: Binary.resourceType:'Binary'", }));
         }
-        if (!this["contentType"]) {
-            results.push(["contentType", 'Missing required element: Binary.contentType']);
+        if (!this['contentType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property contentType:fhir.FhirCode fhir: Binary.contentType:code", }));
         }
-        if (this["_contentType"]) {
-            results.push(...this._contentType.doModelValidation());
+        if (this["contentType"]) {
+            outcome.issue.push(...this.contentType.doModelValidation().issue);
         }
         if (this["securityContext"]) {
-            results.push(...this.securityContext.doModelValidation());
+            outcome.issue.push(...this.securityContext.doModelValidation().issue);
         }
-        if (this["_data"]) {
-            results.push(...this._data.doModelValidation());
+        if (this["data"]) {
+            outcome.issue.push(...this.data.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Binary.js.map

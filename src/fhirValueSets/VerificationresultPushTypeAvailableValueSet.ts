@@ -43,17 +43,3 @@ export type VerificationresultPushTypeAvailableValueSetType = typeof Verificatio
 /**
  * Type of alerts/updates the primary source can send
  */
-export enum VerificationresultPushTypeAvailableValueSetEnum {
-  /**
-   * Code: any
-   */
-  AnyChanges = "any",
-  /**
-   * Code: source
-   */
-  AsDefinedBySource = "source",
-  /**
-   * Code: specific
-   */
-  SpecificRequestedChanges = "specific",
-}

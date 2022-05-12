@@ -3,840 +3,55 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: TestScript
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { TestscriptProfileOriginTypesValueSet, TestscriptProfileOriginTypesValueSetType, TestscriptProfileOriginTypesValueSetEnum } from '../fhirValueSets/TestscriptProfileOriginTypesValueSet.js'
-import { TestscriptProfileDestinationTypesValueSet, TestscriptProfileDestinationTypesValueSetType, TestscriptProfileDestinationTypesValueSetEnum } from '../fhirValueSets/TestscriptProfileDestinationTypesValueSet.js'
-import { TestscriptOperationCodesValueSet, TestscriptOperationCodesValueSetType, TestscriptOperationCodesValueSetEnum } from '../fhirValueSets/TestscriptOperationCodesValueSet.js'
-import { DefinedTypesValueSet, DefinedTypesValueSetType, DefinedTypesValueSetEnum } from '../fhirValueSets/DefinedTypesValueSet.js'
-import { HttpOperationsValueSet, HttpOperationsValueSetType, HttpOperationsValueSetEnum } from '../fhirValueSets/HttpOperationsValueSet.js'
-import { AssertDirectionCodesValueSet, AssertDirectionCodesValueSetType, AssertDirectionCodesValueSetEnum } from '../fhirValueSets/AssertDirectionCodesValueSet.js'
-import { AssertOperatorCodesValueSet, AssertOperatorCodesValueSetType, AssertOperatorCodesValueSetEnum } from '../fhirValueSets/AssertOperatorCodesValueSet.js'
-import { AssertResponseCodeTypesValueSet, AssertResponseCodeTypesValueSetType, AssertResponseCodeTypesValueSetEnum } from '../fhirValueSets/AssertResponseCodeTypesValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-
+import { TestscriptProfileOriginTypesValueSet, TestscriptProfileOriginTypesValueSetType,} from '../fhirValueSets/TestscriptProfileOriginTypesValueSet.js';
+import { TestscriptProfileOriginTypesValueSetEnum } from '../valueSetEnums.js';
+import { TestscriptProfileDestinationTypesValueSet, TestscriptProfileDestinationTypesValueSetType,} from '../fhirValueSets/TestscriptProfileDestinationTypesValueSet.js';
+import { TestscriptProfileDestinationTypesValueSetEnum } from '../valueSetEnums.js';
+import { TestscriptOperationCodesValueSet, TestscriptOperationCodesValueSetType,} from '../fhirValueSets/TestscriptOperationCodesValueSet.js';
+import { TestscriptOperationCodesValueSetEnum } from '../valueSetEnums.js';
+import { DefinedTypesValueSet, DefinedTypesValueSetType,} from '../fhirValueSets/DefinedTypesValueSet.js';
+import { DefinedTypesValueSetEnum } from '../valueSetEnums.js';
+import { HttpOperationsValueSet, HttpOperationsValueSetType,} from '../fhirValueSets/HttpOperationsValueSet.js';
+import { HttpOperationsValueSetEnum } from '../valueSetEnums.js';
+import { AssertDirectionCodesValueSet, AssertDirectionCodesValueSetType,} from '../fhirValueSets/AssertDirectionCodesValueSet.js';
+import { AssertDirectionCodesValueSetEnum } from '../valueSetEnums.js';
+import { AssertOperatorCodesValueSet, AssertOperatorCodesValueSetType,} from '../fhirValueSets/AssertOperatorCodesValueSet.js';
+import { AssertOperatorCodesValueSetEnum } from '../valueSetEnums.js';
+import { AssertResponseCodeTypesValueSet, AssertResponseCodeTypesValueSetType,} from '../fhirValueSets/AssertResponseCodeTypesValueSet.js';
+import { AssertResponseCodeTypesValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * The purpose of this element is to define the profile of an origin element used elsewhere in the script.  Test engines could then use the origin-profile mapping to offer a filtered list of test systems that can serve as the sender for the interaction.
+ * Valid arguments for the TestScriptOrigin type.
  */
-export type ITestScriptOrigin = fhir.IBackboneElement & { 
+export interface TestScriptOriginArgs extends fhir.BackboneElementArgs {
   /**
    * A given origin index (e.g. 1) can appear only once in the list (e.g. Origin 1 cannot be specified twice ... once as FormFiller and again as FormProcessor within the same script as that could get confusing during test configuration). 
    * Different origin indices could play the same actor in the same test script (e.g. You could have two different test systems acting as Form-Filler).
    * The origin indices provided elsewhere in the test script must be one of these origin indices.
    */
-  index: number|null;
-  /**
-   * Extended properties for primitive element: TestScript.origin.index
-   */
-  _index?: fhir.IFhirElement|undefined;
+  index: fhir.FhirInteger|number|undefined;
   /**
    * Must be a "sender"/"client" profile.
    */
-  profile: fhir.ICoding|null;
-}
-
-/**
- * The purpose of this element is to define the profile of a destination element used elsewhere in the script.  Test engines could then use the destination-profile mapping to offer a filtered list of test systems that can serve as the receiver for the interaction.
- */
-export type ITestScriptDestination = fhir.IBackboneElement & { 
-  /**
-   * A given destination index (e.g. 1) can appear only once in the list (e.g. Destination 1 cannot be specified twice ... once as Form-Manager and again as Form-Processor within the same script as that could get confusing during test configuration). 
-   * Different destination indices could play the same actor in the same test script (e.g. You could have two different test systems acting as Form-Manager).
-   * The destination indices provided elsewhere in the test script must be one of these destination indices.
-   */
-  index: number|null;
-  /**
-   * Extended properties for primitive element: TestScript.destination.index
-   */
-  _index?: fhir.IFhirElement|undefined;
-  /**
-   * Must be a "receiver"/"server" profile.
-   */
-  profile: fhir.ICoding|null;
-}
-
-/**
- * A link to the FHIR specification that this test is covering.
- */
-export type ITestScriptMetadataLink = fhir.IBackboneElement & { 
-  /**
-   * URL to a particular requirement or feature within the FHIR specification.
-   */
-  url: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.link.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Short description of the link.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.link.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-}
-
-/**
- * When the metadata capabilities section is defined at TestScript.metadata or at TestScript.setup.metadata, and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then all the tests in the TestScript are skipped.  When the metadata capabilities section is defined at TestScript.test.metadata and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then only that test is skipped.  The "metadata.capabilities.required" and "metadata.capabilities.validated" elements only indicate whether the capabilities are the primary focus of the test script or not.  They do not impact the skipping logic.  Capabilities whose "metadata.capabilities.validated" flag is true are the primary focus of the test script.
- */
-export type ITestScriptMetadataCapability = fhir.IBackboneElement & { 
-  /**
-   * Whether or not the test execution will require the given capabilities of the server in order for this test script to execute.
-   */
-  required: boolean|null;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.required
-   */
-  _required?: fhir.IFhirElement|undefined;
-  /**
-   * Whether or not the test execution will validate the given capabilities of the server in order for this test script to execute.
-   */
-  validated: boolean|null;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.validated
-   */
-  _validated?: fhir.IFhirElement|undefined;
-  /**
-   * Description of the capabilities that this test script is requiring the server to support.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Which origin server these requirements apply to.
-   */
-  origin?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.origin
-   */
-  _origin?: fhir.IFhirElement[]|undefined;
-  /**
-   * Which server these requirements apply to.
-   */
-  destination?: number|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.destination
-   */
-  _destination?: fhir.IFhirElement|undefined;
-  /**
-   * Links to the FHIR specification that describes this interaction and the resources involved in more detail.
-   */
-  link?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.link
-   */
-  _link?: fhir.IFhirElement[]|undefined;
-  /**
-   * The conformance statement of the server has to contain at a minimum the contents of the reference pointed to by this element.
-   */
-  capabilities: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.capabilities
-   */
-  _capabilities?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The required capability must exist and are assumed to function correctly on the FHIR server being tested.
- */
-export type ITestScriptMetadata = fhir.IBackboneElement & { 
-  /**
-   * A link to the FHIR specification that this test is covering.
-   */
-  link?: fhir.ITestScriptMetadataLink[]|undefined;
-  /**
-   * When the metadata capabilities section is defined at TestScript.metadata or at TestScript.setup.metadata, and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then all the tests in the TestScript are skipped.  When the metadata capabilities section is defined at TestScript.test.metadata and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then only that test is skipped.  The "metadata.capabilities.required" and "metadata.capabilities.validated" elements only indicate whether the capabilities are the primary focus of the test script or not.  They do not impact the skipping logic.  Capabilities whose "metadata.capabilities.validated" flag is true are the primary focus of the test script.
-   */
-  capability: fhir.ITestScriptMetadataCapability[]|null;
-}
-
-/**
- * Fixture in the test script - by reference (uri). All fixtures are required for the test script to execute.
- */
-export type ITestScriptFixture = fhir.IBackboneElement & { 
-  /**
-   * Whether or not to implicitly create the fixture during setup. If true, the fixture is automatically created on each server being tested during setup, therefore no create operation is required for this fixture in the TestScript.setup section.
-   */
-  autocreate: boolean|null;
-  /**
-   * Extended properties for primitive element: TestScript.fixture.autocreate
-   */
-  _autocreate?: fhir.IFhirElement|undefined;
-  /**
-   * Whether or not to implicitly delete the fixture during teardown. If true, the fixture is automatically deleted on each server being tested during teardown, therefore no delete operation is required for this fixture in the TestScript.teardown section.
-   */
-  autodelete: boolean|null;
-  /**
-   * Extended properties for primitive element: TestScript.fixture.autodelete
-   */
-  _autodelete?: fhir.IFhirElement|undefined;
-  /**
-   * See http://build.fhir.org/resourcelist.html for complete list of resource types.
-   */
-  resource?: fhir.IReference|undefined;
-}
-
-/**
- * Variables would be set based either on XPath/JSONPath expressions against fixtures (static and response), or headerField evaluations against response headers. If variable evaluates to nodelist or anything other than a primitive value, then test engine would report an error.  Variables would be used to perform clean replacements in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations. This limits the places that test engines would need to look for placeholders "${}".  Variables are scoped to the whole script. They are NOT evaluated at declaration. They are evaluated by test engine when used for substitutions in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations.  See example testscript-search.xml.
- */
-export type ITestScriptVariable = fhir.IBackboneElement & { 
-  /**
-   * Placeholders would contain the variable name wrapped in ${} in "operation.params", "operation.requestHeader.value", and "operation.url" elements.  These placeholders would need to be replaced by the variable value before the operation is executed.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.variable.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * The purpose of this element is to allow for a pre-defined value that can be used as a default or as an override value. Test engines can optionally use this as a placeholder for user-defined execution time values.
-   */
-  defaultValue?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.defaultValue
-   */
-  _defaultValue?: fhir.IFhirElement|undefined;
-  /**
-   * A free text natural language description of the variable and its purpose.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * If headerField is defined, then the variable will be evaluated against the headers that sourceId is pointing to.  If expression or path is defined, then the variable will be evaluated against the fixture body that sourceId is pointing to.  It is an error to define any combination of expression, headerField and path.
-   */
-  expression?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.expression
-   */
-  _expression?: fhir.IFhirElement|undefined;
-  /**
-   * If headerField is defined, then the variable will be evaluated against the headers that sourceId is pointing to.  If path is defined, then the variable will be evaluated against the fixture body that sourceId is pointing to.  It is an error to define both headerField and path.
-   */
-  headerField?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.headerField
-   */
-  _headerField?: fhir.IFhirElement|undefined;
-  /**
-   * Displayable text string with hint help information to the user when entering a default value.
-   */
-  hint?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.hint
-   */
-  _hint?: fhir.IFhirElement|undefined;
-  /**
-   * If headerField is defined, then the variable will be evaluated against the headers that sourceId is pointing to.  If expression or path is defined, then the variable will be evaluated against the fixture body that sourceId is pointing to.  It is an error to define any combination of expression, headerField and path.
-   */
-  path?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.path
-   */
-  _path?: fhir.IFhirElement|undefined;
-  /**
-   * This can be a statically defined fixture (at the top of the TestScript) or a dynamically set fixture created by responseId of the `action.operation` element.
-   */
-  sourceId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.sourceId
-   */
-  _sourceId?: fhir.IFhirElement|undefined;
-}
-
-/**
- * This gives control to test-script writers to set headers explicitly based on test requirements.  It will allow for testing using:  - "If-Modified-Since" and "If-None-Match" headers.  See http://build.fhir.org/http.html#2.1.0.5.1 - "If-Match" header.  See http://build.fhir.org/http.html#2.1.0.11 - Conditional Create using "If-None-Exist".  See http://build.fhir.org/http.html#2.1.0.13.1 - Invalid "Content-Type" header for negative testing. - etc.
- */
-export type ITestScriptSetupActionOperationRequestHeader = fhir.IBackboneElement & { 
-  /**
-   * If header element is specified, then field is required.
-   */
-  field: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.requestHeader.field
-   */
-  _field?: fhir.IFhirElement|undefined;
-  /**
-   * If header element is specified, then value is required.  No conversions will be done by the test engine e.g. "xml" to "application/fhir+xml".  The values will be set in HTTP headers "as-is".  Test engines do have to look for placeholders (${}) and replace the variable placeholders with the variable values at runtime before sending the request.
-   */
-  value: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.requestHeader.value
-   */
-  _value?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The operation to perform.
- */
-export type ITestScriptSetupActionOperation = fhir.IBackboneElement & { 
-  /**
-   * See http://build.fhir.org/http.html for list of server interactions.
-   */
-  type?: fhir.ICoding|undefined;
-  /**
-   * If "url" element is specified, then "targetId", "params", and "resource" elements will be ignored as "url" element will have everything needed for constructing the request url.  If "params" element is specified, then "targetId" element is ignored. For FHIR operations that require a resource (e.g. "read" and "vread" operations), the "resource" element must be specified when "params" element is specified.  If "url" and "params" elements are absent, then the request url will be constructed from "targetId" fixture if present. For "read" operation, the resource and id values will be extracted from "targetId" fixture and used to construct the url. For "vread" and "history" operations, the versionId value will also be used.
-   */
-  resource?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.resource
-   */
-  _resource?: fhir.IFhirElement|undefined;
-  /**
-   * This has no impact on the verification itself.
-   */
-  label?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.label
-   */
-  _label?: fhir.IFhirElement|undefined;
-  /**
-   * This has no impact on the verification itself.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * If this is specified, then test engine shall set the 'Accept' header to the corresponding value.  If you'd like to explicitly set the 'Accept' to some other value then use the 'requestHeader' element.
-   */
-  accept?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.accept
-   */
-  _accept?: fhir.IFhirElement|undefined;
-  /**
-   * If this is specified, then test engine shall set the 'Content-Type' header to the corresponding value.  If you'd like to explicitly set the 'Content-Type' to some other value then use the 'requestHeader' element.
-   */
-  contentType?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.contentType
-   */
-  _contentType?: fhir.IFhirElement|undefined;
-  /**
-   * If multiple TestScript.destination elements are defined and operation.destination is undefined, test engine will report an error as it cannot determine what destination to use for the exchange.
-   */
-  destination?: number|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.destination
-   */
-  _destination?: fhir.IFhirElement|undefined;
-  /**
-   * Whether or not to implicitly send the request url in encoded format. The default is true to match the standard RESTful client behavior. Set to false when communicating with a server that does not support encoded url paths.
-   */
-  encodeRequestUrl: boolean|null;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.encodeRequestUrl
-   */
-  _encodeRequestUrl?: fhir.IFhirElement|undefined;
-  /**
-   * The primary purpose of the explicit HTTP method is support of  HTTP POST method invocation of the FHIR search. Other uses will include support of negative testing.
-   */
-  method?: HttpOperationsValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.method
-   */
-  _method?: fhir.IFhirElement|undefined;
-  /**
-   * If absent, test engine will send the message.  When present, test engine will not send the request message but will wait for the request message to be sent from this origin server.
-   */
-  origin?: number|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.origin
-   */
-  _origin?: fhir.IFhirElement|undefined;
-  /**
-   * If "url" element is specified, then "targetId", "params", and "resource" elements will be ignored as "url" element will have everything needed for constructing the request url.  If "params" element is specified, then "targetId" element is ignored.  For FHIR operations that require a resource (e.g. "read" and "vread" operations), the "resource" element must be specified when "params" element is specified.  If "url" and "params" elements are absent, then the request url will be constructed from "targetId" fixture if present.  For "read" operation, the resource and id values will be extracted from "targetId" fixture and used to construct the url.  For "vread" and "history" operations, the versionId value will also be used.   Test engines would append whatever is specified for "params" to the URL after the resource type without tampering with the string (beyond encoding the URL for HTTP).  The "params" element does not correspond exactly to "search parameters".  Nor is it the "path".  It corresponds to the part of the URL that comes after the [type] (when "resource" element is specified); e.g. It corresponds to "/[id]/_history/[vid] {?_format=[mime-type]}" in the following operation: GET [base]/[type]/[id]/_history/[vid] {?_format=[mime-type]}  Test engines do have to look for placeholders (${}) and replace the variable placeholders with the variable values at runtime before sending the request.
-   */
-  params?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.params
-   */
-  _params?: fhir.IFhirElement|undefined;
-  /**
-   * This gives control to test-script writers to set headers explicitly based on test requirements.  It will allow for testing using:  - "If-Modified-Since" and "If-None-Match" headers.  See http://build.fhir.org/http.html#2.1.0.5.1 - "If-Match" header.  See http://build.fhir.org/http.html#2.1.0.11 - Conditional Create using "If-None-Exist".  See http://build.fhir.org/http.html#2.1.0.13.1 - Invalid "Content-Type" header for negative testing. - etc.
-   */
-  requestHeader?: fhir.ITestScriptSetupActionOperationRequestHeader[]|undefined;
-  /**
-   * If a requestId is supplied, then the resulting request (both headers and body) is mapped to the fixture ID (which may be entirely new and previously undeclared) designated by "requestId".  If requestId is not specified, it is the test engine's responsibility to store the request and use it as the requestId in subsequent assertions when assertion path and/or headerField is specified, direction is equal to request, and the requestId in not specified.
-   */
-  requestId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.requestId
-   */
-  _requestId?: fhir.IFhirElement|undefined;
-  /**
-   * If a responseId is supplied, and the server responds, then the resulting response (both headers and body) is mapped to the fixture ID (which may be entirely new and previously undeclared) designated by "responseId".  If responseId is not specified, it is the test engine's responsibility to store the response and use it as the responseId in subsequent assertions when assertion path and/or headerField is specified and the responseId is not specified.
-   */
-  responseId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.responseId
-   */
-  _responseId?: fhir.IFhirElement|undefined;
-  /**
-   * The id of the fixture used as the body of a PUT or POST request.
-   */
-  sourceId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.sourceId
-   */
-  _sourceId?: fhir.IFhirElement|undefined;
-  /**
-   * If "url" element is specified, then "targetId", "params", and "resource" elements will be ignored as "url" element will have everything needed for constructing the request url.  If "params" element is specified, then "targetId" element is ignored.  For FHIR operations that require a resource (e.g. "read" and "vread" operations), the "resource" element must be specified when "params" element is specified.  If "url" and "params" elements are absent, then the request url will be constructed from "targetId" fixture if present.  For "read" operation, the resource and id values will be extracted from "targetId" fixture and used to construct the url.  For "vread" and "history" operations, the versionId value will also be used.
-   */
-  targetId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.targetId
-   */
-  _targetId?: fhir.IFhirElement|undefined;
-  /**
-   * Used to set the request URL explicitly.  If "url" element is defined, then "targetId", "resource", and "params" elements will be ignored.  Test engines would use whatever is specified in "url" without tampering with the string (beyond encoding the URL for HTTP).  Test engines do have to look for placeholders (${}) and replace the variable placeholders with the variable values at runtime before sending the request.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-}
-
-/**
- * In order to evaluate an assertion, the request, response, and results of the most recently executed operation must always be maintained by the test engine.
- */
-export type ITestScriptSetupActionAssert = fhir.IBackboneElement & { 
-  /**
-   * This has no impact on the verification itself.
-   */
-  label?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.label
-   */
-  _label?: fhir.IFhirElement|undefined;
-  /**
-   * This has no impact on the verification itself.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * If the direction is specified as "response" (the default), then the processing of this assert is against the received response message. If the direction is specified as "request", then the processing of this assert is against the sent request message.
-   */
-  direction?: AssertDirectionCodesValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.direction
-   */
-  _direction?: fhir.IFhirElement|undefined;
-  /**
-   * Id of the source fixture used as the contents to be evaluated by either the "source/expression" or "sourceId/path" definition.
-   */
-  compareToSourceId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.compareToSourceId
-   */
-  _compareToSourceId?: fhir.IFhirElement|undefined;
-  /**
-   * Thefhirpath expression to be evaluated against the expected fixture to compare to. Ignored if "assert.value" is used. The evaluation will be done before the assertion is evaluated.
-   */
-  compareToSourceExpression?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.compareToSourceExpression
-   */
-  _compareToSourceExpression?: fhir.IFhirElement|undefined;
-  /**
-   * The XPath or JSONPath expression to be evaluated against the expected fixture to compare to. Ignored if "assert.value" is used. The evaluation will be done before the assertion is evaluated.
-   */
-  compareToSourcePath?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.compareToSourcePath
-   */
-  _compareToSourcePath?: fhir.IFhirElement|undefined;
-  /**
-   * If this is specified, then test engine shall confirm that the content-type of the last operation's headers is set to this value.  If "assert.sourceId" element is specified, then the evaluation will be done against the headers mapped to that sourceId (and not the last operation's headers).  If you'd like to have more control over the string, then use 'assert.headerField' instead.
-   */
-  contentType?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.contentType
-   */
-  _contentType?: fhir.IFhirElement|undefined;
-  /**
-   * If both "expression" and a "fixtureId" are specified, then the expression will be evaluated against the request or response body mapped to the fixtureId.  If "expression" is specified and a "fixtureId" is not, then the expression will be evaluated against the response body of the last operation.  Test engines are to store the request and response body and headers of the last operation at all times for subsequent assertions.
-   */
-  expression?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.expression
-   */
-  _expression?: fhir.IFhirElement|undefined;
-  /**
-   * If "headerField" is specified then "value" must be specified.  If "sourceId" is not specified, then "headerField" will be evaluated against the last operation's response headers.  Test engines are to keep track of the last operation's response body and response headers.
-   */
-  headerField?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.headerField
-   */
-  _headerField?: fhir.IFhirElement|undefined;
-  /**
-   * Asserts that the response contains all the element/content in another fixture pointed to by minimumId.  This can be a statically defined fixture or one that is dynamically set via responseId.
-   */
-  minimumId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.minimumId
-   */
-  _minimumId?: fhir.IFhirElement|undefined;
-  /**
-   * Asserts that the Bundle contains first, last, and next links.
-   */
-  navigationLinks?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.navigationLinks
-   */
-  _navigationLinks?: fhir.IFhirElement|undefined;
-  /**
-   * Operators are useful especially for negative testing.  If operator is not specified, then the "equals" operator is assumed; e.g. ```&lt;code&gt;   &lt;assert&gt;  &lt;operator value="in" /&gt;  &lt;responseCode value="200,201,204" /&gt;    &lt;/assert&gt;    &lt;assert&gt;  &lt;operator value="notEquals" /&gt;  &lt;response value="okay"/&gt;   &lt;/assert&gt;    &lt;assert&gt;  &lt;operator value="greaterThan" /&gt;    &lt;responseHeader&gt;     &lt;field value="Content-Length" /&gt;     &lt;value value="0" /&gt;    &lt;/responseHeader/&gt;   &lt;/assert&gt; &lt;/code&gt; ```.
-   */
-  operator?: AssertOperatorCodesValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.operator
-   */
-  _operator?: fhir.IFhirElement|undefined;
-  /**
-   * If both "path" and a "fixtureId" are specified, then the path will be evaluated against the request or response body mapped to the fixtureId.  If "path" is specified and a "fixtureId" is not, then the path will be evaluated against the response body of the last operation.  Test engines are to store the request and response body and headers of the last operation at all times for subsequent assertions.
-   */
-  path?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.path
-   */
-  _path?: fhir.IFhirElement|undefined;
-  /**
-   * If "requestMethod" is specified then it will be used in place of "value". The "requestMethod" will evaluate against the last operation's request HTTP operation.
-   */
-  requestMethod?: HttpOperationsValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.requestMethod
-   */
-  _requestMethod?: fhir.IFhirElement|undefined;
-  /**
-   * If "requestURL" is specified then it will be used in place of "value". The "requestURL" will evaluate against the last operation's full request URL path string.
-   */
-  requestURL?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.requestURL
-   */
-  _requestURL?: fhir.IFhirElement|undefined;
-  /**
-   * This will be expected resource type in response body e.g. in read, vread, search, etc.  See http://build.fhir.org/resourcelist.html for complete list of resource types; e.g. &lt;assert &gt; &lt;resourceType value="Patient" &lt;/assert&gt;.
-   */
-  resource?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.resource
-   */
-  _resource?: fhir.IFhirElement|undefined;
-  /**
-   * This is a shorter way of achieving similar verifications via "assert.responseCode".  If you need more control, then use "assert.responseCode"  e.g. &lt;assert&gt;  &lt;contentType value="json" /&gt;  &lt;response value="okay"/&gt; &lt;/assert&gt;.
-   */
-  response?: AssertResponseCodeTypesValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.response
-   */
-  _response?: fhir.IFhirElement|undefined;
-  /**
-   * To be used with "operator" attribute value. Asserts that the response code equals this value if "operator" is not specified.   If the operator is "in" or "notIn" then the responseCode would be a comma-separated list of values e.g. "200,201". Otherwise, it's expected to be a numeric value.   If "fixture" is not specified, then the "responseBodyId" value of the last operation is assumed.
-   */
-  responseCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.responseCode
-   */
-  _responseCode?: fhir.IFhirElement|undefined;
-  /**
-   * This can be a statically defined fixture (at the top of the testscript) or a dynamically set fixture created by responseId of the action.operation element.
-   */
-  sourceId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.sourceId
-   */
-  _sourceId?: fhir.IFhirElement|undefined;
-  /**
-   * The ID of a Profile fixture. Asserts that the response is valid according to the Profile specified by validateProfileId.
-   */
-  validateProfileId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.validateProfileId
-   */
-  _validateProfileId?: fhir.IFhirElement|undefined;
-  /**
-   * The string-representation of a number, string, or boolean that is expected.  Test engines do have to look for placeholders (${}) and replace the variable placeholders with the variable values at runtime before comparing this value to the actual value.
-   */
-  value?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.value
-   */
-  _value?: fhir.IFhirElement|undefined;
-  /**
-   * If this element is specified and it is true, then assertion failures can be logged by test engine but should not stop the test script execution from proceeding.  There are likely cases where the spec is not clear on what should happen. If the spec says something is optional (maybe a response header for example), but a server doesn’t do it, we could choose to issue a warning.
-   */
-  warningOnly: boolean|null;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.warningOnly
-   */
-  _warningOnly?: fhir.IFhirElement|undefined;
-}
-
-/**
- * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
- */
-export type ITestScriptSetupAction = fhir.IBackboneElement & { 
-  /**
-   * The operation to perform.
-   */
-  operation?: fhir.ITestScriptSetupActionOperation|undefined;
-  /**
-   * In order to evaluate an assertion, the request, response, and results of the most recently executed operation must always be maintained by the test engine.
-   */
-  assert?: fhir.ITestScriptSetupActionAssert|undefined;
-}
-
-/**
- * A series of required setup operations before tests are executed.
- */
-export type ITestScriptSetup = fhir.IBackboneElement & { 
-  /**
-   * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
-   */
-  action: fhir.ITestScriptSetupAction[]|null;
-}
-
-/**
- * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
- */
-export type ITestScriptTestAction = fhir.IBackboneElement & { 
-  /**
-   * An operation would involve a REST request to a server.
-   */
-  operation?: fhir.ITestScriptSetupActionOperation|undefined;
-  /**
-   * In order to evaluate an assertion, the request, response, and results of the most recently executed operation must always be maintained by the test engine.
-   */
-  assert?: fhir.ITestScriptSetupActionAssert|undefined;
-}
-
-/**
- * A test in this script.
- */
-export type ITestScriptTest = fhir.IBackboneElement & { 
-  /**
-   * The name of this test used for tracking/logging purposes by test engines.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.test.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * A short description of the test used by test engines for tracking and reporting purposes.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.test.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
-   */
-  action: fhir.ITestScriptTestAction[]|null;
-}
-
-/**
- * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
- */
-export type ITestScriptTeardownAction = fhir.IBackboneElement & { 
-  /**
-   * An operation would involve a REST request to a server.
-   */
-  operation: fhir.ITestScriptSetupActionOperation|null;
-}
-
-/**
- * A series of operations required to clean up after all the tests are executed (successfully or otherwise).
- */
-export type ITestScriptTeardown = fhir.IBackboneElement & { 
-  /**
-   * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
-   */
-  action: fhir.ITestScriptTeardownAction[]|null;
-}
-
-/**
- * A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
- */
-export type ITestScript = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "TestScript";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this test script outside of FHIR, where it is not possible to use the logical URI.
-   */
-  identifier?: fhir.IIdentifier|undefined;
-  /**
-   * There may be different test script instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the test script with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of test scripts that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: TestScript.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of test scripts that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the test script. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the test script is the organization or individual primarily responsible for the maintenance and upkeep of the test script. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the test script. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the test script was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the test script as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the test script is presumed to be the predominant language in the place the test script was created).
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the test script to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * This element does not describe the usage of the test script. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this test script.
-   */
-  purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.purpose
-   */
-  _purpose?: fhir.IFhirElement|undefined;
-  /**
-   * A copyright statement relating to the test script and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the test script.
-   */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-  /**
-   * The purpose of this element is to define the profile of an origin element used elsewhere in the script.  Test engines could then use the origin-profile mapping to offer a filtered list of test systems that can serve as the sender for the interaction.
-   */
-  origin?: fhir.ITestScriptOrigin[]|undefined;
-  /**
-   * The purpose of this element is to define the profile of a destination element used elsewhere in the script.  Test engines could then use the destination-profile mapping to offer a filtered list of test systems that can serve as the receiver for the interaction.
-   */
-  destination?: fhir.ITestScriptDestination[]|undefined;
-  /**
-   * The required capability must exist and are assumed to function correctly on the FHIR server being tested.
-   */
-  metadata?: fhir.ITestScriptMetadata|undefined;
-  /**
-   * Fixture in the test script - by reference (uri). All fixtures are required for the test script to execute.
-   */
-  fixture?: fhir.ITestScriptFixture[]|undefined;
-  /**
-   * See http://build.fhir.org/resourcelist.html for complete list of resource types.
-   */
-  profile?: fhir.IReference[]|undefined;
-  /**
-   * Variables would be set based either on XPath/JSONPath expressions against fixtures (static and response), or headerField evaluations against response headers. If variable evaluates to nodelist or anything other than a primitive value, then test engine would report an error.  Variables would be used to perform clean replacements in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations. This limits the places that test engines would need to look for placeholders "${}".  Variables are scoped to the whole script. They are NOT evaluated at declaration. They are evaluated by test engine when used for substitutions in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations.  See example testscript-search.xml.
-   */
-  variable?: fhir.ITestScriptVariable[]|undefined;
-  /**
-   * A series of required setup operations before tests are executed.
-   */
-  setup?: fhir.ITestScriptSetup|undefined;
-  /**
-   * A test in this script.
-   */
-  test?: fhir.ITestScriptTest[]|undefined;
-  /**
-   * A series of operations required to clean up after all the tests are executed (successfully or otherwise).
-   */
-  teardown?: fhir.ITestScriptTeardown|undefined;
+  profile: fhir.CodingArgs|null;
 }
 
 /**
  * The purpose of this element is to define the profile of an origin element used elsewhere in the script.  Test engines could then use the origin-profile mapping to offer a filtered list of test systems that can serve as the sender for the interaction.
  */
-export class TestScriptOrigin extends fhir.BackboneElement implements ITestScriptOrigin {
+export class TestScriptOrigin extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptOrigin';
   /**
    * A given origin index (e.g. 1) can appear only once in the list (e.g. Origin 1 cannot be specified twice ... once as FormFiller and again as FormProcessor within the same script as that could get confusing during test configuration). 
    * Different origin indices could play the same actor in the same test script (e.g. You could have two different test systems acting as Form-Filler).
    * The origin indices provided elsewhere in the test script must be one of these origin indices.
    */
-  public index: number|null;
-  /**
-   * Extended properties for primitive element: TestScript.origin.index
-   */
-  public _index?: fhir.FhirElement|undefined;
+  public index: fhir.FhirInteger|null;
   /**
    * Must be a "sender"/"client" profile.
    */
@@ -844,12 +59,11 @@ export class TestScriptOrigin extends fhir.BackboneElement implements ITestScrip
   /**
    * Default constructor for TestScriptOrigin - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptOrigin> = { }) {
-    super(source);
-    if (source['index']) { this.index = source.index; }
+  constructor(source:Partial<TestScriptOriginArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['index']) { this.index = new fhir.FhirInteger({value: source.index}); }
     else { this.index = null; }
-    if (source['_index']) { this._index = new fhir.FhirElement(source._index!); }
-    if (source['profile']) { this.profile = new fhir.Coding(source.profile!); }
+    if (source['profile']) { this.profile = new fhir.Coding(source.profile); }
     else { this.profile = null; }
   }
   /**
@@ -861,30 +75,52 @@ export class TestScriptOrigin extends fhir.BackboneElement implements ITestScrip
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["index"]) { results.push(["index",'Missing required element: TestScript.origin.index']); }
-    if (this["_index"]) { results.push(...this._index.doModelValidation()); }
-    if (!this["profile"]) { results.push(["profile",'Missing required element: TestScript.origin.profile']); }
-    if (this["profile"]) { results.push(...this.profile.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['index']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property index:fhir.FhirInteger fhir: TestScript.origin.index:integer", }));
+    }
+    if (this["index"]) { outcome.issue!.push(...this.index.doModelValidation().issue!); }
+    if (!this['profile']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property profile:fhir.Coding fhir: TestScript.origin.profile:Coding", }));
+    }
+    if (this["profile"]) { outcome.issue!.push(...this.profile.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }
-
 /**
- * The purpose of this element is to define the profile of a destination element used elsewhere in the script.  Test engines could then use the destination-profile mapping to offer a filtered list of test systems that can serve as the receiver for the interaction.
+ * Valid arguments for the TestScriptDestination type.
  */
-export class TestScriptDestination extends fhir.BackboneElement implements ITestScriptDestination {
+export interface TestScriptDestinationArgs extends fhir.BackboneElementArgs {
   /**
    * A given destination index (e.g. 1) can appear only once in the list (e.g. Destination 1 cannot be specified twice ... once as Form-Manager and again as Form-Processor within the same script as that could get confusing during test configuration). 
    * Different destination indices could play the same actor in the same test script (e.g. You could have two different test systems acting as Form-Manager).
    * The destination indices provided elsewhere in the test script must be one of these destination indices.
    */
-  public index: number|null;
+  index: fhir.FhirInteger|number|undefined;
   /**
-   * Extended properties for primitive element: TestScript.destination.index
+   * Must be a "receiver"/"server" profile.
    */
-  public _index?: fhir.FhirElement|undefined;
+  profile: fhir.CodingArgs|null;
+}
+
+/**
+ * The purpose of this element is to define the profile of a destination element used elsewhere in the script.  Test engines could then use the destination-profile mapping to offer a filtered list of test systems that can serve as the receiver for the interaction.
+ */
+export class TestScriptDestination extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptDestination';
+  /**
+   * A given destination index (e.g. 1) can appear only once in the list (e.g. Destination 1 cannot be specified twice ... once as Form-Manager and again as Form-Processor within the same script as that could get confusing during test configuration). 
+   * Different destination indices could play the same actor in the same test script (e.g. You could have two different test systems acting as Form-Manager).
+   * The destination indices provided elsewhere in the test script must be one of these destination indices.
+   */
+  public index: fhir.FhirInteger|null;
   /**
    * Must be a "receiver"/"server" profile.
    */
@@ -892,12 +128,11 @@ export class TestScriptDestination extends fhir.BackboneElement implements ITest
   /**
    * Default constructor for TestScriptDestination - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptDestination> = { }) {
-    super(source);
-    if (source['index']) { this.index = source.index; }
+  constructor(source:Partial<TestScriptDestinationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['index']) { this.index = new fhir.FhirInteger({value: source.index}); }
     else { this.index = null; }
-    if (source['_index']) { this._index = new fhir.FhirElement(source._index!); }
-    if (source['profile']) { this.profile = new fhir.Coding(source.profile!); }
+    if (source['profile']) { this.profile = new fhir.Coding(source.profile); }
     else { this.profile = null; }
   }
   /**
@@ -909,178 +144,225 @@ export class TestScriptDestination extends fhir.BackboneElement implements ITest
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["index"]) { results.push(["index",'Missing required element: TestScript.destination.index']); }
-    if (this["_index"]) { results.push(...this._index.doModelValidation()); }
-    if (!this["profile"]) { results.push(["profile",'Missing required element: TestScript.destination.profile']); }
-    if (this["profile"]) { results.push(...this.profile.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['index']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property index:fhir.FhirInteger fhir: TestScript.destination.index:integer", }));
+    }
+    if (this["index"]) { outcome.issue!.push(...this.index.doModelValidation().issue!); }
+    if (!this['profile']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property profile:fhir.Coding fhir: TestScript.destination.profile:Coding", }));
+    }
+    if (this["profile"]) { outcome.issue!.push(...this.profile.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptMetadataLink type.
+ */
+export interface TestScriptMetadataLinkArgs extends fhir.BackboneElementArgs {
+  /**
+   * URL to a particular requirement or feature within the FHIR specification.
+   */
+  url: fhir.FhirUri|string|undefined;
+  /**
+   * Short description of the link.
+   */
+  description?: fhir.FhirString|string|undefined;
 }
 
 /**
  * A link to the FHIR specification that this test is covering.
  */
-export class TestScriptMetadataLink extends fhir.BackboneElement implements ITestScriptMetadataLink {
+export class TestScriptMetadataLink extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptMetadataLink';
   /**
    * URL to a particular requirement or feature within the FHIR specification.
    */
-  public url: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.link.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url: fhir.FhirUri|null;
   /**
    * Short description of the link.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.link.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Default constructor for TestScriptMetadataLink - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptMetadataLink> = { }) {
-    super(source);
-    if (source['url']) { this.url = source.url; }
+  constructor(source:Partial<TestScriptMetadataLinkArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     else { this.url = null; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["url"]) { results.push(["url",'Missing required element: TestScript.metadata.link.url']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['url']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property url:fhir.FhirUri fhir: TestScript.metadata.link.url:uri", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptMetadataCapability type.
+ */
+export interface TestScriptMetadataCapabilityArgs extends fhir.BackboneElementArgs {
+  /**
+   * Whether or not the test execution will require the given capabilities of the server in order for this test script to execute.
+   */
+  required: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Whether or not the test execution will validate the given capabilities of the server in order for this test script to execute.
+   */
+  validated: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Description of the capabilities that this test script is requiring the server to support.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * Which origin server these requirements apply to.
+   */
+  origin?: fhir.FhirInteger[]|number[]|undefined;
+  /**
+   * Which server these requirements apply to.
+   */
+  destination?: fhir.FhirInteger|number|undefined;
+  /**
+   * Links to the FHIR specification that describes this interaction and the resources involved in more detail.
+   */
+  link?: fhir.FhirUri[]|string[]|undefined;
+  /**
+   * The conformance statement of the server has to contain at a minimum the contents of the reference pointed to by this element.
+   */
+  capabilities: fhir.FhirCanonical|string|undefined;
 }
 
 /**
  * When the metadata capabilities section is defined at TestScript.metadata or at TestScript.setup.metadata, and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then all the tests in the TestScript are skipped.  When the metadata capabilities section is defined at TestScript.test.metadata and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then only that test is skipped.  The "metadata.capabilities.required" and "metadata.capabilities.validated" elements only indicate whether the capabilities are the primary focus of the test script or not.  They do not impact the skipping logic.  Capabilities whose "metadata.capabilities.validated" flag is true are the primary focus of the test script.
  */
-export class TestScriptMetadataCapability extends fhir.BackboneElement implements ITestScriptMetadataCapability {
+export class TestScriptMetadataCapability extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptMetadataCapability';
   /**
    * Whether or not the test execution will require the given capabilities of the server in order for this test script to execute.
    */
-  public required: boolean|null;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.required
-   */
-  public _required?: fhir.FhirElement|undefined;
+  public required: fhir.FhirBoolean|null;
   /**
    * Whether or not the test execution will validate the given capabilities of the server in order for this test script to execute.
    */
-  public validated: boolean|null;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.validated
-   */
-  public _validated?: fhir.FhirElement|undefined;
+  public validated: fhir.FhirBoolean|null;
   /**
    * Description of the capabilities that this test script is requiring the server to support.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Which origin server these requirements apply to.
    */
-  public origin?: number[]|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.origin
-   */
-  public _origin?: fhir.FhirElement[]|undefined;
+  public origin?: fhir.FhirInteger[]|undefined = [];
   /**
    * Which server these requirements apply to.
    */
-  public destination?: number|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.destination
-   */
-  public _destination?: fhir.FhirElement|undefined;
+  public destination?: fhir.FhirInteger|undefined;
   /**
    * Links to the FHIR specification that describes this interaction and the resources involved in more detail.
    */
-  public link?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.link
-   */
-  public _link?: fhir.FhirElement[]|undefined;
+  public link?: fhir.FhirUri[]|undefined = [];
   /**
    * The conformance statement of the server has to contain at a minimum the contents of the reference pointed to by this element.
    */
-  public capabilities: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.metadata.capability.capabilities
-   */
-  public _capabilities?: fhir.FhirElement|undefined;
+  public capabilities: fhir.FhirCanonical|null;
   /**
    * Default constructor for TestScriptMetadataCapability - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptMetadataCapability> = { }) {
-    super(source);
-    if (source['required']) { this.required = source.required; }
+  constructor(source:Partial<TestScriptMetadataCapabilityArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['required']) { this.required = new fhir.FhirBoolean({value: source.required}); }
     else { this.required = null; }
-    if (source['_required']) { this._required = new fhir.FhirElement(source._required!); }
-    if (source['validated']) { this.validated = source.validated; }
+    if (source['validated']) { this.validated = new fhir.FhirBoolean({value: source.validated}); }
     else { this.validated = null; }
-    if (source['_validated']) { this._validated = new fhir.FhirElement(source._validated!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['origin']) { this.origin = source.origin.map((x) => (x)); }
-    if (source['_origin']) { this._origin = source._origin.map((x) => new fhir.FhirElement(x)); }
-    if (source['destination']) { this.destination = source.destination; }
-    if (source['_destination']) { this._destination = new fhir.FhirElement(source._destination!); }
-    if (source['link']) { this.link = source.link.map((x) => (x)); }
-    if (source['_link']) { this._link = source._link.map((x) => new fhir.FhirElement(x)); }
-    if (source['capabilities']) { this.capabilities = source.capabilities; }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['origin']) { this.origin = source.origin.map((x) => new fhir.FhirInteger({value: x})); }
+    if (source['destination']) { this.destination = new fhir.FhirInteger({value: source.destination}); }
+    if (source['link']) { this.link = source.link.map((x) => new fhir.FhirUri({value: x})); }
+    if (source['capabilities']) { this.capabilities = new fhir.FhirCanonical({value: source.capabilities}); }
     else { this.capabilities = null; }
-    if (source['_capabilities']) { this._capabilities = new fhir.FhirElement(source._capabilities!); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["required"]) { results.push(["required",'Missing required element: TestScript.metadata.capability.required']); }
-    if (this["_required"]) { results.push(...this._required.doModelValidation()); }
-    if (!this["validated"]) { results.push(["validated",'Missing required element: TestScript.metadata.capability.validated']); }
-    if (this["_validated"]) { results.push(...this._validated.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_origin"]) { this._origin.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_destination"]) { results.push(...this._destination.doModelValidation()); }
-    if (this["_link"]) { this._link.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["capabilities"]) { results.push(["capabilities",'Missing required element: TestScript.metadata.capability.capabilities']); }
-    if (this["_capabilities"]) { results.push(...this._capabilities.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['required']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property required:fhir.FhirBoolean fhir: TestScript.metadata.capability.required:boolean", }));
+    }
+    if (this["required"]) { outcome.issue!.push(...this.required.doModelValidation().issue!); }
+    if (!this['validated']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property validated:fhir.FhirBoolean fhir: TestScript.metadata.capability.validated:boolean", }));
+    }
+    if (this["validated"]) { outcome.issue!.push(...this.validated.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["origin"]) { this.origin.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["destination"]) { outcome.issue!.push(...this.destination.doModelValidation().issue!); }
+    if (this["link"]) { this.link.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['capabilities']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property capabilities:fhir.FhirCanonical fhir: TestScript.metadata.capability.capabilities:canonical", }));
+    }
+    if (this["capabilities"]) { outcome.issue!.push(...this.capabilities.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptMetadata type.
+ */
+export interface TestScriptMetadataArgs extends fhir.BackboneElementArgs {
+  /**
+   * A link to the FHIR specification that this test is covering.
+   */
+  link?: fhir.TestScriptMetadataLinkArgs[]|undefined;
+  /**
+   * When the metadata capabilities section is defined at TestScript.metadata or at TestScript.setup.metadata, and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then all the tests in the TestScript are skipped.  When the metadata capabilities section is defined at TestScript.test.metadata and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then only that test is skipped.  The "metadata.capabilities.required" and "metadata.capabilities.validated" elements only indicate whether the capabilities are the primary focus of the test script or not.  They do not impact the skipping logic.  Capabilities whose "metadata.capabilities.validated" flag is true are the primary focus of the test script.
+   */
+  capability: fhir.TestScriptMetadataCapabilityArgs[]|null;
 }
 
 /**
  * The required capability must exist and are assumed to function correctly on the FHIR server being tested.
  */
-export class TestScriptMetadata extends fhir.BackboneElement implements ITestScriptMetadata {
+export class TestScriptMetadata extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptMetadata';
   /**
    * A link to the FHIR specification that this test is covering.
    */
-  public link?: fhir.TestScriptMetadataLink[]|undefined;
+  public link?: fhir.TestScriptMetadataLink[]|undefined = [];
   /**
    * When the metadata capabilities section is defined at TestScript.metadata or at TestScript.setup.metadata, and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then all the tests in the TestScript are skipped.  When the metadata capabilities section is defined at TestScript.test.metadata and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then only that test is skipped.  The "metadata.capabilities.required" and "metadata.capabilities.validated" elements only indicate whether the capabilities are the primary focus of the test script or not.  They do not impact the skipping logic.  Capabilities whose "metadata.capabilities.validated" flag is true are the primary focus of the test script.
    */
-  public capability: fhir.TestScriptMetadataCapability[]|null;
+  public capability: fhir.TestScriptMetadataCapability[]|null = [];
   /**
    * Default constructor for TestScriptMetadata - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptMetadata> = { }) {
-    super(source);
+  constructor(source:Partial<TestScriptMetadataArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['link']) { this.link = source.link.map((x) => new fhir.TestScriptMetadataLink(x)); }
     if (source['capability']) { this.capability = source.capability.map((x) => new fhir.TestScriptMetadataCapability(x)); }
     else { this.capability = null; }
@@ -1088,35 +370,57 @@ export class TestScriptMetadata extends fhir.BackboneElement implements ITestScr
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["link"]) { this.link.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if ((!this["capability"]) || (this["capability"].length === 0)) { results.push(["capability",'Missing required element: TestScript.metadata.capability']); }
-    if (this["capability"]) { this.capability.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["link"]) { this.link.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['capability']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property capability:fhir.TestScriptMetadataCapability[] fhir: TestScript.metadata.capability:capability", }));
+    } else if (!Array.isArray(this.capability)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property capability:fhir.TestScriptMetadataCapability[] fhir: TestScript.metadata.capability:capability", }));
+    } else if (this.capability.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property capability:fhir.TestScriptMetadataCapability[] fhir: TestScript.metadata.capability:capability", }));
+    }
+    if (this["capability"]) { this.capability.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptFixture type.
+ */
+export interface TestScriptFixtureArgs extends fhir.BackboneElementArgs {
+  /**
+   * Whether or not to implicitly create the fixture during setup. If true, the fixture is automatically created on each server being tested during setup, therefore no create operation is required for this fixture in the TestScript.setup section.
+   */
+  autocreate: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Whether or not to implicitly delete the fixture during teardown. If true, the fixture is automatically deleted on each server being tested during teardown, therefore no delete operation is required for this fixture in the TestScript.teardown section.
+   */
+  autodelete: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * See http://build.fhir.org/resourcelist.html for complete list of resource types.
+   */
+  resource?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * Fixture in the test script - by reference (uri). All fixtures are required for the test script to execute.
  */
-export class TestScriptFixture extends fhir.BackboneElement implements ITestScriptFixture {
+export class TestScriptFixture extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptFixture';
   /**
    * Whether or not to implicitly create the fixture during setup. If true, the fixture is automatically created on each server being tested during setup, therefore no create operation is required for this fixture in the TestScript.setup section.
    */
-  public autocreate: boolean|null;
-  /**
-   * Extended properties for primitive element: TestScript.fixture.autocreate
-   */
-  public _autocreate?: fhir.FhirElement|undefined;
+  public autocreate: fhir.FhirBoolean|null;
   /**
    * Whether or not to implicitly delete the fixture during teardown. If true, the fixture is automatically deleted on each server being tested during teardown, therefore no delete operation is required for this fixture in the TestScript.teardown section.
    */
-  public autodelete: boolean|null;
-  /**
-   * Extended properties for primitive element: TestScript.fixture.autodelete
-   */
-  public _autodelete?: fhir.FhirElement|undefined;
+  public autodelete: fhir.FhirBoolean|null;
   /**
    * See http://build.fhir.org/resourcelist.html for complete list of resource types.
    */
@@ -1124,188 +428,290 @@ export class TestScriptFixture extends fhir.BackboneElement implements ITestScri
   /**
    * Default constructor for TestScriptFixture - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptFixture> = { }) {
-    super(source);
-    if (source['autocreate']) { this.autocreate = source.autocreate; }
+  constructor(source:Partial<TestScriptFixtureArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['autocreate']) { this.autocreate = new fhir.FhirBoolean({value: source.autocreate}); }
     else { this.autocreate = null; }
-    if (source['_autocreate']) { this._autocreate = new fhir.FhirElement(source._autocreate!); }
-    if (source['autodelete']) { this.autodelete = source.autodelete; }
+    if (source['autodelete']) { this.autodelete = new fhir.FhirBoolean({value: source.autodelete}); }
     else { this.autodelete = null; }
-    if (source['_autodelete']) { this._autodelete = new fhir.FhirElement(source._autodelete!); }
-    if (source['resource']) { this.resource = new fhir.Reference(source.resource!); }
+    if (source['resource']) { this.resource = new fhir.Reference(source.resource); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["autocreate"]) { results.push(["autocreate",'Missing required element: TestScript.fixture.autocreate']); }
-    if (this["_autocreate"]) { results.push(...this._autocreate.doModelValidation()); }
-    if (!this["autodelete"]) { results.push(["autodelete",'Missing required element: TestScript.fixture.autodelete']); }
-    if (this["_autodelete"]) { results.push(...this._autodelete.doModelValidation()); }
-    if (this["resource"]) { results.push(...this.resource.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['autocreate']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property autocreate:fhir.FhirBoolean fhir: TestScript.fixture.autocreate:boolean", }));
+    }
+    if (this["autocreate"]) { outcome.issue!.push(...this.autocreate.doModelValidation().issue!); }
+    if (!this['autodelete']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property autodelete:fhir.FhirBoolean fhir: TestScript.fixture.autodelete:boolean", }));
+    }
+    if (this["autodelete"]) { outcome.issue!.push(...this.autodelete.doModelValidation().issue!); }
+    if (this["resource"]) { outcome.issue!.push(...this.resource.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptVariable type.
+ */
+export interface TestScriptVariableArgs extends fhir.BackboneElementArgs {
+  /**
+   * Placeholders would contain the variable name wrapped in ${} in "operation.params", "operation.requestHeader.value", and "operation.url" elements.  These placeholders would need to be replaced by the variable value before the operation is executed.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * The purpose of this element is to allow for a pre-defined value that can be used as a default or as an override value. Test engines can optionally use this as a placeholder for user-defined execution time values.
+   */
+  defaultValue?: fhir.FhirString|string|undefined;
+  /**
+   * A free text natural language description of the variable and its purpose.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * If headerField is defined, then the variable will be evaluated against the headers that sourceId is pointing to.  If expression or path is defined, then the variable will be evaluated against the fixture body that sourceId is pointing to.  It is an error to define any combination of expression, headerField and path.
+   */
+  expression?: fhir.FhirString|string|undefined;
+  /**
+   * If headerField is defined, then the variable will be evaluated against the headers that sourceId is pointing to.  If path is defined, then the variable will be evaluated against the fixture body that sourceId is pointing to.  It is an error to define both headerField and path.
+   */
+  headerField?: fhir.FhirString|string|undefined;
+  /**
+   * Displayable text string with hint help information to the user when entering a default value.
+   */
+  hint?: fhir.FhirString|string|undefined;
+  /**
+   * If headerField is defined, then the variable will be evaluated against the headers that sourceId is pointing to.  If expression or path is defined, then the variable will be evaluated against the fixture body that sourceId is pointing to.  It is an error to define any combination of expression, headerField and path.
+   */
+  path?: fhir.FhirString|string|undefined;
+  /**
+   * This can be a statically defined fixture (at the top of the TestScript) or a dynamically set fixture created by responseId of the `action.operation` element.
+   */
+  sourceId?: fhir.FhirId|string|undefined;
 }
 
 /**
  * Variables would be set based either on XPath/JSONPath expressions against fixtures (static and response), or headerField evaluations against response headers. If variable evaluates to nodelist or anything other than a primitive value, then test engine would report an error.  Variables would be used to perform clean replacements in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations. This limits the places that test engines would need to look for placeholders "${}".  Variables are scoped to the whole script. They are NOT evaluated at declaration. They are evaluated by test engine when used for substitutions in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations.  See example testscript-search.xml.
  */
-export class TestScriptVariable extends fhir.BackboneElement implements ITestScriptVariable {
+export class TestScriptVariable extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptVariable';
   /**
    * Placeholders would contain the variable name wrapped in ${} in "operation.params", "operation.requestHeader.value", and "operation.url" elements.  These placeholders would need to be replaced by the variable value before the operation is executed.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.variable.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * The purpose of this element is to allow for a pre-defined value that can be used as a default or as an override value. Test engines can optionally use this as a placeholder for user-defined execution time values.
    */
-  public defaultValue?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.defaultValue
-   */
-  public _defaultValue?: fhir.FhirElement|undefined;
+  public defaultValue?: fhir.FhirString|undefined;
   /**
    * A free text natural language description of the variable and its purpose.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * If headerField is defined, then the variable will be evaluated against the headers that sourceId is pointing to.  If expression or path is defined, then the variable will be evaluated against the fixture body that sourceId is pointing to.  It is an error to define any combination of expression, headerField and path.
    */
-  public expression?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.expression
-   */
-  public _expression?: fhir.FhirElement|undefined;
+  public expression?: fhir.FhirString|undefined;
   /**
    * If headerField is defined, then the variable will be evaluated against the headers that sourceId is pointing to.  If path is defined, then the variable will be evaluated against the fixture body that sourceId is pointing to.  It is an error to define both headerField and path.
    */
-  public headerField?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.headerField
-   */
-  public _headerField?: fhir.FhirElement|undefined;
+  public headerField?: fhir.FhirString|undefined;
   /**
    * Displayable text string with hint help information to the user when entering a default value.
    */
-  public hint?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.hint
-   */
-  public _hint?: fhir.FhirElement|undefined;
+  public hint?: fhir.FhirString|undefined;
   /**
    * If headerField is defined, then the variable will be evaluated against the headers that sourceId is pointing to.  If expression or path is defined, then the variable will be evaluated against the fixture body that sourceId is pointing to.  It is an error to define any combination of expression, headerField and path.
    */
-  public path?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.path
-   */
-  public _path?: fhir.FhirElement|undefined;
+  public path?: fhir.FhirString|undefined;
   /**
    * This can be a statically defined fixture (at the top of the TestScript) or a dynamically set fixture created by responseId of the `action.operation` element.
    */
-  public sourceId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.variable.sourceId
-   */
-  public _sourceId?: fhir.FhirElement|undefined;
+  public sourceId?: fhir.FhirId|undefined;
   /**
    * Default constructor for TestScriptVariable - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptVariable> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<TestScriptVariableArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['defaultValue']) { this.defaultValue = source.defaultValue; }
-    if (source['_defaultValue']) { this._defaultValue = new fhir.FhirElement(source._defaultValue!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['expression']) { this.expression = source.expression; }
-    if (source['_expression']) { this._expression = new fhir.FhirElement(source._expression!); }
-    if (source['headerField']) { this.headerField = source.headerField; }
-    if (source['_headerField']) { this._headerField = new fhir.FhirElement(source._headerField!); }
-    if (source['hint']) { this.hint = source.hint; }
-    if (source['_hint']) { this._hint = new fhir.FhirElement(source._hint!); }
-    if (source['path']) { this.path = source.path; }
-    if (source['_path']) { this._path = new fhir.FhirElement(source._path!); }
-    if (source['sourceId']) { this.sourceId = source.sourceId; }
-    if (source['_sourceId']) { this._sourceId = new fhir.FhirElement(source._sourceId!); }
+    if (source['defaultValue']) { this.defaultValue = new fhir.FhirString({value: source.defaultValue}); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['expression']) { this.expression = new fhir.FhirString({value: source.expression}); }
+    if (source['headerField']) { this.headerField = new fhir.FhirString({value: source.headerField}); }
+    if (source['hint']) { this.hint = new fhir.FhirString({value: source.hint}); }
+    if (source['path']) { this.path = new fhir.FhirString({value: source.path}); }
+    if (source['sourceId']) { this.sourceId = new fhir.FhirId({value: source.sourceId}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: TestScript.variable.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_defaultValue"]) { results.push(...this._defaultValue.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_expression"]) { results.push(...this._expression.doModelValidation()); }
-    if (this["_headerField"]) { results.push(...this._headerField.doModelValidation()); }
-    if (this["_hint"]) { results.push(...this._hint.doModelValidation()); }
-    if (this["_path"]) { results.push(...this._path.doModelValidation()); }
-    if (this["_sourceId"]) { results.push(...this._sourceId.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: TestScript.variable.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["defaultValue"]) { outcome.issue!.push(...this.defaultValue.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["expression"]) { outcome.issue!.push(...this.expression.doModelValidation().issue!); }
+    if (this["headerField"]) { outcome.issue!.push(...this.headerField.doModelValidation().issue!); }
+    if (this["hint"]) { outcome.issue!.push(...this.hint.doModelValidation().issue!); }
+    if (this["path"]) { outcome.issue!.push(...this.path.doModelValidation().issue!); }
+    if (this["sourceId"]) { outcome.issue!.push(...this.sourceId.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptSetupActionOperationRequestHeader type.
+ */
+export interface TestScriptSetupActionOperationRequestHeaderArgs extends fhir.BackboneElementArgs {
+  /**
+   * If header element is specified, then field is required.
+   */
+  field: fhir.FhirString|string|undefined;
+  /**
+   * If header element is specified, then value is required.  No conversions will be done by the test engine e.g. "xml" to "application/fhir+xml".  The values will be set in HTTP headers "as-is".  Test engines do have to look for placeholders (${}) and replace the variable placeholders with the variable values at runtime before sending the request.
+   */
+  value: fhir.FhirString|string|undefined;
 }
 
 /**
  * This gives control to test-script writers to set headers explicitly based on test requirements.  It will allow for testing using:  - "If-Modified-Since" and "If-None-Match" headers.  See http://build.fhir.org/http.html#2.1.0.5.1 - "If-Match" header.  See http://build.fhir.org/http.html#2.1.0.11 - Conditional Create using "If-None-Exist".  See http://build.fhir.org/http.html#2.1.0.13.1 - Invalid "Content-Type" header for negative testing. - etc.
  */
-export class TestScriptSetupActionOperationRequestHeader extends fhir.BackboneElement implements ITestScriptSetupActionOperationRequestHeader {
+export class TestScriptSetupActionOperationRequestHeader extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptSetupActionOperationRequestHeader';
   /**
    * If header element is specified, then field is required.
    */
-  public field: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.requestHeader.field
-   */
-  public _field?: fhir.FhirElement|undefined;
+  public field: fhir.FhirString|null;
   /**
    * If header element is specified, then value is required.  No conversions will be done by the test engine e.g. "xml" to "application/fhir+xml".  The values will be set in HTTP headers "as-is".  Test engines do have to look for placeholders (${}) and replace the variable placeholders with the variable values at runtime before sending the request.
    */
-  public value: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.requestHeader.value
-   */
-  public _value?: fhir.FhirElement|undefined;
+  public value: fhir.FhirString|null;
   /**
    * Default constructor for TestScriptSetupActionOperationRequestHeader - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptSetupActionOperationRequestHeader> = { }) {
-    super(source);
-    if (source['field']) { this.field = source.field; }
+  constructor(source:Partial<TestScriptSetupActionOperationRequestHeaderArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['field']) { this.field = new fhir.FhirString({value: source.field}); }
     else { this.field = null; }
-    if (source['_field']) { this._field = new fhir.FhirElement(source._field!); }
-    if (source['value']) { this.value = source.value; }
+    if (source['value']) { this.value = new fhir.FhirString({value: source.value}); }
     else { this.value = null; }
-    if (source['_value']) { this._value = new fhir.FhirElement(source._value!); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["field"]) { results.push(["field",'Missing required element: TestScript.setup.action.operation.requestHeader.field']); }
-    if (this["_field"]) { results.push(...this._field.doModelValidation()); }
-    if (!this["value"]) { results.push(["value",'Missing required element: TestScript.setup.action.operation.requestHeader.value']); }
-    if (this["_value"]) { results.push(...this._value.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['field']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property field:fhir.FhirString fhir: TestScript.setup.action.operation.requestHeader.field:string", }));
+    }
+    if (this["field"]) { outcome.issue!.push(...this.field.doModelValidation().issue!); }
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value:fhir.FhirString fhir: TestScript.setup.action.operation.requestHeader.value:string", }));
+    }
+    if (this["value"]) { outcome.issue!.push(...this.value.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptSetupActionOperation type.
+ */
+export interface TestScriptSetupActionOperationArgs extends fhir.BackboneElementArgs {
+  /**
+   * See http://build.fhir.org/http.html for list of server interactions.
+   */
+  type?: fhir.CodingArgs|undefined;
+  /**
+   * If "url" element is specified, then "targetId", "params", and "resource" elements will be ignored as "url" element will have everything needed for constructing the request url.  If "params" element is specified, then "targetId" element is ignored. For FHIR operations that require a resource (e.g. "read" and "vread" operations), the "resource" element must be specified when "params" element is specified.  If "url" and "params" elements are absent, then the request url will be constructed from "targetId" fixture if present. For "read" operation, the resource and id values will be extracted from "targetId" fixture and used to construct the url. For "vread" and "history" operations, the versionId value will also be used.
+   */
+  resource?: fhir.FhirCode|string|undefined;
+  /**
+   * This has no impact on the verification itself.
+   */
+  label?: fhir.FhirString|string|undefined;
+  /**
+   * This has no impact on the verification itself.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * If this is specified, then test engine shall set the 'Accept' header to the corresponding value.  If you'd like to explicitly set the 'Accept' to some other value then use the 'requestHeader' element.
+   */
+  accept?: fhir.FhirCode|string|undefined;
+  /**
+   * If this is specified, then test engine shall set the 'Content-Type' header to the corresponding value.  If you'd like to explicitly set the 'Content-Type' to some other value then use the 'requestHeader' element.
+   */
+  contentType?: fhir.FhirCode|string|undefined;
+  /**
+   * If multiple TestScript.destination elements are defined and operation.destination is undefined, test engine will report an error as it cannot determine what destination to use for the exchange.
+   */
+  destination?: fhir.FhirInteger|number|undefined;
+  /**
+   * Whether or not to implicitly send the request url in encoded format. The default is true to match the standard RESTful client behavior. Set to false when communicating with a server that does not support encoded url paths.
+   */
+  encodeRequestUrl: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * The primary purpose of the explicit HTTP method is support of  HTTP POST method invocation of the FHIR search. Other uses will include support of negative testing.
+   */
+  method?: HttpOperationsValueSetEnum|undefined;
+  /**
+   * If absent, test engine will send the message.  When present, test engine will not send the request message but will wait for the request message to be sent from this origin server.
+   */
+  origin?: fhir.FhirInteger|number|undefined;
+  /**
+   * If "url" element is specified, then "targetId", "params", and "resource" elements will be ignored as "url" element will have everything needed for constructing the request url.  If "params" element is specified, then "targetId" element is ignored.  For FHIR operations that require a resource (e.g. "read" and "vread" operations), the "resource" element must be specified when "params" element is specified.  If "url" and "params" elements are absent, then the request url will be constructed from "targetId" fixture if present.  For "read" operation, the resource and id values will be extracted from "targetId" fixture and used to construct the url.  For "vread" and "history" operations, the versionId value will also be used.   Test engines would append whatever is specified for "params" to the URL after the resource type without tampering with the string (beyond encoding the URL for HTTP).  The "params" element does not correspond exactly to "search parameters".  Nor is it the "path".  It corresponds to the part of the URL that comes after the [type] (when "resource" element is specified); e.g. It corresponds to "/[id]/_history/[vid] {?_format=[mime-type]}" in the following operation: GET [base]/[type]/[id]/_history/[vid] {?_format=[mime-type]}  Test engines do have to look for placeholders (${}) and replace the variable placeholders with the variable values at runtime before sending the request.
+   */
+  params?: fhir.FhirString|string|undefined;
+  /**
+   * This gives control to test-script writers to set headers explicitly based on test requirements.  It will allow for testing using:  - "If-Modified-Since" and "If-None-Match" headers.  See http://build.fhir.org/http.html#2.1.0.5.1 - "If-Match" header.  See http://build.fhir.org/http.html#2.1.0.11 - Conditional Create using "If-None-Exist".  See http://build.fhir.org/http.html#2.1.0.13.1 - Invalid "Content-Type" header for negative testing. - etc.
+   */
+  requestHeader?: fhir.TestScriptSetupActionOperationRequestHeaderArgs[]|undefined;
+  /**
+   * If a requestId is supplied, then the resulting request (both headers and body) is mapped to the fixture ID (which may be entirely new and previously undeclared) designated by "requestId".  If requestId is not specified, it is the test engine's responsibility to store the request and use it as the requestId in subsequent assertions when assertion path and/or headerField is specified, direction is equal to request, and the requestId in not specified.
+   */
+  requestId?: fhir.FhirId|string|undefined;
+  /**
+   * If a responseId is supplied, and the server responds, then the resulting response (both headers and body) is mapped to the fixture ID (which may be entirely new and previously undeclared) designated by "responseId".  If responseId is not specified, it is the test engine's responsibility to store the response and use it as the responseId in subsequent assertions when assertion path and/or headerField is specified and the responseId is not specified.
+   */
+  responseId?: fhir.FhirId|string|undefined;
+  /**
+   * The id of the fixture used as the body of a PUT or POST request.
+   */
+  sourceId?: fhir.FhirId|string|undefined;
+  /**
+   * If "url" element is specified, then "targetId", "params", and "resource" elements will be ignored as "url" element will have everything needed for constructing the request url.  If "params" element is specified, then "targetId" element is ignored.  For FHIR operations that require a resource (e.g. "read" and "vread" operations), the "resource" element must be specified when "params" element is specified.  If "url" and "params" elements are absent, then the request url will be constructed from "targetId" fixture if present.  For "read" operation, the resource and id values will be extracted from "targetId" fixture and used to construct the url.  For "vread" and "history" operations, the versionId value will also be used.
+   */
+  targetId?: fhir.FhirId|string|undefined;
+  /**
+   * Used to set the request URL explicitly.  If "url" element is defined, then "targetId", "resource", and "params" elements will be ignored.  Test engines would use whatever is specified in "url" without tampering with the string (beyond encoding the URL for HTTP).  Test engines do have to look for placeholders (${}) and replace the variable placeholders with the variable values at runtime before sending the request.
+   */
+  url?: fhir.FhirString|string|undefined;
 }
 
 /**
  * The operation to perform.
  */
-export class TestScriptSetupActionOperation extends fhir.BackboneElement implements ITestScriptSetupActionOperation {
+export class TestScriptSetupActionOperation extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptSetupActionOperation';
   /**
    * See http://build.fhir.org/http.html for list of server interactions.
    */
@@ -1313,165 +719,90 @@ export class TestScriptSetupActionOperation extends fhir.BackboneElement impleme
   /**
    * If "url" element is specified, then "targetId", "params", and "resource" elements will be ignored as "url" element will have everything needed for constructing the request url.  If "params" element is specified, then "targetId" element is ignored. For FHIR operations that require a resource (e.g. "read" and "vread" operations), the "resource" element must be specified when "params" element is specified.  If "url" and "params" elements are absent, then the request url will be constructed from "targetId" fixture if present. For "read" operation, the resource and id values will be extracted from "targetId" fixture and used to construct the url. For "vread" and "history" operations, the versionId value will also be used.
    */
-  public resource?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.resource
-   */
-  public _resource?: fhir.FhirElement|undefined;
+  public resource?: fhir.FhirCode|undefined;
   /**
    * This has no impact on the verification itself.
    */
-  public label?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.label
-   */
-  public _label?: fhir.FhirElement|undefined;
+  public label?: fhir.FhirString|undefined;
   /**
    * This has no impact on the verification itself.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * If this is specified, then test engine shall set the 'Accept' header to the corresponding value.  If you'd like to explicitly set the 'Accept' to some other value then use the 'requestHeader' element.
    */
-  public accept?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.accept
-   */
-  public _accept?: fhir.FhirElement|undefined;
+  public accept?: fhir.FhirCode|undefined;
   /**
    * If this is specified, then test engine shall set the 'Content-Type' header to the corresponding value.  If you'd like to explicitly set the 'Content-Type' to some other value then use the 'requestHeader' element.
    */
-  public contentType?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.contentType
-   */
-  public _contentType?: fhir.FhirElement|undefined;
+  public contentType?: fhir.FhirCode|undefined;
   /**
    * If multiple TestScript.destination elements are defined and operation.destination is undefined, test engine will report an error as it cannot determine what destination to use for the exchange.
    */
-  public destination?: number|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.destination
-   */
-  public _destination?: fhir.FhirElement|undefined;
+  public destination?: fhir.FhirInteger|undefined;
   /**
    * Whether or not to implicitly send the request url in encoded format. The default is true to match the standard RESTful client behavior. Set to false when communicating with a server that does not support encoded url paths.
    */
-  public encodeRequestUrl: boolean|null;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.encodeRequestUrl
-   */
-  public _encodeRequestUrl?: fhir.FhirElement|undefined;
+  public encodeRequestUrl: fhir.FhirBoolean|null;
   /**
    * The primary purpose of the explicit HTTP method is support of  HTTP POST method invocation of the FHIR search. Other uses will include support of negative testing.
    */
   public method?: HttpOperationsValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.method
-   */
-  public _method?: fhir.FhirElement|undefined;
-  /**
    * If absent, test engine will send the message.  When present, test engine will not send the request message but will wait for the request message to be sent from this origin server.
    */
-  public origin?: number|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.origin
-   */
-  public _origin?: fhir.FhirElement|undefined;
+  public origin?: fhir.FhirInteger|undefined;
   /**
    * If "url" element is specified, then "targetId", "params", and "resource" elements will be ignored as "url" element will have everything needed for constructing the request url.  If "params" element is specified, then "targetId" element is ignored.  For FHIR operations that require a resource (e.g. "read" and "vread" operations), the "resource" element must be specified when "params" element is specified.  If "url" and "params" elements are absent, then the request url will be constructed from "targetId" fixture if present.  For "read" operation, the resource and id values will be extracted from "targetId" fixture and used to construct the url.  For "vread" and "history" operations, the versionId value will also be used.   Test engines would append whatever is specified for "params" to the URL after the resource type without tampering with the string (beyond encoding the URL for HTTP).  The "params" element does not correspond exactly to "search parameters".  Nor is it the "path".  It corresponds to the part of the URL that comes after the [type] (when "resource" element is specified); e.g. It corresponds to "/[id]/_history/[vid] {?_format=[mime-type]}" in the following operation: GET [base]/[type]/[id]/_history/[vid] {?_format=[mime-type]}  Test engines do have to look for placeholders (${}) and replace the variable placeholders with the variable values at runtime before sending the request.
    */
-  public params?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.params
-   */
-  public _params?: fhir.FhirElement|undefined;
+  public params?: fhir.FhirString|undefined;
   /**
    * This gives control to test-script writers to set headers explicitly based on test requirements.  It will allow for testing using:  - "If-Modified-Since" and "If-None-Match" headers.  See http://build.fhir.org/http.html#2.1.0.5.1 - "If-Match" header.  See http://build.fhir.org/http.html#2.1.0.11 - Conditional Create using "If-None-Exist".  See http://build.fhir.org/http.html#2.1.0.13.1 - Invalid "Content-Type" header for negative testing. - etc.
    */
-  public requestHeader?: fhir.TestScriptSetupActionOperationRequestHeader[]|undefined;
+  public requestHeader?: fhir.TestScriptSetupActionOperationRequestHeader[]|undefined = [];
   /**
    * If a requestId is supplied, then the resulting request (both headers and body) is mapped to the fixture ID (which may be entirely new and previously undeclared) designated by "requestId".  If requestId is not specified, it is the test engine's responsibility to store the request and use it as the requestId in subsequent assertions when assertion path and/or headerField is specified, direction is equal to request, and the requestId in not specified.
    */
-  public requestId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.requestId
-   */
-  public _requestId?: fhir.FhirElement|undefined;
+  public requestId?: fhir.FhirId|undefined;
   /**
    * If a responseId is supplied, and the server responds, then the resulting response (both headers and body) is mapped to the fixture ID (which may be entirely new and previously undeclared) designated by "responseId".  If responseId is not specified, it is the test engine's responsibility to store the response and use it as the responseId in subsequent assertions when assertion path and/or headerField is specified and the responseId is not specified.
    */
-  public responseId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.responseId
-   */
-  public _responseId?: fhir.FhirElement|undefined;
+  public responseId?: fhir.FhirId|undefined;
   /**
    * The id of the fixture used as the body of a PUT or POST request.
    */
-  public sourceId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.sourceId
-   */
-  public _sourceId?: fhir.FhirElement|undefined;
+  public sourceId?: fhir.FhirId|undefined;
   /**
    * If "url" element is specified, then "targetId", "params", and "resource" elements will be ignored as "url" element will have everything needed for constructing the request url.  If "params" element is specified, then "targetId" element is ignored.  For FHIR operations that require a resource (e.g. "read" and "vread" operations), the "resource" element must be specified when "params" element is specified.  If "url" and "params" elements are absent, then the request url will be constructed from "targetId" fixture if present.  For "read" operation, the resource and id values will be extracted from "targetId" fixture and used to construct the url.  For "vread" and "history" operations, the versionId value will also be used.
    */
-  public targetId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.targetId
-   */
-  public _targetId?: fhir.FhirElement|undefined;
+  public targetId?: fhir.FhirId|undefined;
   /**
    * Used to set the request URL explicitly.  If "url" element is defined, then "targetId", "resource", and "params" elements will be ignored.  Test engines would use whatever is specified in "url" without tampering with the string (beyond encoding the URL for HTTP).  Test engines do have to look for placeholders (${}) and replace the variable placeholders with the variable values at runtime before sending the request.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.operation.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirString|undefined;
   /**
    * Default constructor for TestScriptSetupActionOperation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptSetupActionOperation> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.Coding(source.type!); }
-    if (source['resource']) { this.resource = source.resource; }
-    if (source['_resource']) { this._resource = new fhir.FhirElement(source._resource!); }
-    if (source['label']) { this.label = source.label; }
-    if (source['_label']) { this._label = new fhir.FhirElement(source._label!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['accept']) { this.accept = source.accept; }
-    if (source['_accept']) { this._accept = new fhir.FhirElement(source._accept!); }
-    if (source['contentType']) { this.contentType = source.contentType; }
-    if (source['_contentType']) { this._contentType = new fhir.FhirElement(source._contentType!); }
-    if (source['destination']) { this.destination = source.destination; }
-    if (source['_destination']) { this._destination = new fhir.FhirElement(source._destination!); }
-    if (source['encodeRequestUrl']) { this.encodeRequestUrl = source.encodeRequestUrl; }
+  constructor(source:Partial<TestScriptSetupActionOperationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.Coding(source.type); }
+    if (source['resource']) { this.resource = new fhir.FhirCode({value: source.resource}); }
+    if (source['label']) { this.label = new fhir.FhirString({value: source.label}); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['accept']) { this.accept = new fhir.FhirCode({value: source.accept}); }
+    if (source['contentType']) { this.contentType = new fhir.FhirCode({value: source.contentType}); }
+    if (source['destination']) { this.destination = new fhir.FhirInteger({value: source.destination}); }
+    if (source['encodeRequestUrl']) { this.encodeRequestUrl = new fhir.FhirBoolean({value: source.encodeRequestUrl}); }
     else { this.encodeRequestUrl = null; }
-    if (source['_encodeRequestUrl']) { this._encodeRequestUrl = new fhir.FhirElement(source._encodeRequestUrl!); }
     if (source['method']) { this.method = source.method; }
-    if (source['_method']) { this._method = new fhir.FhirElement(source._method!); }
-    if (source['origin']) { this.origin = source.origin; }
-    if (source['_origin']) { this._origin = new fhir.FhirElement(source._origin!); }
-    if (source['params']) { this.params = source.params; }
-    if (source['_params']) { this._params = new fhir.FhirElement(source._params!); }
+    if (source['origin']) { this.origin = new fhir.FhirInteger({value: source.origin}); }
+    if (source['params']) { this.params = new fhir.FhirString({value: source.params}); }
     if (source['requestHeader']) { this.requestHeader = source.requestHeader.map((x) => new fhir.TestScriptSetupActionOperationRequestHeader(x)); }
-    if (source['requestId']) { this.requestId = source.requestId; }
-    if (source['_requestId']) { this._requestId = new fhir.FhirElement(source._requestId!); }
-    if (source['responseId']) { this.responseId = source.responseId; }
-    if (source['_responseId']) { this._responseId = new fhir.FhirElement(source._responseId!); }
-    if (source['sourceId']) { this.sourceId = source.sourceId; }
-    if (source['_sourceId']) { this._sourceId = new fhir.FhirElement(source._sourceId!); }
-    if (source['targetId']) { this.targetId = source.targetId; }
-    if (source['_targetId']) { this._targetId = new fhir.FhirElement(source._targetId!); }
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
+    if (source['requestId']) { this.requestId = new fhir.FhirId({value: source.requestId}); }
+    if (source['responseId']) { this.responseId = new fhir.FhirId({value: source.responseId}); }
+    if (source['sourceId']) { this.sourceId = new fhir.FhirId({value: source.sourceId}); }
+    if (source['targetId']) { this.targetId = new fhir.FhirId({value: source.targetId}); }
+    if (source['url']) { this.url = new fhir.FhirString({value: source.url}); }
   }
   /**
    * Extensible-bound Value Set for type
@@ -1494,260 +825,251 @@ export class TestScriptSetupActionOperation extends fhir.BackboneElement impleme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["_resource"]) { results.push(...this._resource.doModelValidation()); }
-    if (this["_label"]) { results.push(...this._label.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_accept"]) { results.push(...this._accept.doModelValidation()); }
-    if (this["_contentType"]) { results.push(...this._contentType.doModelValidation()); }
-    if (this["_destination"]) { results.push(...this._destination.doModelValidation()); }
-    if (!this["encodeRequestUrl"]) { results.push(["encodeRequestUrl",'Missing required element: TestScript.setup.action.operation.encodeRequestUrl']); }
-    if (this["_encodeRequestUrl"]) { results.push(...this._encodeRequestUrl.doModelValidation()); }
-    if (this["_method"]) { results.push(...this._method.doModelValidation()); }
-    if (this["_origin"]) { results.push(...this._origin.doModelValidation()); }
-    if (this["_params"]) { results.push(...this._params.doModelValidation()); }
-    if (this["requestHeader"]) { this.requestHeader.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_requestId"]) { results.push(...this._requestId.doModelValidation()); }
-    if (this["_responseId"]) { results.push(...this._responseId.doModelValidation()); }
-    if (this["_sourceId"]) { results.push(...this._sourceId.doModelValidation()); }
-    if (this["_targetId"]) { results.push(...this._targetId.doModelValidation()); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["resource"]) { outcome.issue!.push(...this.resource.doModelValidation().issue!); }
+    if (this["label"]) { outcome.issue!.push(...this.label.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["accept"]) { outcome.issue!.push(...this.accept.doModelValidation().issue!); }
+    if (this["contentType"]) { outcome.issue!.push(...this.contentType.doModelValidation().issue!); }
+    if (this["destination"]) { outcome.issue!.push(...this.destination.doModelValidation().issue!); }
+    if (!this['encodeRequestUrl']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property encodeRequestUrl:fhir.FhirBoolean fhir: TestScript.setup.action.operation.encodeRequestUrl:boolean", }));
+    }
+    if (this["encodeRequestUrl"]) { outcome.issue!.push(...this.encodeRequestUrl.doModelValidation().issue!); }
+    if (this["origin"]) { outcome.issue!.push(...this.origin.doModelValidation().issue!); }
+    if (this["params"]) { outcome.issue!.push(...this.params.doModelValidation().issue!); }
+    if (this["requestHeader"]) { this.requestHeader.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["requestId"]) { outcome.issue!.push(...this.requestId.doModelValidation().issue!); }
+    if (this["responseId"]) { outcome.issue!.push(...this.responseId.doModelValidation().issue!); }
+    if (this["sourceId"]) { outcome.issue!.push(...this.sourceId.doModelValidation().issue!); }
+    if (this["targetId"]) { outcome.issue!.push(...this.targetId.doModelValidation().issue!); }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptSetupActionAssert type.
+ */
+export interface TestScriptSetupActionAssertArgs extends fhir.BackboneElementArgs {
+  /**
+   * This has no impact on the verification itself.
+   */
+  label?: fhir.FhirString|string|undefined;
+  /**
+   * This has no impact on the verification itself.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * If the direction is specified as "response" (the default), then the processing of this assert is against the received response message. If the direction is specified as "request", then the processing of this assert is against the sent request message.
+   */
+  direction?: AssertDirectionCodesValueSetEnum|undefined;
+  /**
+   * Id of the source fixture used as the contents to be evaluated by either the "source/expression" or "sourceId/path" definition.
+   */
+  compareToSourceId?: fhir.FhirString|string|undefined;
+  /**
+   * Thefhirpath expression to be evaluated against the expected fixture to compare to. Ignored if "assert.value" is used. The evaluation will be done before the assertion is evaluated.
+   */
+  compareToSourceExpression?: fhir.FhirString|string|undefined;
+  /**
+   * The XPath or JSONPath expression to be evaluated against the expected fixture to compare to. Ignored if "assert.value" is used. The evaluation will be done before the assertion is evaluated.
+   */
+  compareToSourcePath?: fhir.FhirString|string|undefined;
+  /**
+   * If this is specified, then test engine shall confirm that the content-type of the last operation's headers is set to this value.  If "assert.sourceId" element is specified, then the evaluation will be done against the headers mapped to that sourceId (and not the last operation's headers).  If you'd like to have more control over the string, then use 'assert.headerField' instead.
+   */
+  contentType?: fhir.FhirCode|string|undefined;
+  /**
+   * If both "expression" and a "fixtureId" are specified, then the expression will be evaluated against the request or response body mapped to the fixtureId.  If "expression" is specified and a "fixtureId" is not, then the expression will be evaluated against the response body of the last operation.  Test engines are to store the request and response body and headers of the last operation at all times for subsequent assertions.
+   */
+  expression?: fhir.FhirString|string|undefined;
+  /**
+   * If "headerField" is specified then "value" must be specified.  If "sourceId" is not specified, then "headerField" will be evaluated against the last operation's response headers.  Test engines are to keep track of the last operation's response body and response headers.
+   */
+  headerField?: fhir.FhirString|string|undefined;
+  /**
+   * Asserts that the response contains all the element/content in another fixture pointed to by minimumId.  This can be a statically defined fixture or one that is dynamically set via responseId.
+   */
+  minimumId?: fhir.FhirString|string|undefined;
+  /**
+   * Asserts that the Bundle contains first, last, and next links.
+   */
+  navigationLinks?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Operators are useful especially for negative testing.  If operator is not specified, then the "equals" operator is assumed; e.g. ```&lt;code&gt;   &lt;assert&gt;  &lt;operator value="in" /&gt;  &lt;responseCode value="200,201,204" /&gt;    &lt;/assert&gt;    &lt;assert&gt;  &lt;operator value="notEquals" /&gt;  &lt;response value="okay"/&gt;   &lt;/assert&gt;    &lt;assert&gt;  &lt;operator value="greaterThan" /&gt;    &lt;responseHeader&gt;     &lt;field value="Content-Length" /&gt;     &lt;value value="0" /&gt;    &lt;/responseHeader/&gt;   &lt;/assert&gt; &lt;/code&gt; ```.
+   */
+  operator?: AssertOperatorCodesValueSetEnum|undefined;
+  /**
+   * If both "path" and a "fixtureId" are specified, then the path will be evaluated against the request or response body mapped to the fixtureId.  If "path" is specified and a "fixtureId" is not, then the path will be evaluated against the response body of the last operation.  Test engines are to store the request and response body and headers of the last operation at all times for subsequent assertions.
+   */
+  path?: fhir.FhirString|string|undefined;
+  /**
+   * If "requestMethod" is specified then it will be used in place of "value". The "requestMethod" will evaluate against the last operation's request HTTP operation.
+   */
+  requestMethod?: HttpOperationsValueSetEnum|undefined;
+  /**
+   * If "requestURL" is specified then it will be used in place of "value". The "requestURL" will evaluate against the last operation's full request URL path string.
+   */
+  requestURL?: fhir.FhirString|string|undefined;
+  /**
+   * This will be expected resource type in response body e.g. in read, vread, search, etc.  See http://build.fhir.org/resourcelist.html for complete list of resource types; e.g. &lt;assert &gt; &lt;resourceType value="Patient" &lt;/assert&gt;.
+   */
+  resource?: fhir.FhirCode|string|undefined;
+  /**
+   * This is a shorter way of achieving similar verifications via "assert.responseCode".  If you need more control, then use "assert.responseCode"  e.g. &lt;assert&gt;  &lt;contentType value="json" /&gt;  &lt;response value="okay"/&gt; &lt;/assert&gt;.
+   */
+  response?: AssertResponseCodeTypesValueSetEnum|undefined;
+  /**
+   * To be used with "operator" attribute value. Asserts that the response code equals this value if "operator" is not specified.   If the operator is "in" or "notIn" then the responseCode would be a comma-separated list of values e.g. "200,201". Otherwise, it's expected to be a numeric value.   If "fixture" is not specified, then the "responseBodyId" value of the last operation is assumed.
+   */
+  responseCode?: fhir.FhirString|string|undefined;
+  /**
+   * This can be a statically defined fixture (at the top of the testscript) or a dynamically set fixture created by responseId of the action.operation element.
+   */
+  sourceId?: fhir.FhirId|string|undefined;
+  /**
+   * The ID of a Profile fixture. Asserts that the response is valid according to the Profile specified by validateProfileId.
+   */
+  validateProfileId?: fhir.FhirId|string|undefined;
+  /**
+   * The string-representation of a number, string, or boolean that is expected.  Test engines do have to look for placeholders (${}) and replace the variable placeholders with the variable values at runtime before comparing this value to the actual value.
+   */
+  value?: fhir.FhirString|string|undefined;
+  /**
+   * If this element is specified and it is true, then assertion failures can be logged by test engine but should not stop the test script execution from proceeding.  There are likely cases where the spec is not clear on what should happen. If the spec says something is optional (maybe a response header for example), but a server doesn’t do it, we could choose to issue a warning.
+   */
+  warningOnly: fhir.FhirBoolean|boolean|undefined;
 }
 
 /**
  * In order to evaluate an assertion, the request, response, and results of the most recently executed operation must always be maintained by the test engine.
  */
-export class TestScriptSetupActionAssert extends fhir.BackboneElement implements ITestScriptSetupActionAssert {
+export class TestScriptSetupActionAssert extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptSetupActionAssert';
   /**
    * This has no impact on the verification itself.
    */
-  public label?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.label
-   */
-  public _label?: fhir.FhirElement|undefined;
+  public label?: fhir.FhirString|undefined;
   /**
    * This has no impact on the verification itself.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * If the direction is specified as "response" (the default), then the processing of this assert is against the received response message. If the direction is specified as "request", then the processing of this assert is against the sent request message.
    */
   public direction?: AssertDirectionCodesValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.direction
-   */
-  public _direction?: fhir.FhirElement|undefined;
-  /**
    * Id of the source fixture used as the contents to be evaluated by either the "source/expression" or "sourceId/path" definition.
    */
-  public compareToSourceId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.compareToSourceId
-   */
-  public _compareToSourceId?: fhir.FhirElement|undefined;
+  public compareToSourceId?: fhir.FhirString|undefined;
   /**
    * Thefhirpath expression to be evaluated against the expected fixture to compare to. Ignored if "assert.value" is used. The evaluation will be done before the assertion is evaluated.
    */
-  public compareToSourceExpression?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.compareToSourceExpression
-   */
-  public _compareToSourceExpression?: fhir.FhirElement|undefined;
+  public compareToSourceExpression?: fhir.FhirString|undefined;
   /**
    * The XPath or JSONPath expression to be evaluated against the expected fixture to compare to. Ignored if "assert.value" is used. The evaluation will be done before the assertion is evaluated.
    */
-  public compareToSourcePath?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.compareToSourcePath
-   */
-  public _compareToSourcePath?: fhir.FhirElement|undefined;
+  public compareToSourcePath?: fhir.FhirString|undefined;
   /**
    * If this is specified, then test engine shall confirm that the content-type of the last operation's headers is set to this value.  If "assert.sourceId" element is specified, then the evaluation will be done against the headers mapped to that sourceId (and not the last operation's headers).  If you'd like to have more control over the string, then use 'assert.headerField' instead.
    */
-  public contentType?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.contentType
-   */
-  public _contentType?: fhir.FhirElement|undefined;
+  public contentType?: fhir.FhirCode|undefined;
   /**
    * If both "expression" and a "fixtureId" are specified, then the expression will be evaluated against the request or response body mapped to the fixtureId.  If "expression" is specified and a "fixtureId" is not, then the expression will be evaluated against the response body of the last operation.  Test engines are to store the request and response body and headers of the last operation at all times for subsequent assertions.
    */
-  public expression?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.expression
-   */
-  public _expression?: fhir.FhirElement|undefined;
+  public expression?: fhir.FhirString|undefined;
   /**
    * If "headerField" is specified then "value" must be specified.  If "sourceId" is not specified, then "headerField" will be evaluated against the last operation's response headers.  Test engines are to keep track of the last operation's response body and response headers.
    */
-  public headerField?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.headerField
-   */
-  public _headerField?: fhir.FhirElement|undefined;
+  public headerField?: fhir.FhirString|undefined;
   /**
    * Asserts that the response contains all the element/content in another fixture pointed to by minimumId.  This can be a statically defined fixture or one that is dynamically set via responseId.
    */
-  public minimumId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.minimumId
-   */
-  public _minimumId?: fhir.FhirElement|undefined;
+  public minimumId?: fhir.FhirString|undefined;
   /**
    * Asserts that the Bundle contains first, last, and next links.
    */
-  public navigationLinks?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.navigationLinks
-   */
-  public _navigationLinks?: fhir.FhirElement|undefined;
+  public navigationLinks?: fhir.FhirBoolean|undefined;
   /**
    * Operators are useful especially for negative testing.  If operator is not specified, then the "equals" operator is assumed; e.g. ```&lt;code&gt;   &lt;assert&gt;  &lt;operator value="in" /&gt;  &lt;responseCode value="200,201,204" /&gt;    &lt;/assert&gt;    &lt;assert&gt;  &lt;operator value="notEquals" /&gt;  &lt;response value="okay"/&gt;   &lt;/assert&gt;    &lt;assert&gt;  &lt;operator value="greaterThan" /&gt;    &lt;responseHeader&gt;     &lt;field value="Content-Length" /&gt;     &lt;value value="0" /&gt;    &lt;/responseHeader/&gt;   &lt;/assert&gt; &lt;/code&gt; ```.
    */
   public operator?: AssertOperatorCodesValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.operator
-   */
-  public _operator?: fhir.FhirElement|undefined;
-  /**
    * If both "path" and a "fixtureId" are specified, then the path will be evaluated against the request or response body mapped to the fixtureId.  If "path" is specified and a "fixtureId" is not, then the path will be evaluated against the response body of the last operation.  Test engines are to store the request and response body and headers of the last operation at all times for subsequent assertions.
    */
-  public path?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.path
-   */
-  public _path?: fhir.FhirElement|undefined;
+  public path?: fhir.FhirString|undefined;
   /**
    * If "requestMethod" is specified then it will be used in place of "value". The "requestMethod" will evaluate against the last operation's request HTTP operation.
    */
   public requestMethod?: HttpOperationsValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.requestMethod
-   */
-  public _requestMethod?: fhir.FhirElement|undefined;
-  /**
    * If "requestURL" is specified then it will be used in place of "value". The "requestURL" will evaluate against the last operation's full request URL path string.
    */
-  public requestURL?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.requestURL
-   */
-  public _requestURL?: fhir.FhirElement|undefined;
+  public requestURL?: fhir.FhirString|undefined;
   /**
    * This will be expected resource type in response body e.g. in read, vread, search, etc.  See http://build.fhir.org/resourcelist.html for complete list of resource types; e.g. &lt;assert &gt; &lt;resourceType value="Patient" &lt;/assert&gt;.
    */
-  public resource?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.resource
-   */
-  public _resource?: fhir.FhirElement|undefined;
+  public resource?: fhir.FhirCode|undefined;
   /**
    * This is a shorter way of achieving similar verifications via "assert.responseCode".  If you need more control, then use "assert.responseCode"  e.g. &lt;assert&gt;  &lt;contentType value="json" /&gt;  &lt;response value="okay"/&gt; &lt;/assert&gt;.
    */
   public response?: AssertResponseCodeTypesValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.response
-   */
-  public _response?: fhir.FhirElement|undefined;
-  /**
    * To be used with "operator" attribute value. Asserts that the response code equals this value if "operator" is not specified.   If the operator is "in" or "notIn" then the responseCode would be a comma-separated list of values e.g. "200,201". Otherwise, it's expected to be a numeric value.   If "fixture" is not specified, then the "responseBodyId" value of the last operation is assumed.
    */
-  public responseCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.responseCode
-   */
-  public _responseCode?: fhir.FhirElement|undefined;
+  public responseCode?: fhir.FhirString|undefined;
   /**
    * This can be a statically defined fixture (at the top of the testscript) or a dynamically set fixture created by responseId of the action.operation element.
    */
-  public sourceId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.sourceId
-   */
-  public _sourceId?: fhir.FhirElement|undefined;
+  public sourceId?: fhir.FhirId|undefined;
   /**
    * The ID of a Profile fixture. Asserts that the response is valid according to the Profile specified by validateProfileId.
    */
-  public validateProfileId?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.validateProfileId
-   */
-  public _validateProfileId?: fhir.FhirElement|undefined;
+  public validateProfileId?: fhir.FhirId|undefined;
   /**
    * The string-representation of a number, string, or boolean that is expected.  Test engines do have to look for placeholders (${}) and replace the variable placeholders with the variable values at runtime before comparing this value to the actual value.
    */
-  public value?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.value
-   */
-  public _value?: fhir.FhirElement|undefined;
+  public value?: fhir.FhirString|undefined;
   /**
    * If this element is specified and it is true, then assertion failures can be logged by test engine but should not stop the test script execution from proceeding.  There are likely cases where the spec is not clear on what should happen. If the spec says something is optional (maybe a response header for example), but a server doesn’t do it, we could choose to issue a warning.
    */
-  public warningOnly: boolean|null;
-  /**
-   * Extended properties for primitive element: TestScript.setup.action.assert.warningOnly
-   */
-  public _warningOnly?: fhir.FhirElement|undefined;
+  public warningOnly: fhir.FhirBoolean|null;
   /**
    * Default constructor for TestScriptSetupActionAssert - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptSetupActionAssert> = { }) {
-    super(source);
-    if (source['label']) { this.label = source.label; }
-    if (source['_label']) { this._label = new fhir.FhirElement(source._label!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+  constructor(source:Partial<TestScriptSetupActionAssertArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['label']) { this.label = new fhir.FhirString({value: source.label}); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
     if (source['direction']) { this.direction = source.direction; }
-    if (source['_direction']) { this._direction = new fhir.FhirElement(source._direction!); }
-    if (source['compareToSourceId']) { this.compareToSourceId = source.compareToSourceId; }
-    if (source['_compareToSourceId']) { this._compareToSourceId = new fhir.FhirElement(source._compareToSourceId!); }
-    if (source['compareToSourceExpression']) { this.compareToSourceExpression = source.compareToSourceExpression; }
-    if (source['_compareToSourceExpression']) { this._compareToSourceExpression = new fhir.FhirElement(source._compareToSourceExpression!); }
-    if (source['compareToSourcePath']) { this.compareToSourcePath = source.compareToSourcePath; }
-    if (source['_compareToSourcePath']) { this._compareToSourcePath = new fhir.FhirElement(source._compareToSourcePath!); }
-    if (source['contentType']) { this.contentType = source.contentType; }
-    if (source['_contentType']) { this._contentType = new fhir.FhirElement(source._contentType!); }
-    if (source['expression']) { this.expression = source.expression; }
-    if (source['_expression']) { this._expression = new fhir.FhirElement(source._expression!); }
-    if (source['headerField']) { this.headerField = source.headerField; }
-    if (source['_headerField']) { this._headerField = new fhir.FhirElement(source._headerField!); }
-    if (source['minimumId']) { this.minimumId = source.minimumId; }
-    if (source['_minimumId']) { this._minimumId = new fhir.FhirElement(source._minimumId!); }
-    if (source['navigationLinks']) { this.navigationLinks = source.navigationLinks; }
-    if (source['_navigationLinks']) { this._navigationLinks = new fhir.FhirElement(source._navigationLinks!); }
+    if (source['compareToSourceId']) { this.compareToSourceId = new fhir.FhirString({value: source.compareToSourceId}); }
+    if (source['compareToSourceExpression']) { this.compareToSourceExpression = new fhir.FhirString({value: source.compareToSourceExpression}); }
+    if (source['compareToSourcePath']) { this.compareToSourcePath = new fhir.FhirString({value: source.compareToSourcePath}); }
+    if (source['contentType']) { this.contentType = new fhir.FhirCode({value: source.contentType}); }
+    if (source['expression']) { this.expression = new fhir.FhirString({value: source.expression}); }
+    if (source['headerField']) { this.headerField = new fhir.FhirString({value: source.headerField}); }
+    if (source['minimumId']) { this.minimumId = new fhir.FhirString({value: source.minimumId}); }
+    if (source['navigationLinks']) { this.navigationLinks = new fhir.FhirBoolean({value: source.navigationLinks}); }
     if (source['operator']) { this.operator = source.operator; }
-    if (source['_operator']) { this._operator = new fhir.FhirElement(source._operator!); }
-    if (source['path']) { this.path = source.path; }
-    if (source['_path']) { this._path = new fhir.FhirElement(source._path!); }
+    if (source['path']) { this.path = new fhir.FhirString({value: source.path}); }
     if (source['requestMethod']) { this.requestMethod = source.requestMethod; }
-    if (source['_requestMethod']) { this._requestMethod = new fhir.FhirElement(source._requestMethod!); }
-    if (source['requestURL']) { this.requestURL = source.requestURL; }
-    if (source['_requestURL']) { this._requestURL = new fhir.FhirElement(source._requestURL!); }
-    if (source['resource']) { this.resource = source.resource; }
-    if (source['_resource']) { this._resource = new fhir.FhirElement(source._resource!); }
+    if (source['requestURL']) { this.requestURL = new fhir.FhirString({value: source.requestURL}); }
+    if (source['resource']) { this.resource = new fhir.FhirCode({value: source.resource}); }
     if (source['response']) { this.response = source.response; }
-    if (source['_response']) { this._response = new fhir.FhirElement(source._response!); }
-    if (source['responseCode']) { this.responseCode = source.responseCode; }
-    if (source['_responseCode']) { this._responseCode = new fhir.FhirElement(source._responseCode!); }
-    if (source['sourceId']) { this.sourceId = source.sourceId; }
-    if (source['_sourceId']) { this._sourceId = new fhir.FhirElement(source._sourceId!); }
-    if (source['validateProfileId']) { this.validateProfileId = source.validateProfileId; }
-    if (source['_validateProfileId']) { this._validateProfileId = new fhir.FhirElement(source._validateProfileId!); }
-    if (source['value']) { this.value = source.value; }
-    if (source['_value']) { this._value = new fhir.FhirElement(source._value!); }
-    if (source['warningOnly']) { this.warningOnly = source.warningOnly; }
+    if (source['responseCode']) { this.responseCode = new fhir.FhirString({value: source.responseCode}); }
+    if (source['sourceId']) { this.sourceId = new fhir.FhirId({value: source.sourceId}); }
+    if (source['validateProfileId']) { this.validateProfileId = new fhir.FhirId({value: source.validateProfileId}); }
+    if (source['value']) { this.value = new fhir.FhirString({value: source.value}); }
+    if (source['warningOnly']) { this.warningOnly = new fhir.FhirBoolean({value: source.warningOnly}); }
     else { this.warningOnly = null; }
-    if (source['_warningOnly']) { this._warningOnly = new fhir.FhirElement(source._warningOnly!); }
   }
   /**
    * Required-bound Value Set for direction
@@ -1782,39 +1104,57 @@ export class TestScriptSetupActionAssert extends fhir.BackboneElement implements
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_label"]) { results.push(...this._label.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_direction"]) { results.push(...this._direction.doModelValidation()); }
-    if (this["_compareToSourceId"]) { results.push(...this._compareToSourceId.doModelValidation()); }
-    if (this["_compareToSourceExpression"]) { results.push(...this._compareToSourceExpression.doModelValidation()); }
-    if (this["_compareToSourcePath"]) { results.push(...this._compareToSourcePath.doModelValidation()); }
-    if (this["_contentType"]) { results.push(...this._contentType.doModelValidation()); }
-    if (this["_expression"]) { results.push(...this._expression.doModelValidation()); }
-    if (this["_headerField"]) { results.push(...this._headerField.doModelValidation()); }
-    if (this["_minimumId"]) { results.push(...this._minimumId.doModelValidation()); }
-    if (this["_navigationLinks"]) { results.push(...this._navigationLinks.doModelValidation()); }
-    if (this["_operator"]) { results.push(...this._operator.doModelValidation()); }
-    if (this["_path"]) { results.push(...this._path.doModelValidation()); }
-    if (this["_requestMethod"]) { results.push(...this._requestMethod.doModelValidation()); }
-    if (this["_requestURL"]) { results.push(...this._requestURL.doModelValidation()); }
-    if (this["_resource"]) { results.push(...this._resource.doModelValidation()); }
-    if (this["_response"]) { results.push(...this._response.doModelValidation()); }
-    if (this["_responseCode"]) { results.push(...this._responseCode.doModelValidation()); }
-    if (this["_sourceId"]) { results.push(...this._sourceId.doModelValidation()); }
-    if (this["_validateProfileId"]) { results.push(...this._validateProfileId.doModelValidation()); }
-    if (this["_value"]) { results.push(...this._value.doModelValidation()); }
-    if (!this["warningOnly"]) { results.push(["warningOnly",'Missing required element: TestScript.setup.action.assert.warningOnly']); }
-    if (this["_warningOnly"]) { results.push(...this._warningOnly.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["label"]) { outcome.issue!.push(...this.label.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["compareToSourceId"]) { outcome.issue!.push(...this.compareToSourceId.doModelValidation().issue!); }
+    if (this["compareToSourceExpression"]) { outcome.issue!.push(...this.compareToSourceExpression.doModelValidation().issue!); }
+    if (this["compareToSourcePath"]) { outcome.issue!.push(...this.compareToSourcePath.doModelValidation().issue!); }
+    if (this["contentType"]) { outcome.issue!.push(...this.contentType.doModelValidation().issue!); }
+    if (this["expression"]) { outcome.issue!.push(...this.expression.doModelValidation().issue!); }
+    if (this["headerField"]) { outcome.issue!.push(...this.headerField.doModelValidation().issue!); }
+    if (this["minimumId"]) { outcome.issue!.push(...this.minimumId.doModelValidation().issue!); }
+    if (this["navigationLinks"]) { outcome.issue!.push(...this.navigationLinks.doModelValidation().issue!); }
+    if (this["path"]) { outcome.issue!.push(...this.path.doModelValidation().issue!); }
+    if (this["requestURL"]) { outcome.issue!.push(...this.requestURL.doModelValidation().issue!); }
+    if (this["resource"]) { outcome.issue!.push(...this.resource.doModelValidation().issue!); }
+    if (this["responseCode"]) { outcome.issue!.push(...this.responseCode.doModelValidation().issue!); }
+    if (this["sourceId"]) { outcome.issue!.push(...this.sourceId.doModelValidation().issue!); }
+    if (this["validateProfileId"]) { outcome.issue!.push(...this.validateProfileId.doModelValidation().issue!); }
+    if (this["value"]) { outcome.issue!.push(...this.value.doModelValidation().issue!); }
+    if (!this['warningOnly']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property warningOnly:fhir.FhirBoolean fhir: TestScript.setup.action.assert.warningOnly:boolean", }));
+    }
+    if (this["warningOnly"]) { outcome.issue!.push(...this.warningOnly.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptSetupAction type.
+ */
+export interface TestScriptSetupActionArgs extends fhir.BackboneElementArgs {
+  /**
+   * The operation to perform.
+   */
+  operation?: fhir.TestScriptSetupActionOperationArgs|undefined;
+  /**
+   * In order to evaluate an assertion, the request, response, and results of the most recently executed operation must always be maintained by the test engine.
+   */
+  assert?: fhir.TestScriptSetupActionAssertArgs|undefined;
 }
 
 /**
  * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
  */
-export class TestScriptSetupAction extends fhir.BackboneElement implements ITestScriptSetupAction {
+export class TestScriptSetupAction extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptSetupAction';
   /**
    * The operation to perform.
    */
@@ -1826,53 +1166,95 @@ export class TestScriptSetupAction extends fhir.BackboneElement implements ITest
   /**
    * Default constructor for TestScriptSetupAction - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptSetupAction> = { }) {
-    super(source);
-    if (source['operation']) { this.operation = new fhir.TestScriptSetupActionOperation(source.operation!); }
-    if (source['assert']) { this.assert = new fhir.TestScriptSetupActionAssert(source.assert!); }
+  constructor(source:Partial<TestScriptSetupActionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['operation']) { this.operation = new fhir.TestScriptSetupActionOperation(source.operation); }
+    if (source['assert']) { this.assert = new fhir.TestScriptSetupActionAssert(source.assert); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["operation"]) { results.push(...this.operation.doModelValidation()); }
-    if (this["assert"]) { results.push(...this.assert.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["operation"]) { outcome.issue!.push(...this.operation.doModelValidation().issue!); }
+    if (this["assert"]) { outcome.issue!.push(...this.assert.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptSetup type.
+ */
+export interface TestScriptSetupArgs extends fhir.BackboneElementArgs {
+  /**
+   * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
+   */
+  action: fhir.TestScriptSetupActionArgs[]|null;
 }
 
 /**
  * A series of required setup operations before tests are executed.
  */
-export class TestScriptSetup extends fhir.BackboneElement implements ITestScriptSetup {
+export class TestScriptSetup extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptSetup';
   /**
    * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
    */
-  public action: fhir.TestScriptSetupAction[]|null;
+  public action: fhir.TestScriptSetupAction[]|null = [];
   /**
    * Default constructor for TestScriptSetup - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptSetup> = { }) {
-    super(source);
+  constructor(source:Partial<TestScriptSetupArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['action']) { this.action = source.action.map((x) => new fhir.TestScriptSetupAction(x)); }
     else { this.action = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if ((!this["action"]) || (this["action"].length === 0)) { results.push(["action",'Missing required element: TestScript.setup.action']); }
-    if (this["action"]) { this.action.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['action']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property action:fhir.TestScriptSetupAction[] fhir: TestScript.setup.action:action", }));
+    } else if (!Array.isArray(this.action)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property action:fhir.TestScriptSetupAction[] fhir: TestScript.setup.action:action", }));
+    } else if (this.action.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property action:fhir.TestScriptSetupAction[] fhir: TestScript.setup.action:action", }));
+    }
+    if (this["action"]) { this.action.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptTestAction type.
+ */
+export interface TestScriptTestActionArgs extends fhir.BackboneElementArgs {
+  /**
+   * An operation would involve a REST request to a server.
+   */
+  operation?: fhir.TestScriptSetupActionOperationArgs|undefined;
+  /**
+   * In order to evaluate an assertion, the request, response, and results of the most recently executed operation must always be maintained by the test engine.
+   */
+  assert?: fhir.TestScriptSetupActionAssertArgs|undefined;
 }
 
 /**
  * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
  */
-export class TestScriptTestAction extends fhir.BackboneElement implements ITestScriptTestAction {
+export class TestScriptTestAction extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptTestAction';
   /**
    * An operation would involve a REST request to a server.
    */
@@ -1884,75 +1266,111 @@ export class TestScriptTestAction extends fhir.BackboneElement implements ITestS
   /**
    * Default constructor for TestScriptTestAction - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptTestAction> = { }) {
-    super(source);
-    if (source['operation']) { this.operation = new fhir.TestScriptSetupActionOperation(source.operation!); }
-    if (source['assert']) { this.assert = new fhir.TestScriptSetupActionAssert(source.assert!); }
+  constructor(source:Partial<TestScriptTestActionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['operation']) { this.operation = new fhir.TestScriptSetupActionOperation(source.operation); }
+    if (source['assert']) { this.assert = new fhir.TestScriptSetupActionAssert(source.assert); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["operation"]) { results.push(...this.operation.doModelValidation()); }
-    if (this["assert"]) { results.push(...this.assert.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["operation"]) { outcome.issue!.push(...this.operation.doModelValidation().issue!); }
+    if (this["assert"]) { outcome.issue!.push(...this.assert.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptTest type.
+ */
+export interface TestScriptTestArgs extends fhir.BackboneElementArgs {
+  /**
+   * The name of this test used for tracking/logging purposes by test engines.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * A short description of the test used by test engines for tracking and reporting purposes.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
+   */
+  action: fhir.TestScriptTestActionArgs[]|null;
 }
 
 /**
  * A test in this script.
  */
-export class TestScriptTest extends fhir.BackboneElement implements ITestScriptTest {
+export class TestScriptTest extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptTest';
   /**
    * The name of this test used for tracking/logging purposes by test engines.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.test.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * A short description of the test used by test engines for tracking and reporting purposes.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.test.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
    */
-  public action: fhir.TestScriptTestAction[]|null;
+  public action: fhir.TestScriptTestAction[]|null = [];
   /**
    * Default constructor for TestScriptTest - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptTest> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+  constructor(source:Partial<TestScriptTestArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
     if (source['action']) { this.action = source.action.map((x) => new fhir.TestScriptTestAction(x)); }
     else { this.action = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if ((!this["action"]) || (this["action"].length === 0)) { results.push(["action",'Missing required element: TestScript.test.action']); }
-    if (this["action"]) { this.action.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (!this['action']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property action:fhir.TestScriptTestAction[] fhir: TestScript.test.action:action", }));
+    } else if (!Array.isArray(this.action)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property action:fhir.TestScriptTestAction[] fhir: TestScript.test.action:action", }));
+    } else if (this.action.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property action:fhir.TestScriptTestAction[] fhir: TestScript.test.action:action", }));
+    }
+    if (this["action"]) { this.action.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptTeardownAction type.
+ */
+export interface TestScriptTeardownActionArgs extends fhir.BackboneElementArgs {
+  /**
+   * An operation would involve a REST request to a server.
+   */
+  operation: fhir.TestScriptSetupActionOperationArgs|null;
 }
 
 /**
  * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
  */
-export class TestScriptTeardownAction extends fhir.BackboneElement implements ITestScriptTeardownAction {
+export class TestScriptTeardownAction extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptTeardownAction';
   /**
    * An operation would involve a REST request to a server.
    */
@@ -1960,53 +1378,191 @@ export class TestScriptTeardownAction extends fhir.BackboneElement implements IT
   /**
    * Default constructor for TestScriptTeardownAction - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptTeardownAction> = { }) {
-    super(source);
-    if (source['operation']) { this.operation = new fhir.TestScriptSetupActionOperation(source.operation!); }
+  constructor(source:Partial<TestScriptTeardownActionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['operation']) { this.operation = new fhir.TestScriptSetupActionOperation(source.operation); }
     else { this.operation = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["operation"]) { results.push(["operation",'Missing required element: TestScript.teardown.action.operation']); }
-    if (this["operation"]) { results.push(...this.operation.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['operation']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property operation:fhir.TestScriptSetupActionOperation fhir: TestScript.teardown.action.operation:TestScript.setup.action.operation", }));
+    }
+    if (this["operation"]) { outcome.issue!.push(...this.operation.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScriptTeardown type.
+ */
+export interface TestScriptTeardownArgs extends fhir.BackboneElementArgs {
+  /**
+   * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
+   */
+  action: fhir.TestScriptTeardownActionArgs[]|null;
 }
 
 /**
  * A series of operations required to clean up after all the tests are executed (successfully or otherwise).
  */
-export class TestScriptTeardown extends fhir.BackboneElement implements ITestScriptTeardown {
+export class TestScriptTeardown extends fhir.BackboneElement {
+  readonly __dataType:string = 'TestScriptTeardown';
   /**
    * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
    */
-  public action: fhir.TestScriptTeardownAction[]|null;
+  public action: fhir.TestScriptTeardownAction[]|null = [];
   /**
    * Default constructor for TestScriptTeardown - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScriptTeardown> = { }) {
-    super(source);
+  constructor(source:Partial<TestScriptTeardownArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['action']) { this.action = source.action.map((x) => new fhir.TestScriptTeardownAction(x)); }
     else { this.action = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if ((!this["action"]) || (this["action"].length === 0)) { results.push(["action",'Missing required element: TestScript.teardown.action']); }
-    if (this["action"]) { this.action.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['action']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property action:fhir.TestScriptTeardownAction[] fhir: TestScript.teardown.action:action", }));
+    } else if (!Array.isArray(this.action)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property action:fhir.TestScriptTeardownAction[] fhir: TestScript.teardown.action:action", }));
+    } else if (this.action.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property action:fhir.TestScriptTeardownAction[] fhir: TestScript.teardown.action:action", }));
+    }
+    if (this["action"]) { this.action.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the TestScript type.
+ */
+export interface TestScriptArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "TestScript"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url: fhir.FhirUri|string|undefined;
+  /**
+   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this test script outside of FHIR, where it is not possible to use the logical URI.
+   */
+  identifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * There may be different test script instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the test script with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * Allows filtering of test scripts that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Allows filtering of test scripts that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the test script. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the test script is the organization or individual primarily responsible for the maintenance and upkeep of the test script. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the test script. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the test script was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the test script as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the test script is presumed to be the predominant language in the place the test script was created).
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the test script to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * This element does not describe the usage of the test script. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this test script.
+   */
+  purpose?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * A copyright statement relating to the test script and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the test script.
+   */
+  copyright?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * The purpose of this element is to define the profile of an origin element used elsewhere in the script.  Test engines could then use the origin-profile mapping to offer a filtered list of test systems that can serve as the sender for the interaction.
+   */
+  origin?: fhir.TestScriptOriginArgs[]|undefined;
+  /**
+   * The purpose of this element is to define the profile of a destination element used elsewhere in the script.  Test engines could then use the destination-profile mapping to offer a filtered list of test systems that can serve as the receiver for the interaction.
+   */
+  destination?: fhir.TestScriptDestinationArgs[]|undefined;
+  /**
+   * The required capability must exist and are assumed to function correctly on the FHIR server being tested.
+   */
+  metadata?: fhir.TestScriptMetadataArgs|undefined;
+  /**
+   * Fixture in the test script - by reference (uri). All fixtures are required for the test script to execute.
+   */
+  fixture?: fhir.TestScriptFixtureArgs[]|undefined;
+  /**
+   * See http://build.fhir.org/resourcelist.html for complete list of resource types.
+   */
+  profile?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Variables would be set based either on XPath/JSONPath expressions against fixtures (static and response), or headerField evaluations against response headers. If variable evaluates to nodelist or anything other than a primitive value, then test engine would report an error.  Variables would be used to perform clean replacements in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations. This limits the places that test engines would need to look for placeholders "${}".  Variables are scoped to the whole script. They are NOT evaluated at declaration. They are evaluated by test engine when used for substitutions in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations.  See example testscript-search.xml.
+   */
+  variable?: fhir.TestScriptVariableArgs[]|undefined;
+  /**
+   * A series of required setup operations before tests are executed.
+   */
+  setup?: fhir.TestScriptSetupArgs|undefined;
+  /**
+   * A test in this script.
+   */
+  test?: fhir.TestScriptTestArgs[]|undefined;
+  /**
+   * A series of operations required to clean up after all the tests are executed (successfully or otherwise).
+   */
+  teardown?: fhir.TestScriptTeardownArgs|undefined;
 }
 
 /**
  * A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
  */
-export class TestScript extends fhir.DomainResource implements ITestScript {
+export class TestScript extends fhir.DomainResource {
+  readonly __dataType:string = 'TestScript';
   /**
    * Resource Type Name
    */
@@ -2016,11 +1572,7 @@ export class TestScript extends fhir.DomainResource implements ITestScript {
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url: fhir.FhirUri|null;
   /**
    * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this test script outside of FHIR, where it is not possible to use the logical URI.
    */
@@ -2028,103 +1580,63 @@ export class TestScript extends fhir.DomainResource implements ITestScript {
   /**
    * There may be different test script instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the test script with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: TestScript.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * Allows filtering of test scripts that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: TestScript.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of test scripts that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the test script. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the test script is the organization or individual primarily responsible for the maintenance and upkeep of the test script. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the test script. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the test script was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the test script as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the test script is presumed to be the predominant language in the place the test script was created).
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the test script to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * This element does not describe the usage of the test script. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this test script.
    */
-  public purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.purpose
-   */
-  public _purpose?: fhir.FhirElement|undefined;
+  public purpose?: fhir.FhirMarkdown|undefined;
   /**
    * A copyright statement relating to the test script and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the test script.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: TestScript.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * The purpose of this element is to define the profile of an origin element used elsewhere in the script.  Test engines could then use the origin-profile mapping to offer a filtered list of test systems that can serve as the sender for the interaction.
    */
-  public origin?: fhir.TestScriptOrigin[]|undefined;
+  public origin?: fhir.TestScriptOrigin[]|undefined = [];
   /**
    * The purpose of this element is to define the profile of a destination element used elsewhere in the script.  Test engines could then use the destination-profile mapping to offer a filtered list of test systems that can serve as the receiver for the interaction.
    */
-  public destination?: fhir.TestScriptDestination[]|undefined;
+  public destination?: fhir.TestScriptDestination[]|undefined = [];
   /**
    * The required capability must exist and are assumed to function correctly on the FHIR server being tested.
    */
@@ -2132,15 +1644,15 @@ export class TestScript extends fhir.DomainResource implements ITestScript {
   /**
    * Fixture in the test script - by reference (uri). All fixtures are required for the test script to execute.
    */
-  public fixture?: fhir.TestScriptFixture[]|undefined;
+  public fixture?: fhir.TestScriptFixture[]|undefined = [];
   /**
    * See http://build.fhir.org/resourcelist.html for complete list of resource types.
    */
-  public profile?: fhir.Reference[]|undefined;
+  public profile?: fhir.Reference[]|undefined = [];
   /**
    * Variables would be set based either on XPath/JSONPath expressions against fixtures (static and response), or headerField evaluations against response headers. If variable evaluates to nodelist or anything other than a primitive value, then test engine would report an error.  Variables would be used to perform clean replacements in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations. This limits the places that test engines would need to look for placeholders "${}".  Variables are scoped to the whole script. They are NOT evaluated at declaration. They are evaluated by test engine when used for substitutions in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations.  See example testscript-search.xml.
    */
-  public variable?: fhir.TestScriptVariable[]|undefined;
+  public variable?: fhir.TestScriptVariable[]|undefined = [];
   /**
    * A series of required setup operations before tests are executed.
    */
@@ -2148,7 +1660,7 @@ export class TestScript extends fhir.DomainResource implements ITestScript {
   /**
    * A test in this script.
    */
-  public test?: fhir.TestScriptTest[]|undefined;
+  public test?: fhir.TestScriptTest[]|undefined = [];
   /**
    * A series of operations required to clean up after all the tests are executed (successfully or otherwise).
    */
@@ -2156,47 +1668,36 @@ export class TestScript extends fhir.DomainResource implements ITestScript {
   /**
    * Default constructor for TestScript - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITestScript> = { }) {
-    super(source);
+  constructor(source:Partial<TestScriptArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'TestScript';
-    if (source['url']) { this.url = source.url; }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     else { this.url = null; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['purpose']) { this.purpose = source.purpose; }
-    if (source['_purpose']) { this._purpose = new fhir.FhirElement(source._purpose!); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
+    if (source['purpose']) { this.purpose = new fhir.FhirMarkdown({value: source.purpose}); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
     if (source['origin']) { this.origin = source.origin.map((x) => new fhir.TestScriptOrigin(x)); }
     if (source['destination']) { this.destination = source.destination.map((x) => new fhir.TestScriptDestination(x)); }
-    if (source['metadata']) { this.metadata = new fhir.TestScriptMetadata(source.metadata!); }
+    if (source['metadata']) { this.metadata = new fhir.TestScriptMetadata(source.metadata); }
     if (source['fixture']) { this.fixture = source.fixture.map((x) => new fhir.TestScriptFixture(x)); }
     if (source['profile']) { this.profile = source.profile.map((x) => new fhir.Reference(x)); }
     if (source['variable']) { this.variable = source.variable.map((x) => new fhir.TestScriptVariable(x)); }
-    if (source['setup']) { this.setup = new fhir.TestScriptSetup(source.setup!); }
+    if (source['setup']) { this.setup = new fhir.TestScriptSetup(source.setup); }
     if (source['test']) { this.test = source.test.map((x) => new fhir.TestScriptTest(x)); }
-    if (source['teardown']) { this.teardown = new fhir.TestScriptTeardown(source.teardown!); }
+    if (source['teardown']) { this.teardown = new fhir.TestScriptTeardown(source.teardown); }
   }
   /**
    * Required-bound Value Set for status
@@ -2207,36 +1708,49 @@ export class TestScript extends fhir.DomainResource implements ITestScript {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: TestScript.resourceType']); }
-    if (!this["url"]) { results.push(["url",'Missing required element: TestScript.url']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (!this["name"]) { results.push(["name",'Missing required element: TestScript.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: TestScript.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_purpose"]) { results.push(...this._purpose.doModelValidation()); }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (this["origin"]) { this.origin.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["destination"]) { this.destination.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["metadata"]) { results.push(...this.metadata.doModelValidation()); }
-    if (this["fixture"]) { this.fixture.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["profile"]) { this.profile.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["variable"]) { this.variable.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["setup"]) { results.push(...this.setup.doModelValidation()); }
-    if (this["test"]) { this.test.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["teardown"]) { results.push(...this.teardown.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'TestScript' fhir: TestScript.resourceType:'TestScript'", }));
+    }
+    if (!this['url']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property url:fhir.FhirUri fhir: TestScript.url:uri", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: TestScript.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: TestScript.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (this["origin"]) { this.origin.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["destination"]) { this.destination.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["metadata"]) { outcome.issue!.push(...this.metadata.doModelValidation().issue!); }
+    if (this["fixture"]) { this.fixture.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["profile"]) { this.profile.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["variable"]) { this.variable.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["setup"]) { outcome.issue!.push(...this.setup.doModelValidation().issue!); }
+    if (this["test"]) { this.test.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["teardown"]) { outcome.issue!.push(...this.teardown.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

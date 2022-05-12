@@ -27,15 +27,4 @@ export const FormsValueSet = {
 /**
  * This value set includes a sample set of Forms codes.
  */
-export var FormsValueSetEnum;
-(function (FormsValueSetEnum) {
-    /**
-     * 1: Example: The #1 form to be used when printing this information.
-     */
-    FormsValueSetEnum["FormNumber1"] = "1";
-    /**
-     * 2: Example: The #2 form to be used when printing this information.
-     */
-    FormsValueSetEnum["FormNumber1_2"] = "2";
-})(FormsValueSetEnum || (FormsValueSetEnum = {}));
 //# sourceMappingURL=FormsValueSet.js.map

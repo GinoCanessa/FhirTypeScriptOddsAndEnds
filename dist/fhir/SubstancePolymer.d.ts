@@ -1,175 +1,30 @@
 import * as fhir from '../fhir.js';
 /**
- * Todo.
+ * Valid arguments for the SubstancePolymerMonomerSetStartingMaterial type.
  */
-export declare type ISubstancePolymerMonomerSetStartingMaterial = fhir.IBackboneElement & {
+export interface SubstancePolymerMonomerSetStartingMaterialArgs extends fhir.BackboneElementArgs {
     /**
      * Todo.
      */
-    material?: fhir.ICodeableConcept | undefined;
+    material?: fhir.CodeableConceptArgs | undefined;
     /**
      * Todo.
      */
-    type?: fhir.ICodeableConcept | undefined;
+    type?: fhir.CodeableConceptArgs | undefined;
     /**
      * Todo.
      */
-    isDefining?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: SubstancePolymer.monomerSet.startingMaterial.isDefining
-     */
-    _isDefining?: fhir.IFhirElement | undefined;
+    isDefining?: fhir.FhirBoolean | boolean | undefined;
     /**
      * Todo.
      */
-    amount?: fhir.ISubstanceAmount | undefined;
-};
+    amount?: fhir.SubstanceAmountArgs | undefined;
+}
 /**
  * Todo.
  */
-export declare type ISubstancePolymerMonomerSet = fhir.IBackboneElement & {
-    /**
-     * Todo.
-     */
-    ratioType?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    startingMaterial?: fhir.ISubstancePolymerMonomerSetStartingMaterial[] | undefined;
-};
-/**
- * Todo.
- */
-export declare type ISubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation = fhir.IBackboneElement & {
-    /**
-     * Todo.
-     */
-    degree?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    amount?: fhir.ISubstanceAmount | undefined;
-};
-/**
- * Todo.
- */
-export declare type ISubstancePolymerRepeatRepeatUnitStructuralRepresentation = fhir.IBackboneElement & {
-    /**
-     * Todo.
-     */
-    type?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    representation?: string | undefined;
-    /**
-     * Extended properties for primitive element: SubstancePolymer.repeat.repeatUnit.structuralRepresentation.representation
-     */
-    _representation?: fhir.IFhirElement | undefined;
-    /**
-     * Todo.
-     */
-    attachment?: fhir.IAttachment | undefined;
-};
-/**
- * Todo.
- */
-export declare type ISubstancePolymerRepeatRepeatUnit = fhir.IBackboneElement & {
-    /**
-     * Todo.
-     */
-    orientationOfPolymerisation?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    repeatUnit?: string | undefined;
-    /**
-     * Extended properties for primitive element: SubstancePolymer.repeat.repeatUnit.repeatUnit
-     */
-    _repeatUnit?: fhir.IFhirElement | undefined;
-    /**
-     * Todo.
-     */
-    amount?: fhir.ISubstanceAmount | undefined;
-    /**
-     * Todo.
-     */
-    degreeOfPolymerisation?: fhir.ISubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation[] | undefined;
-    /**
-     * Todo.
-     */
-    structuralRepresentation?: fhir.ISubstancePolymerRepeatRepeatUnitStructuralRepresentation[] | undefined;
-};
-/**
- * Todo.
- */
-export declare type ISubstancePolymerRepeat = fhir.IBackboneElement & {
-    /**
-     * Todo.
-     */
-    numberOfUnits?: number | undefined;
-    /**
-     * Extended properties for primitive element: SubstancePolymer.repeat.numberOfUnits
-     */
-    _numberOfUnits?: fhir.IFhirElement | undefined;
-    /**
-     * Todo.
-     */
-    averageMolecularFormula?: string | undefined;
-    /**
-     * Extended properties for primitive element: SubstancePolymer.repeat.averageMolecularFormula
-     */
-    _averageMolecularFormula?: fhir.IFhirElement | undefined;
-    /**
-     * Todo.
-     */
-    repeatUnitAmountType?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    repeatUnit?: fhir.ISubstancePolymerRepeatRepeatUnit[] | undefined;
-};
-/**
- * Todo.
- */
-export declare type ISubstancePolymer = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "SubstancePolymer";
-    /**
-     * Todo.
-     */
-    class?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    geometry?: fhir.ICodeableConcept | undefined;
-    /**
-     * Todo.
-     */
-    copolymerConnectivity?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Todo.
-     */
-    modification?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: SubstancePolymer.modification
-     */
-    _modification?: fhir.IFhirElement[] | undefined;
-    /**
-     * Todo.
-     */
-    monomerSet?: fhir.ISubstancePolymerMonomerSet[] | undefined;
-    /**
-     * Todo.
-     */
-    repeat?: fhir.ISubstancePolymerRepeat[] | undefined;
-};
-/**
- * Todo.
- */
-export declare class SubstancePolymerMonomerSetStartingMaterial extends fhir.BackboneElement implements ISubstancePolymerMonomerSetStartingMaterial {
+export declare class SubstancePolymerMonomerSetStartingMaterial extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Todo.
      */
@@ -181,11 +36,7 @@ export declare class SubstancePolymerMonomerSetStartingMaterial extends fhir.Bac
     /**
      * Todo.
      */
-    isDefining?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: SubstancePolymer.monomerSet.startingMaterial.isDefining
-     */
-    _isDefining?: fhir.FhirElement | undefined;
+    isDefining?: fhir.FhirBoolean | undefined;
     /**
      * Todo.
      */
@@ -193,16 +44,34 @@ export declare class SubstancePolymerMonomerSetStartingMaterial extends fhir.Bac
     /**
      * Default constructor for SubstancePolymerMonomerSetStartingMaterial - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISubstancePolymerMonomerSetStartingMaterial>);
+    constructor(source?: Partial<SubstancePolymerMonomerSetStartingMaterialArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the SubstancePolymerMonomerSet type.
+ */
+export interface SubstancePolymerMonomerSetArgs extends fhir.BackboneElementArgs {
+    /**
+     * Todo.
+     */
+    ratioType?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    startingMaterial?: fhir.SubstancePolymerMonomerSetStartingMaterialArgs[] | undefined;
 }
 /**
  * Todo.
  */
-export declare class SubstancePolymerMonomerSet extends fhir.BackboneElement implements ISubstancePolymerMonomerSet {
+export declare class SubstancePolymerMonomerSet extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Todo.
      */
@@ -214,16 +83,34 @@ export declare class SubstancePolymerMonomerSet extends fhir.BackboneElement imp
     /**
      * Default constructor for SubstancePolymerMonomerSet - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISubstancePolymerMonomerSet>);
+    constructor(source?: Partial<SubstancePolymerMonomerSetArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation type.
+ */
+export interface SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisationArgs extends fhir.BackboneElementArgs {
+    /**
+     * Todo.
+     */
+    degree?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    amount?: fhir.SubstanceAmountArgs | undefined;
 }
 /**
  * Todo.
  */
-export declare class SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation extends fhir.BackboneElement implements ISubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation {
+export declare class SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Todo.
      */
@@ -235,16 +122,38 @@ export declare class SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation exte
     /**
      * Default constructor for SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation>);
+    constructor(source?: Partial<SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the SubstancePolymerRepeatRepeatUnitStructuralRepresentation type.
+ */
+export interface SubstancePolymerRepeatRepeatUnitStructuralRepresentationArgs extends fhir.BackboneElementArgs {
+    /**
+     * Todo.
+     */
+    type?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    representation?: fhir.FhirString | string | undefined;
+    /**
+     * Todo.
+     */
+    attachment?: fhir.AttachmentArgs | undefined;
 }
 /**
  * Todo.
  */
-export declare class SubstancePolymerRepeatRepeatUnitStructuralRepresentation extends fhir.BackboneElement implements ISubstancePolymerRepeatRepeatUnitStructuralRepresentation {
+export declare class SubstancePolymerRepeatRepeatUnitStructuralRepresentation extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Todo.
      */
@@ -252,11 +161,7 @@ export declare class SubstancePolymerRepeatRepeatUnitStructuralRepresentation ex
     /**
      * Todo.
      */
-    representation?: string | undefined;
-    /**
-     * Extended properties for primitive element: SubstancePolymer.repeat.repeatUnit.structuralRepresentation.representation
-     */
-    _representation?: fhir.FhirElement | undefined;
+    representation?: fhir.FhirString | undefined;
     /**
      * Todo.
      */
@@ -264,16 +169,46 @@ export declare class SubstancePolymerRepeatRepeatUnitStructuralRepresentation ex
     /**
      * Default constructor for SubstancePolymerRepeatRepeatUnitStructuralRepresentation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISubstancePolymerRepeatRepeatUnitStructuralRepresentation>);
+    constructor(source?: Partial<SubstancePolymerRepeatRepeatUnitStructuralRepresentationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the SubstancePolymerRepeatRepeatUnit type.
+ */
+export interface SubstancePolymerRepeatRepeatUnitArgs extends fhir.BackboneElementArgs {
+    /**
+     * Todo.
+     */
+    orientationOfPolymerisation?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    repeatUnit?: fhir.FhirString | string | undefined;
+    /**
+     * Todo.
+     */
+    amount?: fhir.SubstanceAmountArgs | undefined;
+    /**
+     * Todo.
+     */
+    degreeOfPolymerisation?: fhir.SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisationArgs[] | undefined;
+    /**
+     * Todo.
+     */
+    structuralRepresentation?: fhir.SubstancePolymerRepeatRepeatUnitStructuralRepresentationArgs[] | undefined;
 }
 /**
  * Todo.
  */
-export declare class SubstancePolymerRepeatRepeatUnit extends fhir.BackboneElement implements ISubstancePolymerRepeatRepeatUnit {
+export declare class SubstancePolymerRepeatRepeatUnit extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Todo.
      */
@@ -281,11 +216,7 @@ export declare class SubstancePolymerRepeatRepeatUnit extends fhir.BackboneEleme
     /**
      * Todo.
      */
-    repeatUnit?: string | undefined;
-    /**
-     * Extended properties for primitive element: SubstancePolymer.repeat.repeatUnit.repeatUnit
-     */
-    _repeatUnit?: fhir.FhirElement | undefined;
+    repeatUnit?: fhir.FhirString | undefined;
     /**
      * Todo.
      */
@@ -301,32 +232,50 @@ export declare class SubstancePolymerRepeatRepeatUnit extends fhir.BackboneEleme
     /**
      * Default constructor for SubstancePolymerRepeatRepeatUnit - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISubstancePolymerRepeatRepeatUnit>);
+    constructor(source?: Partial<SubstancePolymerRepeatRepeatUnitArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the SubstancePolymerRepeat type.
+ */
+export interface SubstancePolymerRepeatArgs extends fhir.BackboneElementArgs {
+    /**
+     * Todo.
+     */
+    numberOfUnits?: fhir.FhirInteger | number | undefined;
+    /**
+     * Todo.
+     */
+    averageMolecularFormula?: fhir.FhirString | string | undefined;
+    /**
+     * Todo.
+     */
+    repeatUnitAmountType?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    repeatUnit?: fhir.SubstancePolymerRepeatRepeatUnitArgs[] | undefined;
 }
 /**
  * Todo.
  */
-export declare class SubstancePolymerRepeat extends fhir.BackboneElement implements ISubstancePolymerRepeat {
+export declare class SubstancePolymerRepeat extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Todo.
      */
-    numberOfUnits?: number | undefined;
-    /**
-     * Extended properties for primitive element: SubstancePolymer.repeat.numberOfUnits
-     */
-    _numberOfUnits?: fhir.FhirElement | undefined;
+    numberOfUnits?: fhir.FhirInteger | undefined;
     /**
      * Todo.
      */
-    averageMolecularFormula?: string | undefined;
-    /**
-     * Extended properties for primitive element: SubstancePolymer.repeat.averageMolecularFormula
-     */
-    _averageMolecularFormula?: fhir.FhirElement | undefined;
+    averageMolecularFormula?: fhir.FhirString | undefined;
     /**
      * Todo.
      */
@@ -338,16 +287,54 @@ export declare class SubstancePolymerRepeat extends fhir.BackboneElement impleme
     /**
      * Default constructor for SubstancePolymerRepeat - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISubstancePolymerRepeat>);
+    constructor(source?: Partial<SubstancePolymerRepeatArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the SubstancePolymer type.
+ */
+export interface SubstancePolymerArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "SubstancePolymer" | undefined;
+    /**
+     * Todo.
+     */
+    class?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    geometry?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Todo.
+     */
+    copolymerConnectivity?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * Todo.
+     */
+    modification?: fhir.FhirString[] | string[] | undefined;
+    /**
+     * Todo.
+     */
+    monomerSet?: fhir.SubstancePolymerMonomerSetArgs[] | undefined;
+    /**
+     * Todo.
+     */
+    repeat?: fhir.SubstancePolymerRepeatArgs[] | undefined;
 }
 /**
  * Todo.
  */
-export declare class SubstancePolymer extends fhir.DomainResource implements ISubstancePolymer {
+export declare class SubstancePolymer extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -367,11 +354,7 @@ export declare class SubstancePolymer extends fhir.DomainResource implements ISu
     /**
      * Todo.
      */
-    modification?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: SubstancePolymer.modification
-     */
-    _modification?: fhir.FhirElement[] | undefined;
+    modification?: fhir.FhirString[] | undefined;
     /**
      * Todo.
      */
@@ -383,10 +366,14 @@ export declare class SubstancePolymer extends fhir.DomainResource implements ISu
     /**
      * Default constructor for SubstancePolymer - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISubstancePolymer>);
+    constructor(source?: Partial<SubstancePolymerArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=SubstancePolymer.d.ts.map

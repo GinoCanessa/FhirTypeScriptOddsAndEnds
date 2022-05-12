@@ -3,15 +3,16 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Measure
 import * as fhir from '../fhir.js';
-import { MeasurePopulationValueSet } from '../fhirValueSets/MeasurePopulationValueSet.js';
-import { MeasureDataUsageValueSet } from '../fhirValueSets/MeasureDataUsageValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { SubjectTypeValueSet } from '../fhirValueSets/SubjectTypeValueSet.js';
-import { DefinitionTopicValueSet } from '../fhirValueSets/DefinitionTopicValueSet.js';
-import { MeasureScoringValueSet } from '../fhirValueSets/MeasureScoringValueSet.js';
-import { CompositeMeasureScoringValueSet } from '../fhirValueSets/CompositeMeasureScoringValueSet.js';
-import { MeasureTypeValueSet } from '../fhirValueSets/MeasureTypeValueSet.js';
-import { MeasureImprovementNotationValueSet } from '../fhirValueSets/MeasureImprovementNotationValueSet.js';
+import { MeasurePopulationValueSet, } from '../fhirValueSets/MeasurePopulationValueSet.js';
+import { MeasureDataUsageValueSet, } from '../fhirValueSets/MeasureDataUsageValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { DefinitionTopicValueSet, } from '../fhirValueSets/DefinitionTopicValueSet.js';
+import { MeasureScoringValueSet, } from '../fhirValueSets/MeasureScoringValueSet.js';
+import { CompositeMeasureScoringValueSet, } from '../fhirValueSets/CompositeMeasureScoringValueSet.js';
+import { MeasureTypeValueSet, } from '../fhirValueSets/MeasureTypeValueSet.js';
+import { MeasureImprovementNotationValueSet, } from '../fhirValueSets/MeasureImprovementNotationValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A population criteria for the measure.
  */
@@ -19,16 +20,14 @@ export class MeasureGroupPopulation extends fhir.BackboneElement {
     /**
      * Default constructor for MeasureGroupPopulation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MeasureGroupPopulation';
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['criteria']) {
             this.criteria = new fhir.Expression(source.criteria);
@@ -47,20 +46,26 @@ export class MeasureGroupPopulation extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (!this["criteria"]) {
-            results.push(["criteria", 'Missing required element: Measure.group.population.criteria']);
+        if (!this['criteria']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property criteria:fhir.Expression fhir: Measure.group.population.criteria:Expression", }));
         }
         if (this["criteria"]) {
-            results.push(...this.criteria.doModelValidation());
+            outcome.issue.push(...this.criteria.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -70,16 +75,14 @@ export class MeasureGroupStratifierComponent extends fhir.BackboneElement {
     /**
      * Default constructor for MeasureGroupStratifierComponent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MeasureGroupStratifierComponent';
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['criteria']) {
             this.criteria = new fhir.Expression(source.criteria);
@@ -92,20 +95,26 @@ export class MeasureGroupStratifierComponent extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (!this["criteria"]) {
-            results.push(["criteria", 'Missing required element: Measure.group.stratifier.component.criteria']);
+        if (!this['criteria']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property criteria:fhir.Expression fhir: Measure.group.stratifier.component.criteria:Expression", }));
         }
         if (this["criteria"]) {
-            results.push(...this.criteria.doModelValidation());
+            outcome.issue.push(...this.criteria.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -115,16 +124,18 @@ export class MeasureGroupStratifier extends fhir.BackboneElement {
     /**
      * Default constructor for MeasureGroupStratifier - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MeasureGroupStratifier';
+        /**
+         * Stratifiers are defined either as a single criteria, or as a set of component criteria.
+         */
+        this.component = [];
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['criteria']) {
             this.criteria = new fhir.Expression(source.criteria);
@@ -137,20 +148,26 @@ export class MeasureGroupStratifier extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["criteria"]) {
-            results.push(...this.criteria.doModelValidation());
+            outcome.issue.push(...this.criteria.doModelValidation().issue);
         }
         if (this["component"]) {
-            this.component.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.component.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -160,16 +177,22 @@ export class MeasureGroup extends fhir.BackboneElement {
     /**
      * Default constructor for MeasureGroup - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MeasureGroup';
+        /**
+         * A population criteria for the measure.
+         */
+        this.population = [];
+        /**
+         * The stratifier criteria for the measure report, specified as either the name of a valid CQL expression defined within a referenced library or a valid FHIR Resource Path.
+         */
+        this.stratifier = [];
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['population']) {
             this.population = source.population.map((x) => new fhir.MeasureGroupPopulation(x));
@@ -182,20 +205,26 @@ export class MeasureGroup extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["population"]) {
-            this.population.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.population.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["stratifier"]) {
-            this.stratifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.stratifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -205,8 +234,13 @@ export class MeasureSupplementalData extends fhir.BackboneElement {
     /**
      * Default constructor for MeasureSupplementalData - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MeasureSupplementalData';
+        /**
+         * An indicator of the intended usage for the supplemental data element. Supplemental data indicates the data is additional information requested to augment the measure information. Risk adjustment factor indicates the data is additional information used to calculate risk adjustment factors when applying a risk model to the measure calculation.
+         */
+        this.usage = [];
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
@@ -214,10 +248,7 @@ export class MeasureSupplementalData extends fhir.BackboneElement {
             this.usage = source.usage.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['criteria']) {
             this.criteria = new fhir.Expression(source.criteria);
@@ -236,23 +267,29 @@ export class MeasureSupplementalData extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["usage"]) {
-            this.usage.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.usage.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (!this["criteria"]) {
-            results.push(["criteria", 'Missing required element: Measure.supplementalData.criteria']);
+        if (!this['criteria']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property criteria:fhir.Expression fhir: Measure.supplementalData.criteria:Expression", }));
         }
         if (this["criteria"]) {
-            results.push(...this.criteria.doModelValidation());
+            outcome.issue.push(...this.criteria.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -262,41 +299,88 @@ export class Measure extends fhir.DomainResource {
     /**
      * Default constructor for Measure - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Measure';
+        /**
+         * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this measure outside of FHIR, where it is not possible to use the logical URI.
+         */
+        this.identifier = [];
+        this.__subjectIsChoice = true;
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the measure to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * Descriptive topics related to the content of the measure. Topics provide a high-level categorization grouping types of measures that can be useful for filtering and searching.
+         */
+        this.topic = [];
+        /**
+         * An individiual or organization primarily involved in the creation and maintenance of the content.
+         */
+        this.author = [];
+        /**
+         * An individual or organization primarily responsible for internal coherence of the content.
+         */
+        this.editor = [];
+        /**
+         * An individual or organization primarily responsible for review of some aspect of the content.
+         */
+        this.reviewer = [];
+        /**
+         * An individual or organization responsible for officially endorsing the content for use in some setting.
+         */
+        this.endorser = [];
+        /**
+         * Each related artifact is either an attachment, or a reference to another resource, but not both.
+         */
+        this.relatedArtifact = [];
+        /**
+         * A reference to a Library resource containing the formal logic used by the measure.
+         */
+        this.library = [];
+        /**
+         * Indicates whether the measure is used to examine a process, an outcome over time, a patient-reported outcome, or a structure measure such as utilization.
+         */
+        this.type = [];
+        /**
+         * Provides a description of an individual term used within the measure.
+         */
+        this.definition = [];
+        /**
+         * A group of population criteria for the measure.
+         */
+        this.group = [];
+        /**
+         * Note that supplemental data are reported as observations for each patient and included in the evaluatedResources bundle. See the MeasureReport resource or the Quality Reporting topic for more information.
+         */
+        this.supplementalData = [];
         this.resourceType = 'Measure';
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['subtitle']) {
-            this.subtitle = source.subtitle;
-        }
-        if (source['_subtitle']) {
-            this._subtitle = new fhir.FhirElement(source._subtitle);
+            this.subtitle = new fhir.FhirString({ value: source.subtitle });
         }
         if (source['status']) {
             this.status = source.status;
@@ -304,41 +388,29 @@ export class Measure extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+        if (source['subject']) {
+            this.subject = source.subject;
         }
-        if (source['subjectCodeableConcept']) {
-            this.subjectCodeableConcept = new fhir.CodeableConcept(source.subjectCodeableConcept);
+        else if (source['subjectCodeableConcept']) {
+            this.subject = new fhir.CodeableConcept(source.subjectCodeableConcept);
         }
-        if (source['subjectReference']) {
-            this.subjectReference = new fhir.Reference(source.subjectReference);
+        else if (source['subjectReference']) {
+            this.subject = new fhir.Reference(source.subjectReference);
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -347,34 +419,19 @@ export class Measure extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['usage']) {
-            this.usage = source.usage;
-        }
-        if (source['_usage']) {
-            this._usage = new fhir.FhirElement(source._usage);
+            this.usage = new fhir.FhirString({ value: source.usage });
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['approvalDate']) {
-            this.approvalDate = source.approvalDate;
-        }
-        if (source['_approvalDate']) {
-            this._approvalDate = new fhir.FhirElement(source._approvalDate);
+            this.approvalDate = new fhir.FhirDate({ value: source.approvalDate });
         }
         if (source['lastReviewDate']) {
-            this.lastReviewDate = source.lastReviewDate;
-        }
-        if (source['_lastReviewDate']) {
-            this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate);
+            this.lastReviewDate = new fhir.FhirDate({ value: source.lastReviewDate });
         }
         if (source['effectivePeriod']) {
             this.effectivePeriod = new fhir.Period(source.effectivePeriod);
@@ -398,16 +455,10 @@ export class Measure extends fhir.DomainResource {
             this.relatedArtifact = source.relatedArtifact.map((x) => new fhir.RelatedArtifact(x));
         }
         if (source['library']) {
-            this.library = source.library.map((x) => (x));
-        }
-        if (source['_library']) {
-            this._library = source._library.map((x) => new fhir.FhirElement(x));
+            this.library = source.library.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['disclaimer']) {
-            this.disclaimer = source.disclaimer;
-        }
-        if (source['_disclaimer']) {
-            this._disclaimer = new fhir.FhirElement(source._disclaimer);
+            this.disclaimer = new fhir.FhirMarkdown({ value: source.disclaimer });
         }
         if (source['scoring']) {
             this.scoring = new fhir.CodeableConcept(source.scoring);
@@ -419,43 +470,25 @@ export class Measure extends fhir.DomainResource {
             this.type = source.type.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['riskAdjustment']) {
-            this.riskAdjustment = source.riskAdjustment;
-        }
-        if (source['_riskAdjustment']) {
-            this._riskAdjustment = new fhir.FhirElement(source._riskAdjustment);
+            this.riskAdjustment = new fhir.FhirString({ value: source.riskAdjustment });
         }
         if (source['rateAggregation']) {
-            this.rateAggregation = source.rateAggregation;
-        }
-        if (source['_rateAggregation']) {
-            this._rateAggregation = new fhir.FhirElement(source._rateAggregation);
+            this.rateAggregation = new fhir.FhirString({ value: source.rateAggregation });
         }
         if (source['rationale']) {
-            this.rationale = source.rationale;
-        }
-        if (source['_rationale']) {
-            this._rationale = new fhir.FhirElement(source._rationale);
+            this.rationale = new fhir.FhirMarkdown({ value: source.rationale });
         }
         if (source['clinicalRecommendationStatement']) {
-            this.clinicalRecommendationStatement = source.clinicalRecommendationStatement;
-        }
-        if (source['_clinicalRecommendationStatement']) {
-            this._clinicalRecommendationStatement = new fhir.FhirElement(source._clinicalRecommendationStatement);
+            this.clinicalRecommendationStatement = new fhir.FhirMarkdown({ value: source.clinicalRecommendationStatement });
         }
         if (source['improvementNotation']) {
             this.improvementNotation = new fhir.CodeableConcept(source.improvementNotation);
         }
         if (source['definition']) {
-            this.definition = source.definition.map((x) => (x));
-        }
-        if (source['_definition']) {
-            this._definition = source._definition.map((x) => new fhir.FhirElement(x));
+            this.definition = source.definition.map((x) => new fhir.FhirMarkdown({ value: x }));
         }
         if (source['guidance']) {
-            this.guidance = source.guidance;
-        }
-        if (source['_guidance']) {
-            this._guidance = new fhir.FhirElement(source._guidance);
+            this.guidance = new fhir.FhirMarkdown({ value: source.guidance });
         }
         if (source['group']) {
             this.group = source.group.map((x) => new fhir.MeasureGroup(x));
@@ -469,18 +502,6 @@ export class Measure extends fhir.DomainResource {
      */
     static statusRequiredValueSet() {
         return PublicationStatusValueSet;
-    }
-    /**
-     * Extensible-bound Value Set for subjectCodeableConcept
-     */
-    static subjectCodeableConceptExtensibleValueSet() {
-        return SubjectTypeValueSet;
-    }
-    /**
-     * Extensible-bound Value Set for subjectReference
-     */
-    static subjectReferenceExtensibleValueSet() {
-        return SubjectTypeValueSet;
     }
     /**
      * Example-bound Value Set for topic
@@ -516,140 +537,137 @@ export class Measure extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Measure.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Measure' fhir: Measure.resourceType:'Measure'", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_subtitle"]) {
-            results.push(...this._subtitle.doModelValidation());
+        if (this["subtitle"]) {
+            outcome.issue.push(...this.subtitle.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Measure.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: Measure.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["subjectCodeableConcept"]) {
-            results.push(...this.subjectCodeableConcept.doModelValidation());
-        }
-        if (this["subjectReference"]) {
-            results.push(...this.subjectReference.doModelValidation());
-        }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (this["_usage"]) {
-            results.push(...this._usage.doModelValidation());
+        if (this["usage"]) {
+            outcome.issue.push(...this.usage.doModelValidation().issue);
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
-        if (this["_approvalDate"]) {
-            results.push(...this._approvalDate.doModelValidation());
+        if (this["approvalDate"]) {
+            outcome.issue.push(...this.approvalDate.doModelValidation().issue);
         }
-        if (this["_lastReviewDate"]) {
-            results.push(...this._lastReviewDate.doModelValidation());
+        if (this["lastReviewDate"]) {
+            outcome.issue.push(...this.lastReviewDate.doModelValidation().issue);
         }
         if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
+            outcome.issue.push(...this.effectivePeriod.doModelValidation().issue);
         }
         if (this["topic"]) {
-            this.topic.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.topic.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["author"]) {
-            this.author.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.author.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["editor"]) {
-            this.editor.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.editor.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reviewer"]) {
-            this.reviewer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reviewer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["endorser"]) {
-            this.endorser.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.endorser.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relatedArtifact"]) {
-            this.relatedArtifact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relatedArtifact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_library"]) {
-            this._library.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["library"]) {
+            this.library.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_disclaimer"]) {
-            results.push(...this._disclaimer.doModelValidation());
+        if (this["disclaimer"]) {
+            outcome.issue.push(...this.disclaimer.doModelValidation().issue);
         }
         if (this["scoring"]) {
-            results.push(...this.scoring.doModelValidation());
+            outcome.issue.push(...this.scoring.doModelValidation().issue);
         }
         if (this["compositeScoring"]) {
-            results.push(...this.compositeScoring.doModelValidation());
+            outcome.issue.push(...this.compositeScoring.doModelValidation().issue);
         }
         if (this["type"]) {
-            this.type.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.type.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_riskAdjustment"]) {
-            results.push(...this._riskAdjustment.doModelValidation());
+        if (this["riskAdjustment"]) {
+            outcome.issue.push(...this.riskAdjustment.doModelValidation().issue);
         }
-        if (this["_rateAggregation"]) {
-            results.push(...this._rateAggregation.doModelValidation());
+        if (this["rateAggregation"]) {
+            outcome.issue.push(...this.rateAggregation.doModelValidation().issue);
         }
-        if (this["_rationale"]) {
-            results.push(...this._rationale.doModelValidation());
+        if (this["rationale"]) {
+            outcome.issue.push(...this.rationale.doModelValidation().issue);
         }
-        if (this["_clinicalRecommendationStatement"]) {
-            results.push(...this._clinicalRecommendationStatement.doModelValidation());
+        if (this["clinicalRecommendationStatement"]) {
+            outcome.issue.push(...this.clinicalRecommendationStatement.doModelValidation().issue);
         }
         if (this["improvementNotation"]) {
-            results.push(...this.improvementNotation.doModelValidation());
+            outcome.issue.push(...this.improvementNotation.doModelValidation().issue);
         }
-        if (this["_definition"]) {
-            this._definition.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["definition"]) {
+            this.definition.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_guidance"]) {
-            results.push(...this._guidance.doModelValidation());
+        if (this["guidance"]) {
+            outcome.issue.push(...this.guidance.doModelValidation().issue);
         }
         if (this["group"]) {
-            this.group.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.group.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["supplementalData"]) {
-            this.supplementalData.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.supplementalData.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Measure.js.map

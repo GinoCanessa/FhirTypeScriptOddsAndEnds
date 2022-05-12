@@ -3,115 +3,73 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Quantity
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { QuantityComparatorValueSet, QuantityComparatorValueSetType, QuantityComparatorValueSetEnum } from '../fhirValueSets/QuantityComparatorValueSet.js'
-
+import { QuantityComparatorValueSet, QuantityComparatorValueSetType,} from '../fhirValueSets/QuantityComparatorValueSet.js';
+import { QuantityComparatorValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
+ * Valid arguments for the Quantity type.
  */
-export type IQuantity = fhir.IFhirElement & { 
+export interface QuantityArgs extends fhir.FhirElementArgs {
   /**
    * The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books).
    */
-  value?: number|undefined;
-  /**
-   * Extended properties for primitive element: Quantity.value
-   */
-  _value?: fhir.IFhirElement|undefined;
+  value?: fhir.FhirDecimal|number|undefined;
   /**
    * How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "&lt;" , then the real value is &lt; stated value.
    */
   comparator?: QuantityComparatorValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Quantity.comparator
-   */
-  _comparator?: fhir.IFhirElement|undefined;
-  /**
    * A human-readable form of the unit.
    */
-  unit?: string|undefined;
-  /**
-   * Extended properties for primitive element: Quantity.unit
-   */
-  _unit?: fhir.IFhirElement|undefined;
+  unit?: fhir.FhirString|string|undefined;
   /**
    * The identification of the system that provides the coded form of the unit.
    */
-  system?: string|undefined;
-  /**
-   * Extended properties for primitive element: Quantity.system
-   */
-  _system?: fhir.IFhirElement|undefined;
+  system?: fhir.FhirUri|string|undefined;
   /**
    * The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system.
    */
-  code?: string|undefined;
-  /**
-   * Extended properties for primitive element: Quantity.code
-   */
-  _code?: fhir.IFhirElement|undefined;
+  code?: fhir.FhirCode|string|undefined;
 }
 
 /**
  * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
  */
-export class Quantity extends fhir.FhirElement implements IQuantity {
+export class Quantity extends fhir.FhirElement {
+  readonly __dataType:string = 'Quantity';
   /**
    * The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books).
    */
-  public value?: number|undefined;
-  /**
-   * Extended properties for primitive element: Quantity.value
-   */
-  public _value?: fhir.FhirElement|undefined;
+  public value?: fhir.FhirDecimal|undefined;
   /**
    * How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is "&lt;" , then the real value is &lt; stated value.
    */
   public comparator?: QuantityComparatorValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Quantity.comparator
-   */
-  public _comparator?: fhir.FhirElement|undefined;
-  /**
    * A human-readable form of the unit.
    */
-  public unit?: string|undefined;
-  /**
-   * Extended properties for primitive element: Quantity.unit
-   */
-  public _unit?: fhir.FhirElement|undefined;
+  public unit?: fhir.FhirString|undefined;
   /**
    * The identification of the system that provides the coded form of the unit.
    */
-  public system?: string|undefined;
-  /**
-   * Extended properties for primitive element: Quantity.system
-   */
-  public _system?: fhir.FhirElement|undefined;
+  public system?: fhir.FhirUri|undefined;
   /**
    * The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system.
    */
-  public code?: string|undefined;
-  /**
-   * Extended properties for primitive element: Quantity.code
-   */
-  public _code?: fhir.FhirElement|undefined;
+  public code?: fhir.FhirCode|undefined;
   /**
    * Default constructor for Quantity - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IQuantity> = { }) {
-    super(source);
-    if (source['value']) { this.value = source.value; }
-    if (source['_value']) { this._value = new fhir.FhirElement(source._value!); }
+  constructor(source:Partial<QuantityArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['value']) { this.value = new fhir.FhirDecimal({value: source.value}); }
     if (source['comparator']) { this.comparator = source.comparator; }
-    if (source['_comparator']) { this._comparator = new fhir.FhirElement(source._comparator!); }
-    if (source['unit']) { this.unit = source.unit; }
-    if (source['_unit']) { this._unit = new fhir.FhirElement(source._unit!); }
-    if (source['system']) { this.system = source.system; }
-    if (source['_system']) { this._system = new fhir.FhirElement(source._system!); }
-    if (source['code']) { this.code = source.code; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
+    if (source['unit']) { this.unit = new fhir.FhirString({value: source.unit}); }
+    if (source['system']) { this.system = new fhir.FhirUri({value: source.system}); }
+    if (source['code']) { this.code = new fhir.FhirCode({value: source.code}); }
   }
   /**
    * Required-bound Value Set for comparator
@@ -122,13 +80,18 @@ export class Quantity extends fhir.FhirElement implements IQuantity {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_value"]) { results.push(...this._value.doModelValidation()); }
-    if (this["_comparator"]) { results.push(...this._comparator.doModelValidation()); }
-    if (this["_unit"]) { results.push(...this._unit.doModelValidation()); }
-    if (this["_system"]) { results.push(...this._system.doModelValidation()); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["value"]) { outcome.issue!.push(...this.value.doModelValidation().issue!); }
+    if (this["unit"]) { outcome.issue!.push(...this.unit.doModelValidation().issue!); }
+    if (this["system"]) { outcome.issue!.push(...this.system.doModelValidation().issue!); }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

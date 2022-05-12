@@ -27,15 +27,4 @@ export const EventCapabilityModeValueSet = {
 /**
  * The mode of a message capability statement.
  */
-export var EventCapabilityModeValueSetEnum;
-(function (EventCapabilityModeValueSetEnum) {
-    /**
-     * receiver: The application receives requests and sends responses.
-     */
-    EventCapabilityModeValueSetEnum["Receiver"] = "receiver";
-    /**
-     * sender: The application sends requests and receives responses.
-     */
-    EventCapabilityModeValueSetEnum["Sender"] = "sender";
-})(EventCapabilityModeValueSetEnum || (EventCapabilityModeValueSetEnum = {}));
 //# sourceMappingURL=EventCapabilityModeValueSet.js.map

@@ -1,43 +1,40 @@
 import * as fhir from '../fhir.js';
 import { BasicResourceTypeValueSetType } from '../fhirValueSets/BasicResourceTypeValueSet.js';
 /**
- * Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.
+ * Valid arguments for the Basic type.
  */
-export declare type IBasic = fhir.IDomainResource & {
+export interface BasicArgs extends fhir.DomainResourceArgs {
     /**
      * Resource Type Name
      */
-    resourceType: "Basic";
+    resourceType: "Basic" | undefined;
     /**
      * Identifier assigned to the resource for business purposes, outside the context of FHIR.
      */
-    identifier?: fhir.IIdentifier[] | undefined;
+    identifier?: fhir.IdentifierArgs[] | undefined;
     /**
      * Because resource references will only be able to indicate 'Basic', the type of reference will need to be specified in a Profile identified as part of the resource.  Refer to the resource notes section for information on appropriate terminologies for this code.
      * This element is labeled as a modifier because it defines the meaning of the resource and cannot be ignored.
      */
-    code: fhir.ICodeableConcept | null;
+    code: fhir.CodeableConceptArgs | null;
     /**
      * Optional as not all potential resources will have subjects.  Resources associated with multiple subjects can handle this via extension.
      */
-    subject?: fhir.IReference | undefined;
+    subject?: fhir.ReferenceArgs | undefined;
     /**
      * Identifies when the resource was first created.
      */
-    created?: string | undefined;
-    /**
-     * Extended properties for primitive element: Basic.created
-     */
-    _created?: fhir.IFhirElement | undefined;
+    created?: fhir.FhirDate | string | undefined;
     /**
      * Indicates who was responsible for creating the resource instance.
      */
-    author?: fhir.IReference | undefined;
-};
+    author?: fhir.ReferenceArgs | undefined;
+}
 /**
  * Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.
  */
-export declare class Basic extends fhir.DomainResource implements IBasic {
+export declare class Basic extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -58,11 +55,7 @@ export declare class Basic extends fhir.DomainResource implements IBasic {
     /**
      * Identifies when the resource was first created.
      */
-    created?: string | undefined;
-    /**
-     * Extended properties for primitive element: Basic.created
-     */
-    _created?: fhir.FhirElement | undefined;
+    created?: fhir.FhirDate | undefined;
     /**
      * Indicates who was responsible for creating the resource instance.
      */
@@ -70,7 +63,7 @@ export declare class Basic extends fhir.DomainResource implements IBasic {
     /**
      * Default constructor for Basic - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IBasic>);
+    constructor(source?: Partial<BasicArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Example-bound Value Set for code
      */
@@ -78,6 +71,10 @@ export declare class Basic extends fhir.DomainResource implements IBasic {
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Basic.d.ts.map

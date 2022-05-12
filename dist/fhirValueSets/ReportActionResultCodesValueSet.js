@@ -51,27 +51,4 @@ export const ReportActionResultCodesValueSet = {
 /**
  * The results of executing an action.
  */
-export var ReportActionResultCodesValueSetEnum;
-(function (ReportActionResultCodesValueSetEnum) {
-    /**
-     * error: The action encountered a fatal error and the engine was unable to process.
-     */
-    ReportActionResultCodesValueSetEnum["Error"] = "error";
-    /**
-     * fail: The action failed.
-     */
-    ReportActionResultCodesValueSetEnum["Fail"] = "fail";
-    /**
-     * pass: The action was successful.
-     */
-    ReportActionResultCodesValueSetEnum["Pass"] = "pass";
-    /**
-     * skip: The action was skipped.
-     */
-    ReportActionResultCodesValueSetEnum["Skip"] = "skip";
-    /**
-     * warning: The action passed but with warnings.
-     */
-    ReportActionResultCodesValueSetEnum["Warning"] = "warning";
-})(ReportActionResultCodesValueSetEnum || (ReportActionResultCodesValueSetEnum = {}));
 //# sourceMappingURL=ReportActionResultCodesValueSet.js.map

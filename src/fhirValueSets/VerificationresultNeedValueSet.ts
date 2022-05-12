@@ -43,17 +43,3 @@ export type VerificationresultNeedValueSetType = typeof VerificationresultNeedVa
 /**
  * The frequency with which the target must be validated
  */
-export enum VerificationresultNeedValueSetEnum {
-  /**
-   * initial: ***TODO***
-   */
-  Initial = "initial",
-  /**
-   * none: ***TODO***
-   */
-  None = "none",
-  /**
-   * periodic: ***TODO***
-   */
-  Periodic = "periodic",
-}

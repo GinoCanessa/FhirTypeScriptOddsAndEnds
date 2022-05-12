@@ -3,26 +3,27 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: PlanDefinition
 import * as fhir from '../fhir.js';
-import { ObservationCodesValueSet } from '../fhirValueSets/ObservationCodesValueSet.js';
-import { GoalCategoryValueSet } from '../fhirValueSets/GoalCategoryValueSet.js';
-import { ClinicalFindingsValueSet } from '../fhirValueSets/ClinicalFindingsValueSet.js';
-import { GoalPriorityValueSet } from '../fhirValueSets/GoalPriorityValueSet.js';
-import { GoalStartEventValueSet } from '../fhirValueSets/GoalStartEventValueSet.js';
-import { ConditionCodeValueSet } from '../fhirValueSets/ConditionCodeValueSet.js';
-import { ActionConditionKindValueSet } from '../fhirValueSets/ActionConditionKindValueSet.js';
-import { ActionRelationshipTypeValueSet } from '../fhirValueSets/ActionRelationshipTypeValueSet.js';
-import { ActionParticipantTypeValueSet } from '../fhirValueSets/ActionParticipantTypeValueSet.js';
-import { RequestPriorityValueSet } from '../fhirValueSets/RequestPriorityValueSet.js';
-import { SubjectTypeValueSet } from '../fhirValueSets/SubjectTypeValueSet.js';
-import { ActionTypeValueSet } from '../fhirValueSets/ActionTypeValueSet.js';
-import { ActionGroupingBehaviorValueSet } from '../fhirValueSets/ActionGroupingBehaviorValueSet.js';
-import { ActionSelectionBehaviorValueSet } from '../fhirValueSets/ActionSelectionBehaviorValueSet.js';
-import { ActionRequiredBehaviorValueSet } from '../fhirValueSets/ActionRequiredBehaviorValueSet.js';
-import { ActionPrecheckBehaviorValueSet } from '../fhirValueSets/ActionPrecheckBehaviorValueSet.js';
-import { ActionCardinalityBehaviorValueSet } from '../fhirValueSets/ActionCardinalityBehaviorValueSet.js';
-import { PlanDefinitionTypeValueSet } from '../fhirValueSets/PlanDefinitionTypeValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { DefinitionTopicValueSet } from '../fhirValueSets/DefinitionTopicValueSet.js';
+import { ObservationCodesValueSet, } from '../fhirValueSets/ObservationCodesValueSet.js';
+import { GoalCategoryValueSet, } from '../fhirValueSets/GoalCategoryValueSet.js';
+import { ClinicalFindingsValueSet, } from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { GoalPriorityValueSet, } from '../fhirValueSets/GoalPriorityValueSet.js';
+import { GoalStartEventValueSet, } from '../fhirValueSets/GoalStartEventValueSet.js';
+import { ConditionCodeValueSet, } from '../fhirValueSets/ConditionCodeValueSet.js';
+import { ActionConditionKindValueSet, } from '../fhirValueSets/ActionConditionKindValueSet.js';
+import { ActionRelationshipTypeValueSet, } from '../fhirValueSets/ActionRelationshipTypeValueSet.js';
+import { ActionParticipantTypeValueSet, } from '../fhirValueSets/ActionParticipantTypeValueSet.js';
+import { RequestPriorityValueSet, } from '../fhirValueSets/RequestPriorityValueSet.js';
+import { ActionTypeValueSet, } from '../fhirValueSets/ActionTypeValueSet.js';
+import { ActionGroupingBehaviorValueSet, } from '../fhirValueSets/ActionGroupingBehaviorValueSet.js';
+import { ActionSelectionBehaviorValueSet, } from '../fhirValueSets/ActionSelectionBehaviorValueSet.js';
+import { ActionRequiredBehaviorValueSet, } from '../fhirValueSets/ActionRequiredBehaviorValueSet.js';
+import { ActionPrecheckBehaviorValueSet, } from '../fhirValueSets/ActionPrecheckBehaviorValueSet.js';
+import { ActionCardinalityBehaviorValueSet, } from '../fhirValueSets/ActionCardinalityBehaviorValueSet.js';
+import { PlanDefinitionTypeValueSet, } from '../fhirValueSets/PlanDefinitionTypeValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { DefinitionTopicValueSet, } from '../fhirValueSets/DefinitionTopicValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Indicates what should be done and within what timeframe.
  */
@@ -30,19 +31,24 @@ export class PlanDefinitionGoalTarget extends fhir.BackboneElement {
     /**
      * Default constructor for PlanDefinitionGoalTarget - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PlanDefinitionGoalTarget';
+        this.__detailIsChoice = true;
         if (source['measure']) {
             this.measure = new fhir.CodeableConcept(source.measure);
         }
-        if (source['detailQuantity']) {
-            this.detailQuantity = new fhir.Quantity(source.detailQuantity);
+        if (source['detail']) {
+            this.detail = source.detail;
         }
-        if (source['detailRange']) {
-            this.detailRange = new fhir.Range(source.detailRange);
+        else if (source['detailQuantity']) {
+            this.detail = new fhir.Quantity(source.detailQuantity);
         }
-        if (source['detailCodeableConcept']) {
-            this.detailCodeableConcept = new fhir.CodeableConcept(source.detailCodeableConcept);
+        else if (source['detailRange']) {
+            this.detail = new fhir.Range(source.detailRange);
+        }
+        else if (source['detailCodeableConcept']) {
+            this.detail = new fhir.CodeableConcept(source.detailCodeableConcept);
         }
         if (source['due']) {
             this.due = new fhir.Duration(source.due);
@@ -58,23 +64,20 @@ export class PlanDefinitionGoalTarget extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["measure"]) {
-            results.push(...this.measure.doModelValidation());
-        }
-        if (this["detailQuantity"]) {
-            results.push(...this.detailQuantity.doModelValidation());
-        }
-        if (this["detailRange"]) {
-            results.push(...this.detailRange.doModelValidation());
-        }
-        if (this["detailCodeableConcept"]) {
-            results.push(...this.detailCodeableConcept.doModelValidation());
+            outcome.issue.push(...this.measure.doModelValidation().issue);
         }
         if (this["due"]) {
-            results.push(...this.due.doModelValidation());
+            outcome.issue.push(...this.due.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -84,8 +87,21 @@ export class PlanDefinitionGoal extends fhir.BackboneElement {
     /**
      * Default constructor for PlanDefinitionGoal - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PlanDefinitionGoal';
+        /**
+         * Identifies problems, conditions, issues, or concerns the goal is intended to address.
+         */
+        this.addresses = [];
+        /**
+         * Didactic or other informational resources associated with the goal that provide further supporting information about the goal. Information resources can include inline text commentary and links to web resources.
+         */
+        this.documentation = [];
+        /**
+         * Indicates what should be done and within what timeframe.
+         */
+        this.target = [];
         if (source['category']) {
             this.category = new fhir.CodeableConcept(source.category);
         }
@@ -145,32 +161,38 @@ export class PlanDefinitionGoal extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["category"]) {
-            results.push(...this.category.doModelValidation());
+            outcome.issue.push(...this.category.doModelValidation().issue);
         }
-        if (!this["description"]) {
-            results.push(["description", 'Missing required element: PlanDefinition.goal.description']);
+        if (!this['description']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property description:fhir.CodeableConcept fhir: PlanDefinition.goal.description:CodeableConcept", }));
         }
         if (this["description"]) {
-            results.push(...this.description.doModelValidation());
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["priority"]) {
-            results.push(...this.priority.doModelValidation());
+            outcome.issue.push(...this.priority.doModelValidation().issue);
         }
         if (this["start"]) {
-            results.push(...this.start.doModelValidation());
+            outcome.issue.push(...this.start.doModelValidation().issue);
         }
         if (this["addresses"]) {
-            this.addresses.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.addresses.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["documentation"]) {
-            this.documentation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.documentation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["target"]) {
-            this.target.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.target.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -180,16 +202,14 @@ export class PlanDefinitionActionCondition extends fhir.BackboneElement {
     /**
      * Default constructor for PlanDefinitionActionCondition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PlanDefinitionActionCondition';
         if (source['kind']) {
             this.kind = source.kind;
         }
         else {
             this.kind = null;
-        }
-        if (source['_kind']) {
-            this._kind = new fhir.FhirElement(source._kind);
         }
         if (source['expression']) {
             this.expression = new fhir.Expression(source.expression);
@@ -205,17 +225,20 @@ export class PlanDefinitionActionCondition extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["kind"]) {
-            results.push(["kind", 'Missing required element: PlanDefinition.action.condition.kind']);
-        }
-        if (this["_kind"]) {
-            results.push(...this._kind.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['kind']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property kind:ActionConditionKindValueSetEnum fhir: PlanDefinition.action.condition.kind:code", }));
         }
         if (this["expression"]) {
-            results.push(...this.expression.doModelValidation());
+            outcome.issue.push(...this.expression.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -225,16 +248,15 @@ export class PlanDefinitionActionRelatedAction extends fhir.BackboneElement {
     /**
      * Default constructor for PlanDefinitionActionRelatedAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PlanDefinitionActionRelatedAction';
+        this.__offsetIsChoice = true;
         if (source['actionId']) {
-            this.actionId = source.actionId;
+            this.actionId = new fhir.FhirId({ value: source.actionId });
         }
         else {
             this.actionId = null;
-        }
-        if (source['_actionId']) {
-            this._actionId = new fhir.FhirElement(source._actionId);
         }
         if (source['relationship']) {
             this.relationship = source.relationship;
@@ -242,14 +264,14 @@ export class PlanDefinitionActionRelatedAction extends fhir.BackboneElement {
         else {
             this.relationship = null;
         }
-        if (source['_relationship']) {
-            this._relationship = new fhir.FhirElement(source._relationship);
+        if (source['offset']) {
+            this.offset = source.offset;
         }
-        if (source['offsetDuration']) {
-            this.offsetDuration = new fhir.Duration(source.offsetDuration);
+        else if (source['offsetDuration']) {
+            this.offset = new fhir.Duration(source.offsetDuration);
         }
-        if (source['offsetRange']) {
-            this.offsetRange = new fhir.Range(source.offsetRange);
+        else if (source['offsetRange']) {
+            this.offset = new fhir.Range(source.offsetRange);
         }
     }
     /**
@@ -262,26 +284,23 @@ export class PlanDefinitionActionRelatedAction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["actionId"]) {
-            results.push(["actionId", 'Missing required element: PlanDefinition.action.relatedAction.actionId']);
+        var outcome = super.doModelValidation();
+        if (!this['actionId']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property actionId:fhir.FhirId fhir: PlanDefinition.action.relatedAction.actionId:id", }));
         }
-        if (this["_actionId"]) {
-            results.push(...this._actionId.doModelValidation());
+        if (this["actionId"]) {
+            outcome.issue.push(...this.actionId.doModelValidation().issue);
         }
-        if (!this["relationship"]) {
-            results.push(["relationship", 'Missing required element: PlanDefinition.action.relatedAction.relationship']);
+        if (!this['relationship']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property relationship:ActionRelationshipTypeValueSetEnum fhir: PlanDefinition.action.relatedAction.relationship:code", }));
         }
-        if (this["_relationship"]) {
-            results.push(...this._relationship.doModelValidation());
-        }
-        if (this["offsetDuration"]) {
-            results.push(...this.offsetDuration.doModelValidation());
-        }
-        if (this["offsetRange"]) {
-            results.push(...this.offsetRange.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -291,16 +310,14 @@ export class PlanDefinitionActionParticipant extends fhir.BackboneElement {
     /**
      * Default constructor for PlanDefinitionActionParticipant - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PlanDefinitionActionParticipant';
         if (source['type']) {
             this.type = source.type;
         }
         else {
             this.type = null;
-        }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
         }
         if (source['role']) {
             this.role = new fhir.CodeableConcept(source.role);
@@ -316,17 +333,20 @@ export class PlanDefinitionActionParticipant extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: PlanDefinition.action.participant.type']);
-        }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:ActionParticipantTypeValueSetEnum fhir: PlanDefinition.action.participant.type:code", }));
         }
         if (this["role"]) {
-            results.push(...this.role.doModelValidation());
+            outcome.issue.push(...this.role.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -336,13 +356,11 @@ export class PlanDefinitionActionDynamicValue extends fhir.BackboneElement {
     /**
      * Default constructor for PlanDefinitionActionDynamicValue - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PlanDefinitionActionDynamicValue';
         if (source['path']) {
-            this.path = source.path;
-        }
-        if (source['_path']) {
-            this._path = new fhir.FhirElement(source._path);
+            this.path = new fhir.FhirString({ value: source.path });
         }
         if (source['expression']) {
             this.expression = new fhir.Expression(source.expression);
@@ -352,14 +370,20 @@ export class PlanDefinitionActionDynamicValue extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_path"]) {
-            results.push(...this._path.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["path"]) {
+            outcome.issue.push(...this.path.doModelValidation().issue);
         }
         if (this["expression"]) {
-            results.push(...this.expression.doModelValidation());
+            outcome.issue.push(...this.expression.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -369,37 +393,74 @@ export class PlanDefinitionAction extends fhir.BackboneElement {
     /**
      * Default constructor for PlanDefinitionAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PlanDefinitionAction';
+        /**
+         * A code that provides meaning for the action or action group. For example, a section may have a LOINC code for the section of a documentation template.
+         */
+        this.code = [];
+        /**
+         * This is different than the clinical evidence documentation, it's an actual business description of the reason for performing the action.
+         */
+        this.reason = [];
+        /**
+         * Didactic or other informational resources associated with the action that can be provided to the CDS recipient. Information resources can include inline text commentary and links to web resources.
+         */
+        this.documentation = [];
+        /**
+         * Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition.
+         */
+        this.goalId = [];
+        this.__subjectIsChoice = true;
+        /**
+         * A description of when the action should be triggered.
+         */
+        this.trigger = [];
+        /**
+         * When multiple conditions of the same kind are present, the effects are combined using AND semantics, so the overall condition is true only if all the conditions are true.
+         */
+        this.condition = [];
+        /**
+         * Defines input data requirements for the action.
+         */
+        this.input = [];
+        /**
+         * Defines the outputs of the action, if any.
+         */
+        this.output = [];
+        /**
+         * When an action depends on multiple actions, the meaning is that all actions are dependencies, rather than that any of the actions are a dependency.
+         */
+        this.relatedAction = [];
+        this.__timingIsChoice = true;
+        /**
+         * Indicates who should participate in performing the action described.
+         */
+        this.participant = [];
+        this.__definitionIsChoice = true;
+        /**
+         * Dynamic values are applied in the order in which they are defined in the PlanDefinition resource. Note that when dynamic values are also specified by a referenced ActivityDefinition, the dynamicValues from the ActivityDefinition are applied first, followed by the dynamicValues specified here. In addition, if both a transform and dynamic values are specific, the dynamic values are applied to the result of the transform.
+         */
+        this.dynamicValue = [];
+        /**
+         * Sub actions that are contained within the action. The behavior of this action determines the functionality of the sub-actions. For example, a selection behavior of at-most-one indicates that of the sub-actions, at most one may be chosen as part of realizing the action definition.
+         */
+        this.action = [];
         if (source['prefix']) {
-            this.prefix = source.prefix;
-        }
-        if (source['_prefix']) {
-            this._prefix = new fhir.FhirElement(source._prefix);
+            this.prefix = new fhir.FhirString({ value: source.prefix });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['textEquivalent']) {
-            this.textEquivalent = source.textEquivalent;
-        }
-        if (source['_textEquivalent']) {
-            this._textEquivalent = new fhir.FhirElement(source._textEquivalent);
+            this.textEquivalent = new fhir.FhirString({ value: source.textEquivalent });
         }
         if (source['priority']) {
             this.priority = source.priority;
-        }
-        if (source['_priority']) {
-            this._priority = new fhir.FhirElement(source._priority);
         }
         if (source['code']) {
             this.code = source.code.map((x) => new fhir.CodeableConcept(x));
@@ -411,16 +472,16 @@ export class PlanDefinitionAction extends fhir.BackboneElement {
             this.documentation = source.documentation.map((x) => new fhir.RelatedArtifact(x));
         }
         if (source['goalId']) {
-            this.goalId = source.goalId.map((x) => (x));
+            this.goalId = source.goalId.map((x) => new fhir.FhirId({ value: x }));
         }
-        if (source['_goalId']) {
-            this._goalId = source._goalId.map((x) => new fhir.FhirElement(x));
+        if (source['subject']) {
+            this.subject = source.subject;
         }
-        if (source['subjectCodeableConcept']) {
-            this.subjectCodeableConcept = new fhir.CodeableConcept(source.subjectCodeableConcept);
+        else if (source['subjectCodeableConcept']) {
+            this.subject = new fhir.CodeableConcept(source.subjectCodeableConcept);
         }
-        if (source['subjectReference']) {
-            this.subjectReference = new fhir.Reference(source.subjectReference);
+        else if (source['subjectReference']) {
+            this.subject = new fhir.Reference(source.subjectReference);
         }
         if (source['trigger']) {
             this.trigger = source.trigger.map((x) => new fhir.TriggerDefinition(x));
@@ -437,26 +498,26 @@ export class PlanDefinitionAction extends fhir.BackboneElement {
         if (source['relatedAction']) {
             this.relatedAction = source.relatedAction.map((x) => new fhir.PlanDefinitionActionRelatedAction(x));
         }
-        if (source['timingDateTime']) {
-            this.timingDateTime = source.timingDateTime;
+        if (source['timing']) {
+            this.timing = source.timing;
         }
-        if (source['_timingDateTime']) {
-            this._timingDateTime = new fhir.FhirElement(source._timingDateTime);
+        else if (source['timingDateTime']) {
+            this.timing = new fhir.FhirDateTime({ value: source.timingDateTime });
         }
-        if (source['timingAge']) {
-            this.timingAge = new fhir.Age(source.timingAge);
+        else if (source['timingAge']) {
+            this.timing = new fhir.Age(source.timingAge);
         }
-        if (source['timingPeriod']) {
-            this.timingPeriod = new fhir.Period(source.timingPeriod);
+        else if (source['timingPeriod']) {
+            this.timing = new fhir.Period(source.timingPeriod);
         }
-        if (source['timingDuration']) {
-            this.timingDuration = new fhir.Duration(source.timingDuration);
+        else if (source['timingDuration']) {
+            this.timing = new fhir.Duration(source.timingDuration);
         }
-        if (source['timingRange']) {
-            this.timingRange = new fhir.Range(source.timingRange);
+        else if (source['timingRange']) {
+            this.timing = new fhir.Range(source.timingRange);
         }
-        if (source['timingTiming']) {
-            this.timingTiming = new fhir.Timing(source.timingTiming);
+        else if (source['timingTiming']) {
+            this.timing = new fhir.Timing(source.timingTiming);
         }
         if (source['participant']) {
             this.participant = source.participant.map((x) => new fhir.PlanDefinitionActionParticipant(x));
@@ -467,50 +528,29 @@ export class PlanDefinitionAction extends fhir.BackboneElement {
         if (source['groupingBehavior']) {
             this.groupingBehavior = source.groupingBehavior;
         }
-        if (source['_groupingBehavior']) {
-            this._groupingBehavior = new fhir.FhirElement(source._groupingBehavior);
-        }
         if (source['selectionBehavior']) {
             this.selectionBehavior = source.selectionBehavior;
-        }
-        if (source['_selectionBehavior']) {
-            this._selectionBehavior = new fhir.FhirElement(source._selectionBehavior);
         }
         if (source['requiredBehavior']) {
             this.requiredBehavior = source.requiredBehavior;
         }
-        if (source['_requiredBehavior']) {
-            this._requiredBehavior = new fhir.FhirElement(source._requiredBehavior);
-        }
         if (source['precheckBehavior']) {
             this.precheckBehavior = source.precheckBehavior;
-        }
-        if (source['_precheckBehavior']) {
-            this._precheckBehavior = new fhir.FhirElement(source._precheckBehavior);
         }
         if (source['cardinalityBehavior']) {
             this.cardinalityBehavior = source.cardinalityBehavior;
         }
-        if (source['_cardinalityBehavior']) {
-            this._cardinalityBehavior = new fhir.FhirElement(source._cardinalityBehavior);
+        if (source['definition']) {
+            this.definition = source.definition;
         }
-        if (source['definitionCanonical']) {
-            this.definitionCanonical = source.definitionCanonical;
+        else if (source['definitionCanonical']) {
+            this.definition = new fhir.FhirCanonical({ value: source.definitionCanonical });
         }
-        if (source['_definitionCanonical']) {
-            this._definitionCanonical = new fhir.FhirElement(source._definitionCanonical);
-        }
-        if (source['definitionUri']) {
-            this.definitionUri = source.definitionUri;
-        }
-        if (source['_definitionUri']) {
-            this._definitionUri = new fhir.FhirElement(source._definitionUri);
+        else if (source['definitionUri']) {
+            this.definition = new fhir.FhirUri({ value: source.definitionUri });
         }
         if (source['transform']) {
-            this.transform = source.transform;
-        }
-        if (source['_transform']) {
-            this._transform = new fhir.FhirElement(source._transform);
+            this.transform = new fhir.FhirCanonical({ value: source.transform });
         }
         if (source['dynamicValue']) {
             this.dynamicValue = source.dynamicValue.map((x) => new fhir.PlanDefinitionActionDynamicValue(x));
@@ -524,18 +564,6 @@ export class PlanDefinitionAction extends fhir.BackboneElement {
      */
     static priorityRequiredValueSet() {
         return RequestPriorityValueSet;
-    }
-    /**
-     * Extensible-bound Value Set for subjectCodeableConcept
-     */
-    static subjectCodeableConceptExtensibleValueSet() {
-        return SubjectTypeValueSet;
-    }
-    /**
-     * Extensible-bound Value Set for subjectReference
-     */
-    static subjectReferenceExtensibleValueSet() {
-        return SubjectTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for type
@@ -577,110 +605,68 @@ export class PlanDefinitionAction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_prefix"]) {
-            results.push(...this._prefix.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["prefix"]) {
+            outcome.issue.push(...this.prefix.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_textEquivalent"]) {
-            results.push(...this._textEquivalent.doModelValidation());
-        }
-        if (this["_priority"]) {
-            results.push(...this._priority.doModelValidation());
+        if (this["textEquivalent"]) {
+            outcome.issue.push(...this.textEquivalent.doModelValidation().issue);
         }
         if (this["code"]) {
-            this.code.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.code.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reason"]) {
-            this.reason.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reason.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["documentation"]) {
-            this.documentation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.documentation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_goalId"]) {
-            this._goalId.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["subjectCodeableConcept"]) {
-            results.push(...this.subjectCodeableConcept.doModelValidation());
-        }
-        if (this["subjectReference"]) {
-            results.push(...this.subjectReference.doModelValidation());
+        if (this["goalId"]) {
+            this.goalId.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["trigger"]) {
-            this.trigger.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.trigger.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["condition"]) {
-            this.condition.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.condition.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["input"]) {
-            this.input.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.input.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["output"]) {
-            this.output.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.output.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relatedAction"]) {
-            this.relatedAction.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_timingDateTime"]) {
-            results.push(...this._timingDateTime.doModelValidation());
-        }
-        if (this["timingAge"]) {
-            results.push(...this.timingAge.doModelValidation());
-        }
-        if (this["timingPeriod"]) {
-            results.push(...this.timingPeriod.doModelValidation());
-        }
-        if (this["timingDuration"]) {
-            results.push(...this.timingDuration.doModelValidation());
-        }
-        if (this["timingRange"]) {
-            results.push(...this.timingRange.doModelValidation());
-        }
-        if (this["timingTiming"]) {
-            results.push(...this.timingTiming.doModelValidation());
+            this.relatedAction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["participant"]) {
-            this.participant.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.participant.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_groupingBehavior"]) {
-            results.push(...this._groupingBehavior.doModelValidation());
-        }
-        if (this["_selectionBehavior"]) {
-            results.push(...this._selectionBehavior.doModelValidation());
-        }
-        if (this["_requiredBehavior"]) {
-            results.push(...this._requiredBehavior.doModelValidation());
-        }
-        if (this["_precheckBehavior"]) {
-            results.push(...this._precheckBehavior.doModelValidation());
-        }
-        if (this["_cardinalityBehavior"]) {
-            results.push(...this._cardinalityBehavior.doModelValidation());
-        }
-        if (this["_definitionCanonical"]) {
-            results.push(...this._definitionCanonical.doModelValidation());
-        }
-        if (this["_definitionUri"]) {
-            results.push(...this._definitionUri.doModelValidation());
-        }
-        if (this["_transform"]) {
-            results.push(...this._transform.doModelValidation());
+        if (this["transform"]) {
+            outcome.issue.push(...this.transform.doModelValidation().issue);
         }
         if (this["dynamicValue"]) {
-            this.dynamicValue.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.dynamicValue.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["action"]) {
-            this.action.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.action.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -690,41 +676,80 @@ export class PlanDefinition extends fhir.DomainResource {
     /**
      * Default constructor for PlanDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PlanDefinition';
+        /**
+         * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this plan definition outside of FHIR, where it is not possible to use the logical URI.
+         */
+        this.identifier = [];
+        this.__subjectIsChoice = true;
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the plan definition to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * Descriptive topics related to the content of the plan definition. Topics provide a high-level categorization of the definition that can be useful for filtering and searching.
+         */
+        this.topic = [];
+        /**
+         * An individiual or organization primarily involved in the creation and maintenance of the content.
+         */
+        this.author = [];
+        /**
+         * An individual or organization primarily responsible for internal coherence of the content.
+         */
+        this.editor = [];
+        /**
+         * An individual or organization primarily responsible for review of some aspect of the content.
+         */
+        this.reviewer = [];
+        /**
+         * An individual or organization responsible for officially endorsing the content for use in some setting.
+         */
+        this.endorser = [];
+        /**
+         * Each related artifact is either an attachment, or a reference to another resource, but not both.
+         */
+        this.relatedArtifact = [];
+        /**
+         * A reference to a Library resource containing any formal logic used by the plan definition.
+         */
+        this.library = [];
+        /**
+         * Goals that describe what the activities within the plan are intended to achieve. For example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
+         */
+        this.goal = [];
+        /**
+         * Note that there is overlap between many of the elements defined here and the ActivityDefinition resource. When an ActivityDefinition is referenced (using the definition element), the overlapping elements in the plan override the content of the referenced ActivityDefinition unless otherwise documented in the specific elements. See the PlanDefinition resource for more detailed information.
+         */
+        this.action = [];
         this.resourceType = 'PlanDefinition';
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['subtitle']) {
-            this.subtitle = source.subtitle;
-        }
-        if (source['_subtitle']) {
-            this._subtitle = new fhir.FhirElement(source._subtitle);
+            this.subtitle = new fhir.FhirString({ value: source.subtitle });
         }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
@@ -735,41 +760,29 @@ export class PlanDefinition extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+        if (source['subject']) {
+            this.subject = source.subject;
         }
-        if (source['subjectCodeableConcept']) {
-            this.subjectCodeableConcept = new fhir.CodeableConcept(source.subjectCodeableConcept);
+        else if (source['subjectCodeableConcept']) {
+            this.subject = new fhir.CodeableConcept(source.subjectCodeableConcept);
         }
-        if (source['subjectReference']) {
-            this.subjectReference = new fhir.Reference(source.subjectReference);
+        else if (source['subjectReference']) {
+            this.subject = new fhir.Reference(source.subjectReference);
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -778,34 +791,19 @@ export class PlanDefinition extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['usage']) {
-            this.usage = source.usage;
-        }
-        if (source['_usage']) {
-            this._usage = new fhir.FhirElement(source._usage);
+            this.usage = new fhir.FhirString({ value: source.usage });
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['approvalDate']) {
-            this.approvalDate = source.approvalDate;
-        }
-        if (source['_approvalDate']) {
-            this._approvalDate = new fhir.FhirElement(source._approvalDate);
+            this.approvalDate = new fhir.FhirDate({ value: source.approvalDate });
         }
         if (source['lastReviewDate']) {
-            this.lastReviewDate = source.lastReviewDate;
-        }
-        if (source['_lastReviewDate']) {
-            this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate);
+            this.lastReviewDate = new fhir.FhirDate({ value: source.lastReviewDate });
         }
         if (source['effectivePeriod']) {
             this.effectivePeriod = new fhir.Period(source.effectivePeriod);
@@ -829,10 +827,7 @@ export class PlanDefinition extends fhir.DomainResource {
             this.relatedArtifact = source.relatedArtifact.map((x) => new fhir.RelatedArtifact(x));
         }
         if (source['library']) {
-            this.library = source.library.map((x) => (x));
-        }
-        if (source['_library']) {
-            this._library = source._library.map((x) => new fhir.FhirElement(x));
+            this.library = source.library.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['goal']) {
             this.goal = source.goal.map((x) => new fhir.PlanDefinitionGoal(x));
@@ -854,18 +849,6 @@ export class PlanDefinition extends fhir.DomainResource {
         return PublicationStatusValueSet;
     }
     /**
-     * Extensible-bound Value Set for subjectCodeableConcept
-     */
-    static subjectCodeableConceptExtensibleValueSet() {
-        return SubjectTypeValueSet;
-    }
-    /**
-     * Extensible-bound Value Set for subjectReference
-     */
-    static subjectReferenceExtensibleValueSet() {
-        return SubjectTypeValueSet;
-    }
-    /**
      * Example-bound Value Set for topic
      */
     static topicExampleValueSet() {
@@ -875,110 +858,107 @@ export class PlanDefinition extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: PlanDefinition.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'PlanDefinition' fhir: PlanDefinition.resourceType:'PlanDefinition'", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_subtitle"]) {
-            results.push(...this._subtitle.doModelValidation());
+        if (this["subtitle"]) {
+            outcome.issue.push(...this.subtitle.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: PlanDefinition.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: PlanDefinition.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["subjectCodeableConcept"]) {
-            results.push(...this.subjectCodeableConcept.doModelValidation());
-        }
-        if (this["subjectReference"]) {
-            results.push(...this.subjectReference.doModelValidation());
-        }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (this["_usage"]) {
-            results.push(...this._usage.doModelValidation());
+        if (this["usage"]) {
+            outcome.issue.push(...this.usage.doModelValidation().issue);
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
-        if (this["_approvalDate"]) {
-            results.push(...this._approvalDate.doModelValidation());
+        if (this["approvalDate"]) {
+            outcome.issue.push(...this.approvalDate.doModelValidation().issue);
         }
-        if (this["_lastReviewDate"]) {
-            results.push(...this._lastReviewDate.doModelValidation());
+        if (this["lastReviewDate"]) {
+            outcome.issue.push(...this.lastReviewDate.doModelValidation().issue);
         }
         if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
+            outcome.issue.push(...this.effectivePeriod.doModelValidation().issue);
         }
         if (this["topic"]) {
-            this.topic.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.topic.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["author"]) {
-            this.author.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.author.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["editor"]) {
-            this.editor.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.editor.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reviewer"]) {
-            this.reviewer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reviewer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["endorser"]) {
-            this.endorser.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.endorser.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relatedArtifact"]) {
-            this.relatedArtifact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relatedArtifact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_library"]) {
-            this._library.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["library"]) {
+            this.library.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["goal"]) {
-            this.goal.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.goal.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["action"]) {
-            this.action.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.action.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=PlanDefinition.js.map

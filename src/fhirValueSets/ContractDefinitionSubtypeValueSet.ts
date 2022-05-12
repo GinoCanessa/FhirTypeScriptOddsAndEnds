@@ -27,9 +27,3 @@ export type ContractDefinitionSubtypeValueSetType = typeof ContractDefinitionSub
 /**
  * This value set contract specific codes for status.
  */
-export enum ContractDefinitionSubtypeValueSetEnum {
-  /**
-   * temp: To be completed
-   */
-  TemporaryValue = "temp",
-}

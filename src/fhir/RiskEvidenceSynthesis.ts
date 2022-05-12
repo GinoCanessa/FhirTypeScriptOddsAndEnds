@@ -3,405 +3,118 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: RiskEvidenceSynthesis
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { PrecisionEstimateTypeValueSet, PrecisionEstimateTypeValueSetType, PrecisionEstimateTypeValueSetEnum } from '../fhirValueSets/PrecisionEstimateTypeValueSet.js'
-import { RiskEstimateTypeValueSet, RiskEstimateTypeValueSetType, RiskEstimateTypeValueSetEnum } from '../fhirValueSets/RiskEstimateTypeValueSet.js'
-import { UcumUnitsValueSet, UcumUnitsValueSetType, UcumUnitsValueSetEnum } from '../fhirValueSets/UcumUnitsValueSet.js'
-import { CertaintySubcomponentTypeValueSet, CertaintySubcomponentTypeValueSetType, CertaintySubcomponentTypeValueSetEnum } from '../fhirValueSets/CertaintySubcomponentTypeValueSet.js'
-import { CertaintySubcomponentRatingValueSet, CertaintySubcomponentRatingValueSetType, CertaintySubcomponentRatingValueSetEnum } from '../fhirValueSets/CertaintySubcomponentRatingValueSet.js'
-import { EvidenceQualityValueSet, EvidenceQualityValueSetType, EvidenceQualityValueSetEnum } from '../fhirValueSets/EvidenceQualityValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-import { DefinitionTopicValueSet, DefinitionTopicValueSetType, DefinitionTopicValueSetEnum } from '../fhirValueSets/DefinitionTopicValueSet.js'
-import { SynthesisTypeValueSet, SynthesisTypeValueSetType, SynthesisTypeValueSetEnum } from '../fhirValueSets/SynthesisTypeValueSet.js'
-import { StudyTypeValueSet, StudyTypeValueSetType, StudyTypeValueSetEnum } from '../fhirValueSets/StudyTypeValueSet.js'
-
+import { PrecisionEstimateTypeValueSet, PrecisionEstimateTypeValueSetType,} from '../fhirValueSets/PrecisionEstimateTypeValueSet.js';
+import { PrecisionEstimateTypeValueSetEnum } from '../valueSetEnums.js';
+import { RiskEstimateTypeValueSet, RiskEstimateTypeValueSetType,} from '../fhirValueSets/RiskEstimateTypeValueSet.js';
+import { RiskEstimateTypeValueSetEnum } from '../valueSetEnums.js';
+import { UcumUnitsValueSet, UcumUnitsValueSetType,} from '../fhirValueSets/UcumUnitsValueSet.js';
+import { UcumUnitsValueSetEnum } from '../valueSetEnums.js';
+import { CertaintySubcomponentTypeValueSet, CertaintySubcomponentTypeValueSetType,} from '../fhirValueSets/CertaintySubcomponentTypeValueSet.js';
+import { CertaintySubcomponentTypeValueSetEnum } from '../valueSetEnums.js';
+import { CertaintySubcomponentRatingValueSet, CertaintySubcomponentRatingValueSetType,} from '../fhirValueSets/CertaintySubcomponentRatingValueSet.js';
+import { CertaintySubcomponentRatingValueSetEnum } from '../valueSetEnums.js';
+import { EvidenceQualityValueSet, EvidenceQualityValueSetType,} from '../fhirValueSets/EvidenceQualityValueSet.js';
+import { EvidenceQualityValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { DefinitionTopicValueSet, DefinitionTopicValueSetType,} from '../fhirValueSets/DefinitionTopicValueSet.js';
+import { DefinitionTopicValueSetEnum } from '../valueSetEnums.js';
+import { SynthesisTypeValueSet, SynthesisTypeValueSetType,} from '../fhirValueSets/SynthesisTypeValueSet.js';
+import { SynthesisTypeValueSetEnum } from '../valueSetEnums.js';
+import { StudyTypeValueSet, StudyTypeValueSetType,} from '../fhirValueSets/StudyTypeValueSet.js';
+import { StudyTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A description of the size of the sample involved in the synthesis.
+ * Valid arguments for the RiskEvidenceSynthesisSampleSize type.
  */
-export type IRiskEvidenceSynthesisSampleSize = fhir.IBackboneElement & { 
+export interface RiskEvidenceSynthesisSampleSizeArgs extends fhir.BackboneElementArgs {
   /**
    * Human-readable summary of sample size.
    */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.sampleSize.description
-   */
-  _description?: fhir.IFhirElement|undefined;
+  description?: fhir.FhirString|string|undefined;
   /**
    * Number of studies included in this evidence synthesis.
    */
-  numberOfStudies?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.sampleSize.numberOfStudies
-   */
-  _numberOfStudies?: fhir.IFhirElement|undefined;
+  numberOfStudies?: fhir.FhirInteger|number|undefined;
   /**
    * Number of participants included in this evidence synthesis.
    */
-  numberOfParticipants?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.sampleSize.numberOfParticipants
-   */
-  _numberOfParticipants?: fhir.IFhirElement|undefined;
-}
-
-/**
- * A description of the precision of the estimate for the effect.
- */
-export type IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate = fhir.IBackboneElement & { 
-  /**
-   * Examples include confidence interval and interquartile range.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Use 95 for a 95% confidence interval.
-   */
-  level?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.precisionEstimate.level
-   */
-  _level?: fhir.IFhirElement|undefined;
-  /**
-   * Lower bound of confidence interval.
-   */
-  from?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.precisionEstimate.from
-   */
-  _from?: fhir.IFhirElement|undefined;
-  /**
-   * Upper bound of confidence interval.
-   */
-  to?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.precisionEstimate.to
-   */
-  _to?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The estimated risk of the outcome.
- */
-export type IRiskEvidenceSynthesisRiskEstimate = fhir.IBackboneElement & { 
-  /**
-   * Human-readable summary of risk estimate.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Examples include proportion and mean.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * The point estimate of the risk estimate.
-   */
-  value?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.value
-   */
-  _value?: fhir.IFhirElement|undefined;
-  /**
-   * Specifies the UCUM unit for the outcome.
-   */
-  unitOfMeasure?: fhir.ICodeableConcept|undefined;
-  /**
-   * The sample size for the group that was measured for this risk estimate.
-   */
-  denominatorCount?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.denominatorCount
-   */
-  _denominatorCount?: fhir.IFhirElement|undefined;
-  /**
-   * The number of group members with the outcome of interest.
-   */
-  numeratorCount?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.numeratorCount
-   */
-  _numeratorCount?: fhir.IFhirElement|undefined;
-  /**
-   * A description of the precision of the estimate for the effect.
-   */
-  precisionEstimate?: fhir.IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate[]|undefined;
-}
-
-/**
- * A description of a component of the overall certainty.
- */
-export type IRiskEvidenceSynthesisCertaintyCertaintySubcomponent = fhir.IBackboneElement & { 
-  /**
-   * Type of subcomponent of certainty rating.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * A rating of a subcomponent of rating certainty.
-   */
-  rating?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * A human-readable string to clarify or explain concepts about the resource.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-}
-
-/**
- * A description of the certainty of the risk estimate.
- */
-export type IRiskEvidenceSynthesisCertainty = fhir.IBackboneElement & { 
-  /**
-   * A rating of the certainty of the effect estimate.
-   */
-  rating?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * A human-readable string to clarify or explain concepts about the resource.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-  /**
-   * A description of a component of the overall certainty.
-   */
-  certaintySubcomponent?: fhir.IRiskEvidenceSynthesisCertaintyCertaintySubcomponent[]|undefined;
-}
-
-/**
- * The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.
- */
-export type IRiskEvidenceSynthesis = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "RiskEvidenceSynthesis";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this risk evidence synthesis outside of FHIR, where it is not possible to use the logical URI.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * There may be different risk evidence synthesis instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the risk evidence synthesis with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of risk evidence synthesiss that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the risk evidence synthesis. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the risk evidence synthesis is the organization or individual primarily responsible for the maintenance and upkeep of the risk evidence synthesis. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the risk evidence synthesis. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the risk evidence synthesis was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the risk evidence synthesis as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the risk evidence synthesis is presumed to be the predominant language in the place the risk evidence synthesis was created).
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * A human-readable string to clarify or explain concepts about the resource.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the risk evidence synthesis to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * A copyright statement relating to the risk evidence synthesis and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the risk evidence synthesis.
-   */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-  /**
-   * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
-   */
-  approvalDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.approvalDate
-   */
-  _approvalDate?: fhir.IFhirElement|undefined;
-  /**
-   * If specified, this date follows the original approval date.
-   */
-  lastReviewDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.lastReviewDate
-   */
-  _lastReviewDate?: fhir.IFhirElement|undefined;
-  /**
-   * The effective period for a risk evidence synthesis  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
-   */
-  effectivePeriod?: fhir.IPeriod|undefined;
-  /**
-   * Descriptive topics related to the content of the RiskEvidenceSynthesis. Topics provide a high-level categorization grouping types of EffectEvidenceSynthesiss that can be useful for filtering and searching.
-   */
-  topic?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * An individiual or organization primarily involved in the creation and maintenance of the content.
-   */
-  author?: fhir.IContactDetail[]|undefined;
-  /**
-   * An individual or organization primarily responsible for internal coherence of the content.
-   */
-  editor?: fhir.IContactDetail[]|undefined;
-  /**
-   * An individual or organization primarily responsible for review of some aspect of the content.
-   */
-  reviewer?: fhir.IContactDetail[]|undefined;
-  /**
-   * An individual or organization responsible for officially endorsing the content for use in some setting.
-   */
-  endorser?: fhir.IContactDetail[]|undefined;
-  /**
-   * Each related artifact is either an attachment, or a reference to another resource, but not both.
-   */
-  relatedArtifact?: fhir.IRelatedArtifact[]|undefined;
-  /**
-   * Type of synthesis eg meta-analysis.
-   */
-  synthesisType?: fhir.ICodeableConcept|undefined;
-  /**
-   * Type of study eg randomized trial.
-   */
-  studyType?: fhir.ICodeableConcept|undefined;
-  /**
-   * A reference to a EvidenceVariable resource that defines the population for the research.
-   */
-  population: fhir.IReference|null;
-  /**
-   * A reference to a EvidenceVariable resource that defines the exposure for the research.
-   */
-  exposure?: fhir.IReference|undefined;
-  /**
-   * A reference to a EvidenceVariable resomece that defines the outcome for the research.
-   */
-  outcome: fhir.IReference|null;
-  /**
-   * A description of the size of the sample involved in the synthesis.
-   */
-  sampleSize?: fhir.IRiskEvidenceSynthesisSampleSize|undefined;
-  /**
-   * The estimated risk of the outcome.
-   */
-  riskEstimate?: fhir.IRiskEvidenceSynthesisRiskEstimate|undefined;
-  /**
-   * A description of the certainty of the risk estimate.
-   */
-  certainty?: fhir.IRiskEvidenceSynthesisCertainty[]|undefined;
+  numberOfParticipants?: fhir.FhirInteger|number|undefined;
 }
 
 /**
  * A description of the size of the sample involved in the synthesis.
  */
-export class RiskEvidenceSynthesisSampleSize extends fhir.BackboneElement implements IRiskEvidenceSynthesisSampleSize {
+export class RiskEvidenceSynthesisSampleSize extends fhir.BackboneElement {
+  readonly __dataType:string = 'RiskEvidenceSynthesisSampleSize';
   /**
    * Human-readable summary of sample size.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.sampleSize.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Number of studies included in this evidence synthesis.
    */
-  public numberOfStudies?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.sampleSize.numberOfStudies
-   */
-  public _numberOfStudies?: fhir.FhirElement|undefined;
+  public numberOfStudies?: fhir.FhirInteger|undefined;
   /**
    * Number of participants included in this evidence synthesis.
    */
-  public numberOfParticipants?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.sampleSize.numberOfParticipants
-   */
-  public _numberOfParticipants?: fhir.FhirElement|undefined;
+  public numberOfParticipants?: fhir.FhirInteger|undefined;
   /**
    * Default constructor for RiskEvidenceSynthesisSampleSize - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IRiskEvidenceSynthesisSampleSize> = { }) {
-    super(source);
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['numberOfStudies']) { this.numberOfStudies = source.numberOfStudies; }
-    if (source['_numberOfStudies']) { this._numberOfStudies = new fhir.FhirElement(source._numberOfStudies!); }
-    if (source['numberOfParticipants']) { this.numberOfParticipants = source.numberOfParticipants; }
-    if (source['_numberOfParticipants']) { this._numberOfParticipants = new fhir.FhirElement(source._numberOfParticipants!); }
+  constructor(source:Partial<RiskEvidenceSynthesisSampleSizeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['numberOfStudies']) { this.numberOfStudies = new fhir.FhirInteger({value: source.numberOfStudies}); }
+    if (source['numberOfParticipants']) { this.numberOfParticipants = new fhir.FhirInteger({value: source.numberOfParticipants}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_numberOfStudies"]) { results.push(...this._numberOfStudies.doModelValidation()); }
-    if (this["_numberOfParticipants"]) { results.push(...this._numberOfParticipants.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["numberOfStudies"]) { outcome.issue!.push(...this.numberOfStudies.doModelValidation().issue!); }
+    if (this["numberOfParticipants"]) { outcome.issue!.push(...this.numberOfParticipants.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the RiskEvidenceSynthesisRiskEstimatePrecisionEstimate type.
+ */
+export interface RiskEvidenceSynthesisRiskEstimatePrecisionEstimateArgs extends fhir.BackboneElementArgs {
+  /**
+   * Examples include confidence interval and interquartile range.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Use 95 for a 95% confidence interval.
+   */
+  level?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Lower bound of confidence interval.
+   */
+  from?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Upper bound of confidence interval.
+   */
+  to?: fhir.FhirDecimal|number|undefined;
 }
 
 /**
  * A description of the precision of the estimate for the effect.
  */
-export class RiskEvidenceSynthesisRiskEstimatePrecisionEstimate extends fhir.BackboneElement implements IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate {
+export class RiskEvidenceSynthesisRiskEstimatePrecisionEstimate extends fhir.BackboneElement {
+  readonly __dataType:string = 'RiskEvidenceSynthesisRiskEstimatePrecisionEstimate';
   /**
    * Examples include confidence interval and interquartile range.
    */
@@ -409,39 +122,24 @@ export class RiskEvidenceSynthesisRiskEstimatePrecisionEstimate extends fhir.Bac
   /**
    * Use 95 for a 95% confidence interval.
    */
-  public level?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.precisionEstimate.level
-   */
-  public _level?: fhir.FhirElement|undefined;
+  public level?: fhir.FhirDecimal|undefined;
   /**
    * Lower bound of confidence interval.
    */
-  public from?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.precisionEstimate.from
-   */
-  public _from?: fhir.FhirElement|undefined;
+  public from?: fhir.FhirDecimal|undefined;
   /**
    * Upper bound of confidence interval.
    */
-  public to?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.precisionEstimate.to
-   */
-  public _to?: fhir.FhirElement|undefined;
+  public to?: fhir.FhirDecimal|undefined;
   /**
    * Default constructor for RiskEvidenceSynthesisRiskEstimatePrecisionEstimate - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['level']) { this.level = source.level; }
-    if (source['_level']) { this._level = new fhir.FhirElement(source._level!); }
-    if (source['from']) { this.from = source.from; }
-    if (source['_from']) { this._from = new fhir.FhirElement(source._from!); }
-    if (source['to']) { this.to = source.to; }
-    if (source['_to']) { this._to = new fhir.FhirElement(source._to!); }
+  constructor(source:Partial<RiskEvidenceSynthesisRiskEstimatePrecisionEstimateArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['level']) { this.level = new fhir.FhirDecimal({value: source.level}); }
+    if (source['from']) { this.from = new fhir.FhirDecimal({value: source.from}); }
+    if (source['to']) { this.to = new fhir.FhirDecimal({value: source.to}); }
   }
   /**
    * Extensible-bound Value Set for type
@@ -452,28 +150,64 @@ export class RiskEvidenceSynthesisRiskEstimatePrecisionEstimate extends fhir.Bac
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["_level"]) { results.push(...this._level.doModelValidation()); }
-    if (this["_from"]) { results.push(...this._from.doModelValidation()); }
-    if (this["_to"]) { results.push(...this._to.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["level"]) { outcome.issue!.push(...this.level.doModelValidation().issue!); }
+    if (this["from"]) { outcome.issue!.push(...this.from.doModelValidation().issue!); }
+    if (this["to"]) { outcome.issue!.push(...this.to.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the RiskEvidenceSynthesisRiskEstimate type.
+ */
+export interface RiskEvidenceSynthesisRiskEstimateArgs extends fhir.BackboneElementArgs {
+  /**
+   * Human-readable summary of risk estimate.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * Examples include proportion and mean.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The point estimate of the risk estimate.
+   */
+  value?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Specifies the UCUM unit for the outcome.
+   */
+  unitOfMeasure?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The sample size for the group that was measured for this risk estimate.
+   */
+  denominatorCount?: fhir.FhirInteger|number|undefined;
+  /**
+   * The number of group members with the outcome of interest.
+   */
+  numeratorCount?: fhir.FhirInteger|number|undefined;
+  /**
+   * A description of the precision of the estimate for the effect.
+   */
+  precisionEstimate?: fhir.RiskEvidenceSynthesisRiskEstimatePrecisionEstimateArgs[]|undefined;
 }
 
 /**
  * The estimated risk of the outcome.
  */
-export class RiskEvidenceSynthesisRiskEstimate extends fhir.BackboneElement implements IRiskEvidenceSynthesisRiskEstimate {
+export class RiskEvidenceSynthesisRiskEstimate extends fhir.BackboneElement {
+  readonly __dataType:string = 'RiskEvidenceSynthesisRiskEstimate';
   /**
    * Human-readable summary of risk estimate.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Examples include proportion and mean.
    */
@@ -481,11 +215,7 @@ export class RiskEvidenceSynthesisRiskEstimate extends fhir.BackboneElement impl
   /**
    * The point estimate of the risk estimate.
    */
-  public value?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.value
-   */
-  public _value?: fhir.FhirElement|undefined;
+  public value?: fhir.FhirDecimal|undefined;
   /**
    * Specifies the UCUM unit for the outcome.
    */
@@ -493,38 +223,26 @@ export class RiskEvidenceSynthesisRiskEstimate extends fhir.BackboneElement impl
   /**
    * The sample size for the group that was measured for this risk estimate.
    */
-  public denominatorCount?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.denominatorCount
-   */
-  public _denominatorCount?: fhir.FhirElement|undefined;
+  public denominatorCount?: fhir.FhirInteger|undefined;
   /**
    * The number of group members with the outcome of interest.
    */
-  public numeratorCount?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.riskEstimate.numeratorCount
-   */
-  public _numeratorCount?: fhir.FhirElement|undefined;
+  public numeratorCount?: fhir.FhirInteger|undefined;
   /**
    * A description of the precision of the estimate for the effect.
    */
-  public precisionEstimate?: fhir.RiskEvidenceSynthesisRiskEstimatePrecisionEstimate[]|undefined;
+  public precisionEstimate?: fhir.RiskEvidenceSynthesisRiskEstimatePrecisionEstimate[]|undefined = [];
   /**
    * Default constructor for RiskEvidenceSynthesisRiskEstimate - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IRiskEvidenceSynthesisRiskEstimate> = { }) {
-    super(source);
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['value']) { this.value = source.value; }
-    if (source['_value']) { this._value = new fhir.FhirElement(source._value!); }
-    if (source['unitOfMeasure']) { this.unitOfMeasure = new fhir.CodeableConcept(source.unitOfMeasure!); }
-    if (source['denominatorCount']) { this.denominatorCount = source.denominatorCount; }
-    if (source['_denominatorCount']) { this._denominatorCount = new fhir.FhirElement(source._denominatorCount!); }
-    if (source['numeratorCount']) { this.numeratorCount = source.numeratorCount; }
-    if (source['_numeratorCount']) { this._numeratorCount = new fhir.FhirElement(source._numeratorCount!); }
+  constructor(source:Partial<RiskEvidenceSynthesisRiskEstimateArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['value']) { this.value = new fhir.FhirDecimal({value: source.value}); }
+    if (source['unitOfMeasure']) { this.unitOfMeasure = new fhir.CodeableConcept(source.unitOfMeasure); }
+    if (source['denominatorCount']) { this.denominatorCount = new fhir.FhirInteger({value: source.denominatorCount}); }
+    if (source['numeratorCount']) { this.numeratorCount = new fhir.FhirInteger({value: source.numeratorCount}); }
     if (source['precisionEstimate']) { this.precisionEstimate = source.precisionEstimate.map((x) => new fhir.RiskEvidenceSynthesisRiskEstimatePrecisionEstimate(x)); }
   }
   /**
@@ -542,23 +260,47 @@ export class RiskEvidenceSynthesisRiskEstimate extends fhir.BackboneElement impl
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["_value"]) { results.push(...this._value.doModelValidation()); }
-    if (this["unitOfMeasure"]) { results.push(...this.unitOfMeasure.doModelValidation()); }
-    if (this["_denominatorCount"]) { results.push(...this._denominatorCount.doModelValidation()); }
-    if (this["_numeratorCount"]) { results.push(...this._numeratorCount.doModelValidation()); }
-    if (this["precisionEstimate"]) { this.precisionEstimate.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["value"]) { outcome.issue!.push(...this.value.doModelValidation().issue!); }
+    if (this["unitOfMeasure"]) { outcome.issue!.push(...this.unitOfMeasure.doModelValidation().issue!); }
+    if (this["denominatorCount"]) { outcome.issue!.push(...this.denominatorCount.doModelValidation().issue!); }
+    if (this["numeratorCount"]) { outcome.issue!.push(...this.numeratorCount.doModelValidation().issue!); }
+    if (this["precisionEstimate"]) { this.precisionEstimate.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the RiskEvidenceSynthesisCertaintyCertaintySubcomponent type.
+ */
+export interface RiskEvidenceSynthesisCertaintyCertaintySubcomponentArgs extends fhir.BackboneElementArgs {
+  /**
+   * Type of subcomponent of certainty rating.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * A rating of a subcomponent of rating certainty.
+   */
+  rating?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * A human-readable string to clarify or explain concepts about the resource.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
 }
 
 /**
  * A description of a component of the overall certainty.
  */
-export class RiskEvidenceSynthesisCertaintyCertaintySubcomponent extends fhir.BackboneElement implements IRiskEvidenceSynthesisCertaintyCertaintySubcomponent {
+export class RiskEvidenceSynthesisCertaintyCertaintySubcomponent extends fhir.BackboneElement {
+  readonly __dataType:string = 'RiskEvidenceSynthesisCertaintyCertaintySubcomponent';
   /**
    * Type of subcomponent of certainty rating.
    */
@@ -566,17 +308,17 @@ export class RiskEvidenceSynthesisCertaintyCertaintySubcomponent extends fhir.Ba
   /**
    * A rating of a subcomponent of rating certainty.
    */
-  public rating?: fhir.CodeableConcept[]|undefined;
+  public rating?: fhir.CodeableConcept[]|undefined = [];
   /**
    * A human-readable string to clarify or explain concepts about the resource.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Default constructor for RiskEvidenceSynthesisCertaintyCertaintySubcomponent - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IRiskEvidenceSynthesisCertaintyCertaintySubcomponent> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<RiskEvidenceSynthesisCertaintyCertaintySubcomponentArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     if (source['rating']) { this.rating = source.rating.map((x) => new fhir.CodeableConcept(x)); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
   }
@@ -595,36 +337,60 @@ export class RiskEvidenceSynthesisCertaintyCertaintySubcomponent extends fhir.Ba
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["rating"]) { this.rating.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["rating"]) { this.rating.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the RiskEvidenceSynthesisCertainty type.
+ */
+export interface RiskEvidenceSynthesisCertaintyArgs extends fhir.BackboneElementArgs {
+  /**
+   * A rating of the certainty of the effect estimate.
+   */
+  rating?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * A human-readable string to clarify or explain concepts about the resource.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
+  /**
+   * A description of a component of the overall certainty.
+   */
+  certaintySubcomponent?: fhir.RiskEvidenceSynthesisCertaintyCertaintySubcomponentArgs[]|undefined;
 }
 
 /**
  * A description of the certainty of the risk estimate.
  */
-export class RiskEvidenceSynthesisCertainty extends fhir.BackboneElement implements IRiskEvidenceSynthesisCertainty {
+export class RiskEvidenceSynthesisCertainty extends fhir.BackboneElement {
+  readonly __dataType:string = 'RiskEvidenceSynthesisCertainty';
   /**
    * A rating of the certainty of the effect estimate.
    */
-  public rating?: fhir.CodeableConcept[]|undefined;
+  public rating?: fhir.CodeableConcept[]|undefined = [];
   /**
    * A human-readable string to clarify or explain concepts about the resource.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * A description of a component of the overall certainty.
    */
-  public certaintySubcomponent?: fhir.RiskEvidenceSynthesisCertaintyCertaintySubcomponent[]|undefined;
+  public certaintySubcomponent?: fhir.RiskEvidenceSynthesisCertaintyCertaintySubcomponent[]|undefined = [];
   /**
    * Default constructor for RiskEvidenceSynthesisCertainty - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IRiskEvidenceSynthesisCertainty> = { }) {
-    super(source);
+  constructor(source:Partial<RiskEvidenceSynthesisCertaintyArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['rating']) { this.rating = source.rating.map((x) => new fhir.CodeableConcept(x)); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
     if (source['certaintySubcomponent']) { this.certaintySubcomponent = source.certaintySubcomponent.map((x) => new fhir.RiskEvidenceSynthesisCertaintyCertaintySubcomponent(x)); }
@@ -638,19 +404,161 @@ export class RiskEvidenceSynthesisCertainty extends fhir.BackboneElement impleme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["rating"]) { this.rating.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["certaintySubcomponent"]) { this.certaintySubcomponent.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["rating"]) { this.rating.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["certaintySubcomponent"]) { this.certaintySubcomponent.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the RiskEvidenceSynthesis type.
+ */
+export interface RiskEvidenceSynthesisArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "RiskEvidenceSynthesis"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this risk evidence synthesis outside of FHIR, where it is not possible to use the logical URI.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * There may be different risk evidence synthesis instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the risk evidence synthesis with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * Allows filtering of risk evidence synthesiss that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the risk evidence synthesis. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the risk evidence synthesis is the organization or individual primarily responsible for the maintenance and upkeep of the risk evidence synthesis. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the risk evidence synthesis. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the risk evidence synthesis was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the risk evidence synthesis as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the risk evidence synthesis is presumed to be the predominant language in the place the risk evidence synthesis was created).
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * A human-readable string to clarify or explain concepts about the resource.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the risk evidence synthesis to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * A copyright statement relating to the risk evidence synthesis and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the risk evidence synthesis.
+   */
+  copyright?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
+   */
+  approvalDate?: fhir.FhirDate|string|undefined;
+  /**
+   * If specified, this date follows the original approval date.
+   */
+  lastReviewDate?: fhir.FhirDate|string|undefined;
+  /**
+   * The effective period for a risk evidence synthesis  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
+   */
+  effectivePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * Descriptive topics related to the content of the RiskEvidenceSynthesis. Topics provide a high-level categorization grouping types of EffectEvidenceSynthesiss that can be useful for filtering and searching.
+   */
+  topic?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * An individiual or organization primarily involved in the creation and maintenance of the content.
+   */
+  author?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * An individual or organization primarily responsible for internal coherence of the content.
+   */
+  editor?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * An individual or organization primarily responsible for review of some aspect of the content.
+   */
+  reviewer?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * An individual or organization responsible for officially endorsing the content for use in some setting.
+   */
+  endorser?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * Each related artifact is either an attachment, or a reference to another resource, but not both.
+   */
+  relatedArtifact?: fhir.RelatedArtifactArgs[]|undefined;
+  /**
+   * Type of synthesis eg meta-analysis.
+   */
+  synthesisType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Type of study eg randomized trial.
+   */
+  studyType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * A reference to a EvidenceVariable resource that defines the population for the research.
+   */
+  population: fhir.ReferenceArgs|null;
+  /**
+   * A reference to a EvidenceVariable resource that defines the exposure for the research.
+   */
+  exposure?: fhir.ReferenceArgs|undefined;
+  /**
+   * A reference to a EvidenceVariable resomece that defines the outcome for the research.
+   */
+  outcome: fhir.ReferenceArgs|null;
+  /**
+   * A description of the size of the sample involved in the synthesis.
+   */
+  sampleSize?: fhir.RiskEvidenceSynthesisSampleSizeArgs|undefined;
+  /**
+   * The estimated risk of the outcome.
+   */
+  riskEstimate?: fhir.RiskEvidenceSynthesisRiskEstimateArgs|undefined;
+  /**
+   * A description of the certainty of the risk estimate.
+   */
+  certainty?: fhir.RiskEvidenceSynthesisCertaintyArgs[]|undefined;
 }
 
 /**
  * The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.
  */
-export class RiskEvidenceSynthesis extends fhir.DomainResource implements IRiskEvidenceSynthesis {
+export class RiskEvidenceSynthesis extends fhir.DomainResource {
+  readonly __dataType:string = 'RiskEvidenceSynthesis';
   /**
    * Resource Type Name
    */
@@ -660,111 +568,67 @@ export class RiskEvidenceSynthesis extends fhir.DomainResource implements IRiskE
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this risk evidence synthesis outside of FHIR, where it is not possible to use the logical URI.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * There may be different risk evidence synthesis instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the risk evidence synthesis with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * Allows filtering of risk evidence synthesiss that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the risk evidence synthesis. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the risk evidence synthesis is the organization or individual primarily responsible for the maintenance and upkeep of the risk evidence synthesis. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the risk evidence synthesis. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the risk evidence synthesis was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the risk evidence synthesis as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the risk evidence synthesis is presumed to be the predominant language in the place the risk evidence synthesis was created).
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * A human-readable string to clarify or explain concepts about the resource.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the risk evidence synthesis to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * A copyright statement relating to the risk evidence synthesis and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the risk evidence synthesis.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
    */
-  public approvalDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.approvalDate
-   */
-  public _approvalDate?: fhir.FhirElement|undefined;
+  public approvalDate?: fhir.FhirDate|undefined;
   /**
    * If specified, this date follows the original approval date.
    */
-  public lastReviewDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskEvidenceSynthesis.lastReviewDate
-   */
-  public _lastReviewDate?: fhir.FhirElement|undefined;
+  public lastReviewDate?: fhir.FhirDate|undefined;
   /**
    * The effective period for a risk evidence synthesis  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
    */
@@ -772,27 +636,27 @@ export class RiskEvidenceSynthesis extends fhir.DomainResource implements IRiskE
   /**
    * Descriptive topics related to the content of the RiskEvidenceSynthesis. Topics provide a high-level categorization grouping types of EffectEvidenceSynthesiss that can be useful for filtering and searching.
    */
-  public topic?: fhir.CodeableConcept[]|undefined;
+  public topic?: fhir.CodeableConcept[]|undefined = [];
   /**
    * An individiual or organization primarily involved in the creation and maintenance of the content.
    */
-  public author?: fhir.ContactDetail[]|undefined;
+  public author?: fhir.ContactDetail[]|undefined = [];
   /**
    * An individual or organization primarily responsible for internal coherence of the content.
    */
-  public editor?: fhir.ContactDetail[]|undefined;
+  public editor?: fhir.ContactDetail[]|undefined = [];
   /**
    * An individual or organization primarily responsible for review of some aspect of the content.
    */
-  public reviewer?: fhir.ContactDetail[]|undefined;
+  public reviewer?: fhir.ContactDetail[]|undefined = [];
   /**
    * An individual or organization responsible for officially endorsing the content for use in some setting.
    */
-  public endorser?: fhir.ContactDetail[]|undefined;
+  public endorser?: fhir.ContactDetail[]|undefined = [];
   /**
    * Each related artifact is either an attachment, or a reference to another resource, but not both.
    */
-  public relatedArtifact?: fhir.RelatedArtifact[]|undefined;
+  public relatedArtifact?: fhir.RelatedArtifact[]|undefined = [];
   /**
    * Type of synthesis eg meta-analysis.
    */
@@ -824,57 +688,46 @@ export class RiskEvidenceSynthesis extends fhir.DomainResource implements IRiskE
   /**
    * A description of the certainty of the risk estimate.
    */
-  public certainty?: fhir.RiskEvidenceSynthesisCertainty[]|undefined;
+  public certainty?: fhir.RiskEvidenceSynthesisCertainty[]|undefined = [];
   /**
    * Default constructor for RiskEvidenceSynthesis - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IRiskEvidenceSynthesis> = { }) {
-    super(source);
+  constructor(source:Partial<RiskEvidenceSynthesisArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'RiskEvidenceSynthesis';
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
-    if (source['approvalDate']) { this.approvalDate = source.approvalDate; }
-    if (source['_approvalDate']) { this._approvalDate = new fhir.FhirElement(source._approvalDate!); }
-    if (source['lastReviewDate']) { this.lastReviewDate = source.lastReviewDate; }
-    if (source['_lastReviewDate']) { this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate!); }
-    if (source['effectivePeriod']) { this.effectivePeriod = new fhir.Period(source.effectivePeriod!); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
+    if (source['approvalDate']) { this.approvalDate = new fhir.FhirDate({value: source.approvalDate}); }
+    if (source['lastReviewDate']) { this.lastReviewDate = new fhir.FhirDate({value: source.lastReviewDate}); }
+    if (source['effectivePeriod']) { this.effectivePeriod = new fhir.Period(source.effectivePeriod); }
     if (source['topic']) { this.topic = source.topic.map((x) => new fhir.CodeableConcept(x)); }
     if (source['author']) { this.author = source.author.map((x) => new fhir.ContactDetail(x)); }
     if (source['editor']) { this.editor = source.editor.map((x) => new fhir.ContactDetail(x)); }
     if (source['reviewer']) { this.reviewer = source.reviewer.map((x) => new fhir.ContactDetail(x)); }
     if (source['endorser']) { this.endorser = source.endorser.map((x) => new fhir.ContactDetail(x)); }
     if (source['relatedArtifact']) { this.relatedArtifact = source.relatedArtifact.map((x) => new fhir.RelatedArtifact(x)); }
-    if (source['synthesisType']) { this.synthesisType = new fhir.CodeableConcept(source.synthesisType!); }
-    if (source['studyType']) { this.studyType = new fhir.CodeableConcept(source.studyType!); }
-    if (source['population']) { this.population = new fhir.Reference(source.population!); }
+    if (source['synthesisType']) { this.synthesisType = new fhir.CodeableConcept(source.synthesisType); }
+    if (source['studyType']) { this.studyType = new fhir.CodeableConcept(source.studyType); }
+    if (source['population']) { this.population = new fhir.Reference(source.population); }
     else { this.population = null; }
-    if (source['exposure']) { this.exposure = new fhir.Reference(source.exposure!); }
-    if (source['outcome']) { this.outcome = new fhir.Reference(source.outcome!); }
+    if (source['exposure']) { this.exposure = new fhir.Reference(source.exposure); }
+    if (source['outcome']) { this.outcome = new fhir.Reference(source.outcome); }
     else { this.outcome = null; }
-    if (source['sampleSize']) { this.sampleSize = new fhir.RiskEvidenceSynthesisSampleSize(source.sampleSize!); }
-    if (source['riskEstimate']) { this.riskEstimate = new fhir.RiskEvidenceSynthesisRiskEstimate(source.riskEstimate!); }
+    if (source['sampleSize']) { this.sampleSize = new fhir.RiskEvidenceSynthesisSampleSize(source.sampleSize); }
+    if (source['riskEstimate']) { this.riskEstimate = new fhir.RiskEvidenceSynthesisRiskEstimate(source.riskEstimate); }
     if (source['certainty']) { this.certainty = source.certainty.map((x) => new fhir.RiskEvidenceSynthesisCertainty(x)); }
   }
   /**
@@ -904,43 +757,56 @@ export class RiskEvidenceSynthesis extends fhir.DomainResource implements IRiskE
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: RiskEvidenceSynthesis.resourceType']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: RiskEvidenceSynthesis.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (this["_approvalDate"]) { results.push(...this._approvalDate.doModelValidation()); }
-    if (this["_lastReviewDate"]) { results.push(...this._lastReviewDate.doModelValidation()); }
-    if (this["effectivePeriod"]) { results.push(...this.effectivePeriod.doModelValidation()); }
-    if (this["topic"]) { this.topic.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["author"]) { this.author.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["editor"]) { this.editor.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reviewer"]) { this.reviewer.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["endorser"]) { this.endorser.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["relatedArtifact"]) { this.relatedArtifact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["synthesisType"]) { results.push(...this.synthesisType.doModelValidation()); }
-    if (this["studyType"]) { results.push(...this.studyType.doModelValidation()); }
-    if (!this["population"]) { results.push(["population",'Missing required element: RiskEvidenceSynthesis.population']); }
-    if (this["population"]) { results.push(...this.population.doModelValidation()); }
-    if (this["exposure"]) { results.push(...this.exposure.doModelValidation()); }
-    if (!this["outcome"]) { results.push(["outcome",'Missing required element: RiskEvidenceSynthesis.outcome']); }
-    if (this["outcome"]) { results.push(...this.outcome.doModelValidation()); }
-    if (this["sampleSize"]) { results.push(...this.sampleSize.doModelValidation()); }
-    if (this["riskEstimate"]) { results.push(...this.riskEstimate.doModelValidation()); }
-    if (this["certainty"]) { this.certainty.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'RiskEvidenceSynthesis' fhir: RiskEvidenceSynthesis.resourceType:'RiskEvidenceSynthesis'", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: RiskEvidenceSynthesis.status:code", }));
+    }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (this["approvalDate"]) { outcome.issue!.push(...this.approvalDate.doModelValidation().issue!); }
+    if (this["lastReviewDate"]) { outcome.issue!.push(...this.lastReviewDate.doModelValidation().issue!); }
+    if (this["effectivePeriod"]) { outcome.issue!.push(...this.effectivePeriod.doModelValidation().issue!); }
+    if (this["topic"]) { this.topic.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["author"]) { this.author.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["editor"]) { this.editor.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reviewer"]) { this.reviewer.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["endorser"]) { this.endorser.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["relatedArtifact"]) { this.relatedArtifact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["synthesisType"]) { outcome.issue!.push(...this.synthesisType.doModelValidation().issue!); }
+    if (this["studyType"]) { outcome.issue!.push(...this.studyType.doModelValidation().issue!); }
+    if (!this['population']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property population:fhir.Reference fhir: RiskEvidenceSynthesis.population:Reference", }));
+    }
+    if (this["population"]) { outcome.issue!.push(...this.population.doModelValidation().issue!); }
+    if (this["exposure"]) { outcome.issue!.push(...this.exposure.doModelValidation().issue!); }
+    if (!this['outcome']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property outcome:fhir.Reference fhir: RiskEvidenceSynthesis.outcome:Reference", }));
+    }
+    if (this["outcome"]) { outcome.issue!.push(...this.outcome.doModelValidation().issue!); }
+    if (this["sampleSize"]) { outcome.issue!.push(...this.sampleSize.doModelValidation().issue!); }
+    if (this["riskEstimate"]) { outcome.issue!.push(...this.riskEstimate.doModelValidation().issue!); }
+    if (this["certainty"]) { this.certainty.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

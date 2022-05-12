@@ -3,223 +3,54 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: VisionPrescription
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { VisionBaseCodesValueSet, VisionBaseCodesValueSetType, VisionBaseCodesValueSetEnum } from '../fhirValueSets/VisionBaseCodesValueSet.js'
-import { VisionProductValueSet, VisionProductValueSetType, VisionProductValueSetEnum } from '../fhirValueSets/VisionProductValueSet.js'
-import { VisionEyeCodesValueSet, VisionEyeCodesValueSetType, VisionEyeCodesValueSetEnum } from '../fhirValueSets/VisionEyeCodesValueSet.js'
-import { FmStatusValueSet, FmStatusValueSetType, FmStatusValueSetEnum } from '../fhirValueSets/FmStatusValueSet.js'
-
+import { VisionBaseCodesValueSet, VisionBaseCodesValueSetType,} from '../fhirValueSets/VisionBaseCodesValueSet.js';
+import { VisionBaseCodesValueSetEnum } from '../valueSetEnums.js';
+import { VisionProductValueSet, VisionProductValueSetType,} from '../fhirValueSets/VisionProductValueSet.js';
+import { VisionProductValueSetEnum } from '../valueSetEnums.js';
+import { VisionEyeCodesValueSet, VisionEyeCodesValueSetType,} from '../fhirValueSets/VisionEyeCodesValueSet.js';
+import { VisionEyeCodesValueSetEnum } from '../valueSetEnums.js';
+import { FmStatusValueSet, FmStatusValueSetType,} from '../fhirValueSets/FmStatusValueSet.js';
+import { FmStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Allows for adjustment on two axis.
+ * Valid arguments for the VisionPrescriptionLensSpecificationPrism type.
  */
-export type IVisionPrescriptionLensSpecificationPrism = fhir.IBackboneElement & { 
+export interface VisionPrescriptionLensSpecificationPrismArgs extends fhir.BackboneElementArgs {
   /**
    * Amount of prism to compensate for eye alignment in fractional units.
    */
-  amount: number|null;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.prism.amount
-   */
-  _amount?: fhir.IFhirElement|undefined;
+  amount: fhir.FhirDecimal|number|undefined;
   /**
    * The relative base, or reference lens edge, for the prism.
    */
   base: VisionBaseCodesValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.prism.base
-   */
-  _base?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.
- */
-export type IVisionPrescriptionLensSpecification = fhir.IBackboneElement & { 
-  /**
-   * Identifies the type of vision correction product which is required for the patient.
-   */
-  product: fhir.ICodeableConcept|null;
-  /**
-   * May also appear as OD (oculus dexter) for the right eye and OS (oculus siniter) for the left eye.
-   */
-  eye: VisionEyeCodesValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.eye
-   */
-  _eye?: fhir.IFhirElement|undefined;
-  /**
-   * The value is negative for near-sighted and positive for far sighted.
-   * Often insurance will not cover a lens with power between +75 and -75.
-   */
-  sphere?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.sphere
-   */
-  _sphere?: fhir.IFhirElement|undefined;
-  /**
-   * Power adjustment for astigmatism measured in dioptres (0.25 units).
-   */
-  cylinder?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.cylinder
-   */
-  _cylinder?: fhir.IFhirElement|undefined;
-  /**
-   * The limits are +180 and -180 degrees.
-   */
-  axis?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.axis
-   */
-  _axis?: fhir.IFhirElement|undefined;
-  /**
-   * Allows for adjustment on two axis.
-   */
-  prism?: fhir.IVisionPrescriptionLensSpecificationPrism[]|undefined;
-  /**
-   * Power adjustment for multifocal lenses measured in dioptres (0.25 units).
-   */
-  add?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.add
-   */
-  _add?: fhir.IFhirElement|undefined;
-  /**
-   * Contact lens power measured in dioptres (0.25 units).
-   */
-  power?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.power
-   */
-  _power?: fhir.IFhirElement|undefined;
-  /**
-   * Back curvature measured in millimetres.
-   */
-  backCurve?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.backCurve
-   */
-  _backCurve?: fhir.IFhirElement|undefined;
-  /**
-   * Contact lens diameter measured in millimetres.
-   */
-  diameter?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.diameter
-   */
-  _diameter?: fhir.IFhirElement|undefined;
-  /**
-   * The recommended maximum wear period for the lens.
-   */
-  duration?: fhir.IQuantity|undefined;
-  /**
-   * Special color or pattern.
-   */
-  color?: string|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.color
-   */
-  _color?: fhir.IFhirElement|undefined;
-  /**
-   * Brand recommendations or restrictions.
-   */
-  brand?: string|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.brand
-   */
-  _brand?: fhir.IFhirElement|undefined;
-  /**
-   * Notes for special requirements such as coatings and lens materials.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-}
-
-/**
- * An authorization for the provision of glasses and/or contact lenses to a patient.
- */
-export type IVisionPrescription = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "VisionPrescription";
-  /**
-   * A unique identifier assigned to this vision prescription.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-   */
-  status: FmStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: VisionPrescription.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * The date this resource was created.
-   */
-  created: string|null;
-  /**
-   * Extended properties for primitive element: VisionPrescription.created
-   */
-  _created?: fhir.IFhirElement|undefined;
-  /**
-   * A resource reference to the person to whom the vision prescription applies.
-   */
-  patient: fhir.IReference|null;
-  /**
-   * A reference to a resource that identifies the particular occurrence of contact between patient and health care provider during which the prescription was issued.
-   */
-  encounter?: fhir.IReference|undefined;
-  /**
-   * Jurisdictions determine the valid lifetime of a prescription. Typically vision prescriptions are valid for two years from the date written.
-   */
-  dateWritten: string|null;
-  /**
-   * Extended properties for primitive element: VisionPrescription.dateWritten
-   */
-  _dateWritten?: fhir.IFhirElement|undefined;
-  /**
-   * The healthcare professional responsible for authorizing the prescription.
-   */
-  prescriber: fhir.IReference|null;
-  /**
-   * Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.
-   */
-  lensSpecification: fhir.IVisionPrescriptionLensSpecification[]|null;
 }
 
 /**
  * Allows for adjustment on two axis.
  */
-export class VisionPrescriptionLensSpecificationPrism extends fhir.BackboneElement implements IVisionPrescriptionLensSpecificationPrism {
+export class VisionPrescriptionLensSpecificationPrism extends fhir.BackboneElement {
+  readonly __dataType:string = 'VisionPrescriptionLensSpecificationPrism';
   /**
    * Amount of prism to compensate for eye alignment in fractional units.
    */
-  public amount: number|null;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.prism.amount
-   */
-  public _amount?: fhir.FhirElement|undefined;
+  public amount: fhir.FhirDecimal|null;
   /**
    * The relative base, or reference lens edge, for the prism.
    */
   public base: VisionBaseCodesValueSetEnum|null;
   /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.prism.base
-   */
-  public _base?: fhir.FhirElement|undefined;
-  /**
    * Default constructor for VisionPrescriptionLensSpecificationPrism - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IVisionPrescriptionLensSpecificationPrism> = { }) {
-    super(source);
-    if (source['amount']) { this.amount = source.amount; }
+  constructor(source:Partial<VisionPrescriptionLensSpecificationPrismArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['amount']) { this.amount = new fhir.FhirDecimal({value: source.amount}); }
     else { this.amount = null; }
-    if (source['_amount']) { this._amount = new fhir.FhirElement(source._amount!); }
     if (source['base']) { this.base = source.base; }
     else { this.base = null; }
-    if (source['_base']) { this._base = new fhir.FhirElement(source._base!); }
   }
   /**
    * Required-bound Value Set for base
@@ -230,20 +61,92 @@ export class VisionPrescriptionLensSpecificationPrism extends fhir.BackboneEleme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["amount"]) { results.push(["amount",'Missing required element: VisionPrescription.lensSpecification.prism.amount']); }
-    if (this["_amount"]) { results.push(...this._amount.doModelValidation()); }
-    if (!this["base"]) { results.push(["base",'Missing required element: VisionPrescription.lensSpecification.prism.base']); }
-    if (this["_base"]) { results.push(...this._base.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['amount']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property amount:fhir.FhirDecimal fhir: VisionPrescription.lensSpecification.prism.amount:decimal", }));
+    }
+    if (this["amount"]) { outcome.issue!.push(...this.amount.doModelValidation().issue!); }
+    if (!this['base']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property base:VisionBaseCodesValueSetEnum fhir: VisionPrescription.lensSpecification.prism.base:code", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the VisionPrescriptionLensSpecification type.
+ */
+export interface VisionPrescriptionLensSpecificationArgs extends fhir.BackboneElementArgs {
+  /**
+   * Identifies the type of vision correction product which is required for the patient.
+   */
+  product: fhir.CodeableConceptArgs|null;
+  /**
+   * May also appear as OD (oculus dexter) for the right eye and OS (oculus siniter) for the left eye.
+   */
+  eye: VisionEyeCodesValueSetEnum|null;
+  /**
+   * The value is negative for near-sighted and positive for far sighted.
+   * Often insurance will not cover a lens with power between +75 and -75.
+   */
+  sphere?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Power adjustment for astigmatism measured in dioptres (0.25 units).
+   */
+  cylinder?: fhir.FhirDecimal|number|undefined;
+  /**
+   * The limits are +180 and -180 degrees.
+   */
+  axis?: fhir.FhirInteger|number|undefined;
+  /**
+   * Allows for adjustment on two axis.
+   */
+  prism?: fhir.VisionPrescriptionLensSpecificationPrismArgs[]|undefined;
+  /**
+   * Power adjustment for multifocal lenses measured in dioptres (0.25 units).
+   */
+  add?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Contact lens power measured in dioptres (0.25 units).
+   */
+  power?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Back curvature measured in millimetres.
+   */
+  backCurve?: fhir.FhirDecimal|number|undefined;
+  /**
+   * Contact lens diameter measured in millimetres.
+   */
+  diameter?: fhir.FhirDecimal|number|undefined;
+  /**
+   * The recommended maximum wear period for the lens.
+   */
+  duration?: fhir.QuantityArgs|undefined;
+  /**
+   * Special color or pattern.
+   */
+  color?: fhir.FhirString|string|undefined;
+  /**
+   * Brand recommendations or restrictions.
+   */
+  brand?: fhir.FhirString|string|undefined;
+  /**
+   * Notes for special requirements such as coatings and lens materials.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
 }
 
 /**
  * Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.
  */
-export class VisionPrescriptionLensSpecification extends fhir.BackboneElement implements IVisionPrescriptionLensSpecification {
+export class VisionPrescriptionLensSpecification extends fhir.BackboneElement {
+  readonly __dataType:string = 'VisionPrescriptionLensSpecification';
   /**
    * Identifies the type of vision correction product which is required for the patient.
    */
@@ -253,70 +156,38 @@ export class VisionPrescriptionLensSpecification extends fhir.BackboneElement im
    */
   public eye: VisionEyeCodesValueSetEnum|null;
   /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.eye
-   */
-  public _eye?: fhir.FhirElement|undefined;
-  /**
    * The value is negative for near-sighted and positive for far sighted.
    * Often insurance will not cover a lens with power between +75 and -75.
    */
-  public sphere?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.sphere
-   */
-  public _sphere?: fhir.FhirElement|undefined;
+  public sphere?: fhir.FhirDecimal|undefined;
   /**
    * Power adjustment for astigmatism measured in dioptres (0.25 units).
    */
-  public cylinder?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.cylinder
-   */
-  public _cylinder?: fhir.FhirElement|undefined;
+  public cylinder?: fhir.FhirDecimal|undefined;
   /**
    * The limits are +180 and -180 degrees.
    */
-  public axis?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.axis
-   */
-  public _axis?: fhir.FhirElement|undefined;
+  public axis?: fhir.FhirInteger|undefined;
   /**
    * Allows for adjustment on two axis.
    */
-  public prism?: fhir.VisionPrescriptionLensSpecificationPrism[]|undefined;
+  public prism?: fhir.VisionPrescriptionLensSpecificationPrism[]|undefined = [];
   /**
    * Power adjustment for multifocal lenses measured in dioptres (0.25 units).
    */
-  public add?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.add
-   */
-  public _add?: fhir.FhirElement|undefined;
+  public add?: fhir.FhirDecimal|undefined;
   /**
    * Contact lens power measured in dioptres (0.25 units).
    */
-  public power?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.power
-   */
-  public _power?: fhir.FhirElement|undefined;
+  public power?: fhir.FhirDecimal|undefined;
   /**
    * Back curvature measured in millimetres.
    */
-  public backCurve?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.backCurve
-   */
-  public _backCurve?: fhir.FhirElement|undefined;
+  public backCurve?: fhir.FhirDecimal|undefined;
   /**
    * Contact lens diameter measured in millimetres.
    */
-  public diameter?: number|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.diameter
-   */
-  public _diameter?: fhir.FhirElement|undefined;
+  public diameter?: fhir.FhirDecimal|undefined;
   /**
    * The recommended maximum wear period for the lens.
    */
@@ -324,53 +195,35 @@ export class VisionPrescriptionLensSpecification extends fhir.BackboneElement im
   /**
    * Special color or pattern.
    */
-  public color?: string|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.color
-   */
-  public _color?: fhir.FhirElement|undefined;
+  public color?: fhir.FhirString|undefined;
   /**
    * Brand recommendations or restrictions.
    */
-  public brand?: string|undefined;
-  /**
-   * Extended properties for primitive element: VisionPrescription.lensSpecification.brand
-   */
-  public _brand?: fhir.FhirElement|undefined;
+  public brand?: fhir.FhirString|undefined;
   /**
    * Notes for special requirements such as coatings and lens materials.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Default constructor for VisionPrescriptionLensSpecification - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IVisionPrescriptionLensSpecification> = { }) {
-    super(source);
-    if (source['product']) { this.product = new fhir.CodeableConcept(source.product!); }
+  constructor(source:Partial<VisionPrescriptionLensSpecificationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['product']) { this.product = new fhir.CodeableConcept(source.product); }
     else { this.product = null; }
     if (source['eye']) { this.eye = source.eye; }
     else { this.eye = null; }
-    if (source['_eye']) { this._eye = new fhir.FhirElement(source._eye!); }
-    if (source['sphere']) { this.sphere = source.sphere; }
-    if (source['_sphere']) { this._sphere = new fhir.FhirElement(source._sphere!); }
-    if (source['cylinder']) { this.cylinder = source.cylinder; }
-    if (source['_cylinder']) { this._cylinder = new fhir.FhirElement(source._cylinder!); }
-    if (source['axis']) { this.axis = source.axis; }
-    if (source['_axis']) { this._axis = new fhir.FhirElement(source._axis!); }
+    if (source['sphere']) { this.sphere = new fhir.FhirDecimal({value: source.sphere}); }
+    if (source['cylinder']) { this.cylinder = new fhir.FhirDecimal({value: source.cylinder}); }
+    if (source['axis']) { this.axis = new fhir.FhirInteger({value: source.axis}); }
     if (source['prism']) { this.prism = source.prism.map((x) => new fhir.VisionPrescriptionLensSpecificationPrism(x)); }
-    if (source['add']) { this.add = source.add; }
-    if (source['_add']) { this._add = new fhir.FhirElement(source._add!); }
-    if (source['power']) { this.power = source.power; }
-    if (source['_power']) { this._power = new fhir.FhirElement(source._power!); }
-    if (source['backCurve']) { this.backCurve = source.backCurve; }
-    if (source['_backCurve']) { this._backCurve = new fhir.FhirElement(source._backCurve!); }
-    if (source['diameter']) { this.diameter = source.diameter; }
-    if (source['_diameter']) { this._diameter = new fhir.FhirElement(source._diameter!); }
-    if (source['duration']) { this.duration = new fhir.Quantity(source.duration!); }
-    if (source['color']) { this.color = source.color; }
-    if (source['_color']) { this._color = new fhir.FhirElement(source._color!); }
-    if (source['brand']) { this.brand = source.brand; }
-    if (source['_brand']) { this._brand = new fhir.FhirElement(source._brand!); }
+    if (source['add']) { this.add = new fhir.FhirDecimal({value: source.add}); }
+    if (source['power']) { this.power = new fhir.FhirDecimal({value: source.power}); }
+    if (source['backCurve']) { this.backCurve = new fhir.FhirDecimal({value: source.backCurve}); }
+    if (source['diameter']) { this.diameter = new fhir.FhirDecimal({value: source.diameter}); }
+    if (source['duration']) { this.duration = new fhir.Quantity(source.duration); }
+    if (source['color']) { this.color = new fhir.FhirString({value: source.color}); }
+    if (source['brand']) { this.brand = new fhir.FhirString({value: source.brand}); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
   }
   /**
@@ -388,32 +241,83 @@ export class VisionPrescriptionLensSpecification extends fhir.BackboneElement im
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["product"]) { results.push(["product",'Missing required element: VisionPrescription.lensSpecification.product']); }
-    if (this["product"]) { results.push(...this.product.doModelValidation()); }
-    if (!this["eye"]) { results.push(["eye",'Missing required element: VisionPrescription.lensSpecification.eye']); }
-    if (this["_eye"]) { results.push(...this._eye.doModelValidation()); }
-    if (this["_sphere"]) { results.push(...this._sphere.doModelValidation()); }
-    if (this["_cylinder"]) { results.push(...this._cylinder.doModelValidation()); }
-    if (this["_axis"]) { results.push(...this._axis.doModelValidation()); }
-    if (this["prism"]) { this.prism.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_add"]) { results.push(...this._add.doModelValidation()); }
-    if (this["_power"]) { results.push(...this._power.doModelValidation()); }
-    if (this["_backCurve"]) { results.push(...this._backCurve.doModelValidation()); }
-    if (this["_diameter"]) { results.push(...this._diameter.doModelValidation()); }
-    if (this["duration"]) { results.push(...this.duration.doModelValidation()); }
-    if (this["_color"]) { results.push(...this._color.doModelValidation()); }
-    if (this["_brand"]) { results.push(...this._brand.doModelValidation()); }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['product']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property product:fhir.CodeableConcept fhir: VisionPrescription.lensSpecification.product:CodeableConcept", }));
+    }
+    if (this["product"]) { outcome.issue!.push(...this.product.doModelValidation().issue!); }
+    if (!this['eye']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property eye:VisionEyeCodesValueSetEnum fhir: VisionPrescription.lensSpecification.eye:code", }));
+    }
+    if (this["sphere"]) { outcome.issue!.push(...this.sphere.doModelValidation().issue!); }
+    if (this["cylinder"]) { outcome.issue!.push(...this.cylinder.doModelValidation().issue!); }
+    if (this["axis"]) { outcome.issue!.push(...this.axis.doModelValidation().issue!); }
+    if (this["prism"]) { this.prism.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["add"]) { outcome.issue!.push(...this.add.doModelValidation().issue!); }
+    if (this["power"]) { outcome.issue!.push(...this.power.doModelValidation().issue!); }
+    if (this["backCurve"]) { outcome.issue!.push(...this.backCurve.doModelValidation().issue!); }
+    if (this["diameter"]) { outcome.issue!.push(...this.diameter.doModelValidation().issue!); }
+    if (this["duration"]) { outcome.issue!.push(...this.duration.doModelValidation().issue!); }
+    if (this["color"]) { outcome.issue!.push(...this.color.doModelValidation().issue!); }
+    if (this["brand"]) { outcome.issue!.push(...this.brand.doModelValidation().issue!); }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the VisionPrescription type.
+ */
+export interface VisionPrescriptionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "VisionPrescription"|undefined;
+  /**
+   * A unique identifier assigned to this vision prescription.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+   */
+  status: FmStatusValueSetEnum|null;
+  /**
+   * The date this resource was created.
+   */
+  created: fhir.FhirDateTime|string|undefined;
+  /**
+   * A resource reference to the person to whom the vision prescription applies.
+   */
+  patient: fhir.ReferenceArgs|null;
+  /**
+   * A reference to a resource that identifies the particular occurrence of contact between patient and health care provider during which the prescription was issued.
+   */
+  encounter?: fhir.ReferenceArgs|undefined;
+  /**
+   * Jurisdictions determine the valid lifetime of a prescription. Typically vision prescriptions are valid for two years from the date written.
+   */
+  dateWritten: fhir.FhirDateTime|string|undefined;
+  /**
+   * The healthcare professional responsible for authorizing the prescription.
+   */
+  prescriber: fhir.ReferenceArgs|null;
+  /**
+   * Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.
+   */
+  lensSpecification: fhir.VisionPrescriptionLensSpecificationArgs[]|null;
 }
 
 /**
  * An authorization for the provision of glasses and/or contact lenses to a patient.
  */
-export class VisionPrescription extends fhir.DomainResource implements IVisionPrescription {
+export class VisionPrescription extends fhir.DomainResource {
+  readonly __dataType:string = 'VisionPrescription';
   /**
    * Resource Type Name
    */
@@ -421,23 +325,15 @@ export class VisionPrescription extends fhir.DomainResource implements IVisionPr
   /**
    * A unique identifier assigned to this vision prescription.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
   public status: FmStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: VisionPrescription.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * The date this resource was created.
    */
-  public created: string|null;
-  /**
-   * Extended properties for primitive element: VisionPrescription.created
-   */
-  public _created?: fhir.FhirElement|undefined;
+  public created: fhir.FhirDateTime|null;
   /**
    * A resource reference to the person to whom the vision prescription applies.
    */
@@ -449,11 +345,7 @@ export class VisionPrescription extends fhir.DomainResource implements IVisionPr
   /**
    * Jurisdictions determine the valid lifetime of a prescription. Typically vision prescriptions are valid for two years from the date written.
    */
-  public dateWritten: string|null;
-  /**
-   * Extended properties for primitive element: VisionPrescription.dateWritten
-   */
-  public _dateWritten?: fhir.FhirElement|undefined;
+  public dateWritten: fhir.FhirDateTime|null;
   /**
    * The healthcare professional responsible for authorizing the prescription.
    */
@@ -461,27 +353,24 @@ export class VisionPrescription extends fhir.DomainResource implements IVisionPr
   /**
    * Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.
    */
-  public lensSpecification: fhir.VisionPrescriptionLensSpecification[]|null;
+  public lensSpecification: fhir.VisionPrescriptionLensSpecification[]|null = [];
   /**
    * Default constructor for VisionPrescription - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IVisionPrescription> = { }) {
-    super(source);
+  constructor(source:Partial<VisionPrescriptionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'VisionPrescription';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['created']) { this.created = source.created; }
+    if (source['created']) { this.created = new fhir.FhirDateTime({value: source.created}); }
     else { this.created = null; }
-    if (source['_created']) { this._created = new fhir.FhirElement(source._created!); }
-    if (source['patient']) { this.patient = new fhir.Reference(source.patient!); }
+    if (source['patient']) { this.patient = new fhir.Reference(source.patient); }
     else { this.patient = null; }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['dateWritten']) { this.dateWritten = source.dateWritten; }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['dateWritten']) { this.dateWritten = new fhir.FhirDateTime({value: source.dateWritten}); }
     else { this.dateWritten = null; }
-    if (source['_dateWritten']) { this._dateWritten = new fhir.FhirElement(source._dateWritten!); }
-    if (source['prescriber']) { this.prescriber = new fhir.Reference(source.prescriber!); }
+    if (source['prescriber']) { this.prescriber = new fhir.Reference(source.prescriber); }
     else { this.prescriber = null; }
     if (source['lensSpecification']) { this.lensSpecification = source.lensSpecification.map((x) => new fhir.VisionPrescriptionLensSpecification(x)); }
     else { this.lensSpecification = null; }
@@ -495,23 +384,46 @@ export class VisionPrescription extends fhir.DomainResource implements IVisionPr
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: VisionPrescription.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: VisionPrescription.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (!this["created"]) { results.push(["created",'Missing required element: VisionPrescription.created']); }
-    if (this["_created"]) { results.push(...this._created.doModelValidation()); }
-    if (!this["patient"]) { results.push(["patient",'Missing required element: VisionPrescription.patient']); }
-    if (this["patient"]) { results.push(...this.patient.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (!this["dateWritten"]) { results.push(["dateWritten",'Missing required element: VisionPrescription.dateWritten']); }
-    if (this["_dateWritten"]) { results.push(...this._dateWritten.doModelValidation()); }
-    if (!this["prescriber"]) { results.push(["prescriber",'Missing required element: VisionPrescription.prescriber']); }
-    if (this["prescriber"]) { results.push(...this.prescriber.doModelValidation()); }
-    if ((!this["lensSpecification"]) || (this["lensSpecification"].length === 0)) { results.push(["lensSpecification",'Missing required element: VisionPrescription.lensSpecification']); }
-    if (this["lensSpecification"]) { this.lensSpecification.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'VisionPrescription' fhir: VisionPrescription.resourceType:'VisionPrescription'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:FmStatusValueSetEnum fhir: VisionPrescription.status:code", }));
+    }
+    if (!this['created']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property created:fhir.FhirDateTime fhir: VisionPrescription.created:dateTime", }));
+    }
+    if (this["created"]) { outcome.issue!.push(...this.created.doModelValidation().issue!); }
+    if (!this['patient']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property patient:fhir.Reference fhir: VisionPrescription.patient:Reference", }));
+    }
+    if (this["patient"]) { outcome.issue!.push(...this.patient.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (!this['dateWritten']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property dateWritten:fhir.FhirDateTime fhir: VisionPrescription.dateWritten:dateTime", }));
+    }
+    if (this["dateWritten"]) { outcome.issue!.push(...this.dateWritten.doModelValidation().issue!); }
+    if (!this['prescriber']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property prescriber:fhir.Reference fhir: VisionPrescription.prescriber:Reference", }));
+    }
+    if (this["prescriber"]) { outcome.issue!.push(...this.prescriber.doModelValidation().issue!); }
+    if (!this['lensSpecification']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property lensSpecification:fhir.VisionPrescriptionLensSpecification[] fhir: VisionPrescription.lensSpecification:lensSpecification", }));
+    } else if (!Array.isArray(this.lensSpecification)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property lensSpecification:fhir.VisionPrescriptionLensSpecification[] fhir: VisionPrescription.lensSpecification:lensSpecification", }));
+    } else if (this.lensSpecification.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property lensSpecification:fhir.VisionPrescriptionLensSpecification[] fhir: VisionPrescription.lensSpecification:lensSpecification", }));
+    }
+    if (this["lensSpecification"]) { this.lensSpecification.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

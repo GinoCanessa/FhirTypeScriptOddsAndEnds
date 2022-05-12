@@ -3,8 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: DeviceUseStatement
 import * as fhir from '../fhir.js';
-import { DeviceStatementStatusValueSet } from '../fhirValueSets/DeviceStatementStatusValueSet.js';
-import { BodySiteValueSet } from '../fhirValueSets/BodySiteValueSet.js';
+import { DeviceStatementStatusValueSet, } from '../fhirValueSets/DeviceStatementStatusValueSet.js';
+import { BodySiteValueSet, } from '../fhirValueSets/BodySiteValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A record of a device being used by a patient where the record is the result of a report from the patient or another clinician.
  */
@@ -12,8 +14,34 @@ export class DeviceUseStatement extends fhir.DomainResource {
     /**
      * Default constructor for DeviceUseStatement - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DeviceUseStatement';
+        /**
+         * An external identifier for this statement such as an IRI.
+         */
+        this.identifier = [];
+        /**
+         * A plan, proposal or order that is fulfilled in whole or in part by this DeviceUseStatement.
+         */
+        this.basedOn = [];
+        /**
+         * The most common use cases for deriving a DeviceUseStatement comes from creating it from a request or from an observation or a claim. it should be noted that the amount of information that is available varies from the type resource that you derive the DeviceUseStatement from.
+         */
+        this.derivedFrom = [];
+        this.__timingIsChoice = true;
+        /**
+         * Reason or justification for the use of the device.
+         */
+        this.reasonCode = [];
+        /**
+         * Indicates another resource whose existence justifies this DeviceUseStatement.
+         */
+        this.reasonReference = [];
+        /**
+         * Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement.
+         */
+        this.note = [];
         this.resourceType = 'DeviceUseStatement';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -27,9 +55,6 @@ export class DeviceUseStatement extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['subject']) {
             this.subject = new fhir.Reference(source.subject);
         }
@@ -39,23 +64,20 @@ export class DeviceUseStatement extends fhir.DomainResource {
         if (source['derivedFrom']) {
             this.derivedFrom = source.derivedFrom.map((x) => new fhir.Reference(x));
         }
-        if (source['timingTiming']) {
-            this.timingTiming = new fhir.Timing(source.timingTiming);
+        if (source['timing']) {
+            this.timing = source.timing;
         }
-        if (source['timingPeriod']) {
-            this.timingPeriod = new fhir.Period(source.timingPeriod);
+        else if (source['timingTiming']) {
+            this.timing = new fhir.Timing(source.timingTiming);
         }
-        if (source['timingDateTime']) {
-            this.timingDateTime = source.timingDateTime;
+        else if (source['timingPeriod']) {
+            this.timing = new fhir.Period(source.timingPeriod);
         }
-        if (source['_timingDateTime']) {
-            this._timingDateTime = new fhir.FhirElement(source._timingDateTime);
+        else if (source['timingDateTime']) {
+            this.timing = new fhir.FhirDateTime({ value: source.timingDateTime });
         }
         if (source['recordedOn']) {
-            this.recordedOn = source.recordedOn;
-        }
-        if (source['_recordedOn']) {
-            this._recordedOn = new fhir.FhirElement(source._recordedOn);
+            this.recordedOn = new fhir.FhirDateTime({ value: source.recordedOn });
         }
         if (source['source']) {
             this.source = new fhir.Reference(source.source);
@@ -95,65 +117,59 @@ export class DeviceUseStatement extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: DeviceUseStatement.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'DeviceUseStatement' fhir: DeviceUseStatement.resourceType:'DeviceUseStatement'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: DeviceUseStatement.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:DeviceStatementStatusValueSetEnum fhir: DeviceUseStatement.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
-        }
-        if (!this["subject"]) {
-            results.push(["subject", 'Missing required element: DeviceUseStatement.subject']);
+        if (!this['subject']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property subject:fhir.Reference fhir: DeviceUseStatement.subject:Reference", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["derivedFrom"]) {
-            this.derivedFrom.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.derivedFrom.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["timingTiming"]) {
-            results.push(...this.timingTiming.doModelValidation());
-        }
-        if (this["timingPeriod"]) {
-            results.push(...this.timingPeriod.doModelValidation());
-        }
-        if (this["_timingDateTime"]) {
-            results.push(...this._timingDateTime.doModelValidation());
-        }
-        if (this["_recordedOn"]) {
-            results.push(...this._recordedOn.doModelValidation());
+        if (this["recordedOn"]) {
+            outcome.issue.push(...this.recordedOn.doModelValidation().issue);
         }
         if (this["source"]) {
-            results.push(...this.source.doModelValidation());
+            outcome.issue.push(...this.source.doModelValidation().issue);
         }
-        if (!this["device"]) {
-            results.push(["device", 'Missing required element: DeviceUseStatement.device']);
+        if (!this['device']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property device:fhir.Reference fhir: DeviceUseStatement.device:Reference", }));
         }
         if (this["device"]) {
-            results.push(...this.device.doModelValidation());
+            outcome.issue.push(...this.device.doModelValidation().issue);
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["bodySite"]) {
-            results.push(...this.bodySite.doModelValidation());
+            outcome.issue.push(...this.bodySite.doModelValidation().issue);
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=DeviceUseStatement.js.map

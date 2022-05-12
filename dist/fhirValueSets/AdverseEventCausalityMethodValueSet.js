@@ -35,19 +35,4 @@ export const AdverseEventCausalityMethodValueSet = {
 /**
  * TODO.
  */
-export var AdverseEventCausalityMethodValueSetEnum;
-(function (AdverseEventCausalityMethodValueSetEnum) {
-    /**
-     * Code: Bayesian
-     */
-    AdverseEventCausalityMethodValueSetEnum["Bayesian"] = "Bayesian";
-    /**
-     * Code: Checklist
-     */
-    AdverseEventCausalityMethodValueSetEnum["Checklist"] = "Checklist";
-    /**
-     * Code: ProbabilityScale
-     */
-    AdverseEventCausalityMethodValueSetEnum["ProbabilityScale"] = "ProbabilityScale";
-})(AdverseEventCausalityMethodValueSetEnum || (AdverseEventCausalityMethodValueSetEnum = {}));
 //# sourceMappingURL=AdverseEventCausalityMethodValueSet.js.map

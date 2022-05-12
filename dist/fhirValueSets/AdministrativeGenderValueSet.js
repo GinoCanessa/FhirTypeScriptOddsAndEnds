@@ -43,23 +43,4 @@ export const AdministrativeGenderValueSet = {
 /**
  * The gender of a person used for administrative purposes.
  */
-export var AdministrativeGenderValueSetEnum;
-(function (AdministrativeGenderValueSetEnum) {
-    /**
-     * female: Female.
-     */
-    AdministrativeGenderValueSetEnum["Female"] = "female";
-    /**
-     * male: Male.
-     */
-    AdministrativeGenderValueSetEnum["Male"] = "male";
-    /**
-     * other: Other.
-     */
-    AdministrativeGenderValueSetEnum["Other"] = "other";
-    /**
-     * unknown: Unknown.
-     */
-    AdministrativeGenderValueSetEnum["Unknown"] = "unknown";
-})(AdministrativeGenderValueSetEnum || (AdministrativeGenderValueSetEnum = {}));
 //# sourceMappingURL=AdministrativeGenderValueSet.js.map

@@ -3,66 +3,63 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Schedule
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ServiceCategoryValueSet, ServiceCategoryValueSetType, ServiceCategoryValueSetEnum } from '../fhirValueSets/ServiceCategoryValueSet.js'
-import { ServiceTypeValueSet, ServiceTypeValueSetType, ServiceTypeValueSetEnum } from '../fhirValueSets/ServiceTypeValueSet.js'
-import { C80PracticeCodesValueSet, C80PracticeCodesValueSetType, C80PracticeCodesValueSetEnum } from '../fhirValueSets/C80PracticeCodesValueSet.js'
-
+import { ServiceCategoryValueSet, ServiceCategoryValueSetType,} from '../fhirValueSets/ServiceCategoryValueSet.js';
+import { ServiceCategoryValueSetEnum } from '../valueSetEnums.js';
+import { ServiceTypeValueSet, ServiceTypeValueSetType,} from '../fhirValueSets/ServiceTypeValueSet.js';
+import { ServiceTypeValueSetEnum } from '../valueSetEnums.js';
+import { C80PracticeCodesValueSet, C80PracticeCodesValueSetType,} from '../fhirValueSets/C80PracticeCodesValueSet.js';
+import { C80PracticeCodesValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A container for slots of time that may be available for booking appointments.
+ * Valid arguments for the Schedule type.
  */
-export type ISchedule = fhir.IDomainResource & { 
+export interface ScheduleArgs extends fhir.DomainResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "Schedule";
+  resourceType: "Schedule"|undefined;
   /**
    * External Ids for this item.
    */
-  identifier?: fhir.IIdentifier[]|undefined;
+  identifier?: fhir.IdentifierArgs[]|undefined;
   /**
    * This element is labeled as a modifier because it may be used to mark that the resource was created in error.
    */
-  active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Schedule.active
-   */
-  _active?: fhir.IFhirElement|undefined;
+  active?: fhir.FhirBoolean|boolean|undefined;
   /**
    * A broad categorization of the service that is to be performed during this appointment.
    */
-  serviceCategory?: fhir.ICodeableConcept[]|undefined;
+  serviceCategory?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * The specific service that is to be performed during this appointment.
    */
-  serviceType?: fhir.ICodeableConcept[]|undefined;
+  serviceType?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * The specialty of a practitioner that would be required to perform the service requested in this appointment.
    */
-  specialty?: fhir.ICodeableConcept[]|undefined;
+  specialty?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * The capacity to support multiple referenced resource types should be used in cases where the specific resources themselves cannot be scheduled without the other, and thus only make sense to the system exposing them as a group. Common examples of this are where the combination of a practitioner and a room (Location) are always required by a system.
    */
-  actor: fhir.IReference[]|null;
+  actor: fhir.ReferenceArgs[]|null;
   /**
    * The period of time that the slots that reference this Schedule resource cover (even if none exist). These  cover the amount of time that an organization's planning horizon; the interval for which they are currently accepting appointments. This does not define a "template" for planning outside these dates.
    */
-  planningHorizon?: fhir.IPeriod|undefined;
+  planningHorizon?: fhir.PeriodArgs|undefined;
   /**
    * Comments on the availability to describe any extended information. Such as custom constraints on the slots that may be associated.
    */
-  comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: Schedule.comment
-   */
-  _comment?: fhir.IFhirElement|undefined;
+  comment?: fhir.FhirString|string|undefined;
 }
 
 /**
  * A container for slots of time that may be available for booking appointments.
  */
-export class Schedule extends fhir.DomainResource implements ISchedule {
+export class Schedule extends fhir.DomainResource {
+  readonly __dataType:string = 'Schedule';
   /**
    * Resource Type Name
    */
@@ -70,31 +67,27 @@ export class Schedule extends fhir.DomainResource implements ISchedule {
   /**
    * External Ids for this item.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because it may be used to mark that the resource was created in error.
    */
-  public active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Schedule.active
-   */
-  public _active?: fhir.FhirElement|undefined;
+  public active?: fhir.FhirBoolean|undefined;
   /**
    * A broad categorization of the service that is to be performed during this appointment.
    */
-  public serviceCategory?: fhir.CodeableConcept[]|undefined;
+  public serviceCategory?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The specific service that is to be performed during this appointment.
    */
-  public serviceType?: fhir.CodeableConcept[]|undefined;
+  public serviceType?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The specialty of a practitioner that would be required to perform the service requested in this appointment.
    */
-  public specialty?: fhir.CodeableConcept[]|undefined;
+  public specialty?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The capacity to support multiple referenced resource types should be used in cases where the specific resources themselves cannot be scheduled without the other, and thus only make sense to the system exposing them as a group. Common examples of this are where the combination of a practitioner and a room (Location) are always required by a system.
    */
-  public actor: fhir.Reference[]|null;
+  public actor: fhir.Reference[]|null = [];
   /**
    * The period of time that the slots that reference this Schedule resource cover (even if none exist). These  cover the amount of time that an organization's planning horizon; the interval for which they are currently accepting appointments. This does not define a "template" for planning outside these dates.
    */
@@ -102,28 +95,22 @@ export class Schedule extends fhir.DomainResource implements ISchedule {
   /**
    * Comments on the availability to describe any extended information. Such as custom constraints on the slots that may be associated.
    */
-  public comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: Schedule.comment
-   */
-  public _comment?: fhir.FhirElement|undefined;
+  public comment?: fhir.FhirString|undefined;
   /**
    * Default constructor for Schedule - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISchedule> = { }) {
-    super(source);
+  constructor(source:Partial<ScheduleArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Schedule';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['active']) { this.active = source.active; }
-    if (source['_active']) { this._active = new fhir.FhirElement(source._active!); }
+    if (source['active']) { this.active = new fhir.FhirBoolean({value: source.active}); }
     if (source['serviceCategory']) { this.serviceCategory = source.serviceCategory.map((x) => new fhir.CodeableConcept(x)); }
     if (source['serviceType']) { this.serviceType = source.serviceType.map((x) => new fhir.CodeableConcept(x)); }
     if (source['specialty']) { this.specialty = source.specialty.map((x) => new fhir.CodeableConcept(x)); }
     if (source['actor']) { this.actor = source.actor.map((x) => new fhir.Reference(x)); }
     else { this.actor = null; }
-    if (source['planningHorizon']) { this.planningHorizon = new fhir.Period(source.planningHorizon!); }
-    if (source['comment']) { this.comment = source.comment; }
-    if (source['_comment']) { this._comment = new fhir.FhirElement(source._comment!); }
+    if (source['planningHorizon']) { this.planningHorizon = new fhir.Period(source.planningHorizon); }
+    if (source['comment']) { this.comment = new fhir.FhirString({value: source.comment}); }
   }
   /**
    * Example-bound Value Set for serviceCategory
@@ -146,18 +133,32 @@ export class Schedule extends fhir.DomainResource implements ISchedule {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Schedule.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_active"]) { results.push(...this._active.doModelValidation()); }
-    if (this["serviceCategory"]) { this.serviceCategory.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["serviceType"]) { this.serviceType.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["specialty"]) { this.specialty.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if ((!this["actor"]) || (this["actor"].length === 0)) { results.push(["actor",'Missing required element: Schedule.actor']); }
-    if (this["actor"]) { this.actor.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["planningHorizon"]) { results.push(...this.planningHorizon.doModelValidation()); }
-    if (this["_comment"]) { results.push(...this._comment.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Schedule' fhir: Schedule.resourceType:'Schedule'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["active"]) { outcome.issue!.push(...this.active.doModelValidation().issue!); }
+    if (this["serviceCategory"]) { this.serviceCategory.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["serviceType"]) { this.serviceType.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["specialty"]) { this.specialty.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['actor']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property actor:fhir.Reference[] fhir: Schedule.actor:Reference", }));
+    } else if (!Array.isArray(this.actor)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property actor:fhir.Reference[] fhir: Schedule.actor:Reference", }));
+    } else if (this.actor.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property actor:fhir.Reference[] fhir: Schedule.actor:Reference", }));
+    }
+    if (this["actor"]) { this.actor.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["planningHorizon"]) { outcome.issue!.push(...this.planningHorizon.doModelValidation().issue!); }
+    if (this["comment"]) { outcome.issue!.push(...this.comment.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

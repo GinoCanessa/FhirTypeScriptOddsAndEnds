@@ -3,19 +3,21 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: AuditEvent
 import * as fhir from '../fhir.js';
-import { NetworkTypeValueSet } from '../fhirValueSets/NetworkTypeValueSet.js';
-import { ParticipationRoleTypeValueSet } from '../fhirValueSets/ParticipationRoleTypeValueSet.js';
-import { SecurityRoleTypeValueSet } from '../fhirValueSets/SecurityRoleTypeValueSet.js';
-import { Dicm405MediatypeValueSet } from '../fhirValueSets/Dicm405MediatypeValueSet.js';
-import { V3PurposeOfUseValueSet } from '../fhirValueSets/V3PurposeOfUseValueSet.js';
-import { AuditSourceTypeValueSet } from '../fhirValueSets/AuditSourceTypeValueSet.js';
-import { AuditEntityTypeValueSet } from '../fhirValueSets/AuditEntityTypeValueSet.js';
-import { ObjectRoleValueSet } from '../fhirValueSets/ObjectRoleValueSet.js';
-import { SecurityLabelsValueSet } from '../fhirValueSets/SecurityLabelsValueSet.js';
-import { AuditEventTypeValueSet } from '../fhirValueSets/AuditEventTypeValueSet.js';
-import { AuditEventSubTypeValueSet } from '../fhirValueSets/AuditEventSubTypeValueSet.js';
-import { AuditEventActionValueSet } from '../fhirValueSets/AuditEventActionValueSet.js';
-import { AuditEventOutcomeValueSet } from '../fhirValueSets/AuditEventOutcomeValueSet.js';
+import { NetworkTypeValueSet, } from '../fhirValueSets/NetworkTypeValueSet.js';
+import { ParticipationRoleTypeValueSet, } from '../fhirValueSets/ParticipationRoleTypeValueSet.js';
+import { SecurityRoleTypeValueSet, } from '../fhirValueSets/SecurityRoleTypeValueSet.js';
+import { Dicm405MediatypeValueSet, } from '../fhirValueSets/Dicm405MediatypeValueSet.js';
+import { V3PurposeOfUseValueSet, } from '../fhirValueSets/V3PurposeOfUseValueSet.js';
+import { AuditSourceTypeValueSet, } from '../fhirValueSets/AuditSourceTypeValueSet.js';
+import { AuditEntityTypeValueSet, } from '../fhirValueSets/AuditEntityTypeValueSet.js';
+import { ObjectRoleValueSet, } from '../fhirValueSets/ObjectRoleValueSet.js';
+import { SecurityLabelsValueSet, } from '../fhirValueSets/SecurityLabelsValueSet.js';
+import { AuditEventTypeValueSet, } from '../fhirValueSets/AuditEventTypeValueSet.js';
+import { AuditEventSubTypeValueSet, } from '../fhirValueSets/AuditEventSubTypeValueSet.js';
+import { AuditEventActionValueSet, } from '../fhirValueSets/AuditEventActionValueSet.js';
+import { AuditEventOutcomeValueSet, } from '../fhirValueSets/AuditEventOutcomeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Logical network location for application activity, if the activity has a network location.
  */
@@ -23,19 +25,14 @@ export class AuditEventAgentNetwork extends fhir.BackboneElement {
     /**
      * Default constructor for AuditEventAgentNetwork - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AuditEventAgentNetwork';
         if (source['address']) {
-            this.address = source.address;
-        }
-        if (source['_address']) {
-            this._address = new fhir.FhirElement(source._address);
+            this.address = new fhir.FhirString({ value: source.address });
         }
         if (source['type']) {
-            this.type = source.type;
-        }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
+            this.type = new fhir.FhirCode({ value: source.type });
         }
     }
     /**
@@ -48,14 +45,20 @@ export class AuditEventAgentNetwork extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_address"]) {
-            results.push(...this._address.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["address"]) {
+            outcome.issue.push(...this.address.doModelValidation().issue);
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (this["type"]) {
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -66,8 +69,21 @@ export class AuditEventAgent extends fhir.BackboneElement {
     /**
      * Default constructor for AuditEventAgent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AuditEventAgent';
+        /**
+         * Should be roles relevant to the event. Should  not be an exhaustive list of roles.
+         */
+        this.role = [];
+        /**
+         * For example: Where an OAuth token authorizes, the unique identifier from the OAuth token is placed into the policy element Where a policy engine (e.g. XACML) holds policy logic, the unique policy identifier is placed into the policy element.
+         */
+        this.policy = [];
+        /**
+         * Use AuditEvent.agent.purposeOfUse when you know that is specific to the agent, otherwise use AuditEvent.purposeOfEvent. For example, during a machine-to-machine transfer it might not be obvious to the audit system who caused the event, but it does know why.
+         */
+        this.purposeOfUse = [];
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
@@ -78,34 +94,22 @@ export class AuditEventAgent extends fhir.BackboneElement {
             this.who = new fhir.Reference(source.who);
         }
         if (source['altId']) {
-            this.altId = source.altId;
-        }
-        if (source['_altId']) {
-            this._altId = new fhir.FhirElement(source._altId);
+            this.altId = new fhir.FhirString({ value: source.altId });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['requestor']) {
-            this.requestor = source.requestor;
+            this.requestor = new fhir.FhirBoolean({ value: source.requestor });
         }
         else {
             this.requestor = null;
-        }
-        if (source['_requestor']) {
-            this._requestor = new fhir.FhirElement(source._requestor);
         }
         if (source['location']) {
             this.location = new fhir.Reference(source.location);
         }
         if (source['policy']) {
-            this.policy = source.policy.map((x) => (x));
-        }
-        if (source['_policy']) {
-            this._policy = source._policy.map((x) => new fhir.FhirElement(x));
+            this.policy = source.policy.map((x) => new fhir.FhirUri({ value: x }));
         }
         if (source['media']) {
             this.media = new fhir.Coding(source.media);
@@ -145,44 +149,50 @@ export class AuditEventAgent extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["role"]) {
-            this.role.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.role.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["who"]) {
-            results.push(...this.who.doModelValidation());
+            outcome.issue.push(...this.who.doModelValidation().issue);
         }
-        if (this["_altId"]) {
-            results.push(...this._altId.doModelValidation());
+        if (this["altId"]) {
+            outcome.issue.push(...this.altId.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (!this["requestor"]) {
-            results.push(["requestor", 'Missing required element: AuditEvent.agent.requestor']);
+        if (!this['requestor']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property requestor:fhir.FhirBoolean fhir: AuditEvent.agent.requestor:boolean", }));
         }
-        if (this["_requestor"]) {
-            results.push(...this._requestor.doModelValidation());
+        if (this["requestor"]) {
+            outcome.issue.push(...this.requestor.doModelValidation().issue);
         }
         if (this["location"]) {
-            results.push(...this.location.doModelValidation());
+            outcome.issue.push(...this.location.doModelValidation().issue);
         }
-        if (this["_policy"]) {
-            this._policy.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["policy"]) {
+            this.policy.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["media"]) {
-            results.push(...this.media.doModelValidation());
+            outcome.issue.push(...this.media.doModelValidation().issue);
         }
         if (this["network"]) {
-            results.push(...this.network.doModelValidation());
+            outcome.issue.push(...this.network.doModelValidation().issue);
         }
         if (this["purposeOfUse"]) {
-            this.purposeOfUse.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.purposeOfUse.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -192,13 +202,15 @@ export class AuditEventSource extends fhir.BackboneElement {
     /**
      * Default constructor for AuditEventSource - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AuditEventSource';
+        /**
+         * Code specifying the type of source where event originated.
+         */
+        this.type = [];
         if (source['site']) {
-            this.site = source.site;
-        }
-        if (source['_site']) {
-            this._site = new fhir.FhirElement(source._site);
+            this.site = new fhir.FhirString({ value: source.site });
         }
         if (source['observer']) {
             this.observer = new fhir.Reference(source.observer);
@@ -220,20 +232,26 @@ export class AuditEventSource extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_site"]) {
-            results.push(...this._site.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["site"]) {
+            outcome.issue.push(...this.site.doModelValidation().issue);
         }
-        if (!this["observer"]) {
-            results.push(["observer", 'Missing required element: AuditEvent.source.observer']);
+        if (!this['observer']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property observer:fhir.Reference fhir: AuditEvent.source.observer:Reference", }));
         }
         if (this["observer"]) {
-            results.push(...this.observer.doModelValidation());
+            outcome.issue.push(...this.observer.doModelValidation().issue);
         }
         if (this["type"]) {
-            this.type.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.type.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -243,48 +261,50 @@ export class AuditEventEntityDetail extends fhir.BackboneElement {
     /**
      * Default constructor for AuditEventEntityDetail - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AuditEventEntityDetail';
+        this.__valueIsChoice = true;
         if (source['type']) {
-            this.type = source.type;
+            this.type = new fhir.FhirString({ value: source.type });
         }
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['valueString']) {
-            this.valueString = source.valueString;
+        else if (source['valueString']) {
+            this.value = new fhir.FhirString({ value: source.valueString });
         }
-        if (source['_valueString']) {
-            this._valueString = new fhir.FhirElement(source._valueString);
+        else if (source['valueBase64Binary']) {
+            this.value = new fhir.FhirBase64Binary({ value: source.valueBase64Binary });
         }
-        if (source['valueBase64Binary']) {
-            this.valueBase64Binary = source.valueBase64Binary;
-        }
-        if (source['_valueBase64Binary']) {
-            this._valueBase64Binary = new fhir.FhirElement(source._valueBase64Binary);
+        else {
+            this.value = null;
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: AuditEvent.entity.detail.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.FhirString fhir: AuditEvent.entity.detail.type:string", }));
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (this["type"]) {
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_valueString"]) {
-            results.push(...this._valueString.doModelValidation());
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value: fhir: AuditEvent.entity.detail.value[x]:", }));
         }
-        if (this["_valueBase64Binary"]) {
-            results.push(...this._valueBase64Binary.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -294,8 +314,17 @@ export class AuditEventEntity extends fhir.BackboneElement {
     /**
      * Default constructor for AuditEventEntity - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AuditEventEntity';
+        /**
+         * Copied from entity meta security tags.
+         */
+        this.securityLabel = [];
+        /**
+         * Tagged value pairs for conveying additional information about the entity.
+         */
+        this.detail = [];
         if (source['what']) {
             this.what = new fhir.Reference(source.what);
         }
@@ -312,22 +341,13 @@ export class AuditEventEntity extends fhir.BackboneElement {
             this.securityLabel = source.securityLabel.map((x) => new fhir.Coding(x));
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['query']) {
-            this.query = source.query;
-        }
-        if (source['_query']) {
-            this._query = new fhir.FhirElement(source._query);
+            this.query = new fhir.FhirBase64Binary({ value: source.query });
         }
         if (source['detail']) {
             this.detail = source.detail.map((x) => new fhir.AuditEventEntityDetail(x));
@@ -355,35 +375,41 @@ export class AuditEventEntity extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["what"]) {
-            results.push(...this.what.doModelValidation());
+            outcome.issue.push(...this.what.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["role"]) {
-            results.push(...this.role.doModelValidation());
+            outcome.issue.push(...this.role.doModelValidation().issue);
         }
         if (this["lifecycle"]) {
-            results.push(...this.lifecycle.doModelValidation());
+            outcome.issue.push(...this.lifecycle.doModelValidation().issue);
         }
         if (this["securityLabel"]) {
-            this.securityLabel.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.securityLabel.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_query"]) {
-            results.push(...this._query.doModelValidation());
+        if (this["query"]) {
+            outcome.issue.push(...this.query.doModelValidation().issue);
         }
         if (this["detail"]) {
-            this.detail.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.detail.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -393,8 +419,26 @@ export class AuditEvent extends fhir.DomainResource {
     /**
      * Default constructor for AuditEvent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AuditEvent';
+        /**
+         * Identifier for the category of event.
+         */
+        this.subtype = [];
+        /**
+         * Use AuditEvent.agent.purposeOfUse when you know that it is specific to the agent, otherwise use AuditEvent.purposeOfEvent. For example, during a machine-to-machine transfer it might not be obvious to the audit system who caused the event, but it does know why.
+         */
+        this.purposeOfEvent = [];
+        /**
+         * Several agents may be associated (i.e. have some responsibility for an activity) with an event or activity.
+         * For example, an activity may be initiated by one user for other users or involve more than one user. However, only one user may be the initiator/requestor for the activity.
+         */
+        this.agent = [];
+        /**
+         * Required unless the values for event identification, agent identification, and audit source identification are sufficient to document the entire auditable event. Because events may have more than one entity, this group can be a repeating set of values.
+         */
+        this.entity = [];
         this.resourceType = 'AuditEvent';
         if (source['type']) {
             this.type = new fhir.Coding(source.type);
@@ -406,34 +450,22 @@ export class AuditEvent extends fhir.DomainResource {
             this.subtype = source.subtype.map((x) => new fhir.Coding(x));
         }
         if (source['action']) {
-            this.action = source.action;
-        }
-        if (source['_action']) {
-            this._action = new fhir.FhirElement(source._action);
+            this.action = new fhir.FhirCode({ value: source.action });
         }
         if (source['period']) {
             this.period = new fhir.Period(source.period);
         }
         if (source['recorded']) {
-            this.recorded = source.recorded;
+            this.recorded = new fhir.FhirInstant({ value: source.recorded });
         }
         else {
             this.recorded = null;
         }
-        if (source['_recorded']) {
-            this._recorded = new fhir.FhirElement(source._recorded);
-        }
         if (source['outcome']) {
-            this.outcome = source.outcome;
-        }
-        if (source['_outcome']) {
-            this._outcome = new fhir.FhirElement(source._outcome);
+            this.outcome = new fhir.FhirCode({ value: source.outcome });
         }
         if (source['outcomeDesc']) {
-            this.outcomeDesc = source.outcomeDesc;
-        }
-        if (source['_outcomeDesc']) {
-            this._outcomeDesc = new fhir.FhirElement(source._outcomeDesc);
+            this.outcomeDesc = new fhir.FhirString({ value: source.outcomeDesc });
         }
         if (source['purposeOfEvent']) {
             this.purposeOfEvent = source.purposeOfEvent.map((x) => new fhir.CodeableConcept(x));
@@ -488,56 +520,68 @@ export class AuditEvent extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: AuditEvent.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'AuditEvent' fhir: AuditEvent.resourceType:'AuditEvent'", }));
         }
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: AuditEvent.type']);
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.Coding fhir: AuditEvent.type:Coding", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["subtype"]) {
-            this.subtype.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.subtype.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_action"]) {
-            results.push(...this._action.doModelValidation());
+        if (this["action"]) {
+            outcome.issue.push(...this.action.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        if (!this["recorded"]) {
-            results.push(["recorded", 'Missing required element: AuditEvent.recorded']);
+        if (!this['recorded']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property recorded:fhir.FhirInstant fhir: AuditEvent.recorded:instant", }));
         }
-        if (this["_recorded"]) {
-            results.push(...this._recorded.doModelValidation());
+        if (this["recorded"]) {
+            outcome.issue.push(...this.recorded.doModelValidation().issue);
         }
-        if (this["_outcome"]) {
-            results.push(...this._outcome.doModelValidation());
+        if (this["outcome"]) {
+            outcome.issue.push(...this.outcome.doModelValidation().issue);
         }
-        if (this["_outcomeDesc"]) {
-            results.push(...this._outcomeDesc.doModelValidation());
+        if (this["outcomeDesc"]) {
+            outcome.issue.push(...this.outcomeDesc.doModelValidation().issue);
         }
         if (this["purposeOfEvent"]) {
-            this.purposeOfEvent.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.purposeOfEvent.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if ((!this["agent"]) || (this["agent"].length === 0)) {
-            results.push(["agent", 'Missing required element: AuditEvent.agent']);
+        if (!this['agent']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property agent:fhir.AuditEventAgent[] fhir: AuditEvent.agent:agent", }));
+        }
+        else if (!Array.isArray(this.agent)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property agent:fhir.AuditEventAgent[] fhir: AuditEvent.agent:agent", }));
+        }
+        else if (this.agent.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property agent:fhir.AuditEventAgent[] fhir: AuditEvent.agent:agent", }));
         }
         if (this["agent"]) {
-            this.agent.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.agent.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["source"]) {
-            results.push(["source", 'Missing required element: AuditEvent.source']);
+        if (!this['source']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property source:fhir.AuditEventSource fhir: AuditEvent.source:source", }));
         }
         if (this["source"]) {
-            results.push(...this.source.doModelValidation());
+            outcome.issue.push(...this.source.doModelValidation().issue);
         }
         if (this["entity"]) {
-            this.entity.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.entity.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=AuditEvent.js.map

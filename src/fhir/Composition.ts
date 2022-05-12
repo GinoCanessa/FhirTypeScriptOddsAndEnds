@@ -3,248 +3,63 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Composition
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { CompositionAttestationModeValueSet, CompositionAttestationModeValueSetType, CompositionAttestationModeValueSetEnum } from '../fhirValueSets/CompositionAttestationModeValueSet.js'
-import { DocumentRelationshipTypeValueSet, DocumentRelationshipTypeValueSetType, DocumentRelationshipTypeValueSetEnum } from '../fhirValueSets/DocumentRelationshipTypeValueSet.js'
-import { V3ActCodeValueSet, V3ActCodeValueSetType, V3ActCodeValueSetEnum } from '../fhirValueSets/V3ActCodeValueSet.js'
-import { DocSectionCodesValueSet, DocSectionCodesValueSetType, DocSectionCodesValueSetEnum } from '../fhirValueSets/DocSectionCodesValueSet.js'
-import { ListModeValueSet, ListModeValueSetType, ListModeValueSetEnum } from '../fhirValueSets/ListModeValueSet.js'
-import { ListOrderValueSet, ListOrderValueSetType, ListOrderValueSetEnum } from '../fhirValueSets/ListOrderValueSet.js'
-import { ListEmptyReasonValueSet, ListEmptyReasonValueSetType, ListEmptyReasonValueSetEnum } from '../fhirValueSets/ListEmptyReasonValueSet.js'
-import { CompositionStatusValueSet, CompositionStatusValueSetType, CompositionStatusValueSetEnum } from '../fhirValueSets/CompositionStatusValueSet.js'
-import { DocTypecodesValueSet, DocTypecodesValueSetType, DocTypecodesValueSetEnum } from '../fhirValueSets/DocTypecodesValueSet.js'
-import { DocumentClasscodesValueSet, DocumentClasscodesValueSetType, DocumentClasscodesValueSetEnum } from '../fhirValueSets/DocumentClasscodesValueSet.js'
-import { V3ConfidentialityClassificationValueSet, V3ConfidentialityClassificationValueSetType, V3ConfidentialityClassificationValueSetEnum } from '../fhirValueSets/V3ConfidentialityClassificationValueSet.js'
-
+import { CompositionAttestationModeValueSet, CompositionAttestationModeValueSetType,} from '../fhirValueSets/CompositionAttestationModeValueSet.js';
+import { CompositionAttestationModeValueSetEnum } from '../valueSetEnums.js';
+import { DocumentRelationshipTypeValueSet, DocumentRelationshipTypeValueSetType,} from '../fhirValueSets/DocumentRelationshipTypeValueSet.js';
+import { DocumentRelationshipTypeValueSetEnum } from '../valueSetEnums.js';
+import { V3ActCodeValueSet, V3ActCodeValueSetType,} from '../fhirValueSets/V3ActCodeValueSet.js';
+import { V3ActCodeValueSetEnum } from '../valueSetEnums.js';
+import { DocSectionCodesValueSet, DocSectionCodesValueSetType,} from '../fhirValueSets/DocSectionCodesValueSet.js';
+import { DocSectionCodesValueSetEnum } from '../valueSetEnums.js';
+import { ListModeValueSet, ListModeValueSetType,} from '../fhirValueSets/ListModeValueSet.js';
+import { ListModeValueSetEnum } from '../valueSetEnums.js';
+import { ListOrderValueSet, ListOrderValueSetType,} from '../fhirValueSets/ListOrderValueSet.js';
+import { ListOrderValueSetEnum } from '../valueSetEnums.js';
+import { ListEmptyReasonValueSet, ListEmptyReasonValueSetType,} from '../fhirValueSets/ListEmptyReasonValueSet.js';
+import { ListEmptyReasonValueSetEnum } from '../valueSetEnums.js';
+import { CompositionStatusValueSet, CompositionStatusValueSetType,} from '../fhirValueSets/CompositionStatusValueSet.js';
+import { CompositionStatusValueSetEnum } from '../valueSetEnums.js';
+import { DocTypecodesValueSet, DocTypecodesValueSetType,} from '../fhirValueSets/DocTypecodesValueSet.js';
+import { DocTypecodesValueSetEnum } from '../valueSetEnums.js';
+import { DocumentClasscodesValueSet, DocumentClasscodesValueSetType,} from '../fhirValueSets/DocumentClasscodesValueSet.js';
+import { DocumentClasscodesValueSetEnum } from '../valueSetEnums.js';
+import { V3ConfidentialityClassificationValueSet, V3ConfidentialityClassificationValueSetType,} from '../fhirValueSets/V3ConfidentialityClassificationValueSet.js';
+import { V3ConfidentialityClassificationValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Only list each attester once.
+ * Valid arguments for the CompositionAttester type.
  */
-export type ICompositionAttester = fhir.IBackboneElement & { 
+export interface CompositionAttesterArgs extends fhir.BackboneElementArgs {
   /**
    * The type of attestation the authenticator offers.
    */
   mode: CompositionAttestationModeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Composition.attester.mode
-   */
-  _mode?: fhir.IFhirElement|undefined;
-  /**
    * When the composition was attested by the party.
    */
-  time?: string|undefined;
-  /**
-   * Extended properties for primitive element: Composition.attester.time
-   */
-  _time?: fhir.IFhirElement|undefined;
+  time?: fhir.FhirDateTime|string|undefined;
   /**
    * Who attested the composition in the specified way.
    */
-  party?: fhir.IReference|undefined;
-}
-
-/**
- * A document is a version specific composition.
- */
-export type ICompositionRelatesTo = fhir.IBackboneElement & { 
-  /**
-   * If this document appends another document, then the document cannot be fully understood without also accessing the referenced document.
-   */
-  code: DocumentRelationshipTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Composition.relatesTo.code
-   */
-  _code?: fhir.IFhirElement|undefined;
-  /**
-   * The target composition/document of this relationship.
-   */
-  targetIdentifier?: fhir.IIdentifier|undefined;
-  /**
-   * The target composition/document of this relationship.
-   */
-  targetReference?: fhir.IReference|undefined;
-}
-
-/**
- * The event needs to be consistent with the type element, though can provide further information if desired.
- */
-export type ICompositionEvent = fhir.IBackboneElement & { 
-  /**
-   * An event can further specialize the act inherent in the typeCode, such as where it is simply "Procedure Report" and the procedure was a "colonoscopy". If one or more eventCodes are included, they SHALL NOT conflict with the values inherent in the classCode, practiceSettingCode or typeCode, as such a conflict would create an ambiguous situation. This short list of codes is provided to be used as key words for certain types of queries.
-   */
-  code?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this time.
-   */
-  period?: fhir.IPeriod|undefined;
-  /**
-   * The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy.
-   */
-  detail?: fhir.IReference[]|undefined;
-}
-
-/**
- * The root of the sections that make up the composition.
- */
-export type ICompositionSection = fhir.IBackboneElement & { 
-  /**
-   * The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: Composition.section.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   
-   * If the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.
-   */
-  code?: fhir.ICodeableConcept|undefined;
-  /**
-   * Identifies who is responsible for the information in this section, not necessarily who typed it in.
-   */
-  author?: fhir.IReference[]|undefined;
-  /**
-   * Typically, sections in a doument are about the subject of the document, whether that is a  patient, or group of patients, location, or device, or whatever. For some kind of documents, some sections actually contain data about related entities. Typical examples are  a section in a newborn discharge summary concerning the mother, or family history documents, with a section about each family member, though there are many other examples.
-   */
-  focus?: fhir.IReference|undefined;
-  /**
-   * Document profiles may define what content should be represented in the narrative to ensure clinical safety.
-   */
-  text?: fhir.INarrative|undefined;
-  /**
-   * This element is labeled as a modifier because a change list must not be misunderstood as a complete list.
-   */
-  mode?: ListModeValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: Composition.section.mode
-   */
-  _mode?: fhir.IFhirElement|undefined;
-  /**
-   * Applications SHOULD render ordered lists in the order provided, but MAY allow users to re-order based on their own preferences as well. If there is no order specified, the order is unknown, though there may still be some order.
-   */
-  orderedBy?: fhir.ICodeableConcept|undefined;
-  /**
-   * If there are no entries in the list, an emptyReason SHOULD be provided.
-   */
-  entry?: fhir.IReference[]|undefined;
-  /**
-   * The various reasons for an empty section make a significant interpretation to its interpretation. Note that this code is for use when the entire section content has been suppressed, and not for when individual items are omitted - implementers may consider using a text note or a flag on an entry in these cases.
-   */
-  emptyReason?: fhir.ICodeableConcept|undefined;
-  /**
-   * Nested sections are primarily used to help human readers navigate to particular portions of the document.
-   */
-  section?: fhir.ICompositionSection[]|undefined;
-}
-
-/**
- * A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.).
- */
-export type IComposition = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Composition";
-  /**
-   * Similar to ClinicalDocument/setId in CDA. See discussion in resource definition for how these relate.
-   */
-  identifier?: fhir.IIdentifier|undefined;
-  /**
-   * If a composition is marked as withdrawn, the compositions/documents in the series, or data from the composition or document series, should never be displayed to a user without being clearly marked as untrustworthy. The flag "entered-in-error" is why this element is labeled as a modifier of other elements.   
-   * Some reporting work flows require that the original narrative of a final document never be altered; instead, only new narrative can be added. The composition resource has no explicit status for explicitly noting whether this business rule is in effect. This would be handled by an extension if required.
-   */
-  status: CompositionStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Composition.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * For Composition type, LOINC is ubiquitous and strongly endorsed by HL7. Most implementation guides will require a specific LOINC code, or use LOINC as an extensible binding.
-   */
-  type: fhir.ICodeableConcept|null;
-  /**
-   * This is a metadata field from [XDS/MHD](http://wiki.ihe.net/index.php?title=Mobile_access_to_Health_Documents_(MHD)).
-   */
-  category?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * For clinical documents, this is usually the patient.
-   */
-  subject?: fhir.IReference|undefined;
-  /**
-   * Describes the clinical encounter or type of care this documentation is associated with.
-   */
-  encounter?: fhir.IReference|undefined;
-  /**
-   * The Last Modified Date on the composition may be after the date of the document was attested without being changed.
-   */
-  date: string|null;
-  /**
-   * Extended properties for primitive element: Composition.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Identifies who is responsible for the information in the composition, not necessarily who typed it in.
-   */
-  author: fhir.IReference[]|null;
-  /**
-   * For many compositions, the title is the same as the text or a display name of Composition.type (e.g. a "consultation" or "progress note"). Note that CDA does not make title mandatory, but there are no known cases where it is useful for title to be omitted, so it is mandatory here. Feedback on this requirement is welcome during the trial use period.
-   */
-  title: string|null;
-  /**
-   * Extended properties for primitive element: Composition.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * The exact use of this element, and enforcement and issues related to highly sensitive documents are out of scope for the base specification, and delegated to implementation profiles (see security section).  This element is labeled as a modifier because highly confidential documents must not be treated as if they are not.
-   */
-  confidentiality?: string|undefined;
-  /**
-   * Extended properties for primitive element: Composition.confidentiality
-   */
-  _confidentiality?: fhir.IFhirElement|undefined;
-  /**
-   * Only list each attester once.
-   */
-  attester?: fhir.ICompositionAttester[]|undefined;
-  /**
-   * This is useful when documents are derived from a composition - provides guidance for how to get the latest version of the document. This is optional because this is sometimes not known by the authoring system, and can be inferred by context. However, it is important that this information be known when working with a derived document, so providing a custodian is encouraged.
-   */
-  custodian?: fhir.IReference|undefined;
-  /**
-   * A document is a version specific composition.
-   */
-  relatesTo?: fhir.ICompositionRelatesTo[]|undefined;
-  /**
-   * The event needs to be consistent with the type element, though can provide further information if desired.
-   */
-  event?: fhir.ICompositionEvent[]|undefined;
-  /**
-   * The root of the sections that make up the composition.
-   */
-  section?: fhir.ICompositionSection[]|undefined;
+  party?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * Only list each attester once.
  */
-export class CompositionAttester extends fhir.BackboneElement implements ICompositionAttester {
+export class CompositionAttester extends fhir.BackboneElement {
+  readonly __dataType:string = 'CompositionAttester';
   /**
    * The type of attestation the authenticator offers.
    */
   public mode: CompositionAttestationModeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Composition.attester.mode
-   */
-  public _mode?: fhir.FhirElement|undefined;
-  /**
    * When the composition was attested by the party.
    */
-  public time?: string|undefined;
-  /**
-   * Extended properties for primitive element: Composition.attester.time
-   */
-  public _time?: fhir.FhirElement|undefined;
+  public time?: fhir.FhirDateTime|undefined;
   /**
    * Who attested the composition in the specified way.
    */
@@ -252,14 +67,12 @@ export class CompositionAttester extends fhir.BackboneElement implements ICompos
   /**
    * Default constructor for CompositionAttester - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICompositionAttester> = { }) {
-    super(source);
+  constructor(source:Partial<CompositionAttesterArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['mode']) { this.mode = source.mode; }
     else { this.mode = null; }
-    if (source['_mode']) { this._mode = new fhir.FhirElement(source._mode!); }
-    if (source['time']) { this.time = source.time; }
-    if (source['_time']) { this._time = new fhir.FhirElement(source._time!); }
-    if (source['party']) { this.party = new fhir.Reference(source.party!); }
+    if (source['time']) { this.time = new fhir.FhirDateTime({value: source.time}); }
+    if (source['party']) { this.party = new fhir.Reference(source.party); }
   }
   /**
    * Required-bound Value Set for mode
@@ -270,46 +83,69 @@ export class CompositionAttester extends fhir.BackboneElement implements ICompos
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["mode"]) { results.push(["mode",'Missing required element: Composition.attester.mode']); }
-    if (this["_mode"]) { results.push(...this._mode.doModelValidation()); }
-    if (this["_time"]) { results.push(...this._time.doModelValidation()); }
-    if (this["party"]) { results.push(...this.party.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['mode']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property mode:CompositionAttestationModeValueSetEnum fhir: Composition.attester.mode:code", }));
+    }
+    if (this["time"]) { outcome.issue!.push(...this.time.doModelValidation().issue!); }
+    if (this["party"]) { outcome.issue!.push(...this.party.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CompositionRelatesTo type.
+ */
+export interface CompositionRelatesToArgs extends fhir.BackboneElementArgs {
+  /**
+   * If this document appends another document, then the document cannot be fully understood without also accessing the referenced document.
+   */
+  code: DocumentRelationshipTypeValueSetEnum|null;
+  /**
+   * The target composition/document of this relationship.
+   */
+  target?: fhir.Identifier|fhir.Reference|undefined;
+  /**
+   * The target composition/document of this relationship.
+   */
+  targetIdentifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * The target composition/document of this relationship.
+   */
+  targetReference?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * A document is a version specific composition.
  */
-export class CompositionRelatesTo extends fhir.BackboneElement implements ICompositionRelatesTo {
+export class CompositionRelatesTo extends fhir.BackboneElement {
+  readonly __dataType:string = 'CompositionRelatesTo';
   /**
    * If this document appends another document, then the document cannot be fully understood without also accessing the referenced document.
    */
   public code: DocumentRelationshipTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Composition.relatesTo.code
-   */
-  public _code?: fhir.FhirElement|undefined;
-  /**
    * The target composition/document of this relationship.
    */
-  public targetIdentifier?: fhir.Identifier|undefined;
-  /**
-   * The target composition/document of this relationship.
-   */
-  public targetReference?: fhir.Reference|undefined;
+  public target: (fhir.Identifier|fhir.Reference)|null;
+  readonly __targetIsChoice:true = true;
   /**
    * Default constructor for CompositionRelatesTo - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICompositionRelatesTo> = { }) {
-    super(source);
+  constructor(source:Partial<CompositionRelatesToArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['code']) { this.code = source.code; }
     else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['targetIdentifier']) { this.targetIdentifier = new fhir.Identifier(source.targetIdentifier!); }
-    if (source['targetReference']) { this.targetReference = new fhir.Reference(source.targetReference!); }
+    if (source['target']) { this.target = source.target; }
+    else if (source['targetIdentifier']) { this.target = new fhir.Identifier(source.targetIdentifier); }
+    else if (source['targetReference']) { this.target = new fhir.Reference(source.targetReference); }
+    else { this.target = null; }
   }
   /**
    * Required-bound Value Set for code
@@ -320,24 +156,50 @@ export class CompositionRelatesTo extends fhir.BackboneElement implements ICompo
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: Composition.relatesTo.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["targetIdentifier"]) { results.push(...this.targetIdentifier.doModelValidation()); }
-    if (this["targetReference"]) { results.push(...this.targetReference.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:DocumentRelationshipTypeValueSetEnum fhir: Composition.relatesTo.code:code", }));
+    }
+    if (!this['target']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property target: fhir: Composition.relatesTo.target[x]:", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CompositionEvent type.
+ */
+export interface CompositionEventArgs extends fhir.BackboneElementArgs {
+  /**
+   * An event can further specialize the act inherent in the typeCode, such as where it is simply "Procedure Report" and the procedure was a "colonoscopy". If one or more eventCodes are included, they SHALL NOT conflict with the values inherent in the classCode, practiceSettingCode or typeCode, as such a conflict would create an ambiguous situation. This short list of codes is provided to be used as key words for certain types of queries.
+   */
+  code?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this time.
+   */
+  period?: fhir.PeriodArgs|undefined;
+  /**
+   * The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy.
+   */
+  detail?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * The event needs to be consistent with the type element, though can provide further information if desired.
  */
-export class CompositionEvent extends fhir.BackboneElement implements ICompositionEvent {
+export class CompositionEvent extends fhir.BackboneElement {
+  readonly __dataType:string = 'CompositionEvent';
   /**
    * An event can further specialize the act inherent in the typeCode, such as where it is simply "Procedure Report" and the procedure was a "colonoscopy". If one or more eventCodes are included, they SHALL NOT conflict with the values inherent in the classCode, practiceSettingCode or typeCode, as such a conflict would create an ambiguous situation. This short list of codes is provided to be used as key words for certain types of queries.
    */
-  public code?: fhir.CodeableConcept[]|undefined;
+  public code?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this time.
    */
@@ -345,14 +207,14 @@ export class CompositionEvent extends fhir.BackboneElement implements ICompositi
   /**
    * The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy.
    */
-  public detail?: fhir.Reference[]|undefined;
+  public detail?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for CompositionEvent - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICompositionEvent> = { }) {
-    super(source);
+  constructor(source:Partial<CompositionEventArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['code']) { this.code = source.code.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
     if (source['detail']) { this.detail = source.detail.map((x) => new fhir.Reference(x)); }
   }
   /**
@@ -364,27 +226,76 @@ export class CompositionEvent extends fhir.BackboneElement implements ICompositi
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["code"]) { this.code.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    if (this["detail"]) { this.detail.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["code"]) { this.code.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    if (this["detail"]) { this.detail.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CompositionSection type.
+ */
+export interface CompositionSectionArgs extends fhir.BackboneElementArgs {
+  /**
+   * The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   
+   * If the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Identifies who is responsible for the information in this section, not necessarily who typed it in.
+   */
+  author?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Typically, sections in a doument are about the subject of the document, whether that is a  patient, or group of patients, location, or device, or whatever. For some kind of documents, some sections actually contain data about related entities. Typical examples are  a section in a newborn discharge summary concerning the mother, or family history documents, with a section about each family member, though there are many other examples.
+   */
+  focus?: fhir.ReferenceArgs|undefined;
+  /**
+   * Document profiles may define what content should be represented in the narrative to ensure clinical safety.
+   */
+  text?: fhir.NarrativeArgs|undefined;
+  /**
+   * This element is labeled as a modifier because a change list must not be misunderstood as a complete list.
+   */
+  mode?: ListModeValueSetEnum|undefined;
+  /**
+   * Applications SHOULD render ordered lists in the order provided, but MAY allow users to re-order based on their own preferences as well. If there is no order specified, the order is unknown, though there may still be some order.
+   */
+  orderedBy?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * If there are no entries in the list, an emptyReason SHOULD be provided.
+   */
+  entry?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The various reasons for an empty section make a significant interpretation to its interpretation. Note that this code is for use when the entire section content has been suppressed, and not for when individual items are omitted - implementers may consider using a text note or a flag on an entry in these cases.
+   */
+  emptyReason?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Nested sections are primarily used to help human readers navigate to particular portions of the document.
+   */
+  section?: fhir.CompositionSectionArgs[]|undefined;
 }
 
 /**
  * The root of the sections that make up the composition.
  */
-export class CompositionSection extends fhir.BackboneElement implements ICompositionSection {
+export class CompositionSection extends fhir.BackboneElement {
+  readonly __dataType:string = 'CompositionSection';
   /**
    * The title identifies the section for a human reader. The title must be consistent with the narrative of the resource that is the target of the section.content reference. Generally, sections SHOULD have titles, but in some documents, it is unnecessary or inappropriate. Typically, this is where a section has subsections that have their own adequately distinguishing title,  or documents that only have a single section. Most Implementation Guides will make section title to be a required element.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: Composition.section.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * The code identifies the section for an automated processor of the document. This is particularly relevant when using profiles to control the structure of the document.   
    * If the section has content (instead of sub-sections), the section.code does not change the meaning or interpretation of the resource that is the content of the section in the comments for the section.code.
@@ -393,7 +304,7 @@ export class CompositionSection extends fhir.BackboneElement implements IComposi
   /**
    * Identifies who is responsible for the information in this section, not necessarily who typed it in.
    */
-  public author?: fhir.Reference[]|undefined;
+  public author?: fhir.Reference[]|undefined = [];
   /**
    * Typically, sections in a doument are about the subject of the document, whether that is a  patient, or group of patients, location, or device, or whatever. For some kind of documents, some sections actually contain data about related entities. Typical examples are  a section in a newborn discharge summary concerning the mother, or family history documents, with a section about each family member, though there are many other examples.
    */
@@ -407,17 +318,13 @@ export class CompositionSection extends fhir.BackboneElement implements IComposi
    */
   public mode?: ListModeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Composition.section.mode
-   */
-  public _mode?: fhir.FhirElement|undefined;
-  /**
    * Applications SHOULD render ordered lists in the order provided, but MAY allow users to re-order based on their own preferences as well. If there is no order specified, the order is unknown, though there may still be some order.
    */
   public orderedBy?: fhir.CodeableConcept|undefined;
   /**
    * If there are no entries in the list, an emptyReason SHOULD be provided.
    */
-  public entry?: fhir.Reference[]|undefined;
+  public entry?: fhir.Reference[]|undefined = [];
   /**
    * The various reasons for an empty section make a significant interpretation to its interpretation. Note that this code is for use when the entire section content has been suppressed, and not for when individual items are omitted - implementers may consider using a text note or a flag on an entry in these cases.
    */
@@ -425,23 +332,21 @@ export class CompositionSection extends fhir.BackboneElement implements IComposi
   /**
    * Nested sections are primarily used to help human readers navigate to particular portions of the document.
    */
-  public section?: fhir.CompositionSection[]|undefined;
+  public section?: fhir.CompositionSection[]|undefined = [];
   /**
    * Default constructor for CompositionSection - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICompositionSection> = { }) {
-    super(source);
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+  constructor(source:Partial<CompositionSectionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
     if (source['author']) { this.author = source.author.map((x) => new fhir.Reference(x)); }
-    if (source['focus']) { this.focus = new fhir.Reference(source.focus!); }
-    if (source['text']) { this.text = new fhir.Narrative(source.text!); }
+    if (source['focus']) { this.focus = new fhir.Reference(source.focus); }
+    if (source['text']) { this.text = new fhir.Narrative(source.text); }
     if (source['mode']) { this.mode = source.mode; }
-    if (source['_mode']) { this._mode = new fhir.FhirElement(source._mode!); }
-    if (source['orderedBy']) { this.orderedBy = new fhir.CodeableConcept(source.orderedBy!); }
+    if (source['orderedBy']) { this.orderedBy = new fhir.CodeableConcept(source.orderedBy); }
     if (source['entry']) { this.entry = source.entry.map((x) => new fhir.Reference(x)); }
-    if (source['emptyReason']) { this.emptyReason = new fhir.CodeableConcept(source.emptyReason!); }
+    if (source['emptyReason']) { this.emptyReason = new fhir.CodeableConcept(source.emptyReason); }
     if (source['section']) { this.section = source.section.map((x) => new fhir.CompositionSection(x)); }
   }
   /**
@@ -471,26 +376,102 @@ export class CompositionSection extends fhir.BackboneElement implements IComposi
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["author"]) { this.author.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["focus"]) { results.push(...this.focus.doModelValidation()); }
-    if (this["text"]) { results.push(...this.text.doModelValidation()); }
-    if (this["_mode"]) { results.push(...this._mode.doModelValidation()); }
-    if (this["orderedBy"]) { results.push(...this.orderedBy.doModelValidation()); }
-    if (this["entry"]) { this.entry.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["emptyReason"]) { results.push(...this.emptyReason.doModelValidation()); }
-    if (this["section"]) { this.section.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["author"]) { this.author.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["focus"]) { outcome.issue!.push(...this.focus.doModelValidation().issue!); }
+    if (this["text"]) { outcome.issue!.push(...this.text.doModelValidation().issue!); }
+    if (this["orderedBy"]) { outcome.issue!.push(...this.orderedBy.doModelValidation().issue!); }
+    if (this["entry"]) { this.entry.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["emptyReason"]) { outcome.issue!.push(...this.emptyReason.doModelValidation().issue!); }
+    if (this["section"]) { this.section.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Composition type.
+ */
+export interface CompositionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Composition"|undefined;
+  /**
+   * Similar to ClinicalDocument/setId in CDA. See discussion in resource definition for how these relate.
+   */
+  identifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * If a composition is marked as withdrawn, the compositions/documents in the series, or data from the composition or document series, should never be displayed to a user without being clearly marked as untrustworthy. The flag "entered-in-error" is why this element is labeled as a modifier of other elements.   
+   * Some reporting work flows require that the original narrative of a final document never be altered; instead, only new narrative can be added. The composition resource has no explicit status for explicitly noting whether this business rule is in effect. This would be handled by an extension if required.
+   */
+  status: CompositionStatusValueSetEnum|null;
+  /**
+   * For Composition type, LOINC is ubiquitous and strongly endorsed by HL7. Most implementation guides will require a specific LOINC code, or use LOINC as an extensible binding.
+   */
+  type: fhir.CodeableConceptArgs|null;
+  /**
+   * This is a metadata field from [XDS/MHD](http://wiki.ihe.net/index.php?title=Mobile_access_to_Health_Documents_(MHD)).
+   */
+  category?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * For clinical documents, this is usually the patient.
+   */
+  subject?: fhir.ReferenceArgs|undefined;
+  /**
+   * Describes the clinical encounter or type of care this documentation is associated with.
+   */
+  encounter?: fhir.ReferenceArgs|undefined;
+  /**
+   * The Last Modified Date on the composition may be after the date of the document was attested without being changed.
+   */
+  date: fhir.FhirDateTime|string|undefined;
+  /**
+   * Identifies who is responsible for the information in the composition, not necessarily who typed it in.
+   */
+  author: fhir.ReferenceArgs[]|null;
+  /**
+   * For many compositions, the title is the same as the text or a display name of Composition.type (e.g. a "consultation" or "progress note"). Note that CDA does not make title mandatory, but there are no known cases where it is useful for title to be omitted, so it is mandatory here. Feedback on this requirement is welcome during the trial use period.
+   */
+  title: fhir.FhirString|string|undefined;
+  /**
+   * The exact use of this element, and enforcement and issues related to highly sensitive documents are out of scope for the base specification, and delegated to implementation profiles (see security section).  This element is labeled as a modifier because highly confidential documents must not be treated as if they are not.
+   */
+  confidentiality?: fhir.FhirCode|string|undefined;
+  /**
+   * Only list each attester once.
+   */
+  attester?: fhir.CompositionAttesterArgs[]|undefined;
+  /**
+   * This is useful when documents are derived from a composition - provides guidance for how to get the latest version of the document. This is optional because this is sometimes not known by the authoring system, and can be inferred by context. However, it is important that this information be known when working with a derived document, so providing a custodian is encouraged.
+   */
+  custodian?: fhir.ReferenceArgs|undefined;
+  /**
+   * A document is a version specific composition.
+   */
+  relatesTo?: fhir.CompositionRelatesToArgs[]|undefined;
+  /**
+   * The event needs to be consistent with the type element, though can provide further information if desired.
+   */
+  event?: fhir.CompositionEventArgs[]|undefined;
+  /**
+   * The root of the sections that make up the composition.
+   */
+  section?: fhir.CompositionSectionArgs[]|undefined;
 }
 
 /**
  * A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.).
  */
-export class Composition extends fhir.DomainResource implements IComposition {
+export class Composition extends fhir.DomainResource {
+  readonly __dataType:string = 'Composition';
   /**
    * Resource Type Name
    */
@@ -505,17 +486,13 @@ export class Composition extends fhir.DomainResource implements IComposition {
    */
   public status: CompositionStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Composition.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * For Composition type, LOINC is ubiquitous and strongly endorsed by HL7. Most implementation guides will require a specific LOINC code, or use LOINC as an extensible binding.
    */
   public type: fhir.CodeableConcept|null;
   /**
    * This is a metadata field from [XDS/MHD](http://wiki.ihe.net/index.php?title=Mobile_access_to_Health_Documents_(MHD)).
    */
-  public category?: fhir.CodeableConcept[]|undefined;
+  public category?: fhir.CodeableConcept[]|undefined = [];
   /**
    * For clinical documents, this is usually the patient.
    */
@@ -527,35 +504,23 @@ export class Composition extends fhir.DomainResource implements IComposition {
   /**
    * The Last Modified Date on the composition may be after the date of the document was attested without being changed.
    */
-  public date: string|null;
-  /**
-   * Extended properties for primitive element: Composition.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date: fhir.FhirDateTime|null;
   /**
    * Identifies who is responsible for the information in the composition, not necessarily who typed it in.
    */
-  public author: fhir.Reference[]|null;
+  public author: fhir.Reference[]|null = [];
   /**
    * For many compositions, the title is the same as the text or a display name of Composition.type (e.g. a "consultation" or "progress note"). Note that CDA does not make title mandatory, but there are no known cases where it is useful for title to be omitted, so it is mandatory here. Feedback on this requirement is welcome during the trial use period.
    */
-  public title: string|null;
-  /**
-   * Extended properties for primitive element: Composition.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title: fhir.FhirString|null;
   /**
    * The exact use of this element, and enforcement and issues related to highly sensitive documents are out of scope for the base specification, and delegated to implementation profiles (see security section).  This element is labeled as a modifier because highly confidential documents must not be treated as if they are not.
    */
-  public confidentiality?: string|undefined;
-  /**
-   * Extended properties for primitive element: Composition.confidentiality
-   */
-  public _confidentiality?: fhir.FhirElement|undefined;
+  public confidentiality?: fhir.FhirCode|undefined;
   /**
    * Only list each attester once.
    */
-  public attester?: fhir.CompositionAttester[]|undefined;
+  public attester?: fhir.CompositionAttester[]|undefined = [];
   /**
    * This is useful when documents are derived from a composition - provides guidance for how to get the latest version of the document. This is optional because this is sometimes not known by the authoring system, and can be inferred by context. However, it is important that this information be known when working with a derived document, so providing a custodian is encouraged.
    */
@@ -563,42 +528,38 @@ export class Composition extends fhir.DomainResource implements IComposition {
   /**
    * A document is a version specific composition.
    */
-  public relatesTo?: fhir.CompositionRelatesTo[]|undefined;
+  public relatesTo?: fhir.CompositionRelatesTo[]|undefined = [];
   /**
    * The event needs to be consistent with the type element, though can provide further information if desired.
    */
-  public event?: fhir.CompositionEvent[]|undefined;
+  public event?: fhir.CompositionEvent[]|undefined = [];
   /**
    * The root of the sections that make up the composition.
    */
-  public section?: fhir.CompositionSection[]|undefined;
+  public section?: fhir.CompositionSection[]|undefined = [];
   /**
    * Default constructor for Composition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IComposition> = { }) {
-    super(source);
+  constructor(source:Partial<CompositionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Composition';
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
     if (source['category']) { this.category = source.category.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['date']) { this.date = source.date; }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
     else { this.date = null; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
     if (source['author']) { this.author = source.author.map((x) => new fhir.Reference(x)); }
     else { this.author = null; }
-    if (source['title']) { this.title = source.title; }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
     else { this.title = null; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
-    if (source['confidentiality']) { this.confidentiality = source.confidentiality; }
-    if (source['_confidentiality']) { this._confidentiality = new fhir.FhirElement(source._confidentiality!); }
+    if (source['confidentiality']) { this.confidentiality = new fhir.FhirCode({value: source.confidentiality}); }
     if (source['attester']) { this.attester = source.attester.map((x) => new fhir.CompositionAttester(x)); }
-    if (source['custodian']) { this.custodian = new fhir.Reference(source.custodian!); }
+    if (source['custodian']) { this.custodian = new fhir.Reference(source.custodian); }
     if (source['relatesTo']) { this.relatesTo = source.relatesTo.map((x) => new fhir.CompositionRelatesTo(x)); }
     if (source['event']) { this.event = source.event.map((x) => new fhir.CompositionEvent(x)); }
     if (source['section']) { this.section = source.section.map((x) => new fhir.CompositionSection(x)); }
@@ -630,29 +591,50 @@ export class Composition extends fhir.DomainResource implements IComposition {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Composition.resourceType']); }
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: Composition.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (!this["type"]) { results.push(["type",'Missing required element: Composition.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["category"]) { this.category.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (!this["date"]) { results.push(["date",'Missing required element: Composition.date']); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if ((!this["author"]) || (this["author"].length === 0)) { results.push(["author",'Missing required element: Composition.author']); }
-    if (this["author"]) { this.author.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["title"]) { results.push(["title",'Missing required element: Composition.title']); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (this["_confidentiality"]) { results.push(...this._confidentiality.doModelValidation()); }
-    if (this["attester"]) { this.attester.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["custodian"]) { results.push(...this.custodian.doModelValidation()); }
-    if (this["relatesTo"]) { this.relatesTo.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["event"]) { this.event.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["section"]) { this.section.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Composition' fhir: Composition.resourceType:'Composition'", }));
+    }
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:CompositionStatusValueSetEnum fhir: Composition.status:code", }));
+    }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: Composition.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["category"]) { this.category.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (!this['date']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property date:fhir.FhirDateTime fhir: Composition.date:dateTime", }));
+    }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (!this['author']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property author:fhir.Reference[] fhir: Composition.author:Reference", }));
+    } else if (!Array.isArray(this.author)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property author:fhir.Reference[] fhir: Composition.author:Reference", }));
+    } else if (this.author.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property author:fhir.Reference[] fhir: Composition.author:Reference", }));
+    }
+    if (this["author"]) { this.author.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['title']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property title:fhir.FhirString fhir: Composition.title:string", }));
+    }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (this["confidentiality"]) { outcome.issue!.push(...this.confidentiality.doModelValidation().issue!); }
+    if (this["attester"]) { this.attester.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["custodian"]) { outcome.issue!.push(...this.custodian.doModelValidation().issue!); }
+    if (this["relatesTo"]) { this.relatesTo.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["event"]) { this.event.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["section"]) { this.section.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

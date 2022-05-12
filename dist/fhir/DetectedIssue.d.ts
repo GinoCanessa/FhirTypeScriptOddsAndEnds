@@ -1,128 +1,29 @@
 import * as fhir from '../fhir.js';
 import { ManifestationOrSymptomValueSetType } from '../fhirValueSets/ManifestationOrSymptomValueSet.js';
 import { DetectedissueMitigationActionValueSetType } from '../fhirValueSets/DetectedissueMitigationActionValueSet.js';
-import { ObservationStatusValueSetType, ObservationStatusValueSetEnum } from '../fhirValueSets/ObservationStatusValueSet.js';
+import { ObservationStatusValueSetType } from '../fhirValueSets/ObservationStatusValueSet.js';
+import { ObservationStatusValueSetEnum } from '../valueSetEnums.js';
 import { DetectedissueCategoryValueSetType } from '../fhirValueSets/DetectedissueCategoryValueSet.js';
-import { DetectedissueSeverityValueSetType, DetectedissueSeverityValueSetEnum } from '../fhirValueSets/DetectedissueSeverityValueSet.js';
+import { DetectedissueSeverityValueSetType } from '../fhirValueSets/DetectedissueSeverityValueSet.js';
+import { DetectedissueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Supporting evidence or manifestations that provide the basis for identifying the detected issue such as a GuidanceResponse or MeasureReport.
+ * Valid arguments for the DetectedIssueEvidence type.
  */
-export declare type IDetectedIssueEvidence = fhir.IBackboneElement & {
+export interface DetectedIssueEvidenceArgs extends fhir.BackboneElementArgs {
     /**
      * A manifestation that led to the recording of this detected issue.
      */
-    code?: fhir.ICodeableConcept[] | undefined;
+    code?: fhir.CodeableConceptArgs[] | undefined;
     /**
      * Links to resources that constitute evidence for the detected issue such as a GuidanceResponse or MeasureReport.
      */
-    detail?: fhir.IReference[] | undefined;
-};
-/**
- * Indicates an action that has been taken or is committed to reduce or eliminate the likelihood of the risk identified by the detected issue from manifesting.  Can also reflect an observation of known mitigating factors that may reduce/eliminate the need for any action.
- */
-export declare type IDetectedIssueMitigation = fhir.IBackboneElement & {
-    /**
-     * The "text" component can be used for detail or when no appropriate code exists.
-     */
-    action: fhir.ICodeableConcept | null;
-    /**
-     * This might not be the same as when the mitigating step was actually taken.
-     */
-    date?: string | undefined;
-    /**
-     * Extended properties for primitive element: DetectedIssue.mitigation.date
-     */
-    _date?: fhir.IFhirElement | undefined;
-    /**
-     * Identifies the practitioner who determined the mitigation and takes responsibility for the mitigation step occurring.
-     */
-    author?: fhir.IReference | undefined;
-};
-/**
- * Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, Ineffective treatment frequency, Procedure-condition conflict, etc.
- */
-export declare type IDetectedIssue = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "DetectedIssue";
-    /**
-     * Business identifier associated with the detected issue record.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * This element is labeled as a modifier because the status contains the codes cancelled and entered-in-error that mark the issue as not currently valid.
-     */
-    status: ObservationStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: DetectedIssue.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * Identifies the general type of issue identified.
-     */
-    code?: fhir.ICodeableConcept | undefined;
-    /**
-     * Indicates the degree of importance associated with the identified issue based on the potential impact on the patient.
-     */
-    severity?: DetectedissueSeverityValueSetEnum | undefined;
-    /**
-     * Extended properties for primitive element: DetectedIssue.severity
-     */
-    _severity?: fhir.IFhirElement | undefined;
-    /**
-     * Indicates the patient whose record the detected issue is associated with.
-     */
-    patient?: fhir.IReference | undefined;
-    /**
-     * The date or period when the detected issue was initially identified.
-     */
-    identifiedDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: DetectedIssue.identified[x]
-     */
-    _identifiedDateTime?: fhir.IFhirElement | undefined;
-    /**
-     * The date or period when the detected issue was initially identified.
-     */
-    identifiedPeriod?: fhir.IPeriod | undefined;
-    /**
-     * Individual or device responsible for the issue being raised.  For example, a decision support application or a pharmacist conducting a medication review.
-     */
-    author?: fhir.IReference | undefined;
-    /**
-     * There's an implicit constraint on the number of implicated resources based on DetectedIssue.type; e.g. For drug-drug, there would be more than one.  For timing, there would typically only be one.
-     */
-    implicated?: fhir.IReference[] | undefined;
-    /**
-     * Supporting evidence or manifestations that provide the basis for identifying the detected issue such as a GuidanceResponse or MeasureReport.
-     */
-    evidence?: fhir.IDetectedIssueEvidence[] | undefined;
-    /**
-     * Should focus on information not covered elsewhere as discrete data - no need to duplicate the narrative.
-     */
-    detail?: string | undefined;
-    /**
-     * Extended properties for primitive element: DetectedIssue.detail
-     */
-    _detail?: fhir.IFhirElement | undefined;
-    /**
-     * The literature, knowledge-base or similar reference that describes the propensity for the detected issue identified.
-     */
-    reference?: string | undefined;
-    /**
-     * Extended properties for primitive element: DetectedIssue.reference
-     */
-    _reference?: fhir.IFhirElement | undefined;
-    /**
-     * Indicates an action that has been taken or is committed to reduce or eliminate the likelihood of the risk identified by the detected issue from manifesting.  Can also reflect an observation of known mitigating factors that may reduce/eliminate the need for any action.
-     */
-    mitigation?: fhir.IDetectedIssueMitigation[] | undefined;
-};
+    detail?: fhir.ReferenceArgs[] | undefined;
+}
 /**
  * Supporting evidence or manifestations that provide the basis for identifying the detected issue such as a GuidanceResponse or MeasureReport.
  */
-export declare class DetectedIssueEvidence extends fhir.BackboneElement implements IDetectedIssueEvidence {
+export declare class DetectedIssueEvidence extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * A manifestation that led to the recording of this detected issue.
      */
@@ -134,7 +35,7 @@ export declare class DetectedIssueEvidence extends fhir.BackboneElement implemen
     /**
      * Default constructor for DetectedIssueEvidence - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IDetectedIssueEvidence>);
+    constructor(source?: Partial<DetectedIssueEvidenceArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Example-bound Value Set for code
      */
@@ -142,12 +43,34 @@ export declare class DetectedIssueEvidence extends fhir.BackboneElement implemen
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the DetectedIssueMitigation type.
+ */
+export interface DetectedIssueMitigationArgs extends fhir.BackboneElementArgs {
+    /**
+     * The "text" component can be used for detail or when no appropriate code exists.
+     */
+    action: fhir.CodeableConceptArgs | null;
+    /**
+     * This might not be the same as when the mitigating step was actually taken.
+     */
+    date?: fhir.FhirDateTime | string | undefined;
+    /**
+     * Identifies the practitioner who determined the mitigation and takes responsibility for the mitigation step occurring.
+     */
+    author?: fhir.ReferenceArgs | undefined;
 }
 /**
  * Indicates an action that has been taken or is committed to reduce or eliminate the likelihood of the risk identified by the detected issue from manifesting.  Can also reflect an observation of known mitigating factors that may reduce/eliminate the need for any action.
  */
-export declare class DetectedIssueMitigation extends fhir.BackboneElement implements IDetectedIssueMitigation {
+export declare class DetectedIssueMitigation extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The "text" component can be used for detail or when no appropriate code exists.
      */
@@ -155,11 +78,7 @@ export declare class DetectedIssueMitigation extends fhir.BackboneElement implem
     /**
      * This might not be the same as when the mitigating step was actually taken.
      */
-    date?: string | undefined;
-    /**
-     * Extended properties for primitive element: DetectedIssue.mitigation.date
-     */
-    _date?: fhir.FhirElement | undefined;
+    date?: fhir.FhirDateTime | undefined;
     /**
      * Identifies the practitioner who determined the mitigation and takes responsibility for the mitigation step occurring.
      */
@@ -167,7 +86,7 @@ export declare class DetectedIssueMitigation extends fhir.BackboneElement implem
     /**
      * Default constructor for DetectedIssueMitigation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IDetectedIssueMitigation>);
+    constructor(source?: Partial<DetectedIssueMitigationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Preferred-bound Value Set for action
      */
@@ -175,12 +94,82 @@ export declare class DetectedIssueMitigation extends fhir.BackboneElement implem
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the DetectedIssue type.
+ */
+export interface DetectedIssueArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "DetectedIssue" | undefined;
+    /**
+     * Business identifier associated with the detected issue record.
+     */
+    identifier?: fhir.IdentifierArgs[] | undefined;
+    /**
+     * This element is labeled as a modifier because the status contains the codes cancelled and entered-in-error that mark the issue as not currently valid.
+     */
+    status: ObservationStatusValueSetEnum | null;
+    /**
+     * Identifies the general type of issue identified.
+     */
+    code?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Indicates the degree of importance associated with the identified issue based on the potential impact on the patient.
+     */
+    severity?: DetectedissueSeverityValueSetEnum | undefined;
+    /**
+     * Indicates the patient whose record the detected issue is associated with.
+     */
+    patient?: fhir.ReferenceArgs | undefined;
+    /**
+     * The date or period when the detected issue was initially identified.
+     */
+    identified?: fhir.FhirDateTime | fhir.Period | undefined;
+    /**
+     * The date or period when the detected issue was initially identified.
+     */
+    identifiedDateTime?: fhir.FhirDateTime | string | undefined;
+    /**
+     * The date or period when the detected issue was initially identified.
+     */
+    identifiedPeriod?: fhir.PeriodArgs | undefined;
+    /**
+     * Individual or device responsible for the issue being raised.  For example, a decision support application or a pharmacist conducting a medication review.
+     */
+    author?: fhir.ReferenceArgs | undefined;
+    /**
+     * There's an implicit constraint on the number of implicated resources based on DetectedIssue.type; e.g. For drug-drug, there would be more than one.  For timing, there would typically only be one.
+     */
+    implicated?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * Supporting evidence or manifestations that provide the basis for identifying the detected issue such as a GuidanceResponse or MeasureReport.
+     */
+    evidence?: fhir.DetectedIssueEvidenceArgs[] | undefined;
+    /**
+     * Should focus on information not covered elsewhere as discrete data - no need to duplicate the narrative.
+     */
+    detail?: fhir.FhirString | string | undefined;
+    /**
+     * The literature, knowledge-base or similar reference that describes the propensity for the detected issue identified.
+     */
+    reference?: fhir.FhirUri | string | undefined;
+    /**
+     * Indicates an action that has been taken or is committed to reduce or eliminate the likelihood of the risk identified by the detected issue from manifesting.  Can also reflect an observation of known mitigating factors that may reduce/eliminate the need for any action.
+     */
+    mitigation?: fhir.DetectedIssueMitigationArgs[] | undefined;
 }
 /**
  * Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, Ineffective treatment frequency, Procedure-condition conflict, etc.
  */
-export declare class DetectedIssue extends fhir.DomainResource implements IDetectedIssue {
+export declare class DetectedIssue extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -194,10 +183,6 @@ export declare class DetectedIssue extends fhir.DomainResource implements IDetec
      */
     status: ObservationStatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: DetectedIssue.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * Identifies the general type of issue identified.
      */
     code?: fhir.CodeableConcept | undefined;
@@ -206,25 +191,14 @@ export declare class DetectedIssue extends fhir.DomainResource implements IDetec
      */
     severity?: DetectedissueSeverityValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: DetectedIssue.severity
-     */
-    _severity?: fhir.FhirElement | undefined;
-    /**
      * Indicates the patient whose record the detected issue is associated with.
      */
     patient?: fhir.Reference | undefined;
     /**
      * The date or period when the detected issue was initially identified.
      */
-    identifiedDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: DetectedIssue.identified[x]
-     */
-    _identifiedDateTime?: fhir.FhirElement | undefined;
-    /**
-     * The date or period when the detected issue was initially identified.
-     */
-    identifiedPeriod?: fhir.Period | undefined;
+    identified?: (fhir.FhirDateTime | fhir.Period) | undefined;
+    readonly __identifiedIsChoice: true;
     /**
      * Individual or device responsible for the issue being raised.  For example, a decision support application or a pharmacist conducting a medication review.
      */
@@ -240,19 +214,11 @@ export declare class DetectedIssue extends fhir.DomainResource implements IDetec
     /**
      * Should focus on information not covered elsewhere as discrete data - no need to duplicate the narrative.
      */
-    detail?: string | undefined;
-    /**
-     * Extended properties for primitive element: DetectedIssue.detail
-     */
-    _detail?: fhir.FhirElement | undefined;
+    detail?: fhir.FhirString | undefined;
     /**
      * The literature, knowledge-base or similar reference that describes the propensity for the detected issue identified.
      */
-    reference?: string | undefined;
-    /**
-     * Extended properties for primitive element: DetectedIssue.reference
-     */
-    _reference?: fhir.FhirElement | undefined;
+    reference?: fhir.FhirUri | undefined;
     /**
      * Indicates an action that has been taken or is committed to reduce or eliminate the likelihood of the risk identified by the detected issue from manifesting.  Can also reflect an observation of known mitigating factors that may reduce/eliminate the need for any action.
      */
@@ -260,7 +226,7 @@ export declare class DetectedIssue extends fhir.DomainResource implements IDetec
     /**
      * Default constructor for DetectedIssue - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IDetectedIssue>);
+    constructor(source?: Partial<DetectedIssueArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -276,6 +242,10 @@ export declare class DetectedIssue extends fhir.DomainResource implements IDetec
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=DetectedIssue.d.ts.map

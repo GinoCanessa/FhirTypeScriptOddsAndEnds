@@ -51,27 +51,4 @@ export const ProductCategoryValueSet = {
 /**
  * Biologically Derived Product Category.
  */
-export var ProductCategoryValueSetEnum;
-(function (ProductCategoryValueSetEnum) {
-    /**
-     * biologicalAgent: Biological agent of unspecified type.
-     */
-    ProductCategoryValueSetEnum["BiologicalAgent"] = "biologicalAgent";
-    /**
-     * cells: Collection of cells.
-     */
-    ProductCategoryValueSetEnum["Cells"] = "cells";
-    /**
-     * fluid: Body fluid.
-     */
-    ProductCategoryValueSetEnum["Fluid"] = "fluid";
-    /**
-     * organ: A collection of tissues joined in a structural unit to serve a common function.
-     */
-    ProductCategoryValueSetEnum["Organ"] = "organ";
-    /**
-     * tissue: An ensemble of similar cells and their extracellular matrix from the same origin that together carry out a specific function.
-     */
-    ProductCategoryValueSetEnum["Tissue"] = "tissue";
-})(ProductCategoryValueSetEnum || (ProductCategoryValueSetEnum = {}));
 //# sourceMappingURL=ProductCategoryValueSet.js.map

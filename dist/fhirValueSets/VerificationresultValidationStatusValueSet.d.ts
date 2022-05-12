@@ -23,18 +23,4 @@ export declare type VerificationresultValidationStatusValueSetType = typeof Veri
 /**
  * Status of the validation of the target against the primary source
  */
-export declare enum VerificationresultValidationStatusValueSetEnum {
-    /**
-     * Code: failed
-     */
-    Failed = "failed",
-    /**
-     * Code: successful
-     */
-    Successful = "successful",
-    /**
-     * unknown: The validations status has not been determined yet
-     */
-    Unknown = "unknown"
-}
 //# sourceMappingURL=VerificationresultValidationStatusValueSet.d.ts.map

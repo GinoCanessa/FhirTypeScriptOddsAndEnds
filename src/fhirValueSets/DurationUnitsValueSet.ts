@@ -83,37 +83,3 @@ export type DurationUnitsValueSetType = typeof DurationUnitsValueSet;
 /**
  * Unified Code for Units of Measure (UCUM). This value set includes all UCUM codes
  */
-export enum DurationUnitsValueSetEnum {
-  /**
-   * Code: a
-   */
-  Years = "a",
-  /**
-   * Code: d
-   */
-  Days = "d",
-  /**
-   * Code: h
-   */
-  Hours = "h",
-  /**
-   * Code: min
-   */
-  Minutes = "min",
-  /**
-   * Code: mo
-   */
-  Months = "mo",
-  /**
-   * Code: ms
-   */
-  Milliseconds = "ms",
-  /**
-   * Code: s
-   */
-  Seconds = "s",
-  /**
-   * Code: wk
-   */
-  Weeks = "wk",
-}

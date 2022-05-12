@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SubstancePolymer
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Todo.
  */
@@ -10,8 +12,9 @@ export class SubstancePolymerMonomerSetStartingMaterial extends fhir.BackboneEle
     /**
      * Default constructor for SubstancePolymerMonomerSetStartingMaterial - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstancePolymerMonomerSetStartingMaterial';
         if (source['material']) {
             this.material = new fhir.CodeableConcept(source.material);
         }
@@ -19,10 +22,7 @@ export class SubstancePolymerMonomerSetStartingMaterial extends fhir.BackboneEle
             this.type = new fhir.CodeableConcept(source.type);
         }
         if (source['isDefining']) {
-            this.isDefining = source.isDefining;
-        }
-        if (source['_isDefining']) {
-            this._isDefining = new fhir.FhirElement(source._isDefining);
+            this.isDefining = new fhir.FhirBoolean({ value: source.isDefining });
         }
         if (source['amount']) {
             this.amount = new fhir.SubstanceAmount(source.amount);
@@ -32,20 +32,26 @@ export class SubstancePolymerMonomerSetStartingMaterial extends fhir.BackboneEle
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["material"]) {
-            results.push(...this.material.doModelValidation());
+            outcome.issue.push(...this.material.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_isDefining"]) {
-            results.push(...this._isDefining.doModelValidation());
+        if (this["isDefining"]) {
+            outcome.issue.push(...this.isDefining.doModelValidation().issue);
         }
         if (this["amount"]) {
-            results.push(...this.amount.doModelValidation());
+            outcome.issue.push(...this.amount.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -55,8 +61,13 @@ export class SubstancePolymerMonomerSet extends fhir.BackboneElement {
     /**
      * Default constructor for SubstancePolymerMonomerSet - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstancePolymerMonomerSet';
+        /**
+         * Todo.
+         */
+        this.startingMaterial = [];
         if (source['ratioType']) {
             this.ratioType = new fhir.CodeableConcept(source.ratioType);
         }
@@ -68,14 +79,20 @@ export class SubstancePolymerMonomerSet extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["ratioType"]) {
-            results.push(...this.ratioType.doModelValidation());
+            outcome.issue.push(...this.ratioType.doModelValidation().issue);
         }
         if (this["startingMaterial"]) {
-            this.startingMaterial.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.startingMaterial.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -85,8 +102,9 @@ export class SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation extends fhir
     /**
      * Default constructor for SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation';
         if (source['degree']) {
             this.degree = new fhir.CodeableConcept(source.degree);
         }
@@ -98,14 +116,20 @@ export class SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation extends fhir
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["degree"]) {
-            results.push(...this.degree.doModelValidation());
+            outcome.issue.push(...this.degree.doModelValidation().issue);
         }
         if (this["amount"]) {
-            results.push(...this.amount.doModelValidation());
+            outcome.issue.push(...this.amount.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -115,16 +139,14 @@ export class SubstancePolymerRepeatRepeatUnitStructuralRepresentation extends fh
     /**
      * Default constructor for SubstancePolymerRepeatRepeatUnitStructuralRepresentation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstancePolymerRepeatRepeatUnitStructuralRepresentation';
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
         if (source['representation']) {
-            this.representation = source.representation;
-        }
-        if (source['_representation']) {
-            this._representation = new fhir.FhirElement(source._representation);
+            this.representation = new fhir.FhirString({ value: source.representation });
         }
         if (source['attachment']) {
             this.attachment = new fhir.Attachment(source.attachment);
@@ -134,17 +156,23 @@ export class SubstancePolymerRepeatRepeatUnitStructuralRepresentation extends fh
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_representation"]) {
-            results.push(...this._representation.doModelValidation());
+        if (this["representation"]) {
+            outcome.issue.push(...this.representation.doModelValidation().issue);
         }
         if (this["attachment"]) {
-            results.push(...this.attachment.doModelValidation());
+            outcome.issue.push(...this.attachment.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -154,16 +182,22 @@ export class SubstancePolymerRepeatRepeatUnit extends fhir.BackboneElement {
     /**
      * Default constructor for SubstancePolymerRepeatRepeatUnit - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstancePolymerRepeatRepeatUnit';
+        /**
+         * Todo.
+         */
+        this.degreeOfPolymerisation = [];
+        /**
+         * Todo.
+         */
+        this.structuralRepresentation = [];
         if (source['orientationOfPolymerisation']) {
             this.orientationOfPolymerisation = new fhir.CodeableConcept(source.orientationOfPolymerisation);
         }
         if (source['repeatUnit']) {
-            this.repeatUnit = source.repeatUnit;
-        }
-        if (source['_repeatUnit']) {
-            this._repeatUnit = new fhir.FhirElement(source._repeatUnit);
+            this.repeatUnit = new fhir.FhirString({ value: source.repeatUnit });
         }
         if (source['amount']) {
             this.amount = new fhir.SubstanceAmount(source.amount);
@@ -179,23 +213,29 @@ export class SubstancePolymerRepeatRepeatUnit extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["orientationOfPolymerisation"]) {
-            results.push(...this.orientationOfPolymerisation.doModelValidation());
+            outcome.issue.push(...this.orientationOfPolymerisation.doModelValidation().issue);
         }
-        if (this["_repeatUnit"]) {
-            results.push(...this._repeatUnit.doModelValidation());
+        if (this["repeatUnit"]) {
+            outcome.issue.push(...this.repeatUnit.doModelValidation().issue);
         }
         if (this["amount"]) {
-            results.push(...this.amount.doModelValidation());
+            outcome.issue.push(...this.amount.doModelValidation().issue);
         }
         if (this["degreeOfPolymerisation"]) {
-            this.degreeOfPolymerisation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.degreeOfPolymerisation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["structuralRepresentation"]) {
-            this.structuralRepresentation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.structuralRepresentation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -205,19 +245,18 @@ export class SubstancePolymerRepeat extends fhir.BackboneElement {
     /**
      * Default constructor for SubstancePolymerRepeat - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstancePolymerRepeat';
+        /**
+         * Todo.
+         */
+        this.repeatUnit = [];
         if (source['numberOfUnits']) {
-            this.numberOfUnits = source.numberOfUnits;
-        }
-        if (source['_numberOfUnits']) {
-            this._numberOfUnits = new fhir.FhirElement(source._numberOfUnits);
+            this.numberOfUnits = new fhir.FhirInteger({ value: source.numberOfUnits });
         }
         if (source['averageMolecularFormula']) {
-            this.averageMolecularFormula = source.averageMolecularFormula;
-        }
-        if (source['_averageMolecularFormula']) {
-            this._averageMolecularFormula = new fhir.FhirElement(source._averageMolecularFormula);
+            this.averageMolecularFormula = new fhir.FhirString({ value: source.averageMolecularFormula });
         }
         if (source['repeatUnitAmountType']) {
             this.repeatUnitAmountType = new fhir.CodeableConcept(source.repeatUnitAmountType);
@@ -230,20 +269,26 @@ export class SubstancePolymerRepeat extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_numberOfUnits"]) {
-            results.push(...this._numberOfUnits.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["numberOfUnits"]) {
+            outcome.issue.push(...this.numberOfUnits.doModelValidation().issue);
         }
-        if (this["_averageMolecularFormula"]) {
-            results.push(...this._averageMolecularFormula.doModelValidation());
+        if (this["averageMolecularFormula"]) {
+            outcome.issue.push(...this.averageMolecularFormula.doModelValidation().issue);
         }
         if (this["repeatUnitAmountType"]) {
-            results.push(...this.repeatUnitAmountType.doModelValidation());
+            outcome.issue.push(...this.repeatUnitAmountType.doModelValidation().issue);
         }
         if (this["repeatUnit"]) {
-            this.repeatUnit.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.repeatUnit.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -253,8 +298,25 @@ export class SubstancePolymer extends fhir.DomainResource {
     /**
      * Default constructor for SubstancePolymer - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstancePolymer';
+        /**
+         * Todo.
+         */
+        this.copolymerConnectivity = [];
+        /**
+         * Todo.
+         */
+        this.modification = [];
+        /**
+         * Todo.
+         */
+        this.monomerSet = [];
+        /**
+         * Todo.
+         */
+        this.repeat = [];
         this.resourceType = 'SubstancePolymer';
         if (source['class']) {
             this.class = new fhir.CodeableConcept(source.class);
@@ -266,10 +328,7 @@ export class SubstancePolymer extends fhir.DomainResource {
             this.copolymerConnectivity = source.copolymerConnectivity.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['modification']) {
-            this.modification = source.modification.map((x) => (x));
-        }
-        if (source['_modification']) {
-            this._modification = source._modification.map((x) => new fhir.FhirElement(x));
+            this.modification = source.modification.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['monomerSet']) {
             this.monomerSet = source.monomerSet.map((x) => new fhir.SubstancePolymerMonomerSet(x));
@@ -282,29 +341,35 @@ export class SubstancePolymer extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: SubstancePolymer.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'SubstancePolymer' fhir: SubstancePolymer.resourceType:'SubstancePolymer'", }));
         }
         if (this["class"]) {
-            results.push(...this.class.doModelValidation());
+            outcome.issue.push(...this.class.doModelValidation().issue);
         }
         if (this["geometry"]) {
-            results.push(...this.geometry.doModelValidation());
+            outcome.issue.push(...this.geometry.doModelValidation().issue);
         }
         if (this["copolymerConnectivity"]) {
-            this.copolymerConnectivity.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.copolymerConnectivity.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_modification"]) {
-            this._modification.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["modification"]) {
+            this.modification.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["monomerSet"]) {
-            this.monomerSet.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.monomerSet.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["repeat"]) {
-            this.repeat.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.repeat.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=SubstancePolymer.js.map

@@ -59,31 +59,4 @@ export const RestfulSecurityServiceValueSet = {
 /**
  * Types of security services used with FHIR.
  */
-export var RestfulSecurityServiceValueSetEnum;
-(function (RestfulSecurityServiceValueSetEnum) {
-    /**
-     * Basic: Basic authentication defined in HTTP specification.
-     */
-    RestfulSecurityServiceValueSetEnum["Basic"] = "Basic";
-    /**
-     * Certificates: SSL where client must have a certificate registered with the server.
-     */
-    RestfulSecurityServiceValueSetEnum["Certificates"] = "Certificates";
-    /**
-     * Kerberos: see http://www.ietf.org/rfc/rfc4120.txt.
-     */
-    RestfulSecurityServiceValueSetEnum["Kerberos"] = "Kerberos";
-    /**
-     * NTLM: Microsoft NTLM Authentication.
-     */
-    RestfulSecurityServiceValueSetEnum["NTLM"] = "NTLM";
-    /**
-     * OAuth: OAuth (unspecified version see oauth.net).
-     */
-    RestfulSecurityServiceValueSetEnum["OAuth"] = "OAuth";
-    /**
-     * SMART-on-FHIR: OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org/).
-     */
-    RestfulSecurityServiceValueSetEnum["SMARTOnFHIR"] = "SMART-on-FHIR";
-})(RestfulSecurityServiceValueSetEnum || (RestfulSecurityServiceValueSetEnum = {}));
 //# sourceMappingURL=RestfulSecurityServiceValueSet.js.map

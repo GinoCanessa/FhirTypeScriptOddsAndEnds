@@ -3,76 +3,59 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Signature
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { SignatureTypeValueSet, SignatureTypeValueSetType, SignatureTypeValueSetEnum } from '../fhirValueSets/SignatureTypeValueSet.js'
-
+import { SignatureTypeValueSet, SignatureTypeValueSetType,} from '../fhirValueSets/SignatureTypeValueSet.js';
+import { SignatureTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A signature along with supporting context. The signature may be a digital signature that is cryptographic in nature, or some other signature acceptable to the domain. This other signature may be as simple as a graphical image representing a hand-written signature, or a signature ceremony Different signature approaches have different utilities.
+ * Valid arguments for the Signature type.
  */
-export type ISignature = fhir.IFhirElement & { 
+export interface SignatureArgs extends fhir.FhirElementArgs {
   /**
    * Examples include attesting to: authorship, correct transcription, and witness of specific event. Also known as a &amp;quot;Commitment Type Indication&amp;quot;.
    */
-  type: fhir.ICoding[]|null;
+  type: fhir.CodingArgs[]|null;
   /**
    * This should agree with the information in the signature.
    */
-  when: string|null;
-  /**
-   * Extended properties for primitive element: Signature.when
-   */
-  _when?: fhir.IFhirElement|undefined;
+  when: fhir.FhirInstant|string|undefined;
   /**
    * This should agree with the information in the signature.
    */
-  who: fhir.IReference|null;
+  who: fhir.ReferenceArgs|null;
   /**
    * The party that can't sign. For example a child.
    */
-  onBehalfOf?: fhir.IReference|undefined;
+  onBehalfOf?: fhir.ReferenceArgs|undefined;
   /**
    * "xml", "json" and "ttl" are allowed, which describe the simple encodings described in the specification (and imply appropriate bundle support). Otherwise, mime types are legal here.
    */
-  targetFormat?: string|undefined;
-  /**
-   * Extended properties for primitive element: Signature.targetFormat
-   */
-  _targetFormat?: fhir.IFhirElement|undefined;
+  targetFormat?: fhir.FhirCode|string|undefined;
   /**
    * A mime type that indicates the technical format of the signature. Important mime types are application/signature+xml for X ML DigSig, application/jose for JWS, and image/* for a graphical image of a signature, etc.
    */
-  sigFormat?: string|undefined;
-  /**
-   * Extended properties for primitive element: Signature.sigFormat
-   */
-  _sigFormat?: fhir.IFhirElement|undefined;
+  sigFormat?: fhir.FhirCode|string|undefined;
   /**
    * Where the signature type is an XML DigSig, the signed content is a FHIR Resource(s), the signature is of the XML form of the Resource(s) using  XML-Signature (XMLDIG) "Detached Signature" form.
    */
-  data?: string|undefined;
-  /**
-   * Extended properties for primitive element: Signature.data
-   */
-  _data?: fhir.IFhirElement|undefined;
+  data?: fhir.FhirBase64Binary|string|undefined;
 }
 
 /**
  * A signature along with supporting context. The signature may be a digital signature that is cryptographic in nature, or some other signature acceptable to the domain. This other signature may be as simple as a graphical image representing a hand-written signature, or a signature ceremony Different signature approaches have different utilities.
  */
-export class Signature extends fhir.FhirElement implements ISignature {
+export class Signature extends fhir.FhirElement {
+  readonly __dataType:string = 'Signature';
   /**
    * Examples include attesting to: authorship, correct transcription, and witness of specific event. Also known as a &amp;quot;Commitment Type Indication&amp;quot;.
    */
-  public type: fhir.Coding[]|null;
+  public type: fhir.Coding[]|null = [];
   /**
    * This should agree with the information in the signature.
    */
-  public when: string|null;
-  /**
-   * Extended properties for primitive element: Signature.when
-   */
-  public _when?: fhir.FhirElement|undefined;
+  public when: fhir.FhirInstant|null;
   /**
    * This should agree with the information in the signature.
    */
@@ -84,46 +67,30 @@ export class Signature extends fhir.FhirElement implements ISignature {
   /**
    * "xml", "json" and "ttl" are allowed, which describe the simple encodings described in the specification (and imply appropriate bundle support). Otherwise, mime types are legal here.
    */
-  public targetFormat?: string|undefined;
-  /**
-   * Extended properties for primitive element: Signature.targetFormat
-   */
-  public _targetFormat?: fhir.FhirElement|undefined;
+  public targetFormat?: fhir.FhirCode|undefined;
   /**
    * A mime type that indicates the technical format of the signature. Important mime types are application/signature+xml for X ML DigSig, application/jose for JWS, and image/* for a graphical image of a signature, etc.
    */
-  public sigFormat?: string|undefined;
-  /**
-   * Extended properties for primitive element: Signature.sigFormat
-   */
-  public _sigFormat?: fhir.FhirElement|undefined;
+  public sigFormat?: fhir.FhirCode|undefined;
   /**
    * Where the signature type is an XML DigSig, the signed content is a FHIR Resource(s), the signature is of the XML form of the Resource(s) using  XML-Signature (XMLDIG) "Detached Signature" form.
    */
-  public data?: string|undefined;
-  /**
-   * Extended properties for primitive element: Signature.data
-   */
-  public _data?: fhir.FhirElement|undefined;
+  public data?: fhir.FhirBase64Binary|undefined;
   /**
    * Default constructor for Signature - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISignature> = { }) {
-    super(source);
+  constructor(source:Partial<SignatureArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['type']) { this.type = source.type.map((x) => new fhir.Coding(x)); }
     else { this.type = null; }
-    if (source['when']) { this.when = source.when; }
+    if (source['when']) { this.when = new fhir.FhirInstant({value: source.when}); }
     else { this.when = null; }
-    if (source['_when']) { this._when = new fhir.FhirElement(source._when!); }
-    if (source['who']) { this.who = new fhir.Reference(source.who!); }
+    if (source['who']) { this.who = new fhir.Reference(source.who); }
     else { this.who = null; }
-    if (source['onBehalfOf']) { this.onBehalfOf = new fhir.Reference(source.onBehalfOf!); }
-    if (source['targetFormat']) { this.targetFormat = source.targetFormat; }
-    if (source['_targetFormat']) { this._targetFormat = new fhir.FhirElement(source._targetFormat!); }
-    if (source['sigFormat']) { this.sigFormat = source.sigFormat; }
-    if (source['_sigFormat']) { this._sigFormat = new fhir.FhirElement(source._sigFormat!); }
-    if (source['data']) { this.data = source.data; }
-    if (source['_data']) { this._data = new fhir.FhirElement(source._data!); }
+    if (source['onBehalfOf']) { this.onBehalfOf = new fhir.Reference(source.onBehalfOf); }
+    if (source['targetFormat']) { this.targetFormat = new fhir.FhirCode({value: source.targetFormat}); }
+    if (source['sigFormat']) { this.sigFormat = new fhir.FhirCode({value: source.sigFormat}); }
+    if (source['data']) { this.data = new fhir.FhirBase64Binary({value: source.data}); }
   }
   /**
    * Preferred-bound Value Set for type
@@ -134,18 +101,34 @@ export class Signature extends fhir.FhirElement implements ISignature {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if ((!this["type"]) || (this["type"].length === 0)) { results.push(["type",'Missing required element: Signature.type']); }
-    if (this["type"]) { this.type.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["when"]) { results.push(["when",'Missing required element: Signature.when']); }
-    if (this["_when"]) { results.push(...this._when.doModelValidation()); }
-    if (!this["who"]) { results.push(["who",'Missing required element: Signature.who']); }
-    if (this["who"]) { results.push(...this.who.doModelValidation()); }
-    if (this["onBehalfOf"]) { results.push(...this.onBehalfOf.doModelValidation()); }
-    if (this["_targetFormat"]) { results.push(...this._targetFormat.doModelValidation()); }
-    if (this["_sigFormat"]) { results.push(...this._sigFormat.doModelValidation()); }
-    if (this["_data"]) { results.push(...this._data.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.Coding[] fhir: Signature.type:Coding", }));
+    } else if (!Array.isArray(this.type)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property type:fhir.Coding[] fhir: Signature.type:Coding", }));
+    } else if (this.type.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.Coding[] fhir: Signature.type:Coding", }));
+    }
+    if (this["type"]) { this.type.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['when']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property when:fhir.FhirInstant fhir: Signature.when:instant", }));
+    }
+    if (this["when"]) { outcome.issue!.push(...this.when.doModelValidation().issue!); }
+    if (!this['who']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property who:fhir.Reference fhir: Signature.who:Reference", }));
+    }
+    if (this["who"]) { outcome.issue!.push(...this.who.doModelValidation().issue!); }
+    if (this["onBehalfOf"]) { outcome.issue!.push(...this.onBehalfOf.doModelValidation().issue!); }
+    if (this["targetFormat"]) { outcome.issue!.push(...this.targetFormat.doModelValidation().issue!); }
+    if (this["sigFormat"]) { outcome.issue!.push(...this.sigFormat.doModelValidation().issue!); }
+    if (this["data"]) { outcome.issue!.push(...this.data.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

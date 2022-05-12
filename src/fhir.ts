@@ -2,348 +2,217 @@
 // Contents of: hl7.fhir.r4.core version: 4.0.1
 // Minimum TypeScript Version: 3.7
 
-import { IFhirElement, FhirElement } from './fhir/FhirElement.js';
-import { ICoding, Coding } from './fhir/Coding.js';
-import { IAddress, Address } from './fhir/Address.js';
-import { IQuantity, Quantity } from './fhir/Quantity.js';
-import { IAge, Age } from './fhir/Age.js';
-import { IAnnotation, Annotation } from './fhir/Annotation.js';
-import { IAttachment, Attachment } from './fhir/Attachment.js';
-import { IBackboneElement, BackboneElement } from './fhir/BackboneElement.js';
-import { ICodeableConcept, CodeableConcept } from './fhir/CodeableConcept.js';
-import { IContactDetail, ContactDetail } from './fhir/ContactDetail.js';
-import { IContactPoint, ContactPoint } from './fhir/ContactPoint.js';
-import { IContributor, Contributor } from './fhir/Contributor.js';
-import { ICount, Count } from './fhir/Count.js';
-import { IDataRequirement, DataRequirement, IDataRequirementCodeFilter, DataRequirementCodeFilter, IDataRequirementDateFilter, DataRequirementDateFilter, IDataRequirementSort, DataRequirementSort } from './fhir/DataRequirement.js';
-import { IDistance, Distance } from './fhir/Distance.js';
-import { IDosage, Dosage, IDosageDoseAndRate, DosageDoseAndRate } from './fhir/Dosage.js';
-import { IDuration, Duration } from './fhir/Duration.js';
-import { IElementDefinition, ElementDefinition, IElementDefinitionSlicing, ElementDefinitionSlicing, IElementDefinitionSlicingDiscriminator, ElementDefinitionSlicingDiscriminator, IElementDefinitionBase, ElementDefinitionBase, IElementDefinitionType, ElementDefinitionType, IElementDefinitionExample, ElementDefinitionExample, IElementDefinitionConstraint, ElementDefinitionConstraint, IElementDefinitionBinding, ElementDefinitionBinding, IElementDefinitionMapping, ElementDefinitionMapping } from './fhir/ElementDefinition.js';
-import { IExpression, Expression } from './fhir/Expression.js';
-import { IExtension, Extension } from './fhir/Extension.js';
-import { IHumanName, HumanName } from './fhir/HumanName.js';
-import { IIdentifier, Identifier } from './fhir/Identifier.js';
-import { IMarketingStatus, MarketingStatus } from './fhir/MarketingStatus.js';
-import { IMeta, Meta } from './fhir/Meta.js';
-import { IMoney, Money } from './fhir/Money.js';
-import { INarrative, Narrative } from './fhir/Narrative.js';
-import { IParameterDefinition, ParameterDefinition } from './fhir/ParameterDefinition.js';
-import { IPeriod, Period } from './fhir/Period.js';
-import { IPopulation, Population } from './fhir/Population.js';
-import { IProdCharacteristic, ProdCharacteristic } from './fhir/ProdCharacteristic.js';
-import { IProductShelfLife, ProductShelfLife } from './fhir/ProductShelfLife.js';
-import { IRange, Range } from './fhir/Range.js';
-import { IRatio, Ratio } from './fhir/Ratio.js';
-import { IReference, Reference } from './fhir/Reference.js';
-import { IRelatedArtifact, RelatedArtifact } from './fhir/RelatedArtifact.js';
-import { ISampledData, SampledData } from './fhir/SampledData.js';
-import { ISignature, Signature } from './fhir/Signature.js';
-import { ISubstanceAmount, SubstanceAmount, ISubstanceAmountReferenceRange, SubstanceAmountReferenceRange } from './fhir/SubstanceAmount.js';
-import { ITiming, Timing, ITimingRepeat, TimingRepeat } from './fhir/Timing.js';
-import { ITriggerDefinition, TriggerDefinition } from './fhir/TriggerDefinition.js';
-import { IUsageContext, UsageContext } from './fhir/UsageContext.js';
-import { IResource, Resource } from './fhir/Resource.js';
-import { IDomainResource, DomainResource } from './fhir/DomainResource.js';
-import { IAccount, Account, IAccountCoverage, AccountCoverage, IAccountGuarantor, AccountGuarantor } from './fhir/Account.js';
-import { IActivityDefinition, ActivityDefinition, IActivityDefinitionParticipant, ActivityDefinitionParticipant, IActivityDefinitionDynamicValue, ActivityDefinitionDynamicValue } from './fhir/ActivityDefinition.js';
-import { IAdverseEvent, AdverseEvent, IAdverseEventSuspectEntity, AdverseEventSuspectEntity, IAdverseEventSuspectEntityCausality, AdverseEventSuspectEntityCausality } from './fhir/AdverseEvent.js';
-import { IAllergyIntolerance, AllergyIntolerance, IAllergyIntoleranceReaction, AllergyIntoleranceReaction } from './fhir/AllergyIntolerance.js';
-import { IAppointment, Appointment, IAppointmentParticipant, AppointmentParticipant } from './fhir/Appointment.js';
-import { IAppointmentResponse, AppointmentResponse } from './fhir/AppointmentResponse.js';
-import { IAuditEvent, AuditEvent, IAuditEventAgent, AuditEventAgent, IAuditEventAgentNetwork, AuditEventAgentNetwork, IAuditEventSource, AuditEventSource, IAuditEventEntity, AuditEventEntity, IAuditEventEntityDetail, AuditEventEntityDetail } from './fhir/AuditEvent.js';
-import { IBasic, Basic } from './fhir/Basic.js';
-import { IBinary, Binary } from './fhir/Binary.js';
-import { IBiologicallyDerivedProduct, BiologicallyDerivedProduct, IBiologicallyDerivedProductCollection, BiologicallyDerivedProductCollection, IBiologicallyDerivedProductProcessing, BiologicallyDerivedProductProcessing, IBiologicallyDerivedProductManipulation, BiologicallyDerivedProductManipulation, IBiologicallyDerivedProductStorage, BiologicallyDerivedProductStorage } from './fhir/BiologicallyDerivedProduct.js';
-import { IBodyStructure, BodyStructure } from './fhir/BodyStructure.js';
-import { IBundle, Bundle, IBundleLink, BundleLink, IBundleEntry, BundleEntry, IBundleEntrySearch, BundleEntrySearch, IBundleEntryRequest, BundleEntryRequest, IBundleEntryResponse, BundleEntryResponse } from './fhir/Bundle.js';
-import { ICapabilityStatement, CapabilityStatement, ICapabilityStatementSoftware, CapabilityStatementSoftware, ICapabilityStatementImplementation, CapabilityStatementImplementation, ICapabilityStatementRest, CapabilityStatementRest, ICapabilityStatementRestSecurity, CapabilityStatementRestSecurity, ICapabilityStatementRestResource, CapabilityStatementRestResource, ICapabilityStatementRestResourceInteraction, CapabilityStatementRestResourceInteraction, ICapabilityStatementRestResourceSearchParam, CapabilityStatementRestResourceSearchParam, ICapabilityStatementRestResourceOperation, CapabilityStatementRestResourceOperation, ICapabilityStatementRestInteraction, CapabilityStatementRestInteraction, ICapabilityStatementMessaging, CapabilityStatementMessaging, ICapabilityStatementMessagingEndpoint, CapabilityStatementMessagingEndpoint, ICapabilityStatementMessagingSupportedMessage, CapabilityStatementMessagingSupportedMessage, ICapabilityStatementDocument, CapabilityStatementDocument } from './fhir/CapabilityStatement.js';
-import { ICarePlan, CarePlan, ICarePlanActivity, CarePlanActivity, ICarePlanActivityDetail, CarePlanActivityDetail } from './fhir/CarePlan.js';
-import { ICareTeam, CareTeam, ICareTeamParticipant, CareTeamParticipant } from './fhir/CareTeam.js';
-import { ICatalogEntry, CatalogEntry, ICatalogEntryRelatedEntry, CatalogEntryRelatedEntry } from './fhir/CatalogEntry.js';
-import { IChargeItem, ChargeItem, IChargeItemPerformer, ChargeItemPerformer } from './fhir/ChargeItem.js';
-import { IChargeItemDefinition, ChargeItemDefinition, IChargeItemDefinitionApplicability, ChargeItemDefinitionApplicability, IChargeItemDefinitionPropertyGroup, ChargeItemDefinitionPropertyGroup, IChargeItemDefinitionPropertyGroupPriceComponent, ChargeItemDefinitionPropertyGroupPriceComponent } from './fhir/ChargeItemDefinition.js';
-import { IClaim, Claim, IClaimRelated, ClaimRelated, IClaimPayee, ClaimPayee, IClaimCareTeam, ClaimCareTeam, IClaimSupportingInfo, ClaimSupportingInfo, IClaimDiagnosis, ClaimDiagnosis, IClaimProcedure, ClaimProcedure, IClaimInsurance, ClaimInsurance, IClaimAccident, ClaimAccident, IClaimItem, ClaimItem, IClaimItemDetail, ClaimItemDetail, IClaimItemDetailSubDetail, ClaimItemDetailSubDetail } from './fhir/Claim.js';
-import { IClaimResponse, ClaimResponse, IClaimResponseItem, ClaimResponseItem, IClaimResponseItemAdjudication, ClaimResponseItemAdjudication, IClaimResponseItemDetail, ClaimResponseItemDetail, IClaimResponseItemDetailSubDetail, ClaimResponseItemDetailSubDetail, IClaimResponseAddItem, ClaimResponseAddItem, IClaimResponseAddItemDetail, ClaimResponseAddItemDetail, IClaimResponseAddItemDetailSubDetail, ClaimResponseAddItemDetailSubDetail, IClaimResponseTotal, ClaimResponseTotal, IClaimResponsePayment, ClaimResponsePayment, IClaimResponseProcessNote, ClaimResponseProcessNote, IClaimResponseInsurance, ClaimResponseInsurance, IClaimResponseError, ClaimResponseError } from './fhir/ClaimResponse.js';
-import { IClinicalImpression, ClinicalImpression, IClinicalImpressionInvestigation, ClinicalImpressionInvestigation, IClinicalImpressionFinding, ClinicalImpressionFinding } from './fhir/ClinicalImpression.js';
-import { ICodeSystem, CodeSystem, ICodeSystemFilter, CodeSystemFilter, ICodeSystemProperty, CodeSystemProperty, ICodeSystemConcept, CodeSystemConcept, ICodeSystemConceptDesignation, CodeSystemConceptDesignation, ICodeSystemConceptProperty, CodeSystemConceptProperty } from './fhir/CodeSystem.js';
-import { ICommunication, Communication, ICommunicationPayload, CommunicationPayload } from './fhir/Communication.js';
-import { ICommunicationRequest, CommunicationRequest, ICommunicationRequestPayload, CommunicationRequestPayload } from './fhir/CommunicationRequest.js';
-import { ICompartmentDefinition, CompartmentDefinition, ICompartmentDefinitionResource, CompartmentDefinitionResource } from './fhir/CompartmentDefinition.js';
-import { IComposition, Composition, ICompositionAttester, CompositionAttester, ICompositionRelatesTo, CompositionRelatesTo, ICompositionEvent, CompositionEvent, ICompositionSection, CompositionSection } from './fhir/Composition.js';
-import { IConceptMap, ConceptMap, IConceptMapGroup, ConceptMapGroup, IConceptMapGroupElement, ConceptMapGroupElement, IConceptMapGroupElementTarget, ConceptMapGroupElementTarget, IConceptMapGroupElementTargetDependsOn, ConceptMapGroupElementTargetDependsOn, IConceptMapGroupUnmapped, ConceptMapGroupUnmapped } from './fhir/ConceptMap.js';
-import { ICondition, Condition, IConditionStage, ConditionStage, IConditionEvidence, ConditionEvidence } from './fhir/Condition.js';
-import { IConsent, Consent, IConsentPolicy, ConsentPolicy, IConsentVerification, ConsentVerification, IConsentProvision, ConsentProvision, IConsentProvisionActor, ConsentProvisionActor, IConsentProvisionData, ConsentProvisionData } from './fhir/Consent.js';
-import { IContract, Contract, IContractContentDefinition, ContractContentDefinition, IContractTerm, ContractTerm, IContractTermSecurityLabel, ContractTermSecurityLabel, IContractTermOffer, ContractTermOffer, IContractTermOfferParty, ContractTermOfferParty, IContractTermOfferAnswer, ContractTermOfferAnswer, IContractTermAsset, ContractTermAsset, IContractTermAssetContext, ContractTermAssetContext, IContractTermAssetValuedItem, ContractTermAssetValuedItem, IContractTermAction, ContractTermAction, IContractTermActionSubject, ContractTermActionSubject, IContractSigner, ContractSigner, IContractFriendly, ContractFriendly, IContractLegal, ContractLegal, IContractRule, ContractRule } from './fhir/Contract.js';
-import { ICoverage, Coverage, ICoverageClass, CoverageClass, ICoverageCostToBeneficiary, CoverageCostToBeneficiary, ICoverageCostToBeneficiaryException, CoverageCostToBeneficiaryException } from './fhir/Coverage.js';
-import { ICoverageEligibilityRequest, CoverageEligibilityRequest, ICoverageEligibilityRequestSupportingInfo, CoverageEligibilityRequestSupportingInfo, ICoverageEligibilityRequestInsurance, CoverageEligibilityRequestInsurance, ICoverageEligibilityRequestItem, CoverageEligibilityRequestItem, ICoverageEligibilityRequestItemDiagnosis, CoverageEligibilityRequestItemDiagnosis } from './fhir/CoverageEligibilityRequest.js';
-import { ICoverageEligibilityResponse, CoverageEligibilityResponse, ICoverageEligibilityResponseInsurance, CoverageEligibilityResponseInsurance, ICoverageEligibilityResponseInsuranceItem, CoverageEligibilityResponseInsuranceItem, ICoverageEligibilityResponseInsuranceItemBenefit, CoverageEligibilityResponseInsuranceItemBenefit, ICoverageEligibilityResponseError, CoverageEligibilityResponseError } from './fhir/CoverageEligibilityResponse.js';
-import { IDetectedIssue, DetectedIssue, IDetectedIssueEvidence, DetectedIssueEvidence, IDetectedIssueMitigation, DetectedIssueMitigation } from './fhir/DetectedIssue.js';
-import { IDevice, Device, IDeviceUdiCarrier, DeviceUdiCarrier, IDeviceDeviceName, DeviceDeviceName, IDeviceSpecialization, DeviceSpecialization, IDeviceVersion, DeviceVersion, IDeviceProperty, DeviceProperty } from './fhir/Device.js';
-import { IDeviceDefinition, DeviceDefinition, IDeviceDefinitionUdiDeviceIdentifier, DeviceDefinitionUdiDeviceIdentifier, IDeviceDefinitionDeviceName, DeviceDefinitionDeviceName, IDeviceDefinitionSpecialization, DeviceDefinitionSpecialization, IDeviceDefinitionCapability, DeviceDefinitionCapability, IDeviceDefinitionProperty, DeviceDefinitionProperty, IDeviceDefinitionMaterial, DeviceDefinitionMaterial } from './fhir/DeviceDefinition.js';
-import { IDeviceMetric, DeviceMetric, IDeviceMetricCalibration, DeviceMetricCalibration } from './fhir/DeviceMetric.js';
-import { IDeviceRequest, DeviceRequest, IDeviceRequestParameter, DeviceRequestParameter } from './fhir/DeviceRequest.js';
-import { IDeviceUseStatement, DeviceUseStatement } from './fhir/DeviceUseStatement.js';
-import { IDiagnosticReport, DiagnosticReport, IDiagnosticReportMedia, DiagnosticReportMedia } from './fhir/DiagnosticReport.js';
-import { IDocumentManifest, DocumentManifest, IDocumentManifestRelated, DocumentManifestRelated } from './fhir/DocumentManifest.js';
-import { IDocumentReference, DocumentReference, IDocumentReferenceRelatesTo, DocumentReferenceRelatesTo, IDocumentReferenceContent, DocumentReferenceContent, IDocumentReferenceContext, DocumentReferenceContext } from './fhir/DocumentReference.js';
-import { IEffectEvidenceSynthesis, EffectEvidenceSynthesis, IEffectEvidenceSynthesisSampleSize, EffectEvidenceSynthesisSampleSize, IEffectEvidenceSynthesisResultsByExposure, EffectEvidenceSynthesisResultsByExposure, IEffectEvidenceSynthesisEffectEstimate, EffectEvidenceSynthesisEffectEstimate, IEffectEvidenceSynthesisEffectEstimatePrecisionEstimate, EffectEvidenceSynthesisEffectEstimatePrecisionEstimate, IEffectEvidenceSynthesisCertainty, EffectEvidenceSynthesisCertainty, IEffectEvidenceSynthesisCertaintyCertaintySubcomponent, EffectEvidenceSynthesisCertaintyCertaintySubcomponent } from './fhir/EffectEvidenceSynthesis.js';
-import { IEncounter, Encounter, IEncounterStatusHistory, EncounterStatusHistory, IEncounterClassHistory, EncounterClassHistory, IEncounterParticipant, EncounterParticipant, IEncounterDiagnosis, EncounterDiagnosis, IEncounterHospitalization, EncounterHospitalization, IEncounterLocation, EncounterLocation } from './fhir/Encounter.js';
-import { IEndpoint, Endpoint } from './fhir/Endpoint.js';
-import { IEnrollmentRequest, EnrollmentRequest } from './fhir/EnrollmentRequest.js';
-import { IEnrollmentResponse, EnrollmentResponse } from './fhir/EnrollmentResponse.js';
-import { IEpisodeOfCare, EpisodeOfCare, IEpisodeOfCareStatusHistory, EpisodeOfCareStatusHistory, IEpisodeOfCareDiagnosis, EpisodeOfCareDiagnosis } from './fhir/EpisodeOfCare.js';
-import { IEventDefinition, EventDefinition } from './fhir/EventDefinition.js';
-import { IEvidence, Evidence } from './fhir/Evidence.js';
-import { IEvidenceVariable, EvidenceVariable, IEvidenceVariableCharacteristic, EvidenceVariableCharacteristic } from './fhir/EvidenceVariable.js';
-import { IExampleScenario, ExampleScenario, IExampleScenarioActor, ExampleScenarioActor, IExampleScenarioInstance, ExampleScenarioInstance, IExampleScenarioInstanceVersion, ExampleScenarioInstanceVersion, IExampleScenarioInstanceContainedInstance, ExampleScenarioInstanceContainedInstance, IExampleScenarioProcess, ExampleScenarioProcess, IExampleScenarioProcessStep, ExampleScenarioProcessStep, IExampleScenarioProcessStepOperation, ExampleScenarioProcessStepOperation, IExampleScenarioProcessStepAlternative, ExampleScenarioProcessStepAlternative } from './fhir/ExampleScenario.js';
-import { IExplanationOfBenefit, ExplanationOfBenefit, IExplanationOfBenefitRelated, ExplanationOfBenefitRelated, IExplanationOfBenefitPayee, ExplanationOfBenefitPayee, IExplanationOfBenefitCareTeam, ExplanationOfBenefitCareTeam, IExplanationOfBenefitSupportingInfo, ExplanationOfBenefitSupportingInfo, IExplanationOfBenefitDiagnosis, ExplanationOfBenefitDiagnosis, IExplanationOfBenefitProcedure, ExplanationOfBenefitProcedure, IExplanationOfBenefitInsurance, ExplanationOfBenefitInsurance, IExplanationOfBenefitAccident, ExplanationOfBenefitAccident, IExplanationOfBenefitItem, ExplanationOfBenefitItem, IExplanationOfBenefitItemAdjudication, ExplanationOfBenefitItemAdjudication, IExplanationOfBenefitItemDetail, ExplanationOfBenefitItemDetail, IExplanationOfBenefitItemDetailSubDetail, ExplanationOfBenefitItemDetailSubDetail, IExplanationOfBenefitAddItem, ExplanationOfBenefitAddItem, IExplanationOfBenefitAddItemDetail, ExplanationOfBenefitAddItemDetail, IExplanationOfBenefitAddItemDetailSubDetail, ExplanationOfBenefitAddItemDetailSubDetail, IExplanationOfBenefitTotal, ExplanationOfBenefitTotal, IExplanationOfBenefitPayment, ExplanationOfBenefitPayment, IExplanationOfBenefitProcessNote, ExplanationOfBenefitProcessNote, IExplanationOfBenefitBenefitBalance, ExplanationOfBenefitBenefitBalance, IExplanationOfBenefitBenefitBalanceFinancial, ExplanationOfBenefitBenefitBalanceFinancial } from './fhir/ExplanationOfBenefit.js';
-import { IFamilyMemberHistory, FamilyMemberHistory, IFamilyMemberHistoryCondition, FamilyMemberHistoryCondition } from './fhir/FamilyMemberHistory.js';
-import { IFlag, Flag } from './fhir/Flag.js';
-import { IGoal, Goal, IGoalTarget, GoalTarget } from './fhir/Goal.js';
-import { IGraphDefinition, GraphDefinition, IGraphDefinitionLink, GraphDefinitionLink, IGraphDefinitionLinkTarget, GraphDefinitionLinkTarget, IGraphDefinitionLinkTargetCompartment, GraphDefinitionLinkTargetCompartment } from './fhir/GraphDefinition.js';
-import { IGroup, Group, IGroupCharacteristic, GroupCharacteristic, IGroupMember, GroupMember } from './fhir/Group.js';
-import { IGuidanceResponse, GuidanceResponse } from './fhir/GuidanceResponse.js';
-import { IHealthcareService, HealthcareService, IHealthcareServiceEligibility, HealthcareServiceEligibility, IHealthcareServiceAvailableTime, HealthcareServiceAvailableTime, IHealthcareServiceNotAvailable, HealthcareServiceNotAvailable } from './fhir/HealthcareService.js';
-import { IImagingStudy, ImagingStudy, IImagingStudySeries, ImagingStudySeries, IImagingStudySeriesPerformer, ImagingStudySeriesPerformer, IImagingStudySeriesInstance, ImagingStudySeriesInstance } from './fhir/ImagingStudy.js';
-import { IImmunization, Immunization, IImmunizationPerformer, ImmunizationPerformer, IImmunizationEducation, ImmunizationEducation, IImmunizationReaction, ImmunizationReaction, IImmunizationProtocolApplied, ImmunizationProtocolApplied } from './fhir/Immunization.js';
-import { IImmunizationEvaluation, ImmunizationEvaluation } from './fhir/ImmunizationEvaluation.js';
-import { IImmunizationRecommendation, ImmunizationRecommendation, IImmunizationRecommendationRecommendation, ImmunizationRecommendationRecommendation, IImmunizationRecommendationRecommendationDateCriterion, ImmunizationRecommendationRecommendationDateCriterion } from './fhir/ImmunizationRecommendation.js';
-import { IImplementationGuide, ImplementationGuide, IImplementationGuideDependsOn, ImplementationGuideDependsOn, IImplementationGuideGlobal, ImplementationGuideGlobal, IImplementationGuideDefinition, ImplementationGuideDefinition, IImplementationGuideDefinitionGrouping, ImplementationGuideDefinitionGrouping, IImplementationGuideDefinitionResource, ImplementationGuideDefinitionResource, IImplementationGuideDefinitionPage, ImplementationGuideDefinitionPage, IImplementationGuideDefinitionParameter, ImplementationGuideDefinitionParameter, IImplementationGuideDefinitionTemplate, ImplementationGuideDefinitionTemplate, IImplementationGuideManifest, ImplementationGuideManifest, IImplementationGuideManifestResource, ImplementationGuideManifestResource, IImplementationGuideManifestPage, ImplementationGuideManifestPage } from './fhir/ImplementationGuide.js';
-import { IInsurancePlan, InsurancePlan, IInsurancePlanContact, InsurancePlanContact, IInsurancePlanCoverage, InsurancePlanCoverage, IInsurancePlanCoverageBenefit, InsurancePlanCoverageBenefit, IInsurancePlanCoverageBenefitLimit, InsurancePlanCoverageBenefitLimit, IInsurancePlanPlan, InsurancePlanPlan, IInsurancePlanPlanGeneralCost, InsurancePlanPlanGeneralCost, IInsurancePlanPlanSpecificCost, InsurancePlanPlanSpecificCost, IInsurancePlanPlanSpecificCostBenefit, InsurancePlanPlanSpecificCostBenefit, IInsurancePlanPlanSpecificCostBenefitCost, InsurancePlanPlanSpecificCostBenefitCost } from './fhir/InsurancePlan.js';
-import { IInvoice, Invoice, IInvoiceParticipant, InvoiceParticipant, IInvoiceLineItem, InvoiceLineItem, IInvoiceLineItemPriceComponent, InvoiceLineItemPriceComponent } from './fhir/Invoice.js';
-import { ILibrary, Library } from './fhir/Library.js';
-import { ILinkage, Linkage, ILinkageItem, LinkageItem } from './fhir/Linkage.js';
-import { IList, List, IListEntry, ListEntry } from './fhir/List.js';
-import { ILocation, Location, ILocationPosition, LocationPosition, ILocationHoursOfOperation, LocationHoursOfOperation } from './fhir/Location.js';
-import { IMeasure, Measure, IMeasureGroup, MeasureGroup, IMeasureGroupPopulation, MeasureGroupPopulation, IMeasureGroupStratifier, MeasureGroupStratifier, IMeasureGroupStratifierComponent, MeasureGroupStratifierComponent, IMeasureSupplementalData, MeasureSupplementalData } from './fhir/Measure.js';
-import { IMeasureReport, MeasureReport, IMeasureReportGroup, MeasureReportGroup, IMeasureReportGroupPopulation, MeasureReportGroupPopulation, IMeasureReportGroupStratifier, MeasureReportGroupStratifier, IMeasureReportGroupStratifierStratum, MeasureReportGroupStratifierStratum, IMeasureReportGroupStratifierStratumComponent, MeasureReportGroupStratifierStratumComponent, IMeasureReportGroupStratifierStratumPopulation, MeasureReportGroupStratifierStratumPopulation } from './fhir/MeasureReport.js';
-import { IMedia, Media } from './fhir/Media.js';
-import { IMedication, Medication, IMedicationIngredient, MedicationIngredient, IMedicationBatch, MedicationBatch } from './fhir/Medication.js';
-import { IMedicationAdministration, MedicationAdministration, IMedicationAdministrationPerformer, MedicationAdministrationPerformer, IMedicationAdministrationDosage, MedicationAdministrationDosage } from './fhir/MedicationAdministration.js';
-import { IMedicationDispense, MedicationDispense, IMedicationDispensePerformer, MedicationDispensePerformer, IMedicationDispenseSubstitution, MedicationDispenseSubstitution } from './fhir/MedicationDispense.js';
-import { IMedicationKnowledge, MedicationKnowledge, IMedicationKnowledgeRelatedMedicationKnowledge, MedicationKnowledgeRelatedMedicationKnowledge, IMedicationKnowledgeMonograph, MedicationKnowledgeMonograph, IMedicationKnowledgeIngredient, MedicationKnowledgeIngredient, IMedicationKnowledgeCost, MedicationKnowledgeCost, IMedicationKnowledgeMonitoringProgram, MedicationKnowledgeMonitoringProgram, IMedicationKnowledgeAdministrationGuidelines, MedicationKnowledgeAdministrationGuidelines, IMedicationKnowledgeAdministrationGuidelinesDosage, MedicationKnowledgeAdministrationGuidelinesDosage, IMedicationKnowledgeAdministrationGuidelinesPatientCharacteristics, MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics, IMedicationKnowledgeMedicineClassification, MedicationKnowledgeMedicineClassification, IMedicationKnowledgePackaging, MedicationKnowledgePackaging, IMedicationKnowledgeDrugCharacteristic, MedicationKnowledgeDrugCharacteristic, IMedicationKnowledgeRegulatory, MedicationKnowledgeRegulatory, IMedicationKnowledgeRegulatorySubstitution, MedicationKnowledgeRegulatorySubstitution, IMedicationKnowledgeRegulatorySchedule, MedicationKnowledgeRegulatorySchedule, IMedicationKnowledgeRegulatoryMaxDispense, MedicationKnowledgeRegulatoryMaxDispense, IMedicationKnowledgeKinetics, MedicationKnowledgeKinetics } from './fhir/MedicationKnowledge.js';
-import { IMedicationRequest, MedicationRequest, IMedicationRequestDispenseRequest, MedicationRequestDispenseRequest, IMedicationRequestDispenseRequestInitialFill, MedicationRequestDispenseRequestInitialFill, IMedicationRequestSubstitution, MedicationRequestSubstitution } from './fhir/MedicationRequest.js';
-import { IMedicationStatement, MedicationStatement } from './fhir/MedicationStatement.js';
-import { IMedicinalProduct, MedicinalProduct, IMedicinalProductName, MedicinalProductName, IMedicinalProductNameNamePart, MedicinalProductNameNamePart, IMedicinalProductNameCountryLanguage, MedicinalProductNameCountryLanguage, IMedicinalProductManufacturingBusinessOperation, MedicinalProductManufacturingBusinessOperation, IMedicinalProductSpecialDesignation, MedicinalProductSpecialDesignation } from './fhir/MedicinalProduct.js';
-import { IMedicinalProductAuthorization, MedicinalProductAuthorization, IMedicinalProductAuthorizationJurisdictionalAuthorization, MedicinalProductAuthorizationJurisdictionalAuthorization, IMedicinalProductAuthorizationProcedure, MedicinalProductAuthorizationProcedure } from './fhir/MedicinalProductAuthorization.js';
-import { IMedicinalProductContraindication, MedicinalProductContraindication, IMedicinalProductContraindicationOtherTherapy, MedicinalProductContraindicationOtherTherapy } from './fhir/MedicinalProductContraindication.js';
-import { IMedicinalProductIndication, MedicinalProductIndication, IMedicinalProductIndicationOtherTherapy, MedicinalProductIndicationOtherTherapy } from './fhir/MedicinalProductIndication.js';
-import { IMedicinalProductIngredient, MedicinalProductIngredient, IMedicinalProductIngredientSpecifiedSubstance, MedicinalProductIngredientSpecifiedSubstance, IMedicinalProductIngredientSpecifiedSubstanceStrength, MedicinalProductIngredientSpecifiedSubstanceStrength, IMedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength, MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength, IMedicinalProductIngredientSubstance, MedicinalProductIngredientSubstance } from './fhir/MedicinalProductIngredient.js';
-import { IMedicinalProductInteraction, MedicinalProductInteraction, IMedicinalProductInteractionInteractant, MedicinalProductInteractionInteractant } from './fhir/MedicinalProductInteraction.js';
-import { IMedicinalProductManufactured, MedicinalProductManufactured } from './fhir/MedicinalProductManufactured.js';
-import { IMedicinalProductPackaged, MedicinalProductPackaged, IMedicinalProductPackagedBatchIdentifier, MedicinalProductPackagedBatchIdentifier, IMedicinalProductPackagedPackageItem, MedicinalProductPackagedPackageItem } from './fhir/MedicinalProductPackaged.js';
-import { IMedicinalProductPharmaceutical, MedicinalProductPharmaceutical, IMedicinalProductPharmaceuticalCharacteristics, MedicinalProductPharmaceuticalCharacteristics, IMedicinalProductPharmaceuticalRouteOfAdministration, MedicinalProductPharmaceuticalRouteOfAdministration, IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies, IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod } from './fhir/MedicinalProductPharmaceutical.js';
-import { IMedicinalProductUndesirableEffect, MedicinalProductUndesirableEffect } from './fhir/MedicinalProductUndesirableEffect.js';
-import { IMessageDefinition, MessageDefinition, IMessageDefinitionFocus, MessageDefinitionFocus, IMessageDefinitionAllowedResponse, MessageDefinitionAllowedResponse } from './fhir/MessageDefinition.js';
-import { IMessageHeader, MessageHeader, IMessageHeaderDestination, MessageHeaderDestination, IMessageHeaderSource, MessageHeaderSource, IMessageHeaderResponse, MessageHeaderResponse } from './fhir/MessageHeader.js';
-import { IMolecularSequence, MolecularSequence, IMolecularSequenceReferenceSeq, MolecularSequenceReferenceSeq, IMolecularSequenceVariant, MolecularSequenceVariant, IMolecularSequenceQuality, MolecularSequenceQuality, IMolecularSequenceQualityRoc, MolecularSequenceQualityRoc, IMolecularSequenceRepository, MolecularSequenceRepository, IMolecularSequenceStructureVariant, MolecularSequenceStructureVariant, IMolecularSequenceStructureVariantOuter, MolecularSequenceStructureVariantOuter, IMolecularSequenceStructureVariantInner, MolecularSequenceStructureVariantInner } from './fhir/MolecularSequence.js';
-import { INamingSystem, NamingSystem, INamingSystemUniqueId, NamingSystemUniqueId } from './fhir/NamingSystem.js';
-import { INutritionOrder, NutritionOrder, INutritionOrderOralDiet, NutritionOrderOralDiet, INutritionOrderOralDietNutrient, NutritionOrderOralDietNutrient, INutritionOrderOralDietTexture, NutritionOrderOralDietTexture, INutritionOrderSupplement, NutritionOrderSupplement, INutritionOrderEnteralFormula, NutritionOrderEnteralFormula, INutritionOrderEnteralFormulaAdministration, NutritionOrderEnteralFormulaAdministration } from './fhir/NutritionOrder.js';
-import { IObservation, Observation, IObservationReferenceRange, ObservationReferenceRange, IObservationComponent, ObservationComponent } from './fhir/Observation.js';
-import { IObservationDefinition, ObservationDefinition, IObservationDefinitionQuantitativeDetails, ObservationDefinitionQuantitativeDetails, IObservationDefinitionQualifiedInterval, ObservationDefinitionQualifiedInterval } from './fhir/ObservationDefinition.js';
-import { IOperationDefinition, OperationDefinition, IOperationDefinitionParameter, OperationDefinitionParameter, IOperationDefinitionParameterBinding, OperationDefinitionParameterBinding, IOperationDefinitionParameterReferencedFrom, OperationDefinitionParameterReferencedFrom, IOperationDefinitionOverload, OperationDefinitionOverload } from './fhir/OperationDefinition.js';
-import { IOperationOutcome, OperationOutcome, IOperationOutcomeIssue, OperationOutcomeIssue } from './fhir/OperationOutcome.js';
-import { IOrganization, Organization, IOrganizationContact, OrganizationContact } from './fhir/Organization.js';
-import { IOrganizationAffiliation, OrganizationAffiliation } from './fhir/OrganizationAffiliation.js';
-import { IParameters, Parameters, IParametersParameter, ParametersParameter } from './fhir/Parameters.js';
-import { IPatient, Patient, IPatientContact, PatientContact, IPatientCommunication, PatientCommunication, IPatientLink, PatientLink } from './fhir/Patient.js';
-import { IPaymentNotice, PaymentNotice } from './fhir/PaymentNotice.js';
-import { IPaymentReconciliation, PaymentReconciliation, IPaymentReconciliationDetail, PaymentReconciliationDetail, IPaymentReconciliationProcessNote, PaymentReconciliationProcessNote } from './fhir/PaymentReconciliation.js';
-import { IPerson, Person, IPersonLink, PersonLink } from './fhir/Person.js';
-import { IPlanDefinition, PlanDefinition, IPlanDefinitionGoal, PlanDefinitionGoal, IPlanDefinitionGoalTarget, PlanDefinitionGoalTarget, IPlanDefinitionAction, PlanDefinitionAction, IPlanDefinitionActionCondition, PlanDefinitionActionCondition, IPlanDefinitionActionRelatedAction, PlanDefinitionActionRelatedAction, IPlanDefinitionActionParticipant, PlanDefinitionActionParticipant, IPlanDefinitionActionDynamicValue, PlanDefinitionActionDynamicValue } from './fhir/PlanDefinition.js';
-import { IPractitioner, Practitioner, IPractitionerQualification, PractitionerQualification } from './fhir/Practitioner.js';
-import { IPractitionerRole, PractitionerRole, IPractitionerRoleAvailableTime, PractitionerRoleAvailableTime, IPractitionerRoleNotAvailable, PractitionerRoleNotAvailable } from './fhir/PractitionerRole.js';
-import { IProcedure, Procedure, IProcedurePerformer, ProcedurePerformer, IProcedureFocalDevice, ProcedureFocalDevice } from './fhir/Procedure.js';
-import { IProvenance, Provenance, IProvenanceAgent, ProvenanceAgent, IProvenanceEntity, ProvenanceEntity } from './fhir/Provenance.js';
-import { IQuestionnaire, Questionnaire, IQuestionnaireItem, QuestionnaireItem, IQuestionnaireItemEnableWhen, QuestionnaireItemEnableWhen, IQuestionnaireItemAnswerOption, QuestionnaireItemAnswerOption, IQuestionnaireItemInitial, QuestionnaireItemInitial } from './fhir/Questionnaire.js';
-import { IQuestionnaireResponse, QuestionnaireResponse, IQuestionnaireResponseItem, QuestionnaireResponseItem, IQuestionnaireResponseItemAnswer, QuestionnaireResponseItemAnswer } from './fhir/QuestionnaireResponse.js';
-import { IRelatedPerson, RelatedPerson, IRelatedPersonCommunication, RelatedPersonCommunication } from './fhir/RelatedPerson.js';
-import { IRequestGroup, RequestGroup, IRequestGroupAction, RequestGroupAction, IRequestGroupActionCondition, RequestGroupActionCondition, IRequestGroupActionRelatedAction, RequestGroupActionRelatedAction } from './fhir/RequestGroup.js';
-import { IResearchDefinition, ResearchDefinition } from './fhir/ResearchDefinition.js';
-import { IResearchElementDefinition, ResearchElementDefinition, IResearchElementDefinitionCharacteristic, ResearchElementDefinitionCharacteristic } from './fhir/ResearchElementDefinition.js';
-import { IResearchStudy, ResearchStudy, IResearchStudyArm, ResearchStudyArm, IResearchStudyObjective, ResearchStudyObjective } from './fhir/ResearchStudy.js';
-import { IResearchSubject, ResearchSubject } from './fhir/ResearchSubject.js';
-import { IRiskAssessment, RiskAssessment, IRiskAssessmentPrediction, RiskAssessmentPrediction } from './fhir/RiskAssessment.js';
-import { IRiskEvidenceSynthesis, RiskEvidenceSynthesis, IRiskEvidenceSynthesisSampleSize, RiskEvidenceSynthesisSampleSize, IRiskEvidenceSynthesisRiskEstimate, RiskEvidenceSynthesisRiskEstimate, IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate, RiskEvidenceSynthesisRiskEstimatePrecisionEstimate, IRiskEvidenceSynthesisCertainty, RiskEvidenceSynthesisCertainty, IRiskEvidenceSynthesisCertaintyCertaintySubcomponent, RiskEvidenceSynthesisCertaintyCertaintySubcomponent } from './fhir/RiskEvidenceSynthesis.js';
-import { ISchedule, Schedule } from './fhir/Schedule.js';
-import { ISearchParameter, SearchParameter, ISearchParameterComponent, SearchParameterComponent } from './fhir/SearchParameter.js';
-import { IServiceRequest, ServiceRequest } from './fhir/ServiceRequest.js';
-import { ISlot, Slot } from './fhir/Slot.js';
-import { ISpecimen, Specimen, ISpecimenCollection, SpecimenCollection, ISpecimenProcessing, SpecimenProcessing, ISpecimenContainer, SpecimenContainer } from './fhir/Specimen.js';
-import { ISpecimenDefinition, SpecimenDefinition, ISpecimenDefinitionTypeTested, SpecimenDefinitionTypeTested, ISpecimenDefinitionTypeTestedContainer, SpecimenDefinitionTypeTestedContainer, ISpecimenDefinitionTypeTestedContainerAdditive, SpecimenDefinitionTypeTestedContainerAdditive, ISpecimenDefinitionTypeTestedHandling, SpecimenDefinitionTypeTestedHandling } from './fhir/SpecimenDefinition.js';
-import { IStructureDefinition, StructureDefinition, IStructureDefinitionMapping, StructureDefinitionMapping, IStructureDefinitionContext, StructureDefinitionContext, IStructureDefinitionSnapshot, StructureDefinitionSnapshot, IStructureDefinitionDifferential, StructureDefinitionDifferential } from './fhir/StructureDefinition.js';
-import { IStructureMap, StructureMap, IStructureMapStructure, StructureMapStructure, IStructureMapGroup, StructureMapGroup, IStructureMapGroupInput, StructureMapGroupInput, IStructureMapGroupRule, StructureMapGroupRule, IStructureMapGroupRuleSource, StructureMapGroupRuleSource, IStructureMapGroupRuleTarget, StructureMapGroupRuleTarget, IStructureMapGroupRuleTargetParameter, StructureMapGroupRuleTargetParameter, IStructureMapGroupRuleDependent, StructureMapGroupRuleDependent } from './fhir/StructureMap.js';
-import { ISubscription, Subscription, ISubscriptionChannel, SubscriptionChannel } from './fhir/Subscription.js';
-import { ISubstance, Substance, ISubstanceInstance, SubstanceInstance, ISubstanceIngredient, SubstanceIngredient } from './fhir/Substance.js';
-import { ISubstanceNucleicAcid, SubstanceNucleicAcid, ISubstanceNucleicAcidSubunit, SubstanceNucleicAcidSubunit, ISubstanceNucleicAcidSubunitLinkage, SubstanceNucleicAcidSubunitLinkage, ISubstanceNucleicAcidSubunitSugar, SubstanceNucleicAcidSubunitSugar } from './fhir/SubstanceNucleicAcid.js';
-import { ISubstancePolymer, SubstancePolymer, ISubstancePolymerMonomerSet, SubstancePolymerMonomerSet, ISubstancePolymerMonomerSetStartingMaterial, SubstancePolymerMonomerSetStartingMaterial, ISubstancePolymerRepeat, SubstancePolymerRepeat, ISubstancePolymerRepeatRepeatUnit, SubstancePolymerRepeatRepeatUnit, ISubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation, SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation, ISubstancePolymerRepeatRepeatUnitStructuralRepresentation, SubstancePolymerRepeatRepeatUnitStructuralRepresentation } from './fhir/SubstancePolymer.js';
-import { ISubstanceProtein, SubstanceProtein, ISubstanceProteinSubunit, SubstanceProteinSubunit } from './fhir/SubstanceProtein.js';
-import { ISubstanceReferenceInformation, SubstanceReferenceInformation, ISubstanceReferenceInformationGene, SubstanceReferenceInformationGene, ISubstanceReferenceInformationGeneElement, SubstanceReferenceInformationGeneElement, ISubstanceReferenceInformationClassification, SubstanceReferenceInformationClassification, ISubstanceReferenceInformationTarget, SubstanceReferenceInformationTarget } from './fhir/SubstanceReferenceInformation.js';
-import { ISubstanceSourceMaterial, SubstanceSourceMaterial, ISubstanceSourceMaterialFractionDescription, SubstanceSourceMaterialFractionDescription, ISubstanceSourceMaterialOrganism, SubstanceSourceMaterialOrganism, ISubstanceSourceMaterialOrganismAuthor, SubstanceSourceMaterialOrganismAuthor, ISubstanceSourceMaterialOrganismHybrid, SubstanceSourceMaterialOrganismHybrid, ISubstanceSourceMaterialOrganismOrganismGeneral, SubstanceSourceMaterialOrganismOrganismGeneral, ISubstanceSourceMaterialPartDescription, SubstanceSourceMaterialPartDescription } from './fhir/SubstanceSourceMaterial.js';
-import { ISubstanceSpecification, SubstanceSpecification, ISubstanceSpecificationMoiety, SubstanceSpecificationMoiety, ISubstanceSpecificationProperty, SubstanceSpecificationProperty, ISubstanceSpecificationStructure, SubstanceSpecificationStructure, ISubstanceSpecificationStructureIsotope, SubstanceSpecificationStructureIsotope, ISubstanceSpecificationStructureIsotopeMolecularWeight, SubstanceSpecificationStructureIsotopeMolecularWeight, ISubstanceSpecificationStructureRepresentation, SubstanceSpecificationStructureRepresentation, ISubstanceSpecificationCode, SubstanceSpecificationCode, ISubstanceSpecificationName, SubstanceSpecificationName, ISubstanceSpecificationNameOfficial, SubstanceSpecificationNameOfficial, ISubstanceSpecificationRelationship, SubstanceSpecificationRelationship } from './fhir/SubstanceSpecification.js';
-import { ISupplyDelivery, SupplyDelivery, ISupplyDeliverySuppliedItem, SupplyDeliverySuppliedItem } from './fhir/SupplyDelivery.js';
-import { ISupplyRequest, SupplyRequest, ISupplyRequestParameter, SupplyRequestParameter } from './fhir/SupplyRequest.js';
-import { ITask, Task, ITaskRestriction, TaskRestriction, ITaskInput, TaskInput, ITaskOutput, TaskOutput } from './fhir/Task.js';
-import { ITerminologyCapabilities, TerminologyCapabilities, ITerminologyCapabilitiesSoftware, TerminologyCapabilitiesSoftware, ITerminologyCapabilitiesImplementation, TerminologyCapabilitiesImplementation, ITerminologyCapabilitiesCodeSystem, TerminologyCapabilitiesCodeSystem, ITerminologyCapabilitiesCodeSystemVersion, TerminologyCapabilitiesCodeSystemVersion, ITerminologyCapabilitiesCodeSystemVersionFilter, TerminologyCapabilitiesCodeSystemVersionFilter, ITerminologyCapabilitiesExpansion, TerminologyCapabilitiesExpansion, ITerminologyCapabilitiesExpansionParameter, TerminologyCapabilitiesExpansionParameter, ITerminologyCapabilitiesValidateCode, TerminologyCapabilitiesValidateCode, ITerminologyCapabilitiesTranslation, TerminologyCapabilitiesTranslation, ITerminologyCapabilitiesClosure, TerminologyCapabilitiesClosure } from './fhir/TerminologyCapabilities.js';
-import { ITestReport, TestReport, ITestReportParticipant, TestReportParticipant, ITestReportSetup, TestReportSetup, ITestReportSetupAction, TestReportSetupAction, ITestReportSetupActionOperation, TestReportSetupActionOperation, ITestReportSetupActionAssert, TestReportSetupActionAssert, ITestReportTest, TestReportTest, ITestReportTestAction, TestReportTestAction, ITestReportTeardown, TestReportTeardown, ITestReportTeardownAction, TestReportTeardownAction } from './fhir/TestReport.js';
-import { ITestScript, TestScript, ITestScriptOrigin, TestScriptOrigin, ITestScriptDestination, TestScriptDestination, ITestScriptMetadata, TestScriptMetadata, ITestScriptMetadataLink, TestScriptMetadataLink, ITestScriptMetadataCapability, TestScriptMetadataCapability, ITestScriptFixture, TestScriptFixture, ITestScriptVariable, TestScriptVariable, ITestScriptSetup, TestScriptSetup, ITestScriptSetupAction, TestScriptSetupAction, ITestScriptSetupActionOperation, TestScriptSetupActionOperation, ITestScriptSetupActionOperationRequestHeader, TestScriptSetupActionOperationRequestHeader, ITestScriptSetupActionAssert, TestScriptSetupActionAssert, ITestScriptTest, TestScriptTest, ITestScriptTestAction, TestScriptTestAction, ITestScriptTeardown, TestScriptTeardown, ITestScriptTeardownAction, TestScriptTeardownAction } from './fhir/TestScript.js';
-import { IValueSet, ValueSet, IValueSetCompose, ValueSetCompose, IValueSetComposeInclude, ValueSetComposeInclude, IValueSetComposeIncludeConcept, ValueSetComposeIncludeConcept, IValueSetComposeIncludeConceptDesignation, ValueSetComposeIncludeConceptDesignation, IValueSetComposeIncludeFilter, ValueSetComposeIncludeFilter, IValueSetExpansion, ValueSetExpansion, IValueSetExpansionParameter, ValueSetExpansionParameter, IValueSetExpansionContains, ValueSetExpansionContains } from './fhir/ValueSet.js';
-import { IVerificationResult, VerificationResult, IVerificationResultPrimarySource, VerificationResultPrimarySource, IVerificationResultAttestation, VerificationResultAttestation, IVerificationResultValidator, VerificationResultValidator } from './fhir/VerificationResult.js';
-import { IVisionPrescription, VisionPrescription, IVisionPrescriptionLensSpecification, VisionPrescriptionLensSpecification, IVisionPrescriptionLensSpecificationPrism, VisionPrescriptionLensSpecificationPrism } from './fhir/VisionPrescription.js';
-
-/**
- * Resource binding for generic use.
- */
-type IFhirResource = 
- IAccount
- |IActivityDefinition
- |IAdverseEvent
- |IAllergyIntolerance
- |IAppointment
- |IAppointmentResponse
- |IAuditEvent
- |IBasic
- |IBinary
- |IBiologicallyDerivedProduct
- |IBodyStructure
- |IBundle
- |ICapabilityStatement
- |ICarePlan
- |ICareTeam
- |ICatalogEntry
- |IChargeItem
- |IChargeItemDefinition
- |IClaim
- |IClaimResponse
- |IClinicalImpression
- |ICodeSystem
- |ICommunication
- |ICommunicationRequest
- |ICompartmentDefinition
- |IComposition
- |IConceptMap
- |ICondition
- |IConsent
- |IContract
- |ICoverage
- |ICoverageEligibilityRequest
- |ICoverageEligibilityResponse
- |IDetectedIssue
- |IDevice
- |IDeviceDefinition
- |IDeviceMetric
- |IDeviceRequest
- |IDeviceUseStatement
- |IDiagnosticReport
- |IDocumentManifest
- |IDocumentReference
- |IDomainResource
- |IEffectEvidenceSynthesis
- |IEncounter
- |IEndpoint
- |IEnrollmentRequest
- |IEnrollmentResponse
- |IEpisodeOfCare
- |IEventDefinition
- |IEvidence
- |IEvidenceVariable
- |IExampleScenario
- |IExplanationOfBenefit
- |IFamilyMemberHistory
- |IFlag
- |IGoal
- |IGraphDefinition
- |IGroup
- |IGuidanceResponse
- |IHealthcareService
- |IImagingStudy
- |IImmunization
- |IImmunizationEvaluation
- |IImmunizationRecommendation
- |IImplementationGuide
- |IInsurancePlan
- |IInvoice
- |ILibrary
- |ILinkage
- |IList
- |ILocation
- |IMeasure
- |IMeasureReport
- |IMedia
- |IMedication
- |IMedicationAdministration
- |IMedicationDispense
- |IMedicationKnowledge
- |IMedicationRequest
- |IMedicationStatement
- |IMedicinalProduct
- |IMedicinalProductAuthorization
- |IMedicinalProductContraindication
- |IMedicinalProductIndication
- |IMedicinalProductIngredient
- |IMedicinalProductInteraction
- |IMedicinalProductManufactured
- |IMedicinalProductPackaged
- |IMedicinalProductPharmaceutical
- |IMedicinalProductUndesirableEffect
- |IMessageDefinition
- |IMessageHeader
- |IMolecularSequence
- |INamingSystem
- |INutritionOrder
- |IObservation
- |IObservationDefinition
- |IOperationDefinition
- |IOperationOutcome
- |IOrganization
- |IOrganizationAffiliation
- |IParameters
- |IPatient
- |IPaymentNotice
- |IPaymentReconciliation
- |IPerson
- |IPlanDefinition
- |IPractitioner
- |IPractitionerRole
- |IProcedure
- |IProvenance
- |IQuestionnaire
- |IQuestionnaireResponse
- |IRelatedPerson
- |IRequestGroup
- |IResearchDefinition
- |IResearchElementDefinition
- |IResearchStudy
- |IResearchSubject
- |IResource
- |IRiskAssessment
- |IRiskEvidenceSynthesis
- |ISchedule
- |ISearchParameter
- |IServiceRequest
- |ISlot
- |ISpecimen
- |ISpecimenDefinition
- |IStructureDefinition
- |IStructureMap
- |ISubscription
- |ISubstance
- |ISubstanceNucleicAcid
- |ISubstancePolymer
- |ISubstanceProtein
- |ISubstanceReferenceInformation
- |ISubstanceSourceMaterial
- |ISubstanceSpecification
- |ISupplyDelivery
- |ISupplyRequest
- |ITask
- |ITerminologyCapabilities
- |ITestReport
- |ITestScript
- |IValueSet
- |IVerificationResult
- |IVisionPrescription;
+import { FhirBaseArgs, FhirBase } from './fhir/FhirBase.js';
+import { FhirPrimitiveArgs, FhirPrimitive } from './fhir/FhirPrimitive.js';
+import { FhirBase64BinaryArgs, FhirBase64Binary } from './fhir/FhirBase64Binary.js';
+import { FhirBooleanArgs, FhirBoolean } from './fhir/FhirBoolean.js';
+import { FhirCanonicalArgs, FhirCanonical } from './fhir/FhirCanonical.js';
+import { FhirCodeArgs, FhirCode } from './fhir/FhirCode.js';
+import { FhirDateArgs, FhirDate } from './fhir/FhirDate.js';
+import { FhirDateTimeArgs, FhirDateTime } from './fhir/FhirDateTime.js';
+import { FhirDecimalArgs, FhirDecimal } from './fhir/FhirDecimal.js';
+import { FhirIdArgs, FhirId } from './fhir/FhirId.js';
+import { FhirInstantArgs, FhirInstant } from './fhir/FhirInstant.js';
+import { FhirIntegerArgs, FhirInteger } from './fhir/FhirInteger.js';
+import { FhirMarkdownArgs, FhirMarkdown } from './fhir/FhirMarkdown.js';
+import { FhirOidArgs, FhirOid } from './fhir/FhirOid.js';
+import { FhirPositiveIntArgs, FhirPositiveInt } from './fhir/FhirPositiveInt.js';
+import { FhirStringArgs, FhirString } from './fhir/FhirString.js';
+import { FhirTimeArgs, FhirTime } from './fhir/FhirTime.js';
+import { FhirUnsignedIntArgs, FhirUnsignedInt } from './fhir/FhirUnsignedInt.js';
+import { FhirUriArgs, FhirUri } from './fhir/FhirUri.js';
+import { FhirUrlArgs, FhirUrl } from './fhir/FhirUrl.js';
+import { FhirUuidArgs, FhirUuid } from './fhir/FhirUuid.js';
+import { FhirXhtmlArgs, FhirXhtml } from './fhir/FhirXhtml.js';
+import { FhirElementArgs, FhirElement } from './fhir/FhirElement.js';
+import { CodingArgs, Coding } from './fhir/Coding.js';
+import { AddressArgs, Address } from './fhir/Address.js';
+import { QuantityArgs, Quantity } from './fhir/Quantity.js';
+import { AgeArgs, Age } from './fhir/Age.js';
+import { AnnotationArgs, Annotation } from './fhir/Annotation.js';
+import { AttachmentArgs, Attachment } from './fhir/Attachment.js';
+import { BackboneElementArgs, BackboneElement } from './fhir/BackboneElement.js';
+import { CodeableConceptArgs, CodeableConcept } from './fhir/CodeableConcept.js';
+import { ContactDetailArgs, ContactDetail } from './fhir/ContactDetail.js';
+import { ContactPointArgs, ContactPoint } from './fhir/ContactPoint.js';
+import { ContributorArgs, Contributor } from './fhir/Contributor.js';
+import { CountArgs, Count } from './fhir/Count.js';
+import { DataRequirementArgs, DataRequirement, DataRequirementCodeFilterArgs, DataRequirementCodeFilter, DataRequirementDateFilterArgs, DataRequirementDateFilter, DataRequirementSortArgs, DataRequirementSort } from './fhir/DataRequirement.js';
+import { DistanceArgs, Distance } from './fhir/Distance.js';
+import { DosageArgs, Dosage, DosageDoseAndRateArgs, DosageDoseAndRate } from './fhir/Dosage.js';
+import { DurationArgs, Duration } from './fhir/Duration.js';
+import { ElementDefinitionArgs, ElementDefinition, ElementDefinitionSlicingArgs, ElementDefinitionSlicing, ElementDefinitionSlicingDiscriminatorArgs, ElementDefinitionSlicingDiscriminator, ElementDefinitionBaseArgs, ElementDefinitionBase, ElementDefinitionTypeArgs, ElementDefinitionType, ElementDefinitionExampleArgs, ElementDefinitionExample, ElementDefinitionConstraintArgs, ElementDefinitionConstraint, ElementDefinitionBindingArgs, ElementDefinitionBinding, ElementDefinitionMappingArgs, ElementDefinitionMapping } from './fhir/ElementDefinition.js';
+import { ExpressionArgs, Expression } from './fhir/Expression.js';
+import { ExtensionArgs, Extension } from './fhir/Extension.js';
+import { HumanNameArgs, HumanName } from './fhir/HumanName.js';
+import { IdentifierArgs, Identifier } from './fhir/Identifier.js';
+import { MarketingStatusArgs, MarketingStatus } from './fhir/MarketingStatus.js';
+import { MetaArgs, Meta } from './fhir/Meta.js';
+import { MoneyArgs, Money } from './fhir/Money.js';
+import { NarrativeArgs, Narrative } from './fhir/Narrative.js';
+import { ParameterDefinitionArgs, ParameterDefinition } from './fhir/ParameterDefinition.js';
+import { PeriodArgs, Period } from './fhir/Period.js';
+import { PopulationArgs, Population } from './fhir/Population.js';
+import { ProdCharacteristicArgs, ProdCharacteristic } from './fhir/ProdCharacteristic.js';
+import { ProductShelfLifeArgs, ProductShelfLife } from './fhir/ProductShelfLife.js';
+import { RangeArgs, Range } from './fhir/Range.js';
+import { RatioArgs, Ratio } from './fhir/Ratio.js';
+import { ReferenceArgs, Reference } from './fhir/Reference.js';
+import { RelatedArtifactArgs, RelatedArtifact } from './fhir/RelatedArtifact.js';
+import { SampledDataArgs, SampledData } from './fhir/SampledData.js';
+import { SignatureArgs, Signature } from './fhir/Signature.js';
+import { SubstanceAmountArgs, SubstanceAmount, SubstanceAmountReferenceRangeArgs, SubstanceAmountReferenceRange } from './fhir/SubstanceAmount.js';
+import { TimingArgs, Timing, TimingRepeatArgs, TimingRepeat } from './fhir/Timing.js';
+import { TriggerDefinitionArgs, TriggerDefinition } from './fhir/TriggerDefinition.js';
+import { UsageContextArgs, UsageContext } from './fhir/UsageContext.js';
+import { ResourceArgs, Resource } from './fhir/Resource.js';
+import { DomainResourceArgs, DomainResource } from './fhir/DomainResource.js';
+import { AccountArgs, Account, AccountCoverageArgs, AccountCoverage, AccountGuarantorArgs, AccountGuarantor } from './fhir/Account.js';
+import { ActivityDefinitionArgs, ActivityDefinition, ActivityDefinitionParticipantArgs, ActivityDefinitionParticipant, ActivityDefinitionDynamicValueArgs, ActivityDefinitionDynamicValue } from './fhir/ActivityDefinition.js';
+import { AdverseEventArgs, AdverseEvent, AdverseEventSuspectEntityArgs, AdverseEventSuspectEntity, AdverseEventSuspectEntityCausalityArgs, AdverseEventSuspectEntityCausality } from './fhir/AdverseEvent.js';
+import { AllergyIntoleranceArgs, AllergyIntolerance, AllergyIntoleranceReactionArgs, AllergyIntoleranceReaction } from './fhir/AllergyIntolerance.js';
+import { AppointmentArgs, Appointment, AppointmentParticipantArgs, AppointmentParticipant } from './fhir/Appointment.js';
+import { AppointmentResponseArgs, AppointmentResponse } from './fhir/AppointmentResponse.js';
+import { AuditEventArgs, AuditEvent, AuditEventAgentArgs, AuditEventAgent, AuditEventAgentNetworkArgs, AuditEventAgentNetwork, AuditEventSourceArgs, AuditEventSource, AuditEventEntityArgs, AuditEventEntity, AuditEventEntityDetailArgs, AuditEventEntityDetail } from './fhir/AuditEvent.js';
+import { BasicArgs, Basic } from './fhir/Basic.js';
+import { BinaryArgs, Binary } from './fhir/Binary.js';
+import { BiologicallyDerivedProductArgs, BiologicallyDerivedProduct, BiologicallyDerivedProductCollectionArgs, BiologicallyDerivedProductCollection, BiologicallyDerivedProductProcessingArgs, BiologicallyDerivedProductProcessing, BiologicallyDerivedProductManipulationArgs, BiologicallyDerivedProductManipulation, BiologicallyDerivedProductStorageArgs, BiologicallyDerivedProductStorage } from './fhir/BiologicallyDerivedProduct.js';
+import { BodyStructureArgs, BodyStructure } from './fhir/BodyStructure.js';
+import { BundleArgs, Bundle, BundleLinkArgs, BundleLink, BundleEntryArgs, BundleEntry, BundleEntrySearchArgs, BundleEntrySearch, BundleEntryRequestArgs, BundleEntryRequest, BundleEntryResponseArgs, BundleEntryResponse } from './fhir/Bundle.js';
+import { CapabilityStatementArgs, CapabilityStatement, CapabilityStatementSoftwareArgs, CapabilityStatementSoftware, CapabilityStatementImplementationArgs, CapabilityStatementImplementation, CapabilityStatementRestArgs, CapabilityStatementRest, CapabilityStatementRestSecurityArgs, CapabilityStatementRestSecurity, CapabilityStatementRestResourceArgs, CapabilityStatementRestResource, CapabilityStatementRestResourceInteractionArgs, CapabilityStatementRestResourceInteraction, CapabilityStatementRestResourceSearchParamArgs, CapabilityStatementRestResourceSearchParam, CapabilityStatementRestResourceOperationArgs, CapabilityStatementRestResourceOperation, CapabilityStatementRestInteractionArgs, CapabilityStatementRestInteraction, CapabilityStatementMessagingArgs, CapabilityStatementMessaging, CapabilityStatementMessagingEndpointArgs, CapabilityStatementMessagingEndpoint, CapabilityStatementMessagingSupportedMessageArgs, CapabilityStatementMessagingSupportedMessage, CapabilityStatementDocumentArgs, CapabilityStatementDocument } from './fhir/CapabilityStatement.js';
+import { CarePlanArgs, CarePlan, CarePlanActivityArgs, CarePlanActivity, CarePlanActivityDetailArgs, CarePlanActivityDetail } from './fhir/CarePlan.js';
+import { CareTeamArgs, CareTeam, CareTeamParticipantArgs, CareTeamParticipant } from './fhir/CareTeam.js';
+import { CatalogEntryArgs, CatalogEntry, CatalogEntryRelatedEntryArgs, CatalogEntryRelatedEntry } from './fhir/CatalogEntry.js';
+import { ChargeItemArgs, ChargeItem, ChargeItemPerformerArgs, ChargeItemPerformer } from './fhir/ChargeItem.js';
+import { ChargeItemDefinitionArgs, ChargeItemDefinition, ChargeItemDefinitionApplicabilityArgs, ChargeItemDefinitionApplicability, ChargeItemDefinitionPropertyGroupArgs, ChargeItemDefinitionPropertyGroup, ChargeItemDefinitionPropertyGroupPriceComponentArgs, ChargeItemDefinitionPropertyGroupPriceComponent } from './fhir/ChargeItemDefinition.js';
+import { ClaimArgs, Claim, ClaimRelatedArgs, ClaimRelated, ClaimPayeeArgs, ClaimPayee, ClaimCareTeamArgs, ClaimCareTeam, ClaimSupportingInfoArgs, ClaimSupportingInfo, ClaimDiagnosisArgs, ClaimDiagnosis, ClaimProcedureArgs, ClaimProcedure, ClaimInsuranceArgs, ClaimInsurance, ClaimAccidentArgs, ClaimAccident, ClaimItemArgs, ClaimItem, ClaimItemDetailArgs, ClaimItemDetail, ClaimItemDetailSubDetailArgs, ClaimItemDetailSubDetail } from './fhir/Claim.js';
+import { ClaimResponseArgs, ClaimResponse, ClaimResponseItemArgs, ClaimResponseItem, ClaimResponseItemAdjudicationArgs, ClaimResponseItemAdjudication, ClaimResponseItemDetailArgs, ClaimResponseItemDetail, ClaimResponseItemDetailSubDetailArgs, ClaimResponseItemDetailSubDetail, ClaimResponseAddItemArgs, ClaimResponseAddItem, ClaimResponseAddItemDetailArgs, ClaimResponseAddItemDetail, ClaimResponseAddItemDetailSubDetailArgs, ClaimResponseAddItemDetailSubDetail, ClaimResponseTotalArgs, ClaimResponseTotal, ClaimResponsePaymentArgs, ClaimResponsePayment, ClaimResponseProcessNoteArgs, ClaimResponseProcessNote, ClaimResponseInsuranceArgs, ClaimResponseInsurance, ClaimResponseErrorArgs, ClaimResponseError } from './fhir/ClaimResponse.js';
+import { ClinicalImpressionArgs, ClinicalImpression, ClinicalImpressionInvestigationArgs, ClinicalImpressionInvestigation, ClinicalImpressionFindingArgs, ClinicalImpressionFinding } from './fhir/ClinicalImpression.js';
+import { CodeSystemArgs, CodeSystem, CodeSystemFilterArgs, CodeSystemFilter, CodeSystemPropertyArgs, CodeSystemProperty, CodeSystemConceptArgs, CodeSystemConcept, CodeSystemConceptDesignationArgs, CodeSystemConceptDesignation, CodeSystemConceptPropertyArgs, CodeSystemConceptProperty } from './fhir/CodeSystem.js';
+import { CommunicationArgs, Communication, CommunicationPayloadArgs, CommunicationPayload } from './fhir/Communication.js';
+import { CommunicationRequestArgs, CommunicationRequest, CommunicationRequestPayloadArgs, CommunicationRequestPayload } from './fhir/CommunicationRequest.js';
+import { CompartmentDefinitionArgs, CompartmentDefinition, CompartmentDefinitionResourceArgs, CompartmentDefinitionResource } from './fhir/CompartmentDefinition.js';
+import { CompositionArgs, Composition, CompositionAttesterArgs, CompositionAttester, CompositionRelatesToArgs, CompositionRelatesTo, CompositionEventArgs, CompositionEvent, CompositionSectionArgs, CompositionSection } from './fhir/Composition.js';
+import { ConceptMapArgs, ConceptMap, ConceptMapGroupArgs, ConceptMapGroup, ConceptMapGroupElementArgs, ConceptMapGroupElement, ConceptMapGroupElementTargetArgs, ConceptMapGroupElementTarget, ConceptMapGroupElementTargetDependsOnArgs, ConceptMapGroupElementTargetDependsOn, ConceptMapGroupUnmappedArgs, ConceptMapGroupUnmapped } from './fhir/ConceptMap.js';
+import { ConditionArgs, Condition, ConditionStageArgs, ConditionStage, ConditionEvidenceArgs, ConditionEvidence } from './fhir/Condition.js';
+import { ConsentArgs, Consent, ConsentPolicyArgs, ConsentPolicy, ConsentVerificationArgs, ConsentVerification, ConsentProvisionArgs, ConsentProvision, ConsentProvisionActorArgs, ConsentProvisionActor, ConsentProvisionDataArgs, ConsentProvisionData } from './fhir/Consent.js';
+import { ContractArgs, Contract, ContractContentDefinitionArgs, ContractContentDefinition, ContractTermArgs, ContractTerm, ContractTermSecurityLabelArgs, ContractTermSecurityLabel, ContractTermOfferArgs, ContractTermOffer, ContractTermOfferPartyArgs, ContractTermOfferParty, ContractTermOfferAnswerArgs, ContractTermOfferAnswer, ContractTermAssetArgs, ContractTermAsset, ContractTermAssetContextArgs, ContractTermAssetContext, ContractTermAssetValuedItemArgs, ContractTermAssetValuedItem, ContractTermActionArgs, ContractTermAction, ContractTermActionSubjectArgs, ContractTermActionSubject, ContractSignerArgs, ContractSigner, ContractFriendlyArgs, ContractFriendly, ContractLegalArgs, ContractLegal, ContractRuleArgs, ContractRule } from './fhir/Contract.js';
+import { CoverageArgs, Coverage, CoverageClassArgs, CoverageClass, CoverageCostToBeneficiaryArgs, CoverageCostToBeneficiary, CoverageCostToBeneficiaryExceptionArgs, CoverageCostToBeneficiaryException } from './fhir/Coverage.js';
+import { CoverageEligibilityRequestArgs, CoverageEligibilityRequest, CoverageEligibilityRequestSupportingInfoArgs, CoverageEligibilityRequestSupportingInfo, CoverageEligibilityRequestInsuranceArgs, CoverageEligibilityRequestInsurance, CoverageEligibilityRequestItemArgs, CoverageEligibilityRequestItem, CoverageEligibilityRequestItemDiagnosisArgs, CoverageEligibilityRequestItemDiagnosis } from './fhir/CoverageEligibilityRequest.js';
+import { CoverageEligibilityResponseArgs, CoverageEligibilityResponse, CoverageEligibilityResponseInsuranceArgs, CoverageEligibilityResponseInsurance, CoverageEligibilityResponseInsuranceItemArgs, CoverageEligibilityResponseInsuranceItem, CoverageEligibilityResponseInsuranceItemBenefitArgs, CoverageEligibilityResponseInsuranceItemBenefit, CoverageEligibilityResponseErrorArgs, CoverageEligibilityResponseError } from './fhir/CoverageEligibilityResponse.js';
+import { DetectedIssueArgs, DetectedIssue, DetectedIssueEvidenceArgs, DetectedIssueEvidence, DetectedIssueMitigationArgs, DetectedIssueMitigation } from './fhir/DetectedIssue.js';
+import { DeviceArgs, Device, DeviceUdiCarrierArgs, DeviceUdiCarrier, DeviceDeviceNameArgs, DeviceDeviceName, DeviceSpecializationArgs, DeviceSpecialization, DeviceVersionArgs, DeviceVersion, DevicePropertyArgs, DeviceProperty } from './fhir/Device.js';
+import { DeviceDefinitionArgs, DeviceDefinition, DeviceDefinitionUdiDeviceIdentifierArgs, DeviceDefinitionUdiDeviceIdentifier, DeviceDefinitionDeviceNameArgs, DeviceDefinitionDeviceName, DeviceDefinitionSpecializationArgs, DeviceDefinitionSpecialization, DeviceDefinitionCapabilityArgs, DeviceDefinitionCapability, DeviceDefinitionPropertyArgs, DeviceDefinitionProperty, DeviceDefinitionMaterialArgs, DeviceDefinitionMaterial } from './fhir/DeviceDefinition.js';
+import { DeviceMetricArgs, DeviceMetric, DeviceMetricCalibrationArgs, DeviceMetricCalibration } from './fhir/DeviceMetric.js';
+import { DeviceRequestArgs, DeviceRequest, DeviceRequestParameterArgs, DeviceRequestParameter } from './fhir/DeviceRequest.js';
+import { DeviceUseStatementArgs, DeviceUseStatement } from './fhir/DeviceUseStatement.js';
+import { DiagnosticReportArgs, DiagnosticReport, DiagnosticReportMediaArgs, DiagnosticReportMedia } from './fhir/DiagnosticReport.js';
+import { DocumentManifestArgs, DocumentManifest, DocumentManifestRelatedArgs, DocumentManifestRelated } from './fhir/DocumentManifest.js';
+import { DocumentReferenceArgs, DocumentReference, DocumentReferenceRelatesToArgs, DocumentReferenceRelatesTo, DocumentReferenceContentArgs, DocumentReferenceContent, DocumentReferenceContextArgs, DocumentReferenceContext } from './fhir/DocumentReference.js';
+import { EffectEvidenceSynthesisArgs, EffectEvidenceSynthesis, EffectEvidenceSynthesisSampleSizeArgs, EffectEvidenceSynthesisSampleSize, EffectEvidenceSynthesisResultsByExposureArgs, EffectEvidenceSynthesisResultsByExposure, EffectEvidenceSynthesisEffectEstimateArgs, EffectEvidenceSynthesisEffectEstimate, EffectEvidenceSynthesisEffectEstimatePrecisionEstimateArgs, EffectEvidenceSynthesisEffectEstimatePrecisionEstimate, EffectEvidenceSynthesisCertaintyArgs, EffectEvidenceSynthesisCertainty, EffectEvidenceSynthesisCertaintyCertaintySubcomponentArgs, EffectEvidenceSynthesisCertaintyCertaintySubcomponent } from './fhir/EffectEvidenceSynthesis.js';
+import { EncounterArgs, Encounter, EncounterStatusHistoryArgs, EncounterStatusHistory, EncounterClassHistoryArgs, EncounterClassHistory, EncounterParticipantArgs, EncounterParticipant, EncounterDiagnosisArgs, EncounterDiagnosis, EncounterHospitalizationArgs, EncounterHospitalization, EncounterLocationArgs, EncounterLocation } from './fhir/Encounter.js';
+import { EndpointArgs, Endpoint } from './fhir/Endpoint.js';
+import { EnrollmentRequestArgs, EnrollmentRequest } from './fhir/EnrollmentRequest.js';
+import { EnrollmentResponseArgs, EnrollmentResponse } from './fhir/EnrollmentResponse.js';
+import { EpisodeOfCareArgs, EpisodeOfCare, EpisodeOfCareStatusHistoryArgs, EpisodeOfCareStatusHistory, EpisodeOfCareDiagnosisArgs, EpisodeOfCareDiagnosis } from './fhir/EpisodeOfCare.js';
+import { EventDefinitionArgs, EventDefinition } from './fhir/EventDefinition.js';
+import { EvidenceArgs, Evidence } from './fhir/Evidence.js';
+import { EvidenceVariableArgs, EvidenceVariable, EvidenceVariableCharacteristicArgs, EvidenceVariableCharacteristic } from './fhir/EvidenceVariable.js';
+import { ExampleScenarioArgs, ExampleScenario, ExampleScenarioActorArgs, ExampleScenarioActor, ExampleScenarioInstanceArgs, ExampleScenarioInstance, ExampleScenarioInstanceVersionArgs, ExampleScenarioInstanceVersion, ExampleScenarioInstanceContainedInstanceArgs, ExampleScenarioInstanceContainedInstance, ExampleScenarioProcessArgs, ExampleScenarioProcess, ExampleScenarioProcessStepArgs, ExampleScenarioProcessStep, ExampleScenarioProcessStepOperationArgs, ExampleScenarioProcessStepOperation, ExampleScenarioProcessStepAlternativeArgs, ExampleScenarioProcessStepAlternative } from './fhir/ExampleScenario.js';
+import { ExplanationOfBenefitArgs, ExplanationOfBenefit, ExplanationOfBenefitRelatedArgs, ExplanationOfBenefitRelated, ExplanationOfBenefitPayeeArgs, ExplanationOfBenefitPayee, ExplanationOfBenefitCareTeamArgs, ExplanationOfBenefitCareTeam, ExplanationOfBenefitSupportingInfoArgs, ExplanationOfBenefitSupportingInfo, ExplanationOfBenefitDiagnosisArgs, ExplanationOfBenefitDiagnosis, ExplanationOfBenefitProcedureArgs, ExplanationOfBenefitProcedure, ExplanationOfBenefitInsuranceArgs, ExplanationOfBenefitInsurance, ExplanationOfBenefitAccidentArgs, ExplanationOfBenefitAccident, ExplanationOfBenefitItemArgs, ExplanationOfBenefitItem, ExplanationOfBenefitItemAdjudicationArgs, ExplanationOfBenefitItemAdjudication, ExplanationOfBenefitItemDetailArgs, ExplanationOfBenefitItemDetail, ExplanationOfBenefitItemDetailSubDetailArgs, ExplanationOfBenefitItemDetailSubDetail, ExplanationOfBenefitAddItemArgs, ExplanationOfBenefitAddItem, ExplanationOfBenefitAddItemDetailArgs, ExplanationOfBenefitAddItemDetail, ExplanationOfBenefitAddItemDetailSubDetailArgs, ExplanationOfBenefitAddItemDetailSubDetail, ExplanationOfBenefitTotalArgs, ExplanationOfBenefitTotal, ExplanationOfBenefitPaymentArgs, ExplanationOfBenefitPayment, ExplanationOfBenefitProcessNoteArgs, ExplanationOfBenefitProcessNote, ExplanationOfBenefitBenefitBalanceArgs, ExplanationOfBenefitBenefitBalance, ExplanationOfBenefitBenefitBalanceFinancialArgs, ExplanationOfBenefitBenefitBalanceFinancial } from './fhir/ExplanationOfBenefit.js';
+import { FamilyMemberHistoryArgs, FamilyMemberHistory, FamilyMemberHistoryConditionArgs, FamilyMemberHistoryCondition } from './fhir/FamilyMemberHistory.js';
+import { FlagArgs, Flag } from './fhir/Flag.js';
+import { GoalArgs, Goal, GoalTargetArgs, GoalTarget } from './fhir/Goal.js';
+import { GraphDefinitionArgs, GraphDefinition, GraphDefinitionLinkArgs, GraphDefinitionLink, GraphDefinitionLinkTargetArgs, GraphDefinitionLinkTarget, GraphDefinitionLinkTargetCompartmentArgs, GraphDefinitionLinkTargetCompartment } from './fhir/GraphDefinition.js';
+import { GroupArgs, Group, GroupCharacteristicArgs, GroupCharacteristic, GroupMemberArgs, GroupMember } from './fhir/Group.js';
+import { GuidanceResponseArgs, GuidanceResponse } from './fhir/GuidanceResponse.js';
+import { HealthcareServiceArgs, HealthcareService, HealthcareServiceEligibilityArgs, HealthcareServiceEligibility, HealthcareServiceAvailableTimeArgs, HealthcareServiceAvailableTime, HealthcareServiceNotAvailableArgs, HealthcareServiceNotAvailable } from './fhir/HealthcareService.js';
+import { ImagingStudyArgs, ImagingStudy, ImagingStudySeriesArgs, ImagingStudySeries, ImagingStudySeriesPerformerArgs, ImagingStudySeriesPerformer, ImagingStudySeriesInstanceArgs, ImagingStudySeriesInstance } from './fhir/ImagingStudy.js';
+import { ImmunizationArgs, Immunization, ImmunizationPerformerArgs, ImmunizationPerformer, ImmunizationEducationArgs, ImmunizationEducation, ImmunizationReactionArgs, ImmunizationReaction, ImmunizationProtocolAppliedArgs, ImmunizationProtocolApplied } from './fhir/Immunization.js';
+import { ImmunizationEvaluationArgs, ImmunizationEvaluation } from './fhir/ImmunizationEvaluation.js';
+import { ImmunizationRecommendationArgs, ImmunizationRecommendation, ImmunizationRecommendationRecommendationArgs, ImmunizationRecommendationRecommendation, ImmunizationRecommendationRecommendationDateCriterionArgs, ImmunizationRecommendationRecommendationDateCriterion } from './fhir/ImmunizationRecommendation.js';
+import { ImplementationGuideArgs, ImplementationGuide, ImplementationGuideDependsOnArgs, ImplementationGuideDependsOn, ImplementationGuideGlobalArgs, ImplementationGuideGlobal, ImplementationGuideDefinitionArgs, ImplementationGuideDefinition, ImplementationGuideDefinitionGroupingArgs, ImplementationGuideDefinitionGrouping, ImplementationGuideDefinitionResourceArgs, ImplementationGuideDefinitionResource, ImplementationGuideDefinitionPageArgs, ImplementationGuideDefinitionPage, ImplementationGuideDefinitionParameterArgs, ImplementationGuideDefinitionParameter, ImplementationGuideDefinitionTemplateArgs, ImplementationGuideDefinitionTemplate, ImplementationGuideManifestArgs, ImplementationGuideManifest, ImplementationGuideManifestResourceArgs, ImplementationGuideManifestResource, ImplementationGuideManifestPageArgs, ImplementationGuideManifestPage } from './fhir/ImplementationGuide.js';
+import { InsurancePlanArgs, InsurancePlan, InsurancePlanContactArgs, InsurancePlanContact, InsurancePlanCoverageArgs, InsurancePlanCoverage, InsurancePlanCoverageBenefitArgs, InsurancePlanCoverageBenefit, InsurancePlanCoverageBenefitLimitArgs, InsurancePlanCoverageBenefitLimit, InsurancePlanPlanArgs, InsurancePlanPlan, InsurancePlanPlanGeneralCostArgs, InsurancePlanPlanGeneralCost, InsurancePlanPlanSpecificCostArgs, InsurancePlanPlanSpecificCost, InsurancePlanPlanSpecificCostBenefitArgs, InsurancePlanPlanSpecificCostBenefit, InsurancePlanPlanSpecificCostBenefitCostArgs, InsurancePlanPlanSpecificCostBenefitCost } from './fhir/InsurancePlan.js';
+import { InvoiceArgs, Invoice, InvoiceParticipantArgs, InvoiceParticipant, InvoiceLineItemArgs, InvoiceLineItem, InvoiceLineItemPriceComponentArgs, InvoiceLineItemPriceComponent } from './fhir/Invoice.js';
+import { LibraryArgs, Library } from './fhir/Library.js';
+import { LinkageArgs, Linkage, LinkageItemArgs, LinkageItem } from './fhir/Linkage.js';
+import { ListArgs, List, ListEntryArgs, ListEntry } from './fhir/List.js';
+import { LocationArgs, Location, LocationPositionArgs, LocationPosition, LocationHoursOfOperationArgs, LocationHoursOfOperation } from './fhir/Location.js';
+import { MeasureArgs, Measure, MeasureGroupArgs, MeasureGroup, MeasureGroupPopulationArgs, MeasureGroupPopulation, MeasureGroupStratifierArgs, MeasureGroupStratifier, MeasureGroupStratifierComponentArgs, MeasureGroupStratifierComponent, MeasureSupplementalDataArgs, MeasureSupplementalData } from './fhir/Measure.js';
+import { MeasureReportArgs, MeasureReport, MeasureReportGroupArgs, MeasureReportGroup, MeasureReportGroupPopulationArgs, MeasureReportGroupPopulation, MeasureReportGroupStratifierArgs, MeasureReportGroupStratifier, MeasureReportGroupStratifierStratumArgs, MeasureReportGroupStratifierStratum, MeasureReportGroupStratifierStratumComponentArgs, MeasureReportGroupStratifierStratumComponent, MeasureReportGroupStratifierStratumPopulationArgs, MeasureReportGroupStratifierStratumPopulation } from './fhir/MeasureReport.js';
+import { MediaArgs, Media } from './fhir/Media.js';
+import { MedicationArgs, Medication, MedicationIngredientArgs, MedicationIngredient, MedicationBatchArgs, MedicationBatch } from './fhir/Medication.js';
+import { MedicationAdministrationArgs, MedicationAdministration, MedicationAdministrationPerformerArgs, MedicationAdministrationPerformer, MedicationAdministrationDosageArgs, MedicationAdministrationDosage } from './fhir/MedicationAdministration.js';
+import { MedicationDispenseArgs, MedicationDispense, MedicationDispensePerformerArgs, MedicationDispensePerformer, MedicationDispenseSubstitutionArgs, MedicationDispenseSubstitution } from './fhir/MedicationDispense.js';
+import { MedicationKnowledgeArgs, MedicationKnowledge, MedicationKnowledgeRelatedMedicationKnowledgeArgs, MedicationKnowledgeRelatedMedicationKnowledge, MedicationKnowledgeMonographArgs, MedicationKnowledgeMonograph, MedicationKnowledgeIngredientArgs, MedicationKnowledgeIngredient, MedicationKnowledgeCostArgs, MedicationKnowledgeCost, MedicationKnowledgeMonitoringProgramArgs, MedicationKnowledgeMonitoringProgram, MedicationKnowledgeAdministrationGuidelinesArgs, MedicationKnowledgeAdministrationGuidelines, MedicationKnowledgeAdministrationGuidelinesDosageArgs, MedicationKnowledgeAdministrationGuidelinesDosage, MedicationKnowledgeAdministrationGuidelinesPatientCharacteristicsArgs, MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics, MedicationKnowledgeMedicineClassificationArgs, MedicationKnowledgeMedicineClassification, MedicationKnowledgePackagingArgs, MedicationKnowledgePackaging, MedicationKnowledgeDrugCharacteristicArgs, MedicationKnowledgeDrugCharacteristic, MedicationKnowledgeRegulatoryArgs, MedicationKnowledgeRegulatory, MedicationKnowledgeRegulatorySubstitutionArgs, MedicationKnowledgeRegulatorySubstitution, MedicationKnowledgeRegulatoryScheduleArgs, MedicationKnowledgeRegulatorySchedule, MedicationKnowledgeRegulatoryMaxDispenseArgs, MedicationKnowledgeRegulatoryMaxDispense, MedicationKnowledgeKineticsArgs, MedicationKnowledgeKinetics } from './fhir/MedicationKnowledge.js';
+import { MedicationRequestArgs, MedicationRequest, MedicationRequestDispenseRequestArgs, MedicationRequestDispenseRequest, MedicationRequestDispenseRequestInitialFillArgs, MedicationRequestDispenseRequestInitialFill, MedicationRequestSubstitutionArgs, MedicationRequestSubstitution } from './fhir/MedicationRequest.js';
+import { MedicationStatementArgs, MedicationStatement } from './fhir/MedicationStatement.js';
+import { MedicinalProductArgs, MedicinalProduct, MedicinalProductNameArgs, MedicinalProductName, MedicinalProductNameNamePartArgs, MedicinalProductNameNamePart, MedicinalProductNameCountryLanguageArgs, MedicinalProductNameCountryLanguage, MedicinalProductManufacturingBusinessOperationArgs, MedicinalProductManufacturingBusinessOperation, MedicinalProductSpecialDesignationArgs, MedicinalProductSpecialDesignation } from './fhir/MedicinalProduct.js';
+import { MedicinalProductAuthorizationArgs, MedicinalProductAuthorization, MedicinalProductAuthorizationJurisdictionalAuthorizationArgs, MedicinalProductAuthorizationJurisdictionalAuthorization, MedicinalProductAuthorizationProcedureArgs, MedicinalProductAuthorizationProcedure } from './fhir/MedicinalProductAuthorization.js';
+import { MedicinalProductContraindicationArgs, MedicinalProductContraindication, MedicinalProductContraindicationOtherTherapyArgs, MedicinalProductContraindicationOtherTherapy } from './fhir/MedicinalProductContraindication.js';
+import { MedicinalProductIndicationArgs, MedicinalProductIndication, MedicinalProductIndicationOtherTherapyArgs, MedicinalProductIndicationOtherTherapy } from './fhir/MedicinalProductIndication.js';
+import { MedicinalProductIngredientArgs, MedicinalProductIngredient, MedicinalProductIngredientSpecifiedSubstanceArgs, MedicinalProductIngredientSpecifiedSubstance, MedicinalProductIngredientSpecifiedSubstanceStrengthArgs, MedicinalProductIngredientSpecifiedSubstanceStrength, MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrengthArgs, MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength, MedicinalProductIngredientSubstanceArgs, MedicinalProductIngredientSubstance } from './fhir/MedicinalProductIngredient.js';
+import { MedicinalProductInteractionArgs, MedicinalProductInteraction, MedicinalProductInteractionInteractantArgs, MedicinalProductInteractionInteractant } from './fhir/MedicinalProductInteraction.js';
+import { MedicinalProductManufacturedArgs, MedicinalProductManufactured } from './fhir/MedicinalProductManufactured.js';
+import { MedicinalProductPackagedArgs, MedicinalProductPackaged, MedicinalProductPackagedBatchIdentifierArgs, MedicinalProductPackagedBatchIdentifier, MedicinalProductPackagedPackageItemArgs, MedicinalProductPackagedPackageItem } from './fhir/MedicinalProductPackaged.js';
+import { MedicinalProductPharmaceuticalArgs, MedicinalProductPharmaceutical, MedicinalProductPharmaceuticalCharacteristicsArgs, MedicinalProductPharmaceuticalCharacteristics, MedicinalProductPharmaceuticalRouteOfAdministrationArgs, MedicinalProductPharmaceuticalRouteOfAdministration, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesArgs, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriodArgs, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod } from './fhir/MedicinalProductPharmaceutical.js';
+import { MedicinalProductUndesirableEffectArgs, MedicinalProductUndesirableEffect } from './fhir/MedicinalProductUndesirableEffect.js';
+import { MessageDefinitionArgs, MessageDefinition, MessageDefinitionFocusArgs, MessageDefinitionFocus, MessageDefinitionAllowedResponseArgs, MessageDefinitionAllowedResponse } from './fhir/MessageDefinition.js';
+import { MessageHeaderArgs, MessageHeader, MessageHeaderDestinationArgs, MessageHeaderDestination, MessageHeaderSourceArgs, MessageHeaderSource, MessageHeaderResponseArgs, MessageHeaderResponse } from './fhir/MessageHeader.js';
+import { MolecularSequenceArgs, MolecularSequence, MolecularSequenceReferenceSeqArgs, MolecularSequenceReferenceSeq, MolecularSequenceVariantArgs, MolecularSequenceVariant, MolecularSequenceQualityArgs, MolecularSequenceQuality, MolecularSequenceQualityRocArgs, MolecularSequenceQualityRoc, MolecularSequenceRepositoryArgs, MolecularSequenceRepository, MolecularSequenceStructureVariantArgs, MolecularSequenceStructureVariant, MolecularSequenceStructureVariantOuterArgs, MolecularSequenceStructureVariantOuter, MolecularSequenceStructureVariantInnerArgs, MolecularSequenceStructureVariantInner } from './fhir/MolecularSequence.js';
+import { NamingSystemArgs, NamingSystem, NamingSystemUniqueIdArgs, NamingSystemUniqueId } from './fhir/NamingSystem.js';
+import { NutritionOrderArgs, NutritionOrder, NutritionOrderOralDietArgs, NutritionOrderOralDiet, NutritionOrderOralDietNutrientArgs, NutritionOrderOralDietNutrient, NutritionOrderOralDietTextureArgs, NutritionOrderOralDietTexture, NutritionOrderSupplementArgs, NutritionOrderSupplement, NutritionOrderEnteralFormulaArgs, NutritionOrderEnteralFormula, NutritionOrderEnteralFormulaAdministrationArgs, NutritionOrderEnteralFormulaAdministration } from './fhir/NutritionOrder.js';
+import { ObservationArgs, Observation, ObservationReferenceRangeArgs, ObservationReferenceRange, ObservationComponentArgs, ObservationComponent } from './fhir/Observation.js';
+import { ObservationDefinitionArgs, ObservationDefinition, ObservationDefinitionQuantitativeDetailsArgs, ObservationDefinitionQuantitativeDetails, ObservationDefinitionQualifiedIntervalArgs, ObservationDefinitionQualifiedInterval } from './fhir/ObservationDefinition.js';
+import { OperationDefinitionArgs, OperationDefinition, OperationDefinitionParameterArgs, OperationDefinitionParameter, OperationDefinitionParameterBindingArgs, OperationDefinitionParameterBinding, OperationDefinitionParameterReferencedFromArgs, OperationDefinitionParameterReferencedFrom, OperationDefinitionOverloadArgs, OperationDefinitionOverload } from './fhir/OperationDefinition.js';
+import { OperationOutcomeArgs, OperationOutcome, OperationOutcomeIssueArgs, OperationOutcomeIssue } from './fhir/OperationOutcome.js';
+import { OrganizationArgs, Organization, OrganizationContactArgs, OrganizationContact } from './fhir/Organization.js';
+import { OrganizationAffiliationArgs, OrganizationAffiliation } from './fhir/OrganizationAffiliation.js';
+import { ParametersArgs, Parameters, ParametersParameterArgs, ParametersParameter } from './fhir/Parameters.js';
+import { PatientArgs, Patient, PatientContactArgs, PatientContact, PatientCommunicationArgs, PatientCommunication, PatientLinkArgs, PatientLink } from './fhir/Patient.js';
+import { PaymentNoticeArgs, PaymentNotice } from './fhir/PaymentNotice.js';
+import { PaymentReconciliationArgs, PaymentReconciliation, PaymentReconciliationDetailArgs, PaymentReconciliationDetail, PaymentReconciliationProcessNoteArgs, PaymentReconciliationProcessNote } from './fhir/PaymentReconciliation.js';
+import { PersonArgs, Person, PersonLinkArgs, PersonLink } from './fhir/Person.js';
+import { PlanDefinitionArgs, PlanDefinition, PlanDefinitionGoalArgs, PlanDefinitionGoal, PlanDefinitionGoalTargetArgs, PlanDefinitionGoalTarget, PlanDefinitionActionArgs, PlanDefinitionAction, PlanDefinitionActionConditionArgs, PlanDefinitionActionCondition, PlanDefinitionActionRelatedActionArgs, PlanDefinitionActionRelatedAction, PlanDefinitionActionParticipantArgs, PlanDefinitionActionParticipant, PlanDefinitionActionDynamicValueArgs, PlanDefinitionActionDynamicValue } from './fhir/PlanDefinition.js';
+import { PractitionerArgs, Practitioner, PractitionerQualificationArgs, PractitionerQualification } from './fhir/Practitioner.js';
+import { PractitionerRoleArgs, PractitionerRole, PractitionerRoleAvailableTimeArgs, PractitionerRoleAvailableTime, PractitionerRoleNotAvailableArgs, PractitionerRoleNotAvailable } from './fhir/PractitionerRole.js';
+import { ProcedureArgs, Procedure, ProcedurePerformerArgs, ProcedurePerformer, ProcedureFocalDeviceArgs, ProcedureFocalDevice } from './fhir/Procedure.js';
+import { ProvenanceArgs, Provenance, ProvenanceAgentArgs, ProvenanceAgent, ProvenanceEntityArgs, ProvenanceEntity } from './fhir/Provenance.js';
+import { QuestionnaireArgs, Questionnaire, QuestionnaireItemArgs, QuestionnaireItem, QuestionnaireItemEnableWhenArgs, QuestionnaireItemEnableWhen, QuestionnaireItemAnswerOptionArgs, QuestionnaireItemAnswerOption, QuestionnaireItemInitialArgs, QuestionnaireItemInitial } from './fhir/Questionnaire.js';
+import { QuestionnaireResponseArgs, QuestionnaireResponse, QuestionnaireResponseItemArgs, QuestionnaireResponseItem, QuestionnaireResponseItemAnswerArgs, QuestionnaireResponseItemAnswer } from './fhir/QuestionnaireResponse.js';
+import { RelatedPersonArgs, RelatedPerson, RelatedPersonCommunicationArgs, RelatedPersonCommunication } from './fhir/RelatedPerson.js';
+import { RequestGroupArgs, RequestGroup, RequestGroupActionArgs, RequestGroupAction, RequestGroupActionConditionArgs, RequestGroupActionCondition, RequestGroupActionRelatedActionArgs, RequestGroupActionRelatedAction } from './fhir/RequestGroup.js';
+import { ResearchDefinitionArgs, ResearchDefinition } from './fhir/ResearchDefinition.js';
+import { ResearchElementDefinitionArgs, ResearchElementDefinition, ResearchElementDefinitionCharacteristicArgs, ResearchElementDefinitionCharacteristic } from './fhir/ResearchElementDefinition.js';
+import { ResearchStudyArgs, ResearchStudy, ResearchStudyArmArgs, ResearchStudyArm, ResearchStudyObjectiveArgs, ResearchStudyObjective } from './fhir/ResearchStudy.js';
+import { ResearchSubjectArgs, ResearchSubject } from './fhir/ResearchSubject.js';
+import { RiskAssessmentArgs, RiskAssessment, RiskAssessmentPredictionArgs, RiskAssessmentPrediction } from './fhir/RiskAssessment.js';
+import { RiskEvidenceSynthesisArgs, RiskEvidenceSynthesis, RiskEvidenceSynthesisSampleSizeArgs, RiskEvidenceSynthesisSampleSize, RiskEvidenceSynthesisRiskEstimateArgs, RiskEvidenceSynthesisRiskEstimate, RiskEvidenceSynthesisRiskEstimatePrecisionEstimateArgs, RiskEvidenceSynthesisRiskEstimatePrecisionEstimate, RiskEvidenceSynthesisCertaintyArgs, RiskEvidenceSynthesisCertainty, RiskEvidenceSynthesisCertaintyCertaintySubcomponentArgs, RiskEvidenceSynthesisCertaintyCertaintySubcomponent } from './fhir/RiskEvidenceSynthesis.js';
+import { ScheduleArgs, Schedule } from './fhir/Schedule.js';
+import { SearchParameterArgs, SearchParameter, SearchParameterComponentArgs, SearchParameterComponent } from './fhir/SearchParameter.js';
+import { ServiceRequestArgs, ServiceRequest } from './fhir/ServiceRequest.js';
+import { SlotArgs, Slot } from './fhir/Slot.js';
+import { SpecimenArgs, Specimen, SpecimenCollectionArgs, SpecimenCollection, SpecimenProcessingArgs, SpecimenProcessing, SpecimenContainerArgs, SpecimenContainer } from './fhir/Specimen.js';
+import { SpecimenDefinitionArgs, SpecimenDefinition, SpecimenDefinitionTypeTestedArgs, SpecimenDefinitionTypeTested, SpecimenDefinitionTypeTestedContainerArgs, SpecimenDefinitionTypeTestedContainer, SpecimenDefinitionTypeTestedContainerAdditiveArgs, SpecimenDefinitionTypeTestedContainerAdditive, SpecimenDefinitionTypeTestedHandlingArgs, SpecimenDefinitionTypeTestedHandling } from './fhir/SpecimenDefinition.js';
+import { StructureDefinitionArgs, StructureDefinition, StructureDefinitionMappingArgs, StructureDefinitionMapping, StructureDefinitionContextArgs, StructureDefinitionContext, StructureDefinitionSnapshotArgs, StructureDefinitionSnapshot, StructureDefinitionDifferentialArgs, StructureDefinitionDifferential } from './fhir/StructureDefinition.js';
+import { StructureMapArgs, StructureMap, StructureMapStructureArgs, StructureMapStructure, StructureMapGroupArgs, StructureMapGroup, StructureMapGroupInputArgs, StructureMapGroupInput, StructureMapGroupRuleArgs, StructureMapGroupRule, StructureMapGroupRuleSourceArgs, StructureMapGroupRuleSource, StructureMapGroupRuleTargetArgs, StructureMapGroupRuleTarget, StructureMapGroupRuleTargetParameterArgs, StructureMapGroupRuleTargetParameter, StructureMapGroupRuleDependentArgs, StructureMapGroupRuleDependent } from './fhir/StructureMap.js';
+import { SubscriptionArgs, Subscription, SubscriptionChannelArgs, SubscriptionChannel } from './fhir/Subscription.js';
+import { SubstanceArgs, Substance, SubstanceInstanceArgs, SubstanceInstance, SubstanceIngredientArgs, SubstanceIngredient } from './fhir/Substance.js';
+import { SubstanceNucleicAcidArgs, SubstanceNucleicAcid, SubstanceNucleicAcidSubunitArgs, SubstanceNucleicAcidSubunit, SubstanceNucleicAcidSubunitLinkageArgs, SubstanceNucleicAcidSubunitLinkage, SubstanceNucleicAcidSubunitSugarArgs, SubstanceNucleicAcidSubunitSugar } from './fhir/SubstanceNucleicAcid.js';
+import { SubstancePolymerArgs, SubstancePolymer, SubstancePolymerMonomerSetArgs, SubstancePolymerMonomerSet, SubstancePolymerMonomerSetStartingMaterialArgs, SubstancePolymerMonomerSetStartingMaterial, SubstancePolymerRepeatArgs, SubstancePolymerRepeat, SubstancePolymerRepeatRepeatUnitArgs, SubstancePolymerRepeatRepeatUnit, SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisationArgs, SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation, SubstancePolymerRepeatRepeatUnitStructuralRepresentationArgs, SubstancePolymerRepeatRepeatUnitStructuralRepresentation } from './fhir/SubstancePolymer.js';
+import { SubstanceProteinArgs, SubstanceProtein, SubstanceProteinSubunitArgs, SubstanceProteinSubunit } from './fhir/SubstanceProtein.js';
+import { SubstanceReferenceInformationArgs, SubstanceReferenceInformation, SubstanceReferenceInformationGeneArgs, SubstanceReferenceInformationGene, SubstanceReferenceInformationGeneElementArgs, SubstanceReferenceInformationGeneElement, SubstanceReferenceInformationClassificationArgs, SubstanceReferenceInformationClassification, SubstanceReferenceInformationTargetArgs, SubstanceReferenceInformationTarget } from './fhir/SubstanceReferenceInformation.js';
+import { SubstanceSourceMaterialArgs, SubstanceSourceMaterial, SubstanceSourceMaterialFractionDescriptionArgs, SubstanceSourceMaterialFractionDescription, SubstanceSourceMaterialOrganismArgs, SubstanceSourceMaterialOrganism, SubstanceSourceMaterialOrganismAuthorArgs, SubstanceSourceMaterialOrganismAuthor, SubstanceSourceMaterialOrganismHybridArgs, SubstanceSourceMaterialOrganismHybrid, SubstanceSourceMaterialOrganismOrganismGeneralArgs, SubstanceSourceMaterialOrganismOrganismGeneral, SubstanceSourceMaterialPartDescriptionArgs, SubstanceSourceMaterialPartDescription } from './fhir/SubstanceSourceMaterial.js';
+import { SubstanceSpecificationArgs, SubstanceSpecification, SubstanceSpecificationMoietyArgs, SubstanceSpecificationMoiety, SubstanceSpecificationPropertyArgs, SubstanceSpecificationProperty, SubstanceSpecificationStructureArgs, SubstanceSpecificationStructure, SubstanceSpecificationStructureIsotopeArgs, SubstanceSpecificationStructureIsotope, SubstanceSpecificationStructureIsotopeMolecularWeightArgs, SubstanceSpecificationStructureIsotopeMolecularWeight, SubstanceSpecificationStructureRepresentationArgs, SubstanceSpecificationStructureRepresentation, SubstanceSpecificationCodeArgs, SubstanceSpecificationCode, SubstanceSpecificationNameArgs, SubstanceSpecificationName, SubstanceSpecificationNameOfficialArgs, SubstanceSpecificationNameOfficial, SubstanceSpecificationRelationshipArgs, SubstanceSpecificationRelationship } from './fhir/SubstanceSpecification.js';
+import { SupplyDeliveryArgs, SupplyDelivery, SupplyDeliverySuppliedItemArgs, SupplyDeliverySuppliedItem } from './fhir/SupplyDelivery.js';
+import { SupplyRequestArgs, SupplyRequest, SupplyRequestParameterArgs, SupplyRequestParameter } from './fhir/SupplyRequest.js';
+import { TaskArgs, Task, TaskRestrictionArgs, TaskRestriction, TaskInputArgs, TaskInput, TaskOutputArgs, TaskOutput } from './fhir/Task.js';
+import { TerminologyCapabilitiesArgs, TerminologyCapabilities, TerminologyCapabilitiesSoftwareArgs, TerminologyCapabilitiesSoftware, TerminologyCapabilitiesImplementationArgs, TerminologyCapabilitiesImplementation, TerminologyCapabilitiesCodeSystemArgs, TerminologyCapabilitiesCodeSystem, TerminologyCapabilitiesCodeSystemVersionArgs, TerminologyCapabilitiesCodeSystemVersion, TerminologyCapabilitiesCodeSystemVersionFilterArgs, TerminologyCapabilitiesCodeSystemVersionFilter, TerminologyCapabilitiesExpansionArgs, TerminologyCapabilitiesExpansion, TerminologyCapabilitiesExpansionParameterArgs, TerminologyCapabilitiesExpansionParameter, TerminologyCapabilitiesValidateCodeArgs, TerminologyCapabilitiesValidateCode, TerminologyCapabilitiesTranslationArgs, TerminologyCapabilitiesTranslation, TerminologyCapabilitiesClosureArgs, TerminologyCapabilitiesClosure } from './fhir/TerminologyCapabilities.js';
+import { TestReportArgs, TestReport, TestReportParticipantArgs, TestReportParticipant, TestReportSetupArgs, TestReportSetup, TestReportSetupActionArgs, TestReportSetupAction, TestReportSetupActionOperationArgs, TestReportSetupActionOperation, TestReportSetupActionAssertArgs, TestReportSetupActionAssert, TestReportTestArgs, TestReportTest, TestReportTestActionArgs, TestReportTestAction, TestReportTeardownArgs, TestReportTeardown, TestReportTeardownActionArgs, TestReportTeardownAction } from './fhir/TestReport.js';
+import { TestScriptArgs, TestScript, TestScriptOriginArgs, TestScriptOrigin, TestScriptDestinationArgs, TestScriptDestination, TestScriptMetadataArgs, TestScriptMetadata, TestScriptMetadataLinkArgs, TestScriptMetadataLink, TestScriptMetadataCapabilityArgs, TestScriptMetadataCapability, TestScriptFixtureArgs, TestScriptFixture, TestScriptVariableArgs, TestScriptVariable, TestScriptSetupArgs, TestScriptSetup, TestScriptSetupActionArgs, TestScriptSetupAction, TestScriptSetupActionOperationArgs, TestScriptSetupActionOperation, TestScriptSetupActionOperationRequestHeaderArgs, TestScriptSetupActionOperationRequestHeader, TestScriptSetupActionAssertArgs, TestScriptSetupActionAssert, TestScriptTestArgs, TestScriptTest, TestScriptTestActionArgs, TestScriptTestAction, TestScriptTeardownArgs, TestScriptTeardown, TestScriptTeardownActionArgs, TestScriptTeardownAction } from './fhir/TestScript.js';
+import { ValueSetArgs, ValueSet, ValueSetComposeArgs, ValueSetCompose, ValueSetComposeIncludeArgs, ValueSetComposeInclude, ValueSetComposeIncludeConceptArgs, ValueSetComposeIncludeConcept, ValueSetComposeIncludeConceptDesignationArgs, ValueSetComposeIncludeConceptDesignation, ValueSetComposeIncludeFilterArgs, ValueSetComposeIncludeFilter, ValueSetExpansionArgs, ValueSetExpansion, ValueSetExpansionParameterArgs, ValueSetExpansionParameter, ValueSetExpansionContainsArgs, ValueSetExpansionContains } from './fhir/ValueSet.js';
+import { VerificationResultArgs, VerificationResult, VerificationResultPrimarySourceArgs, VerificationResultPrimarySource, VerificationResultAttestationArgs, VerificationResultAttestation, VerificationResultValidatorArgs, VerificationResultValidator } from './fhir/VerificationResult.js';
+import { VisionPrescriptionArgs, VisionPrescription, VisionPrescriptionLensSpecificationArgs, VisionPrescriptionLensSpecification, VisionPrescriptionLensSpecificationPrismArgs, VisionPrescriptionLensSpecificationPrism } from './fhir/VisionPrescription.js';
 
 /**
  * Resource binding for generic use.
@@ -653,197 +522,330 @@ function resourceFactory(source:any) : FhirResource|null {
     default: return null;
   }
 }
+/**
+ * FHIR object constructor properties
+ */
+interface FhirConstructorOptions {
+  /**
+   * If objects should retain unknown elements.
+   */
+  allowUnknownElements?: boolean|undefined;
+}
+/**
+ * Function to remove invalid element values from serialization
+ * @param obj 
+ * @returns 
+ */
+function fhirToJson(obj:any) {
+  let c:any = {};
 
+  for (const key in obj) {
+    if ((obj[key] === undefined) || 
+        (obj[key] === null) ||
+        (obj[key] === '') ||
+        (obj[key] === NaN)) {
+      continue;
+    }
+
+    if (key.startsWith('__')) {
+      continue;
+    }
+
+    let dKey:string = key + (obj['__' + key + 'IsChoice'] ? (obj[key]['__dataType'] ?? '') : '');
+
+    if (Array.isArray(obj[key])) {
+      if (obj[key].length === 0) {
+        continue;
+      }
+
+      if (obj[key][0]['__isPrimitive']) {
+        const eName:string = '_' + dKey;
+        let foundAnyVal:boolean = false;
+        let foundAnyExt:boolean = false;
+        c[dKey] = [];
+        c[eName] = [];
+        obj[key].forEach((av:any) => {
+          let addElement:boolean = false;
+          if ((av['value'] !== undefined) && (av['value'] !== null)) { 
+            c[dKey].push(av.valueOf()); 
+            foundAnyVal = true;
+            addElement = true;
+          } else { 
+            c[dKey].push(null);
+          }
+
+          let ao:object = {};
+          if (av.id) { (ao as any)['id'] = av.id; }
+          if (av.extension) {
+            (ao as any)['extension'] = [];
+            av.extension.forEach((e:any) => {
+              (ao as any)['extension'].push(fhirToJson(e));
+            });
+          }
+
+          if (Object.keys(ao).length !== 0) { 
+            c[eName].push(ao);
+            foundAnyExt = true;
+            addElement = true;
+          } else {
+            c[eName].push(null);
+          }
+
+          if (!addElement) {
+            c[dKey].pop();
+            c[eName].pop();
+          }
+        });
+
+        if (!foundAnyVal) { delete c[dKey]; }
+        if (!foundAnyExt) { delete c[eName]; }
+      } else if (obj[key][0]['__dataType']) {
+        c[dKey] = [];
+        obj[key].forEach((v:any) => {
+          c[dKey].push(fhirToJson(v));
+        });
+      } else {
+        c[dKey] = obj[key];
+      }
+    } else {
+      if (obj[key]['__isPrimitive']) {
+        if (obj[key]['value']) { c[dKey] = obj[key].valueOf(); }
+
+        const eName:string = '_' + dKey;
+        c[eName] = {};
+        if (obj[key]['id']) { c[eName]['id'] = obj[key]['id']; }
+        if (obj[key]['extension']) {
+          c[eName]['extension'] = [];
+          obj[key]['extension'].forEach((e:any) => {
+            c[eName]['extension'].push(fhirToJson(e));
+          });
+        }
+
+        if (Object.keys(c[eName]).length === 0) { delete c[eName]; }
+      } else if (obj[key]['__dataType']) {
+        c[dKey] = fhirToJson(obj[key]);
+      } else {
+        c[dKey] = obj[key];
+      }
+    }
+  }
+
+  return c;
+}
+  
 export {
-  type IFhirElement, FhirElement, 
-  type ICoding, Coding, 
-  type IAddress, Address, 
-  type IQuantity, Quantity, 
-  type IAge, Age, 
-  type IAnnotation, Annotation, 
-  type IAttachment, Attachment, 
-  type IBackboneElement, BackboneElement, 
-  type ICodeableConcept, CodeableConcept, 
-  type IContactDetail, ContactDetail, 
-  type IContactPoint, ContactPoint, 
-  type IContributor, Contributor, 
-  type ICount, Count, 
-  type IDataRequirement, DataRequirement, type IDataRequirementCodeFilter, DataRequirementCodeFilter, type IDataRequirementDateFilter, DataRequirementDateFilter, type IDataRequirementSort, DataRequirementSort, 
-  type IDistance, Distance, 
-  type IDosage, Dosage, type IDosageDoseAndRate, DosageDoseAndRate, 
-  type IDuration, Duration, 
-  type IElementDefinition, ElementDefinition, type IElementDefinitionSlicing, ElementDefinitionSlicing, type IElementDefinitionSlicingDiscriminator, ElementDefinitionSlicingDiscriminator, type IElementDefinitionBase, ElementDefinitionBase, type IElementDefinitionType, ElementDefinitionType, type IElementDefinitionExample, ElementDefinitionExample, type IElementDefinitionConstraint, ElementDefinitionConstraint, type IElementDefinitionBinding, ElementDefinitionBinding, type IElementDefinitionMapping, ElementDefinitionMapping, 
-  type IExpression, Expression, 
-  type IExtension, Extension, 
-  type IHumanName, HumanName, 
-  type IIdentifier, Identifier, 
-  type IMarketingStatus, MarketingStatus, 
-  type IMeta, Meta, 
-  type IMoney, Money, 
-  type INarrative, Narrative, 
-  type IParameterDefinition, ParameterDefinition, 
-  type IPeriod, Period, 
-  type IPopulation, Population, 
-  type IProdCharacteristic, ProdCharacteristic, 
-  type IProductShelfLife, ProductShelfLife, 
-  type IRange, Range, 
-  type IRatio, Ratio, 
-  type IReference, Reference, 
-  type IRelatedArtifact, RelatedArtifact, 
-  type ISampledData, SampledData, 
-  type ISignature, Signature, 
-  type ISubstanceAmount, SubstanceAmount, type ISubstanceAmountReferenceRange, SubstanceAmountReferenceRange, 
-  type ITiming, Timing, type ITimingRepeat, TimingRepeat, 
-  type ITriggerDefinition, TriggerDefinition, 
-  type IUsageContext, UsageContext, 
-  type IResource, Resource, 
-  type IDomainResource, DomainResource, 
-  type IAccount, Account, type IAccountCoverage, AccountCoverage, type IAccountGuarantor, AccountGuarantor, 
-  type IActivityDefinition, ActivityDefinition, type IActivityDefinitionParticipant, ActivityDefinitionParticipant, type IActivityDefinitionDynamicValue, ActivityDefinitionDynamicValue, 
-  type IAdverseEvent, AdverseEvent, type IAdverseEventSuspectEntity, AdverseEventSuspectEntity, type IAdverseEventSuspectEntityCausality, AdverseEventSuspectEntityCausality, 
-  type IAllergyIntolerance, AllergyIntolerance, type IAllergyIntoleranceReaction, AllergyIntoleranceReaction, 
-  type IAppointment, Appointment, type IAppointmentParticipant, AppointmentParticipant, 
-  type IAppointmentResponse, AppointmentResponse, 
-  type IAuditEvent, AuditEvent, type IAuditEventAgent, AuditEventAgent, type IAuditEventAgentNetwork, AuditEventAgentNetwork, type IAuditEventSource, AuditEventSource, type IAuditEventEntity, AuditEventEntity, type IAuditEventEntityDetail, AuditEventEntityDetail, 
-  type IBasic, Basic, 
-  type IBinary, Binary, 
-  type IBiologicallyDerivedProduct, BiologicallyDerivedProduct, type IBiologicallyDerivedProductCollection, BiologicallyDerivedProductCollection, type IBiologicallyDerivedProductProcessing, BiologicallyDerivedProductProcessing, type IBiologicallyDerivedProductManipulation, BiologicallyDerivedProductManipulation, type IBiologicallyDerivedProductStorage, BiologicallyDerivedProductStorage, 
-  type IBodyStructure, BodyStructure, 
-  type IBundle, Bundle, type IBundleLink, BundleLink, type IBundleEntry, BundleEntry, type IBundleEntrySearch, BundleEntrySearch, type IBundleEntryRequest, BundleEntryRequest, type IBundleEntryResponse, BundleEntryResponse, 
-  type ICapabilityStatement, CapabilityStatement, type ICapabilityStatementSoftware, CapabilityStatementSoftware, type ICapabilityStatementImplementation, CapabilityStatementImplementation, type ICapabilityStatementRest, CapabilityStatementRest, type ICapabilityStatementRestSecurity, CapabilityStatementRestSecurity, type ICapabilityStatementRestResource, CapabilityStatementRestResource, type ICapabilityStatementRestResourceInteraction, CapabilityStatementRestResourceInteraction, type ICapabilityStatementRestResourceSearchParam, CapabilityStatementRestResourceSearchParam, type ICapabilityStatementRestResourceOperation, CapabilityStatementRestResourceOperation, type ICapabilityStatementRestInteraction, CapabilityStatementRestInteraction, type ICapabilityStatementMessaging, CapabilityStatementMessaging, type ICapabilityStatementMessagingEndpoint, CapabilityStatementMessagingEndpoint, type ICapabilityStatementMessagingSupportedMessage, CapabilityStatementMessagingSupportedMessage, type ICapabilityStatementDocument, CapabilityStatementDocument, 
-  type ICarePlan, CarePlan, type ICarePlanActivity, CarePlanActivity, type ICarePlanActivityDetail, CarePlanActivityDetail, 
-  type ICareTeam, CareTeam, type ICareTeamParticipant, CareTeamParticipant, 
-  type ICatalogEntry, CatalogEntry, type ICatalogEntryRelatedEntry, CatalogEntryRelatedEntry, 
-  type IChargeItem, ChargeItem, type IChargeItemPerformer, ChargeItemPerformer, 
-  type IChargeItemDefinition, ChargeItemDefinition, type IChargeItemDefinitionApplicability, ChargeItemDefinitionApplicability, type IChargeItemDefinitionPropertyGroup, ChargeItemDefinitionPropertyGroup, type IChargeItemDefinitionPropertyGroupPriceComponent, ChargeItemDefinitionPropertyGroupPriceComponent, 
-  type IClaim, Claim, type IClaimRelated, ClaimRelated, type IClaimPayee, ClaimPayee, type IClaimCareTeam, ClaimCareTeam, type IClaimSupportingInfo, ClaimSupportingInfo, type IClaimDiagnosis, ClaimDiagnosis, type IClaimProcedure, ClaimProcedure, type IClaimInsurance, ClaimInsurance, type IClaimAccident, ClaimAccident, type IClaimItem, ClaimItem, type IClaimItemDetail, ClaimItemDetail, type IClaimItemDetailSubDetail, ClaimItemDetailSubDetail, 
-  type IClaimResponse, ClaimResponse, type IClaimResponseItem, ClaimResponseItem, type IClaimResponseItemAdjudication, ClaimResponseItemAdjudication, type IClaimResponseItemDetail, ClaimResponseItemDetail, type IClaimResponseItemDetailSubDetail, ClaimResponseItemDetailSubDetail, type IClaimResponseAddItem, ClaimResponseAddItem, type IClaimResponseAddItemDetail, ClaimResponseAddItemDetail, type IClaimResponseAddItemDetailSubDetail, ClaimResponseAddItemDetailSubDetail, type IClaimResponseTotal, ClaimResponseTotal, type IClaimResponsePayment, ClaimResponsePayment, type IClaimResponseProcessNote, ClaimResponseProcessNote, type IClaimResponseInsurance, ClaimResponseInsurance, type IClaimResponseError, ClaimResponseError, 
-  type IClinicalImpression, ClinicalImpression, type IClinicalImpressionInvestigation, ClinicalImpressionInvestigation, type IClinicalImpressionFinding, ClinicalImpressionFinding, 
-  type ICodeSystem, CodeSystem, type ICodeSystemFilter, CodeSystemFilter, type ICodeSystemProperty, CodeSystemProperty, type ICodeSystemConcept, CodeSystemConcept, type ICodeSystemConceptDesignation, CodeSystemConceptDesignation, type ICodeSystemConceptProperty, CodeSystemConceptProperty, 
-  type ICommunication, Communication, type ICommunicationPayload, CommunicationPayload, 
-  type ICommunicationRequest, CommunicationRequest, type ICommunicationRequestPayload, CommunicationRequestPayload, 
-  type ICompartmentDefinition, CompartmentDefinition, type ICompartmentDefinitionResource, CompartmentDefinitionResource, 
-  type IComposition, Composition, type ICompositionAttester, CompositionAttester, type ICompositionRelatesTo, CompositionRelatesTo, type ICompositionEvent, CompositionEvent, type ICompositionSection, CompositionSection, 
-  type IConceptMap, ConceptMap, type IConceptMapGroup, ConceptMapGroup, type IConceptMapGroupElement, ConceptMapGroupElement, type IConceptMapGroupElementTarget, ConceptMapGroupElementTarget, type IConceptMapGroupElementTargetDependsOn, ConceptMapGroupElementTargetDependsOn, type IConceptMapGroupUnmapped, ConceptMapGroupUnmapped, 
-  type ICondition, Condition, type IConditionStage, ConditionStage, type IConditionEvidence, ConditionEvidence, 
-  type IConsent, Consent, type IConsentPolicy, ConsentPolicy, type IConsentVerification, ConsentVerification, type IConsentProvision, ConsentProvision, type IConsentProvisionActor, ConsentProvisionActor, type IConsentProvisionData, ConsentProvisionData, 
-  type IContract, Contract, type IContractContentDefinition, ContractContentDefinition, type IContractTerm, ContractTerm, type IContractTermSecurityLabel, ContractTermSecurityLabel, type IContractTermOffer, ContractTermOffer, type IContractTermOfferParty, ContractTermOfferParty, type IContractTermOfferAnswer, ContractTermOfferAnswer, type IContractTermAsset, ContractTermAsset, type IContractTermAssetContext, ContractTermAssetContext, type IContractTermAssetValuedItem, ContractTermAssetValuedItem, type IContractTermAction, ContractTermAction, type IContractTermActionSubject, ContractTermActionSubject, type IContractSigner, ContractSigner, type IContractFriendly, ContractFriendly, type IContractLegal, ContractLegal, type IContractRule, ContractRule, 
-  type ICoverage, Coverage, type ICoverageClass, CoverageClass, type ICoverageCostToBeneficiary, CoverageCostToBeneficiary, type ICoverageCostToBeneficiaryException, CoverageCostToBeneficiaryException, 
-  type ICoverageEligibilityRequest, CoverageEligibilityRequest, type ICoverageEligibilityRequestSupportingInfo, CoverageEligibilityRequestSupportingInfo, type ICoverageEligibilityRequestInsurance, CoverageEligibilityRequestInsurance, type ICoverageEligibilityRequestItem, CoverageEligibilityRequestItem, type ICoverageEligibilityRequestItemDiagnosis, CoverageEligibilityRequestItemDiagnosis, 
-  type ICoverageEligibilityResponse, CoverageEligibilityResponse, type ICoverageEligibilityResponseInsurance, CoverageEligibilityResponseInsurance, type ICoverageEligibilityResponseInsuranceItem, CoverageEligibilityResponseInsuranceItem, type ICoverageEligibilityResponseInsuranceItemBenefit, CoverageEligibilityResponseInsuranceItemBenefit, type ICoverageEligibilityResponseError, CoverageEligibilityResponseError, 
-  type IDetectedIssue, DetectedIssue, type IDetectedIssueEvidence, DetectedIssueEvidence, type IDetectedIssueMitigation, DetectedIssueMitigation, 
-  type IDevice, Device, type IDeviceUdiCarrier, DeviceUdiCarrier, type IDeviceDeviceName, DeviceDeviceName, type IDeviceSpecialization, DeviceSpecialization, type IDeviceVersion, DeviceVersion, type IDeviceProperty, DeviceProperty, 
-  type IDeviceDefinition, DeviceDefinition, type IDeviceDefinitionUdiDeviceIdentifier, DeviceDefinitionUdiDeviceIdentifier, type IDeviceDefinitionDeviceName, DeviceDefinitionDeviceName, type IDeviceDefinitionSpecialization, DeviceDefinitionSpecialization, type IDeviceDefinitionCapability, DeviceDefinitionCapability, type IDeviceDefinitionProperty, DeviceDefinitionProperty, type IDeviceDefinitionMaterial, DeviceDefinitionMaterial, 
-  type IDeviceMetric, DeviceMetric, type IDeviceMetricCalibration, DeviceMetricCalibration, 
-  type IDeviceRequest, DeviceRequest, type IDeviceRequestParameter, DeviceRequestParameter, 
-  type IDeviceUseStatement, DeviceUseStatement, 
-  type IDiagnosticReport, DiagnosticReport, type IDiagnosticReportMedia, DiagnosticReportMedia, 
-  type IDocumentManifest, DocumentManifest, type IDocumentManifestRelated, DocumentManifestRelated, 
-  type IDocumentReference, DocumentReference, type IDocumentReferenceRelatesTo, DocumentReferenceRelatesTo, type IDocumentReferenceContent, DocumentReferenceContent, type IDocumentReferenceContext, DocumentReferenceContext, 
-  type IEffectEvidenceSynthesis, EffectEvidenceSynthesis, type IEffectEvidenceSynthesisSampleSize, EffectEvidenceSynthesisSampleSize, type IEffectEvidenceSynthesisResultsByExposure, EffectEvidenceSynthesisResultsByExposure, type IEffectEvidenceSynthesisEffectEstimate, EffectEvidenceSynthesisEffectEstimate, type IEffectEvidenceSynthesisEffectEstimatePrecisionEstimate, EffectEvidenceSynthesisEffectEstimatePrecisionEstimate, type IEffectEvidenceSynthesisCertainty, EffectEvidenceSynthesisCertainty, type IEffectEvidenceSynthesisCertaintyCertaintySubcomponent, EffectEvidenceSynthesisCertaintyCertaintySubcomponent, 
-  type IEncounter, Encounter, type IEncounterStatusHistory, EncounterStatusHistory, type IEncounterClassHistory, EncounterClassHistory, type IEncounterParticipant, EncounterParticipant, type IEncounterDiagnosis, EncounterDiagnosis, type IEncounterHospitalization, EncounterHospitalization, type IEncounterLocation, EncounterLocation, 
-  type IEndpoint, Endpoint, 
-  type IEnrollmentRequest, EnrollmentRequest, 
-  type IEnrollmentResponse, EnrollmentResponse, 
-  type IEpisodeOfCare, EpisodeOfCare, type IEpisodeOfCareStatusHistory, EpisodeOfCareStatusHistory, type IEpisodeOfCareDiagnosis, EpisodeOfCareDiagnosis, 
-  type IEventDefinition, EventDefinition, 
-  type IEvidence, Evidence, 
-  type IEvidenceVariable, EvidenceVariable, type IEvidenceVariableCharacteristic, EvidenceVariableCharacteristic, 
-  type IExampleScenario, ExampleScenario, type IExampleScenarioActor, ExampleScenarioActor, type IExampleScenarioInstance, ExampleScenarioInstance, type IExampleScenarioInstanceVersion, ExampleScenarioInstanceVersion, type IExampleScenarioInstanceContainedInstance, ExampleScenarioInstanceContainedInstance, type IExampleScenarioProcess, ExampleScenarioProcess, type IExampleScenarioProcessStep, ExampleScenarioProcessStep, type IExampleScenarioProcessStepOperation, ExampleScenarioProcessStepOperation, type IExampleScenarioProcessStepAlternative, ExampleScenarioProcessStepAlternative, 
-  type IExplanationOfBenefit, ExplanationOfBenefit, type IExplanationOfBenefitRelated, ExplanationOfBenefitRelated, type IExplanationOfBenefitPayee, ExplanationOfBenefitPayee, type IExplanationOfBenefitCareTeam, ExplanationOfBenefitCareTeam, type IExplanationOfBenefitSupportingInfo, ExplanationOfBenefitSupportingInfo, type IExplanationOfBenefitDiagnosis, ExplanationOfBenefitDiagnosis, type IExplanationOfBenefitProcedure, ExplanationOfBenefitProcedure, type IExplanationOfBenefitInsurance, ExplanationOfBenefitInsurance, type IExplanationOfBenefitAccident, ExplanationOfBenefitAccident, type IExplanationOfBenefitItem, ExplanationOfBenefitItem, type IExplanationOfBenefitItemAdjudication, ExplanationOfBenefitItemAdjudication, type IExplanationOfBenefitItemDetail, ExplanationOfBenefitItemDetail, type IExplanationOfBenefitItemDetailSubDetail, ExplanationOfBenefitItemDetailSubDetail, type IExplanationOfBenefitAddItem, ExplanationOfBenefitAddItem, type IExplanationOfBenefitAddItemDetail, ExplanationOfBenefitAddItemDetail, type IExplanationOfBenefitAddItemDetailSubDetail, ExplanationOfBenefitAddItemDetailSubDetail, type IExplanationOfBenefitTotal, ExplanationOfBenefitTotal, type IExplanationOfBenefitPayment, ExplanationOfBenefitPayment, type IExplanationOfBenefitProcessNote, ExplanationOfBenefitProcessNote, type IExplanationOfBenefitBenefitBalance, ExplanationOfBenefitBenefitBalance, type IExplanationOfBenefitBenefitBalanceFinancial, ExplanationOfBenefitBenefitBalanceFinancial, 
-  type IFamilyMemberHistory, FamilyMemberHistory, type IFamilyMemberHistoryCondition, FamilyMemberHistoryCondition, 
-  type IFlag, Flag, 
-  type IGoal, Goal, type IGoalTarget, GoalTarget, 
-  type IGraphDefinition, GraphDefinition, type IGraphDefinitionLink, GraphDefinitionLink, type IGraphDefinitionLinkTarget, GraphDefinitionLinkTarget, type IGraphDefinitionLinkTargetCompartment, GraphDefinitionLinkTargetCompartment, 
-  type IGroup, Group, type IGroupCharacteristic, GroupCharacteristic, type IGroupMember, GroupMember, 
-  type IGuidanceResponse, GuidanceResponse, 
-  type IHealthcareService, HealthcareService, type IHealthcareServiceEligibility, HealthcareServiceEligibility, type IHealthcareServiceAvailableTime, HealthcareServiceAvailableTime, type IHealthcareServiceNotAvailable, HealthcareServiceNotAvailable, 
-  type IImagingStudy, ImagingStudy, type IImagingStudySeries, ImagingStudySeries, type IImagingStudySeriesPerformer, ImagingStudySeriesPerformer, type IImagingStudySeriesInstance, ImagingStudySeriesInstance, 
-  type IImmunization, Immunization, type IImmunizationPerformer, ImmunizationPerformer, type IImmunizationEducation, ImmunizationEducation, type IImmunizationReaction, ImmunizationReaction, type IImmunizationProtocolApplied, ImmunizationProtocolApplied, 
-  type IImmunizationEvaluation, ImmunizationEvaluation, 
-  type IImmunizationRecommendation, ImmunizationRecommendation, type IImmunizationRecommendationRecommendation, ImmunizationRecommendationRecommendation, type IImmunizationRecommendationRecommendationDateCriterion, ImmunizationRecommendationRecommendationDateCriterion, 
-  type IImplementationGuide, ImplementationGuide, type IImplementationGuideDependsOn, ImplementationGuideDependsOn, type IImplementationGuideGlobal, ImplementationGuideGlobal, type IImplementationGuideDefinition, ImplementationGuideDefinition, type IImplementationGuideDefinitionGrouping, ImplementationGuideDefinitionGrouping, type IImplementationGuideDefinitionResource, ImplementationGuideDefinitionResource, type IImplementationGuideDefinitionPage, ImplementationGuideDefinitionPage, type IImplementationGuideDefinitionParameter, ImplementationGuideDefinitionParameter, type IImplementationGuideDefinitionTemplate, ImplementationGuideDefinitionTemplate, type IImplementationGuideManifest, ImplementationGuideManifest, type IImplementationGuideManifestResource, ImplementationGuideManifestResource, type IImplementationGuideManifestPage, ImplementationGuideManifestPage, 
-  type IInsurancePlan, InsurancePlan, type IInsurancePlanContact, InsurancePlanContact, type IInsurancePlanCoverage, InsurancePlanCoverage, type IInsurancePlanCoverageBenefit, InsurancePlanCoverageBenefit, type IInsurancePlanCoverageBenefitLimit, InsurancePlanCoverageBenefitLimit, type IInsurancePlanPlan, InsurancePlanPlan, type IInsurancePlanPlanGeneralCost, InsurancePlanPlanGeneralCost, type IInsurancePlanPlanSpecificCost, InsurancePlanPlanSpecificCost, type IInsurancePlanPlanSpecificCostBenefit, InsurancePlanPlanSpecificCostBenefit, type IInsurancePlanPlanSpecificCostBenefitCost, InsurancePlanPlanSpecificCostBenefitCost, 
-  type IInvoice, Invoice, type IInvoiceParticipant, InvoiceParticipant, type IInvoiceLineItem, InvoiceLineItem, type IInvoiceLineItemPriceComponent, InvoiceLineItemPriceComponent, 
-  type ILibrary, Library, 
-  type ILinkage, Linkage, type ILinkageItem, LinkageItem, 
-  type IList, List, type IListEntry, ListEntry, 
-  type ILocation, Location, type ILocationPosition, LocationPosition, type ILocationHoursOfOperation, LocationHoursOfOperation, 
-  type IMeasure, Measure, type IMeasureGroup, MeasureGroup, type IMeasureGroupPopulation, MeasureGroupPopulation, type IMeasureGroupStratifier, MeasureGroupStratifier, type IMeasureGroupStratifierComponent, MeasureGroupStratifierComponent, type IMeasureSupplementalData, MeasureSupplementalData, 
-  type IMeasureReport, MeasureReport, type IMeasureReportGroup, MeasureReportGroup, type IMeasureReportGroupPopulation, MeasureReportGroupPopulation, type IMeasureReportGroupStratifier, MeasureReportGroupStratifier, type IMeasureReportGroupStratifierStratum, MeasureReportGroupStratifierStratum, type IMeasureReportGroupStratifierStratumComponent, MeasureReportGroupStratifierStratumComponent, type IMeasureReportGroupStratifierStratumPopulation, MeasureReportGroupStratifierStratumPopulation, 
-  type IMedia, Media, 
-  type IMedication, Medication, type IMedicationIngredient, MedicationIngredient, type IMedicationBatch, MedicationBatch, 
-  type IMedicationAdministration, MedicationAdministration, type IMedicationAdministrationPerformer, MedicationAdministrationPerformer, type IMedicationAdministrationDosage, MedicationAdministrationDosage, 
-  type IMedicationDispense, MedicationDispense, type IMedicationDispensePerformer, MedicationDispensePerformer, type IMedicationDispenseSubstitution, MedicationDispenseSubstitution, 
-  type IMedicationKnowledge, MedicationKnowledge, type IMedicationKnowledgeRelatedMedicationKnowledge, MedicationKnowledgeRelatedMedicationKnowledge, type IMedicationKnowledgeMonograph, MedicationKnowledgeMonograph, type IMedicationKnowledgeIngredient, MedicationKnowledgeIngredient, type IMedicationKnowledgeCost, MedicationKnowledgeCost, type IMedicationKnowledgeMonitoringProgram, MedicationKnowledgeMonitoringProgram, type IMedicationKnowledgeAdministrationGuidelines, MedicationKnowledgeAdministrationGuidelines, type IMedicationKnowledgeAdministrationGuidelinesDosage, MedicationKnowledgeAdministrationGuidelinesDosage, type IMedicationKnowledgeAdministrationGuidelinesPatientCharacteristics, MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics, type IMedicationKnowledgeMedicineClassification, MedicationKnowledgeMedicineClassification, type IMedicationKnowledgePackaging, MedicationKnowledgePackaging, type IMedicationKnowledgeDrugCharacteristic, MedicationKnowledgeDrugCharacteristic, type IMedicationKnowledgeRegulatory, MedicationKnowledgeRegulatory, type IMedicationKnowledgeRegulatorySubstitution, MedicationKnowledgeRegulatorySubstitution, type IMedicationKnowledgeRegulatorySchedule, MedicationKnowledgeRegulatorySchedule, type IMedicationKnowledgeRegulatoryMaxDispense, MedicationKnowledgeRegulatoryMaxDispense, type IMedicationKnowledgeKinetics, MedicationKnowledgeKinetics, 
-  type IMedicationRequest, MedicationRequest, type IMedicationRequestDispenseRequest, MedicationRequestDispenseRequest, type IMedicationRequestDispenseRequestInitialFill, MedicationRequestDispenseRequestInitialFill, type IMedicationRequestSubstitution, MedicationRequestSubstitution, 
-  type IMedicationStatement, MedicationStatement, 
-  type IMedicinalProduct, MedicinalProduct, type IMedicinalProductName, MedicinalProductName, type IMedicinalProductNameNamePart, MedicinalProductNameNamePart, type IMedicinalProductNameCountryLanguage, MedicinalProductNameCountryLanguage, type IMedicinalProductManufacturingBusinessOperation, MedicinalProductManufacturingBusinessOperation, type IMedicinalProductSpecialDesignation, MedicinalProductSpecialDesignation, 
-  type IMedicinalProductAuthorization, MedicinalProductAuthorization, type IMedicinalProductAuthorizationJurisdictionalAuthorization, MedicinalProductAuthorizationJurisdictionalAuthorization, type IMedicinalProductAuthorizationProcedure, MedicinalProductAuthorizationProcedure, 
-  type IMedicinalProductContraindication, MedicinalProductContraindication, type IMedicinalProductContraindicationOtherTherapy, MedicinalProductContraindicationOtherTherapy, 
-  type IMedicinalProductIndication, MedicinalProductIndication, type IMedicinalProductIndicationOtherTherapy, MedicinalProductIndicationOtherTherapy, 
-  type IMedicinalProductIngredient, MedicinalProductIngredient, type IMedicinalProductIngredientSpecifiedSubstance, MedicinalProductIngredientSpecifiedSubstance, type IMedicinalProductIngredientSpecifiedSubstanceStrength, MedicinalProductIngredientSpecifiedSubstanceStrength, type IMedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength, MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength, type IMedicinalProductIngredientSubstance, MedicinalProductIngredientSubstance, 
-  type IMedicinalProductInteraction, MedicinalProductInteraction, type IMedicinalProductInteractionInteractant, MedicinalProductInteractionInteractant, 
-  type IMedicinalProductManufactured, MedicinalProductManufactured, 
-  type IMedicinalProductPackaged, MedicinalProductPackaged, type IMedicinalProductPackagedBatchIdentifier, MedicinalProductPackagedBatchIdentifier, type IMedicinalProductPackagedPackageItem, MedicinalProductPackagedPackageItem, 
-  type IMedicinalProductPharmaceutical, MedicinalProductPharmaceutical, type IMedicinalProductPharmaceuticalCharacteristics, MedicinalProductPharmaceuticalCharacteristics, type IMedicinalProductPharmaceuticalRouteOfAdministration, MedicinalProductPharmaceuticalRouteOfAdministration, type IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies, type IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod, 
-  type IMedicinalProductUndesirableEffect, MedicinalProductUndesirableEffect, 
-  type IMessageDefinition, MessageDefinition, type IMessageDefinitionFocus, MessageDefinitionFocus, type IMessageDefinitionAllowedResponse, MessageDefinitionAllowedResponse, 
-  type IMessageHeader, MessageHeader, type IMessageHeaderDestination, MessageHeaderDestination, type IMessageHeaderSource, MessageHeaderSource, type IMessageHeaderResponse, MessageHeaderResponse, 
-  type IMolecularSequence, MolecularSequence, type IMolecularSequenceReferenceSeq, MolecularSequenceReferenceSeq, type IMolecularSequenceVariant, MolecularSequenceVariant, type IMolecularSequenceQuality, MolecularSequenceQuality, type IMolecularSequenceQualityRoc, MolecularSequenceQualityRoc, type IMolecularSequenceRepository, MolecularSequenceRepository, type IMolecularSequenceStructureVariant, MolecularSequenceStructureVariant, type IMolecularSequenceStructureVariantOuter, MolecularSequenceStructureVariantOuter, type IMolecularSequenceStructureVariantInner, MolecularSequenceStructureVariantInner, 
-  type INamingSystem, NamingSystem, type INamingSystemUniqueId, NamingSystemUniqueId, 
-  type INutritionOrder, NutritionOrder, type INutritionOrderOralDiet, NutritionOrderOralDiet, type INutritionOrderOralDietNutrient, NutritionOrderOralDietNutrient, type INutritionOrderOralDietTexture, NutritionOrderOralDietTexture, type INutritionOrderSupplement, NutritionOrderSupplement, type INutritionOrderEnteralFormula, NutritionOrderEnteralFormula, type INutritionOrderEnteralFormulaAdministration, NutritionOrderEnteralFormulaAdministration, 
-  type IObservation, Observation, type IObservationReferenceRange, ObservationReferenceRange, type IObservationComponent, ObservationComponent, 
-  type IObservationDefinition, ObservationDefinition, type IObservationDefinitionQuantitativeDetails, ObservationDefinitionQuantitativeDetails, type IObservationDefinitionQualifiedInterval, ObservationDefinitionQualifiedInterval, 
-  type IOperationDefinition, OperationDefinition, type IOperationDefinitionParameter, OperationDefinitionParameter, type IOperationDefinitionParameterBinding, OperationDefinitionParameterBinding, type IOperationDefinitionParameterReferencedFrom, OperationDefinitionParameterReferencedFrom, type IOperationDefinitionOverload, OperationDefinitionOverload, 
-  type IOperationOutcome, OperationOutcome, type IOperationOutcomeIssue, OperationOutcomeIssue, 
-  type IOrganization, Organization, type IOrganizationContact, OrganizationContact, 
-  type IOrganizationAffiliation, OrganizationAffiliation, 
-  type IParameters, Parameters, type IParametersParameter, ParametersParameter, 
-  type IPatient, Patient, type IPatientContact, PatientContact, type IPatientCommunication, PatientCommunication, type IPatientLink, PatientLink, 
-  type IPaymentNotice, PaymentNotice, 
-  type IPaymentReconciliation, PaymentReconciliation, type IPaymentReconciliationDetail, PaymentReconciliationDetail, type IPaymentReconciliationProcessNote, PaymentReconciliationProcessNote, 
-  type IPerson, Person, type IPersonLink, PersonLink, 
-  type IPlanDefinition, PlanDefinition, type IPlanDefinitionGoal, PlanDefinitionGoal, type IPlanDefinitionGoalTarget, PlanDefinitionGoalTarget, type IPlanDefinitionAction, PlanDefinitionAction, type IPlanDefinitionActionCondition, PlanDefinitionActionCondition, type IPlanDefinitionActionRelatedAction, PlanDefinitionActionRelatedAction, type IPlanDefinitionActionParticipant, PlanDefinitionActionParticipant, type IPlanDefinitionActionDynamicValue, PlanDefinitionActionDynamicValue, 
-  type IPractitioner, Practitioner, type IPractitionerQualification, PractitionerQualification, 
-  type IPractitionerRole, PractitionerRole, type IPractitionerRoleAvailableTime, PractitionerRoleAvailableTime, type IPractitionerRoleNotAvailable, PractitionerRoleNotAvailable, 
-  type IProcedure, Procedure, type IProcedurePerformer, ProcedurePerformer, type IProcedureFocalDevice, ProcedureFocalDevice, 
-  type IProvenance, Provenance, type IProvenanceAgent, ProvenanceAgent, type IProvenanceEntity, ProvenanceEntity, 
-  type IQuestionnaire, Questionnaire, type IQuestionnaireItem, QuestionnaireItem, type IQuestionnaireItemEnableWhen, QuestionnaireItemEnableWhen, type IQuestionnaireItemAnswerOption, QuestionnaireItemAnswerOption, type IQuestionnaireItemInitial, QuestionnaireItemInitial, 
-  type IQuestionnaireResponse, QuestionnaireResponse, type IQuestionnaireResponseItem, QuestionnaireResponseItem, type IQuestionnaireResponseItemAnswer, QuestionnaireResponseItemAnswer, 
-  type IRelatedPerson, RelatedPerson, type IRelatedPersonCommunication, RelatedPersonCommunication, 
-  type IRequestGroup, RequestGroup, type IRequestGroupAction, RequestGroupAction, type IRequestGroupActionCondition, RequestGroupActionCondition, type IRequestGroupActionRelatedAction, RequestGroupActionRelatedAction, 
-  type IResearchDefinition, ResearchDefinition, 
-  type IResearchElementDefinition, ResearchElementDefinition, type IResearchElementDefinitionCharacteristic, ResearchElementDefinitionCharacteristic, 
-  type IResearchStudy, ResearchStudy, type IResearchStudyArm, ResearchStudyArm, type IResearchStudyObjective, ResearchStudyObjective, 
-  type IResearchSubject, ResearchSubject, 
-  type IRiskAssessment, RiskAssessment, type IRiskAssessmentPrediction, RiskAssessmentPrediction, 
-  type IRiskEvidenceSynthesis, RiskEvidenceSynthesis, type IRiskEvidenceSynthesisSampleSize, RiskEvidenceSynthesisSampleSize, type IRiskEvidenceSynthesisRiskEstimate, RiskEvidenceSynthesisRiskEstimate, type IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate, RiskEvidenceSynthesisRiskEstimatePrecisionEstimate, type IRiskEvidenceSynthesisCertainty, RiskEvidenceSynthesisCertainty, type IRiskEvidenceSynthesisCertaintyCertaintySubcomponent, RiskEvidenceSynthesisCertaintyCertaintySubcomponent, 
-  type ISchedule, Schedule, 
-  type ISearchParameter, SearchParameter, type ISearchParameterComponent, SearchParameterComponent, 
-  type IServiceRequest, ServiceRequest, 
-  type ISlot, Slot, 
-  type ISpecimen, Specimen, type ISpecimenCollection, SpecimenCollection, type ISpecimenProcessing, SpecimenProcessing, type ISpecimenContainer, SpecimenContainer, 
-  type ISpecimenDefinition, SpecimenDefinition, type ISpecimenDefinitionTypeTested, SpecimenDefinitionTypeTested, type ISpecimenDefinitionTypeTestedContainer, SpecimenDefinitionTypeTestedContainer, type ISpecimenDefinitionTypeTestedContainerAdditive, SpecimenDefinitionTypeTestedContainerAdditive, type ISpecimenDefinitionTypeTestedHandling, SpecimenDefinitionTypeTestedHandling, 
-  type IStructureDefinition, StructureDefinition, type IStructureDefinitionMapping, StructureDefinitionMapping, type IStructureDefinitionContext, StructureDefinitionContext, type IStructureDefinitionSnapshot, StructureDefinitionSnapshot, type IStructureDefinitionDifferential, StructureDefinitionDifferential, 
-  type IStructureMap, StructureMap, type IStructureMapStructure, StructureMapStructure, type IStructureMapGroup, StructureMapGroup, type IStructureMapGroupInput, StructureMapGroupInput, type IStructureMapGroupRule, StructureMapGroupRule, type IStructureMapGroupRuleSource, StructureMapGroupRuleSource, type IStructureMapGroupRuleTarget, StructureMapGroupRuleTarget, type IStructureMapGroupRuleTargetParameter, StructureMapGroupRuleTargetParameter, type IStructureMapGroupRuleDependent, StructureMapGroupRuleDependent, 
-  type ISubscription, Subscription, type ISubscriptionChannel, SubscriptionChannel, 
-  type ISubstance, Substance, type ISubstanceInstance, SubstanceInstance, type ISubstanceIngredient, SubstanceIngredient, 
-  type ISubstanceNucleicAcid, SubstanceNucleicAcid, type ISubstanceNucleicAcidSubunit, SubstanceNucleicAcidSubunit, type ISubstanceNucleicAcidSubunitLinkage, SubstanceNucleicAcidSubunitLinkage, type ISubstanceNucleicAcidSubunitSugar, SubstanceNucleicAcidSubunitSugar, 
-  type ISubstancePolymer, SubstancePolymer, type ISubstancePolymerMonomerSet, SubstancePolymerMonomerSet, type ISubstancePolymerMonomerSetStartingMaterial, SubstancePolymerMonomerSetStartingMaterial, type ISubstancePolymerRepeat, SubstancePolymerRepeat, type ISubstancePolymerRepeatRepeatUnit, SubstancePolymerRepeatRepeatUnit, type ISubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation, SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation, type ISubstancePolymerRepeatRepeatUnitStructuralRepresentation, SubstancePolymerRepeatRepeatUnitStructuralRepresentation, 
-  type ISubstanceProtein, SubstanceProtein, type ISubstanceProteinSubunit, SubstanceProteinSubunit, 
-  type ISubstanceReferenceInformation, SubstanceReferenceInformation, type ISubstanceReferenceInformationGene, SubstanceReferenceInformationGene, type ISubstanceReferenceInformationGeneElement, SubstanceReferenceInformationGeneElement, type ISubstanceReferenceInformationClassification, SubstanceReferenceInformationClassification, type ISubstanceReferenceInformationTarget, SubstanceReferenceInformationTarget, 
-  type ISubstanceSourceMaterial, SubstanceSourceMaterial, type ISubstanceSourceMaterialFractionDescription, SubstanceSourceMaterialFractionDescription, type ISubstanceSourceMaterialOrganism, SubstanceSourceMaterialOrganism, type ISubstanceSourceMaterialOrganismAuthor, SubstanceSourceMaterialOrganismAuthor, type ISubstanceSourceMaterialOrganismHybrid, SubstanceSourceMaterialOrganismHybrid, type ISubstanceSourceMaterialOrganismOrganismGeneral, SubstanceSourceMaterialOrganismOrganismGeneral, type ISubstanceSourceMaterialPartDescription, SubstanceSourceMaterialPartDescription, 
-  type ISubstanceSpecification, SubstanceSpecification, type ISubstanceSpecificationMoiety, SubstanceSpecificationMoiety, type ISubstanceSpecificationProperty, SubstanceSpecificationProperty, type ISubstanceSpecificationStructure, SubstanceSpecificationStructure, type ISubstanceSpecificationStructureIsotope, SubstanceSpecificationStructureIsotope, type ISubstanceSpecificationStructureIsotopeMolecularWeight, SubstanceSpecificationStructureIsotopeMolecularWeight, type ISubstanceSpecificationStructureRepresentation, SubstanceSpecificationStructureRepresentation, type ISubstanceSpecificationCode, SubstanceSpecificationCode, type ISubstanceSpecificationName, SubstanceSpecificationName, type ISubstanceSpecificationNameOfficial, SubstanceSpecificationNameOfficial, type ISubstanceSpecificationRelationship, SubstanceSpecificationRelationship, 
-  type ISupplyDelivery, SupplyDelivery, type ISupplyDeliverySuppliedItem, SupplyDeliverySuppliedItem, 
-  type ISupplyRequest, SupplyRequest, type ISupplyRequestParameter, SupplyRequestParameter, 
-  type ITask, Task, type ITaskRestriction, TaskRestriction, type ITaskInput, TaskInput, type ITaskOutput, TaskOutput, 
-  type ITerminologyCapabilities, TerminologyCapabilities, type ITerminologyCapabilitiesSoftware, TerminologyCapabilitiesSoftware, type ITerminologyCapabilitiesImplementation, TerminologyCapabilitiesImplementation, type ITerminologyCapabilitiesCodeSystem, TerminologyCapabilitiesCodeSystem, type ITerminologyCapabilitiesCodeSystemVersion, TerminologyCapabilitiesCodeSystemVersion, type ITerminologyCapabilitiesCodeSystemVersionFilter, TerminologyCapabilitiesCodeSystemVersionFilter, type ITerminologyCapabilitiesExpansion, TerminologyCapabilitiesExpansion, type ITerminologyCapabilitiesExpansionParameter, TerminologyCapabilitiesExpansionParameter, type ITerminologyCapabilitiesValidateCode, TerminologyCapabilitiesValidateCode, type ITerminologyCapabilitiesTranslation, TerminologyCapabilitiesTranslation, type ITerminologyCapabilitiesClosure, TerminologyCapabilitiesClosure, 
-  type ITestReport, TestReport, type ITestReportParticipant, TestReportParticipant, type ITestReportSetup, TestReportSetup, type ITestReportSetupAction, TestReportSetupAction, type ITestReportSetupActionOperation, TestReportSetupActionOperation, type ITestReportSetupActionAssert, TestReportSetupActionAssert, type ITestReportTest, TestReportTest, type ITestReportTestAction, TestReportTestAction, type ITestReportTeardown, TestReportTeardown, type ITestReportTeardownAction, TestReportTeardownAction, 
-  type ITestScript, TestScript, type ITestScriptOrigin, TestScriptOrigin, type ITestScriptDestination, TestScriptDestination, type ITestScriptMetadata, TestScriptMetadata, type ITestScriptMetadataLink, TestScriptMetadataLink, type ITestScriptMetadataCapability, TestScriptMetadataCapability, type ITestScriptFixture, TestScriptFixture, type ITestScriptVariable, TestScriptVariable, type ITestScriptSetup, TestScriptSetup, type ITestScriptSetupAction, TestScriptSetupAction, type ITestScriptSetupActionOperation, TestScriptSetupActionOperation, type ITestScriptSetupActionOperationRequestHeader, TestScriptSetupActionOperationRequestHeader, type ITestScriptSetupActionAssert, TestScriptSetupActionAssert, type ITestScriptTest, TestScriptTest, type ITestScriptTestAction, TestScriptTestAction, type ITestScriptTeardown, TestScriptTeardown, type ITestScriptTeardownAction, TestScriptTeardownAction, 
-  type IValueSet, ValueSet, type IValueSetCompose, ValueSetCompose, type IValueSetComposeInclude, ValueSetComposeInclude, type IValueSetComposeIncludeConcept, ValueSetComposeIncludeConcept, type IValueSetComposeIncludeConceptDesignation, ValueSetComposeIncludeConceptDesignation, type IValueSetComposeIncludeFilter, ValueSetComposeIncludeFilter, type IValueSetExpansion, ValueSetExpansion, type IValueSetExpansionParameter, ValueSetExpansionParameter, type IValueSetExpansionContains, ValueSetExpansionContains, 
-  type IVerificationResult, VerificationResult, type IVerificationResultPrimarySource, VerificationResultPrimarySource, type IVerificationResultAttestation, VerificationResultAttestation, type IVerificationResultValidator, VerificationResultValidator, 
-  type IVisionPrescription, VisionPrescription, type IVisionPrescriptionLensSpecification, VisionPrescriptionLensSpecification, type IVisionPrescriptionLensSpecificationPrism, VisionPrescriptionLensSpecificationPrism, 
-  type IFhirResource, type FhirResource, 
+  type FhirBaseArgs, FhirBase, 
+  type FhirPrimitiveArgs, FhirPrimitive, 
+  type FhirBase64BinaryArgs, FhirBase64Binary, 
+  type FhirBooleanArgs, FhirBoolean, 
+  type FhirCanonicalArgs, FhirCanonical, 
+  type FhirCodeArgs, FhirCode, 
+  type FhirDateArgs, FhirDate, 
+  type FhirDateTimeArgs, FhirDateTime, 
+  type FhirDecimalArgs, FhirDecimal, 
+  type FhirIdArgs, FhirId, 
+  type FhirInstantArgs, FhirInstant, 
+  type FhirIntegerArgs, FhirInteger, 
+  type FhirMarkdownArgs, FhirMarkdown, 
+  type FhirOidArgs, FhirOid, 
+  type FhirPositiveIntArgs, FhirPositiveInt, 
+  type FhirStringArgs, FhirString, 
+  type FhirTimeArgs, FhirTime, 
+  type FhirUnsignedIntArgs, FhirUnsignedInt, 
+  type FhirUriArgs, FhirUri, 
+  type FhirUrlArgs, FhirUrl, 
+  type FhirUuidArgs, FhirUuid, 
+  type FhirXhtmlArgs, FhirXhtml, 
+  type FhirElementArgs, FhirElement, 
+  type CodingArgs, Coding, 
+  type AddressArgs, Address, 
+  type QuantityArgs, Quantity, 
+  type AgeArgs, Age, 
+  type AnnotationArgs, Annotation, 
+  type AttachmentArgs, Attachment, 
+  type BackboneElementArgs, BackboneElement, 
+  type CodeableConceptArgs, CodeableConcept, 
+  type ContactDetailArgs, ContactDetail, 
+  type ContactPointArgs, ContactPoint, 
+  type ContributorArgs, Contributor, 
+  type CountArgs, Count, 
+  type DataRequirementArgs, DataRequirement, type DataRequirementCodeFilterArgs, DataRequirementCodeFilter, type DataRequirementDateFilterArgs, DataRequirementDateFilter, type DataRequirementSortArgs, DataRequirementSort, 
+  type DistanceArgs, Distance, 
+  type DosageArgs, Dosage, type DosageDoseAndRateArgs, DosageDoseAndRate, 
+  type DurationArgs, Duration, 
+  type ElementDefinitionArgs, ElementDefinition, type ElementDefinitionSlicingArgs, ElementDefinitionSlicing, type ElementDefinitionSlicingDiscriminatorArgs, ElementDefinitionSlicingDiscriminator, type ElementDefinitionBaseArgs, ElementDefinitionBase, type ElementDefinitionTypeArgs, ElementDefinitionType, type ElementDefinitionExampleArgs, ElementDefinitionExample, type ElementDefinitionConstraintArgs, ElementDefinitionConstraint, type ElementDefinitionBindingArgs, ElementDefinitionBinding, type ElementDefinitionMappingArgs, ElementDefinitionMapping, 
+  type ExpressionArgs, Expression, 
+  type ExtensionArgs, Extension, 
+  type HumanNameArgs, HumanName, 
+  type IdentifierArgs, Identifier, 
+  type MarketingStatusArgs, MarketingStatus, 
+  type MetaArgs, Meta, 
+  type MoneyArgs, Money, 
+  type NarrativeArgs, Narrative, 
+  type ParameterDefinitionArgs, ParameterDefinition, 
+  type PeriodArgs, Period, 
+  type PopulationArgs, Population, 
+  type ProdCharacteristicArgs, ProdCharacteristic, 
+  type ProductShelfLifeArgs, ProductShelfLife, 
+  type RangeArgs, Range, 
+  type RatioArgs, Ratio, 
+  type ReferenceArgs, Reference, 
+  type RelatedArtifactArgs, RelatedArtifact, 
+  type SampledDataArgs, SampledData, 
+  type SignatureArgs, Signature, 
+  type SubstanceAmountArgs, SubstanceAmount, type SubstanceAmountReferenceRangeArgs, SubstanceAmountReferenceRange, 
+  type TimingArgs, Timing, type TimingRepeatArgs, TimingRepeat, 
+  type TriggerDefinitionArgs, TriggerDefinition, 
+  type UsageContextArgs, UsageContext, 
+  type ResourceArgs, Resource, 
+  type DomainResourceArgs, DomainResource, 
+  type AccountArgs, Account, type AccountCoverageArgs, AccountCoverage, type AccountGuarantorArgs, AccountGuarantor, 
+  type ActivityDefinitionArgs, ActivityDefinition, type ActivityDefinitionParticipantArgs, ActivityDefinitionParticipant, type ActivityDefinitionDynamicValueArgs, ActivityDefinitionDynamicValue, 
+  type AdverseEventArgs, AdverseEvent, type AdverseEventSuspectEntityArgs, AdverseEventSuspectEntity, type AdverseEventSuspectEntityCausalityArgs, AdverseEventSuspectEntityCausality, 
+  type AllergyIntoleranceArgs, AllergyIntolerance, type AllergyIntoleranceReactionArgs, AllergyIntoleranceReaction, 
+  type AppointmentArgs, Appointment, type AppointmentParticipantArgs, AppointmentParticipant, 
+  type AppointmentResponseArgs, AppointmentResponse, 
+  type AuditEventArgs, AuditEvent, type AuditEventAgentArgs, AuditEventAgent, type AuditEventAgentNetworkArgs, AuditEventAgentNetwork, type AuditEventSourceArgs, AuditEventSource, type AuditEventEntityArgs, AuditEventEntity, type AuditEventEntityDetailArgs, AuditEventEntityDetail, 
+  type BasicArgs, Basic, 
+  type BinaryArgs, Binary, 
+  type BiologicallyDerivedProductArgs, BiologicallyDerivedProduct, type BiologicallyDerivedProductCollectionArgs, BiologicallyDerivedProductCollection, type BiologicallyDerivedProductProcessingArgs, BiologicallyDerivedProductProcessing, type BiologicallyDerivedProductManipulationArgs, BiologicallyDerivedProductManipulation, type BiologicallyDerivedProductStorageArgs, BiologicallyDerivedProductStorage, 
+  type BodyStructureArgs, BodyStructure, 
+  type BundleArgs, Bundle, type BundleLinkArgs, BundleLink, type BundleEntryArgs, BundleEntry, type BundleEntrySearchArgs, BundleEntrySearch, type BundleEntryRequestArgs, BundleEntryRequest, type BundleEntryResponseArgs, BundleEntryResponse, 
+  type CapabilityStatementArgs, CapabilityStatement, type CapabilityStatementSoftwareArgs, CapabilityStatementSoftware, type CapabilityStatementImplementationArgs, CapabilityStatementImplementation, type CapabilityStatementRestArgs, CapabilityStatementRest, type CapabilityStatementRestSecurityArgs, CapabilityStatementRestSecurity, type CapabilityStatementRestResourceArgs, CapabilityStatementRestResource, type CapabilityStatementRestResourceInteractionArgs, CapabilityStatementRestResourceInteraction, type CapabilityStatementRestResourceSearchParamArgs, CapabilityStatementRestResourceSearchParam, type CapabilityStatementRestResourceOperationArgs, CapabilityStatementRestResourceOperation, type CapabilityStatementRestInteractionArgs, CapabilityStatementRestInteraction, type CapabilityStatementMessagingArgs, CapabilityStatementMessaging, type CapabilityStatementMessagingEndpointArgs, CapabilityStatementMessagingEndpoint, type CapabilityStatementMessagingSupportedMessageArgs, CapabilityStatementMessagingSupportedMessage, type CapabilityStatementDocumentArgs, CapabilityStatementDocument, 
+  type CarePlanArgs, CarePlan, type CarePlanActivityArgs, CarePlanActivity, type CarePlanActivityDetailArgs, CarePlanActivityDetail, 
+  type CareTeamArgs, CareTeam, type CareTeamParticipantArgs, CareTeamParticipant, 
+  type CatalogEntryArgs, CatalogEntry, type CatalogEntryRelatedEntryArgs, CatalogEntryRelatedEntry, 
+  type ChargeItemArgs, ChargeItem, type ChargeItemPerformerArgs, ChargeItemPerformer, 
+  type ChargeItemDefinitionArgs, ChargeItemDefinition, type ChargeItemDefinitionApplicabilityArgs, ChargeItemDefinitionApplicability, type ChargeItemDefinitionPropertyGroupArgs, ChargeItemDefinitionPropertyGroup, type ChargeItemDefinitionPropertyGroupPriceComponentArgs, ChargeItemDefinitionPropertyGroupPriceComponent, 
+  type ClaimArgs, Claim, type ClaimRelatedArgs, ClaimRelated, type ClaimPayeeArgs, ClaimPayee, type ClaimCareTeamArgs, ClaimCareTeam, type ClaimSupportingInfoArgs, ClaimSupportingInfo, type ClaimDiagnosisArgs, ClaimDiagnosis, type ClaimProcedureArgs, ClaimProcedure, type ClaimInsuranceArgs, ClaimInsurance, type ClaimAccidentArgs, ClaimAccident, type ClaimItemArgs, ClaimItem, type ClaimItemDetailArgs, ClaimItemDetail, type ClaimItemDetailSubDetailArgs, ClaimItemDetailSubDetail, 
+  type ClaimResponseArgs, ClaimResponse, type ClaimResponseItemArgs, ClaimResponseItem, type ClaimResponseItemAdjudicationArgs, ClaimResponseItemAdjudication, type ClaimResponseItemDetailArgs, ClaimResponseItemDetail, type ClaimResponseItemDetailSubDetailArgs, ClaimResponseItemDetailSubDetail, type ClaimResponseAddItemArgs, ClaimResponseAddItem, type ClaimResponseAddItemDetailArgs, ClaimResponseAddItemDetail, type ClaimResponseAddItemDetailSubDetailArgs, ClaimResponseAddItemDetailSubDetail, type ClaimResponseTotalArgs, ClaimResponseTotal, type ClaimResponsePaymentArgs, ClaimResponsePayment, type ClaimResponseProcessNoteArgs, ClaimResponseProcessNote, type ClaimResponseInsuranceArgs, ClaimResponseInsurance, type ClaimResponseErrorArgs, ClaimResponseError, 
+  type ClinicalImpressionArgs, ClinicalImpression, type ClinicalImpressionInvestigationArgs, ClinicalImpressionInvestigation, type ClinicalImpressionFindingArgs, ClinicalImpressionFinding, 
+  type CodeSystemArgs, CodeSystem, type CodeSystemFilterArgs, CodeSystemFilter, type CodeSystemPropertyArgs, CodeSystemProperty, type CodeSystemConceptArgs, CodeSystemConcept, type CodeSystemConceptDesignationArgs, CodeSystemConceptDesignation, type CodeSystemConceptPropertyArgs, CodeSystemConceptProperty, 
+  type CommunicationArgs, Communication, type CommunicationPayloadArgs, CommunicationPayload, 
+  type CommunicationRequestArgs, CommunicationRequest, type CommunicationRequestPayloadArgs, CommunicationRequestPayload, 
+  type CompartmentDefinitionArgs, CompartmentDefinition, type CompartmentDefinitionResourceArgs, CompartmentDefinitionResource, 
+  type CompositionArgs, Composition, type CompositionAttesterArgs, CompositionAttester, type CompositionRelatesToArgs, CompositionRelatesTo, type CompositionEventArgs, CompositionEvent, type CompositionSectionArgs, CompositionSection, 
+  type ConceptMapArgs, ConceptMap, type ConceptMapGroupArgs, ConceptMapGroup, type ConceptMapGroupElementArgs, ConceptMapGroupElement, type ConceptMapGroupElementTargetArgs, ConceptMapGroupElementTarget, type ConceptMapGroupElementTargetDependsOnArgs, ConceptMapGroupElementTargetDependsOn, type ConceptMapGroupUnmappedArgs, ConceptMapGroupUnmapped, 
+  type ConditionArgs, Condition, type ConditionStageArgs, ConditionStage, type ConditionEvidenceArgs, ConditionEvidence, 
+  type ConsentArgs, Consent, type ConsentPolicyArgs, ConsentPolicy, type ConsentVerificationArgs, ConsentVerification, type ConsentProvisionArgs, ConsentProvision, type ConsentProvisionActorArgs, ConsentProvisionActor, type ConsentProvisionDataArgs, ConsentProvisionData, 
+  type ContractArgs, Contract, type ContractContentDefinitionArgs, ContractContentDefinition, type ContractTermArgs, ContractTerm, type ContractTermSecurityLabelArgs, ContractTermSecurityLabel, type ContractTermOfferArgs, ContractTermOffer, type ContractTermOfferPartyArgs, ContractTermOfferParty, type ContractTermOfferAnswerArgs, ContractTermOfferAnswer, type ContractTermAssetArgs, ContractTermAsset, type ContractTermAssetContextArgs, ContractTermAssetContext, type ContractTermAssetValuedItemArgs, ContractTermAssetValuedItem, type ContractTermActionArgs, ContractTermAction, type ContractTermActionSubjectArgs, ContractTermActionSubject, type ContractSignerArgs, ContractSigner, type ContractFriendlyArgs, ContractFriendly, type ContractLegalArgs, ContractLegal, type ContractRuleArgs, ContractRule, 
+  type CoverageArgs, Coverage, type CoverageClassArgs, CoverageClass, type CoverageCostToBeneficiaryArgs, CoverageCostToBeneficiary, type CoverageCostToBeneficiaryExceptionArgs, CoverageCostToBeneficiaryException, 
+  type CoverageEligibilityRequestArgs, CoverageEligibilityRequest, type CoverageEligibilityRequestSupportingInfoArgs, CoverageEligibilityRequestSupportingInfo, type CoverageEligibilityRequestInsuranceArgs, CoverageEligibilityRequestInsurance, type CoverageEligibilityRequestItemArgs, CoverageEligibilityRequestItem, type CoverageEligibilityRequestItemDiagnosisArgs, CoverageEligibilityRequestItemDiagnosis, 
+  type CoverageEligibilityResponseArgs, CoverageEligibilityResponse, type CoverageEligibilityResponseInsuranceArgs, CoverageEligibilityResponseInsurance, type CoverageEligibilityResponseInsuranceItemArgs, CoverageEligibilityResponseInsuranceItem, type CoverageEligibilityResponseInsuranceItemBenefitArgs, CoverageEligibilityResponseInsuranceItemBenefit, type CoverageEligibilityResponseErrorArgs, CoverageEligibilityResponseError, 
+  type DetectedIssueArgs, DetectedIssue, type DetectedIssueEvidenceArgs, DetectedIssueEvidence, type DetectedIssueMitigationArgs, DetectedIssueMitigation, 
+  type DeviceArgs, Device, type DeviceUdiCarrierArgs, DeviceUdiCarrier, type DeviceDeviceNameArgs, DeviceDeviceName, type DeviceSpecializationArgs, DeviceSpecialization, type DeviceVersionArgs, DeviceVersion, type DevicePropertyArgs, DeviceProperty, 
+  type DeviceDefinitionArgs, DeviceDefinition, type DeviceDefinitionUdiDeviceIdentifierArgs, DeviceDefinitionUdiDeviceIdentifier, type DeviceDefinitionDeviceNameArgs, DeviceDefinitionDeviceName, type DeviceDefinitionSpecializationArgs, DeviceDefinitionSpecialization, type DeviceDefinitionCapabilityArgs, DeviceDefinitionCapability, type DeviceDefinitionPropertyArgs, DeviceDefinitionProperty, type DeviceDefinitionMaterialArgs, DeviceDefinitionMaterial, 
+  type DeviceMetricArgs, DeviceMetric, type DeviceMetricCalibrationArgs, DeviceMetricCalibration, 
+  type DeviceRequestArgs, DeviceRequest, type DeviceRequestParameterArgs, DeviceRequestParameter, 
+  type DeviceUseStatementArgs, DeviceUseStatement, 
+  type DiagnosticReportArgs, DiagnosticReport, type DiagnosticReportMediaArgs, DiagnosticReportMedia, 
+  type DocumentManifestArgs, DocumentManifest, type DocumentManifestRelatedArgs, DocumentManifestRelated, 
+  type DocumentReferenceArgs, DocumentReference, type DocumentReferenceRelatesToArgs, DocumentReferenceRelatesTo, type DocumentReferenceContentArgs, DocumentReferenceContent, type DocumentReferenceContextArgs, DocumentReferenceContext, 
+  type EffectEvidenceSynthesisArgs, EffectEvidenceSynthesis, type EffectEvidenceSynthesisSampleSizeArgs, EffectEvidenceSynthesisSampleSize, type EffectEvidenceSynthesisResultsByExposureArgs, EffectEvidenceSynthesisResultsByExposure, type EffectEvidenceSynthesisEffectEstimateArgs, EffectEvidenceSynthesisEffectEstimate, type EffectEvidenceSynthesisEffectEstimatePrecisionEstimateArgs, EffectEvidenceSynthesisEffectEstimatePrecisionEstimate, type EffectEvidenceSynthesisCertaintyArgs, EffectEvidenceSynthesisCertainty, type EffectEvidenceSynthesisCertaintyCertaintySubcomponentArgs, EffectEvidenceSynthesisCertaintyCertaintySubcomponent, 
+  type EncounterArgs, Encounter, type EncounterStatusHistoryArgs, EncounterStatusHistory, type EncounterClassHistoryArgs, EncounterClassHistory, type EncounterParticipantArgs, EncounterParticipant, type EncounterDiagnosisArgs, EncounterDiagnosis, type EncounterHospitalizationArgs, EncounterHospitalization, type EncounterLocationArgs, EncounterLocation, 
+  type EndpointArgs, Endpoint, 
+  type EnrollmentRequestArgs, EnrollmentRequest, 
+  type EnrollmentResponseArgs, EnrollmentResponse, 
+  type EpisodeOfCareArgs, EpisodeOfCare, type EpisodeOfCareStatusHistoryArgs, EpisodeOfCareStatusHistory, type EpisodeOfCareDiagnosisArgs, EpisodeOfCareDiagnosis, 
+  type EventDefinitionArgs, EventDefinition, 
+  type EvidenceArgs, Evidence, 
+  type EvidenceVariableArgs, EvidenceVariable, type EvidenceVariableCharacteristicArgs, EvidenceVariableCharacteristic, 
+  type ExampleScenarioArgs, ExampleScenario, type ExampleScenarioActorArgs, ExampleScenarioActor, type ExampleScenarioInstanceArgs, ExampleScenarioInstance, type ExampleScenarioInstanceVersionArgs, ExampleScenarioInstanceVersion, type ExampleScenarioInstanceContainedInstanceArgs, ExampleScenarioInstanceContainedInstance, type ExampleScenarioProcessArgs, ExampleScenarioProcess, type ExampleScenarioProcessStepArgs, ExampleScenarioProcessStep, type ExampleScenarioProcessStepOperationArgs, ExampleScenarioProcessStepOperation, type ExampleScenarioProcessStepAlternativeArgs, ExampleScenarioProcessStepAlternative, 
+  type ExplanationOfBenefitArgs, ExplanationOfBenefit, type ExplanationOfBenefitRelatedArgs, ExplanationOfBenefitRelated, type ExplanationOfBenefitPayeeArgs, ExplanationOfBenefitPayee, type ExplanationOfBenefitCareTeamArgs, ExplanationOfBenefitCareTeam, type ExplanationOfBenefitSupportingInfoArgs, ExplanationOfBenefitSupportingInfo, type ExplanationOfBenefitDiagnosisArgs, ExplanationOfBenefitDiagnosis, type ExplanationOfBenefitProcedureArgs, ExplanationOfBenefitProcedure, type ExplanationOfBenefitInsuranceArgs, ExplanationOfBenefitInsurance, type ExplanationOfBenefitAccidentArgs, ExplanationOfBenefitAccident, type ExplanationOfBenefitItemArgs, ExplanationOfBenefitItem, type ExplanationOfBenefitItemAdjudicationArgs, ExplanationOfBenefitItemAdjudication, type ExplanationOfBenefitItemDetailArgs, ExplanationOfBenefitItemDetail, type ExplanationOfBenefitItemDetailSubDetailArgs, ExplanationOfBenefitItemDetailSubDetail, type ExplanationOfBenefitAddItemArgs, ExplanationOfBenefitAddItem, type ExplanationOfBenefitAddItemDetailArgs, ExplanationOfBenefitAddItemDetail, type ExplanationOfBenefitAddItemDetailSubDetailArgs, ExplanationOfBenefitAddItemDetailSubDetail, type ExplanationOfBenefitTotalArgs, ExplanationOfBenefitTotal, type ExplanationOfBenefitPaymentArgs, ExplanationOfBenefitPayment, type ExplanationOfBenefitProcessNoteArgs, ExplanationOfBenefitProcessNote, type ExplanationOfBenefitBenefitBalanceArgs, ExplanationOfBenefitBenefitBalance, type ExplanationOfBenefitBenefitBalanceFinancialArgs, ExplanationOfBenefitBenefitBalanceFinancial, 
+  type FamilyMemberHistoryArgs, FamilyMemberHistory, type FamilyMemberHistoryConditionArgs, FamilyMemberHistoryCondition, 
+  type FlagArgs, Flag, 
+  type GoalArgs, Goal, type GoalTargetArgs, GoalTarget, 
+  type GraphDefinitionArgs, GraphDefinition, type GraphDefinitionLinkArgs, GraphDefinitionLink, type GraphDefinitionLinkTargetArgs, GraphDefinitionLinkTarget, type GraphDefinitionLinkTargetCompartmentArgs, GraphDefinitionLinkTargetCompartment, 
+  type GroupArgs, Group, type GroupCharacteristicArgs, GroupCharacteristic, type GroupMemberArgs, GroupMember, 
+  type GuidanceResponseArgs, GuidanceResponse, 
+  type HealthcareServiceArgs, HealthcareService, type HealthcareServiceEligibilityArgs, HealthcareServiceEligibility, type HealthcareServiceAvailableTimeArgs, HealthcareServiceAvailableTime, type HealthcareServiceNotAvailableArgs, HealthcareServiceNotAvailable, 
+  type ImagingStudyArgs, ImagingStudy, type ImagingStudySeriesArgs, ImagingStudySeries, type ImagingStudySeriesPerformerArgs, ImagingStudySeriesPerformer, type ImagingStudySeriesInstanceArgs, ImagingStudySeriesInstance, 
+  type ImmunizationArgs, Immunization, type ImmunizationPerformerArgs, ImmunizationPerformer, type ImmunizationEducationArgs, ImmunizationEducation, type ImmunizationReactionArgs, ImmunizationReaction, type ImmunizationProtocolAppliedArgs, ImmunizationProtocolApplied, 
+  type ImmunizationEvaluationArgs, ImmunizationEvaluation, 
+  type ImmunizationRecommendationArgs, ImmunizationRecommendation, type ImmunizationRecommendationRecommendationArgs, ImmunizationRecommendationRecommendation, type ImmunizationRecommendationRecommendationDateCriterionArgs, ImmunizationRecommendationRecommendationDateCriterion, 
+  type ImplementationGuideArgs, ImplementationGuide, type ImplementationGuideDependsOnArgs, ImplementationGuideDependsOn, type ImplementationGuideGlobalArgs, ImplementationGuideGlobal, type ImplementationGuideDefinitionArgs, ImplementationGuideDefinition, type ImplementationGuideDefinitionGroupingArgs, ImplementationGuideDefinitionGrouping, type ImplementationGuideDefinitionResourceArgs, ImplementationGuideDefinitionResource, type ImplementationGuideDefinitionPageArgs, ImplementationGuideDefinitionPage, type ImplementationGuideDefinitionParameterArgs, ImplementationGuideDefinitionParameter, type ImplementationGuideDefinitionTemplateArgs, ImplementationGuideDefinitionTemplate, type ImplementationGuideManifestArgs, ImplementationGuideManifest, type ImplementationGuideManifestResourceArgs, ImplementationGuideManifestResource, type ImplementationGuideManifestPageArgs, ImplementationGuideManifestPage, 
+  type InsurancePlanArgs, InsurancePlan, type InsurancePlanContactArgs, InsurancePlanContact, type InsurancePlanCoverageArgs, InsurancePlanCoverage, type InsurancePlanCoverageBenefitArgs, InsurancePlanCoverageBenefit, type InsurancePlanCoverageBenefitLimitArgs, InsurancePlanCoverageBenefitLimit, type InsurancePlanPlanArgs, InsurancePlanPlan, type InsurancePlanPlanGeneralCostArgs, InsurancePlanPlanGeneralCost, type InsurancePlanPlanSpecificCostArgs, InsurancePlanPlanSpecificCost, type InsurancePlanPlanSpecificCostBenefitArgs, InsurancePlanPlanSpecificCostBenefit, type InsurancePlanPlanSpecificCostBenefitCostArgs, InsurancePlanPlanSpecificCostBenefitCost, 
+  type InvoiceArgs, Invoice, type InvoiceParticipantArgs, InvoiceParticipant, type InvoiceLineItemArgs, InvoiceLineItem, type InvoiceLineItemPriceComponentArgs, InvoiceLineItemPriceComponent, 
+  type LibraryArgs, Library, 
+  type LinkageArgs, Linkage, type LinkageItemArgs, LinkageItem, 
+  type ListArgs, List, type ListEntryArgs, ListEntry, 
+  type LocationArgs, Location, type LocationPositionArgs, LocationPosition, type LocationHoursOfOperationArgs, LocationHoursOfOperation, 
+  type MeasureArgs, Measure, type MeasureGroupArgs, MeasureGroup, type MeasureGroupPopulationArgs, MeasureGroupPopulation, type MeasureGroupStratifierArgs, MeasureGroupStratifier, type MeasureGroupStratifierComponentArgs, MeasureGroupStratifierComponent, type MeasureSupplementalDataArgs, MeasureSupplementalData, 
+  type MeasureReportArgs, MeasureReport, type MeasureReportGroupArgs, MeasureReportGroup, type MeasureReportGroupPopulationArgs, MeasureReportGroupPopulation, type MeasureReportGroupStratifierArgs, MeasureReportGroupStratifier, type MeasureReportGroupStratifierStratumArgs, MeasureReportGroupStratifierStratum, type MeasureReportGroupStratifierStratumComponentArgs, MeasureReportGroupStratifierStratumComponent, type MeasureReportGroupStratifierStratumPopulationArgs, MeasureReportGroupStratifierStratumPopulation, 
+  type MediaArgs, Media, 
+  type MedicationArgs, Medication, type MedicationIngredientArgs, MedicationIngredient, type MedicationBatchArgs, MedicationBatch, 
+  type MedicationAdministrationArgs, MedicationAdministration, type MedicationAdministrationPerformerArgs, MedicationAdministrationPerformer, type MedicationAdministrationDosageArgs, MedicationAdministrationDosage, 
+  type MedicationDispenseArgs, MedicationDispense, type MedicationDispensePerformerArgs, MedicationDispensePerformer, type MedicationDispenseSubstitutionArgs, MedicationDispenseSubstitution, 
+  type MedicationKnowledgeArgs, MedicationKnowledge, type MedicationKnowledgeRelatedMedicationKnowledgeArgs, MedicationKnowledgeRelatedMedicationKnowledge, type MedicationKnowledgeMonographArgs, MedicationKnowledgeMonograph, type MedicationKnowledgeIngredientArgs, MedicationKnowledgeIngredient, type MedicationKnowledgeCostArgs, MedicationKnowledgeCost, type MedicationKnowledgeMonitoringProgramArgs, MedicationKnowledgeMonitoringProgram, type MedicationKnowledgeAdministrationGuidelinesArgs, MedicationKnowledgeAdministrationGuidelines, type MedicationKnowledgeAdministrationGuidelinesDosageArgs, MedicationKnowledgeAdministrationGuidelinesDosage, type MedicationKnowledgeAdministrationGuidelinesPatientCharacteristicsArgs, MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics, type MedicationKnowledgeMedicineClassificationArgs, MedicationKnowledgeMedicineClassification, type MedicationKnowledgePackagingArgs, MedicationKnowledgePackaging, type MedicationKnowledgeDrugCharacteristicArgs, MedicationKnowledgeDrugCharacteristic, type MedicationKnowledgeRegulatoryArgs, MedicationKnowledgeRegulatory, type MedicationKnowledgeRegulatorySubstitutionArgs, MedicationKnowledgeRegulatorySubstitution, type MedicationKnowledgeRegulatoryScheduleArgs, MedicationKnowledgeRegulatorySchedule, type MedicationKnowledgeRegulatoryMaxDispenseArgs, MedicationKnowledgeRegulatoryMaxDispense, type MedicationKnowledgeKineticsArgs, MedicationKnowledgeKinetics, 
+  type MedicationRequestArgs, MedicationRequest, type MedicationRequestDispenseRequestArgs, MedicationRequestDispenseRequest, type MedicationRequestDispenseRequestInitialFillArgs, MedicationRequestDispenseRequestInitialFill, type MedicationRequestSubstitutionArgs, MedicationRequestSubstitution, 
+  type MedicationStatementArgs, MedicationStatement, 
+  type MedicinalProductArgs, MedicinalProduct, type MedicinalProductNameArgs, MedicinalProductName, type MedicinalProductNameNamePartArgs, MedicinalProductNameNamePart, type MedicinalProductNameCountryLanguageArgs, MedicinalProductNameCountryLanguage, type MedicinalProductManufacturingBusinessOperationArgs, MedicinalProductManufacturingBusinessOperation, type MedicinalProductSpecialDesignationArgs, MedicinalProductSpecialDesignation, 
+  type MedicinalProductAuthorizationArgs, MedicinalProductAuthorization, type MedicinalProductAuthorizationJurisdictionalAuthorizationArgs, MedicinalProductAuthorizationJurisdictionalAuthorization, type MedicinalProductAuthorizationProcedureArgs, MedicinalProductAuthorizationProcedure, 
+  type MedicinalProductContraindicationArgs, MedicinalProductContraindication, type MedicinalProductContraindicationOtherTherapyArgs, MedicinalProductContraindicationOtherTherapy, 
+  type MedicinalProductIndicationArgs, MedicinalProductIndication, type MedicinalProductIndicationOtherTherapyArgs, MedicinalProductIndicationOtherTherapy, 
+  type MedicinalProductIngredientArgs, MedicinalProductIngredient, type MedicinalProductIngredientSpecifiedSubstanceArgs, MedicinalProductIngredientSpecifiedSubstance, type MedicinalProductIngredientSpecifiedSubstanceStrengthArgs, MedicinalProductIngredientSpecifiedSubstanceStrength, type MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrengthArgs, MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength, type MedicinalProductIngredientSubstanceArgs, MedicinalProductIngredientSubstance, 
+  type MedicinalProductInteractionArgs, MedicinalProductInteraction, type MedicinalProductInteractionInteractantArgs, MedicinalProductInteractionInteractant, 
+  type MedicinalProductManufacturedArgs, MedicinalProductManufactured, 
+  type MedicinalProductPackagedArgs, MedicinalProductPackaged, type MedicinalProductPackagedBatchIdentifierArgs, MedicinalProductPackagedBatchIdentifier, type MedicinalProductPackagedPackageItemArgs, MedicinalProductPackagedPackageItem, 
+  type MedicinalProductPharmaceuticalArgs, MedicinalProductPharmaceutical, type MedicinalProductPharmaceuticalCharacteristicsArgs, MedicinalProductPharmaceuticalCharacteristics, type MedicinalProductPharmaceuticalRouteOfAdministrationArgs, MedicinalProductPharmaceuticalRouteOfAdministration, type MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesArgs, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies, type MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriodArgs, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod, 
+  type MedicinalProductUndesirableEffectArgs, MedicinalProductUndesirableEffect, 
+  type MessageDefinitionArgs, MessageDefinition, type MessageDefinitionFocusArgs, MessageDefinitionFocus, type MessageDefinitionAllowedResponseArgs, MessageDefinitionAllowedResponse, 
+  type MessageHeaderArgs, MessageHeader, type MessageHeaderDestinationArgs, MessageHeaderDestination, type MessageHeaderSourceArgs, MessageHeaderSource, type MessageHeaderResponseArgs, MessageHeaderResponse, 
+  type MolecularSequenceArgs, MolecularSequence, type MolecularSequenceReferenceSeqArgs, MolecularSequenceReferenceSeq, type MolecularSequenceVariantArgs, MolecularSequenceVariant, type MolecularSequenceQualityArgs, MolecularSequenceQuality, type MolecularSequenceQualityRocArgs, MolecularSequenceQualityRoc, type MolecularSequenceRepositoryArgs, MolecularSequenceRepository, type MolecularSequenceStructureVariantArgs, MolecularSequenceStructureVariant, type MolecularSequenceStructureVariantOuterArgs, MolecularSequenceStructureVariantOuter, type MolecularSequenceStructureVariantInnerArgs, MolecularSequenceStructureVariantInner, 
+  type NamingSystemArgs, NamingSystem, type NamingSystemUniqueIdArgs, NamingSystemUniqueId, 
+  type NutritionOrderArgs, NutritionOrder, type NutritionOrderOralDietArgs, NutritionOrderOralDiet, type NutritionOrderOralDietNutrientArgs, NutritionOrderOralDietNutrient, type NutritionOrderOralDietTextureArgs, NutritionOrderOralDietTexture, type NutritionOrderSupplementArgs, NutritionOrderSupplement, type NutritionOrderEnteralFormulaArgs, NutritionOrderEnteralFormula, type NutritionOrderEnteralFormulaAdministrationArgs, NutritionOrderEnteralFormulaAdministration, 
+  type ObservationArgs, Observation, type ObservationReferenceRangeArgs, ObservationReferenceRange, type ObservationComponentArgs, ObservationComponent, 
+  type ObservationDefinitionArgs, ObservationDefinition, type ObservationDefinitionQuantitativeDetailsArgs, ObservationDefinitionQuantitativeDetails, type ObservationDefinitionQualifiedIntervalArgs, ObservationDefinitionQualifiedInterval, 
+  type OperationDefinitionArgs, OperationDefinition, type OperationDefinitionParameterArgs, OperationDefinitionParameter, type OperationDefinitionParameterBindingArgs, OperationDefinitionParameterBinding, type OperationDefinitionParameterReferencedFromArgs, OperationDefinitionParameterReferencedFrom, type OperationDefinitionOverloadArgs, OperationDefinitionOverload, 
+  type OperationOutcomeArgs, OperationOutcome, type OperationOutcomeIssueArgs, OperationOutcomeIssue, 
+  type OrganizationArgs, Organization, type OrganizationContactArgs, OrganizationContact, 
+  type OrganizationAffiliationArgs, OrganizationAffiliation, 
+  type ParametersArgs, Parameters, type ParametersParameterArgs, ParametersParameter, 
+  type PatientArgs, Patient, type PatientContactArgs, PatientContact, type PatientCommunicationArgs, PatientCommunication, type PatientLinkArgs, PatientLink, 
+  type PaymentNoticeArgs, PaymentNotice, 
+  type PaymentReconciliationArgs, PaymentReconciliation, type PaymentReconciliationDetailArgs, PaymentReconciliationDetail, type PaymentReconciliationProcessNoteArgs, PaymentReconciliationProcessNote, 
+  type PersonArgs, Person, type PersonLinkArgs, PersonLink, 
+  type PlanDefinitionArgs, PlanDefinition, type PlanDefinitionGoalArgs, PlanDefinitionGoal, type PlanDefinitionGoalTargetArgs, PlanDefinitionGoalTarget, type PlanDefinitionActionArgs, PlanDefinitionAction, type PlanDefinitionActionConditionArgs, PlanDefinitionActionCondition, type PlanDefinitionActionRelatedActionArgs, PlanDefinitionActionRelatedAction, type PlanDefinitionActionParticipantArgs, PlanDefinitionActionParticipant, type PlanDefinitionActionDynamicValueArgs, PlanDefinitionActionDynamicValue, 
+  type PractitionerArgs, Practitioner, type PractitionerQualificationArgs, PractitionerQualification, 
+  type PractitionerRoleArgs, PractitionerRole, type PractitionerRoleAvailableTimeArgs, PractitionerRoleAvailableTime, type PractitionerRoleNotAvailableArgs, PractitionerRoleNotAvailable, 
+  type ProcedureArgs, Procedure, type ProcedurePerformerArgs, ProcedurePerformer, type ProcedureFocalDeviceArgs, ProcedureFocalDevice, 
+  type ProvenanceArgs, Provenance, type ProvenanceAgentArgs, ProvenanceAgent, type ProvenanceEntityArgs, ProvenanceEntity, 
+  type QuestionnaireArgs, Questionnaire, type QuestionnaireItemArgs, QuestionnaireItem, type QuestionnaireItemEnableWhenArgs, QuestionnaireItemEnableWhen, type QuestionnaireItemAnswerOptionArgs, QuestionnaireItemAnswerOption, type QuestionnaireItemInitialArgs, QuestionnaireItemInitial, 
+  type QuestionnaireResponseArgs, QuestionnaireResponse, type QuestionnaireResponseItemArgs, QuestionnaireResponseItem, type QuestionnaireResponseItemAnswerArgs, QuestionnaireResponseItemAnswer, 
+  type RelatedPersonArgs, RelatedPerson, type RelatedPersonCommunicationArgs, RelatedPersonCommunication, 
+  type RequestGroupArgs, RequestGroup, type RequestGroupActionArgs, RequestGroupAction, type RequestGroupActionConditionArgs, RequestGroupActionCondition, type RequestGroupActionRelatedActionArgs, RequestGroupActionRelatedAction, 
+  type ResearchDefinitionArgs, ResearchDefinition, 
+  type ResearchElementDefinitionArgs, ResearchElementDefinition, type ResearchElementDefinitionCharacteristicArgs, ResearchElementDefinitionCharacteristic, 
+  type ResearchStudyArgs, ResearchStudy, type ResearchStudyArmArgs, ResearchStudyArm, type ResearchStudyObjectiveArgs, ResearchStudyObjective, 
+  type ResearchSubjectArgs, ResearchSubject, 
+  type RiskAssessmentArgs, RiskAssessment, type RiskAssessmentPredictionArgs, RiskAssessmentPrediction, 
+  type RiskEvidenceSynthesisArgs, RiskEvidenceSynthesis, type RiskEvidenceSynthesisSampleSizeArgs, RiskEvidenceSynthesisSampleSize, type RiskEvidenceSynthesisRiskEstimateArgs, RiskEvidenceSynthesisRiskEstimate, type RiskEvidenceSynthesisRiskEstimatePrecisionEstimateArgs, RiskEvidenceSynthesisRiskEstimatePrecisionEstimate, type RiskEvidenceSynthesisCertaintyArgs, RiskEvidenceSynthesisCertainty, type RiskEvidenceSynthesisCertaintyCertaintySubcomponentArgs, RiskEvidenceSynthesisCertaintyCertaintySubcomponent, 
+  type ScheduleArgs, Schedule, 
+  type SearchParameterArgs, SearchParameter, type SearchParameterComponentArgs, SearchParameterComponent, 
+  type ServiceRequestArgs, ServiceRequest, 
+  type SlotArgs, Slot, 
+  type SpecimenArgs, Specimen, type SpecimenCollectionArgs, SpecimenCollection, type SpecimenProcessingArgs, SpecimenProcessing, type SpecimenContainerArgs, SpecimenContainer, 
+  type SpecimenDefinitionArgs, SpecimenDefinition, type SpecimenDefinitionTypeTestedArgs, SpecimenDefinitionTypeTested, type SpecimenDefinitionTypeTestedContainerArgs, SpecimenDefinitionTypeTestedContainer, type SpecimenDefinitionTypeTestedContainerAdditiveArgs, SpecimenDefinitionTypeTestedContainerAdditive, type SpecimenDefinitionTypeTestedHandlingArgs, SpecimenDefinitionTypeTestedHandling, 
+  type StructureDefinitionArgs, StructureDefinition, type StructureDefinitionMappingArgs, StructureDefinitionMapping, type StructureDefinitionContextArgs, StructureDefinitionContext, type StructureDefinitionSnapshotArgs, StructureDefinitionSnapshot, type StructureDefinitionDifferentialArgs, StructureDefinitionDifferential, 
+  type StructureMapArgs, StructureMap, type StructureMapStructureArgs, StructureMapStructure, type StructureMapGroupArgs, StructureMapGroup, type StructureMapGroupInputArgs, StructureMapGroupInput, type StructureMapGroupRuleArgs, StructureMapGroupRule, type StructureMapGroupRuleSourceArgs, StructureMapGroupRuleSource, type StructureMapGroupRuleTargetArgs, StructureMapGroupRuleTarget, type StructureMapGroupRuleTargetParameterArgs, StructureMapGroupRuleTargetParameter, type StructureMapGroupRuleDependentArgs, StructureMapGroupRuleDependent, 
+  type SubscriptionArgs, Subscription, type SubscriptionChannelArgs, SubscriptionChannel, 
+  type SubstanceArgs, Substance, type SubstanceInstanceArgs, SubstanceInstance, type SubstanceIngredientArgs, SubstanceIngredient, 
+  type SubstanceNucleicAcidArgs, SubstanceNucleicAcid, type SubstanceNucleicAcidSubunitArgs, SubstanceNucleicAcidSubunit, type SubstanceNucleicAcidSubunitLinkageArgs, SubstanceNucleicAcidSubunitLinkage, type SubstanceNucleicAcidSubunitSugarArgs, SubstanceNucleicAcidSubunitSugar, 
+  type SubstancePolymerArgs, SubstancePolymer, type SubstancePolymerMonomerSetArgs, SubstancePolymerMonomerSet, type SubstancePolymerMonomerSetStartingMaterialArgs, SubstancePolymerMonomerSetStartingMaterial, type SubstancePolymerRepeatArgs, SubstancePolymerRepeat, type SubstancePolymerRepeatRepeatUnitArgs, SubstancePolymerRepeatRepeatUnit, type SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisationArgs, SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation, type SubstancePolymerRepeatRepeatUnitStructuralRepresentationArgs, SubstancePolymerRepeatRepeatUnitStructuralRepresentation, 
+  type SubstanceProteinArgs, SubstanceProtein, type SubstanceProteinSubunitArgs, SubstanceProteinSubunit, 
+  type SubstanceReferenceInformationArgs, SubstanceReferenceInformation, type SubstanceReferenceInformationGeneArgs, SubstanceReferenceInformationGene, type SubstanceReferenceInformationGeneElementArgs, SubstanceReferenceInformationGeneElement, type SubstanceReferenceInformationClassificationArgs, SubstanceReferenceInformationClassification, type SubstanceReferenceInformationTargetArgs, SubstanceReferenceInformationTarget, 
+  type SubstanceSourceMaterialArgs, SubstanceSourceMaterial, type SubstanceSourceMaterialFractionDescriptionArgs, SubstanceSourceMaterialFractionDescription, type SubstanceSourceMaterialOrganismArgs, SubstanceSourceMaterialOrganism, type SubstanceSourceMaterialOrganismAuthorArgs, SubstanceSourceMaterialOrganismAuthor, type SubstanceSourceMaterialOrganismHybridArgs, SubstanceSourceMaterialOrganismHybrid, type SubstanceSourceMaterialOrganismOrganismGeneralArgs, SubstanceSourceMaterialOrganismOrganismGeneral, type SubstanceSourceMaterialPartDescriptionArgs, SubstanceSourceMaterialPartDescription, 
+  type SubstanceSpecificationArgs, SubstanceSpecification, type SubstanceSpecificationMoietyArgs, SubstanceSpecificationMoiety, type SubstanceSpecificationPropertyArgs, SubstanceSpecificationProperty, type SubstanceSpecificationStructureArgs, SubstanceSpecificationStructure, type SubstanceSpecificationStructureIsotopeArgs, SubstanceSpecificationStructureIsotope, type SubstanceSpecificationStructureIsotopeMolecularWeightArgs, SubstanceSpecificationStructureIsotopeMolecularWeight, type SubstanceSpecificationStructureRepresentationArgs, SubstanceSpecificationStructureRepresentation, type SubstanceSpecificationCodeArgs, SubstanceSpecificationCode, type SubstanceSpecificationNameArgs, SubstanceSpecificationName, type SubstanceSpecificationNameOfficialArgs, SubstanceSpecificationNameOfficial, type SubstanceSpecificationRelationshipArgs, SubstanceSpecificationRelationship, 
+  type SupplyDeliveryArgs, SupplyDelivery, type SupplyDeliverySuppliedItemArgs, SupplyDeliverySuppliedItem, 
+  type SupplyRequestArgs, SupplyRequest, type SupplyRequestParameterArgs, SupplyRequestParameter, 
+  type TaskArgs, Task, type TaskRestrictionArgs, TaskRestriction, type TaskInputArgs, TaskInput, type TaskOutputArgs, TaskOutput, 
+  type TerminologyCapabilitiesArgs, TerminologyCapabilities, type TerminologyCapabilitiesSoftwareArgs, TerminologyCapabilitiesSoftware, type TerminologyCapabilitiesImplementationArgs, TerminologyCapabilitiesImplementation, type TerminologyCapabilitiesCodeSystemArgs, TerminologyCapabilitiesCodeSystem, type TerminologyCapabilitiesCodeSystemVersionArgs, TerminologyCapabilitiesCodeSystemVersion, type TerminologyCapabilitiesCodeSystemVersionFilterArgs, TerminologyCapabilitiesCodeSystemVersionFilter, type TerminologyCapabilitiesExpansionArgs, TerminologyCapabilitiesExpansion, type TerminologyCapabilitiesExpansionParameterArgs, TerminologyCapabilitiesExpansionParameter, type TerminologyCapabilitiesValidateCodeArgs, TerminologyCapabilitiesValidateCode, type TerminologyCapabilitiesTranslationArgs, TerminologyCapabilitiesTranslation, type TerminologyCapabilitiesClosureArgs, TerminologyCapabilitiesClosure, 
+  type TestReportArgs, TestReport, type TestReportParticipantArgs, TestReportParticipant, type TestReportSetupArgs, TestReportSetup, type TestReportSetupActionArgs, TestReportSetupAction, type TestReportSetupActionOperationArgs, TestReportSetupActionOperation, type TestReportSetupActionAssertArgs, TestReportSetupActionAssert, type TestReportTestArgs, TestReportTest, type TestReportTestActionArgs, TestReportTestAction, type TestReportTeardownArgs, TestReportTeardown, type TestReportTeardownActionArgs, TestReportTeardownAction, 
+  type TestScriptArgs, TestScript, type TestScriptOriginArgs, TestScriptOrigin, type TestScriptDestinationArgs, TestScriptDestination, type TestScriptMetadataArgs, TestScriptMetadata, type TestScriptMetadataLinkArgs, TestScriptMetadataLink, type TestScriptMetadataCapabilityArgs, TestScriptMetadataCapability, type TestScriptFixtureArgs, TestScriptFixture, type TestScriptVariableArgs, TestScriptVariable, type TestScriptSetupArgs, TestScriptSetup, type TestScriptSetupActionArgs, TestScriptSetupAction, type TestScriptSetupActionOperationArgs, TestScriptSetupActionOperation, type TestScriptSetupActionOperationRequestHeaderArgs, TestScriptSetupActionOperationRequestHeader, type TestScriptSetupActionAssertArgs, TestScriptSetupActionAssert, type TestScriptTestArgs, TestScriptTest, type TestScriptTestActionArgs, TestScriptTestAction, type TestScriptTeardownArgs, TestScriptTeardown, type TestScriptTeardownActionArgs, TestScriptTeardownAction, 
+  type ValueSetArgs, ValueSet, type ValueSetComposeArgs, ValueSetCompose, type ValueSetComposeIncludeArgs, ValueSetComposeInclude, type ValueSetComposeIncludeConceptArgs, ValueSetComposeIncludeConcept, type ValueSetComposeIncludeConceptDesignationArgs, ValueSetComposeIncludeConceptDesignation, type ValueSetComposeIncludeFilterArgs, ValueSetComposeIncludeFilter, type ValueSetExpansionArgs, ValueSetExpansion, type ValueSetExpansionParameterArgs, ValueSetExpansionParameter, type ValueSetExpansionContainsArgs, ValueSetExpansionContains, 
+  type VerificationResultArgs, VerificationResult, type VerificationResultPrimarySourceArgs, VerificationResultPrimarySource, type VerificationResultAttestationArgs, VerificationResultAttestation, type VerificationResultValidatorArgs, VerificationResultValidator, 
+  type VisionPrescriptionArgs, VisionPrescription, type VisionPrescriptionLensSpecificationArgs, VisionPrescriptionLensSpecification, type VisionPrescriptionLensSpecificationPrismArgs, VisionPrescriptionLensSpecificationPrism, 
+  type FhirResource, type FhirConstructorOptions, 
+  fhirToJson, 
   resourceFactory, 
 }

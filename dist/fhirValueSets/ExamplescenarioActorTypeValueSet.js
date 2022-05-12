@@ -27,15 +27,4 @@ export const ExamplescenarioActorTypeValueSet = {
 /**
  * The type of actor - system or human.
  */
-export var ExamplescenarioActorTypeValueSetEnum;
-(function (ExamplescenarioActorTypeValueSetEnum) {
-    /**
-     * entity: A system.
-     */
-    ExamplescenarioActorTypeValueSetEnum["System"] = "entity";
-    /**
-     * person: A person.
-     */
-    ExamplescenarioActorTypeValueSetEnum["Person"] = "person";
-})(ExamplescenarioActorTypeValueSetEnum || (ExamplescenarioActorTypeValueSetEnum = {}));
 //# sourceMappingURL=ExamplescenarioActorTypeValueSet.js.map

@@ -3,120 +3,27 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Account
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { AccountStatusValueSet, AccountStatusValueSetType, AccountStatusValueSetEnum } from '../fhirValueSets/AccountStatusValueSet.js'
-import { AccountTypeValueSet, AccountTypeValueSetType, AccountTypeValueSetEnum } from '../fhirValueSets/AccountTypeValueSet.js'
-
+import { AccountStatusValueSet, AccountStatusValueSetType,} from '../fhirValueSets/AccountStatusValueSet.js';
+import { AccountStatusValueSetEnum } from '../valueSetEnums.js';
+import { AccountTypeValueSet, AccountTypeValueSetType,} from '../fhirValueSets/AccountTypeValueSet.js';
+import { AccountTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Typically. this may be some form of insurance, internal charges, or self-pay.
- * Local or jurisdictional business rules may determine which coverage covers which types of billable items charged to the account, and in which order.
- * Where the order is important, a local/jurisdictional extension may be defined to specify the order for the type of charge.
+ * Valid arguments for the AccountCoverage type.
  */
-export type IAccountCoverage = fhir.IBackboneElement & { 
+export interface AccountCoverageArgs extends fhir.BackboneElementArgs {
   /**
    * The party(s) that contribute to payment (or part of) of the charges applied to this account (including self-pay).
    * A coverage may only be responsible for specific types of charges, and the sequence of the coverages in the account could be important when processing billing.
    */
-  coverage: fhir.IReference|null;
+  coverage: fhir.ReferenceArgs|null;
   /**
    * It is common in some jurisdictions for there to be multiple coverages allocated to an account, and a sequence is required to order the settling of the account (often with insurance claiming).
    */
-  priority?: number|undefined;
-  /**
-   * Extended properties for primitive element: Account.coverage.priority
-   */
-  _priority?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The parties responsible for balancing the account if other payment options fall short.
- */
-export type IAccountGuarantor = fhir.IBackboneElement & { 
-  /**
-   * The entity who is responsible.
-   */
-  party: fhir.IReference|null;
-  /**
-   * A guarantor may be placed on credit hold or otherwise have their role temporarily suspended.
-   */
-  onHold?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Account.guarantor.onHold
-   */
-  _onHold?: fhir.IFhirElement|undefined;
-  /**
-   * The timeframe during which the guarantor accepts responsibility for the account.
-   */
-  period?: fhir.IPeriod|undefined;
-}
-
-/**
- * A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
- */
-export type IAccount = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Account";
-  /**
-   * Unique identifier used to reference the account.  Might or might not be intended for human use (e.g. credit card number).
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains the codes inactive and entered-in-error that mark the Account as not currently valid.
-   */
-  status: AccountStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Account.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Categorizes the account for reporting and searching purposes.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Name used for the account when displaying it to humans in reports, etc.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Account.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Accounts can be applied to non-patients for tracking other non-patient related activities, such as group services (patients not tracked, and costs charged to another body), or might not be allocated.
-   */
-  subject?: fhir.IReference[]|undefined;
-  /**
-   * It is possible for transactions to be posted outside the service period, as long as the service was provided within the defined service period.
-   */
-  servicePeriod?: fhir.IPeriod|undefined;
-  /**
-   * Typically. this may be some form of insurance, internal charges, or self-pay.
-   * Local or jurisdictional business rules may determine which coverage covers which types of billable items charged to the account, and in which order.
-   * Where the order is important, a local/jurisdictional extension may be defined to specify the order for the type of charge.
-   */
-  coverage?: fhir.IAccountCoverage[]|undefined;
-  /**
-   * Indicates the service area, hospital, department, etc. with responsibility for managing the Account.
-   */
-  owner?: fhir.IReference|undefined;
-  /**
-   * Provides additional information about what the account tracks and how it is used.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: Account.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * The parties responsible for balancing the account if other payment options fall short.
-   */
-  guarantor?: fhir.IAccountGuarantor[]|undefined;
-  /**
-   * Reference to a parent Account.
-   */
-  partOf?: fhir.IReference|undefined;
+  priority?: fhir.FhirPositiveInt|number|undefined;
 }
 
 /**
@@ -124,7 +31,8 @@ export type IAccount = fhir.IDomainResource & {
  * Local or jurisdictional business rules may determine which coverage covers which types of billable items charged to the account, and in which order.
  * Where the order is important, a local/jurisdictional extension may be defined to specify the order for the type of charge.
  */
-export class AccountCoverage extends fhir.BackboneElement implements IAccountCoverage {
+export class AccountCoverage extends fhir.BackboneElement {
+  readonly __dataType:string = 'AccountCoverage';
   /**
    * The party(s) that contribute to payment (or part of) of the charges applied to this account (including self-pay).
    * A coverage may only be responsible for specific types of charges, and the sequence of the coverages in the account could be important when processing billing.
@@ -133,37 +41,58 @@ export class AccountCoverage extends fhir.BackboneElement implements IAccountCov
   /**
    * It is common in some jurisdictions for there to be multiple coverages allocated to an account, and a sequence is required to order the settling of the account (often with insurance claiming).
    */
-  public priority?: number|undefined;
-  /**
-   * Extended properties for primitive element: Account.coverage.priority
-   */
-  public _priority?: fhir.FhirElement|undefined;
+  public priority?: fhir.FhirPositiveInt|undefined;
   /**
    * Default constructor for AccountCoverage - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAccountCoverage> = { }) {
-    super(source);
-    if (source['coverage']) { this.coverage = new fhir.Reference(source.coverage!); }
+  constructor(source:Partial<AccountCoverageArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['coverage']) { this.coverage = new fhir.Reference(source.coverage); }
     else { this.coverage = null; }
-    if (source['priority']) { this.priority = source.priority; }
-    if (source['_priority']) { this._priority = new fhir.FhirElement(source._priority!); }
+    if (source['priority']) { this.priority = new fhir.FhirPositiveInt({value: source.priority}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["coverage"]) { results.push(["coverage",'Missing required element: Account.coverage.coverage']); }
-    if (this["coverage"]) { results.push(...this.coverage.doModelValidation()); }
-    if (this["_priority"]) { results.push(...this._priority.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['coverage']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property coverage:fhir.Reference fhir: Account.coverage.coverage:Reference", }));
+    }
+    if (this["coverage"]) { outcome.issue!.push(...this.coverage.doModelValidation().issue!); }
+    if (this["priority"]) { outcome.issue!.push(...this.priority.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the AccountGuarantor type.
+ */
+export interface AccountGuarantorArgs extends fhir.BackboneElementArgs {
+  /**
+   * The entity who is responsible.
+   */
+  party: fhir.ReferenceArgs|null;
+  /**
+   * A guarantor may be placed on credit hold or otherwise have their role temporarily suspended.
+   */
+  onHold?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * The timeframe during which the guarantor accepts responsibility for the account.
+   */
+  period?: fhir.PeriodArgs|undefined;
 }
 
 /**
  * The parties responsible for balancing the account if other payment options fall short.
  */
-export class AccountGuarantor extends fhir.BackboneElement implements IAccountGuarantor {
+export class AccountGuarantor extends fhir.BackboneElement {
+  readonly __dataType:string = 'AccountGuarantor';
   /**
    * The entity who is responsible.
    */
@@ -171,11 +100,7 @@ export class AccountGuarantor extends fhir.BackboneElement implements IAccountGu
   /**
    * A guarantor may be placed on credit hold or otherwise have their role temporarily suspended.
    */
-  public onHold?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Account.guarantor.onHold
-   */
-  public _onHold?: fhir.FhirElement|undefined;
+  public onHold?: fhir.FhirBoolean|undefined;
   /**
    * The timeframe during which the guarantor accepts responsibility for the account.
    */
@@ -183,31 +108,94 @@ export class AccountGuarantor extends fhir.BackboneElement implements IAccountGu
   /**
    * Default constructor for AccountGuarantor - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAccountGuarantor> = { }) {
-    super(source);
-    if (source['party']) { this.party = new fhir.Reference(source.party!); }
+  constructor(source:Partial<AccountGuarantorArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['party']) { this.party = new fhir.Reference(source.party); }
     else { this.party = null; }
-    if (source['onHold']) { this.onHold = source.onHold; }
-    if (source['_onHold']) { this._onHold = new fhir.FhirElement(source._onHold!); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
+    if (source['onHold']) { this.onHold = new fhir.FhirBoolean({value: source.onHold}); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["party"]) { results.push(["party",'Missing required element: Account.guarantor.party']); }
-    if (this["party"]) { results.push(...this.party.doModelValidation()); }
-    if (this["_onHold"]) { results.push(...this._onHold.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['party']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property party:fhir.Reference fhir: Account.guarantor.party:Reference", }));
+    }
+    if (this["party"]) { outcome.issue!.push(...this.party.doModelValidation().issue!); }
+    if (this["onHold"]) { outcome.issue!.push(...this.onHold.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Account type.
+ */
+export interface AccountArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Account"|undefined;
+  /**
+   * Unique identifier used to reference the account.  Might or might not be intended for human use (e.g. credit card number).
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains the codes inactive and entered-in-error that mark the Account as not currently valid.
+   */
+  status: AccountStatusValueSetEnum|null;
+  /**
+   * Categorizes the account for reporting and searching purposes.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Name used for the account when displaying it to humans in reports, etc.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * Accounts can be applied to non-patients for tracking other non-patient related activities, such as group services (patients not tracked, and costs charged to another body), or might not be allocated.
+   */
+  subject?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * It is possible for transactions to be posted outside the service period, as long as the service was provided within the defined service period.
+   */
+  servicePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * Typically. this may be some form of insurance, internal charges, or self-pay.
+   * Local or jurisdictional business rules may determine which coverage covers which types of billable items charged to the account, and in which order.
+   * Where the order is important, a local/jurisdictional extension may be defined to specify the order for the type of charge.
+   */
+  coverage?: fhir.AccountCoverageArgs[]|undefined;
+  /**
+   * Indicates the service area, hospital, department, etc. with responsibility for managing the Account.
+   */
+  owner?: fhir.ReferenceArgs|undefined;
+  /**
+   * Provides additional information about what the account tracks and how it is used.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * The parties responsible for balancing the account if other payment options fall short.
+   */
+  guarantor?: fhir.AccountGuarantorArgs[]|undefined;
+  /**
+   * Reference to a parent Account.
+   */
+  partOf?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
  */
-export class Account extends fhir.DomainResource implements IAccount {
+export class Account extends fhir.DomainResource {
+  readonly __dataType:string = 'Account';
   /**
    * Resource Type Name
    */
@@ -215,15 +203,11 @@ export class Account extends fhir.DomainResource implements IAccount {
   /**
    * Unique identifier used to reference the account.  Might or might not be intended for human use (e.g. credit card number).
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains the codes inactive and entered-in-error that mark the Account as not currently valid.
    */
   public status: AccountStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Account.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * Categorizes the account for reporting and searching purposes.
    */
@@ -231,15 +215,11 @@ export class Account extends fhir.DomainResource implements IAccount {
   /**
    * Name used for the account when displaying it to humans in reports, etc.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Account.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Accounts can be applied to non-patients for tracking other non-patient related activities, such as group services (patients not tracked, and costs charged to another body), or might not be allocated.
    */
-  public subject?: fhir.Reference[]|undefined;
+  public subject?: fhir.Reference[]|undefined = [];
   /**
    * It is possible for transactions to be posted outside the service period, as long as the service was provided within the defined service period.
    */
@@ -249,7 +229,7 @@ export class Account extends fhir.DomainResource implements IAccount {
    * Local or jurisdictional business rules may determine which coverage covers which types of billable items charged to the account, and in which order.
    * Where the order is important, a local/jurisdictional extension may be defined to specify the order for the type of charge.
    */
-  public coverage?: fhir.AccountCoverage[]|undefined;
+  public coverage?: fhir.AccountCoverage[]|undefined = [];
   /**
    * Indicates the service area, hospital, department, etc. with responsibility for managing the Account.
    */
@@ -257,15 +237,11 @@ export class Account extends fhir.DomainResource implements IAccount {
   /**
    * Provides additional information about what the account tracks and how it is used.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: Account.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * The parties responsible for balancing the account if other payment options fall short.
    */
-  public guarantor?: fhir.AccountGuarantor[]|undefined;
+  public guarantor?: fhir.AccountGuarantor[]|undefined = [];
   /**
    * Reference to a parent Account.
    */
@@ -273,24 +249,21 @@ export class Account extends fhir.DomainResource implements IAccount {
   /**
    * Default constructor for Account - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAccount> = { }) {
-    super(source);
+  constructor(source:Partial<AccountArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Account';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     if (source['subject']) { this.subject = source.subject.map((x) => new fhir.Reference(x)); }
-    if (source['servicePeriod']) { this.servicePeriod = new fhir.Period(source.servicePeriod!); }
+    if (source['servicePeriod']) { this.servicePeriod = new fhir.Period(source.servicePeriod); }
     if (source['coverage']) { this.coverage = source.coverage.map((x) => new fhir.AccountCoverage(x)); }
-    if (source['owner']) { this.owner = new fhir.Reference(source.owner!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['owner']) { this.owner = new fhir.Reference(source.owner); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
     if (source['guarantor']) { this.guarantor = source.guarantor.map((x) => new fhir.AccountGuarantor(x)); }
-    if (source['partOf']) { this.partOf = new fhir.Reference(source.partOf!); }
+    if (source['partOf']) { this.partOf = new fhir.Reference(source.partOf); }
   }
   /**
    * Required-bound Value Set for status
@@ -307,21 +280,30 @@ export class Account extends fhir.DomainResource implements IAccount {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Account.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: Account.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["subject"]) { this.subject.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["servicePeriod"]) { results.push(...this.servicePeriod.doModelValidation()); }
-    if (this["coverage"]) { this.coverage.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["owner"]) { results.push(...this.owner.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["guarantor"]) { this.guarantor.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["partOf"]) { results.push(...this.partOf.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Account' fhir: Account.resourceType:'Account'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:AccountStatusValueSetEnum fhir: Account.status:code", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["subject"]) { this.subject.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["servicePeriod"]) { outcome.issue!.push(...this.servicePeriod.doModelValidation().issue!); }
+    if (this["coverage"]) { this.coverage.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["owner"]) { outcome.issue!.push(...this.owner.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["guarantor"]) { this.guarantor.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["partOf"]) { outcome.issue!.push(...this.partOf.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

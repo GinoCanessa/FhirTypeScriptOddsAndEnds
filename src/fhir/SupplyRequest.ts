@@ -3,146 +3,53 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SupplyRequest
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { SupplyrequestStatusValueSet, SupplyrequestStatusValueSetType, SupplyrequestStatusValueSetEnum } from '../fhirValueSets/SupplyrequestStatusValueSet.js'
-import { SupplyrequestKindValueSet, SupplyrequestKindValueSetType, SupplyrequestKindValueSetEnum } from '../fhirValueSets/SupplyrequestKindValueSet.js'
-import { RequestPriorityValueSet, RequestPriorityValueSetType, RequestPriorityValueSetEnum } from '../fhirValueSets/RequestPriorityValueSet.js'
-import { SupplyItemValueSet, SupplyItemValueSetType, SupplyItemValueSetEnum } from '../fhirValueSets/SupplyItemValueSet.js'
-import { SupplyrequestReasonValueSet, SupplyrequestReasonValueSetType, SupplyrequestReasonValueSetEnum } from '../fhirValueSets/SupplyrequestReasonValueSet.js'
-
+import { SupplyrequestStatusValueSet, SupplyrequestStatusValueSetType,} from '../fhirValueSets/SupplyrequestStatusValueSet.js';
+import { SupplyrequestStatusValueSetEnum } from '../valueSetEnums.js';
+import { SupplyrequestKindValueSet, SupplyrequestKindValueSetType,} from '../fhirValueSets/SupplyrequestKindValueSet.js';
+import { SupplyrequestKindValueSetEnum } from '../valueSetEnums.js';
+import { RequestPriorityValueSet, RequestPriorityValueSetType,} from '../fhirValueSets/RequestPriorityValueSet.js';
+import { RequestPriorityValueSetEnum } from '../valueSetEnums.js';
+import { SupplyrequestReasonValueSet, SupplyrequestReasonValueSetType,} from '../fhirValueSets/SupplyrequestReasonValueSet.js';
+import { SupplyrequestReasonValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Specific parameters for the ordered item.  For example, the size of the indicated item.
+ * Valid arguments for the SupplyRequestParameter type.
  */
-export type ISupplyRequestParameter = fhir.IBackboneElement & { 
+export interface SupplyRequestParameterArgs extends fhir.BackboneElementArgs {
   /**
    * A code or string that identifies the device detail being asserted.
    */
-  code?: fhir.ICodeableConcept|undefined;
+  code?: fhir.CodeableConceptArgs|undefined;
   /**
    * Range means device should have a value that falls somewhere within the specified range.
    */
-  valueCodeableConcept?: fhir.ICodeableConcept|undefined;
+  value?: fhir.CodeableConcept|fhir.Quantity|fhir.Range|fhir.FhirBoolean|undefined;
   /**
    * Range means device should have a value that falls somewhere within the specified range.
    */
-  valueQuantity?: fhir.IQuantity|undefined;
+  valueCodeableConcept?: fhir.CodeableConceptArgs|undefined;
   /**
    * Range means device should have a value that falls somewhere within the specified range.
    */
-  valueRange?: fhir.IRange|undefined;
+  valueQuantity?: fhir.QuantityArgs|undefined;
   /**
    * Range means device should have a value that falls somewhere within the specified range.
    */
-  valueBoolean?: boolean|undefined;
+  valueRange?: fhir.RangeArgs|undefined;
   /**
-   * Extended properties for primitive element: SupplyRequest.parameter.value[x]
+   * Range means device should have a value that falls somewhere within the specified range.
    */
-  _valueBoolean?: fhir.IFhirElement|undefined;
-}
-
-/**
- * A record of a request for a medication, substance or device used in the healthcare setting.
- */
-export type ISupplyRequest = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "SupplyRequest";
-  /**
-   * The identifier.type element is used to distinguish between the identifiers assigned by the requester/placer and the performer/filler.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * Status of the supply request.
-   */
-  status?: SupplyrequestStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: SupplyRequest.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Category of supply, e.g.  central, non-stock, etc. This is used to support work flows associated with the supply process.
-   */
-  category?: fhir.ICodeableConcept|undefined;
-  /**
-   * Indicates how quickly this SupplyRequest should be addressed with respect to other requests.
-   */
-  priority?: RequestPriorityValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: SupplyRequest.priority
-   */
-  _priority?: fhir.IFhirElement|undefined;
-  /**
-   * Note that there's a difference between a prescription - an instruction to take a medication, along with a (sometimes) implicit supply, and an explicit request to supply, with no explicit instructions.
-   */
-  itemCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * Note that there's a difference between a prescription - an instruction to take a medication, along with a (sometimes) implicit supply, and an explicit request to supply, with no explicit instructions.
-   */
-  itemReference?: fhir.IReference|undefined;
-  /**
-   * The amount that is being ordered of the indicated item.
-   */
-  quantity: fhir.IQuantity|null;
-  /**
-   * Specific parameters for the ordered item.  For example, the size of the indicated item.
-   */
-  parameter?: fhir.ISupplyRequestParameter[]|undefined;
-  /**
-   * When the request should be fulfilled.
-   */
-  occurrenceDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: SupplyRequest.occurrence[x]
-   */
-  _occurrenceDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * When the request should be fulfilled.
-   */
-  occurrencePeriod?: fhir.IPeriod|undefined;
-  /**
-   * When the request should be fulfilled.
-   */
-  occurrenceTiming?: fhir.ITiming|undefined;
-  /**
-   * When the request was made.
-   */
-  authoredOn?: string|undefined;
-  /**
-   * Extended properties for primitive element: SupplyRequest.authoredOn
-   */
-  _authoredOn?: fhir.IFhirElement|undefined;
-  /**
-   * The device, practitioner, etc. who initiated the request.
-   */
-  requester?: fhir.IReference|undefined;
-  /**
-   * Who is intended to fulfill the request.
-   */
-  supplier?: fhir.IReference[]|undefined;
-  /**
-   * The reason why the supply item was requested.
-   */
-  reasonCode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The reason why the supply item was requested.
-   */
-  reasonReference?: fhir.IReference[]|undefined;
-  /**
-   * Where the supply is expected to come from.
-   */
-  deliverFrom?: fhir.IReference|undefined;
-  /**
-   * Where the supply is destined to go.
-   */
-  deliverTo?: fhir.IReference|undefined;
+  valueBoolean?: fhir.FhirBoolean|boolean|undefined;
 }
 
 /**
  * Specific parameters for the ordered item.  For example, the size of the indicated item.
  */
-export class SupplyRequestParameter extends fhir.BackboneElement implements ISupplyRequestParameter {
+export class SupplyRequestParameter extends fhir.BackboneElement {
+  readonly __dataType:string = 'SupplyRequestParameter';
   /**
    * A code or string that identifies the device detail being asserted.
    */
@@ -150,53 +57,130 @@ export class SupplyRequestParameter extends fhir.BackboneElement implements ISup
   /**
    * Range means device should have a value that falls somewhere within the specified range.
    */
-  public valueCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * Range means device should have a value that falls somewhere within the specified range.
-   */
-  public valueQuantity?: fhir.Quantity|undefined;
-  /**
-   * Range means device should have a value that falls somewhere within the specified range.
-   */
-  public valueRange?: fhir.Range|undefined;
-  /**
-   * Range means device should have a value that falls somewhere within the specified range.
-   */
-  public valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: SupplyRequest.parameter.value[x]
-   */
-  public _valueBoolean?: fhir.FhirElement|undefined;
+  public value?: (fhir.CodeableConcept|fhir.Quantity|fhir.Range|fhir.FhirBoolean)|undefined;
+  readonly __valueIsChoice:true = true;
   /**
    * Default constructor for SupplyRequestParameter - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISupplyRequestParameter> = { }) {
-    super(source);
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
-    if (source['valueCodeableConcept']) { this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept!); }
-    if (source['valueQuantity']) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
-    if (source['valueRange']) { this.valueRange = new fhir.Range(source.valueRange!); }
-    if (source['valueBoolean']) { this.valueBoolean = source.valueBoolean; }
-    if (source['_valueBoolean']) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
+  constructor(source:Partial<SupplyRequestParameterArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueCodeableConcept']) { this.value = new fhir.CodeableConcept(source.valueCodeableConcept); }
+    else if (source['valueQuantity']) { this.value = new fhir.Quantity(source.valueQuantity); }
+    else if (source['valueRange']) { this.value = new fhir.Range(source.valueRange); }
+    else if (source['valueBoolean']) { this.value = new fhir.FhirBoolean({value: source.valueBoolean}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["valueCodeableConcept"]) { results.push(...this.valueCodeableConcept.doModelValidation()); }
-    if (this["valueQuantity"]) { results.push(...this.valueQuantity.doModelValidation()); }
-    if (this["valueRange"]) { results.push(...this.valueRange.doModelValidation()); }
-    if (this["_valueBoolean"]) { results.push(...this._valueBoolean.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SupplyRequest type.
+ */
+export interface SupplyRequestArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "SupplyRequest"|undefined;
+  /**
+   * The identifier.type element is used to distinguish between the identifiers assigned by the requester/placer and the performer/filler.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * Status of the supply request.
+   */
+  status?: SupplyrequestStatusValueSetEnum|undefined;
+  /**
+   * Category of supply, e.g.  central, non-stock, etc. This is used to support work flows associated with the supply process.
+   */
+  category?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Indicates how quickly this SupplyRequest should be addressed with respect to other requests.
+   */
+  priority?: RequestPriorityValueSetEnum|undefined;
+  /**
+   * Note that there's a difference between a prescription - an instruction to take a medication, along with a (sometimes) implicit supply, and an explicit request to supply, with no explicit instructions.
+   */
+  item?: fhir.CodeableConcept|fhir.Reference|undefined;
+  /**
+   * Note that there's a difference between a prescription - an instruction to take a medication, along with a (sometimes) implicit supply, and an explicit request to supply, with no explicit instructions.
+   */
+  itemCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Note that there's a difference between a prescription - an instruction to take a medication, along with a (sometimes) implicit supply, and an explicit request to supply, with no explicit instructions.
+   */
+  itemReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * The amount that is being ordered of the indicated item.
+   */
+  quantity: fhir.QuantityArgs|null;
+  /**
+   * Specific parameters for the ordered item.  For example, the size of the indicated item.
+   */
+  parameter?: fhir.SupplyRequestParameterArgs[]|undefined;
+  /**
+   * When the request should be fulfilled.
+   */
+  occurrence?: fhir.FhirDateTime|fhir.Period|fhir.Timing|undefined;
+  /**
+   * When the request should be fulfilled.
+   */
+  occurrenceDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * When the request should be fulfilled.
+   */
+  occurrencePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * When the request should be fulfilled.
+   */
+  occurrenceTiming?: fhir.TimingArgs|undefined;
+  /**
+   * When the request was made.
+   */
+  authoredOn?: fhir.FhirDateTime|string|undefined;
+  /**
+   * The device, practitioner, etc. who initiated the request.
+   */
+  requester?: fhir.ReferenceArgs|undefined;
+  /**
+   * Who is intended to fulfill the request.
+   */
+  supplier?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The reason why the supply item was requested.
+   */
+  reasonCode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The reason why the supply item was requested.
+   */
+  reasonReference?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Where the supply is expected to come from.
+   */
+  deliverFrom?: fhir.ReferenceArgs|undefined;
+  /**
+   * Where the supply is destined to go.
+   */
+  deliverTo?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * A record of a request for a medication, substance or device used in the healthcare setting.
  */
-export class SupplyRequest extends fhir.DomainResource implements ISupplyRequest {
+export class SupplyRequest extends fhir.DomainResource {
+  readonly __dataType:string = 'SupplyRequest';
   /**
    * Resource Type Name
    */
@@ -204,15 +188,11 @@ export class SupplyRequest extends fhir.DomainResource implements ISupplyRequest
   /**
    * The identifier.type element is used to distinguish between the identifiers assigned by the requester/placer and the performer/filler.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Status of the supply request.
    */
   public status?: SupplyrequestStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: SupplyRequest.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * Category of supply, e.g.  central, non-stock, etc. This is used to support work flows associated with the supply process.
    */
@@ -222,17 +202,10 @@ export class SupplyRequest extends fhir.DomainResource implements ISupplyRequest
    */
   public priority?: RequestPriorityValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: SupplyRequest.priority
-   */
-  public _priority?: fhir.FhirElement|undefined;
-  /**
    * Note that there's a difference between a prescription - an instruction to take a medication, along with a (sometimes) implicit supply, and an explicit request to supply, with no explicit instructions.
    */
-  public itemCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * Note that there's a difference between a prescription - an instruction to take a medication, along with a (sometimes) implicit supply, and an explicit request to supply, with no explicit instructions.
-   */
-  public itemReference?: fhir.Reference|undefined;
+  public item: (fhir.CodeableConcept|fhir.Reference)|null;
+  readonly __itemIsChoice:true = true;
   /**
    * The amount that is being ordered of the indicated item.
    */
@@ -240,31 +213,16 @@ export class SupplyRequest extends fhir.DomainResource implements ISupplyRequest
   /**
    * Specific parameters for the ordered item.  For example, the size of the indicated item.
    */
-  public parameter?: fhir.SupplyRequestParameter[]|undefined;
+  public parameter?: fhir.SupplyRequestParameter[]|undefined = [];
   /**
    * When the request should be fulfilled.
    */
-  public occurrenceDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: SupplyRequest.occurrence[x]
-   */
-  public _occurrenceDateTime?: fhir.FhirElement|undefined;
-  /**
-   * When the request should be fulfilled.
-   */
-  public occurrencePeriod?: fhir.Period|undefined;
-  /**
-   * When the request should be fulfilled.
-   */
-  public occurrenceTiming?: fhir.Timing|undefined;
+  public occurrence?: (fhir.FhirDateTime|fhir.Period|fhir.Timing)|undefined;
+  readonly __occurrenceIsChoice:true = true;
   /**
    * When the request was made.
    */
-  public authoredOn?: string|undefined;
-  /**
-   * Extended properties for primitive element: SupplyRequest.authoredOn
-   */
-  public _authoredOn?: fhir.FhirElement|undefined;
+  public authoredOn?: fhir.FhirDateTime|undefined;
   /**
    * The device, practitioner, etc. who initiated the request.
    */
@@ -272,15 +230,15 @@ export class SupplyRequest extends fhir.DomainResource implements ISupplyRequest
   /**
    * Who is intended to fulfill the request.
    */
-  public supplier?: fhir.Reference[]|undefined;
+  public supplier?: fhir.Reference[]|undefined = [];
   /**
    * The reason why the supply item was requested.
    */
-  public reasonCode?: fhir.CodeableConcept[]|undefined;
+  public reasonCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The reason why the supply item was requested.
    */
-  public reasonReference?: fhir.Reference[]|undefined;
+  public reasonReference?: fhir.Reference[]|undefined = [];
   /**
    * Where the supply is expected to come from.
    */
@@ -292,32 +250,31 @@ export class SupplyRequest extends fhir.DomainResource implements ISupplyRequest
   /**
    * Default constructor for SupplyRequest - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISupplyRequest> = { }) {
-    super(source);
+  constructor(source:Partial<SupplyRequestArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'SupplyRequest';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['category']) { this.category = new fhir.CodeableConcept(source.category!); }
+    if (source['category']) { this.category = new fhir.CodeableConcept(source.category); }
     if (source['priority']) { this.priority = source.priority; }
-    if (source['_priority']) { this._priority = new fhir.FhirElement(source._priority!); }
-    if (source['itemCodeableConcept']) { this.itemCodeableConcept = new fhir.CodeableConcept(source.itemCodeableConcept!); }
-    if (source['itemReference']) { this.itemReference = new fhir.Reference(source.itemReference!); }
-    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity!); }
+    if (source['item']) { this.item = source.item; }
+    else if (source['itemCodeableConcept']) { this.item = new fhir.CodeableConcept(source.itemCodeableConcept); }
+    else if (source['itemReference']) { this.item = new fhir.Reference(source.itemReference); }
+    else { this.item = null; }
+    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity); }
     else { this.quantity = null; }
     if (source['parameter']) { this.parameter = source.parameter.map((x) => new fhir.SupplyRequestParameter(x)); }
-    if (source['occurrenceDateTime']) { this.occurrenceDateTime = source.occurrenceDateTime; }
-    if (source['_occurrenceDateTime']) { this._occurrenceDateTime = new fhir.FhirElement(source._occurrenceDateTime!); }
-    if (source['occurrencePeriod']) { this.occurrencePeriod = new fhir.Period(source.occurrencePeriod!); }
-    if (source['occurrenceTiming']) { this.occurrenceTiming = new fhir.Timing(source.occurrenceTiming!); }
-    if (source['authoredOn']) { this.authoredOn = source.authoredOn; }
-    if (source['_authoredOn']) { this._authoredOn = new fhir.FhirElement(source._authoredOn!); }
-    if (source['requester']) { this.requester = new fhir.Reference(source.requester!); }
+    if (source['occurrence']) { this.occurrence = source.occurrence; }
+    else if (source['occurrenceDateTime']) { this.occurrence = new fhir.FhirDateTime({value: source.occurrenceDateTime}); }
+    else if (source['occurrencePeriod']) { this.occurrence = new fhir.Period(source.occurrencePeriod); }
+    else if (source['occurrenceTiming']) { this.occurrence = new fhir.Timing(source.occurrenceTiming); }
+    if (source['authoredOn']) { this.authoredOn = new fhir.FhirDateTime({value: source.authoredOn}); }
+    if (source['requester']) { this.requester = new fhir.Reference(source.requester); }
     if (source['supplier']) { this.supplier = source.supplier.map((x) => new fhir.Reference(x)); }
     if (source['reasonCode']) { this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x)); }
     if (source['reasonReference']) { this.reasonReference = source.reasonReference.map((x) => new fhir.Reference(x)); }
-    if (source['deliverFrom']) { this.deliverFrom = new fhir.Reference(source.deliverFrom!); }
-    if (source['deliverTo']) { this.deliverTo = new fhir.Reference(source.deliverTo!); }
+    if (source['deliverFrom']) { this.deliverFrom = new fhir.Reference(source.deliverFrom); }
+    if (source['deliverTo']) { this.deliverTo = new fhir.Reference(source.deliverTo); }
   }
   /**
    * Required-bound Value Set for status
@@ -338,18 +295,6 @@ export class SupplyRequest extends fhir.DomainResource implements ISupplyRequest
     return RequestPriorityValueSet;
   }
   /**
-   * Example-bound Value Set for itemCodeableConcept
-   */
-  public static itemCodeableConceptExampleValueSet():SupplyItemValueSetType {
-    return SupplyItemValueSet;
-  }
-  /**
-   * Example-bound Value Set for itemReference
-   */
-  public static itemReferenceExampleValueSet():SupplyItemValueSetType {
-    return SupplyItemValueSet;
-  }
-  /**
    * Example-bound Value Set for reasonCode
    */
   public static reasonCodeExampleValueSet():SupplyrequestReasonValueSetType {
@@ -358,28 +303,34 @@ export class SupplyRequest extends fhir.DomainResource implements ISupplyRequest
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: SupplyRequest.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["category"]) { results.push(...this.category.doModelValidation()); }
-    if (this["_priority"]) { results.push(...this._priority.doModelValidation()); }
-    if (this["itemCodeableConcept"]) { results.push(...this.itemCodeableConcept.doModelValidation()); }
-    if (this["itemReference"]) { results.push(...this.itemReference.doModelValidation()); }
-    if (!this["quantity"]) { results.push(["quantity",'Missing required element: SupplyRequest.quantity']); }
-    if (this["quantity"]) { results.push(...this.quantity.doModelValidation()); }
-    if (this["parameter"]) { this.parameter.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_occurrenceDateTime"]) { results.push(...this._occurrenceDateTime.doModelValidation()); }
-    if (this["occurrencePeriod"]) { results.push(...this.occurrencePeriod.doModelValidation()); }
-    if (this["occurrenceTiming"]) { results.push(...this.occurrenceTiming.doModelValidation()); }
-    if (this["_authoredOn"]) { results.push(...this._authoredOn.doModelValidation()); }
-    if (this["requester"]) { results.push(...this.requester.doModelValidation()); }
-    if (this["supplier"]) { this.supplier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["deliverFrom"]) { results.push(...this.deliverFrom.doModelValidation()); }
-    if (this["deliverTo"]) { results.push(...this.deliverTo.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'SupplyRequest' fhir: SupplyRequest.resourceType:'SupplyRequest'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["category"]) { outcome.issue!.push(...this.category.doModelValidation().issue!); }
+    if (!this['item']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property item: fhir: SupplyRequest.item[x]:", }));
+    }
+    if (!this['quantity']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property quantity:fhir.Quantity fhir: SupplyRequest.quantity:Quantity", }));
+    }
+    if (this["quantity"]) { outcome.issue!.push(...this.quantity.doModelValidation().issue!); }
+    if (this["parameter"]) { this.parameter.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["authoredOn"]) { outcome.issue!.push(...this.authoredOn.doModelValidation().issue!); }
+    if (this["requester"]) { outcome.issue!.push(...this.requester.doModelValidation().issue!); }
+    if (this["supplier"]) { this.supplier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["deliverFrom"]) { outcome.issue!.push(...this.deliverFrom.doModelValidation().issue!); }
+    if (this["deliverTo"]) { outcome.issue!.push(...this.deliverTo.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

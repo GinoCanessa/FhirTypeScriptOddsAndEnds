@@ -1,45 +1,46 @@
 import * as fhir from '../fhir.js';
 /**
- * The manufactured item as contained in the packaged medicinal product.
+ * Valid arguments for the MedicinalProductManufactured type.
  */
-export declare type IMedicinalProductManufactured = fhir.IDomainResource & {
+export interface MedicinalProductManufacturedArgs extends fhir.DomainResourceArgs {
     /**
      * Resource Type Name
      */
-    resourceType: "MedicinalProductManufactured";
+    resourceType: "MedicinalProductManufactured" | undefined;
     /**
      * Dose form as manufactured and before any transformation into the pharmaceutical product.
      */
-    manufacturedDoseForm: fhir.ICodeableConcept | null;
+    manufacturedDoseForm: fhir.CodeableConceptArgs | null;
     /**
      * The “real world” units in which the quantity of the manufactured item is described.
      */
-    unitOfPresentation?: fhir.ICodeableConcept | undefined;
+    unitOfPresentation?: fhir.CodeableConceptArgs | undefined;
     /**
      * The quantity or "count number" of the manufactured item.
      */
-    quantity: fhir.IQuantity | null;
+    quantity: fhir.QuantityArgs | null;
     /**
      * Manufacturer of the item (Note that this should be named "manufacturer" but it currently causes technical issues).
      */
-    manufacturer?: fhir.IReference[] | undefined;
+    manufacturer?: fhir.ReferenceArgs[] | undefined;
     /**
      * Ingredient.
      */
-    ingredient?: fhir.IReference[] | undefined;
+    ingredient?: fhir.ReferenceArgs[] | undefined;
     /**
      * Dimensions, color etc.
      */
-    physicalCharacteristics?: fhir.IProdCharacteristic | undefined;
+    physicalCharacteristics?: fhir.ProdCharacteristicArgs | undefined;
     /**
      * Other codeable characteristics.
      */
-    otherCharacteristics?: fhir.ICodeableConcept[] | undefined;
-};
+    otherCharacteristics?: fhir.CodeableConceptArgs[] | undefined;
+}
 /**
  * The manufactured item as contained in the packaged medicinal product.
  */
-export declare class MedicinalProductManufactured extends fhir.DomainResource implements IMedicinalProductManufactured {
+export declare class MedicinalProductManufactured extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -75,10 +76,14 @@ export declare class MedicinalProductManufactured extends fhir.DomainResource im
     /**
      * Default constructor for MedicinalProductManufactured - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMedicinalProductManufactured>);
+    constructor(source?: Partial<MedicinalProductManufacturedArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=MedicinalProductManufactured.d.ts.map

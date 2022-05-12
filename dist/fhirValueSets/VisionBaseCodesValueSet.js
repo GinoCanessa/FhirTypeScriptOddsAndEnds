@@ -43,23 +43,4 @@ export const VisionBaseCodesValueSet = {
 /**
  * A coded concept listing the base codes.
  */
-export var VisionBaseCodesValueSetEnum;
-(function (VisionBaseCodesValueSetEnum) {
-    /**
-     * down: bottom.
-     */
-    VisionBaseCodesValueSetEnum["Down"] = "down";
-    /**
-     * in: inner edge.
-     */
-    VisionBaseCodesValueSetEnum["In"] = "in";
-    /**
-     * out: outer edge.
-     */
-    VisionBaseCodesValueSetEnum["Out"] = "out";
-    /**
-     * up: top.
-     */
-    VisionBaseCodesValueSetEnum["Up"] = "up";
-})(VisionBaseCodesValueSetEnum || (VisionBaseCodesValueSetEnum = {}));
 //# sourceMappingURL=VisionBaseCodesValueSet.js.map

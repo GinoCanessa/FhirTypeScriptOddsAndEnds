@@ -3,11 +3,13 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: DeviceMetric
 import * as fhir from '../fhir.js';
-import { MetricCalibrationTypeValueSet } from '../fhirValueSets/MetricCalibrationTypeValueSet.js';
-import { MetricCalibrationStateValueSet } from '../fhirValueSets/MetricCalibrationStateValueSet.js';
-import { MetricOperationalStatusValueSet } from '../fhirValueSets/MetricOperationalStatusValueSet.js';
-import { MetricColorValueSet } from '../fhirValueSets/MetricColorValueSet.js';
-import { MetricCategoryValueSet } from '../fhirValueSets/MetricCategoryValueSet.js';
+import { MetricCalibrationTypeValueSet, } from '../fhirValueSets/MetricCalibrationTypeValueSet.js';
+import { MetricCalibrationStateValueSet, } from '../fhirValueSets/MetricCalibrationStateValueSet.js';
+import { MetricOperationalStatusValueSet, } from '../fhirValueSets/MetricOperationalStatusValueSet.js';
+import { MetricColorValueSet, } from '../fhirValueSets/MetricColorValueSet.js';
+import { MetricCategoryValueSet, } from '../fhirValueSets/MetricCategoryValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Describes the calibrations that have been performed or that are required to be performed.
  */
@@ -15,25 +17,17 @@ export class DeviceMetricCalibration extends fhir.BackboneElement {
     /**
      * Default constructor for DeviceMetricCalibration - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DeviceMetricCalibration';
         if (source['type']) {
             this.type = source.type;
-        }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
         }
         if (source['state']) {
             this.state = source.state;
         }
-        if (source['_state']) {
-            this._state = new fhir.FhirElement(source._state);
-        }
         if (source['time']) {
-            this.time = source.time;
-        }
-        if (source['_time']) {
-            this._time = new fhir.FhirElement(source._time);
+            this.time = new fhir.FhirInstant({ value: source.time });
         }
     }
     /**
@@ -52,17 +46,17 @@ export class DeviceMetricCalibration extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["time"]) {
+            outcome.issue.push(...this.time.doModelValidation().issue);
         }
-        if (this["_state"]) {
-            results.push(...this._state.doModelValidation());
-        }
-        if (this["_time"]) {
-            results.push(...this._time.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -72,8 +66,17 @@ export class DeviceMetric extends fhir.DomainResource {
     /**
      * Default constructor for DeviceMetric - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DeviceMetric';
+        /**
+         * For identifiers assigned to a device by the device or gateway software, the `system` element of the identifier should be set to the unique identifier of the device.
+         */
+        this.identifier = [];
+        /**
+         * Describes the calibrations that have been performed or that are required to be performed.
+         */
+        this.calibration = [];
         this.resourceType = 'DeviceMetric';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -96,23 +99,14 @@ export class DeviceMetric extends fhir.DomainResource {
         if (source['operationalStatus']) {
             this.operationalStatus = source.operationalStatus;
         }
-        if (source['_operationalStatus']) {
-            this._operationalStatus = new fhir.FhirElement(source._operationalStatus);
-        }
         if (source['color']) {
             this.color = source.color;
-        }
-        if (source['_color']) {
-            this._color = new fhir.FhirElement(source._color);
         }
         if (source['category']) {
             this.category = source.category;
         }
         else {
             this.category = null;
-        }
-        if (source['_category']) {
-            this._category = new fhir.FhirElement(source._category);
         }
         if (source['measurementPeriod']) {
             this.measurementPeriod = new fhir.Timing(source.measurementPeriod);
@@ -143,47 +137,44 @@ export class DeviceMetric extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: DeviceMetric.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'DeviceMetric' fhir: DeviceMetric.resourceType:'DeviceMetric'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: DeviceMetric.type']);
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.CodeableConcept fhir: DeviceMetric.type:CodeableConcept", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["unit"]) {
-            results.push(...this.unit.doModelValidation());
+            outcome.issue.push(...this.unit.doModelValidation().issue);
         }
         if (this["source"]) {
-            results.push(...this.source.doModelValidation());
+            outcome.issue.push(...this.source.doModelValidation().issue);
         }
         if (this["parent"]) {
-            results.push(...this.parent.doModelValidation());
+            outcome.issue.push(...this.parent.doModelValidation().issue);
         }
-        if (this["_operationalStatus"]) {
-            results.push(...this._operationalStatus.doModelValidation());
-        }
-        if (this["_color"]) {
-            results.push(...this._color.doModelValidation());
-        }
-        if (!this["category"]) {
-            results.push(["category", 'Missing required element: DeviceMetric.category']);
-        }
-        if (this["_category"]) {
-            results.push(...this._category.doModelValidation());
+        if (!this['category']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property category:MetricCategoryValueSetEnum fhir: DeviceMetric.category:code", }));
         }
         if (this["measurementPeriod"]) {
-            results.push(...this.measurementPeriod.doModelValidation());
+            outcome.issue.push(...this.measurementPeriod.doModelValidation().issue);
         }
         if (this["calibration"]) {
-            this.calibration.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.calibration.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=DeviceMetric.js.map

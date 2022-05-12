@@ -3,7 +3,7 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Attachment
 import * as fhir from '../fhir.js';
-import { LanguagesValueSet } from '../fhirValueSets/LanguagesValueSet.js';
+import { LanguagesValueSet, } from '../fhirValueSets/LanguagesValueSet.js';
 /**
  * For referring to data content defined in other formats.
  */
@@ -11,55 +11,32 @@ export class Attachment extends fhir.FhirElement {
     /**
      * Default constructor for Attachment - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Attachment';
         if (source['contentType']) {
-            this.contentType = source.contentType;
-        }
-        if (source['_contentType']) {
-            this._contentType = new fhir.FhirElement(source._contentType);
+            this.contentType = new fhir.FhirCode({ value: source.contentType });
         }
         if (source['language']) {
-            this.language = source.language;
-        }
-        if (source['_language']) {
-            this._language = new fhir.FhirElement(source._language);
+            this.language = new fhir.FhirCode({ value: source.language });
         }
         if (source['data']) {
-            this.data = source.data;
-        }
-        if (source['_data']) {
-            this._data = new fhir.FhirElement(source._data);
+            this.data = new fhir.FhirBase64Binary({ value: source.data });
         }
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUrl({ value: source.url });
         }
         if (source['size']) {
-            this.size = source.size;
-        }
-        if (source['_size']) {
-            this._size = new fhir.FhirElement(source._size);
+            this.size = new fhir.FhirUnsignedInt({ value: source.size });
         }
         if (source['hash']) {
-            this.hash = source.hash;
-        }
-        if (source['_hash']) {
-            this._hash = new fhir.FhirElement(source._hash);
+            this.hash = new fhir.FhirBase64Binary({ value: source.hash });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['creation']) {
-            this.creation = source.creation;
-        }
-        if (source['_creation']) {
-            this._creation = new fhir.FhirElement(source._creation);
+            this.creation = new fhir.FhirDateTime({ value: source.creation });
         }
     }
     /**
@@ -72,32 +49,38 @@ export class Attachment extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_contentType"]) {
-            results.push(...this._contentType.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["contentType"]) {
+            outcome.issue.push(...this.contentType.doModelValidation().issue);
         }
-        if (this["_language"]) {
-            results.push(...this._language.doModelValidation());
+        if (this["language"]) {
+            outcome.issue.push(...this.language.doModelValidation().issue);
         }
-        if (this["_data"]) {
-            results.push(...this._data.doModelValidation());
+        if (this["data"]) {
+            outcome.issue.push(...this.data.doModelValidation().issue);
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
-        if (this["_size"]) {
-            results.push(...this._size.doModelValidation());
+        if (this["size"]) {
+            outcome.issue.push(...this.size.doModelValidation().issue);
         }
-        if (this["_hash"]) {
-            results.push(...this._hash.doModelValidation());
+        if (this["hash"]) {
+            outcome.issue.push(...this.hash.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_creation"]) {
-            results.push(...this._creation.doModelValidation());
+        if (this["creation"]) {
+            outcome.issue.push(...this.creation.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Attachment.js.map

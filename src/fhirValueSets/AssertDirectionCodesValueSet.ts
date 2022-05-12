@@ -35,13 +35,3 @@ export type AssertDirectionCodesValueSetType = typeof AssertDirectionCodesValueS
 /**
  * The type of direction to use for assertion.
  */
-export enum AssertDirectionCodesValueSetEnum {
-  /**
-   * request: The assertion is evaluated on the request.
-   */
-  Request = "request",
-  /**
-   * response: The assertion is evaluated on the response. This is the default value.
-   */
-  Response = "response",
-}

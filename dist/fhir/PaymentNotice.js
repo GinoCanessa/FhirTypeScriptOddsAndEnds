@@ -3,8 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: PaymentNotice
 import * as fhir from '../fhir.js';
-import { FmStatusValueSet } from '../fhirValueSets/FmStatusValueSet.js';
-import { PaymentStatusValueSet } from '../fhirValueSets/PaymentStatusValueSet.js';
+import { FmStatusValueSet, } from '../fhirValueSets/FmStatusValueSet.js';
+import { PaymentStatusValueSet, } from '../fhirValueSets/PaymentStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * This resource provides the status of the payment for goods and services rendered, and the request and response resource references.
  */
@@ -12,8 +14,13 @@ export class PaymentNotice extends fhir.DomainResource {
     /**
      * Default constructor for PaymentNotice - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PaymentNotice';
+        /**
+         * A unique identifier assigned to this payment notice.
+         */
+        this.identifier = [];
         this.resourceType = 'PaymentNotice';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -24,9 +31,6 @@ export class PaymentNotice extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['request']) {
             this.request = new fhir.Reference(source.request);
         }
@@ -34,13 +38,10 @@ export class PaymentNotice extends fhir.DomainResource {
             this.response = new fhir.Reference(source.response);
         }
         if (source['created']) {
-            this.created = source.created;
+            this.created = new fhir.FhirDateTime({ value: source.created });
         }
         else {
             this.created = null;
-        }
-        if (source['_created']) {
-            this._created = new fhir.FhirElement(source._created);
         }
         if (source['provider']) {
             this.provider = new fhir.Reference(source.provider);
@@ -52,10 +53,7 @@ export class PaymentNotice extends fhir.DomainResource {
             this.payment = null;
         }
         if (source['paymentDate']) {
-            this.paymentDate = source.paymentDate;
-        }
-        if (source['_paymentDate']) {
-            this._paymentDate = new fhir.FhirElement(source._paymentDate);
+            this.paymentDate = new fhir.FhirDate({ value: source.paymentDate });
         }
         if (source['payee']) {
             this.payee = new fhir.Reference(source.payee);
@@ -92,62 +90,65 @@ export class PaymentNotice extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: PaymentNotice.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'PaymentNotice' fhir: PaymentNotice.resourceType:'PaymentNotice'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: PaymentNotice.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:FmStatusValueSetEnum fhir: PaymentNotice.status:code", }));
         }
         if (this["request"]) {
-            results.push(...this.request.doModelValidation());
+            outcome.issue.push(...this.request.doModelValidation().issue);
         }
         if (this["response"]) {
-            results.push(...this.response.doModelValidation());
+            outcome.issue.push(...this.response.doModelValidation().issue);
         }
-        if (!this["created"]) {
-            results.push(["created", 'Missing required element: PaymentNotice.created']);
+        if (!this['created']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property created:fhir.FhirDateTime fhir: PaymentNotice.created:dateTime", }));
         }
-        if (this["_created"]) {
-            results.push(...this._created.doModelValidation());
+        if (this["created"]) {
+            outcome.issue.push(...this.created.doModelValidation().issue);
         }
         if (this["provider"]) {
-            results.push(...this.provider.doModelValidation());
+            outcome.issue.push(...this.provider.doModelValidation().issue);
         }
-        if (!this["payment"]) {
-            results.push(["payment", 'Missing required element: PaymentNotice.payment']);
+        if (!this['payment']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property payment:fhir.Reference fhir: PaymentNotice.payment:Reference", }));
         }
         if (this["payment"]) {
-            results.push(...this.payment.doModelValidation());
+            outcome.issue.push(...this.payment.doModelValidation().issue);
         }
-        if (this["_paymentDate"]) {
-            results.push(...this._paymentDate.doModelValidation());
+        if (this["paymentDate"]) {
+            outcome.issue.push(...this.paymentDate.doModelValidation().issue);
         }
         if (this["payee"]) {
-            results.push(...this.payee.doModelValidation());
+            outcome.issue.push(...this.payee.doModelValidation().issue);
         }
-        if (!this["recipient"]) {
-            results.push(["recipient", 'Missing required element: PaymentNotice.recipient']);
+        if (!this['recipient']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property recipient:fhir.Reference fhir: PaymentNotice.recipient:Reference", }));
         }
         if (this["recipient"]) {
-            results.push(...this.recipient.doModelValidation());
+            outcome.issue.push(...this.recipient.doModelValidation().issue);
         }
-        if (!this["amount"]) {
-            results.push(["amount", 'Missing required element: PaymentNotice.amount']);
+        if (!this['amount']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property amount:fhir.Money fhir: PaymentNotice.amount:Money", }));
         }
         if (this["amount"]) {
-            results.push(...this.amount.doModelValidation());
+            outcome.issue.push(...this.amount.doModelValidation().issue);
         }
         if (this["paymentStatus"]) {
-            results.push(...this.paymentStatus.doModelValidation());
+            outcome.issue.push(...this.paymentStatus.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=PaymentNotice.js.map

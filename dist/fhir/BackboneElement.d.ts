@@ -1,17 +1,18 @@
 import * as fhir from '../fhir.js';
 /**
- * Base definition for all elements that are defined inside a resource - but not those in a data type.
+ * Valid arguments for the BackboneElement type.
  */
-export declare type IBackboneElement = fhir.IFhirElement & {
+export interface BackboneElementArgs extends fhir.FhirElementArgs {
     /**
      * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
      */
-    modifierExtension?: fhir.IExtension[] | undefined;
-};
+    modifierExtension?: fhir.ExtensionArgs[] | undefined;
+}
 /**
  * Base definition for all elements that are defined inside a resource - but not those in a data type.
  */
-export declare class BackboneElement extends fhir.FhirElement implements IBackboneElement {
+export declare class BackboneElement extends fhir.FhirElement {
+    readonly __dataType: string;
     /**
      * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
      */
@@ -19,10 +20,14 @@ export declare class BackboneElement extends fhir.FhirElement implements IBackbo
     /**
      * Default constructor for BackboneElement - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IBackboneElement>);
+    constructor(source?: Partial<BackboneElementArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=BackboneElement.d.ts.map

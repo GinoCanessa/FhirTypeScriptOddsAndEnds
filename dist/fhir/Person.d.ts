@@ -1,88 +1,26 @@
 import * as fhir from '../fhir.js';
-import { IdentityAssuranceLevelValueSetType, IdentityAssuranceLevelValueSetEnum } from '../fhirValueSets/IdentityAssuranceLevelValueSet.js';
-import { AdministrativeGenderValueSetType, AdministrativeGenderValueSetEnum } from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { IdentityAssuranceLevelValueSetType } from '../fhirValueSets/IdentityAssuranceLevelValueSet.js';
+import { IdentityAssuranceLevelValueSetEnum } from '../valueSetEnums.js';
+import { AdministrativeGenderValueSetType } from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { AdministrativeGenderValueSetEnum } from '../valueSetEnums.js';
 /**
- * Link to a resource that concerns the same actual person.
+ * Valid arguments for the PersonLink type.
  */
-export declare type IPersonLink = fhir.IBackboneElement & {
+export interface PersonLinkArgs extends fhir.BackboneElementArgs {
     /**
      * The resource to which this actual person is associated.
      */
-    target: fhir.IReference | null;
+    target: fhir.ReferenceArgs | null;
     /**
      * Level of assurance that this link is associated with the target resource.
      */
     assurance?: IdentityAssuranceLevelValueSetEnum | undefined;
-    /**
-     * Extended properties for primitive element: Person.link.assurance
-     */
-    _assurance?: fhir.IFhirElement | undefined;
-};
-/**
- * Demographics and administrative information about a person independent of a specific health-related context.
- */
-export declare type IPerson = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "Person";
-    /**
-     * Identifier for a person within a particular scope.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * Person may have multiple names with different uses or applicable periods.
-     */
-    name?: fhir.IHumanName[] | undefined;
-    /**
-     * Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification.
-     */
-    telecom?: fhir.IContactPoint[] | undefined;
-    /**
-     * The gender might not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though a clear majority of systems and contexts only support M and F.
-     */
-    gender?: AdministrativeGenderValueSetEnum | undefined;
-    /**
-     * Extended properties for primitive element: Person.gender
-     */
-    _gender?: fhir.IFhirElement | undefined;
-    /**
-     * At least an estimated year should be provided as a guess if the real DOB is unknown.
-     */
-    birthDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Person.birthDate
-     */
-    _birthDate?: fhir.IFhirElement | undefined;
-    /**
-     * Person may have multiple addresses with different uses or applicable periods.
-     */
-    address?: fhir.IAddress[] | undefined;
-    /**
-     * An image that can be displayed as a thumbnail of the person to enhance the identification of the individual.
-     */
-    photo?: fhir.IAttachment | undefined;
-    /**
-     * The organization that is the custodian of the person record.
-     */
-    managingOrganization?: fhir.IReference | undefined;
-    /**
-     * Whether this person's record is in active use.
-     */
-    active?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Person.active
-     */
-    _active?: fhir.IFhirElement | undefined;
-    /**
-     * Link to a resource that concerns the same actual person.
-     */
-    link?: fhir.IPersonLink[] | undefined;
-};
+}
 /**
  * Link to a resource that concerns the same actual person.
  */
-export declare class PersonLink extends fhir.BackboneElement implements IPersonLink {
+export declare class PersonLink extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The resource to which this actual person is associated.
      */
@@ -92,13 +30,9 @@ export declare class PersonLink extends fhir.BackboneElement implements IPersonL
      */
     assurance?: IdentityAssuranceLevelValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: Person.link.assurance
-     */
-    _assurance?: fhir.FhirElement | undefined;
-    /**
      * Default constructor for PersonLink - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IPersonLink>);
+    constructor(source?: Partial<PersonLinkArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for assurance
      */
@@ -106,12 +40,66 @@ export declare class PersonLink extends fhir.BackboneElement implements IPersonL
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the Person type.
+ */
+export interface PersonArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "Person" | undefined;
+    /**
+     * Identifier for a person within a particular scope.
+     */
+    identifier?: fhir.IdentifierArgs[] | undefined;
+    /**
+     * Person may have multiple names with different uses or applicable periods.
+     */
+    name?: fhir.HumanNameArgs[] | undefined;
+    /**
+     * Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification.
+     */
+    telecom?: fhir.ContactPointArgs[] | undefined;
+    /**
+     * The gender might not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though a clear majority of systems and contexts only support M and F.
+     */
+    gender?: AdministrativeGenderValueSetEnum | undefined;
+    /**
+     * At least an estimated year should be provided as a guess if the real DOB is unknown.
+     */
+    birthDate?: fhir.FhirDate | string | undefined;
+    /**
+     * Person may have multiple addresses with different uses or applicable periods.
+     */
+    address?: fhir.AddressArgs[] | undefined;
+    /**
+     * An image that can be displayed as a thumbnail of the person to enhance the identification of the individual.
+     */
+    photo?: fhir.AttachmentArgs | undefined;
+    /**
+     * The organization that is the custodian of the person record.
+     */
+    managingOrganization?: fhir.ReferenceArgs | undefined;
+    /**
+     * Whether this person's record is in active use.
+     */
+    active?: fhir.FhirBoolean | boolean | undefined;
+    /**
+     * Link to a resource that concerns the same actual person.
+     */
+    link?: fhir.PersonLinkArgs[] | undefined;
 }
 /**
  * Demographics and administrative information about a person independent of a specific health-related context.
  */
-export declare class Person extends fhir.DomainResource implements IPerson {
+export declare class Person extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -133,17 +121,9 @@ export declare class Person extends fhir.DomainResource implements IPerson {
      */
     gender?: AdministrativeGenderValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: Person.gender
-     */
-    _gender?: fhir.FhirElement | undefined;
-    /**
      * At least an estimated year should be provided as a guess if the real DOB is unknown.
      */
-    birthDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Person.birthDate
-     */
-    _birthDate?: fhir.FhirElement | undefined;
+    birthDate?: fhir.FhirDate | undefined;
     /**
      * Person may have multiple addresses with different uses or applicable periods.
      */
@@ -159,11 +139,7 @@ export declare class Person extends fhir.DomainResource implements IPerson {
     /**
      * Whether this person's record is in active use.
      */
-    active?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Person.active
-     */
-    _active?: fhir.FhirElement | undefined;
+    active?: fhir.FhirBoolean | undefined;
     /**
      * Link to a resource that concerns the same actual person.
      */
@@ -171,7 +147,7 @@ export declare class Person extends fhir.DomainResource implements IPerson {
     /**
      * Default constructor for Person - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IPerson>);
+    constructor(source?: Partial<PersonArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for gender
      */
@@ -179,6 +155,10 @@ export declare class Person extends fhir.DomainResource implements IPerson {
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Person.d.ts.map

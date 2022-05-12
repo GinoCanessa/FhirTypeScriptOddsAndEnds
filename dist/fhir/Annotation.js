@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Annotation
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A  text note which also  contains information about who made the statement and when.
  */
@@ -10,54 +12,50 @@ export class Annotation extends fhir.FhirElement {
     /**
      * Default constructor for Annotation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['authorReference']) {
-            this.authorReference = new fhir.Reference(source.authorReference);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Annotation';
+        this.__authorIsChoice = true;
+        if (source['author']) {
+            this.author = source.author;
         }
-        if (source['authorString']) {
-            this.authorString = source.authorString;
+        else if (source['authorReference']) {
+            this.author = new fhir.Reference(source.authorReference);
         }
-        if (source['_authorString']) {
-            this._authorString = new fhir.FhirElement(source._authorString);
+        else if (source['authorString']) {
+            this.author = new fhir.FhirString({ value: source.authorString });
         }
         if (source['time']) {
-            this.time = source.time;
-        }
-        if (source['_time']) {
-            this._time = new fhir.FhirElement(source._time);
+            this.time = new fhir.FhirDateTime({ value: source.time });
         }
         if (source['text']) {
-            this.text = source.text;
+            this.text = new fhir.FhirMarkdown({ value: source.text });
         }
         else {
             this.text = null;
-        }
-        if (source['_text']) {
-            this._text = new fhir.FhirElement(source._text);
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["authorReference"]) {
-            results.push(...this.authorReference.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["time"]) {
+            outcome.issue.push(...this.time.doModelValidation().issue);
         }
-        if (this["_authorString"]) {
-            results.push(...this._authorString.doModelValidation());
+        if (!this['text']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property text:fhir.FhirMarkdown fhir: Annotation.text:markdown", }));
         }
-        if (this["_time"]) {
-            results.push(...this._time.doModelValidation());
+        if (this["text"]) {
+            outcome.issue.push(...this.text.doModelValidation().issue);
         }
-        if (!this["text"]) {
-            results.push(["text", 'Missing required element: Annotation.text']);
-        }
-        if (this["_text"]) {
-            results.push(...this._text.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Annotation.js.map

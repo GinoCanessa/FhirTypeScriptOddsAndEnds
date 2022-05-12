@@ -35,19 +35,4 @@ export const VerificationresultNeedValueSet = {
 /**
  * The frequency with which the target must be validated
  */
-export var VerificationresultNeedValueSetEnum;
-(function (VerificationresultNeedValueSetEnum) {
-    /**
-     * initial: ***TODO***
-     */
-    VerificationresultNeedValueSetEnum["Initial"] = "initial";
-    /**
-     * none: ***TODO***
-     */
-    VerificationresultNeedValueSetEnum["None"] = "none";
-    /**
-     * periodic: ***TODO***
-     */
-    VerificationresultNeedValueSetEnum["Periodic"] = "periodic";
-})(VerificationresultNeedValueSetEnum || (VerificationresultNeedValueSetEnum = {}));
 //# sourceMappingURL=VerificationresultNeedValueSet.js.map

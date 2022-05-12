@@ -3,30 +3,38 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Distance
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A length - a value with a unit that is a physical distance.
+ * Valid arguments for the Distance type.
  */
-export type IDistance = fhir.IQuantity & { 
+export interface DistanceArgs extends fhir.QuantityArgs {
 }
 
 /**
  * A length - a value with a unit that is a physical distance.
  */
-export class Distance extends fhir.Quantity implements IDistance {
+export class Distance extends fhir.Quantity {
+  readonly __dataType:string = 'Distance';
   /**
    * Default constructor for Distance - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IDistance> = { }) {
-    super(source);
+  constructor(source:Partial<DistanceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -75,39 +75,4 @@ export const MetricColorValueSet = {
 /**
  * Describes the typical color of representation.
  */
-export var MetricColorValueSetEnum;
-(function (MetricColorValueSetEnum) {
-    /**
-     * black: Color for representation - black.
-     */
-    MetricColorValueSetEnum["ColorBlack"] = "black";
-    /**
-     * blue: Color for representation - blue.
-     */
-    MetricColorValueSetEnum["ColorBlue"] = "blue";
-    /**
-     * cyan: Color for representation - cyan.
-     */
-    MetricColorValueSetEnum["ColorCyan"] = "cyan";
-    /**
-     * green: Color for representation - green.
-     */
-    MetricColorValueSetEnum["ColorGreen"] = "green";
-    /**
-     * magenta: Color for representation - magenta.
-     */
-    MetricColorValueSetEnum["ColorMagenta"] = "magenta";
-    /**
-     * red: Color for representation - red.
-     */
-    MetricColorValueSetEnum["ColorRed"] = "red";
-    /**
-     * white: Color for representation - white.
-     */
-    MetricColorValueSetEnum["ColorWhite"] = "white";
-    /**
-     * yellow: Color for representation - yellow.
-     */
-    MetricColorValueSetEnum["ColorYellow"] = "yellow";
-})(MetricColorValueSetEnum || (MetricColorValueSetEnum = {}));
 //# sourceMappingURL=MetricColorValueSet.js.map

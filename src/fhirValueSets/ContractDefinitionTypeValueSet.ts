@@ -27,9 +27,3 @@ export type ContractDefinitionTypeValueSetType = typeof ContractDefinitionTypeVa
 /**
  * This value set contract specific codes for status.
  */
-export enum ContractDefinitionTypeValueSetEnum {
-  /**
-   * temp: To be completed
-   */
-  TemporaryValue = "temp",
-}

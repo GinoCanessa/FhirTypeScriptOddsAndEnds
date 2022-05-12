@@ -43,23 +43,4 @@ export const V3ActIncidentCodeValueSet = {
 /**
  *  Set of codes indicating the type of incident or accident.
  */
-export var V3ActIncidentCodeValueSetEnum;
-(function (V3ActIncidentCodeValueSetEnum) {
-    /**
-     * MVA: Incident or accident as the result of a motor vehicle accident
-     */
-    V3ActIncidentCodeValueSetEnum["MotorVehicleAccident"] = "MVA";
-    /**
-     * SCHOOL: Incident or accident is the result of a school place accident.
-     */
-    V3ActIncidentCodeValueSetEnum["SchoolAccident"] = "SCHOOL";
-    /**
-     * SPT: Incident or accident is the result of a sporting accident.
-     */
-    V3ActIncidentCodeValueSetEnum["SportingAccident"] = "SPT";
-    /**
-     * WPA: Incident or accident is the result of a work place accident
-     */
-    V3ActIncidentCodeValueSetEnum["WorkplaceAccident"] = "WPA";
-})(V3ActIncidentCodeValueSetEnum || (V3ActIncidentCodeValueSetEnum = {}));
 //# sourceMappingURL=V3ActIncidentCodeValueSet.js.map

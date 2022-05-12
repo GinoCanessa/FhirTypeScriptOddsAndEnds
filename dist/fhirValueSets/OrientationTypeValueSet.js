@@ -27,15 +27,4 @@ export const OrientationTypeValueSet = {
 /**
  * Type for orientation.
  */
-export var OrientationTypeValueSetEnum;
-(function (OrientationTypeValueSetEnum) {
-    /**
-     * antisense: Antisense orientation of reference sequence.
-     */
-    OrientationTypeValueSetEnum["AntisenseOrientationOfReferenceSeq"] = "antisense";
-    /**
-     * sense: Sense orientation of reference sequence.
-     */
-    OrientationTypeValueSetEnum["SenseOrientationOfReferenceSeq"] = "sense";
-})(OrientationTypeValueSetEnum || (OrientationTypeValueSetEnum = {}));
 //# sourceMappingURL=OrientationTypeValueSet.js.map

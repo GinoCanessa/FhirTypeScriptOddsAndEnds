@@ -43,17 +43,3 @@ export type ProcessPriorityValueSetType = typeof ProcessPriorityValueSet;
 /**
  * This value set includes the financial processing priority codes.
  */
-export enum ProcessPriorityValueSetEnum {
-  /**
-   * deferred: Later, when possible.
-   */
-  Deferred = "deferred",
-  /**
-   * normal: With best effort.
-   */
-  Normal = "normal",
-  /**
-   * stat: Immediately in real time.
-   */
-  Immediate = "stat",
-}

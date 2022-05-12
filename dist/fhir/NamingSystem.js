@@ -3,10 +3,12 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: NamingSystem
 import * as fhir from '../fhir.js';
-import { NamingsystemIdentifierTypeValueSet } from '../fhirValueSets/NamingsystemIdentifierTypeValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { NamingsystemTypeValueSet } from '../fhirValueSets/NamingsystemTypeValueSet.js';
-import { IdentifierTypeValueSet } from '../fhirValueSets/IdentifierTypeValueSet.js';
+import { NamingsystemIdentifierTypeValueSet, } from '../fhirValueSets/NamingsystemIdentifierTypeValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { NamingsystemTypeValueSet, } from '../fhirValueSets/NamingsystemTypeValueSet.js';
+import { IdentifierTypeValueSet, } from '../fhirValueSets/IdentifierTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Multiple identifiers may exist, either due to duplicate registration, regional rules, needs of different communication technologies, etc.
  */
@@ -14,37 +16,26 @@ export class NamingSystemUniqueId extends fhir.BackboneElement {
     /**
      * Default constructor for NamingSystemUniqueId - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'NamingSystemUniqueId';
         if (source['type']) {
             this.type = source.type;
         }
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['value']) {
-            this.value = source.value;
+            this.value = new fhir.FhirString({ value: source.value });
         }
         else {
             this.value = null;
         }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
-        }
         if (source['preferred']) {
-            this.preferred = source.preferred;
-        }
-        if (source['_preferred']) {
-            this._preferred = new fhir.FhirElement(source._preferred);
+            this.preferred = new fhir.FhirBoolean({ value: source.preferred });
         }
         if (source['comment']) {
-            this.comment = source.comment;
-        }
-        if (source['_comment']) {
-            this._comment = new fhir.FhirElement(source._comment);
+            this.comment = new fhir.FhirString({ value: source.comment });
         }
         if (source['period']) {
             this.period = new fhir.Period(source.period);
@@ -60,29 +51,32 @@ export class NamingSystemUniqueId extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: NamingSystem.uniqueId.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:NamingsystemIdentifierTypeValueSetEnum fhir: NamingSystem.uniqueId.type:code", }));
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value:fhir.FhirString fhir: NamingSystem.uniqueId.value:string", }));
         }
-        if (!this["value"]) {
-            results.push(["value", 'Missing required element: NamingSystem.uniqueId.value']);
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
         }
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
+        if (this["preferred"]) {
+            outcome.issue.push(...this.preferred.doModelValidation().issue);
         }
-        if (this["_preferred"]) {
-            results.push(...this._preferred.doModelValidation());
-        }
-        if (this["_comment"]) {
-            results.push(...this._comment.doModelValidation());
+        if (this["comment"]) {
+            outcome.issue.push(...this.comment.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -92,17 +86,31 @@ export class NamingSystem extends fhir.DomainResource {
     /**
      * Default constructor for NamingSystem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'NamingSystem';
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the naming system to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * Multiple identifiers may exist, either due to duplicate registration, regional rules, needs of different communication technologies, etc.
+         */
+        this.uniqueId = [];
         this.resourceType = 'NamingSystem';
         if (source['name']) {
-            this.name = source.name;
+            this.name = new fhir.FhirString({ value: source.name });
         }
         else {
             this.name = null;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
         }
         if (source['status']) {
             this.status = source.status;
@@ -110,50 +118,32 @@ export class NamingSystem extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['kind']) {
             this.kind = source.kind;
         }
         else {
             this.kind = null;
         }
-        if (source['_kind']) {
-            this._kind = new fhir.FhirElement(source._kind);
-        }
         if (source['date']) {
-            this.date = source.date;
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         else {
             this.date = null;
         }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
-        }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['responsible']) {
-            this.responsible = source.responsible;
-        }
-        if (source['_responsible']) {
-            this._responsible = new fhir.FhirElement(source._responsible);
+            this.responsible = new fhir.FhirString({ value: source.responsible });
         }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -162,10 +152,7 @@ export class NamingSystem extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['usage']) {
-            this.usage = source.usage;
-        }
-        if (source['_usage']) {
-            this._usage = new fhir.FhirElement(source._usage);
+            this.usage = new fhir.FhirString({ value: source.usage });
         }
         if (source['uniqueId']) {
             this.uniqueId = source.uniqueId.map((x) => new fhir.NamingSystemUniqueId(x));
@@ -196,65 +183,71 @@ export class NamingSystem extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: NamingSystem.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'NamingSystem' fhir: NamingSystem.resourceType:'NamingSystem'", }));
         }
-        if (!this["name"]) {
-            results.push(["name", 'Missing required element: NamingSystem.name']);
+        if (!this['name']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property name:fhir.FhirString fhir: NamingSystem.name:string", }));
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: NamingSystem.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: NamingSystem.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['kind']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property kind:NamingsystemTypeValueSetEnum fhir: NamingSystem.kind:code", }));
         }
-        if (!this["kind"]) {
-            results.push(["kind", 'Missing required element: NamingSystem.kind']);
+        if (!this['date']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property date:fhir.FhirDateTime fhir: NamingSystem.date:dateTime", }));
         }
-        if (this["_kind"]) {
-            results.push(...this._kind.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (!this["date"]) {
-            results.push(["date", 'Missing required element: NamingSystem.date']);
-        }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_responsible"]) {
-            results.push(...this._responsible.doModelValidation());
+        if (this["responsible"]) {
+            outcome.issue.push(...this.responsible.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_usage"]) {
-            results.push(...this._usage.doModelValidation());
+        if (this["usage"]) {
+            outcome.issue.push(...this.usage.doModelValidation().issue);
         }
-        if ((!this["uniqueId"]) || (this["uniqueId"].length === 0)) {
-            results.push(["uniqueId", 'Missing required element: NamingSystem.uniqueId']);
+        if (!this['uniqueId']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property uniqueId:fhir.NamingSystemUniqueId[] fhir: NamingSystem.uniqueId:uniqueId", }));
+        }
+        else if (!Array.isArray(this.uniqueId)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property uniqueId:fhir.NamingSystemUniqueId[] fhir: NamingSystem.uniqueId:uniqueId", }));
+        }
+        else if (this.uniqueId.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property uniqueId:fhir.NamingSystemUniqueId[] fhir: NamingSystem.uniqueId:uniqueId", }));
         }
         if (this["uniqueId"]) {
-            this.uniqueId.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.uniqueId.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=NamingSystem.js.map

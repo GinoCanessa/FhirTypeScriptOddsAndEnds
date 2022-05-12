@@ -1,59 +1,28 @@
 import * as fhir from '../fhir.js';
-import { LinkageTypeValueSetType, LinkageTypeValueSetEnum } from '../fhirValueSets/LinkageTypeValueSet.js';
+import { LinkageTypeValueSetType } from '../fhirValueSets/LinkageTypeValueSet.js';
+import { LinkageTypeValueSetEnum } from '../valueSetEnums.js';
 /**
- * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
+ * Valid arguments for the LinkageItem type.
  */
-export declare type ILinkageItem = fhir.IBackboneElement & {
+export interface LinkageItemArgs extends fhir.BackboneElementArgs {
     /**
      * Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
      */
     type: LinkageTypeValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: Linkage.item.type
-     */
-    _type?: fhir.IFhirElement | undefined;
     /**
      * The resource instance being linked as part of the group.
      */
-    resource: fhir.IReference | null;
-};
-/**
- * Identifies two or more records (resource instances) that refer to the same real-world "occurrence".
- */
-export declare type ILinkage = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "Linkage";
-    /**
-     * If false, any asserted linkages should not be considered current/relevant/applicable.
-     */
-    active?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Linkage.active
-     */
-    _active?: fhir.IFhirElement | undefined;
-    /**
-     * Identifies the user or organization responsible for asserting the linkages as well as the user or organization who establishes the context in which the nature of each linkage is evaluated.
-     */
-    author?: fhir.IReference | undefined;
-    /**
-     * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
-     */
-    item: fhir.ILinkageItem[] | null;
-};
+    resource: fhir.ReferenceArgs | null;
+}
 /**
  * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
  */
-export declare class LinkageItem extends fhir.BackboneElement implements ILinkageItem {
+export declare class LinkageItem extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
      */
     type: LinkageTypeValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: Linkage.item.type
-     */
-    _type?: fhir.FhirElement | undefined;
     /**
      * The resource instance being linked as part of the group.
      */
@@ -61,7 +30,7 @@ export declare class LinkageItem extends fhir.BackboneElement implements ILinkag
     /**
      * Default constructor for LinkageItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ILinkageItem>);
+    constructor(source?: Partial<LinkageItemArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for type
      */
@@ -69,12 +38,38 @@ export declare class LinkageItem extends fhir.BackboneElement implements ILinkag
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the Linkage type.
+ */
+export interface LinkageArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "Linkage" | undefined;
+    /**
+     * If false, any asserted linkages should not be considered current/relevant/applicable.
+     */
+    active?: fhir.FhirBoolean | boolean | undefined;
+    /**
+     * Identifies the user or organization responsible for asserting the linkages as well as the user or organization who establishes the context in which the nature of each linkage is evaluated.
+     */
+    author?: fhir.ReferenceArgs | undefined;
+    /**
+     * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
+     */
+    item: fhir.LinkageItemArgs[] | null;
 }
 /**
  * Identifies two or more records (resource instances) that refer to the same real-world "occurrence".
  */
-export declare class Linkage extends fhir.DomainResource implements ILinkage {
+export declare class Linkage extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -82,11 +77,7 @@ export declare class Linkage extends fhir.DomainResource implements ILinkage {
     /**
      * If false, any asserted linkages should not be considered current/relevant/applicable.
      */
-    active?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Linkage.active
-     */
-    _active?: fhir.FhirElement | undefined;
+    active?: fhir.FhirBoolean | undefined;
     /**
      * Identifies the user or organization responsible for asserting the linkages as well as the user or organization who establishes the context in which the nature of each linkage is evaluated.
      */
@@ -98,10 +89,14 @@ export declare class Linkage extends fhir.DomainResource implements ILinkage {
     /**
      * Default constructor for Linkage - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ILinkage>);
+    constructor(source?: Partial<LinkageArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Linkage.d.ts.map

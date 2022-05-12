@@ -27,15 +27,4 @@ export const ExposureStateValueSet = {
 /**
  * Whether the results by exposure is describing the results for the primary exposure of interest (exposure) or the alternative state (exposureAlternative).
  */
-export var ExposureStateValueSetEnum;
-(function (ExposureStateValueSetEnum) {
-    /**
-     * exposure: used when the results by exposure is describing the results for the primary exposure of interest.
-     */
-    ExposureStateValueSetEnum["Exposure"] = "exposure";
-    /**
-     * exposure-alternative: used when the results by exposure is describing the results for the alternative exposure state, control state or comparator state.
-     */
-    ExposureStateValueSetEnum["ExposureAlternative"] = "exposure-alternative";
-})(ExposureStateValueSetEnum || (ExposureStateValueSetEnum = {}));
 //# sourceMappingURL=ExposureStateValueSet.js.map

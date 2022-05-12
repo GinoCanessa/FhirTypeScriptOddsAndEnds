@@ -59,31 +59,4 @@ export const AdverseEventOutcomeValueSet = {
 /**
  * TODO (and should this be required?).
  */
-export var AdverseEventOutcomeValueSetEnum;
-(function (AdverseEventOutcomeValueSetEnum) {
-    /**
-     * Code: fatal
-     */
-    AdverseEventOutcomeValueSetEnum["Fatal"] = "fatal";
-    /**
-     * Code: ongoing
-     */
-    AdverseEventOutcomeValueSetEnum["Ongoing"] = "ongoing";
-    /**
-     * Code: recovering
-     */
-    AdverseEventOutcomeValueSetEnum["Recovering"] = "recovering";
-    /**
-     * Code: resolved
-     */
-    AdverseEventOutcomeValueSetEnum["Resolved"] = "resolved";
-    /**
-     * Code: resolvedWithSequelae
-     */
-    AdverseEventOutcomeValueSetEnum["ResolvedWithSequelae"] = "resolvedWithSequelae";
-    /**
-     * Code: unknown
-     */
-    AdverseEventOutcomeValueSetEnum["Unknown"] = "unknown";
-})(AdverseEventOutcomeValueSetEnum || (AdverseEventOutcomeValueSetEnum = {}));
 //# sourceMappingURL=AdverseEventOutcomeValueSet.js.map

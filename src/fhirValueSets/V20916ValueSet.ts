@@ -43,17 +43,3 @@ export type V20916ValueSetType = typeof V20916ValueSet;
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0916 ( Relevant Clincial Information)
  */
-export enum V20916ValueSetEnum {
-  /**
-   * Code: F
-   */
-  PatientWasFastingPriorToTheProcedure = "F",
-  /**
-   * Code: NF
-   */
-  ThePatientIndicatedTheyDidNotFastPriorToTheProcedure = "NF",
-  /**
-   * Code: NG
-   */
-  NotGivenPatientWasNotAskedAtTheTimeOfTheProcedure = "NG",
-}

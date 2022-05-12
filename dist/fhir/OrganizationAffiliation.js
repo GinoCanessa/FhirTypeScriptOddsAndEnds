@@ -3,8 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: OrganizationAffiliation
 import * as fhir from '../fhir.js';
-import { OrganizationRoleValueSet } from '../fhirValueSets/OrganizationRoleValueSet.js';
-import { C80PracticeCodesValueSet } from '../fhirValueSets/C80PracticeCodesValueSet.js';
+import { OrganizationRoleValueSet, } from '../fhirValueSets/OrganizationRoleValueSet.js';
+import { C80PracticeCodesValueSet, } from '../fhirValueSets/C80PracticeCodesValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Defines an affiliation/assotiation/relationship between 2 distinct oganizations, that is not a part-of relationship/sub-division relationship.
  */
@@ -12,17 +14,47 @@ export class OrganizationAffiliation extends fhir.DomainResource {
     /**
      * Default constructor for OrganizationAffiliation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'OrganizationAffiliation';
+        /**
+         * Business identifiers that are specific to this role.
+         */
+        this.identifier = [];
+        /**
+         * Health insurance provider network in which the participatingOrganization provides the role's services (if defined) at the indicated locations (if defined).
+         */
+        this.network = [];
+        /**
+         * Definition of the role the participatingOrganization plays in the association.
+         */
+        this.code = [];
+        /**
+         * Specific specialty of the participatingOrganization in the context of the role.
+         */
+        this.specialty = [];
+        /**
+         * The location(s) at which the role occurs.
+         */
+        this.location = [];
+        /**
+         * Healthcare services provided through the role.
+         */
+        this.healthcareService = [];
+        /**
+         * Contact details at the participatingOrganization relevant to this Affiliation.
+         */
+        this.telecom = [];
+        /**
+         * Technical endpoints providing access to services operated for this role.
+         */
+        this.endpoint = [];
         this.resourceType = 'OrganizationAffiliation';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['active']) {
-            this.active = source.active;
-        }
-        if (source['_active']) {
-            this._active = new fhir.FhirElement(source._active);
+            this.active = new fhir.FhirBoolean({ value: source.active });
         }
         if (source['period']) {
             this.period = new fhir.Period(source.period);
@@ -71,47 +103,53 @@ export class OrganizationAffiliation extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: OrganizationAffiliation.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'OrganizationAffiliation' fhir: OrganizationAffiliation.resourceType:'OrganizationAffiliation'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_active"]) {
-            results.push(...this._active.doModelValidation());
+        if (this["active"]) {
+            outcome.issue.push(...this.active.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
         if (this["organization"]) {
-            results.push(...this.organization.doModelValidation());
+            outcome.issue.push(...this.organization.doModelValidation().issue);
         }
         if (this["participatingOrganization"]) {
-            results.push(...this.participatingOrganization.doModelValidation());
+            outcome.issue.push(...this.participatingOrganization.doModelValidation().issue);
         }
         if (this["network"]) {
-            this.network.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.network.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["code"]) {
-            this.code.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.code.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["specialty"]) {
-            this.specialty.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.specialty.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["location"]) {
-            this.location.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.location.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["healthcareService"]) {
-            this.healthcareService.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.healthcareService.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["telecom"]) {
-            this.telecom.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.telecom.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["endpoint"]) {
-            this.endpoint.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.endpoint.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=OrganizationAffiliation.js.map

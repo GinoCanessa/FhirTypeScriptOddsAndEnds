@@ -51,27 +51,4 @@ export const NetworkTypeValueSet = {
 /**
  * The type of network access point of this agent in the audit event.
  */
-export var NetworkTypeValueSetEnum;
-(function (NetworkTypeValueSetEnum) {
-    /**
-     * 1: The machine name, including DNS name.
-     */
-    NetworkTypeValueSetEnum["MachineName"] = "1";
-    /**
-     * 2: The assigned Internet Protocol (IP) address.
-     */
-    NetworkTypeValueSetEnum["IPAddress"] = "2";
-    /**
-     * 3: The assigned telephone number.
-     */
-    NetworkTypeValueSetEnum["TelephoneNumber"] = "3";
-    /**
-     * 4: The assigned email address.
-     */
-    NetworkTypeValueSetEnum["EmailAddress"] = "4";
-    /**
-     * 5: URI (User directory, HTTP-PUT, ftp, etc.).
-     */
-    NetworkTypeValueSetEnum["URI"] = "5";
-})(NetworkTypeValueSetEnum || (NetworkTypeValueSetEnum = {}));
 //# sourceMappingURL=NetworkTypeValueSet.js.map

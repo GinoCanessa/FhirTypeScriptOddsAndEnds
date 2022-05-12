@@ -3,99 +3,82 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Annotation
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A  text note which also  contains information about who made the statement and when.
+ * Valid arguments for the Annotation type.
  */
-export type IAnnotation = fhir.IFhirElement & { 
+export interface AnnotationArgs extends fhir.FhirElementArgs {
   /**
    * Organization is used when there's no need for specific attribution as to who made the comment.
    */
-  authorReference?: fhir.IReference|undefined;
+  author?: fhir.Reference|fhir.FhirString|undefined;
   /**
    * Organization is used when there's no need for specific attribution as to who made the comment.
    */
-  authorString?: string|undefined;
+  authorReference?: fhir.ReferenceArgs|undefined;
   /**
-   * Extended properties for primitive element: Annotation.author[x]
+   * Organization is used when there's no need for specific attribution as to who made the comment.
    */
-  _authorString?: fhir.IFhirElement|undefined;
+  authorString?: fhir.FhirString|string|undefined;
   /**
    * Indicates when this particular annotation was made.
    */
-  time?: string|undefined;
-  /**
-   * Extended properties for primitive element: Annotation.time
-   */
-  _time?: fhir.IFhirElement|undefined;
+  time?: fhir.FhirDateTime|string|undefined;
   /**
    * The text of the annotation in markdown format.
    */
-  text: string|null;
-  /**
-   * Extended properties for primitive element: Annotation.text
-   */
-  _text?: fhir.IFhirElement|undefined;
+  text: fhir.FhirMarkdown|string|undefined;
 }
 
 /**
  * A  text note which also  contains information about who made the statement and when.
  */
-export class Annotation extends fhir.FhirElement implements IAnnotation {
+export class Annotation extends fhir.FhirElement {
+  readonly __dataType:string = 'Annotation';
   /**
    * Organization is used when there's no need for specific attribution as to who made the comment.
    */
-  public authorReference?: fhir.Reference|undefined;
-  /**
-   * Organization is used when there's no need for specific attribution as to who made the comment.
-   */
-  public authorString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Annotation.author[x]
-   */
-  public _authorString?: fhir.FhirElement|undefined;
+  public author?: (fhir.Reference|fhir.FhirString)|undefined;
+  readonly __authorIsChoice:true = true;
   /**
    * Indicates when this particular annotation was made.
    */
-  public time?: string|undefined;
-  /**
-   * Extended properties for primitive element: Annotation.time
-   */
-  public _time?: fhir.FhirElement|undefined;
+  public time?: fhir.FhirDateTime|undefined;
   /**
    * The text of the annotation in markdown format.
    */
-  public text: string|null;
-  /**
-   * Extended properties for primitive element: Annotation.text
-   */
-  public _text?: fhir.FhirElement|undefined;
+  public text: fhir.FhirMarkdown|null;
   /**
    * Default constructor for Annotation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAnnotation> = { }) {
-    super(source);
-    if (source['authorReference']) { this.authorReference = new fhir.Reference(source.authorReference!); }
-    if (source['authorString']) { this.authorString = source.authorString; }
-    if (source['_authorString']) { this._authorString = new fhir.FhirElement(source._authorString!); }
-    if (source['time']) { this.time = source.time; }
-    if (source['_time']) { this._time = new fhir.FhirElement(source._time!); }
-    if (source['text']) { this.text = source.text; }
+  constructor(source:Partial<AnnotationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['author']) { this.author = source.author; }
+    else if (source['authorReference']) { this.author = new fhir.Reference(source.authorReference); }
+    else if (source['authorString']) { this.author = new fhir.FhirString({value: source.authorString}); }
+    if (source['time']) { this.time = new fhir.FhirDateTime({value: source.time}); }
+    if (source['text']) { this.text = new fhir.FhirMarkdown({value: source.text}); }
     else { this.text = null; }
-    if (source['_text']) { this._text = new fhir.FhirElement(source._text!); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["authorReference"]) { results.push(...this.authorReference.doModelValidation()); }
-    if (this["_authorString"]) { results.push(...this._authorString.doModelValidation()); }
-    if (this["_time"]) { results.push(...this._time.doModelValidation()); }
-    if (!this["text"]) { results.push(["text",'Missing required element: Annotation.text']); }
-    if (this["_text"]) { results.push(...this._text.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["time"]) { outcome.issue!.push(...this.time.doModelValidation().issue!); }
+    if (!this['text']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property text:fhir.FhirMarkdown fhir: Annotation.text:markdown", }));
+    }
+    if (this["text"]) { outcome.issue!.push(...this.text.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

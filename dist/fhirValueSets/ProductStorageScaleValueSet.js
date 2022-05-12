@@ -35,19 +35,4 @@ export const ProductStorageScaleValueSet = {
 /**
  * BiologicallyDerived Product Storage Scale.
  */
-export var ProductStorageScaleValueSetEnum;
-(function (ProductStorageScaleValueSetEnum) {
-    /**
-     * celsius: Celsius or centigrade temperature scale.
-     */
-    ProductStorageScaleValueSetEnum["Celsius"] = "celsius";
-    /**
-     * farenheit: Fahrenheit temperature scale.
-     */
-    ProductStorageScaleValueSetEnum["Fahrenheit"] = "farenheit";
-    /**
-     * kelvin: Kelvin absolute thermodynamic temperature scale.
-     */
-    ProductStorageScaleValueSetEnum["Kelvin"] = "kelvin";
-})(ProductStorageScaleValueSetEnum || (ProductStorageScaleValueSetEnum = {}));
 //# sourceMappingURL=ProductStorageScaleValueSet.js.map

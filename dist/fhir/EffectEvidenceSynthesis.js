@@ -3,18 +3,20 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: EffectEvidenceSynthesis
 import * as fhir from '../fhir.js';
-import { ExposureStateValueSet } from '../fhirValueSets/ExposureStateValueSet.js';
-import { EvidenceVariantStateValueSet } from '../fhirValueSets/EvidenceVariantStateValueSet.js';
-import { PrecisionEstimateTypeValueSet } from '../fhirValueSets/PrecisionEstimateTypeValueSet.js';
-import { EffectEstimateTypeValueSet } from '../fhirValueSets/EffectEstimateTypeValueSet.js';
-import { UcumUnitsValueSet } from '../fhirValueSets/UcumUnitsValueSet.js';
-import { CertaintySubcomponentTypeValueSet } from '../fhirValueSets/CertaintySubcomponentTypeValueSet.js';
-import { CertaintySubcomponentRatingValueSet } from '../fhirValueSets/CertaintySubcomponentRatingValueSet.js';
-import { EvidenceQualityValueSet } from '../fhirValueSets/EvidenceQualityValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { DefinitionTopicValueSet } from '../fhirValueSets/DefinitionTopicValueSet.js';
-import { SynthesisTypeValueSet } from '../fhirValueSets/SynthesisTypeValueSet.js';
-import { StudyTypeValueSet } from '../fhirValueSets/StudyTypeValueSet.js';
+import { ExposureStateValueSet, } from '../fhirValueSets/ExposureStateValueSet.js';
+import { EvidenceVariantStateValueSet, } from '../fhirValueSets/EvidenceVariantStateValueSet.js';
+import { PrecisionEstimateTypeValueSet, } from '../fhirValueSets/PrecisionEstimateTypeValueSet.js';
+import { EffectEstimateTypeValueSet, } from '../fhirValueSets/EffectEstimateTypeValueSet.js';
+import { UcumUnitsValueSet, } from '../fhirValueSets/UcumUnitsValueSet.js';
+import { CertaintySubcomponentTypeValueSet, } from '../fhirValueSets/CertaintySubcomponentTypeValueSet.js';
+import { CertaintySubcomponentRatingValueSet, } from '../fhirValueSets/CertaintySubcomponentRatingValueSet.js';
+import { EvidenceQualityValueSet, } from '../fhirValueSets/EvidenceQualityValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { DefinitionTopicValueSet, } from '../fhirValueSets/DefinitionTopicValueSet.js';
+import { SynthesisTypeValueSet, } from '../fhirValueSets/SynthesisTypeValueSet.js';
+import { StudyTypeValueSet, } from '../fhirValueSets/StudyTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A description of the size of the sample involved in the synthesis.
  */
@@ -22,42 +24,40 @@ export class EffectEvidenceSynthesisSampleSize extends fhir.BackboneElement {
     /**
      * Default constructor for EffectEvidenceSynthesisSampleSize - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EffectEvidenceSynthesisSampleSize';
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['numberOfStudies']) {
-            this.numberOfStudies = source.numberOfStudies;
-        }
-        if (source['_numberOfStudies']) {
-            this._numberOfStudies = new fhir.FhirElement(source._numberOfStudies);
+            this.numberOfStudies = new fhir.FhirInteger({ value: source.numberOfStudies });
         }
         if (source['numberOfParticipants']) {
-            this.numberOfParticipants = source.numberOfParticipants;
-        }
-        if (source['_numberOfParticipants']) {
-            this._numberOfParticipants = new fhir.FhirElement(source._numberOfParticipants);
+            this.numberOfParticipants = new fhir.FhirInteger({ value: source.numberOfParticipants });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_numberOfStudies"]) {
-            results.push(...this._numberOfStudies.doModelValidation());
+        if (this["numberOfStudies"]) {
+            outcome.issue.push(...this.numberOfStudies.doModelValidation().issue);
         }
-        if (this["_numberOfParticipants"]) {
-            results.push(...this._numberOfParticipants.doModelValidation());
+        if (this["numberOfParticipants"]) {
+            outcome.issue.push(...this.numberOfParticipants.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -67,19 +67,14 @@ export class EffectEvidenceSynthesisResultsByExposure extends fhir.BackboneEleme
     /**
      * Default constructor for EffectEvidenceSynthesisResultsByExposure - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EffectEvidenceSynthesisResultsByExposure';
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['exposureState']) {
             this.exposureState = source.exposureState;
-        }
-        if (source['_exposureState']) {
-            this._exposureState = new fhir.FhirElement(source._exposureState);
         }
         if (source['variantState']) {
             this.variantState = new fhir.CodeableConcept(source.variantState);
@@ -107,23 +102,26 @@ export class EffectEvidenceSynthesisResultsByExposure extends fhir.BackboneEleme
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
-        }
-        if (this["_exposureState"]) {
-            results.push(...this._exposureState.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["variantState"]) {
-            results.push(...this.variantState.doModelValidation());
+            outcome.issue.push(...this.variantState.doModelValidation().issue);
         }
-        if (!this["riskEvidenceSynthesis"]) {
-            results.push(["riskEvidenceSynthesis", 'Missing required element: EffectEvidenceSynthesis.resultsByExposure.riskEvidenceSynthesis']);
+        if (!this['riskEvidenceSynthesis']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property riskEvidenceSynthesis:fhir.Reference fhir: EffectEvidenceSynthesis.resultsByExposure.riskEvidenceSynthesis:Reference", }));
         }
         if (this["riskEvidenceSynthesis"]) {
-            results.push(...this.riskEvidenceSynthesis.doModelValidation());
+            outcome.issue.push(...this.riskEvidenceSynthesis.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -133,28 +131,20 @@ export class EffectEvidenceSynthesisEffectEstimatePrecisionEstimate extends fhir
     /**
      * Default constructor for EffectEvidenceSynthesisEffectEstimatePrecisionEstimate - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EffectEvidenceSynthesisEffectEstimatePrecisionEstimate';
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
         if (source['level']) {
-            this.level = source.level;
-        }
-        if (source['_level']) {
-            this._level = new fhir.FhirElement(source._level);
+            this.level = new fhir.FhirDecimal({ value: source.level });
         }
         if (source['from']) {
-            this.from = source.from;
-        }
-        if (source['_from']) {
-            this._from = new fhir.FhirElement(source._from);
+            this.from = new fhir.FhirDecimal({ value: source.from });
         }
         if (source['to']) {
-            this.to = source.to;
-        }
-        if (source['_to']) {
-            this._to = new fhir.FhirElement(source._to);
+            this.to = new fhir.FhirDecimal({ value: source.to });
         }
     }
     /**
@@ -167,20 +157,26 @@ export class EffectEvidenceSynthesisEffectEstimatePrecisionEstimate extends fhir
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_level"]) {
-            results.push(...this._level.doModelValidation());
+        if (this["level"]) {
+            outcome.issue.push(...this.level.doModelValidation().issue);
         }
-        if (this["_from"]) {
-            results.push(...this._from.doModelValidation());
+        if (this["from"]) {
+            outcome.issue.push(...this.from.doModelValidation().issue);
         }
-        if (this["_to"]) {
-            results.push(...this._to.doModelValidation());
+        if (this["to"]) {
+            outcome.issue.push(...this.to.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -190,13 +186,15 @@ export class EffectEvidenceSynthesisEffectEstimate extends fhir.BackboneElement 
     /**
      * Default constructor for EffectEvidenceSynthesisEffectEstimate - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EffectEvidenceSynthesisEffectEstimate';
+        /**
+         * A description of the precision of the estimate for the effect.
+         */
+        this.precisionEstimate = [];
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
@@ -205,10 +203,7 @@ export class EffectEvidenceSynthesisEffectEstimate extends fhir.BackboneElement 
             this.variantState = new fhir.CodeableConcept(source.variantState);
         }
         if (source['value']) {
-            this.value = source.value;
-        }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
+            this.value = new fhir.FhirDecimal({ value: source.value });
         }
         if (source['unitOfMeasure']) {
             this.unitOfMeasure = new fhir.CodeableConcept(source.unitOfMeasure);
@@ -239,26 +234,32 @@ export class EffectEvidenceSynthesisEffectEstimate extends fhir.BackboneElement 
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["variantState"]) {
-            results.push(...this.variantState.doModelValidation());
+            outcome.issue.push(...this.variantState.doModelValidation().issue);
         }
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
         }
         if (this["unitOfMeasure"]) {
-            results.push(...this.unitOfMeasure.doModelValidation());
+            outcome.issue.push(...this.unitOfMeasure.doModelValidation().issue);
         }
         if (this["precisionEstimate"]) {
-            this.precisionEstimate.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.precisionEstimate.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -268,8 +269,17 @@ export class EffectEvidenceSynthesisCertaintyCertaintySubcomponent extends fhir.
     /**
      * Default constructor for EffectEvidenceSynthesisCertaintyCertaintySubcomponent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EffectEvidenceSynthesisCertaintyCertaintySubcomponent';
+        /**
+         * A rating of a subcomponent of rating certainty.
+         */
+        this.rating = [];
+        /**
+         * A human-readable string to clarify or explain concepts about the resource.
+         */
+        this.note = [];
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
@@ -296,17 +306,23 @@ export class EffectEvidenceSynthesisCertaintyCertaintySubcomponent extends fhir.
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["rating"]) {
-            this.rating.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.rating.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -316,8 +332,21 @@ export class EffectEvidenceSynthesisCertainty extends fhir.BackboneElement {
     /**
      * Default constructor for EffectEvidenceSynthesisCertainty - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EffectEvidenceSynthesisCertainty';
+        /**
+         * A rating of the certainty of the effect estimate.
+         */
+        this.rating = [];
+        /**
+         * A human-readable string to clarify or explain concepts about the resource.
+         */
+        this.note = [];
+        /**
+         * A description of a component of the overall certainty.
+         */
+        this.certaintySubcomponent = [];
         if (source['rating']) {
             this.rating = source.rating.map((x) => new fhir.CodeableConcept(x));
         }
@@ -338,17 +367,23 @@ export class EffectEvidenceSynthesisCertainty extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["rating"]) {
-            this.rating.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.rating.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["certaintySubcomponent"]) {
-            this.certaintySubcomponent.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.certaintySubcomponent.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -358,35 +393,80 @@ export class EffectEvidenceSynthesis extends fhir.DomainResource {
     /**
      * Default constructor for EffectEvidenceSynthesis - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EffectEvidenceSynthesis';
+        /**
+         * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this effect evidence synthesis outside of FHIR, where it is not possible to use the logical URI.
+         */
+        this.identifier = [];
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * A human-readable string to clarify or explain concepts about the resource.
+         */
+        this.note = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the effect evidence synthesis to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * Descriptive topics related to the content of the EffectEvidenceSynthesis. Topics provide a high-level categorization grouping types of EffectEvidenceSynthesiss that can be useful for filtering and searching.
+         */
+        this.topic = [];
+        /**
+         * An individiual or organization primarily involved in the creation and maintenance of the content.
+         */
+        this.author = [];
+        /**
+         * An individual or organization primarily responsible for internal coherence of the content.
+         */
+        this.editor = [];
+        /**
+         * An individual or organization primarily responsible for review of some aspect of the content.
+         */
+        this.reviewer = [];
+        /**
+         * An individual or organization responsible for officially endorsing the content for use in some setting.
+         */
+        this.endorser = [];
+        /**
+         * Each related artifact is either an attachment, or a reference to another resource, but not both.
+         */
+        this.relatedArtifact = [];
+        /**
+         * A description of the results for each exposure considered in the effect estimate.
+         */
+        this.resultsByExposure = [];
+        /**
+         * The estimated effect of the exposure variant.
+         */
+        this.effectEstimate = [];
+        /**
+         * A description of the certainty of the effect estimate.
+         */
+        this.certainty = [];
         this.resourceType = 'EffectEvidenceSynthesis';
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['status']) {
             this.status = source.status;
@@ -394,29 +474,17 @@ export class EffectEvidenceSynthesis extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['note']) {
             this.note = source.note.map((x) => new fhir.Annotation(x));
@@ -428,22 +496,13 @@ export class EffectEvidenceSynthesis extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['approvalDate']) {
-            this.approvalDate = source.approvalDate;
-        }
-        if (source['_approvalDate']) {
-            this._approvalDate = new fhir.FhirElement(source._approvalDate);
+            this.approvalDate = new fhir.FhirDate({ value: source.approvalDate });
         }
         if (source['lastReviewDate']) {
-            this.lastReviewDate = source.lastReviewDate;
-        }
-        if (source['_lastReviewDate']) {
-            this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate);
+            this.lastReviewDate = new fhir.FhirDate({ value: source.lastReviewDate });
         }
         if (source['effectivePeriod']) {
             this.effectivePeriod = new fhir.Period(source.effectivePeriod);
@@ -537,125 +596,128 @@ export class EffectEvidenceSynthesis extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: EffectEvidenceSynthesis.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'EffectEvidenceSynthesis' fhir: EffectEvidenceSynthesis.resourceType:'EffectEvidenceSynthesis'", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: EffectEvidenceSynthesis.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: EffectEvidenceSynthesis.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
-        if (this["_approvalDate"]) {
-            results.push(...this._approvalDate.doModelValidation());
+        if (this["approvalDate"]) {
+            outcome.issue.push(...this.approvalDate.doModelValidation().issue);
         }
-        if (this["_lastReviewDate"]) {
-            results.push(...this._lastReviewDate.doModelValidation());
+        if (this["lastReviewDate"]) {
+            outcome.issue.push(...this.lastReviewDate.doModelValidation().issue);
         }
         if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
+            outcome.issue.push(...this.effectivePeriod.doModelValidation().issue);
         }
         if (this["topic"]) {
-            this.topic.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.topic.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["author"]) {
-            this.author.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.author.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["editor"]) {
-            this.editor.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.editor.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reviewer"]) {
-            this.reviewer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reviewer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["endorser"]) {
-            this.endorser.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.endorser.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relatedArtifact"]) {
-            this.relatedArtifact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relatedArtifact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["synthesisType"]) {
-            results.push(...this.synthesisType.doModelValidation());
+            outcome.issue.push(...this.synthesisType.doModelValidation().issue);
         }
         if (this["studyType"]) {
-            results.push(...this.studyType.doModelValidation());
+            outcome.issue.push(...this.studyType.doModelValidation().issue);
         }
-        if (!this["population"]) {
-            results.push(["population", 'Missing required element: EffectEvidenceSynthesis.population']);
+        if (!this['population']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property population:fhir.Reference fhir: EffectEvidenceSynthesis.population:Reference", }));
         }
         if (this["population"]) {
-            results.push(...this.population.doModelValidation());
+            outcome.issue.push(...this.population.doModelValidation().issue);
         }
-        if (!this["exposure"]) {
-            results.push(["exposure", 'Missing required element: EffectEvidenceSynthesis.exposure']);
+        if (!this['exposure']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property exposure:fhir.Reference fhir: EffectEvidenceSynthesis.exposure:Reference", }));
         }
         if (this["exposure"]) {
-            results.push(...this.exposure.doModelValidation());
+            outcome.issue.push(...this.exposure.doModelValidation().issue);
         }
-        if (!this["exposureAlternative"]) {
-            results.push(["exposureAlternative", 'Missing required element: EffectEvidenceSynthesis.exposureAlternative']);
+        if (!this['exposureAlternative']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property exposureAlternative:fhir.Reference fhir: EffectEvidenceSynthesis.exposureAlternative:Reference", }));
         }
         if (this["exposureAlternative"]) {
-            results.push(...this.exposureAlternative.doModelValidation());
+            outcome.issue.push(...this.exposureAlternative.doModelValidation().issue);
         }
-        if (!this["outcome"]) {
-            results.push(["outcome", 'Missing required element: EffectEvidenceSynthesis.outcome']);
+        if (!this['outcome']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property outcome:fhir.Reference fhir: EffectEvidenceSynthesis.outcome:Reference", }));
         }
         if (this["outcome"]) {
-            results.push(...this.outcome.doModelValidation());
+            outcome.issue.push(...this.outcome.doModelValidation().issue);
         }
         if (this["sampleSize"]) {
-            results.push(...this.sampleSize.doModelValidation());
+            outcome.issue.push(...this.sampleSize.doModelValidation().issue);
         }
         if (this["resultsByExposure"]) {
-            this.resultsByExposure.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.resultsByExposure.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["effectEstimate"]) {
-            this.effectEstimate.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.effectEstimate.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["certainty"]) {
-            this.certainty.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.certainty.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=EffectEvidenceSynthesis.js.map

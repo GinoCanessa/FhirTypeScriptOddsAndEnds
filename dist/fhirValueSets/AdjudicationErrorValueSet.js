@@ -27,15 +27,4 @@ export const AdjudicationErrorValueSet = {
 /**
  * This value set includes a smattering of adjudication codes.
  */
-export var AdjudicationErrorValueSetEnum;
-(function (AdjudicationErrorValueSetEnum) {
-    /**
-     * a001: Missing Identifier
-     */
-    AdjudicationErrorValueSetEnum["MissingIdentifier"] = "a001";
-    /**
-     * a002: Missing Creation Date
-     */
-    AdjudicationErrorValueSetEnum["MissingCreationDate"] = "a002";
-})(AdjudicationErrorValueSetEnum || (AdjudicationErrorValueSetEnum = {}));
 //# sourceMappingURL=AdjudicationErrorValueSet.js.map

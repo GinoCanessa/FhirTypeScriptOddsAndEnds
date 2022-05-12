@@ -27,15 +27,4 @@ export const RelatedClaimRelationshipValueSet = {
 /**
  * This value set includes sample Related Claim Relationship codes.
  */
-export var RelatedClaimRelationshipValueSetEnum;
-(function (RelatedClaimRelationshipValueSetEnum) {
-    /**
-     * associated: A claim for a different suite of services which is related the suite claimed here.
-     */
-    RelatedClaimRelationshipValueSetEnum["AssociatedClaim"] = "associated";
-    /**
-     * prior: A prior claim instance for the same intended suite of services.
-     */
-    RelatedClaimRelationshipValueSetEnum["PriorClaim"] = "prior";
-})(RelatedClaimRelationshipValueSetEnum || (RelatedClaimRelationshipValueSetEnum = {}));
 //# sourceMappingURL=RelatedClaimRelationshipValueSet.js.map

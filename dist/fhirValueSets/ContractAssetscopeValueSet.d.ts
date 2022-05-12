@@ -15,10 +15,4 @@ export declare type ContractAssetscopeValueSetType = typeof ContractAssetscopeVa
 /**
  * This value set contract specific codes for asset scope.
  */
-export declare enum ContractAssetscopeValueSetEnum {
-    /**
-     * thing: To be completed
-     */
-    Thing = "thing"
-}
 //# sourceMappingURL=ContractAssetscopeValueSet.d.ts.map

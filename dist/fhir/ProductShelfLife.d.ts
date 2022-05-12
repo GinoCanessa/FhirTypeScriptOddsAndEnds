@@ -1,29 +1,30 @@
 import * as fhir from '../fhir.js';
 /**
- * The shelf-life and storage information for a medicinal product item or container can be described using this class.
+ * Valid arguments for the ProductShelfLife type.
  */
-export declare type IProductShelfLife = fhir.IBackboneElement & {
+export interface ProductShelfLifeArgs extends fhir.BackboneElementArgs {
     /**
      * Unique identifier for the packaged Medicinal Product.
      */
-    identifier?: fhir.IIdentifier | undefined;
+    identifier?: fhir.IdentifierArgs | undefined;
     /**
      * This describes the shelf life, taking into account various scenarios such as shelf life of the packaged Medicinal Product itself, shelf life after transformation where necessary and shelf life after the first opening of a bottle, etc. The shelf life type shall be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.
      */
-    type: fhir.ICodeableConcept | null;
+    type: fhir.CodeableConceptArgs | null;
     /**
      * The shelf life time period can be specified using a numerical value for the period of time and its unit of time measurement The unit of measurement shall be specified in accordance with ISO 11240 and the resulting terminology The symbol and the symbol identifier shall be used.
      */
-    period: fhir.IQuantity | null;
+    period: fhir.QuantityArgs | null;
     /**
      * Special precautions for storage, if any, can be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.
      */
-    specialPrecautionsForStorage?: fhir.ICodeableConcept[] | undefined;
-};
+    specialPrecautionsForStorage?: fhir.CodeableConceptArgs[] | undefined;
+}
 /**
  * The shelf-life and storage information for a medicinal product item or container can be described using this class.
  */
-export declare class ProductShelfLife extends fhir.BackboneElement implements IProductShelfLife {
+export declare class ProductShelfLife extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Unique identifier for the packaged Medicinal Product.
      */
@@ -43,10 +44,14 @@ export declare class ProductShelfLife extends fhir.BackboneElement implements IP
     /**
      * Default constructor for ProductShelfLife - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IProductShelfLife>);
+    constructor(source?: Partial<ProductShelfLifeArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=ProductShelfLife.d.ts.map

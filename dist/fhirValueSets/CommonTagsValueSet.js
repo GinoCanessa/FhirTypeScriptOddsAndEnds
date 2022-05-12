@@ -19,11 +19,4 @@ export const CommonTagsValueSet = {
 /**
  * Common Tag Codes defined by FHIR project
  */
-export var CommonTagsValueSetEnum;
-(function (CommonTagsValueSetEnum) {
-    /**
-     * actionable: This request is intended to be acted upon, not merely stored
-     */
-    CommonTagsValueSetEnum["Actionable"] = "actionable";
-})(CommonTagsValueSetEnum || (CommonTagsValueSetEnum = {}));
 //# sourceMappingURL=CommonTagsValueSet.js.map

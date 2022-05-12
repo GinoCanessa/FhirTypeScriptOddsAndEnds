@@ -3,8 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: RiskAssessment
 import * as fhir from '../fhir.js';
-import { RiskProbabilityValueSet } from '../fhirValueSets/RiskProbabilityValueSet.js';
-import { ObservationStatusValueSet } from '../fhirValueSets/ObservationStatusValueSet.js';
+import { RiskProbabilityValueSet, } from '../fhirValueSets/RiskProbabilityValueSet.js';
+import { ObservationStatusValueSet, } from '../fhirValueSets/ObservationStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.
  */
@@ -12,40 +14,40 @@ export class RiskAssessmentPrediction extends fhir.BackboneElement {
     /**
      * Default constructor for RiskAssessmentPrediction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'RiskAssessmentPrediction';
+        this.__probabilityIsChoice = true;
+        this.__whenIsChoice = true;
         if (source['outcome']) {
             this.outcome = new fhir.CodeableConcept(source.outcome);
         }
-        if (source['probabilityDecimal']) {
-            this.probabilityDecimal = source.probabilityDecimal;
+        if (source['probability']) {
+            this.probability = source.probability;
         }
-        if (source['_probabilityDecimal']) {
-            this._probabilityDecimal = new fhir.FhirElement(source._probabilityDecimal);
+        else if (source['probabilityDecimal']) {
+            this.probability = new fhir.FhirDecimal({ value: source.probabilityDecimal });
         }
-        if (source['probabilityRange']) {
-            this.probabilityRange = new fhir.Range(source.probabilityRange);
+        else if (source['probabilityRange']) {
+            this.probability = new fhir.Range(source.probabilityRange);
         }
         if (source['qualitativeRisk']) {
             this.qualitativeRisk = new fhir.CodeableConcept(source.qualitativeRisk);
         }
         if (source['relativeRisk']) {
-            this.relativeRisk = source.relativeRisk;
+            this.relativeRisk = new fhir.FhirDecimal({ value: source.relativeRisk });
         }
-        if (source['_relativeRisk']) {
-            this._relativeRisk = new fhir.FhirElement(source._relativeRisk);
+        if (source['when']) {
+            this.when = source.when;
         }
-        if (source['whenPeriod']) {
-            this.whenPeriod = new fhir.Period(source.whenPeriod);
+        else if (source['whenPeriod']) {
+            this.when = new fhir.Period(source.whenPeriod);
         }
-        if (source['whenRange']) {
-            this.whenRange = new fhir.Range(source.whenRange);
+        else if (source['whenRange']) {
+            this.when = new fhir.Range(source.whenRange);
         }
         if (source['rationale']) {
-            this.rationale = source.rationale;
-        }
-        if (source['_rationale']) {
-            this._rationale = new fhir.FhirElement(source._rationale);
+            this.rationale = new fhir.FhirString({ value: source.rationale });
         }
     }
     /**
@@ -58,32 +60,26 @@ export class RiskAssessmentPrediction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["outcome"]) {
-            results.push(...this.outcome.doModelValidation());
-        }
-        if (this["_probabilityDecimal"]) {
-            results.push(...this._probabilityDecimal.doModelValidation());
-        }
-        if (this["probabilityRange"]) {
-            results.push(...this.probabilityRange.doModelValidation());
+            outcome.issue.push(...this.outcome.doModelValidation().issue);
         }
         if (this["qualitativeRisk"]) {
-            results.push(...this.qualitativeRisk.doModelValidation());
+            outcome.issue.push(...this.qualitativeRisk.doModelValidation().issue);
         }
-        if (this["_relativeRisk"]) {
-            results.push(...this._relativeRisk.doModelValidation());
+        if (this["relativeRisk"]) {
+            outcome.issue.push(...this.relativeRisk.doModelValidation().issue);
         }
-        if (this["whenPeriod"]) {
-            results.push(...this.whenPeriod.doModelValidation());
+        if (this["rationale"]) {
+            outcome.issue.push(...this.rationale.doModelValidation().issue);
         }
-        if (this["whenRange"]) {
-            results.push(...this.whenRange.doModelValidation());
-        }
-        if (this["_rationale"]) {
-            results.push(...this._rationale.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -93,8 +89,34 @@ export class RiskAssessment extends fhir.DomainResource {
     /**
      * Default constructor for RiskAssessment - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'RiskAssessment';
+        /**
+         * Business identifier assigned to the risk assessment.
+         */
+        this.identifier = [];
+        this.__occurrenceIsChoice = true;
+        /**
+         * The reason the risk assessment was performed.
+         */
+        this.reasonCode = [];
+        /**
+         * Resources supporting the reason the risk assessment was performed.
+         */
+        this.reasonReference = [];
+        /**
+         * Indicates the source data considered as part of the assessment (for example, FamilyHistory, Observations, Procedures, Conditions, etc.).
+         */
+        this.basis = [];
+        /**
+         * Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.
+         */
+        this.prediction = [];
+        /**
+         * Additional comments about the risk assessment.
+         */
+        this.note = [];
         this.resourceType = 'RiskAssessment';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -111,9 +133,6 @@ export class RiskAssessment extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['method']) {
             this.method = new fhir.CodeableConcept(source.method);
         }
@@ -129,14 +148,14 @@ export class RiskAssessment extends fhir.DomainResource {
         if (source['encounter']) {
             this.encounter = new fhir.Reference(source.encounter);
         }
-        if (source['occurrenceDateTime']) {
-            this.occurrenceDateTime = source.occurrenceDateTime;
+        if (source['occurrence']) {
+            this.occurrence = source.occurrence;
         }
-        if (source['_occurrenceDateTime']) {
-            this._occurrenceDateTime = new fhir.FhirElement(source._occurrenceDateTime);
+        else if (source['occurrenceDateTime']) {
+            this.occurrence = new fhir.FhirDateTime({ value: source.occurrenceDateTime });
         }
-        if (source['occurrencePeriod']) {
-            this.occurrencePeriod = new fhir.Period(source.occurrencePeriod);
+        else if (source['occurrencePeriod']) {
+            this.occurrence = new fhir.Period(source.occurrencePeriod);
         }
         if (source['condition']) {
             this.condition = new fhir.Reference(source.condition);
@@ -157,10 +176,7 @@ export class RiskAssessment extends fhir.DomainResource {
             this.prediction = source.prediction.map((x) => new fhir.RiskAssessmentPrediction(x));
         }
         if (source['mitigation']) {
-            this.mitigation = source.mitigation;
-        }
-        if (source['_mitigation']) {
-            this._mitigation = new fhir.FhirElement(source._mitigation);
+            this.mitigation = new fhir.FhirString({ value: source.mitigation });
         }
         if (source['note']) {
             this.note = source.note.map((x) => new fhir.Annotation(x));
@@ -176,71 +192,68 @@ export class RiskAssessment extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: RiskAssessment.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'RiskAssessment' fhir: RiskAssessment.resourceType:'RiskAssessment'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["basedOn"]) {
-            results.push(...this.basedOn.doModelValidation());
+            outcome.issue.push(...this.basedOn.doModelValidation().issue);
         }
         if (this["parent"]) {
-            results.push(...this.parent.doModelValidation());
+            outcome.issue.push(...this.parent.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: RiskAssessment.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:ObservationStatusValueSetEnum fhir: RiskAssessment.status:code", }));
         }
         if (this["method"]) {
-            results.push(...this.method.doModelValidation());
+            outcome.issue.push(...this.method.doModelValidation().issue);
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (!this["subject"]) {
-            results.push(["subject", 'Missing required element: RiskAssessment.subject']);
+        if (!this['subject']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property subject:fhir.Reference fhir: RiskAssessment.subject:Reference", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
-        }
-        if (this["_occurrenceDateTime"]) {
-            results.push(...this._occurrenceDateTime.doModelValidation());
-        }
-        if (this["occurrencePeriod"]) {
-            results.push(...this.occurrencePeriod.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
         if (this["condition"]) {
-            results.push(...this.condition.doModelValidation());
+            outcome.issue.push(...this.condition.doModelValidation().issue);
         }
         if (this["performer"]) {
-            results.push(...this.performer.doModelValidation());
+            outcome.issue.push(...this.performer.doModelValidation().issue);
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["basis"]) {
-            this.basis.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basis.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["prediction"]) {
-            this.prediction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.prediction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_mitigation"]) {
-            results.push(...this._mitigation.doModelValidation());
+        if (this["mitigation"]) {
+            outcome.issue.push(...this.mitigation.doModelValidation().issue);
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=RiskAssessment.js.map

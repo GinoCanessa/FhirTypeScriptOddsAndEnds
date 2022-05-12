@@ -3,16 +3,18 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: DocumentReference
 import * as fhir from '../fhir.js';
-import { DocumentRelationshipTypeValueSet } from '../fhirValueSets/DocumentRelationshipTypeValueSet.js';
-import { FormatcodesValueSet } from '../fhirValueSets/FormatcodesValueSet.js';
-import { V3ActCodeValueSet } from '../fhirValueSets/V3ActCodeValueSet.js';
-import { C80FacilitycodesValueSet } from '../fhirValueSets/C80FacilitycodesValueSet.js';
-import { C80PracticeCodesValueSet } from '../fhirValueSets/C80PracticeCodesValueSet.js';
-import { DocumentReferenceStatusValueSet } from '../fhirValueSets/DocumentReferenceStatusValueSet.js';
-import { CompositionStatusValueSet } from '../fhirValueSets/CompositionStatusValueSet.js';
-import { C80DocTypecodesValueSet } from '../fhirValueSets/C80DocTypecodesValueSet.js';
-import { DocumentClasscodesValueSet } from '../fhirValueSets/DocumentClasscodesValueSet.js';
-import { SecurityLabelsValueSet } from '../fhirValueSets/SecurityLabelsValueSet.js';
+import { DocumentRelationshipTypeValueSet, } from '../fhirValueSets/DocumentRelationshipTypeValueSet.js';
+import { FormatcodesValueSet, } from '../fhirValueSets/FormatcodesValueSet.js';
+import { V3ActCodeValueSet, } from '../fhirValueSets/V3ActCodeValueSet.js';
+import { C80FacilitycodesValueSet, } from '../fhirValueSets/C80FacilitycodesValueSet.js';
+import { C80PracticeCodesValueSet, } from '../fhirValueSets/C80PracticeCodesValueSet.js';
+import { DocumentReferenceStatusValueSet, } from '../fhirValueSets/DocumentReferenceStatusValueSet.js';
+import { CompositionStatusValueSet, } from '../fhirValueSets/CompositionStatusValueSet.js';
+import { C80DocTypecodesValueSet, } from '../fhirValueSets/C80DocTypecodesValueSet.js';
+import { DocumentClasscodesValueSet, } from '../fhirValueSets/DocumentClasscodesValueSet.js';
+import { SecurityLabelsValueSet, } from '../fhirValueSets/SecurityLabelsValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * This element is labeled as a modifier because documents that append to other documents are incomplete on their own.
  */
@@ -20,16 +22,14 @@ export class DocumentReferenceRelatesTo extends fhir.BackboneElement {
     /**
      * Default constructor for DocumentReferenceRelatesTo - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DocumentReferenceRelatesTo';
         if (source['code']) {
             this.code = source.code;
         }
         else {
             this.code = null;
-        }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
         }
         if (source['target']) {
             this.target = new fhir.Reference(source.target);
@@ -48,20 +48,23 @@ export class DocumentReferenceRelatesTo extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: DocumentReference.relatesTo.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:DocumentRelationshipTypeValueSetEnum fhir: DocumentReference.relatesTo.code:code", }));
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
-        }
-        if (!this["target"]) {
-            results.push(["target", 'Missing required element: DocumentReference.relatesTo.target']);
+        if (!this['target']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property target:fhir.Reference fhir: DocumentReference.relatesTo.target:Reference", }));
         }
         if (this["target"]) {
-            results.push(...this.target.doModelValidation());
+            outcome.issue.push(...this.target.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -71,8 +74,9 @@ export class DocumentReferenceContent extends fhir.BackboneElement {
     /**
      * Default constructor for DocumentReferenceContent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DocumentReferenceContent';
         if (source['attachment']) {
             this.attachment = new fhir.Attachment(source.attachment);
         }
@@ -93,17 +97,23 @@ export class DocumentReferenceContent extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["attachment"]) {
-            results.push(["attachment", 'Missing required element: DocumentReference.content.attachment']);
+        var outcome = super.doModelValidation();
+        if (!this['attachment']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property attachment:fhir.Attachment fhir: DocumentReference.content.attachment:Attachment", }));
         }
         if (this["attachment"]) {
-            results.push(...this.attachment.doModelValidation());
+            outcome.issue.push(...this.attachment.doModelValidation().issue);
         }
         if (this["format"]) {
-            results.push(...this.format.doModelValidation());
+            outcome.issue.push(...this.format.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -113,8 +123,21 @@ export class DocumentReferenceContext extends fhir.BackboneElement {
     /**
      * Default constructor for DocumentReferenceContext - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DocumentReferenceContext';
+        /**
+         * Describes the clinical encounter or type of care that the document content is associated with.
+         */
+        this.encounter = [];
+        /**
+         * An event can further specialize the act inherent in the type, such as  where it is simply "Procedure Report" and the procedure was a "colonoscopy". If one or more event codes are included, they shall not conflict with the values inherent in the class or type elements as such a conflict would create an ambiguous situation.
+         */
+        this.event = [];
+        /**
+         * May be identifiers or resources that caused the DocumentReference or referenced Document to be created.
+         */
+        this.related = [];
         if (source['encounter']) {
             this.encounter = source.encounter.map((x) => new fhir.Reference(x));
         }
@@ -159,29 +182,35 @@ export class DocumentReferenceContext extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["encounter"]) {
-            this.encounter.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.encounter.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["event"]) {
-            this.event.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.event.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
         if (this["facilityType"]) {
-            results.push(...this.facilityType.doModelValidation());
+            outcome.issue.push(...this.facilityType.doModelValidation().issue);
         }
         if (this["practiceSetting"]) {
-            results.push(...this.practiceSetting.doModelValidation());
+            outcome.issue.push(...this.practiceSetting.doModelValidation().issue);
         }
         if (this["sourcePatientInfo"]) {
-            results.push(...this.sourcePatientInfo.doModelValidation());
+            outcome.issue.push(...this.sourcePatientInfo.doModelValidation().issue);
         }
         if (this["related"]) {
-            this.related.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.related.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -191,8 +220,34 @@ export class DocumentReference extends fhir.DomainResource {
     /**
      * Default constructor for DocumentReference - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'DocumentReference';
+        /**
+         * Other identifiers associated with the document, including version independent identifiers.
+         */
+        this.identifier = [];
+        /**
+         * Key metadata element describing the the category or classification of the document. This is a broader perspective that groups similar documents based on how they would be used. This is a primary key used in searching.
+         */
+        this.category = [];
+        /**
+         * Not necessarily who did the actual data entry (i.e. typist) or who was the source (informant).
+         */
+        this.author = [];
+        /**
+         * This element is labeled as a modifier because documents that append to other documents are incomplete on their own.
+         */
+        this.relatesTo = [];
+        /**
+         * The confidentiality codes can carry multiple vocabulary items. HL7 has developed an understanding of security and privacy tags that might be desirable in a Document Sharing environment, called HL7 Healthcare Privacy and Security Classification System (HCS). The following specification is recommended but not mandated, as the vocabulary bindings are an administrative domain responsibility. The use of this method is up to the policy domain such as the XDS Affinity Domain or other Trust Domain where all parties including sender and recipients are trusted to appropriately tag and enforce.
+         * In the HL7 Healthcare Privacy and Security Classification (HCS) there are code systems specific to Confidentiality, Sensitivity, Integrity, and Handling Caveats. Some values would come from a local vocabulary as they are related to workflow roles and special projects.
+         */
+        this.securityLabel = [];
+        /**
+         * The document and format referenced. There may be multiple content element repetitions, each with a different format.
+         */
+        this.content = [];
         this.resourceType = 'DocumentReference';
         if (source['masterIdentifier']) {
             this.masterIdentifier = new fhir.Identifier(source.masterIdentifier);
@@ -206,14 +261,8 @@ export class DocumentReference extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['docStatus']) {
             this.docStatus = source.docStatus;
-        }
-        if (source['_docStatus']) {
-            this._docStatus = new fhir.FhirElement(source._docStatus);
         }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
@@ -225,10 +274,7 @@ export class DocumentReference extends fhir.DomainResource {
             this.subject = new fhir.Reference(source.subject);
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirInstant({ value: source.date });
         }
         if (source['author']) {
             this.author = source.author.map((x) => new fhir.Reference(x));
@@ -243,10 +289,7 @@ export class DocumentReference extends fhir.DomainResource {
             this.relatesTo = source.relatesTo.map((x) => new fhir.DocumentReferenceRelatesTo(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['securityLabel']) {
             this.securityLabel = source.securityLabel.map((x) => new fhir.CodeableConcept(x));
@@ -295,65 +338,71 @@ export class DocumentReference extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: DocumentReference.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'DocumentReference' fhir: DocumentReference.resourceType:'DocumentReference'", }));
         }
         if (this["masterIdentifier"]) {
-            results.push(...this.masterIdentifier.doModelValidation());
+            outcome.issue.push(...this.masterIdentifier.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: DocumentReference.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
-        }
-        if (this["_docStatus"]) {
-            results.push(...this._docStatus.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:DocumentReferenceStatusValueSetEnum fhir: DocumentReference.status:code", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["category"]) {
-            this.category.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.category.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
         if (this["author"]) {
-            this.author.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.author.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["authenticator"]) {
-            results.push(...this.authenticator.doModelValidation());
+            outcome.issue.push(...this.authenticator.doModelValidation().issue);
         }
         if (this["custodian"]) {
-            results.push(...this.custodian.doModelValidation());
+            outcome.issue.push(...this.custodian.doModelValidation().issue);
         }
         if (this["relatesTo"]) {
-            this.relatesTo.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relatesTo.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["securityLabel"]) {
-            this.securityLabel.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.securityLabel.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if ((!this["content"]) || (this["content"].length === 0)) {
-            results.push(["content", 'Missing required element: DocumentReference.content']);
+        if (!this['content']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property content:fhir.DocumentReferenceContent[] fhir: DocumentReference.content:content", }));
+        }
+        else if (!Array.isArray(this.content)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property content:fhir.DocumentReferenceContent[] fhir: DocumentReference.content:content", }));
+        }
+        else if (this.content.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property content:fhir.DocumentReferenceContent[] fhir: DocumentReference.content:content", }));
         }
         if (this["content"]) {
-            this.content.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.content.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["context"]) {
-            results.push(...this.context.doModelValidation());
+            outcome.issue.push(...this.context.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=DocumentReference.js.map

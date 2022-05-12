@@ -3,35 +3,37 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: DomainResource
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A resource that includes narrative, extensions, and contained resources.
+ * Valid arguments for the DomainResource type.
  */
-export type IDomainResource = fhir.IResource & { 
+export interface DomainResourceArgs extends fhir.ResourceArgs {
   /**
    * Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a "text blob" or where text is additionally entered raw or narrated and encoded information is added later.
    */
-  text?: fhir.INarrative|undefined;
+  text?: fhir.NarrativeArgs|undefined;
   /**
    * This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.
    */
-  contained?: fhir.IFhirResource[]|undefined;
+  contained?: fhir.ResourceArgs[]|any[]|undefined;
   /**
    * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
    */
-  extension?: fhir.IExtension[]|undefined;
+  extension?: fhir.ExtensionArgs[]|undefined;
   /**
    * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
    */
-  modifierExtension?: fhir.IExtension[]|undefined;
+  modifierExtension?: fhir.ExtensionArgs[]|undefined;
 }
 
 /**
  * A resource that includes narrative, extensions, and contained resources.
  */
-export class DomainResource extends fhir.Resource implements IDomainResource {
+export class DomainResource extends fhir.Resource {
+  readonly __dataType:string = 'DomainResource';
   /**
    * Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a "text blob" or where text is additionally entered raw or narrated and encoded information is added later.
    */
@@ -39,21 +41,21 @@ export class DomainResource extends fhir.Resource implements IDomainResource {
   /**
    * This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.
    */
-  public contained?: fhir.FhirResource[]|undefined;
+  public contained?: fhir.FhirResource[]|undefined = [];
   /**
    * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
    */
-  public extension?: fhir.Extension[]|undefined;
+  public extension?: fhir.Extension[]|undefined = [];
   /**
    * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
    */
-  public modifierExtension?: fhir.Extension[]|undefined;
+  public modifierExtension?: fhir.Extension[]|undefined = [];
   /**
    * Default constructor for DomainResource - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IDomainResource> = { }) {
-    super(source);
-    if (source['text']) { this.text = new fhir.Narrative(source.text!); }
+  constructor(source:Partial<DomainResourceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['text']) { this.text = new fhir.Narrative(source.text); }
     if (source['contained']) {
       this.contained = [];
       source.contained.forEach((x) => {
@@ -67,12 +69,18 @@ export class DomainResource extends fhir.Resource implements IDomainResource {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["text"]) { results.push(...this.text.doModelValidation()); }
-    if (this["contained"]) { this.contained.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["extension"]) { this.extension.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["modifierExtension"]) { this.modifierExtension.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["text"]) { outcome.issue!.push(...this.text.doModelValidation().issue!); }
+    if (this["contained"]) { this.contained.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["extension"]) { this.extension.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["modifierExtension"]) { this.modifierExtension.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

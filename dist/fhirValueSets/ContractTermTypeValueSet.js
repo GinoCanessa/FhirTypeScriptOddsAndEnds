@@ -27,15 +27,4 @@ export const ContractTermTypeValueSet = {
 /**
  * This value set includes sample Contract Term Type codes.
  */
-export var ContractTermTypeValueSetEnum;
-(function (ContractTermTypeValueSetEnum) {
-    /**
-     * statutory: Based on specialized statutes that deal with particular subjects.
-     */
-    ContractTermTypeValueSetEnum["Statutory"] = "statutory";
-    /**
-     * subject-to: Execution of the term in the contract is conditional on the execution of other actions.
-     */
-    ContractTermTypeValueSetEnum["SubjectTo"] = "subject-to";
-})(ContractTermTypeValueSetEnum || (ContractTermTypeValueSetEnum = {}));
 //# sourceMappingURL=ContractTermTypeValueSet.js.map

@@ -59,31 +59,4 @@ export const AgeUnitsValueSet = {
 /**
  * Unified Code for Units of Measure (UCUM). This value set includes all UCUM codes
  */
-export var AgeUnitsValueSetEnum;
-(function (AgeUnitsValueSetEnum) {
-    /**
-     * Code: a
-     */
-    AgeUnitsValueSetEnum["Years"] = "a";
-    /**
-     * Code: d
-     */
-    AgeUnitsValueSetEnum["Days"] = "d";
-    /**
-     * Code: h
-     */
-    AgeUnitsValueSetEnum["Hours"] = "h";
-    /**
-     * Code: min
-     */
-    AgeUnitsValueSetEnum["Minutes"] = "min";
-    /**
-     * Code: mo
-     */
-    AgeUnitsValueSetEnum["Months"] = "mo";
-    /**
-     * Code: wk
-     */
-    AgeUnitsValueSetEnum["Weeks"] = "wk";
-})(AgeUnitsValueSetEnum || (AgeUnitsValueSetEnum = {}));
 //# sourceMappingURL=AgeUnitsValueSet.js.map

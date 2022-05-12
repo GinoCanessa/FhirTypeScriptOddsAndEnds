@@ -3,27 +3,29 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Ratio
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A relationship of two Quantity values - expressed as a numerator and a denominator.
+ * Valid arguments for the Ratio type.
  */
-export type IRatio = fhir.IFhirElement & { 
+export interface RatioArgs extends fhir.FhirElementArgs {
   /**
    * The value of the numerator.
    */
-  numerator?: fhir.IQuantity|undefined;
+  numerator?: fhir.QuantityArgs|undefined;
   /**
    * The value of the denominator.
    */
-  denominator?: fhir.IQuantity|undefined;
+  denominator?: fhir.QuantityArgs|undefined;
 }
 
 /**
  * A relationship of two Quantity values - expressed as a numerator and a denominator.
  */
-export class Ratio extends fhir.FhirElement implements IRatio {
+export class Ratio extends fhir.FhirElement {
+  readonly __dataType:string = 'Ratio';
   /**
    * The value of the numerator.
    */
@@ -35,18 +37,24 @@ export class Ratio extends fhir.FhirElement implements IRatio {
   /**
    * Default constructor for Ratio - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IRatio> = { }) {
-    super(source);
-    if (source['numerator']) { this.numerator = new fhir.Quantity(source.numerator!); }
-    if (source['denominator']) { this.denominator = new fhir.Quantity(source.denominator!); }
+  constructor(source:Partial<RatioArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['numerator']) { this.numerator = new fhir.Quantity(source.numerator); }
+    if (source['denominator']) { this.denominator = new fhir.Quantity(source.denominator); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["numerator"]) { results.push(...this.numerator.doModelValidation()); }
-    if (this["denominator"]) { results.push(...this.denominator.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["numerator"]) { outcome.issue!.push(...this.numerator.doModelValidation().issue!); }
+    if (this["denominator"]) { outcome.issue!.push(...this.denominator.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

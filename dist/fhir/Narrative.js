@@ -3,7 +3,9 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Narrative
 import * as fhir from '../fhir.js';
-import { NarrativeStatusValueSet } from '../fhirValueSets/NarrativeStatusValueSet.js';
+import { NarrativeStatusValueSet, } from '../fhirValueSets/NarrativeStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A human-readable summary of the resource conveying the essential clinical and business information for the resource.
  */
@@ -11,25 +13,20 @@ export class Narrative extends fhir.FhirElement {
     /**
      * Default constructor for Narrative - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Narrative';
         if (source['status']) {
             this.status = source.status;
         }
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['div']) {
-            this.div = source.div;
+            this.div = new fhir.FhirXhtml({ value: source.div });
         }
         else {
             this.div = null;
-        }
-        if (source['_div']) {
-            this._div = new fhir.FhirElement(source._div);
         }
     }
     /**
@@ -42,20 +39,23 @@ export class Narrative extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Narrative.status']);
+        var outcome = super.doModelValidation();
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:NarrativeStatusValueSetEnum fhir: Narrative.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['div']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property div:fhir.FhirXhtml fhir: Narrative.div:xhtml", }));
         }
-        if (!this["div"]) {
-            results.push(["div", 'Missing required element: Narrative.div']);
+        if (this["div"]) {
+            outcome.issue.push(...this.div.doModelValidation().issue);
         }
-        if (this["_div"]) {
-            results.push(...this._div.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Narrative.js.map

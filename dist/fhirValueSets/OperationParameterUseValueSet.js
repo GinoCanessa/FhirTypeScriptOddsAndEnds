@@ -27,15 +27,4 @@ export const OperationParameterUseValueSet = {
 /**
  * Whether an operation parameter is an input or an output parameter.
  */
-export var OperationParameterUseValueSetEnum;
-(function (OperationParameterUseValueSetEnum) {
-    /**
-     * in: This is an input parameter.
-     */
-    OperationParameterUseValueSetEnum["In"] = "in";
-    /**
-     * out: This is an output parameter.
-     */
-    OperationParameterUseValueSetEnum["Out"] = "out";
-})(OperationParameterUseValueSetEnum || (OperationParameterUseValueSetEnum = {}));
 //# sourceMappingURL=OperationParameterUseValueSet.js.map

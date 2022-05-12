@@ -3,49 +3,48 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Basic
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { BasicResourceTypeValueSet, BasicResourceTypeValueSetType, BasicResourceTypeValueSetEnum } from '../fhirValueSets/BasicResourceTypeValueSet.js'
-
+import { BasicResourceTypeValueSet, BasicResourceTypeValueSetType,} from '../fhirValueSets/BasicResourceTypeValueSet.js';
+import { BasicResourceTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.
+ * Valid arguments for the Basic type.
  */
-export type IBasic = fhir.IDomainResource & { 
+export interface BasicArgs extends fhir.DomainResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "Basic";
+  resourceType: "Basic"|undefined;
   /**
    * Identifier assigned to the resource for business purposes, outside the context of FHIR.
    */
-  identifier?: fhir.IIdentifier[]|undefined;
+  identifier?: fhir.IdentifierArgs[]|undefined;
   /**
    * Because resource references will only be able to indicate 'Basic', the type of reference will need to be specified in a Profile identified as part of the resource.  Refer to the resource notes section for information on appropriate terminologies for this code.
    * This element is labeled as a modifier because it defines the meaning of the resource and cannot be ignored.
    */
-  code: fhir.ICodeableConcept|null;
+  code: fhir.CodeableConceptArgs|null;
   /**
    * Optional as not all potential resources will have subjects.  Resources associated with multiple subjects can handle this via extension.
    */
-  subject?: fhir.IReference|undefined;
+  subject?: fhir.ReferenceArgs|undefined;
   /**
    * Identifies when the resource was first created.
    */
-  created?: string|undefined;
-  /**
-   * Extended properties for primitive element: Basic.created
-   */
-  _created?: fhir.IFhirElement|undefined;
+  created?: fhir.FhirDate|string|undefined;
   /**
    * Indicates who was responsible for creating the resource instance.
    */
-  author?: fhir.IReference|undefined;
+  author?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.
  */
-export class Basic extends fhir.DomainResource implements IBasic {
+export class Basic extends fhir.DomainResource {
+  readonly __dataType:string = 'Basic';
   /**
    * Resource Type Name
    */
@@ -53,7 +52,7 @@ export class Basic extends fhir.DomainResource implements IBasic {
   /**
    * Identifier assigned to the resource for business purposes, outside the context of FHIR.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Because resource references will only be able to indicate 'Basic', the type of reference will need to be specified in a Profile identified as part of the resource.  Refer to the resource notes section for information on appropriate terminologies for this code.
    * This element is labeled as a modifier because it defines the meaning of the resource and cannot be ignored.
@@ -66,11 +65,7 @@ export class Basic extends fhir.DomainResource implements IBasic {
   /**
    * Identifies when the resource was first created.
    */
-  public created?: string|undefined;
-  /**
-   * Extended properties for primitive element: Basic.created
-   */
-  public _created?: fhir.FhirElement|undefined;
+  public created?: fhir.FhirDate|undefined;
   /**
    * Indicates who was responsible for creating the resource instance.
    */
@@ -78,16 +73,15 @@ export class Basic extends fhir.DomainResource implements IBasic {
   /**
    * Default constructor for Basic - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IBasic> = { }) {
-    super(source);
+  constructor(source:Partial<BasicArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Basic';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
     else { this.code = null; }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
-    if (source['created']) { this.created = source.created; }
-    if (source['_created']) { this._created = new fhir.FhirElement(source._created!); }
-    if (source['author']) { this.author = new fhir.Reference(source.author!); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
+    if (source['created']) { this.created = new fhir.FhirDate({value: source.created}); }
+    if (source['author']) { this.author = new fhir.Reference(source.author); }
   }
   /**
    * Example-bound Value Set for code
@@ -98,15 +92,25 @@ export class Basic extends fhir.DomainResource implements IBasic {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Basic.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["code"]) { results.push(["code",'Missing required element: Basic.code']); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["_created"]) { results.push(...this._created.doModelValidation()); }
-    if (this["author"]) { results.push(...this.author.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Basic' fhir: Basic.resourceType:'Basic'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.CodeableConcept fhir: Basic.code:CodeableConcept", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["created"]) { outcome.issue!.push(...this.created.doModelValidation().issue!); }
+    if (this["author"]) { outcome.issue!.push(...this.author.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

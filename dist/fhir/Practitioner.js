@@ -3,9 +3,11 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Practitioner
 import * as fhir from '../fhir.js';
-import { V2270360ValueSet } from '../fhirValueSets/V2270360ValueSet.js';
-import { AdministrativeGenderValueSet } from '../fhirValueSets/AdministrativeGenderValueSet.js';
-import { LanguagesValueSet } from '../fhirValueSets/LanguagesValueSet.js';
+import { V2270360ValueSet, } from '../fhirValueSets/V2270360ValueSet.js';
+import { AdministrativeGenderValueSet, } from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { LanguagesValueSet, } from '../fhirValueSets/LanguagesValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The official certifications, training, and licenses that authorize or otherwise pertain to the provision of care by the practitioner.  For example, a medical license issued by a medical board authorizing the practitioner to practice medicine within a certian locality.
  */
@@ -13,8 +15,13 @@ export class PractitionerQualification extends fhir.BackboneElement {
     /**
      * Default constructor for PractitionerQualification - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PractitionerQualification';
+        /**
+         * An identifier that applies to this person's qualification in this role.
+         */
+        this.identifier = [];
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
@@ -41,23 +48,29 @@ export class PractitionerQualification extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: Practitioner.qualification.code']);
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.CodeableConcept fhir: Practitioner.qualification.code:CodeableConcept", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
         if (this["issuer"]) {
-            results.push(...this.issuer.doModelValidation());
+            outcome.issue.push(...this.issuer.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -67,17 +80,49 @@ export class Practitioner extends fhir.DomainResource {
     /**
      * Default constructor for Practitioner - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Practitioner';
+        /**
+         * An identifier that applies to this person in this role.
+         */
+        this.identifier = [];
+        /**
+         * The selection of the use property should ensure that there is a single usual name specified, and others use the nickname (alias), old, or other values as appropriate.
+         * In general, select the value to be used in the ResourceReference.display based on this:
+         * 1. There is more than 1 name
+         * 2. Use = usual
+         * 3. Period is current to the date of the usage
+         * 4. Use = official
+         * 5. Other order as decided by internal business rules.
+         */
+        this.name = [];
+        /**
+         * Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and to help with identification.  These typically will have home numbers, or mobile numbers that are not role specific.
+         */
+        this.telecom = [];
+        /**
+         * The PractitionerRole does not have an address value on it, as it is expected that the location property be used for this purpose (which has an address).
+         */
+        this.address = [];
+        /**
+         * Image of the person.
+         */
+        this.photo = [];
+        /**
+         * The official certifications, training, and licenses that authorize or otherwise pertain to the provision of care by the practitioner.  For example, a medical license issued by a medical board authorizing the practitioner to practice medicine within a certian locality.
+         */
+        this.qualification = [];
+        /**
+         * The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.
+         */
+        this.communication = [];
         this.resourceType = 'Practitioner';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['active']) {
-            this.active = source.active;
-        }
-        if (source['_active']) {
-            this._active = new fhir.FhirElement(source._active);
+            this.active = new fhir.FhirBoolean({ value: source.active });
         }
         if (source['name']) {
             this.name = source.name.map((x) => new fhir.HumanName(x));
@@ -91,14 +136,8 @@ export class Practitioner extends fhir.DomainResource {
         if (source['gender']) {
             this.gender = source.gender;
         }
-        if (source['_gender']) {
-            this._gender = new fhir.FhirElement(source._gender);
-        }
         if (source['birthDate']) {
-            this.birthDate = source.birthDate;
-        }
-        if (source['_birthDate']) {
-            this._birthDate = new fhir.FhirElement(source._birthDate);
+            this.birthDate = new fhir.FhirDate({ value: source.birthDate });
         }
         if (source['photo']) {
             this.photo = source.photo.map((x) => new fhir.Attachment(x));
@@ -126,41 +165,44 @@ export class Practitioner extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Practitioner.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Practitioner' fhir: Practitioner.resourceType:'Practitioner'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_active"]) {
-            results.push(...this._active.doModelValidation());
+        if (this["active"]) {
+            outcome.issue.push(...this.active.doModelValidation().issue);
         }
         if (this["name"]) {
-            this.name.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.name.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["telecom"]) {
-            this.telecom.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.telecom.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["address"]) {
-            this.address.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.address.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_gender"]) {
-            results.push(...this._gender.doModelValidation());
-        }
-        if (this["_birthDate"]) {
-            results.push(...this._birthDate.doModelValidation());
+        if (this["birthDate"]) {
+            outcome.issue.push(...this.birthDate.doModelValidation().issue);
         }
         if (this["photo"]) {
-            this.photo.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.photo.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["qualification"]) {
-            this.qualification.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.qualification.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["communication"]) {
-            this.communication.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.communication.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Practitioner.js.map

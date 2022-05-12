@@ -35,19 +35,4 @@ export const SequenceTypeValueSet = {
 /**
  * Type if a sequence -- DNA, RNA, or amino acid sequence.
  */
-export var SequenceTypeValueSetEnum;
-(function (SequenceTypeValueSetEnum) {
-    /**
-     * aa: Amino acid sequence.
-     */
-    SequenceTypeValueSetEnum["AASequence"] = "aa";
-    /**
-     * dna: DNA Sequence.
-     */
-    SequenceTypeValueSetEnum["DNASequence"] = "dna";
-    /**
-     * rna: RNA Sequence.
-     */
-    SequenceTypeValueSetEnum["RNASequence"] = "rna";
-})(SequenceTypeValueSetEnum || (SequenceTypeValueSetEnum = {}));
 //# sourceMappingURL=SequenceTypeValueSet.js.map

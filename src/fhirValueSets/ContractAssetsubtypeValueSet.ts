@@ -27,9 +27,3 @@ export type ContractAssetsubtypeValueSetType = typeof ContractAssetsubtypeValueS
 /**
  * This value set contract specific codes for asset subtype.
  */
-export enum ContractAssetsubtypeValueSetEnum {
-  /**
-   * participation: To be completed
-   */
-  Participation = "participation",
-}

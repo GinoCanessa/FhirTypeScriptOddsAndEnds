@@ -1,267 +1,174 @@
 import * as fhir from '../fhir.js';
-import { PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetType } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
 import { ResourceTypesValueSetType } from '../fhirValueSets/ResourceTypesValueSet.js';
-import { SearchParamTypeValueSetType, SearchParamTypeValueSetEnum } from '../fhirValueSets/SearchParamTypeValueSet.js';
-import { SearchXpathUsageValueSetType, SearchXpathUsageValueSetEnum } from '../fhirValueSets/SearchXpathUsageValueSet.js';
-import { SearchComparatorValueSetType, SearchComparatorValueSetEnum } from '../fhirValueSets/SearchComparatorValueSet.js';
-import { SearchModifierCodeValueSetType, SearchModifierCodeValueSetEnum } from '../fhirValueSets/SearchModifierCodeValueSet.js';
+import { SearchParamTypeValueSetType } from '../fhirValueSets/SearchParamTypeValueSet.js';
+import { SearchParamTypeValueSetEnum } from '../valueSetEnums.js';
+import { SearchXpathUsageValueSetType } from '../fhirValueSets/SearchXpathUsageValueSet.js';
+import { SearchXpathUsageValueSetEnum } from '../valueSetEnums.js';
+import { SearchComparatorValueSetType } from '../fhirValueSets/SearchComparatorValueSet.js';
+import { SearchComparatorValueSetEnum } from '../valueSetEnums.js';
+import { SearchModifierCodeValueSetType } from '../fhirValueSets/SearchModifierCodeValueSet.js';
+import { SearchModifierCodeValueSetEnum } from '../valueSetEnums.js';
 /**
- * Used to define the parts of a composite search parameter.
+ * Valid arguments for the SearchParameterComponent type.
  */
-export declare type ISearchParameterComponent = fhir.IBackboneElement & {
+export interface SearchParameterComponentArgs extends fhir.BackboneElementArgs {
     /**
      * The definition of the search parameter that describes this part.
      */
-    definition: string | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.component.definition
-     */
-    _definition?: fhir.IFhirElement | undefined;
+    definition: fhir.FhirCanonical | string | undefined;
     /**
      * This expression overrides the expression in the definition and extracts the index values from the outcome of the composite expression.
      */
-    expression: string | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.component.expression
-     */
-    _expression?: fhir.IFhirElement | undefined;
-};
+    expression: fhir.FhirString | string | undefined;
+}
 /**
- * A search parameter that defines a named search item that can be used to search/filter on a resource.
+ * Used to define the parts of a composite search parameter.
  */
-export declare type ISearchParameter = fhir.IDomainResource & {
+export declare class SearchParameterComponent extends fhir.BackboneElement {
+    readonly __dataType: string;
+    /**
+     * The definition of the search parameter that describes this part.
+     */
+    definition: fhir.FhirCanonical | null;
+    /**
+     * This expression overrides the expression in the definition and extracts the index values from the outcome of the composite expression.
+     */
+    expression: fhir.FhirString | null;
+    /**
+     * Default constructor for SearchParameterComponent - initializes any required elements to null if a value is not provided.
+     */
+    constructor(source?: Partial<SearchParameterComponentArgs>, options?: fhir.FhirConstructorOptions);
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the SearchParameter type.
+ */
+export interface SearchParameterArgs extends fhir.DomainResourceArgs {
     /**
      * Resource Type Name
      */
-    resourceType: "SearchParameter";
+    resourceType: "SearchParameter" | undefined;
     /**
      * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
      * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions).
      * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
      */
-    url: string | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.url
-     */
-    _url?: fhir.IFhirElement | undefined;
+    url: fhir.FhirUri | string | undefined;
     /**
      * There may be different search parameter instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the search parameter with the format [url]|[version].
      */
-    version?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.version
-     */
-    _version?: fhir.IFhirElement | undefined;
+    version?: fhir.FhirString | string | undefined;
     /**
      * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
      */
-    name: string | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.name
-     */
-    _name?: fhir.IFhirElement | undefined;
+    name: fhir.FhirString | string | undefined;
     /**
      * The intent of this is that a server can designate that it provides support for a search parameter defined in the specification itself (e.g.  [`value-quantity`](http://hl7.org/fhir/SearchParameter/Observation-value-quantity), but detail how it is supported by the server.
      */
-    derivedFrom?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.derivedFrom
-     */
-    _derivedFrom?: fhir.IFhirElement | undefined;
+    derivedFrom?: fhir.FhirCanonical | string | undefined;
     /**
      * Allows filtering of search parameters that are appropriate for use versus not.
      */
     status: PublicationStatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: SearchParameter.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
      * Allows filtering of search parameters that are appropriate for use versus not.
      */
-    experimental?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.experimental
-     */
-    _experimental?: fhir.IFhirElement | undefined;
+    experimental?: fhir.FhirBoolean | boolean | undefined;
     /**
      * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the search parameter. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
      */
-    date?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.date
-     */
-    _date?: fhir.IFhirElement | undefined;
+    date?: fhir.FhirDateTime | string | undefined;
     /**
      * Usually an organization but may be an individual. The publisher (or steward) of the search parameter is the organization or individual primarily responsible for the maintenance and upkeep of the search parameter. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the search parameter. This item SHOULD be populated unless the information is available from context.
      */
-    publisher?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.publisher
-     */
-    _publisher?: fhir.IFhirElement | undefined;
+    publisher?: fhir.FhirString | string | undefined;
     /**
      * May be a web site, an email address, a telephone number, etc.
      */
-    contact?: fhir.IContactDetail[] | undefined;
+    contact?: fhir.ContactDetailArgs[] | undefined;
     /**
      * This description can be used to capture details such as why the search parameter was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the search parameter as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the search parameter is presumed to be the predominant language in the place the search parameter was created).
      */
-    description: string | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.description
-     */
-    _description?: fhir.IFhirElement | undefined;
+    description: fhir.FhirMarkdown | string | undefined;
     /**
      * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
      */
-    useContext?: fhir.IUsageContext[] | undefined;
+    useContext?: fhir.UsageContextArgs[] | undefined;
     /**
      * It may be possible for the search parameter to be used in jurisdictions other than those for which it was originally designed or intended.
      */
-    jurisdiction?: fhir.ICodeableConcept[] | undefined;
+    jurisdiction?: fhir.CodeableConceptArgs[] | undefined;
     /**
      * This element does not describe the usage of the search parameter. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this search parameter.
      */
-    purpose?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.purpose
-     */
-    _purpose?: fhir.IFhirElement | undefined;
+    purpose?: fhir.FhirMarkdown | string | undefined;
     /**
      * For maximum compatibility, use only lowercase ASCII characters.
      */
-    code: string | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.code
-     */
-    _code?: fhir.IFhirElement | undefined;
+    code: fhir.FhirCode | string | undefined;
     /**
      * A search parameter must always apply to at least one resource type. When search parameters apply to more than one resource type, they can be used against any of the listed resource types, or in a cross-type search (see [Cross Resource Search](http.html#xres-search)).
      */
-    base: string[] | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.base
-     */
-    _base?: fhir.IFhirElement[] | undefined;
+    base: fhir.FhirCode[] | string[] | undefined;
     /**
      * The type of value that a search parameter may contain, and how the content is interpreted.
      */
     type: SearchParamTypeValueSetEnum | null;
     /**
-     * Extended properties for primitive element: SearchParameter.type
-     */
-    _type?: fhir.IFhirElement | undefined;
-    /**
      * Note that the elements returned by the expression are sometimes complex elements where logic is required to determine quite how to handle them; e.g. CodeableConcepts may contain text and/or multiple codings, where the codings themselves contain a code and a system. For composite search parameters, the outcome of the expression must a collection of base elements from which the composites are derived.
      */
-    expression?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.expression
-     */
-    _expression?: fhir.IFhirElement | undefined;
+    expression?: fhir.FhirString | string | undefined;
     /**
      * Note that the elements returned by the XPath are sometimes complex elements where logic is required to determine quite how to handle them; e.g. CodeableConcepts may contain text and/or multiple codings, where the codings themselves contain a code and a system.
      */
-    xpath?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.xpath
-     */
-    _xpath?: fhir.IFhirElement | undefined;
+    xpath?: fhir.FhirString | string | undefined;
     /**
      * How the search parameter relates to the set of elements returned by evaluating the xpath query.
      */
     xpathUsage?: SearchXpathUsageValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: SearchParameter.xpathUsage
-     */
-    _xpathUsage?: fhir.IFhirElement | undefined;
-    /**
      * Types of resource (if a resource is referenced).
      */
-    target?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.target
-     */
-    _target?: fhir.IFhirElement[] | undefined;
+    target?: fhir.FhirCode[] | string[] | undefined;
     /**
      * Whether multiple values are allowed for each time the parameter exists. Values are separated by commas, and the parameter matches if any of the values match.
      */
-    multipleOr?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.multipleOr
-     */
-    _multipleOr?: fhir.IFhirElement | undefined;
+    multipleOr?: fhir.FhirBoolean | boolean | undefined;
     /**
      * Whether multiple parameters are allowed - e.g. more than one parameter with the same name. The search matches if all the parameters match.
      */
-    multipleAnd?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.multipleAnd
-     */
-    _multipleAnd?: fhir.IFhirElement | undefined;
+    multipleAnd?: fhir.FhirBoolean | boolean | undefined;
     /**
      * If no comparators are listed, clients should not expect servers to support any comparators.
      */
     comparator?: SearchComparatorValueSetEnum[] | undefined;
     /**
-     * Extended properties for primitive element: SearchParameter.comparator
-     */
-    _comparator?: fhir.IFhirElement[] | undefined;
-    /**
      * A modifier supported for the search parameter.
      */
     modifier?: SearchModifierCodeValueSetEnum[] | undefined;
     /**
-     * Extended properties for primitive element: SearchParameter.modifier
-     */
-    _modifier?: fhir.IFhirElement[] | undefined;
-    /**
      * Systems are not required to list all the chain names they support, but if they don't list them, clients might not know to use them.
      */
-    chain?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.chain
-     */
-    _chain?: fhir.IFhirElement[] | undefined;
+    chain?: fhir.FhirString[] | string[] | undefined;
     /**
      * Used to define the parts of a composite search parameter.
      */
-    component?: fhir.ISearchParameterComponent[] | undefined;
-};
-/**
- * Used to define the parts of a composite search parameter.
- */
-export declare class SearchParameterComponent extends fhir.BackboneElement implements ISearchParameterComponent {
-    /**
-     * The definition of the search parameter that describes this part.
-     */
-    definition: string | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.component.definition
-     */
-    _definition?: fhir.FhirElement | undefined;
-    /**
-     * This expression overrides the expression in the definition and extracts the index values from the outcome of the composite expression.
-     */
-    expression: string | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.component.expression
-     */
-    _expression?: fhir.FhirElement | undefined;
-    /**
-     * Default constructor for SearchParameterComponent - initializes any required elements to null if a value is not provided.
-     */
-    constructor(source?: Partial<ISearchParameterComponent>);
-    /**
-     * Function to perform basic model validation (e.g., check if required elements are present).
-     */
-    doModelValidation(): [string, string][];
+    component?: fhir.SearchParameterComponentArgs[] | undefined;
 }
 /**
  * A search parameter that defines a named search item that can be used to search/filter on a resource.
  */
-export declare class SearchParameter extends fhir.DomainResource implements ISearchParameter {
+export declare class SearchParameter extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -271,67 +178,35 @@ export declare class SearchParameter extends fhir.DomainResource implements ISea
      * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions).
      * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
      */
-    url: string | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.url
-     */
-    _url?: fhir.FhirElement | undefined;
+    url: fhir.FhirUri | null;
     /**
      * There may be different search parameter instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the search parameter with the format [url]|[version].
      */
-    version?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.version
-     */
-    _version?: fhir.FhirElement | undefined;
+    version?: fhir.FhirString | undefined;
     /**
      * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
      */
-    name: string | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.name
-     */
-    _name?: fhir.FhirElement | undefined;
+    name: fhir.FhirString | null;
     /**
      * The intent of this is that a server can designate that it provides support for a search parameter defined in the specification itself (e.g.  [`value-quantity`](http://hl7.org/fhir/SearchParameter/Observation-value-quantity), but detail how it is supported by the server.
      */
-    derivedFrom?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.derivedFrom
-     */
-    _derivedFrom?: fhir.FhirElement | undefined;
+    derivedFrom?: fhir.FhirCanonical | undefined;
     /**
      * Allows filtering of search parameters that are appropriate for use versus not.
      */
     status: PublicationStatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: SearchParameter.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * Allows filtering of search parameters that are appropriate for use versus not.
      */
-    experimental?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.experimental
-     */
-    _experimental?: fhir.FhirElement | undefined;
+    experimental?: fhir.FhirBoolean | undefined;
     /**
      * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the search parameter. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
      */
-    date?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.date
-     */
-    _date?: fhir.FhirElement | undefined;
+    date?: fhir.FhirDateTime | undefined;
     /**
      * Usually an organization but may be an individual. The publisher (or steward) of the search parameter is the organization or individual primarily responsible for the maintenance and upkeep of the search parameter. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the search parameter. This item SHOULD be populated unless the information is available from context.
      */
-    publisher?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.publisher
-     */
-    _publisher?: fhir.FhirElement | undefined;
+    publisher?: fhir.FhirString | undefined;
     /**
      * May be a web site, an email address, a telephone number, etc.
      */
@@ -339,11 +214,7 @@ export declare class SearchParameter extends fhir.DomainResource implements ISea
     /**
      * This description can be used to capture details such as why the search parameter was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the search parameter as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the search parameter is presumed to be the predominant language in the place the search parameter was created).
      */
-    description: string | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.description
-     */
-    _description?: fhir.FhirElement | undefined;
+    description: fhir.FhirMarkdown | null;
     /**
      * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
      */
@@ -355,107 +226,55 @@ export declare class SearchParameter extends fhir.DomainResource implements ISea
     /**
      * This element does not describe the usage of the search parameter. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this search parameter.
      */
-    purpose?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.purpose
-     */
-    _purpose?: fhir.FhirElement | undefined;
+    purpose?: fhir.FhirMarkdown | undefined;
     /**
      * For maximum compatibility, use only lowercase ASCII characters.
      */
-    code: string | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.code
-     */
-    _code?: fhir.FhirElement | undefined;
+    code: fhir.FhirCode | null;
     /**
      * A search parameter must always apply to at least one resource type. When search parameters apply to more than one resource type, they can be used against any of the listed resource types, or in a cross-type search (see [Cross Resource Search](http.html#xres-search)).
      */
-    base: string[] | null;
-    /**
-     * Extended properties for primitive element: SearchParameter.base
-     */
-    _base?: fhir.FhirElement[] | undefined;
+    base: fhir.FhirCode[] | null;
     /**
      * The type of value that a search parameter may contain, and how the content is interpreted.
      */
     type: SearchParamTypeValueSetEnum | null;
     /**
-     * Extended properties for primitive element: SearchParameter.type
-     */
-    _type?: fhir.FhirElement | undefined;
-    /**
      * Note that the elements returned by the expression are sometimes complex elements where logic is required to determine quite how to handle them; e.g. CodeableConcepts may contain text and/or multiple codings, where the codings themselves contain a code and a system. For composite search parameters, the outcome of the expression must a collection of base elements from which the composites are derived.
      */
-    expression?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.expression
-     */
-    _expression?: fhir.FhirElement | undefined;
+    expression?: fhir.FhirString | undefined;
     /**
      * Note that the elements returned by the XPath are sometimes complex elements where logic is required to determine quite how to handle them; e.g. CodeableConcepts may contain text and/or multiple codings, where the codings themselves contain a code and a system.
      */
-    xpath?: string | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.xpath
-     */
-    _xpath?: fhir.FhirElement | undefined;
+    xpath?: fhir.FhirString | undefined;
     /**
      * How the search parameter relates to the set of elements returned by evaluating the xpath query.
      */
     xpathUsage?: SearchXpathUsageValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: SearchParameter.xpathUsage
-     */
-    _xpathUsage?: fhir.FhirElement | undefined;
-    /**
      * Types of resource (if a resource is referenced).
      */
-    target?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.target
-     */
-    _target?: fhir.FhirElement[] | undefined;
+    target?: fhir.FhirCode[] | undefined;
     /**
      * Whether multiple values are allowed for each time the parameter exists. Values are separated by commas, and the parameter matches if any of the values match.
      */
-    multipleOr?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.multipleOr
-     */
-    _multipleOr?: fhir.FhirElement | undefined;
+    multipleOr?: fhir.FhirBoolean | undefined;
     /**
      * Whether multiple parameters are allowed - e.g. more than one parameter with the same name. The search matches if all the parameters match.
      */
-    multipleAnd?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.multipleAnd
-     */
-    _multipleAnd?: fhir.FhirElement | undefined;
+    multipleAnd?: fhir.FhirBoolean | undefined;
     /**
      * If no comparators are listed, clients should not expect servers to support any comparators.
      */
     comparator?: SearchComparatorValueSetEnum[] | undefined;
     /**
-     * Extended properties for primitive element: SearchParameter.comparator
-     */
-    _comparator?: fhir.FhirElement[] | undefined;
-    /**
      * A modifier supported for the search parameter.
      */
     modifier?: SearchModifierCodeValueSetEnum[] | undefined;
     /**
-     * Extended properties for primitive element: SearchParameter.modifier
-     */
-    _modifier?: fhir.FhirElement[] | undefined;
-    /**
      * Systems are not required to list all the chain names they support, but if they don't list them, clients might not know to use them.
      */
-    chain?: string[] | undefined;
-    /**
-     * Extended properties for primitive element: SearchParameter.chain
-     */
-    _chain?: fhir.FhirElement[] | undefined;
+    chain?: fhir.FhirString[] | undefined;
     /**
      * Used to define the parts of a composite search parameter.
      */
@@ -463,7 +282,7 @@ export declare class SearchParameter extends fhir.DomainResource implements ISea
     /**
      * Default constructor for SearchParameter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<ISearchParameter>);
+    constructor(source?: Partial<SearchParameterArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -495,6 +314,10 @@ export declare class SearchParameter extends fhir.DomainResource implements ISea
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=SearchParameter.d.ts.map

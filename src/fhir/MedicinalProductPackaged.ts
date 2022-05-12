@@ -3,131 +3,29 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MedicinalProductPackaged
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Batch numbering.
+ * Valid arguments for the MedicinalProductPackagedBatchIdentifier type.
  */
-export type IMedicinalProductPackagedBatchIdentifier = fhir.IBackboneElement & { 
+export interface MedicinalProductPackagedBatchIdentifierArgs extends fhir.BackboneElementArgs {
   /**
    * A number appearing on the outer packaging of a specific batch.
    */
-  outerPackaging: fhir.IIdentifier|null;
+  outerPackaging: fhir.IdentifierArgs|null;
   /**
    * A number appearing on the immediate packaging (and not the outer packaging).
    */
-  immediatePackaging?: fhir.IIdentifier|undefined;
-}
-
-/**
- * A packaging item, as a contained for medicine, possibly with other packaging items within.
- */
-export type IMedicinalProductPackagedPackageItem = fhir.IBackboneElement & { 
-  /**
-   * Including possibly Data Carrier Identifier.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * The physical type of the container of the medicine.
-   */
-  type: fhir.ICodeableConcept|null;
-  /**
-   * The quantity of this package in the medicinal product, at the current level of packaging. The outermost is always 1.
-   */
-  quantity: fhir.IQuantity|null;
-  /**
-   * Material type of the package item.
-   */
-  material?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * A possible alternate material for the packaging.
-   */
-  alternateMaterial?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * A device accompanying a medicinal product.
-   */
-  device?: fhir.IReference[]|undefined;
-  /**
-   * The manufactured item as contained in the packaged medicinal product.
-   */
-  manufacturedItem?: fhir.IReference[]|undefined;
-  /**
-   * Allows containers within containers.
-   */
-  packageItem?: fhir.IMedicinalProductPackagedPackageItem[]|undefined;
-  /**
-   * Dimensions, color etc.
-   */
-  physicalCharacteristics?: fhir.IProdCharacteristic|undefined;
-  /**
-   * Other codeable characteristics.
-   */
-  otherCharacteristics?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Shelf Life and storage information.
-   */
-  shelfLifeStorage?: fhir.IProductShelfLife[]|undefined;
-  /**
-   * Manufacturer of this Package Item.
-   */
-  manufacturer?: fhir.IReference[]|undefined;
-}
-
-/**
- * A medicinal product in a container or package.
- */
-export type IMedicinalProductPackaged = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "MedicinalProductPackaged";
-  /**
-   * Unique identifier.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * The product with this is a pack for.
-   */
-  subject?: fhir.IReference[]|undefined;
-  /**
-   * Textual description.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicinalProductPackaged.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * The legal status of supply of the medicinal product as classified by the regulator.
-   */
-  legalStatusOfSupply?: fhir.ICodeableConcept|undefined;
-  /**
-   * Marketing information.
-   */
-  marketingStatus?: fhir.IMarketingStatus[]|undefined;
-  /**
-   * Manufacturer of this Package Item.
-   */
-  marketingAuthorization?: fhir.IReference|undefined;
-  /**
-   * Manufacturer of this Package Item.
-   */
-  manufacturer?: fhir.IReference[]|undefined;
-  /**
-   * Batch numbering.
-   */
-  batchIdentifier?: fhir.IMedicinalProductPackagedBatchIdentifier[]|undefined;
-  /**
-   * A packaging item, as a contained for medicine, possibly with other packaging items within.
-   */
-  packageItem: fhir.IMedicinalProductPackagedPackageItem[]|null;
+  immediatePackaging?: fhir.IdentifierArgs|undefined;
 }
 
 /**
  * Batch numbering.
  */
-export class MedicinalProductPackagedBatchIdentifier extends fhir.BackboneElement implements IMedicinalProductPackagedBatchIdentifier {
+export class MedicinalProductPackagedBatchIdentifier extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicinalProductPackagedBatchIdentifier';
   /**
    * A number appearing on the outer packaging of a specific batch.
    */
@@ -139,32 +37,94 @@ export class MedicinalProductPackagedBatchIdentifier extends fhir.BackboneElemen
   /**
    * Default constructor for MedicinalProductPackagedBatchIdentifier - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicinalProductPackagedBatchIdentifier> = { }) {
-    super(source);
-    if (source['outerPackaging']) { this.outerPackaging = new fhir.Identifier(source.outerPackaging!); }
+  constructor(source:Partial<MedicinalProductPackagedBatchIdentifierArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['outerPackaging']) { this.outerPackaging = new fhir.Identifier(source.outerPackaging); }
     else { this.outerPackaging = null; }
-    if (source['immediatePackaging']) { this.immediatePackaging = new fhir.Identifier(source.immediatePackaging!); }
+    if (source['immediatePackaging']) { this.immediatePackaging = new fhir.Identifier(source.immediatePackaging); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["outerPackaging"]) { results.push(["outerPackaging",'Missing required element: MedicinalProductPackaged.batchIdentifier.outerPackaging']); }
-    if (this["outerPackaging"]) { results.push(...this.outerPackaging.doModelValidation()); }
-    if (this["immediatePackaging"]) { results.push(...this.immediatePackaging.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['outerPackaging']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property outerPackaging:fhir.Identifier fhir: MedicinalProductPackaged.batchIdentifier.outerPackaging:Identifier", }));
+    }
+    if (this["outerPackaging"]) { outcome.issue!.push(...this.outerPackaging.doModelValidation().issue!); }
+    if (this["immediatePackaging"]) { outcome.issue!.push(...this.immediatePackaging.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicinalProductPackagedPackageItem type.
+ */
+export interface MedicinalProductPackagedPackageItemArgs extends fhir.BackboneElementArgs {
+  /**
+   * Including possibly Data Carrier Identifier.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * The physical type of the container of the medicine.
+   */
+  type: fhir.CodeableConceptArgs|null;
+  /**
+   * The quantity of this package in the medicinal product, at the current level of packaging. The outermost is always 1.
+   */
+  quantity: fhir.QuantityArgs|null;
+  /**
+   * Material type of the package item.
+   */
+  material?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * A possible alternate material for the packaging.
+   */
+  alternateMaterial?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * A device accompanying a medicinal product.
+   */
+  device?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The manufactured item as contained in the packaged medicinal product.
+   */
+  manufacturedItem?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Allows containers within containers.
+   */
+  packageItem?: fhir.MedicinalProductPackagedPackageItemArgs[]|undefined;
+  /**
+   * Dimensions, color etc.
+   */
+  physicalCharacteristics?: fhir.ProdCharacteristicArgs|undefined;
+  /**
+   * Other codeable characteristics.
+   */
+  otherCharacteristics?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Shelf Life and storage information.
+   */
+  shelfLifeStorage?: fhir.ProductShelfLifeArgs[]|undefined;
+  /**
+   * Manufacturer of this Package Item.
+   */
+  manufacturer?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * A packaging item, as a contained for medicine, possibly with other packaging items within.
  */
-export class MedicinalProductPackagedPackageItem extends fhir.BackboneElement implements IMedicinalProductPackagedPackageItem {
+export class MedicinalProductPackagedPackageItem extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicinalProductPackagedPackageItem';
   /**
    * Including possibly Data Carrier Identifier.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * The physical type of the container of the medicine.
    */
@@ -176,23 +136,23 @@ export class MedicinalProductPackagedPackageItem extends fhir.BackboneElement im
   /**
    * Material type of the package item.
    */
-  public material?: fhir.CodeableConcept[]|undefined;
+  public material?: fhir.CodeableConcept[]|undefined = [];
   /**
    * A possible alternate material for the packaging.
    */
-  public alternateMaterial?: fhir.CodeableConcept[]|undefined;
+  public alternateMaterial?: fhir.CodeableConcept[]|undefined = [];
   /**
    * A device accompanying a medicinal product.
    */
-  public device?: fhir.Reference[]|undefined;
+  public device?: fhir.Reference[]|undefined = [];
   /**
    * The manufactured item as contained in the packaged medicinal product.
    */
-  public manufacturedItem?: fhir.Reference[]|undefined;
+  public manufacturedItem?: fhir.Reference[]|undefined = [];
   /**
    * Allows containers within containers.
    */
-  public packageItem?: fhir.MedicinalProductPackagedPackageItem[]|undefined;
+  public packageItem?: fhir.MedicinalProductPackagedPackageItem[]|undefined = [];
   /**
    * Dimensions, color etc.
    */
@@ -200,31 +160,31 @@ export class MedicinalProductPackagedPackageItem extends fhir.BackboneElement im
   /**
    * Other codeable characteristics.
    */
-  public otherCharacteristics?: fhir.CodeableConcept[]|undefined;
+  public otherCharacteristics?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Shelf Life and storage information.
    */
-  public shelfLifeStorage?: fhir.ProductShelfLife[]|undefined;
+  public shelfLifeStorage?: fhir.ProductShelfLife[]|undefined = [];
   /**
    * Manufacturer of this Package Item.
    */
-  public manufacturer?: fhir.Reference[]|undefined;
+  public manufacturer?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for MedicinalProductPackagedPackageItem - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicinalProductPackagedPackageItem> = { }) {
-    super(source);
+  constructor(source:Partial<MedicinalProductPackagedPackageItemArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
-    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity!); }
+    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity); }
     else { this.quantity = null; }
     if (source['material']) { this.material = source.material.map((x) => new fhir.CodeableConcept(x)); }
     if (source['alternateMaterial']) { this.alternateMaterial = source.alternateMaterial.map((x) => new fhir.CodeableConcept(x)); }
     if (source['device']) { this.device = source.device.map((x) => new fhir.Reference(x)); }
     if (source['manufacturedItem']) { this.manufacturedItem = source.manufacturedItem.map((x) => new fhir.Reference(x)); }
     if (source['packageItem']) { this.packageItem = source.packageItem.map((x) => new fhir.MedicinalProductPackagedPackageItem(x)); }
-    if (source['physicalCharacteristics']) { this.physicalCharacteristics = new fhir.ProdCharacteristic(source.physicalCharacteristics!); }
+    if (source['physicalCharacteristics']) { this.physicalCharacteristics = new fhir.ProdCharacteristic(source.physicalCharacteristics); }
     if (source['otherCharacteristics']) { this.otherCharacteristics = source.otherCharacteristics.map((x) => new fhir.CodeableConcept(x)); }
     if (source['shelfLifeStorage']) { this.shelfLifeStorage = source.shelfLifeStorage.map((x) => new fhir.ProductShelfLife(x)); }
     if (source['manufacturer']) { this.manufacturer = source.manufacturer.map((x) => new fhir.Reference(x)); }
@@ -232,30 +192,86 @@ export class MedicinalProductPackagedPackageItem extends fhir.BackboneElement im
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["type"]) { results.push(["type",'Missing required element: MedicinalProductPackaged.packageItem.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (!this["quantity"]) { results.push(["quantity",'Missing required element: MedicinalProductPackaged.packageItem.quantity']); }
-    if (this["quantity"]) { results.push(...this.quantity.doModelValidation()); }
-    if (this["material"]) { this.material.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["alternateMaterial"]) { this.alternateMaterial.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["device"]) { this.device.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["manufacturedItem"]) { this.manufacturedItem.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["packageItem"]) { this.packageItem.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["physicalCharacteristics"]) { results.push(...this.physicalCharacteristics.doModelValidation()); }
-    if (this["otherCharacteristics"]) { this.otherCharacteristics.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["shelfLifeStorage"]) { this.shelfLifeStorage.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["manufacturer"]) { this.manufacturer.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: MedicinalProductPackaged.packageItem.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (!this['quantity']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property quantity:fhir.Quantity fhir: MedicinalProductPackaged.packageItem.quantity:Quantity", }));
+    }
+    if (this["quantity"]) { outcome.issue!.push(...this.quantity.doModelValidation().issue!); }
+    if (this["material"]) { this.material.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["alternateMaterial"]) { this.alternateMaterial.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["device"]) { this.device.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["manufacturedItem"]) { this.manufacturedItem.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["packageItem"]) { this.packageItem.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["physicalCharacteristics"]) { outcome.issue!.push(...this.physicalCharacteristics.doModelValidation().issue!); }
+    if (this["otherCharacteristics"]) { this.otherCharacteristics.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["shelfLifeStorage"]) { this.shelfLifeStorage.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["manufacturer"]) { this.manufacturer.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicinalProductPackaged type.
+ */
+export interface MedicinalProductPackagedArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "MedicinalProductPackaged"|undefined;
+  /**
+   * Unique identifier.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * The product with this is a pack for.
+   */
+  subject?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Textual description.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * The legal status of supply of the medicinal product as classified by the regulator.
+   */
+  legalStatusOfSupply?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Marketing information.
+   */
+  marketingStatus?: fhir.MarketingStatusArgs[]|undefined;
+  /**
+   * Manufacturer of this Package Item.
+   */
+  marketingAuthorization?: fhir.ReferenceArgs|undefined;
+  /**
+   * Manufacturer of this Package Item.
+   */
+  manufacturer?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Batch numbering.
+   */
+  batchIdentifier?: fhir.MedicinalProductPackagedBatchIdentifierArgs[]|undefined;
+  /**
+   * A packaging item, as a contained for medicine, possibly with other packaging items within.
+   */
+  packageItem: fhir.MedicinalProductPackagedPackageItemArgs[]|null;
 }
 
 /**
  * A medicinal product in a container or package.
  */
-export class MedicinalProductPackaged extends fhir.DomainResource implements IMedicinalProductPackaged {
+export class MedicinalProductPackaged extends fhir.DomainResource {
+  readonly __dataType:string = 'MedicinalProductPackaged';
   /**
    * Resource Type Name
    */
@@ -263,19 +279,15 @@ export class MedicinalProductPackaged extends fhir.DomainResource implements IMe
   /**
    * Unique identifier.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * The product with this is a pack for.
    */
-  public subject?: fhir.Reference[]|undefined;
+  public subject?: fhir.Reference[]|undefined = [];
   /**
    * Textual description.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicinalProductPackaged.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * The legal status of supply of the medicinal product as classified by the regulator.
    */
@@ -283,7 +295,7 @@ export class MedicinalProductPackaged extends fhir.DomainResource implements IMe
   /**
    * Marketing information.
    */
-  public marketingStatus?: fhir.MarketingStatus[]|undefined;
+  public marketingStatus?: fhir.MarketingStatus[]|undefined = [];
   /**
    * Manufacturer of this Package Item.
    */
@@ -291,28 +303,27 @@ export class MedicinalProductPackaged extends fhir.DomainResource implements IMe
   /**
    * Manufacturer of this Package Item.
    */
-  public manufacturer?: fhir.Reference[]|undefined;
+  public manufacturer?: fhir.Reference[]|undefined = [];
   /**
    * Batch numbering.
    */
-  public batchIdentifier?: fhir.MedicinalProductPackagedBatchIdentifier[]|undefined;
+  public batchIdentifier?: fhir.MedicinalProductPackagedBatchIdentifier[]|undefined = [];
   /**
    * A packaging item, as a contained for medicine, possibly with other packaging items within.
    */
-  public packageItem: fhir.MedicinalProductPackagedPackageItem[]|null;
+  public packageItem: fhir.MedicinalProductPackagedPackageItem[]|null = [];
   /**
    * Default constructor for MedicinalProductPackaged - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicinalProductPackaged> = { }) {
-    super(source);
+  constructor(source:Partial<MedicinalProductPackagedArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'MedicinalProductPackaged';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['subject']) { this.subject = source.subject.map((x) => new fhir.Reference(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['legalStatusOfSupply']) { this.legalStatusOfSupply = new fhir.CodeableConcept(source.legalStatusOfSupply!); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['legalStatusOfSupply']) { this.legalStatusOfSupply = new fhir.CodeableConcept(source.legalStatusOfSupply); }
     if (source['marketingStatus']) { this.marketingStatus = source.marketingStatus.map((x) => new fhir.MarketingStatus(x)); }
-    if (source['marketingAuthorization']) { this.marketingAuthorization = new fhir.Reference(source.marketingAuthorization!); }
+    if (source['marketingAuthorization']) { this.marketingAuthorization = new fhir.Reference(source.marketingAuthorization); }
     if (source['manufacturer']) { this.manufacturer = source.manufacturer.map((x) => new fhir.Reference(x)); }
     if (source['batchIdentifier']) { this.batchIdentifier = source.batchIdentifier.map((x) => new fhir.MedicinalProductPackagedBatchIdentifier(x)); }
     if (source['packageItem']) { this.packageItem = source.packageItem.map((x) => new fhir.MedicinalProductPackagedPackageItem(x)); }
@@ -321,19 +332,33 @@ export class MedicinalProductPackaged extends fhir.DomainResource implements IMe
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: MedicinalProductPackaged.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["subject"]) { this.subject.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["legalStatusOfSupply"]) { results.push(...this.legalStatusOfSupply.doModelValidation()); }
-    if (this["marketingStatus"]) { this.marketingStatus.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["marketingAuthorization"]) { results.push(...this.marketingAuthorization.doModelValidation()); }
-    if (this["manufacturer"]) { this.manufacturer.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["batchIdentifier"]) { this.batchIdentifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if ((!this["packageItem"]) || (this["packageItem"].length === 0)) { results.push(["packageItem",'Missing required element: MedicinalProductPackaged.packageItem']); }
-    if (this["packageItem"]) { this.packageItem.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'MedicinalProductPackaged' fhir: MedicinalProductPackaged.resourceType:'MedicinalProductPackaged'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["subject"]) { this.subject.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["legalStatusOfSupply"]) { outcome.issue!.push(...this.legalStatusOfSupply.doModelValidation().issue!); }
+    if (this["marketingStatus"]) { this.marketingStatus.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["marketingAuthorization"]) { outcome.issue!.push(...this.marketingAuthorization.doModelValidation().issue!); }
+    if (this["manufacturer"]) { this.manufacturer.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["batchIdentifier"]) { this.batchIdentifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['packageItem']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property packageItem:fhir.MedicinalProductPackagedPackageItem[] fhir: MedicinalProductPackaged.packageItem:packageItem", }));
+    } else if (!Array.isArray(this.packageItem)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property packageItem:fhir.MedicinalProductPackagedPackageItem[] fhir: MedicinalProductPackaged.packageItem:packageItem", }));
+    } else if (this.packageItem.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property packageItem:fhir.MedicinalProductPackagedPackageItem[] fhir: MedicinalProductPackaged.packageItem:packageItem", }));
+    }
+    if (this["packageItem"]) { this.packageItem.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

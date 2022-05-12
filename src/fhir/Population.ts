@@ -3,47 +3,50 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Population
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A populatioof people with some set of grouping criteria.
+ * Valid arguments for the Population type.
  */
-export type IPopulation = fhir.IBackboneElement & { 
+export interface PopulationArgs extends fhir.BackboneElementArgs {
   /**
    * The age of the specific population.
    */
-  ageRange?: fhir.IRange|undefined;
+  age?: fhir.Range|fhir.CodeableConcept|undefined;
   /**
    * The age of the specific population.
    */
-  ageCodeableConcept?: fhir.ICodeableConcept|undefined;
+  ageRange?: fhir.RangeArgs|undefined;
+  /**
+   * The age of the specific population.
+   */
+  ageCodeableConcept?: fhir.CodeableConceptArgs|undefined;
   /**
    * The gender of the specific population.
    */
-  gender?: fhir.ICodeableConcept|undefined;
+  gender?: fhir.CodeableConceptArgs|undefined;
   /**
    * Race of the specific population.
    */
-  race?: fhir.ICodeableConcept|undefined;
+  race?: fhir.CodeableConceptArgs|undefined;
   /**
    * The existing physiological conditions of the specific population to which this applies.
    */
-  physiologicalCondition?: fhir.ICodeableConcept|undefined;
+  physiologicalCondition?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * A populatioof people with some set of grouping criteria.
  */
-export class Population extends fhir.BackboneElement implements IPopulation {
+export class Population extends fhir.BackboneElement {
+  readonly __dataType:string = 'Population';
   /**
    * The age of the specific population.
    */
-  public ageRange?: fhir.Range|undefined;
-  /**
-   * The age of the specific population.
-   */
-  public ageCodeableConcept?: fhir.CodeableConcept|undefined;
+  public age?: (fhir.Range|fhir.CodeableConcept)|undefined;
+  readonly __ageIsChoice:true = true;
   /**
    * The gender of the specific population.
    */
@@ -59,24 +62,29 @@ export class Population extends fhir.BackboneElement implements IPopulation {
   /**
    * Default constructor for Population - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IPopulation> = { }) {
-    super(source);
-    if (source['ageRange']) { this.ageRange = new fhir.Range(source.ageRange!); }
-    if (source['ageCodeableConcept']) { this.ageCodeableConcept = new fhir.CodeableConcept(source.ageCodeableConcept!); }
-    if (source['gender']) { this.gender = new fhir.CodeableConcept(source.gender!); }
-    if (source['race']) { this.race = new fhir.CodeableConcept(source.race!); }
-    if (source['physiologicalCondition']) { this.physiologicalCondition = new fhir.CodeableConcept(source.physiologicalCondition!); }
+  constructor(source:Partial<PopulationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['age']) { this.age = source.age; }
+    else if (source['ageRange']) { this.age = new fhir.Range(source.ageRange); }
+    else if (source['ageCodeableConcept']) { this.age = new fhir.CodeableConcept(source.ageCodeableConcept); }
+    if (source['gender']) { this.gender = new fhir.CodeableConcept(source.gender); }
+    if (source['race']) { this.race = new fhir.CodeableConcept(source.race); }
+    if (source['physiologicalCondition']) { this.physiologicalCondition = new fhir.CodeableConcept(source.physiologicalCondition); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["ageRange"]) { results.push(...this.ageRange.doModelValidation()); }
-    if (this["ageCodeableConcept"]) { results.push(...this.ageCodeableConcept.doModelValidation()); }
-    if (this["gender"]) { results.push(...this.gender.doModelValidation()); }
-    if (this["race"]) { results.push(...this.race.doModelValidation()); }
-    if (this["physiologicalCondition"]) { results.push(...this.physiologicalCondition.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["gender"]) { outcome.issue!.push(...this.gender.doModelValidation().issue!); }
+    if (this["race"]) { outcome.issue!.push(...this.race.doModelValidation().issue!); }
+    if (this["physiologicalCondition"]) { outcome.issue!.push(...this.physiologicalCondition.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -3,184 +3,45 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Coverage
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { CoverageClassValueSet, CoverageClassValueSetType, CoverageClassValueSetEnum } from '../fhirValueSets/CoverageClassValueSet.js'
-import { CoverageFinancialExceptionValueSet, CoverageFinancialExceptionValueSetType, CoverageFinancialExceptionValueSetEnum } from '../fhirValueSets/CoverageFinancialExceptionValueSet.js'
-import { CoverageCopayTypeValueSet, CoverageCopayTypeValueSetType, CoverageCopayTypeValueSetEnum } from '../fhirValueSets/CoverageCopayTypeValueSet.js'
-import { FmStatusValueSet, FmStatusValueSetType, FmStatusValueSetEnum } from '../fhirValueSets/FmStatusValueSet.js'
-import { CoverageTypeValueSet, CoverageTypeValueSetType, CoverageTypeValueSetEnum } from '../fhirValueSets/CoverageTypeValueSet.js'
-import { SubscriberRelationshipValueSet, SubscriberRelationshipValueSetType, SubscriberRelationshipValueSetEnum } from '../fhirValueSets/SubscriberRelationshipValueSet.js'
-
+import { CoverageClassValueSet, CoverageClassValueSetType,} from '../fhirValueSets/CoverageClassValueSet.js';
+import { CoverageClassValueSetEnum } from '../valueSetEnums.js';
+import { CoverageFinancialExceptionValueSet, CoverageFinancialExceptionValueSetType,} from '../fhirValueSets/CoverageFinancialExceptionValueSet.js';
+import { CoverageFinancialExceptionValueSetEnum } from '../valueSetEnums.js';
+import { CoverageCopayTypeValueSet, CoverageCopayTypeValueSetType,} from '../fhirValueSets/CoverageCopayTypeValueSet.js';
+import { CoverageCopayTypeValueSetEnum } from '../valueSetEnums.js';
+import { FmStatusValueSet, FmStatusValueSetType,} from '../fhirValueSets/FmStatusValueSet.js';
+import { FmStatusValueSetEnum } from '../valueSetEnums.js';
+import { CoverageTypeValueSet, CoverageTypeValueSetType,} from '../fhirValueSets/CoverageTypeValueSet.js';
+import { CoverageTypeValueSetEnum } from '../valueSetEnums.js';
+import { SubscriberRelationshipValueSet, SubscriberRelationshipValueSetType,} from '../fhirValueSets/SubscriberRelationshipValueSet.js';
+import { SubscriberRelationshipValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * For example may be used to identify a class of coverage or employer group, Policy, Plan.
+ * Valid arguments for the CoverageClass type.
  */
-export type ICoverageClass = fhir.IBackboneElement & { 
+export interface CoverageClassArgs extends fhir.BackboneElementArgs {
   /**
    * The type of classification for which an insurer-specific class label or number and optional name is provided, for example may be used to identify a class of coverage or employer group, Policy, Plan.
    */
-  type: fhir.ICodeableConcept|null;
+  type: fhir.CodeableConceptArgs|null;
   /**
    * For example, the Group or Plan number.
    */
-  value: string|null;
-  /**
-   * Extended properties for primitive element: Coverage.class.value
-   */
-  _value?: fhir.IFhirElement|undefined;
+  value: fhir.FhirString|string|undefined;
   /**
    * A short description for the class.
    */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coverage.class.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-}
-
-/**
- * A suite of codes indicating exceptions or reductions to patient costs and their effective periods.
- */
-export type ICoverageCostToBeneficiaryException = fhir.IBackboneElement & { 
-  /**
-   * The code for the specific exception.
-   */
-  type: fhir.ICodeableConcept|null;
-  /**
-   * The timeframe during when the exception is in force.
-   */
-  period?: fhir.IPeriod|undefined;
-}
-
-/**
- * For example by knowing the patient visit co-pay, the provider can collect the amount prior to undertaking treatment.
- */
-export type ICoverageCostToBeneficiary = fhir.IBackboneElement & { 
-  /**
-   * For example visit, specialist visits, emergency, inpatient care, etc.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Amount may be expressed as a percentage of the service/product cost or a fixed amount of currency.
-   */
-  valueQuantity?: fhir.IQuantity|undefined;
-  /**
-   * Amount may be expressed as a percentage of the service/product cost or a fixed amount of currency.
-   */
-  valueMoney?: fhir.IMoney|undefined;
-  /**
-   * A suite of codes indicating exceptions or reductions to patient costs and their effective periods.
-   */
-  exception?: fhir.ICoverageCostToBeneficiaryException[]|undefined;
-}
-
-/**
- * Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.
- */
-export type ICoverage = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Coverage";
-  /**
-   * The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatenation of the Coverage.SubscriberID and the Coverage.dependant.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains the code entered-in-error that marks the coverage as not currently valid.
-   */
-  status: FmStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Coverage.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * The type of coverage: social program, medical plan, accident coverage (workers compensation, auto), group health or payment by an individual or organization.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * For example: may be an individual, corporation or the subscriber's employer.
-   */
-  policyHolder?: fhir.IReference|undefined;
-  /**
-   * May be self or a parent in the case of dependants.
-   */
-  subscriber?: fhir.IReference|undefined;
-  /**
-   * The insurer assigned ID for the Subscriber.
-   */
-  subscriberId?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coverage.subscriberId
-   */
-  _subscriberId?: fhir.IFhirElement|undefined;
-  /**
-   * The party who benefits from the insurance coverage; the patient when products and/or services are provided.
-   */
-  beneficiary: fhir.IReference|null;
-  /**
-   * Periodically the member number is constructed from the subscriberId and the dependant number.
-   */
-  dependent?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coverage.dependent
-   */
-  _dependent?: fhir.IFhirElement|undefined;
-  /**
-   * Typically, an individual uses policies which are theirs (relationship='self') before policies owned by others.
-   */
-  relationship?: fhir.ICodeableConcept|undefined;
-  /**
-   * Time period during which the coverage is in force. A missing start date indicates the start date isn't known, a missing end date means the coverage is continuing to be in force.
-   */
-  period?: fhir.IPeriod|undefined;
-  /**
-   * May provide multiple identifiers such as insurance company identifier or business identifier (BIN number).
-   * For selfpay it may provide multiple paying persons and/or organizations.
-   */
-  payor: fhir.IReference[]|null;
-  /**
-   * For example may be used to identify a class of coverage or employer group, Policy, Plan.
-   */
-  class?: fhir.ICoverageClass[]|undefined;
-  /**
-   * The order of applicability of this coverage relative to other coverages which are currently in force. Note, there may be gaps in the numbering and this does not imply primary, secondary etc. as the specific positioning of coverages depends upon the episode of care.
-   */
-  order?: number|undefined;
-  /**
-   * Extended properties for primitive element: Coverage.order
-   */
-  _order?: fhir.IFhirElement|undefined;
-  /**
-   * The insurer-specific identifier for the insurer-defined network of providers to which the beneficiary may seek treatment which will be covered at the 'in-network' rate, otherwise 'out of network' terms and conditions apply.
-   */
-  network?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coverage.network
-   */
-  _network?: fhir.IFhirElement|undefined;
-  /**
-   * For example by knowing the patient visit co-pay, the provider can collect the amount prior to undertaking treatment.
-   */
-  costToBeneficiary?: fhir.ICoverageCostToBeneficiary[]|undefined;
-  /**
-   * Typically, automotive and worker's compensation policies would be flagged with 'subrogation=true' to enable healthcare payors to collect against accident claims.
-   */
-  subrogation?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Coverage.subrogation
-   */
-  _subrogation?: fhir.IFhirElement|undefined;
-  /**
-   * The policy(s) which constitute this insurance coverage.
-   */
-  contract?: fhir.IReference[]|undefined;
+  name?: fhir.FhirString|string|undefined;
 }
 
 /**
  * For example may be used to identify a class of coverage or employer group, Policy, Plan.
  */
-export class CoverageClass extends fhir.BackboneElement implements ICoverageClass {
+export class CoverageClass extends fhir.BackboneElement {
+  readonly __dataType:string = 'CoverageClass';
   /**
    * The type of classification for which an insurer-specific class label or number and optional name is provided, for example may be used to identify a class of coverage or employer group, Policy, Plan.
    */
@@ -188,31 +49,21 @@ export class CoverageClass extends fhir.BackboneElement implements ICoverageClas
   /**
    * For example, the Group or Plan number.
    */
-  public value: string|null;
-  /**
-   * Extended properties for primitive element: Coverage.class.value
-   */
-  public _value?: fhir.FhirElement|undefined;
+  public value: fhir.FhirString|null;
   /**
    * A short description for the class.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coverage.class.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Default constructor for CoverageClass - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICoverageClass> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<CoverageClassArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
-    if (source['value']) { this.value = source.value; }
+    if (source['value']) { this.value = new fhir.FhirString({value: source.value}); }
     else { this.value = null; }
-    if (source['_value']) { this._value = new fhir.FhirElement(source._value!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
   }
   /**
    * Extensible-bound Value Set for type
@@ -223,21 +74,45 @@ export class CoverageClass extends fhir.BackboneElement implements ICoverageClas
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: Coverage.class.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (!this["value"]) { results.push(["value",'Missing required element: Coverage.class.value']); }
-    if (this["_value"]) { results.push(...this._value.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: Coverage.class.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value:fhir.FhirString fhir: Coverage.class.value:string", }));
+    }
+    if (this["value"]) { outcome.issue!.push(...this.value.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CoverageCostToBeneficiaryException type.
+ */
+export interface CoverageCostToBeneficiaryExceptionArgs extends fhir.BackboneElementArgs {
+  /**
+   * The code for the specific exception.
+   */
+  type: fhir.CodeableConceptArgs|null;
+  /**
+   * The timeframe during when the exception is in force.
+   */
+  period?: fhir.PeriodArgs|undefined;
 }
 
 /**
  * A suite of codes indicating exceptions or reductions to patient costs and their effective periods.
  */
-export class CoverageCostToBeneficiaryException extends fhir.BackboneElement implements ICoverageCostToBeneficiaryException {
+export class CoverageCostToBeneficiaryException extends fhir.BackboneElement {
+  readonly __dataType:string = 'CoverageCostToBeneficiaryException';
   /**
    * The code for the specific exception.
    */
@@ -249,11 +124,11 @@ export class CoverageCostToBeneficiaryException extends fhir.BackboneElement imp
   /**
    * Default constructor for CoverageCostToBeneficiaryException - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICoverageCostToBeneficiaryException> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<CoverageCostToBeneficiaryExceptionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
   }
   /**
    * Example-bound Value Set for type
@@ -264,19 +139,53 @@ export class CoverageCostToBeneficiaryException extends fhir.BackboneElement imp
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: Coverage.costToBeneficiary.exception.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: Coverage.costToBeneficiary.exception.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CoverageCostToBeneficiary type.
+ */
+export interface CoverageCostToBeneficiaryArgs extends fhir.BackboneElementArgs {
+  /**
+   * For example visit, specialist visits, emergency, inpatient care, etc.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Amount may be expressed as a percentage of the service/product cost or a fixed amount of currency.
+   */
+  value?: fhir.Quantity|fhir.Money|undefined;
+  /**
+   * Amount may be expressed as a percentage of the service/product cost or a fixed amount of currency.
+   */
+  valueQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * Amount may be expressed as a percentage of the service/product cost or a fixed amount of currency.
+   */
+  valueMoney?: fhir.MoneyArgs|undefined;
+  /**
+   * A suite of codes indicating exceptions or reductions to patient costs and their effective periods.
+   */
+  exception?: fhir.CoverageCostToBeneficiaryExceptionArgs[]|undefined;
 }
 
 /**
  * For example by knowing the patient visit co-pay, the provider can collect the amount prior to undertaking treatment.
  */
-export class CoverageCostToBeneficiary extends fhir.BackboneElement implements ICoverageCostToBeneficiary {
+export class CoverageCostToBeneficiary extends fhir.BackboneElement {
+  readonly __dataType:string = 'CoverageCostToBeneficiary';
   /**
    * For example visit, specialist visits, emergency, inpatient care, etc.
    */
@@ -284,23 +193,22 @@ export class CoverageCostToBeneficiary extends fhir.BackboneElement implements I
   /**
    * Amount may be expressed as a percentage of the service/product cost or a fixed amount of currency.
    */
-  public valueQuantity?: fhir.Quantity|undefined;
-  /**
-   * Amount may be expressed as a percentage of the service/product cost or a fixed amount of currency.
-   */
-  public valueMoney?: fhir.Money|undefined;
+  public value: (fhir.Quantity|fhir.Money)|null;
+  readonly __valueIsChoice:true = true;
   /**
    * A suite of codes indicating exceptions or reductions to patient costs and their effective periods.
    */
-  public exception?: fhir.CoverageCostToBeneficiaryException[]|undefined;
+  public exception?: fhir.CoverageCostToBeneficiaryException[]|undefined = [];
   /**
    * Default constructor for CoverageCostToBeneficiary - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICoverageCostToBeneficiary> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['valueQuantity']) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
-    if (source['valueMoney']) { this.valueMoney = new fhir.Money(source.valueMoney!); }
+  constructor(source:Partial<CoverageCostToBeneficiaryArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueQuantity']) { this.value = new fhir.Quantity(source.valueQuantity); }
+    else if (source['valueMoney']) { this.value = new fhir.Money(source.valueMoney); }
+    else { this.value = null; }
     if (source['exception']) { this.exception = source.exception.map((x) => new fhir.CoverageCostToBeneficiaryException(x)); }
   }
   /**
@@ -312,20 +220,106 @@ export class CoverageCostToBeneficiary extends fhir.BackboneElement implements I
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["valueQuantity"]) { results.push(...this.valueQuantity.doModelValidation()); }
-    if (this["valueMoney"]) { results.push(...this.valueMoney.doModelValidation()); }
-    if (this["exception"]) { this.exception.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value: fhir: Coverage.costToBeneficiary.value[x]:", }));
+    }
+    if (this["exception"]) { this.exception.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Coverage type.
+ */
+export interface CoverageArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Coverage"|undefined;
+  /**
+   * The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatenation of the Coverage.SubscriberID and the Coverage.dependant.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains the code entered-in-error that marks the coverage as not currently valid.
+   */
+  status: FmStatusValueSetEnum|null;
+  /**
+   * The type of coverage: social program, medical plan, accident coverage (workers compensation, auto), group health or payment by an individual or organization.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * For example: may be an individual, corporation or the subscriber's employer.
+   */
+  policyHolder?: fhir.ReferenceArgs|undefined;
+  /**
+   * May be self or a parent in the case of dependants.
+   */
+  subscriber?: fhir.ReferenceArgs|undefined;
+  /**
+   * The insurer assigned ID for the Subscriber.
+   */
+  subscriberId?: fhir.FhirString|string|undefined;
+  /**
+   * The party who benefits from the insurance coverage; the patient when products and/or services are provided.
+   */
+  beneficiary: fhir.ReferenceArgs|null;
+  /**
+   * Periodically the member number is constructed from the subscriberId and the dependant number.
+   */
+  dependent?: fhir.FhirString|string|undefined;
+  /**
+   * Typically, an individual uses policies which are theirs (relationship='self') before policies owned by others.
+   */
+  relationship?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Time period during which the coverage is in force. A missing start date indicates the start date isn't known, a missing end date means the coverage is continuing to be in force.
+   */
+  period?: fhir.PeriodArgs|undefined;
+  /**
+   * May provide multiple identifiers such as insurance company identifier or business identifier (BIN number).
+   * For selfpay it may provide multiple paying persons and/or organizations.
+   */
+  payor: fhir.ReferenceArgs[]|null;
+  /**
+   * For example may be used to identify a class of coverage or employer group, Policy, Plan.
+   */
+  class?: fhir.CoverageClassArgs[]|undefined;
+  /**
+   * The order of applicability of this coverage relative to other coverages which are currently in force. Note, there may be gaps in the numbering and this does not imply primary, secondary etc. as the specific positioning of coverages depends upon the episode of care.
+   */
+  order?: fhir.FhirPositiveInt|number|undefined;
+  /**
+   * The insurer-specific identifier for the insurer-defined network of providers to which the beneficiary may seek treatment which will be covered at the 'in-network' rate, otherwise 'out of network' terms and conditions apply.
+   */
+  network?: fhir.FhirString|string|undefined;
+  /**
+   * For example by knowing the patient visit co-pay, the provider can collect the amount prior to undertaking treatment.
+   */
+  costToBeneficiary?: fhir.CoverageCostToBeneficiaryArgs[]|undefined;
+  /**
+   * Typically, automotive and worker's compensation policies would be flagged with 'subrogation=true' to enable healthcare payors to collect against accident claims.
+   */
+  subrogation?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * The policy(s) which constitute this insurance coverage.
+   */
+  contract?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.
  */
-export class Coverage extends fhir.DomainResource implements ICoverage {
+export class Coverage extends fhir.DomainResource {
+  readonly __dataType:string = 'Coverage';
   /**
    * Resource Type Name
    */
@@ -333,15 +327,11 @@ export class Coverage extends fhir.DomainResource implements ICoverage {
   /**
    * The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatenation of the Coverage.SubscriberID and the Coverage.dependant.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains the code entered-in-error that marks the coverage as not currently valid.
    */
   public status: FmStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Coverage.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * The type of coverage: social program, medical plan, accident coverage (workers compensation, auto), group health or payment by an individual or organization.
    */
@@ -357,11 +347,7 @@ export class Coverage extends fhir.DomainResource implements ICoverage {
   /**
    * The insurer assigned ID for the Subscriber.
    */
-  public subscriberId?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coverage.subscriberId
-   */
-  public _subscriberId?: fhir.FhirElement|undefined;
+  public subscriberId?: fhir.FhirString|undefined;
   /**
    * The party who benefits from the insurance coverage; the patient when products and/or services are provided.
    */
@@ -369,11 +355,7 @@ export class Coverage extends fhir.DomainResource implements ICoverage {
   /**
    * Periodically the member number is constructed from the subscriberId and the dependant number.
    */
-  public dependent?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coverage.dependent
-   */
-  public _dependent?: fhir.FhirElement|undefined;
+  public dependent?: fhir.FhirString|undefined;
   /**
    * Typically, an individual uses policies which are theirs (relationship='self') before policies owned by others.
    */
@@ -386,74 +368,56 @@ export class Coverage extends fhir.DomainResource implements ICoverage {
    * May provide multiple identifiers such as insurance company identifier or business identifier (BIN number).
    * For selfpay it may provide multiple paying persons and/or organizations.
    */
-  public payor: fhir.Reference[]|null;
+  public payor: fhir.Reference[]|null = [];
   /**
    * For example may be used to identify a class of coverage or employer group, Policy, Plan.
    */
-  public class?: fhir.CoverageClass[]|undefined;
+  public class?: fhir.CoverageClass[]|undefined = [];
   /**
    * The order of applicability of this coverage relative to other coverages which are currently in force. Note, there may be gaps in the numbering and this does not imply primary, secondary etc. as the specific positioning of coverages depends upon the episode of care.
    */
-  public order?: number|undefined;
-  /**
-   * Extended properties for primitive element: Coverage.order
-   */
-  public _order?: fhir.FhirElement|undefined;
+  public order?: fhir.FhirPositiveInt|undefined;
   /**
    * The insurer-specific identifier for the insurer-defined network of providers to which the beneficiary may seek treatment which will be covered at the 'in-network' rate, otherwise 'out of network' terms and conditions apply.
    */
-  public network?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coverage.network
-   */
-  public _network?: fhir.FhirElement|undefined;
+  public network?: fhir.FhirString|undefined;
   /**
    * For example by knowing the patient visit co-pay, the provider can collect the amount prior to undertaking treatment.
    */
-  public costToBeneficiary?: fhir.CoverageCostToBeneficiary[]|undefined;
+  public costToBeneficiary?: fhir.CoverageCostToBeneficiary[]|undefined = [];
   /**
    * Typically, automotive and worker's compensation policies would be flagged with 'subrogation=true' to enable healthcare payors to collect against accident claims.
    */
-  public subrogation?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Coverage.subrogation
-   */
-  public _subrogation?: fhir.FhirElement|undefined;
+  public subrogation?: fhir.FhirBoolean|undefined;
   /**
    * The policy(s) which constitute this insurance coverage.
    */
-  public contract?: fhir.Reference[]|undefined;
+  public contract?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for Coverage - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICoverage> = { }) {
-    super(source);
+  constructor(source:Partial<CoverageArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Coverage';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['policyHolder']) { this.policyHolder = new fhir.Reference(source.policyHolder!); }
-    if (source['subscriber']) { this.subscriber = new fhir.Reference(source.subscriber!); }
-    if (source['subscriberId']) { this.subscriberId = source.subscriberId; }
-    if (source['_subscriberId']) { this._subscriberId = new fhir.FhirElement(source._subscriberId!); }
-    if (source['beneficiary']) { this.beneficiary = new fhir.Reference(source.beneficiary!); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['policyHolder']) { this.policyHolder = new fhir.Reference(source.policyHolder); }
+    if (source['subscriber']) { this.subscriber = new fhir.Reference(source.subscriber); }
+    if (source['subscriberId']) { this.subscriberId = new fhir.FhirString({value: source.subscriberId}); }
+    if (source['beneficiary']) { this.beneficiary = new fhir.Reference(source.beneficiary); }
     else { this.beneficiary = null; }
-    if (source['dependent']) { this.dependent = source.dependent; }
-    if (source['_dependent']) { this._dependent = new fhir.FhirElement(source._dependent!); }
-    if (source['relationship']) { this.relationship = new fhir.CodeableConcept(source.relationship!); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
+    if (source['dependent']) { this.dependent = new fhir.FhirString({value: source.dependent}); }
+    if (source['relationship']) { this.relationship = new fhir.CodeableConcept(source.relationship); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
     if (source['payor']) { this.payor = source.payor.map((x) => new fhir.Reference(x)); }
     else { this.payor = null; }
     if (source['class']) { this.class = source.class.map((x) => new fhir.CoverageClass(x)); }
-    if (source['order']) { this.order = source.order; }
-    if (source['_order']) { this._order = new fhir.FhirElement(source._order!); }
-    if (source['network']) { this.network = source.network; }
-    if (source['_network']) { this._network = new fhir.FhirElement(source._network!); }
+    if (source['order']) { this.order = new fhir.FhirPositiveInt({value: source.order}); }
+    if (source['network']) { this.network = new fhir.FhirString({value: source.network}); }
     if (source['costToBeneficiary']) { this.costToBeneficiary = source.costToBeneficiary.map((x) => new fhir.CoverageCostToBeneficiary(x)); }
-    if (source['subrogation']) { this.subrogation = source.subrogation; }
-    if (source['_subrogation']) { this._subrogation = new fhir.FhirElement(source._subrogation!); }
+    if (source['subrogation']) { this.subrogation = new fhir.FhirBoolean({value: source.subrogation}); }
     if (source['contract']) { this.contract = source.contract.map((x) => new fhir.Reference(x)); }
   }
   /**
@@ -477,29 +441,46 @@ export class Coverage extends fhir.DomainResource implements ICoverage {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Coverage.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: Coverage.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["policyHolder"]) { results.push(...this.policyHolder.doModelValidation()); }
-    if (this["subscriber"]) { results.push(...this.subscriber.doModelValidation()); }
-    if (this["_subscriberId"]) { results.push(...this._subscriberId.doModelValidation()); }
-    if (!this["beneficiary"]) { results.push(["beneficiary",'Missing required element: Coverage.beneficiary']); }
-    if (this["beneficiary"]) { results.push(...this.beneficiary.doModelValidation()); }
-    if (this["_dependent"]) { results.push(...this._dependent.doModelValidation()); }
-    if (this["relationship"]) { results.push(...this.relationship.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    if ((!this["payor"]) || (this["payor"].length === 0)) { results.push(["payor",'Missing required element: Coverage.payor']); }
-    if (this["payor"]) { this.payor.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["class"]) { this.class.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_order"]) { results.push(...this._order.doModelValidation()); }
-    if (this["_network"]) { results.push(...this._network.doModelValidation()); }
-    if (this["costToBeneficiary"]) { this.costToBeneficiary.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_subrogation"]) { results.push(...this._subrogation.doModelValidation()); }
-    if (this["contract"]) { this.contract.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Coverage' fhir: Coverage.resourceType:'Coverage'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:FmStatusValueSetEnum fhir: Coverage.status:code", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["policyHolder"]) { outcome.issue!.push(...this.policyHolder.doModelValidation().issue!); }
+    if (this["subscriber"]) { outcome.issue!.push(...this.subscriber.doModelValidation().issue!); }
+    if (this["subscriberId"]) { outcome.issue!.push(...this.subscriberId.doModelValidation().issue!); }
+    if (!this['beneficiary']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property beneficiary:fhir.Reference fhir: Coverage.beneficiary:Reference", }));
+    }
+    if (this["beneficiary"]) { outcome.issue!.push(...this.beneficiary.doModelValidation().issue!); }
+    if (this["dependent"]) { outcome.issue!.push(...this.dependent.doModelValidation().issue!); }
+    if (this["relationship"]) { outcome.issue!.push(...this.relationship.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    if (!this['payor']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property payor:fhir.Reference[] fhir: Coverage.payor:Reference", }));
+    } else if (!Array.isArray(this.payor)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property payor:fhir.Reference[] fhir: Coverage.payor:Reference", }));
+    } else if (this.payor.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property payor:fhir.Reference[] fhir: Coverage.payor:Reference", }));
+    }
+    if (this["payor"]) { this.payor.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["class"]) { this.class.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["order"]) { outcome.issue!.push(...this.order.doModelValidation().issue!); }
+    if (this["network"]) { outcome.issue!.push(...this.network.doModelValidation().issue!); }
+    if (this["costToBeneficiary"]) { this.costToBeneficiary.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["subrogation"]) { outcome.issue!.push(...this.subrogation.doModelValidation().issue!); }
+    if (this["contract"]) { this.contract.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

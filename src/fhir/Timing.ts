@@ -3,329 +3,185 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Timing
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { UnitsOfTimeValueSet, UnitsOfTimeValueSetType, UnitsOfTimeValueSetEnum } from '../fhirValueSets/UnitsOfTimeValueSet.js'
-import { DaysOfWeekValueSet, DaysOfWeekValueSetType, DaysOfWeekValueSetEnum } from '../fhirValueSets/DaysOfWeekValueSet.js'
-import { EventTimingValueSet, EventTimingValueSetType, EventTimingValueSetEnum } from '../fhirValueSets/EventTimingValueSet.js'
-import { TimingAbbreviationValueSet, TimingAbbreviationValueSetType, TimingAbbreviationValueSetEnum } from '../fhirValueSets/TimingAbbreviationValueSet.js'
-
+import { UnitsOfTimeValueSet, UnitsOfTimeValueSetType,} from '../fhirValueSets/UnitsOfTimeValueSet.js';
+import { UnitsOfTimeValueSetEnum } from '../valueSetEnums.js';
+import { DaysOfWeekValueSet, DaysOfWeekValueSetType,} from '../fhirValueSets/DaysOfWeekValueSet.js';
+import { DaysOfWeekValueSetEnum } from '../valueSetEnums.js';
+import { EventTimingValueSet, EventTimingValueSetType,} from '../fhirValueSets/EventTimingValueSet.js';
+import { EventTimingValueSetEnum } from '../valueSetEnums.js';
+import { TimingAbbreviationValueSet, TimingAbbreviationValueSetType,} from '../fhirValueSets/TimingAbbreviationValueSet.js';
+import { TimingAbbreviationValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A set of rules that describe when the event is scheduled.
+ * Valid arguments for the TimingRepeat type.
  */
-export type ITimingRepeat = fhir.IFhirElement & { 
+export interface TimingRepeatArgs extends fhir.FhirElementArgs {
   /**
    * Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
    */
-  boundsDuration?: fhir.IDuration|undefined;
+  bounds?: fhir.Duration|fhir.Range|fhir.Period|undefined;
   /**
    * Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
    */
-  boundsRange?: fhir.IRange|undefined;
+  boundsDuration?: fhir.DurationArgs|undefined;
   /**
    * Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
    */
-  boundsPeriod?: fhir.IPeriod|undefined;
+  boundsRange?: fhir.RangeArgs|undefined;
+  /**
+   * Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
+   */
+  boundsPeriod?: fhir.PeriodArgs|undefined;
   /**
    * If you have both bounds and count, then this should be understood as within the bounds period, until count times happens.
    */
-  count?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.count
-   */
-  _count?: fhir.IFhirElement|undefined;
+  count?: fhir.FhirPositiveInt|number|undefined;
   /**
    * If present, indicates that the count is a range - so to perform the action between [count] and [countMax] times.
    */
-  countMax?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.countMax
-   */
-  _countMax?: fhir.IFhirElement|undefined;
+  countMax?: fhir.FhirPositiveInt|number|undefined;
   /**
    * For some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise).
    */
-  duration?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.duration
-   */
-  _duration?: fhir.IFhirElement|undefined;
+  duration?: fhir.FhirDecimal|number|undefined;
   /**
    * For some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise).
    */
-  durationMax?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.durationMax
-   */
-  _durationMax?: fhir.IFhirElement|undefined;
+  durationMax?: fhir.FhirDecimal|number|undefined;
   /**
    * The units of time for the duration, in UCUM units.
    */
   durationUnit?: UnitsOfTimeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Timing.repeat.durationUnit
-   */
-  _durationUnit?: fhir.IFhirElement|undefined;
-  /**
    * The number of times to repeat the action within the specified period. If frequencyMax is present, this element indicates the lower bound of the allowed range of the frequency.
    */
-  frequency?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.frequency
-   */
-  _frequency?: fhir.IFhirElement|undefined;
+  frequency?: fhir.FhirPositiveInt|number|undefined;
   /**
    * If present, indicates that the frequency is a range - so to repeat between [frequency] and [frequencyMax] times within the period or period range.
    */
-  frequencyMax?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.frequencyMax
-   */
-  _frequencyMax?: fhir.IFhirElement|undefined;
+  frequencyMax?: fhir.FhirPositiveInt|number|undefined;
   /**
    * Indicates the duration of time over which repetitions are to occur; e.g. to express "3 times per day", 3 would be the frequency and "1 day" would be the period. If periodMax is present, this element indicates the lower bound of the allowed range of the period length.
    */
-  period?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.period
-   */
-  _period?: fhir.IFhirElement|undefined;
+  period?: fhir.FhirDecimal|number|undefined;
   /**
    * If present, indicates that the period is a range from [period] to [periodMax], allowing expressing concepts such as "do this once every 3-5 days.
    */
-  periodMax?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.periodMax
-   */
-  _periodMax?: fhir.IFhirElement|undefined;
+  periodMax?: fhir.FhirDecimal|number|undefined;
   /**
    * The units of time for the period in UCUM units.
    */
   periodUnit?: UnitsOfTimeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Timing.repeat.periodUnit
-   */
-  _periodUnit?: fhir.IFhirElement|undefined;
-  /**
    * If no days are specified, the action is assumed to happen every day as otherwise specified. The elements frequency and period cannot be used as well as dayOfWeek.
    */
   dayOfWeek?: DaysOfWeekValueSetEnum[]|undefined;
   /**
-   * Extended properties for primitive element: Timing.repeat.dayOfWeek
-   */
-  _dayOfWeek?: fhir.IFhirElement[]|undefined;
-  /**
    * When time of day is specified, it is inferred that the action happens every day (as filtered by dayofWeek) on the specified times. The elements when, frequency and period cannot be used as well as timeOfDay.
    */
-  timeOfDay?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.timeOfDay
-   */
-  _timeOfDay?: fhir.IFhirElement[]|undefined;
+  timeOfDay?: fhir.FhirTime[]|string[]|undefined;
   /**
    * When more than one event is listed, the event is tied to the union of the specified events.
    */
-  when?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.when
-   */
-  _when?: fhir.IFhirElement[]|undefined;
+  when?: fhir.FhirCode[]|string[]|undefined;
   /**
    * The number of minutes from the event. If the event code does not indicate whether the minutes is before or after the event, then the offset is assumed to be after the event.
    */
-  offset?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.offset
-   */
-  _offset?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
- */
-export type ITiming = fhir.IBackboneElement & { 
-  /**
-   * Identifies specific times when the event occurs.
-   */
-  event?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Timing.event
-   */
-  _event?: fhir.IFhirElement[]|undefined;
-  /**
-   * A set of rules that describe when the event is scheduled.
-   */
-  repeat?: fhir.ITimingRepeat|undefined;
-  /**
-   * BID etc. are defined as 'at institutionally specified times'. For example, an institution may choose that BID is "always at 7am and 6pm".  If it is inappropriate for this choice to be made, the code BID should not be used. Instead, a distinct organization-specific code should be used in place of the HL7-defined BID code and/or a structured representation should be used (in this case, specifying the two event times).
-   */
-  code?: fhir.ICodeableConcept|undefined;
+  offset?: fhir.FhirUnsignedInt|number|undefined;
 }
 
 /**
  * A set of rules that describe when the event is scheduled.
  */
-export class TimingRepeat extends fhir.FhirElement implements ITimingRepeat {
+export class TimingRepeat extends fhir.FhirElement {
+  readonly __dataType:string = 'TimingRepeat';
   /**
    * Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
    */
-  public boundsDuration?: fhir.Duration|undefined;
-  /**
-   * Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
-   */
-  public boundsRange?: fhir.Range|undefined;
-  /**
-   * Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
-   */
-  public boundsPeriod?: fhir.Period|undefined;
+  public bounds?: (fhir.Duration|fhir.Range|fhir.Period)|undefined;
+  readonly __boundsIsChoice:true = true;
   /**
    * If you have both bounds and count, then this should be understood as within the bounds period, until count times happens.
    */
-  public count?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.count
-   */
-  public _count?: fhir.FhirElement|undefined;
+  public count?: fhir.FhirPositiveInt|undefined;
   /**
    * If present, indicates that the count is a range - so to perform the action between [count] and [countMax] times.
    */
-  public countMax?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.countMax
-   */
-  public _countMax?: fhir.FhirElement|undefined;
+  public countMax?: fhir.FhirPositiveInt|undefined;
   /**
    * For some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise).
    */
-  public duration?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.duration
-   */
-  public _duration?: fhir.FhirElement|undefined;
+  public duration?: fhir.FhirDecimal|undefined;
   /**
    * For some events the duration is part of the definition of the event (e.g. IV infusions, where the duration is implicit in the specified quantity and rate). For others, it's part of the timing specification (e.g. exercise).
    */
-  public durationMax?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.durationMax
-   */
-  public _durationMax?: fhir.FhirElement|undefined;
+  public durationMax?: fhir.FhirDecimal|undefined;
   /**
    * The units of time for the duration, in UCUM units.
    */
   public durationUnit?: UnitsOfTimeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Timing.repeat.durationUnit
-   */
-  public _durationUnit?: fhir.FhirElement|undefined;
-  /**
    * The number of times to repeat the action within the specified period. If frequencyMax is present, this element indicates the lower bound of the allowed range of the frequency.
    */
-  public frequency?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.frequency
-   */
-  public _frequency?: fhir.FhirElement|undefined;
+  public frequency?: fhir.FhirPositiveInt|undefined;
   /**
    * If present, indicates that the frequency is a range - so to repeat between [frequency] and [frequencyMax] times within the period or period range.
    */
-  public frequencyMax?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.frequencyMax
-   */
-  public _frequencyMax?: fhir.FhirElement|undefined;
+  public frequencyMax?: fhir.FhirPositiveInt|undefined;
   /**
    * Indicates the duration of time over which repetitions are to occur; e.g. to express "3 times per day", 3 would be the frequency and "1 day" would be the period. If periodMax is present, this element indicates the lower bound of the allowed range of the period length.
    */
-  public period?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.period
-   */
-  public _period?: fhir.FhirElement|undefined;
+  public period?: fhir.FhirDecimal|undefined;
   /**
    * If present, indicates that the period is a range from [period] to [periodMax], allowing expressing concepts such as "do this once every 3-5 days.
    */
-  public periodMax?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.periodMax
-   */
-  public _periodMax?: fhir.FhirElement|undefined;
+  public periodMax?: fhir.FhirDecimal|undefined;
   /**
    * The units of time for the period in UCUM units.
    */
   public periodUnit?: UnitsOfTimeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Timing.repeat.periodUnit
-   */
-  public _periodUnit?: fhir.FhirElement|undefined;
-  /**
    * If no days are specified, the action is assumed to happen every day as otherwise specified. The elements frequency and period cannot be used as well as dayOfWeek.
    */
-  public dayOfWeek?: DaysOfWeekValueSetEnum[]|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.dayOfWeek
-   */
-  public _dayOfWeek?: fhir.FhirElement[]|undefined;
+  public dayOfWeek?: DaysOfWeekValueSetEnum[]|undefined = [];
   /**
    * When time of day is specified, it is inferred that the action happens every day (as filtered by dayofWeek) on the specified times. The elements when, frequency and period cannot be used as well as timeOfDay.
    */
-  public timeOfDay?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.timeOfDay
-   */
-  public _timeOfDay?: fhir.FhirElement[]|undefined;
+  public timeOfDay?: fhir.FhirTime[]|undefined = [];
   /**
    * When more than one event is listed, the event is tied to the union of the specified events.
    */
-  public when?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.when
-   */
-  public _when?: fhir.FhirElement[]|undefined;
+  public when?: fhir.FhirCode[]|undefined = [];
   /**
    * The number of minutes from the event. If the event code does not indicate whether the minutes is before or after the event, then the offset is assumed to be after the event.
    */
-  public offset?: number|undefined;
-  /**
-   * Extended properties for primitive element: Timing.repeat.offset
-   */
-  public _offset?: fhir.FhirElement|undefined;
+  public offset?: fhir.FhirUnsignedInt|undefined;
   /**
    * Default constructor for TimingRepeat - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITimingRepeat> = { }) {
-    super(source);
-    if (source['boundsDuration']) { this.boundsDuration = new fhir.Duration(source.boundsDuration!); }
-    if (source['boundsRange']) { this.boundsRange = new fhir.Range(source.boundsRange!); }
-    if (source['boundsPeriod']) { this.boundsPeriod = new fhir.Period(source.boundsPeriod!); }
-    if (source['count']) { this.count = source.count; }
-    if (source['_count']) { this._count = new fhir.FhirElement(source._count!); }
-    if (source['countMax']) { this.countMax = source.countMax; }
-    if (source['_countMax']) { this._countMax = new fhir.FhirElement(source._countMax!); }
-    if (source['duration']) { this.duration = source.duration; }
-    if (source['_duration']) { this._duration = new fhir.FhirElement(source._duration!); }
-    if (source['durationMax']) { this.durationMax = source.durationMax; }
-    if (source['_durationMax']) { this._durationMax = new fhir.FhirElement(source._durationMax!); }
+  constructor(source:Partial<TimingRepeatArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['bounds']) { this.bounds = source.bounds; }
+    else if (source['boundsDuration']) { this.bounds = new fhir.Duration(source.boundsDuration); }
+    else if (source['boundsRange']) { this.bounds = new fhir.Range(source.boundsRange); }
+    else if (source['boundsPeriod']) { this.bounds = new fhir.Period(source.boundsPeriod); }
+    if (source['count']) { this.count = new fhir.FhirPositiveInt({value: source.count}); }
+    if (source['countMax']) { this.countMax = new fhir.FhirPositiveInt({value: source.countMax}); }
+    if (source['duration']) { this.duration = new fhir.FhirDecimal({value: source.duration}); }
+    if (source['durationMax']) { this.durationMax = new fhir.FhirDecimal({value: source.durationMax}); }
     if (source['durationUnit']) { this.durationUnit = source.durationUnit; }
-    if (source['_durationUnit']) { this._durationUnit = new fhir.FhirElement(source._durationUnit!); }
-    if (source['frequency']) { this.frequency = source.frequency; }
-    if (source['_frequency']) { this._frequency = new fhir.FhirElement(source._frequency!); }
-    if (source['frequencyMax']) { this.frequencyMax = source.frequencyMax; }
-    if (source['_frequencyMax']) { this._frequencyMax = new fhir.FhirElement(source._frequencyMax!); }
-    if (source['period']) { this.period = source.period; }
-    if (source['_period']) { this._period = new fhir.FhirElement(source._period!); }
-    if (source['periodMax']) { this.periodMax = source.periodMax; }
-    if (source['_periodMax']) { this._periodMax = new fhir.FhirElement(source._periodMax!); }
+    if (source['frequency']) { this.frequency = new fhir.FhirPositiveInt({value: source.frequency}); }
+    if (source['frequencyMax']) { this.frequencyMax = new fhir.FhirPositiveInt({value: source.frequencyMax}); }
+    if (source['period']) { this.period = new fhir.FhirDecimal({value: source.period}); }
+    if (source['periodMax']) { this.periodMax = new fhir.FhirDecimal({value: source.periodMax}); }
     if (source['periodUnit']) { this.periodUnit = source.periodUnit; }
-    if (source['_periodUnit']) { this._periodUnit = new fhir.FhirElement(source._periodUnit!); }
-    if (source['dayOfWeek']) { this.dayOfWeek = source.dayOfWeek.map((x) => (x)); }
-    if (source['_dayOfWeek']) { this._dayOfWeek = source._dayOfWeek.map((x) => new fhir.FhirElement(x)); }
-    if (source['timeOfDay']) { this.timeOfDay = source.timeOfDay.map((x) => (x)); }
-    if (source['_timeOfDay']) { this._timeOfDay = source._timeOfDay.map((x) => new fhir.FhirElement(x)); }
-    if (source['when']) { this.when = source.when.map((x) => (x)); }
-    if (source['_when']) { this._when = source._when.map((x) => new fhir.FhirElement(x)); }
-    if (source['offset']) { this.offset = source.offset; }
-    if (source['_offset']) { this._offset = new fhir.FhirElement(source._offset!); }
+    if (source['dayOfWeek']) { this.dayOfWeek = source.dayOfWeek.map((x) => x); }
+    if (source['timeOfDay']) { this.timeOfDay = source.timeOfDay.map((x) => new fhir.FhirTime({value: x})); }
+    if (source['when']) { this.when = source.when.map((x) => new fhir.FhirCode({value: x})); }
+    if (source['offset']) { this.offset = new fhir.FhirUnsignedInt({value: source.offset}); }
   }
   /**
    * Required-bound Value Set for durationUnit
@@ -354,41 +210,55 @@ export class TimingRepeat extends fhir.FhirElement implements ITimingRepeat {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["boundsDuration"]) { results.push(...this.boundsDuration.doModelValidation()); }
-    if (this["boundsRange"]) { results.push(...this.boundsRange.doModelValidation()); }
-    if (this["boundsPeriod"]) { results.push(...this.boundsPeriod.doModelValidation()); }
-    if (this["_count"]) { results.push(...this._count.doModelValidation()); }
-    if (this["_countMax"]) { results.push(...this._countMax.doModelValidation()); }
-    if (this["_duration"]) { results.push(...this._duration.doModelValidation()); }
-    if (this["_durationMax"]) { results.push(...this._durationMax.doModelValidation()); }
-    if (this["_durationUnit"]) { results.push(...this._durationUnit.doModelValidation()); }
-    if (this["_frequency"]) { results.push(...this._frequency.doModelValidation()); }
-    if (this["_frequencyMax"]) { results.push(...this._frequencyMax.doModelValidation()); }
-    if (this["_period"]) { results.push(...this._period.doModelValidation()); }
-    if (this["_periodMax"]) { results.push(...this._periodMax.doModelValidation()); }
-    if (this["_periodUnit"]) { results.push(...this._periodUnit.doModelValidation()); }
-    if (this["_dayOfWeek"]) { this._dayOfWeek.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_timeOfDay"]) { this._timeOfDay.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_when"]) { this._when.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_offset"]) { results.push(...this._offset.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["count"]) { outcome.issue!.push(...this.count.doModelValidation().issue!); }
+    if (this["countMax"]) { outcome.issue!.push(...this.countMax.doModelValidation().issue!); }
+    if (this["duration"]) { outcome.issue!.push(...this.duration.doModelValidation().issue!); }
+    if (this["durationMax"]) { outcome.issue!.push(...this.durationMax.doModelValidation().issue!); }
+    if (this["frequency"]) { outcome.issue!.push(...this.frequency.doModelValidation().issue!); }
+    if (this["frequencyMax"]) { outcome.issue!.push(...this.frequencyMax.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    if (this["periodMax"]) { outcome.issue!.push(...this.periodMax.doModelValidation().issue!); }
+    if (this["timeOfDay"]) { this.timeOfDay.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["when"]) { this.when.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["offset"]) { outcome.issue!.push(...this.offset.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Timing type.
+ */
+export interface TimingArgs extends fhir.BackboneElementArgs {
+  /**
+   * Identifies specific times when the event occurs.
+   */
+  event?: fhir.FhirDateTime[]|string[]|undefined;
+  /**
+   * A set of rules that describe when the event is scheduled.
+   */
+  repeat?: fhir.TimingRepeatArgs|undefined;
+  /**
+   * BID etc. are defined as 'at institutionally specified times'. For example, an institution may choose that BID is "always at 7am and 6pm".  If it is inappropriate for this choice to be made, the code BID should not be used. Instead, a distinct organization-specific code should be used in place of the HL7-defined BID code and/or a structured representation should be used (in this case, specifying the two event times).
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
  */
-export class Timing extends fhir.BackboneElement implements ITiming {
+export class Timing extends fhir.BackboneElement {
+  readonly __dataType:string = 'Timing';
   /**
    * Identifies specific times when the event occurs.
    */
-  public event?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Timing.event
-   */
-  public _event?: fhir.FhirElement[]|undefined;
+  public event?: fhir.FhirDateTime[]|undefined = [];
   /**
    * A set of rules that describe when the event is scheduled.
    */
@@ -400,12 +270,11 @@ export class Timing extends fhir.BackboneElement implements ITiming {
   /**
    * Default constructor for Timing - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ITiming> = { }) {
-    super(source);
-    if (source['event']) { this.event = source.event.map((x) => (x)); }
-    if (source['_event']) { this._event = source._event.map((x) => new fhir.FhirElement(x)); }
-    if (source['repeat']) { this.repeat = new fhir.TimingRepeat(source.repeat!); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+  constructor(source:Partial<TimingArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['event']) { this.event = source.event.map((x) => new fhir.FhirDateTime({value: x})); }
+    if (source['repeat']) { this.repeat = new fhir.TimingRepeat(source.repeat); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
   }
   /**
    * Preferred-bound Value Set for code
@@ -416,11 +285,17 @@ export class Timing extends fhir.BackboneElement implements ITiming {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_event"]) { this._event.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["repeat"]) { results.push(...this.repeat.doModelValidation()); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["event"]) { this.event.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["repeat"]) { outcome.issue!.push(...this.repeat.doModelValidation().issue!); }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

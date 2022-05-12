@@ -1,67 +1,54 @@
 import * as fhir from '../fhir.js';
-import { FmStatusValueSetType, FmStatusValueSetEnum } from '../fhirValueSets/FmStatusValueSet.js';
-import { RemittanceOutcomeValueSetType, RemittanceOutcomeValueSetEnum } from '../fhirValueSets/RemittanceOutcomeValueSet.js';
+import { FmStatusValueSetType } from '../fhirValueSets/FmStatusValueSet.js';
+import { FmStatusValueSetEnum } from '../valueSetEnums.js';
+import { RemittanceOutcomeValueSetType } from '../fhirValueSets/RemittanceOutcomeValueSet.js';
+import { RemittanceOutcomeValueSetEnum } from '../valueSetEnums.js';
 /**
- * This resource provides enrollment and plan details from the processing of an EnrollmentRequest resource.
+ * Valid arguments for the EnrollmentResponse type.
  */
-export declare type IEnrollmentResponse = fhir.IDomainResource & {
+export interface EnrollmentResponseArgs extends fhir.DomainResourceArgs {
     /**
      * Resource Type Name
      */
-    resourceType: "EnrollmentResponse";
+    resourceType: "EnrollmentResponse" | undefined;
     /**
      * The Response business identifier.
      */
-    identifier?: fhir.IIdentifier[] | undefined;
+    identifier?: fhir.IdentifierArgs[] | undefined;
     /**
      * This element is labeled as a modifier because the status contains codes that mark the response as not currently valid.
      */
     status?: FmStatusValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: EnrollmentResponse.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
      * Original request resource reference.
      */
-    request?: fhir.IReference | undefined;
+    request?: fhir.ReferenceArgs | undefined;
     /**
      * Processing status: error, complete.
      */
     outcome?: RemittanceOutcomeValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: EnrollmentResponse.outcome
-     */
-    _outcome?: fhir.IFhirElement | undefined;
-    /**
      * A description of the status of the adjudication.
      */
-    disposition?: string | undefined;
-    /**
-     * Extended properties for primitive element: EnrollmentResponse.disposition
-     */
-    _disposition?: fhir.IFhirElement | undefined;
+    disposition?: fhir.FhirString | string | undefined;
     /**
      * The date when the enclosed suite of services were performed or completed.
      */
-    created?: string | undefined;
-    /**
-     * Extended properties for primitive element: EnrollmentResponse.created
-     */
-    _created?: fhir.IFhirElement | undefined;
+    created?: fhir.FhirDateTime | string | undefined;
     /**
      * The Insurer who produced this adjudicated response.
      */
-    organization?: fhir.IReference | undefined;
+    organization?: fhir.ReferenceArgs | undefined;
     /**
      * The practitioner who is responsible for the services rendered to the patient.
      */
-    requestProvider?: fhir.IReference | undefined;
-};
+    requestProvider?: fhir.ReferenceArgs | undefined;
+}
 /**
  * This resource provides enrollment and plan details from the processing of an EnrollmentRequest resource.
  */
-export declare class EnrollmentResponse extends fhir.DomainResource implements IEnrollmentResponse {
+export declare class EnrollmentResponse extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -75,10 +62,6 @@ export declare class EnrollmentResponse extends fhir.DomainResource implements I
      */
     status?: FmStatusValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: EnrollmentResponse.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * Original request resource reference.
      */
     request?: fhir.Reference | undefined;
@@ -87,25 +70,13 @@ export declare class EnrollmentResponse extends fhir.DomainResource implements I
      */
     outcome?: RemittanceOutcomeValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: EnrollmentResponse.outcome
-     */
-    _outcome?: fhir.FhirElement | undefined;
-    /**
      * A description of the status of the adjudication.
      */
-    disposition?: string | undefined;
-    /**
-     * Extended properties for primitive element: EnrollmentResponse.disposition
-     */
-    _disposition?: fhir.FhirElement | undefined;
+    disposition?: fhir.FhirString | undefined;
     /**
      * The date when the enclosed suite of services were performed or completed.
      */
-    created?: string | undefined;
-    /**
-     * Extended properties for primitive element: EnrollmentResponse.created
-     */
-    _created?: fhir.FhirElement | undefined;
+    created?: fhir.FhirDateTime | undefined;
     /**
      * The Insurer who produced this adjudicated response.
      */
@@ -117,7 +88,7 @@ export declare class EnrollmentResponse extends fhir.DomainResource implements I
     /**
      * Default constructor for EnrollmentResponse - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IEnrollmentResponse>);
+    constructor(source?: Partial<EnrollmentResponseArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -129,6 +100,10 @@ export declare class EnrollmentResponse extends fhir.DomainResource implements I
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=EnrollmentResponse.d.ts.map

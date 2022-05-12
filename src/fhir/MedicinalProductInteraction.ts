@@ -3,100 +3,108 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MedicinalProductInteraction
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * The specific medication, food or laboratory test that interacts.
+ * Valid arguments for the MedicinalProductInteractionInteractant type.
  */
-export type IMedicinalProductInteractionInteractant = fhir.IBackboneElement & { 
+export interface MedicinalProductInteractionInteractantArgs extends fhir.BackboneElementArgs {
   /**
    * The specific medication, food or laboratory test that interacts.
    */
-  itemReference?: fhir.IReference|undefined;
+  item?: fhir.Reference|fhir.CodeableConcept|undefined;
   /**
    * The specific medication, food or laboratory test that interacts.
    */
-  itemCodeableConcept?: fhir.ICodeableConcept|undefined;
-}
-
-/**
- * The interactions of the medicinal product with other medicinal products, or other forms of interactions.
- */
-export type IMedicinalProductInteraction = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "MedicinalProductInteraction";
-  /**
-   * The medication for which this is a described interaction.
-   */
-  subject?: fhir.IReference[]|undefined;
-  /**
-   * The interaction described.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicinalProductInteraction.description
-   */
-  _description?: fhir.IFhirElement|undefined;
+  itemReference?: fhir.ReferenceArgs|undefined;
   /**
    * The specific medication, food or laboratory test that interacts.
    */
-  interactant?: fhir.IMedicinalProductInteractionInteractant[]|undefined;
-  /**
-   * The type of the interaction e.g. drug-drug interaction, drug-food interaction, drug-lab test interaction.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * The effect of the interaction, for example "reduced gastric absorption of primary medication".
-   */
-  effect?: fhir.ICodeableConcept|undefined;
-  /**
-   * The incidence of the interaction, e.g. theoretical, observed.
-   */
-  incidence?: fhir.ICodeableConcept|undefined;
-  /**
-   * Actions for managing the interaction.
-   */
-  management?: fhir.ICodeableConcept|undefined;
+  itemCodeableConcept?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * The specific medication, food or laboratory test that interacts.
  */
-export class MedicinalProductInteractionInteractant extends fhir.BackboneElement implements IMedicinalProductInteractionInteractant {
+export class MedicinalProductInteractionInteractant extends fhir.BackboneElement {
+  readonly __dataType:string = 'MedicinalProductInteractionInteractant';
   /**
    * The specific medication, food or laboratory test that interacts.
    */
-  public itemReference?: fhir.Reference|undefined;
-  /**
-   * The specific medication, food or laboratory test that interacts.
-   */
-  public itemCodeableConcept?: fhir.CodeableConcept|undefined;
+  public item: (fhir.Reference|fhir.CodeableConcept)|null;
+  readonly __itemIsChoice:true = true;
   /**
    * Default constructor for MedicinalProductInteractionInteractant - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicinalProductInteractionInteractant> = { }) {
-    super(source);
-    if (source['itemReference']) { this.itemReference = new fhir.Reference(source.itemReference!); }
-    if (source['itemCodeableConcept']) { this.itemCodeableConcept = new fhir.CodeableConcept(source.itemCodeableConcept!); }
+  constructor(source:Partial<MedicinalProductInteractionInteractantArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['item']) { this.item = source.item; }
+    else if (source['itemReference']) { this.item = new fhir.Reference(source.itemReference); }
+    else if (source['itemCodeableConcept']) { this.item = new fhir.CodeableConcept(source.itemCodeableConcept); }
+    else { this.item = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["itemReference"]) { results.push(...this.itemReference.doModelValidation()); }
-    if (this["itemCodeableConcept"]) { results.push(...this.itemCodeableConcept.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['item']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property item: fhir: MedicinalProductInteraction.interactant.item[x]:", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the MedicinalProductInteraction type.
+ */
+export interface MedicinalProductInteractionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "MedicinalProductInteraction"|undefined;
+  /**
+   * The medication for which this is a described interaction.
+   */
+  subject?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The interaction described.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * The specific medication, food or laboratory test that interacts.
+   */
+  interactant?: fhir.MedicinalProductInteractionInteractantArgs[]|undefined;
+  /**
+   * The type of the interaction e.g. drug-drug interaction, drug-food interaction, drug-lab test interaction.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The effect of the interaction, for example "reduced gastric absorption of primary medication".
+   */
+  effect?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The incidence of the interaction, e.g. theoretical, observed.
+   */
+  incidence?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Actions for managing the interaction.
+   */
+  management?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * The interactions of the medicinal product with other medicinal products, or other forms of interactions.
  */
-export class MedicinalProductInteraction extends fhir.DomainResource implements IMedicinalProductInteraction {
+export class MedicinalProductInteraction extends fhir.DomainResource {
+  readonly __dataType:string = 'MedicinalProductInteraction';
   /**
    * Resource Type Name
    */
@@ -104,19 +112,15 @@ export class MedicinalProductInteraction extends fhir.DomainResource implements 
   /**
    * The medication for which this is a described interaction.
    */
-  public subject?: fhir.Reference[]|undefined;
+  public subject?: fhir.Reference[]|undefined = [];
   /**
    * The interaction described.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: MedicinalProductInteraction.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * The specific medication, food or laboratory test that interacts.
    */
-  public interactant?: fhir.MedicinalProductInteractionInteractant[]|undefined;
+  public interactant?: fhir.MedicinalProductInteractionInteractant[]|undefined = [];
   /**
    * The type of the interaction e.g. drug-drug interaction, drug-food interaction, drug-lab test interaction.
    */
@@ -136,31 +140,38 @@ export class MedicinalProductInteraction extends fhir.DomainResource implements 
   /**
    * Default constructor for MedicinalProductInteraction - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IMedicinalProductInteraction> = { }) {
-    super(source);
+  constructor(source:Partial<MedicinalProductInteractionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'MedicinalProductInteraction';
     if (source['subject']) { this.subject = source.subject.map((x) => new fhir.Reference(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
     if (source['interactant']) { this.interactant = source.interactant.map((x) => new fhir.MedicinalProductInteractionInteractant(x)); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['effect']) { this.effect = new fhir.CodeableConcept(source.effect!); }
-    if (source['incidence']) { this.incidence = new fhir.CodeableConcept(source.incidence!); }
-    if (source['management']) { this.management = new fhir.CodeableConcept(source.management!); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['effect']) { this.effect = new fhir.CodeableConcept(source.effect); }
+    if (source['incidence']) { this.incidence = new fhir.CodeableConcept(source.incidence); }
+    if (source['management']) { this.management = new fhir.CodeableConcept(source.management); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: MedicinalProductInteraction.resourceType']); }
-    if (this["subject"]) { this.subject.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["interactant"]) { this.interactant.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["effect"]) { results.push(...this.effect.doModelValidation()); }
-    if (this["incidence"]) { results.push(...this.incidence.doModelValidation()); }
-    if (this["management"]) { results.push(...this.management.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'MedicinalProductInteraction' fhir: MedicinalProductInteraction.resourceType:'MedicinalProductInteraction'", }));
+    }
+    if (this["subject"]) { this.subject.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["interactant"]) { this.interactant.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["effect"]) { outcome.issue!.push(...this.effect.doModelValidation().issue!); }
+    if (this["incidence"]) { outcome.issue!.push(...this.incidence.doModelValidation().issue!); }
+    if (this["management"]) { outcome.issue!.push(...this.management.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

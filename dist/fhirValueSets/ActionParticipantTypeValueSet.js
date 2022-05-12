@@ -43,23 +43,4 @@ export const ActionParticipantTypeValueSet = {
 /**
  * The type of participant for the action.
  */
-export var ActionParticipantTypeValueSetEnum;
-(function (ActionParticipantTypeValueSetEnum) {
-    /**
-     * device: The participant is a system or device used in the care of the patient.
-     */
-    ActionParticipantTypeValueSetEnum["Device"] = "device";
-    /**
-     * patient: The participant is the patient under evaluation.
-     */
-    ActionParticipantTypeValueSetEnum["Patient"] = "patient";
-    /**
-     * practitioner: The participant is a practitioner involved in the patient's care.
-     */
-    ActionParticipantTypeValueSetEnum["Practitioner"] = "practitioner";
-    /**
-     * related-person: The participant is a person related to the patient.
-     */
-    ActionParticipantTypeValueSetEnum["RelatedPerson"] = "related-person";
-})(ActionParticipantTypeValueSetEnum || (ActionParticipantTypeValueSetEnum = {}));
 //# sourceMappingURL=ActionParticipantTypeValueSet.js.map

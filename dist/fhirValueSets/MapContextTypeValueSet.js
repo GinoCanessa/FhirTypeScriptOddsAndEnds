@@ -27,15 +27,4 @@ export const MapContextTypeValueSet = {
 /**
  * How to interpret the context.
  */
-export var MapContextTypeValueSetEnum;
-(function (MapContextTypeValueSetEnum) {
-    /**
-     * type: The context specifies a type.
-     */
-    MapContextTypeValueSetEnum["Type"] = "type";
-    /**
-     * variable: The context specifies a variable.
-     */
-    MapContextTypeValueSetEnum["Variable"] = "variable";
-})(MapContextTypeValueSetEnum || (MapContextTypeValueSetEnum = {}));
 //# sourceMappingURL=MapContextTypeValueSet.js.map

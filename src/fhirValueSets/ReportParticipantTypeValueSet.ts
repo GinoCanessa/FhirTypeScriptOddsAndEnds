@@ -43,17 +43,3 @@ export type ReportParticipantTypeValueSetType = typeof ReportParticipantTypeValu
 /**
  * The type of participant.
  */
-export enum ReportParticipantTypeValueSetEnum {
-  /**
-   * client: A FHIR Client.
-   */
-  Client = "client",
-  /**
-   * server: A FHIR Server.
-   */
-  Server = "server",
-  /**
-   * test-engine: The test execution engine.
-   */
-  TestEngine = "test-engine",
-}

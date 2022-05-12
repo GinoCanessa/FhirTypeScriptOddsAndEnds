@@ -3,58 +3,58 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Element
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Base definition for all elements in a resource.
+ * Valid arguments for the FhirElement type.
  */
-export type IFhirElement = {
+export interface FhirElementArgs {
   /**
    * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
    */
-  id?: string|undefined;
-  /**
-   * Extended properties for primitive element: Element.id
-   */
-  _id?: fhir.IFhirElement|undefined;
+  id?: fhir.FhirString|string|undefined;
   /**
    * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
    */
-  extension?: fhir.IExtension[]|undefined;
+  extension?: fhir.ExtensionArgs[]|undefined;
 }
 
 /**
  * Base definition for all elements in a resource.
  */
-export class FhirElement implements IFhirElement {
+export class FhirElement {
+  readonly __dataType:string = 'Element';
   /**
    * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
    */
-  public id?: string|undefined;
-  /**
-   * Extended properties for primitive element: Element.id
-   */
-  public _id?: fhir.FhirElement|undefined;
+  public id?: fhir.FhirString|undefined;
   /**
    * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
    */
-  public extension?: fhir.Extension[]|undefined;
+  public extension?: fhir.Extension[]|undefined = [];
   /**
    * Default constructor for FhirElement - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IFhirElement> = { }) {
-    if (source['id']) { this.id = source.id; }
-    if (source['_id']) { this._id = new fhir.FhirElement(source._id!); }
+  constructor(source:Partial<FhirElementArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    if (options.allowUnknownElements === true) { Object.assign(this, source); }
+    if (source['id']) { this.id = new fhir.FhirString({value: source.id}); }
     if (source['extension']) { this.extension = source.extension.map((x) => new fhir.Extension(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public doModelValidation():[string,string][] {
-    var results:[string,string][] = [];
-    if (this["_id"]) { results.push(...this._id.doModelValidation()); }
-    if (this["extension"]) { this.extension.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = new fhir.OperationOutcome({issue:[]});
+    if (this["id"]) { outcome.issue!.push(...this.id.doModelValidation().issue!); }
+    if (this["extension"]) { this.extension.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -3,722 +3,330 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Extension
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Optional Extension Element - found in all resources.
+ * Valid arguments for the Extension type.
  */
-export type IExtension = fhir.IFhirElement & { 
+export interface ExtensionArgs extends fhir.FhirElementArgs {
   /**
    * The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.
    */
-  url: string|null;
-  /**
-   * Extended properties for primitive element: Extension.url
-   */
-  _url?: fhir.IFhirElement|undefined;
+  url: fhir.FhirString|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueBase64Binary?: fhir.IFhirElement|undefined;
+  value?: fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueBoolean?: fhir.IFhirElement|undefined;
+  valueBase64Binary?: fhir.FhirBase64Binary|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueCanonical?: fhir.IFhirElement|undefined;
+  valueBoolean?: fhir.FhirBoolean|boolean|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueCode?: fhir.IFhirElement|undefined;
+  valueCanonical?: fhir.FhirCanonical|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueDate?: fhir.IFhirElement|undefined;
+  valueCode?: fhir.FhirCode|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueDateTime?: fhir.IFhirElement|undefined;
+  valueDate?: fhir.FhirDate|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueDecimal?: fhir.IFhirElement|undefined;
+  valueDateTime?: fhir.FhirDateTime|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueId?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueId?: fhir.IFhirElement|undefined;
+  valueDecimal?: fhir.FhirDecimal|number|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueInstant?: fhir.IFhirElement|undefined;
+  valueId?: fhir.FhirId|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueInteger?: fhir.IFhirElement|undefined;
+  valueInstant?: fhir.FhirInstant|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueMarkdown?: fhir.IFhirElement|undefined;
+  valueInteger?: fhir.FhirInteger|number|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueOid?: fhir.IFhirElement|undefined;
+  valueMarkdown?: fhir.FhirMarkdown|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valuePositiveInt?: fhir.IFhirElement|undefined;
+  valueOid?: fhir.FhirOid|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueString?: fhir.IFhirElement|undefined;
+  valuePositiveInt?: fhir.FhirPositiveInt|number|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueTime?: fhir.IFhirElement|undefined;
+  valueString?: fhir.FhirString|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueUnsignedInt?: fhir.IFhirElement|undefined;
+  valueTime?: fhir.FhirTime|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueUri?: fhir.IFhirElement|undefined;
+  valueUnsignedInt?: fhir.FhirUnsignedInt|number|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueUrl?: fhir.IFhirElement|undefined;
+  valueUri?: fhir.FhirUri|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  _valueUuid?: fhir.IFhirElement|undefined;
+  valueUrl?: fhir.FhirUrl|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueAddress?: fhir.IAddress|undefined;
+  valueUuid?: fhir.FhirUuid|string|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueAge?: fhir.IAge|undefined;
+  valueAddress?: fhir.AddressArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueAnnotation?: fhir.IAnnotation|undefined;
+  valueAge?: fhir.AgeArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueAttachment?: fhir.IAttachment|undefined;
+  valueAnnotation?: fhir.AnnotationArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueCodeableConcept?: fhir.ICodeableConcept|undefined;
+  valueAttachment?: fhir.AttachmentArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueCoding?: fhir.ICoding|undefined;
+  valueCodeableConcept?: fhir.CodeableConceptArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueContactPoint?: fhir.IContactPoint|undefined;
+  valueCoding?: fhir.CodingArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueCount?: fhir.ICount|undefined;
+  valueContactPoint?: fhir.ContactPointArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueDistance?: fhir.IDistance|undefined;
+  valueCount?: fhir.CountArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueDuration?: fhir.IDuration|undefined;
+  valueDistance?: fhir.DistanceArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueHumanName?: fhir.IHumanName|undefined;
+  valueDuration?: fhir.DurationArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueIdentifier?: fhir.IIdentifier|undefined;
+  valueHumanName?: fhir.HumanNameArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueMoney?: fhir.IMoney|undefined;
+  valueIdentifier?: fhir.IdentifierArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valuePeriod?: fhir.IPeriod|undefined;
+  valueMoney?: fhir.MoneyArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueQuantity?: fhir.IQuantity|undefined;
+  valuePeriod?: fhir.PeriodArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueRange?: fhir.IRange|undefined;
+  valueQuantity?: fhir.QuantityArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueRatio?: fhir.IRatio|undefined;
+  valueRange?: fhir.RangeArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueReference?: fhir.IReference|undefined;
+  valueRatio?: fhir.RatioArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueSampledData?: fhir.ISampledData|undefined;
+  valueReference?: fhir.ReferenceArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueSignature?: fhir.ISignature|undefined;
+  valueSampledData?: fhir.SampledDataArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueTiming?: fhir.ITiming|undefined;
+  valueSignature?: fhir.SignatureArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueContactDetail?: fhir.IContactDetail|undefined;
+  valueTiming?: fhir.TimingArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueContributor?: fhir.IContributor|undefined;
+  valueContactDetail?: fhir.ContactDetailArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueDataRequirement?: fhir.IDataRequirement|undefined;
+  valueContributor?: fhir.ContributorArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueExpression?: fhir.IExpression|undefined;
+  valueDataRequirement?: fhir.DataRequirementArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueParameterDefinition?: fhir.IParameterDefinition|undefined;
+  valueExpression?: fhir.ExpressionArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueRelatedArtifact?: fhir.IRelatedArtifact|undefined;
+  valueParameterDefinition?: fhir.ParameterDefinitionArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueTriggerDefinition?: fhir.ITriggerDefinition|undefined;
+  valueRelatedArtifact?: fhir.RelatedArtifactArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueUsageContext?: fhir.IUsageContext|undefined;
+  valueTriggerDefinition?: fhir.TriggerDefinitionArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueDosage?: fhir.IDosage|undefined;
+  valueUsageContext?: fhir.UsageContextArgs|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueMeta?: fhir.IMeta|undefined;
+  valueDosage?: fhir.DosageArgs|undefined;
+  /**
+   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
+   */
+  valueMeta?: fhir.MetaArgs|undefined;
 }
 
 /**
  * Optional Extension Element - found in all resources.
  */
-export class Extension extends fhir.FhirElement implements IExtension {
+export class Extension extends fhir.FhirElement {
+  readonly __dataType:string = 'Extension';
   /**
    * The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.
    */
-  public url: string|null;
-  /**
-   * Extended properties for primitive element: Extension.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url: fhir.FhirString|null;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueBase64Binary?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueBoolean?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueCanonical?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueCode?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueDate?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueDecimal?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueId?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueId?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueInstant?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueInteger?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueMarkdown?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueOid?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valuePositiveInt?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueString?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueTime?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueUnsignedInt?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueUri?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueUrl?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: Extension.value[x]
-   */
-  public _valueUuid?: fhir.FhirElement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueAddress?: fhir.Address|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueAge?: fhir.Age|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueAnnotation?: fhir.Annotation|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueAttachment?: fhir.Attachment|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueCoding?: fhir.Coding|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueContactPoint?: fhir.ContactPoint|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueCount?: fhir.Count|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueDistance?: fhir.Distance|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueDuration?: fhir.Duration|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueHumanName?: fhir.HumanName|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueIdentifier?: fhir.Identifier|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueMoney?: fhir.Money|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valuePeriod?: fhir.Period|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueQuantity?: fhir.Quantity|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueRange?: fhir.Range|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueRatio?: fhir.Ratio|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueReference?: fhir.Reference|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueSampledData?: fhir.SampledData|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueSignature?: fhir.Signature|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueTiming?: fhir.Timing|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueContactDetail?: fhir.ContactDetail|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueContributor?: fhir.Contributor|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueDataRequirement?: fhir.DataRequirement|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueExpression?: fhir.Expression|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueParameterDefinition?: fhir.ParameterDefinition|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueRelatedArtifact?: fhir.RelatedArtifact|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueTriggerDefinition?: fhir.TriggerDefinition|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueUsageContext?: fhir.UsageContext|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueDosage?: fhir.Dosage|undefined;
-  /**
-   * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-   */
-  public valueMeta?: fhir.Meta|undefined;
+  public value?: (fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta)|undefined;
+  readonly __valueIsChoice:true = true;
   /**
    * Default constructor for Extension - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IExtension> = { }) {
-    super(source);
-    if (source['url']) { this.url = source.url; }
+  constructor(source:Partial<ExtensionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['url']) { this.url = new fhir.FhirString({value: source.url}); }
     else { this.url = null; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['valueBase64Binary']) { this.valueBase64Binary = source.valueBase64Binary; }
-    if (source['_valueBase64Binary']) { this._valueBase64Binary = new fhir.FhirElement(source._valueBase64Binary!); }
-    if (source['valueBoolean']) { this.valueBoolean = source.valueBoolean; }
-    if (source['_valueBoolean']) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
-    if (source['valueCanonical']) { this.valueCanonical = source.valueCanonical; }
-    if (source['_valueCanonical']) { this._valueCanonical = new fhir.FhirElement(source._valueCanonical!); }
-    if (source['valueCode']) { this.valueCode = source.valueCode; }
-    if (source['_valueCode']) { this._valueCode = new fhir.FhirElement(source._valueCode!); }
-    if (source['valueDate']) { this.valueDate = source.valueDate; }
-    if (source['_valueDate']) { this._valueDate = new fhir.FhirElement(source._valueDate!); }
-    if (source['valueDateTime']) { this.valueDateTime = source.valueDateTime; }
-    if (source['_valueDateTime']) { this._valueDateTime = new fhir.FhirElement(source._valueDateTime!); }
-    if (source['valueDecimal']) { this.valueDecimal = source.valueDecimal; }
-    if (source['_valueDecimal']) { this._valueDecimal = new fhir.FhirElement(source._valueDecimal!); }
-    if (source['valueId']) { this.valueId = source.valueId; }
-    if (source['_valueId']) { this._valueId = new fhir.FhirElement(source._valueId!); }
-    if (source['valueInstant']) { this.valueInstant = source.valueInstant; }
-    if (source['_valueInstant']) { this._valueInstant = new fhir.FhirElement(source._valueInstant!); }
-    if (source['valueInteger']) { this.valueInteger = source.valueInteger; }
-    if (source['_valueInteger']) { this._valueInteger = new fhir.FhirElement(source._valueInteger!); }
-    if (source['valueMarkdown']) { this.valueMarkdown = source.valueMarkdown; }
-    if (source['_valueMarkdown']) { this._valueMarkdown = new fhir.FhirElement(source._valueMarkdown!); }
-    if (source['valueOid']) { this.valueOid = source.valueOid; }
-    if (source['_valueOid']) { this._valueOid = new fhir.FhirElement(source._valueOid!); }
-    if (source['valuePositiveInt']) { this.valuePositiveInt = source.valuePositiveInt; }
-    if (source['_valuePositiveInt']) { this._valuePositiveInt = new fhir.FhirElement(source._valuePositiveInt!); }
-    if (source['valueString']) { this.valueString = source.valueString; }
-    if (source['_valueString']) { this._valueString = new fhir.FhirElement(source._valueString!); }
-    if (source['valueTime']) { this.valueTime = source.valueTime; }
-    if (source['_valueTime']) { this._valueTime = new fhir.FhirElement(source._valueTime!); }
-    if (source['valueUnsignedInt']) { this.valueUnsignedInt = source.valueUnsignedInt; }
-    if (source['_valueUnsignedInt']) { this._valueUnsignedInt = new fhir.FhirElement(source._valueUnsignedInt!); }
-    if (source['valueUri']) { this.valueUri = source.valueUri; }
-    if (source['_valueUri']) { this._valueUri = new fhir.FhirElement(source._valueUri!); }
-    if (source['valueUrl']) { this.valueUrl = source.valueUrl; }
-    if (source['_valueUrl']) { this._valueUrl = new fhir.FhirElement(source._valueUrl!); }
-    if (source['valueUuid']) { this.valueUuid = source.valueUuid; }
-    if (source['_valueUuid']) { this._valueUuid = new fhir.FhirElement(source._valueUuid!); }
-    if (source['valueAddress']) { this.valueAddress = new fhir.Address(source.valueAddress!); }
-    if (source['valueAge']) { this.valueAge = new fhir.Age(source.valueAge!); }
-    if (source['valueAnnotation']) { this.valueAnnotation = new fhir.Annotation(source.valueAnnotation!); }
-    if (source['valueAttachment']) { this.valueAttachment = new fhir.Attachment(source.valueAttachment!); }
-    if (source['valueCodeableConcept']) { this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept!); }
-    if (source['valueCoding']) { this.valueCoding = new fhir.Coding(source.valueCoding!); }
-    if (source['valueContactPoint']) { this.valueContactPoint = new fhir.ContactPoint(source.valueContactPoint!); }
-    if (source['valueCount']) { this.valueCount = new fhir.Count(source.valueCount!); }
-    if (source['valueDistance']) { this.valueDistance = new fhir.Distance(source.valueDistance!); }
-    if (source['valueDuration']) { this.valueDuration = new fhir.Duration(source.valueDuration!); }
-    if (source['valueHumanName']) { this.valueHumanName = new fhir.HumanName(source.valueHumanName!); }
-    if (source['valueIdentifier']) { this.valueIdentifier = new fhir.Identifier(source.valueIdentifier!); }
-    if (source['valueMoney']) { this.valueMoney = new fhir.Money(source.valueMoney!); }
-    if (source['valuePeriod']) { this.valuePeriod = new fhir.Period(source.valuePeriod!); }
-    if (source['valueQuantity']) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
-    if (source['valueRange']) { this.valueRange = new fhir.Range(source.valueRange!); }
-    if (source['valueRatio']) { this.valueRatio = new fhir.Ratio(source.valueRatio!); }
-    if (source['valueReference']) { this.valueReference = new fhir.Reference(source.valueReference!); }
-    if (source['valueSampledData']) { this.valueSampledData = new fhir.SampledData(source.valueSampledData!); }
-    if (source['valueSignature']) { this.valueSignature = new fhir.Signature(source.valueSignature!); }
-    if (source['valueTiming']) { this.valueTiming = new fhir.Timing(source.valueTiming!); }
-    if (source['valueContactDetail']) { this.valueContactDetail = new fhir.ContactDetail(source.valueContactDetail!); }
-    if (source['valueContributor']) { this.valueContributor = new fhir.Contributor(source.valueContributor!); }
-    if (source['valueDataRequirement']) { this.valueDataRequirement = new fhir.DataRequirement(source.valueDataRequirement!); }
-    if (source['valueExpression']) { this.valueExpression = new fhir.Expression(source.valueExpression!); }
-    if (source['valueParameterDefinition']) { this.valueParameterDefinition = new fhir.ParameterDefinition(source.valueParameterDefinition!); }
-    if (source['valueRelatedArtifact']) { this.valueRelatedArtifact = new fhir.RelatedArtifact(source.valueRelatedArtifact!); }
-    if (source['valueTriggerDefinition']) { this.valueTriggerDefinition = new fhir.TriggerDefinition(source.valueTriggerDefinition!); }
-    if (source['valueUsageContext']) { this.valueUsageContext = new fhir.UsageContext(source.valueUsageContext!); }
-    if (source['valueDosage']) { this.valueDosage = new fhir.Dosage(source.valueDosage!); }
-    if (source['valueMeta']) { this.valueMeta = new fhir.Meta(source.valueMeta!); }
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueBase64Binary']) { this.value = new fhir.FhirBase64Binary({value: source.valueBase64Binary}); }
+    else if (source['valueBoolean']) { this.value = new fhir.FhirBoolean({value: source.valueBoolean}); }
+    else if (source['valueCanonical']) { this.value = new fhir.FhirCanonical({value: source.valueCanonical}); }
+    else if (source['valueCode']) { this.value = new fhir.FhirCode({value: source.valueCode}); }
+    else if (source['valueDate']) { this.value = new fhir.FhirDate({value: source.valueDate}); }
+    else if (source['valueDateTime']) { this.value = new fhir.FhirDateTime({value: source.valueDateTime}); }
+    else if (source['valueDecimal']) { this.value = new fhir.FhirDecimal({value: source.valueDecimal}); }
+    else if (source['valueId']) { this.value = new fhir.FhirId({value: source.valueId}); }
+    else if (source['valueInstant']) { this.value = new fhir.FhirInstant({value: source.valueInstant}); }
+    else if (source['valueInteger']) { this.value = new fhir.FhirInteger({value: source.valueInteger}); }
+    else if (source['valueMarkdown']) { this.value = new fhir.FhirMarkdown({value: source.valueMarkdown}); }
+    else if (source['valueOid']) { this.value = new fhir.FhirOid({value: source.valueOid}); }
+    else if (source['valuePositiveInt']) { this.value = new fhir.FhirPositiveInt({value: source.valuePositiveInt}); }
+    else if (source['valueString']) { this.value = new fhir.FhirString({value: source.valueString}); }
+    else if (source['valueTime']) { this.value = new fhir.FhirTime({value: source.valueTime}); }
+    else if (source['valueUnsignedInt']) { this.value = new fhir.FhirUnsignedInt({value: source.valueUnsignedInt}); }
+    else if (source['valueUri']) { this.value = new fhir.FhirUri({value: source.valueUri}); }
+    else if (source['valueUrl']) { this.value = new fhir.FhirUrl({value: source.valueUrl}); }
+    else if (source['valueUuid']) { this.value = new fhir.FhirUuid({value: source.valueUuid}); }
+    else if (source['valueAddress']) { this.value = new fhir.Address(source.valueAddress); }
+    else if (source['valueAge']) { this.value = new fhir.Age(source.valueAge); }
+    else if (source['valueAnnotation']) { this.value = new fhir.Annotation(source.valueAnnotation); }
+    else if (source['valueAttachment']) { this.value = new fhir.Attachment(source.valueAttachment); }
+    else if (source['valueCodeableConcept']) { this.value = new fhir.CodeableConcept(source.valueCodeableConcept); }
+    else if (source['valueCoding']) { this.value = new fhir.Coding(source.valueCoding); }
+    else if (source['valueContactPoint']) { this.value = new fhir.ContactPoint(source.valueContactPoint); }
+    else if (source['valueCount']) { this.value = new fhir.Count(source.valueCount); }
+    else if (source['valueDistance']) { this.value = new fhir.Distance(source.valueDistance); }
+    else if (source['valueDuration']) { this.value = new fhir.Duration(source.valueDuration); }
+    else if (source['valueHumanName']) { this.value = new fhir.HumanName(source.valueHumanName); }
+    else if (source['valueIdentifier']) { this.value = new fhir.Identifier(source.valueIdentifier); }
+    else if (source['valueMoney']) { this.value = new fhir.Money(source.valueMoney); }
+    else if (source['valuePeriod']) { this.value = new fhir.Period(source.valuePeriod); }
+    else if (source['valueQuantity']) { this.value = new fhir.Quantity(source.valueQuantity); }
+    else if (source['valueRange']) { this.value = new fhir.Range(source.valueRange); }
+    else if (source['valueRatio']) { this.value = new fhir.Ratio(source.valueRatio); }
+    else if (source['valueReference']) { this.value = new fhir.Reference(source.valueReference); }
+    else if (source['valueSampledData']) { this.value = new fhir.SampledData(source.valueSampledData); }
+    else if (source['valueSignature']) { this.value = new fhir.Signature(source.valueSignature); }
+    else if (source['valueTiming']) { this.value = new fhir.Timing(source.valueTiming); }
+    else if (source['valueContactDetail']) { this.value = new fhir.ContactDetail(source.valueContactDetail); }
+    else if (source['valueContributor']) { this.value = new fhir.Contributor(source.valueContributor); }
+    else if (source['valueDataRequirement']) { this.value = new fhir.DataRequirement(source.valueDataRequirement); }
+    else if (source['valueExpression']) { this.value = new fhir.Expression(source.valueExpression); }
+    else if (source['valueParameterDefinition']) { this.value = new fhir.ParameterDefinition(source.valueParameterDefinition); }
+    else if (source['valueRelatedArtifact']) { this.value = new fhir.RelatedArtifact(source.valueRelatedArtifact); }
+    else if (source['valueTriggerDefinition']) { this.value = new fhir.TriggerDefinition(source.valueTriggerDefinition); }
+    else if (source['valueUsageContext']) { this.value = new fhir.UsageContext(source.valueUsageContext); }
+    else if (source['valueDosage']) { this.value = new fhir.Dosage(source.valueDosage); }
+    else if (source['valueMeta']) { this.value = new fhir.Meta(source.valueMeta); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["url"]) { results.push(["url",'Missing required element: Extension.url']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["_valueBase64Binary"]) { results.push(...this._valueBase64Binary.doModelValidation()); }
-    if (this["_valueBoolean"]) { results.push(...this._valueBoolean.doModelValidation()); }
-    if (this["_valueCanonical"]) { results.push(...this._valueCanonical.doModelValidation()); }
-    if (this["_valueCode"]) { results.push(...this._valueCode.doModelValidation()); }
-    if (this["_valueDate"]) { results.push(...this._valueDate.doModelValidation()); }
-    if (this["_valueDateTime"]) { results.push(...this._valueDateTime.doModelValidation()); }
-    if (this["_valueDecimal"]) { results.push(...this._valueDecimal.doModelValidation()); }
-    if (this["_valueId"]) { results.push(...this._valueId.doModelValidation()); }
-    if (this["_valueInstant"]) { results.push(...this._valueInstant.doModelValidation()); }
-    if (this["_valueInteger"]) { results.push(...this._valueInteger.doModelValidation()); }
-    if (this["_valueMarkdown"]) { results.push(...this._valueMarkdown.doModelValidation()); }
-    if (this["_valueOid"]) { results.push(...this._valueOid.doModelValidation()); }
-    if (this["_valuePositiveInt"]) { results.push(...this._valuePositiveInt.doModelValidation()); }
-    if (this["_valueString"]) { results.push(...this._valueString.doModelValidation()); }
-    if (this["_valueTime"]) { results.push(...this._valueTime.doModelValidation()); }
-    if (this["_valueUnsignedInt"]) { results.push(...this._valueUnsignedInt.doModelValidation()); }
-    if (this["_valueUri"]) { results.push(...this._valueUri.doModelValidation()); }
-    if (this["_valueUrl"]) { results.push(...this._valueUrl.doModelValidation()); }
-    if (this["_valueUuid"]) { results.push(...this._valueUuid.doModelValidation()); }
-    if (this["valueAddress"]) { results.push(...this.valueAddress.doModelValidation()); }
-    if (this["valueAge"]) { results.push(...this.valueAge.doModelValidation()); }
-    if (this["valueAnnotation"]) { results.push(...this.valueAnnotation.doModelValidation()); }
-    if (this["valueAttachment"]) { results.push(...this.valueAttachment.doModelValidation()); }
-    if (this["valueCodeableConcept"]) { results.push(...this.valueCodeableConcept.doModelValidation()); }
-    if (this["valueCoding"]) { results.push(...this.valueCoding.doModelValidation()); }
-    if (this["valueContactPoint"]) { results.push(...this.valueContactPoint.doModelValidation()); }
-    if (this["valueCount"]) { results.push(...this.valueCount.doModelValidation()); }
-    if (this["valueDistance"]) { results.push(...this.valueDistance.doModelValidation()); }
-    if (this["valueDuration"]) { results.push(...this.valueDuration.doModelValidation()); }
-    if (this["valueHumanName"]) { results.push(...this.valueHumanName.doModelValidation()); }
-    if (this["valueIdentifier"]) { results.push(...this.valueIdentifier.doModelValidation()); }
-    if (this["valueMoney"]) { results.push(...this.valueMoney.doModelValidation()); }
-    if (this["valuePeriod"]) { results.push(...this.valuePeriod.doModelValidation()); }
-    if (this["valueQuantity"]) { results.push(...this.valueQuantity.doModelValidation()); }
-    if (this["valueRange"]) { results.push(...this.valueRange.doModelValidation()); }
-    if (this["valueRatio"]) { results.push(...this.valueRatio.doModelValidation()); }
-    if (this["valueReference"]) { results.push(...this.valueReference.doModelValidation()); }
-    if (this["valueSampledData"]) { results.push(...this.valueSampledData.doModelValidation()); }
-    if (this["valueSignature"]) { results.push(...this.valueSignature.doModelValidation()); }
-    if (this["valueTiming"]) { results.push(...this.valueTiming.doModelValidation()); }
-    if (this["valueContactDetail"]) { results.push(...this.valueContactDetail.doModelValidation()); }
-    if (this["valueContributor"]) { results.push(...this.valueContributor.doModelValidation()); }
-    if (this["valueDataRequirement"]) { results.push(...this.valueDataRequirement.doModelValidation()); }
-    if (this["valueExpression"]) { results.push(...this.valueExpression.doModelValidation()); }
-    if (this["valueParameterDefinition"]) { results.push(...this.valueParameterDefinition.doModelValidation()); }
-    if (this["valueRelatedArtifact"]) { results.push(...this.valueRelatedArtifact.doModelValidation()); }
-    if (this["valueTriggerDefinition"]) { results.push(...this.valueTriggerDefinition.doModelValidation()); }
-    if (this["valueUsageContext"]) { results.push(...this.valueUsageContext.doModelValidation()); }
-    if (this["valueDosage"]) { results.push(...this.valueDosage.doModelValidation()); }
-    if (this["valueMeta"]) { results.push(...this.valueMeta.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['url']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property url:fhir.FhirString fhir: Extension.url:string", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+
+  /**
+   * Create an extension object with a specified URL and FhirBase value
+   * @param url 
+   * @param value 
+   * @returns 
+   */
+  static fromValue(url:string, value:fhir.FhirBase):Extension {
+    let ext:Extension = new Extension({url: url});
+    
+    if (!value) {
+      return ext;
+    }
+
+    const vName = 'value' + (value.__dataType) ? value.__dataType : value.constructor.name;
+    (ext as any)[vName] = value;
+    return ext;
   }
 }

@@ -27,15 +27,4 @@ export const VisionEyeCodesValueSet = {
 /**
  * A coded concept listing the eye codes.
  */
-export var VisionEyeCodesValueSetEnum;
-(function (VisionEyeCodesValueSetEnum) {
-    /**
-     * left: Left Eye.
-     */
-    VisionEyeCodesValueSetEnum["LeftEye"] = "left";
-    /**
-     * right: Right Eye.
-     */
-    VisionEyeCodesValueSetEnum["RightEye"] = "right";
-})(VisionEyeCodesValueSetEnum || (VisionEyeCodesValueSetEnum = {}));
 //# sourceMappingURL=VisionEyeCodesValueSet.js.map

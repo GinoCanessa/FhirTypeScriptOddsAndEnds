@@ -3,202 +3,69 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Appointment
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { EncounterParticipantTypeValueSet, EncounterParticipantTypeValueSetType, EncounterParticipantTypeValueSetEnum } from '../fhirValueSets/EncounterParticipantTypeValueSet.js'
-import { ParticipantrequiredValueSet, ParticipantrequiredValueSetType, ParticipantrequiredValueSetEnum } from '../fhirValueSets/ParticipantrequiredValueSet.js'
-import { ParticipationstatusValueSet, ParticipationstatusValueSetType, ParticipationstatusValueSetEnum } from '../fhirValueSets/ParticipationstatusValueSet.js'
-import { AppointmentstatusValueSet, AppointmentstatusValueSetType, AppointmentstatusValueSetEnum } from '../fhirValueSets/AppointmentstatusValueSet.js'
-import { AppointmentCancellationReasonValueSet, AppointmentCancellationReasonValueSetType, AppointmentCancellationReasonValueSetEnum } from '../fhirValueSets/AppointmentCancellationReasonValueSet.js'
-import { ServiceCategoryValueSet, ServiceCategoryValueSetType, ServiceCategoryValueSetEnum } from '../fhirValueSets/ServiceCategoryValueSet.js'
-import { ServiceTypeValueSet, ServiceTypeValueSetType, ServiceTypeValueSetEnum } from '../fhirValueSets/ServiceTypeValueSet.js'
-import { C80PracticeCodesValueSet, C80PracticeCodesValueSetType, C80PracticeCodesValueSetEnum } from '../fhirValueSets/C80PracticeCodesValueSet.js'
-import { V20276ValueSet, V20276ValueSetType, V20276ValueSetEnum } from '../fhirValueSets/V20276ValueSet.js'
-import { EncounterReasonValueSet, EncounterReasonValueSetType, EncounterReasonValueSetEnum } from '../fhirValueSets/EncounterReasonValueSet.js'
-
+import { EncounterParticipantTypeValueSet, EncounterParticipantTypeValueSetType,} from '../fhirValueSets/EncounterParticipantTypeValueSet.js';
+import { EncounterParticipantTypeValueSetEnum } from '../valueSetEnums.js';
+import { ParticipantrequiredValueSet, ParticipantrequiredValueSetType,} from '../fhirValueSets/ParticipantrequiredValueSet.js';
+import { ParticipantrequiredValueSetEnum } from '../valueSetEnums.js';
+import { ParticipationstatusValueSet, ParticipationstatusValueSetType,} from '../fhirValueSets/ParticipationstatusValueSet.js';
+import { ParticipationstatusValueSetEnum } from '../valueSetEnums.js';
+import { AppointmentstatusValueSet, AppointmentstatusValueSetType,} from '../fhirValueSets/AppointmentstatusValueSet.js';
+import { AppointmentstatusValueSetEnum } from '../valueSetEnums.js';
+import { AppointmentCancellationReasonValueSet, AppointmentCancellationReasonValueSetType,} from '../fhirValueSets/AppointmentCancellationReasonValueSet.js';
+import { AppointmentCancellationReasonValueSetEnum } from '../valueSetEnums.js';
+import { ServiceCategoryValueSet, ServiceCategoryValueSetType,} from '../fhirValueSets/ServiceCategoryValueSet.js';
+import { ServiceCategoryValueSetEnum } from '../valueSetEnums.js';
+import { ServiceTypeValueSet, ServiceTypeValueSetType,} from '../fhirValueSets/ServiceTypeValueSet.js';
+import { ServiceTypeValueSetEnum } from '../valueSetEnums.js';
+import { C80PracticeCodesValueSet, C80PracticeCodesValueSetType,} from '../fhirValueSets/C80PracticeCodesValueSet.js';
+import { C80PracticeCodesValueSetEnum } from '../valueSetEnums.js';
+import { V20276ValueSet, V20276ValueSetType,} from '../fhirValueSets/V20276ValueSet.js';
+import { V20276ValueSetEnum } from '../valueSetEnums.js';
+import { EncounterReasonValueSet, EncounterReasonValueSetType,} from '../fhirValueSets/EncounterReasonValueSet.js';
+import { EncounterReasonValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * List of participants involved in the appointment.
+ * Valid arguments for the AppointmentParticipant type.
  */
-export type IAppointmentParticipant = fhir.IBackboneElement & { 
+export interface AppointmentParticipantArgs extends fhir.BackboneElementArgs {
   /**
    * The role of the participant can be used to declare what the actor will be doing in the scope of this appointment.
    * If the actor is not specified, then it is expected that the actor will be filled in at a later stage of planning.
    * This value SHALL be the same when creating an AppointmentResponse so that they can be matched, and subsequently update the Appointment.
    */
-  type?: fhir.ICodeableConcept[]|undefined;
+  type?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * A Person, Location/HealthcareService or Device that is participating in the appointment.
    */
-  actor?: fhir.IReference|undefined;
+  actor?: fhir.ReferenceArgs|undefined;
   /**
    * Whether this participant is required to be present at the meeting. This covers a use-case where two doctors need to meet to discuss the results for a specific patient, and the patient is not required to be present.
    */
   required?: ParticipantrequiredValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Appointment.participant.required
-   */
-  _required?: fhir.IFhirElement|undefined;
-  /**
    * Participation status of the actor.
    */
   status: ParticipationstatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Appointment.participant.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
    * Participation period of the actor.
    */
-  period?: fhir.IPeriod|undefined;
-}
-
-/**
- * A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
- */
-export type IAppointment = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Appointment";
-  /**
-   * This records identifiers associated with this appointment concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * If the Appointment's status is "cancelled" then all participants are expected to have their calendars released for the appointment period, and as such any Slots that were marked as BUSY can be re-set to FREE.
-   * This element is labeled as a modifier because the status contains the code entered-in-error that mark the Appointment as not currently valid.
-   */
-  status: AppointmentstatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Appointment.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * The coded reason for the appointment being cancelled. This is often used in reporting/billing/futher processing to determine if further actions are required, or specific fees apply.
-   */
-  cancelationReason?: fhir.ICodeableConcept|undefined;
-  /**
-   * A broad categorization of the service that is to be performed during this appointment.
-   */
-  serviceCategory?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * For a provider to provider appointment the code "FOLLOWUP" may be appropriate, as this is expected to be discussing some patient that was seen in the past.
-   */
-  serviceType?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The specialty of a practitioner that would be required to perform the service requested in this appointment.
-   */
-  specialty?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The style of appointment or patient that has been booked in the slot (not service type).
-   */
-  appointmentType?: fhir.ICodeableConcept|undefined;
-  /**
-   * The coded reason that this appointment is being scheduled. This is more clinical than administrative.
-   */
-  reasonCode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Reason the appointment has been scheduled to take place, as specified using information from another resource. When the patient arrives and the encounter begins it may be used as the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure.
-   */
-  reasonReference?: fhir.IReference[]|undefined;
-  /**
-   * Seeking implementer feedback on this property and how interoperable it is.
-   * Using an extension to record a CodeableConcept for named values may be tested at a future connectathon.
-   */
-  priority?: number|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.priority
-   */
-  _priority?: fhir.IFhirElement|undefined;
-  /**
-   * The brief description of the appointment as would be shown on a subject line in a meeting request, or appointment list. Detailed or expanded information should be put in the comment field.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Additional information to support the appointment provided when making the appointment.
-   */
-  supportingInformation?: fhir.IReference[]|undefined;
-  /**
-   * Date/Time that the appointment is to take place.
-   */
-  start?: string|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.start
-   */
-  _start?: fhir.IFhirElement|undefined;
-  /**
-   * Date/Time that the appointment is to conclude.
-   */
-  end?: string|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.end
-   */
-  _end?: fhir.IFhirElement|undefined;
-  /**
-   * Number of minutes that the appointment is to take. This can be less than the duration between the start and end times.  For example, where the actual time of appointment is only an estimate or if a 30 minute appointment is being requested, but any time would work.  Also, if there is, for example, a planned 15 minute break in the middle of a long appointment, the duration may be 15 minutes less than the difference between the start and end.
-   */
-  minutesDuration?: number|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.minutesDuration
-   */
-  _minutesDuration?: fhir.IFhirElement|undefined;
-  /**
-   * The slots from the participants' schedules that will be filled by the appointment.
-   */
-  slot?: fhir.IReference[]|undefined;
-  /**
-   * This property is required for many use cases where the age of an appointment is considered in processing workflows for scheduling and billing of appointments.
-   */
-  created?: string|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.created
-   */
-  _created?: fhir.IFhirElement|undefined;
-  /**
-   * Additional text to aid in facilitating the appointment. For instance, a comment might be, "patient should proceed immediately to infusion room upon arrival"
-   * Where this is a planned appointment and the start/end dates are not set then this field can be used to provide additional guidance on the details of the appointment request, including any restrictions on when to book it.
-   */
-  comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.comment
-   */
-  _comment?: fhir.IFhirElement|undefined;
-  /**
-   * While Appointment.comment contains information for internal use, Appointment.patientInstructions is used to capture patient facing information about the Appointment (e.g. please bring your referral or fast from 8pm night before).
-   */
-  patientInstruction?: string|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.patientInstruction
-   */
-  _patientInstruction?: fhir.IFhirElement|undefined;
-  /**
-   * The service request this appointment is allocated to assess (e.g. incoming referral or procedure request).
-   */
-  basedOn?: fhir.IReference[]|undefined;
-  /**
-   * List of participants involved in the appointment.
-   */
-  participant: fhir.IAppointmentParticipant[]|null;
-  /**
-   * This does not introduce a capacity for recurring appointments.
-   */
-  requestedPeriod?: fhir.IPeriod[]|undefined;
+  period?: fhir.PeriodArgs|undefined;
 }
 
 /**
  * List of participants involved in the appointment.
  */
-export class AppointmentParticipant extends fhir.BackboneElement implements IAppointmentParticipant {
+export class AppointmentParticipant extends fhir.BackboneElement {
+  readonly __dataType:string = 'AppointmentParticipant';
   /**
    * The role of the participant can be used to declare what the actor will be doing in the scope of this appointment.
    * If the actor is not specified, then it is expected that the actor will be filled in at a later stage of planning.
    * This value SHALL be the same when creating an AppointmentResponse so that they can be matched, and subsequently update the Appointment.
    */
-  public type?: fhir.CodeableConcept[]|undefined;
+  public type?: fhir.CodeableConcept[]|undefined = [];
   /**
    * A Person, Location/HealthcareService or Device that is participating in the appointment.
    */
@@ -208,17 +75,9 @@ export class AppointmentParticipant extends fhir.BackboneElement implements IApp
    */
   public required?: ParticipantrequiredValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Appointment.participant.required
-   */
-  public _required?: fhir.FhirElement|undefined;
-  /**
    * Participation status of the actor.
    */
   public status: ParticipationstatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Appointment.participant.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * Participation period of the actor.
    */
@@ -226,16 +85,14 @@ export class AppointmentParticipant extends fhir.BackboneElement implements IApp
   /**
    * Default constructor for AppointmentParticipant - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAppointmentParticipant> = { }) {
-    super(source);
+  constructor(source:Partial<AppointmentParticipantArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['type']) { this.type = source.type.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['actor']) { this.actor = new fhir.Reference(source.actor!); }
+    if (source['actor']) { this.actor = new fhir.Reference(source.actor); }
     if (source['required']) { this.required = source.required; }
-    if (source['_required']) { this._required = new fhir.FhirElement(source._required!); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
   }
   /**
    * Extensible-bound Value Set for type
@@ -258,22 +115,129 @@ export class AppointmentParticipant extends fhir.BackboneElement implements IApp
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { this.type.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["actor"]) { results.push(...this.actor.doModelValidation()); }
-    if (this["_required"]) { results.push(...this._required.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: Appointment.participant.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { this.type.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["actor"]) { outcome.issue!.push(...this.actor.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:ParticipationstatusValueSetEnum fhir: Appointment.participant.status:code", }));
+    }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Appointment type.
+ */
+export interface AppointmentArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Appointment"|undefined;
+  /**
+   * This records identifiers associated with this appointment concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * If the Appointment's status is "cancelled" then all participants are expected to have their calendars released for the appointment period, and as such any Slots that were marked as BUSY can be re-set to FREE.
+   * This element is labeled as a modifier because the status contains the code entered-in-error that mark the Appointment as not currently valid.
+   */
+  status: AppointmentstatusValueSetEnum|null;
+  /**
+   * The coded reason for the appointment being cancelled. This is often used in reporting/billing/futher processing to determine if further actions are required, or specific fees apply.
+   */
+  cancelationReason?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * A broad categorization of the service that is to be performed during this appointment.
+   */
+  serviceCategory?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * For a provider to provider appointment the code "FOLLOWUP" may be appropriate, as this is expected to be discussing some patient that was seen in the past.
+   */
+  serviceType?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The specialty of a practitioner that would be required to perform the service requested in this appointment.
+   */
+  specialty?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The style of appointment or patient that has been booked in the slot (not service type).
+   */
+  appointmentType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The coded reason that this appointment is being scheduled. This is more clinical than administrative.
+   */
+  reasonCode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Reason the appointment has been scheduled to take place, as specified using information from another resource. When the patient arrives and the encounter begins it may be used as the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure.
+   */
+  reasonReference?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Seeking implementer feedback on this property and how interoperable it is.
+   * Using an extension to record a CodeableConcept for named values may be tested at a future connectathon.
+   */
+  priority?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * The brief description of the appointment as would be shown on a subject line in a meeting request, or appointment list. Detailed or expanded information should be put in the comment field.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * Additional information to support the appointment provided when making the appointment.
+   */
+  supportingInformation?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Date/Time that the appointment is to take place.
+   */
+  start?: fhir.FhirInstant|string|undefined;
+  /**
+   * Date/Time that the appointment is to conclude.
+   */
+  end?: fhir.FhirInstant|string|undefined;
+  /**
+   * Number of minutes that the appointment is to take. This can be less than the duration between the start and end times.  For example, where the actual time of appointment is only an estimate or if a 30 minute appointment is being requested, but any time would work.  Also, if there is, for example, a planned 15 minute break in the middle of a long appointment, the duration may be 15 minutes less than the difference between the start and end.
+   */
+  minutesDuration?: fhir.FhirPositiveInt|number|undefined;
+  /**
+   * The slots from the participants' schedules that will be filled by the appointment.
+   */
+  slot?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * This property is required for many use cases where the age of an appointment is considered in processing workflows for scheduling and billing of appointments.
+   */
+  created?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Additional text to aid in facilitating the appointment. For instance, a comment might be, "patient should proceed immediately to infusion room upon arrival"
+   * Where this is a planned appointment and the start/end dates are not set then this field can be used to provide additional guidance on the details of the appointment request, including any restrictions on when to book it.
+   */
+  comment?: fhir.FhirString|string|undefined;
+  /**
+   * While Appointment.comment contains information for internal use, Appointment.patientInstructions is used to capture patient facing information about the Appointment (e.g. please bring your referral or fast from 8pm night before).
+   */
+  patientInstruction?: fhir.FhirString|string|undefined;
+  /**
+   * The service request this appointment is allocated to assess (e.g. incoming referral or procedure request).
+   */
+  basedOn?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * List of participants involved in the appointment.
+   */
+  participant: fhir.AppointmentParticipantArgs[]|null;
+  /**
+   * This does not introduce a capacity for recurring appointments.
+   */
+  requestedPeriod?: fhir.PeriodArgs[]|undefined;
 }
 
 /**
  * A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
  */
-export class Appointment extends fhir.DomainResource implements IAppointment {
+export class Appointment extends fhir.DomainResource {
+  readonly __dataType:string = 'Appointment';
   /**
    * Resource Type Name
    */
@@ -281,16 +245,12 @@ export class Appointment extends fhir.DomainResource implements IAppointment {
   /**
    * This records identifiers associated with this appointment concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * If the Appointment's status is "cancelled" then all participants are expected to have their calendars released for the appointment period, and as such any Slots that were marked as BUSY can be re-set to FREE.
    * This element is labeled as a modifier because the status contains the code entered-in-error that mark the Appointment as not currently valid.
    */
   public status: AppointmentstatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Appointment.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * The coded reason for the appointment being cancelled. This is often used in reporting/billing/futher processing to determine if further actions are required, or specific fees apply.
    */
@@ -298,15 +258,15 @@ export class Appointment extends fhir.DomainResource implements IAppointment {
   /**
    * A broad categorization of the service that is to be performed during this appointment.
    */
-  public serviceCategory?: fhir.CodeableConcept[]|undefined;
+  public serviceCategory?: fhir.CodeableConcept[]|undefined = [];
   /**
    * For a provider to provider appointment the code "FOLLOWUP" may be appropriate, as this is expected to be discussing some patient that was seen in the past.
    */
-  public serviceType?: fhir.CodeableConcept[]|undefined;
+  public serviceType?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The specialty of a practitioner that would be required to perform the service requested in this appointment.
    */
-  public specialty?: fhir.CodeableConcept[]|undefined;
+  public specialty?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The style of appointment or patient that has been booked in the slot (not service type).
    */
@@ -314,132 +274,91 @@ export class Appointment extends fhir.DomainResource implements IAppointment {
   /**
    * The coded reason that this appointment is being scheduled. This is more clinical than administrative.
    */
-  public reasonCode?: fhir.CodeableConcept[]|undefined;
+  public reasonCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Reason the appointment has been scheduled to take place, as specified using information from another resource. When the patient arrives and the encounter begins it may be used as the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure.
    */
-  public reasonReference?: fhir.Reference[]|undefined;
+  public reasonReference?: fhir.Reference[]|undefined = [];
   /**
    * Seeking implementer feedback on this property and how interoperable it is.
    * Using an extension to record a CodeableConcept for named values may be tested at a future connectathon.
    */
-  public priority?: number|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.priority
-   */
-  public _priority?: fhir.FhirElement|undefined;
+  public priority?: fhir.FhirUnsignedInt|undefined;
   /**
    * The brief description of the appointment as would be shown on a subject line in a meeting request, or appointment list. Detailed or expanded information should be put in the comment field.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Additional information to support the appointment provided when making the appointment.
    */
-  public supportingInformation?: fhir.Reference[]|undefined;
+  public supportingInformation?: fhir.Reference[]|undefined = [];
   /**
    * Date/Time that the appointment is to take place.
    */
-  public start?: string|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.start
-   */
-  public _start?: fhir.FhirElement|undefined;
+  public start?: fhir.FhirInstant|undefined;
   /**
    * Date/Time that the appointment is to conclude.
    */
-  public end?: string|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.end
-   */
-  public _end?: fhir.FhirElement|undefined;
+  public end?: fhir.FhirInstant|undefined;
   /**
    * Number of minutes that the appointment is to take. This can be less than the duration between the start and end times.  For example, where the actual time of appointment is only an estimate or if a 30 minute appointment is being requested, but any time would work.  Also, if there is, for example, a planned 15 minute break in the middle of a long appointment, the duration may be 15 minutes less than the difference between the start and end.
    */
-  public minutesDuration?: number|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.minutesDuration
-   */
-  public _minutesDuration?: fhir.FhirElement|undefined;
+  public minutesDuration?: fhir.FhirPositiveInt|undefined;
   /**
    * The slots from the participants' schedules that will be filled by the appointment.
    */
-  public slot?: fhir.Reference[]|undefined;
+  public slot?: fhir.Reference[]|undefined = [];
   /**
    * This property is required for many use cases where the age of an appointment is considered in processing workflows for scheduling and billing of appointments.
    */
-  public created?: string|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.created
-   */
-  public _created?: fhir.FhirElement|undefined;
+  public created?: fhir.FhirDateTime|undefined;
   /**
    * Additional text to aid in facilitating the appointment. For instance, a comment might be, "patient should proceed immediately to infusion room upon arrival"
    * Where this is a planned appointment and the start/end dates are not set then this field can be used to provide additional guidance on the details of the appointment request, including any restrictions on when to book it.
    */
-  public comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.comment
-   */
-  public _comment?: fhir.FhirElement|undefined;
+  public comment?: fhir.FhirString|undefined;
   /**
    * While Appointment.comment contains information for internal use, Appointment.patientInstructions is used to capture patient facing information about the Appointment (e.g. please bring your referral or fast from 8pm night before).
    */
-  public patientInstruction?: string|undefined;
-  /**
-   * Extended properties for primitive element: Appointment.patientInstruction
-   */
-  public _patientInstruction?: fhir.FhirElement|undefined;
+  public patientInstruction?: fhir.FhirString|undefined;
   /**
    * The service request this appointment is allocated to assess (e.g. incoming referral or procedure request).
    */
-  public basedOn?: fhir.Reference[]|undefined;
+  public basedOn?: fhir.Reference[]|undefined = [];
   /**
    * List of participants involved in the appointment.
    */
-  public participant: fhir.AppointmentParticipant[]|null;
+  public participant: fhir.AppointmentParticipant[]|null = [];
   /**
    * This does not introduce a capacity for recurring appointments.
    */
-  public requestedPeriod?: fhir.Period[]|undefined;
+  public requestedPeriod?: fhir.Period[]|undefined = [];
   /**
    * Default constructor for Appointment - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAppointment> = { }) {
-    super(source);
+  constructor(source:Partial<AppointmentArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Appointment';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['cancelationReason']) { this.cancelationReason = new fhir.CodeableConcept(source.cancelationReason!); }
+    if (source['cancelationReason']) { this.cancelationReason = new fhir.CodeableConcept(source.cancelationReason); }
     if (source['serviceCategory']) { this.serviceCategory = source.serviceCategory.map((x) => new fhir.CodeableConcept(x)); }
     if (source['serviceType']) { this.serviceType = source.serviceType.map((x) => new fhir.CodeableConcept(x)); }
     if (source['specialty']) { this.specialty = source.specialty.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['appointmentType']) { this.appointmentType = new fhir.CodeableConcept(source.appointmentType!); }
+    if (source['appointmentType']) { this.appointmentType = new fhir.CodeableConcept(source.appointmentType); }
     if (source['reasonCode']) { this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x)); }
     if (source['reasonReference']) { this.reasonReference = source.reasonReference.map((x) => new fhir.Reference(x)); }
-    if (source['priority']) { this.priority = source.priority; }
-    if (source['_priority']) { this._priority = new fhir.FhirElement(source._priority!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['priority']) { this.priority = new fhir.FhirUnsignedInt({value: source.priority}); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
     if (source['supportingInformation']) { this.supportingInformation = source.supportingInformation.map((x) => new fhir.Reference(x)); }
-    if (source['start']) { this.start = source.start; }
-    if (source['_start']) { this._start = new fhir.FhirElement(source._start!); }
-    if (source['end']) { this.end = source.end; }
-    if (source['_end']) { this._end = new fhir.FhirElement(source._end!); }
-    if (source['minutesDuration']) { this.minutesDuration = source.minutesDuration; }
-    if (source['_minutesDuration']) { this._minutesDuration = new fhir.FhirElement(source._minutesDuration!); }
+    if (source['start']) { this.start = new fhir.FhirInstant({value: source.start}); }
+    if (source['end']) { this.end = new fhir.FhirInstant({value: source.end}); }
+    if (source['minutesDuration']) { this.minutesDuration = new fhir.FhirPositiveInt({value: source.minutesDuration}); }
     if (source['slot']) { this.slot = source.slot.map((x) => new fhir.Reference(x)); }
-    if (source['created']) { this.created = source.created; }
-    if (source['_created']) { this._created = new fhir.FhirElement(source._created!); }
-    if (source['comment']) { this.comment = source.comment; }
-    if (source['_comment']) { this._comment = new fhir.FhirElement(source._comment!); }
-    if (source['patientInstruction']) { this.patientInstruction = source.patientInstruction; }
-    if (source['_patientInstruction']) { this._patientInstruction = new fhir.FhirElement(source._patientInstruction!); }
+    if (source['created']) { this.created = new fhir.FhirDateTime({value: source.created}); }
+    if (source['comment']) { this.comment = new fhir.FhirString({value: source.comment}); }
+    if (source['patientInstruction']) { this.patientInstruction = new fhir.FhirString({value: source.patientInstruction}); }
     if (source['basedOn']) { this.basedOn = source.basedOn.map((x) => new fhir.Reference(x)); }
     if (source['participant']) { this.participant = source.participant.map((x) => new fhir.AppointmentParticipant(x)); }
     else { this.participant = null; }
@@ -490,33 +409,48 @@ export class Appointment extends fhir.DomainResource implements IAppointment {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Appointment.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: Appointment.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["cancelationReason"]) { results.push(...this.cancelationReason.doModelValidation()); }
-    if (this["serviceCategory"]) { this.serviceCategory.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["serviceType"]) { this.serviceType.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["specialty"]) { this.specialty.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["appointmentType"]) { results.push(...this.appointmentType.doModelValidation()); }
-    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_priority"]) { results.push(...this._priority.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["supportingInformation"]) { this.supportingInformation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_start"]) { results.push(...this._start.doModelValidation()); }
-    if (this["_end"]) { results.push(...this._end.doModelValidation()); }
-    if (this["_minutesDuration"]) { results.push(...this._minutesDuration.doModelValidation()); }
-    if (this["slot"]) { this.slot.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_created"]) { results.push(...this._created.doModelValidation()); }
-    if (this["_comment"]) { results.push(...this._comment.doModelValidation()); }
-    if (this["_patientInstruction"]) { results.push(...this._patientInstruction.doModelValidation()); }
-    if (this["basedOn"]) { this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if ((!this["participant"]) || (this["participant"].length === 0)) { results.push(["participant",'Missing required element: Appointment.participant']); }
-    if (this["participant"]) { this.participant.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["requestedPeriod"]) { this.requestedPeriod.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Appointment' fhir: Appointment.resourceType:'Appointment'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:AppointmentstatusValueSetEnum fhir: Appointment.status:code", }));
+    }
+    if (this["cancelationReason"]) { outcome.issue!.push(...this.cancelationReason.doModelValidation().issue!); }
+    if (this["serviceCategory"]) { this.serviceCategory.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["serviceType"]) { this.serviceType.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["specialty"]) { this.specialty.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["appointmentType"]) { outcome.issue!.push(...this.appointmentType.doModelValidation().issue!); }
+    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["priority"]) { outcome.issue!.push(...this.priority.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["supportingInformation"]) { this.supportingInformation.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["start"]) { outcome.issue!.push(...this.start.doModelValidation().issue!); }
+    if (this["end"]) { outcome.issue!.push(...this.end.doModelValidation().issue!); }
+    if (this["minutesDuration"]) { outcome.issue!.push(...this.minutesDuration.doModelValidation().issue!); }
+    if (this["slot"]) { this.slot.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["created"]) { outcome.issue!.push(...this.created.doModelValidation().issue!); }
+    if (this["comment"]) { outcome.issue!.push(...this.comment.doModelValidation().issue!); }
+    if (this["patientInstruction"]) { outcome.issue!.push(...this.patientInstruction.doModelValidation().issue!); }
+    if (this["basedOn"]) { this.basedOn.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['participant']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property participant:fhir.AppointmentParticipant[] fhir: Appointment.participant:participant", }));
+    } else if (!Array.isArray(this.participant)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property participant:fhir.AppointmentParticipant[] fhir: Appointment.participant:participant", }));
+    } else if (this.participant.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property participant:fhir.AppointmentParticipant[] fhir: Appointment.participant:participant", }));
+    }
+    if (this["participant"]) { this.participant.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["requestedPeriod"]) { this.requestedPeriod.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

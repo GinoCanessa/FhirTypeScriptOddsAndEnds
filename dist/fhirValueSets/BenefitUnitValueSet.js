@@ -27,15 +27,4 @@ export const BenefitUnitValueSet = {
 /**
  * This value set includes a smattering of Unit type codes.
  */
-export var BenefitUnitValueSetEnum;
-(function (BenefitUnitValueSetEnum) {
-    /**
-     * family: A family, typically includes self, spouse(s) and children to a defined age
-     */
-    BenefitUnitValueSetEnum["Family"] = "family";
-    /**
-     * individual: A single individual
-     */
-    BenefitUnitValueSetEnum["Individual"] = "individual";
-})(BenefitUnitValueSetEnum || (BenefitUnitValueSetEnum = {}));
 //# sourceMappingURL=BenefitUnitValueSet.js.map

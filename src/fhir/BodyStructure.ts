@@ -3,66 +3,63 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: BodyStructure
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { BodystructureCodeValueSet, BodystructureCodeValueSetType, BodystructureCodeValueSetEnum } from '../fhirValueSets/BodystructureCodeValueSet.js'
-import { BodySiteValueSet, BodySiteValueSetType, BodySiteValueSetEnum } from '../fhirValueSets/BodySiteValueSet.js'
-import { BodystructureRelativeLocationValueSet, BodystructureRelativeLocationValueSetType, BodystructureRelativeLocationValueSetEnum } from '../fhirValueSets/BodystructureRelativeLocationValueSet.js'
-
+import { BodystructureCodeValueSet, BodystructureCodeValueSetType,} from '../fhirValueSets/BodystructureCodeValueSet.js';
+import { BodystructureCodeValueSetEnum } from '../valueSetEnums.js';
+import { BodySiteValueSet, BodySiteValueSetType,} from '../fhirValueSets/BodySiteValueSet.js';
+import { BodySiteValueSetEnum } from '../valueSetEnums.js';
+import { BodystructureRelativeLocationValueSet, BodystructureRelativeLocationValueSetType,} from '../fhirValueSets/BodystructureRelativeLocationValueSet.js';
+import { BodystructureRelativeLocationValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
+ * Valid arguments for the BodyStructure type.
  */
-export type IBodyStructure = fhir.IDomainResource & { 
+export interface BodyStructureArgs extends fhir.DomainResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "BodyStructure";
+  resourceType: "BodyStructure"|undefined;
   /**
    * Identifier for this instance of the anatomical structure.
    */
-  identifier?: fhir.IIdentifier[]|undefined;
+  identifier?: fhir.IdentifierArgs[]|undefined;
   /**
    * This element is labeled as a modifier because it may be used to mark that the resource was created in error.
    */
-  active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: BodyStructure.active
-   */
-  _active?: fhir.IFhirElement|undefined;
+  active?: fhir.FhirBoolean|boolean|undefined;
   /**
    * The minimum cardinality of 0 supports the use case of specifying a location without defining a morphology.
    */
-  morphology?: fhir.ICodeableConcept|undefined;
+  morphology?: fhir.CodeableConceptArgs|undefined;
   /**
    * The anatomical location or region of the specimen, lesion, or body structure.
    */
-  location?: fhir.ICodeableConcept|undefined;
+  location?: fhir.CodeableConceptArgs|undefined;
   /**
    * Qualifier to refine the anatomical location.  These include qualifiers for laterality, relative location, directionality, number, and plane.
    */
-  locationQualifier?: fhir.ICodeableConcept[]|undefined;
+  locationQualifier?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * This description could include any visual markings used to orientate the viewer e.g. external reference points, special sutures, ink markings.
    */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: BodyStructure.description
-   */
-  _description?: fhir.IFhirElement|undefined;
+  description?: fhir.FhirString|string|undefined;
   /**
    * Image or images used to identify a location.
    */
-  image?: fhir.IAttachment[]|undefined;
+  image?: fhir.AttachmentArgs[]|undefined;
   /**
    * The person to which the body site belongs.
    */
-  patient: fhir.IReference|null;
+  patient: fhir.ReferenceArgs|null;
 }
 
 /**
  * Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
  */
-export class BodyStructure extends fhir.DomainResource implements IBodyStructure {
+export class BodyStructure extends fhir.DomainResource {
+  readonly __dataType:string = 'BodyStructure';
   /**
    * Resource Type Name
    */
@@ -70,15 +67,11 @@ export class BodyStructure extends fhir.DomainResource implements IBodyStructure
   /**
    * Identifier for this instance of the anatomical structure.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because it may be used to mark that the resource was created in error.
    */
-  public active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: BodyStructure.active
-   */
-  public _active?: fhir.FhirElement|undefined;
+  public active?: fhir.FhirBoolean|undefined;
   /**
    * The minimum cardinality of 0 supports the use case of specifying a location without defining a morphology.
    */
@@ -90,19 +83,15 @@ export class BodyStructure extends fhir.DomainResource implements IBodyStructure
   /**
    * Qualifier to refine the anatomical location.  These include qualifiers for laterality, relative location, directionality, number, and plane.
    */
-  public locationQualifier?: fhir.CodeableConcept[]|undefined;
+  public locationQualifier?: fhir.CodeableConcept[]|undefined = [];
   /**
    * This description could include any visual markings used to orientate the viewer e.g. external reference points, special sutures, ink markings.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: BodyStructure.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Image or images used to identify a location.
    */
-  public image?: fhir.Attachment[]|undefined;
+  public image?: fhir.Attachment[]|undefined = [];
   /**
    * The person to which the body site belongs.
    */
@@ -110,19 +99,17 @@ export class BodyStructure extends fhir.DomainResource implements IBodyStructure
   /**
    * Default constructor for BodyStructure - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IBodyStructure> = { }) {
-    super(source);
+  constructor(source:Partial<BodyStructureArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'BodyStructure';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['active']) { this.active = source.active; }
-    if (source['_active']) { this._active = new fhir.FhirElement(source._active!); }
-    if (source['morphology']) { this.morphology = new fhir.CodeableConcept(source.morphology!); }
-    if (source['location']) { this.location = new fhir.CodeableConcept(source.location!); }
+    if (source['active']) { this.active = new fhir.FhirBoolean({value: source.active}); }
+    if (source['morphology']) { this.morphology = new fhir.CodeableConcept(source.morphology); }
+    if (source['location']) { this.location = new fhir.CodeableConcept(source.location); }
     if (source['locationQualifier']) { this.locationQualifier = source.locationQualifier.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
     if (source['image']) { this.image = source.image.map((x) => new fhir.Attachment(x)); }
-    if (source['patient']) { this.patient = new fhir.Reference(source.patient!); }
+    if (source['patient']) { this.patient = new fhir.Reference(source.patient); }
     else { this.patient = null; }
   }
   /**
@@ -146,18 +133,28 @@ export class BodyStructure extends fhir.DomainResource implements IBodyStructure
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: BodyStructure.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_active"]) { results.push(...this._active.doModelValidation()); }
-    if (this["morphology"]) { results.push(...this.morphology.doModelValidation()); }
-    if (this["location"]) { results.push(...this.location.doModelValidation()); }
-    if (this["locationQualifier"]) { this.locationQualifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["image"]) { this.image.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["patient"]) { results.push(["patient",'Missing required element: BodyStructure.patient']); }
-    if (this["patient"]) { results.push(...this.patient.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'BodyStructure' fhir: BodyStructure.resourceType:'BodyStructure'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["active"]) { outcome.issue!.push(...this.active.doModelValidation().issue!); }
+    if (this["morphology"]) { outcome.issue!.push(...this.morphology.doModelValidation().issue!); }
+    if (this["location"]) { outcome.issue!.push(...this.location.doModelValidation().issue!); }
+    if (this["locationQualifier"]) { this.locationQualifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["image"]) { this.image.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['patient']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property patient:fhir.Reference fhir: BodyStructure.patient:Reference", }));
+    }
+    if (this["patient"]) { outcome.issue!.push(...this.patient.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

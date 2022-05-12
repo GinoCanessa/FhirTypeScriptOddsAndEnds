@@ -75,39 +75,4 @@ export const TriggerTypeValueSet = {
 /**
  * The type of trigger.
  */
-export var TriggerTypeValueSetEnum;
-(function (TriggerTypeValueSetEnum) {
-    /**
-     * data-access-ended: The trigger occurs whenever access to data of a particular type is completed.
-     */
-    TriggerTypeValueSetEnum["DataAccessEnded"] = "data-access-ended";
-    /**
-     * data-accessed: The trigger occurs whenever data of a particular type is accessed.
-     */
-    TriggerTypeValueSetEnum["DataAccessed"] = "data-accessed";
-    /**
-     * data-added: The trigger occurs whenever data of a particular type is added.
-     */
-    TriggerTypeValueSetEnum["DataAdded"] = "data-added";
-    /**
-     * data-changed: The trigger occurs whenever data of a particular type is changed in any way, either added, modified, or removed.
-     */
-    TriggerTypeValueSetEnum["DataChanged"] = "data-changed";
-    /**
-     * data-modified: The trigger occurs whenever data of a particular type is modified.
-     */
-    TriggerTypeValueSetEnum["DataUpdated"] = "data-modified";
-    /**
-     * data-removed: The trigger occurs whenever data of a particular type is removed.
-     */
-    TriggerTypeValueSetEnum["DataRemoved"] = "data-removed";
-    /**
-     * named-event: The trigger occurs in response to a specific named event, and no other information about the trigger is specified. Named events are completely pre-coordinated, and the formal semantics of the trigger are not provided.
-     */
-    TriggerTypeValueSetEnum["NamedEvent"] = "named-event";
-    /**
-     * periodic: The trigger occurs at a specific time or periodically as described by a timing or schedule. A periodic event cannot have any data elements, but may have a name assigned as a shorthand for the event.
-     */
-    TriggerTypeValueSetEnum["Periodic"] = "periodic";
-})(TriggerTypeValueSetEnum || (TriggerTypeValueSetEnum = {}));
 //# sourceMappingURL=TriggerTypeValueSet.js.map

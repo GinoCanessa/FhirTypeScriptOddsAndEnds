@@ -3,177 +3,81 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Goal
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ObservationCodesValueSet, ObservationCodesValueSetType, ObservationCodesValueSetEnum } from '../fhirValueSets/ObservationCodesValueSet.js'
-import { GoalStatusValueSet, GoalStatusValueSetType, GoalStatusValueSetEnum } from '../fhirValueSets/GoalStatusValueSet.js'
-import { GoalAchievementValueSet, GoalAchievementValueSetType, GoalAchievementValueSetEnum } from '../fhirValueSets/GoalAchievementValueSet.js'
-import { GoalCategoryValueSet, GoalCategoryValueSetType, GoalCategoryValueSetEnum } from '../fhirValueSets/GoalCategoryValueSet.js'
-import { GoalPriorityValueSet, GoalPriorityValueSetType, GoalPriorityValueSetEnum } from '../fhirValueSets/GoalPriorityValueSet.js'
-import { ClinicalFindingsValueSet, ClinicalFindingsValueSetType, ClinicalFindingsValueSetEnum } from '../fhirValueSets/ClinicalFindingsValueSet.js'
-import { GoalStartEventValueSet, GoalStartEventValueSetType, GoalStartEventValueSetEnum } from '../fhirValueSets/GoalStartEventValueSet.js'
-
+import { ObservationCodesValueSet, ObservationCodesValueSetType,} from '../fhirValueSets/ObservationCodesValueSet.js';
+import { ObservationCodesValueSetEnum } from '../valueSetEnums.js';
+import { GoalStatusValueSet, GoalStatusValueSetType,} from '../fhirValueSets/GoalStatusValueSet.js';
+import { GoalStatusValueSetEnum } from '../valueSetEnums.js';
+import { GoalAchievementValueSet, GoalAchievementValueSetType,} from '../fhirValueSets/GoalAchievementValueSet.js';
+import { GoalAchievementValueSetEnum } from '../valueSetEnums.js';
+import { GoalCategoryValueSet, GoalCategoryValueSetType,} from '../fhirValueSets/GoalCategoryValueSet.js';
+import { GoalCategoryValueSetEnum } from '../valueSetEnums.js';
+import { GoalPriorityValueSet, GoalPriorityValueSetType,} from '../fhirValueSets/GoalPriorityValueSet.js';
+import { GoalPriorityValueSetEnum } from '../valueSetEnums.js';
+import { ClinicalFindingsValueSet, ClinicalFindingsValueSetType,} from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { ClinicalFindingsValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.
+ * Valid arguments for the GoalTarget type.
  */
-export type IGoalTarget = fhir.IBackboneElement & { 
+export interface GoalTargetArgs extends fhir.BackboneElementArgs {
   /**
    * The parameter whose value is being tracked, e.g. body weight, blood pressure, or hemoglobin A1c level.
    */
-  measure?: fhir.ICodeableConcept|undefined;
+  measure?: fhir.CodeableConceptArgs|undefined;
   /**
    * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
    */
-  detailQuantity?: fhir.IQuantity|undefined;
+  detail?: fhir.Quantity|fhir.Range|fhir.CodeableConcept|fhir.FhirString|fhir.FhirBoolean|fhir.FhirInteger|fhir.Ratio|undefined;
   /**
    * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
    */
-  detailRange?: fhir.IRange|undefined;
+  detailQuantity?: fhir.QuantityArgs|undefined;
   /**
    * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
    */
-  detailCodeableConcept?: fhir.ICodeableConcept|undefined;
+  detailRange?: fhir.RangeArgs|undefined;
   /**
    * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
    */
-  detailString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Goal.target.detail[x]
-   */
-  _detailString?: fhir.IFhirElement|undefined;
+  detailCodeableConcept?: fhir.CodeableConceptArgs|undefined;
   /**
    * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
    */
-  detailBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Goal.target.detail[x]
-   */
-  _detailBoolean?: fhir.IFhirElement|undefined;
+  detailString?: fhir.FhirString|string|undefined;
   /**
    * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
    */
-  detailInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Goal.target.detail[x]
-   */
-  _detailInteger?: fhir.IFhirElement|undefined;
+  detailBoolean?: fhir.FhirBoolean|boolean|undefined;
   /**
    * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
    */
-  detailRatio?: fhir.IRatio|undefined;
+  detailInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
+   */
+  detailRatio?: fhir.RatioArgs|undefined;
   /**
    * Indicates either the date or the duration after start by which the goal should be met.
    */
-  dueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Goal.target.due[x]
-   */
-  _dueDate?: fhir.IFhirElement|undefined;
+  due?: fhir.FhirDate|fhir.Duration|undefined;
   /**
    * Indicates either the date or the duration after start by which the goal should be met.
    */
-  dueDuration?: fhir.IDuration|undefined;
-}
-
-/**
- * Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
- */
-export type IGoal = fhir.IDomainResource & { 
+  dueDate?: fhir.FhirDate|string|undefined;
   /**
-   * Resource Type Name
+   * Indicates either the date or the duration after start by which the goal should be met.
    */
-  resourceType: "Goal";
-  /**
-   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * This element is labeled as a modifier because the lifecycleStatus contains codes that mark the resource as not currently valid.
-   */
-  lifecycleStatus: GoalStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Goal.lifecycleStatus
-   */
-  _lifecycleStatus?: fhir.IFhirElement|undefined;
-  /**
-   * Describes the progression, or lack thereof, towards the goal against the target.
-   */
-  achievementStatus?: fhir.ICodeableConcept|undefined;
-  /**
-   * Indicates a category the goal falls within.
-   */
-  category?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Extensions are available to track priorities as established by each participant (i.e. Priority from the patient's perspective, different practitioners' perspectives, family member's perspectives)
-   * The ordinal extension on Coding can be used to convey a numerically comparable ranking to priority.  (Keep in mind that different coding systems may use a "low value=important".
-   */
-  priority?: fhir.ICodeableConcept|undefined;
-  /**
-   * If no code is available, use CodeableConcept.text.
-   */
-  description: fhir.ICodeableConcept|null;
-  /**
-   * Identifies the patient, group or organization for whom the goal is being established.
-   */
-  subject: fhir.IReference|null;
-  /**
-   * The date or event after which the goal should begin being pursued.
-   */
-  startDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Goal.start[x]
-   */
-  _startDate?: fhir.IFhirElement|undefined;
-  /**
-   * The date or event after which the goal should begin being pursued.
-   */
-  startCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.
-   */
-  target?: fhir.IGoalTarget[]|undefined;
-  /**
-   * To see the date for past statuses, query history.
-   */
-  statusDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Goal.statusDate
-   */
-  _statusDate?: fhir.IFhirElement|undefined;
-  /**
-   * This will typically be captured for statuses such as rejected, on-hold or cancelled, but could be present for others.
-   */
-  statusReason?: string|undefined;
-  /**
-   * Extended properties for primitive element: Goal.statusReason
-   */
-  _statusReason?: fhir.IFhirElement|undefined;
-  /**
-   * This is the individual responsible for establishing the goal, not necessarily who recorded it.  (For that, use the Provenance resource.).
-   */
-  expressedBy?: fhir.IReference|undefined;
-  /**
-   * The identified conditions and other health record elements that are intended to be addressed by the goal.
-   */
-  addresses?: fhir.IReference[]|undefined;
-  /**
-   * May be used for progress notes, concerns or other related information that doesn't actually describe the goal itself.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-  /**
-   * Note that this should not duplicate the goal status.
-   */
-  outcomeCode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The goal outcome is independent of the outcome of the related activities.  For example, if the Goal is to achieve a target body weight of 150 lb and a care plan activity is defined to diet, then the care plan’s activity outcome could be calories consumed whereas goal outcome is an observation for the actual body weight measured.
-   */
-  outcomeReference?: fhir.IReference[]|undefined;
+  dueDuration?: fhir.DurationArgs|undefined;
 }
 
 /**
  * When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.
  */
-export class GoalTarget extends fhir.BackboneElement implements IGoalTarget {
+export class GoalTarget extends fhir.BackboneElement {
+  readonly __dataType:string = 'GoalTarget';
   /**
    * The parameter whose value is being tracked, e.g. body weight, blood pressure, or hemoglobin A1c level.
    */
@@ -181,74 +85,30 @@ export class GoalTarget extends fhir.BackboneElement implements IGoalTarget {
   /**
    * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
    */
-  public detailQuantity?: fhir.Quantity|undefined;
-  /**
-   * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
-   */
-  public detailRange?: fhir.Range|undefined;
-  /**
-   * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
-   */
-  public detailCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
-   */
-  public detailString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Goal.target.detail[x]
-   */
-  public _detailString?: fhir.FhirElement|undefined;
-  /**
-   * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
-   */
-  public detailBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Goal.target.detail[x]
-   */
-  public _detailBoolean?: fhir.FhirElement|undefined;
-  /**
-   * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
-   */
-  public detailInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Goal.target.detail[x]
-   */
-  public _detailInteger?: fhir.FhirElement|undefined;
-  /**
-   * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
-   */
-  public detailRatio?: fhir.Ratio|undefined;
+  public detail?: (fhir.Quantity|fhir.Range|fhir.CodeableConcept|fhir.FhirString|fhir.FhirBoolean|fhir.FhirInteger|fhir.Ratio)|undefined;
+  readonly __detailIsChoice:true = true;
   /**
    * Indicates either the date or the duration after start by which the goal should be met.
    */
-  public dueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Goal.target.due[x]
-   */
-  public _dueDate?: fhir.FhirElement|undefined;
-  /**
-   * Indicates either the date or the duration after start by which the goal should be met.
-   */
-  public dueDuration?: fhir.Duration|undefined;
+  public due?: (fhir.FhirDate|fhir.Duration)|undefined;
+  readonly __dueIsChoice:true = true;
   /**
    * Default constructor for GoalTarget - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IGoalTarget> = { }) {
-    super(source);
-    if (source['measure']) { this.measure = new fhir.CodeableConcept(source.measure!); }
-    if (source['detailQuantity']) { this.detailQuantity = new fhir.Quantity(source.detailQuantity!); }
-    if (source['detailRange']) { this.detailRange = new fhir.Range(source.detailRange!); }
-    if (source['detailCodeableConcept']) { this.detailCodeableConcept = new fhir.CodeableConcept(source.detailCodeableConcept!); }
-    if (source['detailString']) { this.detailString = source.detailString; }
-    if (source['_detailString']) { this._detailString = new fhir.FhirElement(source._detailString!); }
-    if (source['detailBoolean']) { this.detailBoolean = source.detailBoolean; }
-    if (source['_detailBoolean']) { this._detailBoolean = new fhir.FhirElement(source._detailBoolean!); }
-    if (source['detailInteger']) { this.detailInteger = source.detailInteger; }
-    if (source['_detailInteger']) { this._detailInteger = new fhir.FhirElement(source._detailInteger!); }
-    if (source['detailRatio']) { this.detailRatio = new fhir.Ratio(source.detailRatio!); }
-    if (source['dueDate']) { this.dueDate = source.dueDate; }
-    if (source['_dueDate']) { this._dueDate = new fhir.FhirElement(source._dueDate!); }
-    if (source['dueDuration']) { this.dueDuration = new fhir.Duration(source.dueDuration!); }
+  constructor(source:Partial<GoalTargetArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['measure']) { this.measure = new fhir.CodeableConcept(source.measure); }
+    if (source['detail']) { this.detail = source.detail; }
+    else if (source['detailQuantity']) { this.detail = new fhir.Quantity(source.detailQuantity); }
+    else if (source['detailRange']) { this.detail = new fhir.Range(source.detailRange); }
+    else if (source['detailCodeableConcept']) { this.detail = new fhir.CodeableConcept(source.detailCodeableConcept); }
+    else if (source['detailString']) { this.detail = new fhir.FhirString({value: source.detailString}); }
+    else if (source['detailBoolean']) { this.detail = new fhir.FhirBoolean({value: source.detailBoolean}); }
+    else if (source['detailInteger']) { this.detail = new fhir.FhirInteger({value: source.detailInteger}); }
+    else if (source['detailRatio']) { this.detail = new fhir.Ratio(source.detailRatio); }
+    if (source['due']) { this.due = source.due; }
+    else if (source['dueDate']) { this.due = new fhir.FhirDate({value: source.dueDate}); }
+    else if (source['dueDuration']) { this.due = new fhir.Duration(source.dueDuration); }
   }
   /**
    * Example-bound Value Set for measure
@@ -259,26 +119,106 @@ export class GoalTarget extends fhir.BackboneElement implements IGoalTarget {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["measure"]) { results.push(...this.measure.doModelValidation()); }
-    if (this["detailQuantity"]) { results.push(...this.detailQuantity.doModelValidation()); }
-    if (this["detailRange"]) { results.push(...this.detailRange.doModelValidation()); }
-    if (this["detailCodeableConcept"]) { results.push(...this.detailCodeableConcept.doModelValidation()); }
-    if (this["_detailString"]) { results.push(...this._detailString.doModelValidation()); }
-    if (this["_detailBoolean"]) { results.push(...this._detailBoolean.doModelValidation()); }
-    if (this["_detailInteger"]) { results.push(...this._detailInteger.doModelValidation()); }
-    if (this["detailRatio"]) { results.push(...this.detailRatio.doModelValidation()); }
-    if (this["_dueDate"]) { results.push(...this._dueDate.doModelValidation()); }
-    if (this["dueDuration"]) { results.push(...this.dueDuration.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["measure"]) { outcome.issue!.push(...this.measure.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Goal type.
+ */
+export interface GoalArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Goal"|undefined;
+  /**
+   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * This element is labeled as a modifier because the lifecycleStatus contains codes that mark the resource as not currently valid.
+   */
+  lifecycleStatus: GoalStatusValueSetEnum|null;
+  /**
+   * Describes the progression, or lack thereof, towards the goal against the target.
+   */
+  achievementStatus?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Indicates a category the goal falls within.
+   */
+  category?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Extensions are available to track priorities as established by each participant (i.e. Priority from the patient's perspective, different practitioners' perspectives, family member's perspectives)
+   * The ordinal extension on Coding can be used to convey a numerically comparable ranking to priority.  (Keep in mind that different coding systems may use a "low value=important".
+   */
+  priority?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * If no code is available, use CodeableConcept.text.
+   */
+  description: fhir.CodeableConceptArgs|null;
+  /**
+   * Identifies the patient, group or organization for whom the goal is being established.
+   */
+  subject: fhir.ReferenceArgs|null;
+  /**
+   * The date or event after which the goal should begin being pursued.
+   */
+  start?: fhir.FhirDate|fhir.CodeableConcept|undefined;
+  /**
+   * The date or event after which the goal should begin being pursued.
+   */
+  startDate?: fhir.FhirDate|string|undefined;
+  /**
+   * The date or event after which the goal should begin being pursued.
+   */
+  startCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.
+   */
+  target?: fhir.GoalTargetArgs[]|undefined;
+  /**
+   * To see the date for past statuses, query history.
+   */
+  statusDate?: fhir.FhirDate|string|undefined;
+  /**
+   * This will typically be captured for statuses such as rejected, on-hold or cancelled, but could be present for others.
+   */
+  statusReason?: fhir.FhirString|string|undefined;
+  /**
+   * This is the individual responsible for establishing the goal, not necessarily who recorded it.  (For that, use the Provenance resource.).
+   */
+  expressedBy?: fhir.ReferenceArgs|undefined;
+  /**
+   * The identified conditions and other health record elements that are intended to be addressed by the goal.
+   */
+  addresses?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * May be used for progress notes, concerns or other related information that doesn't actually describe the goal itself.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
+  /**
+   * Note that this should not duplicate the goal status.
+   */
+  outcomeCode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The goal outcome is independent of the outcome of the related activities.  For example, if the Goal is to achieve a target body weight of 150 lb and a care plan activity is defined to diet, then the care plan’s activity outcome could be calories consumed whereas goal outcome is an observation for the actual body weight measured.
+   */
+  outcomeReference?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
  */
-export class Goal extends fhir.DomainResource implements IGoal {
+export class Goal extends fhir.DomainResource {
+  readonly __dataType:string = 'Goal';
   /**
    * Resource Type Name
    */
@@ -286,15 +226,11 @@ export class Goal extends fhir.DomainResource implements IGoal {
   /**
    * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the lifecycleStatus contains codes that mark the resource as not currently valid.
    */
   public lifecycleStatus: GoalStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Goal.lifecycleStatus
-   */
-  public _lifecycleStatus?: fhir.FhirElement|undefined;
   /**
    * Describes the progression, or lack thereof, towards the goal against the target.
    */
@@ -302,7 +238,7 @@ export class Goal extends fhir.DomainResource implements IGoal {
   /**
    * Indicates a category the goal falls within.
    */
-  public category?: fhir.CodeableConcept[]|undefined;
+  public category?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Extensions are available to track priorities as established by each participant (i.e. Priority from the patient's perspective, different practitioners' perspectives, family member's perspectives)
    * The ordinal extension on Coding can be used to convey a numerically comparable ranking to priority.  (Keep in mind that different coding systems may use a "low value=important".
@@ -319,35 +255,20 @@ export class Goal extends fhir.DomainResource implements IGoal {
   /**
    * The date or event after which the goal should begin being pursued.
    */
-  public startDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Goal.start[x]
-   */
-  public _startDate?: fhir.FhirElement|undefined;
-  /**
-   * The date or event after which the goal should begin being pursued.
-   */
-  public startCodeableConcept?: fhir.CodeableConcept|undefined;
+  public start?: (fhir.FhirDate|fhir.CodeableConcept)|undefined;
+  readonly __startIsChoice:true = true;
   /**
    * When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.
    */
-  public target?: fhir.GoalTarget[]|undefined;
+  public target?: fhir.GoalTarget[]|undefined = [];
   /**
    * To see the date for past statuses, query history.
    */
-  public statusDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Goal.statusDate
-   */
-  public _statusDate?: fhir.FhirElement|undefined;
+  public statusDate?: fhir.FhirDate|undefined;
   /**
    * This will typically be captured for statuses such as rejected, on-hold or cancelled, but could be present for others.
    */
-  public statusReason?: string|undefined;
-  /**
-   * Extended properties for primitive element: Goal.statusReason
-   */
-  public _statusReason?: fhir.FhirElement|undefined;
+  public statusReason?: fhir.FhirString|undefined;
   /**
    * This is the individual responsible for establishing the goal, not necessarily who recorded it.  (For that, use the Provenance resource.).
    */
@@ -355,45 +276,42 @@ export class Goal extends fhir.DomainResource implements IGoal {
   /**
    * The identified conditions and other health record elements that are intended to be addressed by the goal.
    */
-  public addresses?: fhir.Reference[]|undefined;
+  public addresses?: fhir.Reference[]|undefined = [];
   /**
    * May be used for progress notes, concerns or other related information that doesn't actually describe the goal itself.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Note that this should not duplicate the goal status.
    */
-  public outcomeCode?: fhir.CodeableConcept[]|undefined;
+  public outcomeCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The goal outcome is independent of the outcome of the related activities.  For example, if the Goal is to achieve a target body weight of 150 lb and a care plan activity is defined to diet, then the care plan’s activity outcome could be calories consumed whereas goal outcome is an observation for the actual body weight measured.
    */
-  public outcomeReference?: fhir.Reference[]|undefined;
+  public outcomeReference?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for Goal - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IGoal> = { }) {
-    super(source);
+  constructor(source:Partial<GoalArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Goal';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['lifecycleStatus']) { this.lifecycleStatus = source.lifecycleStatus; }
     else { this.lifecycleStatus = null; }
-    if (source['_lifecycleStatus']) { this._lifecycleStatus = new fhir.FhirElement(source._lifecycleStatus!); }
-    if (source['achievementStatus']) { this.achievementStatus = new fhir.CodeableConcept(source.achievementStatus!); }
+    if (source['achievementStatus']) { this.achievementStatus = new fhir.CodeableConcept(source.achievementStatus); }
     if (source['category']) { this.category = source.category.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['priority']) { this.priority = new fhir.CodeableConcept(source.priority!); }
-    if (source['description']) { this.description = new fhir.CodeableConcept(source.description!); }
+    if (source['priority']) { this.priority = new fhir.CodeableConcept(source.priority); }
+    if (source['description']) { this.description = new fhir.CodeableConcept(source.description); }
     else { this.description = null; }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
     else { this.subject = null; }
-    if (source['startDate']) { this.startDate = source.startDate; }
-    if (source['_startDate']) { this._startDate = new fhir.FhirElement(source._startDate!); }
-    if (source['startCodeableConcept']) { this.startCodeableConcept = new fhir.CodeableConcept(source.startCodeableConcept!); }
+    if (source['start']) { this.start = source.start; }
+    else if (source['startDate']) { this.start = new fhir.FhirDate({value: source.startDate}); }
+    else if (source['startCodeableConcept']) { this.start = new fhir.CodeableConcept(source.startCodeableConcept); }
     if (source['target']) { this.target = source.target.map((x) => new fhir.GoalTarget(x)); }
-    if (source['statusDate']) { this.statusDate = source.statusDate; }
-    if (source['_statusDate']) { this._statusDate = new fhir.FhirElement(source._statusDate!); }
-    if (source['statusReason']) { this.statusReason = source.statusReason; }
-    if (source['_statusReason']) { this._statusReason = new fhir.FhirElement(source._statusReason!); }
-    if (source['expressedBy']) { this.expressedBy = new fhir.Reference(source.expressedBy!); }
+    if (source['statusDate']) { this.statusDate = new fhir.FhirDate({value: source.statusDate}); }
+    if (source['statusReason']) { this.statusReason = new fhir.FhirString({value: source.statusReason}); }
+    if (source['expressedBy']) { this.expressedBy = new fhir.Reference(source.expressedBy); }
     if (source['addresses']) { this.addresses = source.addresses.map((x) => new fhir.Reference(x)); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
     if (source['outcomeCode']) { this.outcomeCode = source.outcomeCode.map((x) => new fhir.CodeableConcept(x)); }
@@ -430,18 +348,6 @@ export class Goal extends fhir.DomainResource implements IGoal {
     return ClinicalFindingsValueSet;
   }
   /**
-   * Example-bound Value Set for startDate
-   */
-  public static startDateExampleValueSet():GoalStartEventValueSetType {
-    return GoalStartEventValueSet;
-  }
-  /**
-   * Example-bound Value Set for startCodeableConcept
-   */
-  public static startCodeableConceptExampleValueSet():GoalStartEventValueSetType {
-    return GoalStartEventValueSet;
-  }
-  /**
    * Example-bound Value Set for outcomeCode
    */
   public static outcomeCodeExampleValueSet():ClinicalFindingsValueSetType {
@@ -450,29 +356,40 @@ export class Goal extends fhir.DomainResource implements IGoal {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Goal.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["lifecycleStatus"]) { results.push(["lifecycleStatus",'Missing required element: Goal.lifecycleStatus']); }
-    if (this["_lifecycleStatus"]) { results.push(...this._lifecycleStatus.doModelValidation()); }
-    if (this["achievementStatus"]) { results.push(...this.achievementStatus.doModelValidation()); }
-    if (this["category"]) { this.category.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["priority"]) { results.push(...this.priority.doModelValidation()); }
-    if (!this["description"]) { results.push(["description",'Missing required element: Goal.description']); }
-    if (this["description"]) { results.push(...this.description.doModelValidation()); }
-    if (!this["subject"]) { results.push(["subject",'Missing required element: Goal.subject']); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["_startDate"]) { results.push(...this._startDate.doModelValidation()); }
-    if (this["startCodeableConcept"]) { results.push(...this.startCodeableConcept.doModelValidation()); }
-    if (this["target"]) { this.target.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_statusDate"]) { results.push(...this._statusDate.doModelValidation()); }
-    if (this["_statusReason"]) { results.push(...this._statusReason.doModelValidation()); }
-    if (this["expressedBy"]) { results.push(...this.expressedBy.doModelValidation()); }
-    if (this["addresses"]) { this.addresses.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["outcomeCode"]) { this.outcomeCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["outcomeReference"]) { this.outcomeReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Goal' fhir: Goal.resourceType:'Goal'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['lifecycleStatus']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property lifecycleStatus:GoalStatusValueSetEnum fhir: Goal.lifecycleStatus:code", }));
+    }
+    if (this["achievementStatus"]) { outcome.issue!.push(...this.achievementStatus.doModelValidation().issue!); }
+    if (this["category"]) { this.category.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["priority"]) { outcome.issue!.push(...this.priority.doModelValidation().issue!); }
+    if (!this['description']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property description:fhir.CodeableConcept fhir: Goal.description:CodeableConcept", }));
+    }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (!this['subject']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property subject:fhir.Reference fhir: Goal.subject:Reference", }));
+    }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["target"]) { this.target.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["statusDate"]) { outcome.issue!.push(...this.statusDate.doModelValidation().issue!); }
+    if (this["statusReason"]) { outcome.issue!.push(...this.statusReason.doModelValidation().issue!); }
+    if (this["expressedBy"]) { outcome.issue!.push(...this.expressedBy.doModelValidation().issue!); }
+    if (this["addresses"]) { this.addresses.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["outcomeCode"]) { this.outcomeCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["outcomeReference"]) { this.outcomeReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

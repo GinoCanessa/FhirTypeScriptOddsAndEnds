@@ -59,31 +59,4 @@ export const SpecialValuesValueSet = {
 /**
  * A set of generally useful codes defined so they can be included in value sets.
  */
-export var SpecialValuesValueSetEnum;
-(function (SpecialValuesValueSetEnum) {
-    /**
-     * false: Boolean false.
-     */
-    SpecialValuesValueSetEnum["False"] = "false";
-    /**
-     * nil-known: The are no known applicable values in this context.
-     */
-    SpecialValuesValueSetEnum["NilKnown"] = "nil-known";
-    /**
-     * sufficient: The specific quantity is not known, but is known to be non-zero and is not specified because it makes up the bulk of the material.
-     */
-    SpecialValuesValueSetEnum["SufficientQuantity"] = "sufficient";
-    /**
-     * trace: The content is greater than zero, but too small to be quantified.
-     */
-    SpecialValuesValueSetEnum["TraceAmountDetected"] = "trace";
-    /**
-     * true: Boolean true.
-     */
-    SpecialValuesValueSetEnum["True"] = "true";
-    /**
-     * withdrawn: The value is no longer available.
-     */
-    SpecialValuesValueSetEnum["ValueWithdrawn"] = "withdrawn";
-})(SpecialValuesValueSetEnum || (SpecialValuesValueSetEnum = {}));
 //# sourceMappingURL=SpecialValuesValueSet.js.map

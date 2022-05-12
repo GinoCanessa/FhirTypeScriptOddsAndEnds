@@ -3,125 +3,88 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Coding
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A reference to a code defined by a terminology system.
+ * Valid arguments for the Coding type.
  */
-export type ICoding = fhir.IFhirElement & { 
+export interface CodingArgs extends fhir.FhirElementArgs {
   /**
    * The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.
    */
-  system?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coding.system
-   */
-  _system?: fhir.IFhirElement|undefined;
+  system?: fhir.FhirUri|string|undefined;
   /**
    * Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.
    */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coding.version
-   */
-  _version?: fhir.IFhirElement|undefined;
+  version?: fhir.FhirString|string|undefined;
   /**
    * A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).
    */
-  code?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coding.code
-   */
-  _code?: fhir.IFhirElement|undefined;
+  code?: fhir.FhirCode|string|undefined;
   /**
    * A representation of the meaning of the code in the system, following the rules of the system.
    */
-  display?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coding.display
-   */
-  _display?: fhir.IFhirElement|undefined;
+  display?: fhir.FhirString|string|undefined;
   /**
    * Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.
    */
-  userSelected?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Coding.userSelected
-   */
-  _userSelected?: fhir.IFhirElement|undefined;
+  userSelected?: fhir.FhirBoolean|boolean|undefined;
 }
 
 /**
  * A reference to a code defined by a terminology system.
  */
-export class Coding extends fhir.FhirElement implements ICoding {
+export class Coding extends fhir.FhirElement {
+  readonly __dataType:string = 'Coding';
   /**
    * The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.
    */
-  public system?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coding.system
-   */
-  public _system?: fhir.FhirElement|undefined;
+  public system?: fhir.FhirUri|undefined;
   /**
    * Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coding.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).
    */
-  public code?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coding.code
-   */
-  public _code?: fhir.FhirElement|undefined;
+  public code?: fhir.FhirCode|undefined;
   /**
    * A representation of the meaning of the code in the system, following the rules of the system.
    */
-  public display?: string|undefined;
-  /**
-   * Extended properties for primitive element: Coding.display
-   */
-  public _display?: fhir.FhirElement|undefined;
+  public display?: fhir.FhirString|undefined;
   /**
    * Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.
    */
-  public userSelected?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Coding.userSelected
-   */
-  public _userSelected?: fhir.FhirElement|undefined;
+  public userSelected?: fhir.FhirBoolean|undefined;
   /**
    * Default constructor for Coding - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICoding> = { }) {
-    super(source);
-    if (source['system']) { this.system = source.system; }
-    if (source['_system']) { this._system = new fhir.FhirElement(source._system!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['code']) { this.code = source.code; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['display']) { this.display = source.display; }
-    if (source['_display']) { this._display = new fhir.FhirElement(source._display!); }
-    if (source['userSelected']) { this.userSelected = source.userSelected; }
-    if (source['_userSelected']) { this._userSelected = new fhir.FhirElement(source._userSelected!); }
+  constructor(source:Partial<CodingArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['system']) { this.system = new fhir.FhirUri({value: source.system}); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['code']) { this.code = new fhir.FhirCode({value: source.code}); }
+    if (source['display']) { this.display = new fhir.FhirString({value: source.display}); }
+    if (source['userSelected']) { this.userSelected = new fhir.FhirBoolean({value: source.userSelected}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_system"]) { results.push(...this._system.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["_display"]) { results.push(...this._display.doModelValidation()); }
-    if (this["_userSelected"]) { results.push(...this._userSelected.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["system"]) { outcome.issue!.push(...this.system.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["display"]) { outcome.issue!.push(...this.display.doModelValidation().issue!); }
+    if (this["userSelected"]) { outcome.issue!.push(...this.userSelected.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

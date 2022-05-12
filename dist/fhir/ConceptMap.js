@@ -3,9 +3,11 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ConceptMap
 import * as fhir from '../fhir.js';
-import { ConceptMapEquivalenceValueSet } from '../fhirValueSets/ConceptMapEquivalenceValueSet.js';
-import { ConceptmapUnmappedModeValueSet } from '../fhirValueSets/ConceptmapUnmappedModeValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { ConceptMapEquivalenceValueSet, } from '../fhirValueSets/ConceptMapEquivalenceValueSet.js';
+import { ConceptmapUnmappedModeValueSet, } from '../fhirValueSets/ConceptmapUnmappedModeValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A set of additional dependencies for this mapping to hold. This mapping is only applicable if the specified element can be resolved, and it has the specified value.
  */
@@ -13,63 +15,58 @@ export class ConceptMapGroupElementTargetDependsOn extends fhir.BackboneElement 
     /**
      * Default constructor for ConceptMapGroupElementTargetDependsOn - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ConceptMapGroupElementTargetDependsOn';
         if (source['property']) {
-            this.property = source.property;
+            this.property = new fhir.FhirUri({ value: source.property });
         }
         else {
             this.property = null;
         }
-        if (source['_property']) {
-            this._property = new fhir.FhirElement(source._property);
-        }
         if (source['system']) {
-            this.system = source.system;
-        }
-        if (source['_system']) {
-            this._system = new fhir.FhirElement(source._system);
+            this.system = new fhir.FhirCanonical({ value: source.system });
         }
         if (source['value']) {
-            this.value = source.value;
+            this.value = new fhir.FhirString({ value: source.value });
         }
         else {
             this.value = null;
         }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
-        }
         if (source['display']) {
-            this.display = source.display;
-        }
-        if (source['_display']) {
-            this._display = new fhir.FhirElement(source._display);
+            this.display = new fhir.FhirString({ value: source.display });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["property"]) {
-            results.push(["property", 'Missing required element: ConceptMap.group.element.target.dependsOn.property']);
+        var outcome = super.doModelValidation();
+        if (!this['property']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property property:fhir.FhirUri fhir: ConceptMap.group.element.target.dependsOn.property:uri", }));
         }
-        if (this["_property"]) {
-            results.push(...this._property.doModelValidation());
+        if (this["property"]) {
+            outcome.issue.push(...this.property.doModelValidation().issue);
         }
-        if (this["_system"]) {
-            results.push(...this._system.doModelValidation());
+        if (this["system"]) {
+            outcome.issue.push(...this.system.doModelValidation().issue);
         }
-        if (!this["value"]) {
-            results.push(["value", 'Missing required element: ConceptMap.group.element.target.dependsOn.value']);
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value:fhir.FhirString fhir: ConceptMap.group.element.target.dependsOn.value:string", }));
         }
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
         }
-        if (this["_display"]) {
-            results.push(...this._display.doModelValidation());
+        if (this["display"]) {
+            outcome.issue.push(...this.display.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -79,19 +76,22 @@ export class ConceptMapGroupElementTarget extends fhir.BackboneElement {
     /**
      * Default constructor for ConceptMapGroupElementTarget - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ConceptMapGroupElementTarget';
+        /**
+         * A set of additional dependencies for this mapping to hold. This mapping is only applicable if the specified element can be resolved, and it has the specified value.
+         */
+        this.dependsOn = [];
+        /**
+         * A set of additional outcomes from this mapping to other elements. To properly execute this mapping, the specified element must be mapped to some data element or source that is in context. The mapping may still be useful without a place for the additional data elements, but the equivalence cannot be relied on.
+         */
+        this.product = [];
         if (source['code']) {
-            this.code = source.code;
-        }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         if (source['display']) {
-            this.display = source.display;
-        }
-        if (source['_display']) {
-            this._display = new fhir.FhirElement(source._display);
+            this.display = new fhir.FhirString({ value: source.display });
         }
         if (source['equivalence']) {
             this.equivalence = source.equivalence;
@@ -99,14 +99,8 @@ export class ConceptMapGroupElementTarget extends fhir.BackboneElement {
         else {
             this.equivalence = null;
         }
-        if (source['_equivalence']) {
-            this._equivalence = new fhir.FhirElement(source._equivalence);
-        }
         if (source['comment']) {
-            this.comment = source.comment;
-        }
-        if (source['_comment']) {
-            this._comment = new fhir.FhirElement(source._comment);
+            this.comment = new fhir.FhirString({ value: source.comment });
         }
         if (source['dependsOn']) {
             this.dependsOn = source.dependsOn.map((x) => new fhir.ConceptMapGroupElementTargetDependsOn(x));
@@ -125,29 +119,32 @@ export class ConceptMapGroupElementTarget extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_display"]) {
-            results.push(...this._display.doModelValidation());
+        if (this["display"]) {
+            outcome.issue.push(...this.display.doModelValidation().issue);
         }
-        if (!this["equivalence"]) {
-            results.push(["equivalence", 'Missing required element: ConceptMap.group.element.target.equivalence']);
+        if (!this['equivalence']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property equivalence:ConceptMapEquivalenceValueSetEnum fhir: ConceptMap.group.element.target.equivalence:code", }));
         }
-        if (this["_equivalence"]) {
-            results.push(...this._equivalence.doModelValidation());
-        }
-        if (this["_comment"]) {
-            results.push(...this._comment.doModelValidation());
+        if (this["comment"]) {
+            outcome.issue.push(...this.comment.doModelValidation().issue);
         }
         if (this["dependsOn"]) {
-            this.dependsOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.dependsOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["product"]) {
-            this.product.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.product.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -157,19 +154,18 @@ export class ConceptMapGroupElement extends fhir.BackboneElement {
     /**
      * Default constructor for ConceptMapGroupElement - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ConceptMapGroupElement';
+        /**
+         * Ideally there would only be one map, with equal or equivalent mapping. But multiple maps are allowed for several narrower options, or to assert that other concepts are unmatched.
+         */
+        this.target = [];
         if (source['code']) {
-            this.code = source.code;
-        }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         if (source['display']) {
-            this.display = source.display;
-        }
-        if (source['_display']) {
-            this._display = new fhir.FhirElement(source._display);
+            this.display = new fhir.FhirString({ value: source.display });
         }
         if (source['target']) {
             this.target = source.target.map((x) => new fhir.ConceptMapGroupElementTarget(x));
@@ -179,17 +175,23 @@ export class ConceptMapGroupElement extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_display"]) {
-            results.push(...this._display.doModelValidation());
+        if (this["display"]) {
+            outcome.issue.push(...this.display.doModelValidation().issue);
         }
         if (this["target"]) {
-            this.target.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.target.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -199,34 +201,23 @@ export class ConceptMapGroupUnmapped extends fhir.BackboneElement {
     /**
      * Default constructor for ConceptMapGroupUnmapped - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ConceptMapGroupUnmapped';
         if (source['mode']) {
             this.mode = source.mode;
         }
         else {
             this.mode = null;
         }
-        if (source['_mode']) {
-            this._mode = new fhir.FhirElement(source._mode);
-        }
         if (source['code']) {
-            this.code = source.code;
-        }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         if (source['display']) {
-            this.display = source.display;
-        }
-        if (source['_display']) {
-            this._display = new fhir.FhirElement(source._display);
+            this.display = new fhir.FhirString({ value: source.display });
         }
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirCanonical({ value: source.url });
         }
     }
     /**
@@ -239,23 +230,26 @@ export class ConceptMapGroupUnmapped extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["mode"]) {
-            results.push(["mode", 'Missing required element: ConceptMap.group.unmapped.mode']);
+        var outcome = super.doModelValidation();
+        if (!this['mode']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property mode:ConceptmapUnmappedModeValueSetEnum fhir: ConceptMap.group.unmapped.mode:code", }));
         }
-        if (this["_mode"]) {
-            results.push(...this._mode.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (this["display"]) {
+            outcome.issue.push(...this.display.doModelValidation().issue);
         }
-        if (this["_display"]) {
-            results.push(...this._display.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -265,31 +259,24 @@ export class ConceptMapGroup extends fhir.BackboneElement {
     /**
      * Default constructor for ConceptMapGroup - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ConceptMapGroup';
+        /**
+         * Generally, the ideal is that there would only be one mapping for each concept in the source value set, but a given concept may be mapped multiple times with different comments or dependencies.
+         */
+        this.element = [];
         if (source['source']) {
-            this.source = source.source;
-        }
-        if (source['_source']) {
-            this._source = new fhir.FhirElement(source._source);
+            this.source = new fhir.FhirUri({ value: source.source });
         }
         if (source['sourceVersion']) {
-            this.sourceVersion = source.sourceVersion;
-        }
-        if (source['_sourceVersion']) {
-            this._sourceVersion = new fhir.FhirElement(source._sourceVersion);
+            this.sourceVersion = new fhir.FhirString({ value: source.sourceVersion });
         }
         if (source['target']) {
-            this.target = source.target;
-        }
-        if (source['_target']) {
-            this._target = new fhir.FhirElement(source._target);
+            this.target = new fhir.FhirUri({ value: source.target });
         }
         if (source['targetVersion']) {
-            this.targetVersion = source.targetVersion;
-        }
-        if (source['_targetVersion']) {
-            this._targetVersion = new fhir.FhirElement(source._targetVersion);
+            this.targetVersion = new fhir.FhirString({ value: source.targetVersion });
         }
         if (source['element']) {
             this.element = source.element.map((x) => new fhir.ConceptMapGroupElement(x));
@@ -305,29 +292,41 @@ export class ConceptMapGroup extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_source"]) {
-            results.push(...this._source.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["source"]) {
+            outcome.issue.push(...this.source.doModelValidation().issue);
         }
-        if (this["_sourceVersion"]) {
-            results.push(...this._sourceVersion.doModelValidation());
+        if (this["sourceVersion"]) {
+            outcome.issue.push(...this.sourceVersion.doModelValidation().issue);
         }
-        if (this["_target"]) {
-            results.push(...this._target.doModelValidation());
+        if (this["target"]) {
+            outcome.issue.push(...this.target.doModelValidation().issue);
         }
-        if (this["_targetVersion"]) {
-            results.push(...this._targetVersion.doModelValidation());
+        if (this["targetVersion"]) {
+            outcome.issue.push(...this.targetVersion.doModelValidation().issue);
         }
-        if ((!this["element"]) || (this["element"].length === 0)) {
-            results.push(["element", 'Missing required element: ConceptMap.group.element']);
+        if (!this['element']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property element:fhir.ConceptMapGroupElement[] fhir: ConceptMap.group.element:element", }));
+        }
+        else if (!Array.isArray(this.element)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property element:fhir.ConceptMapGroupElement[] fhir: ConceptMap.group.element:element", }));
+        }
+        else if (this.element.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property element:fhir.ConceptMapGroupElement[] fhir: ConceptMap.group.element:element", }));
         }
         if (this["element"]) {
-            this.element.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.element.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["unmapped"]) {
-            results.push(...this.unmapped.doModelValidation());
+            outcome.issue.push(...this.unmapped.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -337,35 +336,42 @@ export class ConceptMap extends fhir.DomainResource {
     /**
      * Default constructor for ConceptMap - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ConceptMap';
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the concept map to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        this.__sourceIsChoice = true;
+        this.__targetIsChoice = true;
+        /**
+         * A group of mappings that all have the same source and target system.
+         */
+        this.group = [];
         this.resourceType = 'ConceptMap';
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['status']) {
             this.status = source.status;
@@ -373,35 +379,20 @@ export class ConceptMap extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
-        }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -410,40 +401,28 @@ export class ConceptMap extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+        if (source['source']) {
+            this.source = source.source;
         }
-        if (source['sourceUri']) {
-            this.sourceUri = source.sourceUri;
+        else if (source['sourceUri']) {
+            this.source = new fhir.FhirUri({ value: source.sourceUri });
         }
-        if (source['_sourceUri']) {
-            this._sourceUri = new fhir.FhirElement(source._sourceUri);
+        else if (source['sourceCanonical']) {
+            this.source = new fhir.FhirCanonical({ value: source.sourceCanonical });
         }
-        if (source['sourceCanonical']) {
-            this.sourceCanonical = source.sourceCanonical;
+        if (source['target']) {
+            this.target = source.target;
         }
-        if (source['_sourceCanonical']) {
-            this._sourceCanonical = new fhir.FhirElement(source._sourceCanonical);
+        else if (source['targetUri']) {
+            this.target = new fhir.FhirUri({ value: source.targetUri });
         }
-        if (source['targetUri']) {
-            this.targetUri = source.targetUri;
-        }
-        if (source['_targetUri']) {
-            this._targetUri = new fhir.FhirElement(source._targetUri);
-        }
-        if (source['targetCanonical']) {
-            this.targetCanonical = source.targetCanonical;
-        }
-        if (source['_targetCanonical']) {
-            this._targetCanonical = new fhir.FhirElement(source._targetCanonical);
+        else if (source['targetCanonical']) {
+            this.target = new fhir.FhirCanonical({ value: source.targetCanonical });
         }
         if (source['group']) {
             this.group = source.group.map((x) => new fhir.ConceptMapGroup(x));
@@ -459,74 +438,65 @@ export class ConceptMap extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: ConceptMap.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'ConceptMap' fhir: ConceptMap.resourceType:'ConceptMap'", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: ConceptMap.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: ConceptMap.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
-        }
-        if (this["_sourceUri"]) {
-            results.push(...this._sourceUri.doModelValidation());
-        }
-        if (this["_sourceCanonical"]) {
-            results.push(...this._sourceCanonical.doModelValidation());
-        }
-        if (this["_targetUri"]) {
-            results.push(...this._targetUri.doModelValidation());
-        }
-        if (this["_targetCanonical"]) {
-            results.push(...this._targetCanonical.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
         if (this["group"]) {
-            this.group.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.group.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ConceptMap.js.map

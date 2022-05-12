@@ -3,9 +3,11 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Schedule
 import * as fhir from '../fhir.js';
-import { ServiceCategoryValueSet } from '../fhirValueSets/ServiceCategoryValueSet.js';
-import { ServiceTypeValueSet } from '../fhirValueSets/ServiceTypeValueSet.js';
-import { C80PracticeCodesValueSet } from '../fhirValueSets/C80PracticeCodesValueSet.js';
+import { ServiceCategoryValueSet, } from '../fhirValueSets/ServiceCategoryValueSet.js';
+import { ServiceTypeValueSet, } from '../fhirValueSets/ServiceTypeValueSet.js';
+import { C80PracticeCodesValueSet, } from '../fhirValueSets/C80PracticeCodesValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A container for slots of time that may be available for booking appointments.
  */
@@ -13,17 +15,35 @@ export class Schedule extends fhir.DomainResource {
     /**
      * Default constructor for Schedule - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Schedule';
+        /**
+         * External Ids for this item.
+         */
+        this.identifier = [];
+        /**
+         * A broad categorization of the service that is to be performed during this appointment.
+         */
+        this.serviceCategory = [];
+        /**
+         * The specific service that is to be performed during this appointment.
+         */
+        this.serviceType = [];
+        /**
+         * The specialty of a practitioner that would be required to perform the service requested in this appointment.
+         */
+        this.specialty = [];
+        /**
+         * The capacity to support multiple referenced resource types should be used in cases where the specific resources themselves cannot be scheduled without the other, and thus only make sense to the system exposing them as a group. Common examples of this are where the combination of a practitioner and a room (Location) are always required by a system.
+         */
+        this.actor = [];
         this.resourceType = 'Schedule';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['active']) {
-            this.active = source.active;
-        }
-        if (source['_active']) {
-            this._active = new fhir.FhirElement(source._active);
+            this.active = new fhir.FhirBoolean({ value: source.active });
         }
         if (source['serviceCategory']) {
             this.serviceCategory = source.serviceCategory.map((x) => new fhir.CodeableConcept(x));
@@ -44,10 +64,7 @@ export class Schedule extends fhir.DomainResource {
             this.planningHorizon = new fhir.Period(source.planningHorizon);
         }
         if (source['comment']) {
-            this.comment = source.comment;
-        }
-        if (source['_comment']) {
-            this._comment = new fhir.FhirElement(source._comment);
+            this.comment = new fhir.FhirString({ value: source.comment });
         }
     }
     /**
@@ -72,38 +89,50 @@ export class Schedule extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Schedule.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Schedule' fhir: Schedule.resourceType:'Schedule'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_active"]) {
-            results.push(...this._active.doModelValidation());
+        if (this["active"]) {
+            outcome.issue.push(...this.active.doModelValidation().issue);
         }
         if (this["serviceCategory"]) {
-            this.serviceCategory.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.serviceCategory.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["serviceType"]) {
-            this.serviceType.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.serviceType.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["specialty"]) {
-            this.specialty.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.specialty.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if ((!this["actor"]) || (this["actor"].length === 0)) {
-            results.push(["actor", 'Missing required element: Schedule.actor']);
+        if (!this['actor']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property actor:fhir.Reference[] fhir: Schedule.actor:Reference", }));
+        }
+        else if (!Array.isArray(this.actor)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property actor:fhir.Reference[] fhir: Schedule.actor:Reference", }));
+        }
+        else if (this.actor.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property actor:fhir.Reference[] fhir: Schedule.actor:Reference", }));
         }
         if (this["actor"]) {
-            this.actor.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.actor.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["planningHorizon"]) {
-            results.push(...this.planningHorizon.doModelValidation());
+            outcome.issue.push(...this.planningHorizon.doModelValidation().issue);
         }
-        if (this["_comment"]) {
-            results.push(...this._comment.doModelValidation());
+        if (this["comment"]) {
+            outcome.issue.push(...this.comment.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Schedule.js.map

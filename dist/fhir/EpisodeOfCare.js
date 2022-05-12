@@ -3,9 +3,11 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: EpisodeOfCare
 import * as fhir from '../fhir.js';
-import { EpisodeOfCareStatusValueSet } from '../fhirValueSets/EpisodeOfCareStatusValueSet.js';
-import { DiagnosisRoleValueSet } from '../fhirValueSets/DiagnosisRoleValueSet.js';
-import { EpisodeofcareTypeValueSet } from '../fhirValueSets/EpisodeofcareTypeValueSet.js';
+import { EpisodeOfCareStatusValueSet, } from '../fhirValueSets/EpisodeOfCareStatusValueSet.js';
+import { DiagnosisRoleValueSet, } from '../fhirValueSets/DiagnosisRoleValueSet.js';
+import { EpisodeofcareTypeValueSet, } from '../fhirValueSets/EpisodeofcareTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The history of statuses that the EpisodeOfCare has been through (without requiring processing the history of the resource).
  */
@@ -13,16 +15,14 @@ export class EpisodeOfCareStatusHistory extends fhir.BackboneElement {
     /**
      * Default constructor for EpisodeOfCareStatusHistory - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EpisodeOfCareStatusHistory';
         if (source['status']) {
             this.status = source.status;
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['period']) {
             this.period = new fhir.Period(source.period);
@@ -41,20 +41,23 @@ export class EpisodeOfCareStatusHistory extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: EpisodeOfCare.statusHistory.status']);
+        var outcome = super.doModelValidation();
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:EpisodeOfCareStatusValueSetEnum fhir: EpisodeOfCare.statusHistory.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
-        }
-        if (!this["period"]) {
-            results.push(["period", 'Missing required element: EpisodeOfCare.statusHistory.period']);
+        if (!this['period']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property period:fhir.Period fhir: EpisodeOfCare.statusHistory.period:Period", }));
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -64,8 +67,9 @@ export class EpisodeOfCareDiagnosis extends fhir.BackboneElement {
     /**
      * Default constructor for EpisodeOfCareDiagnosis - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EpisodeOfCareDiagnosis';
         if (source['condition']) {
             this.condition = new fhir.Reference(source.condition);
         }
@@ -76,10 +80,7 @@ export class EpisodeOfCareDiagnosis extends fhir.BackboneElement {
             this.role = new fhir.CodeableConcept(source.role);
         }
         if (source['rank']) {
-            this.rank = source.rank;
-        }
-        if (source['_rank']) {
-            this._rank = new fhir.FhirElement(source._rank);
+            this.rank = new fhir.FhirPositiveInt({ value: source.rank });
         }
     }
     /**
@@ -92,20 +93,26 @@ export class EpisodeOfCareDiagnosis extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["condition"]) {
-            results.push(["condition", 'Missing required element: EpisodeOfCare.diagnosis.condition']);
+        var outcome = super.doModelValidation();
+        if (!this['condition']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property condition:fhir.Reference fhir: EpisodeOfCare.diagnosis.condition:Reference", }));
         }
         if (this["condition"]) {
-            results.push(...this.condition.doModelValidation());
+            outcome.issue.push(...this.condition.doModelValidation().issue);
         }
         if (this["role"]) {
-            results.push(...this.role.doModelValidation());
+            outcome.issue.push(...this.role.doModelValidation().issue);
         }
-        if (this["_rank"]) {
-            results.push(...this._rank.doModelValidation());
+        if (this["rank"]) {
+            outcome.issue.push(...this.rank.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -115,8 +122,37 @@ export class EpisodeOfCare extends fhir.DomainResource {
     /**
      * Default constructor for EpisodeOfCare - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EpisodeOfCare';
+        /**
+         * The EpisodeOfCare may be known by different identifiers for different contexts of use, such as when an external agency is tracking the Episode for funding purposes.
+         */
+        this.identifier = [];
+        /**
+         * The history of statuses that the EpisodeOfCare has been through (without requiring processing the history of the resource).
+         */
+        this.statusHistory = [];
+        /**
+         * The type can be very important in processing as this could be used in determining if the EpisodeOfCare is relevant to specific government reporting, or other types of classifications.
+         */
+        this.type = [];
+        /**
+         * The list of diagnosis relevant to this episode of care.
+         */
+        this.diagnosis = [];
+        /**
+         * Referral Request(s) that are fulfilled by this EpisodeOfCare, incoming referrals.
+         */
+        this.referralRequest = [];
+        /**
+         * The list of practitioners that may be facilitating this episode of care for specific purposes.
+         */
+        this.team = [];
+        /**
+         * The billing system may choose to allocate billable items associated with the EpisodeOfCare to different referenced Accounts based on internal business rules.
+         */
+        this.account = [];
         this.resourceType = 'EpisodeOfCare';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -126,9 +162,6 @@ export class EpisodeOfCare extends fhir.DomainResource {
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['statusHistory']) {
             this.statusHistory = source.statusHistory.map((x) => new fhir.EpisodeOfCareStatusHistory(x));
@@ -180,53 +213,56 @@ export class EpisodeOfCare extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: EpisodeOfCare.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'EpisodeOfCare' fhir: EpisodeOfCare.resourceType:'EpisodeOfCare'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: EpisodeOfCare.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:EpisodeOfCareStatusValueSetEnum fhir: EpisodeOfCare.status:code", }));
         }
         if (this["statusHistory"]) {
-            this.statusHistory.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.statusHistory.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["type"]) {
-            this.type.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.type.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["diagnosis"]) {
-            this.diagnosis.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.diagnosis.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["patient"]) {
-            results.push(["patient", 'Missing required element: EpisodeOfCare.patient']);
+        if (!this['patient']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property patient:fhir.Reference fhir: EpisodeOfCare.patient:Reference", }));
         }
         if (this["patient"]) {
-            results.push(...this.patient.doModelValidation());
+            outcome.issue.push(...this.patient.doModelValidation().issue);
         }
         if (this["managingOrganization"]) {
-            results.push(...this.managingOrganization.doModelValidation());
+            outcome.issue.push(...this.managingOrganization.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
         if (this["referralRequest"]) {
-            this.referralRequest.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.referralRequest.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["careManager"]) {
-            results.push(...this.careManager.doModelValidation());
+            outcome.issue.push(...this.careManager.doModelValidation().issue);
         }
         if (this["team"]) {
-            this.team.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.team.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["account"]) {
-            this.account.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.account.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=EpisodeOfCare.js.map

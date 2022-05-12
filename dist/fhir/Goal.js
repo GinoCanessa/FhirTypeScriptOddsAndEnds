@@ -3,13 +3,14 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Goal
 import * as fhir from '../fhir.js';
-import { ObservationCodesValueSet } from '../fhirValueSets/ObservationCodesValueSet.js';
-import { GoalStatusValueSet } from '../fhirValueSets/GoalStatusValueSet.js';
-import { GoalAchievementValueSet } from '../fhirValueSets/GoalAchievementValueSet.js';
-import { GoalCategoryValueSet } from '../fhirValueSets/GoalCategoryValueSet.js';
-import { GoalPriorityValueSet } from '../fhirValueSets/GoalPriorityValueSet.js';
-import { ClinicalFindingsValueSet } from '../fhirValueSets/ClinicalFindingsValueSet.js';
-import { GoalStartEventValueSet } from '../fhirValueSets/GoalStartEventValueSet.js';
+import { ObservationCodesValueSet, } from '../fhirValueSets/ObservationCodesValueSet.js';
+import { GoalStatusValueSet, } from '../fhirValueSets/GoalStatusValueSet.js';
+import { GoalAchievementValueSet, } from '../fhirValueSets/GoalAchievementValueSet.js';
+import { GoalCategoryValueSet, } from '../fhirValueSets/GoalCategoryValueSet.js';
+import { GoalPriorityValueSet, } from '../fhirValueSets/GoalPriorityValueSet.js';
+import { ClinicalFindingsValueSet, } from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.
  */
@@ -17,49 +18,46 @@ export class GoalTarget extends fhir.BackboneElement {
     /**
      * Default constructor for GoalTarget - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'GoalTarget';
+        this.__detailIsChoice = true;
+        this.__dueIsChoice = true;
         if (source['measure']) {
             this.measure = new fhir.CodeableConcept(source.measure);
         }
-        if (source['detailQuantity']) {
-            this.detailQuantity = new fhir.Quantity(source.detailQuantity);
+        if (source['detail']) {
+            this.detail = source.detail;
         }
-        if (source['detailRange']) {
-            this.detailRange = new fhir.Range(source.detailRange);
+        else if (source['detailQuantity']) {
+            this.detail = new fhir.Quantity(source.detailQuantity);
         }
-        if (source['detailCodeableConcept']) {
-            this.detailCodeableConcept = new fhir.CodeableConcept(source.detailCodeableConcept);
+        else if (source['detailRange']) {
+            this.detail = new fhir.Range(source.detailRange);
         }
-        if (source['detailString']) {
-            this.detailString = source.detailString;
+        else if (source['detailCodeableConcept']) {
+            this.detail = new fhir.CodeableConcept(source.detailCodeableConcept);
         }
-        if (source['_detailString']) {
-            this._detailString = new fhir.FhirElement(source._detailString);
+        else if (source['detailString']) {
+            this.detail = new fhir.FhirString({ value: source.detailString });
         }
-        if (source['detailBoolean']) {
-            this.detailBoolean = source.detailBoolean;
+        else if (source['detailBoolean']) {
+            this.detail = new fhir.FhirBoolean({ value: source.detailBoolean });
         }
-        if (source['_detailBoolean']) {
-            this._detailBoolean = new fhir.FhirElement(source._detailBoolean);
+        else if (source['detailInteger']) {
+            this.detail = new fhir.FhirInteger({ value: source.detailInteger });
         }
-        if (source['detailInteger']) {
-            this.detailInteger = source.detailInteger;
+        else if (source['detailRatio']) {
+            this.detail = new fhir.Ratio(source.detailRatio);
         }
-        if (source['_detailInteger']) {
-            this._detailInteger = new fhir.FhirElement(source._detailInteger);
+        if (source['due']) {
+            this.due = source.due;
         }
-        if (source['detailRatio']) {
-            this.detailRatio = new fhir.Ratio(source.detailRatio);
+        else if (source['dueDate']) {
+            this.due = new fhir.FhirDate({ value: source.dueDate });
         }
-        if (source['dueDate']) {
-            this.dueDate = source.dueDate;
-        }
-        if (source['_dueDate']) {
-            this._dueDate = new fhir.FhirElement(source._dueDate);
-        }
-        if (source['dueDuration']) {
-            this.dueDuration = new fhir.Duration(source.dueDuration);
+        else if (source['dueDuration']) {
+            this.due = new fhir.Duration(source.dueDuration);
         }
     }
     /**
@@ -72,38 +70,17 @@ export class GoalTarget extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["measure"]) {
-            results.push(...this.measure.doModelValidation());
+            outcome.issue.push(...this.measure.doModelValidation().issue);
         }
-        if (this["detailQuantity"]) {
-            results.push(...this.detailQuantity.doModelValidation());
-        }
-        if (this["detailRange"]) {
-            results.push(...this.detailRange.doModelValidation());
-        }
-        if (this["detailCodeableConcept"]) {
-            results.push(...this.detailCodeableConcept.doModelValidation());
-        }
-        if (this["_detailString"]) {
-            results.push(...this._detailString.doModelValidation());
-        }
-        if (this["_detailBoolean"]) {
-            results.push(...this._detailBoolean.doModelValidation());
-        }
-        if (this["_detailInteger"]) {
-            results.push(...this._detailInteger.doModelValidation());
-        }
-        if (this["detailRatio"]) {
-            results.push(...this.detailRatio.doModelValidation());
-        }
-        if (this["_dueDate"]) {
-            results.push(...this._dueDate.doModelValidation());
-        }
-        if (this["dueDuration"]) {
-            results.push(...this.dueDuration.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -113,8 +90,38 @@ export class Goal extends fhir.DomainResource {
     /**
      * Default constructor for Goal - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Goal';
+        /**
+         * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+         */
+        this.identifier = [];
+        /**
+         * Indicates a category the goal falls within.
+         */
+        this.category = [];
+        this.__startIsChoice = true;
+        /**
+         * When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.
+         */
+        this.target = [];
+        /**
+         * The identified conditions and other health record elements that are intended to be addressed by the goal.
+         */
+        this.addresses = [];
+        /**
+         * May be used for progress notes, concerns or other related information that doesn't actually describe the goal itself.
+         */
+        this.note = [];
+        /**
+         * Note that this should not duplicate the goal status.
+         */
+        this.outcomeCode = [];
+        /**
+         * The goal outcome is independent of the outcome of the related activities.  For example, if the Goal is to achieve a target body weight of 150 lb and a care plan activity is defined to diet, then the care plan’s activity outcome could be calories consumed whereas goal outcome is an observation for the actual body weight measured.
+         */
+        this.outcomeReference = [];
         this.resourceType = 'Goal';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -124,9 +131,6 @@ export class Goal extends fhir.DomainResource {
         }
         else {
             this.lifecycleStatus = null;
-        }
-        if (source['_lifecycleStatus']) {
-            this._lifecycleStatus = new fhir.FhirElement(source._lifecycleStatus);
         }
         if (source['achievementStatus']) {
             this.achievementStatus = new fhir.CodeableConcept(source.achievementStatus);
@@ -149,29 +153,23 @@ export class Goal extends fhir.DomainResource {
         else {
             this.subject = null;
         }
-        if (source['startDate']) {
-            this.startDate = source.startDate;
+        if (source['start']) {
+            this.start = source.start;
         }
-        if (source['_startDate']) {
-            this._startDate = new fhir.FhirElement(source._startDate);
+        else if (source['startDate']) {
+            this.start = new fhir.FhirDate({ value: source.startDate });
         }
-        if (source['startCodeableConcept']) {
-            this.startCodeableConcept = new fhir.CodeableConcept(source.startCodeableConcept);
+        else if (source['startCodeableConcept']) {
+            this.start = new fhir.CodeableConcept(source.startCodeableConcept);
         }
         if (source['target']) {
             this.target = source.target.map((x) => new fhir.GoalTarget(x));
         }
         if (source['statusDate']) {
-            this.statusDate = source.statusDate;
-        }
-        if (source['_statusDate']) {
-            this._statusDate = new fhir.FhirElement(source._statusDate);
+            this.statusDate = new fhir.FhirDate({ value: source.statusDate });
         }
         if (source['statusReason']) {
-            this.statusReason = source.statusReason;
-        }
-        if (source['_statusReason']) {
-            this._statusReason = new fhir.FhirElement(source._statusReason);
+            this.statusReason = new fhir.FhirString({ value: source.statusReason });
         }
         if (source['expressedBy']) {
             this.expressedBy = new fhir.Reference(source.expressedBy);
@@ -220,18 +218,6 @@ export class Goal extends fhir.DomainResource {
         return ClinicalFindingsValueSet;
     }
     /**
-     * Example-bound Value Set for startDate
-     */
-    static startDateExampleValueSet() {
-        return GoalStartEventValueSet;
-    }
-    /**
-     * Example-bound Value Set for startCodeableConcept
-     */
-    static startCodeableConceptExampleValueSet() {
-        return GoalStartEventValueSet;
-    }
-    /**
      * Example-bound Value Set for outcomeCode
      */
     static outcomeCodeExampleValueSet() {
@@ -241,71 +227,68 @@ export class Goal extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Goal.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Goal' fhir: Goal.resourceType:'Goal'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["lifecycleStatus"]) {
-            results.push(["lifecycleStatus", 'Missing required element: Goal.lifecycleStatus']);
-        }
-        if (this["_lifecycleStatus"]) {
-            results.push(...this._lifecycleStatus.doModelValidation());
+        if (!this['lifecycleStatus']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property lifecycleStatus:GoalStatusValueSetEnum fhir: Goal.lifecycleStatus:code", }));
         }
         if (this["achievementStatus"]) {
-            results.push(...this.achievementStatus.doModelValidation());
+            outcome.issue.push(...this.achievementStatus.doModelValidation().issue);
         }
         if (this["category"]) {
-            this.category.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.category.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["priority"]) {
-            results.push(...this.priority.doModelValidation());
+            outcome.issue.push(...this.priority.doModelValidation().issue);
         }
-        if (!this["description"]) {
-            results.push(["description", 'Missing required element: Goal.description']);
+        if (!this['description']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property description:fhir.CodeableConcept fhir: Goal.description:CodeableConcept", }));
         }
         if (this["description"]) {
-            results.push(...this.description.doModelValidation());
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (!this["subject"]) {
-            results.push(["subject", 'Missing required element: Goal.subject']);
+        if (!this['subject']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property subject:fhir.Reference fhir: Goal.subject:Reference", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
-        }
-        if (this["_startDate"]) {
-            results.push(...this._startDate.doModelValidation());
-        }
-        if (this["startCodeableConcept"]) {
-            results.push(...this.startCodeableConcept.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["target"]) {
-            this.target.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.target.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_statusDate"]) {
-            results.push(...this._statusDate.doModelValidation());
+        if (this["statusDate"]) {
+            outcome.issue.push(...this.statusDate.doModelValidation().issue);
         }
-        if (this["_statusReason"]) {
-            results.push(...this._statusReason.doModelValidation());
+        if (this["statusReason"]) {
+            outcome.issue.push(...this.statusReason.doModelValidation().issue);
         }
         if (this["expressedBy"]) {
-            results.push(...this.expressedBy.doModelValidation());
+            outcome.issue.push(...this.expressedBy.doModelValidation().issue);
         }
         if (this["addresses"]) {
-            this.addresses.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.addresses.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["outcomeCode"]) {
-            this.outcomeCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.outcomeCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["outcomeReference"]) {
-            this.outcomeReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.outcomeReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Goal.js.map

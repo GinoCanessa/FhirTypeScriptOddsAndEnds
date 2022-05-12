@@ -43,17 +43,3 @@ export type HandlingConditionValueSetType = typeof HandlingConditionValueSet;
 /**
  * Set of handling instructions prior testing of the specimen.
  */
-export enum HandlingConditionValueSetEnum {
-  /**
-   * frozen: frozen temperature.
-   */
-  Frozen = "frozen",
-  /**
-   * refrigerated: refrigerated temperature.
-   */
-  Refrigerated = "refrigerated",
-  /**
-   * room: room temperature.
-   */
-  RoomTemperature = "room",
-}

@@ -3,194 +3,60 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: CompartmentDefinition
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ResourceTypesValueSet, ResourceTypesValueSetType, ResourceTypesValueSetEnum } from '../fhirValueSets/ResourceTypesValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-import { CompartmentTypeValueSet, CompartmentTypeValueSetType, CompartmentTypeValueSetEnum } from '../fhirValueSets/CompartmentTypeValueSet.js'
-
+import { ResourceTypesValueSet, ResourceTypesValueSetType,} from '../fhirValueSets/ResourceTypesValueSet.js';
+import { ResourceTypesValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { CompartmentTypeValueSet, CompartmentTypeValueSetType,} from '../fhirValueSets/CompartmentTypeValueSet.js';
+import { CompartmentTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Information about how a resource is related to the compartment.
+ * Valid arguments for the CompartmentDefinitionResource type.
  */
-export type ICompartmentDefinitionResource = fhir.IBackboneElement & { 
+export interface CompartmentDefinitionResourceArgs extends fhir.BackboneElementArgs {
   /**
    * The name of a resource supported by the server.
    */
-  code: string|null;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.resource.code
-   */
-  _code?: fhir.IFhirElement|undefined;
+  code: fhir.FhirCode|string|undefined;
   /**
    * If no search parameters are listed, then the resource is not linked to the compartment.
    */
-  param?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.resource.param
-   */
-  _param?: fhir.IFhirElement[]|undefined;
+  param?: fhir.FhirString[]|string[]|undefined;
   /**
    * Additional documentation about the resource and compartment.
    */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.resource.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-}
-
-/**
- * A compartment definition that defines how resources are accessed on a server.
- */
-export type ICompartmentDefinition = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "CompartmentDefinition";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url: string|null;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * There may be different compartment definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the compartment definition with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.This is often the same as the code for the parameter, but does not need to be.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of compartment definitions that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of compartment definitions that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the compartment definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the compartment definition is the organization or individual primarily responsible for the maintenance and upkeep of the compartment definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the compartment definition. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the compartment definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the compartment definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the compartment definition is presumed to be the predominant language in the place the compartment definition was created).
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * This element does not describe the usage of the compartment definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this compartment definition.
-   */
-  purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.purpose
-   */
-  _purpose?: fhir.IFhirElement|undefined;
-  /**
-   * Only the specification can define the compartments that can exist. Servers can choose to support them.
-   */
-  code: CompartmentTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.code
-   */
-  _code?: fhir.IFhirElement|undefined;
-  /**
-   * Servers may define and use compartments to manage logical access without implementing the compartment related syntax.
-   */
-  search: boolean|null;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.search
-   */
-  _search?: fhir.IFhirElement|undefined;
-  /**
-   * Information about how a resource is related to the compartment.
-   */
-  resource?: fhir.ICompartmentDefinitionResource[]|undefined;
+  documentation?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Information about how a resource is related to the compartment.
  */
-export class CompartmentDefinitionResource extends fhir.BackboneElement implements ICompartmentDefinitionResource {
+export class CompartmentDefinitionResource extends fhir.BackboneElement {
+  readonly __dataType:string = 'CompartmentDefinitionResource';
   /**
    * The name of a resource supported by the server.
    */
-  public code: string|null;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.resource.code
-   */
-  public _code?: fhir.FhirElement|undefined;
+  public code: fhir.FhirCode|null;
   /**
    * If no search parameters are listed, then the resource is not linked to the compartment.
    */
-  public param?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.resource.param
-   */
-  public _param?: fhir.FhirElement[]|undefined;
+  public param?: fhir.FhirString[]|undefined = [];
   /**
    * Additional documentation about the resource and compartment.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.resource.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirString|undefined;
   /**
    * Default constructor for CompartmentDefinitionResource - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICompartmentDefinitionResource> = { }) {
-    super(source);
-    if (source['code']) { this.code = source.code; }
+  constructor(source:Partial<CompartmentDefinitionResourceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.FhirCode({value: source.code}); }
     else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['param']) { this.param = source.param.map((x) => (x)); }
-    if (source['_param']) { this._param = source._param.map((x) => new fhir.FhirElement(x)); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
+    if (source['param']) { this.param = source.param.map((x) => new fhir.FhirString({value: x})); }
+    if (source['documentation']) { this.documentation = new fhir.FhirString({value: source.documentation}); }
   }
   /**
    * Required-bound Value Set for code
@@ -201,20 +67,96 @@ export class CompartmentDefinitionResource extends fhir.BackboneElement implemen
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: CompartmentDefinition.resource.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["_param"]) { this._param.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.FhirCode fhir: CompartmentDefinition.resource.code:code", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["param"]) { this.param.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CompartmentDefinition type.
+ */
+export interface CompartmentDefinitionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "CompartmentDefinition"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url: fhir.FhirUri|string|undefined;
+  /**
+   * There may be different compartment definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the compartment definition with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.This is often the same as the code for the parameter, but does not need to be.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * Allows filtering of compartment definitions that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Allows filtering of compartment definitions that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the compartment definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the compartment definition is the organization or individual primarily responsible for the maintenance and upkeep of the compartment definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the compartment definition. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the compartment definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the compartment definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the compartment definition is presumed to be the predominant language in the place the compartment definition was created).
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * This element does not describe the usage of the compartment definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this compartment definition.
+   */
+  purpose?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Only the specification can define the compartments that can exist. Servers can choose to support them.
+   */
+  code: CompartmentTypeValueSetEnum|null;
+  /**
+   * Servers may define and use compartments to manage logical access without implementing the compartment related syntax.
+   */
+  search: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Information about how a resource is related to the compartment.
+   */
+  resource?: fhir.CompartmentDefinitionResourceArgs[]|undefined;
 }
 
 /**
  * A compartment definition that defines how resources are accessed on a server.
  */
-export class CompartmentDefinition extends fhir.DomainResource implements ICompartmentDefinition {
+export class CompartmentDefinition extends fhir.DomainResource {
+  readonly __dataType:string = 'CompartmentDefinition';
   /**
    * Resource Type Name
    */
@@ -224,138 +166,83 @@ export class CompartmentDefinition extends fhir.DomainResource implements ICompa
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url: string|null;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url: fhir.FhirUri|null;
   /**
    * There may be different compartment definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the compartment definition with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.This is often the same as the code for the parameter, but does not need to be.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * Allows filtering of compartment definitions that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: CompartmentDefinition.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of compartment definitions that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the compartment definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the compartment definition is the organization or individual primarily responsible for the maintenance and upkeep of the compartment definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the compartment definition. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the compartment definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the compartment definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the compartment definition is presumed to be the predominant language in the place the compartment definition was created).
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * This element does not describe the usage of the compartment definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this compartment definition.
    */
-  public purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.purpose
-   */
-  public _purpose?: fhir.FhirElement|undefined;
+  public purpose?: fhir.FhirMarkdown|undefined;
   /**
    * Only the specification can define the compartments that can exist. Servers can choose to support them.
    */
   public code: CompartmentTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: CompartmentDefinition.code
-   */
-  public _code?: fhir.FhirElement|undefined;
-  /**
    * Servers may define and use compartments to manage logical access without implementing the compartment related syntax.
    */
-  public search: boolean|null;
-  /**
-   * Extended properties for primitive element: CompartmentDefinition.search
-   */
-  public _search?: fhir.FhirElement|undefined;
+  public search: fhir.FhirBoolean|null;
   /**
    * Information about how a resource is related to the compartment.
    */
-  public resource?: fhir.CompartmentDefinitionResource[]|undefined;
+  public resource?: fhir.CompartmentDefinitionResource[]|undefined = [];
   /**
    * Default constructor for CompartmentDefinition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICompartmentDefinition> = { }) {
-    super(source);
+  constructor(source:Partial<CompartmentDefinitionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'CompartmentDefinition';
-    if (source['url']) { this.url = source.url; }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     else { this.url = null; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
-    if (source['purpose']) { this.purpose = source.purpose; }
-    if (source['_purpose']) { this._purpose = new fhir.FhirElement(source._purpose!); }
+    if (source['purpose']) { this.purpose = new fhir.FhirMarkdown({value: source.purpose}); }
     if (source['code']) { this.code = source.code; }
     else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['search']) { this.search = source.search; }
+    if (source['search']) { this.search = new fhir.FhirBoolean({value: source.search}); }
     else { this.search = null; }
-    if (source['_search']) { this._search = new fhir.FhirElement(source._search!); }
     if (source['resource']) { this.resource = source.resource.map((x) => new fhir.CompartmentDefinitionResource(x)); }
   }
   /**
@@ -373,28 +260,44 @@ export class CompartmentDefinition extends fhir.DomainResource implements ICompa
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: CompartmentDefinition.resourceType']); }
-    if (!this["url"]) { results.push(["url",'Missing required element: CompartmentDefinition.url']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (!this["name"]) { results.push(["name",'Missing required element: CompartmentDefinition.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: CompartmentDefinition.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_purpose"]) { results.push(...this._purpose.doModelValidation()); }
-    if (!this["code"]) { results.push(["code",'Missing required element: CompartmentDefinition.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (!this["search"]) { results.push(["search",'Missing required element: CompartmentDefinition.search']); }
-    if (this["_search"]) { results.push(...this._search.doModelValidation()); }
-    if (this["resource"]) { this.resource.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'CompartmentDefinition' fhir: CompartmentDefinition.resourceType:'CompartmentDefinition'", }));
+    }
+    if (!this['url']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property url:fhir.FhirUri fhir: CompartmentDefinition.url:uri", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: CompartmentDefinition.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: CompartmentDefinition.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:CompartmentTypeValueSetEnum fhir: CompartmentDefinition.code:code", }));
+    }
+    if (!this['search']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property search:fhir.FhirBoolean fhir: CompartmentDefinition.search:boolean", }));
+    }
+    if (this["search"]) { outcome.issue!.push(...this.search.doModelValidation().issue!); }
+    if (this["resource"]) { this.resource.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

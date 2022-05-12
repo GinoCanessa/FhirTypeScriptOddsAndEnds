@@ -1,37 +1,38 @@
 import * as fhir from '../fhir.js';
 /**
- * Describe the undesirable effects of the medicinal product.
+ * Valid arguments for the MedicinalProductUndesirableEffect type.
  */
-export declare type IMedicinalProductUndesirableEffect = fhir.IDomainResource & {
+export interface MedicinalProductUndesirableEffectArgs extends fhir.DomainResourceArgs {
     /**
      * Resource Type Name
      */
-    resourceType: "MedicinalProductUndesirableEffect";
+    resourceType: "MedicinalProductUndesirableEffect" | undefined;
     /**
      * The medication for which this is an indication.
      */
-    subject?: fhir.IReference[] | undefined;
+    subject?: fhir.ReferenceArgs[] | undefined;
     /**
      * The symptom, condition or undesirable effect.
      */
-    symptomConditionEffect?: fhir.ICodeableConcept | undefined;
+    symptomConditionEffect?: fhir.CodeableConceptArgs | undefined;
     /**
      * Classification of the effect.
      */
-    classification?: fhir.ICodeableConcept | undefined;
+    classification?: fhir.CodeableConceptArgs | undefined;
     /**
      * The frequency of occurrence of the effect.
      */
-    frequencyOfOccurrence?: fhir.ICodeableConcept | undefined;
+    frequencyOfOccurrence?: fhir.CodeableConceptArgs | undefined;
     /**
      * The population group to which this applies.
      */
-    population?: fhir.IPopulation[] | undefined;
-};
+    population?: fhir.PopulationArgs[] | undefined;
+}
 /**
  * Describe the undesirable effects of the medicinal product.
  */
-export declare class MedicinalProductUndesirableEffect extends fhir.DomainResource implements IMedicinalProductUndesirableEffect {
+export declare class MedicinalProductUndesirableEffect extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -59,10 +60,14 @@ export declare class MedicinalProductUndesirableEffect extends fhir.DomainResour
     /**
      * Default constructor for MedicinalProductUndesirableEffect - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IMedicinalProductUndesirableEffect>);
+    constructor(source?: Partial<MedicinalProductUndesirableEffectArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=MedicinalProductUndesirableEffect.d.ts.map

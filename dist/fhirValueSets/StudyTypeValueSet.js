@@ -67,35 +67,4 @@ export const StudyTypeValueSet = {
 /**
  * Types of research studies (types of research methods).
  */
-export var StudyTypeValueSetEnum;
-(function (StudyTypeValueSetEnum) {
-    /**
-     * case-control: case-control study.
-     */
-    StudyTypeValueSetEnum["CaseControlStudy"] = "case-control";
-    /**
-     * case-report: a single case report.
-     */
-    StudyTypeValueSetEnum["CaseReport"] = "case-report";
-    /**
-     * CCT: controlled (but not randomized) trial.
-     */
-    StudyTypeValueSetEnum["ControlledTrialNonRandomized"] = "CCT";
-    /**
-     * cohort: observational study comparing cohorts.
-     */
-    StudyTypeValueSetEnum["ComparativeCohortStudy"] = "cohort";
-    /**
-     * mixed: a combination of 1 or more types of studies.
-     */
-    StudyTypeValueSetEnum["MixedMethods"] = "mixed";
-    /**
-     * RCT: randomized controlled trial.
-     */
-    StudyTypeValueSetEnum["RandomizedTrial"] = "RCT";
-    /**
-     * series: uncontrolled cohort or case series.
-     */
-    StudyTypeValueSetEnum["UncontrolledCohortOrCaseSeries"] = "series";
-})(StudyTypeValueSetEnum || (StudyTypeValueSetEnum = {}));
 //# sourceMappingURL=StudyTypeValueSet.js.map

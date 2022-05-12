@@ -2,7 +2,8 @@
 // Contents of: hl7.fhir.r4.core version: 4.0.1
 // Minimum TypeScript Version: 3.7
 
+import * as fhirJson from './fhirJson.js';
 import * as fhir from './fhir.js';
 import * as valueSets from './valueSets.js';
 import * as valueSetEnums from './valueSetEnums.js';
-export { fhir, valueSets, valueSetEnums };
+export { fhir, valueSets, valueSetEnums, fhirJson, };

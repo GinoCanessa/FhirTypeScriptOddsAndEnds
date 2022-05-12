@@ -27,15 +27,4 @@ export const SupplydeliveryTypeValueSet = {
 /**
  * This value sets refers to a specific supply item.
  */
-export var SupplydeliveryTypeValueSetEnum;
-(function (SupplydeliveryTypeValueSetEnum) {
-    /**
-     * device: What is supplied (or requested) is a device.
-     */
-    SupplydeliveryTypeValueSetEnum["Device"] = "device";
-    /**
-     * medication: Supply is a kind of medication.
-     */
-    SupplydeliveryTypeValueSetEnum["Medication"] = "medication";
-})(SupplydeliveryTypeValueSetEnum || (SupplydeliveryTypeValueSetEnum = {}));
 //# sourceMappingURL=SupplydeliveryTypeValueSet.js.map

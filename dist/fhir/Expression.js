@@ -3,7 +3,9 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Expression
 import * as fhir from '../fhir.js';
-import { ExpressionLanguageValueSet } from '../fhirValueSets/ExpressionLanguageValueSet.js';
+import { ExpressionLanguageValueSet, } from '../fhirValueSets/ExpressionLanguageValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A expression that is evaluated in a specified context and returns a value. The context of use of the expression must specify the context in which the expression is evaluated, and how the result of the expression is used.
  */
@@ -11,40 +13,26 @@ export class Expression extends fhir.FhirElement {
     /**
      * Default constructor for Expression - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Expression';
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirId({ value: source.name });
         }
         if (source['language']) {
-            this.language = source.language;
+            this.language = new fhir.FhirCode({ value: source.language });
         }
         else {
             this.language = null;
         }
-        if (source['_language']) {
-            this._language = new fhir.FhirElement(source._language);
-        }
         if (source['expression']) {
-            this.expression = source.expression;
-        }
-        if (source['_expression']) {
-            this._expression = new fhir.FhirElement(source._expression);
+            this.expression = new fhir.FhirString({ value: source.expression });
         }
         if (source['reference']) {
-            this.reference = source.reference;
-        }
-        if (source['_reference']) {
-            this._reference = new fhir.FhirElement(source._reference);
+            this.reference = new fhir.FhirUri({ value: source.reference });
         }
     }
     /**
@@ -57,26 +45,32 @@ export class Expression extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (!this["language"]) {
-            results.push(["language", 'Missing required element: Expression.language']);
+        if (!this['language']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property language:fhir.FhirCode fhir: Expression.language:code", }));
         }
-        if (this["_language"]) {
-            results.push(...this._language.doModelValidation());
+        if (this["language"]) {
+            outcome.issue.push(...this.language.doModelValidation().issue);
         }
-        if (this["_expression"]) {
-            results.push(...this._expression.doModelValidation());
+        if (this["expression"]) {
+            outcome.issue.push(...this.expression.doModelValidation().issue);
         }
-        if (this["_reference"]) {
-            results.push(...this._reference.doModelValidation());
+        if (this["reference"]) {
+            outcome.issue.push(...this.reference.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Expression.js.map

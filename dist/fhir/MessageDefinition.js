@@ -3,10 +3,12 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MessageDefinition
 import * as fhir from '../fhir.js';
-import { ResourceTypesValueSet } from '../fhirValueSets/ResourceTypesValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { MessageSignificanceCategoryValueSet } from '../fhirValueSets/MessageSignificanceCategoryValueSet.js';
-import { MessageheaderResponseRequestValueSet } from '../fhirValueSets/MessageheaderResponseRequestValueSet.js';
+import { ResourceTypesValueSet, } from '../fhirValueSets/ResourceTypesValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { MessageSignificanceCategoryValueSet, } from '../fhirValueSets/MessageSignificanceCategoryValueSet.js';
+import { MessageheaderResponseRequestValueSet, } from '../fhirValueSets/MessageheaderResponseRequestValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Identifies the resource (or resources) that are being addressed by the event.  For example, the Encounter for an admit message or two Account records for a merge.
  */
@@ -14,37 +16,26 @@ export class MessageDefinitionFocus extends fhir.BackboneElement {
     /**
      * Default constructor for MessageDefinitionFocus - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MessageDefinitionFocus';
         if (source['code']) {
-            this.code = source.code;
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         else {
             this.code = null;
         }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
-        }
         if (source['profile']) {
-            this.profile = source.profile;
-        }
-        if (source['_profile']) {
-            this._profile = new fhir.FhirElement(source._profile);
+            this.profile = new fhir.FhirCanonical({ value: source.profile });
         }
         if (source['min']) {
-            this.min = source.min;
+            this.min = new fhir.FhirUnsignedInt({ value: source.min });
         }
         else {
             this.min = null;
         }
-        if (source['_min']) {
-            this._min = new fhir.FhirElement(source._min);
-        }
         if (source['max']) {
-            this.max = source.max;
-        }
-        if (source['_max']) {
-            this._max = new fhir.FhirElement(source._max);
+            this.max = new fhir.FhirString({ value: source.max });
         }
     }
     /**
@@ -57,26 +48,32 @@ export class MessageDefinitionFocus extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: MessageDefinition.focus.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.FhirCode fhir: MessageDefinition.focus.code:code", }));
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_profile"]) {
-            results.push(...this._profile.doModelValidation());
+        if (this["profile"]) {
+            outcome.issue.push(...this.profile.doModelValidation().issue);
         }
-        if (!this["min"]) {
-            results.push(["min", 'Missing required element: MessageDefinition.focus.min']);
+        if (!this['min']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property min:fhir.FhirUnsignedInt fhir: MessageDefinition.focus.min:unsignedInt", }));
         }
-        if (this["_min"]) {
-            results.push(...this._min.doModelValidation());
+        if (this["min"]) {
+            outcome.issue.push(...this.min.doModelValidation().issue);
         }
-        if (this["_max"]) {
-            results.push(...this._max.doModelValidation());
+        if (this["max"]) {
+            outcome.issue.push(...this.max.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -86,39 +83,40 @@ export class MessageDefinitionAllowedResponse extends fhir.BackboneElement {
     /**
      * Default constructor for MessageDefinitionAllowedResponse - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MessageDefinitionAllowedResponse';
         if (source['message']) {
-            this.message = source.message;
+            this.message = new fhir.FhirCanonical({ value: source.message });
         }
         else {
             this.message = null;
         }
-        if (source['_message']) {
-            this._message = new fhir.FhirElement(source._message);
-        }
         if (source['situation']) {
-            this.situation = source.situation;
-        }
-        if (source['_situation']) {
-            this._situation = new fhir.FhirElement(source._situation);
+            this.situation = new fhir.FhirMarkdown({ value: source.situation });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["message"]) {
-            results.push(["message", 'Missing required element: MessageDefinition.allowedResponse.message']);
+        var outcome = super.doModelValidation();
+        if (!this['message']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property message:fhir.FhirCanonical fhir: MessageDefinition.allowedResponse.message:canonical", }));
         }
-        if (this["_message"]) {
-            results.push(...this._message.doModelValidation());
+        if (this["message"]) {
+            outcome.issue.push(...this.message.doModelValidation().issue);
         }
-        if (this["_situation"]) {
-            results.push(...this._situation.doModelValidation());
+        if (this["situation"]) {
+            outcome.issue.push(...this.situation.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -128,41 +126,64 @@ export class MessageDefinition extends fhir.DomainResource {
     /**
      * Default constructor for MessageDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MessageDefinition';
+        /**
+         * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this message definition outside of FHIR, where it is not possible to use the logical URI.
+         */
+        this.identifier = [];
+        /**
+         * A MessageDefinition that is superseded by this definition.
+         */
+        this.replaces = [];
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the message definition to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * It should be possible to use MessageDefinition to describe a message to be used by certain steps in a particular protocol as part of a PlanDefinition or ActivityDefinition.
+         */
+        this.parent = [];
+        this.__eventIsChoice = true;
+        /**
+         * Identifies the resource (or resources) that are being addressed by the event.  For example, the Encounter for an admit message or two Account records for a merge.
+         */
+        this.focus = [];
+        /**
+         * This indicates an application level response to "close" a transaction implicit in a particular request message.  To define a complete workflow scenario, look to the [[PlanDefinition]] resource which allows the definition of complex orchestrations, conditionality, etc.
+         */
+        this.allowedResponse = [];
+        /**
+         * Canonical reference to a GraphDefinition. If a URL is provided, it is the canonical reference to a [GraphDefinition](graphdefinition.html) that it controls what resources are to be added to the bundle when building the document. The GraphDefinition can also specify profiles that apply to the various resources.
+         */
+        this.graph = [];
         this.resourceType = 'MessageDefinition';
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['replaces']) {
-            this.replaces = source.replaces.map((x) => (x));
-        }
-        if (source['_replaces']) {
-            this._replaces = source._replaces.map((x) => new fhir.FhirElement(x));
+            this.replaces = source.replaces.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['status']) {
             this.status = source.status;
@@ -170,38 +191,23 @@ export class MessageDefinition extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
-        }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
         if (source['date']) {
-            this.date = source.date;
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         else {
             this.date = null;
         }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
-        }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -210,43 +216,31 @@ export class MessageDefinition extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['base']) {
-            this.base = source.base;
-        }
-        if (source['_base']) {
-            this._base = new fhir.FhirElement(source._base);
+            this.base = new fhir.FhirCanonical({ value: source.base });
         }
         if (source['parent']) {
-            this.parent = source.parent.map((x) => (x));
+            this.parent = source.parent.map((x) => new fhir.FhirCanonical({ value: x }));
         }
-        if (source['_parent']) {
-            this._parent = source._parent.map((x) => new fhir.FhirElement(x));
+        if (source['event']) {
+            this.event = source.event;
         }
-        if (source['eventCoding']) {
-            this.eventCoding = new fhir.Coding(source.eventCoding);
+        else if (source['eventCoding']) {
+            this.event = new fhir.Coding(source.eventCoding);
         }
-        if (source['eventUri']) {
-            this.eventUri = source.eventUri;
+        else if (source['eventUri']) {
+            this.event = new fhir.FhirUri({ value: source.eventUri });
         }
-        if (source['_eventUri']) {
-            this._eventUri = new fhir.FhirElement(source._eventUri);
+        else {
+            this.event = null;
         }
         if (source['category']) {
             this.category = source.category;
-        }
-        if (source['_category']) {
-            this._category = new fhir.FhirElement(source._category);
         }
         if (source['focus']) {
             this.focus = source.focus.map((x) => new fhir.MessageDefinitionFocus(x));
@@ -254,17 +248,11 @@ export class MessageDefinition extends fhir.DomainResource {
         if (source['responseRequired']) {
             this.responseRequired = source.responseRequired;
         }
-        if (source['_responseRequired']) {
-            this._responseRequired = new fhir.FhirElement(source._responseRequired);
-        }
         if (source['allowedResponse']) {
             this.allowedResponse = source.allowedResponse.map((x) => new fhir.MessageDefinitionAllowedResponse(x));
         }
         if (source['graph']) {
-            this.graph = source.graph.map((x) => (x));
-        }
-        if (source['_graph']) {
-            this._graph = source._graph.map((x) => new fhir.FhirElement(x));
+            this.graph = source.graph.map((x) => new fhir.FhirCanonical({ value: x }));
         }
     }
     /**
@@ -289,92 +277,86 @@ export class MessageDefinition extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: MessageDefinition.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'MessageDefinition' fhir: MessageDefinition.resourceType:'MessageDefinition'", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_replaces"]) {
-            this._replaces.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["replaces"]) {
+            this.replaces.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: MessageDefinition.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: MessageDefinition.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (!this['date']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property date:fhir.FhirDateTime fhir: MessageDefinition.date:dateTime", }));
         }
-        if (!this["date"]) {
-            results.push(["date", 'Missing required element: MessageDefinition.date']);
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
-        if (this["_base"]) {
-            results.push(...this._base.doModelValidation());
+        if (this["base"]) {
+            outcome.issue.push(...this.base.doModelValidation().issue);
         }
-        if (this["_parent"]) {
-            this._parent.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["parent"]) {
+            this.parent.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["eventCoding"]) {
-            results.push(...this.eventCoding.doModelValidation());
-        }
-        if (this["_eventUri"]) {
-            results.push(...this._eventUri.doModelValidation());
-        }
-        if (this["_category"]) {
-            results.push(...this._category.doModelValidation());
+        if (!this['event']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property event: fhir: MessageDefinition.event[x]:", }));
         }
         if (this["focus"]) {
-            this.focus.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_responseRequired"]) {
-            results.push(...this._responseRequired.doModelValidation());
+            this.focus.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["allowedResponse"]) {
-            this.allowedResponse.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.allowedResponse.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_graph"]) {
-            this._graph.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["graph"]) {
+            this.graph.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=MessageDefinition.js.map

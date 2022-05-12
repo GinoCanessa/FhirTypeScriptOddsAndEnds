@@ -51,27 +51,4 @@ export const PropertyRepresentationValueSet = {
 /**
  * How a property is represented when serialized.
  */
-export var PropertyRepresentationValueSetEnum;
-(function (PropertyRepresentationValueSetEnum) {
-    /**
-     * cdaText: Use CDA narrative instead of XHTML.
-     */
-    PropertyRepresentationValueSetEnum["CDATextFormat"] = "cdaText";
-    /**
-     * typeAttr: The type of this element is indicated using xsi:type.
-     */
-    PropertyRepresentationValueSetEnum["TypeAttribute"] = "typeAttr";
-    /**
-     * xhtml: The property is represented using XHTML.
-     */
-    PropertyRepresentationValueSetEnum["XHTML"] = "xhtml";
-    /**
-     * xmlAttr: In XML, this property is represented as an attribute not an element.
-     */
-    PropertyRepresentationValueSetEnum["XMLAttribute"] = "xmlAttr";
-    /**
-     * xmlText: This element is represented using the XML text attribute (primitives only).
-     */
-    PropertyRepresentationValueSetEnum["XMLText"] = "xmlText";
-})(PropertyRepresentationValueSetEnum || (PropertyRepresentationValueSetEnum = {}));
 //# sourceMappingURL=PropertyRepresentationValueSet.js.map

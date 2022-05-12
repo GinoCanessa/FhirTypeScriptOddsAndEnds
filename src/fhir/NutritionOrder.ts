@@ -3,296 +3,47 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: NutritionOrder
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { NutrientCodeValueSet, NutrientCodeValueSetType, NutrientCodeValueSetEnum } from '../fhirValueSets/NutrientCodeValueSet.js'
-import { ModifiedFoodtypeValueSet, ModifiedFoodtypeValueSetType, ModifiedFoodtypeValueSetEnum } from '../fhirValueSets/ModifiedFoodtypeValueSet.js'
-import { DietTypeValueSet, DietTypeValueSetType, DietTypeValueSetEnum } from '../fhirValueSets/DietTypeValueSet.js'
-import { EntformulaAdditiveValueSet, EntformulaAdditiveValueSetType, EntformulaAdditiveValueSetEnum } from '../fhirValueSets/EntformulaAdditiveValueSet.js'
-import { EnteralRouteValueSet, EnteralRouteValueSetType, EnteralRouteValueSetEnum } from '../fhirValueSets/EnteralRouteValueSet.js'
-import { RequestStatusValueSet, RequestStatusValueSetType, RequestStatusValueSetEnum } from '../fhirValueSets/RequestStatusValueSet.js'
-import { RequestIntentValueSet, RequestIntentValueSetType, RequestIntentValueSetEnum } from '../fhirValueSets/RequestIntentValueSet.js'
-import { EncounterDietValueSet, EncounterDietValueSetType, EncounterDietValueSetEnum } from '../fhirValueSets/EncounterDietValueSet.js'
-import { FoodTypeValueSet, FoodTypeValueSetType, FoodTypeValueSetEnum } from '../fhirValueSets/FoodTypeValueSet.js'
-
+import { NutrientCodeValueSet, NutrientCodeValueSetType,} from '../fhirValueSets/NutrientCodeValueSet.js';
+import { NutrientCodeValueSetEnum } from '../valueSetEnums.js';
+import { ModifiedFoodtypeValueSet, ModifiedFoodtypeValueSetType,} from '../fhirValueSets/ModifiedFoodtypeValueSet.js';
+import { ModifiedFoodtypeValueSetEnum } from '../valueSetEnums.js';
+import { DietTypeValueSet, DietTypeValueSetType,} from '../fhirValueSets/DietTypeValueSet.js';
+import { DietTypeValueSetEnum } from '../valueSetEnums.js';
+import { EntformulaAdditiveValueSet, EntformulaAdditiveValueSetType,} from '../fhirValueSets/EntformulaAdditiveValueSet.js';
+import { EntformulaAdditiveValueSetEnum } from '../valueSetEnums.js';
+import { EnteralRouteValueSet, EnteralRouteValueSetType,} from '../fhirValueSets/EnteralRouteValueSet.js';
+import { EnteralRouteValueSetEnum } from '../valueSetEnums.js';
+import { RequestStatusValueSet, RequestStatusValueSetType,} from '../fhirValueSets/RequestStatusValueSet.js';
+import { RequestStatusValueSetEnum } from '../valueSetEnums.js';
+import { RequestIntentValueSet, RequestIntentValueSetType,} from '../fhirValueSets/RequestIntentValueSet.js';
+import { RequestIntentValueSetEnum } from '../valueSetEnums.js';
+import { EncounterDietValueSet, EncounterDietValueSetType,} from '../fhirValueSets/EncounterDietValueSet.js';
+import { EncounterDietValueSetEnum } from '../valueSetEnums.js';
+import { FoodTypeValueSet, FoodTypeValueSetType,} from '../fhirValueSets/FoodTypeValueSet.js';
+import { FoodTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Class that defines the quantity and type of nutrient modifications (for example carbohydrate, fiber or sodium) required for the oral diet.
+ * Valid arguments for the NutritionOrderOralDietNutrient type.
  */
-export type INutritionOrderOralDietNutrient = fhir.IBackboneElement & { 
+export interface NutritionOrderOralDietNutrientArgs extends fhir.BackboneElementArgs {
   /**
    * The nutrient that is being modified such as carbohydrate or sodium.
    */
-  modifier?: fhir.ICodeableConcept|undefined;
+  modifier?: fhir.CodeableConceptArgs|undefined;
   /**
    * The quantity of the specified nutrient to include in diet.
    */
-  amount?: fhir.IQuantity|undefined;
-}
-
-/**
- * Class that describes any texture modifications required for the patient to safely consume various types of solid foods.
- */
-export type INutritionOrderOralDietTexture = fhir.IBackboneElement & { 
-  /**
-   * Coupled with the foodType (Meat).
-   */
-  modifier?: fhir.ICodeableConcept|undefined;
-  /**
-   * Coupled with the `texture.modifier`; could be (All Foods).
-   */
-  foodType?: fhir.ICodeableConcept|undefined;
-}
-
-/**
- * Diet given orally in contrast to enteral (tube) feeding.
- */
-export type INutritionOrderOralDiet = fhir.IBackboneElement & { 
-  /**
-   * The kind of diet or dietary restriction such as fiber restricted diet or diabetic diet.
-   */
-  type?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The time period and frequency at which the diet should be given.  The diet should be given for the combination of all schedules if more than one schedule is present.
-   */
-  schedule?: fhir.ITiming[]|undefined;
-  /**
-   * Class that defines the quantity and type of nutrient modifications (for example carbohydrate, fiber or sodium) required for the oral diet.
-   */
-  nutrient?: fhir.INutritionOrderOralDietNutrient[]|undefined;
-  /**
-   * Class that describes any texture modifications required for the patient to safely consume various types of solid foods.
-   */
-  texture?: fhir.INutritionOrderOralDietTexture[]|undefined;
-  /**
-   * The required consistency (e.g. honey-thick, nectar-thick, thin, thickened.) of liquids or fluids served to the patient.
-   */
-  fluidConsistencyType?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Free text dosage instructions can be used for cases where the instructions are too complex to code.
-   */
-  instruction?: string|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.oralDiet.instruction
-   */
-  _instruction?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Oral nutritional products given in order to add further nutritional value to the patient's diet.
- */
-export type INutritionOrderSupplement = fhir.IBackboneElement & { 
-  /**
-   * The kind of nutritional supplement product required such as a high protein or pediatric clear liquid supplement.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * The product or brand name of the nutritional supplement such as "Acme Protein Shake".
-   */
-  productName?: string|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.supplement.productName
-   */
-  _productName?: fhir.IFhirElement|undefined;
-  /**
-   * The time period and frequency at which the supplement(s) should be given.  The supplement should be given for the combination of all schedules if more than one schedule is present.
-   */
-  schedule?: fhir.ITiming[]|undefined;
-  /**
-   * The amount of the nutritional supplement to be given.
-   */
-  quantity?: fhir.IQuantity|undefined;
-  /**
-   * Free text dosage instructions can be used for cases where the instructions are too complex to code.
-   */
-  instruction?: string|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.supplement.instruction
-   */
-  _instruction?: fhir.IFhirElement|undefined;
-}
-
-/**
- * See implementation notes below for further discussion on how to order continuous vs bolus enteral feeding using this resource.
- */
-export type INutritionOrderEnteralFormulaAdministration = fhir.IBackboneElement & { 
-  /**
-   * The time period and frequency at which the enteral formula should be delivered to the patient.
-   */
-  schedule?: fhir.ITiming|undefined;
-  /**
-   * The volume of formula to provide to the patient per the specified administration schedule.
-   */
-  quantity?: fhir.IQuantity|undefined;
-  /**
-   * Ratio is used when the quantity value in the denominator is not "1", otherwise use Quantity. For example, the Ratio datatype is used for "200 mL/4 hrs" versus the Quantity datatype for "50 mL/hr".
-   */
-  rateQuantity?: fhir.IQuantity|undefined;
-  /**
-   * Ratio is used when the quantity value in the denominator is not "1", otherwise use Quantity. For example, the Ratio datatype is used for "200 mL/4 hrs" versus the Quantity datatype for "50 mL/hr".
-   */
-  rateRatio?: fhir.IRatio|undefined;
-}
-
-/**
- * Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.
- */
-export type INutritionOrderEnteralFormula = fhir.IBackboneElement & { 
-  /**
-   * The type of enteral or infant formula such as an adult standard formula with fiber or a soy-based infant formula.
-   */
-  baseFormulaType?: fhir.ICodeableConcept|undefined;
-  /**
-   * The product or brand name of the enteral or infant formula product such as "ACME Adult Standard Formula".
-   */
-  baseFormulaProductName?: string|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.enteralFormula.baseFormulaProductName
-   */
-  _baseFormulaProductName?: fhir.IFhirElement|undefined;
-  /**
-   * Indicates the type of modular component such as protein, carbohydrate, fat or fiber to be provided in addition to or mixed with the base formula.
-   */
-  additiveType?: fhir.ICodeableConcept|undefined;
-  /**
-   * The product or brand name of the type of modular component to be added to the formula.
-   */
-  additiveProductName?: string|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.enteralFormula.additiveProductName
-   */
-  _additiveProductName?: fhir.IFhirElement|undefined;
-  /**
-   * The amount of energy (calories) that the formula should provide per specified volume, typically per mL or fluid oz.  For example, an infant may require a formula that provides 24 calories per fluid ounce or an adult may require an enteral formula that provides 1.5 calorie/mL.
-   */
-  caloricDensity?: fhir.IQuantity|undefined;
-  /**
-   * The route or physiological path of administration into the patient's gastrointestinal  tract for purposes of providing the formula feeding, e.g. nasogastric tube.
-   */
-  routeofAdministration?: fhir.ICodeableConcept|undefined;
-  /**
-   * See implementation notes below for further discussion on how to order continuous vs bolus enteral feeding using this resource.
-   */
-  administration?: fhir.INutritionOrderEnteralFormulaAdministration[]|undefined;
-  /**
-   * The maximum total quantity of formula that may be administered to a subject over the period of time, e.g. 1440 mL over 24 hours.
-   */
-  maxVolumeToDeliver?: fhir.IQuantity|undefined;
-  /**
-   * Free text dosage instructions can be used for cases where the instructions are too complex to code.
-   */
-  administrationInstruction?: string|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.enteralFormula.administrationInstruction
-   */
-  _administrationInstruction?: fhir.IFhirElement|undefined;
-}
-
-/**
- * A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
- */
-export type INutritionOrder = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "NutritionOrder";
-  /**
-   * The Identifier.type element can be to indicate filler vs. placer if needed.  This is explained in further detail [here](servicerequest.html#notes).
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * Note: This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
-   */
-  instantiatesCanonical?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.instantiatesCanonical
-   */
-  _instantiatesCanonical?: fhir.IFhirElement[]|undefined;
-  /**
-   * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
-   */
-  instantiatesUri?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.instantiatesUri
-   */
-  _instantiatesUri?: fhir.IFhirElement[]|undefined;
-  /**
-   * The URL pointing to a protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.
-   */
-  instantiates?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.instantiates
-   */
-  _instantiates?: fhir.IFhirElement[]|undefined;
-  /**
-   * Typically the system placing the order sets the status to "requested". Thereafter, the order is maintained by the receiver that updates the status as the request is handled.  This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-   */
-  status: RequestStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: NutritionOrder.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * When resources map to this element, they are free to define as many codes as necessary to cover their space and will map to "proposal, plan or order".  Can have multiple codes that map to one of these.  E.g. "original order", "encoded order", "reflex order" would all map to "order".  Expectation is that the set of codes is mutually exclusive or a strict all-encompassing hierarchy.
-   */
-  intent: RequestIntentValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: NutritionOrder.intent
-   */
-  _intent?: fhir.IFhirElement|undefined;
-  /**
-   * The person (patient) who needs the nutrition order for an oral diet, nutritional supplement and/or enteral or formula feeding.
-   */
-  patient: fhir.IReference|null;
-  /**
-   * An encounter that provides additional information about the healthcare context in which this request is made.
-   */
-  encounter?: fhir.IReference|undefined;
-  /**
-   * The date and time that this nutrition order was requested.
-   */
-  dateTime: string|null;
-  /**
-   * Extended properties for primitive element: NutritionOrder.dateTime
-   */
-  _dateTime?: fhir.IFhirElement|undefined;
-  /**
-   * The practitioner that holds legal responsibility for ordering the diet, nutritional supplement, or formula feedings.
-   */
-  orderer?: fhir.IReference|undefined;
-  /**
-   * Information on a patient's food allergies and intolerances to inform healthcare personnel about the type of foods that the patient shouldn't receive or consume.
-   */
-  allergyIntolerance?: fhir.IReference[]|undefined;
-  /**
-   * Information on a patient's food preferences that inform healthcare personnel about the food that the patient should receive or consume.
-   */
-  foodPreferenceModifier?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Information on a patient's food allergies, intolerances and preferences to inform healthcare personnel about the type  of foods that the patient shouldn't receive or consume.
-   */
-  excludeFoodModifier?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Diet given orally in contrast to enteral (tube) feeding.
-   */
-  oralDiet?: fhir.INutritionOrderOralDiet|undefined;
-  /**
-   * Oral nutritional products given in order to add further nutritional value to the patient's diet.
-   */
-  supplement?: fhir.INutritionOrderSupplement[]|undefined;
-  /**
-   * Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.
-   */
-  enteralFormula?: fhir.INutritionOrderEnteralFormula|undefined;
-  /**
-   * This element SHALL NOT be used to supply free text instructions for the diet which are represented in the `.oralDiet.instruction`, `supplement.instruction`, or `enteralFormula.administrationInstruction` elements.
-   */
-  note?: fhir.IAnnotation[]|undefined;
+  amount?: fhir.QuantityArgs|undefined;
 }
 
 /**
  * Class that defines the quantity and type of nutrient modifications (for example carbohydrate, fiber or sodium) required for the oral diet.
  */
-export class NutritionOrderOralDietNutrient extends fhir.BackboneElement implements INutritionOrderOralDietNutrient {
+export class NutritionOrderOralDietNutrient extends fhir.BackboneElement {
+  readonly __dataType:string = 'NutritionOrderOralDietNutrient';
   /**
    * The nutrient that is being modified such as carbohydrate or sodium.
    */
@@ -304,10 +55,10 @@ export class NutritionOrderOralDietNutrient extends fhir.BackboneElement impleme
   /**
    * Default constructor for NutritionOrderOralDietNutrient - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<INutritionOrderOralDietNutrient> = { }) {
-    super(source);
-    if (source['modifier']) { this.modifier = new fhir.CodeableConcept(source.modifier!); }
-    if (source['amount']) { this.amount = new fhir.Quantity(source.amount!); }
+  constructor(source:Partial<NutritionOrderOralDietNutrientArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['modifier']) { this.modifier = new fhir.CodeableConcept(source.modifier); }
+    if (source['amount']) { this.amount = new fhir.Quantity(source.amount); }
   }
   /**
    * Example-bound Value Set for modifier
@@ -318,18 +69,38 @@ export class NutritionOrderOralDietNutrient extends fhir.BackboneElement impleme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["modifier"]) { results.push(...this.modifier.doModelValidation()); }
-    if (this["amount"]) { results.push(...this.amount.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["modifier"]) { outcome.issue!.push(...this.modifier.doModelValidation().issue!); }
+    if (this["amount"]) { outcome.issue!.push(...this.amount.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the NutritionOrderOralDietTexture type.
+ */
+export interface NutritionOrderOralDietTextureArgs extends fhir.BackboneElementArgs {
+  /**
+   * Coupled with the foodType (Meat).
+   */
+  modifier?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Coupled with the `texture.modifier`; could be (All Foods).
+   */
+  foodType?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * Class that describes any texture modifications required for the patient to safely consume various types of solid foods.
  */
-export class NutritionOrderOralDietTexture extends fhir.BackboneElement implements INutritionOrderOralDietTexture {
+export class NutritionOrderOralDietTexture extends fhir.BackboneElement {
+  readonly __dataType:string = 'NutritionOrderOralDietTexture';
   /**
    * Coupled with the foodType (Meat).
    */
@@ -341,10 +112,10 @@ export class NutritionOrderOralDietTexture extends fhir.BackboneElement implemen
   /**
    * Default constructor for NutritionOrderOralDietTexture - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<INutritionOrderOralDietTexture> = { }) {
-    super(source);
-    if (source['modifier']) { this.modifier = new fhir.CodeableConcept(source.modifier!); }
-    if (source['foodType']) { this.foodType = new fhir.CodeableConcept(source.foodType!); }
+  constructor(source:Partial<NutritionOrderOralDietTextureArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['modifier']) { this.modifier = new fhir.CodeableConcept(source.modifier); }
+    if (source['foodType']) { this.foodType = new fhir.CodeableConcept(source.foodType); }
   }
   /**
    * Example-bound Value Set for foodType
@@ -355,58 +126,89 @@ export class NutritionOrderOralDietTexture extends fhir.BackboneElement implemen
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["modifier"]) { results.push(...this.modifier.doModelValidation()); }
-    if (this["foodType"]) { results.push(...this.foodType.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["modifier"]) { outcome.issue!.push(...this.modifier.doModelValidation().issue!); }
+    if (this["foodType"]) { outcome.issue!.push(...this.foodType.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the NutritionOrderOralDiet type.
+ */
+export interface NutritionOrderOralDietArgs extends fhir.BackboneElementArgs {
+  /**
+   * The kind of diet or dietary restriction such as fiber restricted diet or diabetic diet.
+   */
+  type?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The time period and frequency at which the diet should be given.  The diet should be given for the combination of all schedules if more than one schedule is present.
+   */
+  schedule?: fhir.TimingArgs[]|undefined;
+  /**
+   * Class that defines the quantity and type of nutrient modifications (for example carbohydrate, fiber or sodium) required for the oral diet.
+   */
+  nutrient?: fhir.NutritionOrderOralDietNutrientArgs[]|undefined;
+  /**
+   * Class that describes any texture modifications required for the patient to safely consume various types of solid foods.
+   */
+  texture?: fhir.NutritionOrderOralDietTextureArgs[]|undefined;
+  /**
+   * The required consistency (e.g. honey-thick, nectar-thick, thin, thickened.) of liquids or fluids served to the patient.
+   */
+  fluidConsistencyType?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Free text dosage instructions can be used for cases where the instructions are too complex to code.
+   */
+  instruction?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Diet given orally in contrast to enteral (tube) feeding.
  */
-export class NutritionOrderOralDiet extends fhir.BackboneElement implements INutritionOrderOralDiet {
+export class NutritionOrderOralDiet extends fhir.BackboneElement {
+  readonly __dataType:string = 'NutritionOrderOralDiet';
   /**
    * The kind of diet or dietary restriction such as fiber restricted diet or diabetic diet.
    */
-  public type?: fhir.CodeableConcept[]|undefined;
+  public type?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The time period and frequency at which the diet should be given.  The diet should be given for the combination of all schedules if more than one schedule is present.
    */
-  public schedule?: fhir.Timing[]|undefined;
+  public schedule?: fhir.Timing[]|undefined = [];
   /**
    * Class that defines the quantity and type of nutrient modifications (for example carbohydrate, fiber or sodium) required for the oral diet.
    */
-  public nutrient?: fhir.NutritionOrderOralDietNutrient[]|undefined;
+  public nutrient?: fhir.NutritionOrderOralDietNutrient[]|undefined = [];
   /**
    * Class that describes any texture modifications required for the patient to safely consume various types of solid foods.
    */
-  public texture?: fhir.NutritionOrderOralDietTexture[]|undefined;
+  public texture?: fhir.NutritionOrderOralDietTexture[]|undefined = [];
   /**
    * The required consistency (e.g. honey-thick, nectar-thick, thin, thickened.) of liquids or fluids served to the patient.
    */
-  public fluidConsistencyType?: fhir.CodeableConcept[]|undefined;
+  public fluidConsistencyType?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Free text dosage instructions can be used for cases where the instructions are too complex to code.
    */
-  public instruction?: string|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.oralDiet.instruction
-   */
-  public _instruction?: fhir.FhirElement|undefined;
+  public instruction?: fhir.FhirString|undefined;
   /**
    * Default constructor for NutritionOrderOralDiet - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<INutritionOrderOralDiet> = { }) {
-    super(source);
+  constructor(source:Partial<NutritionOrderOralDietArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['type']) { this.type = source.type.map((x) => new fhir.CodeableConcept(x)); }
     if (source['schedule']) { this.schedule = source.schedule.map((x) => new fhir.Timing(x)); }
     if (source['nutrient']) { this.nutrient = source.nutrient.map((x) => new fhir.NutritionOrderOralDietNutrient(x)); }
     if (source['texture']) { this.texture = source.texture.map((x) => new fhir.NutritionOrderOralDietTexture(x)); }
     if (source['fluidConsistencyType']) { this.fluidConsistencyType = source.fluidConsistencyType.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['instruction']) { this.instruction = source.instruction; }
-    if (source['_instruction']) { this._instruction = new fhir.FhirElement(source._instruction!); }
+    if (source['instruction']) { this.instruction = new fhir.FhirString({value: source.instruction}); }
   }
   /**
    * Example-bound Value Set for type
@@ -417,22 +219,54 @@ export class NutritionOrderOralDiet extends fhir.BackboneElement implements INut
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { this.type.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["schedule"]) { this.schedule.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["nutrient"]) { this.nutrient.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["texture"]) { this.texture.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["fluidConsistencyType"]) { this.fluidConsistencyType.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_instruction"]) { results.push(...this._instruction.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { this.type.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["schedule"]) { this.schedule.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["nutrient"]) { this.nutrient.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["texture"]) { this.texture.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["fluidConsistencyType"]) { this.fluidConsistencyType.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instruction"]) { outcome.issue!.push(...this.instruction.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the NutritionOrderSupplement type.
+ */
+export interface NutritionOrderSupplementArgs extends fhir.BackboneElementArgs {
+  /**
+   * The kind of nutritional supplement product required such as a high protein or pediatric clear liquid supplement.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The product or brand name of the nutritional supplement such as "Acme Protein Shake".
+   */
+  productName?: fhir.FhirString|string|undefined;
+  /**
+   * The time period and frequency at which the supplement(s) should be given.  The supplement should be given for the combination of all schedules if more than one schedule is present.
+   */
+  schedule?: fhir.TimingArgs[]|undefined;
+  /**
+   * The amount of the nutritional supplement to be given.
+   */
+  quantity?: fhir.QuantityArgs|undefined;
+  /**
+   * Free text dosage instructions can be used for cases where the instructions are too complex to code.
+   */
+  instruction?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Oral nutritional products given in order to add further nutritional value to the patient's diet.
  */
-export class NutritionOrderSupplement extends fhir.BackboneElement implements INutritionOrderSupplement {
+export class NutritionOrderSupplement extends fhir.BackboneElement {
+  readonly __dataType:string = 'NutritionOrderSupplement';
   /**
    * The kind of nutritional supplement product required such as a high protein or pediatric clear liquid supplement.
    */
@@ -440,15 +274,11 @@ export class NutritionOrderSupplement extends fhir.BackboneElement implements IN
   /**
    * The product or brand name of the nutritional supplement such as "Acme Protein Shake".
    */
-  public productName?: string|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.supplement.productName
-   */
-  public _productName?: fhir.FhirElement|undefined;
+  public productName?: fhir.FhirString|undefined;
   /**
    * The time period and frequency at which the supplement(s) should be given.  The supplement should be given for the combination of all schedules if more than one schedule is present.
    */
-  public schedule?: fhir.Timing[]|undefined;
+  public schedule?: fhir.Timing[]|undefined = [];
   /**
    * The amount of the nutritional supplement to be given.
    */
@@ -456,42 +286,68 @@ export class NutritionOrderSupplement extends fhir.BackboneElement implements IN
   /**
    * Free text dosage instructions can be used for cases where the instructions are too complex to code.
    */
-  public instruction?: string|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.supplement.instruction
-   */
-  public _instruction?: fhir.FhirElement|undefined;
+  public instruction?: fhir.FhirString|undefined;
   /**
    * Default constructor for NutritionOrderSupplement - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<INutritionOrderSupplement> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['productName']) { this.productName = source.productName; }
-    if (source['_productName']) { this._productName = new fhir.FhirElement(source._productName!); }
+  constructor(source:Partial<NutritionOrderSupplementArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['productName']) { this.productName = new fhir.FhirString({value: source.productName}); }
     if (source['schedule']) { this.schedule = source.schedule.map((x) => new fhir.Timing(x)); }
-    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity!); }
-    if (source['instruction']) { this.instruction = source.instruction; }
-    if (source['_instruction']) { this._instruction = new fhir.FhirElement(source._instruction!); }
+    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity); }
+    if (source['instruction']) { this.instruction = new fhir.FhirString({value: source.instruction}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["_productName"]) { results.push(...this._productName.doModelValidation()); }
-    if (this["schedule"]) { this.schedule.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["quantity"]) { results.push(...this.quantity.doModelValidation()); }
-    if (this["_instruction"]) { results.push(...this._instruction.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["productName"]) { outcome.issue!.push(...this.productName.doModelValidation().issue!); }
+    if (this["schedule"]) { this.schedule.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["quantity"]) { outcome.issue!.push(...this.quantity.doModelValidation().issue!); }
+    if (this["instruction"]) { outcome.issue!.push(...this.instruction.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the NutritionOrderEnteralFormulaAdministration type.
+ */
+export interface NutritionOrderEnteralFormulaAdministrationArgs extends fhir.BackboneElementArgs {
+  /**
+   * The time period and frequency at which the enteral formula should be delivered to the patient.
+   */
+  schedule?: fhir.TimingArgs|undefined;
+  /**
+   * The volume of formula to provide to the patient per the specified administration schedule.
+   */
+  quantity?: fhir.QuantityArgs|undefined;
+  /**
+   * Ratio is used when the quantity value in the denominator is not "1", otherwise use Quantity. For example, the Ratio datatype is used for "200 mL/4 hrs" versus the Quantity datatype for "50 mL/hr".
+   */
+  rate?: fhir.Quantity|fhir.Ratio|undefined;
+  /**
+   * Ratio is used when the quantity value in the denominator is not "1", otherwise use Quantity. For example, the Ratio datatype is used for "200 mL/4 hrs" versus the Quantity datatype for "50 mL/hr".
+   */
+  rateQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * Ratio is used when the quantity value in the denominator is not "1", otherwise use Quantity. For example, the Ratio datatype is used for "200 mL/4 hrs" versus the Quantity datatype for "50 mL/hr".
+   */
+  rateRatio?: fhir.RatioArgs|undefined;
 }
 
 /**
  * See implementation notes below for further discussion on how to order continuous vs bolus enteral feeding using this resource.
  */
-export class NutritionOrderEnteralFormulaAdministration extends fhir.BackboneElement implements INutritionOrderEnteralFormulaAdministration {
+export class NutritionOrderEnteralFormulaAdministration extends fhir.BackboneElement {
+  readonly __dataType:string = 'NutritionOrderEnteralFormulaAdministration';
   /**
    * The time period and frequency at which the enteral formula should be delivered to the patient.
    */
@@ -503,38 +359,82 @@ export class NutritionOrderEnteralFormulaAdministration extends fhir.BackboneEle
   /**
    * Ratio is used when the quantity value in the denominator is not "1", otherwise use Quantity. For example, the Ratio datatype is used for "200 mL/4 hrs" versus the Quantity datatype for "50 mL/hr".
    */
-  public rateQuantity?: fhir.Quantity|undefined;
-  /**
-   * Ratio is used when the quantity value in the denominator is not "1", otherwise use Quantity. For example, the Ratio datatype is used for "200 mL/4 hrs" versus the Quantity datatype for "50 mL/hr".
-   */
-  public rateRatio?: fhir.Ratio|undefined;
+  public rate?: (fhir.Quantity|fhir.Ratio)|undefined;
+  readonly __rateIsChoice:true = true;
   /**
    * Default constructor for NutritionOrderEnteralFormulaAdministration - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<INutritionOrderEnteralFormulaAdministration> = { }) {
-    super(source);
-    if (source['schedule']) { this.schedule = new fhir.Timing(source.schedule!); }
-    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity!); }
-    if (source['rateQuantity']) { this.rateQuantity = new fhir.Quantity(source.rateQuantity!); }
-    if (source['rateRatio']) { this.rateRatio = new fhir.Ratio(source.rateRatio!); }
+  constructor(source:Partial<NutritionOrderEnteralFormulaAdministrationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['schedule']) { this.schedule = new fhir.Timing(source.schedule); }
+    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity); }
+    if (source['rate']) { this.rate = source.rate; }
+    else if (source['rateQuantity']) { this.rate = new fhir.Quantity(source.rateQuantity); }
+    else if (source['rateRatio']) { this.rate = new fhir.Ratio(source.rateRatio); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["schedule"]) { results.push(...this.schedule.doModelValidation()); }
-    if (this["quantity"]) { results.push(...this.quantity.doModelValidation()); }
-    if (this["rateQuantity"]) { results.push(...this.rateQuantity.doModelValidation()); }
-    if (this["rateRatio"]) { results.push(...this.rateRatio.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["schedule"]) { outcome.issue!.push(...this.schedule.doModelValidation().issue!); }
+    if (this["quantity"]) { outcome.issue!.push(...this.quantity.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the NutritionOrderEnteralFormula type.
+ */
+export interface NutritionOrderEnteralFormulaArgs extends fhir.BackboneElementArgs {
+  /**
+   * The type of enteral or infant formula such as an adult standard formula with fiber or a soy-based infant formula.
+   */
+  baseFormulaType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The product or brand name of the enteral or infant formula product such as "ACME Adult Standard Formula".
+   */
+  baseFormulaProductName?: fhir.FhirString|string|undefined;
+  /**
+   * Indicates the type of modular component such as protein, carbohydrate, fat or fiber to be provided in addition to or mixed with the base formula.
+   */
+  additiveType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The product or brand name of the type of modular component to be added to the formula.
+   */
+  additiveProductName?: fhir.FhirString|string|undefined;
+  /**
+   * The amount of energy (calories) that the formula should provide per specified volume, typically per mL or fluid oz.  For example, an infant may require a formula that provides 24 calories per fluid ounce or an adult may require an enteral formula that provides 1.5 calorie/mL.
+   */
+  caloricDensity?: fhir.QuantityArgs|undefined;
+  /**
+   * The route or physiological path of administration into the patient's gastrointestinal  tract for purposes of providing the formula feeding, e.g. nasogastric tube.
+   */
+  routeofAdministration?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * See implementation notes below for further discussion on how to order continuous vs bolus enteral feeding using this resource.
+   */
+  administration?: fhir.NutritionOrderEnteralFormulaAdministrationArgs[]|undefined;
+  /**
+   * The maximum total quantity of formula that may be administered to a subject over the period of time, e.g. 1440 mL over 24 hours.
+   */
+  maxVolumeToDeliver?: fhir.QuantityArgs|undefined;
+  /**
+   * Free text dosage instructions can be used for cases where the instructions are too complex to code.
+   */
+  administrationInstruction?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.
  */
-export class NutritionOrderEnteralFormula extends fhir.BackboneElement implements INutritionOrderEnteralFormula {
+export class NutritionOrderEnteralFormula extends fhir.BackboneElement {
+  readonly __dataType:string = 'NutritionOrderEnteralFormula';
   /**
    * The type of enteral or infant formula such as an adult standard formula with fiber or a soy-based infant formula.
    */
@@ -542,11 +442,7 @@ export class NutritionOrderEnteralFormula extends fhir.BackboneElement implement
   /**
    * The product or brand name of the enteral or infant formula product such as "ACME Adult Standard Formula".
    */
-  public baseFormulaProductName?: string|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.enteralFormula.baseFormulaProductName
-   */
-  public _baseFormulaProductName?: fhir.FhirElement|undefined;
+  public baseFormulaProductName?: fhir.FhirString|undefined;
   /**
    * Indicates the type of modular component such as protein, carbohydrate, fat or fiber to be provided in addition to or mixed with the base formula.
    */
@@ -554,11 +450,7 @@ export class NutritionOrderEnteralFormula extends fhir.BackboneElement implement
   /**
    * The product or brand name of the type of modular component to be added to the formula.
    */
-  public additiveProductName?: string|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.enteralFormula.additiveProductName
-   */
-  public _additiveProductName?: fhir.FhirElement|undefined;
+  public additiveProductName?: fhir.FhirString|undefined;
   /**
    * The amount of energy (calories) that the formula should provide per specified volume, typically per mL or fluid oz.  For example, an infant may require a formula that provides 24 calories per fluid ounce or an adult may require an enteral formula that provides 1.5 calorie/mL.
    */
@@ -570,7 +462,7 @@ export class NutritionOrderEnteralFormula extends fhir.BackboneElement implement
   /**
    * See implementation notes below for further discussion on how to order continuous vs bolus enteral feeding using this resource.
    */
-  public administration?: fhir.NutritionOrderEnteralFormulaAdministration[]|undefined;
+  public administration?: fhir.NutritionOrderEnteralFormulaAdministration[]|undefined = [];
   /**
    * The maximum total quantity of formula that may be administered to a subject over the period of time, e.g. 1440 mL over 24 hours.
    */
@@ -578,28 +470,21 @@ export class NutritionOrderEnteralFormula extends fhir.BackboneElement implement
   /**
    * Free text dosage instructions can be used for cases where the instructions are too complex to code.
    */
-  public administrationInstruction?: string|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.enteralFormula.administrationInstruction
-   */
-  public _administrationInstruction?: fhir.FhirElement|undefined;
+  public administrationInstruction?: fhir.FhirString|undefined;
   /**
    * Default constructor for NutritionOrderEnteralFormula - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<INutritionOrderEnteralFormula> = { }) {
-    super(source);
-    if (source['baseFormulaType']) { this.baseFormulaType = new fhir.CodeableConcept(source.baseFormulaType!); }
-    if (source['baseFormulaProductName']) { this.baseFormulaProductName = source.baseFormulaProductName; }
-    if (source['_baseFormulaProductName']) { this._baseFormulaProductName = new fhir.FhirElement(source._baseFormulaProductName!); }
-    if (source['additiveType']) { this.additiveType = new fhir.CodeableConcept(source.additiveType!); }
-    if (source['additiveProductName']) { this.additiveProductName = source.additiveProductName; }
-    if (source['_additiveProductName']) { this._additiveProductName = new fhir.FhirElement(source._additiveProductName!); }
-    if (source['caloricDensity']) { this.caloricDensity = new fhir.Quantity(source.caloricDensity!); }
-    if (source['routeofAdministration']) { this.routeofAdministration = new fhir.CodeableConcept(source.routeofAdministration!); }
+  constructor(source:Partial<NutritionOrderEnteralFormulaArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['baseFormulaType']) { this.baseFormulaType = new fhir.CodeableConcept(source.baseFormulaType); }
+    if (source['baseFormulaProductName']) { this.baseFormulaProductName = new fhir.FhirString({value: source.baseFormulaProductName}); }
+    if (source['additiveType']) { this.additiveType = new fhir.CodeableConcept(source.additiveType); }
+    if (source['additiveProductName']) { this.additiveProductName = new fhir.FhirString({value: source.additiveProductName}); }
+    if (source['caloricDensity']) { this.caloricDensity = new fhir.Quantity(source.caloricDensity); }
+    if (source['routeofAdministration']) { this.routeofAdministration = new fhir.CodeableConcept(source.routeofAdministration); }
     if (source['administration']) { this.administration = source.administration.map((x) => new fhir.NutritionOrderEnteralFormulaAdministration(x)); }
-    if (source['maxVolumeToDeliver']) { this.maxVolumeToDeliver = new fhir.Quantity(source.maxVolumeToDeliver!); }
-    if (source['administrationInstruction']) { this.administrationInstruction = source.administrationInstruction; }
-    if (source['_administrationInstruction']) { this._administrationInstruction = new fhir.FhirElement(source._administrationInstruction!); }
+    if (source['maxVolumeToDeliver']) { this.maxVolumeToDeliver = new fhir.Quantity(source.maxVolumeToDeliver); }
+    if (source['administrationInstruction']) { this.administrationInstruction = new fhir.FhirString({value: source.administrationInstruction}); }
   }
   /**
    * Example-bound Value Set for additiveType
@@ -616,25 +501,109 @@ export class NutritionOrderEnteralFormula extends fhir.BackboneElement implement
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["baseFormulaType"]) { results.push(...this.baseFormulaType.doModelValidation()); }
-    if (this["_baseFormulaProductName"]) { results.push(...this._baseFormulaProductName.doModelValidation()); }
-    if (this["additiveType"]) { results.push(...this.additiveType.doModelValidation()); }
-    if (this["_additiveProductName"]) { results.push(...this._additiveProductName.doModelValidation()); }
-    if (this["caloricDensity"]) { results.push(...this.caloricDensity.doModelValidation()); }
-    if (this["routeofAdministration"]) { results.push(...this.routeofAdministration.doModelValidation()); }
-    if (this["administration"]) { this.administration.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["maxVolumeToDeliver"]) { results.push(...this.maxVolumeToDeliver.doModelValidation()); }
-    if (this["_administrationInstruction"]) { results.push(...this._administrationInstruction.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["baseFormulaType"]) { outcome.issue!.push(...this.baseFormulaType.doModelValidation().issue!); }
+    if (this["baseFormulaProductName"]) { outcome.issue!.push(...this.baseFormulaProductName.doModelValidation().issue!); }
+    if (this["additiveType"]) { outcome.issue!.push(...this.additiveType.doModelValidation().issue!); }
+    if (this["additiveProductName"]) { outcome.issue!.push(...this.additiveProductName.doModelValidation().issue!); }
+    if (this["caloricDensity"]) { outcome.issue!.push(...this.caloricDensity.doModelValidation().issue!); }
+    if (this["routeofAdministration"]) { outcome.issue!.push(...this.routeofAdministration.doModelValidation().issue!); }
+    if (this["administration"]) { this.administration.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["maxVolumeToDeliver"]) { outcome.issue!.push(...this.maxVolumeToDeliver.doModelValidation().issue!); }
+    if (this["administrationInstruction"]) { outcome.issue!.push(...this.administrationInstruction.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the NutritionOrder type.
+ */
+export interface NutritionOrderArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "NutritionOrder"|undefined;
+  /**
+   * The Identifier.type element can be to indicate filler vs. placer if needed.  This is explained in further detail [here](servicerequest.html#notes).
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * Note: This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+   */
+  instantiatesCanonical?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
+   */
+  instantiatesUri?: fhir.FhirUri[]|string[]|undefined;
+  /**
+   * The URL pointing to a protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.
+   */
+  instantiates?: fhir.FhirUri[]|string[]|undefined;
+  /**
+   * Typically the system placing the order sets the status to "requested". Thereafter, the order is maintained by the receiver that updates the status as the request is handled.  This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+   */
+  status: RequestStatusValueSetEnum|null;
+  /**
+   * When resources map to this element, they are free to define as many codes as necessary to cover their space and will map to "proposal, plan or order".  Can have multiple codes that map to one of these.  E.g. "original order", "encoded order", "reflex order" would all map to "order".  Expectation is that the set of codes is mutually exclusive or a strict all-encompassing hierarchy.
+   */
+  intent: RequestIntentValueSetEnum|null;
+  /**
+   * The person (patient) who needs the nutrition order for an oral diet, nutritional supplement and/or enteral or formula feeding.
+   */
+  patient: fhir.ReferenceArgs|null;
+  /**
+   * An encounter that provides additional information about the healthcare context in which this request is made.
+   */
+  encounter?: fhir.ReferenceArgs|undefined;
+  /**
+   * The date and time that this nutrition order was requested.
+   */
+  dateTime: fhir.FhirDateTime|string|undefined;
+  /**
+   * The practitioner that holds legal responsibility for ordering the diet, nutritional supplement, or formula feedings.
+   */
+  orderer?: fhir.ReferenceArgs|undefined;
+  /**
+   * Information on a patient's food allergies and intolerances to inform healthcare personnel about the type of foods that the patient shouldn't receive or consume.
+   */
+  allergyIntolerance?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Information on a patient's food preferences that inform healthcare personnel about the food that the patient should receive or consume.
+   */
+  foodPreferenceModifier?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Information on a patient's food allergies, intolerances and preferences to inform healthcare personnel about the type  of foods that the patient shouldn't receive or consume.
+   */
+  excludeFoodModifier?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Diet given orally in contrast to enteral (tube) feeding.
+   */
+  oralDiet?: fhir.NutritionOrderOralDietArgs|undefined;
+  /**
+   * Oral nutritional products given in order to add further nutritional value to the patient's diet.
+   */
+  supplement?: fhir.NutritionOrderSupplementArgs[]|undefined;
+  /**
+   * Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.
+   */
+  enteralFormula?: fhir.NutritionOrderEnteralFormulaArgs|undefined;
+  /**
+   * This element SHALL NOT be used to supply free text instructions for the diet which are represented in the `.oralDiet.instruction`, `supplement.instruction`, or `enteralFormula.administrationInstruction` elements.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
 }
 
 /**
  * A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
  */
-export class NutritionOrder extends fhir.DomainResource implements INutritionOrder {
+export class NutritionOrder extends fhir.DomainResource {
+  readonly __dataType:string = 'NutritionOrder';
   /**
    * Resource Type Name
    */
@@ -642,47 +611,27 @@ export class NutritionOrder extends fhir.DomainResource implements INutritionOrd
   /**
    * The Identifier.type element can be to indicate filler vs. placer if needed.  This is explained in further detail [here](servicerequest.html#notes).
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Note: This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
    */
-  public instantiatesCanonical?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.instantiatesCanonical
-   */
-  public _instantiatesCanonical?: fhir.FhirElement[]|undefined;
+  public instantiatesCanonical?: fhir.FhirCanonical[]|undefined = [];
   /**
    * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
    */
-  public instantiatesUri?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.instantiatesUri
-   */
-  public _instantiatesUri?: fhir.FhirElement[]|undefined;
+  public instantiatesUri?: fhir.FhirUri[]|undefined = [];
   /**
    * The URL pointing to a protocol, guideline, orderset or other definition that is adhered to in whole or in part by this NutritionOrder.
    */
-  public instantiates?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: NutritionOrder.instantiates
-   */
-  public _instantiates?: fhir.FhirElement[]|undefined;
+  public instantiates?: fhir.FhirUri[]|undefined = [];
   /**
    * Typically the system placing the order sets the status to "requested". Thereafter, the order is maintained by the receiver that updates the status as the request is handled.  This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
   public status: RequestStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: NutritionOrder.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * When resources map to this element, they are free to define as many codes as necessary to cover their space and will map to "proposal, plan or order".  Can have multiple codes that map to one of these.  E.g. "original order", "encoded order", "reflex order" would all map to "order".  Expectation is that the set of codes is mutually exclusive or a strict all-encompassing hierarchy.
    */
   public intent: RequestIntentValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: NutritionOrder.intent
-   */
-  public _intent?: fhir.FhirElement|undefined;
   /**
    * The person (patient) who needs the nutrition order for an oral diet, nutritional supplement and/or enteral or formula feeding.
    */
@@ -694,11 +643,7 @@ export class NutritionOrder extends fhir.DomainResource implements INutritionOrd
   /**
    * The date and time that this nutrition order was requested.
    */
-  public dateTime: string|null;
-  /**
-   * Extended properties for primitive element: NutritionOrder.dateTime
-   */
-  public _dateTime?: fhir.FhirElement|undefined;
+  public dateTime: fhir.FhirDateTime|null;
   /**
    * The practitioner that holds legal responsibility for ordering the diet, nutritional supplement, or formula feedings.
    */
@@ -706,15 +651,15 @@ export class NutritionOrder extends fhir.DomainResource implements INutritionOrd
   /**
    * Information on a patient's food allergies and intolerances to inform healthcare personnel about the type of foods that the patient shouldn't receive or consume.
    */
-  public allergyIntolerance?: fhir.Reference[]|undefined;
+  public allergyIntolerance?: fhir.Reference[]|undefined = [];
   /**
    * Information on a patient's food preferences that inform healthcare personnel about the food that the patient should receive or consume.
    */
-  public foodPreferenceModifier?: fhir.CodeableConcept[]|undefined;
+  public foodPreferenceModifier?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Information on a patient's food allergies, intolerances and preferences to inform healthcare personnel about the type  of foods that the patient shouldn't receive or consume.
    */
-  public excludeFoodModifier?: fhir.CodeableConcept[]|undefined;
+  public excludeFoodModifier?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Diet given orally in contrast to enteral (tube) feeding.
    */
@@ -722,7 +667,7 @@ export class NutritionOrder extends fhir.DomainResource implements INutritionOrd
   /**
    * Oral nutritional products given in order to add further nutritional value to the patient's diet.
    */
-  public supplement?: fhir.NutritionOrderSupplement[]|undefined;
+  public supplement?: fhir.NutritionOrderSupplement[]|undefined = [];
   /**
    * Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.
    */
@@ -730,39 +675,33 @@ export class NutritionOrder extends fhir.DomainResource implements INutritionOrd
   /**
    * This element SHALL NOT be used to supply free text instructions for the diet which are represented in the `.oralDiet.instruction`, `supplement.instruction`, or `enteralFormula.administrationInstruction` elements.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Default constructor for NutritionOrder - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<INutritionOrder> = { }) {
-    super(source);
+  constructor(source:Partial<NutritionOrderArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'NutritionOrder';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['instantiatesCanonical']) { this.instantiatesCanonical = source.instantiatesCanonical.map((x) => (x)); }
-    if (source['_instantiatesCanonical']) { this._instantiatesCanonical = source._instantiatesCanonical.map((x) => new fhir.FhirElement(x)); }
-    if (source['instantiatesUri']) { this.instantiatesUri = source.instantiatesUri.map((x) => (x)); }
-    if (source['_instantiatesUri']) { this._instantiatesUri = source._instantiatesUri.map((x) => new fhir.FhirElement(x)); }
-    if (source['instantiates']) { this.instantiates = source.instantiates.map((x) => (x)); }
-    if (source['_instantiates']) { this._instantiates = source._instantiates.map((x) => new fhir.FhirElement(x)); }
+    if (source['instantiatesCanonical']) { this.instantiatesCanonical = source.instantiatesCanonical.map((x) => new fhir.FhirCanonical({value: x})); }
+    if (source['instantiatesUri']) { this.instantiatesUri = source.instantiatesUri.map((x) => new fhir.FhirUri({value: x})); }
+    if (source['instantiates']) { this.instantiates = source.instantiates.map((x) => new fhir.FhirUri({value: x})); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
     if (source['intent']) { this.intent = source.intent; }
     else { this.intent = null; }
-    if (source['_intent']) { this._intent = new fhir.FhirElement(source._intent!); }
-    if (source['patient']) { this.patient = new fhir.Reference(source.patient!); }
+    if (source['patient']) { this.patient = new fhir.Reference(source.patient); }
     else { this.patient = null; }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['dateTime']) { this.dateTime = source.dateTime; }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['dateTime']) { this.dateTime = new fhir.FhirDateTime({value: source.dateTime}); }
     else { this.dateTime = null; }
-    if (source['_dateTime']) { this._dateTime = new fhir.FhirElement(source._dateTime!); }
-    if (source['orderer']) { this.orderer = new fhir.Reference(source.orderer!); }
+    if (source['orderer']) { this.orderer = new fhir.Reference(source.orderer); }
     if (source['allergyIntolerance']) { this.allergyIntolerance = source.allergyIntolerance.map((x) => new fhir.Reference(x)); }
     if (source['foodPreferenceModifier']) { this.foodPreferenceModifier = source.foodPreferenceModifier.map((x) => new fhir.CodeableConcept(x)); }
     if (source['excludeFoodModifier']) { this.excludeFoodModifier = source.excludeFoodModifier.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['oralDiet']) { this.oralDiet = new fhir.NutritionOrderOralDiet(source.oralDiet!); }
+    if (source['oralDiet']) { this.oralDiet = new fhir.NutritionOrderOralDiet(source.oralDiet); }
     if (source['supplement']) { this.supplement = source.supplement.map((x) => new fhir.NutritionOrderSupplement(x)); }
-    if (source['enteralFormula']) { this.enteralFormula = new fhir.NutritionOrderEnteralFormula(source.enteralFormula!); }
+    if (source['enteralFormula']) { this.enteralFormula = new fhir.NutritionOrderEnteralFormula(source.enteralFormula); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
   }
   /**
@@ -792,30 +731,44 @@ export class NutritionOrder extends fhir.DomainResource implements INutritionOrd
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: NutritionOrder.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_instantiatesCanonical"]) { this._instantiatesCanonical.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_instantiatesUri"]) { this._instantiatesUri.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_instantiates"]) { this._instantiates.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: NutritionOrder.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (!this["intent"]) { results.push(["intent",'Missing required element: NutritionOrder.intent']); }
-    if (this["_intent"]) { results.push(...this._intent.doModelValidation()); }
-    if (!this["patient"]) { results.push(["patient",'Missing required element: NutritionOrder.patient']); }
-    if (this["patient"]) { results.push(...this.patient.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (!this["dateTime"]) { results.push(["dateTime",'Missing required element: NutritionOrder.dateTime']); }
-    if (this["_dateTime"]) { results.push(...this._dateTime.doModelValidation()); }
-    if (this["orderer"]) { results.push(...this.orderer.doModelValidation()); }
-    if (this["allergyIntolerance"]) { this.allergyIntolerance.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["foodPreferenceModifier"]) { this.foodPreferenceModifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["excludeFoodModifier"]) { this.excludeFoodModifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["oralDiet"]) { results.push(...this.oralDiet.doModelValidation()); }
-    if (this["supplement"]) { this.supplement.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["enteralFormula"]) { results.push(...this.enteralFormula.doModelValidation()); }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'NutritionOrder' fhir: NutritionOrder.resourceType:'NutritionOrder'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instantiatesCanonical"]) { this.instantiatesCanonical.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instantiatesUri"]) { this.instantiatesUri.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instantiates"]) { this.instantiates.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:RequestStatusValueSetEnum fhir: NutritionOrder.status:code", }));
+    }
+    if (!this['intent']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property intent:RequestIntentValueSetEnum fhir: NutritionOrder.intent:code", }));
+    }
+    if (!this['patient']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property patient:fhir.Reference fhir: NutritionOrder.patient:Reference", }));
+    }
+    if (this["patient"]) { outcome.issue!.push(...this.patient.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (!this['dateTime']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property dateTime:fhir.FhirDateTime fhir: NutritionOrder.dateTime:dateTime", }));
+    }
+    if (this["dateTime"]) { outcome.issue!.push(...this.dateTime.doModelValidation().issue!); }
+    if (this["orderer"]) { outcome.issue!.push(...this.orderer.doModelValidation().issue!); }
+    if (this["allergyIntolerance"]) { this.allergyIntolerance.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["foodPreferenceModifier"]) { this.foodPreferenceModifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["excludeFoodModifier"]) { this.excludeFoodModifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["oralDiet"]) { outcome.issue!.push(...this.oralDiet.doModelValidation().issue!); }
+    if (this["supplement"]) { this.supplement.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["enteralFormula"]) { outcome.issue!.push(...this.enteralFormula.doModelValidation().issue!); }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

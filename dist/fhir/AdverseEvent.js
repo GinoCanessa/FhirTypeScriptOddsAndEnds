@@ -3,14 +3,16 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: AdverseEvent
 import * as fhir from '../fhir.js';
-import { AdverseEventCausalityAssessValueSet } from '../fhirValueSets/AdverseEventCausalityAssessValueSet.js';
-import { AdverseEventCausalityMethodValueSet } from '../fhirValueSets/AdverseEventCausalityMethodValueSet.js';
-import { AdverseEventActualityValueSet } from '../fhirValueSets/AdverseEventActualityValueSet.js';
-import { AdverseEventCategoryValueSet } from '../fhirValueSets/AdverseEventCategoryValueSet.js';
-import { AdverseEventTypeValueSet } from '../fhirValueSets/AdverseEventTypeValueSet.js';
-import { AdverseEventSeriousnessValueSet } from '../fhirValueSets/AdverseEventSeriousnessValueSet.js';
-import { AdverseEventSeverityValueSet } from '../fhirValueSets/AdverseEventSeverityValueSet.js';
-import { AdverseEventOutcomeValueSet } from '../fhirValueSets/AdverseEventOutcomeValueSet.js';
+import { AdverseEventCausalityAssessValueSet, } from '../fhirValueSets/AdverseEventCausalityAssessValueSet.js';
+import { AdverseEventCausalityMethodValueSet, } from '../fhirValueSets/AdverseEventCausalityMethodValueSet.js';
+import { AdverseEventActualityValueSet, } from '../fhirValueSets/AdverseEventActualityValueSet.js';
+import { AdverseEventCategoryValueSet, } from '../fhirValueSets/AdverseEventCategoryValueSet.js';
+import { AdverseEventTypeValueSet, } from '../fhirValueSets/AdverseEventTypeValueSet.js';
+import { AdverseEventSeriousnessValueSet, } from '../fhirValueSets/AdverseEventSeriousnessValueSet.js';
+import { AdverseEventSeverityValueSet, } from '../fhirValueSets/AdverseEventSeverityValueSet.js';
+import { AdverseEventOutcomeValueSet, } from '../fhirValueSets/AdverseEventOutcomeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Information on the possible cause of the event.
  */
@@ -18,16 +20,14 @@ export class AdverseEventSuspectEntityCausality extends fhir.BackboneElement {
     /**
      * Default constructor for AdverseEventSuspectEntityCausality - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AdverseEventSuspectEntityCausality';
         if (source['assessment']) {
             this.assessment = new fhir.CodeableConcept(source.assessment);
         }
         if (source['productRelatedness']) {
-            this.productRelatedness = source.productRelatedness;
-        }
-        if (source['_productRelatedness']) {
-            this._productRelatedness = new fhir.FhirElement(source._productRelatedness);
+            this.productRelatedness = new fhir.FhirString({ value: source.productRelatedness });
         }
         if (source['author']) {
             this.author = new fhir.Reference(source.author);
@@ -52,20 +52,26 @@ export class AdverseEventSuspectEntityCausality extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["assessment"]) {
-            results.push(...this.assessment.doModelValidation());
+            outcome.issue.push(...this.assessment.doModelValidation().issue);
         }
-        if (this["_productRelatedness"]) {
-            results.push(...this._productRelatedness.doModelValidation());
+        if (this["productRelatedness"]) {
+            outcome.issue.push(...this.productRelatedness.doModelValidation().issue);
         }
         if (this["author"]) {
-            results.push(...this.author.doModelValidation());
+            outcome.issue.push(...this.author.doModelValidation().issue);
         }
         if (this["method"]) {
-            results.push(...this.method.doModelValidation());
+            outcome.issue.push(...this.method.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -75,8 +81,13 @@ export class AdverseEventSuspectEntity extends fhir.BackboneElement {
     /**
      * Default constructor for AdverseEventSuspectEntity - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AdverseEventSuspectEntity';
+        /**
+         * Information on the possible cause of the event.
+         */
+        this.causality = [];
         if (source['instance']) {
             this.instance = new fhir.Reference(source.instance);
         }
@@ -91,17 +102,23 @@ export class AdverseEventSuspectEntity extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["instance"]) {
-            results.push(["instance", 'Missing required element: AdverseEvent.suspectEntity.instance']);
+        var outcome = super.doModelValidation();
+        if (!this['instance']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property instance:fhir.Reference fhir: AdverseEvent.suspectEntity.instance:Reference", }));
         }
         if (this["instance"]) {
-            results.push(...this.instance.doModelValidation());
+            outcome.issue.push(...this.instance.doModelValidation().issue);
         }
         if (this["causality"]) {
-            this.causality.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.causality.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -111,8 +128,37 @@ export class AdverseEvent extends fhir.DomainResource {
     /**
      * Default constructor for AdverseEvent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'AdverseEvent';
+        /**
+         * The overall type of event, intended for search and filtering purposes.
+         */
+        this.category = [];
+        /**
+         * Includes information about the reaction that occurred as a result of exposure to a substance (for example, a drug or a chemical).
+         */
+        this.resultingCondition = [];
+        /**
+         * Parties that may or should contribute or have contributed information to the adverse event, which can consist of one or more activities.  Such information includes information leading to the decision to perform the activity and how to perform the activity (e.g. consultant), information that the activity itself seeks to reveal (e.g. informant of clinical history), or information about what activity was performed (e.g. informant witness).
+         */
+        this.contributor = [];
+        /**
+         * Describes the entity that is suspected to have caused the adverse event.
+         */
+        this.suspectEntity = [];
+        /**
+         * AdverseEvent.subjectMedicalHistory.
+         */
+        this.subjectMedicalHistory = [];
+        /**
+         * AdverseEvent.referenceDocument.
+         */
+        this.referenceDocument = [];
+        /**
+         * AdverseEvent.study.
+         */
+        this.study = [];
         this.resourceType = 'AdverseEvent';
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
@@ -122,9 +168,6 @@ export class AdverseEvent extends fhir.DomainResource {
         }
         else {
             this.actuality = null;
-        }
-        if (source['_actuality']) {
-            this._actuality = new fhir.FhirElement(source._actuality);
         }
         if (source['category']) {
             this.category = source.category.map((x) => new fhir.CodeableConcept(x));
@@ -142,22 +185,13 @@ export class AdverseEvent extends fhir.DomainResource {
             this.encounter = new fhir.Reference(source.encounter);
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['detected']) {
-            this.detected = source.detected;
-        }
-        if (source['_detected']) {
-            this._detected = new fhir.FhirElement(source._detected);
+            this.detected = new fhir.FhirDateTime({ value: source.detected });
         }
         if (source['recordedDate']) {
-            this.recordedDate = source.recordedDate;
-        }
-        if (source['_recordedDate']) {
-            this._recordedDate = new fhir.FhirElement(source._recordedDate);
+            this.recordedDate = new fhir.FhirDateTime({ value: source.recordedDate });
         }
         if (source['resultingCondition']) {
             this.resultingCondition = source.resultingCondition.map((x) => new fhir.Reference(x));
@@ -233,77 +267,80 @@ export class AdverseEvent extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: AdverseEvent.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'AdverseEvent' fhir: AdverseEvent.resourceType:'AdverseEvent'", }));
         }
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (!this["actuality"]) {
-            results.push(["actuality", 'Missing required element: AdverseEvent.actuality']);
-        }
-        if (this["_actuality"]) {
-            results.push(...this._actuality.doModelValidation());
+        if (!this['actuality']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property actuality:AdverseEventActualityValueSetEnum fhir: AdverseEvent.actuality:code", }));
         }
         if (this["category"]) {
-            this.category.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.category.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["event"]) {
-            results.push(...this.event.doModelValidation());
+            outcome.issue.push(...this.event.doModelValidation().issue);
         }
-        if (!this["subject"]) {
-            results.push(["subject", 'Missing required element: AdverseEvent.subject']);
+        if (!this['subject']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property subject:fhir.Reference fhir: AdverseEvent.subject:Reference", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_detected"]) {
-            results.push(...this._detected.doModelValidation());
+        if (this["detected"]) {
+            outcome.issue.push(...this.detected.doModelValidation().issue);
         }
-        if (this["_recordedDate"]) {
-            results.push(...this._recordedDate.doModelValidation());
+        if (this["recordedDate"]) {
+            outcome.issue.push(...this.recordedDate.doModelValidation().issue);
         }
         if (this["resultingCondition"]) {
-            this.resultingCondition.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.resultingCondition.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["location"]) {
-            results.push(...this.location.doModelValidation());
+            outcome.issue.push(...this.location.doModelValidation().issue);
         }
         if (this["seriousness"]) {
-            results.push(...this.seriousness.doModelValidation());
+            outcome.issue.push(...this.seriousness.doModelValidation().issue);
         }
         if (this["severity"]) {
-            results.push(...this.severity.doModelValidation());
+            outcome.issue.push(...this.severity.doModelValidation().issue);
         }
         if (this["outcome"]) {
-            results.push(...this.outcome.doModelValidation());
+            outcome.issue.push(...this.outcome.doModelValidation().issue);
         }
         if (this["recorder"]) {
-            results.push(...this.recorder.doModelValidation());
+            outcome.issue.push(...this.recorder.doModelValidation().issue);
         }
         if (this["contributor"]) {
-            this.contributor.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contributor.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["suspectEntity"]) {
-            this.suspectEntity.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.suspectEntity.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["subjectMedicalHistory"]) {
-            this.subjectMedicalHistory.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.subjectMedicalHistory.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["referenceDocument"]) {
-            this.referenceDocument.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.referenceDocument.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["study"]) {
-            this.study.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.study.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=AdverseEvent.js.map

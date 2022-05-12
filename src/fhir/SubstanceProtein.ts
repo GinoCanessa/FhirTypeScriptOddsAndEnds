@@ -3,129 +3,65 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SubstanceProtein
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * This subclause refers to the description of each subunit constituting the SubstanceProtein. A subunit is a linear sequence of amino acids linked through peptide bonds. The Subunit information shall be provided when the finished SubstanceProtein is a complex of multiple sequences; subunits are not used to delineate domains within a single sequence. Subunits are listed in order of decreasing length; sequences of the same length will be ordered by decreasing molecular weight; subunits that have identical sequences will be repeated multiple times.
+ * Valid arguments for the SubstanceProteinSubunit type.
  */
-export type ISubstanceProteinSubunit = fhir.IBackboneElement & { 
+export interface SubstanceProteinSubunitArgs extends fhir.BackboneElementArgs {
   /**
    * Index of primary sequences of amino acids linked through peptide bonds in order of decreasing length. Sequences of the same length will be ordered by molecular weight. Subunits that have identical sequences will be repeated and have sequential subscripts.
    */
-  subunit?: number|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.subunit.subunit
-   */
-  _subunit?: fhir.IFhirElement|undefined;
+  subunit?: fhir.FhirInteger|number|undefined;
   /**
    * The sequence information shall be provided enumerating the amino acids from N- to C-terminal end using standard single-letter amino acid codes. Uppercase shall be used for L-amino acids and lowercase for D-amino acids. Transcribed SubstanceProteins will always be described using the translated sequence; for synthetic peptide containing amino acids that are not represented with a single letter code an X should be used within the sequence. The modified amino acids will be distinguished by their position in the sequence.
    */
-  sequence?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.subunit.sequence
-   */
-  _sequence?: fhir.IFhirElement|undefined;
+  sequence?: fhir.FhirString|string|undefined;
   /**
    * Length of linear sequences of amino acids contained in the subunit.
    */
-  length?: number|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.subunit.length
-   */
-  _length?: fhir.IFhirElement|undefined;
+  length?: fhir.FhirInteger|number|undefined;
   /**
    * The sequence information shall be provided enumerating the amino acids from N- to C-terminal end using standard single-letter amino acid codes. Uppercase shall be used for L-amino acids and lowercase for D-amino acids. Transcribed SubstanceProteins will always be described using the translated sequence; for synthetic peptide containing amino acids that are not represented with a single letter code an X should be used within the sequence. The modified amino acids will be distinguished by their position in the sequence.
    */
-  sequenceAttachment?: fhir.IAttachment|undefined;
+  sequenceAttachment?: fhir.AttachmentArgs|undefined;
   /**
    * Unique identifier for molecular fragment modification based on the ISO 11238 Substance ID.
    */
-  nTerminalModificationId?: fhir.IIdentifier|undefined;
+  nTerminalModificationId?: fhir.IdentifierArgs|undefined;
   /**
    * The name of the fragment modified at the N-terminal of the SubstanceProtein shall be specified.
    */
-  nTerminalModification?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.subunit.nTerminalModification
-   */
-  _nTerminalModification?: fhir.IFhirElement|undefined;
+  nTerminalModification?: fhir.FhirString|string|undefined;
   /**
    * Unique identifier for molecular fragment modification based on the ISO 11238 Substance ID.
    */
-  cTerminalModificationId?: fhir.IIdentifier|undefined;
+  cTerminalModificationId?: fhir.IdentifierArgs|undefined;
   /**
    * The modification at the C-terminal shall be specified.
    */
-  cTerminalModification?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.subunit.cTerminalModification
-   */
-  _cTerminalModification?: fhir.IFhirElement|undefined;
-}
-
-/**
- * A SubstanceProtein is defined as a single unit of a linear amino acid sequence, or a combination of subunits that are either covalently linked or have a defined invariant stoichiometric relationship. This includes all synthetic, recombinant and purified SubstanceProteins of defined sequence, whether the use is therapeutic or prophylactic. This set of elements will be used to describe albumins, coagulation factors, cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant vaccines, and immunomodulators.
- */
-export type ISubstanceProtein = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "SubstanceProtein";
-  /**
-   * The SubstanceProtein descriptive elements will only be used when a complete or partial amino acid sequence is available or derivable from a nucleic acid sequence.
-   */
-  sequenceType?: fhir.ICodeableConcept|undefined;
-  /**
-   * Number of linear sequences of amino acids linked through peptide bonds. The number of subunits constituting the SubstanceProtein shall be described. It is possible that the number of subunits can be variable.
-   */
-  numberOfSubunits?: number|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.numberOfSubunits
-   */
-  _numberOfSubunits?: fhir.IFhirElement|undefined;
-  /**
-   * The disulphide bond between two cysteine residues either on the same subunit or on two different subunits shall be described. The position of the disulfide bonds in the SubstanceProtein shall be listed in increasing order of subunit number and position within subunit followed by the abbreviation of the amino acids involved. The disulfide linkage positions shall actually contain the amino acid Cysteine at the respective positions.
-   */
-  disulfideLinkage?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.disulfideLinkage
-   */
-  _disulfideLinkage?: fhir.IFhirElement[]|undefined;
-  /**
-   * This subclause refers to the description of each subunit constituting the SubstanceProtein. A subunit is a linear sequence of amino acids linked through peptide bonds. The Subunit information shall be provided when the finished SubstanceProtein is a complex of multiple sequences; subunits are not used to delineate domains within a single sequence. Subunits are listed in order of decreasing length; sequences of the same length will be ordered by decreasing molecular weight; subunits that have identical sequences will be repeated multiple times.
-   */
-  subunit?: fhir.ISubstanceProteinSubunit[]|undefined;
+  cTerminalModification?: fhir.FhirString|string|undefined;
 }
 
 /**
  * This subclause refers to the description of each subunit constituting the SubstanceProtein. A subunit is a linear sequence of amino acids linked through peptide bonds. The Subunit information shall be provided when the finished SubstanceProtein is a complex of multiple sequences; subunits are not used to delineate domains within a single sequence. Subunits are listed in order of decreasing length; sequences of the same length will be ordered by decreasing molecular weight; subunits that have identical sequences will be repeated multiple times.
  */
-export class SubstanceProteinSubunit extends fhir.BackboneElement implements ISubstanceProteinSubunit {
+export class SubstanceProteinSubunit extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceProteinSubunit';
   /**
    * Index of primary sequences of amino acids linked through peptide bonds in order of decreasing length. Sequences of the same length will be ordered by molecular weight. Subunits that have identical sequences will be repeated and have sequential subscripts.
    */
-  public subunit?: number|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.subunit.subunit
-   */
-  public _subunit?: fhir.FhirElement|undefined;
+  public subunit?: fhir.FhirInteger|undefined;
   /**
    * The sequence information shall be provided enumerating the amino acids from N- to C-terminal end using standard single-letter amino acid codes. Uppercase shall be used for L-amino acids and lowercase for D-amino acids. Transcribed SubstanceProteins will always be described using the translated sequence; for synthetic peptide containing amino acids that are not represented with a single letter code an X should be used within the sequence. The modified amino acids will be distinguished by their position in the sequence.
    */
-  public sequence?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.subunit.sequence
-   */
-  public _sequence?: fhir.FhirElement|undefined;
+  public sequence?: fhir.FhirString|undefined;
   /**
    * Length of linear sequences of amino acids contained in the subunit.
    */
-  public length?: number|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.subunit.length
-   */
-  public _length?: fhir.FhirElement|undefined;
+  public length?: fhir.FhirInteger|undefined;
   /**
    * The sequence information shall be provided enumerating the amino acids from N- to C-terminal end using standard single-letter amino acid codes. Uppercase shall be used for L-amino acids and lowercase for D-amino acids. Transcribed SubstanceProteins will always be described using the translated sequence; for synthetic peptide containing amino acids that are not represented with a single letter code an X should be used within the sequence. The modified amino acids will be distinguished by their position in the sequence.
    */
@@ -137,11 +73,7 @@ export class SubstanceProteinSubunit extends fhir.BackboneElement implements ISu
   /**
    * The name of the fragment modified at the N-terminal of the SubstanceProtein shall be specified.
    */
-  public nTerminalModification?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.subunit.nTerminalModification
-   */
-  public _nTerminalModification?: fhir.FhirElement|undefined;
+  public nTerminalModification?: fhir.FhirString|undefined;
   /**
    * Unique identifier for molecular fragment modification based on the ISO 11238 Substance ID.
    */
@@ -149,51 +81,74 @@ export class SubstanceProteinSubunit extends fhir.BackboneElement implements ISu
   /**
    * The modification at the C-terminal shall be specified.
    */
-  public cTerminalModification?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.subunit.cTerminalModification
-   */
-  public _cTerminalModification?: fhir.FhirElement|undefined;
+  public cTerminalModification?: fhir.FhirString|undefined;
   /**
    * Default constructor for SubstanceProteinSubunit - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceProteinSubunit> = { }) {
-    super(source);
-    if (source['subunit']) { this.subunit = source.subunit; }
-    if (source['_subunit']) { this._subunit = new fhir.FhirElement(source._subunit!); }
-    if (source['sequence']) { this.sequence = source.sequence; }
-    if (source['_sequence']) { this._sequence = new fhir.FhirElement(source._sequence!); }
-    if (source['length']) { this.length = source.length; }
-    if (source['_length']) { this._length = new fhir.FhirElement(source._length!); }
-    if (source['sequenceAttachment']) { this.sequenceAttachment = new fhir.Attachment(source.sequenceAttachment!); }
-    if (source['nTerminalModificationId']) { this.nTerminalModificationId = new fhir.Identifier(source.nTerminalModificationId!); }
-    if (source['nTerminalModification']) { this.nTerminalModification = source.nTerminalModification; }
-    if (source['_nTerminalModification']) { this._nTerminalModification = new fhir.FhirElement(source._nTerminalModification!); }
-    if (source['cTerminalModificationId']) { this.cTerminalModificationId = new fhir.Identifier(source.cTerminalModificationId!); }
-    if (source['cTerminalModification']) { this.cTerminalModification = source.cTerminalModification; }
-    if (source['_cTerminalModification']) { this._cTerminalModification = new fhir.FhirElement(source._cTerminalModification!); }
+  constructor(source:Partial<SubstanceProteinSubunitArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['subunit']) { this.subunit = new fhir.FhirInteger({value: source.subunit}); }
+    if (source['sequence']) { this.sequence = new fhir.FhirString({value: source.sequence}); }
+    if (source['length']) { this.length = new fhir.FhirInteger({value: source.length}); }
+    if (source['sequenceAttachment']) { this.sequenceAttachment = new fhir.Attachment(source.sequenceAttachment); }
+    if (source['nTerminalModificationId']) { this.nTerminalModificationId = new fhir.Identifier(source.nTerminalModificationId); }
+    if (source['nTerminalModification']) { this.nTerminalModification = new fhir.FhirString({value: source.nTerminalModification}); }
+    if (source['cTerminalModificationId']) { this.cTerminalModificationId = new fhir.Identifier(source.cTerminalModificationId); }
+    if (source['cTerminalModification']) { this.cTerminalModification = new fhir.FhirString({value: source.cTerminalModification}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_subunit"]) { results.push(...this._subunit.doModelValidation()); }
-    if (this["_sequence"]) { results.push(...this._sequence.doModelValidation()); }
-    if (this["_length"]) { results.push(...this._length.doModelValidation()); }
-    if (this["sequenceAttachment"]) { results.push(...this.sequenceAttachment.doModelValidation()); }
-    if (this["nTerminalModificationId"]) { results.push(...this.nTerminalModificationId.doModelValidation()); }
-    if (this["_nTerminalModification"]) { results.push(...this._nTerminalModification.doModelValidation()); }
-    if (this["cTerminalModificationId"]) { results.push(...this.cTerminalModificationId.doModelValidation()); }
-    if (this["_cTerminalModification"]) { results.push(...this._cTerminalModification.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["subunit"]) { outcome.issue!.push(...this.subunit.doModelValidation().issue!); }
+    if (this["sequence"]) { outcome.issue!.push(...this.sequence.doModelValidation().issue!); }
+    if (this["length"]) { outcome.issue!.push(...this.length.doModelValidation().issue!); }
+    if (this["sequenceAttachment"]) { outcome.issue!.push(...this.sequenceAttachment.doModelValidation().issue!); }
+    if (this["nTerminalModificationId"]) { outcome.issue!.push(...this.nTerminalModificationId.doModelValidation().issue!); }
+    if (this["nTerminalModification"]) { outcome.issue!.push(...this.nTerminalModification.doModelValidation().issue!); }
+    if (this["cTerminalModificationId"]) { outcome.issue!.push(...this.cTerminalModificationId.doModelValidation().issue!); }
+    if (this["cTerminalModification"]) { outcome.issue!.push(...this.cTerminalModification.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceProtein type.
+ */
+export interface SubstanceProteinArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "SubstanceProtein"|undefined;
+  /**
+   * The SubstanceProtein descriptive elements will only be used when a complete or partial amino acid sequence is available or derivable from a nucleic acid sequence.
+   */
+  sequenceType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Number of linear sequences of amino acids linked through peptide bonds. The number of subunits constituting the SubstanceProtein shall be described. It is possible that the number of subunits can be variable.
+   */
+  numberOfSubunits?: fhir.FhirInteger|number|undefined;
+  /**
+   * The disulphide bond between two cysteine residues either on the same subunit or on two different subunits shall be described. The position of the disulfide bonds in the SubstanceProtein shall be listed in increasing order of subunit number and position within subunit followed by the abbreviation of the amino acids involved. The disulfide linkage positions shall actually contain the amino acid Cysteine at the respective positions.
+   */
+  disulfideLinkage?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * This subclause refers to the description of each subunit constituting the SubstanceProtein. A subunit is a linear sequence of amino acids linked through peptide bonds. The Subunit information shall be provided when the finished SubstanceProtein is a complex of multiple sequences; subunits are not used to delineate domains within a single sequence. Subunits are listed in order of decreasing length; sequences of the same length will be ordered by decreasing molecular weight; subunits that have identical sequences will be repeated multiple times.
+   */
+  subunit?: fhir.SubstanceProteinSubunitArgs[]|undefined;
 }
 
 /**
  * A SubstanceProtein is defined as a single unit of a linear amino acid sequence, or a combination of subunits that are either covalently linked or have a defined invariant stoichiometric relationship. This includes all synthetic, recombinant and purified SubstanceProteins of defined sequence, whether the use is therapeutic or prophylactic. This set of elements will be used to describe albumins, coagulation factors, cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant vaccines, and immunomodulators.
  */
-export class SubstanceProtein extends fhir.DomainResource implements ISubstanceProtein {
+export class SubstanceProtein extends fhir.DomainResource {
+  readonly __dataType:string = 'SubstanceProtein';
   /**
    * Resource Type Name
    */
@@ -205,46 +160,44 @@ export class SubstanceProtein extends fhir.DomainResource implements ISubstanceP
   /**
    * Number of linear sequences of amino acids linked through peptide bonds. The number of subunits constituting the SubstanceProtein shall be described. It is possible that the number of subunits can be variable.
    */
-  public numberOfSubunits?: number|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.numberOfSubunits
-   */
-  public _numberOfSubunits?: fhir.FhirElement|undefined;
+  public numberOfSubunits?: fhir.FhirInteger|undefined;
   /**
    * The disulphide bond between two cysteine residues either on the same subunit or on two different subunits shall be described. The position of the disulfide bonds in the SubstanceProtein shall be listed in increasing order of subunit number and position within subunit followed by the abbreviation of the amino acids involved. The disulfide linkage positions shall actually contain the amino acid Cysteine at the respective positions.
    */
-  public disulfideLinkage?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceProtein.disulfideLinkage
-   */
-  public _disulfideLinkage?: fhir.FhirElement[]|undefined;
+  public disulfideLinkage?: fhir.FhirString[]|undefined = [];
   /**
    * This subclause refers to the description of each subunit constituting the SubstanceProtein. A subunit is a linear sequence of amino acids linked through peptide bonds. The Subunit information shall be provided when the finished SubstanceProtein is a complex of multiple sequences; subunits are not used to delineate domains within a single sequence. Subunits are listed in order of decreasing length; sequences of the same length will be ordered by decreasing molecular weight; subunits that have identical sequences will be repeated multiple times.
    */
-  public subunit?: fhir.SubstanceProteinSubunit[]|undefined;
+  public subunit?: fhir.SubstanceProteinSubunit[]|undefined = [];
   /**
    * Default constructor for SubstanceProtein - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceProtein> = { }) {
-    super(source);
+  constructor(source:Partial<SubstanceProteinArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'SubstanceProtein';
-    if (source['sequenceType']) { this.sequenceType = new fhir.CodeableConcept(source.sequenceType!); }
-    if (source['numberOfSubunits']) { this.numberOfSubunits = source.numberOfSubunits; }
-    if (source['_numberOfSubunits']) { this._numberOfSubunits = new fhir.FhirElement(source._numberOfSubunits!); }
-    if (source['disulfideLinkage']) { this.disulfideLinkage = source.disulfideLinkage.map((x) => (x)); }
-    if (source['_disulfideLinkage']) { this._disulfideLinkage = source._disulfideLinkage.map((x) => new fhir.FhirElement(x)); }
+    if (source['sequenceType']) { this.sequenceType = new fhir.CodeableConcept(source.sequenceType); }
+    if (source['numberOfSubunits']) { this.numberOfSubunits = new fhir.FhirInteger({value: source.numberOfSubunits}); }
+    if (source['disulfideLinkage']) { this.disulfideLinkage = source.disulfideLinkage.map((x) => new fhir.FhirString({value: x})); }
     if (source['subunit']) { this.subunit = source.subunit.map((x) => new fhir.SubstanceProteinSubunit(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: SubstanceProtein.resourceType']); }
-    if (this["sequenceType"]) { results.push(...this.sequenceType.doModelValidation()); }
-    if (this["_numberOfSubunits"]) { results.push(...this._numberOfSubunits.doModelValidation()); }
-    if (this["_disulfideLinkage"]) { this._disulfideLinkage.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["subunit"]) { this.subunit.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'SubstanceProtein' fhir: SubstanceProtein.resourceType:'SubstanceProtein'", }));
+    }
+    if (this["sequenceType"]) { outcome.issue!.push(...this.sequenceType.doModelValidation().issue!); }
+    if (this["numberOfSubunits"]) { outcome.issue!.push(...this.numberOfSubunits.doModelValidation().issue!); }
+    if (this["disulfideLinkage"]) { this.disulfideLinkage.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["subunit"]) { this.subunit.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -27,15 +27,4 @@ export const MapInputModeValueSet = {
 /**
  * Mode for this instance of data.
  */
-export var MapInputModeValueSetEnum;
-(function (MapInputModeValueSetEnum) {
-    /**
-     * source: Names an input instance used a source for mapping.
-     */
-    MapInputModeValueSetEnum["SourceInstance"] = "source";
-    /**
-     * target: Names an instance that is being populated.
-     */
-    MapInputModeValueSetEnum["TargetInstance"] = "target";
-})(MapInputModeValueSetEnum || (MapInputModeValueSetEnum = {}));
 //# sourceMappingURL=MapInputModeValueSet.js.map

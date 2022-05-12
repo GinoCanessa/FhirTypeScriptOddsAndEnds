@@ -1,166 +1,26 @@
 import * as fhir from '../fhir.js';
-import { InvoicePriceComponentTypeValueSetType, InvoicePriceComponentTypeValueSetEnum } from '../fhirValueSets/InvoicePriceComponentTypeValueSet.js';
-import { InvoiceStatusValueSetType, InvoiceStatusValueSetEnum } from '../fhirValueSets/InvoiceStatusValueSet.js';
+import { InvoicePriceComponentTypeValueSetType } from '../fhirValueSets/InvoicePriceComponentTypeValueSet.js';
+import { InvoicePriceComponentTypeValueSetEnum } from '../valueSetEnums.js';
+import { InvoiceStatusValueSetType } from '../fhirValueSets/InvoiceStatusValueSet.js';
+import { InvoiceStatusValueSetEnum } from '../valueSetEnums.js';
 /**
- * Indicates who or what performed or participated in the charged service.
+ * Valid arguments for the InvoiceParticipant type.
  */
-export declare type IInvoiceParticipant = fhir.IBackboneElement & {
+export interface InvoiceParticipantArgs extends fhir.BackboneElementArgs {
     /**
      * Describes the type of involvement (e.g. transcriptionist, creator etc.). If the invoice has been created automatically, the Participant may be a billing engine or another kind of device.
      */
-    role?: fhir.ICodeableConcept | undefined;
+    role?: fhir.CodeableConceptArgs | undefined;
     /**
      * The device, practitioner, etc. who performed or participated in the service.
      */
-    actor: fhir.IReference | null;
-};
-/**
- * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
- */
-export declare type IInvoiceLineItemPriceComponent = fhir.IBackboneElement & {
-    /**
-     * This code identifies the type of the component.
-     */
-    type: InvoicePriceComponentTypeValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: Invoice.lineItem.priceComponent.type
-     */
-    _type?: fhir.IFhirElement | undefined;
-    /**
-     * A code that identifies the component. Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc.
-     */
-    code?: fhir.ICodeableConcept | undefined;
-    /**
-     * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
-     */
-    factor?: number | undefined;
-    /**
-     * Extended properties for primitive element: Invoice.lineItem.priceComponent.factor
-     */
-    _factor?: fhir.IFhirElement | undefined;
-    /**
-     * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
-     */
-    amount?: fhir.IMoney | undefined;
-};
-/**
- * Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.
- */
-export declare type IInvoiceLineItem = fhir.IBackboneElement & {
-    /**
-     * Sequence in which the items appear on the invoice.
-     */
-    sequence?: number | undefined;
-    /**
-     * Extended properties for primitive element: Invoice.lineItem.sequence
-     */
-    _sequence?: fhir.IFhirElement | undefined;
-    /**
-     * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
-     */
-    chargeItemReference?: fhir.IReference | undefined;
-    /**
-     * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
-     */
-    chargeItemCodeableConcept?: fhir.ICodeableConcept | undefined;
-    /**
-     * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
-     */
-    priceComponent?: fhir.IInvoiceLineItemPriceComponent[] | undefined;
-};
-/**
- * Invoice containing collected ChargeItems from an Account with calculated individual and total price for Billing purpose.
- */
-export declare type IInvoice = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "Invoice";
-    /**
-     * Identifier of this Invoice, often used for reference in correspondence about this invoice or for tracking of payments.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * The current state of the Invoice.
-     */
-    status: InvoiceStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: Invoice.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * Derived Profiles may choose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.
-     */
-    cancelledReason?: string | undefined;
-    /**
-     * Extended properties for primitive element: Invoice.cancelledReason
-     */
-    _cancelledReason?: fhir.IFhirElement | undefined;
-    /**
-     * Type of Invoice depending on domain, realm an usage (e.g. internal/external, dental, preliminary).
-     */
-    type?: fhir.ICodeableConcept | undefined;
-    /**
-     * The individual or set of individuals receiving the goods and services billed in this invoice.
-     */
-    subject?: fhir.IReference | undefined;
-    /**
-     * The individual or Organization responsible for balancing of this invoice.
-     */
-    recipient?: fhir.IReference | undefined;
-    /**
-     * The list of types may be constrained as appropriate for the type of charge item.
-     */
-    date?: string | undefined;
-    /**
-     * Extended properties for primitive element: Invoice.date
-     */
-    _date?: fhir.IFhirElement | undefined;
-    /**
-     * Indicates who or what performed or participated in the charged service.
-     */
-    participant?: fhir.IInvoiceParticipant[] | undefined;
-    /**
-     * Practitioners and Devices can be associated with multiple organizations. It has to be made clear, on behalf of which Organization the services have been rendered.
-     */
-    issuer?: fhir.IReference | undefined;
-    /**
-     * Systems posting the ChargeItems might not always be able to determine, which accounts the Items need to be places into. It is up to the potprocessing Financial System to apply internal rules to decide based on the Encounter/EpisodeOfCare/Patient/Coverage context and the type of ChargeItem, which Account is appropriate.
-     */
-    account?: fhir.IReference | undefined;
-    /**
-     * Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.
-     */
-    lineItem?: fhir.IInvoiceLineItem[] | undefined;
-    /**
-     * The total amount for the Invoice may be calculated as the sum of the line items with surcharges/deductions that apply in certain conditions.  The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the total price was calculated.
-     */
-    totalPriceComponent?: fhir.IInvoiceLineItemPriceComponent[] | undefined;
-    /**
-     * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
-     */
-    totalNet?: fhir.IMoney | undefined;
-    /**
-     * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
-     */
-    totalGross?: fhir.IMoney | undefined;
-    /**
-     * Derived Profiles may chose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.
-     */
-    paymentTerms?: string | undefined;
-    /**
-     * Extended properties for primitive element: Invoice.paymentTerms
-     */
-    _paymentTerms?: fhir.IFhirElement | undefined;
-    /**
-     * Comments made about the invoice by the issuer, subject, or other participants.
-     */
-    note?: fhir.IAnnotation[] | undefined;
-};
+    actor: fhir.ReferenceArgs | null;
+}
 /**
  * Indicates who or what performed or participated in the charged service.
  */
-export declare class InvoiceParticipant extends fhir.BackboneElement implements IInvoiceParticipant {
+export declare class InvoiceParticipant extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Describes the type of involvement (e.g. transcriptionist, creator etc.). If the invoice has been created automatically, the Participant may be a billing engine or another kind of device.
      */
@@ -172,24 +32,46 @@ export declare class InvoiceParticipant extends fhir.BackboneElement implements 
     /**
      * Default constructor for InvoiceParticipant - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IInvoiceParticipant>);
+    constructor(source?: Partial<InvoiceParticipantArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 /**
- * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
+ * Valid arguments for the InvoiceLineItemPriceComponent type.
  */
-export declare class InvoiceLineItemPriceComponent extends fhir.BackboneElement implements IInvoiceLineItemPriceComponent {
+export interface InvoiceLineItemPriceComponentArgs extends fhir.BackboneElementArgs {
     /**
      * This code identifies the type of the component.
      */
     type: InvoicePriceComponentTypeValueSetEnum | null;
     /**
-     * Extended properties for primitive element: Invoice.lineItem.priceComponent.type
+     * A code that identifies the component. Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc.
      */
-    _type?: fhir.FhirElement | undefined;
+    code?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
+     */
+    factor?: fhir.FhirDecimal | number | undefined;
+    /**
+     * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
+     */
+    amount?: fhir.MoneyArgs | undefined;
+}
+/**
+ * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
+ */
+export declare class InvoiceLineItemPriceComponent extends fhir.BackboneElement {
+    readonly __dataType: string;
+    /**
+     * This code identifies the type of the component.
+     */
+    type: InvoicePriceComponentTypeValueSetEnum | null;
     /**
      * A code that identifies the component. Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc.
      */
@@ -197,11 +79,7 @@ export declare class InvoiceLineItemPriceComponent extends fhir.BackboneElement 
     /**
      * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
      */
-    factor?: number | undefined;
-    /**
-     * Extended properties for primitive element: Invoice.lineItem.priceComponent.factor
-     */
-    _factor?: fhir.FhirElement | undefined;
+    factor?: fhir.FhirDecimal | undefined;
     /**
      * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
      */
@@ -209,7 +87,7 @@ export declare class InvoiceLineItemPriceComponent extends fhir.BackboneElement 
     /**
      * Default constructor for InvoiceLineItemPriceComponent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IInvoiceLineItemPriceComponent>);
+    constructor(source?: Partial<InvoiceLineItemPriceComponentArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for type
      */
@@ -217,28 +95,51 @@ export declare class InvoiceLineItemPriceComponent extends fhir.BackboneElement 
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the InvoiceLineItem type.
+ */
+export interface InvoiceLineItemArgs extends fhir.BackboneElementArgs {
+    /**
+     * Sequence in which the items appear on the invoice.
+     */
+    sequence?: fhir.FhirPositiveInt | number | undefined;
+    /**
+     * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
+     */
+    chargeItem?: fhir.Reference | fhir.CodeableConcept | undefined;
+    /**
+     * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
+     */
+    chargeItemReference?: fhir.ReferenceArgs | undefined;
+    /**
+     * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
+     */
+    chargeItemCodeableConcept?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
+     */
+    priceComponent?: fhir.InvoiceLineItemPriceComponentArgs[] | undefined;
 }
 /**
  * Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.
  */
-export declare class InvoiceLineItem extends fhir.BackboneElement implements IInvoiceLineItem {
+export declare class InvoiceLineItem extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Sequence in which the items appear on the invoice.
      */
-    sequence?: number | undefined;
-    /**
-     * Extended properties for primitive element: Invoice.lineItem.sequence
-     */
-    _sequence?: fhir.FhirElement | undefined;
+    sequence?: fhir.FhirPositiveInt | undefined;
     /**
      * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
      */
-    chargeItemReference?: fhir.Reference | undefined;
-    /**
-     * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
-     */
-    chargeItemCodeableConcept?: fhir.CodeableConcept | undefined;
+    chargeItem: (fhir.Reference | fhir.CodeableConcept) | null;
+    readonly __chargeItemIsChoice: true;
     /**
      * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
      */
@@ -246,16 +147,94 @@ export declare class InvoiceLineItem extends fhir.BackboneElement implements IIn
     /**
      * Default constructor for InvoiceLineItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IInvoiceLineItem>);
+    constructor(source?: Partial<InvoiceLineItemArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the Invoice type.
+ */
+export interface InvoiceArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "Invoice" | undefined;
+    /**
+     * Identifier of this Invoice, often used for reference in correspondence about this invoice or for tracking of payments.
+     */
+    identifier?: fhir.IdentifierArgs[] | undefined;
+    /**
+     * The current state of the Invoice.
+     */
+    status: InvoiceStatusValueSetEnum | null;
+    /**
+     * Derived Profiles may choose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.
+     */
+    cancelledReason?: fhir.FhirString | string | undefined;
+    /**
+     * Type of Invoice depending on domain, realm an usage (e.g. internal/external, dental, preliminary).
+     */
+    type?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * The individual or set of individuals receiving the goods and services billed in this invoice.
+     */
+    subject?: fhir.ReferenceArgs | undefined;
+    /**
+     * The individual or Organization responsible for balancing of this invoice.
+     */
+    recipient?: fhir.ReferenceArgs | undefined;
+    /**
+     * The list of types may be constrained as appropriate for the type of charge item.
+     */
+    date?: fhir.FhirDateTime | string | undefined;
+    /**
+     * Indicates who or what performed or participated in the charged service.
+     */
+    participant?: fhir.InvoiceParticipantArgs[] | undefined;
+    /**
+     * Practitioners and Devices can be associated with multiple organizations. It has to be made clear, on behalf of which Organization the services have been rendered.
+     */
+    issuer?: fhir.ReferenceArgs | undefined;
+    /**
+     * Systems posting the ChargeItems might not always be able to determine, which accounts the Items need to be places into. It is up to the potprocessing Financial System to apply internal rules to decide based on the Encounter/EpisodeOfCare/Patient/Coverage context and the type of ChargeItem, which Account is appropriate.
+     */
+    account?: fhir.ReferenceArgs | undefined;
+    /**
+     * Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.
+     */
+    lineItem?: fhir.InvoiceLineItemArgs[] | undefined;
+    /**
+     * The total amount for the Invoice may be calculated as the sum of the line items with surcharges/deductions that apply in certain conditions.  The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the total price was calculated.
+     */
+    totalPriceComponent?: fhir.InvoiceLineItemPriceComponentArgs[] | undefined;
+    /**
+     * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
+     */
+    totalNet?: fhir.MoneyArgs | undefined;
+    /**
+     * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
+     */
+    totalGross?: fhir.MoneyArgs | undefined;
+    /**
+     * Derived Profiles may chose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.
+     */
+    paymentTerms?: fhir.FhirMarkdown | string | undefined;
+    /**
+     * Comments made about the invoice by the issuer, subject, or other participants.
+     */
+    note?: fhir.AnnotationArgs[] | undefined;
 }
 /**
  * Invoice containing collected ChargeItems from an Account with calculated individual and total price for Billing purpose.
  */
-export declare class Invoice extends fhir.DomainResource implements IInvoice {
+export declare class Invoice extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -269,17 +248,9 @@ export declare class Invoice extends fhir.DomainResource implements IInvoice {
      */
     status: InvoiceStatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: Invoice.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * Derived Profiles may choose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.
      */
-    cancelledReason?: string | undefined;
-    /**
-     * Extended properties for primitive element: Invoice.cancelledReason
-     */
-    _cancelledReason?: fhir.FhirElement | undefined;
+    cancelledReason?: fhir.FhirString | undefined;
     /**
      * Type of Invoice depending on domain, realm an usage (e.g. internal/external, dental, preliminary).
      */
@@ -295,11 +266,7 @@ export declare class Invoice extends fhir.DomainResource implements IInvoice {
     /**
      * The list of types may be constrained as appropriate for the type of charge item.
      */
-    date?: string | undefined;
-    /**
-     * Extended properties for primitive element: Invoice.date
-     */
-    _date?: fhir.FhirElement | undefined;
+    date?: fhir.FhirDateTime | undefined;
     /**
      * Indicates who or what performed or participated in the charged service.
      */
@@ -331,11 +298,7 @@ export declare class Invoice extends fhir.DomainResource implements IInvoice {
     /**
      * Derived Profiles may chose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.
      */
-    paymentTerms?: string | undefined;
-    /**
-     * Extended properties for primitive element: Invoice.paymentTerms
-     */
-    _paymentTerms?: fhir.FhirElement | undefined;
+    paymentTerms?: fhir.FhirMarkdown | undefined;
     /**
      * Comments made about the invoice by the issuer, subject, or other participants.
      */
@@ -343,7 +306,7 @@ export declare class Invoice extends fhir.DomainResource implements IInvoice {
     /**
      * Default constructor for Invoice - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IInvoice>);
+    constructor(source?: Partial<InvoiceArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -351,6 +314,10 @@ export declare class Invoice extends fhir.DomainResource implements IInvoice {
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Invoice.d.ts.map

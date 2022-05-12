@@ -3,155 +3,33 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SubstanceReferenceInformation
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Todo.
+ * Valid arguments for the SubstanceReferenceInformationGene type.
  */
-export type ISubstanceReferenceInformationGene = fhir.IBackboneElement & { 
+export interface SubstanceReferenceInformationGeneArgs extends fhir.BackboneElementArgs {
   /**
    * Todo.
    */
-  geneSequenceOrigin?: fhir.ICodeableConcept|undefined;
+  geneSequenceOrigin?: fhir.CodeableConceptArgs|undefined;
   /**
    * Todo.
    */
-  gene?: fhir.ICodeableConcept|undefined;
+  gene?: fhir.CodeableConceptArgs|undefined;
   /**
    * Todo.
    */
-  source?: fhir.IReference[]|undefined;
+  source?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * Todo.
  */
-export type ISubstanceReferenceInformationGeneElement = fhir.IBackboneElement & { 
-  /**
-   * Todo.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Todo.
-   */
-  element?: fhir.IIdentifier|undefined;
-  /**
-   * Todo.
-   */
-  source?: fhir.IReference[]|undefined;
-}
-
-/**
- * Todo.
- */
-export type ISubstanceReferenceInformationClassification = fhir.IBackboneElement & { 
-  /**
-   * Todo.
-   */
-  domain?: fhir.ICodeableConcept|undefined;
-  /**
-   * Todo.
-   */
-  classification?: fhir.ICodeableConcept|undefined;
-  /**
-   * Todo.
-   */
-  subtype?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Todo.
-   */
-  source?: fhir.IReference[]|undefined;
-}
-
-/**
- * Todo.
- */
-export type ISubstanceReferenceInformationTarget = fhir.IBackboneElement & { 
-  /**
-   * Todo.
-   */
-  target?: fhir.IIdentifier|undefined;
-  /**
-   * Todo.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Todo.
-   */
-  interaction?: fhir.ICodeableConcept|undefined;
-  /**
-   * Todo.
-   */
-  organism?: fhir.ICodeableConcept|undefined;
-  /**
-   * Todo.
-   */
-  organismType?: fhir.ICodeableConcept|undefined;
-  /**
-   * Todo.
-   */
-  amountQuantity?: fhir.IQuantity|undefined;
-  /**
-   * Todo.
-   */
-  amountRange?: fhir.IRange|undefined;
-  /**
-   * Todo.
-   */
-  amountString?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceReferenceInformation.target.amount[x]
-   */
-  _amountString?: fhir.IFhirElement|undefined;
-  /**
-   * Todo.
-   */
-  amountType?: fhir.ICodeableConcept|undefined;
-  /**
-   * Todo.
-   */
-  source?: fhir.IReference[]|undefined;
-}
-
-/**
- * Todo.
- */
-export type ISubstanceReferenceInformation = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "SubstanceReferenceInformation";
-  /**
-   * Todo.
-   */
-  comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceReferenceInformation.comment
-   */
-  _comment?: fhir.IFhirElement|undefined;
-  /**
-   * Todo.
-   */
-  gene?: fhir.ISubstanceReferenceInformationGene[]|undefined;
-  /**
-   * Todo.
-   */
-  geneElement?: fhir.ISubstanceReferenceInformationGeneElement[]|undefined;
-  /**
-   * Todo.
-   */
-  classification?: fhir.ISubstanceReferenceInformationClassification[]|undefined;
-  /**
-   * Todo.
-   */
-  target?: fhir.ISubstanceReferenceInformationTarget[]|undefined;
-}
-
-/**
- * Todo.
- */
-export class SubstanceReferenceInformationGene extends fhir.BackboneElement implements ISubstanceReferenceInformationGene {
+export class SubstanceReferenceInformationGene extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceReferenceInformationGene';
   /**
    * Todo.
    */
@@ -163,32 +41,56 @@ export class SubstanceReferenceInformationGene extends fhir.BackboneElement impl
   /**
    * Todo.
    */
-  public source?: fhir.Reference[]|undefined;
+  public source?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for SubstanceReferenceInformationGene - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceReferenceInformationGene> = { }) {
-    super(source);
-    if (source['geneSequenceOrigin']) { this.geneSequenceOrigin = new fhir.CodeableConcept(source.geneSequenceOrigin!); }
-    if (source['gene']) { this.gene = new fhir.CodeableConcept(source.gene!); }
+  constructor(source:Partial<SubstanceReferenceInformationGeneArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['geneSequenceOrigin']) { this.geneSequenceOrigin = new fhir.CodeableConcept(source.geneSequenceOrigin); }
+    if (source['gene']) { this.gene = new fhir.CodeableConcept(source.gene); }
     if (source['source']) { this.source = source.source.map((x) => new fhir.Reference(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["geneSequenceOrigin"]) { results.push(...this.geneSequenceOrigin.doModelValidation()); }
-    if (this["gene"]) { results.push(...this.gene.doModelValidation()); }
-    if (this["source"]) { this.source.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["geneSequenceOrigin"]) { outcome.issue!.push(...this.geneSequenceOrigin.doModelValidation().issue!); }
+    if (this["gene"]) { outcome.issue!.push(...this.gene.doModelValidation().issue!); }
+    if (this["source"]) { this.source.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceReferenceInformationGeneElement type.
+ */
+export interface SubstanceReferenceInformationGeneElementArgs extends fhir.BackboneElementArgs {
+  /**
+   * Todo.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Todo.
+   */
+  element?: fhir.IdentifierArgs|undefined;
+  /**
+   * Todo.
+   */
+  source?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * Todo.
  */
-export class SubstanceReferenceInformationGeneElement extends fhir.BackboneElement implements ISubstanceReferenceInformationGeneElement {
+export class SubstanceReferenceInformationGeneElement extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceReferenceInformationGeneElement';
   /**
    * Todo.
    */
@@ -200,32 +102,60 @@ export class SubstanceReferenceInformationGeneElement extends fhir.BackboneEleme
   /**
    * Todo.
    */
-  public source?: fhir.Reference[]|undefined;
+  public source?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for SubstanceReferenceInformationGeneElement - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceReferenceInformationGeneElement> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['element']) { this.element = new fhir.Identifier(source.element!); }
+  constructor(source:Partial<SubstanceReferenceInformationGeneElementArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['element']) { this.element = new fhir.Identifier(source.element); }
     if (source['source']) { this.source = source.source.map((x) => new fhir.Reference(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["element"]) { results.push(...this.element.doModelValidation()); }
-    if (this["source"]) { this.source.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["element"]) { outcome.issue!.push(...this.element.doModelValidation().issue!); }
+    if (this["source"]) { this.source.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceReferenceInformationClassification type.
+ */
+export interface SubstanceReferenceInformationClassificationArgs extends fhir.BackboneElementArgs {
+  /**
+   * Todo.
+   */
+  domain?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Todo.
+   */
+  classification?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Todo.
+   */
+  subtype?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Todo.
+   */
+  source?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * Todo.
  */
-export class SubstanceReferenceInformationClassification extends fhir.BackboneElement implements ISubstanceReferenceInformationClassification {
+export class SubstanceReferenceInformationClassification extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceReferenceInformationClassification';
   /**
    * Todo.
    */
@@ -237,38 +167,94 @@ export class SubstanceReferenceInformationClassification extends fhir.BackboneEl
   /**
    * Todo.
    */
-  public subtype?: fhir.CodeableConcept[]|undefined;
+  public subtype?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Todo.
    */
-  public source?: fhir.Reference[]|undefined;
+  public source?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for SubstanceReferenceInformationClassification - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceReferenceInformationClassification> = { }) {
-    super(source);
-    if (source['domain']) { this.domain = new fhir.CodeableConcept(source.domain!); }
-    if (source['classification']) { this.classification = new fhir.CodeableConcept(source.classification!); }
+  constructor(source:Partial<SubstanceReferenceInformationClassificationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['domain']) { this.domain = new fhir.CodeableConcept(source.domain); }
+    if (source['classification']) { this.classification = new fhir.CodeableConcept(source.classification); }
     if (source['subtype']) { this.subtype = source.subtype.map((x) => new fhir.CodeableConcept(x)); }
     if (source['source']) { this.source = source.source.map((x) => new fhir.Reference(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["domain"]) { results.push(...this.domain.doModelValidation()); }
-    if (this["classification"]) { results.push(...this.classification.doModelValidation()); }
-    if (this["subtype"]) { this.subtype.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["source"]) { this.source.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["domain"]) { outcome.issue!.push(...this.domain.doModelValidation().issue!); }
+    if (this["classification"]) { outcome.issue!.push(...this.classification.doModelValidation().issue!); }
+    if (this["subtype"]) { this.subtype.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["source"]) { this.source.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceReferenceInformationTarget type.
+ */
+export interface SubstanceReferenceInformationTargetArgs extends fhir.BackboneElementArgs {
+  /**
+   * Todo.
+   */
+  target?: fhir.IdentifierArgs|undefined;
+  /**
+   * Todo.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Todo.
+   */
+  interaction?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Todo.
+   */
+  organism?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Todo.
+   */
+  organismType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Todo.
+   */
+  amount?: fhir.Quantity|fhir.Range|fhir.FhirString|undefined;
+  /**
+   * Todo.
+   */
+  amountQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * Todo.
+   */
+  amountRange?: fhir.RangeArgs|undefined;
+  /**
+   * Todo.
+   */
+  amountString?: fhir.FhirString|string|undefined;
+  /**
+   * Todo.
+   */
+  amountType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Todo.
+   */
+  source?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * Todo.
  */
-export class SubstanceReferenceInformationTarget extends fhir.BackboneElement implements ISubstanceReferenceInformationTarget {
+export class SubstanceReferenceInformationTarget extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceReferenceInformationTarget';
   /**
    * Todo.
    */
@@ -292,19 +278,8 @@ export class SubstanceReferenceInformationTarget extends fhir.BackboneElement im
   /**
    * Todo.
    */
-  public amountQuantity?: fhir.Quantity|undefined;
-  /**
-   * Todo.
-   */
-  public amountRange?: fhir.Range|undefined;
-  /**
-   * Todo.
-   */
-  public amountString?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceReferenceInformation.target.amount[x]
-   */
-  public _amountString?: fhir.FhirElement|undefined;
+  public amount?: (fhir.Quantity|fhir.Range|fhir.FhirString)|undefined;
+  readonly __amountIsChoice:true = true;
   /**
    * Todo.
    */
@@ -312,47 +287,80 @@ export class SubstanceReferenceInformationTarget extends fhir.BackboneElement im
   /**
    * Todo.
    */
-  public source?: fhir.Reference[]|undefined;
+  public source?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for SubstanceReferenceInformationTarget - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceReferenceInformationTarget> = { }) {
-    super(source);
-    if (source['target']) { this.target = new fhir.Identifier(source.target!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['interaction']) { this.interaction = new fhir.CodeableConcept(source.interaction!); }
-    if (source['organism']) { this.organism = new fhir.CodeableConcept(source.organism!); }
-    if (source['organismType']) { this.organismType = new fhir.CodeableConcept(source.organismType!); }
-    if (source['amountQuantity']) { this.amountQuantity = new fhir.Quantity(source.amountQuantity!); }
-    if (source['amountRange']) { this.amountRange = new fhir.Range(source.amountRange!); }
-    if (source['amountString']) { this.amountString = source.amountString; }
-    if (source['_amountString']) { this._amountString = new fhir.FhirElement(source._amountString!); }
-    if (source['amountType']) { this.amountType = new fhir.CodeableConcept(source.amountType!); }
+  constructor(source:Partial<SubstanceReferenceInformationTargetArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['target']) { this.target = new fhir.Identifier(source.target); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['interaction']) { this.interaction = new fhir.CodeableConcept(source.interaction); }
+    if (source['organism']) { this.organism = new fhir.CodeableConcept(source.organism); }
+    if (source['organismType']) { this.organismType = new fhir.CodeableConcept(source.organismType); }
+    if (source['amount']) { this.amount = source.amount; }
+    else if (source['amountQuantity']) { this.amount = new fhir.Quantity(source.amountQuantity); }
+    else if (source['amountRange']) { this.amount = new fhir.Range(source.amountRange); }
+    else if (source['amountString']) { this.amount = new fhir.FhirString({value: source.amountString}); }
+    if (source['amountType']) { this.amountType = new fhir.CodeableConcept(source.amountType); }
     if (source['source']) { this.source = source.source.map((x) => new fhir.Reference(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["target"]) { results.push(...this.target.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["interaction"]) { results.push(...this.interaction.doModelValidation()); }
-    if (this["organism"]) { results.push(...this.organism.doModelValidation()); }
-    if (this["organismType"]) { results.push(...this.organismType.doModelValidation()); }
-    if (this["amountQuantity"]) { results.push(...this.amountQuantity.doModelValidation()); }
-    if (this["amountRange"]) { results.push(...this.amountRange.doModelValidation()); }
-    if (this["_amountString"]) { results.push(...this._amountString.doModelValidation()); }
-    if (this["amountType"]) { results.push(...this.amountType.doModelValidation()); }
-    if (this["source"]) { this.source.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["target"]) { outcome.issue!.push(...this.target.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["interaction"]) { outcome.issue!.push(...this.interaction.doModelValidation().issue!); }
+    if (this["organism"]) { outcome.issue!.push(...this.organism.doModelValidation().issue!); }
+    if (this["organismType"]) { outcome.issue!.push(...this.organismType.doModelValidation().issue!); }
+    if (this["amountType"]) { outcome.issue!.push(...this.amountType.doModelValidation().issue!); }
+    if (this["source"]) { this.source.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceReferenceInformation type.
+ */
+export interface SubstanceReferenceInformationArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "SubstanceReferenceInformation"|undefined;
+  /**
+   * Todo.
+   */
+  comment?: fhir.FhirString|string|undefined;
+  /**
+   * Todo.
+   */
+  gene?: fhir.SubstanceReferenceInformationGeneArgs[]|undefined;
+  /**
+   * Todo.
+   */
+  geneElement?: fhir.SubstanceReferenceInformationGeneElementArgs[]|undefined;
+  /**
+   * Todo.
+   */
+  classification?: fhir.SubstanceReferenceInformationClassificationArgs[]|undefined;
+  /**
+   * Todo.
+   */
+  target?: fhir.SubstanceReferenceInformationTargetArgs[]|undefined;
 }
 
 /**
  * Todo.
  */
-export class SubstanceReferenceInformation extends fhir.DomainResource implements ISubstanceReferenceInformation {
+export class SubstanceReferenceInformation extends fhir.DomainResource {
+  readonly __dataType:string = 'SubstanceReferenceInformation';
   /**
    * Resource Type Name
    */
@@ -360,35 +368,30 @@ export class SubstanceReferenceInformation extends fhir.DomainResource implement
   /**
    * Todo.
    */
-  public comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceReferenceInformation.comment
-   */
-  public _comment?: fhir.FhirElement|undefined;
+  public comment?: fhir.FhirString|undefined;
   /**
    * Todo.
    */
-  public gene?: fhir.SubstanceReferenceInformationGene[]|undefined;
+  public gene?: fhir.SubstanceReferenceInformationGene[]|undefined = [];
   /**
    * Todo.
    */
-  public geneElement?: fhir.SubstanceReferenceInformationGeneElement[]|undefined;
+  public geneElement?: fhir.SubstanceReferenceInformationGeneElement[]|undefined = [];
   /**
    * Todo.
    */
-  public classification?: fhir.SubstanceReferenceInformationClassification[]|undefined;
+  public classification?: fhir.SubstanceReferenceInformationClassification[]|undefined = [];
   /**
    * Todo.
    */
-  public target?: fhir.SubstanceReferenceInformationTarget[]|undefined;
+  public target?: fhir.SubstanceReferenceInformationTarget[]|undefined = [];
   /**
    * Default constructor for SubstanceReferenceInformation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceReferenceInformation> = { }) {
-    super(source);
+  constructor(source:Partial<SubstanceReferenceInformationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'SubstanceReferenceInformation';
-    if (source['comment']) { this.comment = source.comment; }
-    if (source['_comment']) { this._comment = new fhir.FhirElement(source._comment!); }
+    if (source['comment']) { this.comment = new fhir.FhirString({value: source.comment}); }
     if (source['gene']) { this.gene = source.gene.map((x) => new fhir.SubstanceReferenceInformationGene(x)); }
     if (source['geneElement']) { this.geneElement = source.geneElement.map((x) => new fhir.SubstanceReferenceInformationGeneElement(x)); }
     if (source['classification']) { this.classification = source.classification.map((x) => new fhir.SubstanceReferenceInformationClassification(x)); }
@@ -397,14 +400,22 @@ export class SubstanceReferenceInformation extends fhir.DomainResource implement
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: SubstanceReferenceInformation.resourceType']); }
-    if (this["_comment"]) { results.push(...this._comment.doModelValidation()); }
-    if (this["gene"]) { this.gene.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["geneElement"]) { this.geneElement.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["classification"]) { this.classification.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["target"]) { this.target.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'SubstanceReferenceInformation' fhir: SubstanceReferenceInformation.resourceType:'SubstanceReferenceInformation'", }));
+    }
+    if (this["comment"]) { outcome.issue!.push(...this.comment.doModelValidation().issue!); }
+    if (this["gene"]) { this.gene.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["geneElement"]) { this.geneElement.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["classification"]) { this.classification.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["target"]) { this.target.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -3,11 +3,13 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Media
 import * as fhir from '../fhir.js';
-import { EventStatusValueSet } from '../fhirValueSets/EventStatusValueSet.js';
-import { MediaTypeValueSet } from '../fhirValueSets/MediaTypeValueSet.js';
-import { MediaViewValueSet } from '../fhirValueSets/MediaViewValueSet.js';
-import { ProcedureReasonValueSet } from '../fhirValueSets/ProcedureReasonValueSet.js';
-import { BodySiteValueSet } from '../fhirValueSets/BodySiteValueSet.js';
+import { EventStatusValueSet, } from '../fhirValueSets/EventStatusValueSet.js';
+import { MediaTypeValueSet, } from '../fhirValueSets/MediaTypeValueSet.js';
+import { MediaViewValueSet, } from '../fhirValueSets/MediaViewValueSet.js';
+import { ProcedureReasonValueSet, } from '../fhirValueSets/ProcedureReasonValueSet.js';
+import { BodySiteValueSet, } from '../fhirValueSets/BodySiteValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.
  */
@@ -15,8 +17,31 @@ export class Media extends fhir.DomainResource {
     /**
      * Default constructor for Media - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Media';
+        /**
+         * The identifier label and use can be used to determine what kind of identifier it is.
+         */
+        this.identifier = [];
+        /**
+         * A procedure that is fulfilled in whole or in part by the creation of this media.
+         */
+        this.basedOn = [];
+        /**
+         * Not to be used to link an event to an Encounter - use Media.encounter for that.
+         * [The allowed reference resources may be adjusted as appropriate for the event resource].
+         */
+        this.partOf = [];
+        this.__createdIsChoice = true;
+        /**
+         * Textual reasons can be captured using reasonCode.text.
+         */
+        this.reasonCode = [];
+        /**
+         * Not to be used for observations, conclusions, etc. Instead use an [Observation](observation.html) based on the Media/ImagingStudy resource.
+         */
+        this.note = [];
         this.resourceType = 'Media';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -33,9 +58,6 @@ export class Media extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['type']) {
             this.type = new fhir.CodeableConcept(source.type);
         }
@@ -51,20 +73,17 @@ export class Media extends fhir.DomainResource {
         if (source['encounter']) {
             this.encounter = new fhir.Reference(source.encounter);
         }
-        if (source['createdDateTime']) {
-            this.createdDateTime = source.createdDateTime;
+        if (source['created']) {
+            this.created = source.created;
         }
-        if (source['_createdDateTime']) {
-            this._createdDateTime = new fhir.FhirElement(source._createdDateTime);
+        else if (source['createdDateTime']) {
+            this.created = new fhir.FhirDateTime({ value: source.createdDateTime });
         }
-        if (source['createdPeriod']) {
-            this.createdPeriod = new fhir.Period(source.createdPeriod);
+        else if (source['createdPeriod']) {
+            this.created = new fhir.Period(source.createdPeriod);
         }
         if (source['issued']) {
-            this.issued = source.issued;
-        }
-        if (source['_issued']) {
-            this._issued = new fhir.FhirElement(source._issued);
+            this.issued = new fhir.FhirInstant({ value: source.issued });
         }
         if (source['operator']) {
             this.operator = new fhir.Reference(source.operator);
@@ -76,37 +95,22 @@ export class Media extends fhir.DomainResource {
             this.bodySite = new fhir.CodeableConcept(source.bodySite);
         }
         if (source['deviceName']) {
-            this.deviceName = source.deviceName;
-        }
-        if (source['_deviceName']) {
-            this._deviceName = new fhir.FhirElement(source._deviceName);
+            this.deviceName = new fhir.FhirString({ value: source.deviceName });
         }
         if (source['device']) {
             this.device = new fhir.Reference(source.device);
         }
         if (source['height']) {
-            this.height = source.height;
-        }
-        if (source['_height']) {
-            this._height = new fhir.FhirElement(source._height);
+            this.height = new fhir.FhirPositiveInt({ value: source.height });
         }
         if (source['width']) {
-            this.width = source.width;
-        }
-        if (source['_width']) {
-            this._width = new fhir.FhirElement(source._width);
+            this.width = new fhir.FhirPositiveInt({ value: source.width });
         }
         if (source['frames']) {
-            this.frames = source.frames;
-        }
-        if (source['_frames']) {
-            this._frames = new fhir.FhirElement(source._frames);
+            this.frames = new fhir.FhirPositiveInt({ value: source.frames });
         }
         if (source['duration']) {
-            this.duration = source.duration;
-        }
-        if (source['_duration']) {
-            this._duration = new fhir.FhirElement(source._duration);
+            this.duration = new fhir.FhirDecimal({ value: source.duration });
         }
         if (source['content']) {
             this.content = new fhir.Attachment(source.content);
@@ -152,86 +156,83 @@ export class Media extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Media.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Media' fhir: Media.resourceType:'Media'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["partOf"]) {
-            this.partOf.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.partOf.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Media.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:EventStatusValueSetEnum fhir: Media.status:code", }));
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["modality"]) {
-            results.push(...this.modality.doModelValidation());
+            outcome.issue.push(...this.modality.doModelValidation().issue);
         }
         if (this["view"]) {
-            results.push(...this.view.doModelValidation());
+            outcome.issue.push(...this.view.doModelValidation().issue);
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_createdDateTime"]) {
-            results.push(...this._createdDateTime.doModelValidation());
-        }
-        if (this["createdPeriod"]) {
-            results.push(...this.createdPeriod.doModelValidation());
-        }
-        if (this["_issued"]) {
-            results.push(...this._issued.doModelValidation());
+        if (this["issued"]) {
+            outcome.issue.push(...this.issued.doModelValidation().issue);
         }
         if (this["operator"]) {
-            results.push(...this.operator.doModelValidation());
+            outcome.issue.push(...this.operator.doModelValidation().issue);
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["bodySite"]) {
-            results.push(...this.bodySite.doModelValidation());
+            outcome.issue.push(...this.bodySite.doModelValidation().issue);
         }
-        if (this["_deviceName"]) {
-            results.push(...this._deviceName.doModelValidation());
+        if (this["deviceName"]) {
+            outcome.issue.push(...this.deviceName.doModelValidation().issue);
         }
         if (this["device"]) {
-            results.push(...this.device.doModelValidation());
+            outcome.issue.push(...this.device.doModelValidation().issue);
         }
-        if (this["_height"]) {
-            results.push(...this._height.doModelValidation());
+        if (this["height"]) {
+            outcome.issue.push(...this.height.doModelValidation().issue);
         }
-        if (this["_width"]) {
-            results.push(...this._width.doModelValidation());
+        if (this["width"]) {
+            outcome.issue.push(...this.width.doModelValidation().issue);
         }
-        if (this["_frames"]) {
-            results.push(...this._frames.doModelValidation());
+        if (this["frames"]) {
+            outcome.issue.push(...this.frames.doModelValidation().issue);
         }
-        if (this["_duration"]) {
-            results.push(...this._duration.doModelValidation());
+        if (this["duration"]) {
+            outcome.issue.push(...this.duration.doModelValidation().issue);
         }
-        if (!this["content"]) {
-            results.push(["content", 'Missing required element: Media.content']);
+        if (!this['content']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property content:fhir.Attachment fhir: Media.content:Attachment", }));
         }
         if (this["content"]) {
-            results.push(...this.content.doModelValidation());
+            outcome.issue.push(...this.content.doModelValidation().issue);
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Media.js.map

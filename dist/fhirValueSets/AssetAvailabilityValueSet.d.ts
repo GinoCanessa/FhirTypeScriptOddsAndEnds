@@ -15,10 +15,4 @@ export declare type AssetAvailabilityValueSetType = typeof AssetAvailabilityValu
 /**
  * This value set has asset availability codes.
  */
-export declare enum AssetAvailabilityValueSetEnum {
-    /**
-     * lease: To be completed
-     */
-    Lease = "lease"
-}
 //# sourceMappingURL=AssetAvailabilityValueSet.d.ts.map

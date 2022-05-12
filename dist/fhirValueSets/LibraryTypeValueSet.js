@@ -43,23 +43,4 @@ export const LibraryTypeValueSet = {
 /**
  * The type of knowledge asset this library contains.
  */
-export var LibraryTypeValueSetEnum;
-(function (LibraryTypeValueSetEnum) {
-    /**
-     * asset-collection: The resource is a collection of knowledge assets.
-     */
-    LibraryTypeValueSetEnum["AssetCollection"] = "asset-collection";
-    /**
-     * logic-library: The resource is a shareable library of formalized knowledge.
-     */
-    LibraryTypeValueSetEnum["LogicLibrary"] = "logic-library";
-    /**
-     * model-definition: The resource is a definition of an information model.
-     */
-    LibraryTypeValueSetEnum["ModelDefinition"] = "model-definition";
-    /**
-     * module-definition: The resource defines the dependencies, parameters, and data requirements for a particular module or evaluation context.
-     */
-    LibraryTypeValueSetEnum["ModuleDefinition"] = "module-definition";
-})(LibraryTypeValueSetEnum || (LibraryTypeValueSetEnum = {}));
 //# sourceMappingURL=LibraryTypeValueSet.js.map

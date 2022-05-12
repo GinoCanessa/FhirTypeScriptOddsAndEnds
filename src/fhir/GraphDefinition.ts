@@ -3,326 +3,84 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: GraphDefinition
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { GraphCompartmentUseValueSet, GraphCompartmentUseValueSetType, GraphCompartmentUseValueSetEnum } from '../fhirValueSets/GraphCompartmentUseValueSet.js'
-import { CompartmentTypeValueSet, CompartmentTypeValueSetType, CompartmentTypeValueSetEnum } from '../fhirValueSets/CompartmentTypeValueSet.js'
-import { GraphCompartmentRuleValueSet, GraphCompartmentRuleValueSetType, GraphCompartmentRuleValueSetEnum } from '../fhirValueSets/GraphCompartmentRuleValueSet.js'
-import { ResourceTypesValueSet, ResourceTypesValueSetType, ResourceTypesValueSetEnum } from '../fhirValueSets/ResourceTypesValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-
+import { GraphCompartmentUseValueSet, GraphCompartmentUseValueSetType,} from '../fhirValueSets/GraphCompartmentUseValueSet.js';
+import { GraphCompartmentUseValueSetEnum } from '../valueSetEnums.js';
+import { CompartmentTypeValueSet, CompartmentTypeValueSetType,} from '../fhirValueSets/CompartmentTypeValueSet.js';
+import { CompartmentTypeValueSetEnum } from '../valueSetEnums.js';
+import { GraphCompartmentRuleValueSet, GraphCompartmentRuleValueSetType,} from '../fhirValueSets/GraphCompartmentRuleValueSet.js';
+import { GraphCompartmentRuleValueSetEnum } from '../valueSetEnums.js';
+import { ResourceTypesValueSet, ResourceTypesValueSetType,} from '../fhirValueSets/ResourceTypesValueSet.js';
+import { ResourceTypesValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Compartment Consistency Rules.
+ * Valid arguments for the GraphDefinitionLinkTargetCompartment type.
  */
-export type IGraphDefinitionLinkTargetCompartment = fhir.IBackboneElement & { 
+export interface GraphDefinitionLinkTargetCompartmentArgs extends fhir.BackboneElementArgs {
   /**
    * All conditional rules are evaluated; if they are true, then the rules are evaluated.
    */
   use: GraphCompartmentUseValueSetEnum|null;
   /**
-   * Extended properties for primitive element: GraphDefinition.link.target.compartment.use
-   */
-  _use?: fhir.IFhirElement|undefined;
-  /**
    * Identifies the compartment.
    */
   code: CompartmentTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.target.compartment.code
-   */
-  _code?: fhir.IFhirElement|undefined;
   /**
    * identical | matching | different | no-rule | custom.
    */
   rule: GraphCompartmentRuleValueSetEnum|null;
   /**
-   * Extended properties for primitive element: GraphDefinition.link.target.compartment.rule
-   */
-  _rule?: fhir.IFhirElement|undefined;
-  /**
    * Custom rule, as a FHIRPath expression.
    */
-  expression?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.target.compartment.expression
-   */
-  _expression?: fhir.IFhirElement|undefined;
+  expression?: fhir.FhirString|string|undefined;
   /**
    * Documentation for FHIRPath expression.
    */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.target.compartment.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Potential target for the link.
- */
-export type IGraphDefinitionLinkTarget = fhir.IBackboneElement & { 
-  /**
-   * Type of resource this link refers to.
-   */
-  type: string|null;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.target.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * At least one of the parameters must have the value {ref} which identifies the focus resource.
-   */
-  params?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.target.params
-   */
-  _params?: fhir.IFhirElement|undefined;
-  /**
-   * Profile for the target resource.
-   */
-  profile?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.target.profile
-   */
-  _profile?: fhir.IFhirElement|undefined;
-  /**
-   * Compartment Consistency Rules.
-   */
-  compartment?: fhir.IGraphDefinitionLinkTargetCompartment[]|undefined;
-  /**
-   * Additional links from target resource.
-   */
-  link?: fhir.IGraphDefinitionLink[]|undefined;
-}
-
-/**
- * Links this graph makes rules about.
- */
-export type IGraphDefinitionLink = fhir.IBackboneElement & { 
-  /**
-   * The path expression cannot contain a resolve() function. If there is no path, the link is a reverse lookup, using target.params. If the path is "*" then this means all references in the resource.
-   */
-  path?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.path
-   */
-  _path?: fhir.IFhirElement|undefined;
-  /**
-   * Which slice (if profiled).
-   */
-  sliceName?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.sliceName
-   */
-  _sliceName?: fhir.IFhirElement|undefined;
-  /**
-   * Minimum occurrences for this link.
-   */
-  min?: number|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.min
-   */
-  _min?: fhir.IFhirElement|undefined;
-  /**
-   * Maximum occurrences for this link.
-   */
-  max?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.max
-   */
-  _max?: fhir.IFhirElement|undefined;
-  /**
-   * Information about why this link is of interest in this graph definition.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Potential target for the link.
-   */
-  target?: fhir.IGraphDefinitionLinkTarget[]|undefined;
-}
-
-/**
- * A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
- */
-export type IGraphDefinition = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "GraphDefinition";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * There may be different graph definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the graph definition with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: GraphDefinition.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of graph definitions that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: GraphDefinition.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of graph definitions that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the graph definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the graph definition is the organization or individual primarily responsible for the maintenance and upkeep of the graph definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the graph definition. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the graph definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the graph definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the graph definition is presumed to be the predominant language in the place the graph definition was created).
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the graph definition to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * This element does not describe the usage of the graph definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this graph definition.
-   */
-  purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.purpose
-   */
-  _purpose?: fhir.IFhirElement|undefined;
-  /**
-   * The type of FHIR resource at which instances of this graph start.
-   */
-  start: string|null;
-  /**
-   * Extended properties for primitive element: GraphDefinition.start
-   */
-  _start?: fhir.IFhirElement|undefined;
-  /**
-   * The code does not include the '$' prefix that is always included in the URL when the operation is invoked.
-   */
-  profile?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.profile
-   */
-  _profile?: fhir.IFhirElement|undefined;
-  /**
-   * Links this graph makes rules about.
-   */
-  link?: fhir.IGraphDefinitionLink[]|undefined;
+  description?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Compartment Consistency Rules.
  */
-export class GraphDefinitionLinkTargetCompartment extends fhir.BackboneElement implements IGraphDefinitionLinkTargetCompartment {
+export class GraphDefinitionLinkTargetCompartment extends fhir.BackboneElement {
+  readonly __dataType:string = 'GraphDefinitionLinkTargetCompartment';
   /**
    * All conditional rules are evaluated; if they are true, then the rules are evaluated.
    */
   public use: GraphCompartmentUseValueSetEnum|null;
   /**
-   * Extended properties for primitive element: GraphDefinition.link.target.compartment.use
-   */
-  public _use?: fhir.FhirElement|undefined;
-  /**
    * Identifies the compartment.
    */
   public code: CompartmentTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.target.compartment.code
-   */
-  public _code?: fhir.FhirElement|undefined;
   /**
    * identical | matching | different | no-rule | custom.
    */
   public rule: GraphCompartmentRuleValueSetEnum|null;
   /**
-   * Extended properties for primitive element: GraphDefinition.link.target.compartment.rule
-   */
-  public _rule?: fhir.FhirElement|undefined;
-  /**
    * Custom rule, as a FHIRPath expression.
    */
-  public expression?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.target.compartment.expression
-   */
-  public _expression?: fhir.FhirElement|undefined;
+  public expression?: fhir.FhirString|undefined;
   /**
    * Documentation for FHIRPath expression.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.target.compartment.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Default constructor for GraphDefinitionLinkTargetCompartment - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IGraphDefinitionLinkTargetCompartment> = { }) {
-    super(source);
+  constructor(source:Partial<GraphDefinitionLinkTargetCompartmentArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['use']) { this.use = source.use; }
     else { this.use = null; }
-    if (source['_use']) { this._use = new fhir.FhirElement(source._use!); }
     if (source['code']) { this.code = source.code; }
     else { this.code = null; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
     if (source['rule']) { this.rule = source.rule; }
     else { this.rule = null; }
-    if (source['_rule']) { this._rule = new fhir.FhirElement(source._rule!); }
-    if (source['expression']) { this.expression = source.expression; }
-    if (source['_expression']) { this._expression = new fhir.FhirElement(source._expression!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['expression']) { this.expression = new fhir.FhirString({value: source.expression}); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
   }
   /**
    * Required-bound Value Set for use
@@ -345,68 +103,88 @@ export class GraphDefinitionLinkTargetCompartment extends fhir.BackboneElement i
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["use"]) { results.push(["use",'Missing required element: GraphDefinition.link.target.compartment.use']); }
-    if (this["_use"]) { results.push(...this._use.doModelValidation()); }
-    if (!this["code"]) { results.push(["code",'Missing required element: GraphDefinition.link.target.compartment.code']); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (!this["rule"]) { results.push(["rule",'Missing required element: GraphDefinition.link.target.compartment.rule']); }
-    if (this["_rule"]) { results.push(...this._rule.doModelValidation()); }
-    if (this["_expression"]) { results.push(...this._expression.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['use']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property use:GraphCompartmentUseValueSetEnum fhir: GraphDefinition.link.target.compartment.use:code", }));
+    }
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:CompartmentTypeValueSetEnum fhir: GraphDefinition.link.target.compartment.code:code", }));
+    }
+    if (!this['rule']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property rule:GraphCompartmentRuleValueSetEnum fhir: GraphDefinition.link.target.compartment.rule:code", }));
+    }
+    if (this["expression"]) { outcome.issue!.push(...this.expression.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the GraphDefinitionLinkTarget type.
+ */
+export interface GraphDefinitionLinkTargetArgs extends fhir.BackboneElementArgs {
+  /**
+   * Type of resource this link refers to.
+   */
+  type: fhir.FhirCode|string|undefined;
+  /**
+   * At least one of the parameters must have the value {ref} which identifies the focus resource.
+   */
+  params?: fhir.FhirString|string|undefined;
+  /**
+   * Profile for the target resource.
+   */
+  profile?: fhir.FhirCanonical|string|undefined;
+  /**
+   * Compartment Consistency Rules.
+   */
+  compartment?: fhir.GraphDefinitionLinkTargetCompartmentArgs[]|undefined;
+  /**
+   * Additional links from target resource.
+   */
+  link?: fhir.GraphDefinitionLinkArgs[]|undefined;
 }
 
 /**
  * Potential target for the link.
  */
-export class GraphDefinitionLinkTarget extends fhir.BackboneElement implements IGraphDefinitionLinkTarget {
+export class GraphDefinitionLinkTarget extends fhir.BackboneElement {
+  readonly __dataType:string = 'GraphDefinitionLinkTarget';
   /**
    * Type of resource this link refers to.
    */
-  public type: string|null;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.target.type
-   */
-  public _type?: fhir.FhirElement|undefined;
+  public type: fhir.FhirCode|null;
   /**
    * At least one of the parameters must have the value {ref} which identifies the focus resource.
    */
-  public params?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.target.params
-   */
-  public _params?: fhir.FhirElement|undefined;
+  public params?: fhir.FhirString|undefined;
   /**
    * Profile for the target resource.
    */
-  public profile?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.target.profile
-   */
-  public _profile?: fhir.FhirElement|undefined;
+  public profile?: fhir.FhirCanonical|undefined;
   /**
    * Compartment Consistency Rules.
    */
-  public compartment?: fhir.GraphDefinitionLinkTargetCompartment[]|undefined;
+  public compartment?: fhir.GraphDefinitionLinkTargetCompartment[]|undefined = [];
   /**
    * Additional links from target resource.
    */
-  public link?: fhir.GraphDefinitionLink[]|undefined;
+  public link?: fhir.GraphDefinitionLink[]|undefined = [];
   /**
    * Default constructor for GraphDefinitionLinkTarget - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IGraphDefinitionLinkTarget> = { }) {
-    super(source);
-    if (source['type']) { this.type = source.type; }
+  constructor(source:Partial<GraphDefinitionLinkTargetArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.FhirCode({value: source.type}); }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['params']) { this.params = source.params; }
-    if (source['_params']) { this._params = new fhir.FhirElement(source._params!); }
-    if (source['profile']) { this.profile = source.profile; }
-    if (source['_profile']) { this._profile = new fhir.FhirElement(source._profile!); }
+    if (source['params']) { this.params = new fhir.FhirString({value: source.params}); }
+    if (source['profile']) { this.profile = new fhir.FhirCanonical({value: source.profile}); }
     if (source['compartment']) { this.compartment = source.compartment.map((x) => new fhir.GraphDefinitionLinkTargetCompartment(x)); }
     if (source['link']) { this.link = source.link.map((x) => new fhir.GraphDefinitionLink(x)); }
   }
@@ -419,102 +197,193 @@ export class GraphDefinitionLinkTarget extends fhir.BackboneElement implements I
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: GraphDefinition.link.target.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_params"]) { results.push(...this._params.doModelValidation()); }
-    if (this["_profile"]) { results.push(...this._profile.doModelValidation()); }
-    if (this["compartment"]) { this.compartment.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["link"]) { this.link.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.FhirCode fhir: GraphDefinition.link.target.type:code", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["params"]) { outcome.issue!.push(...this.params.doModelValidation().issue!); }
+    if (this["profile"]) { outcome.issue!.push(...this.profile.doModelValidation().issue!); }
+    if (this["compartment"]) { this.compartment.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["link"]) { this.link.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the GraphDefinitionLink type.
+ */
+export interface GraphDefinitionLinkArgs extends fhir.BackboneElementArgs {
+  /**
+   * The path expression cannot contain a resolve() function. If there is no path, the link is a reverse lookup, using target.params. If the path is "*" then this means all references in the resource.
+   */
+  path?: fhir.FhirString|string|undefined;
+  /**
+   * Which slice (if profiled).
+   */
+  sliceName?: fhir.FhirString|string|undefined;
+  /**
+   * Minimum occurrences for this link.
+   */
+  min?: fhir.FhirInteger|number|undefined;
+  /**
+   * Maximum occurrences for this link.
+   */
+  max?: fhir.FhirString|string|undefined;
+  /**
+   * Information about why this link is of interest in this graph definition.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * Potential target for the link.
+   */
+  target?: fhir.GraphDefinitionLinkTargetArgs[]|undefined;
 }
 
 /**
  * Links this graph makes rules about.
  */
-export class GraphDefinitionLink extends fhir.BackboneElement implements IGraphDefinitionLink {
+export class GraphDefinitionLink extends fhir.BackboneElement {
+  readonly __dataType:string = 'GraphDefinitionLink';
   /**
    * The path expression cannot contain a resolve() function. If there is no path, the link is a reverse lookup, using target.params. If the path is "*" then this means all references in the resource.
    */
-  public path?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.path
-   */
-  public _path?: fhir.FhirElement|undefined;
+  public path?: fhir.FhirString|undefined;
   /**
    * Which slice (if profiled).
    */
-  public sliceName?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.sliceName
-   */
-  public _sliceName?: fhir.FhirElement|undefined;
+  public sliceName?: fhir.FhirString|undefined;
   /**
    * Minimum occurrences for this link.
    */
-  public min?: number|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.min
-   */
-  public _min?: fhir.FhirElement|undefined;
+  public min?: fhir.FhirInteger|undefined;
   /**
    * Maximum occurrences for this link.
    */
-  public max?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.max
-   */
-  public _max?: fhir.FhirElement|undefined;
+  public max?: fhir.FhirString|undefined;
   /**
    * Information about why this link is of interest in this graph definition.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.link.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Potential target for the link.
    */
-  public target?: fhir.GraphDefinitionLinkTarget[]|undefined;
+  public target?: fhir.GraphDefinitionLinkTarget[]|undefined = [];
   /**
    * Default constructor for GraphDefinitionLink - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IGraphDefinitionLink> = { }) {
-    super(source);
-    if (source['path']) { this.path = source.path; }
-    if (source['_path']) { this._path = new fhir.FhirElement(source._path!); }
-    if (source['sliceName']) { this.sliceName = source.sliceName; }
-    if (source['_sliceName']) { this._sliceName = new fhir.FhirElement(source._sliceName!); }
-    if (source['min']) { this.min = source.min; }
-    if (source['_min']) { this._min = new fhir.FhirElement(source._min!); }
-    if (source['max']) { this.max = source.max; }
-    if (source['_max']) { this._max = new fhir.FhirElement(source._max!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+  constructor(source:Partial<GraphDefinitionLinkArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['path']) { this.path = new fhir.FhirString({value: source.path}); }
+    if (source['sliceName']) { this.sliceName = new fhir.FhirString({value: source.sliceName}); }
+    if (source['min']) { this.min = new fhir.FhirInteger({value: source.min}); }
+    if (source['max']) { this.max = new fhir.FhirString({value: source.max}); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
     if (source['target']) { this.target = source.target.map((x) => new fhir.GraphDefinitionLinkTarget(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_path"]) { results.push(...this._path.doModelValidation()); }
-    if (this["_sliceName"]) { results.push(...this._sliceName.doModelValidation()); }
-    if (this["_min"]) { results.push(...this._min.doModelValidation()); }
-    if (this["_max"]) { results.push(...this._max.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["target"]) { this.target.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["path"]) { outcome.issue!.push(...this.path.doModelValidation().issue!); }
+    if (this["sliceName"]) { outcome.issue!.push(...this.sliceName.doModelValidation().issue!); }
+    if (this["min"]) { outcome.issue!.push(...this.min.doModelValidation().issue!); }
+    if (this["max"]) { outcome.issue!.push(...this.max.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["target"]) { this.target.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the GraphDefinition type.
+ */
+export interface GraphDefinitionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "GraphDefinition"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * There may be different graph definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the graph definition with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * Allows filtering of graph definitions that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Allows filtering of graph definitions that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the graph definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the graph definition is the organization or individual primarily responsible for the maintenance and upkeep of the graph definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the graph definition. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the graph definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the graph definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the graph definition is presumed to be the predominant language in the place the graph definition was created).
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the graph definition to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * This element does not describe the usage of the graph definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this graph definition.
+   */
+  purpose?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * The type of FHIR resource at which instances of this graph start.
+   */
+  start: fhir.FhirCode|string|undefined;
+  /**
+   * The code does not include the '$' prefix that is always included in the URL when the operation is invoked.
+   */
+  profile?: fhir.FhirCanonical|string|undefined;
+  /**
+   * Links this graph makes rules about.
+   */
+  link?: fhir.GraphDefinitionLinkArgs[]|undefined;
 }
 
 /**
  * A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
  */
-export class GraphDefinition extends fhir.DomainResource implements IGraphDefinition {
+export class GraphDefinition extends fhir.DomainResource {
+  readonly __dataType:string = 'GraphDefinition';
   /**
    * Resource Type Name
    */
@@ -524,141 +393,86 @@ export class GraphDefinition extends fhir.DomainResource implements IGraphDefini
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * There may be different graph definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the graph definition with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: GraphDefinition.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * Allows filtering of graph definitions that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: GraphDefinition.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of graph definitions that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the graph definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the graph definition is the organization or individual primarily responsible for the maintenance and upkeep of the graph definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the graph definition. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the graph definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the graph definition as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the graph definition is presumed to be the predominant language in the place the graph definition was created).
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the graph definition to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * This element does not describe the usage of the graph definition. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this graph definition.
    */
-  public purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.purpose
-   */
-  public _purpose?: fhir.FhirElement|undefined;
+  public purpose?: fhir.FhirMarkdown|undefined;
   /**
    * The type of FHIR resource at which instances of this graph start.
    */
-  public start: string|null;
-  /**
-   * Extended properties for primitive element: GraphDefinition.start
-   */
-  public _start?: fhir.FhirElement|undefined;
+  public start: fhir.FhirCode|null;
   /**
    * The code does not include the '$' prefix that is always included in the URL when the operation is invoked.
    */
-  public profile?: string|undefined;
-  /**
-   * Extended properties for primitive element: GraphDefinition.profile
-   */
-  public _profile?: fhir.FhirElement|undefined;
+  public profile?: fhir.FhirCanonical|undefined;
   /**
    * Links this graph makes rules about.
    */
-  public link?: fhir.GraphDefinitionLink[]|undefined;
+  public link?: fhir.GraphDefinitionLink[]|undefined = [];
   /**
    * Default constructor for GraphDefinition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IGraphDefinition> = { }) {
-    super(source);
+  constructor(source:Partial<GraphDefinitionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'GraphDefinition';
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['purpose']) { this.purpose = source.purpose; }
-    if (source['_purpose']) { this._purpose = new fhir.FhirElement(source._purpose!); }
-    if (source['start']) { this.start = source.start; }
+    if (source['purpose']) { this.purpose = new fhir.FhirMarkdown({value: source.purpose}); }
+    if (source['start']) { this.start = new fhir.FhirCode({value: source.start}); }
     else { this.start = null; }
-    if (source['_start']) { this._start = new fhir.FhirElement(source._start!); }
-    if (source['profile']) { this.profile = source.profile; }
-    if (source['_profile']) { this._profile = new fhir.FhirElement(source._profile!); }
+    if (source['profile']) { this.profile = new fhir.FhirCanonical({value: source.profile}); }
     if (source['link']) { this.link = source.link.map((x) => new fhir.GraphDefinitionLink(x)); }
   }
   /**
@@ -676,27 +490,40 @@ export class GraphDefinition extends fhir.DomainResource implements IGraphDefini
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: GraphDefinition.resourceType']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (!this["name"]) { results.push(["name",'Missing required element: GraphDefinition.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: GraphDefinition.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_purpose"]) { results.push(...this._purpose.doModelValidation()); }
-    if (!this["start"]) { results.push(["start",'Missing required element: GraphDefinition.start']); }
-    if (this["_start"]) { results.push(...this._start.doModelValidation()); }
-    if (this["_profile"]) { results.push(...this._profile.doModelValidation()); }
-    if (this["link"]) { this.link.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'GraphDefinition' fhir: GraphDefinition.resourceType:'GraphDefinition'", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: GraphDefinition.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: GraphDefinition.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (!this['start']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property start:fhir.FhirCode fhir: GraphDefinition.start:code", }));
+    }
+    if (this["start"]) { outcome.issue!.push(...this.start.doModelValidation().issue!); }
+    if (this["profile"]) { outcome.issue!.push(...this.profile.doModelValidation().issue!); }
+    if (this["link"]) { this.link.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

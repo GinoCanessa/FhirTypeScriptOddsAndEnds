@@ -3,609 +3,246 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Parameters
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A parameter passed to or received from the operation.
+ * Valid arguments for the ParametersParameter type.
  */
-export type IParametersParameter = fhir.IBackboneElement & { 
+export interface ParametersParameterArgs extends fhir.BackboneElementArgs {
   /**
    * The name of the parameter (reference to the operation definition).
    */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.name
-   */
-  _name?: fhir.IFhirElement|undefined;
+  name: fhir.FhirString|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueBase64Binary?: fhir.IFhirElement|undefined;
+  value?: fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueBoolean?: fhir.IFhirElement|undefined;
+  valueBase64Binary?: fhir.FhirBase64Binary|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueCanonical?: fhir.IFhirElement|undefined;
+  valueBoolean?: fhir.FhirBoolean|boolean|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueCode?: fhir.IFhirElement|undefined;
+  valueCanonical?: fhir.FhirCanonical|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueDate?: fhir.IFhirElement|undefined;
+  valueCode?: fhir.FhirCode|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueDateTime?: fhir.IFhirElement|undefined;
+  valueDate?: fhir.FhirDate|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueDecimal?: fhir.IFhirElement|undefined;
+  valueDateTime?: fhir.FhirDateTime|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueId?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueId?: fhir.IFhirElement|undefined;
+  valueDecimal?: fhir.FhirDecimal|number|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueInstant?: fhir.IFhirElement|undefined;
+  valueId?: fhir.FhirId|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueInteger?: fhir.IFhirElement|undefined;
+  valueInstant?: fhir.FhirInstant|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueMarkdown?: fhir.IFhirElement|undefined;
+  valueInteger?: fhir.FhirInteger|number|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueOid?: fhir.IFhirElement|undefined;
+  valueMarkdown?: fhir.FhirMarkdown|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valuePositiveInt?: fhir.IFhirElement|undefined;
+  valueOid?: fhir.FhirOid|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueString?: fhir.IFhirElement|undefined;
+  valuePositiveInt?: fhir.FhirPositiveInt|number|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueTime?: fhir.IFhirElement|undefined;
+  valueString?: fhir.FhirString|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueUnsignedInt?: fhir.IFhirElement|undefined;
+  valueTime?: fhir.FhirTime|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueUri?: fhir.IFhirElement|undefined;
+  valueUnsignedInt?: fhir.FhirUnsignedInt|number|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueUrl?: fhir.IFhirElement|undefined;
+  valueUri?: fhir.FhirUri|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  _valueUuid?: fhir.IFhirElement|undefined;
+  valueUrl?: fhir.FhirUrl|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueAddress?: fhir.IAddress|undefined;
+  valueUuid?: fhir.FhirUuid|string|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueAge?: fhir.IAge|undefined;
+  valueAddress?: fhir.AddressArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueAnnotation?: fhir.IAnnotation|undefined;
+  valueAge?: fhir.AgeArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueAttachment?: fhir.IAttachment|undefined;
+  valueAnnotation?: fhir.AnnotationArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueCodeableConcept?: fhir.ICodeableConcept|undefined;
+  valueAttachment?: fhir.AttachmentArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueCoding?: fhir.ICoding|undefined;
+  valueCodeableConcept?: fhir.CodeableConceptArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueContactPoint?: fhir.IContactPoint|undefined;
+  valueCoding?: fhir.CodingArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueCount?: fhir.ICount|undefined;
+  valueContactPoint?: fhir.ContactPointArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueDistance?: fhir.IDistance|undefined;
+  valueCount?: fhir.CountArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueDuration?: fhir.IDuration|undefined;
+  valueDistance?: fhir.DistanceArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueHumanName?: fhir.IHumanName|undefined;
+  valueDuration?: fhir.DurationArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueIdentifier?: fhir.IIdentifier|undefined;
+  valueHumanName?: fhir.HumanNameArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueMoney?: fhir.IMoney|undefined;
+  valueIdentifier?: fhir.IdentifierArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valuePeriod?: fhir.IPeriod|undefined;
+  valueMoney?: fhir.MoneyArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueQuantity?: fhir.IQuantity|undefined;
+  valuePeriod?: fhir.PeriodArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueRange?: fhir.IRange|undefined;
+  valueQuantity?: fhir.QuantityArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueRatio?: fhir.IRatio|undefined;
+  valueRange?: fhir.RangeArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueReference?: fhir.IReference|undefined;
+  valueRatio?: fhir.RatioArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueSampledData?: fhir.ISampledData|undefined;
+  valueReference?: fhir.ReferenceArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueSignature?: fhir.ISignature|undefined;
+  valueSampledData?: fhir.SampledDataArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueTiming?: fhir.ITiming|undefined;
+  valueSignature?: fhir.SignatureArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueContactDetail?: fhir.IContactDetail|undefined;
+  valueTiming?: fhir.TimingArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueContributor?: fhir.IContributor|undefined;
+  valueContactDetail?: fhir.ContactDetailArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueDataRequirement?: fhir.IDataRequirement|undefined;
+  valueContributor?: fhir.ContributorArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueExpression?: fhir.IExpression|undefined;
+  valueDataRequirement?: fhir.DataRequirementArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueParameterDefinition?: fhir.IParameterDefinition|undefined;
+  valueExpression?: fhir.ExpressionArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueRelatedArtifact?: fhir.IRelatedArtifact|undefined;
+  valueParameterDefinition?: fhir.ParameterDefinitionArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueTriggerDefinition?: fhir.ITriggerDefinition|undefined;
+  valueRelatedArtifact?: fhir.RelatedArtifactArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueUsageContext?: fhir.IUsageContext|undefined;
+  valueTriggerDefinition?: fhir.TriggerDefinitionArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueDosage?: fhir.IDosage|undefined;
+  valueUsageContext?: fhir.UsageContextArgs|undefined;
   /**
    * If the parameter is a data type.
    */
-  valueMeta?: fhir.IMeta|undefined;
+  valueDosage?: fhir.DosageArgs|undefined;
+  /**
+   * If the parameter is a data type.
+   */
+  valueMeta?: fhir.MetaArgs|undefined;
   /**
    * When resolving references in resources, the operation definition may specify how references may be resolved between parameters. If a reference cannot be resolved between the parameters, the application should fall back to it's general resource resolution methods.
    */
-  resource?: fhir.IFhirResource|undefined;
+  resource?: fhir.ResourceArgs|any|undefined;
   /**
    * Only one level of nested parameters is allowed.
    */
-  part?: fhir.IParametersParameter[]|undefined;
-}
-
-/**
- * This resource is a non-persisted resource used to pass information into and back from an [operation](operations.html). It has no other use, and there is no RESTful endpoint associated with it.
- */
-export type IParameters = fhir.IResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Parameters";
-  /**
-   * A parameter passed to or received from the operation.
-   */
-  parameter?: fhir.IParametersParameter[]|undefined;
+  part?: fhir.ParametersParameterArgs[]|undefined;
 }
 
 /**
  * A parameter passed to or received from the operation.
  */
-export class ParametersParameter extends fhir.BackboneElement implements IParametersParameter {
+export class ParametersParameter extends fhir.BackboneElement {
+  readonly __dataType:string = 'ParametersParameter';
   /**
    * The name of the parameter (reference to the operation definition).
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * If the parameter is a data type.
    */
-  public valueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueBase64Binary?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueBoolean?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueCanonical?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueCode?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueDate?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueDateTime?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueDecimal?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueId?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueId?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueInstant?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueInteger?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueMarkdown?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueOid?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valuePositiveInt?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueString?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueTime?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueUnsignedInt?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueUri?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueUrl?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: Parameters.parameter.value[x]
-   */
-  public _valueUuid?: fhir.FhirElement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueAddress?: fhir.Address|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueAge?: fhir.Age|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueAnnotation?: fhir.Annotation|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueAttachment?: fhir.Attachment|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueCoding?: fhir.Coding|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueContactPoint?: fhir.ContactPoint|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueCount?: fhir.Count|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueDistance?: fhir.Distance|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueDuration?: fhir.Duration|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueHumanName?: fhir.HumanName|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueIdentifier?: fhir.Identifier|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueMoney?: fhir.Money|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valuePeriod?: fhir.Period|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueQuantity?: fhir.Quantity|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueRange?: fhir.Range|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueRatio?: fhir.Ratio|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueReference?: fhir.Reference|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueSampledData?: fhir.SampledData|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueSignature?: fhir.Signature|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueTiming?: fhir.Timing|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueContactDetail?: fhir.ContactDetail|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueContributor?: fhir.Contributor|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueDataRequirement?: fhir.DataRequirement|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueExpression?: fhir.Expression|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueParameterDefinition?: fhir.ParameterDefinition|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueRelatedArtifact?: fhir.RelatedArtifact|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueTriggerDefinition?: fhir.TriggerDefinition|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueUsageContext?: fhir.UsageContext|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueDosage?: fhir.Dosage|undefined;
-  /**
-   * If the parameter is a data type.
-   */
-  public valueMeta?: fhir.Meta|undefined;
+  public value?: (fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta)|undefined;
+  readonly __valueIsChoice:true = true;
   /**
    * When resolving references in resources, the operation definition may specify how references may be resolved between parameters. If a reference cannot be resolved between the parameters, the application should fall back to it's general resource resolution methods.
    */
@@ -613,154 +250,107 @@ export class ParametersParameter extends fhir.BackboneElement implements IParame
   /**
    * Only one level of nested parameters is allowed.
    */
-  public part?: fhir.ParametersParameter[]|undefined;
+  public part?: fhir.ParametersParameter[]|undefined = [];
   /**
    * Default constructor for ParametersParameter - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IParametersParameter> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<ParametersParameterArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['valueBase64Binary']) { this.valueBase64Binary = source.valueBase64Binary; }
-    if (source['_valueBase64Binary']) { this._valueBase64Binary = new fhir.FhirElement(source._valueBase64Binary!); }
-    if (source['valueBoolean']) { this.valueBoolean = source.valueBoolean; }
-    if (source['_valueBoolean']) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
-    if (source['valueCanonical']) { this.valueCanonical = source.valueCanonical; }
-    if (source['_valueCanonical']) { this._valueCanonical = new fhir.FhirElement(source._valueCanonical!); }
-    if (source['valueCode']) { this.valueCode = source.valueCode; }
-    if (source['_valueCode']) { this._valueCode = new fhir.FhirElement(source._valueCode!); }
-    if (source['valueDate']) { this.valueDate = source.valueDate; }
-    if (source['_valueDate']) { this._valueDate = new fhir.FhirElement(source._valueDate!); }
-    if (source['valueDateTime']) { this.valueDateTime = source.valueDateTime; }
-    if (source['_valueDateTime']) { this._valueDateTime = new fhir.FhirElement(source._valueDateTime!); }
-    if (source['valueDecimal']) { this.valueDecimal = source.valueDecimal; }
-    if (source['_valueDecimal']) { this._valueDecimal = new fhir.FhirElement(source._valueDecimal!); }
-    if (source['valueId']) { this.valueId = source.valueId; }
-    if (source['_valueId']) { this._valueId = new fhir.FhirElement(source._valueId!); }
-    if (source['valueInstant']) { this.valueInstant = source.valueInstant; }
-    if (source['_valueInstant']) { this._valueInstant = new fhir.FhirElement(source._valueInstant!); }
-    if (source['valueInteger']) { this.valueInteger = source.valueInteger; }
-    if (source['_valueInteger']) { this._valueInteger = new fhir.FhirElement(source._valueInteger!); }
-    if (source['valueMarkdown']) { this.valueMarkdown = source.valueMarkdown; }
-    if (source['_valueMarkdown']) { this._valueMarkdown = new fhir.FhirElement(source._valueMarkdown!); }
-    if (source['valueOid']) { this.valueOid = source.valueOid; }
-    if (source['_valueOid']) { this._valueOid = new fhir.FhirElement(source._valueOid!); }
-    if (source['valuePositiveInt']) { this.valuePositiveInt = source.valuePositiveInt; }
-    if (source['_valuePositiveInt']) { this._valuePositiveInt = new fhir.FhirElement(source._valuePositiveInt!); }
-    if (source['valueString']) { this.valueString = source.valueString; }
-    if (source['_valueString']) { this._valueString = new fhir.FhirElement(source._valueString!); }
-    if (source['valueTime']) { this.valueTime = source.valueTime; }
-    if (source['_valueTime']) { this._valueTime = new fhir.FhirElement(source._valueTime!); }
-    if (source['valueUnsignedInt']) { this.valueUnsignedInt = source.valueUnsignedInt; }
-    if (source['_valueUnsignedInt']) { this._valueUnsignedInt = new fhir.FhirElement(source._valueUnsignedInt!); }
-    if (source['valueUri']) { this.valueUri = source.valueUri; }
-    if (source['_valueUri']) { this._valueUri = new fhir.FhirElement(source._valueUri!); }
-    if (source['valueUrl']) { this.valueUrl = source.valueUrl; }
-    if (source['_valueUrl']) { this._valueUrl = new fhir.FhirElement(source._valueUrl!); }
-    if (source['valueUuid']) { this.valueUuid = source.valueUuid; }
-    if (source['_valueUuid']) { this._valueUuid = new fhir.FhirElement(source._valueUuid!); }
-    if (source['valueAddress']) { this.valueAddress = new fhir.Address(source.valueAddress!); }
-    if (source['valueAge']) { this.valueAge = new fhir.Age(source.valueAge!); }
-    if (source['valueAnnotation']) { this.valueAnnotation = new fhir.Annotation(source.valueAnnotation!); }
-    if (source['valueAttachment']) { this.valueAttachment = new fhir.Attachment(source.valueAttachment!); }
-    if (source['valueCodeableConcept']) { this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept!); }
-    if (source['valueCoding']) { this.valueCoding = new fhir.Coding(source.valueCoding!); }
-    if (source['valueContactPoint']) { this.valueContactPoint = new fhir.ContactPoint(source.valueContactPoint!); }
-    if (source['valueCount']) { this.valueCount = new fhir.Count(source.valueCount!); }
-    if (source['valueDistance']) { this.valueDistance = new fhir.Distance(source.valueDistance!); }
-    if (source['valueDuration']) { this.valueDuration = new fhir.Duration(source.valueDuration!); }
-    if (source['valueHumanName']) { this.valueHumanName = new fhir.HumanName(source.valueHumanName!); }
-    if (source['valueIdentifier']) { this.valueIdentifier = new fhir.Identifier(source.valueIdentifier!); }
-    if (source['valueMoney']) { this.valueMoney = new fhir.Money(source.valueMoney!); }
-    if (source['valuePeriod']) { this.valuePeriod = new fhir.Period(source.valuePeriod!); }
-    if (source['valueQuantity']) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
-    if (source['valueRange']) { this.valueRange = new fhir.Range(source.valueRange!); }
-    if (source['valueRatio']) { this.valueRatio = new fhir.Ratio(source.valueRatio!); }
-    if (source['valueReference']) { this.valueReference = new fhir.Reference(source.valueReference!); }
-    if (source['valueSampledData']) { this.valueSampledData = new fhir.SampledData(source.valueSampledData!); }
-    if (source['valueSignature']) { this.valueSignature = new fhir.Signature(source.valueSignature!); }
-    if (source['valueTiming']) { this.valueTiming = new fhir.Timing(source.valueTiming!); }
-    if (source['valueContactDetail']) { this.valueContactDetail = new fhir.ContactDetail(source.valueContactDetail!); }
-    if (source['valueContributor']) { this.valueContributor = new fhir.Contributor(source.valueContributor!); }
-    if (source['valueDataRequirement']) { this.valueDataRequirement = new fhir.DataRequirement(source.valueDataRequirement!); }
-    if (source['valueExpression']) { this.valueExpression = new fhir.Expression(source.valueExpression!); }
-    if (source['valueParameterDefinition']) { this.valueParameterDefinition = new fhir.ParameterDefinition(source.valueParameterDefinition!); }
-    if (source['valueRelatedArtifact']) { this.valueRelatedArtifact = new fhir.RelatedArtifact(source.valueRelatedArtifact!); }
-    if (source['valueTriggerDefinition']) { this.valueTriggerDefinition = new fhir.TriggerDefinition(source.valueTriggerDefinition!); }
-    if (source['valueUsageContext']) { this.valueUsageContext = new fhir.UsageContext(source.valueUsageContext!); }
-    if (source['valueDosage']) { this.valueDosage = new fhir.Dosage(source.valueDosage!); }
-    if (source['valueMeta']) { this.valueMeta = new fhir.Meta(source.valueMeta!); }
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueBase64Binary']) { this.value = new fhir.FhirBase64Binary({value: source.valueBase64Binary}); }
+    else if (source['valueBoolean']) { this.value = new fhir.FhirBoolean({value: source.valueBoolean}); }
+    else if (source['valueCanonical']) { this.value = new fhir.FhirCanonical({value: source.valueCanonical}); }
+    else if (source['valueCode']) { this.value = new fhir.FhirCode({value: source.valueCode}); }
+    else if (source['valueDate']) { this.value = new fhir.FhirDate({value: source.valueDate}); }
+    else if (source['valueDateTime']) { this.value = new fhir.FhirDateTime({value: source.valueDateTime}); }
+    else if (source['valueDecimal']) { this.value = new fhir.FhirDecimal({value: source.valueDecimal}); }
+    else if (source['valueId']) { this.value = new fhir.FhirId({value: source.valueId}); }
+    else if (source['valueInstant']) { this.value = new fhir.FhirInstant({value: source.valueInstant}); }
+    else if (source['valueInteger']) { this.value = new fhir.FhirInteger({value: source.valueInteger}); }
+    else if (source['valueMarkdown']) { this.value = new fhir.FhirMarkdown({value: source.valueMarkdown}); }
+    else if (source['valueOid']) { this.value = new fhir.FhirOid({value: source.valueOid}); }
+    else if (source['valuePositiveInt']) { this.value = new fhir.FhirPositiveInt({value: source.valuePositiveInt}); }
+    else if (source['valueString']) { this.value = new fhir.FhirString({value: source.valueString}); }
+    else if (source['valueTime']) { this.value = new fhir.FhirTime({value: source.valueTime}); }
+    else if (source['valueUnsignedInt']) { this.value = new fhir.FhirUnsignedInt({value: source.valueUnsignedInt}); }
+    else if (source['valueUri']) { this.value = new fhir.FhirUri({value: source.valueUri}); }
+    else if (source['valueUrl']) { this.value = new fhir.FhirUrl({value: source.valueUrl}); }
+    else if (source['valueUuid']) { this.value = new fhir.FhirUuid({value: source.valueUuid}); }
+    else if (source['valueAddress']) { this.value = new fhir.Address(source.valueAddress); }
+    else if (source['valueAge']) { this.value = new fhir.Age(source.valueAge); }
+    else if (source['valueAnnotation']) { this.value = new fhir.Annotation(source.valueAnnotation); }
+    else if (source['valueAttachment']) { this.value = new fhir.Attachment(source.valueAttachment); }
+    else if (source['valueCodeableConcept']) { this.value = new fhir.CodeableConcept(source.valueCodeableConcept); }
+    else if (source['valueCoding']) { this.value = new fhir.Coding(source.valueCoding); }
+    else if (source['valueContactPoint']) { this.value = new fhir.ContactPoint(source.valueContactPoint); }
+    else if (source['valueCount']) { this.value = new fhir.Count(source.valueCount); }
+    else if (source['valueDistance']) { this.value = new fhir.Distance(source.valueDistance); }
+    else if (source['valueDuration']) { this.value = new fhir.Duration(source.valueDuration); }
+    else if (source['valueHumanName']) { this.value = new fhir.HumanName(source.valueHumanName); }
+    else if (source['valueIdentifier']) { this.value = new fhir.Identifier(source.valueIdentifier); }
+    else if (source['valueMoney']) { this.value = new fhir.Money(source.valueMoney); }
+    else if (source['valuePeriod']) { this.value = new fhir.Period(source.valuePeriod); }
+    else if (source['valueQuantity']) { this.value = new fhir.Quantity(source.valueQuantity); }
+    else if (source['valueRange']) { this.value = new fhir.Range(source.valueRange); }
+    else if (source['valueRatio']) { this.value = new fhir.Ratio(source.valueRatio); }
+    else if (source['valueReference']) { this.value = new fhir.Reference(source.valueReference); }
+    else if (source['valueSampledData']) { this.value = new fhir.SampledData(source.valueSampledData); }
+    else if (source['valueSignature']) { this.value = new fhir.Signature(source.valueSignature); }
+    else if (source['valueTiming']) { this.value = new fhir.Timing(source.valueTiming); }
+    else if (source['valueContactDetail']) { this.value = new fhir.ContactDetail(source.valueContactDetail); }
+    else if (source['valueContributor']) { this.value = new fhir.Contributor(source.valueContributor); }
+    else if (source['valueDataRequirement']) { this.value = new fhir.DataRequirement(source.valueDataRequirement); }
+    else if (source['valueExpression']) { this.value = new fhir.Expression(source.valueExpression); }
+    else if (source['valueParameterDefinition']) { this.value = new fhir.ParameterDefinition(source.valueParameterDefinition); }
+    else if (source['valueRelatedArtifact']) { this.value = new fhir.RelatedArtifact(source.valueRelatedArtifact); }
+    else if (source['valueTriggerDefinition']) { this.value = new fhir.TriggerDefinition(source.valueTriggerDefinition); }
+    else if (source['valueUsageContext']) { this.value = new fhir.UsageContext(source.valueUsageContext); }
+    else if (source['valueDosage']) { this.value = new fhir.Dosage(source.valueDosage); }
+    else if (source['valueMeta']) { this.value = new fhir.Meta(source.valueMeta); }
     if (source['resource']) { this.resource = (fhir.resourceFactory(source.resource) ?? undefined); }
     if (source['part']) { this.part = source.part.map((x) => new fhir.ParametersParameter(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: Parameters.parameter.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_valueBase64Binary"]) { results.push(...this._valueBase64Binary.doModelValidation()); }
-    if (this["_valueBoolean"]) { results.push(...this._valueBoolean.doModelValidation()); }
-    if (this["_valueCanonical"]) { results.push(...this._valueCanonical.doModelValidation()); }
-    if (this["_valueCode"]) { results.push(...this._valueCode.doModelValidation()); }
-    if (this["_valueDate"]) { results.push(...this._valueDate.doModelValidation()); }
-    if (this["_valueDateTime"]) { results.push(...this._valueDateTime.doModelValidation()); }
-    if (this["_valueDecimal"]) { results.push(...this._valueDecimal.doModelValidation()); }
-    if (this["_valueId"]) { results.push(...this._valueId.doModelValidation()); }
-    if (this["_valueInstant"]) { results.push(...this._valueInstant.doModelValidation()); }
-    if (this["_valueInteger"]) { results.push(...this._valueInteger.doModelValidation()); }
-    if (this["_valueMarkdown"]) { results.push(...this._valueMarkdown.doModelValidation()); }
-    if (this["_valueOid"]) { results.push(...this._valueOid.doModelValidation()); }
-    if (this["_valuePositiveInt"]) { results.push(...this._valuePositiveInt.doModelValidation()); }
-    if (this["_valueString"]) { results.push(...this._valueString.doModelValidation()); }
-    if (this["_valueTime"]) { results.push(...this._valueTime.doModelValidation()); }
-    if (this["_valueUnsignedInt"]) { results.push(...this._valueUnsignedInt.doModelValidation()); }
-    if (this["_valueUri"]) { results.push(...this._valueUri.doModelValidation()); }
-    if (this["_valueUrl"]) { results.push(...this._valueUrl.doModelValidation()); }
-    if (this["_valueUuid"]) { results.push(...this._valueUuid.doModelValidation()); }
-    if (this["valueAddress"]) { results.push(...this.valueAddress.doModelValidation()); }
-    if (this["valueAge"]) { results.push(...this.valueAge.doModelValidation()); }
-    if (this["valueAnnotation"]) { results.push(...this.valueAnnotation.doModelValidation()); }
-    if (this["valueAttachment"]) { results.push(...this.valueAttachment.doModelValidation()); }
-    if (this["valueCodeableConcept"]) { results.push(...this.valueCodeableConcept.doModelValidation()); }
-    if (this["valueCoding"]) { results.push(...this.valueCoding.doModelValidation()); }
-    if (this["valueContactPoint"]) { results.push(...this.valueContactPoint.doModelValidation()); }
-    if (this["valueCount"]) { results.push(...this.valueCount.doModelValidation()); }
-    if (this["valueDistance"]) { results.push(...this.valueDistance.doModelValidation()); }
-    if (this["valueDuration"]) { results.push(...this.valueDuration.doModelValidation()); }
-    if (this["valueHumanName"]) { results.push(...this.valueHumanName.doModelValidation()); }
-    if (this["valueIdentifier"]) { results.push(...this.valueIdentifier.doModelValidation()); }
-    if (this["valueMoney"]) { results.push(...this.valueMoney.doModelValidation()); }
-    if (this["valuePeriod"]) { results.push(...this.valuePeriod.doModelValidation()); }
-    if (this["valueQuantity"]) { results.push(...this.valueQuantity.doModelValidation()); }
-    if (this["valueRange"]) { results.push(...this.valueRange.doModelValidation()); }
-    if (this["valueRatio"]) { results.push(...this.valueRatio.doModelValidation()); }
-    if (this["valueReference"]) { results.push(...this.valueReference.doModelValidation()); }
-    if (this["valueSampledData"]) { results.push(...this.valueSampledData.doModelValidation()); }
-    if (this["valueSignature"]) { results.push(...this.valueSignature.doModelValidation()); }
-    if (this["valueTiming"]) { results.push(...this.valueTiming.doModelValidation()); }
-    if (this["valueContactDetail"]) { results.push(...this.valueContactDetail.doModelValidation()); }
-    if (this["valueContributor"]) { results.push(...this.valueContributor.doModelValidation()); }
-    if (this["valueDataRequirement"]) { results.push(...this.valueDataRequirement.doModelValidation()); }
-    if (this["valueExpression"]) { results.push(...this.valueExpression.doModelValidation()); }
-    if (this["valueParameterDefinition"]) { results.push(...this.valueParameterDefinition.doModelValidation()); }
-    if (this["valueRelatedArtifact"]) { results.push(...this.valueRelatedArtifact.doModelValidation()); }
-    if (this["valueTriggerDefinition"]) { results.push(...this.valueTriggerDefinition.doModelValidation()); }
-    if (this["valueUsageContext"]) { results.push(...this.valueUsageContext.doModelValidation()); }
-    if (this["valueDosage"]) { results.push(...this.valueDosage.doModelValidation()); }
-    if (this["valueMeta"]) { results.push(...this.valueMeta.doModelValidation()); }
-    if (this["resource"]) { results.push(...this.resource.doModelValidation()); }
-    if (this["part"]) { this.part.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: Parameters.parameter.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["resource"]) { outcome.issue!.push(...this.resource.doModelValidation().issue!); }
+    if (this["part"]) { this.part.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Parameters type.
+ */
+export interface ParametersArgs extends fhir.ResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Parameters"|undefined;
+  /**
+   * A parameter passed to or received from the operation.
+   */
+  parameter?: fhir.ParametersParameterArgs[]|undefined;
 }
 
 /**
  * This resource is a non-persisted resource used to pass information into and back from an [operation](operations.html). It has no other use, and there is no RESTful endpoint associated with it.
  */
-export class Parameters extends fhir.Resource implements IParameters {
+export class Parameters extends fhir.Resource {
+  readonly __dataType:string = 'Parameters';
   /**
    * Resource Type Name
    */
@@ -768,22 +358,30 @@ export class Parameters extends fhir.Resource implements IParameters {
   /**
    * A parameter passed to or received from the operation.
    */
-  public parameter?: fhir.ParametersParameter[]|undefined;
+  public parameter?: fhir.ParametersParameter[]|undefined = [];
   /**
    * Default constructor for Parameters - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IParameters> = { }) {
-    super(source);
+  constructor(source:Partial<ParametersArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Parameters';
     if (source['parameter']) { this.parameter = source.parameter.map((x) => new fhir.ParametersParameter(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Parameters.resourceType']); }
-    if (this["parameter"]) { this.parameter.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Parameters' fhir: Parameters.resourceType:'Parameters'", }));
+    }
+    if (this["parameter"]) { this.parameter.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -3,119 +3,37 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: CatalogEntry
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { RelationTypeValueSet, RelationTypeValueSetType, RelationTypeValueSetEnum } from '../fhirValueSets/RelationTypeValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-
+import { RelationTypeValueSet, RelationTypeValueSetType,} from '../fhirValueSets/RelationTypeValueSet.js';
+import { RelationTypeValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Used for example, to point to a substance, or to a device used to administer a medication.
+ * Valid arguments for the CatalogEntryRelatedEntry type.
  */
-export type ICatalogEntryRelatedEntry = fhir.IBackboneElement & { 
+export interface CatalogEntryRelatedEntryArgs extends fhir.BackboneElementArgs {
   /**
    * The type of relation to the related item: child, parent, packageContent, containerPackage, usedIn, uses, requires, etc.
    */
   relationtype: RelationTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: CatalogEntry.relatedEntry.relationtype
-   */
-  _relationtype?: fhir.IFhirElement|undefined;
-  /**
    * The reference to the related item.
    */
-  item: fhir.IReference|null;
-}
-
-/**
- * Catalog entries are wrappers that contextualize items included in a catalog.
- */
-export type ICatalogEntry = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "CatalogEntry";
-  /**
-   * Used in supporting different identifiers for the same product, e.g. manufacturer code and retailer code.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * The type of item - medication, device, service, protocol or other.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Whether the entry represents an orderable item.
-   */
-  orderable: boolean|null;
-  /**
-   * Extended properties for primitive element: CatalogEntry.orderable
-   */
-  _orderable?: fhir.IFhirElement|undefined;
-  /**
-   * The item in a catalog or definition.
-   */
-  referencedItem: fhir.IReference|null;
-  /**
-   * Used in supporting related concepts, e.g. NDC to RxNorm.
-   */
-  additionalIdentifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * Classes of devices, or ATC for medication.
-   */
-  classification?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Used to support catalog exchange even for unsupported products, e.g. getting list of medications even if not prescribable.
-   */
-  status?: PublicationStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: CatalogEntry.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * The time period in which this catalog entry is expected to be active.
-   */
-  validityPeriod?: fhir.IPeriod|undefined;
-  /**
-   * The date until which this catalog entry is expected to be active.
-   */
-  validTo?: string|undefined;
-  /**
-   * Extended properties for primitive element: CatalogEntry.validTo
-   */
-  _validTo?: fhir.IFhirElement|undefined;
-  /**
-   * Perhaps not needed - if we use fhir resource metadata.
-   */
-  lastUpdated?: string|undefined;
-  /**
-   * Extended properties for primitive element: CatalogEntry.lastUpdated
-   */
-  _lastUpdated?: fhir.IFhirElement|undefined;
-  /**
-   * Used for examplefor Out of Formulary, or any specifics.
-   */
-  additionalCharacteristic?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * User for example for ATC classification, or.
-   */
-  additionalClassification?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Used for example, to point to a substance, or to a device used to administer a medication.
-   */
-  relatedEntry?: fhir.ICatalogEntryRelatedEntry[]|undefined;
+  item: fhir.ReferenceArgs|null;
 }
 
 /**
  * Used for example, to point to a substance, or to a device used to administer a medication.
  */
-export class CatalogEntryRelatedEntry extends fhir.BackboneElement implements ICatalogEntryRelatedEntry {
+export class CatalogEntryRelatedEntry extends fhir.BackboneElement {
+  readonly __dataType:string = 'CatalogEntryRelatedEntry';
   /**
    * The type of relation to the related item: child, parent, packageContent, containerPackage, usedIn, uses, requires, etc.
    */
   public relationtype: RelationTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: CatalogEntry.relatedEntry.relationtype
-   */
-  public _relationtype?: fhir.FhirElement|undefined;
   /**
    * The reference to the related item.
    */
@@ -123,12 +41,11 @@ export class CatalogEntryRelatedEntry extends fhir.BackboneElement implements IC
   /**
    * Default constructor for CatalogEntryRelatedEntry - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICatalogEntryRelatedEntry> = { }) {
-    super(source);
+  constructor(source:Partial<CatalogEntryRelatedEntryArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['relationtype']) { this.relationtype = source.relationtype; }
     else { this.relationtype = null; }
-    if (source['_relationtype']) { this._relationtype = new fhir.FhirElement(source._relationtype!); }
-    if (source['item']) { this.item = new fhir.Reference(source.item!); }
+    if (source['item']) { this.item = new fhir.Reference(source.item); }
     else { this.item = null; }
   }
   /**
@@ -140,20 +57,91 @@ export class CatalogEntryRelatedEntry extends fhir.BackboneElement implements IC
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["relationtype"]) { results.push(["relationtype",'Missing required element: CatalogEntry.relatedEntry.relationtype']); }
-    if (this["_relationtype"]) { results.push(...this._relationtype.doModelValidation()); }
-    if (!this["item"]) { results.push(["item",'Missing required element: CatalogEntry.relatedEntry.item']); }
-    if (this["item"]) { results.push(...this.item.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['relationtype']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property relationtype:RelationTypeValueSetEnum fhir: CatalogEntry.relatedEntry.relationtype:code", }));
+    }
+    if (!this['item']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property item:fhir.Reference fhir: CatalogEntry.relatedEntry.item:Reference", }));
+    }
+    if (this["item"]) { outcome.issue!.push(...this.item.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the CatalogEntry type.
+ */
+export interface CatalogEntryArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "CatalogEntry"|undefined;
+  /**
+   * Used in supporting different identifiers for the same product, e.g. manufacturer code and retailer code.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * The type of item - medication, device, service, protocol or other.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Whether the entry represents an orderable item.
+   */
+  orderable: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * The item in a catalog or definition.
+   */
+  referencedItem: fhir.ReferenceArgs|null;
+  /**
+   * Used in supporting related concepts, e.g. NDC to RxNorm.
+   */
+  additionalIdentifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * Classes of devices, or ATC for medication.
+   */
+  classification?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Used to support catalog exchange even for unsupported products, e.g. getting list of medications even if not prescribable.
+   */
+  status?: PublicationStatusValueSetEnum|undefined;
+  /**
+   * The time period in which this catalog entry is expected to be active.
+   */
+  validityPeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * The date until which this catalog entry is expected to be active.
+   */
+  validTo?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Perhaps not needed - if we use fhir resource metadata.
+   */
+  lastUpdated?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Used for examplefor Out of Formulary, or any specifics.
+   */
+  additionalCharacteristic?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * User for example for ATC classification, or.
+   */
+  additionalClassification?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Used for example, to point to a substance, or to a device used to administer a medication.
+   */
+  relatedEntry?: fhir.CatalogEntryRelatedEntryArgs[]|undefined;
 }
 
 /**
  * Catalog entries are wrappers that contextualize items included in a catalog.
  */
-export class CatalogEntry extends fhir.DomainResource implements ICatalogEntry {
+export class CatalogEntry extends fhir.DomainResource {
+  readonly __dataType:string = 'CatalogEntry';
   /**
    * Resource Type Name
    */
@@ -161,7 +149,7 @@ export class CatalogEntry extends fhir.DomainResource implements ICatalogEntry {
   /**
    * Used in supporting different identifiers for the same product, e.g. manufacturer code and retailer code.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * The type of item - medication, device, service, protocol or other.
    */
@@ -169,11 +157,7 @@ export class CatalogEntry extends fhir.DomainResource implements ICatalogEntry {
   /**
    * Whether the entry represents an orderable item.
    */
-  public orderable: boolean|null;
-  /**
-   * Extended properties for primitive element: CatalogEntry.orderable
-   */
-  public _orderable?: fhir.FhirElement|undefined;
+  public orderable: fhir.FhirBoolean|null;
   /**
    * The item in a catalog or definition.
    */
@@ -181,19 +165,15 @@ export class CatalogEntry extends fhir.DomainResource implements ICatalogEntry {
   /**
    * Used in supporting related concepts, e.g. NDC to RxNorm.
    */
-  public additionalIdentifier?: fhir.Identifier[]|undefined;
+  public additionalIdentifier?: fhir.Identifier[]|undefined = [];
   /**
    * Classes of devices, or ATC for medication.
    */
-  public classification?: fhir.CodeableConcept[]|undefined;
+  public classification?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Used to support catalog exchange even for unsupported products, e.g. getting list of medications even if not prescribable.
    */
   public status?: PublicationStatusValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: CatalogEntry.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * The time period in which this catalog entry is expected to be active.
    */
@@ -201,53 +181,41 @@ export class CatalogEntry extends fhir.DomainResource implements ICatalogEntry {
   /**
    * The date until which this catalog entry is expected to be active.
    */
-  public validTo?: string|undefined;
-  /**
-   * Extended properties for primitive element: CatalogEntry.validTo
-   */
-  public _validTo?: fhir.FhirElement|undefined;
+  public validTo?: fhir.FhirDateTime|undefined;
   /**
    * Perhaps not needed - if we use fhir resource metadata.
    */
-  public lastUpdated?: string|undefined;
-  /**
-   * Extended properties for primitive element: CatalogEntry.lastUpdated
-   */
-  public _lastUpdated?: fhir.FhirElement|undefined;
+  public lastUpdated?: fhir.FhirDateTime|undefined;
   /**
    * Used for examplefor Out of Formulary, or any specifics.
    */
-  public additionalCharacteristic?: fhir.CodeableConcept[]|undefined;
+  public additionalCharacteristic?: fhir.CodeableConcept[]|undefined = [];
   /**
    * User for example for ATC classification, or.
    */
-  public additionalClassification?: fhir.CodeableConcept[]|undefined;
+  public additionalClassification?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Used for example, to point to a substance, or to a device used to administer a medication.
    */
-  public relatedEntry?: fhir.CatalogEntryRelatedEntry[]|undefined;
+  public relatedEntry?: fhir.CatalogEntryRelatedEntry[]|undefined = [];
   /**
    * Default constructor for CatalogEntry - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICatalogEntry> = { }) {
-    super(source);
+  constructor(source:Partial<CatalogEntryArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'CatalogEntry';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['orderable']) { this.orderable = source.orderable; }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['orderable']) { this.orderable = new fhir.FhirBoolean({value: source.orderable}); }
     else { this.orderable = null; }
-    if (source['_orderable']) { this._orderable = new fhir.FhirElement(source._orderable!); }
-    if (source['referencedItem']) { this.referencedItem = new fhir.Reference(source.referencedItem!); }
+    if (source['referencedItem']) { this.referencedItem = new fhir.Reference(source.referencedItem); }
     else { this.referencedItem = null; }
     if (source['additionalIdentifier']) { this.additionalIdentifier = source.additionalIdentifier.map((x) => new fhir.Identifier(x)); }
     if (source['classification']) { this.classification = source.classification.map((x) => new fhir.CodeableConcept(x)); }
     if (source['status']) { this.status = source.status; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['validityPeriod']) { this.validityPeriod = new fhir.Period(source.validityPeriod!); }
-    if (source['validTo']) { this.validTo = source.validTo; }
-    if (source['_validTo']) { this._validTo = new fhir.FhirElement(source._validTo!); }
-    if (source['lastUpdated']) { this.lastUpdated = source.lastUpdated; }
-    if (source['_lastUpdated']) { this._lastUpdated = new fhir.FhirElement(source._lastUpdated!); }
+    if (source['validityPeriod']) { this.validityPeriod = new fhir.Period(source.validityPeriod); }
+    if (source['validTo']) { this.validTo = new fhir.FhirDateTime({value: source.validTo}); }
+    if (source['lastUpdated']) { this.lastUpdated = new fhir.FhirDateTime({value: source.lastUpdated}); }
     if (source['additionalCharacteristic']) { this.additionalCharacteristic = source.additionalCharacteristic.map((x) => new fhir.CodeableConcept(x)); }
     if (source['additionalClassification']) { this.additionalClassification = source.additionalClassification.map((x) => new fhir.CodeableConcept(x)); }
     if (source['relatedEntry']) { this.relatedEntry = source.relatedEntry.map((x) => new fhir.CatalogEntryRelatedEntry(x)); }
@@ -261,24 +229,35 @@ export class CatalogEntry extends fhir.DomainResource implements ICatalogEntry {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: CatalogEntry.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (!this["orderable"]) { results.push(["orderable",'Missing required element: CatalogEntry.orderable']); }
-    if (this["_orderable"]) { results.push(...this._orderable.doModelValidation()); }
-    if (!this["referencedItem"]) { results.push(["referencedItem",'Missing required element: CatalogEntry.referencedItem']); }
-    if (this["referencedItem"]) { results.push(...this.referencedItem.doModelValidation()); }
-    if (this["additionalIdentifier"]) { this.additionalIdentifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["classification"]) { this.classification.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["validityPeriod"]) { results.push(...this.validityPeriod.doModelValidation()); }
-    if (this["_validTo"]) { results.push(...this._validTo.doModelValidation()); }
-    if (this["_lastUpdated"]) { results.push(...this._lastUpdated.doModelValidation()); }
-    if (this["additionalCharacteristic"]) { this.additionalCharacteristic.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["additionalClassification"]) { this.additionalClassification.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["relatedEntry"]) { this.relatedEntry.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'CatalogEntry' fhir: CatalogEntry.resourceType:'CatalogEntry'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (!this['orderable']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property orderable:fhir.FhirBoolean fhir: CatalogEntry.orderable:boolean", }));
+    }
+    if (this["orderable"]) { outcome.issue!.push(...this.orderable.doModelValidation().issue!); }
+    if (!this['referencedItem']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property referencedItem:fhir.Reference fhir: CatalogEntry.referencedItem:Reference", }));
+    }
+    if (this["referencedItem"]) { outcome.issue!.push(...this.referencedItem.doModelValidation().issue!); }
+    if (this["additionalIdentifier"]) { this.additionalIdentifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["classification"]) { this.classification.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["validityPeriod"]) { outcome.issue!.push(...this.validityPeriod.doModelValidation().issue!); }
+    if (this["validTo"]) { outcome.issue!.push(...this.validTo.doModelValidation().issue!); }
+    if (this["lastUpdated"]) { outcome.issue!.push(...this.lastUpdated.doModelValidation().issue!); }
+    if (this["additionalCharacteristic"]) { this.additionalCharacteristic.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["additionalClassification"]) { this.additionalClassification.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["relatedEntry"]) { this.relatedEntry.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

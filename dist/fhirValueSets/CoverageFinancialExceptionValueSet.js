@@ -27,15 +27,4 @@ export const CoverageFinancialExceptionValueSet = {
 /**
  * This value set includes Example Coverage Financial Exception Codes.
  */
-export var CoverageFinancialExceptionValueSetEnum;
-(function (CoverageFinancialExceptionValueSetEnum) {
-    /**
-     * foster: Children in the foster care have all copays and deductibles waived.
-     */
-    CoverageFinancialExceptionValueSetEnum["FosterChild"] = "foster";
-    /**
-     * retired: Retired persons have all copays and deductibles reduced.
-     */
-    CoverageFinancialExceptionValueSetEnum["Retired"] = "retired";
-})(CoverageFinancialExceptionValueSetEnum || (CoverageFinancialExceptionValueSetEnum = {}));
 //# sourceMappingURL=CoverageFinancialExceptionValueSet.js.map

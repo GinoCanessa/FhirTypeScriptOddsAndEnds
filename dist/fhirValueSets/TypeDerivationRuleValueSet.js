@@ -27,15 +27,4 @@ export const TypeDerivationRuleValueSet = {
 /**
  * How a type relates to its baseDefinition.
  */
-export var TypeDerivationRuleValueSetEnum;
-(function (TypeDerivationRuleValueSetEnum) {
-    /**
-     * constraint: This definition adds additional rules to an existing concrete type.
-     */
-    TypeDerivationRuleValueSetEnum["Constraint"] = "constraint";
-    /**
-     * specialization: This definition defines a new type that adds additional elements to the base type.
-     */
-    TypeDerivationRuleValueSetEnum["Specialization"] = "specialization";
-})(TypeDerivationRuleValueSetEnum || (TypeDerivationRuleValueSetEnum = {}));
 //# sourceMappingURL=TypeDerivationRuleValueSet.js.map

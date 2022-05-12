@@ -27,15 +27,4 @@ export const ConditionCategoryValueSet = {
 /**
  * Preferred value set for Condition Categories.
  */
-export var ConditionCategoryValueSetEnum;
-(function (ConditionCategoryValueSetEnum) {
-    /**
-     * encounter-diagnosis: A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter.
-     */
-    ConditionCategoryValueSetEnum["EncounterDiagnosis"] = "encounter-diagnosis";
-    /**
-     * problem-list-item: An item on a problem list that can be managed over time and can be expressed by a practitioner (e.g. physician, nurse), patient, or related person.
-     */
-    ConditionCategoryValueSetEnum["ProblemListItem"] = "problem-list-item";
-})(ConditionCategoryValueSetEnum || (ConditionCategoryValueSetEnum = {}));
 //# sourceMappingURL=ConditionCategoryValueSet.js.map

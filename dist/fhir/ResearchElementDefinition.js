@@ -3,13 +3,14 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ResearchElementDefinition
 import * as fhir from '../fhir.js';
-import { UcumUnitsValueSet } from '../fhirValueSets/UcumUnitsValueSet.js';
-import { GroupMeasureValueSet } from '../fhirValueSets/GroupMeasureValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { SubjectTypeValueSet } from '../fhirValueSets/SubjectTypeValueSet.js';
-import { DefinitionTopicValueSet } from '../fhirValueSets/DefinitionTopicValueSet.js';
-import { ResearchElementTypeValueSet } from '../fhirValueSets/ResearchElementTypeValueSet.js';
-import { VariableTypeValueSet } from '../fhirValueSets/VariableTypeValueSet.js';
+import { UcumUnitsValueSet, } from '../fhirValueSets/UcumUnitsValueSet.js';
+import { GroupMeasureValueSet, } from '../fhirValueSets/GroupMeasureValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { DefinitionTopicValueSet, } from '../fhirValueSets/DefinitionTopicValueSet.js';
+import { ResearchElementTypeValueSet, } from '../fhirValueSets/ResearchElementTypeValueSet.js';
+import { VariableTypeValueSet, } from '../fhirValueSets/VariableTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
  */
@@ -17,55 +18,60 @@ export class ResearchElementDefinitionCharacteristic extends fhir.BackboneElemen
     /**
      * Default constructor for ResearchElementDefinitionCharacteristic - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['definitionCodeableConcept']) {
-            this.definitionCodeableConcept = new fhir.CodeableConcept(source.definitionCodeableConcept);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ResearchElementDefinitionCharacteristic';
+        this.__definitionIsChoice = true;
+        /**
+         * Use UsageContext to define the members of the population, such as Age Ranges, Genders, Settings.
+         */
+        this.usageContext = [];
+        this.__studyEffectiveIsChoice = true;
+        this.__participantEffectiveIsChoice = true;
+        if (source['definition']) {
+            this.definition = source.definition;
         }
-        if (source['definitionCanonical']) {
-            this.definitionCanonical = source.definitionCanonical;
+        else if (source['definitionCodeableConcept']) {
+            this.definition = new fhir.CodeableConcept(source.definitionCodeableConcept);
         }
-        if (source['_definitionCanonical']) {
-            this._definitionCanonical = new fhir.FhirElement(source._definitionCanonical);
+        else if (source['definitionCanonical']) {
+            this.definition = new fhir.FhirCanonical({ value: source.definitionCanonical });
         }
-        if (source['definitionExpression']) {
-            this.definitionExpression = new fhir.Expression(source.definitionExpression);
+        else if (source['definitionExpression']) {
+            this.definition = new fhir.Expression(source.definitionExpression);
         }
-        if (source['definitionDataRequirement']) {
-            this.definitionDataRequirement = new fhir.DataRequirement(source.definitionDataRequirement);
+        else if (source['definitionDataRequirement']) {
+            this.definition = new fhir.DataRequirement(source.definitionDataRequirement);
+        }
+        else {
+            this.definition = null;
         }
         if (source['usageContext']) {
             this.usageContext = source.usageContext.map((x) => new fhir.UsageContext(x));
         }
         if (source['exclude']) {
-            this.exclude = source.exclude;
-        }
-        if (source['_exclude']) {
-            this._exclude = new fhir.FhirElement(source._exclude);
+            this.exclude = new fhir.FhirBoolean({ value: source.exclude });
         }
         if (source['unitOfMeasure']) {
             this.unitOfMeasure = new fhir.CodeableConcept(source.unitOfMeasure);
         }
         if (source['studyEffectiveDescription']) {
-            this.studyEffectiveDescription = source.studyEffectiveDescription;
+            this.studyEffectiveDescription = new fhir.FhirString({ value: source.studyEffectiveDescription });
         }
-        if (source['_studyEffectiveDescription']) {
-            this._studyEffectiveDescription = new fhir.FhirElement(source._studyEffectiveDescription);
+        if (source['studyEffective']) {
+            this.studyEffective = source.studyEffective;
         }
-        if (source['studyEffectiveDateTime']) {
-            this.studyEffectiveDateTime = source.studyEffectiveDateTime;
+        else if (source['studyEffectiveDateTime']) {
+            this.studyEffective = new fhir.FhirDateTime({ value: source.studyEffectiveDateTime });
         }
-        if (source['_studyEffectiveDateTime']) {
-            this._studyEffectiveDateTime = new fhir.FhirElement(source._studyEffectiveDateTime);
+        else if (source['studyEffectivePeriod']) {
+            this.studyEffective = new fhir.Period(source.studyEffectivePeriod);
         }
-        if (source['studyEffectivePeriod']) {
-            this.studyEffectivePeriod = new fhir.Period(source.studyEffectivePeriod);
+        else if (source['studyEffectiveDuration']) {
+            this.studyEffective = new fhir.Duration(source.studyEffectiveDuration);
         }
-        if (source['studyEffectiveDuration']) {
-            this.studyEffectiveDuration = new fhir.Duration(source.studyEffectiveDuration);
-        }
-        if (source['studyEffectiveTiming']) {
-            this.studyEffectiveTiming = new fhir.Timing(source.studyEffectiveTiming);
+        else if (source['studyEffectiveTiming']) {
+            this.studyEffective = new fhir.Timing(source.studyEffectiveTiming);
         }
         if (source['studyEffectiveTimeFromStart']) {
             this.studyEffectiveTimeFromStart = new fhir.Duration(source.studyEffectiveTimeFromStart);
@@ -73,38 +79,29 @@ export class ResearchElementDefinitionCharacteristic extends fhir.BackboneElemen
         if (source['studyEffectiveGroupMeasure']) {
             this.studyEffectiveGroupMeasure = source.studyEffectiveGroupMeasure;
         }
-        if (source['_studyEffectiveGroupMeasure']) {
-            this._studyEffectiveGroupMeasure = new fhir.FhirElement(source._studyEffectiveGroupMeasure);
-        }
         if (source['participantEffectiveDescription']) {
-            this.participantEffectiveDescription = source.participantEffectiveDescription;
+            this.participantEffectiveDescription = new fhir.FhirString({ value: source.participantEffectiveDescription });
         }
-        if (source['_participantEffectiveDescription']) {
-            this._participantEffectiveDescription = new fhir.FhirElement(source._participantEffectiveDescription);
+        if (source['participantEffective']) {
+            this.participantEffective = source.participantEffective;
         }
-        if (source['participantEffectiveDateTime']) {
-            this.participantEffectiveDateTime = source.participantEffectiveDateTime;
+        else if (source['participantEffectiveDateTime']) {
+            this.participantEffective = new fhir.FhirDateTime({ value: source.participantEffectiveDateTime });
         }
-        if (source['_participantEffectiveDateTime']) {
-            this._participantEffectiveDateTime = new fhir.FhirElement(source._participantEffectiveDateTime);
+        else if (source['participantEffectivePeriod']) {
+            this.participantEffective = new fhir.Period(source.participantEffectivePeriod);
         }
-        if (source['participantEffectivePeriod']) {
-            this.participantEffectivePeriod = new fhir.Period(source.participantEffectivePeriod);
+        else if (source['participantEffectiveDuration']) {
+            this.participantEffective = new fhir.Duration(source.participantEffectiveDuration);
         }
-        if (source['participantEffectiveDuration']) {
-            this.participantEffectiveDuration = new fhir.Duration(source.participantEffectiveDuration);
-        }
-        if (source['participantEffectiveTiming']) {
-            this.participantEffectiveTiming = new fhir.Timing(source.participantEffectiveTiming);
+        else if (source['participantEffectiveTiming']) {
+            this.participantEffective = new fhir.Timing(source.participantEffectiveTiming);
         }
         if (source['participantEffectiveTimeFromStart']) {
             this.participantEffectiveTimeFromStart = new fhir.Duration(source.participantEffectiveTimeFromStart);
         }
         if (source['participantEffectiveGroupMeasure']) {
             this.participantEffectiveGroupMeasure = source.participantEffectiveGroupMeasure;
-        }
-        if (source['_participantEffectiveGroupMeasure']) {
-            this._participantEffectiveGroupMeasure = new fhir.FhirElement(source._participantEffectiveGroupMeasure);
         }
     }
     /**
@@ -129,71 +126,38 @@ export class ResearchElementDefinitionCharacteristic extends fhir.BackboneElemen
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["definitionCodeableConcept"]) {
-            results.push(...this.definitionCodeableConcept.doModelValidation());
-        }
-        if (this["_definitionCanonical"]) {
-            results.push(...this._definitionCanonical.doModelValidation());
-        }
-        if (this["definitionExpression"]) {
-            results.push(...this.definitionExpression.doModelValidation());
-        }
-        if (this["definitionDataRequirement"]) {
-            results.push(...this.definitionDataRequirement.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['definition']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property definition: fhir: ResearchElementDefinition.characteristic.definition[x]:", }));
         }
         if (this["usageContext"]) {
-            this.usageContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.usageContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_exclude"]) {
-            results.push(...this._exclude.doModelValidation());
+        if (this["exclude"]) {
+            outcome.issue.push(...this.exclude.doModelValidation().issue);
         }
         if (this["unitOfMeasure"]) {
-            results.push(...this.unitOfMeasure.doModelValidation());
+            outcome.issue.push(...this.unitOfMeasure.doModelValidation().issue);
         }
-        if (this["_studyEffectiveDescription"]) {
-            results.push(...this._studyEffectiveDescription.doModelValidation());
-        }
-        if (this["_studyEffectiveDateTime"]) {
-            results.push(...this._studyEffectiveDateTime.doModelValidation());
-        }
-        if (this["studyEffectivePeriod"]) {
-            results.push(...this.studyEffectivePeriod.doModelValidation());
-        }
-        if (this["studyEffectiveDuration"]) {
-            results.push(...this.studyEffectiveDuration.doModelValidation());
-        }
-        if (this["studyEffectiveTiming"]) {
-            results.push(...this.studyEffectiveTiming.doModelValidation());
+        if (this["studyEffectiveDescription"]) {
+            outcome.issue.push(...this.studyEffectiveDescription.doModelValidation().issue);
         }
         if (this["studyEffectiveTimeFromStart"]) {
-            results.push(...this.studyEffectiveTimeFromStart.doModelValidation());
+            outcome.issue.push(...this.studyEffectiveTimeFromStart.doModelValidation().issue);
         }
-        if (this["_studyEffectiveGroupMeasure"]) {
-            results.push(...this._studyEffectiveGroupMeasure.doModelValidation());
-        }
-        if (this["_participantEffectiveDescription"]) {
-            results.push(...this._participantEffectiveDescription.doModelValidation());
-        }
-        if (this["_participantEffectiveDateTime"]) {
-            results.push(...this._participantEffectiveDateTime.doModelValidation());
-        }
-        if (this["participantEffectivePeriod"]) {
-            results.push(...this.participantEffectivePeriod.doModelValidation());
-        }
-        if (this["participantEffectiveDuration"]) {
-            results.push(...this.participantEffectiveDuration.doModelValidation());
-        }
-        if (this["participantEffectiveTiming"]) {
-            results.push(...this.participantEffectiveTiming.doModelValidation());
+        if (this["participantEffectiveDescription"]) {
+            outcome.issue.push(...this.participantEffectiveDescription.doModelValidation().issue);
         }
         if (this["participantEffectiveTimeFromStart"]) {
-            results.push(...this.participantEffectiveTimeFromStart.doModelValidation());
+            outcome.issue.push(...this.participantEffectiveTimeFromStart.doModelValidation().issue);
         }
-        if (this["_participantEffectiveGroupMeasure"]) {
-            results.push(...this._participantEffectiveGroupMeasure.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -203,47 +167,83 @@ export class ResearchElementDefinition extends fhir.DomainResource {
     /**
      * Default constructor for ResearchElementDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ResearchElementDefinition';
+        /**
+         * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this research element definition outside of FHIR, where it is not possible to use the logical URI.
+         */
+        this.identifier = [];
+        this.__subjectIsChoice = true;
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * A human-readable string to clarify or explain concepts about the resource.
+         */
+        this.comment = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the research element definition to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * Descriptive topics related to the content of the ResearchElementDefinition. Topics provide a high-level categorization grouping types of ResearchElementDefinitions that can be useful for filtering and searching.
+         */
+        this.topic = [];
+        /**
+         * An individiual or organization primarily involved in the creation and maintenance of the content.
+         */
+        this.author = [];
+        /**
+         * An individual or organization primarily responsible for internal coherence of the content.
+         */
+        this.editor = [];
+        /**
+         * An individual or organization primarily responsible for review of some aspect of the content.
+         */
+        this.reviewer = [];
+        /**
+         * An individual or organization responsible for officially endorsing the content for use in some setting.
+         */
+        this.endorser = [];
+        /**
+         * Each related artifact is either an attachment, or a reference to another resource, but not both.
+         */
+        this.relatedArtifact = [];
+        /**
+         * A reference to a Library resource containing the formal logic used by the ResearchElementDefinition.
+         */
+        this.library = [];
+        /**
+         * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
+         */
+        this.characteristic = [];
         this.resourceType = 'ResearchElementDefinition';
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['shortTitle']) {
-            this.shortTitle = source.shortTitle;
-        }
-        if (source['_shortTitle']) {
-            this._shortTitle = new fhir.FhirElement(source._shortTitle);
+            this.shortTitle = new fhir.FhirString({ value: source.shortTitle });
         }
         if (source['subtitle']) {
-            this.subtitle = source.subtitle;
-        }
-        if (source['_subtitle']) {
-            this._subtitle = new fhir.FhirElement(source._subtitle);
+            this.subtitle = new fhir.FhirString({ value: source.subtitle });
         }
         if (source['status']) {
             this.status = source.status;
@@ -251,47 +251,32 @@ export class ResearchElementDefinition extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+        if (source['subject']) {
+            this.subject = source.subject;
         }
-        if (source['subjectCodeableConcept']) {
-            this.subjectCodeableConcept = new fhir.CodeableConcept(source.subjectCodeableConcept);
+        else if (source['subjectCodeableConcept']) {
+            this.subject = new fhir.CodeableConcept(source.subjectCodeableConcept);
         }
-        if (source['subjectReference']) {
-            this.subjectReference = new fhir.Reference(source.subjectReference);
+        else if (source['subjectReference']) {
+            this.subject = new fhir.Reference(source.subjectReference);
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['comment']) {
-            this.comment = source.comment.map((x) => (x));
-        }
-        if (source['_comment']) {
-            this._comment = source._comment.map((x) => new fhir.FhirElement(x));
+            this.comment = source.comment.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -300,34 +285,19 @@ export class ResearchElementDefinition extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['usage']) {
-            this.usage = source.usage;
-        }
-        if (source['_usage']) {
-            this._usage = new fhir.FhirElement(source._usage);
+            this.usage = new fhir.FhirString({ value: source.usage });
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['approvalDate']) {
-            this.approvalDate = source.approvalDate;
-        }
-        if (source['_approvalDate']) {
-            this._approvalDate = new fhir.FhirElement(source._approvalDate);
+            this.approvalDate = new fhir.FhirDate({ value: source.approvalDate });
         }
         if (source['lastReviewDate']) {
-            this.lastReviewDate = source.lastReviewDate;
-        }
-        if (source['_lastReviewDate']) {
-            this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate);
+            this.lastReviewDate = new fhir.FhirDate({ value: source.lastReviewDate });
         }
         if (source['effectivePeriod']) {
             this.effectivePeriod = new fhir.Period(source.effectivePeriod);
@@ -351,10 +321,7 @@ export class ResearchElementDefinition extends fhir.DomainResource {
             this.relatedArtifact = source.relatedArtifact.map((x) => new fhir.RelatedArtifact(x));
         }
         if (source['library']) {
-            this.library = source.library.map((x) => (x));
-        }
-        if (source['_library']) {
-            this._library = source._library.map((x) => new fhir.FhirElement(x));
+            this.library = source.library.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['type']) {
             this.type = source.type;
@@ -362,14 +329,8 @@ export class ResearchElementDefinition extends fhir.DomainResource {
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['variableType']) {
             this.variableType = source.variableType;
-        }
-        if (source['_variableType']) {
-            this._variableType = new fhir.FhirElement(source._variableType);
         }
         if (source['characteristic']) {
             this.characteristic = source.characteristic.map((x) => new fhir.ResearchElementDefinitionCharacteristic(x));
@@ -383,18 +344,6 @@ export class ResearchElementDefinition extends fhir.DomainResource {
      */
     static statusRequiredValueSet() {
         return PublicationStatusValueSet;
-    }
-    /**
-     * Extensible-bound Value Set for subjectCodeableConcept
-     */
-    static subjectCodeableConceptExtensibleValueSet() {
-        return SubjectTypeValueSet;
-    }
-    /**
-     * Extensible-bound Value Set for subjectReference
-     */
-    static subjectReferenceExtensibleValueSet() {
-        return SubjectTypeValueSet;
     }
     /**
      * Example-bound Value Set for topic
@@ -418,122 +367,119 @@ export class ResearchElementDefinition extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: ResearchElementDefinition.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'ResearchElementDefinition' fhir: ResearchElementDefinition.resourceType:'ResearchElementDefinition'", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_shortTitle"]) {
-            results.push(...this._shortTitle.doModelValidation());
+        if (this["shortTitle"]) {
+            outcome.issue.push(...this.shortTitle.doModelValidation().issue);
         }
-        if (this["_subtitle"]) {
-            results.push(...this._subtitle.doModelValidation());
+        if (this["subtitle"]) {
+            outcome.issue.push(...this.subtitle.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: ResearchElementDefinition.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: ResearchElementDefinition.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["subjectCodeableConcept"]) {
-            results.push(...this.subjectCodeableConcept.doModelValidation());
-        }
-        if (this["subjectReference"]) {
-            results.push(...this.subjectReference.doModelValidation());
-        }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["_comment"]) {
-            this._comment.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["comment"]) {
+            this.comment.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (this["_usage"]) {
-            results.push(...this._usage.doModelValidation());
+        if (this["usage"]) {
+            outcome.issue.push(...this.usage.doModelValidation().issue);
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
-        if (this["_approvalDate"]) {
-            results.push(...this._approvalDate.doModelValidation());
+        if (this["approvalDate"]) {
+            outcome.issue.push(...this.approvalDate.doModelValidation().issue);
         }
-        if (this["_lastReviewDate"]) {
-            results.push(...this._lastReviewDate.doModelValidation());
+        if (this["lastReviewDate"]) {
+            outcome.issue.push(...this.lastReviewDate.doModelValidation().issue);
         }
         if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
+            outcome.issue.push(...this.effectivePeriod.doModelValidation().issue);
         }
         if (this["topic"]) {
-            this.topic.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.topic.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["author"]) {
-            this.author.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.author.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["editor"]) {
-            this.editor.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.editor.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reviewer"]) {
-            this.reviewer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reviewer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["endorser"]) {
-            this.endorser.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.endorser.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relatedArtifact"]) {
-            this.relatedArtifact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relatedArtifact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_library"]) {
-            this._library.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["library"]) {
+            this.library.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: ResearchElementDefinition.type']);
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:ResearchElementTypeValueSetEnum fhir: ResearchElementDefinition.type:code", }));
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (!this['characteristic']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property characteristic:fhir.ResearchElementDefinitionCharacteristic[] fhir: ResearchElementDefinition.characteristic:characteristic", }));
         }
-        if (this["_variableType"]) {
-            results.push(...this._variableType.doModelValidation());
+        else if (!Array.isArray(this.characteristic)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property characteristic:fhir.ResearchElementDefinitionCharacteristic[] fhir: ResearchElementDefinition.characteristic:characteristic", }));
         }
-        if ((!this["characteristic"]) || (this["characteristic"].length === 0)) {
-            results.push(["characteristic", 'Missing required element: ResearchElementDefinition.characteristic']);
+        else if (this.characteristic.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property characteristic:fhir.ResearchElementDefinitionCharacteristic[] fhir: ResearchElementDefinition.characteristic:characteristic", }));
         }
         if (this["characteristic"]) {
-            this.characteristic.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.characteristic.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ResearchElementDefinition.js.map

@@ -35,19 +35,4 @@ export const SubstanceStatusValueSet = {
 /**
  * A code to indicate if the substance is actively used.
  */
-export var SubstanceStatusValueSetEnum;
-(function (SubstanceStatusValueSetEnum) {
-    /**
-     * active: The substance is considered for use or reference.
-     */
-    SubstanceStatusValueSetEnum["Active"] = "active";
-    /**
-     * entered-in-error: The substance was entered in error.
-     */
-    SubstanceStatusValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * inactive: The substance is considered for reference, but not for use.
-     */
-    SubstanceStatusValueSetEnum["Inactive"] = "inactive";
-})(SubstanceStatusValueSetEnum || (SubstanceStatusValueSetEnum = {}));
 //# sourceMappingURL=SubstanceStatusValueSet.js.map

@@ -3,210 +3,191 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Communication
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { EventStatusValueSet, EventStatusValueSetType, EventStatusValueSetEnum } from '../fhirValueSets/EventStatusValueSet.js'
-import { CommunicationNotDoneReasonValueSet, CommunicationNotDoneReasonValueSetType, CommunicationNotDoneReasonValueSetEnum } from '../fhirValueSets/CommunicationNotDoneReasonValueSet.js'
-import { CommunicationCategoryValueSet, CommunicationCategoryValueSetType, CommunicationCategoryValueSetEnum } from '../fhirValueSets/CommunicationCategoryValueSet.js'
-import { RequestPriorityValueSet, RequestPriorityValueSetType, RequestPriorityValueSetEnum } from '../fhirValueSets/RequestPriorityValueSet.js'
-import { V3ParticipationModeValueSet, V3ParticipationModeValueSetType, V3ParticipationModeValueSetEnum } from '../fhirValueSets/V3ParticipationModeValueSet.js'
-import { CommunicationTopicValueSet, CommunicationTopicValueSetType, CommunicationTopicValueSetEnum } from '../fhirValueSets/CommunicationTopicValueSet.js'
-import { ClinicalFindingsValueSet, ClinicalFindingsValueSetType, ClinicalFindingsValueSetEnum } from '../fhirValueSets/ClinicalFindingsValueSet.js'
+import { EventStatusValueSet, EventStatusValueSetType,} from '../fhirValueSets/EventStatusValueSet.js';
+import { EventStatusValueSetEnum } from '../valueSetEnums.js';
+import { CommunicationNotDoneReasonValueSet, CommunicationNotDoneReasonValueSetType,} from '../fhirValueSets/CommunicationNotDoneReasonValueSet.js';
+import { CommunicationNotDoneReasonValueSetEnum } from '../valueSetEnums.js';
+import { CommunicationCategoryValueSet, CommunicationCategoryValueSetType,} from '../fhirValueSets/CommunicationCategoryValueSet.js';
+import { CommunicationCategoryValueSetEnum } from '../valueSetEnums.js';
+import { RequestPriorityValueSet, RequestPriorityValueSetType,} from '../fhirValueSets/RequestPriorityValueSet.js';
+import { RequestPriorityValueSetEnum } from '../valueSetEnums.js';
+import { V3ParticipationModeValueSet, V3ParticipationModeValueSetType,} from '../fhirValueSets/V3ParticipationModeValueSet.js';
+import { V3ParticipationModeValueSetEnum } from '../valueSetEnums.js';
+import { CommunicationTopicValueSet, CommunicationTopicValueSetType,} from '../fhirValueSets/CommunicationTopicValueSet.js';
+import { CommunicationTopicValueSetEnum } from '../valueSetEnums.js';
+import { ClinicalFindingsValueSet, ClinicalFindingsValueSetType,} from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { ClinicalFindingsValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
+/**
+ * Valid arguments for the CommunicationPayload type.
+ */
+export interface CommunicationPayloadArgs extends fhir.BackboneElementArgs {
+  /**
+   * A communicated content (or for multi-part communications, one portion of the communication).
+   */
+  content?: fhir.FhirString|fhir.Attachment|fhir.Reference|undefined;
+  /**
+   * A communicated content (or for multi-part communications, one portion of the communication).
+   */
+  contentString?: fhir.FhirString|string|undefined;
+  /**
+   * A communicated content (or for multi-part communications, one portion of the communication).
+   */
+  contentAttachment?: fhir.AttachmentArgs|undefined;
+  /**
+   * A communicated content (or for multi-part communications, one portion of the communication).
+   */
+  contentReference?: fhir.ReferenceArgs|undefined;
+}
 
 /**
  * Text, attachment(s), or resource(s) that was communicated to the recipient.
  */
-export type ICommunicationPayload = fhir.IBackboneElement & { 
+export class CommunicationPayload extends fhir.BackboneElement {
+  readonly __dataType:string = 'CommunicationPayload';
   /**
    * A communicated content (or for multi-part communications, one portion of the communication).
    */
-  contentString?: string|undefined;
+  public content: (fhir.FhirString|fhir.Attachment|fhir.Reference)|null;
+  readonly __contentIsChoice:true = true;
   /**
-   * Extended properties for primitive element: Communication.payload.content[x]
+   * Default constructor for CommunicationPayload - initializes any required elements to null if a value is not provided.
    */
-  _contentString?: fhir.IFhirElement|undefined;
+  constructor(source:Partial<CommunicationPayloadArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['content']) { this.content = source.content; }
+    else if (source['contentString']) { this.content = new fhir.FhirString({value: source.contentString}); }
+    else if (source['contentAttachment']) { this.content = new fhir.Attachment(source.contentAttachment); }
+    else if (source['contentReference']) { this.content = new fhir.Reference(source.contentReference); }
+    else { this.content = null; }
+  }
   /**
-   * A communicated content (or for multi-part communications, one portion of the communication).
+   * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  contentAttachment?: fhir.IAttachment|undefined;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['content']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property content: fhir: Communication.payload.content[x]:", }));
+    }
+    return outcome;
+  }
   /**
-   * A communicated content (or for multi-part communications, one portion of the communication).
+   * Function to strip invalid element values for serialization.
    */
-  contentReference?: fhir.IReference|undefined;
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
 }
-
 /**
- * An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency that was notified about a reportable condition.
+ * Valid arguments for the Communication type.
  */
-export type ICommunication = fhir.IDomainResource & { 
+export interface CommunicationArgs extends fhir.DomainResourceArgs {
   /**
    * Resource Type Name
    */
-  resourceType: "Communication";
+  resourceType: "Communication"|undefined;
   /**
    * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
    */
-  identifier?: fhir.IIdentifier[]|undefined;
+  identifier?: fhir.IdentifierArgs[]|undefined;
   /**
    * The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Communication.
    */
-  instantiatesCanonical?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Communication.instantiatesCanonical
-   */
-  _instantiatesCanonical?: fhir.IFhirElement[]|undefined;
+  instantiatesCanonical?: fhir.FhirCanonical[]|string[]|undefined;
   /**
    * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
    */
-  instantiatesUri?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Communication.instantiatesUri
-   */
-  _instantiatesUri?: fhir.IFhirElement[]|undefined;
+  instantiatesUri?: fhir.FhirUri[]|string[]|undefined;
   /**
    * This must point to some sort of a 'Request' resource, such as CarePlan, CommunicationRequest, ServiceRequest, MedicationRequest, etc.
    */
-  basedOn?: fhir.IReference[]|undefined;
+  basedOn?: fhir.ReferenceArgs[]|undefined;
   /**
    * Part of this action.
    */
-  partOf?: fhir.IReference[]|undefined;
+  partOf?: fhir.ReferenceArgs[]|undefined;
   /**
    * Prior communication that this communication is in response to.
    */
-  inResponseTo?: fhir.IReference[]|undefined;
+  inResponseTo?: fhir.ReferenceArgs[]|undefined;
   /**
    * This element is labeled as a modifier because the status contains the codes aborted and entered-in-error that mark the communication as not currently valid.
    */
   status: EventStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Communication.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
    * This is generally only used for "exception" statuses such as "not-done", "suspended" or "aborted". The reason for performing the event at all is captured in reasonCode, not here.
    */
-  statusReason?: fhir.ICodeableConcept|undefined;
+  statusReason?: fhir.CodeableConceptArgs|undefined;
   /**
    * There may be multiple axes of categorization and one communication may serve multiple purposes.
    */
-  category?: fhir.ICodeableConcept[]|undefined;
+  category?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * Used to prioritize workflow (such as which communication to read first) when the communication is planned or in progress.
    */
   priority?: RequestPriorityValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Communication.priority
-   */
-  _priority?: fhir.IFhirElement|undefined;
-  /**
    * A channel that was used for this communication (e.g. email, fax).
    */
-  medium?: fhir.ICodeableConcept[]|undefined;
+  medium?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * The patient or group that was the focus of this communication.
    */
-  subject?: fhir.IReference|undefined;
+  subject?: fhir.ReferenceArgs|undefined;
   /**
    * Communication.topic.text can be used without any codings.
    */
-  topic?: fhir.ICodeableConcept|undefined;
+  topic?: fhir.CodeableConceptArgs|undefined;
   /**
    * Don't use Communication.about element when a more specific element exists, such as basedOn or reasonReference.
    */
-  about?: fhir.IReference[]|undefined;
+  about?: fhir.ReferenceArgs[]|undefined;
   /**
    * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.
    */
-  encounter?: fhir.IReference|undefined;
+  encounter?: fhir.ReferenceArgs|undefined;
   /**
    * The time when this communication was sent.
    */
-  sent?: string|undefined;
-  /**
-   * Extended properties for primitive element: Communication.sent
-   */
-  _sent?: fhir.IFhirElement|undefined;
+  sent?: fhir.FhirDateTime|string|undefined;
   /**
    * The time when this communication arrived at the destination.
    */
-  received?: string|undefined;
-  /**
-   * Extended properties for primitive element: Communication.received
-   */
-  _received?: fhir.IFhirElement|undefined;
+  received?: fhir.FhirDateTime|string|undefined;
   /**
    * The entity (e.g. person, organization, clinical information system, care team or device) which was the target of the communication. If receipts need to be tracked by an individual, a separate resource instance will need to be created for each recipient.  Multiple recipient communications are intended where either receipts are not tracked (e.g. a mass mail-out) or a receipt is captured in aggregate (all emails confirmed received by a particular time).
    */
-  recipient?: fhir.IReference[]|undefined;
+  recipient?: fhir.ReferenceArgs[]|undefined;
   /**
    * The entity (e.g. person, organization, clinical information system, or device) which was the source of the communication.
    */
-  sender?: fhir.IReference|undefined;
+  sender?: fhir.ReferenceArgs|undefined;
   /**
    * Textual reasons can be captured using reasonCode.text.
    */
-  reasonCode?: fhir.ICodeableConcept[]|undefined;
+  reasonCode?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * Indicates another resource whose existence justifies this communication.
    */
-  reasonReference?: fhir.IReference[]|undefined;
+  reasonReference?: fhir.ReferenceArgs[]|undefined;
   /**
    * Text, attachment(s), or resource(s) that was communicated to the recipient.
    */
-  payload?: fhir.ICommunicationPayload[]|undefined;
+  payload?: fhir.CommunicationPayloadArgs[]|undefined;
   /**
    * Additional notes or commentary about the communication by the sender, receiver or other interested parties.
    */
-  note?: fhir.IAnnotation[]|undefined;
-}
-
-/**
- * Text, attachment(s), or resource(s) that was communicated to the recipient.
- */
-export class CommunicationPayload extends fhir.BackboneElement implements ICommunicationPayload {
-  /**
-   * A communicated content (or for multi-part communications, one portion of the communication).
-   */
-  public contentString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Communication.payload.content[x]
-   */
-  public _contentString?: fhir.FhirElement|undefined;
-  /**
-   * A communicated content (or for multi-part communications, one portion of the communication).
-   */
-  public contentAttachment?: fhir.Attachment|undefined;
-  /**
-   * A communicated content (or for multi-part communications, one portion of the communication).
-   */
-  public contentReference?: fhir.Reference|undefined;
-  /**
-   * Default constructor for CommunicationPayload - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<ICommunicationPayload> = { }) {
-    super(source);
-    if (source['contentString']) { this.contentString = source.contentString; }
-    if (source['_contentString']) { this._contentString = new fhir.FhirElement(source._contentString!); }
-    if (source['contentAttachment']) { this.contentAttachment = new fhir.Attachment(source.contentAttachment!); }
-    if (source['contentReference']) { this.contentReference = new fhir.Reference(source.contentReference!); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_contentString"]) { results.push(...this._contentString.doModelValidation()); }
-    if (this["contentAttachment"]) { results.push(...this.contentAttachment.doModelValidation()); }
-    if (this["contentReference"]) { results.push(...this.contentReference.doModelValidation()); }
-    return results;
-  }
+  note?: fhir.AnnotationArgs[]|undefined;
 }
 
 /**
  * An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency that was notified about a reportable condition.
  */
-export class Communication extends fhir.DomainResource implements ICommunication {
+export class Communication extends fhir.DomainResource {
+  readonly __dataType:string = 'Communication';
   /**
    * Resource Type Name
    */
@@ -214,43 +195,31 @@ export class Communication extends fhir.DomainResource implements ICommunication
   /**
    * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Communication.
    */
-  public instantiatesCanonical?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Communication.instantiatesCanonical
-   */
-  public _instantiatesCanonical?: fhir.FhirElement[]|undefined;
+  public instantiatesCanonical?: fhir.FhirCanonical[]|undefined = [];
   /**
    * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
    */
-  public instantiatesUri?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Communication.instantiatesUri
-   */
-  public _instantiatesUri?: fhir.FhirElement[]|undefined;
+  public instantiatesUri?: fhir.FhirUri[]|undefined = [];
   /**
    * This must point to some sort of a 'Request' resource, such as CarePlan, CommunicationRequest, ServiceRequest, MedicationRequest, etc.
    */
-  public basedOn?: fhir.Reference[]|undefined;
+  public basedOn?: fhir.Reference[]|undefined = [];
   /**
    * Part of this action.
    */
-  public partOf?: fhir.Reference[]|undefined;
+  public partOf?: fhir.Reference[]|undefined = [];
   /**
    * Prior communication that this communication is in response to.
    */
-  public inResponseTo?: fhir.Reference[]|undefined;
+  public inResponseTo?: fhir.Reference[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains the codes aborted and entered-in-error that mark the communication as not currently valid.
    */
   public status: EventStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Communication.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * This is generally only used for "exception" statuses such as "not-done", "suspended" or "aborted". The reason for performing the event at all is captured in reasonCode, not here.
    */
@@ -258,19 +227,15 @@ export class Communication extends fhir.DomainResource implements ICommunication
   /**
    * There may be multiple axes of categorization and one communication may serve multiple purposes.
    */
-  public category?: fhir.CodeableConcept[]|undefined;
+  public category?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Used to prioritize workflow (such as which communication to read first) when the communication is planned or in progress.
    */
   public priority?: RequestPriorityValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Communication.priority
-   */
-  public _priority?: fhir.FhirElement|undefined;
-  /**
    * A channel that was used for this communication (e.g. email, fax).
    */
-  public medium?: fhir.CodeableConcept[]|undefined;
+  public medium?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The patient or group that was the focus of this communication.
    */
@@ -282,7 +247,7 @@ export class Communication extends fhir.DomainResource implements ICommunication
   /**
    * Don't use Communication.about element when a more specific element exists, such as basedOn or reasonReference.
    */
-  public about?: fhir.Reference[]|undefined;
+  public about?: fhir.Reference[]|undefined = [];
   /**
    * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.
    */
@@ -290,23 +255,15 @@ export class Communication extends fhir.DomainResource implements ICommunication
   /**
    * The time when this communication was sent.
    */
-  public sent?: string|undefined;
-  /**
-   * Extended properties for primitive element: Communication.sent
-   */
-  public _sent?: fhir.FhirElement|undefined;
+  public sent?: fhir.FhirDateTime|undefined;
   /**
    * The time when this communication arrived at the destination.
    */
-  public received?: string|undefined;
-  /**
-   * Extended properties for primitive element: Communication.received
-   */
-  public _received?: fhir.FhirElement|undefined;
+  public received?: fhir.FhirDateTime|undefined;
   /**
    * The entity (e.g. person, organization, clinical information system, care team or device) which was the target of the communication. If receipts need to be tracked by an individual, a separate resource instance will need to be created for each recipient.  Multiple recipient communications are intended where either receipts are not tracked (e.g. a mass mail-out) or a receipt is captured in aggregate (all emails confirmed received by a particular time).
    */
-  public recipient?: fhir.Reference[]|undefined;
+  public recipient?: fhir.Reference[]|undefined = [];
   /**
    * The entity (e.g. person, organization, clinical information system, or device) which was the source of the communication.
    */
@@ -314,51 +271,45 @@ export class Communication extends fhir.DomainResource implements ICommunication
   /**
    * Textual reasons can be captured using reasonCode.text.
    */
-  public reasonCode?: fhir.CodeableConcept[]|undefined;
+  public reasonCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Indicates another resource whose existence justifies this communication.
    */
-  public reasonReference?: fhir.Reference[]|undefined;
+  public reasonReference?: fhir.Reference[]|undefined = [];
   /**
    * Text, attachment(s), or resource(s) that was communicated to the recipient.
    */
-  public payload?: fhir.CommunicationPayload[]|undefined;
+  public payload?: fhir.CommunicationPayload[]|undefined = [];
   /**
    * Additional notes or commentary about the communication by the sender, receiver or other interested parties.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Default constructor for Communication - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICommunication> = { }) {
-    super(source);
+  constructor(source:Partial<CommunicationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Communication';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['instantiatesCanonical']) { this.instantiatesCanonical = source.instantiatesCanonical.map((x) => (x)); }
-    if (source['_instantiatesCanonical']) { this._instantiatesCanonical = source._instantiatesCanonical.map((x) => new fhir.FhirElement(x)); }
-    if (source['instantiatesUri']) { this.instantiatesUri = source.instantiatesUri.map((x) => (x)); }
-    if (source['_instantiatesUri']) { this._instantiatesUri = source._instantiatesUri.map((x) => new fhir.FhirElement(x)); }
+    if (source['instantiatesCanonical']) { this.instantiatesCanonical = source.instantiatesCanonical.map((x) => new fhir.FhirCanonical({value: x})); }
+    if (source['instantiatesUri']) { this.instantiatesUri = source.instantiatesUri.map((x) => new fhir.FhirUri({value: x})); }
     if (source['basedOn']) { this.basedOn = source.basedOn.map((x) => new fhir.Reference(x)); }
     if (source['partOf']) { this.partOf = source.partOf.map((x) => new fhir.Reference(x)); }
     if (source['inResponseTo']) { this.inResponseTo = source.inResponseTo.map((x) => new fhir.Reference(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['statusReason']) { this.statusReason = new fhir.CodeableConcept(source.statusReason!); }
+    if (source['statusReason']) { this.statusReason = new fhir.CodeableConcept(source.statusReason); }
     if (source['category']) { this.category = source.category.map((x) => new fhir.CodeableConcept(x)); }
     if (source['priority']) { this.priority = source.priority; }
-    if (source['_priority']) { this._priority = new fhir.FhirElement(source._priority!); }
     if (source['medium']) { this.medium = source.medium.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
-    if (source['topic']) { this.topic = new fhir.CodeableConcept(source.topic!); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
+    if (source['topic']) { this.topic = new fhir.CodeableConcept(source.topic); }
     if (source['about']) { this.about = source.about.map((x) => new fhir.Reference(x)); }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['sent']) { this.sent = source.sent; }
-    if (source['_sent']) { this._sent = new fhir.FhirElement(source._sent!); }
-    if (source['received']) { this.received = source.received; }
-    if (source['_received']) { this._received = new fhir.FhirElement(source._received!); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['sent']) { this.sent = new fhir.FhirDateTime({value: source.sent}); }
+    if (source['received']) { this.received = new fhir.FhirDateTime({value: source.received}); }
     if (source['recipient']) { this.recipient = source.recipient.map((x) => new fhir.Reference(x)); }
-    if (source['sender']) { this.sender = new fhir.Reference(source.sender!); }
+    if (source['sender']) { this.sender = new fhir.Reference(source.sender); }
     if (source['reasonCode']) { this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x)); }
     if (source['reasonReference']) { this.reasonReference = source.reasonReference.map((x) => new fhir.Reference(x)); }
     if (source['payload']) { this.payload = source.payload.map((x) => new fhir.CommunicationPayload(x)); }
@@ -409,33 +360,41 @@ export class Communication extends fhir.DomainResource implements ICommunication
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Communication.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_instantiatesCanonical"]) { this._instantiatesCanonical.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_instantiatesUri"]) { this._instantiatesUri.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["basedOn"]) { this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["partOf"]) { this.partOf.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["inResponseTo"]) { this.inResponseTo.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: Communication.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["statusReason"]) { results.push(...this.statusReason.doModelValidation()); }
-    if (this["category"]) { this.category.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_priority"]) { results.push(...this._priority.doModelValidation()); }
-    if (this["medium"]) { this.medium.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["topic"]) { results.push(...this.topic.doModelValidation()); }
-    if (this["about"]) { this.about.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (this["_sent"]) { results.push(...this._sent.doModelValidation()); }
-    if (this["_received"]) { results.push(...this._received.doModelValidation()); }
-    if (this["recipient"]) { this.recipient.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["sender"]) { results.push(...this.sender.doModelValidation()); }
-    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["payload"]) { this.payload.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Communication' fhir: Communication.resourceType:'Communication'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instantiatesCanonical"]) { this.instantiatesCanonical.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instantiatesUri"]) { this.instantiatesUri.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["basedOn"]) { this.basedOn.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["partOf"]) { this.partOf.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["inResponseTo"]) { this.inResponseTo.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:EventStatusValueSetEnum fhir: Communication.status:code", }));
+    }
+    if (this["statusReason"]) { outcome.issue!.push(...this.statusReason.doModelValidation().issue!); }
+    if (this["category"]) { this.category.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["medium"]) { this.medium.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["topic"]) { outcome.issue!.push(...this.topic.doModelValidation().issue!); }
+    if (this["about"]) { this.about.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (this["sent"]) { outcome.issue!.push(...this.sent.doModelValidation().issue!); }
+    if (this["received"]) { outcome.issue!.push(...this.received.doModelValidation().issue!); }
+    if (this["recipient"]) { this.recipient.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["sender"]) { outcome.issue!.push(...this.sender.doModelValidation().issue!); }
+    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["payload"]) { this.payload.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

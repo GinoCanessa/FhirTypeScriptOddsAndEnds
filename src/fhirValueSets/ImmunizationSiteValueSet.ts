@@ -35,13 +35,3 @@ export type ImmunizationSiteValueSetType = typeof ImmunizationSiteValueSet;
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the body site where the vaccination occurred. This value set is provided as a suggestive example.
  */
-export enum ImmunizationSiteValueSetEnum {
-  /**
-   * LA: left arm
-   */
-  LeftArm = "LA",
-  /**
-   * RA: right arm
-   */
-  RightArm = "RA",
-}

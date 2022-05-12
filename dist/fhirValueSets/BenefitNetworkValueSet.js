@@ -27,15 +27,4 @@ export const BenefitNetworkValueSet = {
 /**
  * This value set includes a smattering of Network type codes.
  */
-export var BenefitNetworkValueSetEnum;
-(function (BenefitNetworkValueSetEnum) {
-    /**
-     * in: Services rendered by a Network provider
-     */
-    BenefitNetworkValueSetEnum["InNetwork"] = "in";
-    /**
-     * out: Services rendered by a provider who is not in the Network
-     */
-    BenefitNetworkValueSetEnum["OutOfNetwork"] = "out";
-})(BenefitNetworkValueSetEnum || (BenefitNetworkValueSetEnum = {}));
 //# sourceMappingURL=BenefitNetworkValueSet.js.map

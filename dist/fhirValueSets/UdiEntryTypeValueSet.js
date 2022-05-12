@@ -59,31 +59,4 @@ export const UdiEntryTypeValueSet = {
 /**
  * Codes to identify how UDI data was entered.
  */
-export var UdiEntryTypeValueSetEnum;
-(function (UdiEntryTypeValueSetEnum) {
-    /**
-     * barcode: a barcodescanner captured the data from the device label.
-     */
-    UdiEntryTypeValueSetEnum["Barcode"] = "barcode";
-    /**
-     * card: The data originated from a patient's implant card and was read by an operator.
-     */
-    UdiEntryTypeValueSetEnum["Card"] = "card";
-    /**
-     * manual: The data was read from the label by a person and manually entered. (e.g.  via a keyboard).
-     */
-    UdiEntryTypeValueSetEnum["Manual"] = "manual";
-    /**
-     * rfid: An RFID chip reader captured the data from the device label.
-     */
-    UdiEntryTypeValueSetEnum["RFID"] = "rfid";
-    /**
-     * self-reported: The data originated from a patient source and was not directly scanned or read from a label or card.
-     */
-    UdiEntryTypeValueSetEnum["SelfReported"] = "self-reported";
-    /**
-     * unknown: The method of data capture has not been determined.
-     */
-    UdiEntryTypeValueSetEnum["Unknown"] = "unknown";
-})(UdiEntryTypeValueSetEnum || (UdiEntryTypeValueSetEnum = {}));
 //# sourceMappingURL=UdiEntryTypeValueSet.js.map

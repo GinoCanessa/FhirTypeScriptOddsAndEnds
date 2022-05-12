@@ -3,185 +3,51 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Condition
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ConditionStageValueSet, ConditionStageValueSetType, ConditionStageValueSetEnum } from '../fhirValueSets/ConditionStageValueSet.js'
-import { ConditionStageTypeValueSet, ConditionStageTypeValueSetType, ConditionStageTypeValueSetEnum } from '../fhirValueSets/ConditionStageTypeValueSet.js'
-import { ManifestationOrSymptomValueSet, ManifestationOrSymptomValueSetType, ManifestationOrSymptomValueSetEnum } from '../fhirValueSets/ManifestationOrSymptomValueSet.js'
-import { ConditionClinicalValueSet, ConditionClinicalValueSetType, ConditionClinicalValueSetEnum } from '../fhirValueSets/ConditionClinicalValueSet.js'
-import { ConditionVerStatusValueSet, ConditionVerStatusValueSetType, ConditionVerStatusValueSetEnum } from '../fhirValueSets/ConditionVerStatusValueSet.js'
-import { ConditionCategoryValueSet, ConditionCategoryValueSetType, ConditionCategoryValueSetEnum } from '../fhirValueSets/ConditionCategoryValueSet.js'
-import { ConditionSeverityValueSet, ConditionSeverityValueSetType, ConditionSeverityValueSetEnum } from '../fhirValueSets/ConditionSeverityValueSet.js'
-import { ConditionCodeValueSet, ConditionCodeValueSetType, ConditionCodeValueSetEnum } from '../fhirValueSets/ConditionCodeValueSet.js'
-import { BodySiteValueSet, BodySiteValueSetType, BodySiteValueSetEnum } from '../fhirValueSets/BodySiteValueSet.js'
-
+import { ConditionStageValueSet, ConditionStageValueSetType,} from '../fhirValueSets/ConditionStageValueSet.js';
+import { ConditionStageValueSetEnum } from '../valueSetEnums.js';
+import { ConditionStageTypeValueSet, ConditionStageTypeValueSetType,} from '../fhirValueSets/ConditionStageTypeValueSet.js';
+import { ConditionStageTypeValueSetEnum } from '../valueSetEnums.js';
+import { ManifestationOrSymptomValueSet, ManifestationOrSymptomValueSetType,} from '../fhirValueSets/ManifestationOrSymptomValueSet.js';
+import { ManifestationOrSymptomValueSetEnum } from '../valueSetEnums.js';
+import { ConditionClinicalValueSet, ConditionClinicalValueSetType,} from '../fhirValueSets/ConditionClinicalValueSet.js';
+import { ConditionClinicalValueSetEnum } from '../valueSetEnums.js';
+import { ConditionVerStatusValueSet, ConditionVerStatusValueSetType,} from '../fhirValueSets/ConditionVerStatusValueSet.js';
+import { ConditionVerStatusValueSetEnum } from '../valueSetEnums.js';
+import { ConditionCategoryValueSet, ConditionCategoryValueSetType,} from '../fhirValueSets/ConditionCategoryValueSet.js';
+import { ConditionCategoryValueSetEnum } from '../valueSetEnums.js';
+import { ConditionSeverityValueSet, ConditionSeverityValueSetType,} from '../fhirValueSets/ConditionSeverityValueSet.js';
+import { ConditionSeverityValueSetEnum } from '../valueSetEnums.js';
+import { ConditionCodeValueSet, ConditionCodeValueSetType,} from '../fhirValueSets/ConditionCodeValueSet.js';
+import { ConditionCodeValueSetEnum } from '../valueSetEnums.js';
+import { BodySiteValueSet, BodySiteValueSetType,} from '../fhirValueSets/BodySiteValueSet.js';
+import { BodySiteValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Clinical stage or grade of a condition. May include formal severity assessments.
+ * Valid arguments for the ConditionStage type.
  */
-export type IConditionStage = fhir.IBackboneElement & { 
+export interface ConditionStageArgs extends fhir.BackboneElementArgs {
   /**
    * A simple summary of the stage such as "Stage 3". The determination of the stage is disease-specific.
    */
-  summary?: fhir.ICodeableConcept|undefined;
+  summary?: fhir.CodeableConceptArgs|undefined;
   /**
    * Reference to a formal record of the evidence on which the staging assessment is based.
    */
-  assessment?: fhir.IReference[]|undefined;
+  assessment?: fhir.ReferenceArgs[]|undefined;
   /**
    * The kind of staging, such as pathological or clinical staging.
    */
-  type?: fhir.ICodeableConcept|undefined;
-}
-
-/**
- * The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.
- */
-export type IConditionEvidence = fhir.IBackboneElement & { 
-  /**
-   * A manifestation or symptom that led to the recording of this condition.
-   */
-  code?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Links to other relevant information, including pathology reports.
-   */
-  detail?: fhir.IReference[]|undefined;
-}
-
-/**
- * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
- */
-export type ICondition = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Condition";
-  /**
-   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.
-   */
-  clinicalStatus?: fhir.ICodeableConcept|undefined;
-  /**
-   * verificationStatus is not required.  For example, when a patient has abdominal pain in the ED, there is not likely going to be a verification status.
-   * The data type is CodeableConcept because verificationStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.
-   */
-  verificationStatus?: fhir.ICodeableConcept|undefined;
-  /**
-   * The categorization is often highly contextual and may appear poorly differentiated or not very useful in other contexts.
-   */
-  category?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Coding of the severity with a terminology is preferred, where possible.
-   */
-  severity?: fhir.ICodeableConcept|undefined;
-  /**
-   * Identification of the condition, problem or diagnosis.
-   */
-  code?: fhir.ICodeableConcept|undefined;
-  /**
-   * Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.
-   */
-  bodySite?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Indicates the patient or group who the condition record is associated with.
-   */
-  subject: fhir.IReference|null;
-  /**
-   * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter. This record indicates the encounter this particular record is associated with.  In the case of a "new" diagnosis reflecting ongoing/revised information about the condition, this might be distinct from the first encounter in which the underlying condition was first "known".
-   */
-  encounter?: fhir.IReference|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the Condition began to occur.
-   */
-  onsetDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Condition.onset[x]
-   */
-  _onsetDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the Condition began to occur.
-   */
-  onsetAge?: fhir.IAge|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the Condition began to occur.
-   */
-  onsetPeriod?: fhir.IPeriod|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the Condition began to occur.
-   */
-  onsetRange?: fhir.IRange|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the Condition began to occur.
-   */
-  onsetString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Condition.onset[x]
-   */
-  _onsetString?: fhir.IFhirElement|undefined;
-  /**
-   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
-   */
-  abatementDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Condition.abatement[x]
-   */
-  _abatementDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
-   */
-  abatementAge?: fhir.IAge|undefined;
-  /**
-   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
-   */
-  abatementPeriod?: fhir.IPeriod|undefined;
-  /**
-   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
-   */
-  abatementRange?: fhir.IRange|undefined;
-  /**
-   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
-   */
-  abatementString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Condition.abatement[x]
-   */
-  _abatementString?: fhir.IFhirElement|undefined;
-  /**
-   * The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date.
-   */
-  recordedDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Condition.recordedDate
-   */
-  _recordedDate?: fhir.IFhirElement|undefined;
-  /**
-   * Individual who recorded the record and takes responsibility for its content.
-   */
-  recorder?: fhir.IReference|undefined;
-  /**
-   * Individual who is making the condition statement.
-   */
-  asserter?: fhir.IReference|undefined;
-  /**
-   * Clinical stage or grade of a condition. May include formal severity assessments.
-   */
-  stage?: fhir.IConditionStage[]|undefined;
-  /**
-   * The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.
-   */
-  evidence?: fhir.IConditionEvidence[]|undefined;
-  /**
-   * Additional information about the Condition. This is a general notes/comments entry  for description of the Condition, its diagnosis and prognosis.
-   */
-  note?: fhir.IAnnotation[]|undefined;
+  type?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * Clinical stage or grade of a condition. May include formal severity assessments.
  */
-export class ConditionStage extends fhir.BackboneElement implements IConditionStage {
+export class ConditionStage extends fhir.BackboneElement {
+  readonly __dataType:string = 'ConditionStage';
   /**
    * A simple summary of the stage such as "Stage 3". The determination of the stage is disease-specific.
    */
@@ -189,7 +55,7 @@ export class ConditionStage extends fhir.BackboneElement implements IConditionSt
   /**
    * Reference to a formal record of the evidence on which the staging assessment is based.
    */
-  public assessment?: fhir.Reference[]|undefined;
+  public assessment?: fhir.Reference[]|undefined = [];
   /**
    * The kind of staging, such as pathological or clinical staging.
    */
@@ -197,11 +63,11 @@ export class ConditionStage extends fhir.BackboneElement implements IConditionSt
   /**
    * Default constructor for ConditionStage - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IConditionStage> = { }) {
-    super(source);
-    if (source['summary']) { this.summary = new fhir.CodeableConcept(source.summary!); }
+  constructor(source:Partial<ConditionStageArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['summary']) { this.summary = new fhir.CodeableConcept(source.summary); }
     if (source['assessment']) { this.assessment = source.assessment.map((x) => new fhir.Reference(x)); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
   }
   /**
    * Example-bound Value Set for summary
@@ -218,32 +84,52 @@ export class ConditionStage extends fhir.BackboneElement implements IConditionSt
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["summary"]) { results.push(...this.summary.doModelValidation()); }
-    if (this["assessment"]) { this.assessment.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["summary"]) { outcome.issue!.push(...this.summary.doModelValidation().issue!); }
+    if (this["assessment"]) { this.assessment.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ConditionEvidence type.
+ */
+export interface ConditionEvidenceArgs extends fhir.BackboneElementArgs {
+  /**
+   * A manifestation or symptom that led to the recording of this condition.
+   */
+  code?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Links to other relevant information, including pathology reports.
+   */
+  detail?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.
  */
-export class ConditionEvidence extends fhir.BackboneElement implements IConditionEvidence {
+export class ConditionEvidence extends fhir.BackboneElement {
+  readonly __dataType:string = 'ConditionEvidence';
   /**
    * A manifestation or symptom that led to the recording of this condition.
    */
-  public code?: fhir.CodeableConcept[]|undefined;
+  public code?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Links to other relevant information, including pathology reports.
    */
-  public detail?: fhir.Reference[]|undefined;
+  public detail?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for ConditionEvidence - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IConditionEvidence> = { }) {
-    super(source);
+  constructor(source:Partial<ConditionEvidenceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['code']) { this.code = source.code.map((x) => new fhir.CodeableConcept(x)); }
     if (source['detail']) { this.detail = source.detail.map((x) => new fhir.Reference(x)); }
   }
@@ -256,18 +142,143 @@ export class ConditionEvidence extends fhir.BackboneElement implements IConditio
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["code"]) { this.code.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["detail"]) { this.detail.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["code"]) { this.code.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["detail"]) { this.detail.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Condition type.
+ */
+export interface ConditionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Condition"|undefined;
+  /**
+   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.
+   */
+  clinicalStatus?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * verificationStatus is not required.  For example, when a patient has abdominal pain in the ED, there is not likely going to be a verification status.
+   * The data type is CodeableConcept because verificationStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.
+   */
+  verificationStatus?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The categorization is often highly contextual and may appear poorly differentiated or not very useful in other contexts.
+   */
+  category?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Coding of the severity with a terminology is preferred, where possible.
+   */
+  severity?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Identification of the condition, problem or diagnosis.
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.
+   */
+  bodySite?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Indicates the patient or group who the condition record is associated with.
+   */
+  subject: fhir.ReferenceArgs|null;
+  /**
+   * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter. This record indicates the encounter this particular record is associated with.  In the case of a "new" diagnosis reflecting ongoing/revised information about the condition, this might be distinct from the first encounter in which the underlying condition was first "known".
+   */
+  encounter?: fhir.ReferenceArgs|undefined;
+  /**
+   * Age is generally used when the patient reports an age at which the Condition began to occur.
+   */
+  onset?: fhir.FhirDateTime|fhir.Age|fhir.Period|fhir.Range|fhir.FhirString|undefined;
+  /**
+   * Age is generally used when the patient reports an age at which the Condition began to occur.
+   */
+  onsetDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Age is generally used when the patient reports an age at which the Condition began to occur.
+   */
+  onsetAge?: fhir.AgeArgs|undefined;
+  /**
+   * Age is generally used when the patient reports an age at which the Condition began to occur.
+   */
+  onsetPeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * Age is generally used when the patient reports an age at which the Condition began to occur.
+   */
+  onsetRange?: fhir.RangeArgs|undefined;
+  /**
+   * Age is generally used when the patient reports an age at which the Condition began to occur.
+   */
+  onsetString?: fhir.FhirString|string|undefined;
+  /**
+   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
+   */
+  abatement?: fhir.FhirDateTime|fhir.Age|fhir.Period|fhir.Range|fhir.FhirString|undefined;
+  /**
+   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
+   */
+  abatementDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
+   */
+  abatementAge?: fhir.AgeArgs|undefined;
+  /**
+   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
+   */
+  abatementPeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
+   */
+  abatementRange?: fhir.RangeArgs|undefined;
+  /**
+   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
+   */
+  abatementString?: fhir.FhirString|string|undefined;
+  /**
+   * The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date.
+   */
+  recordedDate?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Individual who recorded the record and takes responsibility for its content.
+   */
+  recorder?: fhir.ReferenceArgs|undefined;
+  /**
+   * Individual who is making the condition statement.
+   */
+  asserter?: fhir.ReferenceArgs|undefined;
+  /**
+   * Clinical stage or grade of a condition. May include formal severity assessments.
+   */
+  stage?: fhir.ConditionStageArgs[]|undefined;
+  /**
+   * The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.
+   */
+  evidence?: fhir.ConditionEvidenceArgs[]|undefined;
+  /**
+   * Additional information about the Condition. This is a general notes/comments entry  for description of the Condition, its diagnosis and prognosis.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
 }
 
 /**
  * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
  */
-export class Condition extends fhir.DomainResource implements ICondition {
+export class Condition extends fhir.DomainResource {
+  readonly __dataType:string = 'Condition';
   /**
    * Resource Type Name
    */
@@ -275,7 +286,7 @@ export class Condition extends fhir.DomainResource implements ICondition {
   /**
    * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.
    */
@@ -288,7 +299,7 @@ export class Condition extends fhir.DomainResource implements ICondition {
   /**
    * The categorization is often highly contextual and may appear poorly differentiated or not very useful in other contexts.
    */
-  public category?: fhir.CodeableConcept[]|undefined;
+  public category?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Coding of the severity with a terminology is preferred, where possible.
    */
@@ -300,7 +311,7 @@ export class Condition extends fhir.DomainResource implements ICondition {
   /**
    * Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.
    */
-  public bodySite?: fhir.CodeableConcept[]|undefined;
+  public bodySite?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Indicates the patient or group who the condition record is associated with.
    */
@@ -312,67 +323,17 @@ export class Condition extends fhir.DomainResource implements ICondition {
   /**
    * Age is generally used when the patient reports an age at which the Condition began to occur.
    */
-  public onsetDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Condition.onset[x]
-   */
-  public _onsetDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the Condition began to occur.
-   */
-  public onsetAge?: fhir.Age|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the Condition began to occur.
-   */
-  public onsetPeriod?: fhir.Period|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the Condition began to occur.
-   */
-  public onsetRange?: fhir.Range|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the Condition began to occur.
-   */
-  public onsetString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Condition.onset[x]
-   */
-  public _onsetString?: fhir.FhirElement|undefined;
+  public onset?: (fhir.FhirDateTime|fhir.Age|fhir.Period|fhir.Range|fhir.FhirString)|undefined;
+  readonly __onsetIsChoice:true = true;
   /**
    * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
    */
-  public abatementDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Condition.abatement[x]
-   */
-  public _abatementDateTime?: fhir.FhirElement|undefined;
-  /**
-   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
-   */
-  public abatementAge?: fhir.Age|undefined;
-  /**
-   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
-   */
-  public abatementPeriod?: fhir.Period|undefined;
-  /**
-   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
-   */
-  public abatementRange?: fhir.Range|undefined;
-  /**
-   * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
-   */
-  public abatementString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Condition.abatement[x]
-   */
-  public _abatementString?: fhir.FhirElement|undefined;
+  public abatement?: (fhir.FhirDateTime|fhir.Age|fhir.Period|fhir.Range|fhir.FhirString)|undefined;
+  readonly __abatementIsChoice:true = true;
   /**
    * The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date.
    */
-  public recordedDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Condition.recordedDate
-   */
-  public _recordedDate?: fhir.FhirElement|undefined;
+  public recordedDate?: fhir.FhirDateTime|undefined;
   /**
    * Individual who recorded the record and takes responsibility for its content.
    */
@@ -384,49 +345,46 @@ export class Condition extends fhir.DomainResource implements ICondition {
   /**
    * Clinical stage or grade of a condition. May include formal severity assessments.
    */
-  public stage?: fhir.ConditionStage[]|undefined;
+  public stage?: fhir.ConditionStage[]|undefined = [];
   /**
    * The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.
    */
-  public evidence?: fhir.ConditionEvidence[]|undefined;
+  public evidence?: fhir.ConditionEvidence[]|undefined = [];
   /**
    * Additional information about the Condition. This is a general notes/comments entry  for description of the Condition, its diagnosis and prognosis.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Default constructor for Condition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ICondition> = { }) {
-    super(source);
+  constructor(source:Partial<ConditionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Condition';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['clinicalStatus']) { this.clinicalStatus = new fhir.CodeableConcept(source.clinicalStatus!); }
-    if (source['verificationStatus']) { this.verificationStatus = new fhir.CodeableConcept(source.verificationStatus!); }
+    if (source['clinicalStatus']) { this.clinicalStatus = new fhir.CodeableConcept(source.clinicalStatus); }
+    if (source['verificationStatus']) { this.verificationStatus = new fhir.CodeableConcept(source.verificationStatus); }
     if (source['category']) { this.category = source.category.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['severity']) { this.severity = new fhir.CodeableConcept(source.severity!); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+    if (source['severity']) { this.severity = new fhir.CodeableConcept(source.severity); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
     if (source['bodySite']) { this.bodySite = source.bodySite.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
     else { this.subject = null; }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['onsetDateTime']) { this.onsetDateTime = source.onsetDateTime; }
-    if (source['_onsetDateTime']) { this._onsetDateTime = new fhir.FhirElement(source._onsetDateTime!); }
-    if (source['onsetAge']) { this.onsetAge = new fhir.Age(source.onsetAge!); }
-    if (source['onsetPeriod']) { this.onsetPeriod = new fhir.Period(source.onsetPeriod!); }
-    if (source['onsetRange']) { this.onsetRange = new fhir.Range(source.onsetRange!); }
-    if (source['onsetString']) { this.onsetString = source.onsetString; }
-    if (source['_onsetString']) { this._onsetString = new fhir.FhirElement(source._onsetString!); }
-    if (source['abatementDateTime']) { this.abatementDateTime = source.abatementDateTime; }
-    if (source['_abatementDateTime']) { this._abatementDateTime = new fhir.FhirElement(source._abatementDateTime!); }
-    if (source['abatementAge']) { this.abatementAge = new fhir.Age(source.abatementAge!); }
-    if (source['abatementPeriod']) { this.abatementPeriod = new fhir.Period(source.abatementPeriod!); }
-    if (source['abatementRange']) { this.abatementRange = new fhir.Range(source.abatementRange!); }
-    if (source['abatementString']) { this.abatementString = source.abatementString; }
-    if (source['_abatementString']) { this._abatementString = new fhir.FhirElement(source._abatementString!); }
-    if (source['recordedDate']) { this.recordedDate = source.recordedDate; }
-    if (source['_recordedDate']) { this._recordedDate = new fhir.FhirElement(source._recordedDate!); }
-    if (source['recorder']) { this.recorder = new fhir.Reference(source.recorder!); }
-    if (source['asserter']) { this.asserter = new fhir.Reference(source.asserter!); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['onset']) { this.onset = source.onset; }
+    else if (source['onsetDateTime']) { this.onset = new fhir.FhirDateTime({value: source.onsetDateTime}); }
+    else if (source['onsetAge']) { this.onset = new fhir.Age(source.onsetAge); }
+    else if (source['onsetPeriod']) { this.onset = new fhir.Period(source.onsetPeriod); }
+    else if (source['onsetRange']) { this.onset = new fhir.Range(source.onsetRange); }
+    else if (source['onsetString']) { this.onset = new fhir.FhirString({value: source.onsetString}); }
+    if (source['abatement']) { this.abatement = source.abatement; }
+    else if (source['abatementDateTime']) { this.abatement = new fhir.FhirDateTime({value: source.abatementDateTime}); }
+    else if (source['abatementAge']) { this.abatement = new fhir.Age(source.abatementAge); }
+    else if (source['abatementPeriod']) { this.abatement = new fhir.Period(source.abatementPeriod); }
+    else if (source['abatementRange']) { this.abatement = new fhir.Range(source.abatementRange); }
+    else if (source['abatementString']) { this.abatement = new fhir.FhirString({value: source.abatementString}); }
+    if (source['recordedDate']) { this.recordedDate = new fhir.FhirDateTime({value: source.recordedDate}); }
+    if (source['recorder']) { this.recorder = new fhir.Reference(source.recorder); }
+    if (source['asserter']) { this.asserter = new fhir.Reference(source.asserter); }
     if (source['stage']) { this.stage = source.stage.map((x) => new fhir.ConditionStage(x)); }
     if (source['evidence']) { this.evidence = source.evidence.map((x) => new fhir.ConditionEvidence(x)); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
@@ -470,35 +428,35 @@ export class Condition extends fhir.DomainResource implements ICondition {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Condition.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["clinicalStatus"]) { results.push(...this.clinicalStatus.doModelValidation()); }
-    if (this["verificationStatus"]) { results.push(...this.verificationStatus.doModelValidation()); }
-    if (this["category"]) { this.category.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["severity"]) { results.push(...this.severity.doModelValidation()); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["bodySite"]) { this.bodySite.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["subject"]) { results.push(["subject",'Missing required element: Condition.subject']); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (this["_onsetDateTime"]) { results.push(...this._onsetDateTime.doModelValidation()); }
-    if (this["onsetAge"]) { results.push(...this.onsetAge.doModelValidation()); }
-    if (this["onsetPeriod"]) { results.push(...this.onsetPeriod.doModelValidation()); }
-    if (this["onsetRange"]) { results.push(...this.onsetRange.doModelValidation()); }
-    if (this["_onsetString"]) { results.push(...this._onsetString.doModelValidation()); }
-    if (this["_abatementDateTime"]) { results.push(...this._abatementDateTime.doModelValidation()); }
-    if (this["abatementAge"]) { results.push(...this.abatementAge.doModelValidation()); }
-    if (this["abatementPeriod"]) { results.push(...this.abatementPeriod.doModelValidation()); }
-    if (this["abatementRange"]) { results.push(...this.abatementRange.doModelValidation()); }
-    if (this["_abatementString"]) { results.push(...this._abatementString.doModelValidation()); }
-    if (this["_recordedDate"]) { results.push(...this._recordedDate.doModelValidation()); }
-    if (this["recorder"]) { results.push(...this.recorder.doModelValidation()); }
-    if (this["asserter"]) { results.push(...this.asserter.doModelValidation()); }
-    if (this["stage"]) { this.stage.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["evidence"]) { this.evidence.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Condition' fhir: Condition.resourceType:'Condition'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["clinicalStatus"]) { outcome.issue!.push(...this.clinicalStatus.doModelValidation().issue!); }
+    if (this["verificationStatus"]) { outcome.issue!.push(...this.verificationStatus.doModelValidation().issue!); }
+    if (this["category"]) { this.category.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["severity"]) { outcome.issue!.push(...this.severity.doModelValidation().issue!); }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["bodySite"]) { this.bodySite.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['subject']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property subject:fhir.Reference fhir: Condition.subject:Reference", }));
+    }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (this["recordedDate"]) { outcome.issue!.push(...this.recordedDate.doModelValidation().issue!); }
+    if (this["recorder"]) { outcome.issue!.push(...this.recorder.doModelValidation().issue!); }
+    if (this["asserter"]) { outcome.issue!.push(...this.asserter.doModelValidation().issue!); }
+    if (this["stage"]) { this.stage.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["evidence"]) { this.evidence.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

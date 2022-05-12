@@ -19,11 +19,4 @@ export const V20092ValueSet = {
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0092 ( RE-ADMISSION INDICATOR)
  */
-export var V20092ValueSetEnum;
-(function (V20092ValueSetEnum) {
-    /**
-     * Code: R
-     */
-    V20092ValueSetEnum["ReAdmission"] = "R";
-})(V20092ValueSetEnum || (V20092ValueSetEnum = {}));
 //# sourceMappingURL=V20092ValueSet.js.map

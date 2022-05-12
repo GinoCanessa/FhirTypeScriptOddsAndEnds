@@ -59,31 +59,4 @@ export const ConsentStateCodesValueSet = {
 /**
  * Indicates the state of the consent.
  */
-export var ConsentStateCodesValueSetEnum;
-(function (ConsentStateCodesValueSetEnum) {
-    /**
-     * active: The consent is to be followed and enforced.
-     */
-    ConsentStateCodesValueSetEnum["Active"] = "active";
-    /**
-     * draft: The consent is in development or awaiting use but is not yet intended to be acted upon.
-     */
-    ConsentStateCodesValueSetEnum["Pending"] = "draft";
-    /**
-     * entered-in-error: The consent was created wrongly (e.g. wrong patient) and should be ignored.
-     */
-    ConsentStateCodesValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * inactive: The consent is terminated or replaced.
-     */
-    ConsentStateCodesValueSetEnum["Inactive"] = "inactive";
-    /**
-     * proposed: The consent has been proposed but not yet agreed to by all parties. The negotiation stage.
-     */
-    ConsentStateCodesValueSetEnum["Proposed"] = "proposed";
-    /**
-     * rejected: The consent has been rejected by one or more of the parties.
-     */
-    ConsentStateCodesValueSetEnum["Rejected"] = "rejected";
-})(ConsentStateCodesValueSetEnum || (ConsentStateCodesValueSetEnum = {}));
 //# sourceMappingURL=ConsentStateCodesValueSet.js.map

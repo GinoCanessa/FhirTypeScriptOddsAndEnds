@@ -1,146 +1,83 @@
 import * as fhir from '../fhir.js';
 import { LanguagesValueSetType } from '../fhirValueSets/LanguagesValueSet.js';
 /**
- * For referring to data content defined in other formats.
+ * Valid arguments for the Attachment type.
  */
-export declare type IAttachment = fhir.IFhirElement & {
+export interface AttachmentArgs extends fhir.FhirElementArgs {
     /**
      * Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate.
      */
-    contentType?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.contentType
-     */
-    _contentType?: fhir.IFhirElement | undefined;
+    contentType?: fhir.FhirCode | string | undefined;
     /**
      * The human language of the content. The value can be any valid value according to BCP 47.
      */
-    language?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.language
-     */
-    _language?: fhir.IFhirElement | undefined;
+    language?: fhir.FhirCode | string | undefined;
     /**
      * The base64-encoded data SHALL be expressed in the same character set as the base resource XML or JSON.
      */
-    data?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.data
-     */
-    _data?: fhir.IFhirElement | undefined;
+    data?: fhir.FhirBase64Binary | string | undefined;
     /**
      * If both data and url are provided, the url SHALL point to the same content as the data contains. Urls may be relative references or may reference transient locations such as a wrapping envelope using cid: though this has ramifications for using signatures. Relative URLs are interpreted relative to the service url, like a resource reference, rather than relative to the resource itself. If a URL is provided, it SHALL resolve to actual data.
      */
-    url?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.url
-     */
-    _url?: fhir.IFhirElement | undefined;
+    url?: fhir.FhirUrl | string | undefined;
     /**
      * The number of bytes is redundant if the data is provided as a base64binary, but is useful if the data is provided as a url reference.
      */
-    size?: number | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.size
-     */
-    _size?: fhir.IFhirElement | undefined;
+    size?: fhir.FhirUnsignedInt | number | undefined;
     /**
      * The hash is calculated on the data prior to base64 encoding, if the data is based64 encoded. The hash is not intended to support digital signatures. Where protection against malicious threats a digital signature should be considered, see [Provenance.signature](provenance-definitions.html#Provenance.signature) for mechanism to protect a resource with a digital signature.
      */
-    hash?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.hash
-     */
-    _hash?: fhir.IFhirElement | undefined;
+    hash?: fhir.FhirBase64Binary | string | undefined;
     /**
      * A label or set of text to display in place of the data.
      */
-    title?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.title
-     */
-    _title?: fhir.IFhirElement | undefined;
+    title?: fhir.FhirString | string | undefined;
     /**
      * The date that the attachment was first created.
      */
-    creation?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.creation
-     */
-    _creation?: fhir.IFhirElement | undefined;
-};
+    creation?: fhir.FhirDateTime | string | undefined;
+}
 /**
  * For referring to data content defined in other formats.
  */
-export declare class Attachment extends fhir.FhirElement implements IAttachment {
+export declare class Attachment extends fhir.FhirElement {
+    readonly __dataType: string;
     /**
      * Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate.
      */
-    contentType?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.contentType
-     */
-    _contentType?: fhir.FhirElement | undefined;
+    contentType?: fhir.FhirCode | undefined;
     /**
      * The human language of the content. The value can be any valid value according to BCP 47.
      */
-    language?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.language
-     */
-    _language?: fhir.FhirElement | undefined;
+    language?: fhir.FhirCode | undefined;
     /**
      * The base64-encoded data SHALL be expressed in the same character set as the base resource XML or JSON.
      */
-    data?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.data
-     */
-    _data?: fhir.FhirElement | undefined;
+    data?: fhir.FhirBase64Binary | undefined;
     /**
      * If both data and url are provided, the url SHALL point to the same content as the data contains. Urls may be relative references or may reference transient locations such as a wrapping envelope using cid: though this has ramifications for using signatures. Relative URLs are interpreted relative to the service url, like a resource reference, rather than relative to the resource itself. If a URL is provided, it SHALL resolve to actual data.
      */
-    url?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.url
-     */
-    _url?: fhir.FhirElement | undefined;
+    url?: fhir.FhirUrl | undefined;
     /**
      * The number of bytes is redundant if the data is provided as a base64binary, but is useful if the data is provided as a url reference.
      */
-    size?: number | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.size
-     */
-    _size?: fhir.FhirElement | undefined;
+    size?: fhir.FhirUnsignedInt | undefined;
     /**
      * The hash is calculated on the data prior to base64 encoding, if the data is based64 encoded. The hash is not intended to support digital signatures. Where protection against malicious threats a digital signature should be considered, see [Provenance.signature](provenance-definitions.html#Provenance.signature) for mechanism to protect a resource with a digital signature.
      */
-    hash?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.hash
-     */
-    _hash?: fhir.FhirElement | undefined;
+    hash?: fhir.FhirBase64Binary | undefined;
     /**
      * A label or set of text to display in place of the data.
      */
-    title?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.title
-     */
-    _title?: fhir.FhirElement | undefined;
+    title?: fhir.FhirString | undefined;
     /**
      * The date that the attachment was first created.
      */
-    creation?: string | undefined;
-    /**
-     * Extended properties for primitive element: Attachment.creation
-     */
-    _creation?: fhir.FhirElement | undefined;
+    creation?: fhir.FhirDateTime | undefined;
     /**
      * Default constructor for Attachment - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IAttachment>);
+    constructor(source?: Partial<AttachmentArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Preferred-bound Value Set for language
      */
@@ -148,6 +85,10 @@ export declare class Attachment extends fhir.FhirElement implements IAttachment 
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Attachment.d.ts.map

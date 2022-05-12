@@ -3,67 +3,50 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Reference
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ResourceTypesValueSet, ResourceTypesValueSetType, ResourceTypesValueSetEnum } from '../fhirValueSets/ResourceTypesValueSet.js'
-
+import { ResourceTypesValueSet, ResourceTypesValueSetType,} from '../fhirValueSets/ResourceTypesValueSet.js';
+import { ResourceTypesValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A reference from one resource to another.
+ * Valid arguments for the Reference type.
  */
-export type IReference = fhir.IFhirElement & { 
+export interface ReferenceArgs extends fhir.FhirElementArgs {
   /**
    * Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure "/[type]/[id]" then it should be assumed that the reference is to a FHIR RESTful server.
    */
-  reference?: string|undefined;
-  /**
-   * Extended properties for primitive element: Reference.reference
-   */
-  _reference?: fhir.IFhirElement|undefined;
+  reference?: fhir.FhirString|string|undefined;
   /**
    * This element is used to indicate the type of  the target of the reference. This may be used which ever of the other elements are populated (or not). In some cases, the type of the target may be determined by inspection of the reference (e.g. a RESTful URL) or by resolving the target of the reference; if both the type and a reference is provided, the reference SHALL resolve to a resource of the same type as that specified.
    */
-  type?: string|undefined;
-  /**
-   * Extended properties for primitive element: Reference.type
-   */
-  _type?: fhir.IFhirElement|undefined;
+  type?: fhir.FhirUri|string|undefined;
   /**
    * When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. 
    * When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference
    * Applications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.
    * Reference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any).
    */
-  identifier?: fhir.IIdentifier|undefined;
+  identifier?: fhir.IdentifierArgs|undefined;
   /**
    * This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.
    */
-  display?: string|undefined;
-  /**
-   * Extended properties for primitive element: Reference.display
-   */
-  _display?: fhir.IFhirElement|undefined;
+  display?: fhir.FhirString|string|undefined;
 }
 
 /**
  * A reference from one resource to another.
  */
-export class Reference extends fhir.FhirElement implements IReference {
+export class Reference extends fhir.FhirElement {
+  readonly __dataType:string = 'Reference';
   /**
    * Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure "/[type]/[id]" then it should be assumed that the reference is to a FHIR RESTful server.
    */
-  public reference?: string|undefined;
-  /**
-   * Extended properties for primitive element: Reference.reference
-   */
-  public _reference?: fhir.FhirElement|undefined;
+  public reference?: fhir.FhirString|undefined;
   /**
    * This element is used to indicate the type of  the target of the reference. This may be used which ever of the other elements are populated (or not). In some cases, the type of the target may be determined by inspection of the reference (e.g. a RESTful URL) or by resolving the target of the reference; if both the type and a reference is provided, the reference SHALL resolve to a resource of the same type as that specified.
    */
-  public type?: string|undefined;
-  /**
-   * Extended properties for primitive element: Reference.type
-   */
-  public _type?: fhir.FhirElement|undefined;
+  public type?: fhir.FhirUri|undefined;
   /**
    * When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. 
    * When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference
@@ -74,23 +57,16 @@ export class Reference extends fhir.FhirElement implements IReference {
   /**
    * This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.
    */
-  public display?: string|undefined;
-  /**
-   * Extended properties for primitive element: Reference.display
-   */
-  public _display?: fhir.FhirElement|undefined;
+  public display?: fhir.FhirString|undefined;
   /**
    * Default constructor for Reference - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IReference> = { }) {
-    super(source);
-    if (source['reference']) { this.reference = source.reference; }
-    if (source['_reference']) { this._reference = new fhir.FhirElement(source._reference!); }
-    if (source['type']) { this.type = source.type; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
-    if (source['display']) { this.display = source.display; }
-    if (source['_display']) { this._display = new fhir.FhirElement(source._display!); }
+  constructor(source:Partial<ReferenceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['reference']) { this.reference = new fhir.FhirString({value: source.reference}); }
+    if (source['type']) { this.type = new fhir.FhirUri({value: source.type}); }
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
+    if (source['display']) { this.display = new fhir.FhirString({value: source.display}); }
   }
   /**
    * Extensible-bound Value Set for type
@@ -101,19 +77,25 @@ export class Reference extends fhir.FhirElement implements IReference {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_reference"]) { results.push(...this._reference.doModelValidation()); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (this["_display"]) { results.push(...this._display.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["reference"]) { outcome.issue!.push(...this.reference.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (this["display"]) { outcome.issue!.push(...this.display.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 
   /**
    * Create a reference from an existing resource
    */
-   static fromResource(source:fhir.IResource, baseUrl:string=''):Reference {
+   static fromResource(source:fhir.FhirResource, baseUrl:string=''):Reference {
     if (baseUrl.endsWith('/')) {
       return new Reference({
         type: source.resourceType ?? undefined,

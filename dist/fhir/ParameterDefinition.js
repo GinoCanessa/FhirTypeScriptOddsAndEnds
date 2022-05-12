@@ -3,8 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: ParameterDefinition
 import * as fhir from '../fhir.js';
-import { OperationParameterUseValueSet } from '../fhirValueSets/OperationParameterUseValueSet.js';
-import { AllTypesValueSet } from '../fhirValueSets/AllTypesValueSet.js';
+import { OperationParameterUseValueSet, } from '../fhirValueSets/OperationParameterUseValueSet.js';
+import { AllTypesValueSet, } from '../fhirValueSets/AllTypesValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
  */
@@ -12,13 +14,11 @@ export class ParameterDefinition extends fhir.FhirElement {
     /**
      * Default constructor for ParameterDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ParameterDefinition';
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirCode({ value: source.name });
         }
         if (source['use']) {
             this.use = source.use;
@@ -26,41 +26,23 @@ export class ParameterDefinition extends fhir.FhirElement {
         else {
             this.use = null;
         }
-        if (source['_use']) {
-            this._use = new fhir.FhirElement(source._use);
-        }
         if (source['min']) {
-            this.min = source.min;
-        }
-        if (source['_min']) {
-            this._min = new fhir.FhirElement(source._min);
+            this.min = new fhir.FhirInteger({ value: source.min });
         }
         if (source['max']) {
-            this.max = source.max;
-        }
-        if (source['_max']) {
-            this._max = new fhir.FhirElement(source._max);
+            this.max = new fhir.FhirString({ value: source.max });
         }
         if (source['documentation']) {
-            this.documentation = source.documentation;
-        }
-        if (source['_documentation']) {
-            this._documentation = new fhir.FhirElement(source._documentation);
+            this.documentation = new fhir.FhirString({ value: source.documentation });
         }
         if (source['type']) {
-            this.type = source.type;
+            this.type = new fhir.FhirCode({ value: source.type });
         }
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['profile']) {
-            this.profile = source.profile;
-        }
-        if (source['_profile']) {
-            this._profile = new fhir.FhirElement(source._profile);
+            this.profile = new fhir.FhirCanonical({ value: source.profile });
         }
     }
     /**
@@ -79,35 +61,38 @@ export class ParameterDefinition extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (!this["use"]) {
-            results.push(["use", 'Missing required element: ParameterDefinition.use']);
+        if (!this['use']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property use:OperationParameterUseValueSetEnum fhir: ParameterDefinition.use:code", }));
         }
-        if (this["_use"]) {
-            results.push(...this._use.doModelValidation());
+        if (this["min"]) {
+            outcome.issue.push(...this.min.doModelValidation().issue);
         }
-        if (this["_min"]) {
-            results.push(...this._min.doModelValidation());
+        if (this["max"]) {
+            outcome.issue.push(...this.max.doModelValidation().issue);
         }
-        if (this["_max"]) {
-            results.push(...this._max.doModelValidation());
+        if (this["documentation"]) {
+            outcome.issue.push(...this.documentation.doModelValidation().issue);
         }
-        if (this["_documentation"]) {
-            results.push(...this._documentation.doModelValidation());
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:fhir.FhirCode fhir: ParameterDefinition.type:code", }));
         }
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: ParameterDefinition.type']);
+        if (this["type"]) {
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (this["profile"]) {
+            outcome.issue.push(...this.profile.doModelValidation().issue);
         }
-        if (this["_profile"]) {
-            results.push(...this._profile.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ParameterDefinition.js.map

@@ -3,356 +3,125 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: DeviceDefinition
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { DeviceNametypeValueSet, DeviceNametypeValueSetType, DeviceNametypeValueSetEnum } from '../fhirValueSets/DeviceNametypeValueSet.js'
-import { DeviceKindValueSet, DeviceKindValueSetType, DeviceKindValueSetEnum } from '../fhirValueSets/DeviceKindValueSet.js'
+import { DeviceNametypeValueSet, DeviceNametypeValueSetType,} from '../fhirValueSets/DeviceNametypeValueSet.js';
+import { DeviceNametypeValueSetEnum } from '../valueSetEnums.js';
+import { DeviceKindValueSet, DeviceKindValueSetType,} from '../fhirValueSets/DeviceKindValueSet.js';
+import { DeviceKindValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
+/**
+ * Valid arguments for the DeviceDefinitionUdiDeviceIdentifier type.
+ */
+export interface DeviceDefinitionUdiDeviceIdentifierArgs extends fhir.BackboneElementArgs {
+  /**
+   * The identifier that is to be associated with every Device that references this DeviceDefintiion for the issuer and jurisdication porvided in the DeviceDefinition.udiDeviceIdentifier.
+   */
+  deviceIdentifier: fhir.FhirString|string|undefined;
+  /**
+   * The organization that assigns the identifier algorithm.
+   */
+  issuer: fhir.FhirUri|string|undefined;
+  /**
+   * The jurisdiction to which the deviceIdentifier applies.
+   */
+  jurisdiction: fhir.FhirUri|string|undefined;
+}
 
 /**
  * Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
  */
-export type IDeviceDefinitionUdiDeviceIdentifier = fhir.IBackboneElement & { 
+export class DeviceDefinitionUdiDeviceIdentifier extends fhir.BackboneElement {
+  readonly __dataType:string = 'DeviceDefinitionUdiDeviceIdentifier';
   /**
    * The identifier that is to be associated with every Device that references this DeviceDefintiion for the issuer and jurisdication porvided in the DeviceDefinition.udiDeviceIdentifier.
    */
-  deviceIdentifier: string|null;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.udiDeviceIdentifier.deviceIdentifier
-   */
-  _deviceIdentifier?: fhir.IFhirElement|undefined;
+  public deviceIdentifier: fhir.FhirString|null;
   /**
    * The organization that assigns the identifier algorithm.
    */
-  issuer: string|null;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.udiDeviceIdentifier.issuer
-   */
-  _issuer?: fhir.IFhirElement|undefined;
+  public issuer: fhir.FhirUri|null;
   /**
    * The jurisdiction to which the deviceIdentifier applies.
    */
-  jurisdiction: string|null;
+  public jurisdiction: fhir.FhirUri|null;
   /**
-   * Extended properties for primitive element: DeviceDefinition.udiDeviceIdentifier.jurisdiction
+   * Default constructor for DeviceDefinitionUdiDeviceIdentifier - initializes any required elements to null if a value is not provided.
    */
-  _jurisdiction?: fhir.IFhirElement|undefined;
+  constructor(source:Partial<DeviceDefinitionUdiDeviceIdentifierArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['deviceIdentifier']) { this.deviceIdentifier = new fhir.FhirString({value: source.deviceIdentifier}); }
+    else { this.deviceIdentifier = null; }
+    if (source['issuer']) { this.issuer = new fhir.FhirUri({value: source.issuer}); }
+    else { this.issuer = null; }
+    if (source['jurisdiction']) { this.jurisdiction = new fhir.FhirUri({value: source.jurisdiction}); }
+    else { this.jurisdiction = null; }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['deviceIdentifier']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property deviceIdentifier:fhir.FhirString fhir: DeviceDefinition.udiDeviceIdentifier.deviceIdentifier:string", }));
+    }
+    if (this["deviceIdentifier"]) { outcome.issue!.push(...this.deviceIdentifier.doModelValidation().issue!); }
+    if (!this['issuer']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property issuer:fhir.FhirUri fhir: DeviceDefinition.udiDeviceIdentifier.issuer:uri", }));
+    }
+    if (this["issuer"]) { outcome.issue!.push(...this.issuer.doModelValidation().issue!); }
+    if (!this['jurisdiction']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property jurisdiction:fhir.FhirUri fhir: DeviceDefinition.udiDeviceIdentifier.jurisdiction:uri", }));
+    }
+    if (this["jurisdiction"]) { outcome.issue!.push(...this.jurisdiction.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
 }
-
 /**
- * A name given to the device to identify it.
+ * Valid arguments for the DeviceDefinitionDeviceName type.
  */
-export type IDeviceDefinitionDeviceName = fhir.IBackboneElement & { 
+export interface DeviceDefinitionDeviceNameArgs extends fhir.BackboneElementArgs {
   /**
    * The name of the device.
    */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.deviceName.name
-   */
-  _name?: fhir.IFhirElement|undefined;
+  name: fhir.FhirString|string|undefined;
   /**
    * The type of deviceName.
    * UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | ModelName.
    */
   type: DeviceNametypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.deviceName.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
- */
-export type IDeviceDefinitionSpecialization = fhir.IBackboneElement & { 
-  /**
-   * The standard that is used to operate and communicate.
-   */
-  systemType: string|null;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.specialization.systemType
-   */
-  _systemType?: fhir.IFhirElement|undefined;
-  /**
-   * The version of the standard that is used to operate and communicate.
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.specialization.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Device capabilities.
- */
-export type IDeviceDefinitionCapability = fhir.IBackboneElement & { 
-  /**
-   * Type of capability.
-   */
-  type: fhir.ICodeableConcept|null;
-  /**
-   * Description of capability.
-   */
-  description?: fhir.ICodeableConcept[]|undefined;
-}
-
-/**
- * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
- */
-export type IDeviceDefinitionProperty = fhir.IBackboneElement & { 
-  /**
-   * Code that specifies the property DeviceDefinitionPropetyCode (Extensible).
-   */
-  type: fhir.ICodeableConcept|null;
-  /**
-   * Property value as a quantity.
-   */
-  valueQuantity?: fhir.IQuantity[]|undefined;
-  /**
-   * Property value as a code, e.g., NTP4 (synced to NTP).
-   */
-  valueCode?: fhir.ICodeableConcept[]|undefined;
-}
-
-/**
- * A substance used to create the material(s) of which the device is made.
- */
-export type IDeviceDefinitionMaterial = fhir.IBackboneElement & { 
-  /**
-   * The substance.
-   */
-  substance: fhir.ICodeableConcept|null;
-  /**
-   * Indicates an alternative material of the device.
-   */
-  alternate?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.material.alternate
-   */
-  _alternate?: fhir.IFhirElement|undefined;
-  /**
-   * Whether the substance is a known or suspected allergen.
-   */
-  allergenicIndicator?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.material.allergenicIndicator
-   */
-  _allergenicIndicator?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The characteristics, operational status and capabilities of a medical-related component of a medical device.
- */
-export type IDeviceDefinition = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "DeviceDefinition";
-  /**
-   * Unique instance identifiers assigned to a device by the software, manufacturers, other organizations or owners. For example: handle ID.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
-   */
-  udiDeviceIdentifier?: fhir.IDeviceDefinitionUdiDeviceIdentifier[]|undefined;
-  /**
-   * A name of the manufacturer.
-   */
-  manufacturerString?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.manufacturer[x]
-   */
-  _manufacturerString?: fhir.IFhirElement|undefined;
-  /**
-   * A name of the manufacturer.
-   */
-  manufacturerReference?: fhir.IReference|undefined;
-  /**
-   * A name given to the device to identify it.
-   */
-  deviceName?: fhir.IDeviceDefinitionDeviceName[]|undefined;
-  /**
-   * The model number for the device.
-   */
-  modelNumber?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.modelNumber
-   */
-  _modelNumber?: fhir.IFhirElement|undefined;
-  /**
-   * What kind of device or device system this is.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
-   */
-  specialization?: fhir.IDeviceDefinitionSpecialization[]|undefined;
-  /**
-   * The available versions of the device, e.g., software versions.
-   */
-  version?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.version
-   */
-  _version?: fhir.IFhirElement[]|undefined;
-  /**
-   * Safety characteristics of the device.
-   */
-  safety?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Shelf Life and storage information.
-   */
-  shelfLifeStorage?: fhir.IProductShelfLife[]|undefined;
-  /**
-   * Dimensions, color etc.
-   */
-  physicalCharacteristics?: fhir.IProdCharacteristic|undefined;
-  /**
-   * Language code for the human-readable text strings produced by the device (all supported).
-   */
-  languageCode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Device capabilities.
-   */
-  capability?: fhir.IDeviceDefinitionCapability[]|undefined;
-  /**
-   * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
-   */
-  property?: fhir.IDeviceDefinitionProperty[]|undefined;
-  /**
-   * An organization that is responsible for the provision and ongoing maintenance of the device.
-   */
-  owner?: fhir.IReference|undefined;
-  /**
-   * used for troubleshooting etc.
-   */
-  contact?: fhir.IContactPoint[]|undefined;
-  /**
-   * If the device is running a FHIR server, the network address should  be the Base URL from which a conformance statement may be retrieved.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Access to on-line information about the device.
-   */
-  onlineInformation?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.onlineInformation
-   */
-  _onlineInformation?: fhir.IFhirElement|undefined;
-  /**
-   * Descriptive information, usage information or implantation information that is not captured in an existing element.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-  /**
-   * The quantity of the device present in the packaging (e.g. the number of devices present in a pack, or the number of devices in the same package of the medicinal product).
-   */
-  quantity?: fhir.IQuantity|undefined;
-  /**
-   * The parent device it can be part of.
-   */
-  parentDevice?: fhir.IReference|undefined;
-  /**
-   * A substance used to create the material(s) of which the device is made.
-   */
-  material?: fhir.IDeviceDefinitionMaterial[]|undefined;
-}
-
-/**
- * Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
- */
-export class DeviceDefinitionUdiDeviceIdentifier extends fhir.BackboneElement implements IDeviceDefinitionUdiDeviceIdentifier {
-  /**
-   * The identifier that is to be associated with every Device that references this DeviceDefintiion for the issuer and jurisdication porvided in the DeviceDefinition.udiDeviceIdentifier.
-   */
-  public deviceIdentifier: string|null;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.udiDeviceIdentifier.deviceIdentifier
-   */
-  public _deviceIdentifier?: fhir.FhirElement|undefined;
-  /**
-   * The organization that assigns the identifier algorithm.
-   */
-  public issuer: string|null;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.udiDeviceIdentifier.issuer
-   */
-  public _issuer?: fhir.FhirElement|undefined;
-  /**
-   * The jurisdiction to which the deviceIdentifier applies.
-   */
-  public jurisdiction: string|null;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.udiDeviceIdentifier.jurisdiction
-   */
-  public _jurisdiction?: fhir.FhirElement|undefined;
-  /**
-   * Default constructor for DeviceDefinitionUdiDeviceIdentifier - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<IDeviceDefinitionUdiDeviceIdentifier> = { }) {
-    super(source);
-    if (source['deviceIdentifier']) { this.deviceIdentifier = source.deviceIdentifier; }
-    else { this.deviceIdentifier = null; }
-    if (source['_deviceIdentifier']) { this._deviceIdentifier = new fhir.FhirElement(source._deviceIdentifier!); }
-    if (source['issuer']) { this.issuer = source.issuer; }
-    else { this.issuer = null; }
-    if (source['_issuer']) { this._issuer = new fhir.FhirElement(source._issuer!); }
-    if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction; }
-    else { this.jurisdiction = null; }
-    if (source['_jurisdiction']) { this._jurisdiction = new fhir.FhirElement(source._jurisdiction!); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["deviceIdentifier"]) { results.push(["deviceIdentifier",'Missing required element: DeviceDefinition.udiDeviceIdentifier.deviceIdentifier']); }
-    if (this["_deviceIdentifier"]) { results.push(...this._deviceIdentifier.doModelValidation()); }
-    if (!this["issuer"]) { results.push(["issuer",'Missing required element: DeviceDefinition.udiDeviceIdentifier.issuer']); }
-    if (this["_issuer"]) { results.push(...this._issuer.doModelValidation()); }
-    if (!this["jurisdiction"]) { results.push(["jurisdiction",'Missing required element: DeviceDefinition.udiDeviceIdentifier.jurisdiction']); }
-    if (this["_jurisdiction"]) { results.push(...this._jurisdiction.doModelValidation()); }
-    return results;
-  }
 }
 
 /**
  * A name given to the device to identify it.
  */
-export class DeviceDefinitionDeviceName extends fhir.BackboneElement implements IDeviceDefinitionDeviceName {
+export class DeviceDefinitionDeviceName extends fhir.BackboneElement {
+  readonly __dataType:string = 'DeviceDefinitionDeviceName';
   /**
    * The name of the device.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.deviceName.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * The type of deviceName.
    * UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | ModelName.
    */
   public type: DeviceNametypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: DeviceDefinition.deviceName.type
-   */
-  public _type?: fhir.FhirElement|undefined;
-  /**
    * Default constructor for DeviceDefinitionDeviceName - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IDeviceDefinitionDeviceName> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<DeviceDefinitionDeviceNameArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
   }
   /**
    * Required-bound Value Set for type
@@ -363,63 +132,98 @@ export class DeviceDefinitionDeviceName extends fhir.BackboneElement implements 
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: DeviceDefinition.deviceName.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (!this["type"]) { results.push(["type",'Missing required element: DeviceDefinition.deviceName.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: DeviceDefinition.deviceName.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:DeviceNametypeValueSetEnum fhir: DeviceDefinition.deviceName.type:code", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the DeviceDefinitionSpecialization type.
+ */
+export interface DeviceDefinitionSpecializationArgs extends fhir.BackboneElementArgs {
+  /**
+   * The standard that is used to operate and communicate.
+   */
+  systemType: fhir.FhirString|string|undefined;
+  /**
+   * The version of the standard that is used to operate and communicate.
+   */
+  version?: fhir.FhirString|string|undefined;
 }
 
 /**
  * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
  */
-export class DeviceDefinitionSpecialization extends fhir.BackboneElement implements IDeviceDefinitionSpecialization {
+export class DeviceDefinitionSpecialization extends fhir.BackboneElement {
+  readonly __dataType:string = 'DeviceDefinitionSpecialization';
   /**
    * The standard that is used to operate and communicate.
    */
-  public systemType: string|null;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.specialization.systemType
-   */
-  public _systemType?: fhir.FhirElement|undefined;
+  public systemType: fhir.FhirString|null;
   /**
    * The version of the standard that is used to operate and communicate.
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.specialization.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * Default constructor for DeviceDefinitionSpecialization - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IDeviceDefinitionSpecialization> = { }) {
-    super(source);
-    if (source['systemType']) { this.systemType = source.systemType; }
+  constructor(source:Partial<DeviceDefinitionSpecializationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['systemType']) { this.systemType = new fhir.FhirString({value: source.systemType}); }
     else { this.systemType = null; }
-    if (source['_systemType']) { this._systemType = new fhir.FhirElement(source._systemType!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["systemType"]) { results.push(["systemType",'Missing required element: DeviceDefinition.specialization.systemType']); }
-    if (this["_systemType"]) { results.push(...this._systemType.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['systemType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property systemType:fhir.FhirString fhir: DeviceDefinition.specialization.systemType:string", }));
+    }
+    if (this["systemType"]) { outcome.issue!.push(...this.systemType.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the DeviceDefinitionCapability type.
+ */
+export interface DeviceDefinitionCapabilityArgs extends fhir.BackboneElementArgs {
+  /**
+   * Type of capability.
+   */
+  type: fhir.CodeableConceptArgs|null;
+  /**
+   * Description of capability.
+   */
+  description?: fhir.CodeableConceptArgs[]|undefined;
 }
 
 /**
  * Device capabilities.
  */
-export class DeviceDefinitionCapability extends fhir.BackboneElement implements IDeviceDefinitionCapability {
+export class DeviceDefinitionCapability extends fhir.BackboneElement {
+  readonly __dataType:string = 'DeviceDefinitionCapability';
   /**
    * Type of capability.
    */
@@ -427,32 +231,58 @@ export class DeviceDefinitionCapability extends fhir.BackboneElement implements 
   /**
    * Description of capability.
    */
-  public description?: fhir.CodeableConcept[]|undefined;
+  public description?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Default constructor for DeviceDefinitionCapability - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IDeviceDefinitionCapability> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<DeviceDefinitionCapabilityArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
     if (source['description']) { this.description = source.description.map((x) => new fhir.CodeableConcept(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: DeviceDefinition.capability.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["description"]) { this.description.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: DeviceDefinition.capability.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["description"]) { this.description.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the DeviceDefinitionProperty type.
+ */
+export interface DeviceDefinitionPropertyArgs extends fhir.BackboneElementArgs {
+  /**
+   * Code that specifies the property DeviceDefinitionPropetyCode (Extensible).
+   */
+  type: fhir.CodeableConceptArgs|null;
+  /**
+   * Property value as a quantity.
+   */
+  valueQuantity?: fhir.QuantityArgs[]|undefined;
+  /**
+   * Property value as a code, e.g., NTP4 (synced to NTP).
+   */
+  valueCode?: fhir.CodeableConceptArgs[]|undefined;
 }
 
 /**
  * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
  */
-export class DeviceDefinitionProperty extends fhir.BackboneElement implements IDeviceDefinitionProperty {
+export class DeviceDefinitionProperty extends fhir.BackboneElement {
+  readonly __dataType:string = 'DeviceDefinitionProperty';
   /**
    * Code that specifies the property DeviceDefinitionPropetyCode (Extensible).
    */
@@ -460,17 +290,17 @@ export class DeviceDefinitionProperty extends fhir.BackboneElement implements ID
   /**
    * Property value as a quantity.
    */
-  public valueQuantity?: fhir.Quantity[]|undefined;
+  public valueQuantity?: fhir.Quantity[]|undefined = [];
   /**
    * Property value as a code, e.g., NTP4 (synced to NTP).
    */
-  public valueCode?: fhir.CodeableConcept[]|undefined;
+  public valueCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Default constructor for DeviceDefinitionProperty - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IDeviceDefinitionProperty> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<DeviceDefinitionPropertyArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     else { this.type = null; }
     if (source['valueQuantity']) { this.valueQuantity = source.valueQuantity.map((x) => new fhir.Quantity(x)); }
     if (source['valueCode']) { this.valueCode = source.valueCode.map((x) => new fhir.CodeableConcept(x)); }
@@ -478,20 +308,46 @@ export class DeviceDefinitionProperty extends fhir.BackboneElement implements ID
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: DeviceDefinition.property.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["valueQuantity"]) { this.valueQuantity.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["valueCode"]) { this.valueCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.CodeableConcept fhir: DeviceDefinition.property.type:CodeableConcept", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["valueQuantity"]) { this.valueQuantity.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["valueCode"]) { this.valueCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the DeviceDefinitionMaterial type.
+ */
+export interface DeviceDefinitionMaterialArgs extends fhir.BackboneElementArgs {
+  /**
+   * The substance.
+   */
+  substance: fhir.CodeableConceptArgs|null;
+  /**
+   * Indicates an alternative material of the device.
+   */
+  alternate?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Whether the substance is a known or suspected allergen.
+   */
+  allergenicIndicator?: fhir.FhirBoolean|boolean|undefined;
 }
 
 /**
  * A substance used to create the material(s) of which the device is made.
  */
-export class DeviceDefinitionMaterial extends fhir.BackboneElement implements IDeviceDefinitionMaterial {
+export class DeviceDefinitionMaterial extends fhir.BackboneElement {
+  readonly __dataType:string = 'DeviceDefinitionMaterial';
   /**
    * The substance.
    */
@@ -499,48 +355,152 @@ export class DeviceDefinitionMaterial extends fhir.BackboneElement implements ID
   /**
    * Indicates an alternative material of the device.
    */
-  public alternate?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.material.alternate
-   */
-  public _alternate?: fhir.FhirElement|undefined;
+  public alternate?: fhir.FhirBoolean|undefined;
   /**
    * Whether the substance is a known or suspected allergen.
    */
-  public allergenicIndicator?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.material.allergenicIndicator
-   */
-  public _allergenicIndicator?: fhir.FhirElement|undefined;
+  public allergenicIndicator?: fhir.FhirBoolean|undefined;
   /**
    * Default constructor for DeviceDefinitionMaterial - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IDeviceDefinitionMaterial> = { }) {
-    super(source);
-    if (source['substance']) { this.substance = new fhir.CodeableConcept(source.substance!); }
+  constructor(source:Partial<DeviceDefinitionMaterialArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['substance']) { this.substance = new fhir.CodeableConcept(source.substance); }
     else { this.substance = null; }
-    if (source['alternate']) { this.alternate = source.alternate; }
-    if (source['_alternate']) { this._alternate = new fhir.FhirElement(source._alternate!); }
-    if (source['allergenicIndicator']) { this.allergenicIndicator = source.allergenicIndicator; }
-    if (source['_allergenicIndicator']) { this._allergenicIndicator = new fhir.FhirElement(source._allergenicIndicator!); }
+    if (source['alternate']) { this.alternate = new fhir.FhirBoolean({value: source.alternate}); }
+    if (source['allergenicIndicator']) { this.allergenicIndicator = new fhir.FhirBoolean({value: source.allergenicIndicator}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["substance"]) { results.push(["substance",'Missing required element: DeviceDefinition.material.substance']); }
-    if (this["substance"]) { results.push(...this.substance.doModelValidation()); }
-    if (this["_alternate"]) { results.push(...this._alternate.doModelValidation()); }
-    if (this["_allergenicIndicator"]) { results.push(...this._allergenicIndicator.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['substance']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property substance:fhir.CodeableConcept fhir: DeviceDefinition.material.substance:CodeableConcept", }));
+    }
+    if (this["substance"]) { outcome.issue!.push(...this.substance.doModelValidation().issue!); }
+    if (this["alternate"]) { outcome.issue!.push(...this.alternate.doModelValidation().issue!); }
+    if (this["allergenicIndicator"]) { outcome.issue!.push(...this.allergenicIndicator.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the DeviceDefinition type.
+ */
+export interface DeviceDefinitionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "DeviceDefinition"|undefined;
+  /**
+   * Unique instance identifiers assigned to a device by the software, manufacturers, other organizations or owners. For example: handle ID.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
+   */
+  udiDeviceIdentifier?: fhir.DeviceDefinitionUdiDeviceIdentifierArgs[]|undefined;
+  /**
+   * A name of the manufacturer.
+   */
+  manufacturer?: fhir.FhirString|fhir.Reference|undefined;
+  /**
+   * A name of the manufacturer.
+   */
+  manufacturerString?: fhir.FhirString|string|undefined;
+  /**
+   * A name of the manufacturer.
+   */
+  manufacturerReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * A name given to the device to identify it.
+   */
+  deviceName?: fhir.DeviceDefinitionDeviceNameArgs[]|undefined;
+  /**
+   * The model number for the device.
+   */
+  modelNumber?: fhir.FhirString|string|undefined;
+  /**
+   * What kind of device or device system this is.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
+   */
+  specialization?: fhir.DeviceDefinitionSpecializationArgs[]|undefined;
+  /**
+   * The available versions of the device, e.g., software versions.
+   */
+  version?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * Safety characteristics of the device.
+   */
+  safety?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Shelf Life and storage information.
+   */
+  shelfLifeStorage?: fhir.ProductShelfLifeArgs[]|undefined;
+  /**
+   * Dimensions, color etc.
+   */
+  physicalCharacteristics?: fhir.ProdCharacteristicArgs|undefined;
+  /**
+   * Language code for the human-readable text strings produced by the device (all supported).
+   */
+  languageCode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Device capabilities.
+   */
+  capability?: fhir.DeviceDefinitionCapabilityArgs[]|undefined;
+  /**
+   * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
+   */
+  property?: fhir.DeviceDefinitionPropertyArgs[]|undefined;
+  /**
+   * An organization that is responsible for the provision and ongoing maintenance of the device.
+   */
+  owner?: fhir.ReferenceArgs|undefined;
+  /**
+   * used for troubleshooting etc.
+   */
+  contact?: fhir.ContactPointArgs[]|undefined;
+  /**
+   * If the device is running a FHIR server, the network address should  be the Base URL from which a conformance statement may be retrieved.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * Access to on-line information about the device.
+   */
+  onlineInformation?: fhir.FhirUri|string|undefined;
+  /**
+   * Descriptive information, usage information or implantation information that is not captured in an existing element.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
+  /**
+   * The quantity of the device present in the packaging (e.g. the number of devices present in a pack, or the number of devices in the same package of the medicinal product).
+   */
+  quantity?: fhir.QuantityArgs|undefined;
+  /**
+   * The parent device it can be part of.
+   */
+  parentDevice?: fhir.ReferenceArgs|undefined;
+  /**
+   * A substance used to create the material(s) of which the device is made.
+   */
+  material?: fhir.DeviceDefinitionMaterialArgs[]|undefined;
 }
 
 /**
  * The characteristics, operational status and capabilities of a medical-related component of a medical device.
  */
-export class DeviceDefinition extends fhir.DomainResource implements IDeviceDefinition {
+export class DeviceDefinition extends fhir.DomainResource {
+  readonly __dataType:string = 'DeviceDefinition';
   /**
    * Resource Type Name
    */
@@ -548,35 +508,24 @@ export class DeviceDefinition extends fhir.DomainResource implements IDeviceDefi
   /**
    * Unique instance identifiers assigned to a device by the software, manufacturers, other organizations or owners. For example: handle ID.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
    */
-  public udiDeviceIdentifier?: fhir.DeviceDefinitionUdiDeviceIdentifier[]|undefined;
+  public udiDeviceIdentifier?: fhir.DeviceDefinitionUdiDeviceIdentifier[]|undefined = [];
   /**
    * A name of the manufacturer.
    */
-  public manufacturerString?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.manufacturer[x]
-   */
-  public _manufacturerString?: fhir.FhirElement|undefined;
-  /**
-   * A name of the manufacturer.
-   */
-  public manufacturerReference?: fhir.Reference|undefined;
+  public manufacturer?: (fhir.FhirString|fhir.Reference)|undefined;
+  readonly __manufacturerIsChoice:true = true;
   /**
    * A name given to the device to identify it.
    */
-  public deviceName?: fhir.DeviceDefinitionDeviceName[]|undefined;
+  public deviceName?: fhir.DeviceDefinitionDeviceName[]|undefined = [];
   /**
    * The model number for the device.
    */
-  public modelNumber?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.modelNumber
-   */
-  public _modelNumber?: fhir.FhirElement|undefined;
+  public modelNumber?: fhir.FhirString|undefined;
   /**
    * What kind of device or device system this is.
    */
@@ -584,23 +533,19 @@ export class DeviceDefinition extends fhir.DomainResource implements IDeviceDefi
   /**
    * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
    */
-  public specialization?: fhir.DeviceDefinitionSpecialization[]|undefined;
+  public specialization?: fhir.DeviceDefinitionSpecialization[]|undefined = [];
   /**
    * The available versions of the device, e.g., software versions.
    */
-  public version?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.version
-   */
-  public _version?: fhir.FhirElement[]|undefined;
+  public version?: fhir.FhirString[]|undefined = [];
   /**
    * Safety characteristics of the device.
    */
-  public safety?: fhir.CodeableConcept[]|undefined;
+  public safety?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Shelf Life and storage information.
    */
-  public shelfLifeStorage?: fhir.ProductShelfLife[]|undefined;
+  public shelfLifeStorage?: fhir.ProductShelfLife[]|undefined = [];
   /**
    * Dimensions, color etc.
    */
@@ -608,15 +553,15 @@ export class DeviceDefinition extends fhir.DomainResource implements IDeviceDefi
   /**
    * Language code for the human-readable text strings produced by the device (all supported).
    */
-  public languageCode?: fhir.CodeableConcept[]|undefined;
+  public languageCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Device capabilities.
    */
-  public capability?: fhir.DeviceDefinitionCapability[]|undefined;
+  public capability?: fhir.DeviceDefinitionCapability[]|undefined = [];
   /**
    * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
    */
-  public property?: fhir.DeviceDefinitionProperty[]|undefined;
+  public property?: fhir.DeviceDefinitionProperty[]|undefined = [];
   /**
    * An organization that is responsible for the provision and ongoing maintenance of the device.
    */
@@ -624,27 +569,19 @@ export class DeviceDefinition extends fhir.DomainResource implements IDeviceDefi
   /**
    * used for troubleshooting etc.
    */
-  public contact?: fhir.ContactPoint[]|undefined;
+  public contact?: fhir.ContactPoint[]|undefined = [];
   /**
    * If the device is running a FHIR server, the network address should  be the Base URL from which a conformance statement may be retrieved.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * Access to on-line information about the device.
    */
-  public onlineInformation?: string|undefined;
-  /**
-   * Extended properties for primitive element: DeviceDefinition.onlineInformation
-   */
-  public _onlineInformation?: fhir.FhirElement|undefined;
+  public onlineInformation?: fhir.FhirUri|undefined;
   /**
    * Descriptive information, usage information or implantation information that is not captured in an existing element.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * The quantity of the device present in the packaging (e.g. the number of devices present in a pack, or the number of devices in the same package of the medicinal product).
    */
@@ -656,40 +593,36 @@ export class DeviceDefinition extends fhir.DomainResource implements IDeviceDefi
   /**
    * A substance used to create the material(s) of which the device is made.
    */
-  public material?: fhir.DeviceDefinitionMaterial[]|undefined;
+  public material?: fhir.DeviceDefinitionMaterial[]|undefined = [];
   /**
    * Default constructor for DeviceDefinition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IDeviceDefinition> = { }) {
-    super(source);
+  constructor(source:Partial<DeviceDefinitionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'DeviceDefinition';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['udiDeviceIdentifier']) { this.udiDeviceIdentifier = source.udiDeviceIdentifier.map((x) => new fhir.DeviceDefinitionUdiDeviceIdentifier(x)); }
-    if (source['manufacturerString']) { this.manufacturerString = source.manufacturerString; }
-    if (source['_manufacturerString']) { this._manufacturerString = new fhir.FhirElement(source._manufacturerString!); }
-    if (source['manufacturerReference']) { this.manufacturerReference = new fhir.Reference(source.manufacturerReference!); }
+    if (source['manufacturer']) { this.manufacturer = source.manufacturer; }
+    else if (source['manufacturerString']) { this.manufacturer = new fhir.FhirString({value: source.manufacturerString}); }
+    else if (source['manufacturerReference']) { this.manufacturer = new fhir.Reference(source.manufacturerReference); }
     if (source['deviceName']) { this.deviceName = source.deviceName.map((x) => new fhir.DeviceDefinitionDeviceName(x)); }
-    if (source['modelNumber']) { this.modelNumber = source.modelNumber; }
-    if (source['_modelNumber']) { this._modelNumber = new fhir.FhirElement(source._modelNumber!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+    if (source['modelNumber']) { this.modelNumber = new fhir.FhirString({value: source.modelNumber}); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     if (source['specialization']) { this.specialization = source.specialization.map((x) => new fhir.DeviceDefinitionSpecialization(x)); }
-    if (source['version']) { this.version = source.version.map((x) => (x)); }
-    if (source['_version']) { this._version = source._version.map((x) => new fhir.FhirElement(x)); }
+    if (source['version']) { this.version = source.version.map((x) => new fhir.FhirString({value: x})); }
     if (source['safety']) { this.safety = source.safety.map((x) => new fhir.CodeableConcept(x)); }
     if (source['shelfLifeStorage']) { this.shelfLifeStorage = source.shelfLifeStorage.map((x) => new fhir.ProductShelfLife(x)); }
-    if (source['physicalCharacteristics']) { this.physicalCharacteristics = new fhir.ProdCharacteristic(source.physicalCharacteristics!); }
+    if (source['physicalCharacteristics']) { this.physicalCharacteristics = new fhir.ProdCharacteristic(source.physicalCharacteristics); }
     if (source['languageCode']) { this.languageCode = source.languageCode.map((x) => new fhir.CodeableConcept(x)); }
     if (source['capability']) { this.capability = source.capability.map((x) => new fhir.DeviceDefinitionCapability(x)); }
     if (source['property']) { this.property = source.property.map((x) => new fhir.DeviceDefinitionProperty(x)); }
-    if (source['owner']) { this.owner = new fhir.Reference(source.owner!); }
+    if (source['owner']) { this.owner = new fhir.Reference(source.owner); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactPoint(x)); }
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['onlineInformation']) { this.onlineInformation = source.onlineInformation; }
-    if (source['_onlineInformation']) { this._onlineInformation = new fhir.FhirElement(source._onlineInformation!); }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
+    if (source['onlineInformation']) { this.onlineInformation = new fhir.FhirUri({value: source.onlineInformation}); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
-    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity!); }
-    if (source['parentDevice']) { this.parentDevice = new fhir.Reference(source.parentDevice!); }
+    if (source['quantity']) { this.quantity = new fhir.Quantity(source.quantity); }
+    if (source['parentDevice']) { this.parentDevice = new fhir.Reference(source.parentDevice); }
     if (source['material']) { this.material = source.material.map((x) => new fhir.DeviceDefinitionMaterial(x)); }
   }
   /**
@@ -701,32 +634,38 @@ export class DeviceDefinition extends fhir.DomainResource implements IDeviceDefi
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: DeviceDefinition.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["udiDeviceIdentifier"]) { this.udiDeviceIdentifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_manufacturerString"]) { results.push(...this._manufacturerString.doModelValidation()); }
-    if (this["manufacturerReference"]) { results.push(...this.manufacturerReference.doModelValidation()); }
-    if (this["deviceName"]) { this.deviceName.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_modelNumber"]) { results.push(...this._modelNumber.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["specialization"]) { this.specialization.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_version"]) { this._version.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["safety"]) { this.safety.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["shelfLifeStorage"]) { this.shelfLifeStorage.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["physicalCharacteristics"]) { results.push(...this.physicalCharacteristics.doModelValidation()); }
-    if (this["languageCode"]) { this.languageCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["capability"]) { this.capability.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["property"]) { this.property.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["owner"]) { results.push(...this.owner.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["_onlineInformation"]) { results.push(...this._onlineInformation.doModelValidation()); }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["quantity"]) { results.push(...this.quantity.doModelValidation()); }
-    if (this["parentDevice"]) { results.push(...this.parentDevice.doModelValidation()); }
-    if (this["material"]) { this.material.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'DeviceDefinition' fhir: DeviceDefinition.resourceType:'DeviceDefinition'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["udiDeviceIdentifier"]) { this.udiDeviceIdentifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["deviceName"]) { this.deviceName.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["modelNumber"]) { outcome.issue!.push(...this.modelNumber.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["specialization"]) { this.specialization.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["version"]) { this.version.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["safety"]) { this.safety.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["shelfLifeStorage"]) { this.shelfLifeStorage.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["physicalCharacteristics"]) { outcome.issue!.push(...this.physicalCharacteristics.doModelValidation().issue!); }
+    if (this["languageCode"]) { this.languageCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["capability"]) { this.capability.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["property"]) { this.property.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["owner"]) { outcome.issue!.push(...this.owner.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["onlineInformation"]) { outcome.issue!.push(...this.onlineInformation.doModelValidation().issue!); }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["quantity"]) { outcome.issue!.push(...this.quantity.doModelValidation().issue!); }
+    if (this["parentDevice"]) { outcome.issue!.push(...this.parentDevice.doModelValidation().issue!); }
+    if (this["material"]) { this.material.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -3,15 +3,17 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ObservationDefinition
 import * as fhir from '../fhir.js';
-import { UcumUnitsValueSet } from '../fhirValueSets/UcumUnitsValueSet.js';
-import { ObservationRangeCategoryValueSet } from '../fhirValueSets/ObservationRangeCategoryValueSet.js';
-import { ReferencerangeMeaningValueSet } from '../fhirValueSets/ReferencerangeMeaningValueSet.js';
-import { ReferencerangeAppliestoValueSet } from '../fhirValueSets/ReferencerangeAppliestoValueSet.js';
-import { AdministrativeGenderValueSet } from '../fhirValueSets/AdministrativeGenderValueSet.js';
-import { ObservationCategoryValueSet } from '../fhirValueSets/ObservationCategoryValueSet.js';
-import { ObservationCodesValueSet } from '../fhirValueSets/ObservationCodesValueSet.js';
-import { PermittedDataTypeValueSet } from '../fhirValueSets/PermittedDataTypeValueSet.js';
-import { ObservationMethodsValueSet } from '../fhirValueSets/ObservationMethodsValueSet.js';
+import { UcumUnitsValueSet, } from '../fhirValueSets/UcumUnitsValueSet.js';
+import { ObservationRangeCategoryValueSet, } from '../fhirValueSets/ObservationRangeCategoryValueSet.js';
+import { ReferencerangeMeaningValueSet, } from '../fhirValueSets/ReferencerangeMeaningValueSet.js';
+import { ReferencerangeAppliestoValueSet, } from '../fhirValueSets/ReferencerangeAppliestoValueSet.js';
+import { AdministrativeGenderValueSet, } from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { ObservationCategoryValueSet, } from '../fhirValueSets/ObservationCategoryValueSet.js';
+import { ObservationCodesValueSet, } from '../fhirValueSets/ObservationCodesValueSet.js';
+import { PermittedDataTypeValueSet, } from '../fhirValueSets/PermittedDataTypeValueSet.js';
+import { ObservationMethodsValueSet, } from '../fhirValueSets/ObservationMethodsValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Characteristics for quantitative results of this observation.
  */
@@ -19,8 +21,9 @@ export class ObservationDefinitionQuantitativeDetails extends fhir.BackboneEleme
     /**
      * Default constructor for ObservationDefinitionQuantitativeDetails - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ObservationDefinitionQuantitativeDetails';
         if (source['customaryUnit']) {
             this.customaryUnit = new fhir.CodeableConcept(source.customaryUnit);
         }
@@ -28,16 +31,10 @@ export class ObservationDefinitionQuantitativeDetails extends fhir.BackboneEleme
             this.unit = new fhir.CodeableConcept(source.unit);
         }
         if (source['conversionFactor']) {
-            this.conversionFactor = source.conversionFactor;
-        }
-        if (source['_conversionFactor']) {
-            this._conversionFactor = new fhir.FhirElement(source._conversionFactor);
+            this.conversionFactor = new fhir.FhirDecimal({ value: source.conversionFactor });
         }
         if (source['decimalPrecision']) {
-            this.decimalPrecision = source.decimalPrecision;
-        }
-        if (source['_decimalPrecision']) {
-            this._decimalPrecision = new fhir.FhirElement(source._decimalPrecision);
+            this.decimalPrecision = new fhir.FhirInteger({ value: source.decimalPrecision });
         }
     }
     /**
@@ -56,20 +53,26 @@ export class ObservationDefinitionQuantitativeDetails extends fhir.BackboneEleme
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["customaryUnit"]) {
-            results.push(...this.customaryUnit.doModelValidation());
+            outcome.issue.push(...this.customaryUnit.doModelValidation().issue);
         }
         if (this["unit"]) {
-            results.push(...this.unit.doModelValidation());
+            outcome.issue.push(...this.unit.doModelValidation().issue);
         }
-        if (this["_conversionFactor"]) {
-            results.push(...this._conversionFactor.doModelValidation());
+        if (this["conversionFactor"]) {
+            outcome.issue.push(...this.conversionFactor.doModelValidation().issue);
         }
-        if (this["_decimalPrecision"]) {
-            results.push(...this._decimalPrecision.doModelValidation());
+        if (this["decimalPrecision"]) {
+            outcome.issue.push(...this.decimalPrecision.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -79,13 +82,15 @@ export class ObservationDefinitionQualifiedInterval extends fhir.BackboneElement
     /**
      * Default constructor for ObservationDefinitionQualifiedInterval - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ObservationDefinitionQualifiedInterval';
+        /**
+         * If this element is not present then the global population is assumed.
+         */
+        this.appliesTo = [];
         if (source['category']) {
             this.category = source.category;
-        }
-        if (source['_category']) {
-            this._category = new fhir.FhirElement(source._category);
         }
         if (source['range']) {
             this.range = new fhir.Range(source.range);
@@ -99,9 +104,6 @@ export class ObservationDefinitionQualifiedInterval extends fhir.BackboneElement
         if (source['gender']) {
             this.gender = source.gender;
         }
-        if (source['_gender']) {
-            this._gender = new fhir.FhirElement(source._gender);
-        }
         if (source['age']) {
             this.age = new fhir.Range(source.age);
         }
@@ -109,10 +111,7 @@ export class ObservationDefinitionQualifiedInterval extends fhir.BackboneElement
             this.gestationalAge = new fhir.Range(source.gestationalAge);
         }
         if (source['condition']) {
-            this.condition = source.condition;
-        }
-        if (source['_condition']) {
-            this._condition = new fhir.FhirElement(source._condition);
+            this.condition = new fhir.FhirString({ value: source.condition });
         }
     }
     /**
@@ -143,32 +142,32 @@ export class ObservationDefinitionQualifiedInterval extends fhir.BackboneElement
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_category"]) {
-            results.push(...this._category.doModelValidation());
-        }
+        var outcome = super.doModelValidation();
         if (this["range"]) {
-            results.push(...this.range.doModelValidation());
+            outcome.issue.push(...this.range.doModelValidation().issue);
         }
         if (this["context"]) {
-            results.push(...this.context.doModelValidation());
+            outcome.issue.push(...this.context.doModelValidation().issue);
         }
         if (this["appliesTo"]) {
-            this.appliesTo.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_gender"]) {
-            results.push(...this._gender.doModelValidation());
+            this.appliesTo.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["age"]) {
-            results.push(...this.age.doModelValidation());
+            outcome.issue.push(...this.age.doModelValidation().issue);
         }
         if (this["gestationalAge"]) {
-            results.push(...this.gestationalAge.doModelValidation());
+            outcome.issue.push(...this.gestationalAge.doModelValidation().issue);
         }
-        if (this["_condition"]) {
-            results.push(...this._condition.doModelValidation());
+        if (this["condition"]) {
+            outcome.issue.push(...this.condition.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -178,8 +177,25 @@ export class ObservationDefinition extends fhir.DomainResource {
     /**
      * Default constructor for ObservationDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ObservationDefinition';
+        /**
+         * This element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used for one instance of ObservationDefinition. The level of granularity is defined by the category concepts in the value set.
+         */
+        this.category = [];
+        /**
+         * A unique identifier assigned to this ObservationDefinition artifact.
+         */
+        this.identifier = [];
+        /**
+         * The data types allowed for the value element of the instance observations conforming to this ObservationDefinition.
+         */
+        this.permittedDataType = [];
+        /**
+         * Multiple  ranges of results qualified by different contexts for ordinal or continuous observations conforming to this ObservationDefinition.
+         */
+        this.qualifiedInterval = [];
         this.resourceType = 'ObservationDefinition';
         if (source['category']) {
             this.category = source.category.map((x) => new fhir.CodeableConcept(x));
@@ -194,25 +210,16 @@ export class ObservationDefinition extends fhir.DomainResource {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['permittedDataType']) {
-            this.permittedDataType = source.permittedDataType.map((x) => (x));
-        }
-        if (source['_permittedDataType']) {
-            this._permittedDataType = source._permittedDataType.map((x) => new fhir.FhirElement(x));
+            this.permittedDataType = source.permittedDataType.map((x) => x);
         }
         if (source['multipleResultsAllowed']) {
-            this.multipleResultsAllowed = source.multipleResultsAllowed;
-        }
-        if (source['_multipleResultsAllowed']) {
-            this._multipleResultsAllowed = new fhir.FhirElement(source._multipleResultsAllowed);
+            this.multipleResultsAllowed = new fhir.FhirBoolean({ value: source.multipleResultsAllowed });
         }
         if (source['method']) {
             this.method = new fhir.CodeableConcept(source.method);
         }
         if (source['preferredReportName']) {
-            this.preferredReportName = source.preferredReportName;
-        }
-        if (source['_preferredReportName']) {
-            this._preferredReportName = new fhir.FhirElement(source._preferredReportName);
+            this.preferredReportName = new fhir.FhirString({ value: source.preferredReportName });
         }
         if (source['quantitativeDetails']) {
             this.quantitativeDetails = new fhir.ObservationDefinitionQuantitativeDetails(source.quantitativeDetails);
@@ -261,53 +268,56 @@ export class ObservationDefinition extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: ObservationDefinition.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'ObservationDefinition' fhir: ObservationDefinition.resourceType:'ObservationDefinition'", }));
         }
         if (this["category"]) {
-            this.category.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.category.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: ObservationDefinition.code']);
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.CodeableConcept fhir: ObservationDefinition.code:CodeableConcept", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_permittedDataType"]) {
-            this._permittedDataType.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_multipleResultsAllowed"]) {
-            results.push(...this._multipleResultsAllowed.doModelValidation());
+        if (this["multipleResultsAllowed"]) {
+            outcome.issue.push(...this.multipleResultsAllowed.doModelValidation().issue);
         }
         if (this["method"]) {
-            results.push(...this.method.doModelValidation());
+            outcome.issue.push(...this.method.doModelValidation().issue);
         }
-        if (this["_preferredReportName"]) {
-            results.push(...this._preferredReportName.doModelValidation());
+        if (this["preferredReportName"]) {
+            outcome.issue.push(...this.preferredReportName.doModelValidation().issue);
         }
         if (this["quantitativeDetails"]) {
-            results.push(...this.quantitativeDetails.doModelValidation());
+            outcome.issue.push(...this.quantitativeDetails.doModelValidation().issue);
         }
         if (this["qualifiedInterval"]) {
-            this.qualifiedInterval.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.qualifiedInterval.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["validCodedValueSet"]) {
-            results.push(...this.validCodedValueSet.doModelValidation());
+            outcome.issue.push(...this.validCodedValueSet.doModelValidation().issue);
         }
         if (this["normalCodedValueSet"]) {
-            results.push(...this.normalCodedValueSet.doModelValidation());
+            outcome.issue.push(...this.normalCodedValueSet.doModelValidation().issue);
         }
         if (this["abnormalCodedValueSet"]) {
-            results.push(...this.abnormalCodedValueSet.doModelValidation());
+            outcome.issue.push(...this.abnormalCodedValueSet.doModelValidation().issue);
         }
         if (this["criticalCodedValueSet"]) {
-            results.push(...this.criticalCodedValueSet.doModelValidation());
+            outcome.issue.push(...this.criticalCodedValueSet.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ObservationDefinition.js.map

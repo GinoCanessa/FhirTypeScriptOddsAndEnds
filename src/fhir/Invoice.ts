@@ -3,175 +3,33 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Invoice
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { InvoicePriceComponentTypeValueSet, InvoicePriceComponentTypeValueSetType, InvoicePriceComponentTypeValueSetEnum } from '../fhirValueSets/InvoicePriceComponentTypeValueSet.js'
-import { InvoiceStatusValueSet, InvoiceStatusValueSetType, InvoiceStatusValueSetEnum } from '../fhirValueSets/InvoiceStatusValueSet.js'
-
+import { InvoicePriceComponentTypeValueSet, InvoicePriceComponentTypeValueSetType,} from '../fhirValueSets/InvoicePriceComponentTypeValueSet.js';
+import { InvoicePriceComponentTypeValueSetEnum } from '../valueSetEnums.js';
+import { InvoiceStatusValueSet, InvoiceStatusValueSetType,} from '../fhirValueSets/InvoiceStatusValueSet.js';
+import { InvoiceStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Indicates who or what performed or participated in the charged service.
+ * Valid arguments for the InvoiceParticipant type.
  */
-export type IInvoiceParticipant = fhir.IBackboneElement & { 
+export interface InvoiceParticipantArgs extends fhir.BackboneElementArgs {
   /**
    * Describes the type of involvement (e.g. transcriptionist, creator etc.). If the invoice has been created automatically, the Participant may be a billing engine or another kind of device.
    */
-  role?: fhir.ICodeableConcept|undefined;
+  role?: fhir.CodeableConceptArgs|undefined;
   /**
    * The device, practitioner, etc. who performed or participated in the service.
    */
-  actor: fhir.IReference|null;
-}
-
-/**
- * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
- */
-export type IInvoiceLineItemPriceComponent = fhir.IBackboneElement & { 
-  /**
-   * This code identifies the type of the component.
-   */
-  type: InvoicePriceComponentTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Invoice.lineItem.priceComponent.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * A code that identifies the component. Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc.
-   */
-  code?: fhir.ICodeableConcept|undefined;
-  /**
-   * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
-   */
-  factor?: number|undefined;
-  /**
-   * Extended properties for primitive element: Invoice.lineItem.priceComponent.factor
-   */
-  _factor?: fhir.IFhirElement|undefined;
-  /**
-   * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
-   */
-  amount?: fhir.IMoney|undefined;
-}
-
-/**
- * Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.
- */
-export type IInvoiceLineItem = fhir.IBackboneElement & { 
-  /**
-   * Sequence in which the items appear on the invoice.
-   */
-  sequence?: number|undefined;
-  /**
-   * Extended properties for primitive element: Invoice.lineItem.sequence
-   */
-  _sequence?: fhir.IFhirElement|undefined;
-  /**
-   * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
-   */
-  chargeItemReference?: fhir.IReference|undefined;
-  /**
-   * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
-   */
-  chargeItemCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
-   */
-  priceComponent?: fhir.IInvoiceLineItemPriceComponent[]|undefined;
-}
-
-/**
- * Invoice containing collected ChargeItems from an Account with calculated individual and total price for Billing purpose.
- */
-export type IInvoice = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Invoice";
-  /**
-   * Identifier of this Invoice, often used for reference in correspondence about this invoice or for tracking of payments.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * The current state of the Invoice.
-   */
-  status: InvoiceStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Invoice.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Derived Profiles may choose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.
-   */
-  cancelledReason?: string|undefined;
-  /**
-   * Extended properties for primitive element: Invoice.cancelledReason
-   */
-  _cancelledReason?: fhir.IFhirElement|undefined;
-  /**
-   * Type of Invoice depending on domain, realm an usage (e.g. internal/external, dental, preliminary).
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * The individual or set of individuals receiving the goods and services billed in this invoice.
-   */
-  subject?: fhir.IReference|undefined;
-  /**
-   * The individual or Organization responsible for balancing of this invoice.
-   */
-  recipient?: fhir.IReference|undefined;
-  /**
-   * The list of types may be constrained as appropriate for the type of charge item.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: Invoice.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Indicates who or what performed or participated in the charged service.
-   */
-  participant?: fhir.IInvoiceParticipant[]|undefined;
-  /**
-   * Practitioners and Devices can be associated with multiple organizations. It has to be made clear, on behalf of which Organization the services have been rendered.
-   */
-  issuer?: fhir.IReference|undefined;
-  /**
-   * Systems posting the ChargeItems might not always be able to determine, which accounts the Items need to be places into. It is up to the potprocessing Financial System to apply internal rules to decide based on the Encounter/EpisodeOfCare/Patient/Coverage context and the type of ChargeItem, which Account is appropriate.
-   */
-  account?: fhir.IReference|undefined;
-  /**
-   * Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.
-   */
-  lineItem?: fhir.IInvoiceLineItem[]|undefined;
-  /**
-   * The total amount for the Invoice may be calculated as the sum of the line items with surcharges/deductions that apply in certain conditions.  The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the total price was calculated.
-   */
-  totalPriceComponent?: fhir.IInvoiceLineItemPriceComponent[]|undefined;
-  /**
-   * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
-   */
-  totalNet?: fhir.IMoney|undefined;
-  /**
-   * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
-   */
-  totalGross?: fhir.IMoney|undefined;
-  /**
-   * Derived Profiles may chose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.
-   */
-  paymentTerms?: string|undefined;
-  /**
-   * Extended properties for primitive element: Invoice.paymentTerms
-   */
-  _paymentTerms?: fhir.IFhirElement|undefined;
-  /**
-   * Comments made about the invoice by the issuer, subject, or other participants.
-   */
-  note?: fhir.IAnnotation[]|undefined;
+  actor: fhir.ReferenceArgs|null;
 }
 
 /**
  * Indicates who or what performed or participated in the charged service.
  */
-export class InvoiceParticipant extends fhir.BackboneElement implements IInvoiceParticipant {
+export class InvoiceParticipant extends fhir.BackboneElement {
+  readonly __dataType:string = 'InvoiceParticipant';
   /**
    * Describes the type of involvement (e.g. transcriptionist, creator etc.). If the invoice has been created automatically, the Participant may be a billing engine or another kind of device.
    */
@@ -183,36 +41,62 @@ export class InvoiceParticipant extends fhir.BackboneElement implements IInvoice
   /**
    * Default constructor for InvoiceParticipant - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IInvoiceParticipant> = { }) {
-    super(source);
-    if (source['role']) { this.role = new fhir.CodeableConcept(source.role!); }
-    if (source['actor']) { this.actor = new fhir.Reference(source.actor!); }
+  constructor(source:Partial<InvoiceParticipantArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['role']) { this.role = new fhir.CodeableConcept(source.role); }
+    if (source['actor']) { this.actor = new fhir.Reference(source.actor); }
     else { this.actor = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["role"]) { results.push(...this.role.doModelValidation()); }
-    if (!this["actor"]) { results.push(["actor",'Missing required element: Invoice.participant.actor']); }
-    if (this["actor"]) { results.push(...this.actor.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["role"]) { outcome.issue!.push(...this.role.doModelValidation().issue!); }
+    if (!this['actor']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property actor:fhir.Reference fhir: Invoice.participant.actor:Reference", }));
+    }
+    if (this["actor"]) { outcome.issue!.push(...this.actor.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the InvoiceLineItemPriceComponent type.
+ */
+export interface InvoiceLineItemPriceComponentArgs extends fhir.BackboneElementArgs {
+  /**
+   * This code identifies the type of the component.
+   */
+  type: InvoicePriceComponentTypeValueSetEnum|null;
+  /**
+   * A code that identifies the component. Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc.
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
+   */
+  factor?: fhir.FhirDecimal|number|undefined;
+  /**
+   * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
+   */
+  amount?: fhir.MoneyArgs|undefined;
 }
 
 /**
  * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
  */
-export class InvoiceLineItemPriceComponent extends fhir.BackboneElement implements IInvoiceLineItemPriceComponent {
+export class InvoiceLineItemPriceComponent extends fhir.BackboneElement {
+  readonly __dataType:string = 'InvoiceLineItemPriceComponent';
   /**
    * This code identifies the type of the component.
    */
   public type: InvoicePriceComponentTypeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Invoice.lineItem.priceComponent.type
-   */
-  public _type?: fhir.FhirElement|undefined;
   /**
    * A code that identifies the component. Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc.
    */
@@ -220,11 +104,7 @@ export class InvoiceLineItemPriceComponent extends fhir.BackboneElement implemen
   /**
    * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
    */
-  public factor?: number|undefined;
-  /**
-   * Extended properties for primitive element: Invoice.lineItem.priceComponent.factor
-   */
-  public _factor?: fhir.FhirElement|undefined;
+  public factor?: fhir.FhirDecimal|undefined;
   /**
    * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
    */
@@ -232,15 +112,13 @@ export class InvoiceLineItemPriceComponent extends fhir.BackboneElement implemen
   /**
    * Default constructor for InvoiceLineItemPriceComponent - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IInvoiceLineItemPriceComponent> = { }) {
-    super(source);
+  constructor(source:Partial<InvoiceLineItemPriceComponentArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
-    if (source['factor']) { this.factor = source.factor; }
-    if (source['_factor']) { this._factor = new fhir.FhirElement(source._factor!); }
-    if (source['amount']) { this.amount = new fhir.Money(source.amount!); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
+    if (source['factor']) { this.factor = new fhir.FhirDecimal({value: source.factor}); }
+    if (source['amount']) { this.amount = new fhir.Money(source.amount); }
   }
   /**
    * Required-bound Value Set for type
@@ -251,69 +129,177 @@ export class InvoiceLineItemPriceComponent extends fhir.BackboneElement implemen
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: Invoice.lineItem.priceComponent.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["_factor"]) { results.push(...this._factor.doModelValidation()); }
-    if (this["amount"]) { results.push(...this.amount.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:InvoicePriceComponentTypeValueSetEnum fhir: Invoice.lineItem.priceComponent.type:code", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["factor"]) { outcome.issue!.push(...this.factor.doModelValidation().issue!); }
+    if (this["amount"]) { outcome.issue!.push(...this.amount.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the InvoiceLineItem type.
+ */
+export interface InvoiceLineItemArgs extends fhir.BackboneElementArgs {
+  /**
+   * Sequence in which the items appear on the invoice.
+   */
+  sequence?: fhir.FhirPositiveInt|number|undefined;
+  /**
+   * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
+   */
+  chargeItem?: fhir.Reference|fhir.CodeableConcept|undefined;
+  /**
+   * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
+   */
+  chargeItemReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
+   */
+  chargeItemCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
+   */
+  priceComponent?: fhir.InvoiceLineItemPriceComponentArgs[]|undefined;
 }
 
 /**
  * Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.
  */
-export class InvoiceLineItem extends fhir.BackboneElement implements IInvoiceLineItem {
+export class InvoiceLineItem extends fhir.BackboneElement {
+  readonly __dataType:string = 'InvoiceLineItem';
   /**
    * Sequence in which the items appear on the invoice.
    */
-  public sequence?: number|undefined;
-  /**
-   * Extended properties for primitive element: Invoice.lineItem.sequence
-   */
-  public _sequence?: fhir.FhirElement|undefined;
+  public sequence?: fhir.FhirPositiveInt|undefined;
   /**
    * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
    */
-  public chargeItemReference?: fhir.Reference|undefined;
-  /**
-   * The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.
-   */
-  public chargeItemCodeableConcept?: fhir.CodeableConcept|undefined;
+  public chargeItem: (fhir.Reference|fhir.CodeableConcept)|null;
+  readonly __chargeItemIsChoice:true = true;
   /**
    * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
    */
-  public priceComponent?: fhir.InvoiceLineItemPriceComponent[]|undefined;
+  public priceComponent?: fhir.InvoiceLineItemPriceComponent[]|undefined = [];
   /**
    * Default constructor for InvoiceLineItem - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IInvoiceLineItem> = { }) {
-    super(source);
-    if (source['sequence']) { this.sequence = source.sequence; }
-    if (source['_sequence']) { this._sequence = new fhir.FhirElement(source._sequence!); }
-    if (source['chargeItemReference']) { this.chargeItemReference = new fhir.Reference(source.chargeItemReference!); }
-    if (source['chargeItemCodeableConcept']) { this.chargeItemCodeableConcept = new fhir.CodeableConcept(source.chargeItemCodeableConcept!); }
+  constructor(source:Partial<InvoiceLineItemArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['sequence']) { this.sequence = new fhir.FhirPositiveInt({value: source.sequence}); }
+    if (source['chargeItem']) { this.chargeItem = source.chargeItem; }
+    else if (source['chargeItemReference']) { this.chargeItem = new fhir.Reference(source.chargeItemReference); }
+    else if (source['chargeItemCodeableConcept']) { this.chargeItem = new fhir.CodeableConcept(source.chargeItemCodeableConcept); }
+    else { this.chargeItem = null; }
     if (source['priceComponent']) { this.priceComponent = source.priceComponent.map((x) => new fhir.InvoiceLineItemPriceComponent(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_sequence"]) { results.push(...this._sequence.doModelValidation()); }
-    if (this["chargeItemReference"]) { results.push(...this.chargeItemReference.doModelValidation()); }
-    if (this["chargeItemCodeableConcept"]) { results.push(...this.chargeItemCodeableConcept.doModelValidation()); }
-    if (this["priceComponent"]) { this.priceComponent.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["sequence"]) { outcome.issue!.push(...this.sequence.doModelValidation().issue!); }
+    if (!this['chargeItem']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property chargeItem: fhir: Invoice.lineItem.chargeItem[x]:", }));
+    }
+    if (this["priceComponent"]) { this.priceComponent.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Invoice type.
+ */
+export interface InvoiceArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Invoice"|undefined;
+  /**
+   * Identifier of this Invoice, often used for reference in correspondence about this invoice or for tracking of payments.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * The current state of the Invoice.
+   */
+  status: InvoiceStatusValueSetEnum|null;
+  /**
+   * Derived Profiles may choose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.
+   */
+  cancelledReason?: fhir.FhirString|string|undefined;
+  /**
+   * Type of Invoice depending on domain, realm an usage (e.g. internal/external, dental, preliminary).
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The individual or set of individuals receiving the goods and services billed in this invoice.
+   */
+  subject?: fhir.ReferenceArgs|undefined;
+  /**
+   * The individual or Organization responsible for balancing of this invoice.
+   */
+  recipient?: fhir.ReferenceArgs|undefined;
+  /**
+   * The list of types may be constrained as appropriate for the type of charge item.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Indicates who or what performed or participated in the charged service.
+   */
+  participant?: fhir.InvoiceParticipantArgs[]|undefined;
+  /**
+   * Practitioners and Devices can be associated with multiple organizations. It has to be made clear, on behalf of which Organization the services have been rendered.
+   */
+  issuer?: fhir.ReferenceArgs|undefined;
+  /**
+   * Systems posting the ChargeItems might not always be able to determine, which accounts the Items need to be places into. It is up to the potprocessing Financial System to apply internal rules to decide based on the Encounter/EpisodeOfCare/Patient/Coverage context and the type of ChargeItem, which Account is appropriate.
+   */
+  account?: fhir.ReferenceArgs|undefined;
+  /**
+   * Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.
+   */
+  lineItem?: fhir.InvoiceLineItemArgs[]|undefined;
+  /**
+   * The total amount for the Invoice may be calculated as the sum of the line items with surcharges/deductions that apply in certain conditions.  The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the total price was calculated.
+   */
+  totalPriceComponent?: fhir.InvoiceLineItemPriceComponentArgs[]|undefined;
+  /**
+   * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
+   */
+  totalNet?: fhir.MoneyArgs|undefined;
+  /**
+   * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
+   */
+  totalGross?: fhir.MoneyArgs|undefined;
+  /**
+   * Derived Profiles may chose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.
+   */
+  paymentTerms?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Comments made about the invoice by the issuer, subject, or other participants.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
 }
 
 /**
  * Invoice containing collected ChargeItems from an Account with calculated individual and total price for Billing purpose.
  */
-export class Invoice extends fhir.DomainResource implements IInvoice {
+export class Invoice extends fhir.DomainResource {
+  readonly __dataType:string = 'Invoice';
   /**
    * Resource Type Name
    */
@@ -321,23 +307,15 @@ export class Invoice extends fhir.DomainResource implements IInvoice {
   /**
    * Identifier of this Invoice, often used for reference in correspondence about this invoice or for tracking of payments.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * The current state of the Invoice.
    */
   public status: InvoiceStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Invoice.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Derived Profiles may choose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.
    */
-  public cancelledReason?: string|undefined;
-  /**
-   * Extended properties for primitive element: Invoice.cancelledReason
-   */
-  public _cancelledReason?: fhir.FhirElement|undefined;
+  public cancelledReason?: fhir.FhirString|undefined;
   /**
    * Type of Invoice depending on domain, realm an usage (e.g. internal/external, dental, preliminary).
    */
@@ -353,15 +331,11 @@ export class Invoice extends fhir.DomainResource implements IInvoice {
   /**
    * The list of types may be constrained as appropriate for the type of charge item.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: Invoice.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Indicates who or what performed or participated in the charged service.
    */
-  public participant?: fhir.InvoiceParticipant[]|undefined;
+  public participant?: fhir.InvoiceParticipant[]|undefined = [];
   /**
    * Practitioners and Devices can be associated with multiple organizations. It has to be made clear, on behalf of which Organization the services have been rendered.
    */
@@ -373,11 +347,11 @@ export class Invoice extends fhir.DomainResource implements IInvoice {
   /**
    * Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.
    */
-  public lineItem?: fhir.InvoiceLineItem[]|undefined;
+  public lineItem?: fhir.InvoiceLineItem[]|undefined = [];
   /**
    * The total amount for the Invoice may be calculated as the sum of the line items with surcharges/deductions that apply in certain conditions.  The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the total price was calculated.
    */
-  public totalPriceComponent?: fhir.InvoiceLineItemPriceComponent[]|undefined;
+  public totalPriceComponent?: fhir.InvoiceLineItemPriceComponent[]|undefined = [];
   /**
    * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
    */
@@ -389,41 +363,33 @@ export class Invoice extends fhir.DomainResource implements IInvoice {
   /**
    * Derived Profiles may chose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.
    */
-  public paymentTerms?: string|undefined;
-  /**
-   * Extended properties for primitive element: Invoice.paymentTerms
-   */
-  public _paymentTerms?: fhir.FhirElement|undefined;
+  public paymentTerms?: fhir.FhirMarkdown|undefined;
   /**
    * Comments made about the invoice by the issuer, subject, or other participants.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Default constructor for Invoice - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IInvoice> = { }) {
-    super(source);
+  constructor(source:Partial<InvoiceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Invoice';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['cancelledReason']) { this.cancelledReason = source.cancelledReason; }
-    if (source['_cancelledReason']) { this._cancelledReason = new fhir.FhirElement(source._cancelledReason!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
-    if (source['recipient']) { this.recipient = new fhir.Reference(source.recipient!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
+    if (source['cancelledReason']) { this.cancelledReason = new fhir.FhirString({value: source.cancelledReason}); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
+    if (source['recipient']) { this.recipient = new fhir.Reference(source.recipient); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
     if (source['participant']) { this.participant = source.participant.map((x) => new fhir.InvoiceParticipant(x)); }
-    if (source['issuer']) { this.issuer = new fhir.Reference(source.issuer!); }
-    if (source['account']) { this.account = new fhir.Reference(source.account!); }
+    if (source['issuer']) { this.issuer = new fhir.Reference(source.issuer); }
+    if (source['account']) { this.account = new fhir.Reference(source.account); }
     if (source['lineItem']) { this.lineItem = source.lineItem.map((x) => new fhir.InvoiceLineItem(x)); }
     if (source['totalPriceComponent']) { this.totalPriceComponent = source.totalPriceComponent.map((x) => new fhir.InvoiceLineItemPriceComponent(x)); }
-    if (source['totalNet']) { this.totalNet = new fhir.Money(source.totalNet!); }
-    if (source['totalGross']) { this.totalGross = new fhir.Money(source.totalGross!); }
-    if (source['paymentTerms']) { this.paymentTerms = source.paymentTerms; }
-    if (source['_paymentTerms']) { this._paymentTerms = new fhir.FhirElement(source._paymentTerms!); }
+    if (source['totalNet']) { this.totalNet = new fhir.Money(source.totalNet); }
+    if (source['totalGross']) { this.totalGross = new fhir.Money(source.totalGross); }
+    if (source['paymentTerms']) { this.paymentTerms = new fhir.FhirMarkdown({value: source.paymentTerms}); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
   }
   /**
@@ -435,26 +401,35 @@ export class Invoice extends fhir.DomainResource implements IInvoice {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Invoice.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: Invoice.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_cancelledReason"]) { results.push(...this._cancelledReason.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["recipient"]) { results.push(...this.recipient.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["participant"]) { this.participant.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["issuer"]) { results.push(...this.issuer.doModelValidation()); }
-    if (this["account"]) { results.push(...this.account.doModelValidation()); }
-    if (this["lineItem"]) { this.lineItem.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["totalPriceComponent"]) { this.totalPriceComponent.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["totalNet"]) { results.push(...this.totalNet.doModelValidation()); }
-    if (this["totalGross"]) { results.push(...this.totalGross.doModelValidation()); }
-    if (this["_paymentTerms"]) { results.push(...this._paymentTerms.doModelValidation()); }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Invoice' fhir: Invoice.resourceType:'Invoice'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:InvoiceStatusValueSetEnum fhir: Invoice.status:code", }));
+    }
+    if (this["cancelledReason"]) { outcome.issue!.push(...this.cancelledReason.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["recipient"]) { outcome.issue!.push(...this.recipient.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["participant"]) { this.participant.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["issuer"]) { outcome.issue!.push(...this.issuer.doModelValidation().issue!); }
+    if (this["account"]) { outcome.issue!.push(...this.account.doModelValidation().issue!); }
+    if (this["lineItem"]) { this.lineItem.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["totalPriceComponent"]) { this.totalPriceComponent.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["totalNet"]) { outcome.issue!.push(...this.totalNet.doModelValidation().issue!); }
+    if (this["totalGross"]) { outcome.issue!.push(...this.totalGross.doModelValidation().issue!); }
+    if (this["paymentTerms"]) { outcome.issue!.push(...this.paymentTerms.doModelValidation().issue!); }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

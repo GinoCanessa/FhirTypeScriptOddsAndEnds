@@ -3,317 +3,70 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: AuditEvent
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { NetworkTypeValueSet, NetworkTypeValueSetType, NetworkTypeValueSetEnum } from '../fhirValueSets/NetworkTypeValueSet.js'
-import { ParticipationRoleTypeValueSet, ParticipationRoleTypeValueSetType, ParticipationRoleTypeValueSetEnum } from '../fhirValueSets/ParticipationRoleTypeValueSet.js'
-import { SecurityRoleTypeValueSet, SecurityRoleTypeValueSetType, SecurityRoleTypeValueSetEnum } from '../fhirValueSets/SecurityRoleTypeValueSet.js'
-import { Dicm405MediatypeValueSet, Dicm405MediatypeValueSetType, Dicm405MediatypeValueSetEnum } from '../fhirValueSets/Dicm405MediatypeValueSet.js'
-import { V3PurposeOfUseValueSet, V3PurposeOfUseValueSetType, V3PurposeOfUseValueSetEnum } from '../fhirValueSets/V3PurposeOfUseValueSet.js'
-import { AuditSourceTypeValueSet, AuditSourceTypeValueSetType, AuditSourceTypeValueSetEnum } from '../fhirValueSets/AuditSourceTypeValueSet.js'
-import { AuditEntityTypeValueSet, AuditEntityTypeValueSetType, AuditEntityTypeValueSetEnum } from '../fhirValueSets/AuditEntityTypeValueSet.js'
-import { ObjectRoleValueSet, ObjectRoleValueSetType, ObjectRoleValueSetEnum } from '../fhirValueSets/ObjectRoleValueSet.js'
-import { SecurityLabelsValueSet, SecurityLabelsValueSetType, SecurityLabelsValueSetEnum } from '../fhirValueSets/SecurityLabelsValueSet.js'
-import { AuditEventTypeValueSet, AuditEventTypeValueSetType, AuditEventTypeValueSetEnum } from '../fhirValueSets/AuditEventTypeValueSet.js'
-import { AuditEventSubTypeValueSet, AuditEventSubTypeValueSetType, AuditEventSubTypeValueSetEnum } from '../fhirValueSets/AuditEventSubTypeValueSet.js'
-import { AuditEventActionValueSet, AuditEventActionValueSetType, AuditEventActionValueSetEnum } from '../fhirValueSets/AuditEventActionValueSet.js'
-import { AuditEventOutcomeValueSet, AuditEventOutcomeValueSetType, AuditEventOutcomeValueSetEnum } from '../fhirValueSets/AuditEventOutcomeValueSet.js'
-
+import { NetworkTypeValueSet, NetworkTypeValueSetType,} from '../fhirValueSets/NetworkTypeValueSet.js';
+import { NetworkTypeValueSetEnum } from '../valueSetEnums.js';
+import { ParticipationRoleTypeValueSet, ParticipationRoleTypeValueSetType,} from '../fhirValueSets/ParticipationRoleTypeValueSet.js';
+import { ParticipationRoleTypeValueSetEnum } from '../valueSetEnums.js';
+import { SecurityRoleTypeValueSet, SecurityRoleTypeValueSetType,} from '../fhirValueSets/SecurityRoleTypeValueSet.js';
+import { SecurityRoleTypeValueSetEnum } from '../valueSetEnums.js';
+import { Dicm405MediatypeValueSet, Dicm405MediatypeValueSetType,} from '../fhirValueSets/Dicm405MediatypeValueSet.js';
+import { Dicm405MediatypeValueSetEnum } from '../valueSetEnums.js';
+import { V3PurposeOfUseValueSet, V3PurposeOfUseValueSetType,} from '../fhirValueSets/V3PurposeOfUseValueSet.js';
+import { V3PurposeOfUseValueSetEnum } from '../valueSetEnums.js';
+import { AuditSourceTypeValueSet, AuditSourceTypeValueSetType,} from '../fhirValueSets/AuditSourceTypeValueSet.js';
+import { AuditSourceTypeValueSetEnum } from '../valueSetEnums.js';
+import { AuditEntityTypeValueSet, AuditEntityTypeValueSetType,} from '../fhirValueSets/AuditEntityTypeValueSet.js';
+import { AuditEntityTypeValueSetEnum } from '../valueSetEnums.js';
+import { ObjectRoleValueSet, ObjectRoleValueSetType,} from '../fhirValueSets/ObjectRoleValueSet.js';
+import { ObjectRoleValueSetEnum } from '../valueSetEnums.js';
+import { SecurityLabelsValueSet, SecurityLabelsValueSetType,} from '../fhirValueSets/SecurityLabelsValueSet.js';
+import { SecurityLabelsValueSetEnum } from '../valueSetEnums.js';
+import { AuditEventTypeValueSet, AuditEventTypeValueSetType,} from '../fhirValueSets/AuditEventTypeValueSet.js';
+import { AuditEventTypeValueSetEnum } from '../valueSetEnums.js';
+import { AuditEventSubTypeValueSet, AuditEventSubTypeValueSetType,} from '../fhirValueSets/AuditEventSubTypeValueSet.js';
+import { AuditEventSubTypeValueSetEnum } from '../valueSetEnums.js';
+import { AuditEventActionValueSet, AuditEventActionValueSetType,} from '../fhirValueSets/AuditEventActionValueSet.js';
+import { AuditEventActionValueSetEnum } from '../valueSetEnums.js';
+import { AuditEventOutcomeValueSet, AuditEventOutcomeValueSetType,} from '../fhirValueSets/AuditEventOutcomeValueSet.js';
+import { AuditEventOutcomeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Logical network location for application activity, if the activity has a network location.
+ * Valid arguments for the AuditEventAgentNetwork type.
  */
-export type IAuditEventAgentNetwork = fhir.IBackboneElement & { 
+export interface AuditEventAgentNetworkArgs extends fhir.BackboneElementArgs {
   /**
    * This could be a device id, IP address or some other identifier associated with a device.
    */
-  address?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.agent.network.address
-   */
-  _address?: fhir.IFhirElement|undefined;
+  address?: fhir.FhirString|string|undefined;
   /**
    * An identifier for the type of network access point that originated the audit event.
    */
-  type?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.agent.network.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Several agents may be associated (i.e. have some responsibility for an activity) with an event or activity.
- * For example, an activity may be initiated by one user for other users or involve more than one user. However, only one user may be the initiator/requestor for the activity.
- */
-export type IAuditEventAgent = fhir.IBackboneElement & { 
-  /**
-   * Specification of the participation type the user plays when performing the event.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Should be roles relevant to the event. Should  not be an exhaustive list of roles.
-   */
-  role?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Where a User ID is available it will go into who.identifier.
-   */
-  who?: fhir.IReference|undefined;
-  /**
-   * Alternative agent Identifier. For a human, this should be a user identifier text string from authentication system. This identifier would be one known to a common authentication system (e.g. single sign-on), if available.
-   */
-  altId?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.agent.altId
-   */
-  _altId?: fhir.IFhirElement|undefined;
-  /**
-   * Human-meaningful name for the agent.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.agent.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * There can only be one initiator. If the initiator is not clear, then do not choose any one agent as the initiator.
-   */
-  requestor: boolean|null;
-  /**
-   * Extended properties for primitive element: AuditEvent.agent.requestor
-   */
-  _requestor?: fhir.IFhirElement|undefined;
-  /**
-   * Where the event occurred.
-   */
-  location?: fhir.IReference|undefined;
-  /**
-   * For example: Where an OAuth token authorizes, the unique identifier from the OAuth token is placed into the policy element Where a policy engine (e.g. XACML) holds policy logic, the unique policy identifier is placed into the policy element.
-   */
-  policy?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.agent.policy
-   */
-  _policy?: fhir.IFhirElement[]|undefined;
-  /**
-   * Type of media involved. Used when the event is about exporting/importing onto media.
-   */
-  media?: fhir.ICoding|undefined;
-  /**
-   * Logical network location for application activity, if the activity has a network location.
-   */
-  network?: fhir.IAuditEventAgentNetwork|undefined;
-  /**
-   * Use AuditEvent.agent.purposeOfUse when you know that is specific to the agent, otherwise use AuditEvent.purposeOfEvent. For example, during a machine-to-machine transfer it might not be obvious to the audit system who caused the event, but it does know why.
-   */
-  purposeOfUse?: fhir.ICodeableConcept[]|undefined;
-}
-
-/**
- * Since multi-tier, distributed, or composite applications make source identification ambiguous, this collection of fields may repeat for each application or process actively involved in the event. For example, multiple value-sets can identify participating web servers, application processes, and database server threads in an n-tier distributed application. Passive event participants (e.g. low-level network transports) need not be identified.
- */
-export type IAuditEventSource = fhir.IBackboneElement & { 
-  /**
-   * Logical source location within the healthcare enterprise network.  For example, a hospital or other provider location within a multi-entity provider group.
-   */
-  site?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.source.site
-   */
-  _site?: fhir.IFhirElement|undefined;
-  /**
-   * Identifier of the source where the event was detected.
-   */
-  observer: fhir.IReference|null;
-  /**
-   * Code specifying the type of source where event originated.
-   */
-  type?: fhir.ICoding[]|undefined;
-}
-
-/**
- * Tagged value pairs for conveying additional information about the entity.
- */
-export type IAuditEventEntityDetail = fhir.IBackboneElement & { 
-  /**
-   * The type of extra detail provided in the value.
-   */
-  type: string|null;
-  /**
-   * Extended properties for primitive element: AuditEvent.entity.detail.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * The value can be string when known to be a string, else base64 encoding should be used to protect binary or undefined content.  The meaning and secondary-encoding of the content of base64 encoded blob is specific to the AuditEvent.type, AuditEvent.subtype, AuditEvent.entity.type, and AuditEvent.entity.role.  The base64 is a general-use and safe container for event specific data blobs regardless of the encoding used by the transaction being recorded.  An AuditEvent consuming application must understand the event it is consuming and the formats used by the event. For example if auditing an Oracle network database access, the Oracle formats must be understood as they will be simply encoded in the base64binary blob.
-   */
-  valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.entity.detail.value[x]
-   */
-  _valueString?: fhir.IFhirElement|undefined;
-  /**
-   * The value can be string when known to be a string, else base64 encoding should be used to protect binary or undefined content.  The meaning and secondary-encoding of the content of base64 encoded blob is specific to the AuditEvent.type, AuditEvent.subtype, AuditEvent.entity.type, and AuditEvent.entity.role.  The base64 is a general-use and safe container for event specific data blobs regardless of the encoding used by the transaction being recorded.  An AuditEvent consuming application must understand the event it is consuming and the formats used by the event. For example if auditing an Oracle network database access, the Oracle formats must be understood as they will be simply encoded in the base64binary blob.
-   */
-  valueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.entity.detail.value[x]
-   */
-  _valueBase64Binary?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Required unless the values for event identification, agent identification, and audit source identification are sufficient to document the entire auditable event. Because events may have more than one entity, this group can be a repeating set of values.
- */
-export type IAuditEventEntity = fhir.IBackboneElement & { 
-  /**
-   * Identifies a specific instance of the entity. The reference should be version specific.
-   */
-  what?: fhir.IReference|undefined;
-  /**
-   * This value is distinct from the user's role or any user relationship to the entity.
-   */
-  type?: fhir.ICoding|undefined;
-  /**
-   * Code representing the role the entity played in the event being audited.
-   */
-  role?: fhir.ICoding|undefined;
-  /**
-   * This can be used to provide an audit trail for data, over time, as it passes through the system.
-   */
-  lifecycle?: fhir.ICoding|undefined;
-  /**
-   * Copied from entity meta security tags.
-   */
-  securityLabel?: fhir.ICoding[]|undefined;
-  /**
-   * This field may be used in a query/report to identify audit events for a specific person.  For example, where multiple synonymous entity identifiers (patient number, medical record number, encounter number, etc.) have been used.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.entity.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Text that describes the entity in more detail.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.entity.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * The meaning and secondary-encoding of the content of base64 encoded blob is specific to the AuditEvent.type, AuditEvent.subtype, AuditEvent.entity.type, and AuditEvent.entity.role.  The base64 is a general-use and safe container for event specific data blobs regardless of the encoding used by the transaction being recorded.  An AuditEvent consuming application must understand the event it is consuming and the formats used by the event. For example, if auditing an Oracle network database access, the Oracle formats must be understood as they will be simply encoded in the base64binary blob.
-   */
-  query?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.entity.query
-   */
-  _query?: fhir.IFhirElement|undefined;
-  /**
-   * Tagged value pairs for conveying additional information about the entity.
-   */
-  detail?: fhir.IAuditEventEntityDetail[]|undefined;
-}
-
-/**
- * A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
- */
-export type IAuditEvent = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "AuditEvent";
-  /**
-   * Identifier for a family of the event.  For example, a menu item, program, rule, policy, function code, application name or URL. It identifies the performed function.
-   */
-  type: fhir.ICoding|null;
-  /**
-   * Identifier for the category of event.
-   */
-  subtype?: fhir.ICoding[]|undefined;
-  /**
-   * Indicator for type of action performed during the event that generated the audit.
-   */
-  action?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.action
-   */
-  _action?: fhir.IFhirElement|undefined;
-  /**
-   * The period can be a little arbitrary; where possible, the time should correspond to human assessment of the activity time.
-   */
-  period?: fhir.IPeriod|undefined;
-  /**
-   * In a distributed system, some sort of common time base (e.g. an NTP [RFC1305] server) is a good implementation tactic.
-   */
-  recorded: string|null;
-  /**
-   * Extended properties for primitive element: AuditEvent.recorded
-   */
-  _recorded?: fhir.IFhirElement|undefined;
-  /**
-   * In some cases a "success" may be partial, for example, an incomplete or interrupted transfer of a radiological study. For the purpose of establishing accountability, these distinctions are not relevant.
-   */
-  outcome?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.outcome
-   */
-  _outcome?: fhir.IFhirElement|undefined;
-  /**
-   * A free text description of the outcome of the event.
-   */
-  outcomeDesc?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.outcomeDesc
-   */
-  _outcomeDesc?: fhir.IFhirElement|undefined;
-  /**
-   * Use AuditEvent.agent.purposeOfUse when you know that it is specific to the agent, otherwise use AuditEvent.purposeOfEvent. For example, during a machine-to-machine transfer it might not be obvious to the audit system who caused the event, but it does know why.
-   */
-  purposeOfEvent?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Several agents may be associated (i.e. have some responsibility for an activity) with an event or activity.
-   * For example, an activity may be initiated by one user for other users or involve more than one user. However, only one user may be the initiator/requestor for the activity.
-   */
-  agent: fhir.IAuditEventAgent[]|null;
-  /**
-   * Since multi-tier, distributed, or composite applications make source identification ambiguous, this collection of fields may repeat for each application or process actively involved in the event. For example, multiple value-sets can identify participating web servers, application processes, and database server threads in an n-tier distributed application. Passive event participants (e.g. low-level network transports) need not be identified.
-   */
-  source: fhir.IAuditEventSource|null;
-  /**
-   * Required unless the values for event identification, agent identification, and audit source identification are sufficient to document the entire auditable event. Because events may have more than one entity, this group can be a repeating set of values.
-   */
-  entity?: fhir.IAuditEventEntity[]|undefined;
+  type?: fhir.FhirCode|string|undefined;
 }
 
 /**
  * Logical network location for application activity, if the activity has a network location.
  */
-export class AuditEventAgentNetwork extends fhir.BackboneElement implements IAuditEventAgentNetwork {
+export class AuditEventAgentNetwork extends fhir.BackboneElement {
+  readonly __dataType:string = 'AuditEventAgentNetwork';
   /**
    * This could be a device id, IP address or some other identifier associated with a device.
    */
-  public address?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.agent.network.address
-   */
-  public _address?: fhir.FhirElement|undefined;
+  public address?: fhir.FhirString|undefined;
   /**
    * An identifier for the type of network access point that originated the audit event.
    */
-  public type?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.agent.network.type
-   */
-  public _type?: fhir.FhirElement|undefined;
+  public type?: fhir.FhirCode|undefined;
   /**
    * Default constructor for AuditEventAgentNetwork - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAuditEventAgentNetwork> = { }) {
-    super(source);
-    if (source['address']) { this.address = source.address; }
-    if (source['_address']) { this._address = new fhir.FhirElement(source._address!); }
-    if (source['type']) { this.type = source.type; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
+  constructor(source:Partial<AuditEventAgentNetworkArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['address']) { this.address = new fhir.FhirString({value: source.address}); }
+    if (source['type']) { this.type = new fhir.FhirCode({value: source.type}); }
   }
   /**
    * Required-bound Value Set for type
@@ -324,19 +77,75 @@ export class AuditEventAgentNetwork extends fhir.BackboneElement implements IAud
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_address"]) { results.push(...this._address.doModelValidation()); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["address"]) { outcome.issue!.push(...this.address.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the AuditEventAgent type.
+ */
+export interface AuditEventAgentArgs extends fhir.BackboneElementArgs {
+  /**
+   * Specification of the participation type the user plays when performing the event.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Should be roles relevant to the event. Should  not be an exhaustive list of roles.
+   */
+  role?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Where a User ID is available it will go into who.identifier.
+   */
+  who?: fhir.ReferenceArgs|undefined;
+  /**
+   * Alternative agent Identifier. For a human, this should be a user identifier text string from authentication system. This identifier would be one known to a common authentication system (e.g. single sign-on), if available.
+   */
+  altId?: fhir.FhirString|string|undefined;
+  /**
+   * Human-meaningful name for the agent.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * There can only be one initiator. If the initiator is not clear, then do not choose any one agent as the initiator.
+   */
+  requestor: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Where the event occurred.
+   */
+  location?: fhir.ReferenceArgs|undefined;
+  /**
+   * For example: Where an OAuth token authorizes, the unique identifier from the OAuth token is placed into the policy element Where a policy engine (e.g. XACML) holds policy logic, the unique policy identifier is placed into the policy element.
+   */
+  policy?: fhir.FhirUri[]|string[]|undefined;
+  /**
+   * Type of media involved. Used when the event is about exporting/importing onto media.
+   */
+  media?: fhir.CodingArgs|undefined;
+  /**
+   * Logical network location for application activity, if the activity has a network location.
+   */
+  network?: fhir.AuditEventAgentNetworkArgs|undefined;
+  /**
+   * Use AuditEvent.agent.purposeOfUse when you know that is specific to the agent, otherwise use AuditEvent.purposeOfEvent. For example, during a machine-to-machine transfer it might not be obvious to the audit system who caused the event, but it does know why.
+   */
+  purposeOfUse?: fhir.CodeableConceptArgs[]|undefined;
 }
 
 /**
  * Several agents may be associated (i.e. have some responsibility for an activity) with an event or activity.
  * For example, an activity may be initiated by one user for other users or involve more than one user. However, only one user may be the initiator/requestor for the activity.
  */
-export class AuditEventAgent extends fhir.BackboneElement implements IAuditEventAgent {
+export class AuditEventAgent extends fhir.BackboneElement {
+  readonly __dataType:string = 'AuditEventAgent';
   /**
    * Specification of the participation type the user plays when performing the event.
    */
@@ -344,7 +153,7 @@ export class AuditEventAgent extends fhir.BackboneElement implements IAuditEvent
   /**
    * Should be roles relevant to the event. Should  not be an exhaustive list of roles.
    */
-  public role?: fhir.CodeableConcept[]|undefined;
+  public role?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Where a User ID is available it will go into who.identifier.
    */
@@ -352,27 +161,15 @@ export class AuditEventAgent extends fhir.BackboneElement implements IAuditEvent
   /**
    * Alternative agent Identifier. For a human, this should be a user identifier text string from authentication system. This identifier would be one known to a common authentication system (e.g. single sign-on), if available.
    */
-  public altId?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.agent.altId
-   */
-  public _altId?: fhir.FhirElement|undefined;
+  public altId?: fhir.FhirString|undefined;
   /**
    * Human-meaningful name for the agent.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.agent.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * There can only be one initiator. If the initiator is not clear, then do not choose any one agent as the initiator.
    */
-  public requestor: boolean|null;
-  /**
-   * Extended properties for primitive element: AuditEvent.agent.requestor
-   */
-  public _requestor?: fhir.FhirElement|undefined;
+  public requestor: fhir.FhirBoolean|null;
   /**
    * Where the event occurred.
    */
@@ -380,11 +177,7 @@ export class AuditEventAgent extends fhir.BackboneElement implements IAuditEvent
   /**
    * For example: Where an OAuth token authorizes, the unique identifier from the OAuth token is placed into the policy element Where a policy engine (e.g. XACML) holds policy logic, the unique policy identifier is placed into the policy element.
    */
-  public policy?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.agent.policy
-   */
-  public _policy?: fhir.FhirElement[]|undefined;
+  public policy?: fhir.FhirUri[]|undefined = [];
   /**
    * Type of media involved. Used when the event is about exporting/importing onto media.
    */
@@ -396,27 +189,23 @@ export class AuditEventAgent extends fhir.BackboneElement implements IAuditEvent
   /**
    * Use AuditEvent.agent.purposeOfUse when you know that is specific to the agent, otherwise use AuditEvent.purposeOfEvent. For example, during a machine-to-machine transfer it might not be obvious to the audit system who caused the event, but it does know why.
    */
-  public purposeOfUse?: fhir.CodeableConcept[]|undefined;
+  public purposeOfUse?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Default constructor for AuditEventAgent - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAuditEventAgent> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
+  constructor(source:Partial<AuditEventAgentArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
     if (source['role']) { this.role = source.role.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['who']) { this.who = new fhir.Reference(source.who!); }
-    if (source['altId']) { this.altId = source.altId; }
-    if (source['_altId']) { this._altId = new fhir.FhirElement(source._altId!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['requestor']) { this.requestor = source.requestor; }
+    if (source['who']) { this.who = new fhir.Reference(source.who); }
+    if (source['altId']) { this.altId = new fhir.FhirString({value: source.altId}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['requestor']) { this.requestor = new fhir.FhirBoolean({value: source.requestor}); }
     else { this.requestor = null; }
-    if (source['_requestor']) { this._requestor = new fhir.FhirElement(source._requestor!); }
-    if (source['location']) { this.location = new fhir.Reference(source.location!); }
-    if (source['policy']) { this.policy = source.policy.map((x) => (x)); }
-    if (source['_policy']) { this._policy = source._policy.map((x) => new fhir.FhirElement(x)); }
-    if (source['media']) { this.media = new fhir.Coding(source.media!); }
-    if (source['network']) { this.network = new fhir.AuditEventAgentNetwork(source.network!); }
+    if (source['location']) { this.location = new fhir.Reference(source.location); }
+    if (source['policy']) { this.policy = source.policy.map((x) => new fhir.FhirUri({value: x})); }
+    if (source['media']) { this.media = new fhir.Coding(source.media); }
+    if (source['network']) { this.network = new fhir.AuditEventAgentNetwork(source.network); }
     if (source['purposeOfUse']) { this.purposeOfUse = source.purposeOfUse.map((x) => new fhir.CodeableConcept(x)); }
   }
   /**
@@ -446,36 +235,58 @@ export class AuditEventAgent extends fhir.BackboneElement implements IAuditEvent
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["role"]) { this.role.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["who"]) { results.push(...this.who.doModelValidation()); }
-    if (this["_altId"]) { results.push(...this._altId.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (!this["requestor"]) { results.push(["requestor",'Missing required element: AuditEvent.agent.requestor']); }
-    if (this["_requestor"]) { results.push(...this._requestor.doModelValidation()); }
-    if (this["location"]) { results.push(...this.location.doModelValidation()); }
-    if (this["_policy"]) { this._policy.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["media"]) { results.push(...this.media.doModelValidation()); }
-    if (this["network"]) { results.push(...this.network.doModelValidation()); }
-    if (this["purposeOfUse"]) { this.purposeOfUse.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["role"]) { this.role.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["who"]) { outcome.issue!.push(...this.who.doModelValidation().issue!); }
+    if (this["altId"]) { outcome.issue!.push(...this.altId.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (!this['requestor']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property requestor:fhir.FhirBoolean fhir: AuditEvent.agent.requestor:boolean", }));
+    }
+    if (this["requestor"]) { outcome.issue!.push(...this.requestor.doModelValidation().issue!); }
+    if (this["location"]) { outcome.issue!.push(...this.location.doModelValidation().issue!); }
+    if (this["policy"]) { this.policy.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["media"]) { outcome.issue!.push(...this.media.doModelValidation().issue!); }
+    if (this["network"]) { outcome.issue!.push(...this.network.doModelValidation().issue!); }
+    if (this["purposeOfUse"]) { this.purposeOfUse.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the AuditEventSource type.
+ */
+export interface AuditEventSourceArgs extends fhir.BackboneElementArgs {
+  /**
+   * Logical source location within the healthcare enterprise network.  For example, a hospital or other provider location within a multi-entity provider group.
+   */
+  site?: fhir.FhirString|string|undefined;
+  /**
+   * Identifier of the source where the event was detected.
+   */
+  observer: fhir.ReferenceArgs|null;
+  /**
+   * Code specifying the type of source where event originated.
+   */
+  type?: fhir.CodingArgs[]|undefined;
 }
 
 /**
  * Since multi-tier, distributed, or composite applications make source identification ambiguous, this collection of fields may repeat for each application or process actively involved in the event. For example, multiple value-sets can identify participating web servers, application processes, and database server threads in an n-tier distributed application. Passive event participants (e.g. low-level network transports) need not be identified.
  */
-export class AuditEventSource extends fhir.BackboneElement implements IAuditEventSource {
+export class AuditEventSource extends fhir.BackboneElement {
+  readonly __dataType:string = 'AuditEventSource';
   /**
    * Logical source location within the healthcare enterprise network.  For example, a hospital or other provider location within a multi-entity provider group.
    */
-  public site?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.source.site
-   */
-  public _site?: fhir.FhirElement|undefined;
+  public site?: fhir.FhirString|undefined;
   /**
    * Identifier of the source where the event was detected.
    */
@@ -483,15 +294,14 @@ export class AuditEventSource extends fhir.BackboneElement implements IAuditEven
   /**
    * Code specifying the type of source where event originated.
    */
-  public type?: fhir.Coding[]|undefined;
+  public type?: fhir.Coding[]|undefined = [];
   /**
    * Default constructor for AuditEventSource - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAuditEventSource> = { }) {
-    super(source);
-    if (source['site']) { this.site = source.site; }
-    if (source['_site']) { this._site = new fhir.FhirElement(source._site!); }
-    if (source['observer']) { this.observer = new fhir.Reference(source.observer!); }
+  constructor(source:Partial<AuditEventSourceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['site']) { this.site = new fhir.FhirString({value: source.site}); }
+    if (source['observer']) { this.observer = new fhir.Reference(source.observer); }
     else { this.observer = null; }
     if (source['type']) { this.type = source.type.map((x) => new fhir.Coding(x)); }
   }
@@ -504,74 +314,139 @@ export class AuditEventSource extends fhir.BackboneElement implements IAuditEven
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_site"]) { results.push(...this._site.doModelValidation()); }
-    if (!this["observer"]) { results.push(["observer",'Missing required element: AuditEvent.source.observer']); }
-    if (this["observer"]) { results.push(...this.observer.doModelValidation()); }
-    if (this["type"]) { this.type.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["site"]) { outcome.issue!.push(...this.site.doModelValidation().issue!); }
+    if (!this['observer']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property observer:fhir.Reference fhir: AuditEvent.source.observer:Reference", }));
+    }
+    if (this["observer"]) { outcome.issue!.push(...this.observer.doModelValidation().issue!); }
+    if (this["type"]) { this.type.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the AuditEventEntityDetail type.
+ */
+export interface AuditEventEntityDetailArgs extends fhir.BackboneElementArgs {
+  /**
+   * The type of extra detail provided in the value.
+   */
+  type: fhir.FhirString|string|undefined;
+  /**
+   * The value can be string when known to be a string, else base64 encoding should be used to protect binary or undefined content.  The meaning and secondary-encoding of the content of base64 encoded blob is specific to the AuditEvent.type, AuditEvent.subtype, AuditEvent.entity.type, and AuditEvent.entity.role.  The base64 is a general-use and safe container for event specific data blobs regardless of the encoding used by the transaction being recorded.  An AuditEvent consuming application must understand the event it is consuming and the formats used by the event. For example if auditing an Oracle network database access, the Oracle formats must be understood as they will be simply encoded in the base64binary blob.
+   */
+  value?: fhir.FhirString|fhir.FhirBase64Binary|undefined;
+  /**
+   * The value can be string when known to be a string, else base64 encoding should be used to protect binary or undefined content.  The meaning and secondary-encoding of the content of base64 encoded blob is specific to the AuditEvent.type, AuditEvent.subtype, AuditEvent.entity.type, and AuditEvent.entity.role.  The base64 is a general-use and safe container for event specific data blobs regardless of the encoding used by the transaction being recorded.  An AuditEvent consuming application must understand the event it is consuming and the formats used by the event. For example if auditing an Oracle network database access, the Oracle formats must be understood as they will be simply encoded in the base64binary blob.
+   */
+  valueString?: fhir.FhirString|string|undefined;
+  /**
+   * The value can be string when known to be a string, else base64 encoding should be used to protect binary or undefined content.  The meaning and secondary-encoding of the content of base64 encoded blob is specific to the AuditEvent.type, AuditEvent.subtype, AuditEvent.entity.type, and AuditEvent.entity.role.  The base64 is a general-use and safe container for event specific data blobs regardless of the encoding used by the transaction being recorded.  An AuditEvent consuming application must understand the event it is consuming and the formats used by the event. For example if auditing an Oracle network database access, the Oracle formats must be understood as they will be simply encoded in the base64binary blob.
+   */
+  valueBase64Binary?: fhir.FhirBase64Binary|string|undefined;
 }
 
 /**
  * Tagged value pairs for conveying additional information about the entity.
  */
-export class AuditEventEntityDetail extends fhir.BackboneElement implements IAuditEventEntityDetail {
+export class AuditEventEntityDetail extends fhir.BackboneElement {
+  readonly __dataType:string = 'AuditEventEntityDetail';
   /**
    * The type of extra detail provided in the value.
    */
-  public type: string|null;
-  /**
-   * Extended properties for primitive element: AuditEvent.entity.detail.type
-   */
-  public _type?: fhir.FhirElement|undefined;
+  public type: fhir.FhirString|null;
   /**
    * The value can be string when known to be a string, else base64 encoding should be used to protect binary or undefined content.  The meaning and secondary-encoding of the content of base64 encoded blob is specific to the AuditEvent.type, AuditEvent.subtype, AuditEvent.entity.type, and AuditEvent.entity.role.  The base64 is a general-use and safe container for event specific data blobs regardless of the encoding used by the transaction being recorded.  An AuditEvent consuming application must understand the event it is consuming and the formats used by the event. For example if auditing an Oracle network database access, the Oracle formats must be understood as they will be simply encoded in the base64binary blob.
    */
-  public valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.entity.detail.value[x]
-   */
-  public _valueString?: fhir.FhirElement|undefined;
-  /**
-   * The value can be string when known to be a string, else base64 encoding should be used to protect binary or undefined content.  The meaning and secondary-encoding of the content of base64 encoded blob is specific to the AuditEvent.type, AuditEvent.subtype, AuditEvent.entity.type, and AuditEvent.entity.role.  The base64 is a general-use and safe container for event specific data blobs regardless of the encoding used by the transaction being recorded.  An AuditEvent consuming application must understand the event it is consuming and the formats used by the event. For example if auditing an Oracle network database access, the Oracle formats must be understood as they will be simply encoded in the base64binary blob.
-   */
-  public valueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.entity.detail.value[x]
-   */
-  public _valueBase64Binary?: fhir.FhirElement|undefined;
+  public value: (fhir.FhirString|fhir.FhirBase64Binary)|null;
+  readonly __valueIsChoice:true = true;
   /**
    * Default constructor for AuditEventEntityDetail - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAuditEventEntityDetail> = { }) {
-    super(source);
-    if (source['type']) { this.type = source.type; }
+  constructor(source:Partial<AuditEventEntityDetailArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.FhirString({value: source.type}); }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['valueString']) { this.valueString = source.valueString; }
-    if (source['_valueString']) { this._valueString = new fhir.FhirElement(source._valueString!); }
-    if (source['valueBase64Binary']) { this.valueBase64Binary = source.valueBase64Binary; }
-    if (source['_valueBase64Binary']) { this._valueBase64Binary = new fhir.FhirElement(source._valueBase64Binary!); }
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueString']) { this.value = new fhir.FhirString({value: source.valueString}); }
+    else if (source['valueBase64Binary']) { this.value = new fhir.FhirBase64Binary({value: source.valueBase64Binary}); }
+    else { this.value = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: AuditEvent.entity.detail.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_valueString"]) { results.push(...this._valueString.doModelValidation()); }
-    if (this["_valueBase64Binary"]) { results.push(...this._valueBase64Binary.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.FhirString fhir: AuditEvent.entity.detail.type:string", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value: fhir: AuditEvent.entity.detail.value[x]:", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the AuditEventEntity type.
+ */
+export interface AuditEventEntityArgs extends fhir.BackboneElementArgs {
+  /**
+   * Identifies a specific instance of the entity. The reference should be version specific.
+   */
+  what?: fhir.ReferenceArgs|undefined;
+  /**
+   * This value is distinct from the user's role or any user relationship to the entity.
+   */
+  type?: fhir.CodingArgs|undefined;
+  /**
+   * Code representing the role the entity played in the event being audited.
+   */
+  role?: fhir.CodingArgs|undefined;
+  /**
+   * This can be used to provide an audit trail for data, over time, as it passes through the system.
+   */
+  lifecycle?: fhir.CodingArgs|undefined;
+  /**
+   * Copied from entity meta security tags.
+   */
+  securityLabel?: fhir.CodingArgs[]|undefined;
+  /**
+   * This field may be used in a query/report to identify audit events for a specific person.  For example, where multiple synonymous entity identifiers (patient number, medical record number, encounter number, etc.) have been used.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * Text that describes the entity in more detail.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * The meaning and secondary-encoding of the content of base64 encoded blob is specific to the AuditEvent.type, AuditEvent.subtype, AuditEvent.entity.type, and AuditEvent.entity.role.  The base64 is a general-use and safe container for event specific data blobs regardless of the encoding used by the transaction being recorded.  An AuditEvent consuming application must understand the event it is consuming and the formats used by the event. For example, if auditing an Oracle network database access, the Oracle formats must be understood as they will be simply encoded in the base64binary blob.
+   */
+  query?: fhir.FhirBase64Binary|string|undefined;
+  /**
+   * Tagged value pairs for conveying additional information about the entity.
+   */
+  detail?: fhir.AuditEventEntityDetailArgs[]|undefined;
 }
 
 /**
  * Required unless the values for event identification, agent identification, and audit source identification are sufficient to document the entire auditable event. Because events may have more than one entity, this group can be a repeating set of values.
  */
-export class AuditEventEntity extends fhir.BackboneElement implements IAuditEventEntity {
+export class AuditEventEntity extends fhir.BackboneElement {
+  readonly __dataType:string = 'AuditEventEntity';
   /**
    * Identifies a specific instance of the entity. The reference should be version specific.
    */
@@ -591,51 +466,36 @@ export class AuditEventEntity extends fhir.BackboneElement implements IAuditEven
   /**
    * Copied from entity meta security tags.
    */
-  public securityLabel?: fhir.Coding[]|undefined;
+  public securityLabel?: fhir.Coding[]|undefined = [];
   /**
    * This field may be used in a query/report to identify audit events for a specific person.  For example, where multiple synonymous entity identifiers (patient number, medical record number, encounter number, etc.) have been used.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.entity.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Text that describes the entity in more detail.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.entity.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * The meaning and secondary-encoding of the content of base64 encoded blob is specific to the AuditEvent.type, AuditEvent.subtype, AuditEvent.entity.type, and AuditEvent.entity.role.  The base64 is a general-use and safe container for event specific data blobs regardless of the encoding used by the transaction being recorded.  An AuditEvent consuming application must understand the event it is consuming and the formats used by the event. For example, if auditing an Oracle network database access, the Oracle formats must be understood as they will be simply encoded in the base64binary blob.
    */
-  public query?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.entity.query
-   */
-  public _query?: fhir.FhirElement|undefined;
+  public query?: fhir.FhirBase64Binary|undefined;
   /**
    * Tagged value pairs for conveying additional information about the entity.
    */
-  public detail?: fhir.AuditEventEntityDetail[]|undefined;
+  public detail?: fhir.AuditEventEntityDetail[]|undefined = [];
   /**
    * Default constructor for AuditEventEntity - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAuditEventEntity> = { }) {
-    super(source);
-    if (source['what']) { this.what = new fhir.Reference(source.what!); }
-    if (source['type']) { this.type = new fhir.Coding(source.type!); }
-    if (source['role']) { this.role = new fhir.Coding(source.role!); }
-    if (source['lifecycle']) { this.lifecycle = new fhir.Coding(source.lifecycle!); }
+  constructor(source:Partial<AuditEventEntityArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['what']) { this.what = new fhir.Reference(source.what); }
+    if (source['type']) { this.type = new fhir.Coding(source.type); }
+    if (source['role']) { this.role = new fhir.Coding(source.role); }
+    if (source['lifecycle']) { this.lifecycle = new fhir.Coding(source.lifecycle); }
     if (source['securityLabel']) { this.securityLabel = source.securityLabel.map((x) => new fhir.Coding(x)); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['query']) { this.query = source.query; }
-    if (source['_query']) { this._query = new fhir.FhirElement(source._query!); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['query']) { this.query = new fhir.FhirBase64Binary({value: source.query}); }
     if (source['detail']) { this.detail = source.detail.map((x) => new fhir.AuditEventEntityDetail(x)); }
   }
   /**
@@ -659,25 +519,86 @@ export class AuditEventEntity extends fhir.BackboneElement implements IAuditEven
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["what"]) { results.push(...this.what.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["role"]) { results.push(...this.role.doModelValidation()); }
-    if (this["lifecycle"]) { results.push(...this.lifecycle.doModelValidation()); }
-    if (this["securityLabel"]) { this.securityLabel.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_query"]) { results.push(...this._query.doModelValidation()); }
-    if (this["detail"]) { this.detail.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["what"]) { outcome.issue!.push(...this.what.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["role"]) { outcome.issue!.push(...this.role.doModelValidation().issue!); }
+    if (this["lifecycle"]) { outcome.issue!.push(...this.lifecycle.doModelValidation().issue!); }
+    if (this["securityLabel"]) { this.securityLabel.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["query"]) { outcome.issue!.push(...this.query.doModelValidation().issue!); }
+    if (this["detail"]) { this.detail.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the AuditEvent type.
+ */
+export interface AuditEventArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "AuditEvent"|undefined;
+  /**
+   * Identifier for a family of the event.  For example, a menu item, program, rule, policy, function code, application name or URL. It identifies the performed function.
+   */
+  type: fhir.CodingArgs|null;
+  /**
+   * Identifier for the category of event.
+   */
+  subtype?: fhir.CodingArgs[]|undefined;
+  /**
+   * Indicator for type of action performed during the event that generated the audit.
+   */
+  action?: fhir.FhirCode|string|undefined;
+  /**
+   * The period can be a little arbitrary; where possible, the time should correspond to human assessment of the activity time.
+   */
+  period?: fhir.PeriodArgs|undefined;
+  /**
+   * In a distributed system, some sort of common time base (e.g. an NTP [RFC1305] server) is a good implementation tactic.
+   */
+  recorded: fhir.FhirInstant|string|undefined;
+  /**
+   * In some cases a "success" may be partial, for example, an incomplete or interrupted transfer of a radiological study. For the purpose of establishing accountability, these distinctions are not relevant.
+   */
+  outcome?: fhir.FhirCode|string|undefined;
+  /**
+   * A free text description of the outcome of the event.
+   */
+  outcomeDesc?: fhir.FhirString|string|undefined;
+  /**
+   * Use AuditEvent.agent.purposeOfUse when you know that it is specific to the agent, otherwise use AuditEvent.purposeOfEvent. For example, during a machine-to-machine transfer it might not be obvious to the audit system who caused the event, but it does know why.
+   */
+  purposeOfEvent?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Several agents may be associated (i.e. have some responsibility for an activity) with an event or activity.
+   * For example, an activity may be initiated by one user for other users or involve more than one user. However, only one user may be the initiator/requestor for the activity.
+   */
+  agent: fhir.AuditEventAgentArgs[]|null;
+  /**
+   * Since multi-tier, distributed, or composite applications make source identification ambiguous, this collection of fields may repeat for each application or process actively involved in the event. For example, multiple value-sets can identify participating web servers, application processes, and database server threads in an n-tier distributed application. Passive event participants (e.g. low-level network transports) need not be identified.
+   */
+  source: fhir.AuditEventSourceArgs|null;
+  /**
+   * Required unless the values for event identification, agent identification, and audit source identification are sufficient to document the entire auditable event. Because events may have more than one entity, this group can be a repeating set of values.
+   */
+  entity?: fhir.AuditEventEntityArgs[]|undefined;
 }
 
 /**
  * A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
  */
-export class AuditEvent extends fhir.DomainResource implements IAuditEvent {
+export class AuditEvent extends fhir.DomainResource {
+  readonly __dataType:string = 'AuditEvent';
   /**
    * Resource Type Name
    */
@@ -689,15 +610,11 @@ export class AuditEvent extends fhir.DomainResource implements IAuditEvent {
   /**
    * Identifier for the category of event.
    */
-  public subtype?: fhir.Coding[]|undefined;
+  public subtype?: fhir.Coding[]|undefined = [];
   /**
    * Indicator for type of action performed during the event that generated the audit.
    */
-  public action?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.action
-   */
-  public _action?: fhir.FhirElement|undefined;
+  public action?: fhir.FhirCode|undefined;
   /**
    * The period can be a little arbitrary; where possible, the time should correspond to human assessment of the activity time.
    */
@@ -705,36 +622,24 @@ export class AuditEvent extends fhir.DomainResource implements IAuditEvent {
   /**
    * In a distributed system, some sort of common time base (e.g. an NTP [RFC1305] server) is a good implementation tactic.
    */
-  public recorded: string|null;
-  /**
-   * Extended properties for primitive element: AuditEvent.recorded
-   */
-  public _recorded?: fhir.FhirElement|undefined;
+  public recorded: fhir.FhirInstant|null;
   /**
    * In some cases a "success" may be partial, for example, an incomplete or interrupted transfer of a radiological study. For the purpose of establishing accountability, these distinctions are not relevant.
    */
-  public outcome?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.outcome
-   */
-  public _outcome?: fhir.FhirElement|undefined;
+  public outcome?: fhir.FhirCode|undefined;
   /**
    * A free text description of the outcome of the event.
    */
-  public outcomeDesc?: string|undefined;
-  /**
-   * Extended properties for primitive element: AuditEvent.outcomeDesc
-   */
-  public _outcomeDesc?: fhir.FhirElement|undefined;
+  public outcomeDesc?: fhir.FhirString|undefined;
   /**
    * Use AuditEvent.agent.purposeOfUse when you know that it is specific to the agent, otherwise use AuditEvent.purposeOfEvent. For example, during a machine-to-machine transfer it might not be obvious to the audit system who caused the event, but it does know why.
    */
-  public purposeOfEvent?: fhir.CodeableConcept[]|undefined;
+  public purposeOfEvent?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Several agents may be associated (i.e. have some responsibility for an activity) with an event or activity.
    * For example, an activity may be initiated by one user for other users or involve more than one user. However, only one user may be the initiator/requestor for the activity.
    */
-  public agent: fhir.AuditEventAgent[]|null;
+  public agent: fhir.AuditEventAgent[]|null = [];
   /**
    * Since multi-tier, distributed, or composite applications make source identification ambiguous, this collection of fields may repeat for each application or process actively involved in the event. For example, multiple value-sets can identify participating web servers, application processes, and database server threads in an n-tier distributed application. Passive event participants (e.g. low-level network transports) need not be identified.
    */
@@ -742,30 +647,26 @@ export class AuditEvent extends fhir.DomainResource implements IAuditEvent {
   /**
    * Required unless the values for event identification, agent identification, and audit source identification are sufficient to document the entire auditable event. Because events may have more than one entity, this group can be a repeating set of values.
    */
-  public entity?: fhir.AuditEventEntity[]|undefined;
+  public entity?: fhir.AuditEventEntity[]|undefined = [];
   /**
    * Default constructor for AuditEvent - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAuditEvent> = { }) {
-    super(source);
+  constructor(source:Partial<AuditEventArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'AuditEvent';
-    if (source['type']) { this.type = new fhir.Coding(source.type!); }
+    if (source['type']) { this.type = new fhir.Coding(source.type); }
     else { this.type = null; }
     if (source['subtype']) { this.subtype = source.subtype.map((x) => new fhir.Coding(x)); }
-    if (source['action']) { this.action = source.action; }
-    if (source['_action']) { this._action = new fhir.FhirElement(source._action!); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
-    if (source['recorded']) { this.recorded = source.recorded; }
+    if (source['action']) { this.action = new fhir.FhirCode({value: source.action}); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
+    if (source['recorded']) { this.recorded = new fhir.FhirInstant({value: source.recorded}); }
     else { this.recorded = null; }
-    if (source['_recorded']) { this._recorded = new fhir.FhirElement(source._recorded!); }
-    if (source['outcome']) { this.outcome = source.outcome; }
-    if (source['_outcome']) { this._outcome = new fhir.FhirElement(source._outcome!); }
-    if (source['outcomeDesc']) { this.outcomeDesc = source.outcomeDesc; }
-    if (source['_outcomeDesc']) { this._outcomeDesc = new fhir.FhirElement(source._outcomeDesc!); }
+    if (source['outcome']) { this.outcome = new fhir.FhirCode({value: source.outcome}); }
+    if (source['outcomeDesc']) { this.outcomeDesc = new fhir.FhirString({value: source.outcomeDesc}); }
     if (source['purposeOfEvent']) { this.purposeOfEvent = source.purposeOfEvent.map((x) => new fhir.CodeableConcept(x)); }
     if (source['agent']) { this.agent = source.agent.map((x) => new fhir.AuditEventAgent(x)); }
     else { this.agent = null; }
-    if (source['source']) { this.source = new fhir.AuditEventSource(source.source!); }
+    if (source['source']) { this.source = new fhir.AuditEventSource(source.source); }
     else { this.source = null; }
     if (source['entity']) { this.entity = source.entity.map((x) => new fhir.AuditEventEntity(x)); }
   }
@@ -802,24 +703,44 @@ export class AuditEvent extends fhir.DomainResource implements IAuditEvent {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: AuditEvent.resourceType']); }
-    if (!this["type"]) { results.push(["type",'Missing required element: AuditEvent.type']); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["subtype"]) { this.subtype.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_action"]) { results.push(...this._action.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    if (!this["recorded"]) { results.push(["recorded",'Missing required element: AuditEvent.recorded']); }
-    if (this["_recorded"]) { results.push(...this._recorded.doModelValidation()); }
-    if (this["_outcome"]) { results.push(...this._outcome.doModelValidation()); }
-    if (this["_outcomeDesc"]) { results.push(...this._outcomeDesc.doModelValidation()); }
-    if (this["purposeOfEvent"]) { this.purposeOfEvent.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if ((!this["agent"]) || (this["agent"].length === 0)) { results.push(["agent",'Missing required element: AuditEvent.agent']); }
-    if (this["agent"]) { this.agent.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["source"]) { results.push(["source",'Missing required element: AuditEvent.source']); }
-    if (this["source"]) { results.push(...this.source.doModelValidation()); }
-    if (this["entity"]) { this.entity.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'AuditEvent' fhir: AuditEvent.resourceType:'AuditEvent'", }));
+    }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.Coding fhir: AuditEvent.type:Coding", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["subtype"]) { this.subtype.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["action"]) { outcome.issue!.push(...this.action.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    if (!this['recorded']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property recorded:fhir.FhirInstant fhir: AuditEvent.recorded:instant", }));
+    }
+    if (this["recorded"]) { outcome.issue!.push(...this.recorded.doModelValidation().issue!); }
+    if (this["outcome"]) { outcome.issue!.push(...this.outcome.doModelValidation().issue!); }
+    if (this["outcomeDesc"]) { outcome.issue!.push(...this.outcomeDesc.doModelValidation().issue!); }
+    if (this["purposeOfEvent"]) { this.purposeOfEvent.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['agent']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property agent:fhir.AuditEventAgent[] fhir: AuditEvent.agent:agent", }));
+    } else if (!Array.isArray(this.agent)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property agent:fhir.AuditEventAgent[] fhir: AuditEvent.agent:agent", }));
+    } else if (this.agent.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property agent:fhir.AuditEventAgent[] fhir: AuditEvent.agent:agent", }));
+    }
+    if (this["agent"]) { this.agent.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['source']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property source:fhir.AuditEventSource fhir: AuditEvent.source:source", }));
+    }
+    if (this["source"]) { outcome.issue!.push(...this.source.doModelValidation().issue!); }
+    if (this["entity"]) { this.entity.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

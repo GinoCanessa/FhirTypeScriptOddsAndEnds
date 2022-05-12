@@ -43,17 +43,3 @@ export type MedicationknowledgeStatusValueSetType = typeof MedicationknowledgeSt
 /**
  * MedicationKnowledge Status Codes
  */
-export enum MedicationknowledgeStatusValueSetEnum {
-  /**
-   * active: The medication is available for use.
-   */
-  Active = "active",
-  /**
-   * entered-in-error: The medication was entered in error.
-   */
-  EnteredInError = "entered-in-error",
-  /**
-   * inactive: The medication is not available for use.
-   */
-  Inactive = "inactive",
-}

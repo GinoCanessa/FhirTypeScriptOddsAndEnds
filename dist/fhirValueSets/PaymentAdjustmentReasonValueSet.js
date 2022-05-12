@@ -27,15 +27,4 @@ export const PaymentAdjustmentReasonValueSet = {
 /**
  * This value set includes smattering of Payment Adjustment Reason codes.
  */
-export var PaymentAdjustmentReasonValueSetEnum;
-(function (PaymentAdjustmentReasonValueSetEnum) {
-    /**
-     * a001: Prior Payment Reversal
-     */
-    PaymentAdjustmentReasonValueSetEnum["PriorPaymentReversal"] = "a001";
-    /**
-     * a002: Prior Overpayment
-     */
-    PaymentAdjustmentReasonValueSetEnum["PriorOverpayment"] = "a002";
-})(PaymentAdjustmentReasonValueSetEnum || (PaymentAdjustmentReasonValueSetEnum = {}));
 //# sourceMappingURL=PaymentAdjustmentReasonValueSet.js.map

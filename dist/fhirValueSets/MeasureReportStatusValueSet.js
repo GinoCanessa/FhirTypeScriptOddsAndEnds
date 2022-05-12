@@ -35,19 +35,4 @@ export const MeasureReportStatusValueSet = {
 /**
  * The status of the measure report.
  */
-export var MeasureReportStatusValueSetEnum;
-(function (MeasureReportStatusValueSetEnum) {
-    /**
-     * complete: The report is complete and ready for use.
-     */
-    MeasureReportStatusValueSetEnum["Complete"] = "complete";
-    /**
-     * error: An error occurred attempting to generate the report.
-     */
-    MeasureReportStatusValueSetEnum["Error"] = "error";
-    /**
-     * pending: The report is currently being generated.
-     */
-    MeasureReportStatusValueSetEnum["Pending"] = "pending";
-})(MeasureReportStatusValueSetEnum || (MeasureReportStatusValueSetEnum = {}));
 //# sourceMappingURL=MeasureReportStatusValueSet.js.map

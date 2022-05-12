@@ -27,15 +27,4 @@ export const ContractActionValueSet = {
 /**
  * This value set includes sample Contract Action codes.
  */
-export var ContractActionValueSetEnum;
-(function (ContractActionValueSetEnum) {
-    /**
-     * action-a: Definition for Action A
-     */
-    ContractActionValueSetEnum["ActionA"] = "action-a";
-    /**
-     * action-b: Definition for Action B
-     */
-    ContractActionValueSetEnum["ActionB"] = "action-b";
-})(ContractActionValueSetEnum || (ContractActionValueSetEnum = {}));
 //# sourceMappingURL=ContractActionValueSet.js.map

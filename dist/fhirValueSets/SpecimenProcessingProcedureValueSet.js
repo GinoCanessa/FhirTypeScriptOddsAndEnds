@@ -75,39 +75,4 @@ export const SpecimenProcessingProcedureValueSet = {
 /**
  * The technique that is used to perform the process or preserve the specimen.
  */
-export var SpecimenProcessingProcedureValueSetEnum;
-(function (SpecimenProcessingProcedureValueSetEnum) {
-    /**
-     * Code: ACID
-     */
-    SpecimenProcessingProcedureValueSetEnum["Acidification"] = "ACID";
-    /**
-     * Code: ALK
-     */
-    SpecimenProcessingProcedureValueSetEnum["Alkalization"] = "ALK";
-    /**
-     * Code: DEFB
-     */
-    SpecimenProcessingProcedureValueSetEnum["Defibrination"] = "DEFB";
-    /**
-     * Code: FILT
-     */
-    SpecimenProcessingProcedureValueSetEnum["Filtration"] = "FILT";
-    /**
-     * Code: LDLP
-     */
-    SpecimenProcessingProcedureValueSetEnum["LDLPrecipitation"] = "LDLP";
-    /**
-     * Code: NEUT
-     */
-    SpecimenProcessingProcedureValueSetEnum["Neutralization"] = "NEUT";
-    /**
-     * Code: RECA
-     */
-    SpecimenProcessingProcedureValueSetEnum["Recalification"] = "RECA";
-    /**
-     * Code: UFIL
-     */
-    SpecimenProcessingProcedureValueSetEnum["Ultrafiltration"] = "UFIL";
-})(SpecimenProcessingProcedureValueSetEnum || (SpecimenProcessingProcedureValueSetEnum = {}));
 //# sourceMappingURL=SpecimenProcessingProcedureValueSet.js.map

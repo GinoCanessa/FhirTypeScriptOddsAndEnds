@@ -3,7 +3,9 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ResearchSubject
 import * as fhir from '../fhir.js';
-import { ResearchSubjectStatusValueSet } from '../fhirValueSets/ResearchSubjectStatusValueSet.js';
+import { ResearchSubjectStatusValueSet, } from '../fhirValueSets/ResearchSubjectStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A physical entity which is the primary unit of operational and/or administrative interest in a study.
  */
@@ -11,8 +13,13 @@ export class ResearchSubject extends fhir.DomainResource {
     /**
      * Default constructor for ResearchSubject - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ResearchSubject';
+        /**
+         * Identifiers assigned to this research subject for a study.
+         */
+        this.identifier = [];
         this.resourceType = 'ResearchSubject';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -22,9 +29,6 @@ export class ResearchSubject extends fhir.DomainResource {
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['period']) {
             this.period = new fhir.Period(source.period);
@@ -42,16 +46,10 @@ export class ResearchSubject extends fhir.DomainResource {
             this.individual = null;
         }
         if (source['assignedArm']) {
-            this.assignedArm = source.assignedArm;
-        }
-        if (source['_assignedArm']) {
-            this._assignedArm = new fhir.FhirElement(source._assignedArm);
+            this.assignedArm = new fhir.FhirString({ value: source.assignedArm });
         }
         if (source['actualArm']) {
-            this.actualArm = source.actualArm;
-        }
-        if (source['_actualArm']) {
-            this._actualArm = new fhir.FhirElement(source._actualArm);
+            this.actualArm = new fhir.FhirString({ value: source.actualArm });
         }
         if (source['consent']) {
             this.consent = new fhir.Reference(source.consent);
@@ -67,44 +65,47 @@ export class ResearchSubject extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: ResearchSubject.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'ResearchSubject' fhir: ResearchSubject.resourceType:'ResearchSubject'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: ResearchSubject.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:ResearchSubjectStatusValueSetEnum fhir: ResearchSubject.status:code", }));
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        if (!this["study"]) {
-            results.push(["study", 'Missing required element: ResearchSubject.study']);
+        if (!this['study']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property study:fhir.Reference fhir: ResearchSubject.study:Reference", }));
         }
         if (this["study"]) {
-            results.push(...this.study.doModelValidation());
+            outcome.issue.push(...this.study.doModelValidation().issue);
         }
-        if (!this["individual"]) {
-            results.push(["individual", 'Missing required element: ResearchSubject.individual']);
+        if (!this['individual']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property individual:fhir.Reference fhir: ResearchSubject.individual:Reference", }));
         }
         if (this["individual"]) {
-            results.push(...this.individual.doModelValidation());
+            outcome.issue.push(...this.individual.doModelValidation().issue);
         }
-        if (this["_assignedArm"]) {
-            results.push(...this._assignedArm.doModelValidation());
+        if (this["assignedArm"]) {
+            outcome.issue.push(...this.assignedArm.doModelValidation().issue);
         }
-        if (this["_actualArm"]) {
-            results.push(...this._actualArm.doModelValidation());
+        if (this["actualArm"]) {
+            outcome.issue.push(...this.actualArm.doModelValidation().issue);
         }
         if (this["consent"]) {
-            results.push(...this.consent.doModelValidation());
+            outcome.issue.push(...this.consent.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ResearchSubject.js.map

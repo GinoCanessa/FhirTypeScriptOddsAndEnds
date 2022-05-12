@@ -3,7 +3,7 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Quantity
 import * as fhir from '../fhir.js';
-import { QuantityComparatorValueSet } from '../fhirValueSets/QuantityComparatorValueSet.js';
+import { QuantityComparatorValueSet, } from '../fhirValueSets/QuantityComparatorValueSet.js';
 /**
  * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
  */
@@ -11,37 +11,23 @@ export class Quantity extends fhir.FhirElement {
     /**
      * Default constructor for Quantity - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Quantity';
         if (source['value']) {
-            this.value = source.value;
-        }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
+            this.value = new fhir.FhirDecimal({ value: source.value });
         }
         if (source['comparator']) {
             this.comparator = source.comparator;
         }
-        if (source['_comparator']) {
-            this._comparator = new fhir.FhirElement(source._comparator);
-        }
         if (source['unit']) {
-            this.unit = source.unit;
-        }
-        if (source['_unit']) {
-            this._unit = new fhir.FhirElement(source._unit);
+            this.unit = new fhir.FhirString({ value: source.unit });
         }
         if (source['system']) {
-            this.system = source.system;
-        }
-        if (source['_system']) {
-            this._system = new fhir.FhirElement(source._system);
+            this.system = new fhir.FhirUri({ value: source.system });
         }
         if (source['code']) {
-            this.code = source.code;
-        }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
+            this.code = new fhir.FhirCode({ value: source.code });
         }
     }
     /**
@@ -54,23 +40,26 @@ export class Quantity extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
         }
-        if (this["_comparator"]) {
-            results.push(...this._comparator.doModelValidation());
+        if (this["unit"]) {
+            outcome.issue.push(...this.unit.doModelValidation().issue);
         }
-        if (this["_unit"]) {
-            results.push(...this._unit.doModelValidation());
+        if (this["system"]) {
+            outcome.issue.push(...this.system.doModelValidation().issue);
         }
-        if (this["_system"]) {
-            results.push(...this._system.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Quantity.js.map

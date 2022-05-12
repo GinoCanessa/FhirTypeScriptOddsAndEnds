@@ -3,251 +3,41 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ImagingStudy
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { SeriesPerformerFunctionValueSet, SeriesPerformerFunctionValueSetType, SeriesPerformerFunctionValueSetEnum } from '../fhirValueSets/SeriesPerformerFunctionValueSet.js'
-import { DicomCid29AcquisitionModalityValueSet, DicomCid29AcquisitionModalityValueSetType, DicomCid29AcquisitionModalityValueSetEnum } from '../fhirValueSets/DicomCid29AcquisitionModalityValueSet.js'
-import { BodySiteValueSet, BodySiteValueSetType, BodySiteValueSetEnum } from '../fhirValueSets/BodySiteValueSet.js'
-import { BodysiteLateralityValueSet, BodysiteLateralityValueSetType, BodysiteLateralityValueSetEnum } from '../fhirValueSets/BodysiteLateralityValueSet.js'
-import { ImagingstudyStatusValueSet, ImagingstudyStatusValueSetType, ImagingstudyStatusValueSetEnum } from '../fhirValueSets/ImagingstudyStatusValueSet.js'
-import { ProcedureReasonValueSet, ProcedureReasonValueSetType, ProcedureReasonValueSetEnum } from '../fhirValueSets/ProcedureReasonValueSet.js'
-
+import { SeriesPerformerFunctionValueSet, SeriesPerformerFunctionValueSetType,} from '../fhirValueSets/SeriesPerformerFunctionValueSet.js';
+import { SeriesPerformerFunctionValueSetEnum } from '../valueSetEnums.js';
+import { DicomCid29AcquisitionModalityValueSet, DicomCid29AcquisitionModalityValueSetType,} from '../fhirValueSets/DicomCid29AcquisitionModalityValueSet.js';
+import { DicomCid29AcquisitionModalityValueSetEnum } from '../valueSetEnums.js';
+import { BodySiteValueSet, BodySiteValueSetType,} from '../fhirValueSets/BodySiteValueSet.js';
+import { BodySiteValueSetEnum } from '../valueSetEnums.js';
+import { BodysiteLateralityValueSet, BodysiteLateralityValueSetType,} from '../fhirValueSets/BodysiteLateralityValueSet.js';
+import { BodysiteLateralityValueSetEnum } from '../valueSetEnums.js';
+import { ImagingstudyStatusValueSet, ImagingstudyStatusValueSetType,} from '../fhirValueSets/ImagingstudyStatusValueSet.js';
+import { ImagingstudyStatusValueSetEnum } from '../valueSetEnums.js';
+import { ProcedureReasonValueSet, ProcedureReasonValueSetType,} from '../fhirValueSets/ProcedureReasonValueSet.js';
+import { ProcedureReasonValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * If the person who performed the series is not known, their Organization may be recorded. A patient, or related person, may be the performer, e.g. for patient-captured images.
+ * Valid arguments for the ImagingStudySeriesPerformer type.
  */
-export type IImagingStudySeriesPerformer = fhir.IBackboneElement & { 
+export interface ImagingStudySeriesPerformerArgs extends fhir.BackboneElementArgs {
   /**
    * Distinguishes the type of involvement of the performer in the series.
    */
-  function?: fhir.ICodeableConcept|undefined;
+  function?: fhir.CodeableConceptArgs|undefined;
   /**
    * Indicates who or what performed the series.
    */
-  actor: fhir.IReference|null;
-}
-
-/**
- * A single SOP instance within the series, e.g. an image, or presentation state.
- */
-export type IImagingStudySeriesInstance = fhir.IBackboneElement & { 
-  /**
-   * See  [DICOM PS3.3 C.12.1](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.12.html#sect_C.12.1).
-   */
-  uid: string|null;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.instance.uid
-   */
-  _uid?: fhir.IFhirElement|undefined;
-  /**
-   * DICOM instance  type.
-   */
-  sopClass: fhir.ICoding|null;
-  /**
-   * The number of instance in the series.
-   */
-  number?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.instance.number
-   */
-  _number?: fhir.IFhirElement|undefined;
-  /**
-   * Particularly for post-acquisition analytic objects, such as SR, presentation states, value mapping, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.instance.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Each study has one or more series of images or other content.
- */
-export type IImagingStudySeries = fhir.IBackboneElement & { 
-  /**
-   * See [DICOM PS3.3 C.7.3](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.3.html).
-   */
-  uid: string|null;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.uid
-   */
-  _uid?: fhir.IFhirElement|undefined;
-  /**
-   * The numeric identifier of this series in the study.
-   */
-  number?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.number
-   */
-  _number?: fhir.IFhirElement|undefined;
-  /**
-   * The modality of this series sequence.
-   */
-  modality: fhir.ICoding|null;
-  /**
-   * A description of the series.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Number of SOP Instances in the Study. The value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
-   */
-  numberOfInstances?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.numberOfInstances
-   */
-  _numberOfInstances?: fhir.IFhirElement|undefined;
-  /**
-   * Typical endpoint types include DICOM WADO-RS, which is used to retrieve DICOM instances in native or rendered (e.g., JPG, PNG) formats using a RESTful API; DICOM WADO-URI, which can similarly retrieve native or rendered instances, except using an HTTP query-based approach; and DICOM QIDO-RS, which allows RESTful query for DICOM information without retrieving the actual instances.
-   */
-  endpoint?: fhir.IReference[]|undefined;
-  /**
-   * The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings. The bodySite may indicate the laterality of body part imaged; if so, it shall be consistent with any content of ImagingStudy.series.laterality.
-   */
-  bodySite?: fhir.ICoding|undefined;
-  /**
-   * The laterality of the (possibly paired) anatomic structures examined. E.g., the left knee, both lungs, or unpaired abdomen. If present, shall be consistent with any laterality information indicated in ImagingStudy.series.bodySite.
-   */
-  laterality?: fhir.ICoding|undefined;
-  /**
-   * The specimen imaged, e.g., for whole slide imaging of a biopsy.
-   */
-  specimen?: fhir.IReference[]|undefined;
-  /**
-   * The date and time the series was started.
-   */
-  started?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.started
-   */
-  _started?: fhir.IFhirElement|undefined;
-  /**
-   * If the person who performed the series is not known, their Organization may be recorded. A patient, or related person, may be the performer, e.g. for patient-captured images.
-   */
-  performer?: fhir.IImagingStudySeriesPerformer[]|undefined;
-  /**
-   * A single SOP instance within the series, e.g. an image, or presentation state.
-   */
-  instance?: fhir.IImagingStudySeriesInstance[]|undefined;
-}
-
-/**
- * Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
- */
-export type IImagingStudy = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "ImagingStudy";
-  /**
-   * See discussion under [Imaging Study Implementation Notes](imagingstudy.html#notes) for encoding of DICOM Study Instance UID. Accession Number should use ACSN Identifier type.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * Unknown does not represent "other" - one of the defined statuses must apply.  Unknown is used when the authoring system is not sure what the current status is.
-   */
-  status: ImagingstudyStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ImagingStudy.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * A list of all the series.modality values that are actual acquisition modalities, i.e. those in the DICOM Context Group 29 (value set OID 1.2.840.10008.6.1.19).
-   */
-  modality?: fhir.ICoding[]|undefined;
-  /**
-   * QA phantoms can be recorded with a Device; multiple subjects (such as mice) can be recorded with a Group.
-   */
-  subject: fhir.IReference|null;
-  /**
-   * This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission test).
-   */
-  encounter?: fhir.IReference|undefined;
-  /**
-   * Date and time the study started.
-   */
-  started?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.started
-   */
-  _started?: fhir.IFhirElement|undefined;
-  /**
-   * A list of the diagnostic requests that resulted in this imaging study being performed.
-   */
-  basedOn?: fhir.IReference[]|undefined;
-  /**
-   * The requesting/referring physician.
-   */
-  referrer?: fhir.IReference|undefined;
-  /**
-   * Who read the study and interpreted the images or other content.
-   */
-  interpreter?: fhir.IReference[]|undefined;
-  /**
-   * Typical endpoint types include DICOM WADO-RS, which is used to retrieve DICOM instances in native or rendered (e.g., JPG, PNG), formats using a RESTful API; DICOM WADO-URI, which can similarly retrieve native or rendered instances, except using an HTTP query-based approach; DICOM QIDO-RS, which allows RESTful query for DICOM information without retrieving the actual instances; or IHE Invoke Image Display (IID), which provides standard invocation of an imaging web viewer.
-   */
-  endpoint?: fhir.IReference[]|undefined;
-  /**
-   * Number of Series in the Study. This value given may be larger than the number of series elements this Resource contains due to resource availability, security, or other factors. This element should be present if any series elements are present.
-   */
-  numberOfSeries?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.numberOfSeries
-   */
-  _numberOfSeries?: fhir.IFhirElement|undefined;
-  /**
-   * Number of SOP Instances in Study. This value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
-   */
-  numberOfInstances?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.numberOfInstances
-   */
-  _numberOfInstances?: fhir.IFhirElement|undefined;
-  /**
-   * The procedure which this ImagingStudy was part of.
-   */
-  procedureReference?: fhir.IReference|undefined;
-  /**
-   * The code for the performed procedure type.
-   */
-  procedureCode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The principal physical location where the ImagingStudy was performed.
-   */
-  location?: fhir.IReference|undefined;
-  /**
-   * Description of clinical condition indicating why the ImagingStudy was requested.
-   */
-  reasonCode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Indicates another resource whose existence justifies this Study.
-   */
-  reasonReference?: fhir.IReference[]|undefined;
-  /**
-   * Per the recommended DICOM mapping, this element is derived from the Study Description attribute (0008,1030). Observations or findings about the imaging study should be recorded in another resource, e.g. Observation, and not in this element.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-  /**
-   * The Imaging Manager description of the study. Institution-generated description or classification of the Study (component) performed.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Each study has one or more series of images or other content.
-   */
-  series?: fhir.IImagingStudySeries[]|undefined;
+  actor: fhir.ReferenceArgs|null;
 }
 
 /**
  * If the person who performed the series is not known, their Organization may be recorded. A patient, or related person, may be the performer, e.g. for patient-captured images.
  */
-export class ImagingStudySeriesPerformer extends fhir.BackboneElement implements IImagingStudySeriesPerformer {
+export class ImagingStudySeriesPerformer extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImagingStudySeriesPerformer';
   /**
    * Distinguishes the type of involvement of the performer in the series.
    */
@@ -259,10 +49,10 @@ export class ImagingStudySeriesPerformer extends fhir.BackboneElement implements
   /**
    * Default constructor for ImagingStudySeriesPerformer - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImagingStudySeriesPerformer> = { }) {
-    super(source);
-    if (source['function']) { this.function = new fhir.CodeableConcept(source.function!); }
-    if (source['actor']) { this.actor = new fhir.Reference(source.actor!); }
+  constructor(source:Partial<ImagingStudySeriesPerformerArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['function']) { this.function = new fhir.CodeableConcept(source.function); }
+    if (source['actor']) { this.actor = new fhir.Reference(source.actor); }
     else { this.actor = null; }
   }
   /**
@@ -274,27 +64,53 @@ export class ImagingStudySeriesPerformer extends fhir.BackboneElement implements
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["function"]) { results.push(...this.function.doModelValidation()); }
-    if (!this["actor"]) { results.push(["actor",'Missing required element: ImagingStudy.series.performer.actor']); }
-    if (this["actor"]) { results.push(...this.actor.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["function"]) { outcome.issue!.push(...this.function.doModelValidation().issue!); }
+    if (!this['actor']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property actor:fhir.Reference fhir: ImagingStudy.series.performer.actor:Reference", }));
+    }
+    if (this["actor"]) { outcome.issue!.push(...this.actor.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImagingStudySeriesInstance type.
+ */
+export interface ImagingStudySeriesInstanceArgs extends fhir.BackboneElementArgs {
+  /**
+   * See  [DICOM PS3.3 C.12.1](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.12.html#sect_C.12.1).
+   */
+  uid: fhir.FhirId|string|undefined;
+  /**
+   * DICOM instance  type.
+   */
+  sopClass: fhir.CodingArgs|null;
+  /**
+   * The number of instance in the series.
+   */
+  number?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * Particularly for post-acquisition analytic objects, such as SR, presentation states, value mapping, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
 }
 
 /**
  * A single SOP instance within the series, e.g. an image, or presentation state.
  */
-export class ImagingStudySeriesInstance extends fhir.BackboneElement implements IImagingStudySeriesInstance {
+export class ImagingStudySeriesInstance extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImagingStudySeriesInstance';
   /**
    * See  [DICOM PS3.3 C.12.1](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.12.html#sect_C.12.1).
    */
-  public uid: string|null;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.instance.uid
-   */
-  public _uid?: fhir.FhirElement|undefined;
+  public uid: fhir.FhirId|null;
   /**
    * DICOM instance  type.
    */
@@ -302,69 +118,114 @@ export class ImagingStudySeriesInstance extends fhir.BackboneElement implements 
   /**
    * The number of instance in the series.
    */
-  public number?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.instance.number
-   */
-  public _number?: fhir.FhirElement|undefined;
+  public number?: fhir.FhirUnsignedInt|undefined;
   /**
    * Particularly for post-acquisition analytic objects, such as SR, presentation states, value mapping, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.instance.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * Default constructor for ImagingStudySeriesInstance - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImagingStudySeriesInstance> = { }) {
-    super(source);
-    if (source['uid']) { this.uid = source.uid; }
+  constructor(source:Partial<ImagingStudySeriesInstanceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['uid']) { this.uid = new fhir.FhirId({value: source.uid}); }
     else { this.uid = null; }
-    if (source['_uid']) { this._uid = new fhir.FhirElement(source._uid!); }
-    if (source['sopClass']) { this.sopClass = new fhir.Coding(source.sopClass!); }
+    if (source['sopClass']) { this.sopClass = new fhir.Coding(source.sopClass); }
     else { this.sopClass = null; }
-    if (source['number']) { this.number = source.number; }
-    if (source['_number']) { this._number = new fhir.FhirElement(source._number!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
+    if (source['number']) { this.number = new fhir.FhirUnsignedInt({value: source.number}); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["uid"]) { results.push(["uid",'Missing required element: ImagingStudy.series.instance.uid']); }
-    if (this["_uid"]) { results.push(...this._uid.doModelValidation()); }
-    if (!this["sopClass"]) { results.push(["sopClass",'Missing required element: ImagingStudy.series.instance.sopClass']); }
-    if (this["sopClass"]) { results.push(...this.sopClass.doModelValidation()); }
-    if (this["_number"]) { results.push(...this._number.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['uid']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property uid:fhir.FhirId fhir: ImagingStudy.series.instance.uid:id", }));
+    }
+    if (this["uid"]) { outcome.issue!.push(...this.uid.doModelValidation().issue!); }
+    if (!this['sopClass']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property sopClass:fhir.Coding fhir: ImagingStudy.series.instance.sopClass:Coding", }));
+    }
+    if (this["sopClass"]) { outcome.issue!.push(...this.sopClass.doModelValidation().issue!); }
+    if (this["number"]) { outcome.issue!.push(...this.number.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImagingStudySeries type.
+ */
+export interface ImagingStudySeriesArgs extends fhir.BackboneElementArgs {
+  /**
+   * See [DICOM PS3.3 C.7.3](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.3.html).
+   */
+  uid: fhir.FhirId|string|undefined;
+  /**
+   * The numeric identifier of this series in the study.
+   */
+  number?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * The modality of this series sequence.
+   */
+  modality: fhir.CodingArgs|null;
+  /**
+   * A description of the series.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * Number of SOP Instances in the Study. The value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
+   */
+  numberOfInstances?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * Typical endpoint types include DICOM WADO-RS, which is used to retrieve DICOM instances in native or rendered (e.g., JPG, PNG) formats using a RESTful API; DICOM WADO-URI, which can similarly retrieve native or rendered instances, except using an HTTP query-based approach; and DICOM QIDO-RS, which allows RESTful query for DICOM information without retrieving the actual instances.
+   */
+  endpoint?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings. The bodySite may indicate the laterality of body part imaged; if so, it shall be consistent with any content of ImagingStudy.series.laterality.
+   */
+  bodySite?: fhir.CodingArgs|undefined;
+  /**
+   * The laterality of the (possibly paired) anatomic structures examined. E.g., the left knee, both lungs, or unpaired abdomen. If present, shall be consistent with any laterality information indicated in ImagingStudy.series.bodySite.
+   */
+  laterality?: fhir.CodingArgs|undefined;
+  /**
+   * The specimen imaged, e.g., for whole slide imaging of a biopsy.
+   */
+  specimen?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The date and time the series was started.
+   */
+  started?: fhir.FhirDateTime|string|undefined;
+  /**
+   * If the person who performed the series is not known, their Organization may be recorded. A patient, or related person, may be the performer, e.g. for patient-captured images.
+   */
+  performer?: fhir.ImagingStudySeriesPerformerArgs[]|undefined;
+  /**
+   * A single SOP instance within the series, e.g. an image, or presentation state.
+   */
+  instance?: fhir.ImagingStudySeriesInstanceArgs[]|undefined;
 }
 
 /**
  * Each study has one or more series of images or other content.
  */
-export class ImagingStudySeries extends fhir.BackboneElement implements IImagingStudySeries {
+export class ImagingStudySeries extends fhir.BackboneElement {
+  readonly __dataType:string = 'ImagingStudySeries';
   /**
    * See [DICOM PS3.3 C.7.3](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.3.html).
    */
-  public uid: string|null;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.uid
-   */
-  public _uid?: fhir.FhirElement|undefined;
+  public uid: fhir.FhirId|null;
   /**
    * The numeric identifier of this series in the study.
    */
-  public number?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.number
-   */
-  public _number?: fhir.FhirElement|undefined;
+  public number?: fhir.FhirUnsignedInt|undefined;
   /**
    * The modality of this series sequence.
    */
@@ -372,23 +233,15 @@ export class ImagingStudySeries extends fhir.BackboneElement implements IImaging
   /**
    * A description of the series.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Number of SOP Instances in the Study. The value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
    */
-  public numberOfInstances?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.numberOfInstances
-   */
-  public _numberOfInstances?: fhir.FhirElement|undefined;
+  public numberOfInstances?: fhir.FhirUnsignedInt|undefined;
   /**
    * Typical endpoint types include DICOM WADO-RS, which is used to retrieve DICOM instances in native or rendered (e.g., JPG, PNG) formats using a RESTful API; DICOM WADO-URI, which can similarly retrieve native or rendered instances, except using an HTTP query-based approach; and DICOM QIDO-RS, which allows RESTful query for DICOM information without retrieving the actual instances.
    */
-  public endpoint?: fhir.Reference[]|undefined;
+  public endpoint?: fhir.Reference[]|undefined = [];
   /**
    * The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings. The bodySite may indicate the laterality of body part imaged; if so, it shall be consistent with any content of ImagingStudy.series.laterality.
    */
@@ -400,45 +253,36 @@ export class ImagingStudySeries extends fhir.BackboneElement implements IImaging
   /**
    * The specimen imaged, e.g., for whole slide imaging of a biopsy.
    */
-  public specimen?: fhir.Reference[]|undefined;
+  public specimen?: fhir.Reference[]|undefined = [];
   /**
    * The date and time the series was started.
    */
-  public started?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.series.started
-   */
-  public _started?: fhir.FhirElement|undefined;
+  public started?: fhir.FhirDateTime|undefined;
   /**
    * If the person who performed the series is not known, their Organization may be recorded. A patient, or related person, may be the performer, e.g. for patient-captured images.
    */
-  public performer?: fhir.ImagingStudySeriesPerformer[]|undefined;
+  public performer?: fhir.ImagingStudySeriesPerformer[]|undefined = [];
   /**
    * A single SOP instance within the series, e.g. an image, or presentation state.
    */
-  public instance?: fhir.ImagingStudySeriesInstance[]|undefined;
+  public instance?: fhir.ImagingStudySeriesInstance[]|undefined = [];
   /**
    * Default constructor for ImagingStudySeries - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImagingStudySeries> = { }) {
-    super(source);
-    if (source['uid']) { this.uid = source.uid; }
+  constructor(source:Partial<ImagingStudySeriesArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['uid']) { this.uid = new fhir.FhirId({value: source.uid}); }
     else { this.uid = null; }
-    if (source['_uid']) { this._uid = new fhir.FhirElement(source._uid!); }
-    if (source['number']) { this.number = source.number; }
-    if (source['_number']) { this._number = new fhir.FhirElement(source._number!); }
-    if (source['modality']) { this.modality = new fhir.Coding(source.modality!); }
+    if (source['number']) { this.number = new fhir.FhirUnsignedInt({value: source.number}); }
+    if (source['modality']) { this.modality = new fhir.Coding(source.modality); }
     else { this.modality = null; }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['numberOfInstances']) { this.numberOfInstances = source.numberOfInstances; }
-    if (source['_numberOfInstances']) { this._numberOfInstances = new fhir.FhirElement(source._numberOfInstances!); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['numberOfInstances']) { this.numberOfInstances = new fhir.FhirUnsignedInt({value: source.numberOfInstances}); }
     if (source['endpoint']) { this.endpoint = source.endpoint.map((x) => new fhir.Reference(x)); }
-    if (source['bodySite']) { this.bodySite = new fhir.Coding(source.bodySite!); }
-    if (source['laterality']) { this.laterality = new fhir.Coding(source.laterality!); }
+    if (source['bodySite']) { this.bodySite = new fhir.Coding(source.bodySite); }
+    if (source['laterality']) { this.laterality = new fhir.Coding(source.laterality); }
     if (source['specimen']) { this.specimen = source.specimen.map((x) => new fhir.Reference(x)); }
-    if (source['started']) { this.started = source.started; }
-    if (source['_started']) { this._started = new fhir.FhirElement(source._started!); }
+    if (source['started']) { this.started = new fhir.FhirDateTime({value: source.started}); }
     if (source['performer']) { this.performer = source.performer.map((x) => new fhir.ImagingStudySeriesPerformer(x)); }
     if (source['instance']) { this.instance = source.instance.map((x) => new fhir.ImagingStudySeriesInstance(x)); }
   }
@@ -463,30 +307,130 @@ export class ImagingStudySeries extends fhir.BackboneElement implements IImaging
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["uid"]) { results.push(["uid",'Missing required element: ImagingStudy.series.uid']); }
-    if (this["_uid"]) { results.push(...this._uid.doModelValidation()); }
-    if (this["_number"]) { results.push(...this._number.doModelValidation()); }
-    if (!this["modality"]) { results.push(["modality",'Missing required element: ImagingStudy.series.modality']); }
-    if (this["modality"]) { results.push(...this.modality.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_numberOfInstances"]) { results.push(...this._numberOfInstances.doModelValidation()); }
-    if (this["endpoint"]) { this.endpoint.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["bodySite"]) { results.push(...this.bodySite.doModelValidation()); }
-    if (this["laterality"]) { results.push(...this.laterality.doModelValidation()); }
-    if (this["specimen"]) { this.specimen.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_started"]) { results.push(...this._started.doModelValidation()); }
-    if (this["performer"]) { this.performer.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["instance"]) { this.instance.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['uid']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property uid:fhir.FhirId fhir: ImagingStudy.series.uid:id", }));
+    }
+    if (this["uid"]) { outcome.issue!.push(...this.uid.doModelValidation().issue!); }
+    if (this["number"]) { outcome.issue!.push(...this.number.doModelValidation().issue!); }
+    if (!this['modality']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property modality:fhir.Coding fhir: ImagingStudy.series.modality:Coding", }));
+    }
+    if (this["modality"]) { outcome.issue!.push(...this.modality.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["numberOfInstances"]) { outcome.issue!.push(...this.numberOfInstances.doModelValidation().issue!); }
+    if (this["endpoint"]) { this.endpoint.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["bodySite"]) { outcome.issue!.push(...this.bodySite.doModelValidation().issue!); }
+    if (this["laterality"]) { outcome.issue!.push(...this.laterality.doModelValidation().issue!); }
+    if (this["specimen"]) { this.specimen.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["started"]) { outcome.issue!.push(...this.started.doModelValidation().issue!); }
+    if (this["performer"]) { this.performer.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instance"]) { this.instance.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ImagingStudy type.
+ */
+export interface ImagingStudyArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "ImagingStudy"|undefined;
+  /**
+   * See discussion under [Imaging Study Implementation Notes](imagingstudy.html#notes) for encoding of DICOM Study Instance UID. Accession Number should use ACSN Identifier type.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * Unknown does not represent "other" - one of the defined statuses must apply.  Unknown is used when the authoring system is not sure what the current status is.
+   */
+  status: ImagingstudyStatusValueSetEnum|null;
+  /**
+   * A list of all the series.modality values that are actual acquisition modalities, i.e. those in the DICOM Context Group 29 (value set OID 1.2.840.10008.6.1.19).
+   */
+  modality?: fhir.CodingArgs[]|undefined;
+  /**
+   * QA phantoms can be recorded with a Device; multiple subjects (such as mice) can be recorded with a Group.
+   */
+  subject: fhir.ReferenceArgs|null;
+  /**
+   * This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission test).
+   */
+  encounter?: fhir.ReferenceArgs|undefined;
+  /**
+   * Date and time the study started.
+   */
+  started?: fhir.FhirDateTime|string|undefined;
+  /**
+   * A list of the diagnostic requests that resulted in this imaging study being performed.
+   */
+  basedOn?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The requesting/referring physician.
+   */
+  referrer?: fhir.ReferenceArgs|undefined;
+  /**
+   * Who read the study and interpreted the images or other content.
+   */
+  interpreter?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Typical endpoint types include DICOM WADO-RS, which is used to retrieve DICOM instances in native or rendered (e.g., JPG, PNG), formats using a RESTful API; DICOM WADO-URI, which can similarly retrieve native or rendered instances, except using an HTTP query-based approach; DICOM QIDO-RS, which allows RESTful query for DICOM information without retrieving the actual instances; or IHE Invoke Image Display (IID), which provides standard invocation of an imaging web viewer.
+   */
+  endpoint?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Number of Series in the Study. This value given may be larger than the number of series elements this Resource contains due to resource availability, security, or other factors. This element should be present if any series elements are present.
+   */
+  numberOfSeries?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * Number of SOP Instances in Study. This value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
+   */
+  numberOfInstances?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * The procedure which this ImagingStudy was part of.
+   */
+  procedureReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * The code for the performed procedure type.
+   */
+  procedureCode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The principal physical location where the ImagingStudy was performed.
+   */
+  location?: fhir.ReferenceArgs|undefined;
+  /**
+   * Description of clinical condition indicating why the ImagingStudy was requested.
+   */
+  reasonCode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Indicates another resource whose existence justifies this Study.
+   */
+  reasonReference?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Per the recommended DICOM mapping, this element is derived from the Study Description attribute (0008,1030). Observations or findings about the imaging study should be recorded in another resource, e.g. Observation, and not in this element.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
+  /**
+   * The Imaging Manager description of the study. Institution-generated description or classification of the Study (component) performed.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * Each study has one or more series of images or other content.
+   */
+  series?: fhir.ImagingStudySeriesArgs[]|undefined;
 }
 
 /**
  * Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
  */
-export class ImagingStudy extends fhir.DomainResource implements IImagingStudy {
+export class ImagingStudy extends fhir.DomainResource {
+  readonly __dataType:string = 'ImagingStudy';
   /**
    * Resource Type Name
    */
@@ -494,19 +438,15 @@ export class ImagingStudy extends fhir.DomainResource implements IImagingStudy {
   /**
    * See discussion under [Imaging Study Implementation Notes](imagingstudy.html#notes) for encoding of DICOM Study Instance UID. Accession Number should use ACSN Identifier type.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Unknown does not represent "other" - one of the defined statuses must apply.  Unknown is used when the authoring system is not sure what the current status is.
    */
   public status: ImagingstudyStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ImagingStudy.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * A list of all the series.modality values that are actual acquisition modalities, i.e. those in the DICOM Context Group 29 (value set OID 1.2.840.10008.6.1.19).
    */
-  public modality?: fhir.Coding[]|undefined;
+  public modality?: fhir.Coding[]|undefined = [];
   /**
    * QA phantoms can be recorded with a Device; multiple subjects (such as mice) can be recorded with a Group.
    */
@@ -518,15 +458,11 @@ export class ImagingStudy extends fhir.DomainResource implements IImagingStudy {
   /**
    * Date and time the study started.
    */
-  public started?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.started
-   */
-  public _started?: fhir.FhirElement|undefined;
+  public started?: fhir.FhirDateTime|undefined;
   /**
    * A list of the diagnostic requests that resulted in this imaging study being performed.
    */
-  public basedOn?: fhir.Reference[]|undefined;
+  public basedOn?: fhir.Reference[]|undefined = [];
   /**
    * The requesting/referring physician.
    */
@@ -534,27 +470,19 @@ export class ImagingStudy extends fhir.DomainResource implements IImagingStudy {
   /**
    * Who read the study and interpreted the images or other content.
    */
-  public interpreter?: fhir.Reference[]|undefined;
+  public interpreter?: fhir.Reference[]|undefined = [];
   /**
    * Typical endpoint types include DICOM WADO-RS, which is used to retrieve DICOM instances in native or rendered (e.g., JPG, PNG), formats using a RESTful API; DICOM WADO-URI, which can similarly retrieve native or rendered instances, except using an HTTP query-based approach; DICOM QIDO-RS, which allows RESTful query for DICOM information without retrieving the actual instances; or IHE Invoke Image Display (IID), which provides standard invocation of an imaging web viewer.
    */
-  public endpoint?: fhir.Reference[]|undefined;
+  public endpoint?: fhir.Reference[]|undefined = [];
   /**
    * Number of Series in the Study. This value given may be larger than the number of series elements this Resource contains due to resource availability, security, or other factors. This element should be present if any series elements are present.
    */
-  public numberOfSeries?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.numberOfSeries
-   */
-  public _numberOfSeries?: fhir.FhirElement|undefined;
+  public numberOfSeries?: fhir.FhirUnsignedInt|undefined;
   /**
    * Number of SOP Instances in Study. This value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
    */
-  public numberOfInstances?: number|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.numberOfInstances
-   */
-  public _numberOfInstances?: fhir.FhirElement|undefined;
+  public numberOfInstances?: fhir.FhirUnsignedInt|undefined;
   /**
    * The procedure which this ImagingStudy was part of.
    */
@@ -562,7 +490,7 @@ export class ImagingStudy extends fhir.DomainResource implements IImagingStudy {
   /**
    * The code for the performed procedure type.
    */
-  public procedureCode?: fhir.CodeableConcept[]|undefined;
+  public procedureCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The principal physical location where the ImagingStudy was performed.
    */
@@ -570,59 +498,50 @@ export class ImagingStudy extends fhir.DomainResource implements IImagingStudy {
   /**
    * Description of clinical condition indicating why the ImagingStudy was requested.
    */
-  public reasonCode?: fhir.CodeableConcept[]|undefined;
+  public reasonCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Indicates another resource whose existence justifies this Study.
    */
-  public reasonReference?: fhir.Reference[]|undefined;
+  public reasonReference?: fhir.Reference[]|undefined = [];
   /**
    * Per the recommended DICOM mapping, this element is derived from the Study Description attribute (0008,1030). Observations or findings about the imaging study should be recorded in another resource, e.g. Observation, and not in this element.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * The Imaging Manager description of the study. Institution-generated description or classification of the Study (component) performed.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ImagingStudy.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Each study has one or more series of images or other content.
    */
-  public series?: fhir.ImagingStudySeries[]|undefined;
+  public series?: fhir.ImagingStudySeries[]|undefined = [];
   /**
    * Default constructor for ImagingStudy - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IImagingStudy> = { }) {
-    super(source);
+  constructor(source:Partial<ImagingStudyArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'ImagingStudy';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
     if (source['modality']) { this.modality = source.modality.map((x) => new fhir.Coding(x)); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
     else { this.subject = null; }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['started']) { this.started = source.started; }
-    if (source['_started']) { this._started = new fhir.FhirElement(source._started!); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['started']) { this.started = new fhir.FhirDateTime({value: source.started}); }
     if (source['basedOn']) { this.basedOn = source.basedOn.map((x) => new fhir.Reference(x)); }
-    if (source['referrer']) { this.referrer = new fhir.Reference(source.referrer!); }
+    if (source['referrer']) { this.referrer = new fhir.Reference(source.referrer); }
     if (source['interpreter']) { this.interpreter = source.interpreter.map((x) => new fhir.Reference(x)); }
     if (source['endpoint']) { this.endpoint = source.endpoint.map((x) => new fhir.Reference(x)); }
-    if (source['numberOfSeries']) { this.numberOfSeries = source.numberOfSeries; }
-    if (source['_numberOfSeries']) { this._numberOfSeries = new fhir.FhirElement(source._numberOfSeries!); }
-    if (source['numberOfInstances']) { this.numberOfInstances = source.numberOfInstances; }
-    if (source['_numberOfInstances']) { this._numberOfInstances = new fhir.FhirElement(source._numberOfInstances!); }
-    if (source['procedureReference']) { this.procedureReference = new fhir.Reference(source.procedureReference!); }
+    if (source['numberOfSeries']) { this.numberOfSeries = new fhir.FhirUnsignedInt({value: source.numberOfSeries}); }
+    if (source['numberOfInstances']) { this.numberOfInstances = new fhir.FhirUnsignedInt({value: source.numberOfInstances}); }
+    if (source['procedureReference']) { this.procedureReference = new fhir.Reference(source.procedureReference); }
     if (source['procedureCode']) { this.procedureCode = source.procedureCode.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['location']) { this.location = new fhir.Reference(source.location!); }
+    if (source['location']) { this.location = new fhir.Reference(source.location); }
     if (source['reasonCode']) { this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x)); }
     if (source['reasonReference']) { this.reasonReference = source.reasonReference.map((x) => new fhir.Reference(x)); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
     if (source['series']) { this.series = source.series.map((x) => new fhir.ImagingStudySeries(x)); }
   }
   /**
@@ -646,31 +565,42 @@ export class ImagingStudy extends fhir.DomainResource implements IImagingStudy {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: ImagingStudy.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: ImagingStudy.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["modality"]) { this.modality.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["subject"]) { results.push(["subject",'Missing required element: ImagingStudy.subject']); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (this["_started"]) { results.push(...this._started.doModelValidation()); }
-    if (this["basedOn"]) { this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["referrer"]) { results.push(...this.referrer.doModelValidation()); }
-    if (this["interpreter"]) { this.interpreter.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["endpoint"]) { this.endpoint.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_numberOfSeries"]) { results.push(...this._numberOfSeries.doModelValidation()); }
-    if (this["_numberOfInstances"]) { results.push(...this._numberOfInstances.doModelValidation()); }
-    if (this["procedureReference"]) { results.push(...this.procedureReference.doModelValidation()); }
-    if (this["procedureCode"]) { this.procedureCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["location"]) { results.push(...this.location.doModelValidation()); }
-    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["series"]) { this.series.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'ImagingStudy' fhir: ImagingStudy.resourceType:'ImagingStudy'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:ImagingstudyStatusValueSetEnum fhir: ImagingStudy.status:code", }));
+    }
+    if (this["modality"]) { this.modality.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['subject']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property subject:fhir.Reference fhir: ImagingStudy.subject:Reference", }));
+    }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (this["started"]) { outcome.issue!.push(...this.started.doModelValidation().issue!); }
+    if (this["basedOn"]) { this.basedOn.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["referrer"]) { outcome.issue!.push(...this.referrer.doModelValidation().issue!); }
+    if (this["interpreter"]) { this.interpreter.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["endpoint"]) { this.endpoint.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["numberOfSeries"]) { outcome.issue!.push(...this.numberOfSeries.doModelValidation().issue!); }
+    if (this["numberOfInstances"]) { outcome.issue!.push(...this.numberOfInstances.doModelValidation().issue!); }
+    if (this["procedureReference"]) { outcome.issue!.push(...this.procedureReference.doModelValidation().issue!); }
+    if (this["procedureCode"]) { this.procedureCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["location"]) { outcome.issue!.push(...this.location.doModelValidation().issue!); }
+    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["series"]) { this.series.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

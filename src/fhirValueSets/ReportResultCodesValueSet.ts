@@ -43,17 +43,3 @@ export type ReportResultCodesValueSetType = typeof ReportResultCodesValueSet;
 /**
  * The reported execution result.
  */
-export enum ReportResultCodesValueSetEnum {
-  /**
-   * fail: One or more test operations failed one or more asserts.
-   */
-  Fail = "fail",
-  /**
-   * pass: All test operations successfully passed all asserts.
-   */
-  Pass = "pass",
-  /**
-   * pending: One or more test operations is pending execution completion.
-   */
-  Pending = "pending",
-}

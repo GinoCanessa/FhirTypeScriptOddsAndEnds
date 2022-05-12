@@ -1,178 +1,57 @@
 import * as fhir from '../fhir.js';
-import { NamingsystemIdentifierTypeValueSetType, NamingsystemIdentifierTypeValueSetEnum } from '../fhirValueSets/NamingsystemIdentifierTypeValueSet.js';
-import { PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { NamingsystemTypeValueSetType, NamingsystemTypeValueSetEnum } from '../fhirValueSets/NamingsystemTypeValueSet.js';
+import { NamingsystemIdentifierTypeValueSetType } from '../fhirValueSets/NamingsystemIdentifierTypeValueSet.js';
+import { NamingsystemIdentifierTypeValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSetType } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { NamingsystemTypeValueSetType } from '../fhirValueSets/NamingsystemTypeValueSet.js';
+import { NamingsystemTypeValueSetEnum } from '../valueSetEnums.js';
 import { IdentifierTypeValueSetType } from '../fhirValueSets/IdentifierTypeValueSet.js';
 /**
- * Multiple identifiers may exist, either due to duplicate registration, regional rules, needs of different communication technologies, etc.
+ * Valid arguments for the NamingSystemUniqueId type.
  */
-export declare type INamingSystemUniqueId = fhir.IBackboneElement & {
+export interface NamingSystemUniqueIdArgs extends fhir.BackboneElementArgs {
     /**
      * Different identifier types may be used in different types of communications (OIDs for v3, URIs for FHIR, etc.).  Other includes RUIDs from v3, standard v2 code name strings, etc.
      */
     type: NamingsystemIdentifierTypeValueSetEnum | null;
     /**
-     * Extended properties for primitive element: NamingSystem.uniqueId.type
-     */
-    _type?: fhir.IFhirElement | undefined;
-    /**
      * If the value is a URI intended for use as FHIR system identifier, the URI should not contain "\" or "?" or "," since this makes escaping very difficult.
      */
-    value: string | null;
-    /**
-     * Extended properties for primitive element: NamingSystem.uniqueId.value
-     */
-    _value?: fhir.IFhirElement | undefined;
+    value: fhir.FhirString | string | undefined;
     /**
      * Indicates whether this identifier is the "preferred" identifier of this type.
      */
-    preferred?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: NamingSystem.uniqueId.preferred
-     */
-    _preferred?: fhir.IFhirElement | undefined;
+    preferred?: fhir.FhirBoolean | boolean | undefined;
     /**
      * e.g. "must be used in Germany" or "was initially published in error with this value".
      */
-    comment?: string | undefined;
-    /**
-     * Extended properties for primitive element: NamingSystem.uniqueId.comment
-     */
-    _comment?: fhir.IFhirElement | undefined;
+    comment?: fhir.FhirString | string | undefined;
     /**
      * Within a registry, a given identifier should only be "active" for a single namespace at a time.  (Ideally, an identifier should only ever be associated with a single namespace across all time).
      */
-    period?: fhir.IPeriod | undefined;
-};
-/**
- * A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a "System" used within the Identifier and Coding data types.
- */
-export declare type INamingSystem = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "NamingSystem";
-    /**
-     * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.The"symbolic name" for an OID would be captured as an extension.
-     */
-    name: string | null;
-    /**
-     * Extended properties for primitive element: NamingSystem.name
-     */
-    _name?: fhir.IFhirElement | undefined;
-    /**
-     * Allows filtering of naming systems that are appropriate for use versus not.
-     */
-    status: PublicationStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: NamingSystem.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * Indicates the purpose for the naming system - what kinds of things does it make unique?
-     */
-    kind: NamingsystemTypeValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: NamingSystem.kind
-     */
-    _kind?: fhir.IFhirElement | undefined;
-    /**
-     * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the naming system. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-     */
-    date: string | null;
-    /**
-     * Extended properties for primitive element: NamingSystem.date
-     */
-    _date?: fhir.IFhirElement | undefined;
-    /**
-     * Usually an organization but may be an individual. The publisher (or steward) of the naming system is the organization or individual primarily responsible for the maintenance and upkeep of the naming system. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the naming system. This item SHOULD be populated unless the information is available from context.
-     */
-    publisher?: string | undefined;
-    /**
-     * Extended properties for primitive element: NamingSystem.publisher
-     */
-    _publisher?: fhir.IFhirElement | undefined;
-    /**
-     * May be a web site, an email address, a telephone number, etc.
-     */
-    contact?: fhir.IContactDetail[] | undefined;
-    /**
-     * This is the primary organization.  Responsibility for some aspects of a namespace may be delegated.
-     */
-    responsible?: string | undefined;
-    /**
-     * Extended properties for primitive element: NamingSystem.responsible
-     */
-    _responsible?: fhir.IFhirElement | undefined;
-    /**
-     * This will most commonly be used for identifier namespaces, but categories could potentially be useful for code systems and authorities as well.
-     */
-    type?: fhir.ICodeableConcept | undefined;
-    /**
-     * This description can be used to capture details such as why the naming system was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the naming system as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the naming system is presumed to be the predominant language in the place the naming system was created).
-     */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: NamingSystem.description
-     */
-    _description?: fhir.IFhirElement | undefined;
-    /**
-     * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-     */
-    useContext?: fhir.IUsageContext[] | undefined;
-    /**
-     * It may be possible for the naming system to be used in jurisdictions other than those for which it was originally designed or intended.
-     */
-    jurisdiction?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Provides guidance on the use of the namespace, including the handling of formatting characters, use of upper vs. lower case, etc.
-     */
-    usage?: string | undefined;
-    /**
-     * Extended properties for primitive element: NamingSystem.usage
-     */
-    _usage?: fhir.IFhirElement | undefined;
-    /**
-     * Multiple identifiers may exist, either due to duplicate registration, regional rules, needs of different communication technologies, etc.
-     */
-    uniqueId: fhir.INamingSystemUniqueId[] | null;
-};
+    period?: fhir.PeriodArgs | undefined;
+}
 /**
  * Multiple identifiers may exist, either due to duplicate registration, regional rules, needs of different communication technologies, etc.
  */
-export declare class NamingSystemUniqueId extends fhir.BackboneElement implements INamingSystemUniqueId {
+export declare class NamingSystemUniqueId extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Different identifier types may be used in different types of communications (OIDs for v3, URIs for FHIR, etc.).  Other includes RUIDs from v3, standard v2 code name strings, etc.
      */
     type: NamingsystemIdentifierTypeValueSetEnum | null;
     /**
-     * Extended properties for primitive element: NamingSystem.uniqueId.type
-     */
-    _type?: fhir.FhirElement | undefined;
-    /**
      * If the value is a URI intended for use as FHIR system identifier, the URI should not contain "\" or "?" or "," since this makes escaping very difficult.
      */
-    value: string | null;
-    /**
-     * Extended properties for primitive element: NamingSystem.uniqueId.value
-     */
-    _value?: fhir.FhirElement | undefined;
+    value: fhir.FhirString | null;
     /**
      * Indicates whether this identifier is the "preferred" identifier of this type.
      */
-    preferred?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: NamingSystem.uniqueId.preferred
-     */
-    _preferred?: fhir.FhirElement | undefined;
+    preferred?: fhir.FhirBoolean | undefined;
     /**
      * e.g. "must be used in Germany" or "was initially published in error with this value".
      */
-    comment?: string | undefined;
-    /**
-     * Extended properties for primitive element: NamingSystem.uniqueId.comment
-     */
-    _comment?: fhir.FhirElement | undefined;
+    comment?: fhir.FhirString | undefined;
     /**
      * Within a registry, a given identifier should only be "active" for a single namespace at a time.  (Ideally, an identifier should only ever be associated with a single namespace across all time).
      */
@@ -180,7 +59,7 @@ export declare class NamingSystemUniqueId extends fhir.BackboneElement implement
     /**
      * Default constructor for NamingSystemUniqueId - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<INamingSystemUniqueId>);
+    constructor(source?: Partial<NamingSystemUniqueIdArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for type
      */
@@ -188,12 +67,78 @@ export declare class NamingSystemUniqueId extends fhir.BackboneElement implement
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the NamingSystem type.
+ */
+export interface NamingSystemArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "NamingSystem" | undefined;
+    /**
+     * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.The"symbolic name" for an OID would be captured as an extension.
+     */
+    name: fhir.FhirString | string | undefined;
+    /**
+     * Allows filtering of naming systems that are appropriate for use versus not.
+     */
+    status: PublicationStatusValueSetEnum | null;
+    /**
+     * Indicates the purpose for the naming system - what kinds of things does it make unique?
+     */
+    kind: NamingsystemTypeValueSetEnum | null;
+    /**
+     * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the naming system. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+     */
+    date: fhir.FhirDateTime | string | undefined;
+    /**
+     * Usually an organization but may be an individual. The publisher (or steward) of the naming system is the organization or individual primarily responsible for the maintenance and upkeep of the naming system. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the naming system. This item SHOULD be populated unless the information is available from context.
+     */
+    publisher?: fhir.FhirString | string | undefined;
+    /**
+     * May be a web site, an email address, a telephone number, etc.
+     */
+    contact?: fhir.ContactDetailArgs[] | undefined;
+    /**
+     * This is the primary organization.  Responsibility for some aspects of a namespace may be delegated.
+     */
+    responsible?: fhir.FhirString | string | undefined;
+    /**
+     * This will most commonly be used for identifier namespaces, but categories could potentially be useful for code systems and authorities as well.
+     */
+    type?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * This description can be used to capture details such as why the naming system was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the naming system as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the naming system is presumed to be the predominant language in the place the naming system was created).
+     */
+    description?: fhir.FhirMarkdown | string | undefined;
+    /**
+     * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+     */
+    useContext?: fhir.UsageContextArgs[] | undefined;
+    /**
+     * It may be possible for the naming system to be used in jurisdictions other than those for which it was originally designed or intended.
+     */
+    jurisdiction?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * Provides guidance on the use of the namespace, including the handling of formatting characters, use of upper vs. lower case, etc.
+     */
+    usage?: fhir.FhirString | string | undefined;
+    /**
+     * Multiple identifiers may exist, either due to duplicate registration, regional rules, needs of different communication technologies, etc.
+     */
+    uniqueId: fhir.NamingSystemUniqueIdArgs[] | null;
 }
 /**
  * A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a "System" used within the Identifier and Coding data types.
  */
-export declare class NamingSystem extends fhir.DomainResource implements INamingSystem {
+export declare class NamingSystem extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -201,43 +146,23 @@ export declare class NamingSystem extends fhir.DomainResource implements INaming
     /**
      * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.The"symbolic name" for an OID would be captured as an extension.
      */
-    name: string | null;
-    /**
-     * Extended properties for primitive element: NamingSystem.name
-     */
-    _name?: fhir.FhirElement | undefined;
+    name: fhir.FhirString | null;
     /**
      * Allows filtering of naming systems that are appropriate for use versus not.
      */
     status: PublicationStatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: NamingSystem.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * Indicates the purpose for the naming system - what kinds of things does it make unique?
      */
     kind: NamingsystemTypeValueSetEnum | null;
     /**
-     * Extended properties for primitive element: NamingSystem.kind
-     */
-    _kind?: fhir.FhirElement | undefined;
-    /**
      * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the naming system. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
      */
-    date: string | null;
-    /**
-     * Extended properties for primitive element: NamingSystem.date
-     */
-    _date?: fhir.FhirElement | undefined;
+    date: fhir.FhirDateTime | null;
     /**
      * Usually an organization but may be an individual. The publisher (or steward) of the naming system is the organization or individual primarily responsible for the maintenance and upkeep of the naming system. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the naming system. This item SHOULD be populated unless the information is available from context.
      */
-    publisher?: string | undefined;
-    /**
-     * Extended properties for primitive element: NamingSystem.publisher
-     */
-    _publisher?: fhir.FhirElement | undefined;
+    publisher?: fhir.FhirString | undefined;
     /**
      * May be a web site, an email address, a telephone number, etc.
      */
@@ -245,11 +170,7 @@ export declare class NamingSystem extends fhir.DomainResource implements INaming
     /**
      * This is the primary organization.  Responsibility for some aspects of a namespace may be delegated.
      */
-    responsible?: string | undefined;
-    /**
-     * Extended properties for primitive element: NamingSystem.responsible
-     */
-    _responsible?: fhir.FhirElement | undefined;
+    responsible?: fhir.FhirString | undefined;
     /**
      * This will most commonly be used for identifier namespaces, but categories could potentially be useful for code systems and authorities as well.
      */
@@ -257,11 +178,7 @@ export declare class NamingSystem extends fhir.DomainResource implements INaming
     /**
      * This description can be used to capture details such as why the naming system was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the naming system as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the naming system is presumed to be the predominant language in the place the naming system was created).
      */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: NamingSystem.description
-     */
-    _description?: fhir.FhirElement | undefined;
+    description?: fhir.FhirMarkdown | undefined;
     /**
      * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
      */
@@ -273,11 +190,7 @@ export declare class NamingSystem extends fhir.DomainResource implements INaming
     /**
      * Provides guidance on the use of the namespace, including the handling of formatting characters, use of upper vs. lower case, etc.
      */
-    usage?: string | undefined;
-    /**
-     * Extended properties for primitive element: NamingSystem.usage
-     */
-    _usage?: fhir.FhirElement | undefined;
+    usage?: fhir.FhirString | undefined;
     /**
      * Multiple identifiers may exist, either due to duplicate registration, regional rules, needs of different communication technologies, etc.
      */
@@ -285,7 +198,7 @@ export declare class NamingSystem extends fhir.DomainResource implements INaming
     /**
      * Default constructor for NamingSystem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<INamingSystem>);
+    constructor(source?: Partial<NamingSystemArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -301,6 +214,10 @@ export declare class NamingSystem extends fhir.DomainResource implements INaming
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=NamingSystem.d.ts.map

@@ -35,13 +35,3 @@ export type ClaimExceptionValueSetType = typeof ClaimExceptionValueSet;
 /**
  * This value set includes sample Exception codes.
  */
-export enum ClaimExceptionValueSetEnum {
-  /**
-   * disabled: Disabled
-   */
-  Disabled = "disabled",
-  /**
-   * student: Fulltime Student
-   */
-  StudentFulltime = "student",
-}

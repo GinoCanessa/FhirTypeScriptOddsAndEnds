@@ -3,7 +3,9 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: QuestionnaireResponse
 import * as fhir from '../fhir.js';
-import { QuestionnaireAnswersStatusValueSet } from '../fhirValueSets/QuestionnaireAnswersStatusValueSet.js';
+import { QuestionnaireAnswersStatusValueSet, } from '../fhirValueSets/QuestionnaireAnswersStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The value is nested because we cannot have a repeating structure that has variable type.
  */
@@ -11,67 +13,52 @@ export class QuestionnaireResponseItemAnswer extends fhir.BackboneElement {
     /**
      * Default constructor for QuestionnaireResponseItemAnswer - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['valueBoolean']) {
-            this.valueBoolean = source.valueBoolean;
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'QuestionnaireResponseItemAnswer';
+        this.__valueIsChoice = true;
+        /**
+         * Nested groups and/or questions found within this particular answer.
+         */
+        this.item = [];
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['_valueBoolean']) {
-            this._valueBoolean = new fhir.FhirElement(source._valueBoolean);
+        else if (source['valueBoolean']) {
+            this.value = new fhir.FhirBoolean({ value: source.valueBoolean });
         }
-        if (source['valueDecimal']) {
-            this.valueDecimal = source.valueDecimal;
+        else if (source['valueDecimal']) {
+            this.value = new fhir.FhirDecimal({ value: source.valueDecimal });
         }
-        if (source['_valueDecimal']) {
-            this._valueDecimal = new fhir.FhirElement(source._valueDecimal);
+        else if (source['valueInteger']) {
+            this.value = new fhir.FhirInteger({ value: source.valueInteger });
         }
-        if (source['valueInteger']) {
-            this.valueInteger = source.valueInteger;
+        else if (source['valueDate']) {
+            this.value = new fhir.FhirDate({ value: source.valueDate });
         }
-        if (source['_valueInteger']) {
-            this._valueInteger = new fhir.FhirElement(source._valueInteger);
+        else if (source['valueDateTime']) {
+            this.value = new fhir.FhirDateTime({ value: source.valueDateTime });
         }
-        if (source['valueDate']) {
-            this.valueDate = source.valueDate;
+        else if (source['valueTime']) {
+            this.value = new fhir.FhirTime({ value: source.valueTime });
         }
-        if (source['_valueDate']) {
-            this._valueDate = new fhir.FhirElement(source._valueDate);
+        else if (source['valueString']) {
+            this.value = new fhir.FhirString({ value: source.valueString });
         }
-        if (source['valueDateTime']) {
-            this.valueDateTime = source.valueDateTime;
+        else if (source['valueUri']) {
+            this.value = new fhir.FhirUri({ value: source.valueUri });
         }
-        if (source['_valueDateTime']) {
-            this._valueDateTime = new fhir.FhirElement(source._valueDateTime);
+        else if (source['valueAttachment']) {
+            this.value = new fhir.Attachment(source.valueAttachment);
         }
-        if (source['valueTime']) {
-            this.valueTime = source.valueTime;
+        else if (source['valueCoding']) {
+            this.value = new fhir.Coding(source.valueCoding);
         }
-        if (source['_valueTime']) {
-            this._valueTime = new fhir.FhirElement(source._valueTime);
+        else if (source['valueQuantity']) {
+            this.value = new fhir.Quantity(source.valueQuantity);
         }
-        if (source['valueString']) {
-            this.valueString = source.valueString;
-        }
-        if (source['_valueString']) {
-            this._valueString = new fhir.FhirElement(source._valueString);
-        }
-        if (source['valueUri']) {
-            this.valueUri = source.valueUri;
-        }
-        if (source['_valueUri']) {
-            this._valueUri = new fhir.FhirElement(source._valueUri);
-        }
-        if (source['valueAttachment']) {
-            this.valueAttachment = new fhir.Attachment(source.valueAttachment);
-        }
-        if (source['valueCoding']) {
-            this.valueCoding = new fhir.Coding(source.valueCoding);
-        }
-        if (source['valueQuantity']) {
-            this.valueQuantity = new fhir.Quantity(source.valueQuantity);
-        }
-        if (source['valueReference']) {
-            this.valueReference = new fhir.Reference(source.valueReference);
+        else if (source['valueReference']) {
+            this.value = new fhir.Reference(source.valueReference);
         }
         if (source['item']) {
             this.item = source.item.map((x) => new fhir.QuestionnaireResponseItem(x));
@@ -81,47 +68,17 @@ export class QuestionnaireResponseItemAnswer extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_valueBoolean"]) {
-            results.push(...this._valueBoolean.doModelValidation());
-        }
-        if (this["_valueDecimal"]) {
-            results.push(...this._valueDecimal.doModelValidation());
-        }
-        if (this["_valueInteger"]) {
-            results.push(...this._valueInteger.doModelValidation());
-        }
-        if (this["_valueDate"]) {
-            results.push(...this._valueDate.doModelValidation());
-        }
-        if (this["_valueDateTime"]) {
-            results.push(...this._valueDateTime.doModelValidation());
-        }
-        if (this["_valueTime"]) {
-            results.push(...this._valueTime.doModelValidation());
-        }
-        if (this["_valueString"]) {
-            results.push(...this._valueString.doModelValidation());
-        }
-        if (this["_valueUri"]) {
-            results.push(...this._valueUri.doModelValidation());
-        }
-        if (this["valueAttachment"]) {
-            results.push(...this.valueAttachment.doModelValidation());
-        }
-        if (this["valueCoding"]) {
-            results.push(...this.valueCoding.doModelValidation());
-        }
-        if (this["valueQuantity"]) {
-            results.push(...this.valueQuantity.doModelValidation());
-        }
-        if (this["valueReference"]) {
-            results.push(...this.valueReference.doModelValidation());
-        }
+        var outcome = super.doModelValidation();
         if (this["item"]) {
-            this.item.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.item.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -131,28 +88,28 @@ export class QuestionnaireResponseItem extends fhir.BackboneElement {
     /**
      * Default constructor for QuestionnaireResponseItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'QuestionnaireResponseItem';
+        /**
+         * The value is nested because we cannot have a repeating structure that has variable type.
+         */
+        this.answer = [];
+        /**
+         * Questions or sub-groups nested beneath a question or group.
+         */
+        this.item = [];
         if (source['linkId']) {
-            this.linkId = source.linkId;
+            this.linkId = new fhir.FhirString({ value: source.linkId });
         }
         else {
             this.linkId = null;
         }
-        if (source['_linkId']) {
-            this._linkId = new fhir.FhirElement(source._linkId);
-        }
         if (source['definition']) {
-            this.definition = source.definition;
-        }
-        if (source['_definition']) {
-            this._definition = new fhir.FhirElement(source._definition);
+            this.definition = new fhir.FhirUri({ value: source.definition });
         }
         if (source['text']) {
-            this.text = source.text;
-        }
-        if (source['_text']) {
-            this._text = new fhir.FhirElement(source._text);
+            this.text = new fhir.FhirString({ value: source.text });
         }
         if (source['answer']) {
             this.answer = source.answer.map((x) => new fhir.QuestionnaireResponseItemAnswer(x));
@@ -165,26 +122,32 @@ export class QuestionnaireResponseItem extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["linkId"]) {
-            results.push(["linkId", 'Missing required element: QuestionnaireResponse.item.linkId']);
+        var outcome = super.doModelValidation();
+        if (!this['linkId']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property linkId:fhir.FhirString fhir: QuestionnaireResponse.item.linkId:string", }));
         }
-        if (this["_linkId"]) {
-            results.push(...this._linkId.doModelValidation());
+        if (this["linkId"]) {
+            outcome.issue.push(...this.linkId.doModelValidation().issue);
         }
-        if (this["_definition"]) {
-            results.push(...this._definition.doModelValidation());
+        if (this["definition"]) {
+            outcome.issue.push(...this.definition.doModelValidation().issue);
         }
-        if (this["_text"]) {
-            results.push(...this._text.doModelValidation());
+        if (this["text"]) {
+            outcome.issue.push(...this.text.doModelValidation().issue);
         }
         if (this["answer"]) {
-            this.answer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.answer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["item"]) {
-            this.item.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.item.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -194,8 +157,21 @@ export class QuestionnaireResponse extends fhir.DomainResource {
     /**
      * Default constructor for QuestionnaireResponse - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'QuestionnaireResponse';
+        /**
+         * The order, proposal or plan that is fulfilled in whole or in part by this QuestionnaireResponse.  For example, a ServiceRequest seeking an intake assessment or a decision support recommendation to assess for post-partum depression.
+         */
+        this.basedOn = [];
+        /**
+         * Composition of questionnaire responses will be handled by the parent questionnaire having answers that reference the child questionnaire.  For relationships to referrals, and other types of requests, use basedOn.
+         */
+        this.partOf = [];
+        /**
+         * Groups cannot have answers and therefore must nest directly within item. When dealing with questions, nesting must occur within each answer because some questions may have multiple answers (and the nesting occurs for each answer).
+         */
+        this.item = [];
         this.resourceType = 'QuestionnaireResponse';
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
@@ -207,19 +183,13 @@ export class QuestionnaireResponse extends fhir.DomainResource {
             this.partOf = source.partOf.map((x) => new fhir.Reference(x));
         }
         if (source['questionnaire']) {
-            this.questionnaire = source.questionnaire;
-        }
-        if (source['_questionnaire']) {
-            this._questionnaire = new fhir.FhirElement(source._questionnaire);
+            this.questionnaire = new fhir.FhirCanonical({ value: source.questionnaire });
         }
         if (source['status']) {
             this.status = source.status;
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['subject']) {
             this.subject = new fhir.Reference(source.subject);
@@ -228,10 +198,7 @@ export class QuestionnaireResponse extends fhir.DomainResource {
             this.encounter = new fhir.Reference(source.encounter);
         }
         if (source['authored']) {
-            this.authored = source.authored;
-        }
-        if (source['_authored']) {
-            this._authored = new fhir.FhirElement(source._authored);
+            this.authored = new fhir.FhirDateTime({ value: source.authored });
         }
         if (source['author']) {
             this.author = new fhir.Reference(source.author);
@@ -253,47 +220,50 @@ export class QuestionnaireResponse extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: QuestionnaireResponse.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'QuestionnaireResponse' fhir: QuestionnaireResponse.resourceType:'QuestionnaireResponse'", }));
         }
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["partOf"]) {
-            this.partOf.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.partOf.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_questionnaire"]) {
-            results.push(...this._questionnaire.doModelValidation());
+        if (this["questionnaire"]) {
+            outcome.issue.push(...this.questionnaire.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: QuestionnaireResponse.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:QuestionnaireAnswersStatusValueSetEnum fhir: QuestionnaireResponse.status:code", }));
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_authored"]) {
-            results.push(...this._authored.doModelValidation());
+        if (this["authored"]) {
+            outcome.issue.push(...this.authored.doModelValidation().issue);
         }
         if (this["author"]) {
-            results.push(...this.author.doModelValidation());
+            outcome.issue.push(...this.author.doModelValidation().issue);
         }
         if (this["source"]) {
-            results.push(...this.source.doModelValidation());
+            outcome.issue.push(...this.source.doModelValidation().issue);
         }
         if (this["item"]) {
-            this.item.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.item.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=QuestionnaireResponse.js.map

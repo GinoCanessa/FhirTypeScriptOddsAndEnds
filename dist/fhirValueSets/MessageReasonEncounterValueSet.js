@@ -59,31 +59,4 @@ export const MessageReasonEncounterValueSet = {
 /**
  * Example Message Reasons. These are the set of codes that might be used an updating an encounter using admin-update.
  */
-export var MessageReasonEncounterValueSetEnum;
-(function (MessageReasonEncounterValueSetEnum) {
-    /**
-     * absent: The patient has temporarily left the institution.
-     */
-    MessageReasonEncounterValueSetEnum["Absent"] = "absent";
-    /**
-     * admit: The patient has been admitted.
-     */
-    MessageReasonEncounterValueSetEnum["Admit"] = "admit";
-    /**
-     * discharge: The patient has been discharged.
-     */
-    MessageReasonEncounterValueSetEnum["Discharge"] = "discharge";
-    /**
-     * edit: Encounter details have been updated (e.g. to correct a coding error).
-     */
-    MessageReasonEncounterValueSetEnum["Edit"] = "edit";
-    /**
-     * moved: The patient has been moved to a new location.
-     */
-    MessageReasonEncounterValueSetEnum["Moved"] = "moved";
-    /**
-     * return: The patient has returned from a temporary absence.
-     */
-    MessageReasonEncounterValueSetEnum["Returned"] = "return";
-})(MessageReasonEncounterValueSetEnum || (MessageReasonEncounterValueSetEnum = {}));
 //# sourceMappingURL=MessageReasonEncounterValueSet.js.map

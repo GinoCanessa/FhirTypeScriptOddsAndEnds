@@ -3,217 +3,57 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Procedure
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { PerformerRoleValueSet, PerformerRoleValueSetType, PerformerRoleValueSetEnum } from '../fhirValueSets/PerformerRoleValueSet.js'
-import { DeviceActionValueSet, DeviceActionValueSetType, DeviceActionValueSetEnum } from '../fhirValueSets/DeviceActionValueSet.js'
-import { EventStatusValueSet, EventStatusValueSetType, EventStatusValueSetEnum } from '../fhirValueSets/EventStatusValueSet.js'
-import { ProcedureNotPerformedReasonValueSet, ProcedureNotPerformedReasonValueSetType, ProcedureNotPerformedReasonValueSetEnum } from '../fhirValueSets/ProcedureNotPerformedReasonValueSet.js'
-import { ProcedureCategoryValueSet, ProcedureCategoryValueSetType, ProcedureCategoryValueSetEnum } from '../fhirValueSets/ProcedureCategoryValueSet.js'
-import { ProcedureCodeValueSet, ProcedureCodeValueSetType, ProcedureCodeValueSetEnum } from '../fhirValueSets/ProcedureCodeValueSet.js'
-import { ProcedureReasonValueSet, ProcedureReasonValueSetType, ProcedureReasonValueSetEnum } from '../fhirValueSets/ProcedureReasonValueSet.js'
-import { BodySiteValueSet, BodySiteValueSetType, BodySiteValueSetEnum } from '../fhirValueSets/BodySiteValueSet.js'
-import { ProcedureOutcomeValueSet, ProcedureOutcomeValueSetType, ProcedureOutcomeValueSetEnum } from '../fhirValueSets/ProcedureOutcomeValueSet.js'
-import { ConditionCodeValueSet, ConditionCodeValueSetType, ConditionCodeValueSetEnum } from '../fhirValueSets/ConditionCodeValueSet.js'
-import { ProcedureFollowupValueSet, ProcedureFollowupValueSetType, ProcedureFollowupValueSetEnum } from '../fhirValueSets/ProcedureFollowupValueSet.js'
-import { DeviceKindValueSet, DeviceKindValueSetType, DeviceKindValueSetEnum } from '../fhirValueSets/DeviceKindValueSet.js'
-
+import { PerformerRoleValueSet, PerformerRoleValueSetType,} from '../fhirValueSets/PerformerRoleValueSet.js';
+import { PerformerRoleValueSetEnum } from '../valueSetEnums.js';
+import { DeviceActionValueSet, DeviceActionValueSetType,} from '../fhirValueSets/DeviceActionValueSet.js';
+import { DeviceActionValueSetEnum } from '../valueSetEnums.js';
+import { EventStatusValueSet, EventStatusValueSetType,} from '../fhirValueSets/EventStatusValueSet.js';
+import { EventStatusValueSetEnum } from '../valueSetEnums.js';
+import { ProcedureNotPerformedReasonValueSet, ProcedureNotPerformedReasonValueSetType,} from '../fhirValueSets/ProcedureNotPerformedReasonValueSet.js';
+import { ProcedureNotPerformedReasonValueSetEnum } from '../valueSetEnums.js';
+import { ProcedureCategoryValueSet, ProcedureCategoryValueSetType,} from '../fhirValueSets/ProcedureCategoryValueSet.js';
+import { ProcedureCategoryValueSetEnum } from '../valueSetEnums.js';
+import { ProcedureCodeValueSet, ProcedureCodeValueSetType,} from '../fhirValueSets/ProcedureCodeValueSet.js';
+import { ProcedureCodeValueSetEnum } from '../valueSetEnums.js';
+import { ProcedureReasonValueSet, ProcedureReasonValueSetType,} from '../fhirValueSets/ProcedureReasonValueSet.js';
+import { ProcedureReasonValueSetEnum } from '../valueSetEnums.js';
+import { BodySiteValueSet, BodySiteValueSetType,} from '../fhirValueSets/BodySiteValueSet.js';
+import { BodySiteValueSetEnum } from '../valueSetEnums.js';
+import { ProcedureOutcomeValueSet, ProcedureOutcomeValueSetType,} from '../fhirValueSets/ProcedureOutcomeValueSet.js';
+import { ProcedureOutcomeValueSetEnum } from '../valueSetEnums.js';
+import { ConditionCodeValueSet, ConditionCodeValueSetType,} from '../fhirValueSets/ConditionCodeValueSet.js';
+import { ConditionCodeValueSetEnum } from '../valueSetEnums.js';
+import { ProcedureFollowupValueSet, ProcedureFollowupValueSetType,} from '../fhirValueSets/ProcedureFollowupValueSet.js';
+import { ProcedureFollowupValueSetEnum } from '../valueSetEnums.js';
+import { DeviceKindValueSet, DeviceKindValueSetType,} from '../fhirValueSets/DeviceKindValueSet.js';
+import { DeviceKindValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Limited to "real" people rather than equipment.
+ * Valid arguments for the ProcedurePerformer type.
  */
-export type IProcedurePerformer = fhir.IBackboneElement & { 
+export interface ProcedurePerformerArgs extends fhir.BackboneElementArgs {
   /**
    * Distinguishes the type of involvement of the performer in the procedure. For example, surgeon, anaesthetist, endoscopist.
    */
-  function?: fhir.ICodeableConcept|undefined;
+  function?: fhir.CodeableConceptArgs|undefined;
   /**
    * The practitioner who was involved in the procedure.
    */
-  actor: fhir.IReference|null;
+  actor: fhir.ReferenceArgs|null;
   /**
    * The organization the device or practitioner was acting on behalf of.
    */
-  onBehalfOf?: fhir.IReference|undefined;
-}
-
-/**
- * A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.
- */
-export type IProcedureFocalDevice = fhir.IBackboneElement & { 
-  /**
-   * The kind of change that happened to the device during the procedure.
-   */
-  action?: fhir.ICodeableConcept|undefined;
-  /**
-   * The device that was manipulated (changed) during the procedure.
-   */
-  manipulated: fhir.IReference|null;
-}
-
-/**
- * An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.
- */
-export type IProcedure = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Procedure";
-  /**
-   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and Person resource instances might share the same social insurance number.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * The URL pointing to a FHIR-defined protocol, guideline, order set or other definition that is adhered to in whole or in part by this Procedure.
-   */
-  instantiatesCanonical?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Procedure.instantiatesCanonical
-   */
-  _instantiatesCanonical?: fhir.IFhirElement[]|undefined;
-  /**
-   * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
-   */
-  instantiatesUri?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Procedure.instantiatesUri
-   */
-  _instantiatesUri?: fhir.IFhirElement[]|undefined;
-  /**
-   * A reference to a resource that contains details of the request for this procedure.
-   */
-  basedOn?: fhir.IReference[]|undefined;
-  /**
-   * The MedicationAdministration resource has a partOf reference to Procedure, but this is not a circular reference.   For example, the anesthesia MedicationAdministration is part of the surgical Procedure (MedicationAdministration.partOf = Procedure).  For example, the procedure to insert the IV port for an IV medication administration is part of the medication administration (Procedure.partOf = MedicationAdministration).
-   */
-  partOf?: fhir.IReference[]|undefined;
-  /**
-   * The "unknown" code is not to be used to convey other statuses.  The "unknown" code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the procedure.
-   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-   */
-  status: EventStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Procedure.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * This is generally only used for "exception" statuses such as "not-done", "suspended" or "aborted". The reason for performing the event at all is captured in reasonCode, not here.
-   */
-  statusReason?: fhir.ICodeableConcept|undefined;
-  /**
-   * A code that classifies the procedure for searching, sorting and display purposes (e.g. "Surgical Procedure").
-   */
-  category?: fhir.ICodeableConcept|undefined;
-  /**
-   * The specific procedure that is performed. Use text if the exact nature of the procedure cannot be coded (e.g. "Laparoscopic Appendectomy").
-   */
-  code?: fhir.ICodeableConcept|undefined;
-  /**
-   * The person, animal or group on which the procedure was performed.
-   */
-  subject: fhir.IReference|null;
-  /**
-   * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.
-   */
-  encounter?: fhir.IReference|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
-   */
-  performedDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Procedure.performed[x]
-   */
-  _performedDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
-   */
-  performedPeriod?: fhir.IPeriod|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
-   */
-  performedString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Procedure.performed[x]
-   */
-  _performedString?: fhir.IFhirElement|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
-   */
-  performedAge?: fhir.IAge|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
-   */
-  performedRange?: fhir.IRange|undefined;
-  /**
-   * Individual who recorded the record and takes responsibility for its content.
-   */
-  recorder?: fhir.IReference|undefined;
-  /**
-   * Individual who is making the procedure statement.
-   */
-  asserter?: fhir.IReference|undefined;
-  /**
-   * Limited to "real" people rather than equipment.
-   */
-  performer?: fhir.IProcedurePerformer[]|undefined;
-  /**
-   * The location where the procedure actually happened.  E.g. a newborn at home, a tracheostomy at a restaurant.
-   */
-  location?: fhir.IReference|undefined;
-  /**
-   * Use Procedure.reasonCode when a code sufficiently describes the reason.  Use Procedure.reasonReference when referencing a resource, which allows more information to be conveyed, such as onset date. Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.
-   */
-  reasonCode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * It is possible for a procedure to be a reason (such as C-Section) for another procedure (such as an epidural). Other examples include endoscopy for dilatation and biopsy (a combination of diagnostic and therapeutic use). 
-   * Use Procedure.reasonCode when a code sufficiently describes the reason.  Use Procedure.reasonReference when referencing a resource, which allows more information to be conveyed, such as onset date. Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.
-   */
-  reasonReference?: fhir.IReference[]|undefined;
-  /**
-   * If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [procedure-targetbodystructure](extension-procedure-targetbodystructure.html).
-   */
-  bodySite?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * If outcome contains narrative text only, it can be captured using the CodeableConcept.text.
-   */
-  outcome?: fhir.ICodeableConcept|undefined;
-  /**
-   * There could potentially be multiple reports - e.g. if this was a procedure which took multiple biopsies resulting in a number of anatomical pathology reports.
-   */
-  report?: fhir.IReference[]|undefined;
-  /**
-   * If complications are only expressed by the narrative text, they can be captured using the CodeableConcept.text.
-   */
-  complication?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Any complications that occurred during the procedure, or in the immediate post-performance period.
-   */
-  complicationDetail?: fhir.IReference[]|undefined;
-  /**
-   * If the procedure required specific follow up - e.g. removal of sutures. The follow up may be represented as a simple note or could potentially be more complex, in which case the CarePlan resource can be used.
-   */
-  followUp?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Any other notes and comments about the procedure.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-  /**
-   * A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.
-   */
-  focalDevice?: fhir.IProcedureFocalDevice[]|undefined;
-  /**
-   * For devices actually implanted or removed, use Procedure.device.
-   */
-  usedReference?: fhir.IReference[]|undefined;
-  /**
-   * For devices actually implanted or removed, use Procedure.device.
-   */
-  usedCode?: fhir.ICodeableConcept[]|undefined;
+  onBehalfOf?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * Limited to "real" people rather than equipment.
  */
-export class ProcedurePerformer extends fhir.BackboneElement implements IProcedurePerformer {
+export class ProcedurePerformer extends fhir.BackboneElement {
+  readonly __dataType:string = 'ProcedurePerformer';
   /**
    * Distinguishes the type of involvement of the performer in the procedure. For example, surgeon, anaesthetist, endoscopist.
    */
@@ -229,12 +69,12 @@ export class ProcedurePerformer extends fhir.BackboneElement implements IProcedu
   /**
    * Default constructor for ProcedurePerformer - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IProcedurePerformer> = { }) {
-    super(source);
-    if (source['function']) { this.function = new fhir.CodeableConcept(source.function!); }
-    if (source['actor']) { this.actor = new fhir.Reference(source.actor!); }
+  constructor(source:Partial<ProcedurePerformerArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['function']) { this.function = new fhir.CodeableConcept(source.function); }
+    if (source['actor']) { this.actor = new fhir.Reference(source.actor); }
     else { this.actor = null; }
-    if (source['onBehalfOf']) { this.onBehalfOf = new fhir.Reference(source.onBehalfOf!); }
+    if (source['onBehalfOf']) { this.onBehalfOf = new fhir.Reference(source.onBehalfOf); }
   }
   /**
    * Example-bound Value Set for function
@@ -245,20 +85,42 @@ export class ProcedurePerformer extends fhir.BackboneElement implements IProcedu
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["function"]) { results.push(...this.function.doModelValidation()); }
-    if (!this["actor"]) { results.push(["actor",'Missing required element: Procedure.performer.actor']); }
-    if (this["actor"]) { results.push(...this.actor.doModelValidation()); }
-    if (this["onBehalfOf"]) { results.push(...this.onBehalfOf.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["function"]) { outcome.issue!.push(...this.function.doModelValidation().issue!); }
+    if (!this['actor']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property actor:fhir.Reference fhir: Procedure.performer.actor:Reference", }));
+    }
+    if (this["actor"]) { outcome.issue!.push(...this.actor.doModelValidation().issue!); }
+    if (this["onBehalfOf"]) { outcome.issue!.push(...this.onBehalfOf.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ProcedureFocalDevice type.
+ */
+export interface ProcedureFocalDeviceArgs extends fhir.BackboneElementArgs {
+  /**
+   * The kind of change that happened to the device during the procedure.
+   */
+  action?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The device that was manipulated (changed) during the procedure.
+   */
+  manipulated: fhir.ReferenceArgs|null;
 }
 
 /**
  * A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.
  */
-export class ProcedureFocalDevice extends fhir.BackboneElement implements IProcedureFocalDevice {
+export class ProcedureFocalDevice extends fhir.BackboneElement {
+  readonly __dataType:string = 'ProcedureFocalDevice';
   /**
    * The kind of change that happened to the device during the procedure.
    */
@@ -270,10 +132,10 @@ export class ProcedureFocalDevice extends fhir.BackboneElement implements IProce
   /**
    * Default constructor for ProcedureFocalDevice - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IProcedureFocalDevice> = { }) {
-    super(source);
-    if (source['action']) { this.action = new fhir.CodeableConcept(source.action!); }
-    if (source['manipulated']) { this.manipulated = new fhir.Reference(source.manipulated!); }
+  constructor(source:Partial<ProcedureFocalDeviceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['action']) { this.action = new fhir.CodeableConcept(source.action); }
+    if (source['manipulated']) { this.manipulated = new fhir.Reference(source.manipulated); }
     else { this.manipulated = null; }
   }
   /**
@@ -285,19 +147,171 @@ export class ProcedureFocalDevice extends fhir.BackboneElement implements IProce
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["action"]) { results.push(...this.action.doModelValidation()); }
-    if (!this["manipulated"]) { results.push(["manipulated",'Missing required element: Procedure.focalDevice.manipulated']); }
-    if (this["manipulated"]) { results.push(...this.manipulated.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["action"]) { outcome.issue!.push(...this.action.doModelValidation().issue!); }
+    if (!this['manipulated']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property manipulated:fhir.Reference fhir: Procedure.focalDevice.manipulated:Reference", }));
+    }
+    if (this["manipulated"]) { outcome.issue!.push(...this.manipulated.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Procedure type.
+ */
+export interface ProcedureArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Procedure"|undefined;
+  /**
+   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and Person resource instances might share the same social insurance number.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * The URL pointing to a FHIR-defined protocol, guideline, order set or other definition that is adhered to in whole or in part by this Procedure.
+   */
+  instantiatesCanonical?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
+   */
+  instantiatesUri?: fhir.FhirUri[]|string[]|undefined;
+  /**
+   * A reference to a resource that contains details of the request for this procedure.
+   */
+  basedOn?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The MedicationAdministration resource has a partOf reference to Procedure, but this is not a circular reference.   For example, the anesthesia MedicationAdministration is part of the surgical Procedure (MedicationAdministration.partOf = Procedure).  For example, the procedure to insert the IV port for an IV medication administration is part of the medication administration (Procedure.partOf = MedicationAdministration).
+   */
+  partOf?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The "unknown" code is not to be used to convey other statuses.  The "unknown" code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the procedure.
+   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+   */
+  status: EventStatusValueSetEnum|null;
+  /**
+   * This is generally only used for "exception" statuses such as "not-done", "suspended" or "aborted". The reason for performing the event at all is captured in reasonCode, not here.
+   */
+  statusReason?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * A code that classifies the procedure for searching, sorting and display purposes (e.g. "Surgical Procedure").
+   */
+  category?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The specific procedure that is performed. Use text if the exact nature of the procedure cannot be coded (e.g. "Laparoscopic Appendectomy").
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The person, animal or group on which the procedure was performed.
+   */
+  subject: fhir.ReferenceArgs|null;
+  /**
+   * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.
+   */
+  encounter?: fhir.ReferenceArgs|undefined;
+  /**
+   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
+   */
+  performed?: fhir.FhirDateTime|fhir.Period|fhir.FhirString|fhir.Age|fhir.Range|undefined;
+  /**
+   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
+   */
+  performedDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
+   */
+  performedPeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
+   */
+  performedString?: fhir.FhirString|string|undefined;
+  /**
+   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
+   */
+  performedAge?: fhir.AgeArgs|undefined;
+  /**
+   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
+   */
+  performedRange?: fhir.RangeArgs|undefined;
+  /**
+   * Individual who recorded the record and takes responsibility for its content.
+   */
+  recorder?: fhir.ReferenceArgs|undefined;
+  /**
+   * Individual who is making the procedure statement.
+   */
+  asserter?: fhir.ReferenceArgs|undefined;
+  /**
+   * Limited to "real" people rather than equipment.
+   */
+  performer?: fhir.ProcedurePerformerArgs[]|undefined;
+  /**
+   * The location where the procedure actually happened.  E.g. a newborn at home, a tracheostomy at a restaurant.
+   */
+  location?: fhir.ReferenceArgs|undefined;
+  /**
+   * Use Procedure.reasonCode when a code sufficiently describes the reason.  Use Procedure.reasonReference when referencing a resource, which allows more information to be conveyed, such as onset date. Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.
+   */
+  reasonCode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * It is possible for a procedure to be a reason (such as C-Section) for another procedure (such as an epidural). Other examples include endoscopy for dilatation and biopsy (a combination of diagnostic and therapeutic use). 
+   * Use Procedure.reasonCode when a code sufficiently describes the reason.  Use Procedure.reasonReference when referencing a resource, which allows more information to be conveyed, such as onset date. Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.
+   */
+  reasonReference?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [procedure-targetbodystructure](extension-procedure-targetbodystructure.html).
+   */
+  bodySite?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * If outcome contains narrative text only, it can be captured using the CodeableConcept.text.
+   */
+  outcome?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * There could potentially be multiple reports - e.g. if this was a procedure which took multiple biopsies resulting in a number of anatomical pathology reports.
+   */
+  report?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * If complications are only expressed by the narrative text, they can be captured using the CodeableConcept.text.
+   */
+  complication?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Any complications that occurred during the procedure, or in the immediate post-performance period.
+   */
+  complicationDetail?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * If the procedure required specific follow up - e.g. removal of sutures. The follow up may be represented as a simple note or could potentially be more complex, in which case the CarePlan resource can be used.
+   */
+  followUp?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Any other notes and comments about the procedure.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
+  /**
+   * A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.
+   */
+  focalDevice?: fhir.ProcedureFocalDeviceArgs[]|undefined;
+  /**
+   * For devices actually implanted or removed, use Procedure.device.
+   */
+  usedReference?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * For devices actually implanted or removed, use Procedure.device.
+   */
+  usedCode?: fhir.CodeableConceptArgs[]|undefined;
 }
 
 /**
  * An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.
  */
-export class Procedure extends fhir.DomainResource implements IProcedure {
+export class Procedure extends fhir.DomainResource {
+  readonly __dataType:string = 'Procedure';
   /**
    * Resource Type Name
    */
@@ -305,40 +319,28 @@ export class Procedure extends fhir.DomainResource implements IProcedure {
   /**
    * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and Person resource instances might share the same social insurance number.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * The URL pointing to a FHIR-defined protocol, guideline, order set or other definition that is adhered to in whole or in part by this Procedure.
    */
-  public instantiatesCanonical?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Procedure.instantiatesCanonical
-   */
-  public _instantiatesCanonical?: fhir.FhirElement[]|undefined;
+  public instantiatesCanonical?: fhir.FhirCanonical[]|undefined = [];
   /**
    * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
    */
-  public instantiatesUri?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Procedure.instantiatesUri
-   */
-  public _instantiatesUri?: fhir.FhirElement[]|undefined;
+  public instantiatesUri?: fhir.FhirUri[]|undefined = [];
   /**
    * A reference to a resource that contains details of the request for this procedure.
    */
-  public basedOn?: fhir.Reference[]|undefined;
+  public basedOn?: fhir.Reference[]|undefined = [];
   /**
    * The MedicationAdministration resource has a partOf reference to Procedure, but this is not a circular reference.   For example, the anesthesia MedicationAdministration is part of the surgical Procedure (MedicationAdministration.partOf = Procedure).  For example, the procedure to insert the IV port for an IV medication administration is part of the medication administration (Procedure.partOf = MedicationAdministration).
    */
-  public partOf?: fhir.Reference[]|undefined;
+  public partOf?: fhir.Reference[]|undefined = [];
   /**
    * The "unknown" code is not to be used to convey other statuses.  The "unknown" code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the procedure.
    * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
   public status: EventStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Procedure.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * This is generally only used for "exception" statuses such as "not-done", "suspended" or "aborted". The reason for performing the event at all is captured in reasonCode, not here.
    */
@@ -362,31 +364,8 @@ export class Procedure extends fhir.DomainResource implements IProcedure {
   /**
    * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
    */
-  public performedDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: Procedure.performed[x]
-   */
-  public _performedDateTime?: fhir.FhirElement|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
-   */
-  public performedPeriod?: fhir.Period|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
-   */
-  public performedString?: string|undefined;
-  /**
-   * Extended properties for primitive element: Procedure.performed[x]
-   */
-  public _performedString?: fhir.FhirElement|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
-   */
-  public performedAge?: fhir.Age|undefined;
-  /**
-   * Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.
-   */
-  public performedRange?: fhir.Range|undefined;
+  public performed?: (fhir.FhirDateTime|fhir.Period|fhir.FhirString|fhir.Age|fhir.Range)|undefined;
+  readonly __performedIsChoice:true = true;
   /**
    * Individual who recorded the record and takes responsibility for its content.
    */
@@ -398,7 +377,7 @@ export class Procedure extends fhir.DomainResource implements IProcedure {
   /**
    * Limited to "real" people rather than equipment.
    */
-  public performer?: fhir.ProcedurePerformer[]|undefined;
+  public performer?: fhir.ProcedurePerformer[]|undefined = [];
   /**
    * The location where the procedure actually happened.  E.g. a newborn at home, a tracheostomy at a restaurant.
    */
@@ -406,16 +385,16 @@ export class Procedure extends fhir.DomainResource implements IProcedure {
   /**
    * Use Procedure.reasonCode when a code sufficiently describes the reason.  Use Procedure.reasonReference when referencing a resource, which allows more information to be conveyed, such as onset date. Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.
    */
-  public reasonCode?: fhir.CodeableConcept[]|undefined;
+  public reasonCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * It is possible for a procedure to be a reason (such as C-Section) for another procedure (such as an epidural). Other examples include endoscopy for dilatation and biopsy (a combination of diagnostic and therapeutic use). 
    * Use Procedure.reasonCode when a code sufficiently describes the reason.  Use Procedure.reasonReference when referencing a resource, which allows more information to be conveyed, such as onset date. Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.
    */
-  public reasonReference?: fhir.Reference[]|undefined;
+  public reasonReference?: fhir.Reference[]|undefined = [];
   /**
    * If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [procedure-targetbodystructure](extension-procedure-targetbodystructure.html).
    */
-  public bodySite?: fhir.CodeableConcept[]|undefined;
+  public bodySite?: fhir.CodeableConcept[]|undefined = [];
   /**
    * If outcome contains narrative text only, it can be captured using the CodeableConcept.text.
    */
@@ -423,72 +402,68 @@ export class Procedure extends fhir.DomainResource implements IProcedure {
   /**
    * There could potentially be multiple reports - e.g. if this was a procedure which took multiple biopsies resulting in a number of anatomical pathology reports.
    */
-  public report?: fhir.Reference[]|undefined;
+  public report?: fhir.Reference[]|undefined = [];
   /**
    * If complications are only expressed by the narrative text, they can be captured using the CodeableConcept.text.
    */
-  public complication?: fhir.CodeableConcept[]|undefined;
+  public complication?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Any complications that occurred during the procedure, or in the immediate post-performance period.
    */
-  public complicationDetail?: fhir.Reference[]|undefined;
+  public complicationDetail?: fhir.Reference[]|undefined = [];
   /**
    * If the procedure required specific follow up - e.g. removal of sutures. The follow up may be represented as a simple note or could potentially be more complex, in which case the CarePlan resource can be used.
    */
-  public followUp?: fhir.CodeableConcept[]|undefined;
+  public followUp?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Any other notes and comments about the procedure.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.
    */
-  public focalDevice?: fhir.ProcedureFocalDevice[]|undefined;
+  public focalDevice?: fhir.ProcedureFocalDevice[]|undefined = [];
   /**
    * For devices actually implanted or removed, use Procedure.device.
    */
-  public usedReference?: fhir.Reference[]|undefined;
+  public usedReference?: fhir.Reference[]|undefined = [];
   /**
    * For devices actually implanted or removed, use Procedure.device.
    */
-  public usedCode?: fhir.CodeableConcept[]|undefined;
+  public usedCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Default constructor for Procedure - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IProcedure> = { }) {
-    super(source);
+  constructor(source:Partial<ProcedureArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Procedure';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['instantiatesCanonical']) { this.instantiatesCanonical = source.instantiatesCanonical.map((x) => (x)); }
-    if (source['_instantiatesCanonical']) { this._instantiatesCanonical = source._instantiatesCanonical.map((x) => new fhir.FhirElement(x)); }
-    if (source['instantiatesUri']) { this.instantiatesUri = source.instantiatesUri.map((x) => (x)); }
-    if (source['_instantiatesUri']) { this._instantiatesUri = source._instantiatesUri.map((x) => new fhir.FhirElement(x)); }
+    if (source['instantiatesCanonical']) { this.instantiatesCanonical = source.instantiatesCanonical.map((x) => new fhir.FhirCanonical({value: x})); }
+    if (source['instantiatesUri']) { this.instantiatesUri = source.instantiatesUri.map((x) => new fhir.FhirUri({value: x})); }
     if (source['basedOn']) { this.basedOn = source.basedOn.map((x) => new fhir.Reference(x)); }
     if (source['partOf']) { this.partOf = source.partOf.map((x) => new fhir.Reference(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['statusReason']) { this.statusReason = new fhir.CodeableConcept(source.statusReason!); }
-    if (source['category']) { this.category = new fhir.CodeableConcept(source.category!); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
+    if (source['statusReason']) { this.statusReason = new fhir.CodeableConcept(source.statusReason); }
+    if (source['category']) { this.category = new fhir.CodeableConcept(source.category); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
     else { this.subject = null; }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['performedDateTime']) { this.performedDateTime = source.performedDateTime; }
-    if (source['_performedDateTime']) { this._performedDateTime = new fhir.FhirElement(source._performedDateTime!); }
-    if (source['performedPeriod']) { this.performedPeriod = new fhir.Period(source.performedPeriod!); }
-    if (source['performedString']) { this.performedString = source.performedString; }
-    if (source['_performedString']) { this._performedString = new fhir.FhirElement(source._performedString!); }
-    if (source['performedAge']) { this.performedAge = new fhir.Age(source.performedAge!); }
-    if (source['performedRange']) { this.performedRange = new fhir.Range(source.performedRange!); }
-    if (source['recorder']) { this.recorder = new fhir.Reference(source.recorder!); }
-    if (source['asserter']) { this.asserter = new fhir.Reference(source.asserter!); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['performed']) { this.performed = source.performed; }
+    else if (source['performedDateTime']) { this.performed = new fhir.FhirDateTime({value: source.performedDateTime}); }
+    else if (source['performedPeriod']) { this.performed = new fhir.Period(source.performedPeriod); }
+    else if (source['performedString']) { this.performed = new fhir.FhirString({value: source.performedString}); }
+    else if (source['performedAge']) { this.performed = new fhir.Age(source.performedAge); }
+    else if (source['performedRange']) { this.performed = new fhir.Range(source.performedRange); }
+    if (source['recorder']) { this.recorder = new fhir.Reference(source.recorder); }
+    if (source['asserter']) { this.asserter = new fhir.Reference(source.asserter); }
     if (source['performer']) { this.performer = source.performer.map((x) => new fhir.ProcedurePerformer(x)); }
-    if (source['location']) { this.location = new fhir.Reference(source.location!); }
+    if (source['location']) { this.location = new fhir.Reference(source.location); }
     if (source['reasonCode']) { this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x)); }
     if (source['reasonReference']) { this.reasonReference = source.reasonReference.map((x) => new fhir.Reference(x)); }
     if (source['bodySite']) { this.bodySite = source.bodySite.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['outcome']) { this.outcome = new fhir.CodeableConcept(source.outcome!); }
+    if (source['outcome']) { this.outcome = new fhir.CodeableConcept(source.outcome); }
     if (source['report']) { this.report = source.report.map((x) => new fhir.Reference(x)); }
     if (source['complication']) { this.complication = source.complication.map((x) => new fhir.CodeableConcept(x)); }
     if (source['complicationDetail']) { this.complicationDetail = source.complicationDetail.map((x) => new fhir.Reference(x)); }
@@ -561,43 +536,49 @@ export class Procedure extends fhir.DomainResource implements IProcedure {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Procedure.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_instantiatesCanonical"]) { this._instantiatesCanonical.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_instantiatesUri"]) { this._instantiatesUri.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["basedOn"]) { this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["partOf"]) { this.partOf.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: Procedure.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["statusReason"]) { results.push(...this.statusReason.doModelValidation()); }
-    if (this["category"]) { results.push(...this.category.doModelValidation()); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (!this["subject"]) { results.push(["subject",'Missing required element: Procedure.subject']); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (this["_performedDateTime"]) { results.push(...this._performedDateTime.doModelValidation()); }
-    if (this["performedPeriod"]) { results.push(...this.performedPeriod.doModelValidation()); }
-    if (this["_performedString"]) { results.push(...this._performedString.doModelValidation()); }
-    if (this["performedAge"]) { results.push(...this.performedAge.doModelValidation()); }
-    if (this["performedRange"]) { results.push(...this.performedRange.doModelValidation()); }
-    if (this["recorder"]) { results.push(...this.recorder.doModelValidation()); }
-    if (this["asserter"]) { results.push(...this.asserter.doModelValidation()); }
-    if (this["performer"]) { this.performer.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["location"]) { results.push(...this.location.doModelValidation()); }
-    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["bodySite"]) { this.bodySite.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["outcome"]) { results.push(...this.outcome.doModelValidation()); }
-    if (this["report"]) { this.report.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["complication"]) { this.complication.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["complicationDetail"]) { this.complicationDetail.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["followUp"]) { this.followUp.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["focalDevice"]) { this.focalDevice.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["usedReference"]) { this.usedReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["usedCode"]) { this.usedCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Procedure' fhir: Procedure.resourceType:'Procedure'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instantiatesCanonical"]) { this.instantiatesCanonical.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instantiatesUri"]) { this.instantiatesUri.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["basedOn"]) { this.basedOn.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["partOf"]) { this.partOf.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:EventStatusValueSetEnum fhir: Procedure.status:code", }));
+    }
+    if (this["statusReason"]) { outcome.issue!.push(...this.statusReason.doModelValidation().issue!); }
+    if (this["category"]) { outcome.issue!.push(...this.category.doModelValidation().issue!); }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (!this['subject']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property subject:fhir.Reference fhir: Procedure.subject:Reference", }));
+    }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (this["recorder"]) { outcome.issue!.push(...this.recorder.doModelValidation().issue!); }
+    if (this["asserter"]) { outcome.issue!.push(...this.asserter.doModelValidation().issue!); }
+    if (this["performer"]) { this.performer.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["location"]) { outcome.issue!.push(...this.location.doModelValidation().issue!); }
+    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["bodySite"]) { this.bodySite.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["outcome"]) { outcome.issue!.push(...this.outcome.doModelValidation().issue!); }
+    if (this["report"]) { this.report.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["complication"]) { this.complication.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["complicationDetail"]) { this.complicationDetail.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["followUp"]) { this.followUp.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["focalDevice"]) { this.focalDevice.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["usedReference"]) { this.usedReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["usedCode"]) { this.usedCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

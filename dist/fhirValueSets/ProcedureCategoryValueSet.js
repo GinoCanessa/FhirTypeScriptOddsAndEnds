@@ -60,35 +60,4 @@ export const ProcedureCategoryValueSet = {
 /**
  * Procedure Category code: A selection of relevant SNOMED CT codes.
  */
-export var ProcedureCategoryValueSetEnum;
-(function (ProcedureCategoryValueSetEnum) {
-    /**
-     * Code: 103693007
-     */
-    ProcedureCategoryValueSetEnum["VAL103693007"] = "103693007";
-    /**
-     * Code: 24642003
-     */
-    ProcedureCategoryValueSetEnum["VAL24642003"] = "24642003";
-    /**
-     * Code: 387713003
-     */
-    ProcedureCategoryValueSetEnum["VAL387713003"] = "387713003";
-    /**
-     * Code: 409063005
-     */
-    ProcedureCategoryValueSetEnum["VAL409063005"] = "409063005";
-    /**
-     * Code: 409073007
-     */
-    ProcedureCategoryValueSetEnum["VAL409073007"] = "409073007";
-    /**
-     * Code: 410606002
-     */
-    ProcedureCategoryValueSetEnum["VAL410606002"] = "410606002";
-    /**
-     * Code: 46947000
-     */
-    ProcedureCategoryValueSetEnum["VAL46947000"] = "46947000";
-})(ProcedureCategoryValueSetEnum || (ProcedureCategoryValueSetEnum = {}));
 //# sourceMappingURL=ProcedureCategoryValueSet.js.map

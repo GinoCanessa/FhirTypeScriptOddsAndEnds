@@ -51,27 +51,4 @@ export const RepositoryTypeValueSet = {
 /**
  * Type for access of external URI.
  */
-export var RepositoryTypeValueSetEnum;
-(function (RepositoryTypeValueSetEnum) {
-    /**
-     * directlink: When URL is clicked, the resource can be seen directly (by webpage or by download link format).
-     */
-    RepositoryTypeValueSetEnum["ClickAndSee"] = "directlink";
-    /**
-     * login: When logged into the website, the resource can be seen.
-     */
-    RepositoryTypeValueSetEnum["ResultCannotBeAccessUnlessAnAccountIsLoggedIn"] = "login";
-    /**
-     * oauth: When logged in and  follow the API in the website related with URL, the resource can be seen.
-     */
-    RepositoryTypeValueSetEnum["ResultNeedToBeFetchedWithAPIAndNeedLOGINOrCookiesAreRequiredWhenVisitingTheLinkOfResource"] = "oauth";
-    /**
-     * openapi: When the API method (e.g. [base_url]/[parameter]) related with the URL of the website is executed, the resource can be seen directly (usually in JSON or XML format).
-     */
-    RepositoryTypeValueSetEnum["TheURLIsTheRESTfulOrOtherKindOfAPIThatCanAccessToTheResult"] = "openapi";
-    /**
-     * other: Some other complicated or particular way to get resource from URL.
-     */
-    RepositoryTypeValueSetEnum["SomeOtherComplicatedOrParticularWayToGetResourceFromURL"] = "other";
-})(RepositoryTypeValueSetEnum || (RepositoryTypeValueSetEnum = {}));
 //# sourceMappingURL=RepositoryTypeValueSet.js.map

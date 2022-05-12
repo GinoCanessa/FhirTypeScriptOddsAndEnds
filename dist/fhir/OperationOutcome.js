@@ -3,9 +3,11 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: OperationOutcome
 import * as fhir from '../fhir.js';
-import { IssueSeverityValueSet } from '../fhirValueSets/IssueSeverityValueSet.js';
-import { IssueTypeValueSet } from '../fhirValueSets/IssueTypeValueSet.js';
-import { OperationOutcomeValueSet } from '../fhirValueSets/OperationOutcomeValueSet.js';
+import { IssueSeverityValueSet, } from '../fhirValueSets/IssueSeverityValueSet.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSet, } from '../fhirValueSets/IssueTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { OperationOutcomeValueSet, } from '../fhirValueSets/OperationOutcomeValueSet.js';
 /**
  * An error, warning, or information message that results from a system action.
  */
@@ -13,46 +15,40 @@ export class OperationOutcomeIssue extends fhir.BackboneElement {
     /**
      * Default constructor for OperationOutcomeIssue - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'OperationOutcomeIssue';
+        /**
+         * The root of the XPath is the resource or bundle that generated OperationOutcome.  Each XPath SHALL resolve to a single node.  This element is deprecated, and is being replaced by expression.
+         */
+        this.location = [];
+        /**
+         * The root of the FHIRPath is the resource or bundle that generated OperationOutcome.  Each FHIRPath SHALL resolve to a single node.
+         */
+        this.expression = [];
         if (source['severity']) {
             this.severity = source.severity;
         }
         else {
             this.severity = null;
         }
-        if (source['_severity']) {
-            this._severity = new fhir.FhirElement(source._severity);
-        }
         if (source['code']) {
-            this.code = source.code;
+            this.code = new fhir.FhirCode({ value: source.code });
         }
         else {
             this.code = null;
-        }
-        if (source['_code']) {
-            this._code = new fhir.FhirElement(source._code);
         }
         if (source['details']) {
             this.details = new fhir.CodeableConcept(source.details);
         }
         if (source['diagnostics']) {
-            this.diagnostics = source.diagnostics;
-        }
-        if (source['_diagnostics']) {
-            this._diagnostics = new fhir.FhirElement(source._diagnostics);
+            this.diagnostics = new fhir.FhirString({ value: source.diagnostics });
         }
         if (source['location']) {
-            this.location = source.location.map((x) => (x));
-        }
-        if (source['_location']) {
-            this._location = source._location.map((x) => new fhir.FhirElement(x));
+            this.location = source.location.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['expression']) {
-            this.expression = source.expression.map((x) => (x));
-        }
-        if (source['_expression']) {
-            this._expression = source._expression.map((x) => new fhir.FhirElement(x));
+            this.expression = source.expression.map((x) => new fhir.FhirString({ value: x }));
         }
     }
     /**
@@ -77,32 +73,35 @@ export class OperationOutcomeIssue extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["severity"]) {
-            results.push(["severity", 'Missing required element: OperationOutcome.issue.severity']);
+        var outcome = super.doModelValidation();
+        if (!this['severity']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property severity:IssueSeverityValueSetEnum fhir: OperationOutcome.issue.severity:code", }));
         }
-        if (this["_severity"]) {
-            results.push(...this._severity.doModelValidation());
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.FhirCode fhir: OperationOutcome.issue.code:code", }));
         }
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: OperationOutcome.issue.code']);
-        }
-        if (this["_code"]) {
-            results.push(...this._code.doModelValidation());
+        if (this["code"]) {
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["details"]) {
-            results.push(...this.details.doModelValidation());
+            outcome.issue.push(...this.details.doModelValidation().issue);
         }
-        if (this["_diagnostics"]) {
-            results.push(...this._diagnostics.doModelValidation());
+        if (this["diagnostics"]) {
+            outcome.issue.push(...this.diagnostics.doModelValidation().issue);
         }
-        if (this["_location"]) {
-            this._location.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["location"]) {
+            this.location.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_expression"]) {
-            this._expression.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["expression"]) {
+            this.expression.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -112,8 +111,13 @@ export class OperationOutcome extends fhir.DomainResource {
     /**
      * Default constructor for OperationOutcome - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'OperationOutcome';
+        /**
+         * An error, warning, or information message that results from a system action.
+         */
+        this.issue = [];
         this.resourceType = 'OperationOutcome';
         if (source['issue']) {
             this.issue = source.issue.map((x) => new fhir.OperationOutcomeIssue(x));
@@ -126,17 +130,29 @@ export class OperationOutcome extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: OperationOutcome.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'OperationOutcome' fhir: OperationOutcome.resourceType:'OperationOutcome'", }));
         }
-        if ((!this["issue"]) || (this["issue"].length === 0)) {
-            results.push(["issue", 'Missing required element: OperationOutcome.issue']);
+        if (!this['issue']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property issue:fhir.OperationOutcomeIssue[] fhir: OperationOutcome.issue:issue", }));
+        }
+        else if (!Array.isArray(this.issue)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property issue:fhir.OperationOutcomeIssue[] fhir: OperationOutcome.issue:issue", }));
+        }
+        else if (this.issue.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property issue:fhir.OperationOutcomeIssue[] fhir: OperationOutcome.issue:issue", }));
         }
         if (this["issue"]) {
-            this.issue.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.issue.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=OperationOutcome.js.map

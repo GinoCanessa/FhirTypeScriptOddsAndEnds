@@ -3,159 +3,65 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: RiskAssessment
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { RiskProbabilityValueSet, RiskProbabilityValueSetType, RiskProbabilityValueSetEnum } from '../fhirValueSets/RiskProbabilityValueSet.js'
-import { ObservationStatusValueSet, ObservationStatusValueSetType, ObservationStatusValueSetEnum } from '../fhirValueSets/ObservationStatusValueSet.js'
-
+import { RiskProbabilityValueSet, RiskProbabilityValueSetType,} from '../fhirValueSets/RiskProbabilityValueSet.js';
+import { RiskProbabilityValueSetEnum } from '../valueSetEnums.js';
+import { ObservationStatusValueSet, ObservationStatusValueSetType,} from '../fhirValueSets/ObservationStatusValueSet.js';
+import { ObservationStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.
+ * Valid arguments for the RiskAssessmentPrediction type.
  */
-export type IRiskAssessmentPrediction = fhir.IBackboneElement & { 
+export interface RiskAssessmentPredictionArgs extends fhir.BackboneElementArgs {
   /**
    * One of the potential outcomes for the patient (e.g. remission, death,  a particular condition).
    */
-  outcome?: fhir.ICodeableConcept|undefined;
+  outcome?: fhir.CodeableConceptArgs|undefined;
   /**
    * If range is used, it represents the lower and upper bounds of certainty; e.g. 40-60%  Decimal values are expressed as percentages as well (max = 100).
    */
-  probabilityDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskAssessment.prediction.probability[x]
-   */
-  _probabilityDecimal?: fhir.IFhirElement|undefined;
+  probability?: fhir.FhirDecimal|fhir.Range|undefined;
   /**
    * If range is used, it represents the lower and upper bounds of certainty; e.g. 40-60%  Decimal values are expressed as percentages as well (max = 100).
    */
-  probabilityRange?: fhir.IRange|undefined;
+  probabilityDecimal?: fhir.FhirDecimal|number|undefined;
+  /**
+   * If range is used, it represents the lower and upper bounds of certainty; e.g. 40-60%  Decimal values are expressed as percentages as well (max = 100).
+   */
+  probabilityRange?: fhir.RangeArgs|undefined;
   /**
    * Indicates how likely the outcome is (in the specified timeframe), expressed as a qualitative value (e.g. low, medium, or high).
    */
-  qualitativeRisk?: fhir.ICodeableConcept|undefined;
+  qualitativeRisk?: fhir.CodeableConceptArgs|undefined;
   /**
    * Indicates the risk for this particular subject (with their specific characteristics) divided by the risk of the population in general.  (Numbers greater than 1 = higher risk than the population, numbers less than 1 = lower risk.).
    */
-  relativeRisk?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskAssessment.prediction.relativeRisk
-   */
-  _relativeRisk?: fhir.IFhirElement|undefined;
+  relativeRisk?: fhir.FhirDecimal|number|undefined;
   /**
    * If not specified, the risk applies "over the subject's lifespan".
    */
-  whenPeriod?: fhir.IPeriod|undefined;
+  when?: fhir.Period|fhir.Range|undefined;
   /**
    * If not specified, the risk applies "over the subject's lifespan".
    */
-  whenRange?: fhir.IRange|undefined;
+  whenPeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * If not specified, the risk applies "over the subject's lifespan".
+   */
+  whenRange?: fhir.RangeArgs|undefined;
   /**
    * Additional information explaining the basis for the prediction.
    */
-  rationale?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskAssessment.prediction.rationale
-   */
-  _rationale?: fhir.IFhirElement|undefined;
-}
-
-/**
- * An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
- */
-export type IRiskAssessment = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "RiskAssessment";
-  /**
-   * Business identifier assigned to the risk assessment.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * A reference to the request that is fulfilled by this risk assessment.
-   */
-  basedOn?: fhir.IReference|undefined;
-  /**
-   * A reference to a resource that this risk assessment is part of, such as a Procedure.
-   */
-  parent?: fhir.IReference|undefined;
-  /**
-   * The status of the RiskAssessment, using the same statuses as an Observation.
-   */
-  status: ObservationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: RiskAssessment.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * The algorithm, process or mechanism used to evaluate the risk.
-   */
-  method?: fhir.ICodeableConcept|undefined;
-  /**
-   * The type of the risk assessment performed.
-   */
-  code?: fhir.ICodeableConcept|undefined;
-  /**
-   * The patient or group the risk assessment applies to.
-   */
-  subject: fhir.IReference|null;
-  /**
-   * The encounter where the assessment was performed.
-   */
-  encounter?: fhir.IReference|undefined;
-  /**
-   * The date (and possibly time) the risk assessment was performed.
-   */
-  occurrenceDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskAssessment.occurrence[x]
-   */
-  _occurrenceDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * The date (and possibly time) the risk assessment was performed.
-   */
-  occurrencePeriod?: fhir.IPeriod|undefined;
-  /**
-   * For assessments or prognosis specific to a particular condition, indicates the condition being assessed.
-   */
-  condition?: fhir.IReference|undefined;
-  /**
-   * The provider or software application that performed the assessment.
-   */
-  performer?: fhir.IReference|undefined;
-  /**
-   * The reason the risk assessment was performed.
-   */
-  reasonCode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Resources supporting the reason the risk assessment was performed.
-   */
-  reasonReference?: fhir.IReference[]|undefined;
-  /**
-   * Indicates the source data considered as part of the assessment (for example, FamilyHistory, Observations, Procedures, Conditions, etc.).
-   */
-  basis?: fhir.IReference[]|undefined;
-  /**
-   * Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.
-   */
-  prediction?: fhir.IRiskAssessmentPrediction[]|undefined;
-  /**
-   * A description of the steps that might be taken to reduce the identified risk(s).
-   */
-  mitigation?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskAssessment.mitigation
-   */
-  _mitigation?: fhir.IFhirElement|undefined;
-  /**
-   * Additional comments about the risk assessment.
-   */
-  note?: fhir.IAnnotation[]|undefined;
+  rationale?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.
  */
-export class RiskAssessmentPrediction extends fhir.BackboneElement implements IRiskAssessmentPrediction {
+export class RiskAssessmentPrediction extends fhir.BackboneElement {
+  readonly __dataType:string = 'RiskAssessmentPrediction';
   /**
    * One of the potential outcomes for the patient (e.g. remission, death,  a particular condition).
    */
@@ -163,15 +69,8 @@ export class RiskAssessmentPrediction extends fhir.BackboneElement implements IR
   /**
    * If range is used, it represents the lower and upper bounds of certainty; e.g. 40-60%  Decimal values are expressed as percentages as well (max = 100).
    */
-  public probabilityDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskAssessment.prediction.probability[x]
-   */
-  public _probabilityDecimal?: fhir.FhirElement|undefined;
-  /**
-   * If range is used, it represents the lower and upper bounds of certainty; e.g. 40-60%  Decimal values are expressed as percentages as well (max = 100).
-   */
-  public probabilityRange?: fhir.Range|undefined;
+  public probability?: (fhir.FhirDecimal|fhir.Range)|undefined;
+  readonly __probabilityIsChoice:true = true;
   /**
    * Indicates how likely the outcome is (in the specified timeframe), expressed as a qualitative value (e.g. low, medium, or high).
    */
@@ -179,43 +78,31 @@ export class RiskAssessmentPrediction extends fhir.BackboneElement implements IR
   /**
    * Indicates the risk for this particular subject (with their specific characteristics) divided by the risk of the population in general.  (Numbers greater than 1 = higher risk than the population, numbers less than 1 = lower risk.).
    */
-  public relativeRisk?: number|undefined;
-  /**
-   * Extended properties for primitive element: RiskAssessment.prediction.relativeRisk
-   */
-  public _relativeRisk?: fhir.FhirElement|undefined;
+  public relativeRisk?: fhir.FhirDecimal|undefined;
   /**
    * If not specified, the risk applies "over the subject's lifespan".
    */
-  public whenPeriod?: fhir.Period|undefined;
-  /**
-   * If not specified, the risk applies "over the subject's lifespan".
-   */
-  public whenRange?: fhir.Range|undefined;
+  public when?: (fhir.Period|fhir.Range)|undefined;
+  readonly __whenIsChoice:true = true;
   /**
    * Additional information explaining the basis for the prediction.
    */
-  public rationale?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskAssessment.prediction.rationale
-   */
-  public _rationale?: fhir.FhirElement|undefined;
+  public rationale?: fhir.FhirString|undefined;
   /**
    * Default constructor for RiskAssessmentPrediction - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IRiskAssessmentPrediction> = { }) {
-    super(source);
-    if (source['outcome']) { this.outcome = new fhir.CodeableConcept(source.outcome!); }
-    if (source['probabilityDecimal']) { this.probabilityDecimal = source.probabilityDecimal; }
-    if (source['_probabilityDecimal']) { this._probabilityDecimal = new fhir.FhirElement(source._probabilityDecimal!); }
-    if (source['probabilityRange']) { this.probabilityRange = new fhir.Range(source.probabilityRange!); }
-    if (source['qualitativeRisk']) { this.qualitativeRisk = new fhir.CodeableConcept(source.qualitativeRisk!); }
-    if (source['relativeRisk']) { this.relativeRisk = source.relativeRisk; }
-    if (source['_relativeRisk']) { this._relativeRisk = new fhir.FhirElement(source._relativeRisk!); }
-    if (source['whenPeriod']) { this.whenPeriod = new fhir.Period(source.whenPeriod!); }
-    if (source['whenRange']) { this.whenRange = new fhir.Range(source.whenRange!); }
-    if (source['rationale']) { this.rationale = source.rationale; }
-    if (source['_rationale']) { this._rationale = new fhir.FhirElement(source._rationale!); }
+  constructor(source:Partial<RiskAssessmentPredictionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['outcome']) { this.outcome = new fhir.CodeableConcept(source.outcome); }
+    if (source['probability']) { this.probability = source.probability; }
+    else if (source['probabilityDecimal']) { this.probability = new fhir.FhirDecimal({value: source.probabilityDecimal}); }
+    else if (source['probabilityRange']) { this.probability = new fhir.Range(source.probabilityRange); }
+    if (source['qualitativeRisk']) { this.qualitativeRisk = new fhir.CodeableConcept(source.qualitativeRisk); }
+    if (source['relativeRisk']) { this.relativeRisk = new fhir.FhirDecimal({value: source.relativeRisk}); }
+    if (source['when']) { this.when = source.when; }
+    else if (source['whenPeriod']) { this.when = new fhir.Period(source.whenPeriod); }
+    else if (source['whenRange']) { this.when = new fhir.Range(source.whenRange); }
+    if (source['rationale']) { this.rationale = new fhir.FhirString({value: source.rationale}); }
   }
   /**
    * Example-bound Value Set for qualitativeRisk
@@ -226,24 +113,112 @@ export class RiskAssessmentPrediction extends fhir.BackboneElement implements IR
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["outcome"]) { results.push(...this.outcome.doModelValidation()); }
-    if (this["_probabilityDecimal"]) { results.push(...this._probabilityDecimal.doModelValidation()); }
-    if (this["probabilityRange"]) { results.push(...this.probabilityRange.doModelValidation()); }
-    if (this["qualitativeRisk"]) { results.push(...this.qualitativeRisk.doModelValidation()); }
-    if (this["_relativeRisk"]) { results.push(...this._relativeRisk.doModelValidation()); }
-    if (this["whenPeriod"]) { results.push(...this.whenPeriod.doModelValidation()); }
-    if (this["whenRange"]) { results.push(...this.whenRange.doModelValidation()); }
-    if (this["_rationale"]) { results.push(...this._rationale.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["outcome"]) { outcome.issue!.push(...this.outcome.doModelValidation().issue!); }
+    if (this["qualitativeRisk"]) { outcome.issue!.push(...this.qualitativeRisk.doModelValidation().issue!); }
+    if (this["relativeRisk"]) { outcome.issue!.push(...this.relativeRisk.doModelValidation().issue!); }
+    if (this["rationale"]) { outcome.issue!.push(...this.rationale.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the RiskAssessment type.
+ */
+export interface RiskAssessmentArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "RiskAssessment"|undefined;
+  /**
+   * Business identifier assigned to the risk assessment.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * A reference to the request that is fulfilled by this risk assessment.
+   */
+  basedOn?: fhir.ReferenceArgs|undefined;
+  /**
+   * A reference to a resource that this risk assessment is part of, such as a Procedure.
+   */
+  parent?: fhir.ReferenceArgs|undefined;
+  /**
+   * The status of the RiskAssessment, using the same statuses as an Observation.
+   */
+  status: ObservationStatusValueSetEnum|null;
+  /**
+   * The algorithm, process or mechanism used to evaluate the risk.
+   */
+  method?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The type of the risk assessment performed.
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The patient or group the risk assessment applies to.
+   */
+  subject: fhir.ReferenceArgs|null;
+  /**
+   * The encounter where the assessment was performed.
+   */
+  encounter?: fhir.ReferenceArgs|undefined;
+  /**
+   * The date (and possibly time) the risk assessment was performed.
+   */
+  occurrence?: fhir.FhirDateTime|fhir.Period|undefined;
+  /**
+   * The date (and possibly time) the risk assessment was performed.
+   */
+  occurrenceDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * The date (and possibly time) the risk assessment was performed.
+   */
+  occurrencePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * For assessments or prognosis specific to a particular condition, indicates the condition being assessed.
+   */
+  condition?: fhir.ReferenceArgs|undefined;
+  /**
+   * The provider or software application that performed the assessment.
+   */
+  performer?: fhir.ReferenceArgs|undefined;
+  /**
+   * The reason the risk assessment was performed.
+   */
+  reasonCode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Resources supporting the reason the risk assessment was performed.
+   */
+  reasonReference?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Indicates the source data considered as part of the assessment (for example, FamilyHistory, Observations, Procedures, Conditions, etc.).
+   */
+  basis?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.
+   */
+  prediction?: fhir.RiskAssessmentPredictionArgs[]|undefined;
+  /**
+   * A description of the steps that might be taken to reduce the identified risk(s).
+   */
+  mitigation?: fhir.FhirString|string|undefined;
+  /**
+   * Additional comments about the risk assessment.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
 }
 
 /**
  * An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
  */
-export class RiskAssessment extends fhir.DomainResource implements IRiskAssessment {
+export class RiskAssessment extends fhir.DomainResource {
+  readonly __dataType:string = 'RiskAssessment';
   /**
    * Resource Type Name
    */
@@ -251,7 +226,7 @@ export class RiskAssessment extends fhir.DomainResource implements IRiskAssessme
   /**
    * Business identifier assigned to the risk assessment.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * A reference to the request that is fulfilled by this risk assessment.
    */
@@ -264,10 +239,6 @@ export class RiskAssessment extends fhir.DomainResource implements IRiskAssessme
    * The status of the RiskAssessment, using the same statuses as an Observation.
    */
   public status: ObservationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: RiskAssessment.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * The algorithm, process or mechanism used to evaluate the risk.
    */
@@ -287,15 +258,8 @@ export class RiskAssessment extends fhir.DomainResource implements IRiskAssessme
   /**
    * The date (and possibly time) the risk assessment was performed.
    */
-  public occurrenceDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskAssessment.occurrence[x]
-   */
-  public _occurrenceDateTime?: fhir.FhirElement|undefined;
-  /**
-   * The date (and possibly time) the risk assessment was performed.
-   */
-  public occurrencePeriod?: fhir.Period|undefined;
+  public occurrence?: (fhir.FhirDateTime|fhir.Period)|undefined;
+  readonly __occurrenceIsChoice:true = true;
   /**
    * For assessments or prognosis specific to a particular condition, indicates the condition being assessed.
    */
@@ -307,59 +271,53 @@ export class RiskAssessment extends fhir.DomainResource implements IRiskAssessme
   /**
    * The reason the risk assessment was performed.
    */
-  public reasonCode?: fhir.CodeableConcept[]|undefined;
+  public reasonCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Resources supporting the reason the risk assessment was performed.
    */
-  public reasonReference?: fhir.Reference[]|undefined;
+  public reasonReference?: fhir.Reference[]|undefined = [];
   /**
    * Indicates the source data considered as part of the assessment (for example, FamilyHistory, Observations, Procedures, Conditions, etc.).
    */
-  public basis?: fhir.Reference[]|undefined;
+  public basis?: fhir.Reference[]|undefined = [];
   /**
    * Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.
    */
-  public prediction?: fhir.RiskAssessmentPrediction[]|undefined;
+  public prediction?: fhir.RiskAssessmentPrediction[]|undefined = [];
   /**
    * A description of the steps that might be taken to reduce the identified risk(s).
    */
-  public mitigation?: string|undefined;
-  /**
-   * Extended properties for primitive element: RiskAssessment.mitigation
-   */
-  public _mitigation?: fhir.FhirElement|undefined;
+  public mitigation?: fhir.FhirString|undefined;
   /**
    * Additional comments about the risk assessment.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Default constructor for RiskAssessment - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IRiskAssessment> = { }) {
-    super(source);
+  constructor(source:Partial<RiskAssessmentArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'RiskAssessment';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['basedOn']) { this.basedOn = new fhir.Reference(source.basedOn!); }
-    if (source['parent']) { this.parent = new fhir.Reference(source.parent!); }
+    if (source['basedOn']) { this.basedOn = new fhir.Reference(source.basedOn); }
+    if (source['parent']) { this.parent = new fhir.Reference(source.parent); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['method']) { this.method = new fhir.CodeableConcept(source.method!); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
+    if (source['method']) { this.method = new fhir.CodeableConcept(source.method); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
     else { this.subject = null; }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['occurrenceDateTime']) { this.occurrenceDateTime = source.occurrenceDateTime; }
-    if (source['_occurrenceDateTime']) { this._occurrenceDateTime = new fhir.FhirElement(source._occurrenceDateTime!); }
-    if (source['occurrencePeriod']) { this.occurrencePeriod = new fhir.Period(source.occurrencePeriod!); }
-    if (source['condition']) { this.condition = new fhir.Reference(source.condition!); }
-    if (source['performer']) { this.performer = new fhir.Reference(source.performer!); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['occurrence']) { this.occurrence = source.occurrence; }
+    else if (source['occurrenceDateTime']) { this.occurrence = new fhir.FhirDateTime({value: source.occurrenceDateTime}); }
+    else if (source['occurrencePeriod']) { this.occurrence = new fhir.Period(source.occurrencePeriod); }
+    if (source['condition']) { this.condition = new fhir.Reference(source.condition); }
+    if (source['performer']) { this.performer = new fhir.Reference(source.performer); }
     if (source['reasonCode']) { this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x)); }
     if (source['reasonReference']) { this.reasonReference = source.reasonReference.map((x) => new fhir.Reference(x)); }
     if (source['basis']) { this.basis = source.basis.map((x) => new fhir.Reference(x)); }
     if (source['prediction']) { this.prediction = source.prediction.map((x) => new fhir.RiskAssessmentPrediction(x)); }
-    if (source['mitigation']) { this.mitigation = source.mitigation; }
-    if (source['_mitigation']) { this._mitigation = new fhir.FhirElement(source._mitigation!); }
+    if (source['mitigation']) { this.mitigation = new fhir.FhirString({value: source.mitigation}); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
   }
   /**
@@ -371,29 +329,38 @@ export class RiskAssessment extends fhir.DomainResource implements IRiskAssessme
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: RiskAssessment.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["basedOn"]) { results.push(...this.basedOn.doModelValidation()); }
-    if (this["parent"]) { results.push(...this.parent.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: RiskAssessment.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["method"]) { results.push(...this.method.doModelValidation()); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (!this["subject"]) { results.push(["subject",'Missing required element: RiskAssessment.subject']); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (this["_occurrenceDateTime"]) { results.push(...this._occurrenceDateTime.doModelValidation()); }
-    if (this["occurrencePeriod"]) { results.push(...this.occurrencePeriod.doModelValidation()); }
-    if (this["condition"]) { results.push(...this.condition.doModelValidation()); }
-    if (this["performer"]) { results.push(...this.performer.doModelValidation()); }
-    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["basis"]) { this.basis.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["prediction"]) { this.prediction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_mitigation"]) { results.push(...this._mitigation.doModelValidation()); }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'RiskAssessment' fhir: RiskAssessment.resourceType:'RiskAssessment'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["basedOn"]) { outcome.issue!.push(...this.basedOn.doModelValidation().issue!); }
+    if (this["parent"]) { outcome.issue!.push(...this.parent.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:ObservationStatusValueSetEnum fhir: RiskAssessment.status:code", }));
+    }
+    if (this["method"]) { outcome.issue!.push(...this.method.doModelValidation().issue!); }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (!this['subject']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property subject:fhir.Reference fhir: RiskAssessment.subject:Reference", }));
+    }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (this["condition"]) { outcome.issue!.push(...this.condition.doModelValidation().issue!); }
+    if (this["performer"]) { outcome.issue!.push(...this.performer.doModelValidation().issue!); }
+    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["basis"]) { this.basis.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["prediction"]) { this.prediction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["mitigation"]) { outcome.issue!.push(...this.mitigation.doModelValidation().issue!); }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

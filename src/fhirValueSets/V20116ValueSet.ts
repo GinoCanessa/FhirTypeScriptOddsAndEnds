@@ -67,29 +67,3 @@ export type V20116ValueSetType = typeof V20116ValueSet;
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0116 ( BED STATUS)
  */
-export enum V20116ValueSetEnum {
-  /**
-   * Code: C
-   */
-  Closed = "C",
-  /**
-   * Code: H
-   */
-  Housekeeping = "H",
-  /**
-   * Code: I
-   */
-  Isolated = "I",
-  /**
-   * Code: K
-   */
-  Contaminated = "K",
-  /**
-   * Code: O
-   */
-  Occupied = "O",
-  /**
-   * Code: U
-   */
-  Unoccupied = "U",
-}

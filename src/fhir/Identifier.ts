@@ -3,65 +3,53 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Identifier
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { IdentifierUseValueSet, IdentifierUseValueSetType, IdentifierUseValueSetEnum } from '../fhirValueSets/IdentifierUseValueSet.js'
-import { IdentifierTypeValueSet, IdentifierTypeValueSetType, IdentifierTypeValueSetEnum } from '../fhirValueSets/IdentifierTypeValueSet.js'
-
+import { IdentifierUseValueSet, IdentifierUseValueSetType,} from '../fhirValueSets/IdentifierUseValueSet.js';
+import { IdentifierUseValueSetEnum } from '../valueSetEnums.js';
+import { IdentifierTypeValueSet, IdentifierTypeValueSetType,} from '../fhirValueSets/IdentifierTypeValueSet.js';
+import { IdentifierTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.
+ * Valid arguments for the Identifier type.
  */
-export type IIdentifier = fhir.IFhirElement & { 
+export interface IdentifierArgs extends fhir.FhirElementArgs {
   /**
    * Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.
    */
   use?: IdentifierUseValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Identifier.use
-   */
-  _use?: fhir.IFhirElement|undefined;
-  /**
    * This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.
    */
-  type?: fhir.ICodeableConcept|undefined;
+  type?: fhir.CodeableConceptArgs|undefined;
   /**
    * Identifier.system is always case sensitive.
    */
-  system?: string|undefined;
-  /**
-   * Extended properties for primitive element: Identifier.system
-   */
-  _system?: fhir.IFhirElement|undefined;
+  system?: fhir.FhirUri|string|undefined;
   /**
    * If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.
    */
-  value?: string|undefined;
-  /**
-   * Extended properties for primitive element: Identifier.value
-   */
-  _value?: fhir.IFhirElement|undefined;
+  value?: fhir.FhirString|string|undefined;
   /**
    * Time period during which identifier is/was valid for use.
    */
-  period?: fhir.IPeriod|undefined;
+  period?: fhir.PeriodArgs|undefined;
   /**
    * The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.
    */
-  assigner?: fhir.IReference|undefined;
+  assigner?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.
  */
-export class Identifier extends fhir.FhirElement implements IIdentifier {
+export class Identifier extends fhir.FhirElement {
+  readonly __dataType:string = 'Identifier';
   /**
    * Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.
    */
   public use?: IdentifierUseValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: Identifier.use
-   */
-  public _use?: fhir.FhirElement|undefined;
   /**
    * This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.
    */
@@ -69,19 +57,11 @@ export class Identifier extends fhir.FhirElement implements IIdentifier {
   /**
    * Identifier.system is always case sensitive.
    */
-  public system?: string|undefined;
-  /**
-   * Extended properties for primitive element: Identifier.system
-   */
-  public _system?: fhir.FhirElement|undefined;
+  public system?: fhir.FhirUri|undefined;
   /**
    * If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.
    */
-  public value?: string|undefined;
-  /**
-   * Extended properties for primitive element: Identifier.value
-   */
-  public _value?: fhir.FhirElement|undefined;
+  public value?: fhir.FhirString|undefined;
   /**
    * Time period during which identifier is/was valid for use.
    */
@@ -93,17 +73,14 @@ export class Identifier extends fhir.FhirElement implements IIdentifier {
   /**
    * Default constructor for Identifier - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IIdentifier> = { }) {
-    super(source);
+  constructor(source:Partial<IdentifierArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['use']) { this.use = source.use; }
-    if (source['_use']) { this._use = new fhir.FhirElement(source._use!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['system']) { this.system = source.system; }
-    if (source['_system']) { this._system = new fhir.FhirElement(source._system!); }
-    if (source['value']) { this.value = source.value; }
-    if (source['_value']) { this._value = new fhir.FhirElement(source._value!); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
-    if (source['assigner']) { this.assigner = new fhir.Reference(source.assigner!); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['system']) { this.system = new fhir.FhirUri({value: source.system}); }
+    if (source['value']) { this.value = new fhir.FhirString({value: source.value}); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
+    if (source['assigner']) { this.assigner = new fhir.Reference(source.assigner); }
   }
   /**
    * Required-bound Value Set for use
@@ -120,14 +97,19 @@ export class Identifier extends fhir.FhirElement implements IIdentifier {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_use"]) { results.push(...this._use.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["_system"]) { results.push(...this._system.doModelValidation()); }
-    if (this["_value"]) { results.push(...this._value.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    if (this["assigner"]) { results.push(...this.assigner.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["system"]) { outcome.issue!.push(...this.system.doModelValidation().issue!); }
+    if (this["value"]) { outcome.issue!.push(...this.value.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    if (this["assigner"]) { outcome.issue!.push(...this.assigner.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

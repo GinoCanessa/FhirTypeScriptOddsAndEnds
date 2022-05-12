@@ -3,89 +3,61 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: ContactPoint
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ContactPointSystemValueSet, ContactPointSystemValueSetType, ContactPointSystemValueSetEnum } from '../fhirValueSets/ContactPointSystemValueSet.js'
-import { ContactPointUseValueSet, ContactPointUseValueSetType, ContactPointUseValueSetEnum } from '../fhirValueSets/ContactPointUseValueSet.js'
-
+import { ContactPointSystemValueSet, ContactPointSystemValueSetType,} from '../fhirValueSets/ContactPointSystemValueSet.js';
+import { ContactPointSystemValueSetEnum } from '../valueSetEnums.js';
+import { ContactPointUseValueSet, ContactPointUseValueSetType,} from '../fhirValueSets/ContactPointUseValueSet.js';
+import { ContactPointUseValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
+ * Valid arguments for the ContactPoint type.
  */
-export type IContactPoint = fhir.IFhirElement & { 
+export interface ContactPointArgs extends fhir.FhirElementArgs {
   /**
    * Telecommunications form for contact point - what communications system is required to make use of the contact.
    */
   system?: ContactPointSystemValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: ContactPoint.system
-   */
-  _system?: fhir.IFhirElement|undefined;
-  /**
    * Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.
    */
-  value?: string|undefined;
-  /**
-   * Extended properties for primitive element: ContactPoint.value
-   */
-  _value?: fhir.IFhirElement|undefined;
+  value?: fhir.FhirString|string|undefined;
   /**
    * Applications can assume that a contact is current unless it explicitly says that it is temporary or old.
    */
   use?: ContactPointUseValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: ContactPoint.use
-   */
-  _use?: fhir.IFhirElement|undefined;
-  /**
    * Note that rank does not necessarily follow the order in which the contacts are represented in the instance.
    */
-  rank?: number|undefined;
-  /**
-   * Extended properties for primitive element: ContactPoint.rank
-   */
-  _rank?: fhir.IFhirElement|undefined;
+  rank?: fhir.FhirPositiveInt|number|undefined;
   /**
    * Time period when the contact point was/is in use.
    */
-  period?: fhir.IPeriod|undefined;
+  period?: fhir.PeriodArgs|undefined;
 }
 
 /**
  * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
  */
-export class ContactPoint extends fhir.FhirElement implements IContactPoint {
+export class ContactPoint extends fhir.FhirElement {
+  readonly __dataType:string = 'ContactPoint';
   /**
    * Telecommunications form for contact point - what communications system is required to make use of the contact.
    */
   public system?: ContactPointSystemValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: ContactPoint.system
-   */
-  public _system?: fhir.FhirElement|undefined;
-  /**
    * Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.
    */
-  public value?: string|undefined;
-  /**
-   * Extended properties for primitive element: ContactPoint.value
-   */
-  public _value?: fhir.FhirElement|undefined;
+  public value?: fhir.FhirString|undefined;
   /**
    * Applications can assume that a contact is current unless it explicitly says that it is temporary or old.
    */
   public use?: ContactPointUseValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: ContactPoint.use
-   */
-  public _use?: fhir.FhirElement|undefined;
-  /**
    * Note that rank does not necessarily follow the order in which the contacts are represented in the instance.
    */
-  public rank?: number|undefined;
-  /**
-   * Extended properties for primitive element: ContactPoint.rank
-   */
-  public _rank?: fhir.FhirElement|undefined;
+  public rank?: fhir.FhirPositiveInt|undefined;
   /**
    * Time period when the contact point was/is in use.
    */
@@ -93,17 +65,13 @@ export class ContactPoint extends fhir.FhirElement implements IContactPoint {
   /**
    * Default constructor for ContactPoint - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContactPoint> = { }) {
-    super(source);
+  constructor(source:Partial<ContactPointArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['system']) { this.system = source.system; }
-    if (source['_system']) { this._system = new fhir.FhirElement(source._system!); }
-    if (source['value']) { this.value = source.value; }
-    if (source['_value']) { this._value = new fhir.FhirElement(source._value!); }
+    if (source['value']) { this.value = new fhir.FhirString({value: source.value}); }
     if (source['use']) { this.use = source.use; }
-    if (source['_use']) { this._use = new fhir.FhirElement(source._use!); }
-    if (source['rank']) { this.rank = source.rank; }
-    if (source['_rank']) { this._rank = new fhir.FhirElement(source._rank!); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
+    if (source['rank']) { this.rank = new fhir.FhirPositiveInt({value: source.rank}); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
   }
   /**
    * Required-bound Value Set for system
@@ -120,13 +88,17 @@ export class ContactPoint extends fhir.FhirElement implements IContactPoint {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_system"]) { results.push(...this._system.doModelValidation()); }
-    if (this["_value"]) { results.push(...this._value.doModelValidation()); }
-    if (this["_use"]) { results.push(...this._use.doModelValidation()); }
-    if (this["_rank"]) { results.push(...this._rank.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["value"]) { outcome.issue!.push(...this.value.doModelValidation().issue!); }
+    if (this["rank"]) { outcome.issue!.push(...this.rank.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

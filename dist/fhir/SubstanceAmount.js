@@ -10,8 +10,9 @@ export class SubstanceAmountReferenceRange extends fhir.FhirElement {
     /**
      * Default constructor for SubstanceAmountReferenceRange - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceAmountReferenceRange';
         if (source['lowLimit']) {
             this.lowLimit = new fhir.Quantity(source.lowLimit);
         }
@@ -23,14 +24,20 @@ export class SubstanceAmountReferenceRange extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["lowLimit"]) {
-            results.push(...this.lowLimit.doModelValidation());
+            outcome.issue.push(...this.lowLimit.doModelValidation().issue);
         }
         if (this["highLimit"]) {
-            results.push(...this.highLimit.doModelValidation());
+            outcome.issue.push(...this.highLimit.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -40,28 +47,27 @@ export class SubstanceAmount extends fhir.BackboneElement {
     /**
      * Default constructor for SubstanceAmount - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['amountQuantity']) {
-            this.amountQuantity = new fhir.Quantity(source.amountQuantity);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SubstanceAmount';
+        this.__amountIsChoice = true;
+        if (source['amount']) {
+            this.amount = source.amount;
         }
-        if (source['amountRange']) {
-            this.amountRange = new fhir.Range(source.amountRange);
+        else if (source['amountQuantity']) {
+            this.amount = new fhir.Quantity(source.amountQuantity);
         }
-        if (source['amountString']) {
-            this.amountString = source.amountString;
+        else if (source['amountRange']) {
+            this.amount = new fhir.Range(source.amountRange);
         }
-        if (source['_amountString']) {
-            this._amountString = new fhir.FhirElement(source._amountString);
+        else if (source['amountString']) {
+            this.amount = new fhir.FhirString({ value: source.amountString });
         }
         if (source['amountType']) {
             this.amountType = new fhir.CodeableConcept(source.amountType);
         }
         if (source['amountText']) {
-            this.amountText = source.amountText;
-        }
-        if (source['_amountText']) {
-            this._amountText = new fhir.FhirElement(source._amountText);
+            this.amountText = new fhir.FhirString({ value: source.amountText });
         }
         if (source['referenceRange']) {
             this.referenceRange = new fhir.SubstanceAmountReferenceRange(source.referenceRange);
@@ -71,26 +77,23 @@ export class SubstanceAmount extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["amountQuantity"]) {
-            results.push(...this.amountQuantity.doModelValidation());
-        }
-        if (this["amountRange"]) {
-            results.push(...this.amountRange.doModelValidation());
-        }
-        if (this["_amountString"]) {
-            results.push(...this._amountString.doModelValidation());
-        }
+        var outcome = super.doModelValidation();
         if (this["amountType"]) {
-            results.push(...this.amountType.doModelValidation());
+            outcome.issue.push(...this.amountType.doModelValidation().issue);
         }
-        if (this["_amountText"]) {
-            results.push(...this._amountText.doModelValidation());
+        if (this["amountText"]) {
+            outcome.issue.push(...this.amountText.doModelValidation().issue);
         }
         if (this["referenceRange"]) {
-            results.push(...this.referenceRange.doModelValidation());
+            outcome.issue.push(...this.referenceRange.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=SubstanceAmount.js.map

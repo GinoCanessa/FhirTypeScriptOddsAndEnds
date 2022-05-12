@@ -43,17 +43,3 @@ export type SequenceTypeValueSetType = typeof SequenceTypeValueSet;
 /**
  * Type if a sequence -- DNA, RNA, or amino acid sequence.
  */
-export enum SequenceTypeValueSetEnum {
-  /**
-   * aa: Amino acid sequence.
-   */
-  AASequence = "aa",
-  /**
-   * dna: DNA Sequence.
-   */
-  DNASequence = "dna",
-  /**
-   * rna: RNA Sequence.
-   */
-  RNASequence = "rna",
-}

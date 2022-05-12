@@ -51,21 +51,3 @@ export type VerificationresultFailureActionValueSetType = typeof Verificationres
 /**
  * The result if validation fails
  */
-export enum VerificationresultFailureActionValueSetEnum {
-  /**
-   * Code: fatal
-   */
-  Fatal = "fatal",
-  /**
-   * Code: none
-   */
-  None = "none",
-  /**
-   * Code: rec-only
-   */
-  RecordOnly = "rec-only",
-  /**
-   * Code: warn
-   */
-  Warning = "warn",
-}

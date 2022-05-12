@@ -3,483 +3,57 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SubstanceSpecification
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Moiety, for structural modifications.
+ * Valid arguments for the SubstanceSpecificationMoiety type.
  */
-export type ISubstanceSpecificationMoiety = fhir.IBackboneElement & { 
+export interface SubstanceSpecificationMoietyArgs extends fhir.BackboneElementArgs {
   /**
    * Role that the moiety is playing.
    */
-  role?: fhir.ICodeableConcept|undefined;
+  role?: fhir.CodeableConceptArgs|undefined;
   /**
    * Identifier by which this moiety substance is known.
    */
-  identifier?: fhir.IIdentifier|undefined;
+  identifier?: fhir.IdentifierArgs|undefined;
   /**
    * Textual name for this moiety substance.
    */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.moiety.name
-   */
-  _name?: fhir.IFhirElement|undefined;
+  name?: fhir.FhirString|string|undefined;
   /**
    * Stereochemistry type.
    */
-  stereochemistry?: fhir.ICodeableConcept|undefined;
+  stereochemistry?: fhir.CodeableConceptArgs|undefined;
   /**
    * Optical activity type.
    */
-  opticalActivity?: fhir.ICodeableConcept|undefined;
+  opticalActivity?: fhir.CodeableConceptArgs|undefined;
   /**
    * Molecular formula.
    */
-  molecularFormula?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.moiety.molecularFormula
-   */
-  _molecularFormula?: fhir.IFhirElement|undefined;
+  molecularFormula?: fhir.FhirString|string|undefined;
   /**
    * Quantitative value for this moiety.
    */
-  amountQuantity?: fhir.IQuantity|undefined;
+  amount?: fhir.Quantity|fhir.FhirString|undefined;
   /**
    * Quantitative value for this moiety.
    */
-  amountString?: string|undefined;
+  amountQuantity?: fhir.QuantityArgs|undefined;
   /**
-   * Extended properties for primitive element: SubstanceSpecification.moiety.amount[x]
+   * Quantitative value for this moiety.
    */
-  _amountString?: fhir.IFhirElement|undefined;
-}
-
-/**
- * General specifications for this substance, including how it is related to other substances.
- */
-export type ISubstanceSpecificationProperty = fhir.IBackboneElement & { 
-  /**
-   * A category for this property, e.g. Physical, Chemical, Enzymatic.
-   */
-  category?: fhir.ICodeableConcept|undefined;
-  /**
-   * Property type e.g. viscosity, pH, isoelectric point.
-   */
-  code?: fhir.ICodeableConcept|undefined;
-  /**
-   * Parameters that were used in the measurement of a property (e.g. for viscosity: measured at 20C with a pH of 7.1).
-   */
-  parameters?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.property.parameters
-   */
-  _parameters?: fhir.IFhirElement|undefined;
-  /**
-   * A substance upon which a defining property depends (e.g. for solubility: in water, in alcohol).
-   */
-  definingSubstanceReference?: fhir.IReference|undefined;
-  /**
-   * A substance upon which a defining property depends (e.g. for solubility: in water, in alcohol).
-   */
-  definingSubstanceCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * Quantitative value for this property.
-   */
-  amountQuantity?: fhir.IQuantity|undefined;
-  /**
-   * Quantitative value for this property.
-   */
-  amountString?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.property.amount[x]
-   */
-  _amountString?: fhir.IFhirElement|undefined;
-}
-
-/**
- * The molecular weight or weight range (for proteins, polymers or nucleic acids).
- */
-export type ISubstanceSpecificationStructureIsotopeMolecularWeight = fhir.IBackboneElement & { 
-  /**
-   * The method by which the molecular weight was determined.
-   */
-  method?: fhir.ICodeableConcept|undefined;
-  /**
-   * Type of molecular weight such as exact, average (also known as. number average), weight average.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
-   */
-  amount?: fhir.IQuantity|undefined;
-}
-
-/**
- * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
- */
-export type ISubstanceSpecificationStructureIsotope = fhir.IBackboneElement & { 
-  /**
-   * Substance identifier for each non-natural or radioisotope.
-   */
-  identifier?: fhir.IIdentifier|undefined;
-  /**
-   * Substance name for each non-natural or radioisotope.
-   */
-  name?: fhir.ICodeableConcept|undefined;
-  /**
-   * The type of isotopic substitution present in a single substance.
-   */
-  substitution?: fhir.ICodeableConcept|undefined;
-  /**
-   * Half life - for a non-natural nuclide.
-   */
-  halfLife?: fhir.IQuantity|undefined;
-  /**
-   * The molecular weight or weight range (for proteins, polymers or nucleic acids).
-   */
-  molecularWeight?: fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight|undefined;
-}
-
-/**
- * Molecular structural representation.
- */
-export type ISubstanceSpecificationStructureRepresentation = fhir.IBackboneElement & { 
-  /**
-   * The type of structure (e.g. Full, Partial, Representative).
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * The structural representation as text string in a format e.g. InChI, SMILES, MOLFILE, CDX.
-   */
-  representation?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.structure.representation.representation
-   */
-  _representation?: fhir.IFhirElement|undefined;
-  /**
-   * An attached file with the structural representation.
-   */
-  attachment?: fhir.IAttachment|undefined;
-}
-
-/**
- * Structural information.
- */
-export type ISubstanceSpecificationStructure = fhir.IBackboneElement & { 
-  /**
-   * Stereochemistry type.
-   */
-  stereochemistry?: fhir.ICodeableConcept|undefined;
-  /**
-   * Optical activity type.
-   */
-  opticalActivity?: fhir.ICodeableConcept|undefined;
-  /**
-   * Molecular formula.
-   */
-  molecularFormula?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.structure.molecularFormula
-   */
-  _molecularFormula?: fhir.IFhirElement|undefined;
-  /**
-   * Specified per moiety according to the Hill system, i.e. first C, then H, then alphabetical, each moiety separated by a dot.
-   */
-  molecularFormulaByMoiety?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.structure.molecularFormulaByMoiety
-   */
-  _molecularFormulaByMoiety?: fhir.IFhirElement|undefined;
-  /**
-   * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
-   */
-  isotope?: fhir.ISubstanceSpecificationStructureIsotope[]|undefined;
-  /**
-   * The molecular weight or weight range (for proteins, polymers or nucleic acids).
-   */
-  molecularWeight?: fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight|undefined;
-  /**
-   * Supporting literature.
-   */
-  source?: fhir.IReference[]|undefined;
-  /**
-   * Molecular structural representation.
-   */
-  representation?: fhir.ISubstanceSpecificationStructureRepresentation[]|undefined;
-}
-
-/**
- * Codes associated with the substance.
- */
-export type ISubstanceSpecificationCode = fhir.IBackboneElement & { 
-  /**
-   * The specific code.
-   */
-  code?: fhir.ICodeableConcept|undefined;
-  /**
-   * Status of the code assignment.
-   */
-  status?: fhir.ICodeableConcept|undefined;
-  /**
-   * The date at which the code status is changed as part of the terminology maintenance.
-   */
-  statusDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.code.statusDate
-   */
-  _statusDate?: fhir.IFhirElement|undefined;
-  /**
-   * Any comment can be provided in this field, if necessary.
-   */
-  comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.code.comment
-   */
-  _comment?: fhir.IFhirElement|undefined;
-  /**
-   * Supporting literature.
-   */
-  source?: fhir.IReference[]|undefined;
-}
-
-/**
- * Details of the official nature of this name.
- */
-export type ISubstanceSpecificationNameOfficial = fhir.IBackboneElement & { 
-  /**
-   * Which authority uses this official name.
-   */
-  authority?: fhir.ICodeableConcept|undefined;
-  /**
-   * The status of the official name.
-   */
-  status?: fhir.ICodeableConcept|undefined;
-  /**
-   * Date of official name change.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.name.official.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Names applicable to this substance.
- */
-export type ISubstanceSpecificationName = fhir.IBackboneElement & { 
-  /**
-   * The actual name.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.name.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Name type.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * The status of the name.
-   */
-  status?: fhir.ICodeableConcept|undefined;
-  /**
-   * If this is the preferred name for this substance.
-   */
-  preferred?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.name.preferred
-   */
-  _preferred?: fhir.IFhirElement|undefined;
-  /**
-   * Language of the name.
-   */
-  language?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The use context of this name for example if there is a different name a drug active ingredient as opposed to a food colour additive.
-   */
-  domain?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The jurisdiction where this name applies.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * A synonym of this name.
-   */
-  synonym?: fhir.ISubstanceSpecificationName[]|undefined;
-  /**
-   * A translation for this name.
-   */
-  translation?: fhir.ISubstanceSpecificationName[]|undefined;
-  /**
-   * Details of the official nature of this name.
-   */
-  official?: fhir.ISubstanceSpecificationNameOfficial[]|undefined;
-  /**
-   * Supporting literature.
-   */
-  source?: fhir.IReference[]|undefined;
-}
-
-/**
- * A link between this substance and another, with details of the relationship.
- */
-export type ISubstanceSpecificationRelationship = fhir.IBackboneElement & { 
-  /**
-   * A pointer to another substance, as a resource or just a representational code.
-   */
-  substanceReference?: fhir.IReference|undefined;
-  /**
-   * A pointer to another substance, as a resource or just a representational code.
-   */
-  substanceCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * For example "salt to parent", "active moiety", "starting material".
-   */
-  relationship?: fhir.ICodeableConcept|undefined;
-  /**
-   * For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.
-   */
-  isDefining?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.relationship.isDefining
-   */
-  _isDefining?: fhir.IFhirElement|undefined;
-  /**
-   * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
-   */
-  amountQuantity?: fhir.IQuantity|undefined;
-  /**
-   * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
-   */
-  amountRange?: fhir.IRange|undefined;
-  /**
-   * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
-   */
-  amountRatio?: fhir.IRatio|undefined;
-  /**
-   * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
-   */
-  amountString?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.relationship.amount[x]
-   */
-  _amountString?: fhir.IFhirElement|undefined;
-  /**
-   * For use when the numeric.
-   */
-  amountRatioLowLimit?: fhir.IRatio|undefined;
-  /**
-   * An operator for the amount, for example "average", "approximately", "less than".
-   */
-  amountType?: fhir.ICodeableConcept|undefined;
-  /**
-   * Supporting literature.
-   */
-  source?: fhir.IReference[]|undefined;
-}
-
-/**
- * The detailed description of a substance, typically at a level beyond what is used for prescribing.
- */
-export type ISubstanceSpecification = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "SubstanceSpecification";
-  /**
-   * Identifier by which this substance is known.
-   */
-  identifier?: fhir.IIdentifier|undefined;
-  /**
-   * High level categorization, e.g. polymer or nucleic acid.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Status of substance within the catalogue e.g. approved.
-   */
-  status?: fhir.ICodeableConcept|undefined;
-  /**
-   * If the substance applies to only human or veterinary use.
-   */
-  domain?: fhir.ICodeableConcept|undefined;
-  /**
-   * Textual description of the substance.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Supporting literature.
-   */
-  source?: fhir.IReference[]|undefined;
-  /**
-   * Textual comment about this record of a substance.
-   */
-  comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.comment
-   */
-  _comment?: fhir.IFhirElement|undefined;
-  /**
-   * Moiety, for structural modifications.
-   */
-  moiety?: fhir.ISubstanceSpecificationMoiety[]|undefined;
-  /**
-   * General specifications for this substance, including how it is related to other substances.
-   */
-  property?: fhir.ISubstanceSpecificationProperty[]|undefined;
-  /**
-   * General information detailing this substance.
-   */
-  referenceInformation?: fhir.IReference|undefined;
-  /**
-   * Structural information.
-   */
-  structure?: fhir.ISubstanceSpecificationStructure|undefined;
-  /**
-   * Codes associated with the substance.
-   */
-  code?: fhir.ISubstanceSpecificationCode[]|undefined;
-  /**
-   * Names applicable to this substance.
-   */
-  name?: fhir.ISubstanceSpecificationName[]|undefined;
-  /**
-   * The molecular weight or weight range (for proteins, polymers or nucleic acids).
-   */
-  molecularWeight?: fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight[]|undefined;
-  /**
-   * A link between this substance and another, with details of the relationship.
-   */
-  relationship?: fhir.ISubstanceSpecificationRelationship[]|undefined;
-  /**
-   * Data items specific to nucleic acids.
-   */
-  nucleicAcid?: fhir.IReference|undefined;
-  /**
-   * Data items specific to polymers.
-   */
-  polymer?: fhir.IReference|undefined;
-  /**
-   * Data items specific to proteins.
-   */
-  protein?: fhir.IReference|undefined;
-  /**
-   * Material or taxonomic/anatomical source for the substance.
-   */
-  sourceMaterial?: fhir.IReference|undefined;
+  amountString?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Moiety, for structural modifications.
  */
-export class SubstanceSpecificationMoiety extends fhir.BackboneElement implements ISubstanceSpecificationMoiety {
+export class SubstanceSpecificationMoiety extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSpecificationMoiety';
   /**
    * Role that the moiety is playing.
    */
@@ -491,11 +65,7 @@ export class SubstanceSpecificationMoiety extends fhir.BackboneElement implement
   /**
    * Textual name for this moiety substance.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.moiety.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Stereochemistry type.
    */
@@ -507,61 +77,94 @@ export class SubstanceSpecificationMoiety extends fhir.BackboneElement implement
   /**
    * Molecular formula.
    */
-  public molecularFormula?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.moiety.molecularFormula
-   */
-  public _molecularFormula?: fhir.FhirElement|undefined;
+  public molecularFormula?: fhir.FhirString|undefined;
   /**
    * Quantitative value for this moiety.
    */
-  public amountQuantity?: fhir.Quantity|undefined;
-  /**
-   * Quantitative value for this moiety.
-   */
-  public amountString?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.moiety.amount[x]
-   */
-  public _amountString?: fhir.FhirElement|undefined;
+  public amount?: (fhir.Quantity|fhir.FhirString)|undefined;
+  readonly __amountIsChoice:true = true;
   /**
    * Default constructor for SubstanceSpecificationMoiety - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSpecificationMoiety> = { }) {
-    super(source);
-    if (source['role']) { this.role = new fhir.CodeableConcept(source.role!); }
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['stereochemistry']) { this.stereochemistry = new fhir.CodeableConcept(source.stereochemistry!); }
-    if (source['opticalActivity']) { this.opticalActivity = new fhir.CodeableConcept(source.opticalActivity!); }
-    if (source['molecularFormula']) { this.molecularFormula = source.molecularFormula; }
-    if (source['_molecularFormula']) { this._molecularFormula = new fhir.FhirElement(source._molecularFormula!); }
-    if (source['amountQuantity']) { this.amountQuantity = new fhir.Quantity(source.amountQuantity!); }
-    if (source['amountString']) { this.amountString = source.amountString; }
-    if (source['_amountString']) { this._amountString = new fhir.FhirElement(source._amountString!); }
+  constructor(source:Partial<SubstanceSpecificationMoietyArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['role']) { this.role = new fhir.CodeableConcept(source.role); }
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['stereochemistry']) { this.stereochemistry = new fhir.CodeableConcept(source.stereochemistry); }
+    if (source['opticalActivity']) { this.opticalActivity = new fhir.CodeableConcept(source.opticalActivity); }
+    if (source['molecularFormula']) { this.molecularFormula = new fhir.FhirString({value: source.molecularFormula}); }
+    if (source['amount']) { this.amount = source.amount; }
+    else if (source['amountQuantity']) { this.amount = new fhir.Quantity(source.amountQuantity); }
+    else if (source['amountString']) { this.amount = new fhir.FhirString({value: source.amountString}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["role"]) { results.push(...this.role.doModelValidation()); }
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["stereochemistry"]) { results.push(...this.stereochemistry.doModelValidation()); }
-    if (this["opticalActivity"]) { results.push(...this.opticalActivity.doModelValidation()); }
-    if (this["_molecularFormula"]) { results.push(...this._molecularFormula.doModelValidation()); }
-    if (this["amountQuantity"]) { results.push(...this.amountQuantity.doModelValidation()); }
-    if (this["_amountString"]) { results.push(...this._amountString.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["role"]) { outcome.issue!.push(...this.role.doModelValidation().issue!); }
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["stereochemistry"]) { outcome.issue!.push(...this.stereochemistry.doModelValidation().issue!); }
+    if (this["opticalActivity"]) { outcome.issue!.push(...this.opticalActivity.doModelValidation().issue!); }
+    if (this["molecularFormula"]) { outcome.issue!.push(...this.molecularFormula.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSpecificationProperty type.
+ */
+export interface SubstanceSpecificationPropertyArgs extends fhir.BackboneElementArgs {
+  /**
+   * A category for this property, e.g. Physical, Chemical, Enzymatic.
+   */
+  category?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Property type e.g. viscosity, pH, isoelectric point.
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Parameters that were used in the measurement of a property (e.g. for viscosity: measured at 20C with a pH of 7.1).
+   */
+  parameters?: fhir.FhirString|string|undefined;
+  /**
+   * A substance upon which a defining property depends (e.g. for solubility: in water, in alcohol).
+   */
+  definingSubstance?: fhir.Reference|fhir.CodeableConcept|undefined;
+  /**
+   * A substance upon which a defining property depends (e.g. for solubility: in water, in alcohol).
+   */
+  definingSubstanceReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * A substance upon which a defining property depends (e.g. for solubility: in water, in alcohol).
+   */
+  definingSubstanceCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Quantitative value for this property.
+   */
+  amount?: fhir.Quantity|fhir.FhirString|undefined;
+  /**
+   * Quantitative value for this property.
+   */
+  amountQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * Quantitative value for this property.
+   */
+  amountString?: fhir.FhirString|string|undefined;
 }
 
 /**
  * General specifications for this substance, including how it is related to other substances.
  */
-export class SubstanceSpecificationProperty extends fhir.BackboneElement implements ISubstanceSpecificationProperty {
+export class SubstanceSpecificationProperty extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSpecificationProperty';
   /**
    * A category for this property, e.g. Physical, Chemical, Enzymatic.
    */
@@ -573,66 +176,72 @@ export class SubstanceSpecificationProperty extends fhir.BackboneElement impleme
   /**
    * Parameters that were used in the measurement of a property (e.g. for viscosity: measured at 20C with a pH of 7.1).
    */
-  public parameters?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.property.parameters
-   */
-  public _parameters?: fhir.FhirElement|undefined;
+  public parameters?: fhir.FhirString|undefined;
   /**
    * A substance upon which a defining property depends (e.g. for solubility: in water, in alcohol).
    */
-  public definingSubstanceReference?: fhir.Reference|undefined;
-  /**
-   * A substance upon which a defining property depends (e.g. for solubility: in water, in alcohol).
-   */
-  public definingSubstanceCodeableConcept?: fhir.CodeableConcept|undefined;
+  public definingSubstance?: (fhir.Reference|fhir.CodeableConcept)|undefined;
+  readonly __definingSubstanceIsChoice:true = true;
   /**
    * Quantitative value for this property.
    */
-  public amountQuantity?: fhir.Quantity|undefined;
-  /**
-   * Quantitative value for this property.
-   */
-  public amountString?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.property.amount[x]
-   */
-  public _amountString?: fhir.FhirElement|undefined;
+  public amount?: (fhir.Quantity|fhir.FhirString)|undefined;
+  readonly __amountIsChoice:true = true;
   /**
    * Default constructor for SubstanceSpecificationProperty - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSpecificationProperty> = { }) {
-    super(source);
-    if (source['category']) { this.category = new fhir.CodeableConcept(source.category!); }
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
-    if (source['parameters']) { this.parameters = source.parameters; }
-    if (source['_parameters']) { this._parameters = new fhir.FhirElement(source._parameters!); }
-    if (source['definingSubstanceReference']) { this.definingSubstanceReference = new fhir.Reference(source.definingSubstanceReference!); }
-    if (source['definingSubstanceCodeableConcept']) { this.definingSubstanceCodeableConcept = new fhir.CodeableConcept(source.definingSubstanceCodeableConcept!); }
-    if (source['amountQuantity']) { this.amountQuantity = new fhir.Quantity(source.amountQuantity!); }
-    if (source['amountString']) { this.amountString = source.amountString; }
-    if (source['_amountString']) { this._amountString = new fhir.FhirElement(source._amountString!); }
+  constructor(source:Partial<SubstanceSpecificationPropertyArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['category']) { this.category = new fhir.CodeableConcept(source.category); }
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
+    if (source['parameters']) { this.parameters = new fhir.FhirString({value: source.parameters}); }
+    if (source['definingSubstance']) { this.definingSubstance = source.definingSubstance; }
+    else if (source['definingSubstanceReference']) { this.definingSubstance = new fhir.Reference(source.definingSubstanceReference); }
+    else if (source['definingSubstanceCodeableConcept']) { this.definingSubstance = new fhir.CodeableConcept(source.definingSubstanceCodeableConcept); }
+    if (source['amount']) { this.amount = source.amount; }
+    else if (source['amountQuantity']) { this.amount = new fhir.Quantity(source.amountQuantity); }
+    else if (source['amountString']) { this.amount = new fhir.FhirString({value: source.amountString}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["category"]) { results.push(...this.category.doModelValidation()); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["_parameters"]) { results.push(...this._parameters.doModelValidation()); }
-    if (this["definingSubstanceReference"]) { results.push(...this.definingSubstanceReference.doModelValidation()); }
-    if (this["definingSubstanceCodeableConcept"]) { results.push(...this.definingSubstanceCodeableConcept.doModelValidation()); }
-    if (this["amountQuantity"]) { results.push(...this.amountQuantity.doModelValidation()); }
-    if (this["_amountString"]) { results.push(...this._amountString.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["category"]) { outcome.issue!.push(...this.category.doModelValidation().issue!); }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["parameters"]) { outcome.issue!.push(...this.parameters.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSpecificationStructureIsotopeMolecularWeight type.
+ */
+export interface SubstanceSpecificationStructureIsotopeMolecularWeightArgs extends fhir.BackboneElementArgs {
+  /**
+   * The method by which the molecular weight was determined.
+   */
+  method?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Type of molecular weight such as exact, average (also known as. number average), weight average.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
+   */
+  amount?: fhir.QuantityArgs|undefined;
 }
 
 /**
  * The molecular weight or weight range (for proteins, polymers or nucleic acids).
  */
-export class SubstanceSpecificationStructureIsotopeMolecularWeight extends fhir.BackboneElement implements ISubstanceSpecificationStructureIsotopeMolecularWeight {
+export class SubstanceSpecificationStructureIsotopeMolecularWeight extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSpecificationStructureIsotopeMolecularWeight';
   /**
    * The method by which the molecular weight was determined.
    */
@@ -648,28 +257,60 @@ export class SubstanceSpecificationStructureIsotopeMolecularWeight extends fhir.
   /**
    * Default constructor for SubstanceSpecificationStructureIsotopeMolecularWeight - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSpecificationStructureIsotopeMolecularWeight> = { }) {
-    super(source);
-    if (source['method']) { this.method = new fhir.CodeableConcept(source.method!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['amount']) { this.amount = new fhir.Quantity(source.amount!); }
+  constructor(source:Partial<SubstanceSpecificationStructureIsotopeMolecularWeightArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['method']) { this.method = new fhir.CodeableConcept(source.method); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['amount']) { this.amount = new fhir.Quantity(source.amount); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["method"]) { results.push(...this.method.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["amount"]) { results.push(...this.amount.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["method"]) { outcome.issue!.push(...this.method.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["amount"]) { outcome.issue!.push(...this.amount.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSpecificationStructureIsotope type.
+ */
+export interface SubstanceSpecificationStructureIsotopeArgs extends fhir.BackboneElementArgs {
+  /**
+   * Substance identifier for each non-natural or radioisotope.
+   */
+  identifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * Substance name for each non-natural or radioisotope.
+   */
+  name?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The type of isotopic substitution present in a single substance.
+   */
+  substitution?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Half life - for a non-natural nuclide.
+   */
+  halfLife?: fhir.QuantityArgs|undefined;
+  /**
+   * The molecular weight or weight range (for proteins, polymers or nucleic acids).
+   */
+  molecularWeight?: fhir.SubstanceSpecificationStructureIsotopeMolecularWeightArgs|undefined;
 }
 
 /**
  * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
  */
-export class SubstanceSpecificationStructureIsotope extends fhir.BackboneElement implements ISubstanceSpecificationStructureIsotope {
+export class SubstanceSpecificationStructureIsotope extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSpecificationStructureIsotope';
   /**
    * Substance identifier for each non-natural or radioisotope.
    */
@@ -693,32 +334,56 @@ export class SubstanceSpecificationStructureIsotope extends fhir.BackboneElement
   /**
    * Default constructor for SubstanceSpecificationStructureIsotope - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSpecificationStructureIsotope> = { }) {
-    super(source);
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
-    if (source['name']) { this.name = new fhir.CodeableConcept(source.name!); }
-    if (source['substitution']) { this.substitution = new fhir.CodeableConcept(source.substitution!); }
-    if (source['halfLife']) { this.halfLife = new fhir.Quantity(source.halfLife!); }
-    if (source['molecularWeight']) { this.molecularWeight = new fhir.SubstanceSpecificationStructureIsotopeMolecularWeight(source.molecularWeight!); }
+  constructor(source:Partial<SubstanceSpecificationStructureIsotopeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
+    if (source['name']) { this.name = new fhir.CodeableConcept(source.name); }
+    if (source['substitution']) { this.substitution = new fhir.CodeableConcept(source.substitution); }
+    if (source['halfLife']) { this.halfLife = new fhir.Quantity(source.halfLife); }
+    if (source['molecularWeight']) { this.molecularWeight = new fhir.SubstanceSpecificationStructureIsotopeMolecularWeight(source.molecularWeight); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (this["name"]) { results.push(...this.name.doModelValidation()); }
-    if (this["substitution"]) { results.push(...this.substitution.doModelValidation()); }
-    if (this["halfLife"]) { results.push(...this.halfLife.doModelValidation()); }
-    if (this["molecularWeight"]) { results.push(...this.molecularWeight.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["substitution"]) { outcome.issue!.push(...this.substitution.doModelValidation().issue!); }
+    if (this["halfLife"]) { outcome.issue!.push(...this.halfLife.doModelValidation().issue!); }
+    if (this["molecularWeight"]) { outcome.issue!.push(...this.molecularWeight.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSpecificationStructureRepresentation type.
+ */
+export interface SubstanceSpecificationStructureRepresentationArgs extends fhir.BackboneElementArgs {
+  /**
+   * The type of structure (e.g. Full, Partial, Representative).
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The structural representation as text string in a format e.g. InChI, SMILES, MOLFILE, CDX.
+   */
+  representation?: fhir.FhirString|string|undefined;
+  /**
+   * An attached file with the structural representation.
+   */
+  attachment?: fhir.AttachmentArgs|undefined;
 }
 
 /**
  * Molecular structural representation.
  */
-export class SubstanceSpecificationStructureRepresentation extends fhir.BackboneElement implements ISubstanceSpecificationStructureRepresentation {
+export class SubstanceSpecificationStructureRepresentation extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSpecificationStructureRepresentation';
   /**
    * The type of structure (e.g. Full, Partial, Representative).
    */
@@ -726,11 +391,7 @@ export class SubstanceSpecificationStructureRepresentation extends fhir.Backbone
   /**
    * The structural representation as text string in a format e.g. InChI, SMILES, MOLFILE, CDX.
    */
-  public representation?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.structure.representation.representation
-   */
-  public _representation?: fhir.FhirElement|undefined;
+  public representation?: fhir.FhirString|undefined;
   /**
    * An attached file with the structural representation.
    */
@@ -738,29 +399,72 @@ export class SubstanceSpecificationStructureRepresentation extends fhir.Backbone
   /**
    * Default constructor for SubstanceSpecificationStructureRepresentation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSpecificationStructureRepresentation> = { }) {
-    super(source);
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['representation']) { this.representation = source.representation; }
-    if (source['_representation']) { this._representation = new fhir.FhirElement(source._representation!); }
-    if (source['attachment']) { this.attachment = new fhir.Attachment(source.attachment!); }
+  constructor(source:Partial<SubstanceSpecificationStructureRepresentationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['representation']) { this.representation = new fhir.FhirString({value: source.representation}); }
+    if (source['attachment']) { this.attachment = new fhir.Attachment(source.attachment); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["_representation"]) { results.push(...this._representation.doModelValidation()); }
-    if (this["attachment"]) { results.push(...this.attachment.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["representation"]) { outcome.issue!.push(...this.representation.doModelValidation().issue!); }
+    if (this["attachment"]) { outcome.issue!.push(...this.attachment.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSpecificationStructure type.
+ */
+export interface SubstanceSpecificationStructureArgs extends fhir.BackboneElementArgs {
+  /**
+   * Stereochemistry type.
+   */
+  stereochemistry?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Optical activity type.
+   */
+  opticalActivity?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Molecular formula.
+   */
+  molecularFormula?: fhir.FhirString|string|undefined;
+  /**
+   * Specified per moiety according to the Hill system, i.e. first C, then H, then alphabetical, each moiety separated by a dot.
+   */
+  molecularFormulaByMoiety?: fhir.FhirString|string|undefined;
+  /**
+   * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
+   */
+  isotope?: fhir.SubstanceSpecificationStructureIsotopeArgs[]|undefined;
+  /**
+   * The molecular weight or weight range (for proteins, polymers or nucleic acids).
+   */
+  molecularWeight?: fhir.SubstanceSpecificationStructureIsotopeMolecularWeightArgs|undefined;
+  /**
+   * Supporting literature.
+   */
+  source?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Molecular structural representation.
+   */
+  representation?: fhir.SubstanceSpecificationStructureRepresentationArgs[]|undefined;
 }
 
 /**
  * Structural information.
  */
-export class SubstanceSpecificationStructure extends fhir.BackboneElement implements ISubstanceSpecificationStructure {
+export class SubstanceSpecificationStructure extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSpecificationStructure';
   /**
    * Stereochemistry type.
    */
@@ -772,23 +476,15 @@ export class SubstanceSpecificationStructure extends fhir.BackboneElement implem
   /**
    * Molecular formula.
    */
-  public molecularFormula?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.structure.molecularFormula
-   */
-  public _molecularFormula?: fhir.FhirElement|undefined;
+  public molecularFormula?: fhir.FhirString|undefined;
   /**
    * Specified per moiety according to the Hill system, i.e. first C, then H, then alphabetical, each moiety separated by a dot.
    */
-  public molecularFormulaByMoiety?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.structure.molecularFormulaByMoiety
-   */
-  public _molecularFormulaByMoiety?: fhir.FhirElement|undefined;
+  public molecularFormulaByMoiety?: fhir.FhirString|undefined;
   /**
    * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
    */
-  public isotope?: fhir.SubstanceSpecificationStructureIsotope[]|undefined;
+  public isotope?: fhir.SubstanceSpecificationStructureIsotope[]|undefined = [];
   /**
    * The molecular weight or weight range (for proteins, polymers or nucleic acids).
    */
@@ -796,48 +492,78 @@ export class SubstanceSpecificationStructure extends fhir.BackboneElement implem
   /**
    * Supporting literature.
    */
-  public source?: fhir.Reference[]|undefined;
+  public source?: fhir.Reference[]|undefined = [];
   /**
    * Molecular structural representation.
    */
-  public representation?: fhir.SubstanceSpecificationStructureRepresentation[]|undefined;
+  public representation?: fhir.SubstanceSpecificationStructureRepresentation[]|undefined = [];
   /**
    * Default constructor for SubstanceSpecificationStructure - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSpecificationStructure> = { }) {
-    super(source);
-    if (source['stereochemistry']) { this.stereochemistry = new fhir.CodeableConcept(source.stereochemistry!); }
-    if (source['opticalActivity']) { this.opticalActivity = new fhir.CodeableConcept(source.opticalActivity!); }
-    if (source['molecularFormula']) { this.molecularFormula = source.molecularFormula; }
-    if (source['_molecularFormula']) { this._molecularFormula = new fhir.FhirElement(source._molecularFormula!); }
-    if (source['molecularFormulaByMoiety']) { this.molecularFormulaByMoiety = source.molecularFormulaByMoiety; }
-    if (source['_molecularFormulaByMoiety']) { this._molecularFormulaByMoiety = new fhir.FhirElement(source._molecularFormulaByMoiety!); }
+  constructor(source:Partial<SubstanceSpecificationStructureArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['stereochemistry']) { this.stereochemistry = new fhir.CodeableConcept(source.stereochemistry); }
+    if (source['opticalActivity']) { this.opticalActivity = new fhir.CodeableConcept(source.opticalActivity); }
+    if (source['molecularFormula']) { this.molecularFormula = new fhir.FhirString({value: source.molecularFormula}); }
+    if (source['molecularFormulaByMoiety']) { this.molecularFormulaByMoiety = new fhir.FhirString({value: source.molecularFormulaByMoiety}); }
     if (source['isotope']) { this.isotope = source.isotope.map((x) => new fhir.SubstanceSpecificationStructureIsotope(x)); }
-    if (source['molecularWeight']) { this.molecularWeight = new fhir.SubstanceSpecificationStructureIsotopeMolecularWeight(source.molecularWeight!); }
+    if (source['molecularWeight']) { this.molecularWeight = new fhir.SubstanceSpecificationStructureIsotopeMolecularWeight(source.molecularWeight); }
     if (source['source']) { this.source = source.source.map((x) => new fhir.Reference(x)); }
     if (source['representation']) { this.representation = source.representation.map((x) => new fhir.SubstanceSpecificationStructureRepresentation(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["stereochemistry"]) { results.push(...this.stereochemistry.doModelValidation()); }
-    if (this["opticalActivity"]) { results.push(...this.opticalActivity.doModelValidation()); }
-    if (this["_molecularFormula"]) { results.push(...this._molecularFormula.doModelValidation()); }
-    if (this["_molecularFormulaByMoiety"]) { results.push(...this._molecularFormulaByMoiety.doModelValidation()); }
-    if (this["isotope"]) { this.isotope.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["molecularWeight"]) { results.push(...this.molecularWeight.doModelValidation()); }
-    if (this["source"]) { this.source.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["representation"]) { this.representation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["stereochemistry"]) { outcome.issue!.push(...this.stereochemistry.doModelValidation().issue!); }
+    if (this["opticalActivity"]) { outcome.issue!.push(...this.opticalActivity.doModelValidation().issue!); }
+    if (this["molecularFormula"]) { outcome.issue!.push(...this.molecularFormula.doModelValidation().issue!); }
+    if (this["molecularFormulaByMoiety"]) { outcome.issue!.push(...this.molecularFormulaByMoiety.doModelValidation().issue!); }
+    if (this["isotope"]) { this.isotope.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["molecularWeight"]) { outcome.issue!.push(...this.molecularWeight.doModelValidation().issue!); }
+    if (this["source"]) { this.source.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["representation"]) { this.representation.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSpecificationCode type.
+ */
+export interface SubstanceSpecificationCodeArgs extends fhir.BackboneElementArgs {
+  /**
+   * The specific code.
+   */
+  code?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Status of the code assignment.
+   */
+  status?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The date at which the code status is changed as part of the terminology maintenance.
+   */
+  statusDate?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Any comment can be provided in this field, if necessary.
+   */
+  comment?: fhir.FhirString|string|undefined;
+  /**
+   * Supporting literature.
+   */
+  source?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * Codes associated with the substance.
  */
-export class SubstanceSpecificationCode extends fhir.BackboneElement implements ISubstanceSpecificationCode {
+export class SubstanceSpecificationCode extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSpecificationCode';
   /**
    * The specific code.
    */
@@ -849,54 +575,68 @@ export class SubstanceSpecificationCode extends fhir.BackboneElement implements 
   /**
    * The date at which the code status is changed as part of the terminology maintenance.
    */
-  public statusDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.code.statusDate
-   */
-  public _statusDate?: fhir.FhirElement|undefined;
+  public statusDate?: fhir.FhirDateTime|undefined;
   /**
    * Any comment can be provided in this field, if necessary.
    */
-  public comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.code.comment
-   */
-  public _comment?: fhir.FhirElement|undefined;
+  public comment?: fhir.FhirString|undefined;
   /**
    * Supporting literature.
    */
-  public source?: fhir.Reference[]|undefined;
+  public source?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for SubstanceSpecificationCode - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSpecificationCode> = { }) {
-    super(source);
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
-    if (source['status']) { this.status = new fhir.CodeableConcept(source.status!); }
-    if (source['statusDate']) { this.statusDate = source.statusDate; }
-    if (source['_statusDate']) { this._statusDate = new fhir.FhirElement(source._statusDate!); }
-    if (source['comment']) { this.comment = source.comment; }
-    if (source['_comment']) { this._comment = new fhir.FhirElement(source._comment!); }
+  constructor(source:Partial<SubstanceSpecificationCodeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
+    if (source['status']) { this.status = new fhir.CodeableConcept(source.status); }
+    if (source['statusDate']) { this.statusDate = new fhir.FhirDateTime({value: source.statusDate}); }
+    if (source['comment']) { this.comment = new fhir.FhirString({value: source.comment}); }
     if (source['source']) { this.source = source.source.map((x) => new fhir.Reference(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["status"]) { results.push(...this.status.doModelValidation()); }
-    if (this["_statusDate"]) { results.push(...this._statusDate.doModelValidation()); }
-    if (this["_comment"]) { results.push(...this._comment.doModelValidation()); }
-    if (this["source"]) { this.source.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["status"]) { outcome.issue!.push(...this.status.doModelValidation().issue!); }
+    if (this["statusDate"]) { outcome.issue!.push(...this.statusDate.doModelValidation().issue!); }
+    if (this["comment"]) { outcome.issue!.push(...this.comment.doModelValidation().issue!); }
+    if (this["source"]) { this.source.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSpecificationNameOfficial type.
+ */
+export interface SubstanceSpecificationNameOfficialArgs extends fhir.BackboneElementArgs {
+  /**
+   * Which authority uses this official name.
+   */
+  authority?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The status of the official name.
+   */
+  status?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Date of official name change.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
 }
 
 /**
  * Details of the official nature of this name.
  */
-export class SubstanceSpecificationNameOfficial extends fhir.BackboneElement implements ISubstanceSpecificationNameOfficial {
+export class SubstanceSpecificationNameOfficial extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSpecificationNameOfficial';
   /**
    * Which authority uses this official name.
    */
@@ -908,45 +648,92 @@ export class SubstanceSpecificationNameOfficial extends fhir.BackboneElement imp
   /**
    * Date of official name change.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.name.official.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Default constructor for SubstanceSpecificationNameOfficial - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSpecificationNameOfficial> = { }) {
-    super(source);
-    if (source['authority']) { this.authority = new fhir.CodeableConcept(source.authority!); }
-    if (source['status']) { this.status = new fhir.CodeableConcept(source.status!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
+  constructor(source:Partial<SubstanceSpecificationNameOfficialArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['authority']) { this.authority = new fhir.CodeableConcept(source.authority); }
+    if (source['status']) { this.status = new fhir.CodeableConcept(source.status); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["authority"]) { results.push(...this.authority.doModelValidation()); }
-    if (this["status"]) { results.push(...this.status.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["authority"]) { outcome.issue!.push(...this.authority.doModelValidation().issue!); }
+    if (this["status"]) { outcome.issue!.push(...this.status.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSpecificationName type.
+ */
+export interface SubstanceSpecificationNameArgs extends fhir.BackboneElementArgs {
+  /**
+   * The actual name.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * Name type.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The status of the name.
+   */
+  status?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * If this is the preferred name for this substance.
+   */
+  preferred?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Language of the name.
+   */
+  language?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The use context of this name for example if there is a different name a drug active ingredient as opposed to a food colour additive.
+   */
+  domain?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The jurisdiction where this name applies.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * A synonym of this name.
+   */
+  synonym?: fhir.SubstanceSpecificationNameArgs[]|undefined;
+  /**
+   * A translation for this name.
+   */
+  translation?: fhir.SubstanceSpecificationNameArgs[]|undefined;
+  /**
+   * Details of the official nature of this name.
+   */
+  official?: fhir.SubstanceSpecificationNameOfficialArgs[]|undefined;
+  /**
+   * Supporting literature.
+   */
+  source?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * Names applicable to this substance.
  */
-export class SubstanceSpecificationName extends fhir.BackboneElement implements ISubstanceSpecificationName {
+export class SubstanceSpecificationName extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSpecificationName';
   /**
    * The actual name.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.name.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * Name type.
    */
@@ -958,51 +745,45 @@ export class SubstanceSpecificationName extends fhir.BackboneElement implements 
   /**
    * If this is the preferred name for this substance.
    */
-  public preferred?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.name.preferred
-   */
-  public _preferred?: fhir.FhirElement|undefined;
+  public preferred?: fhir.FhirBoolean|undefined;
   /**
    * Language of the name.
    */
-  public language?: fhir.CodeableConcept[]|undefined;
+  public language?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The use context of this name for example if there is a different name a drug active ingredient as opposed to a food colour additive.
    */
-  public domain?: fhir.CodeableConcept[]|undefined;
+  public domain?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The jurisdiction where this name applies.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * A synonym of this name.
    */
-  public synonym?: fhir.SubstanceSpecificationName[]|undefined;
+  public synonym?: fhir.SubstanceSpecificationName[]|undefined = [];
   /**
    * A translation for this name.
    */
-  public translation?: fhir.SubstanceSpecificationName[]|undefined;
+  public translation?: fhir.SubstanceSpecificationName[]|undefined = [];
   /**
    * Details of the official nature of this name.
    */
-  public official?: fhir.SubstanceSpecificationNameOfficial[]|undefined;
+  public official?: fhir.SubstanceSpecificationNameOfficial[]|undefined = [];
   /**
    * Supporting literature.
    */
-  public source?: fhir.Reference[]|undefined;
+  public source?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for SubstanceSpecificationName - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSpecificationName> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<SubstanceSpecificationNameArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['status']) { this.status = new fhir.CodeableConcept(source.status!); }
-    if (source['preferred']) { this.preferred = source.preferred; }
-    if (source['_preferred']) { this._preferred = new fhir.FhirElement(source._preferred!); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['status']) { this.status = new fhir.CodeableConcept(source.status); }
+    if (source['preferred']) { this.preferred = new fhir.FhirBoolean({value: source.preferred}); }
     if (source['language']) { this.language = source.language.map((x) => new fhir.CodeableConcept(x)); }
     if (source['domain']) { this.domain = source.domain.map((x) => new fhir.CodeableConcept(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
@@ -1014,36 +795,99 @@ export class SubstanceSpecificationName extends fhir.BackboneElement implements 
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: SubstanceSpecification.name.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["status"]) { results.push(...this.status.doModelValidation()); }
-    if (this["_preferred"]) { results.push(...this._preferred.doModelValidation()); }
-    if (this["language"]) { this.language.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["domain"]) { this.domain.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["synonym"]) { this.synonym.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["translation"]) { this.translation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["official"]) { this.official.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["source"]) { this.source.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: SubstanceSpecification.name.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["status"]) { outcome.issue!.push(...this.status.doModelValidation().issue!); }
+    if (this["preferred"]) { outcome.issue!.push(...this.preferred.doModelValidation().issue!); }
+    if (this["language"]) { this.language.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["domain"]) { this.domain.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["synonym"]) { this.synonym.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["translation"]) { this.translation.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["official"]) { this.official.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["source"]) { this.source.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSpecificationRelationship type.
+ */
+export interface SubstanceSpecificationRelationshipArgs extends fhir.BackboneElementArgs {
+  /**
+   * A pointer to another substance, as a resource or just a representational code.
+   */
+  substance?: fhir.Reference|fhir.CodeableConcept|undefined;
+  /**
+   * A pointer to another substance, as a resource or just a representational code.
+   */
+  substanceReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * A pointer to another substance, as a resource or just a representational code.
+   */
+  substanceCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * For example "salt to parent", "active moiety", "starting material".
+   */
+  relationship?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.
+   */
+  isDefining?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
+   */
+  amount?: fhir.Quantity|fhir.Range|fhir.Ratio|fhir.FhirString|undefined;
+  /**
+   * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
+   */
+  amountQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
+   */
+  amountRange?: fhir.RangeArgs|undefined;
+  /**
+   * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
+   */
+  amountRatio?: fhir.RatioArgs|undefined;
+  /**
+   * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
+   */
+  amountString?: fhir.FhirString|string|undefined;
+  /**
+   * For use when the numeric.
+   */
+  amountRatioLowLimit?: fhir.RatioArgs|undefined;
+  /**
+   * An operator for the amount, for example "average", "approximately", "less than".
+   */
+  amountType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Supporting literature.
+   */
+  source?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * A link between this substance and another, with details of the relationship.
  */
-export class SubstanceSpecificationRelationship extends fhir.BackboneElement implements ISubstanceSpecificationRelationship {
+export class SubstanceSpecificationRelationship extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSpecificationRelationship';
   /**
    * A pointer to another substance, as a resource or just a representational code.
    */
-  public substanceReference?: fhir.Reference|undefined;
-  /**
-   * A pointer to another substance, as a resource or just a representational code.
-   */
-  public substanceCodeableConcept?: fhir.CodeableConcept|undefined;
+  public substance?: (fhir.Reference|fhir.CodeableConcept)|undefined;
+  readonly __substanceIsChoice:true = true;
   /**
    * For example "salt to parent", "active moiety", "starting material".
    */
@@ -1051,31 +895,12 @@ export class SubstanceSpecificationRelationship extends fhir.BackboneElement imp
   /**
    * For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.
    */
-  public isDefining?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.relationship.isDefining
-   */
-  public _isDefining?: fhir.FhirElement|undefined;
+  public isDefining?: fhir.FhirBoolean|undefined;
   /**
    * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
    */
-  public amountQuantity?: fhir.Quantity|undefined;
-  /**
-   * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
-   */
-  public amountRange?: fhir.Range|undefined;
-  /**
-   * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
-   */
-  public amountRatio?: fhir.Ratio|undefined;
-  /**
-   * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
-   */
-  public amountString?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.relationship.amount[x]
-   */
-  public _amountString?: fhir.FhirElement|undefined;
+  public amount?: (fhir.Quantity|fhir.Range|fhir.Ratio|fhir.FhirString)|undefined;
+  readonly __amountIsChoice:true = true;
   /**
    * For use when the numeric.
    */
@@ -1087,50 +912,136 @@ export class SubstanceSpecificationRelationship extends fhir.BackboneElement imp
   /**
    * Supporting literature.
    */
-  public source?: fhir.Reference[]|undefined;
+  public source?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for SubstanceSpecificationRelationship - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSpecificationRelationship> = { }) {
-    super(source);
-    if (source['substanceReference']) { this.substanceReference = new fhir.Reference(source.substanceReference!); }
-    if (source['substanceCodeableConcept']) { this.substanceCodeableConcept = new fhir.CodeableConcept(source.substanceCodeableConcept!); }
-    if (source['relationship']) { this.relationship = new fhir.CodeableConcept(source.relationship!); }
-    if (source['isDefining']) { this.isDefining = source.isDefining; }
-    if (source['_isDefining']) { this._isDefining = new fhir.FhirElement(source._isDefining!); }
-    if (source['amountQuantity']) { this.amountQuantity = new fhir.Quantity(source.amountQuantity!); }
-    if (source['amountRange']) { this.amountRange = new fhir.Range(source.amountRange!); }
-    if (source['amountRatio']) { this.amountRatio = new fhir.Ratio(source.amountRatio!); }
-    if (source['amountString']) { this.amountString = source.amountString; }
-    if (source['_amountString']) { this._amountString = new fhir.FhirElement(source._amountString!); }
-    if (source['amountRatioLowLimit']) { this.amountRatioLowLimit = new fhir.Ratio(source.amountRatioLowLimit!); }
-    if (source['amountType']) { this.amountType = new fhir.CodeableConcept(source.amountType!); }
+  constructor(source:Partial<SubstanceSpecificationRelationshipArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['substance']) { this.substance = source.substance; }
+    else if (source['substanceReference']) { this.substance = new fhir.Reference(source.substanceReference); }
+    else if (source['substanceCodeableConcept']) { this.substance = new fhir.CodeableConcept(source.substanceCodeableConcept); }
+    if (source['relationship']) { this.relationship = new fhir.CodeableConcept(source.relationship); }
+    if (source['isDefining']) { this.isDefining = new fhir.FhirBoolean({value: source.isDefining}); }
+    if (source['amount']) { this.amount = source.amount; }
+    else if (source['amountQuantity']) { this.amount = new fhir.Quantity(source.amountQuantity); }
+    else if (source['amountRange']) { this.amount = new fhir.Range(source.amountRange); }
+    else if (source['amountRatio']) { this.amount = new fhir.Ratio(source.amountRatio); }
+    else if (source['amountString']) { this.amount = new fhir.FhirString({value: source.amountString}); }
+    if (source['amountRatioLowLimit']) { this.amountRatioLowLimit = new fhir.Ratio(source.amountRatioLowLimit); }
+    if (source['amountType']) { this.amountType = new fhir.CodeableConcept(source.amountType); }
     if (source['source']) { this.source = source.source.map((x) => new fhir.Reference(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["substanceReference"]) { results.push(...this.substanceReference.doModelValidation()); }
-    if (this["substanceCodeableConcept"]) { results.push(...this.substanceCodeableConcept.doModelValidation()); }
-    if (this["relationship"]) { results.push(...this.relationship.doModelValidation()); }
-    if (this["_isDefining"]) { results.push(...this._isDefining.doModelValidation()); }
-    if (this["amountQuantity"]) { results.push(...this.amountQuantity.doModelValidation()); }
-    if (this["amountRange"]) { results.push(...this.amountRange.doModelValidation()); }
-    if (this["amountRatio"]) { results.push(...this.amountRatio.doModelValidation()); }
-    if (this["_amountString"]) { results.push(...this._amountString.doModelValidation()); }
-    if (this["amountRatioLowLimit"]) { results.push(...this.amountRatioLowLimit.doModelValidation()); }
-    if (this["amountType"]) { results.push(...this.amountType.doModelValidation()); }
-    if (this["source"]) { this.source.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["relationship"]) { outcome.issue!.push(...this.relationship.doModelValidation().issue!); }
+    if (this["isDefining"]) { outcome.issue!.push(...this.isDefining.doModelValidation().issue!); }
+    if (this["amountRatioLowLimit"]) { outcome.issue!.push(...this.amountRatioLowLimit.doModelValidation().issue!); }
+    if (this["amountType"]) { outcome.issue!.push(...this.amountType.doModelValidation().issue!); }
+    if (this["source"]) { this.source.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSpecification type.
+ */
+export interface SubstanceSpecificationArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "SubstanceSpecification"|undefined;
+  /**
+   * Identifier by which this substance is known.
+   */
+  identifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * High level categorization, e.g. polymer or nucleic acid.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Status of substance within the catalogue e.g. approved.
+   */
+  status?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * If the substance applies to only human or veterinary use.
+   */
+  domain?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Textual description of the substance.
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * Supporting literature.
+   */
+  source?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Textual comment about this record of a substance.
+   */
+  comment?: fhir.FhirString|string|undefined;
+  /**
+   * Moiety, for structural modifications.
+   */
+  moiety?: fhir.SubstanceSpecificationMoietyArgs[]|undefined;
+  /**
+   * General specifications for this substance, including how it is related to other substances.
+   */
+  property?: fhir.SubstanceSpecificationPropertyArgs[]|undefined;
+  /**
+   * General information detailing this substance.
+   */
+  referenceInformation?: fhir.ReferenceArgs|undefined;
+  /**
+   * Structural information.
+   */
+  structure?: fhir.SubstanceSpecificationStructureArgs|undefined;
+  /**
+   * Codes associated with the substance.
+   */
+  code?: fhir.SubstanceSpecificationCodeArgs[]|undefined;
+  /**
+   * Names applicable to this substance.
+   */
+  name?: fhir.SubstanceSpecificationNameArgs[]|undefined;
+  /**
+   * The molecular weight or weight range (for proteins, polymers or nucleic acids).
+   */
+  molecularWeight?: fhir.SubstanceSpecificationStructureIsotopeMolecularWeightArgs[]|undefined;
+  /**
+   * A link between this substance and another, with details of the relationship.
+   */
+  relationship?: fhir.SubstanceSpecificationRelationshipArgs[]|undefined;
+  /**
+   * Data items specific to nucleic acids.
+   */
+  nucleicAcid?: fhir.ReferenceArgs|undefined;
+  /**
+   * Data items specific to polymers.
+   */
+  polymer?: fhir.ReferenceArgs|undefined;
+  /**
+   * Data items specific to proteins.
+   */
+  protein?: fhir.ReferenceArgs|undefined;
+  /**
+   * Material or taxonomic/anatomical source for the substance.
+   */
+  sourceMaterial?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * The detailed description of a substance, typically at a level beyond what is used for prescribing.
  */
-export class SubstanceSpecification extends fhir.DomainResource implements ISubstanceSpecification {
+export class SubstanceSpecification extends fhir.DomainResource {
+  readonly __dataType:string = 'SubstanceSpecification';
   /**
    * Resource Type Name
    */
@@ -1154,31 +1065,23 @@ export class SubstanceSpecification extends fhir.DomainResource implements ISubs
   /**
    * Textual description of the substance.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * Supporting literature.
    */
-  public source?: fhir.Reference[]|undefined;
+  public source?: fhir.Reference[]|undefined = [];
   /**
    * Textual comment about this record of a substance.
    */
-  public comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSpecification.comment
-   */
-  public _comment?: fhir.FhirElement|undefined;
+  public comment?: fhir.FhirString|undefined;
   /**
    * Moiety, for structural modifications.
    */
-  public moiety?: fhir.SubstanceSpecificationMoiety[]|undefined;
+  public moiety?: fhir.SubstanceSpecificationMoiety[]|undefined = [];
   /**
    * General specifications for this substance, including how it is related to other substances.
    */
-  public property?: fhir.SubstanceSpecificationProperty[]|undefined;
+  public property?: fhir.SubstanceSpecificationProperty[]|undefined = [];
   /**
    * General information detailing this substance.
    */
@@ -1190,19 +1093,19 @@ export class SubstanceSpecification extends fhir.DomainResource implements ISubs
   /**
    * Codes associated with the substance.
    */
-  public code?: fhir.SubstanceSpecificationCode[]|undefined;
+  public code?: fhir.SubstanceSpecificationCode[]|undefined = [];
   /**
    * Names applicable to this substance.
    */
-  public name?: fhir.SubstanceSpecificationName[]|undefined;
+  public name?: fhir.SubstanceSpecificationName[]|undefined = [];
   /**
    * The molecular weight or weight range (for proteins, polymers or nucleic acids).
    */
-  public molecularWeight?: fhir.SubstanceSpecificationStructureIsotopeMolecularWeight[]|undefined;
+  public molecularWeight?: fhir.SubstanceSpecificationStructureIsotopeMolecularWeight[]|undefined = [];
   /**
    * A link between this substance and another, with details of the relationship.
    */
-  public relationship?: fhir.SubstanceSpecificationRelationship[]|undefined;
+  public relationship?: fhir.SubstanceSpecificationRelationship[]|undefined = [];
   /**
    * Data items specific to nucleic acids.
    */
@@ -1222,56 +1125,62 @@ export class SubstanceSpecification extends fhir.DomainResource implements ISubs
   /**
    * Default constructor for SubstanceSpecification - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSpecification> = { }) {
-    super(source);
+  constructor(source:Partial<SubstanceSpecificationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'SubstanceSpecification';
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['status']) { this.status = new fhir.CodeableConcept(source.status!); }
-    if (source['domain']) { this.domain = new fhir.CodeableConcept(source.domain!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['status']) { this.status = new fhir.CodeableConcept(source.status); }
+    if (source['domain']) { this.domain = new fhir.CodeableConcept(source.domain); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
     if (source['source']) { this.source = source.source.map((x) => new fhir.Reference(x)); }
-    if (source['comment']) { this.comment = source.comment; }
-    if (source['_comment']) { this._comment = new fhir.FhirElement(source._comment!); }
+    if (source['comment']) { this.comment = new fhir.FhirString({value: source.comment}); }
     if (source['moiety']) { this.moiety = source.moiety.map((x) => new fhir.SubstanceSpecificationMoiety(x)); }
     if (source['property']) { this.property = source.property.map((x) => new fhir.SubstanceSpecificationProperty(x)); }
-    if (source['referenceInformation']) { this.referenceInformation = new fhir.Reference(source.referenceInformation!); }
-    if (source['structure']) { this.structure = new fhir.SubstanceSpecificationStructure(source.structure!); }
+    if (source['referenceInformation']) { this.referenceInformation = new fhir.Reference(source.referenceInformation); }
+    if (source['structure']) { this.structure = new fhir.SubstanceSpecificationStructure(source.structure); }
     if (source['code']) { this.code = source.code.map((x) => new fhir.SubstanceSpecificationCode(x)); }
     if (source['name']) { this.name = source.name.map((x) => new fhir.SubstanceSpecificationName(x)); }
     if (source['molecularWeight']) { this.molecularWeight = source.molecularWeight.map((x) => new fhir.SubstanceSpecificationStructureIsotopeMolecularWeight(x)); }
     if (source['relationship']) { this.relationship = source.relationship.map((x) => new fhir.SubstanceSpecificationRelationship(x)); }
-    if (source['nucleicAcid']) { this.nucleicAcid = new fhir.Reference(source.nucleicAcid!); }
-    if (source['polymer']) { this.polymer = new fhir.Reference(source.polymer!); }
-    if (source['protein']) { this.protein = new fhir.Reference(source.protein!); }
-    if (source['sourceMaterial']) { this.sourceMaterial = new fhir.Reference(source.sourceMaterial!); }
+    if (source['nucleicAcid']) { this.nucleicAcid = new fhir.Reference(source.nucleicAcid); }
+    if (source['polymer']) { this.polymer = new fhir.Reference(source.polymer); }
+    if (source['protein']) { this.protein = new fhir.Reference(source.protein); }
+    if (source['sourceMaterial']) { this.sourceMaterial = new fhir.Reference(source.sourceMaterial); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: SubstanceSpecification.resourceType']); }
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["status"]) { results.push(...this.status.doModelValidation()); }
-    if (this["domain"]) { results.push(...this.domain.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["source"]) { this.source.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_comment"]) { results.push(...this._comment.doModelValidation()); }
-    if (this["moiety"]) { this.moiety.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["property"]) { this.property.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["referenceInformation"]) { results.push(...this.referenceInformation.doModelValidation()); }
-    if (this["structure"]) { results.push(...this.structure.doModelValidation()); }
-    if (this["code"]) { this.code.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["name"]) { this.name.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["molecularWeight"]) { this.molecularWeight.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["relationship"]) { this.relationship.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["nucleicAcid"]) { results.push(...this.nucleicAcid.doModelValidation()); }
-    if (this["polymer"]) { results.push(...this.polymer.doModelValidation()); }
-    if (this["protein"]) { results.push(...this.protein.doModelValidation()); }
-    if (this["sourceMaterial"]) { results.push(...this.sourceMaterial.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'SubstanceSpecification' fhir: SubstanceSpecification.resourceType:'SubstanceSpecification'", }));
+    }
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["status"]) { outcome.issue!.push(...this.status.doModelValidation().issue!); }
+    if (this["domain"]) { outcome.issue!.push(...this.domain.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["source"]) { this.source.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["comment"]) { outcome.issue!.push(...this.comment.doModelValidation().issue!); }
+    if (this["moiety"]) { this.moiety.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["property"]) { this.property.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["referenceInformation"]) { outcome.issue!.push(...this.referenceInformation.doModelValidation().issue!); }
+    if (this["structure"]) { outcome.issue!.push(...this.structure.doModelValidation().issue!); }
+    if (this["code"]) { this.code.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["name"]) { this.name.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["molecularWeight"]) { this.molecularWeight.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["relationship"]) { this.relationship.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["nucleicAcid"]) { outcome.issue!.push(...this.nucleicAcid.doModelValidation().issue!); }
+    if (this["polymer"]) { outcome.issue!.push(...this.polymer.doModelValidation().issue!); }
+    if (this["protein"]) { outcome.issue!.push(...this.protein.doModelValidation().issue!); }
+    if (this["sourceMaterial"]) { outcome.issue!.push(...this.sourceMaterial.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -43,23 +43,4 @@ export const ContributorTypeValueSet = {
 /**
  * The type of contributor.
  */
-export var ContributorTypeValueSetEnum;
-(function (ContributorTypeValueSetEnum) {
-    /**
-     * author: An author of the content of the module.
-     */
-    ContributorTypeValueSetEnum["Author"] = "author";
-    /**
-     * editor: An editor of the content of the module.
-     */
-    ContributorTypeValueSetEnum["Editor"] = "editor";
-    /**
-     * endorser: An endorser of the content of the module.
-     */
-    ContributorTypeValueSetEnum["Endorser"] = "endorser";
-    /**
-     * reviewer: A reviewer of the content of the module.
-     */
-    ContributorTypeValueSetEnum["Reviewer"] = "reviewer";
-})(ContributorTypeValueSetEnum || (ContributorTypeValueSetEnum = {}));
 //# sourceMappingURL=ContributorTypeValueSet.js.map

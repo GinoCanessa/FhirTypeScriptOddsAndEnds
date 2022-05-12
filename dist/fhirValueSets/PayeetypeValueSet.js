@@ -35,19 +35,4 @@ export const PayeetypeValueSet = {
 /**
  * This value set includes sample Payee Type codes.
  */
-export var PayeetypeValueSetEnum;
-(function (PayeetypeValueSetEnum) {
-    /**
-     * other: Any benefit payable will be paid to a third party such as a guarrantor.
-     */
-    PayeetypeValueSetEnum["Provider"] = "other";
-    /**
-     * provider: Any benefit payable will be paid to the provider (Assignment of Benefit).
-     */
-    PayeetypeValueSetEnum["ProviderProvider"] = "provider";
-    /**
-     * subscriber: The subscriber (policy holder) will be reimbursed.
-     */
-    PayeetypeValueSetEnum["Subscriber"] = "subscriber";
-})(PayeetypeValueSetEnum || (PayeetypeValueSetEnum = {}));
 //# sourceMappingURL=PayeetypeValueSet.js.map

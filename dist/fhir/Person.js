@@ -3,8 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Person
 import * as fhir from '../fhir.js';
-import { IdentityAssuranceLevelValueSet } from '../fhirValueSets/IdentityAssuranceLevelValueSet.js';
-import { AdministrativeGenderValueSet } from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { IdentityAssuranceLevelValueSet, } from '../fhirValueSets/IdentityAssuranceLevelValueSet.js';
+import { AdministrativeGenderValueSet, } from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Link to a resource that concerns the same actual person.
  */
@@ -12,8 +14,9 @@ export class PersonLink extends fhir.BackboneElement {
     /**
      * Default constructor for PersonLink - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PersonLink';
         if (source['target']) {
             this.target = new fhir.Reference(source.target);
         }
@@ -22,9 +25,6 @@ export class PersonLink extends fhir.BackboneElement {
         }
         if (source['assurance']) {
             this.assurance = source.assurance;
-        }
-        if (source['_assurance']) {
-            this._assurance = new fhir.FhirElement(source._assurance);
         }
     }
     /**
@@ -37,17 +37,20 @@ export class PersonLink extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["target"]) {
-            results.push(["target", 'Missing required element: Person.link.target']);
+        var outcome = super.doModelValidation();
+        if (!this['target']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property target:fhir.Reference fhir: Person.link.target:Reference", }));
         }
         if (this["target"]) {
-            results.push(...this.target.doModelValidation());
+            outcome.issue.push(...this.target.doModelValidation().issue);
         }
-        if (this["_assurance"]) {
-            results.push(...this._assurance.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -57,8 +60,29 @@ export class Person extends fhir.DomainResource {
     /**
      * Default constructor for Person - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Person';
+        /**
+         * Identifier for a person within a particular scope.
+         */
+        this.identifier = [];
+        /**
+         * Person may have multiple names with different uses or applicable periods.
+         */
+        this.name = [];
+        /**
+         * Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification.
+         */
+        this.telecom = [];
+        /**
+         * Person may have multiple addresses with different uses or applicable periods.
+         */
+        this.address = [];
+        /**
+         * Link to a resource that concerns the same actual person.
+         */
+        this.link = [];
         this.resourceType = 'Person';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -72,14 +96,8 @@ export class Person extends fhir.DomainResource {
         if (source['gender']) {
             this.gender = source.gender;
         }
-        if (source['_gender']) {
-            this._gender = new fhir.FhirElement(source._gender);
-        }
         if (source['birthDate']) {
-            this.birthDate = source.birthDate;
-        }
-        if (source['_birthDate']) {
-            this._birthDate = new fhir.FhirElement(source._birthDate);
+            this.birthDate = new fhir.FhirDate({ value: source.birthDate });
         }
         if (source['address']) {
             this.address = source.address.map((x) => new fhir.Address(x));
@@ -91,10 +109,7 @@ export class Person extends fhir.DomainResource {
             this.managingOrganization = new fhir.Reference(source.managingOrganization);
         }
         if (source['active']) {
-            this.active = source.active;
-        }
-        if (source['_active']) {
-            this._active = new fhir.FhirElement(source._active);
+            this.active = new fhir.FhirBoolean({ value: source.active });
         }
         if (source['link']) {
             this.link = source.link.map((x) => new fhir.PersonLink(x));
@@ -110,41 +125,44 @@ export class Person extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Person.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Person' fhir: Person.resourceType:'Person'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["name"]) {
-            this.name.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.name.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["telecom"]) {
-            this.telecom.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.telecom.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_gender"]) {
-            results.push(...this._gender.doModelValidation());
-        }
-        if (this["_birthDate"]) {
-            results.push(...this._birthDate.doModelValidation());
+        if (this["birthDate"]) {
+            outcome.issue.push(...this.birthDate.doModelValidation().issue);
         }
         if (this["address"]) {
-            this.address.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.address.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["photo"]) {
-            results.push(...this.photo.doModelValidation());
+            outcome.issue.push(...this.photo.doModelValidation().issue);
         }
         if (this["managingOrganization"]) {
-            results.push(...this.managingOrganization.doModelValidation());
+            outcome.issue.push(...this.managingOrganization.doModelValidation().issue);
         }
-        if (this["_active"]) {
-            results.push(...this._active.doModelValidation());
+        if (this["active"]) {
+            outcome.issue.push(...this.active.doModelValidation().issue);
         }
         if (this["link"]) {
-            this.link.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.link.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Person.js.map

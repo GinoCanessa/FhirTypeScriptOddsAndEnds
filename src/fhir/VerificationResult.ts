@@ -3,219 +3,69 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: VerificationResult
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { VerificationresultPrimarySourceTypeValueSet, VerificationresultPrimarySourceTypeValueSetType, VerificationresultPrimarySourceTypeValueSetEnum } from '../fhirValueSets/VerificationresultPrimarySourceTypeValueSet.js'
-import { VerificationresultCommunicationMethodValueSet, VerificationresultCommunicationMethodValueSetType, VerificationresultCommunicationMethodValueSetEnum } from '../fhirValueSets/VerificationresultCommunicationMethodValueSet.js'
-import { VerificationresultValidationStatusValueSet, VerificationresultValidationStatusValueSetType, VerificationresultValidationStatusValueSetEnum } from '../fhirValueSets/VerificationresultValidationStatusValueSet.js'
-import { VerificationresultCanPushUpdatesValueSet, VerificationresultCanPushUpdatesValueSetType, VerificationresultCanPushUpdatesValueSetEnum } from '../fhirValueSets/VerificationresultCanPushUpdatesValueSet.js'
-import { VerificationresultPushTypeAvailableValueSet, VerificationresultPushTypeAvailableValueSetType, VerificationresultPushTypeAvailableValueSetEnum } from '../fhirValueSets/VerificationresultPushTypeAvailableValueSet.js'
-import { VerificationresultNeedValueSet, VerificationresultNeedValueSetType, VerificationresultNeedValueSetEnum } from '../fhirValueSets/VerificationresultNeedValueSet.js'
-import { VerificationresultStatusValueSet, VerificationresultStatusValueSetType, VerificationresultStatusValueSetEnum } from '../fhirValueSets/VerificationresultStatusValueSet.js'
-import { VerificationresultValidationTypeValueSet, VerificationresultValidationTypeValueSetType, VerificationresultValidationTypeValueSetEnum } from '../fhirValueSets/VerificationresultValidationTypeValueSet.js'
-import { VerificationresultValidationProcessValueSet, VerificationresultValidationProcessValueSetType, VerificationresultValidationProcessValueSetEnum } from '../fhirValueSets/VerificationresultValidationProcessValueSet.js'
-import { VerificationresultFailureActionValueSet, VerificationresultFailureActionValueSetType, VerificationresultFailureActionValueSetEnum } from '../fhirValueSets/VerificationresultFailureActionValueSet.js'
-
+import { VerificationresultPrimarySourceTypeValueSet, VerificationresultPrimarySourceTypeValueSetType,} from '../fhirValueSets/VerificationresultPrimarySourceTypeValueSet.js';
+import { VerificationresultPrimarySourceTypeValueSetEnum } from '../valueSetEnums.js';
+import { VerificationresultCommunicationMethodValueSet, VerificationresultCommunicationMethodValueSetType,} from '../fhirValueSets/VerificationresultCommunicationMethodValueSet.js';
+import { VerificationresultCommunicationMethodValueSetEnum } from '../valueSetEnums.js';
+import { VerificationresultValidationStatusValueSet, VerificationresultValidationStatusValueSetType,} from '../fhirValueSets/VerificationresultValidationStatusValueSet.js';
+import { VerificationresultValidationStatusValueSetEnum } from '../valueSetEnums.js';
+import { VerificationresultCanPushUpdatesValueSet, VerificationresultCanPushUpdatesValueSetType,} from '../fhirValueSets/VerificationresultCanPushUpdatesValueSet.js';
+import { VerificationresultCanPushUpdatesValueSetEnum } from '../valueSetEnums.js';
+import { VerificationresultPushTypeAvailableValueSet, VerificationresultPushTypeAvailableValueSetType,} from '../fhirValueSets/VerificationresultPushTypeAvailableValueSet.js';
+import { VerificationresultPushTypeAvailableValueSetEnum } from '../valueSetEnums.js';
+import { VerificationresultNeedValueSet, VerificationresultNeedValueSetType,} from '../fhirValueSets/VerificationresultNeedValueSet.js';
+import { VerificationresultNeedValueSetEnum } from '../valueSetEnums.js';
+import { VerificationresultStatusValueSet, VerificationresultStatusValueSetType,} from '../fhirValueSets/VerificationresultStatusValueSet.js';
+import { VerificationresultStatusValueSetEnum } from '../valueSetEnums.js';
+import { VerificationresultValidationTypeValueSet, VerificationresultValidationTypeValueSetType,} from '../fhirValueSets/VerificationresultValidationTypeValueSet.js';
+import { VerificationresultValidationTypeValueSetEnum } from '../valueSetEnums.js';
+import { VerificationresultValidationProcessValueSet, VerificationresultValidationProcessValueSetType,} from '../fhirValueSets/VerificationresultValidationProcessValueSet.js';
+import { VerificationresultValidationProcessValueSetEnum } from '../valueSetEnums.js';
+import { VerificationresultFailureActionValueSet, VerificationresultFailureActionValueSetType,} from '../fhirValueSets/VerificationresultFailureActionValueSet.js';
+import { VerificationresultFailureActionValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Information about the primary source(s) involved in validation.
+ * Valid arguments for the VerificationResultPrimarySource type.
  */
-export type IVerificationResultPrimarySource = fhir.IBackboneElement & { 
+export interface VerificationResultPrimarySourceArgs extends fhir.BackboneElementArgs {
   /**
    * Reference to the primary source.
    */
-  who?: fhir.IReference|undefined;
+  who?: fhir.ReferenceArgs|undefined;
   /**
    * Type of primary source (License Board; Primary Education; Continuing Education; Postal Service; Relationship owner; Registration Authority; legal source; issuing source; authoritative source).
    */
-  type?: fhir.ICodeableConcept[]|undefined;
+  type?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * Method for communicating with the primary source (manual; API; Push).
    */
-  communicationMethod?: fhir.ICodeableConcept[]|undefined;
+  communicationMethod?: fhir.CodeableConceptArgs[]|undefined;
   /**
    * Status of the validation of the target against the primary source (successful; failed; unknown).
    */
-  validationStatus?: fhir.ICodeableConcept|undefined;
+  validationStatus?: fhir.CodeableConceptArgs|undefined;
   /**
    * When the target was validated against the primary source.
    */
-  validationDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.primarySource.validationDate
-   */
-  _validationDate?: fhir.IFhirElement|undefined;
+  validationDate?: fhir.FhirDateTime|string|undefined;
   /**
    * Ability of the primary source to push updates/alerts (yes; no; undetermined).
    */
-  canPushUpdates?: fhir.ICodeableConcept|undefined;
+  canPushUpdates?: fhir.CodeableConceptArgs|undefined;
   /**
    * Type of alerts/updates the primary source can send (specific requested changes; any changes; as defined by source).
    */
-  pushTypeAvailable?: fhir.ICodeableConcept[]|undefined;
-}
-
-/**
- * Information about the entity attesting to information.
- */
-export type IVerificationResultAttestation = fhir.IBackboneElement & { 
-  /**
-   * The individual or organization attesting to information.
-   */
-  who?: fhir.IReference|undefined;
-  /**
-   * When the who is asserting on behalf of another (organization or individual).
-   */
-  onBehalfOf?: fhir.IReference|undefined;
-  /**
-   * The method by which attested information was submitted/retrieved (manual; API; Push).
-   */
-  communicationMethod?: fhir.ICodeableConcept|undefined;
-  /**
-   * The date the information was attested to.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.attestation.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * A digital identity certificate associated with the attestation source.
-   */
-  sourceIdentityCertificate?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.attestation.sourceIdentityCertificate
-   */
-  _sourceIdentityCertificate?: fhir.IFhirElement|undefined;
-  /**
-   * A digital identity certificate associated with the proxy entity submitting attested information on behalf of the attestation source.
-   */
-  proxyIdentityCertificate?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.attestation.proxyIdentityCertificate
-   */
-  _proxyIdentityCertificate?: fhir.IFhirElement|undefined;
-  /**
-   * Signed assertion by the proxy entity indicating that they have the right to submit attested information on behalf of the attestation source.
-   */
-  proxySignature?: fhir.ISignature|undefined;
-  /**
-   * Signed assertion by the attestation source that they have attested to the information.
-   */
-  sourceSignature?: fhir.ISignature|undefined;
-}
-
-/**
- * Information about the entity validating information.
- */
-export type IVerificationResultValidator = fhir.IBackboneElement & { 
-  /**
-   * Reference to the organization validating information.
-   */
-  organization: fhir.IReference|null;
-  /**
-   * A digital identity certificate associated with the validator.
-   */
-  identityCertificate?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.validator.identityCertificate
-   */
-  _identityCertificate?: fhir.IFhirElement|undefined;
-  /**
-   * Signed assertion by the validator that they have validated the information.
-   */
-  attestationSignature?: fhir.ISignature|undefined;
-}
-
-/**
- * Describes validation requirements, source(s), status and dates for one or more elements.
- */
-export type IVerificationResult = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "VerificationResult";
-  /**
-   * A resource that was validated.
-   */
-  target?: fhir.IReference[]|undefined;
-  /**
-   * The fhirpath location(s) within the resource that was validated.
-   */
-  targetLocation?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.targetLocation
-   */
-  _targetLocation?: fhir.IFhirElement[]|undefined;
-  /**
-   * The frequency with which the target must be validated (none; initial; periodic).
-   */
-  need?: fhir.ICodeableConcept|undefined;
-  /**
-   * The validation status of the target (attested; validated; in process; requires revalidation; validation failed; revalidation failed).
-   */
-  status: VerificationresultStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: VerificationResult.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * When the validation status was updated.
-   */
-  statusDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.statusDate
-   */
-  _statusDate?: fhir.IFhirElement|undefined;
-  /**
-   * What the target is validated against (nothing; primary source; multiple sources).
-   */
-  validationType?: fhir.ICodeableConcept|undefined;
-  /**
-   * The primary process by which the target is validated (edit check; value set; primary source; multiple sources; standalone; in context).
-   */
-  validationProcess?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Frequency of revalidation.
-   */
-  frequency?: fhir.ITiming|undefined;
-  /**
-   * The date/time validation was last completed (including failed validations).
-   */
-  lastPerformed?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.lastPerformed
-   */
-  _lastPerformed?: fhir.IFhirElement|undefined;
-  /**
-   * The date when target is next validated, if appropriate.
-   */
-  nextScheduled?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.nextScheduled
-   */
-  _nextScheduled?: fhir.IFhirElement|undefined;
-  /**
-   * The result if validation fails (fatal; warning; record only; none).
-   */
-  failureAction?: fhir.ICodeableConcept|undefined;
-  /**
-   * Information about the primary source(s) involved in validation.
-   */
-  primarySource?: fhir.IVerificationResultPrimarySource[]|undefined;
-  /**
-   * Information about the entity attesting to information.
-   */
-  attestation?: fhir.IVerificationResultAttestation|undefined;
-  /**
-   * Information about the entity validating information.
-   */
-  validator?: fhir.IVerificationResultValidator[]|undefined;
+  pushTypeAvailable?: fhir.CodeableConceptArgs[]|undefined;
 }
 
 /**
  * Information about the primary source(s) involved in validation.
  */
-export class VerificationResultPrimarySource extends fhir.BackboneElement implements IVerificationResultPrimarySource {
+export class VerificationResultPrimarySource extends fhir.BackboneElement {
+  readonly __dataType:string = 'VerificationResultPrimarySource';
   /**
    * Reference to the primary source.
    */
@@ -223,11 +73,11 @@ export class VerificationResultPrimarySource extends fhir.BackboneElement implem
   /**
    * Type of primary source (License Board; Primary Education; Continuing Education; Postal Service; Relationship owner; Registration Authority; legal source; issuing source; authoritative source).
    */
-  public type?: fhir.CodeableConcept[]|undefined;
+  public type?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Method for communicating with the primary source (manual; API; Push).
    */
-  public communicationMethod?: fhir.CodeableConcept[]|undefined;
+  public communicationMethod?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Status of the validation of the target against the primary source (successful; failed; unknown).
    */
@@ -235,11 +85,7 @@ export class VerificationResultPrimarySource extends fhir.BackboneElement implem
   /**
    * When the target was validated against the primary source.
    */
-  public validationDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.primarySource.validationDate
-   */
-  public _validationDate?: fhir.FhirElement|undefined;
+  public validationDate?: fhir.FhirDateTime|undefined;
   /**
    * Ability of the primary source to push updates/alerts (yes; no; undetermined).
    */
@@ -247,19 +93,18 @@ export class VerificationResultPrimarySource extends fhir.BackboneElement implem
   /**
    * Type of alerts/updates the primary source can send (specific requested changes; any changes; as defined by source).
    */
-  public pushTypeAvailable?: fhir.CodeableConcept[]|undefined;
+  public pushTypeAvailable?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Default constructor for VerificationResultPrimarySource - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IVerificationResultPrimarySource> = { }) {
-    super(source);
-    if (source['who']) { this.who = new fhir.Reference(source.who!); }
+  constructor(source:Partial<VerificationResultPrimarySourceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['who']) { this.who = new fhir.Reference(source.who); }
     if (source['type']) { this.type = source.type.map((x) => new fhir.CodeableConcept(x)); }
     if (source['communicationMethod']) { this.communicationMethod = source.communicationMethod.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['validationStatus']) { this.validationStatus = new fhir.CodeableConcept(source.validationStatus!); }
-    if (source['validationDate']) { this.validationDate = source.validationDate; }
-    if (source['_validationDate']) { this._validationDate = new fhir.FhirElement(source._validationDate!); }
-    if (source['canPushUpdates']) { this.canPushUpdates = new fhir.CodeableConcept(source.canPushUpdates!); }
+    if (source['validationStatus']) { this.validationStatus = new fhir.CodeableConcept(source.validationStatus); }
+    if (source['validationDate']) { this.validationDate = new fhir.FhirDateTime({value: source.validationDate}); }
+    if (source['canPushUpdates']) { this.canPushUpdates = new fhir.CodeableConcept(source.canPushUpdates); }
     if (source['pushTypeAvailable']) { this.pushTypeAvailable = source.pushTypeAvailable.map((x) => new fhir.CodeableConcept(x)); }
   }
   /**
@@ -295,23 +140,67 @@ export class VerificationResultPrimarySource extends fhir.BackboneElement implem
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["who"]) { results.push(...this.who.doModelValidation()); }
-    if (this["type"]) { this.type.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["communicationMethod"]) { this.communicationMethod.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["validationStatus"]) { results.push(...this.validationStatus.doModelValidation()); }
-    if (this["_validationDate"]) { results.push(...this._validationDate.doModelValidation()); }
-    if (this["canPushUpdates"]) { results.push(...this.canPushUpdates.doModelValidation()); }
-    if (this["pushTypeAvailable"]) { this.pushTypeAvailable.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["who"]) { outcome.issue!.push(...this.who.doModelValidation().issue!); }
+    if (this["type"]) { this.type.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["communicationMethod"]) { this.communicationMethod.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["validationStatus"]) { outcome.issue!.push(...this.validationStatus.doModelValidation().issue!); }
+    if (this["validationDate"]) { outcome.issue!.push(...this.validationDate.doModelValidation().issue!); }
+    if (this["canPushUpdates"]) { outcome.issue!.push(...this.canPushUpdates.doModelValidation().issue!); }
+    if (this["pushTypeAvailable"]) { this.pushTypeAvailable.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the VerificationResultAttestation type.
+ */
+export interface VerificationResultAttestationArgs extends fhir.BackboneElementArgs {
+  /**
+   * The individual or organization attesting to information.
+   */
+  who?: fhir.ReferenceArgs|undefined;
+  /**
+   * When the who is asserting on behalf of another (organization or individual).
+   */
+  onBehalfOf?: fhir.ReferenceArgs|undefined;
+  /**
+   * The method by which attested information was submitted/retrieved (manual; API; Push).
+   */
+  communicationMethod?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The date the information was attested to.
+   */
+  date?: fhir.FhirDate|string|undefined;
+  /**
+   * A digital identity certificate associated with the attestation source.
+   */
+  sourceIdentityCertificate?: fhir.FhirString|string|undefined;
+  /**
+   * A digital identity certificate associated with the proxy entity submitting attested information on behalf of the attestation source.
+   */
+  proxyIdentityCertificate?: fhir.FhirString|string|undefined;
+  /**
+   * Signed assertion by the proxy entity indicating that they have the right to submit attested information on behalf of the attestation source.
+   */
+  proxySignature?: fhir.SignatureArgs|undefined;
+  /**
+   * Signed assertion by the attestation source that they have attested to the information.
+   */
+  sourceSignature?: fhir.SignatureArgs|undefined;
 }
 
 /**
  * Information about the entity attesting to information.
  */
-export class VerificationResultAttestation extends fhir.BackboneElement implements IVerificationResultAttestation {
+export class VerificationResultAttestation extends fhir.BackboneElement {
+  readonly __dataType:string = 'VerificationResultAttestation';
   /**
    * The individual or organization attesting to information.
    */
@@ -327,27 +216,15 @@ export class VerificationResultAttestation extends fhir.BackboneElement implemen
   /**
    * The date the information was attested to.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.attestation.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDate|undefined;
   /**
    * A digital identity certificate associated with the attestation source.
    */
-  public sourceIdentityCertificate?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.attestation.sourceIdentityCertificate
-   */
-  public _sourceIdentityCertificate?: fhir.FhirElement|undefined;
+  public sourceIdentityCertificate?: fhir.FhirString|undefined;
   /**
    * A digital identity certificate associated with the proxy entity submitting attested information on behalf of the attestation source.
    */
-  public proxyIdentityCertificate?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.attestation.proxyIdentityCertificate
-   */
-  public _proxyIdentityCertificate?: fhir.FhirElement|undefined;
+  public proxyIdentityCertificate?: fhir.FhirString|undefined;
   /**
    * Signed assertion by the proxy entity indicating that they have the right to submit attested information on behalf of the attestation source.
    */
@@ -359,19 +236,16 @@ export class VerificationResultAttestation extends fhir.BackboneElement implemen
   /**
    * Default constructor for VerificationResultAttestation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IVerificationResultAttestation> = { }) {
-    super(source);
-    if (source['who']) { this.who = new fhir.Reference(source.who!); }
-    if (source['onBehalfOf']) { this.onBehalfOf = new fhir.Reference(source.onBehalfOf!); }
-    if (source['communicationMethod']) { this.communicationMethod = new fhir.CodeableConcept(source.communicationMethod!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['sourceIdentityCertificate']) { this.sourceIdentityCertificate = source.sourceIdentityCertificate; }
-    if (source['_sourceIdentityCertificate']) { this._sourceIdentityCertificate = new fhir.FhirElement(source._sourceIdentityCertificate!); }
-    if (source['proxyIdentityCertificate']) { this.proxyIdentityCertificate = source.proxyIdentityCertificate; }
-    if (source['_proxyIdentityCertificate']) { this._proxyIdentityCertificate = new fhir.FhirElement(source._proxyIdentityCertificate!); }
-    if (source['proxySignature']) { this.proxySignature = new fhir.Signature(source.proxySignature!); }
-    if (source['sourceSignature']) { this.sourceSignature = new fhir.Signature(source.sourceSignature!); }
+  constructor(source:Partial<VerificationResultAttestationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['who']) { this.who = new fhir.Reference(source.who); }
+    if (source['onBehalfOf']) { this.onBehalfOf = new fhir.Reference(source.onBehalfOf); }
+    if (source['communicationMethod']) { this.communicationMethod = new fhir.CodeableConcept(source.communicationMethod); }
+    if (source['date']) { this.date = new fhir.FhirDate({value: source.date}); }
+    if (source['sourceIdentityCertificate']) { this.sourceIdentityCertificate = new fhir.FhirString({value: source.sourceIdentityCertificate}); }
+    if (source['proxyIdentityCertificate']) { this.proxyIdentityCertificate = new fhir.FhirString({value: source.proxyIdentityCertificate}); }
+    if (source['proxySignature']) { this.proxySignature = new fhir.Signature(source.proxySignature); }
+    if (source['sourceSignature']) { this.sourceSignature = new fhir.Signature(source.sourceSignature); }
   }
   /**
    * Example-bound Value Set for communicationMethod
@@ -382,24 +256,48 @@ export class VerificationResultAttestation extends fhir.BackboneElement implemen
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["who"]) { results.push(...this.who.doModelValidation()); }
-    if (this["onBehalfOf"]) { results.push(...this.onBehalfOf.doModelValidation()); }
-    if (this["communicationMethod"]) { results.push(...this.communicationMethod.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_sourceIdentityCertificate"]) { results.push(...this._sourceIdentityCertificate.doModelValidation()); }
-    if (this["_proxyIdentityCertificate"]) { results.push(...this._proxyIdentityCertificate.doModelValidation()); }
-    if (this["proxySignature"]) { results.push(...this.proxySignature.doModelValidation()); }
-    if (this["sourceSignature"]) { results.push(...this.sourceSignature.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["who"]) { outcome.issue!.push(...this.who.doModelValidation().issue!); }
+    if (this["onBehalfOf"]) { outcome.issue!.push(...this.onBehalfOf.doModelValidation().issue!); }
+    if (this["communicationMethod"]) { outcome.issue!.push(...this.communicationMethod.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["sourceIdentityCertificate"]) { outcome.issue!.push(...this.sourceIdentityCertificate.doModelValidation().issue!); }
+    if (this["proxyIdentityCertificate"]) { outcome.issue!.push(...this.proxyIdentityCertificate.doModelValidation().issue!); }
+    if (this["proxySignature"]) { outcome.issue!.push(...this.proxySignature.doModelValidation().issue!); }
+    if (this["sourceSignature"]) { outcome.issue!.push(...this.sourceSignature.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the VerificationResultValidator type.
+ */
+export interface VerificationResultValidatorArgs extends fhir.BackboneElementArgs {
+  /**
+   * Reference to the organization validating information.
+   */
+  organization: fhir.ReferenceArgs|null;
+  /**
+   * A digital identity certificate associated with the validator.
+   */
+  identityCertificate?: fhir.FhirString|string|undefined;
+  /**
+   * Signed assertion by the validator that they have validated the information.
+   */
+  attestationSignature?: fhir.SignatureArgs|undefined;
 }
 
 /**
  * Information about the entity validating information.
  */
-export class VerificationResultValidator extends fhir.BackboneElement implements IVerificationResultValidator {
+export class VerificationResultValidator extends fhir.BackboneElement {
+  readonly __dataType:string = 'VerificationResultValidator';
   /**
    * Reference to the organization validating information.
    */
@@ -407,11 +305,7 @@ export class VerificationResultValidator extends fhir.BackboneElement implements
   /**
    * A digital identity certificate associated with the validator.
    */
-  public identityCertificate?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.validator.identityCertificate
-   */
-  public _identityCertificate?: fhir.FhirElement|undefined;
+  public identityCertificate?: fhir.FhirString|undefined;
   /**
    * Signed assertion by the validator that they have validated the information.
    */
@@ -419,31 +313,104 @@ export class VerificationResultValidator extends fhir.BackboneElement implements
   /**
    * Default constructor for VerificationResultValidator - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IVerificationResultValidator> = { }) {
-    super(source);
-    if (source['organization']) { this.organization = new fhir.Reference(source.organization!); }
+  constructor(source:Partial<VerificationResultValidatorArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['organization']) { this.organization = new fhir.Reference(source.organization); }
     else { this.organization = null; }
-    if (source['identityCertificate']) { this.identityCertificate = source.identityCertificate; }
-    if (source['_identityCertificate']) { this._identityCertificate = new fhir.FhirElement(source._identityCertificate!); }
-    if (source['attestationSignature']) { this.attestationSignature = new fhir.Signature(source.attestationSignature!); }
+    if (source['identityCertificate']) { this.identityCertificate = new fhir.FhirString({value: source.identityCertificate}); }
+    if (source['attestationSignature']) { this.attestationSignature = new fhir.Signature(source.attestationSignature); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["organization"]) { results.push(["organization",'Missing required element: VerificationResult.validator.organization']); }
-    if (this["organization"]) { results.push(...this.organization.doModelValidation()); }
-    if (this["_identityCertificate"]) { results.push(...this._identityCertificate.doModelValidation()); }
-    if (this["attestationSignature"]) { results.push(...this.attestationSignature.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['organization']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property organization:fhir.Reference fhir: VerificationResult.validator.organization:Reference", }));
+    }
+    if (this["organization"]) { outcome.issue!.push(...this.organization.doModelValidation().issue!); }
+    if (this["identityCertificate"]) { outcome.issue!.push(...this.identityCertificate.doModelValidation().issue!); }
+    if (this["attestationSignature"]) { outcome.issue!.push(...this.attestationSignature.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the VerificationResult type.
+ */
+export interface VerificationResultArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "VerificationResult"|undefined;
+  /**
+   * A resource that was validated.
+   */
+  target?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The fhirpath location(s) within the resource that was validated.
+   */
+  targetLocation?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * The frequency with which the target must be validated (none; initial; periodic).
+   */
+  need?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The validation status of the target (attested; validated; in process; requires revalidation; validation failed; revalidation failed).
+   */
+  status: VerificationresultStatusValueSetEnum|null;
+  /**
+   * When the validation status was updated.
+   */
+  statusDate?: fhir.FhirDateTime|string|undefined;
+  /**
+   * What the target is validated against (nothing; primary source; multiple sources).
+   */
+  validationType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The primary process by which the target is validated (edit check; value set; primary source; multiple sources; standalone; in context).
+   */
+  validationProcess?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Frequency of revalidation.
+   */
+  frequency?: fhir.TimingArgs|undefined;
+  /**
+   * The date/time validation was last completed (including failed validations).
+   */
+  lastPerformed?: fhir.FhirDateTime|string|undefined;
+  /**
+   * The date when target is next validated, if appropriate.
+   */
+  nextScheduled?: fhir.FhirDate|string|undefined;
+  /**
+   * The result if validation fails (fatal; warning; record only; none).
+   */
+  failureAction?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Information about the primary source(s) involved in validation.
+   */
+  primarySource?: fhir.VerificationResultPrimarySourceArgs[]|undefined;
+  /**
+   * Information about the entity attesting to information.
+   */
+  attestation?: fhir.VerificationResultAttestationArgs|undefined;
+  /**
+   * Information about the entity validating information.
+   */
+  validator?: fhir.VerificationResultValidatorArgs[]|undefined;
 }
 
 /**
  * Describes validation requirements, source(s), status and dates for one or more elements.
  */
-export class VerificationResult extends fhir.DomainResource implements IVerificationResult {
+export class VerificationResult extends fhir.DomainResource {
+  readonly __dataType:string = 'VerificationResult';
   /**
    * Resource Type Name
    */
@@ -451,15 +418,11 @@ export class VerificationResult extends fhir.DomainResource implements IVerifica
   /**
    * A resource that was validated.
    */
-  public target?: fhir.Reference[]|undefined;
+  public target?: fhir.Reference[]|undefined = [];
   /**
    * The fhirpath location(s) within the resource that was validated.
    */
-  public targetLocation?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.targetLocation
-   */
-  public _targetLocation?: fhir.FhirElement[]|undefined;
+  public targetLocation?: fhir.FhirString[]|undefined = [];
   /**
    * The frequency with which the target must be validated (none; initial; periodic).
    */
@@ -469,17 +432,9 @@ export class VerificationResult extends fhir.DomainResource implements IVerifica
    */
   public status: VerificationresultStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: VerificationResult.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * When the validation status was updated.
    */
-  public statusDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.statusDate
-   */
-  public _statusDate?: fhir.FhirElement|undefined;
+  public statusDate?: fhir.FhirDateTime|undefined;
   /**
    * What the target is validated against (nothing; primary source; multiple sources).
    */
@@ -487,7 +442,7 @@ export class VerificationResult extends fhir.DomainResource implements IVerifica
   /**
    * The primary process by which the target is validated (edit check; value set; primary source; multiple sources; standalone; in context).
    */
-  public validationProcess?: fhir.CodeableConcept[]|undefined;
+  public validationProcess?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Frequency of revalidation.
    */
@@ -495,19 +450,11 @@ export class VerificationResult extends fhir.DomainResource implements IVerifica
   /**
    * The date/time validation was last completed (including failed validations).
    */
-  public lastPerformed?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.lastPerformed
-   */
-  public _lastPerformed?: fhir.FhirElement|undefined;
+  public lastPerformed?: fhir.FhirDateTime|undefined;
   /**
    * The date when target is next validated, if appropriate.
    */
-  public nextScheduled?: string|undefined;
-  /**
-   * Extended properties for primitive element: VerificationResult.nextScheduled
-   */
-  public _nextScheduled?: fhir.FhirElement|undefined;
+  public nextScheduled?: fhir.FhirDate|undefined;
   /**
    * The result if validation fails (fatal; warning; record only; none).
    */
@@ -515,7 +462,7 @@ export class VerificationResult extends fhir.DomainResource implements IVerifica
   /**
    * Information about the primary source(s) involved in validation.
    */
-  public primarySource?: fhir.VerificationResultPrimarySource[]|undefined;
+  public primarySource?: fhir.VerificationResultPrimarySource[]|undefined = [];
   /**
    * Information about the entity attesting to information.
    */
@@ -523,32 +470,27 @@ export class VerificationResult extends fhir.DomainResource implements IVerifica
   /**
    * Information about the entity validating information.
    */
-  public validator?: fhir.VerificationResultValidator[]|undefined;
+  public validator?: fhir.VerificationResultValidator[]|undefined = [];
   /**
    * Default constructor for VerificationResult - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IVerificationResult> = { }) {
-    super(source);
+  constructor(source:Partial<VerificationResultArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'VerificationResult';
     if (source['target']) { this.target = source.target.map((x) => new fhir.Reference(x)); }
-    if (source['targetLocation']) { this.targetLocation = source.targetLocation.map((x) => (x)); }
-    if (source['_targetLocation']) { this._targetLocation = source._targetLocation.map((x) => new fhir.FhirElement(x)); }
-    if (source['need']) { this.need = new fhir.CodeableConcept(source.need!); }
+    if (source['targetLocation']) { this.targetLocation = source.targetLocation.map((x) => new fhir.FhirString({value: x})); }
+    if (source['need']) { this.need = new fhir.CodeableConcept(source.need); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['statusDate']) { this.statusDate = source.statusDate; }
-    if (source['_statusDate']) { this._statusDate = new fhir.FhirElement(source._statusDate!); }
-    if (source['validationType']) { this.validationType = new fhir.CodeableConcept(source.validationType!); }
+    if (source['statusDate']) { this.statusDate = new fhir.FhirDateTime({value: source.statusDate}); }
+    if (source['validationType']) { this.validationType = new fhir.CodeableConcept(source.validationType); }
     if (source['validationProcess']) { this.validationProcess = source.validationProcess.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['frequency']) { this.frequency = new fhir.Timing(source.frequency!); }
-    if (source['lastPerformed']) { this.lastPerformed = source.lastPerformed; }
-    if (source['_lastPerformed']) { this._lastPerformed = new fhir.FhirElement(source._lastPerformed!); }
-    if (source['nextScheduled']) { this.nextScheduled = source.nextScheduled; }
-    if (source['_nextScheduled']) { this._nextScheduled = new fhir.FhirElement(source._nextScheduled!); }
-    if (source['failureAction']) { this.failureAction = new fhir.CodeableConcept(source.failureAction!); }
+    if (source['frequency']) { this.frequency = new fhir.Timing(source.frequency); }
+    if (source['lastPerformed']) { this.lastPerformed = new fhir.FhirDateTime({value: source.lastPerformed}); }
+    if (source['nextScheduled']) { this.nextScheduled = new fhir.FhirDate({value: source.nextScheduled}); }
+    if (source['failureAction']) { this.failureAction = new fhir.CodeableConcept(source.failureAction); }
     if (source['primarySource']) { this.primarySource = source.primarySource.map((x) => new fhir.VerificationResultPrimarySource(x)); }
-    if (source['attestation']) { this.attestation = new fhir.VerificationResultAttestation(source.attestation!); }
+    if (source['attestation']) { this.attestation = new fhir.VerificationResultAttestation(source.attestation); }
     if (source['validator']) { this.validator = source.validator.map((x) => new fhir.VerificationResultValidator(x)); }
   }
   /**
@@ -584,24 +526,33 @@ export class VerificationResult extends fhir.DomainResource implements IVerifica
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: VerificationResult.resourceType']); }
-    if (this["target"]) { this.target.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_targetLocation"]) { this._targetLocation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["need"]) { results.push(...this.need.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: VerificationResult.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_statusDate"]) { results.push(...this._statusDate.doModelValidation()); }
-    if (this["validationType"]) { results.push(...this.validationType.doModelValidation()); }
-    if (this["validationProcess"]) { this.validationProcess.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["frequency"]) { results.push(...this.frequency.doModelValidation()); }
-    if (this["_lastPerformed"]) { results.push(...this._lastPerformed.doModelValidation()); }
-    if (this["_nextScheduled"]) { results.push(...this._nextScheduled.doModelValidation()); }
-    if (this["failureAction"]) { results.push(...this.failureAction.doModelValidation()); }
-    if (this["primarySource"]) { this.primarySource.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["attestation"]) { results.push(...this.attestation.doModelValidation()); }
-    if (this["validator"]) { this.validator.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'VerificationResult' fhir: VerificationResult.resourceType:'VerificationResult'", }));
+    }
+    if (this["target"]) { this.target.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["targetLocation"]) { this.targetLocation.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["need"]) { outcome.issue!.push(...this.need.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:VerificationresultStatusValueSetEnum fhir: VerificationResult.status:code", }));
+    }
+    if (this["statusDate"]) { outcome.issue!.push(...this.statusDate.doModelValidation().issue!); }
+    if (this["validationType"]) { outcome.issue!.push(...this.validationType.doModelValidation().issue!); }
+    if (this["validationProcess"]) { this.validationProcess.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["frequency"]) { outcome.issue!.push(...this.frequency.doModelValidation().issue!); }
+    if (this["lastPerformed"]) { outcome.issue!.push(...this.lastPerformed.doModelValidation().issue!); }
+    if (this["nextScheduled"]) { outcome.issue!.push(...this.nextScheduled.doModelValidation().issue!); }
+    if (this["failureAction"]) { outcome.issue!.push(...this.failureAction.doModelValidation().issue!); }
+    if (this["primarySource"]) { this.primarySource.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["attestation"]) { outcome.issue!.push(...this.attestation.doModelValidation().issue!); }
+    if (this["validator"]) { this.validator.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

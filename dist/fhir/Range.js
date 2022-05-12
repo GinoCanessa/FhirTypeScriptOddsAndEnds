@@ -10,8 +10,9 @@ export class Range extends fhir.FhirElement {
     /**
      * Default constructor for Range - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Range';
         if (source['low']) {
             this.low = new fhir.Quantity(source.low);
         }
@@ -23,14 +24,20 @@ export class Range extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["low"]) {
-            results.push(...this.low.doModelValidation());
+            outcome.issue.push(...this.low.doModelValidation().issue);
         }
         if (this["high"]) {
-            results.push(...this.high.doModelValidation());
+            outcome.issue.push(...this.high.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Range.js.map

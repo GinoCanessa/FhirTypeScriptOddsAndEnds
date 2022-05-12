@@ -3,16 +3,18 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: VerificationResult
 import * as fhir from '../fhir.js';
-import { VerificationresultPrimarySourceTypeValueSet } from '../fhirValueSets/VerificationresultPrimarySourceTypeValueSet.js';
-import { VerificationresultCommunicationMethodValueSet } from '../fhirValueSets/VerificationresultCommunicationMethodValueSet.js';
-import { VerificationresultValidationStatusValueSet } from '../fhirValueSets/VerificationresultValidationStatusValueSet.js';
-import { VerificationresultCanPushUpdatesValueSet } from '../fhirValueSets/VerificationresultCanPushUpdatesValueSet.js';
-import { VerificationresultPushTypeAvailableValueSet } from '../fhirValueSets/VerificationresultPushTypeAvailableValueSet.js';
-import { VerificationresultNeedValueSet } from '../fhirValueSets/VerificationresultNeedValueSet.js';
-import { VerificationresultStatusValueSet } from '../fhirValueSets/VerificationresultStatusValueSet.js';
-import { VerificationresultValidationTypeValueSet } from '../fhirValueSets/VerificationresultValidationTypeValueSet.js';
-import { VerificationresultValidationProcessValueSet } from '../fhirValueSets/VerificationresultValidationProcessValueSet.js';
-import { VerificationresultFailureActionValueSet } from '../fhirValueSets/VerificationresultFailureActionValueSet.js';
+import { VerificationresultPrimarySourceTypeValueSet, } from '../fhirValueSets/VerificationresultPrimarySourceTypeValueSet.js';
+import { VerificationresultCommunicationMethodValueSet, } from '../fhirValueSets/VerificationresultCommunicationMethodValueSet.js';
+import { VerificationresultValidationStatusValueSet, } from '../fhirValueSets/VerificationresultValidationStatusValueSet.js';
+import { VerificationresultCanPushUpdatesValueSet, } from '../fhirValueSets/VerificationresultCanPushUpdatesValueSet.js';
+import { VerificationresultPushTypeAvailableValueSet, } from '../fhirValueSets/VerificationresultPushTypeAvailableValueSet.js';
+import { VerificationresultNeedValueSet, } from '../fhirValueSets/VerificationresultNeedValueSet.js';
+import { VerificationresultStatusValueSet, } from '../fhirValueSets/VerificationresultStatusValueSet.js';
+import { VerificationresultValidationTypeValueSet, } from '../fhirValueSets/VerificationresultValidationTypeValueSet.js';
+import { VerificationresultValidationProcessValueSet, } from '../fhirValueSets/VerificationresultValidationProcessValueSet.js';
+import { VerificationresultFailureActionValueSet, } from '../fhirValueSets/VerificationresultFailureActionValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Information about the primary source(s) involved in validation.
  */
@@ -20,8 +22,21 @@ export class VerificationResultPrimarySource extends fhir.BackboneElement {
     /**
      * Default constructor for VerificationResultPrimarySource - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'VerificationResultPrimarySource';
+        /**
+         * Type of primary source (License Board; Primary Education; Continuing Education; Postal Service; Relationship owner; Registration Authority; legal source; issuing source; authoritative source).
+         */
+        this.type = [];
+        /**
+         * Method for communicating with the primary source (manual; API; Push).
+         */
+        this.communicationMethod = [];
+        /**
+         * Type of alerts/updates the primary source can send (specific requested changes; any changes; as defined by source).
+         */
+        this.pushTypeAvailable = [];
         if (source['who']) {
             this.who = new fhir.Reference(source.who);
         }
@@ -35,10 +50,7 @@ export class VerificationResultPrimarySource extends fhir.BackboneElement {
             this.validationStatus = new fhir.CodeableConcept(source.validationStatus);
         }
         if (source['validationDate']) {
-            this.validationDate = source.validationDate;
-        }
-        if (source['_validationDate']) {
-            this._validationDate = new fhir.FhirElement(source._validationDate);
+            this.validationDate = new fhir.FhirDateTime({ value: source.validationDate });
         }
         if (source['canPushUpdates']) {
             this.canPushUpdates = new fhir.CodeableConcept(source.canPushUpdates);
@@ -81,29 +93,35 @@ export class VerificationResultPrimarySource extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["who"]) {
-            results.push(...this.who.doModelValidation());
+            outcome.issue.push(...this.who.doModelValidation().issue);
         }
         if (this["type"]) {
-            this.type.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.type.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["communicationMethod"]) {
-            this.communicationMethod.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.communicationMethod.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["validationStatus"]) {
-            results.push(...this.validationStatus.doModelValidation());
+            outcome.issue.push(...this.validationStatus.doModelValidation().issue);
         }
-        if (this["_validationDate"]) {
-            results.push(...this._validationDate.doModelValidation());
+        if (this["validationDate"]) {
+            outcome.issue.push(...this.validationDate.doModelValidation().issue);
         }
         if (this["canPushUpdates"]) {
-            results.push(...this.canPushUpdates.doModelValidation());
+            outcome.issue.push(...this.canPushUpdates.doModelValidation().issue);
         }
         if (this["pushTypeAvailable"]) {
-            this.pushTypeAvailable.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.pushTypeAvailable.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -113,8 +131,9 @@ export class VerificationResultAttestation extends fhir.BackboneElement {
     /**
      * Default constructor for VerificationResultAttestation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'VerificationResultAttestation';
         if (source['who']) {
             this.who = new fhir.Reference(source.who);
         }
@@ -125,22 +144,13 @@ export class VerificationResultAttestation extends fhir.BackboneElement {
             this.communicationMethod = new fhir.CodeableConcept(source.communicationMethod);
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDate({ value: source.date });
         }
         if (source['sourceIdentityCertificate']) {
-            this.sourceIdentityCertificate = source.sourceIdentityCertificate;
-        }
-        if (source['_sourceIdentityCertificate']) {
-            this._sourceIdentityCertificate = new fhir.FhirElement(source._sourceIdentityCertificate);
+            this.sourceIdentityCertificate = new fhir.FhirString({ value: source.sourceIdentityCertificate });
         }
         if (source['proxyIdentityCertificate']) {
-            this.proxyIdentityCertificate = source.proxyIdentityCertificate;
-        }
-        if (source['_proxyIdentityCertificate']) {
-            this._proxyIdentityCertificate = new fhir.FhirElement(source._proxyIdentityCertificate);
+            this.proxyIdentityCertificate = new fhir.FhirString({ value: source.proxyIdentityCertificate });
         }
         if (source['proxySignature']) {
             this.proxySignature = new fhir.Signature(source.proxySignature);
@@ -159,32 +169,38 @@ export class VerificationResultAttestation extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["who"]) {
-            results.push(...this.who.doModelValidation());
+            outcome.issue.push(...this.who.doModelValidation().issue);
         }
         if (this["onBehalfOf"]) {
-            results.push(...this.onBehalfOf.doModelValidation());
+            outcome.issue.push(...this.onBehalfOf.doModelValidation().issue);
         }
         if (this["communicationMethod"]) {
-            results.push(...this.communicationMethod.doModelValidation());
+            outcome.issue.push(...this.communicationMethod.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_sourceIdentityCertificate"]) {
-            results.push(...this._sourceIdentityCertificate.doModelValidation());
+        if (this["sourceIdentityCertificate"]) {
+            outcome.issue.push(...this.sourceIdentityCertificate.doModelValidation().issue);
         }
-        if (this["_proxyIdentityCertificate"]) {
-            results.push(...this._proxyIdentityCertificate.doModelValidation());
+        if (this["proxyIdentityCertificate"]) {
+            outcome.issue.push(...this.proxyIdentityCertificate.doModelValidation().issue);
         }
         if (this["proxySignature"]) {
-            results.push(...this.proxySignature.doModelValidation());
+            outcome.issue.push(...this.proxySignature.doModelValidation().issue);
         }
         if (this["sourceSignature"]) {
-            results.push(...this.sourceSignature.doModelValidation());
+            outcome.issue.push(...this.sourceSignature.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -194,8 +210,9 @@ export class VerificationResultValidator extends fhir.BackboneElement {
     /**
      * Default constructor for VerificationResultValidator - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'VerificationResultValidator';
         if (source['organization']) {
             this.organization = new fhir.Reference(source.organization);
         }
@@ -203,10 +220,7 @@ export class VerificationResultValidator extends fhir.BackboneElement {
             this.organization = null;
         }
         if (source['identityCertificate']) {
-            this.identityCertificate = source.identityCertificate;
-        }
-        if (source['_identityCertificate']) {
-            this._identityCertificate = new fhir.FhirElement(source._identityCertificate);
+            this.identityCertificate = new fhir.FhirString({ value: source.identityCertificate });
         }
         if (source['attestationSignature']) {
             this.attestationSignature = new fhir.Signature(source.attestationSignature);
@@ -216,20 +230,26 @@ export class VerificationResultValidator extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["organization"]) {
-            results.push(["organization", 'Missing required element: VerificationResult.validator.organization']);
+        var outcome = super.doModelValidation();
+        if (!this['organization']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property organization:fhir.Reference fhir: VerificationResult.validator.organization:Reference", }));
         }
         if (this["organization"]) {
-            results.push(...this.organization.doModelValidation());
+            outcome.issue.push(...this.organization.doModelValidation().issue);
         }
-        if (this["_identityCertificate"]) {
-            results.push(...this._identityCertificate.doModelValidation());
+        if (this["identityCertificate"]) {
+            outcome.issue.push(...this.identityCertificate.doModelValidation().issue);
         }
         if (this["attestationSignature"]) {
-            results.push(...this.attestationSignature.doModelValidation());
+            outcome.issue.push(...this.attestationSignature.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -239,17 +259,35 @@ export class VerificationResult extends fhir.DomainResource {
     /**
      * Default constructor for VerificationResult - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'VerificationResult';
+        /**
+         * A resource that was validated.
+         */
+        this.target = [];
+        /**
+         * The fhirpath location(s) within the resource that was validated.
+         */
+        this.targetLocation = [];
+        /**
+         * The primary process by which the target is validated (edit check; value set; primary source; multiple sources; standalone; in context).
+         */
+        this.validationProcess = [];
+        /**
+         * Information about the primary source(s) involved in validation.
+         */
+        this.primarySource = [];
+        /**
+         * Information about the entity validating information.
+         */
+        this.validator = [];
         this.resourceType = 'VerificationResult';
         if (source['target']) {
             this.target = source.target.map((x) => new fhir.Reference(x));
         }
         if (source['targetLocation']) {
-            this.targetLocation = source.targetLocation.map((x) => (x));
-        }
-        if (source['_targetLocation']) {
-            this._targetLocation = source._targetLocation.map((x) => new fhir.FhirElement(x));
+            this.targetLocation = source.targetLocation.map((x) => new fhir.FhirString({ value: x }));
         }
         if (source['need']) {
             this.need = new fhir.CodeableConcept(source.need);
@@ -260,14 +298,8 @@ export class VerificationResult extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['statusDate']) {
-            this.statusDate = source.statusDate;
-        }
-        if (source['_statusDate']) {
-            this._statusDate = new fhir.FhirElement(source._statusDate);
+            this.statusDate = new fhir.FhirDateTime({ value: source.statusDate });
         }
         if (source['validationType']) {
             this.validationType = new fhir.CodeableConcept(source.validationType);
@@ -279,16 +311,10 @@ export class VerificationResult extends fhir.DomainResource {
             this.frequency = new fhir.Timing(source.frequency);
         }
         if (source['lastPerformed']) {
-            this.lastPerformed = source.lastPerformed;
-        }
-        if (source['_lastPerformed']) {
-            this._lastPerformed = new fhir.FhirElement(source._lastPerformed);
+            this.lastPerformed = new fhir.FhirDateTime({ value: source.lastPerformed });
         }
         if (source['nextScheduled']) {
-            this.nextScheduled = source.nextScheduled;
-        }
-        if (source['_nextScheduled']) {
-            this._nextScheduled = new fhir.FhirElement(source._nextScheduled);
+            this.nextScheduled = new fhir.FhirDate({ value: source.nextScheduled });
         }
         if (source['failureAction']) {
             this.failureAction = new fhir.CodeableConcept(source.failureAction);
@@ -337,56 +363,59 @@ export class VerificationResult extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: VerificationResult.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'VerificationResult' fhir: VerificationResult.resourceType:'VerificationResult'", }));
         }
         if (this["target"]) {
-            this.target.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.target.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_targetLocation"]) {
-            this._targetLocation.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["targetLocation"]) {
+            this.targetLocation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["need"]) {
-            results.push(...this.need.doModelValidation());
+            outcome.issue.push(...this.need.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: VerificationResult.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:VerificationresultStatusValueSetEnum fhir: VerificationResult.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
-        }
-        if (this["_statusDate"]) {
-            results.push(...this._statusDate.doModelValidation());
+        if (this["statusDate"]) {
+            outcome.issue.push(...this.statusDate.doModelValidation().issue);
         }
         if (this["validationType"]) {
-            results.push(...this.validationType.doModelValidation());
+            outcome.issue.push(...this.validationType.doModelValidation().issue);
         }
         if (this["validationProcess"]) {
-            this.validationProcess.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.validationProcess.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["frequency"]) {
-            results.push(...this.frequency.doModelValidation());
+            outcome.issue.push(...this.frequency.doModelValidation().issue);
         }
-        if (this["_lastPerformed"]) {
-            results.push(...this._lastPerformed.doModelValidation());
+        if (this["lastPerformed"]) {
+            outcome.issue.push(...this.lastPerformed.doModelValidation().issue);
         }
-        if (this["_nextScheduled"]) {
-            results.push(...this._nextScheduled.doModelValidation());
+        if (this["nextScheduled"]) {
+            outcome.issue.push(...this.nextScheduled.doModelValidation().issue);
         }
         if (this["failureAction"]) {
-            results.push(...this.failureAction.doModelValidation());
+            outcome.issue.push(...this.failureAction.doModelValidation().issue);
         }
         if (this["primarySource"]) {
-            this.primarySource.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.primarySource.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["attestation"]) {
-            results.push(...this.attestation.doModelValidation());
+            outcome.issue.push(...this.attestation.doModelValidation().issue);
         }
         if (this["validator"]) {
-            this.validator.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.validator.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=VerificationResult.js.map

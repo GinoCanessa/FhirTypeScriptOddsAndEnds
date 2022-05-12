@@ -3,228 +3,71 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: FamilyMemberHistory
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ConditionCodeValueSet, ConditionCodeValueSetType, ConditionCodeValueSetEnum } from '../fhirValueSets/ConditionCodeValueSet.js'
-import { ConditionOutcomeValueSet, ConditionOutcomeValueSetType, ConditionOutcomeValueSetEnum } from '../fhirValueSets/ConditionOutcomeValueSet.js'
-import { HistoryStatusValueSet, HistoryStatusValueSetType, HistoryStatusValueSetEnum } from '../fhirValueSets/HistoryStatusValueSet.js'
-import { HistoryAbsentReasonValueSet, HistoryAbsentReasonValueSetType, HistoryAbsentReasonValueSetEnum } from '../fhirValueSets/HistoryAbsentReasonValueSet.js'
-import { V3FamilyMemberValueSet, V3FamilyMemberValueSetType, V3FamilyMemberValueSetEnum } from '../fhirValueSets/V3FamilyMemberValueSet.js'
-import { AdministrativeGenderValueSet, AdministrativeGenderValueSetType, AdministrativeGenderValueSetEnum } from '../fhirValueSets/AdministrativeGenderValueSet.js'
-import { ClinicalFindingsValueSet, ClinicalFindingsValueSetType, ClinicalFindingsValueSetEnum } from '../fhirValueSets/ClinicalFindingsValueSet.js'
-
+import { ConditionCodeValueSet, ConditionCodeValueSetType,} from '../fhirValueSets/ConditionCodeValueSet.js';
+import { ConditionCodeValueSetEnum } from '../valueSetEnums.js';
+import { ConditionOutcomeValueSet, ConditionOutcomeValueSetType,} from '../fhirValueSets/ConditionOutcomeValueSet.js';
+import { ConditionOutcomeValueSetEnum } from '../valueSetEnums.js';
+import { HistoryStatusValueSet, HistoryStatusValueSetType,} from '../fhirValueSets/HistoryStatusValueSet.js';
+import { HistoryStatusValueSetEnum } from '../valueSetEnums.js';
+import { HistoryAbsentReasonValueSet, HistoryAbsentReasonValueSetType,} from '../fhirValueSets/HistoryAbsentReasonValueSet.js';
+import { HistoryAbsentReasonValueSetEnum } from '../valueSetEnums.js';
+import { V3FamilyMemberValueSet, V3FamilyMemberValueSetType,} from '../fhirValueSets/V3FamilyMemberValueSet.js';
+import { V3FamilyMemberValueSetEnum } from '../valueSetEnums.js';
+import { AdministrativeGenderValueSet, AdministrativeGenderValueSetType,} from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { AdministrativeGenderValueSetEnum } from '../valueSetEnums.js';
+import { ClinicalFindingsValueSet, ClinicalFindingsValueSetType,} from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { ClinicalFindingsValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * The significant Conditions (or condition) that the family member had. This is a repeating section to allow a system to represent more than one condition per resource, though there is nothing stopping multiple resources - one per condition.
+ * Valid arguments for the FamilyMemberHistoryCondition type.
  */
-export type IFamilyMemberHistoryCondition = fhir.IBackboneElement & { 
+export interface FamilyMemberHistoryConditionArgs extends fhir.BackboneElementArgs {
   /**
    * The actual condition specified. Could be a coded condition (like MI or Diabetes) or a less specific string like 'cancer' depending on how much is known about the condition and the capabilities of the creating system.
    */
-  code: fhir.ICodeableConcept|null;
+  code: fhir.CodeableConceptArgs|null;
   /**
    * Indicates what happened following the condition.  If the condition resulted in death, deceased date is captured on the relation.
    */
-  outcome?: fhir.ICodeableConcept|undefined;
+  outcome?: fhir.CodeableConceptArgs|undefined;
   /**
    * This condition contributed to the cause of death of the related person. If contributedToDeath is not populated, then it is unknown.
    */
-  contributedToDeath?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.condition.contributedToDeath
-   */
-  _contributedToDeath?: fhir.IFhirElement|undefined;
+  contributedToDeath?: fhir.FhirBoolean|boolean|undefined;
   /**
    * Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
    */
-  onsetAge?: fhir.IAge|undefined;
+  onset?: fhir.Age|fhir.Range|fhir.Period|fhir.FhirString|undefined;
   /**
    * Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
    */
-  onsetRange?: fhir.IRange|undefined;
+  onsetAge?: fhir.AgeArgs|undefined;
   /**
    * Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
    */
-  onsetPeriod?: fhir.IPeriod|undefined;
+  onsetRange?: fhir.RangeArgs|undefined;
   /**
    * Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
    */
-  onsetString?: string|undefined;
+  onsetPeriod?: fhir.PeriodArgs|undefined;
   /**
-   * Extended properties for primitive element: FamilyMemberHistory.condition.onset[x]
+   * Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
    */
-  _onsetString?: fhir.IFhirElement|undefined;
+  onsetString?: fhir.FhirString|string|undefined;
   /**
    * An area where general notes can be placed about this specific condition.
    */
-  note?: fhir.IAnnotation[]|undefined;
-}
-
-/**
- * Significant health conditions for a person related to the patient relevant in the context of care for the patient.
- */
-export type IFamilyMemberHistory = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "FamilyMemberHistory";
-  /**
-   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this FamilyMemberHistory.
-   */
-  instantiatesCanonical?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.instantiatesCanonical
-   */
-  _instantiatesCanonical?: fhir.IFhirElement[]|undefined;
-  /**
-   * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
-   */
-  instantiatesUri?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.instantiatesUri
-   */
-  _instantiatesUri?: fhir.IFhirElement[]|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-   */
-  status: HistoryStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Describes why the family member's history is not available.
-   */
-  dataAbsentReason?: fhir.ICodeableConcept|undefined;
-  /**
-   * The person who this history concerns.
-   */
-  patient: fhir.IReference|null;
-  /**
-   * This should be captured even if the same as the date on the List aggregating the full family history.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * This will either be a name or a description; e.g. "Aunt Susan", "my cousin with the red hair".
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * The type of relationship this person has to the patient (father, mother, brother etc.).
-   */
-  relationship: fhir.ICodeableConcept|null;
-  /**
-   * This element should ideally reflect whether the individual is genetically male or female.  However, as reported information based on the knowledge of the patient or reporting friend/relative, there may be situations where the reported sex might not be totally accurate.  E.g. 'Aunt Sue' might be XY rather than XX.  Questions soliciting this information should be phrased to encourage capture of genetic sex where known.  However, systems performing analysis should also allow for the possibility of imprecision with this element.
-   */
-  sex?: fhir.ICodeableConcept|undefined;
-  /**
-   * The actual or approximate date of birth of the relative.
-   */
-  bornPeriod?: fhir.IPeriod|undefined;
-  /**
-   * The actual or approximate date of birth of the relative.
-   */
-  bornDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.born[x]
-   */
-  _bornDate?: fhir.IFhirElement|undefined;
-  /**
-   * The actual or approximate date of birth of the relative.
-   */
-  bornString?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.born[x]
-   */
-  _bornString?: fhir.IFhirElement|undefined;
-  /**
-   * use estimatedAge to indicate whether the age is actual or not.
-   */
-  ageAge?: fhir.IAge|undefined;
-  /**
-   * use estimatedAge to indicate whether the age is actual or not.
-   */
-  ageRange?: fhir.IRange|undefined;
-  /**
-   * use estimatedAge to indicate whether the age is actual or not.
-   */
-  ageString?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.age[x]
-   */
-  _ageString?: fhir.IFhirElement|undefined;
-  /**
-   * This element is labeled as a modifier because the fact that age is estimated can/should change the results of any algorithm that calculates based on the specified age.
-   */
-  estimatedAge?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.estimatedAge
-   */
-  _estimatedAge?: fhir.IFhirElement|undefined;
-  /**
-   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-   */
-  deceasedBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.deceased[x]
-   */
-  _deceasedBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-   */
-  deceasedAge?: fhir.IAge|undefined;
-  /**
-   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-   */
-  deceasedRange?: fhir.IRange|undefined;
-  /**
-   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-   */
-  deceasedDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.deceased[x]
-   */
-  _deceasedDate?: fhir.IFhirElement|undefined;
-  /**
-   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-   */
-  deceasedString?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.deceased[x]
-   */
-  _deceasedString?: fhir.IFhirElement|undefined;
-  /**
-   * Textual reasons can be captured using reasonCode.text.
-   */
-  reasonCode?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * Indicates a Condition, Observation, AllergyIntolerance, or QuestionnaireResponse that justifies this family member history event.
-   */
-  reasonReference?: fhir.IReference[]|undefined;
-  /**
-   * This property allows a non condition-specific note to the made about the related person. Ideally, the note would be in the condition property, but this is not always possible.
-   */
-  note?: fhir.IAnnotation[]|undefined;
-  /**
-   * The significant Conditions (or condition) that the family member had. This is a repeating section to allow a system to represent more than one condition per resource, though there is nothing stopping multiple resources - one per condition.
-   */
-  condition?: fhir.IFamilyMemberHistoryCondition[]|undefined;
+  note?: fhir.AnnotationArgs[]|undefined;
 }
 
 /**
  * The significant Conditions (or condition) that the family member had. This is a repeating section to allow a system to represent more than one condition per resource, though there is nothing stopping multiple resources - one per condition.
  */
-export class FamilyMemberHistoryCondition extends fhir.BackboneElement implements IFamilyMemberHistoryCondition {
+export class FamilyMemberHistoryCondition extends fhir.BackboneElement {
+  readonly __dataType:string = 'FamilyMemberHistoryCondition';
   /**
    * The actual condition specified. Could be a coded condition (like MI or Diabetes) or a less specific string like 'cancer' depending on how much is known about the condition and the capabilities of the creating system.
    */
@@ -236,50 +79,30 @@ export class FamilyMemberHistoryCondition extends fhir.BackboneElement implement
   /**
    * This condition contributed to the cause of death of the related person. If contributedToDeath is not populated, then it is unknown.
    */
-  public contributedToDeath?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.condition.contributedToDeath
-   */
-  public _contributedToDeath?: fhir.FhirElement|undefined;
+  public contributedToDeath?: fhir.FhirBoolean|undefined;
   /**
    * Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
    */
-  public onsetAge?: fhir.Age|undefined;
-  /**
-   * Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
-   */
-  public onsetRange?: fhir.Range|undefined;
-  /**
-   * Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
-   */
-  public onsetPeriod?: fhir.Period|undefined;
-  /**
-   * Either the age of onset, range of approximate age or descriptive string can be recorded.  For conditions with multiple occurrences, this describes the first known occurrence.
-   */
-  public onsetString?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.condition.onset[x]
-   */
-  public _onsetString?: fhir.FhirElement|undefined;
+  public onset?: (fhir.Age|fhir.Range|fhir.Period|fhir.FhirString)|undefined;
+  readonly __onsetIsChoice:true = true;
   /**
    * An area where general notes can be placed about this specific condition.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * Default constructor for FamilyMemberHistoryCondition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IFamilyMemberHistoryCondition> = { }) {
-    super(source);
-    if (source['code']) { this.code = new fhir.CodeableConcept(source.code!); }
+  constructor(source:Partial<FamilyMemberHistoryConditionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.CodeableConcept(source.code); }
     else { this.code = null; }
-    if (source['outcome']) { this.outcome = new fhir.CodeableConcept(source.outcome!); }
-    if (source['contributedToDeath']) { this.contributedToDeath = source.contributedToDeath; }
-    if (source['_contributedToDeath']) { this._contributedToDeath = new fhir.FhirElement(source._contributedToDeath!); }
-    if (source['onsetAge']) { this.onsetAge = new fhir.Age(source.onsetAge!); }
-    if (source['onsetRange']) { this.onsetRange = new fhir.Range(source.onsetRange!); }
-    if (source['onsetPeriod']) { this.onsetPeriod = new fhir.Period(source.onsetPeriod!); }
-    if (source['onsetString']) { this.onsetString = source.onsetString; }
-    if (source['_onsetString']) { this._onsetString = new fhir.FhirElement(source._onsetString!); }
+    if (source['outcome']) { this.outcome = new fhir.CodeableConcept(source.outcome); }
+    if (source['contributedToDeath']) { this.contributedToDeath = new fhir.FhirBoolean({value: source.contributedToDeath}); }
+    if (source['onset']) { this.onset = source.onset; }
+    else if (source['onsetAge']) { this.onset = new fhir.Age(source.onsetAge); }
+    else if (source['onsetRange']) { this.onset = new fhir.Range(source.onsetRange); }
+    else if (source['onsetPeriod']) { this.onset = new fhir.Period(source.onsetPeriod); }
+    else if (source['onsetString']) { this.onset = new fhir.FhirString({value: source.onsetString}); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
   }
   /**
@@ -297,25 +120,155 @@ export class FamilyMemberHistoryCondition extends fhir.BackboneElement implement
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: FamilyMemberHistory.condition.code']); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["outcome"]) { results.push(...this.outcome.doModelValidation()); }
-    if (this["_contributedToDeath"]) { results.push(...this._contributedToDeath.doModelValidation()); }
-    if (this["onsetAge"]) { results.push(...this.onsetAge.doModelValidation()); }
-    if (this["onsetRange"]) { results.push(...this.onsetRange.doModelValidation()); }
-    if (this["onsetPeriod"]) { results.push(...this.onsetPeriod.doModelValidation()); }
-    if (this["_onsetString"]) { results.push(...this._onsetString.doModelValidation()); }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.CodeableConcept fhir: FamilyMemberHistory.condition.code:CodeableConcept", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["outcome"]) { outcome.issue!.push(...this.outcome.doModelValidation().issue!); }
+    if (this["contributedToDeath"]) { outcome.issue!.push(...this.contributedToDeath.doModelValidation().issue!); }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the FamilyMemberHistory type.
+ */
+export interface FamilyMemberHistoryArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "FamilyMemberHistory"|undefined;
+  /**
+   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this FamilyMemberHistory.
+   */
+  instantiatesCanonical?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
+   */
+  instantiatesUri?: fhir.FhirUri[]|string[]|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+   */
+  status: HistoryStatusValueSetEnum|null;
+  /**
+   * Describes why the family member's history is not available.
+   */
+  dataAbsentReason?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The person who this history concerns.
+   */
+  patient: fhir.ReferenceArgs|null;
+  /**
+   * This should be captured even if the same as the date on the List aggregating the full family history.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * This will either be a name or a description; e.g. "Aunt Susan", "my cousin with the red hair".
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * The type of relationship this person has to the patient (father, mother, brother etc.).
+   */
+  relationship: fhir.CodeableConceptArgs|null;
+  /**
+   * This element should ideally reflect whether the individual is genetically male or female.  However, as reported information based on the knowledge of the patient or reporting friend/relative, there may be situations where the reported sex might not be totally accurate.  E.g. 'Aunt Sue' might be XY rather than XX.  Questions soliciting this information should be phrased to encourage capture of genetic sex where known.  However, systems performing analysis should also allow for the possibility of imprecision with this element.
+   */
+  sex?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The actual or approximate date of birth of the relative.
+   */
+  born?: fhir.Period|fhir.FhirDate|fhir.FhirString|undefined;
+  /**
+   * The actual or approximate date of birth of the relative.
+   */
+  bornPeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * The actual or approximate date of birth of the relative.
+   */
+  bornDate?: fhir.FhirDate|string|undefined;
+  /**
+   * The actual or approximate date of birth of the relative.
+   */
+  bornString?: fhir.FhirString|string|undefined;
+  /**
+   * use estimatedAge to indicate whether the age is actual or not.
+   */
+  age?: fhir.Age|fhir.Range|fhir.FhirString|undefined;
+  /**
+   * use estimatedAge to indicate whether the age is actual or not.
+   */
+  ageAge?: fhir.AgeArgs|undefined;
+  /**
+   * use estimatedAge to indicate whether the age is actual or not.
+   */
+  ageRange?: fhir.RangeArgs|undefined;
+  /**
+   * use estimatedAge to indicate whether the age is actual or not.
+   */
+  ageString?: fhir.FhirString|string|undefined;
+  /**
+   * This element is labeled as a modifier because the fact that age is estimated can/should change the results of any algorithm that calculates based on the specified age.
+   */
+  estimatedAge?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
+   */
+  deceased?: fhir.FhirBoolean|fhir.Age|fhir.Range|fhir.FhirDate|fhir.FhirString|undefined;
+  /**
+   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
+   */
+  deceasedBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
+   */
+  deceasedAge?: fhir.AgeArgs|undefined;
+  /**
+   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
+   */
+  deceasedRange?: fhir.RangeArgs|undefined;
+  /**
+   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
+   */
+  deceasedDate?: fhir.FhirDate|string|undefined;
+  /**
+   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
+   */
+  deceasedString?: fhir.FhirString|string|undefined;
+  /**
+   * Textual reasons can be captured using reasonCode.text.
+   */
+  reasonCode?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * Indicates a Condition, Observation, AllergyIntolerance, or QuestionnaireResponse that justifies this family member history event.
+   */
+  reasonReference?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * This property allows a non condition-specific note to the made about the related person. Ideally, the note would be in the condition property, but this is not always possible.
+   */
+  note?: fhir.AnnotationArgs[]|undefined;
+  /**
+   * The significant Conditions (or condition) that the family member had. This is a repeating section to allow a system to represent more than one condition per resource, though there is nothing stopping multiple resources - one per condition.
+   */
+  condition?: fhir.FamilyMemberHistoryConditionArgs[]|undefined;
 }
 
 /**
  * Significant health conditions for a person related to the patient relevant in the context of care for the patient.
  */
-export class FamilyMemberHistory extends fhir.DomainResource implements IFamilyMemberHistory {
+export class FamilyMemberHistory extends fhir.DomainResource {
+  readonly __dataType:string = 'FamilyMemberHistory';
   /**
    * Resource Type Name
    */
@@ -323,31 +276,19 @@ export class FamilyMemberHistory extends fhir.DomainResource implements IFamilyM
   /**
    * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this FamilyMemberHistory.
    */
-  public instantiatesCanonical?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.instantiatesCanonical
-   */
-  public _instantiatesCanonical?: fhir.FhirElement[]|undefined;
+  public instantiatesCanonical?: fhir.FhirCanonical[]|undefined = [];
   /**
    * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
    */
-  public instantiatesUri?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.instantiatesUri
-   */
-  public _instantiatesUri?: fhir.FhirElement[]|undefined;
+  public instantiatesUri?: fhir.FhirUri[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
   public status: HistoryStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * Describes why the family member's history is not available.
    */
@@ -359,19 +300,11 @@ export class FamilyMemberHistory extends fhir.DomainResource implements IFamilyM
   /**
    * This should be captured even if the same as the date on the List aggregating the full family history.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * This will either be a name or a description; e.g. "Aunt Susan", "my cousin with the red hair".
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * The type of relationship this person has to the patient (father, mother, brother etc.).
    */
@@ -383,138 +316,72 @@ export class FamilyMemberHistory extends fhir.DomainResource implements IFamilyM
   /**
    * The actual or approximate date of birth of the relative.
    */
-  public bornPeriod?: fhir.Period|undefined;
-  /**
-   * The actual or approximate date of birth of the relative.
-   */
-  public bornDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.born[x]
-   */
-  public _bornDate?: fhir.FhirElement|undefined;
-  /**
-   * The actual or approximate date of birth of the relative.
-   */
-  public bornString?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.born[x]
-   */
-  public _bornString?: fhir.FhirElement|undefined;
+  public born?: (fhir.Period|fhir.FhirDate|fhir.FhirString)|undefined;
+  readonly __bornIsChoice:true = true;
   /**
    * use estimatedAge to indicate whether the age is actual or not.
    */
-  public ageAge?: fhir.Age|undefined;
-  /**
-   * use estimatedAge to indicate whether the age is actual or not.
-   */
-  public ageRange?: fhir.Range|undefined;
-  /**
-   * use estimatedAge to indicate whether the age is actual or not.
-   */
-  public ageString?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.age[x]
-   */
-  public _ageString?: fhir.FhirElement|undefined;
+  public age?: (fhir.Age|fhir.Range|fhir.FhirString)|undefined;
+  readonly __ageIsChoice:true = true;
   /**
    * This element is labeled as a modifier because the fact that age is estimated can/should change the results of any algorithm that calculates based on the specified age.
    */
-  public estimatedAge?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.estimatedAge
-   */
-  public _estimatedAge?: fhir.FhirElement|undefined;
+  public estimatedAge?: fhir.FhirBoolean|undefined;
   /**
    * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
    */
-  public deceasedBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.deceased[x]
-   */
-  public _deceasedBoolean?: fhir.FhirElement|undefined;
-  /**
-   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-   */
-  public deceasedAge?: fhir.Age|undefined;
-  /**
-   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-   */
-  public deceasedRange?: fhir.Range|undefined;
-  /**
-   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-   */
-  public deceasedDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.deceased[x]
-   */
-  public _deceasedDate?: fhir.FhirElement|undefined;
-  /**
-   * Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.
-   */
-  public deceasedString?: string|undefined;
-  /**
-   * Extended properties for primitive element: FamilyMemberHistory.deceased[x]
-   */
-  public _deceasedString?: fhir.FhirElement|undefined;
+  public deceased?: (fhir.FhirBoolean|fhir.Age|fhir.Range|fhir.FhirDate|fhir.FhirString)|undefined;
+  readonly __deceasedIsChoice:true = true;
   /**
    * Textual reasons can be captured using reasonCode.text.
    */
-  public reasonCode?: fhir.CodeableConcept[]|undefined;
+  public reasonCode?: fhir.CodeableConcept[]|undefined = [];
   /**
    * Indicates a Condition, Observation, AllergyIntolerance, or QuestionnaireResponse that justifies this family member history event.
    */
-  public reasonReference?: fhir.Reference[]|undefined;
+  public reasonReference?: fhir.Reference[]|undefined = [];
   /**
    * This property allows a non condition-specific note to the made about the related person. Ideally, the note would be in the condition property, but this is not always possible.
    */
-  public note?: fhir.Annotation[]|undefined;
+  public note?: fhir.Annotation[]|undefined = [];
   /**
    * The significant Conditions (or condition) that the family member had. This is a repeating section to allow a system to represent more than one condition per resource, though there is nothing stopping multiple resources - one per condition.
    */
-  public condition?: fhir.FamilyMemberHistoryCondition[]|undefined;
+  public condition?: fhir.FamilyMemberHistoryCondition[]|undefined = [];
   /**
    * Default constructor for FamilyMemberHistory - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IFamilyMemberHistory> = { }) {
-    super(source);
+  constructor(source:Partial<FamilyMemberHistoryArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'FamilyMemberHistory';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['instantiatesCanonical']) { this.instantiatesCanonical = source.instantiatesCanonical.map((x) => (x)); }
-    if (source['_instantiatesCanonical']) { this._instantiatesCanonical = source._instantiatesCanonical.map((x) => new fhir.FhirElement(x)); }
-    if (source['instantiatesUri']) { this.instantiatesUri = source.instantiatesUri.map((x) => (x)); }
-    if (source['_instantiatesUri']) { this._instantiatesUri = source._instantiatesUri.map((x) => new fhir.FhirElement(x)); }
+    if (source['instantiatesCanonical']) { this.instantiatesCanonical = source.instantiatesCanonical.map((x) => new fhir.FhirCanonical({value: x})); }
+    if (source['instantiatesUri']) { this.instantiatesUri = source.instantiatesUri.map((x) => new fhir.FhirUri({value: x})); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['dataAbsentReason']) { this.dataAbsentReason = new fhir.CodeableConcept(source.dataAbsentReason!); }
-    if (source['patient']) { this.patient = new fhir.Reference(source.patient!); }
+    if (source['dataAbsentReason']) { this.dataAbsentReason = new fhir.CodeableConcept(source.dataAbsentReason); }
+    if (source['patient']) { this.patient = new fhir.Reference(source.patient); }
     else { this.patient = null; }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['relationship']) { this.relationship = new fhir.CodeableConcept(source.relationship!); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['relationship']) { this.relationship = new fhir.CodeableConcept(source.relationship); }
     else { this.relationship = null; }
-    if (source['sex']) { this.sex = new fhir.CodeableConcept(source.sex!); }
-    if (source['bornPeriod']) { this.bornPeriod = new fhir.Period(source.bornPeriod!); }
-    if (source['bornDate']) { this.bornDate = source.bornDate; }
-    if (source['_bornDate']) { this._bornDate = new fhir.FhirElement(source._bornDate!); }
-    if (source['bornString']) { this.bornString = source.bornString; }
-    if (source['_bornString']) { this._bornString = new fhir.FhirElement(source._bornString!); }
-    if (source['ageAge']) { this.ageAge = new fhir.Age(source.ageAge!); }
-    if (source['ageRange']) { this.ageRange = new fhir.Range(source.ageRange!); }
-    if (source['ageString']) { this.ageString = source.ageString; }
-    if (source['_ageString']) { this._ageString = new fhir.FhirElement(source._ageString!); }
-    if (source['estimatedAge']) { this.estimatedAge = source.estimatedAge; }
-    if (source['_estimatedAge']) { this._estimatedAge = new fhir.FhirElement(source._estimatedAge!); }
-    if (source['deceasedBoolean']) { this.deceasedBoolean = source.deceasedBoolean; }
-    if (source['_deceasedBoolean']) { this._deceasedBoolean = new fhir.FhirElement(source._deceasedBoolean!); }
-    if (source['deceasedAge']) { this.deceasedAge = new fhir.Age(source.deceasedAge!); }
-    if (source['deceasedRange']) { this.deceasedRange = new fhir.Range(source.deceasedRange!); }
-    if (source['deceasedDate']) { this.deceasedDate = source.deceasedDate; }
-    if (source['_deceasedDate']) { this._deceasedDate = new fhir.FhirElement(source._deceasedDate!); }
-    if (source['deceasedString']) { this.deceasedString = source.deceasedString; }
-    if (source['_deceasedString']) { this._deceasedString = new fhir.FhirElement(source._deceasedString!); }
+    if (source['sex']) { this.sex = new fhir.CodeableConcept(source.sex); }
+    if (source['born']) { this.born = source.born; }
+    else if (source['bornPeriod']) { this.born = new fhir.Period(source.bornPeriod); }
+    else if (source['bornDate']) { this.born = new fhir.FhirDate({value: source.bornDate}); }
+    else if (source['bornString']) { this.born = new fhir.FhirString({value: source.bornString}); }
+    if (source['age']) { this.age = source.age; }
+    else if (source['ageAge']) { this.age = new fhir.Age(source.ageAge); }
+    else if (source['ageRange']) { this.age = new fhir.Range(source.ageRange); }
+    else if (source['ageString']) { this.age = new fhir.FhirString({value: source.ageString}); }
+    if (source['estimatedAge']) { this.estimatedAge = new fhir.FhirBoolean({value: source.estimatedAge}); }
+    if (source['deceased']) { this.deceased = source.deceased; }
+    else if (source['deceasedBoolean']) { this.deceased = new fhir.FhirBoolean({value: source.deceasedBoolean}); }
+    else if (source['deceasedAge']) { this.deceased = new fhir.Age(source.deceasedAge); }
+    else if (source['deceasedRange']) { this.deceased = new fhir.Range(source.deceasedRange); }
+    else if (source['deceasedDate']) { this.deceased = new fhir.FhirDate({value: source.deceasedDate}); }
+    else if (source['deceasedString']) { this.deceased = new fhir.FhirString({value: source.deceasedString}); }
     if (source['reasonCode']) { this.reasonCode = source.reasonCode.map((x) => new fhir.CodeableConcept(x)); }
     if (source['reasonReference']) { this.reasonReference = source.reasonReference.map((x) => new fhir.Reference(x)); }
     if (source['note']) { this.note = source.note.map((x) => new fhir.Annotation(x)); }
@@ -553,38 +420,40 @@ export class FamilyMemberHistory extends fhir.DomainResource implements IFamilyM
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: FamilyMemberHistory.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_instantiatesCanonical"]) { this._instantiatesCanonical.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_instantiatesUri"]) { this._instantiatesUri.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: FamilyMemberHistory.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["dataAbsentReason"]) { results.push(...this.dataAbsentReason.doModelValidation()); }
-    if (!this["patient"]) { results.push(["patient",'Missing required element: FamilyMemberHistory.patient']); }
-    if (this["patient"]) { results.push(...this.patient.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (!this["relationship"]) { results.push(["relationship",'Missing required element: FamilyMemberHistory.relationship']); }
-    if (this["relationship"]) { results.push(...this.relationship.doModelValidation()); }
-    if (this["sex"]) { results.push(...this.sex.doModelValidation()); }
-    if (this["bornPeriod"]) { results.push(...this.bornPeriod.doModelValidation()); }
-    if (this["_bornDate"]) { results.push(...this._bornDate.doModelValidation()); }
-    if (this["_bornString"]) { results.push(...this._bornString.doModelValidation()); }
-    if (this["ageAge"]) { results.push(...this.ageAge.doModelValidation()); }
-    if (this["ageRange"]) { results.push(...this.ageRange.doModelValidation()); }
-    if (this["_ageString"]) { results.push(...this._ageString.doModelValidation()); }
-    if (this["_estimatedAge"]) { results.push(...this._estimatedAge.doModelValidation()); }
-    if (this["_deceasedBoolean"]) { results.push(...this._deceasedBoolean.doModelValidation()); }
-    if (this["deceasedAge"]) { results.push(...this.deceasedAge.doModelValidation()); }
-    if (this["deceasedRange"]) { results.push(...this.deceasedRange.doModelValidation()); }
-    if (this["_deceasedDate"]) { results.push(...this._deceasedDate.doModelValidation()); }
-    if (this["_deceasedString"]) { results.push(...this._deceasedString.doModelValidation()); }
-    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["note"]) { this.note.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["condition"]) { this.condition.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'FamilyMemberHistory' fhir: FamilyMemberHistory.resourceType:'FamilyMemberHistory'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instantiatesCanonical"]) { this.instantiatesCanonical.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instantiatesUri"]) { this.instantiatesUri.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:HistoryStatusValueSetEnum fhir: FamilyMemberHistory.status:code", }));
+    }
+    if (this["dataAbsentReason"]) { outcome.issue!.push(...this.dataAbsentReason.doModelValidation().issue!); }
+    if (!this['patient']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property patient:fhir.Reference fhir: FamilyMemberHistory.patient:Reference", }));
+    }
+    if (this["patient"]) { outcome.issue!.push(...this.patient.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (!this['relationship']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property relationship:fhir.CodeableConcept fhir: FamilyMemberHistory.relationship:CodeableConcept", }));
+    }
+    if (this["relationship"]) { outcome.issue!.push(...this.relationship.doModelValidation().issue!); }
+    if (this["sex"]) { outcome.issue!.push(...this.sex.doModelValidation().issue!); }
+    if (this["estimatedAge"]) { outcome.issue!.push(...this.estimatedAge.doModelValidation().issue!); }
+    if (this["reasonCode"]) { this.reasonCode.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["reasonReference"]) { this.reasonReference.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["note"]) { this.note.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["condition"]) { this.condition.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -43,23 +43,4 @@ export const GoalStartEventValueSet = {
 /**
  * Identifies types of events that might trigger the start of a goal.
  */
-export var GoalStartEventValueSetEnum;
-(function (GoalStartEventValueSetEnum) {
-    /**
-     * Code: 308283009
-     */
-    GoalStartEventValueSetEnum["DischargeFromHospital"] = "308283009";
-    /**
-     * Code: 32485007
-     */
-    GoalStartEventValueSetEnum["AdmissionToHospital"] = "32485007";
-    /**
-     * Code: 386216000
-     */
-    GoalStartEventValueSetEnum["Childbirth"] = "386216000";
-    /**
-     * Code: 442137000
-     */
-    GoalStartEventValueSetEnum["CompletionTimeOfProcedure"] = "442137000";
-})(GoalStartEventValueSetEnum || (GoalStartEventValueSetEnum = {}));
 //# sourceMappingURL=GoalStartEventValueSet.js.map

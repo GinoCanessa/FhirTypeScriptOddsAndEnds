@@ -27,15 +27,4 @@ export const ImmunizationFundingSourceValueSet = {
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the source of the vaccine administered. This value set is provided as a suggestive example.
  */
-export var ImmunizationFundingSourceValueSetEnum;
-(function (ImmunizationFundingSourceValueSetEnum) {
-    /**
-     * private: The vaccine was purchased with private funds.
-     */
-    ImmunizationFundingSourceValueSetEnum["Private"] = "private";
-    /**
-     * public: The vaccine was purchased with public funds.
-     */
-    ImmunizationFundingSourceValueSetEnum["Public"] = "public";
-})(ImmunizationFundingSourceValueSetEnum || (ImmunizationFundingSourceValueSetEnum = {}));
 //# sourceMappingURL=ImmunizationFundingSourceValueSet.js.map

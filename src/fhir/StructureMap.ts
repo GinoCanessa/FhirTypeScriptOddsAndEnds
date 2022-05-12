@@ -3,856 +3,80 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: StructureMap
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { MapModelModeValueSet, MapModelModeValueSetType, MapModelModeValueSetEnum } from '../fhirValueSets/MapModelModeValueSet.js'
-import { MapInputModeValueSet, MapInputModeValueSetType, MapInputModeValueSetEnum } from '../fhirValueSets/MapInputModeValueSet.js'
-import { MapSourceListModeValueSet, MapSourceListModeValueSetType, MapSourceListModeValueSetEnum } from '../fhirValueSets/MapSourceListModeValueSet.js'
-import { MapContextTypeValueSet, MapContextTypeValueSetType, MapContextTypeValueSetEnum } from '../fhirValueSets/MapContextTypeValueSet.js'
-import { MapTargetListModeValueSet, MapTargetListModeValueSetType, MapTargetListModeValueSetEnum } from '../fhirValueSets/MapTargetListModeValueSet.js'
-import { MapTransformValueSet, MapTransformValueSetType, MapTransformValueSetEnum } from '../fhirValueSets/MapTransformValueSet.js'
-import { MapGroupTypeModeValueSet, MapGroupTypeModeValueSetType, MapGroupTypeModeValueSetEnum } from '../fhirValueSets/MapGroupTypeModeValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-
+import { MapModelModeValueSet, MapModelModeValueSetType,} from '../fhirValueSets/MapModelModeValueSet.js';
+import { MapModelModeValueSetEnum } from '../valueSetEnums.js';
+import { MapInputModeValueSet, MapInputModeValueSetType,} from '../fhirValueSets/MapInputModeValueSet.js';
+import { MapInputModeValueSetEnum } from '../valueSetEnums.js';
+import { MapSourceListModeValueSet, MapSourceListModeValueSetType,} from '../fhirValueSets/MapSourceListModeValueSet.js';
+import { MapSourceListModeValueSetEnum } from '../valueSetEnums.js';
+import { MapContextTypeValueSet, MapContextTypeValueSetType,} from '../fhirValueSets/MapContextTypeValueSet.js';
+import { MapContextTypeValueSetEnum } from '../valueSetEnums.js';
+import { MapTargetListModeValueSet, MapTargetListModeValueSetType,} from '../fhirValueSets/MapTargetListModeValueSet.js';
+import { MapTargetListModeValueSetEnum } from '../valueSetEnums.js';
+import { MapTransformValueSet, MapTransformValueSetType,} from '../fhirValueSets/MapTransformValueSet.js';
+import { MapTransformValueSetEnum } from '../valueSetEnums.js';
+import { MapGroupTypeModeValueSet, MapGroupTypeModeValueSetType,} from '../fhirValueSets/MapGroupTypeModeValueSet.js';
+import { MapGroupTypeModeValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * It is not necessary for a structure map to identify any dependent structures, though not listing them may restrict its usefulness.
+ * Valid arguments for the StructureMapStructure type.
  */
-export type IStructureMapStructure = fhir.IBackboneElement & { 
+export interface StructureMapStructureArgs extends fhir.BackboneElementArgs {
   /**
    * The canonical reference to the structure.
    */
-  url: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.structure.url
-   */
-  _url?: fhir.IFhirElement|undefined;
+  url: fhir.FhirCanonical|string|undefined;
   /**
    * How the referenced structure is used in this mapping.
    */
   mode: MapModelModeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: StructureMap.structure.mode
-   */
-  _mode?: fhir.IFhirElement|undefined;
-  /**
    * This is needed if both types have the same name (e.g. version conversion).
    */
-  alias?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.structure.alias
-   */
-  _alias?: fhir.IFhirElement|undefined;
+  alias?: fhir.FhirString|string|undefined;
   /**
    * Documentation that describes how the structure is used in the mapping.
    */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.structure.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-}
-
-/**
- * If no inputs are named, then the entry mappings are type based.
- */
-export type IStructureMapGroupInput = fhir.IBackboneElement & { 
-  /**
-   * Name for this instance of data.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.input.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Type for this instance of data.
-   */
-  type?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.input.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * Mode for this instance of data.
-   */
-  mode: MapInputModeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.input.mode
-   */
-  _mode?: fhir.IFhirElement|undefined;
-  /**
-   * Documentation for this instance of data.
-   */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.input.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Source inputs to the mapping.
- */
-export type IStructureMapGroupRuleSource = fhir.IBackboneElement & { 
-  /**
-   * Type or variable this rule applies to.
-   */
-  context: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.context
-   */
-  _context?: fhir.IFhirElement|undefined;
-  /**
-   * Specified minimum cardinality for the element. This is optional; if present, it acts an implicit check on the input content.
-   */
-  min?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.min
-   */
-  _min?: fhir.IFhirElement|undefined;
-  /**
-   * Specified maximum cardinality for the element - a number or a "*". This is optional; if present, it acts an implicit check on the input content (* just serves as documentation; it's the default value).
-   */
-  max?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.max
-   */
-  _max?: fhir.IFhirElement|undefined;
-  /**
-   * Specified type for the element. This works as a condition on the mapping - use for polymorphic elements.
-   */
-  type?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueBase64Binary?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueCanonical?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueCode?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueDate?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueDateTime?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueDecimal?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueId?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueId?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueInstant?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueInteger?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueMarkdown?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueOid?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValuePositiveInt?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueString?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueTime?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueUnsignedInt?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueUri?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueUrl?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  _defaultValueUuid?: fhir.IFhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueAddress?: fhir.IAddress|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueAge?: fhir.IAge|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueAnnotation?: fhir.IAnnotation|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueAttachment?: fhir.IAttachment|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueCodeableConcept?: fhir.ICodeableConcept|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueCoding?: fhir.ICoding|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueContactPoint?: fhir.IContactPoint|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueCount?: fhir.ICount|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueDistance?: fhir.IDistance|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueDuration?: fhir.IDuration|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueHumanName?: fhir.IHumanName|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueIdentifier?: fhir.IIdentifier|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueMoney?: fhir.IMoney|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValuePeriod?: fhir.IPeriod|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueQuantity?: fhir.IQuantity|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueRange?: fhir.IRange|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueRatio?: fhir.IRatio|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueReference?: fhir.IReference|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueSampledData?: fhir.ISampledData|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueSignature?: fhir.ISignature|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueTiming?: fhir.ITiming|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueContactDetail?: fhir.IContactDetail|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueContributor?: fhir.IContributor|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueDataRequirement?: fhir.IDataRequirement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueExpression?: fhir.IExpression|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueParameterDefinition?: fhir.IParameterDefinition|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueRelatedArtifact?: fhir.IRelatedArtifact|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueTriggerDefinition?: fhir.ITriggerDefinition|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueUsageContext?: fhir.IUsageContext|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueDosage?: fhir.IDosage|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  defaultValueMeta?: fhir.IMeta|undefined;
-  /**
-   * Optional field for this source.
-   */
-  element?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.element
-   */
-  _element?: fhir.IFhirElement|undefined;
-  /**
-   * How to handle the list mode for this element.
-   */
-  listMode?: MapSourceListModeValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.listMode
-   */
-  _listMode?: fhir.IFhirElement|undefined;
-  /**
-   * Named context for field, if a field is specified.
-   */
-  variable?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.variable
-   */
-  _variable?: fhir.IFhirElement|undefined;
-  /**
-   * FHIRPath expression  - must be true or the rule does not apply.
-   */
-  condition?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.condition
-   */
-  _condition?: fhir.IFhirElement|undefined;
-  /**
-   * FHIRPath expression  - must be true or the mapping engine throws an error instead of completing.
-   */
-  check?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.check
-   */
-  _check?: fhir.IFhirElement|undefined;
-  /**
-   * This is typically used for recording that something Is not transformed to the target for some reason.
-   */
-  logMessage?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.logMessage
-   */
-  _logMessage?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Parameters to the transform.
- */
-export type IStructureMapGroupRuleTargetParameter = fhir.IBackboneElement & { 
-  /**
-   * Parameter value - variable or literal.
-   */
-  valueId?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
-   */
-  _valueId?: fhir.IFhirElement|undefined;
-  /**
-   * Parameter value - variable or literal.
-   */
-  valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
-   */
-  _valueString?: fhir.IFhirElement|undefined;
-  /**
-   * Parameter value - variable or literal.
-   */
-  valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
-   */
-  _valueBoolean?: fhir.IFhirElement|undefined;
-  /**
-   * Parameter value - variable or literal.
-   */
-  valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
-   */
-  _valueInteger?: fhir.IFhirElement|undefined;
-  /**
-   * Parameter value - variable or literal.
-   */
-  valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
-   */
-  _valueDecimal?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Content to create because of this mapping rule.
- */
-export type IStructureMapGroupRuleTarget = fhir.IBackboneElement & { 
-  /**
-   * Type or variable this rule applies to.
-   */
-  context?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.context
-   */
-  _context?: fhir.IFhirElement|undefined;
-  /**
-   * How to interpret the context.
-   */
-  contextType?: MapContextTypeValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.contextType
-   */
-  _contextType?: fhir.IFhirElement|undefined;
-  /**
-   * Field to create in the context.
-   */
-  element?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.element
-   */
-  _element?: fhir.IFhirElement|undefined;
-  /**
-   * Named context for field, if desired, and a field is specified.
-   */
-  variable?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.variable
-   */
-  _variable?: fhir.IFhirElement|undefined;
-  /**
-   * If field is a list, how to manage the list.
-   */
-  listMode?: MapTargetListModeValueSetEnum[]|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.listMode
-   */
-  _listMode?: fhir.IFhirElement[]|undefined;
-  /**
-   * Internal rule reference for shared list items.
-   */
-  listRuleId?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.listRuleId
-   */
-  _listRuleId?: fhir.IFhirElement|undefined;
-  /**
-   * How the data is copied / created.
-   */
-  transform?: MapTransformValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.transform
-   */
-  _transform?: fhir.IFhirElement|undefined;
-  /**
-   * Parameters to the transform.
-   */
-  parameter?: fhir.IStructureMapGroupRuleTargetParameter[]|undefined;
-}
-
-/**
- * Which other rules to apply in the context of this rule.
- */
-export type IStructureMapGroupRuleDependent = fhir.IBackboneElement & { 
-  /**
-   * Name of a rule or group to apply.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.dependent.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Variable to pass to the rule or group.
-   */
-  variable: string[]|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.dependent.variable
-   */
-  _variable?: fhir.IFhirElement[]|undefined;
-}
-
-/**
- * Transform Rule from source to target.
- */
-export type IStructureMapGroupRule = fhir.IBackboneElement & { 
-  /**
-   * Name of the rule for internal references.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Source inputs to the mapping.
-   */
-  source: fhir.IStructureMapGroupRuleSource[]|null;
-  /**
-   * Content to create because of this mapping rule.
-   */
-  target?: fhir.IStructureMapGroupRuleTarget[]|undefined;
-  /**
-   * Rules contained in this rule.
-   */
-  rule?: fhir.IStructureMapGroupRule[]|undefined;
-  /**
-   * Which other rules to apply in the context of this rule.
-   */
-  dependent?: fhir.IStructureMapGroupRuleDependent[]|undefined;
-  /**
-   * Documentation for this instance of data.
-   */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Organizes the mapping into manageable chunks for human review/ease of maintenance.
- */
-export type IStructureMapGroup = fhir.IBackboneElement & { 
-  /**
-   * A unique name for the group for the convenience of human readers.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Another group that this group adds rules to.
-   */
-  extends?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.extends
-   */
-  _extends?: fhir.IFhirElement|undefined;
-  /**
-   * Not applicable if the underlying model is untyped. There can only be one default mapping for any particular type combination.
-   */
-  typeMode: MapGroupTypeModeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.typeMode
-   */
-  _typeMode?: fhir.IFhirElement|undefined;
-  /**
-   * Additional supporting documentation that explains the purpose of the group and the types of mappings within it.
-   */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
-  /**
-   * If no inputs are named, then the entry mappings are type based.
-   */
-  input: fhir.IStructureMapGroupInput[]|null;
-  /**
-   * Transform Rule from source to target.
-   */
-  rule: fhir.IStructureMapGroupRule[]|null;
-}
-
-/**
- * A Map of relationships between 2 structures that can be used to transform data.
- */
-export type IStructureMap = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "StructureMap";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this structure map outside of FHIR, where it is not possible to use the logical URI.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * There may be different structure map instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the structure map with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of structure maps that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: StructureMap.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of structure maps that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the structure map. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the structure map is the organization or individual primarily responsible for the maintenance and upkeep of the structure map. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the structure map. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * This description can be used to capture details such as why the structure map was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the structure map as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the structure map is presumed to be the predominant language in the place the structure map was created).
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the structure map to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * This element does not describe the usage of the structure map. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this structure map.
-   */
-  purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.purpose
-   */
-  _purpose?: fhir.IFhirElement|undefined;
-  /**
-   * A copyright statement relating to the structure map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the structure map.
-   */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-  /**
-   * It is not necessary for a structure map to identify any dependent structures, though not listing them may restrict its usefulness.
-   */
-  structure?: fhir.IStructureMapStructure[]|undefined;
-  /**
-   * Other maps used by this map (canonical URLs).
-   */
-  import?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.import
-   */
-  _import?: fhir.IFhirElement[]|undefined;
-  /**
-   * Organizes the mapping into manageable chunks for human review/ease of maintenance.
-   */
-  group: fhir.IStructureMapGroup[]|null;
+  documentation?: fhir.FhirString|string|undefined;
 }
 
 /**
  * It is not necessary for a structure map to identify any dependent structures, though not listing them may restrict its usefulness.
  */
-export class StructureMapStructure extends fhir.BackboneElement implements IStructureMapStructure {
+export class StructureMapStructure extends fhir.BackboneElement {
+  readonly __dataType:string = 'StructureMapStructure';
   /**
    * The canonical reference to the structure.
    */
-  public url: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.structure.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url: fhir.FhirCanonical|null;
   /**
    * How the referenced structure is used in this mapping.
    */
   public mode: MapModelModeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: StructureMap.structure.mode
-   */
-  public _mode?: fhir.FhirElement|undefined;
-  /**
    * This is needed if both types have the same name (e.g. version conversion).
    */
-  public alias?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.structure.alias
-   */
-  public _alias?: fhir.FhirElement|undefined;
+  public alias?: fhir.FhirString|undefined;
   /**
    * Documentation that describes how the structure is used in the mapping.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.structure.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirString|undefined;
   /**
    * Default constructor for StructureMapStructure - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IStructureMapStructure> = { }) {
-    super(source);
-    if (source['url']) { this.url = source.url; }
+  constructor(source:Partial<StructureMapStructureArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['url']) { this.url = new fhir.FhirCanonical({value: source.url}); }
     else { this.url = null; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
     if (source['mode']) { this.mode = source.mode; }
     else { this.mode = null; }
-    if (source['_mode']) { this._mode = new fhir.FhirElement(source._mode!); }
-    if (source['alias']) { this.alias = source.alias; }
-    if (source['_alias']) { this._alias = new fhir.FhirElement(source._alias!); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
+    if (source['alias']) { this.alias = new fhir.FhirString({value: source.alias}); }
+    if (source['documentation']) { this.documentation = new fhir.FhirString({value: source.documentation}); }
   }
   /**
    * Required-bound Value Set for mode
@@ -863,69 +87,80 @@ export class StructureMapStructure extends fhir.BackboneElement implements IStru
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["url"]) { results.push(["url",'Missing required element: StructureMap.structure.url']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (!this["mode"]) { results.push(["mode",'Missing required element: StructureMap.structure.mode']); }
-    if (this["_mode"]) { results.push(...this._mode.doModelValidation()); }
-    if (this["_alias"]) { results.push(...this._alias.doModelValidation()); }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['url']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property url:fhir.FhirCanonical fhir: StructureMap.structure.url:canonical", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (!this['mode']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property mode:MapModelModeValueSetEnum fhir: StructureMap.structure.mode:code", }));
+    }
+    if (this["alias"]) { outcome.issue!.push(...this.alias.doModelValidation().issue!); }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the StructureMapGroupInput type.
+ */
+export interface StructureMapGroupInputArgs extends fhir.BackboneElementArgs {
+  /**
+   * Name for this instance of data.
+   */
+  name: fhir.FhirId|string|undefined;
+  /**
+   * Type for this instance of data.
+   */
+  type?: fhir.FhirString|string|undefined;
+  /**
+   * Mode for this instance of data.
+   */
+  mode: MapInputModeValueSetEnum|null;
+  /**
+   * Documentation for this instance of data.
+   */
+  documentation?: fhir.FhirString|string|undefined;
 }
 
 /**
  * If no inputs are named, then the entry mappings are type based.
  */
-export class StructureMapGroupInput extends fhir.BackboneElement implements IStructureMapGroupInput {
+export class StructureMapGroupInput extends fhir.BackboneElement {
+  readonly __dataType:string = 'StructureMapGroupInput';
   /**
    * Name for this instance of data.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.input.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirId|null;
   /**
    * Type for this instance of data.
    */
-  public type?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.input.type
-   */
-  public _type?: fhir.FhirElement|undefined;
+  public type?: fhir.FhirString|undefined;
   /**
    * Mode for this instance of data.
    */
   public mode: MapInputModeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: StructureMap.group.input.mode
-   */
-  public _mode?: fhir.FhirElement|undefined;
-  /**
    * Documentation for this instance of data.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.input.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirString|undefined;
   /**
    * Default constructor for StructureMapGroupInput - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IStructureMapGroupInput> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<StructureMapGroupInputArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirId({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['type']) { this.type = source.type; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
+    if (source['type']) { this.type = new fhir.FhirString({value: source.type}); }
     if (source['mode']) { this.mode = source.mode; }
     else { this.mode = null; }
-    if (source['_mode']) { this._mode = new fhir.FhirElement(source._mode!); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
+    if (source['documentation']) { this.documentation = new fhir.FhirString({value: source.documentation}); }
   }
   /**
    * Required-bound Value Set for mode
@@ -936,473 +171,393 @@ export class StructureMapGroupInput extends fhir.BackboneElement implements IStr
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: StructureMap.group.input.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (!this["mode"]) { results.push(["mode",'Missing required element: StructureMap.group.input.mode']); }
-    if (this["_mode"]) { results.push(...this._mode.doModelValidation()); }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirId fhir: StructureMap.group.input.name:id", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (!this['mode']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property mode:MapInputModeValueSetEnum fhir: StructureMap.group.input.mode:code", }));
+    }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the StructureMapGroupRuleSource type.
+ */
+export interface StructureMapGroupRuleSourceArgs extends fhir.BackboneElementArgs {
+  /**
+   * Type or variable this rule applies to.
+   */
+  context: fhir.FhirId|string|undefined;
+  /**
+   * Specified minimum cardinality for the element. This is optional; if present, it acts an implicit check on the input content.
+   */
+  min?: fhir.FhirInteger|number|undefined;
+  /**
+   * Specified maximum cardinality for the element - a number or a "*". This is optional; if present, it acts an implicit check on the input content (* just serves as documentation; it's the default value).
+   */
+  max?: fhir.FhirString|string|undefined;
+  /**
+   * Specified type for the element. This works as a condition on the mapping - use for polymorphic elements.
+   */
+  type?: fhir.FhirString|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValue?: fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueBase64Binary?: fhir.FhirBase64Binary|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueCanonical?: fhir.FhirCanonical|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueCode?: fhir.FhirCode|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueDate?: fhir.FhirDate|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueDateTime?: fhir.FhirDateTime|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueDecimal?: fhir.FhirDecimal|number|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueId?: fhir.FhirId|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueInstant?: fhir.FhirInstant|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueMarkdown?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueOid?: fhir.FhirOid|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValuePositiveInt?: fhir.FhirPositiveInt|number|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueString?: fhir.FhirString|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueTime?: fhir.FhirTime|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueUnsignedInt?: fhir.FhirUnsignedInt|number|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueUri?: fhir.FhirUri|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueUrl?: fhir.FhirUrl|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueUuid?: fhir.FhirUuid|string|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueAddress?: fhir.AddressArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueAge?: fhir.AgeArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueAnnotation?: fhir.AnnotationArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueAttachment?: fhir.AttachmentArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueCodeableConcept?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueCoding?: fhir.CodingArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueContactPoint?: fhir.ContactPointArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueCount?: fhir.CountArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueDistance?: fhir.DistanceArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueDuration?: fhir.DurationArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueHumanName?: fhir.HumanNameArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueIdentifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueMoney?: fhir.MoneyArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValuePeriod?: fhir.PeriodArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueQuantity?: fhir.QuantityArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueRange?: fhir.RangeArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueRatio?: fhir.RatioArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueReference?: fhir.ReferenceArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueSampledData?: fhir.SampledDataArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueSignature?: fhir.SignatureArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueTiming?: fhir.TimingArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueContactDetail?: fhir.ContactDetailArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueContributor?: fhir.ContributorArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueDataRequirement?: fhir.DataRequirementArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueExpression?: fhir.ExpressionArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueParameterDefinition?: fhir.ParameterDefinitionArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueRelatedArtifact?: fhir.RelatedArtifactArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueTriggerDefinition?: fhir.TriggerDefinitionArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueUsageContext?: fhir.UsageContextArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueDosage?: fhir.DosageArgs|undefined;
+  /**
+   * If there's a default value on an item that can repeat, it will only be used once.
+   */
+  defaultValueMeta?: fhir.MetaArgs|undefined;
+  /**
+   * Optional field for this source.
+   */
+  element?: fhir.FhirString|string|undefined;
+  /**
+   * How to handle the list mode for this element.
+   */
+  listMode?: MapSourceListModeValueSetEnum|undefined;
+  /**
+   * Named context for field, if a field is specified.
+   */
+  variable?: fhir.FhirId|string|undefined;
+  /**
+   * FHIRPath expression  - must be true or the rule does not apply.
+   */
+  condition?: fhir.FhirString|string|undefined;
+  /**
+   * FHIRPath expression  - must be true or the mapping engine throws an error instead of completing.
+   */
+  check?: fhir.FhirString|string|undefined;
+  /**
+   * This is typically used for recording that something Is not transformed to the target for some reason.
+   */
+  logMessage?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Source inputs to the mapping.
  */
-export class StructureMapGroupRuleSource extends fhir.BackboneElement implements IStructureMapGroupRuleSource {
+export class StructureMapGroupRuleSource extends fhir.BackboneElement {
+  readonly __dataType:string = 'StructureMapGroupRuleSource';
   /**
    * Type or variable this rule applies to.
    */
-  public context: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.context
-   */
-  public _context?: fhir.FhirElement|undefined;
+  public context: fhir.FhirId|null;
   /**
    * Specified minimum cardinality for the element. This is optional; if present, it acts an implicit check on the input content.
    */
-  public min?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.min
-   */
-  public _min?: fhir.FhirElement|undefined;
+  public min?: fhir.FhirInteger|undefined;
   /**
    * Specified maximum cardinality for the element - a number or a "*". This is optional; if present, it acts an implicit check on the input content (* just serves as documentation; it's the default value).
    */
-  public max?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.max
-   */
-  public _max?: fhir.FhirElement|undefined;
+  public max?: fhir.FhirString|undefined;
   /**
    * Specified type for the element. This works as a condition on the mapping - use for polymorphic elements.
    */
-  public type?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.type
-   */
-  public _type?: fhir.FhirElement|undefined;
+  public type?: fhir.FhirString|undefined;
   /**
    * If there's a default value on an item that can repeat, it will only be used once.
    */
-  public defaultValueBase64Binary?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueBase64Binary?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueBoolean?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueCanonical?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueCode?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueCode?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueDate?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueDateTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueDateTime?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueDecimal?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueId?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueId?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueInstant?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueInstant?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueInteger?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueMarkdown?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueMarkdown?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueOid?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueOid?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValuePositiveInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValuePositiveInt?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueString?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueTime?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueTime?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueUnsignedInt?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueUnsignedInt?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueUri?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueUrl?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueUrl?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueUuid?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
-   */
-  public _defaultValueUuid?: fhir.FhirElement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueAddress?: fhir.Address|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueAge?: fhir.Age|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueAnnotation?: fhir.Annotation|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueAttachment?: fhir.Attachment|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueCoding?: fhir.Coding|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueContactPoint?: fhir.ContactPoint|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueCount?: fhir.Count|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueDistance?: fhir.Distance|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueDuration?: fhir.Duration|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueHumanName?: fhir.HumanName|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueIdentifier?: fhir.Identifier|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueMoney?: fhir.Money|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValuePeriod?: fhir.Period|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueQuantity?: fhir.Quantity|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueRange?: fhir.Range|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueRatio?: fhir.Ratio|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueReference?: fhir.Reference|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueSampledData?: fhir.SampledData|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueSignature?: fhir.Signature|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueTiming?: fhir.Timing|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueContactDetail?: fhir.ContactDetail|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueContributor?: fhir.Contributor|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueDataRequirement?: fhir.DataRequirement|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueExpression?: fhir.Expression|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueParameterDefinition?: fhir.ParameterDefinition|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueRelatedArtifact?: fhir.RelatedArtifact|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueTriggerDefinition?: fhir.TriggerDefinition|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueUsageContext?: fhir.UsageContext|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueDosage?: fhir.Dosage|undefined;
-  /**
-   * If there's a default value on an item that can repeat, it will only be used once.
-   */
-  public defaultValueMeta?: fhir.Meta|undefined;
+  public defaultValue?: (fhir.FhirBase64Binary|fhir.FhirBoolean|fhir.FhirCanonical|fhir.FhirCode|fhir.FhirDate|fhir.FhirDateTime|fhir.FhirDecimal|fhir.FhirId|fhir.FhirInstant|fhir.FhirInteger|fhir.FhirMarkdown|fhir.FhirOid|fhir.FhirPositiveInt|fhir.FhirString|fhir.FhirTime|fhir.FhirUnsignedInt|fhir.FhirUri|fhir.FhirUrl|fhir.FhirUuid|fhir.Address|fhir.Age|fhir.Annotation|fhir.Attachment|fhir.CodeableConcept|fhir.Coding|fhir.ContactPoint|fhir.Count|fhir.Distance|fhir.Duration|fhir.HumanName|fhir.Identifier|fhir.Money|fhir.Period|fhir.Quantity|fhir.Range|fhir.Ratio|fhir.Reference|fhir.SampledData|fhir.Signature|fhir.Timing|fhir.ContactDetail|fhir.Contributor|fhir.DataRequirement|fhir.Expression|fhir.ParameterDefinition|fhir.RelatedArtifact|fhir.TriggerDefinition|fhir.UsageContext|fhir.Dosage|fhir.Meta)|undefined;
+  readonly __defaultValueIsChoice:true = true;
   /**
    * Optional field for this source.
    */
-  public element?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.element
-   */
-  public _element?: fhir.FhirElement|undefined;
+  public element?: fhir.FhirString|undefined;
   /**
    * How to handle the list mode for this element.
    */
   public listMode?: MapSourceListModeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.listMode
-   */
-  public _listMode?: fhir.FhirElement|undefined;
-  /**
    * Named context for field, if a field is specified.
    */
-  public variable?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.variable
-   */
-  public _variable?: fhir.FhirElement|undefined;
+  public variable?: fhir.FhirId|undefined;
   /**
    * FHIRPath expression  - must be true or the rule does not apply.
    */
-  public condition?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.condition
-   */
-  public _condition?: fhir.FhirElement|undefined;
+  public condition?: fhir.FhirString|undefined;
   /**
    * FHIRPath expression  - must be true or the mapping engine throws an error instead of completing.
    */
-  public check?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.check
-   */
-  public _check?: fhir.FhirElement|undefined;
+  public check?: fhir.FhirString|undefined;
   /**
    * This is typically used for recording that something Is not transformed to the target for some reason.
    */
-  public logMessage?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.source.logMessage
-   */
-  public _logMessage?: fhir.FhirElement|undefined;
+  public logMessage?: fhir.FhirString|undefined;
   /**
    * Default constructor for StructureMapGroupRuleSource - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IStructureMapGroupRuleSource> = { }) {
-    super(source);
-    if (source['context']) { this.context = source.context; }
+  constructor(source:Partial<StructureMapGroupRuleSourceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['context']) { this.context = new fhir.FhirId({value: source.context}); }
     else { this.context = null; }
-    if (source['_context']) { this._context = new fhir.FhirElement(source._context!); }
-    if (source['min']) { this.min = source.min; }
-    if (source['_min']) { this._min = new fhir.FhirElement(source._min!); }
-    if (source['max']) { this.max = source.max; }
-    if (source['_max']) { this._max = new fhir.FhirElement(source._max!); }
-    if (source['type']) { this.type = source.type; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['defaultValueBase64Binary']) { this.defaultValueBase64Binary = source.defaultValueBase64Binary; }
-    if (source['_defaultValueBase64Binary']) { this._defaultValueBase64Binary = new fhir.FhirElement(source._defaultValueBase64Binary!); }
-    if (source['defaultValueBoolean']) { this.defaultValueBoolean = source.defaultValueBoolean; }
-    if (source['_defaultValueBoolean']) { this._defaultValueBoolean = new fhir.FhirElement(source._defaultValueBoolean!); }
-    if (source['defaultValueCanonical']) { this.defaultValueCanonical = source.defaultValueCanonical; }
-    if (source['_defaultValueCanonical']) { this._defaultValueCanonical = new fhir.FhirElement(source._defaultValueCanonical!); }
-    if (source['defaultValueCode']) { this.defaultValueCode = source.defaultValueCode; }
-    if (source['_defaultValueCode']) { this._defaultValueCode = new fhir.FhirElement(source._defaultValueCode!); }
-    if (source['defaultValueDate']) { this.defaultValueDate = source.defaultValueDate; }
-    if (source['_defaultValueDate']) { this._defaultValueDate = new fhir.FhirElement(source._defaultValueDate!); }
-    if (source['defaultValueDateTime']) { this.defaultValueDateTime = source.defaultValueDateTime; }
-    if (source['_defaultValueDateTime']) { this._defaultValueDateTime = new fhir.FhirElement(source._defaultValueDateTime!); }
-    if (source['defaultValueDecimal']) { this.defaultValueDecimal = source.defaultValueDecimal; }
-    if (source['_defaultValueDecimal']) { this._defaultValueDecimal = new fhir.FhirElement(source._defaultValueDecimal!); }
-    if (source['defaultValueId']) { this.defaultValueId = source.defaultValueId; }
-    if (source['_defaultValueId']) { this._defaultValueId = new fhir.FhirElement(source._defaultValueId!); }
-    if (source['defaultValueInstant']) { this.defaultValueInstant = source.defaultValueInstant; }
-    if (source['_defaultValueInstant']) { this._defaultValueInstant = new fhir.FhirElement(source._defaultValueInstant!); }
-    if (source['defaultValueInteger']) { this.defaultValueInteger = source.defaultValueInteger; }
-    if (source['_defaultValueInteger']) { this._defaultValueInteger = new fhir.FhirElement(source._defaultValueInteger!); }
-    if (source['defaultValueMarkdown']) { this.defaultValueMarkdown = source.defaultValueMarkdown; }
-    if (source['_defaultValueMarkdown']) { this._defaultValueMarkdown = new fhir.FhirElement(source._defaultValueMarkdown!); }
-    if (source['defaultValueOid']) { this.defaultValueOid = source.defaultValueOid; }
-    if (source['_defaultValueOid']) { this._defaultValueOid = new fhir.FhirElement(source._defaultValueOid!); }
-    if (source['defaultValuePositiveInt']) { this.defaultValuePositiveInt = source.defaultValuePositiveInt; }
-    if (source['_defaultValuePositiveInt']) { this._defaultValuePositiveInt = new fhir.FhirElement(source._defaultValuePositiveInt!); }
-    if (source['defaultValueString']) { this.defaultValueString = source.defaultValueString; }
-    if (source['_defaultValueString']) { this._defaultValueString = new fhir.FhirElement(source._defaultValueString!); }
-    if (source['defaultValueTime']) { this.defaultValueTime = source.defaultValueTime; }
-    if (source['_defaultValueTime']) { this._defaultValueTime = new fhir.FhirElement(source._defaultValueTime!); }
-    if (source['defaultValueUnsignedInt']) { this.defaultValueUnsignedInt = source.defaultValueUnsignedInt; }
-    if (source['_defaultValueUnsignedInt']) { this._defaultValueUnsignedInt = new fhir.FhirElement(source._defaultValueUnsignedInt!); }
-    if (source['defaultValueUri']) { this.defaultValueUri = source.defaultValueUri; }
-    if (source['_defaultValueUri']) { this._defaultValueUri = new fhir.FhirElement(source._defaultValueUri!); }
-    if (source['defaultValueUrl']) { this.defaultValueUrl = source.defaultValueUrl; }
-    if (source['_defaultValueUrl']) { this._defaultValueUrl = new fhir.FhirElement(source._defaultValueUrl!); }
-    if (source['defaultValueUuid']) { this.defaultValueUuid = source.defaultValueUuid; }
-    if (source['_defaultValueUuid']) { this._defaultValueUuid = new fhir.FhirElement(source._defaultValueUuid!); }
-    if (source['defaultValueAddress']) { this.defaultValueAddress = new fhir.Address(source.defaultValueAddress!); }
-    if (source['defaultValueAge']) { this.defaultValueAge = new fhir.Age(source.defaultValueAge!); }
-    if (source['defaultValueAnnotation']) { this.defaultValueAnnotation = new fhir.Annotation(source.defaultValueAnnotation!); }
-    if (source['defaultValueAttachment']) { this.defaultValueAttachment = new fhir.Attachment(source.defaultValueAttachment!); }
-    if (source['defaultValueCodeableConcept']) { this.defaultValueCodeableConcept = new fhir.CodeableConcept(source.defaultValueCodeableConcept!); }
-    if (source['defaultValueCoding']) { this.defaultValueCoding = new fhir.Coding(source.defaultValueCoding!); }
-    if (source['defaultValueContactPoint']) { this.defaultValueContactPoint = new fhir.ContactPoint(source.defaultValueContactPoint!); }
-    if (source['defaultValueCount']) { this.defaultValueCount = new fhir.Count(source.defaultValueCount!); }
-    if (source['defaultValueDistance']) { this.defaultValueDistance = new fhir.Distance(source.defaultValueDistance!); }
-    if (source['defaultValueDuration']) { this.defaultValueDuration = new fhir.Duration(source.defaultValueDuration!); }
-    if (source['defaultValueHumanName']) { this.defaultValueHumanName = new fhir.HumanName(source.defaultValueHumanName!); }
-    if (source['defaultValueIdentifier']) { this.defaultValueIdentifier = new fhir.Identifier(source.defaultValueIdentifier!); }
-    if (source['defaultValueMoney']) { this.defaultValueMoney = new fhir.Money(source.defaultValueMoney!); }
-    if (source['defaultValuePeriod']) { this.defaultValuePeriod = new fhir.Period(source.defaultValuePeriod!); }
-    if (source['defaultValueQuantity']) { this.defaultValueQuantity = new fhir.Quantity(source.defaultValueQuantity!); }
-    if (source['defaultValueRange']) { this.defaultValueRange = new fhir.Range(source.defaultValueRange!); }
-    if (source['defaultValueRatio']) { this.defaultValueRatio = new fhir.Ratio(source.defaultValueRatio!); }
-    if (source['defaultValueReference']) { this.defaultValueReference = new fhir.Reference(source.defaultValueReference!); }
-    if (source['defaultValueSampledData']) { this.defaultValueSampledData = new fhir.SampledData(source.defaultValueSampledData!); }
-    if (source['defaultValueSignature']) { this.defaultValueSignature = new fhir.Signature(source.defaultValueSignature!); }
-    if (source['defaultValueTiming']) { this.defaultValueTiming = new fhir.Timing(source.defaultValueTiming!); }
-    if (source['defaultValueContactDetail']) { this.defaultValueContactDetail = new fhir.ContactDetail(source.defaultValueContactDetail!); }
-    if (source['defaultValueContributor']) { this.defaultValueContributor = new fhir.Contributor(source.defaultValueContributor!); }
-    if (source['defaultValueDataRequirement']) { this.defaultValueDataRequirement = new fhir.DataRequirement(source.defaultValueDataRequirement!); }
-    if (source['defaultValueExpression']) { this.defaultValueExpression = new fhir.Expression(source.defaultValueExpression!); }
-    if (source['defaultValueParameterDefinition']) { this.defaultValueParameterDefinition = new fhir.ParameterDefinition(source.defaultValueParameterDefinition!); }
-    if (source['defaultValueRelatedArtifact']) { this.defaultValueRelatedArtifact = new fhir.RelatedArtifact(source.defaultValueRelatedArtifact!); }
-    if (source['defaultValueTriggerDefinition']) { this.defaultValueTriggerDefinition = new fhir.TriggerDefinition(source.defaultValueTriggerDefinition!); }
-    if (source['defaultValueUsageContext']) { this.defaultValueUsageContext = new fhir.UsageContext(source.defaultValueUsageContext!); }
-    if (source['defaultValueDosage']) { this.defaultValueDosage = new fhir.Dosage(source.defaultValueDosage!); }
-    if (source['defaultValueMeta']) { this.defaultValueMeta = new fhir.Meta(source.defaultValueMeta!); }
-    if (source['element']) { this.element = source.element; }
-    if (source['_element']) { this._element = new fhir.FhirElement(source._element!); }
+    if (source['min']) { this.min = new fhir.FhirInteger({value: source.min}); }
+    if (source['max']) { this.max = new fhir.FhirString({value: source.max}); }
+    if (source['type']) { this.type = new fhir.FhirString({value: source.type}); }
+    if (source['defaultValue']) { this.defaultValue = source.defaultValue; }
+    else if (source['defaultValueBase64Binary']) { this.defaultValue = new fhir.FhirBase64Binary({value: source.defaultValueBase64Binary}); }
+    else if (source['defaultValueBoolean']) { this.defaultValue = new fhir.FhirBoolean({value: source.defaultValueBoolean}); }
+    else if (source['defaultValueCanonical']) { this.defaultValue = new fhir.FhirCanonical({value: source.defaultValueCanonical}); }
+    else if (source['defaultValueCode']) { this.defaultValue = new fhir.FhirCode({value: source.defaultValueCode}); }
+    else if (source['defaultValueDate']) { this.defaultValue = new fhir.FhirDate({value: source.defaultValueDate}); }
+    else if (source['defaultValueDateTime']) { this.defaultValue = new fhir.FhirDateTime({value: source.defaultValueDateTime}); }
+    else if (source['defaultValueDecimal']) { this.defaultValue = new fhir.FhirDecimal({value: source.defaultValueDecimal}); }
+    else if (source['defaultValueId']) { this.defaultValue = new fhir.FhirId({value: source.defaultValueId}); }
+    else if (source['defaultValueInstant']) { this.defaultValue = new fhir.FhirInstant({value: source.defaultValueInstant}); }
+    else if (source['defaultValueInteger']) { this.defaultValue = new fhir.FhirInteger({value: source.defaultValueInteger}); }
+    else if (source['defaultValueMarkdown']) { this.defaultValue = new fhir.FhirMarkdown({value: source.defaultValueMarkdown}); }
+    else if (source['defaultValueOid']) { this.defaultValue = new fhir.FhirOid({value: source.defaultValueOid}); }
+    else if (source['defaultValuePositiveInt']) { this.defaultValue = new fhir.FhirPositiveInt({value: source.defaultValuePositiveInt}); }
+    else if (source['defaultValueString']) { this.defaultValue = new fhir.FhirString({value: source.defaultValueString}); }
+    else if (source['defaultValueTime']) { this.defaultValue = new fhir.FhirTime({value: source.defaultValueTime}); }
+    else if (source['defaultValueUnsignedInt']) { this.defaultValue = new fhir.FhirUnsignedInt({value: source.defaultValueUnsignedInt}); }
+    else if (source['defaultValueUri']) { this.defaultValue = new fhir.FhirUri({value: source.defaultValueUri}); }
+    else if (source['defaultValueUrl']) { this.defaultValue = new fhir.FhirUrl({value: source.defaultValueUrl}); }
+    else if (source['defaultValueUuid']) { this.defaultValue = new fhir.FhirUuid({value: source.defaultValueUuid}); }
+    else if (source['defaultValueAddress']) { this.defaultValue = new fhir.Address(source.defaultValueAddress); }
+    else if (source['defaultValueAge']) { this.defaultValue = new fhir.Age(source.defaultValueAge); }
+    else if (source['defaultValueAnnotation']) { this.defaultValue = new fhir.Annotation(source.defaultValueAnnotation); }
+    else if (source['defaultValueAttachment']) { this.defaultValue = new fhir.Attachment(source.defaultValueAttachment); }
+    else if (source['defaultValueCodeableConcept']) { this.defaultValue = new fhir.CodeableConcept(source.defaultValueCodeableConcept); }
+    else if (source['defaultValueCoding']) { this.defaultValue = new fhir.Coding(source.defaultValueCoding); }
+    else if (source['defaultValueContactPoint']) { this.defaultValue = new fhir.ContactPoint(source.defaultValueContactPoint); }
+    else if (source['defaultValueCount']) { this.defaultValue = new fhir.Count(source.defaultValueCount); }
+    else if (source['defaultValueDistance']) { this.defaultValue = new fhir.Distance(source.defaultValueDistance); }
+    else if (source['defaultValueDuration']) { this.defaultValue = new fhir.Duration(source.defaultValueDuration); }
+    else if (source['defaultValueHumanName']) { this.defaultValue = new fhir.HumanName(source.defaultValueHumanName); }
+    else if (source['defaultValueIdentifier']) { this.defaultValue = new fhir.Identifier(source.defaultValueIdentifier); }
+    else if (source['defaultValueMoney']) { this.defaultValue = new fhir.Money(source.defaultValueMoney); }
+    else if (source['defaultValuePeriod']) { this.defaultValue = new fhir.Period(source.defaultValuePeriod); }
+    else if (source['defaultValueQuantity']) { this.defaultValue = new fhir.Quantity(source.defaultValueQuantity); }
+    else if (source['defaultValueRange']) { this.defaultValue = new fhir.Range(source.defaultValueRange); }
+    else if (source['defaultValueRatio']) { this.defaultValue = new fhir.Ratio(source.defaultValueRatio); }
+    else if (source['defaultValueReference']) { this.defaultValue = new fhir.Reference(source.defaultValueReference); }
+    else if (source['defaultValueSampledData']) { this.defaultValue = new fhir.SampledData(source.defaultValueSampledData); }
+    else if (source['defaultValueSignature']) { this.defaultValue = new fhir.Signature(source.defaultValueSignature); }
+    else if (source['defaultValueTiming']) { this.defaultValue = new fhir.Timing(source.defaultValueTiming); }
+    else if (source['defaultValueContactDetail']) { this.defaultValue = new fhir.ContactDetail(source.defaultValueContactDetail); }
+    else if (source['defaultValueContributor']) { this.defaultValue = new fhir.Contributor(source.defaultValueContributor); }
+    else if (source['defaultValueDataRequirement']) { this.defaultValue = new fhir.DataRequirement(source.defaultValueDataRequirement); }
+    else if (source['defaultValueExpression']) { this.defaultValue = new fhir.Expression(source.defaultValueExpression); }
+    else if (source['defaultValueParameterDefinition']) { this.defaultValue = new fhir.ParameterDefinition(source.defaultValueParameterDefinition); }
+    else if (source['defaultValueRelatedArtifact']) { this.defaultValue = new fhir.RelatedArtifact(source.defaultValueRelatedArtifact); }
+    else if (source['defaultValueTriggerDefinition']) { this.defaultValue = new fhir.TriggerDefinition(source.defaultValueTriggerDefinition); }
+    else if (source['defaultValueUsageContext']) { this.defaultValue = new fhir.UsageContext(source.defaultValueUsageContext); }
+    else if (source['defaultValueDosage']) { this.defaultValue = new fhir.Dosage(source.defaultValueDosage); }
+    else if (source['defaultValueMeta']) { this.defaultValue = new fhir.Meta(source.defaultValueMeta); }
+    if (source['element']) { this.element = new fhir.FhirString({value: source.element}); }
     if (source['listMode']) { this.listMode = source.listMode; }
-    if (source['_listMode']) { this._listMode = new fhir.FhirElement(source._listMode!); }
-    if (source['variable']) { this.variable = source.variable; }
-    if (source['_variable']) { this._variable = new fhir.FhirElement(source._variable!); }
-    if (source['condition']) { this.condition = source.condition; }
-    if (source['_condition']) { this._condition = new fhir.FhirElement(source._condition!); }
-    if (source['check']) { this.check = source.check; }
-    if (source['_check']) { this._check = new fhir.FhirElement(source._check!); }
-    if (source['logMessage']) { this.logMessage = source.logMessage; }
-    if (source['_logMessage']) { this._logMessage = new fhir.FhirElement(source._logMessage!); }
+    if (source['variable']) { this.variable = new fhir.FhirId({value: source.variable}); }
+    if (source['condition']) { this.condition = new fhir.FhirString({value: source.condition}); }
+    if (source['check']) { this.check = new fhir.FhirString({value: source.check}); }
+    if (source['logMessage']) { this.logMessage = new fhir.FhirString({value: source.logMessage}); }
   }
   /**
    * Required-bound Value Set for listMode
@@ -1413,230 +568,186 @@ export class StructureMapGroupRuleSource extends fhir.BackboneElement implements
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["context"]) { results.push(["context",'Missing required element: StructureMap.group.rule.source.context']); }
-    if (this["_context"]) { results.push(...this._context.doModelValidation()); }
-    if (this["_min"]) { results.push(...this._min.doModelValidation()); }
-    if (this["_max"]) { results.push(...this._max.doModelValidation()); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_defaultValueBase64Binary"]) { results.push(...this._defaultValueBase64Binary.doModelValidation()); }
-    if (this["_defaultValueBoolean"]) { results.push(...this._defaultValueBoolean.doModelValidation()); }
-    if (this["_defaultValueCanonical"]) { results.push(...this._defaultValueCanonical.doModelValidation()); }
-    if (this["_defaultValueCode"]) { results.push(...this._defaultValueCode.doModelValidation()); }
-    if (this["_defaultValueDate"]) { results.push(...this._defaultValueDate.doModelValidation()); }
-    if (this["_defaultValueDateTime"]) { results.push(...this._defaultValueDateTime.doModelValidation()); }
-    if (this["_defaultValueDecimal"]) { results.push(...this._defaultValueDecimal.doModelValidation()); }
-    if (this["_defaultValueId"]) { results.push(...this._defaultValueId.doModelValidation()); }
-    if (this["_defaultValueInstant"]) { results.push(...this._defaultValueInstant.doModelValidation()); }
-    if (this["_defaultValueInteger"]) { results.push(...this._defaultValueInteger.doModelValidation()); }
-    if (this["_defaultValueMarkdown"]) { results.push(...this._defaultValueMarkdown.doModelValidation()); }
-    if (this["_defaultValueOid"]) { results.push(...this._defaultValueOid.doModelValidation()); }
-    if (this["_defaultValuePositiveInt"]) { results.push(...this._defaultValuePositiveInt.doModelValidation()); }
-    if (this["_defaultValueString"]) { results.push(...this._defaultValueString.doModelValidation()); }
-    if (this["_defaultValueTime"]) { results.push(...this._defaultValueTime.doModelValidation()); }
-    if (this["_defaultValueUnsignedInt"]) { results.push(...this._defaultValueUnsignedInt.doModelValidation()); }
-    if (this["_defaultValueUri"]) { results.push(...this._defaultValueUri.doModelValidation()); }
-    if (this["_defaultValueUrl"]) { results.push(...this._defaultValueUrl.doModelValidation()); }
-    if (this["_defaultValueUuid"]) { results.push(...this._defaultValueUuid.doModelValidation()); }
-    if (this["defaultValueAddress"]) { results.push(...this.defaultValueAddress.doModelValidation()); }
-    if (this["defaultValueAge"]) { results.push(...this.defaultValueAge.doModelValidation()); }
-    if (this["defaultValueAnnotation"]) { results.push(...this.defaultValueAnnotation.doModelValidation()); }
-    if (this["defaultValueAttachment"]) { results.push(...this.defaultValueAttachment.doModelValidation()); }
-    if (this["defaultValueCodeableConcept"]) { results.push(...this.defaultValueCodeableConcept.doModelValidation()); }
-    if (this["defaultValueCoding"]) { results.push(...this.defaultValueCoding.doModelValidation()); }
-    if (this["defaultValueContactPoint"]) { results.push(...this.defaultValueContactPoint.doModelValidation()); }
-    if (this["defaultValueCount"]) { results.push(...this.defaultValueCount.doModelValidation()); }
-    if (this["defaultValueDistance"]) { results.push(...this.defaultValueDistance.doModelValidation()); }
-    if (this["defaultValueDuration"]) { results.push(...this.defaultValueDuration.doModelValidation()); }
-    if (this["defaultValueHumanName"]) { results.push(...this.defaultValueHumanName.doModelValidation()); }
-    if (this["defaultValueIdentifier"]) { results.push(...this.defaultValueIdentifier.doModelValidation()); }
-    if (this["defaultValueMoney"]) { results.push(...this.defaultValueMoney.doModelValidation()); }
-    if (this["defaultValuePeriod"]) { results.push(...this.defaultValuePeriod.doModelValidation()); }
-    if (this["defaultValueQuantity"]) { results.push(...this.defaultValueQuantity.doModelValidation()); }
-    if (this["defaultValueRange"]) { results.push(...this.defaultValueRange.doModelValidation()); }
-    if (this["defaultValueRatio"]) { results.push(...this.defaultValueRatio.doModelValidation()); }
-    if (this["defaultValueReference"]) { results.push(...this.defaultValueReference.doModelValidation()); }
-    if (this["defaultValueSampledData"]) { results.push(...this.defaultValueSampledData.doModelValidation()); }
-    if (this["defaultValueSignature"]) { results.push(...this.defaultValueSignature.doModelValidation()); }
-    if (this["defaultValueTiming"]) { results.push(...this.defaultValueTiming.doModelValidation()); }
-    if (this["defaultValueContactDetail"]) { results.push(...this.defaultValueContactDetail.doModelValidation()); }
-    if (this["defaultValueContributor"]) { results.push(...this.defaultValueContributor.doModelValidation()); }
-    if (this["defaultValueDataRequirement"]) { results.push(...this.defaultValueDataRequirement.doModelValidation()); }
-    if (this["defaultValueExpression"]) { results.push(...this.defaultValueExpression.doModelValidation()); }
-    if (this["defaultValueParameterDefinition"]) { results.push(...this.defaultValueParameterDefinition.doModelValidation()); }
-    if (this["defaultValueRelatedArtifact"]) { results.push(...this.defaultValueRelatedArtifact.doModelValidation()); }
-    if (this["defaultValueTriggerDefinition"]) { results.push(...this.defaultValueTriggerDefinition.doModelValidation()); }
-    if (this["defaultValueUsageContext"]) { results.push(...this.defaultValueUsageContext.doModelValidation()); }
-    if (this["defaultValueDosage"]) { results.push(...this.defaultValueDosage.doModelValidation()); }
-    if (this["defaultValueMeta"]) { results.push(...this.defaultValueMeta.doModelValidation()); }
-    if (this["_element"]) { results.push(...this._element.doModelValidation()); }
-    if (this["_listMode"]) { results.push(...this._listMode.doModelValidation()); }
-    if (this["_variable"]) { results.push(...this._variable.doModelValidation()); }
-    if (this["_condition"]) { results.push(...this._condition.doModelValidation()); }
-    if (this["_check"]) { results.push(...this._check.doModelValidation()); }
-    if (this["_logMessage"]) { results.push(...this._logMessage.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['context']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property context:fhir.FhirId fhir: StructureMap.group.rule.source.context:id", }));
+    }
+    if (this["context"]) { outcome.issue!.push(...this.context.doModelValidation().issue!); }
+    if (this["min"]) { outcome.issue!.push(...this.min.doModelValidation().issue!); }
+    if (this["max"]) { outcome.issue!.push(...this.max.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["element"]) { outcome.issue!.push(...this.element.doModelValidation().issue!); }
+    if (this["variable"]) { outcome.issue!.push(...this.variable.doModelValidation().issue!); }
+    if (this["condition"]) { outcome.issue!.push(...this.condition.doModelValidation().issue!); }
+    if (this["check"]) { outcome.issue!.push(...this.check.doModelValidation().issue!); }
+    if (this["logMessage"]) { outcome.issue!.push(...this.logMessage.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the StructureMapGroupRuleTargetParameter type.
+ */
+export interface StructureMapGroupRuleTargetParameterArgs extends fhir.BackboneElementArgs {
+  /**
+   * Parameter value - variable or literal.
+   */
+  value?: fhir.FhirId|fhir.FhirString|fhir.FhirBoolean|fhir.FhirInteger|fhir.FhirDecimal|undefined;
+  /**
+   * Parameter value - variable or literal.
+   */
+  valueId?: fhir.FhirId|string|undefined;
+  /**
+   * Parameter value - variable or literal.
+   */
+  valueString?: fhir.FhirString|string|undefined;
+  /**
+   * Parameter value - variable or literal.
+   */
+  valueBoolean?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Parameter value - variable or literal.
+   */
+  valueInteger?: fhir.FhirInteger|number|undefined;
+  /**
+   * Parameter value - variable or literal.
+   */
+  valueDecimal?: fhir.FhirDecimal|number|undefined;
 }
 
 /**
  * Parameters to the transform.
  */
-export class StructureMapGroupRuleTargetParameter extends fhir.BackboneElement implements IStructureMapGroupRuleTargetParameter {
+export class StructureMapGroupRuleTargetParameter extends fhir.BackboneElement {
+  readonly __dataType:string = 'StructureMapGroupRuleTargetParameter';
   /**
    * Parameter value - variable or literal.
    */
-  public valueId?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
-   */
-  public _valueId?: fhir.FhirElement|undefined;
-  /**
-   * Parameter value - variable or literal.
-   */
-  public valueString?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
-   */
-  public _valueString?: fhir.FhirElement|undefined;
-  /**
-   * Parameter value - variable or literal.
-   */
-  public valueBoolean?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
-   */
-  public _valueBoolean?: fhir.FhirElement|undefined;
-  /**
-   * Parameter value - variable or literal.
-   */
-  public valueInteger?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
-   */
-  public _valueInteger?: fhir.FhirElement|undefined;
-  /**
-   * Parameter value - variable or literal.
-   */
-  public valueDecimal?: number|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
-   */
-  public _valueDecimal?: fhir.FhirElement|undefined;
+  public value: (fhir.FhirId|fhir.FhirString|fhir.FhirBoolean|fhir.FhirInteger|fhir.FhirDecimal)|null;
+  readonly __valueIsChoice:true = true;
   /**
    * Default constructor for StructureMapGroupRuleTargetParameter - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IStructureMapGroupRuleTargetParameter> = { }) {
-    super(source);
-    if (source['valueId']) { this.valueId = source.valueId; }
-    if (source['_valueId']) { this._valueId = new fhir.FhirElement(source._valueId!); }
-    if (source['valueString']) { this.valueString = source.valueString; }
-    if (source['_valueString']) { this._valueString = new fhir.FhirElement(source._valueString!); }
-    if (source['valueBoolean']) { this.valueBoolean = source.valueBoolean; }
-    if (source['_valueBoolean']) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
-    if (source['valueInteger']) { this.valueInteger = source.valueInteger; }
-    if (source['_valueInteger']) { this._valueInteger = new fhir.FhirElement(source._valueInteger!); }
-    if (source['valueDecimal']) { this.valueDecimal = source.valueDecimal; }
-    if (source['_valueDecimal']) { this._valueDecimal = new fhir.FhirElement(source._valueDecimal!); }
+  constructor(source:Partial<StructureMapGroupRuleTargetParameterArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueId']) { this.value = new fhir.FhirId({value: source.valueId}); }
+    else if (source['valueString']) { this.value = new fhir.FhirString({value: source.valueString}); }
+    else if (source['valueBoolean']) { this.value = new fhir.FhirBoolean({value: source.valueBoolean}); }
+    else if (source['valueInteger']) { this.value = new fhir.FhirInteger({value: source.valueInteger}); }
+    else if (source['valueDecimal']) { this.value = new fhir.FhirDecimal({value: source.valueDecimal}); }
+    else { this.value = null; }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_valueId"]) { results.push(...this._valueId.doModelValidation()); }
-    if (this["_valueString"]) { results.push(...this._valueString.doModelValidation()); }
-    if (this["_valueBoolean"]) { results.push(...this._valueBoolean.doModelValidation()); }
-    if (this["_valueInteger"]) { results.push(...this._valueInteger.doModelValidation()); }
-    if (this["_valueDecimal"]) { results.push(...this._valueDecimal.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value: fhir: StructureMap.group.rule.target.parameter.value[x]:", }));
+    }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the StructureMapGroupRuleTarget type.
+ */
+export interface StructureMapGroupRuleTargetArgs extends fhir.BackboneElementArgs {
+  /**
+   * Type or variable this rule applies to.
+   */
+  context?: fhir.FhirId|string|undefined;
+  /**
+   * How to interpret the context.
+   */
+  contextType?: MapContextTypeValueSetEnum|undefined;
+  /**
+   * Field to create in the context.
+   */
+  element?: fhir.FhirString|string|undefined;
+  /**
+   * Named context for field, if desired, and a field is specified.
+   */
+  variable?: fhir.FhirId|string|undefined;
+  /**
+   * If field is a list, how to manage the list.
+   */
+  listMode?: MapTargetListModeValueSetEnum[]|undefined;
+  /**
+   * Internal rule reference for shared list items.
+   */
+  listRuleId?: fhir.FhirId|string|undefined;
+  /**
+   * How the data is copied / created.
+   */
+  transform?: MapTransformValueSetEnum|undefined;
+  /**
+   * Parameters to the transform.
+   */
+  parameter?: fhir.StructureMapGroupRuleTargetParameterArgs[]|undefined;
 }
 
 /**
  * Content to create because of this mapping rule.
  */
-export class StructureMapGroupRuleTarget extends fhir.BackboneElement implements IStructureMapGroupRuleTarget {
+export class StructureMapGroupRuleTarget extends fhir.BackboneElement {
+  readonly __dataType:string = 'StructureMapGroupRuleTarget';
   /**
    * Type or variable this rule applies to.
    */
-  public context?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.context
-   */
-  public _context?: fhir.FhirElement|undefined;
+  public context?: fhir.FhirId|undefined;
   /**
    * How to interpret the context.
    */
   public contextType?: MapContextTypeValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.contextType
-   */
-  public _contextType?: fhir.FhirElement|undefined;
-  /**
    * Field to create in the context.
    */
-  public element?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.element
-   */
-  public _element?: fhir.FhirElement|undefined;
+  public element?: fhir.FhirString|undefined;
   /**
    * Named context for field, if desired, and a field is specified.
    */
-  public variable?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.variable
-   */
-  public _variable?: fhir.FhirElement|undefined;
+  public variable?: fhir.FhirId|undefined;
   /**
    * If field is a list, how to manage the list.
    */
-  public listMode?: MapTargetListModeValueSetEnum[]|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.listMode
-   */
-  public _listMode?: fhir.FhirElement[]|undefined;
+  public listMode?: MapTargetListModeValueSetEnum[]|undefined = [];
   /**
    * Internal rule reference for shared list items.
    */
-  public listRuleId?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.listRuleId
-   */
-  public _listRuleId?: fhir.FhirElement|undefined;
+  public listRuleId?: fhir.FhirId|undefined;
   /**
    * How the data is copied / created.
    */
   public transform?: MapTransformValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: StructureMap.group.rule.target.transform
-   */
-  public _transform?: fhir.FhirElement|undefined;
-  /**
    * Parameters to the transform.
    */
-  public parameter?: fhir.StructureMapGroupRuleTargetParameter[]|undefined;
+  public parameter?: fhir.StructureMapGroupRuleTargetParameter[]|undefined = [];
   /**
    * Default constructor for StructureMapGroupRuleTarget - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IStructureMapGroupRuleTarget> = { }) {
-    super(source);
-    if (source['context']) { this.context = source.context; }
-    if (source['_context']) { this._context = new fhir.FhirElement(source._context!); }
+  constructor(source:Partial<StructureMapGroupRuleTargetArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['context']) { this.context = new fhir.FhirId({value: source.context}); }
     if (source['contextType']) { this.contextType = source.contextType; }
-    if (source['_contextType']) { this._contextType = new fhir.FhirElement(source._contextType!); }
-    if (source['element']) { this.element = source.element; }
-    if (source['_element']) { this._element = new fhir.FhirElement(source._element!); }
-    if (source['variable']) { this.variable = source.variable; }
-    if (source['_variable']) { this._variable = new fhir.FhirElement(source._variable!); }
-    if (source['listMode']) { this.listMode = source.listMode.map((x) => (x)); }
-    if (source['_listMode']) { this._listMode = source._listMode.map((x) => new fhir.FhirElement(x)); }
-    if (source['listRuleId']) { this.listRuleId = source.listRuleId; }
-    if (source['_listRuleId']) { this._listRuleId = new fhir.FhirElement(source._listRuleId!); }
+    if (source['element']) { this.element = new fhir.FhirString({value: source.element}); }
+    if (source['variable']) { this.variable = new fhir.FhirId({value: source.variable}); }
+    if (source['listMode']) { this.listMode = source.listMode.map((x) => x); }
+    if (source['listRuleId']) { this.listRuleId = new fhir.FhirId({value: source.listRuleId}); }
     if (source['transform']) { this.transform = source.transform; }
-    if (source['_transform']) { this._transform = new fhir.FhirElement(source._transform!); }
     if (source['parameter']) { this.parameter = source.parameter.map((x) => new fhir.StructureMapGroupRuleTargetParameter(x)); }
   }
   /**
@@ -1660,193 +771,258 @@ export class StructureMapGroupRuleTarget extends fhir.BackboneElement implements
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_context"]) { results.push(...this._context.doModelValidation()); }
-    if (this["_contextType"]) { results.push(...this._contextType.doModelValidation()); }
-    if (this["_element"]) { results.push(...this._element.doModelValidation()); }
-    if (this["_variable"]) { results.push(...this._variable.doModelValidation()); }
-    if (this["_listMode"]) { this._listMode.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_listRuleId"]) { results.push(...this._listRuleId.doModelValidation()); }
-    if (this["_transform"]) { results.push(...this._transform.doModelValidation()); }
-    if (this["parameter"]) { this.parameter.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["context"]) { outcome.issue!.push(...this.context.doModelValidation().issue!); }
+    if (this["element"]) { outcome.issue!.push(...this.element.doModelValidation().issue!); }
+    if (this["variable"]) { outcome.issue!.push(...this.variable.doModelValidation().issue!); }
+    if (this["listRuleId"]) { outcome.issue!.push(...this.listRuleId.doModelValidation().issue!); }
+    if (this["parameter"]) { this.parameter.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the StructureMapGroupRuleDependent type.
+ */
+export interface StructureMapGroupRuleDependentArgs extends fhir.BackboneElementArgs {
+  /**
+   * Name of a rule or group to apply.
+   */
+  name: fhir.FhirId|string|undefined;
+  /**
+   * Variable to pass to the rule or group.
+   */
+  variable: fhir.FhirString[]|string[]|undefined;
 }
 
 /**
  * Which other rules to apply in the context of this rule.
  */
-export class StructureMapGroupRuleDependent extends fhir.BackboneElement implements IStructureMapGroupRuleDependent {
+export class StructureMapGroupRuleDependent extends fhir.BackboneElement {
+  readonly __dataType:string = 'StructureMapGroupRuleDependent';
   /**
    * Name of a rule or group to apply.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.dependent.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirId|null;
   /**
    * Variable to pass to the rule or group.
    */
-  public variable: string[]|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.dependent.variable
-   */
-  public _variable?: fhir.FhirElement[]|undefined;
+  public variable: fhir.FhirString[]|null = [];
   /**
    * Default constructor for StructureMapGroupRuleDependent - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IStructureMapGroupRuleDependent> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<StructureMapGroupRuleDependentArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirId({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['variable']) { this.variable = source.variable.map((x) => (x)); }
+    if (source['variable']) { this.variable = source.variable.map((x) => new fhir.FhirString({value: x})); }
     else { this.variable = null; }
-    if (source['_variable']) { this._variable = source._variable.map((x) => new fhir.FhirElement(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: StructureMap.group.rule.dependent.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if ((!this["variable"]) || (this["variable"].length === 0)) { results.push(["variable",'Missing required element: StructureMap.group.rule.dependent.variable']); }
-    if (this["_variable"]) { this._variable.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirId fhir: StructureMap.group.rule.dependent.name:id", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (!this['variable']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property variable:fhir.FhirString[] fhir: StructureMap.group.rule.dependent.variable:string", }));
+    } else if (!Array.isArray(this.variable)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property variable:fhir.FhirString[] fhir: StructureMap.group.rule.dependent.variable:string", }));
+    } else if (this.variable.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property variable:fhir.FhirString[] fhir: StructureMap.group.rule.dependent.variable:string", }));
+    }
+    if (this["variable"]) { this.variable.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the StructureMapGroupRule type.
+ */
+export interface StructureMapGroupRuleArgs extends fhir.BackboneElementArgs {
+  /**
+   * Name of the rule for internal references.
+   */
+  name: fhir.FhirId|string|undefined;
+  /**
+   * Source inputs to the mapping.
+   */
+  source: fhir.StructureMapGroupRuleSourceArgs[]|null;
+  /**
+   * Content to create because of this mapping rule.
+   */
+  target?: fhir.StructureMapGroupRuleTargetArgs[]|undefined;
+  /**
+   * Rules contained in this rule.
+   */
+  rule?: fhir.StructureMapGroupRuleArgs[]|undefined;
+  /**
+   * Which other rules to apply in the context of this rule.
+   */
+  dependent?: fhir.StructureMapGroupRuleDependentArgs[]|undefined;
+  /**
+   * Documentation for this instance of data.
+   */
+  documentation?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Transform Rule from source to target.
  */
-export class StructureMapGroupRule extends fhir.BackboneElement implements IStructureMapGroupRule {
+export class StructureMapGroupRule extends fhir.BackboneElement {
+  readonly __dataType:string = 'StructureMapGroupRule';
   /**
    * Name of the rule for internal references.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirId|null;
   /**
    * Source inputs to the mapping.
    */
-  public source: fhir.StructureMapGroupRuleSource[]|null;
+  public source: fhir.StructureMapGroupRuleSource[]|null = [];
   /**
    * Content to create because of this mapping rule.
    */
-  public target?: fhir.StructureMapGroupRuleTarget[]|undefined;
+  public target?: fhir.StructureMapGroupRuleTarget[]|undefined = [];
   /**
    * Rules contained in this rule.
    */
-  public rule?: fhir.StructureMapGroupRule[]|undefined;
+  public rule?: fhir.StructureMapGroupRule[]|undefined = [];
   /**
    * Which other rules to apply in the context of this rule.
    */
-  public dependent?: fhir.StructureMapGroupRuleDependent[]|undefined;
+  public dependent?: fhir.StructureMapGroupRuleDependent[]|undefined = [];
   /**
    * Documentation for this instance of data.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.rule.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirString|undefined;
   /**
    * Default constructor for StructureMapGroupRule - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IStructureMapGroupRule> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<StructureMapGroupRuleArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirId({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
     if (source['source']) { this.source = source.source.map((x) => new fhir.StructureMapGroupRuleSource(x)); }
     else { this.source = null; }
     if (source['target']) { this.target = source.target.map((x) => new fhir.StructureMapGroupRuleTarget(x)); }
     if (source['rule']) { this.rule = source.rule.map((x) => new fhir.StructureMapGroupRule(x)); }
     if (source['dependent']) { this.dependent = source.dependent.map((x) => new fhir.StructureMapGroupRuleDependent(x)); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
+    if (source['documentation']) { this.documentation = new fhir.FhirString({value: source.documentation}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: StructureMap.group.rule.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if ((!this["source"]) || (this["source"].length === 0)) { results.push(["source",'Missing required element: StructureMap.group.rule.source']); }
-    if (this["source"]) { this.source.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["target"]) { this.target.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["rule"]) { this.rule.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["dependent"]) { this.dependent.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirId fhir: StructureMap.group.rule.name:id", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (!this['source']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property source:fhir.StructureMapGroupRuleSource[] fhir: StructureMap.group.rule.source:source", }));
+    } else if (!Array.isArray(this.source)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property source:fhir.StructureMapGroupRuleSource[] fhir: StructureMap.group.rule.source:source", }));
+    } else if (this.source.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property source:fhir.StructureMapGroupRuleSource[] fhir: StructureMap.group.rule.source:source", }));
+    }
+    if (this["source"]) { this.source.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["target"]) { this.target.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["rule"]) { this.rule.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["dependent"]) { this.dependent.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the StructureMapGroup type.
+ */
+export interface StructureMapGroupArgs extends fhir.BackboneElementArgs {
+  /**
+   * A unique name for the group for the convenience of human readers.
+   */
+  name: fhir.FhirId|string|undefined;
+  /**
+   * Another group that this group adds rules to.
+   */
+  extends?: fhir.FhirId|string|undefined;
+  /**
+   * Not applicable if the underlying model is untyped. There can only be one default mapping for any particular type combination.
+   */
+  typeMode: MapGroupTypeModeValueSetEnum|null;
+  /**
+   * Additional supporting documentation that explains the purpose of the group and the types of mappings within it.
+   */
+  documentation?: fhir.FhirString|string|undefined;
+  /**
+   * If no inputs are named, then the entry mappings are type based.
+   */
+  input: fhir.StructureMapGroupInputArgs[]|null;
+  /**
+   * Transform Rule from source to target.
+   */
+  rule: fhir.StructureMapGroupRuleArgs[]|null;
 }
 
 /**
  * Organizes the mapping into manageable chunks for human review/ease of maintenance.
  */
-export class StructureMapGroup extends fhir.BackboneElement implements IStructureMapGroup {
+export class StructureMapGroup extends fhir.BackboneElement {
+  readonly __dataType:string = 'StructureMapGroup';
   /**
    * A unique name for the group for the convenience of human readers.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.group.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirId|null;
   /**
    * Another group that this group adds rules to.
    */
-  public extends?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.extends
-   */
-  public _extends?: fhir.FhirElement|undefined;
+  public extends?: fhir.FhirId|undefined;
   /**
    * Not applicable if the underlying model is untyped. There can only be one default mapping for any particular type combination.
    */
   public typeMode: MapGroupTypeModeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: StructureMap.group.typeMode
-   */
-  public _typeMode?: fhir.FhirElement|undefined;
-  /**
    * Additional supporting documentation that explains the purpose of the group and the types of mappings within it.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.group.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirString|undefined;
   /**
    * If no inputs are named, then the entry mappings are type based.
    */
-  public input: fhir.StructureMapGroupInput[]|null;
+  public input: fhir.StructureMapGroupInput[]|null = [];
   /**
    * Transform Rule from source to target.
    */
-  public rule: fhir.StructureMapGroupRule[]|null;
+  public rule: fhir.StructureMapGroupRule[]|null = [];
   /**
    * Default constructor for StructureMapGroup - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IStructureMapGroup> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
+  constructor(source:Partial<StructureMapGroupArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirId({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['extends']) { this.extends = source.extends; }
-    if (source['_extends']) { this._extends = new fhir.FhirElement(source._extends!); }
+    if (source['extends']) { this.extends = new fhir.FhirId({value: source.extends}); }
     if (source['typeMode']) { this.typeMode = source.typeMode; }
     else { this.typeMode = null; }
-    if (source['_typeMode']) { this._typeMode = new fhir.FhirElement(source._typeMode!); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
+    if (source['documentation']) { this.documentation = new fhir.FhirString({value: source.documentation}); }
     if (source['input']) { this.input = source.input.map((x) => new fhir.StructureMapGroupInput(x)); }
     else { this.input = null; }
     if (source['rule']) { this.rule = source.rule.map((x) => new fhir.StructureMapGroupRule(x)); }
@@ -1861,26 +1037,131 @@ export class StructureMapGroup extends fhir.BackboneElement implements IStructur
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["name"]) { results.push(["name",'Missing required element: StructureMap.group.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_extends"]) { results.push(...this._extends.doModelValidation()); }
-    if (!this["typeMode"]) { results.push(["typeMode",'Missing required element: StructureMap.group.typeMode']); }
-    if (this["_typeMode"]) { results.push(...this._typeMode.doModelValidation()); }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    if ((!this["input"]) || (this["input"].length === 0)) { results.push(["input",'Missing required element: StructureMap.group.input']); }
-    if (this["input"]) { this.input.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if ((!this["rule"]) || (this["rule"].length === 0)) { results.push(["rule",'Missing required element: StructureMap.group.rule']); }
-    if (this["rule"]) { this.rule.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirId fhir: StructureMap.group.name:id", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["extends"]) { outcome.issue!.push(...this.extends.doModelValidation().issue!); }
+    if (!this['typeMode']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property typeMode:MapGroupTypeModeValueSetEnum fhir: StructureMap.group.typeMode:code", }));
+    }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    if (!this['input']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property input:fhir.StructureMapGroupInput[] fhir: StructureMap.group.input:input", }));
+    } else if (!Array.isArray(this.input)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property input:fhir.StructureMapGroupInput[] fhir: StructureMap.group.input:input", }));
+    } else if (this.input.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property input:fhir.StructureMapGroupInput[] fhir: StructureMap.group.input:input", }));
+    }
+    if (this["input"]) { this.input.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['rule']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property rule:fhir.StructureMapGroupRule[] fhir: StructureMap.group.rule:rule", }));
+    } else if (!Array.isArray(this.rule)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property rule:fhir.StructureMapGroupRule[] fhir: StructureMap.group.rule:rule", }));
+    } else if (this.rule.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property rule:fhir.StructureMapGroupRule[] fhir: StructureMap.group.rule:rule", }));
+    }
+    if (this["rule"]) { this.rule.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the StructureMap type.
+ */
+export interface StructureMapArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "StructureMap"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url: fhir.FhirUri|string|undefined;
+  /**
+   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this structure map outside of FHIR, where it is not possible to use the logical URI.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * There may be different structure map instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the structure map with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name: fhir.FhirString|string|undefined;
+  /**
+   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * Allows filtering of structure maps that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Allows filtering of structure maps that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the structure map. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the structure map is the organization or individual primarily responsible for the maintenance and upkeep of the structure map. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the structure map. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * This description can be used to capture details such as why the structure map was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the structure map as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the structure map is presumed to be the predominant language in the place the structure map was created).
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the structure map to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * This element does not describe the usage of the structure map. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this structure map.
+   */
+  purpose?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * A copyright statement relating to the structure map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the structure map.
+   */
+  copyright?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * It is not necessary for a structure map to identify any dependent structures, though not listing them may restrict its usefulness.
+   */
+  structure?: fhir.StructureMapStructureArgs[]|undefined;
+  /**
+   * Other maps used by this map (canonical URLs).
+   */
+  import?: fhir.FhirCanonical[]|string[]|undefined;
+  /**
+   * Organizes the mapping into manageable chunks for human review/ease of maintenance.
+   */
+  group: fhir.StructureMapGroupArgs[]|null;
 }
 
 /**
  * A Map of relationships between 2 structures that can be used to transform data.
  */
-export class StructureMap extends fhir.DomainResource implements IStructureMap {
+export class StructureMap extends fhir.DomainResource {
+  readonly __dataType:string = 'StructureMap';
   /**
    * Resource Type Name
    */
@@ -1890,161 +1171,101 @@ export class StructureMap extends fhir.DomainResource implements IStructureMap {
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url: fhir.FhirUri|null;
   /**
    * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this structure map outside of FHIR, where it is not possible to use the logical URI.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * There may be different structure map instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the structure map with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name: string|null;
-  /**
-   * Extended properties for primitive element: StructureMap.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name: fhir.FhirString|null;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * Allows filtering of structure maps that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: StructureMap.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of structure maps that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the structure map. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the structure map is the organization or individual primarily responsible for the maintenance and upkeep of the structure map. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the structure map. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * This description can be used to capture details such as why the structure map was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the structure map as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the structure map is presumed to be the predominant language in the place the structure map was created).
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the structure map to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * This element does not describe the usage of the structure map. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this structure map.
    */
-  public purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.purpose
-   */
-  public _purpose?: fhir.FhirElement|undefined;
+  public purpose?: fhir.FhirMarkdown|undefined;
   /**
    * A copyright statement relating to the structure map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the structure map.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * It is not necessary for a structure map to identify any dependent structures, though not listing them may restrict its usefulness.
    */
-  public structure?: fhir.StructureMapStructure[]|undefined;
+  public structure?: fhir.StructureMapStructure[]|undefined = [];
   /**
    * Other maps used by this map (canonical URLs).
    */
-  public import?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: StructureMap.import
-   */
-  public _import?: fhir.FhirElement[]|undefined;
+  public import?: fhir.FhirCanonical[]|undefined = [];
   /**
    * Organizes the mapping into manageable chunks for human review/ease of maintenance.
    */
-  public group: fhir.StructureMapGroup[]|null;
+  public group: fhir.StructureMapGroup[]|null = [];
   /**
    * Default constructor for StructureMap - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IStructureMap> = { }) {
-    super(source);
+  constructor(source:Partial<StructureMapArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'StructureMap';
-    if (source['url']) { this.url = source.url; }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     else { this.url = null; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     else { this.name = null; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['purpose']) { this.purpose = source.purpose; }
-    if (source['_purpose']) { this._purpose = new fhir.FhirElement(source._purpose!); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
+    if (source['purpose']) { this.purpose = new fhir.FhirMarkdown({value: source.purpose}); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
     if (source['structure']) { this.structure = source.structure.map((x) => new fhir.StructureMapStructure(x)); }
-    if (source['import']) { this.import = source.import.map((x) => (x)); }
-    if (source['_import']) { this._import = source._import.map((x) => new fhir.FhirElement(x)); }
+    if (source['import']) { this.import = source.import.map((x) => new fhir.FhirCanonical({value: x})); }
     if (source['group']) { this.group = source.group.map((x) => new fhir.StructureMapGroup(x)); }
     else { this.group = null; }
   }
@@ -2057,31 +1278,50 @@ export class StructureMap extends fhir.DomainResource implements IStructureMap {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: StructureMap.resourceType']); }
-    if (!this["url"]) { results.push(["url",'Missing required element: StructureMap.url']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (!this["name"]) { results.push(["name",'Missing required element: StructureMap.name']); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: StructureMap.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_purpose"]) { results.push(...this._purpose.doModelValidation()); }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (this["structure"]) { this.structure.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_import"]) { this._import.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if ((!this["group"]) || (this["group"].length === 0)) { results.push(["group",'Missing required element: StructureMap.group']); }
-    if (this["group"]) { this.group.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'StructureMap' fhir: StructureMap.resourceType:'StructureMap'", }));
+    }
+    if (!this['url']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property url:fhir.FhirUri fhir: StructureMap.url:uri", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (!this['name']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property name:fhir.FhirString fhir: StructureMap.name:string", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: StructureMap.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (this["structure"]) { this.structure.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["import"]) { this.import.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['group']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property group:fhir.StructureMapGroup[] fhir: StructureMap.group:group", }));
+    } else if (!Array.isArray(this.group)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property group:fhir.StructureMapGroup[] fhir: StructureMap.group:group", }));
+    } else if (this.group.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property group:fhir.StructureMapGroup[] fhir: StructureMap.group:group", }));
+    }
+    if (this["group"]) { this.group.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

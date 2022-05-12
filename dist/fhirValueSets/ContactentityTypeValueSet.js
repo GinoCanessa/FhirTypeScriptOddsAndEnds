@@ -59,31 +59,4 @@ export const ContactentityTypeValueSet = {
 /**
  * This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.
  */
-export var ContactentityTypeValueSetEnum;
-(function (ContactentityTypeValueSetEnum) {
-    /**
-     * ADMIN: Contact details for administrative enquiries.
-     */
-    ContactentityTypeValueSetEnum["Administrative"] = "ADMIN";
-    /**
-     * BILL: Contact details for information regarding to billing/general finance enquiries.
-     */
-    ContactentityTypeValueSetEnum["Billing"] = "BILL";
-    /**
-     * HR: Contact details for issues related to Human Resources, such as staff matters, OH&amp;S etc.
-     */
-    ContactentityTypeValueSetEnum["HumanResource"] = "HR";
-    /**
-     * PATINF: Generic information contact for patients.
-     */
-    ContactentityTypeValueSetEnum["Patient"] = "PATINF";
-    /**
-     * PAYOR: Contact details for dealing with issues related to insurance claims/adjudication/payment.
-     */
-    ContactentityTypeValueSetEnum["Payor"] = "PAYOR";
-    /**
-     * PRESS: Dedicated contact point for matters relating to press enquiries.
-     */
-    ContactentityTypeValueSetEnum["Press"] = "PRESS";
-})(ContactentityTypeValueSetEnum || (ContactentityTypeValueSetEnum = {}));
 //# sourceMappingURL=ContactentityTypeValueSet.js.map

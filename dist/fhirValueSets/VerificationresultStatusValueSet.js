@@ -59,31 +59,4 @@ export const VerificationresultStatusValueSet = {
 /**
  * The validation status of the target
  */
-export var VerificationresultStatusValueSetEnum;
-(function (VerificationresultStatusValueSetEnum) {
-    /**
-     * attested: ***TODO***
-     */
-    VerificationresultStatusValueSetEnum["Attested"] = "attested";
-    /**
-     * in-process: ***TODO***
-     */
-    VerificationresultStatusValueSetEnum["InProcess"] = "in-process";
-    /**
-     * req-revalid: ***TODO***
-     */
-    VerificationresultStatusValueSetEnum["RequiresRevalidation"] = "req-revalid";
-    /**
-     * reval-fail: ***TODO***
-     */
-    VerificationresultStatusValueSetEnum["ReValidationFailed"] = "reval-fail";
-    /**
-     * val-fail: ***TODO***
-     */
-    VerificationresultStatusValueSetEnum["ValidationFailed"] = "val-fail";
-    /**
-     * validated: ***TODO***
-     */
-    VerificationresultStatusValueSetEnum["Validated"] = "validated";
-})(VerificationresultStatusValueSetEnum || (VerificationresultStatusValueSetEnum = {}));
 //# sourceMappingURL=VerificationresultStatusValueSet.js.map

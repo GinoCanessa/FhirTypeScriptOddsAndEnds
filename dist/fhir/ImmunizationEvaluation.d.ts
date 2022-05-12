@@ -1,113 +1,91 @@
 import * as fhir from '../fhir.js';
-import { ImmunizationEvaluationStatusValueSetType, ImmunizationEvaluationStatusValueSetEnum } from '../fhirValueSets/ImmunizationEvaluationStatusValueSet.js';
+import { ImmunizationEvaluationStatusValueSetType } from '../fhirValueSets/ImmunizationEvaluationStatusValueSet.js';
+import { ImmunizationEvaluationStatusValueSetEnum } from '../valueSetEnums.js';
 import { ImmunizationEvaluationTargetDiseaseValueSetType } from '../fhirValueSets/ImmunizationEvaluationTargetDiseaseValueSet.js';
 import { ImmunizationEvaluationDoseStatusValueSetType } from '../fhirValueSets/ImmunizationEvaluationDoseStatusValueSet.js';
 import { ImmunizationEvaluationDoseStatusReasonValueSetType } from '../fhirValueSets/ImmunizationEvaluationDoseStatusReasonValueSet.js';
 /**
- * Describes a comparison of an immunization event against published recommendations to determine if the administration is "valid" in relation to those  recommendations.
+ * Valid arguments for the ImmunizationEvaluation type.
  */
-export declare type IImmunizationEvaluation = fhir.IDomainResource & {
+export interface ImmunizationEvaluationArgs extends fhir.DomainResourceArgs {
     /**
      * Resource Type Name
      */
-    resourceType: "ImmunizationEvaluation";
+    resourceType: "ImmunizationEvaluation" | undefined;
     /**
      * A unique identifier assigned to this immunization evaluation record.
      */
-    identifier?: fhir.IIdentifier[] | undefined;
+    identifier?: fhir.IdentifierArgs[] | undefined;
     /**
      * Indicates the current status of the evaluation of the vaccination administration event.
      */
     status: ImmunizationEvaluationStatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: ImmunizationEvaluation.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
      * The individual for whom the evaluation is being done.
      */
-    patient: fhir.IReference | null;
+    patient: fhir.ReferenceArgs | null;
     /**
      * The date the evaluation of the vaccine administration event was performed.
      */
-    date?: string | undefined;
-    /**
-     * Extended properties for primitive element: ImmunizationEvaluation.date
-     */
-    _date?: fhir.IFhirElement | undefined;
+    date?: fhir.FhirDateTime | string | undefined;
     /**
      * Indicates the authority who published the protocol (e.g. ACIP).
      */
-    authority?: fhir.IReference | undefined;
+    authority?: fhir.ReferenceArgs | undefined;
     /**
      * The vaccine preventable disease the dose is being evaluated against.
      */
-    targetDisease: fhir.ICodeableConcept | null;
+    targetDisease: fhir.CodeableConceptArgs | null;
     /**
      * The vaccine administration event being evaluated.
      */
-    immunizationEvent: fhir.IReference | null;
+    immunizationEvent: fhir.ReferenceArgs | null;
     /**
      * Indicates if the dose is valid or not valid with respect to the published recommendations.
      */
-    doseStatus: fhir.ICodeableConcept | null;
+    doseStatus: fhir.CodeableConceptArgs | null;
     /**
      * Provides an explanation as to why the vaccine administration event is valid or not relative to the published recommendations.
      */
-    doseStatusReason?: fhir.ICodeableConcept[] | undefined;
+    doseStatusReason?: fhir.CodeableConceptArgs[] | undefined;
     /**
      * Additional information about the evaluation.
      */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: ImmunizationEvaluation.description
-     */
-    _description?: fhir.IFhirElement | undefined;
+    description?: fhir.FhirString | string | undefined;
     /**
      * One possible path to achieve presumed immunity against a disease - within the context of an authority.
      */
-    series?: string | undefined;
-    /**
-     * Extended properties for primitive element: ImmunizationEvaluation.series
-     */
-    _series?: fhir.IFhirElement | undefined;
+    series?: fhir.FhirString | string | undefined;
     /**
      * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
      */
-    doseNumberPositiveInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: ImmunizationEvaluation.doseNumber[x]
-     */
-    _doseNumberPositiveInt?: fhir.IFhirElement | undefined;
+    doseNumber?: fhir.FhirPositiveInt | fhir.FhirString | undefined;
     /**
      * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
      */
-    doseNumberString?: string | undefined;
-    /**
-     * Extended properties for primitive element: ImmunizationEvaluation.doseNumber[x]
-     */
-    _doseNumberString?: fhir.IFhirElement | undefined;
+    doseNumberPositiveInt?: fhir.FhirPositiveInt | number | undefined;
     /**
      * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
      */
-    seriesDosesPositiveInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: ImmunizationEvaluation.seriesDoses[x]
-     */
-    _seriesDosesPositiveInt?: fhir.IFhirElement | undefined;
+    doseNumberString?: fhir.FhirString | string | undefined;
     /**
      * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
      */
-    seriesDosesString?: string | undefined;
+    seriesDoses?: fhir.FhirPositiveInt | fhir.FhirString | undefined;
     /**
-     * Extended properties for primitive element: ImmunizationEvaluation.seriesDoses[x]
+     * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
      */
-    _seriesDosesString?: fhir.IFhirElement | undefined;
-};
+    seriesDosesPositiveInt?: fhir.FhirPositiveInt | number | undefined;
+    /**
+     * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
+     */
+    seriesDosesString?: fhir.FhirString | string | undefined;
+}
 /**
  * Describes a comparison of an immunization event against published recommendations to determine if the administration is "valid" in relation to those  recommendations.
  */
-export declare class ImmunizationEvaluation extends fhir.DomainResource implements IImmunizationEvaluation {
+export declare class ImmunizationEvaluation extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -121,21 +99,13 @@ export declare class ImmunizationEvaluation extends fhir.DomainResource implemen
      */
     status: ImmunizationEvaluationStatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: ImmunizationEvaluation.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * The individual for whom the evaluation is being done.
      */
     patient: fhir.Reference | null;
     /**
      * The date the evaluation of the vaccine administration event was performed.
      */
-    date?: string | undefined;
-    /**
-     * Extended properties for primitive element: ImmunizationEvaluation.date
-     */
-    _date?: fhir.FhirElement | undefined;
+    date?: fhir.FhirDateTime | undefined;
     /**
      * Indicates the authority who published the protocol (e.g. ACIP).
      */
@@ -159,55 +129,25 @@ export declare class ImmunizationEvaluation extends fhir.DomainResource implemen
     /**
      * Additional information about the evaluation.
      */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: ImmunizationEvaluation.description
-     */
-    _description?: fhir.FhirElement | undefined;
+    description?: fhir.FhirString | undefined;
     /**
      * One possible path to achieve presumed immunity against a disease - within the context of an authority.
      */
-    series?: string | undefined;
-    /**
-     * Extended properties for primitive element: ImmunizationEvaluation.series
-     */
-    _series?: fhir.FhirElement | undefined;
+    series?: fhir.FhirString | undefined;
     /**
      * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
      */
-    doseNumberPositiveInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: ImmunizationEvaluation.doseNumber[x]
-     */
-    _doseNumberPositiveInt?: fhir.FhirElement | undefined;
+    doseNumber?: (fhir.FhirPositiveInt | fhir.FhirString) | undefined;
+    readonly __doseNumberIsChoice: true;
     /**
      * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
      */
-    doseNumberString?: string | undefined;
-    /**
-     * Extended properties for primitive element: ImmunizationEvaluation.doseNumber[x]
-     */
-    _doseNumberString?: fhir.FhirElement | undefined;
-    /**
-     * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
-     */
-    seriesDosesPositiveInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: ImmunizationEvaluation.seriesDoses[x]
-     */
-    _seriesDosesPositiveInt?: fhir.FhirElement | undefined;
-    /**
-     * The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).
-     */
-    seriesDosesString?: string | undefined;
-    /**
-     * Extended properties for primitive element: ImmunizationEvaluation.seriesDoses[x]
-     */
-    _seriesDosesString?: fhir.FhirElement | undefined;
+    seriesDoses?: (fhir.FhirPositiveInt | fhir.FhirString) | undefined;
+    readonly __seriesDosesIsChoice: true;
     /**
      * Default constructor for ImmunizationEvaluation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IImmunizationEvaluation>);
+    constructor(source?: Partial<ImmunizationEvaluationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -227,6 +167,10 @@ export declare class ImmunizationEvaluation extends fhir.DomainResource implemen
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=ImmunizationEvaluation.d.ts.map

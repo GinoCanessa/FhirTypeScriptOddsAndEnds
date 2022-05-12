@@ -43,23 +43,4 @@ export const VerificationresultFailureActionValueSet = {
 /**
  * The result if validation fails
  */
-export var VerificationresultFailureActionValueSetEnum;
-(function (VerificationresultFailureActionValueSetEnum) {
-    /**
-     * Code: fatal
-     */
-    VerificationresultFailureActionValueSetEnum["Fatal"] = "fatal";
-    /**
-     * Code: none
-     */
-    VerificationresultFailureActionValueSetEnum["None"] = "none";
-    /**
-     * Code: rec-only
-     */
-    VerificationresultFailureActionValueSetEnum["RecordOnly"] = "rec-only";
-    /**
-     * Code: warn
-     */
-    VerificationresultFailureActionValueSetEnum["Warning"] = "warn";
-})(VerificationresultFailureActionValueSetEnum || (VerificationresultFailureActionValueSetEnum = {}));
 //# sourceMappingURL=VerificationresultFailureActionValueSet.js.map

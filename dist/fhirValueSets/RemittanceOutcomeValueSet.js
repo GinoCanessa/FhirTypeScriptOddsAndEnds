@@ -43,23 +43,4 @@ export const RemittanceOutcomeValueSet = {
 /**
  * This value set includes Claim Processing Outcome codes.
  */
-export var RemittanceOutcomeValueSetEnum;
-(function (RemittanceOutcomeValueSetEnum) {
-    /**
-     * complete: The processing has completed without errors
-     */
-    RemittanceOutcomeValueSetEnum["ProcessingComplete"] = "complete";
-    /**
-     * error: One or more errors have been detected in the Claim
-     */
-    RemittanceOutcomeValueSetEnum["Error"] = "error";
-    /**
-     * partial: No errors have been detected in the Claim and some of the adjudication has been performed.
-     */
-    RemittanceOutcomeValueSetEnum["PartialProcessing"] = "partial";
-    /**
-     * queued: The Claim/Pre-authorization/Pre-determination has been received but processing has not begun.
-     */
-    RemittanceOutcomeValueSetEnum["Queued"] = "queued";
-})(RemittanceOutcomeValueSetEnum || (RemittanceOutcomeValueSetEnum = {}));
 //# sourceMappingURL=RemittanceOutcomeValueSet.js.map

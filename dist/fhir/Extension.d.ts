@@ -1,588 +1,249 @@
 import * as fhir from '../fhir.js';
 /**
- * Optional Extension Element - found in all resources.
+ * Valid arguments for the Extension type.
  */
-export declare type IExtension = fhir.IFhirElement & {
+export interface ExtensionArgs extends fhir.FhirElementArgs {
     /**
      * The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.
      */
-    url: string | null;
-    /**
-     * Extended properties for primitive element: Extension.url
-     */
-    _url?: fhir.IFhirElement | undefined;
+    url: fhir.FhirString | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueBase64Binary?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueBase64Binary?: fhir.IFhirElement | undefined;
+    value?: fhir.FhirBase64Binary | fhir.FhirBoolean | fhir.FhirCanonical | fhir.FhirCode | fhir.FhirDate | fhir.FhirDateTime | fhir.FhirDecimal | fhir.FhirId | fhir.FhirInstant | fhir.FhirInteger | fhir.FhirMarkdown | fhir.FhirOid | fhir.FhirPositiveInt | fhir.FhirString | fhir.FhirTime | fhir.FhirUnsignedInt | fhir.FhirUri | fhir.FhirUrl | fhir.FhirUuid | fhir.Address | fhir.Age | fhir.Annotation | fhir.Attachment | fhir.CodeableConcept | fhir.Coding | fhir.ContactPoint | fhir.Count | fhir.Distance | fhir.Duration | fhir.HumanName | fhir.Identifier | fhir.Money | fhir.Period | fhir.Quantity | fhir.Range | fhir.Ratio | fhir.Reference | fhir.SampledData | fhir.Signature | fhir.Timing | fhir.ContactDetail | fhir.Contributor | fhir.DataRequirement | fhir.Expression | fhir.ParameterDefinition | fhir.RelatedArtifact | fhir.TriggerDefinition | fhir.UsageContext | fhir.Dosage | fhir.Meta | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueBoolean?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueBoolean?: fhir.IFhirElement | undefined;
+    valueBase64Binary?: fhir.FhirBase64Binary | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueCanonical?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueCanonical?: fhir.IFhirElement | undefined;
+    valueBoolean?: fhir.FhirBoolean | boolean | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueCode?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueCode?: fhir.IFhirElement | undefined;
+    valueCanonical?: fhir.FhirCanonical | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueDate?: fhir.IFhirElement | undefined;
+    valueCode?: fhir.FhirCode | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueDateTime?: fhir.IFhirElement | undefined;
+    valueDate?: fhir.FhirDate | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueDecimal?: number | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueDecimal?: fhir.IFhirElement | undefined;
+    valueDateTime?: fhir.FhirDateTime | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueId?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueId?: fhir.IFhirElement | undefined;
+    valueDecimal?: fhir.FhirDecimal | number | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueInstant?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueInstant?: fhir.IFhirElement | undefined;
+    valueId?: fhir.FhirId | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueInteger?: number | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueInteger?: fhir.IFhirElement | undefined;
+    valueInstant?: fhir.FhirInstant | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueMarkdown?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueMarkdown?: fhir.IFhirElement | undefined;
+    valueInteger?: fhir.FhirInteger | number | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueOid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueOid?: fhir.IFhirElement | undefined;
+    valueMarkdown?: fhir.FhirMarkdown | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valuePositiveInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valuePositiveInt?: fhir.IFhirElement | undefined;
+    valueOid?: fhir.FhirOid | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueString?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueString?: fhir.IFhirElement | undefined;
+    valuePositiveInt?: fhir.FhirPositiveInt | number | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueTime?: fhir.IFhirElement | undefined;
+    valueString?: fhir.FhirString | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueUnsignedInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueUnsignedInt?: fhir.IFhirElement | undefined;
+    valueTime?: fhir.FhirTime | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueUri?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueUri?: fhir.IFhirElement | undefined;
+    valueUnsignedInt?: fhir.FhirUnsignedInt | number | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueUrl?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueUrl?: fhir.IFhirElement | undefined;
+    valueUri?: fhir.FhirUri | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueUuid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueUuid?: fhir.IFhirElement | undefined;
+    valueUrl?: fhir.FhirUrl | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueAddress?: fhir.IAddress | undefined;
+    valueUuid?: fhir.FhirUuid | string | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueAge?: fhir.IAge | undefined;
+    valueAddress?: fhir.AddressArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueAnnotation?: fhir.IAnnotation | undefined;
+    valueAge?: fhir.AgeArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueAttachment?: fhir.IAttachment | undefined;
+    valueAnnotation?: fhir.AnnotationArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueCodeableConcept?: fhir.ICodeableConcept | undefined;
+    valueAttachment?: fhir.AttachmentArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueCoding?: fhir.ICoding | undefined;
+    valueCodeableConcept?: fhir.CodeableConceptArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueContactPoint?: fhir.IContactPoint | undefined;
+    valueCoding?: fhir.CodingArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueCount?: fhir.ICount | undefined;
+    valueContactPoint?: fhir.ContactPointArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueDistance?: fhir.IDistance | undefined;
+    valueCount?: fhir.CountArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueDuration?: fhir.IDuration | undefined;
+    valueDistance?: fhir.DistanceArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueHumanName?: fhir.IHumanName | undefined;
+    valueDuration?: fhir.DurationArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueIdentifier?: fhir.IIdentifier | undefined;
+    valueHumanName?: fhir.HumanNameArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueMoney?: fhir.IMoney | undefined;
+    valueIdentifier?: fhir.IdentifierArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valuePeriod?: fhir.IPeriod | undefined;
+    valueMoney?: fhir.MoneyArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueQuantity?: fhir.IQuantity | undefined;
+    valuePeriod?: fhir.PeriodArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueRange?: fhir.IRange | undefined;
+    valueQuantity?: fhir.QuantityArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueRatio?: fhir.IRatio | undefined;
+    valueRange?: fhir.RangeArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueReference?: fhir.IReference | undefined;
+    valueRatio?: fhir.RatioArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueSampledData?: fhir.ISampledData | undefined;
+    valueReference?: fhir.ReferenceArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueSignature?: fhir.ISignature | undefined;
+    valueSampledData?: fhir.SampledDataArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueTiming?: fhir.ITiming | undefined;
+    valueSignature?: fhir.SignatureArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueContactDetail?: fhir.IContactDetail | undefined;
+    valueTiming?: fhir.TimingArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueContributor?: fhir.IContributor | undefined;
+    valueContactDetail?: fhir.ContactDetailArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueDataRequirement?: fhir.IDataRequirement | undefined;
+    valueContributor?: fhir.ContributorArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueExpression?: fhir.IExpression | undefined;
+    valueDataRequirement?: fhir.DataRequirementArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueParameterDefinition?: fhir.IParameterDefinition | undefined;
+    valueExpression?: fhir.ExpressionArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueRelatedArtifact?: fhir.IRelatedArtifact | undefined;
+    valueParameterDefinition?: fhir.ParameterDefinitionArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueTriggerDefinition?: fhir.ITriggerDefinition | undefined;
+    valueRelatedArtifact?: fhir.RelatedArtifactArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueUsageContext?: fhir.IUsageContext | undefined;
+    valueTriggerDefinition?: fhir.TriggerDefinitionArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueDosage?: fhir.IDosage | undefined;
+    valueUsageContext?: fhir.UsageContextArgs | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueMeta?: fhir.IMeta | undefined;
-};
+    valueDosage?: fhir.DosageArgs | undefined;
+    /**
+     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
+     */
+    valueMeta?: fhir.MetaArgs | undefined;
+}
 /**
  * Optional Extension Element - found in all resources.
  */
-export declare class Extension extends fhir.FhirElement implements IExtension {
+export declare class Extension extends fhir.FhirElement {
+    readonly __dataType: string;
     /**
      * The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.
      */
-    url: string | null;
-    /**
-     * Extended properties for primitive element: Extension.url
-     */
-    _url?: fhir.FhirElement | undefined;
+    url: fhir.FhirString | null;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueBase64Binary?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueBase64Binary?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueBoolean?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueBoolean?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueCanonical?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueCanonical?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueCode?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueCode?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueDate?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueDate?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueDateTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueDateTime?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueDecimal?: number | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueDecimal?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueId?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueId?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueInstant?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueInstant?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueInteger?: number | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueInteger?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueMarkdown?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueMarkdown?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueOid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueOid?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valuePositiveInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valuePositiveInt?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueString?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueString?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueTime?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueTime?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueUnsignedInt?: number | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueUnsignedInt?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueUri?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueUri?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueUrl?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueUrl?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueUuid?: string | undefined;
-    /**
-     * Extended properties for primitive element: Extension.value[x]
-     */
-    _valueUuid?: fhir.FhirElement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueAddress?: fhir.Address | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueAge?: fhir.Age | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueAnnotation?: fhir.Annotation | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueAttachment?: fhir.Attachment | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueCodeableConcept?: fhir.CodeableConcept | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueCoding?: fhir.Coding | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueContactPoint?: fhir.ContactPoint | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueCount?: fhir.Count | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueDistance?: fhir.Distance | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueDuration?: fhir.Duration | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueHumanName?: fhir.HumanName | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueIdentifier?: fhir.Identifier | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueMoney?: fhir.Money | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valuePeriod?: fhir.Period | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueQuantity?: fhir.Quantity | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueRange?: fhir.Range | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueRatio?: fhir.Ratio | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueReference?: fhir.Reference | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueSampledData?: fhir.SampledData | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueSignature?: fhir.Signature | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueTiming?: fhir.Timing | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueContactDetail?: fhir.ContactDetail | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueContributor?: fhir.Contributor | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueDataRequirement?: fhir.DataRequirement | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueExpression?: fhir.Expression | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueParameterDefinition?: fhir.ParameterDefinition | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueRelatedArtifact?: fhir.RelatedArtifact | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueTriggerDefinition?: fhir.TriggerDefinition | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueUsageContext?: fhir.UsageContext | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueDosage?: fhir.Dosage | undefined;
-    /**
-     * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-     */
-    valueMeta?: fhir.Meta | undefined;
+    value?: (fhir.FhirBase64Binary | fhir.FhirBoolean | fhir.FhirCanonical | fhir.FhirCode | fhir.FhirDate | fhir.FhirDateTime | fhir.FhirDecimal | fhir.FhirId | fhir.FhirInstant | fhir.FhirInteger | fhir.FhirMarkdown | fhir.FhirOid | fhir.FhirPositiveInt | fhir.FhirString | fhir.FhirTime | fhir.FhirUnsignedInt | fhir.FhirUri | fhir.FhirUrl | fhir.FhirUuid | fhir.Address | fhir.Age | fhir.Annotation | fhir.Attachment | fhir.CodeableConcept | fhir.Coding | fhir.ContactPoint | fhir.Count | fhir.Distance | fhir.Duration | fhir.HumanName | fhir.Identifier | fhir.Money | fhir.Period | fhir.Quantity | fhir.Range | fhir.Ratio | fhir.Reference | fhir.SampledData | fhir.Signature | fhir.Timing | fhir.ContactDetail | fhir.Contributor | fhir.DataRequirement | fhir.Expression | fhir.ParameterDefinition | fhir.RelatedArtifact | fhir.TriggerDefinition | fhir.UsageContext | fhir.Dosage | fhir.Meta) | undefined;
+    readonly __valueIsChoice: true;
     /**
      * Default constructor for Extension - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IExtension>);
+    constructor(source?: Partial<ExtensionArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+    /**
+     * Create an extension object with a specified URL and FhirBase value
+     * @param url
+     * @param value
+     * @returns
+     */
+    static fromValue(url: string, value: fhir.FhirBase): Extension;
 }
 //# sourceMappingURL=Extension.d.ts.map

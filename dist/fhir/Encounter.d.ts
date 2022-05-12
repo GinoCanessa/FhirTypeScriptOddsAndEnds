@@ -1,5 +1,6 @@
 import * as fhir from '../fhir.js';
-import { EncounterStatusValueSetType, EncounterStatusValueSetEnum } from '../fhirValueSets/EncounterStatusValueSet.js';
+import { EncounterStatusValueSetType } from '../fhirValueSets/EncounterStatusValueSet.js';
+import { EncounterStatusValueSetEnum } from '../valueSetEnums.js';
 import { V3ActEncounterCodeValueSetType } from '../fhirValueSets/V3ActEncounterCodeValueSet.js';
 import { EncounterParticipantTypeValueSetType } from '../fhirValueSets/EncounterParticipantTypeValueSet.js';
 import { DiagnosisRoleValueSetType } from '../fhirValueSets/DiagnosisRoleValueSet.js';
@@ -9,267 +10,35 @@ import { EncounterDietValueSetType } from '../fhirValueSets/EncounterDietValueSe
 import { EncounterSpecialCourtesyValueSetType } from '../fhirValueSets/EncounterSpecialCourtesyValueSet.js';
 import { EncounterSpecialArrangementsValueSetType } from '../fhirValueSets/EncounterSpecialArrangementsValueSet.js';
 import { EncounterDischargeDispositionValueSetType } from '../fhirValueSets/EncounterDischargeDispositionValueSet.js';
-import { EncounterLocationStatusValueSetType, EncounterLocationStatusValueSetEnum } from '../fhirValueSets/EncounterLocationStatusValueSet.js';
+import { EncounterLocationStatusValueSetType } from '../fhirValueSets/EncounterLocationStatusValueSet.js';
+import { EncounterLocationStatusValueSetEnum } from '../valueSetEnums.js';
 import { LocationPhysicalTypeValueSetType } from '../fhirValueSets/LocationPhysicalTypeValueSet.js';
 import { EncounterTypeValueSetType } from '../fhirValueSets/EncounterTypeValueSet.js';
 import { ServiceTypeValueSetType } from '../fhirValueSets/ServiceTypeValueSet.js';
 import { V3ActPriorityValueSetType } from '../fhirValueSets/V3ActPriorityValueSet.js';
 import { EncounterReasonValueSetType } from '../fhirValueSets/EncounterReasonValueSet.js';
 /**
- * The current status is always found in the current version of the resource, not the status history.
+ * Valid arguments for the EncounterStatusHistory type.
  */
-export declare type IEncounterStatusHistory = fhir.IBackboneElement & {
+export interface EncounterStatusHistoryArgs extends fhir.BackboneElementArgs {
     /**
      * planned | arrived | triaged | in-progress | onleave | finished | cancelled +.
      */
     status: EncounterStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: Encounter.statusHistory.status
-     */
-    _status?: fhir.IFhirElement | undefined;
     /**
      * The time that the episode was in the specified status.
      */
-    period: fhir.IPeriod | null;
-};
-/**
- * The class history permits the tracking of the encounters transitions without needing to go  through the resource history.  This would be used for a case where an admission starts of as an emergency encounter, then transitions into an inpatient scenario. Doing this and not restarting a new encounter ensures that any lab/diagnostic results can more easily follow the patient and not require re-processing and not get lost or cancelled during a kind of discharge from emergency to inpatient.
- */
-export declare type IEncounterClassHistory = fhir.IBackboneElement & {
-    /**
-     * inpatient | outpatient | ambulatory | emergency +.
-     */
-    class: fhir.ICoding | null;
-    /**
-     * The time that the episode was in the specified class.
-     */
-    period: fhir.IPeriod | null;
-};
-/**
- * The list of people responsible for providing the service.
- */
-export declare type IEncounterParticipant = fhir.IBackboneElement & {
-    /**
-     * The participant type indicates how an individual participates in an encounter. It includes non-practitioner participants, and for practitioners this is to describe the action type in the context of this encounter (e.g. Admitting Dr, Attending Dr, Translator, Consulting Dr). This is different to the practitioner roles which are functional roles, derived from terms of employment, education, licensing, etc.
-     */
-    type?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * The period of time that the specified participant participated in the encounter. These can overlap or be sub-sets of the overall encounter's period.
-     */
-    period?: fhir.IPeriod | undefined;
-    /**
-     * Persons involved in the encounter other than the patient.
-     */
-    individual?: fhir.IReference | undefined;
-};
-/**
- * The list of diagnosis relevant to this encounter.
- */
-export declare type IEncounterDiagnosis = fhir.IBackboneElement & {
-    /**
-     * For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 = primary diagnosis).
-     */
-    condition: fhir.IReference | null;
-    /**
-     * Role that this diagnosis has within the encounter (e.g. admission, billing, discharge …).
-     */
-    use?: fhir.ICodeableConcept | undefined;
-    /**
-     * Ranking of the diagnosis (for each role type).
-     */
-    rank?: number | undefined;
-    /**
-     * Extended properties for primitive element: Encounter.diagnosis.rank
-     */
-    _rank?: fhir.IFhirElement | undefined;
-};
-/**
- * An Encounter may cover more than just the inpatient stay. Contexts such as outpatients, community clinics, and aged care facilities are also included.
- * The duration recorded in the period of this encounter covers the entire scope of this hospitalization record.
- */
-export declare type IEncounterHospitalization = fhir.IBackboneElement & {
-    /**
-     * Pre-admission identifier.
-     */
-    preAdmissionIdentifier?: fhir.IIdentifier | undefined;
-    /**
-     * The location/organization from which the patient came before admission.
-     */
-    origin?: fhir.IReference | undefined;
-    /**
-     * From where patient was admitted (physician referral, transfer).
-     */
-    admitSource?: fhir.ICodeableConcept | undefined;
-    /**
-     * Whether this hospitalization is a readmission and why if known.
-     */
-    reAdmission?: fhir.ICodeableConcept | undefined;
-    /**
-     * For example, a patient may request both a dairy-free and nut-free diet preference (not mutually exclusive).
-     */
-    dietPreference?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Special courtesies (VIP, board member).
-     */
-    specialCourtesy?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Any special requests that have been made for this hospitalization encounter, such as the provision of specific equipment or other things.
-     */
-    specialArrangement?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Location/organization to which the patient is discharged.
-     */
-    destination?: fhir.IReference | undefined;
-    /**
-     * Category or kind of location after discharge.
-     */
-    dischargeDisposition?: fhir.ICodeableConcept | undefined;
-};
-/**
- * Virtual encounters can be recorded in the Encounter by specifying a location reference to a location of type "kind" such as "client's home" and an encounter.class = "virtual".
- */
-export declare type IEncounterLocation = fhir.IBackboneElement & {
-    /**
-     * The location where the encounter takes place.
-     */
-    location: fhir.IReference | null;
-    /**
-     * When the patient is no longer active at a location, then the period end date is entered, and the status may be changed to completed.
-     */
-    status?: EncounterLocationStatusValueSetEnum | undefined;
-    /**
-     * Extended properties for primitive element: Encounter.location.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * This information is de-normalized from the Location resource to support the easier understanding of the encounter resource and processing in messaging or query.
-     * There may be many levels in the hierachy, and this may only pic specific levels that are required for a specific usage scenario.
-     */
-    physicalType?: fhir.ICodeableConcept | undefined;
-    /**
-     * Time period during which the patient was present at the location.
-     */
-    period?: fhir.IPeriod | undefined;
-};
-/**
- * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
- */
-export declare type IEncounter = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "Encounter";
-    /**
-     * Identifier(s) by which this encounter is known.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * Note that internal business rules will determine the appropriate transitions that may occur between statuses (and also classes).
-     */
-    status: EncounterStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: Encounter.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * The current status is always found in the current version of the resource, not the status history.
-     */
-    statusHistory?: fhir.IEncounterStatusHistory[] | undefined;
-    /**
-     * Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations.
-     */
-    class: fhir.ICoding | null;
-    /**
-     * The class history permits the tracking of the encounters transitions without needing to go  through the resource history.  This would be used for a case where an admission starts of as an emergency encounter, then transitions into an inpatient scenario. Doing this and not restarting a new encounter ensures that any lab/diagnostic results can more easily follow the patient and not require re-processing and not get lost or cancelled during a kind of discharge from emergency to inpatient.
-     */
-    classHistory?: fhir.IEncounterClassHistory[] | undefined;
-    /**
-     * Since there are many ways to further classify encounters, this element is 0..*.
-     */
-    type?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Broad categorization of the service that is to be provided (e.g. cardiology).
-     */
-    serviceType?: fhir.ICodeableConcept | undefined;
-    /**
-     * Indicates the urgency of the encounter.
-     */
-    priority?: fhir.ICodeableConcept | undefined;
-    /**
-     * While the encounter is always about the patient, the patient might not actually be known in all contexts of use, and there may be a group of patients that could be anonymous (such as in a group therapy for Alcoholics Anonymous - where the recording of the encounter could be used for billing on the number of people/staff and not important to the context of the specific patients) or alternately in veterinary care a herd of sheep receiving treatment (where the animals are not individually tracked).
-     */
-    subject?: fhir.IReference | undefined;
-    /**
-     * Where a specific encounter should be classified as a part of a specific episode(s) of care this field should be used. This association can facilitate grouping of related encounters together for a specific purpose, such as government reporting, issue tracking, association via a common problem.  The association is recorded on the encounter as these are typically created after the episode of care and grouped on entry rather than editing the episode of care to append another encounter to it (the episode of care could span years).
-     */
-    episodeOfCare?: fhir.IReference[] | undefined;
-    /**
-     * The request this encounter satisfies (e.g. incoming referral or procedure request).
-     */
-    basedOn?: fhir.IReference[] | undefined;
-    /**
-     * The list of people responsible for providing the service.
-     */
-    participant?: fhir.IEncounterParticipant[] | undefined;
-    /**
-     * The appointment that scheduled this encounter.
-     */
-    appointment?: fhir.IReference[] | undefined;
-    /**
-     * If not (yet) known, the end of the Period may be omitted.
-     */
-    period?: fhir.IPeriod | undefined;
-    /**
-     * May differ from the time the Encounter.period lasted because of leave of absence.
-     */
-    length?: fhir.IDuration | undefined;
-    /**
-     * For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 = primary diagnosis).
-     */
-    reasonCode?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 = primary diagnosis).
-     */
-    reasonReference?: fhir.IReference[] | undefined;
-    /**
-     * The list of diagnosis relevant to this encounter.
-     */
-    diagnosis?: fhir.IEncounterDiagnosis[] | undefined;
-    /**
-     * The billing system may choose to allocate billable items associated with the Encounter to different referenced Accounts based on internal business rules.
-     */
-    account?: fhir.IReference[] | undefined;
-    /**
-     * An Encounter may cover more than just the inpatient stay. Contexts such as outpatients, community clinics, and aged care facilities are also included.
-     * The duration recorded in the period of this encounter covers the entire scope of this hospitalization record.
-     */
-    hospitalization?: fhir.IEncounterHospitalization | undefined;
-    /**
-     * Virtual encounters can be recorded in the Encounter by specifying a location reference to a location of type "kind" such as "client's home" and an encounter.class = "virtual".
-     */
-    location?: fhir.IEncounterLocation[] | undefined;
-    /**
-     * The organization that is primarily responsible for this Encounter's services. This MAY be the same as the organization on the Patient record, however it could be different, such as if the actor performing the services was from an external organization (which may be billed seperately) for an external consultation.  Refer to the example bundle showing an abbreviated set of Encounters for a colonoscopy.
-     */
-    serviceProvider?: fhir.IReference | undefined;
-    /**
-     * This is also used for associating a child's encounter back to the mother's encounter.
-     * Refer to the Notes section in the Patient resource for further details.
-     */
-    partOf?: fhir.IReference | undefined;
-};
+    period: fhir.PeriodArgs | null;
+}
 /**
  * The current status is always found in the current version of the resource, not the status history.
  */
-export declare class EncounterStatusHistory extends fhir.BackboneElement implements IEncounterStatusHistory {
+export declare class EncounterStatusHistory extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * planned | arrived | triaged | in-progress | onleave | finished | cancelled +.
      */
     status: EncounterStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: Encounter.statusHistory.status
-     */
-    _status?: fhir.FhirElement | undefined;
     /**
      * The time that the episode was in the specified status.
      */
@@ -277,7 +46,7 @@ export declare class EncounterStatusHistory extends fhir.BackboneElement impleme
     /**
      * Default constructor for EncounterStatusHistory - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IEncounterStatusHistory>);
+    constructor(source?: Partial<EncounterStatusHistoryArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -285,12 +54,30 @@ export declare class EncounterStatusHistory extends fhir.BackboneElement impleme
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the EncounterClassHistory type.
+ */
+export interface EncounterClassHistoryArgs extends fhir.BackboneElementArgs {
+    /**
+     * inpatient | outpatient | ambulatory | emergency +.
+     */
+    class: fhir.CodingArgs | null;
+    /**
+     * The time that the episode was in the specified class.
+     */
+    period: fhir.PeriodArgs | null;
 }
 /**
  * The class history permits the tracking of the encounters transitions without needing to go  through the resource history.  This would be used for a case where an admission starts of as an emergency encounter, then transitions into an inpatient scenario. Doing this and not restarting a new encounter ensures that any lab/diagnostic results can more easily follow the patient and not require re-processing and not get lost or cancelled during a kind of discharge from emergency to inpatient.
  */
-export declare class EncounterClassHistory extends fhir.BackboneElement implements IEncounterClassHistory {
+export declare class EncounterClassHistory extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * inpatient | outpatient | ambulatory | emergency +.
      */
@@ -302,7 +89,7 @@ export declare class EncounterClassHistory extends fhir.BackboneElement implemen
     /**
      * Default constructor for EncounterClassHistory - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IEncounterClassHistory>);
+    constructor(source?: Partial<EncounterClassHistoryArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Extensible-bound Value Set for class
      */
@@ -310,12 +97,34 @@ export declare class EncounterClassHistory extends fhir.BackboneElement implemen
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the EncounterParticipant type.
+ */
+export interface EncounterParticipantArgs extends fhir.BackboneElementArgs {
+    /**
+     * The participant type indicates how an individual participates in an encounter. It includes non-practitioner participants, and for practitioners this is to describe the action type in the context of this encounter (e.g. Admitting Dr, Attending Dr, Translator, Consulting Dr). This is different to the practitioner roles which are functional roles, derived from terms of employment, education, licensing, etc.
+     */
+    type?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * The period of time that the specified participant participated in the encounter. These can overlap or be sub-sets of the overall encounter's period.
+     */
+    period?: fhir.PeriodArgs | undefined;
+    /**
+     * Persons involved in the encounter other than the patient.
+     */
+    individual?: fhir.ReferenceArgs | undefined;
 }
 /**
  * The list of people responsible for providing the service.
  */
-export declare class EncounterParticipant extends fhir.BackboneElement implements IEncounterParticipant {
+export declare class EncounterParticipant extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The participant type indicates how an individual participates in an encounter. It includes non-practitioner participants, and for practitioners this is to describe the action type in the context of this encounter (e.g. Admitting Dr, Attending Dr, Translator, Consulting Dr). This is different to the practitioner roles which are functional roles, derived from terms of employment, education, licensing, etc.
      */
@@ -331,7 +140,7 @@ export declare class EncounterParticipant extends fhir.BackboneElement implement
     /**
      * Default constructor for EncounterParticipant - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IEncounterParticipant>);
+    constructor(source?: Partial<EncounterParticipantArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Extensible-bound Value Set for type
      */
@@ -339,12 +148,34 @@ export declare class EncounterParticipant extends fhir.BackboneElement implement
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the EncounterDiagnosis type.
+ */
+export interface EncounterDiagnosisArgs extends fhir.BackboneElementArgs {
+    /**
+     * For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 = primary diagnosis).
+     */
+    condition: fhir.ReferenceArgs | null;
+    /**
+     * Role that this diagnosis has within the encounter (e.g. admission, billing, discharge …).
+     */
+    use?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Ranking of the diagnosis (for each role type).
+     */
+    rank?: fhir.FhirPositiveInt | number | undefined;
 }
 /**
  * The list of diagnosis relevant to this encounter.
  */
-export declare class EncounterDiagnosis extends fhir.BackboneElement implements IEncounterDiagnosis {
+export declare class EncounterDiagnosis extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 = primary diagnosis).
      */
@@ -356,15 +187,11 @@ export declare class EncounterDiagnosis extends fhir.BackboneElement implements 
     /**
      * Ranking of the diagnosis (for each role type).
      */
-    rank?: number | undefined;
-    /**
-     * Extended properties for primitive element: Encounter.diagnosis.rank
-     */
-    _rank?: fhir.FhirElement | undefined;
+    rank?: fhir.FhirPositiveInt | undefined;
     /**
      * Default constructor for EncounterDiagnosis - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IEncounterDiagnosis>);
+    constructor(source?: Partial<EncounterDiagnosisArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Preferred-bound Value Set for use
      */
@@ -372,13 +199,59 @@ export declare class EncounterDiagnosis extends fhir.BackboneElement implements 
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the EncounterHospitalization type.
+ */
+export interface EncounterHospitalizationArgs extends fhir.BackboneElementArgs {
+    /**
+     * Pre-admission identifier.
+     */
+    preAdmissionIdentifier?: fhir.IdentifierArgs | undefined;
+    /**
+     * The location/organization from which the patient came before admission.
+     */
+    origin?: fhir.ReferenceArgs | undefined;
+    /**
+     * From where patient was admitted (physician referral, transfer).
+     */
+    admitSource?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Whether this hospitalization is a readmission and why if known.
+     */
+    reAdmission?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * For example, a patient may request both a dairy-free and nut-free diet preference (not mutually exclusive).
+     */
+    dietPreference?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * Special courtesies (VIP, board member).
+     */
+    specialCourtesy?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * Any special requests that have been made for this hospitalization encounter, such as the provision of specific equipment or other things.
+     */
+    specialArrangement?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * Location/organization to which the patient is discharged.
+     */
+    destination?: fhir.ReferenceArgs | undefined;
+    /**
+     * Category or kind of location after discharge.
+     */
+    dischargeDisposition?: fhir.CodeableConceptArgs | undefined;
 }
 /**
  * An Encounter may cover more than just the inpatient stay. Contexts such as outpatients, community clinics, and aged care facilities are also included.
  * The duration recorded in the period of this encounter covers the entire scope of this hospitalization record.
  */
-export declare class EncounterHospitalization extends fhir.BackboneElement implements IEncounterHospitalization {
+export declare class EncounterHospitalization extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * Pre-admission identifier.
      */
@@ -418,7 +291,7 @@ export declare class EncounterHospitalization extends fhir.BackboneElement imple
     /**
      * Default constructor for EncounterHospitalization - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IEncounterHospitalization>);
+    constructor(source?: Partial<EncounterHospitalizationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Preferred-bound Value Set for admitSource
      */
@@ -446,12 +319,39 @@ export declare class EncounterHospitalization extends fhir.BackboneElement imple
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the EncounterLocation type.
+ */
+export interface EncounterLocationArgs extends fhir.BackboneElementArgs {
+    /**
+     * The location where the encounter takes place.
+     */
+    location: fhir.ReferenceArgs | null;
+    /**
+     * When the patient is no longer active at a location, then the period end date is entered, and the status may be changed to completed.
+     */
+    status?: EncounterLocationStatusValueSetEnum | undefined;
+    /**
+     * This information is de-normalized from the Location resource to support the easier understanding of the encounter resource and processing in messaging or query.
+     * There may be many levels in the hierachy, and this may only pic specific levels that are required for a specific usage scenario.
+     */
+    physicalType?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Time period during which the patient was present at the location.
+     */
+    period?: fhir.PeriodArgs | undefined;
 }
 /**
  * Virtual encounters can be recorded in the Encounter by specifying a location reference to a location of type "kind" such as "client's home" and an encounter.class = "virtual".
  */
-export declare class EncounterLocation extends fhir.BackboneElement implements IEncounterLocation {
+export declare class EncounterLocation extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The location where the encounter takes place.
      */
@@ -460,10 +360,6 @@ export declare class EncounterLocation extends fhir.BackboneElement implements I
      * When the patient is no longer active at a location, then the period end date is entered, and the status may be changed to completed.
      */
     status?: EncounterLocationStatusValueSetEnum | undefined;
-    /**
-     * Extended properties for primitive element: Encounter.location.status
-     */
-    _status?: fhir.FhirElement | undefined;
     /**
      * This information is de-normalized from the Location resource to support the easier understanding of the encounter resource and processing in messaging or query.
      * There may be many levels in the hierachy, and this may only pic specific levels that are required for a specific usage scenario.
@@ -476,7 +372,7 @@ export declare class EncounterLocation extends fhir.BackboneElement implements I
     /**
      * Default constructor for EncounterLocation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IEncounterLocation>);
+    constructor(source?: Partial<EncounterLocationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -488,12 +384,120 @@ export declare class EncounterLocation extends fhir.BackboneElement implements I
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the Encounter type.
+ */
+export interface EncounterArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "Encounter" | undefined;
+    /**
+     * Identifier(s) by which this encounter is known.
+     */
+    identifier?: fhir.IdentifierArgs[] | undefined;
+    /**
+     * Note that internal business rules will determine the appropriate transitions that may occur between statuses (and also classes).
+     */
+    status: EncounterStatusValueSetEnum | null;
+    /**
+     * The current status is always found in the current version of the resource, not the status history.
+     */
+    statusHistory?: fhir.EncounterStatusHistoryArgs[] | undefined;
+    /**
+     * Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations.
+     */
+    class: fhir.CodingArgs | null;
+    /**
+     * The class history permits the tracking of the encounters transitions without needing to go  through the resource history.  This would be used for a case where an admission starts of as an emergency encounter, then transitions into an inpatient scenario. Doing this and not restarting a new encounter ensures that any lab/diagnostic results can more easily follow the patient and not require re-processing and not get lost or cancelled during a kind of discharge from emergency to inpatient.
+     */
+    classHistory?: fhir.EncounterClassHistoryArgs[] | undefined;
+    /**
+     * Since there are many ways to further classify encounters, this element is 0..*.
+     */
+    type?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * Broad categorization of the service that is to be provided (e.g. cardiology).
+     */
+    serviceType?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Indicates the urgency of the encounter.
+     */
+    priority?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * While the encounter is always about the patient, the patient might not actually be known in all contexts of use, and there may be a group of patients that could be anonymous (such as in a group therapy for Alcoholics Anonymous - where the recording of the encounter could be used for billing on the number of people/staff and not important to the context of the specific patients) or alternately in veterinary care a herd of sheep receiving treatment (where the animals are not individually tracked).
+     */
+    subject?: fhir.ReferenceArgs | undefined;
+    /**
+     * Where a specific encounter should be classified as a part of a specific episode(s) of care this field should be used. This association can facilitate grouping of related encounters together for a specific purpose, such as government reporting, issue tracking, association via a common problem.  The association is recorded on the encounter as these are typically created after the episode of care and grouped on entry rather than editing the episode of care to append another encounter to it (the episode of care could span years).
+     */
+    episodeOfCare?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * The request this encounter satisfies (e.g. incoming referral or procedure request).
+     */
+    basedOn?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * The list of people responsible for providing the service.
+     */
+    participant?: fhir.EncounterParticipantArgs[] | undefined;
+    /**
+     * The appointment that scheduled this encounter.
+     */
+    appointment?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * If not (yet) known, the end of the Period may be omitted.
+     */
+    period?: fhir.PeriodArgs | undefined;
+    /**
+     * May differ from the time the Encounter.period lasted because of leave of absence.
+     */
+    length?: fhir.DurationArgs | undefined;
+    /**
+     * For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 = primary diagnosis).
+     */
+    reasonCode?: fhir.CodeableConceptArgs[] | undefined;
+    /**
+     * For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 = primary diagnosis).
+     */
+    reasonReference?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * The list of diagnosis relevant to this encounter.
+     */
+    diagnosis?: fhir.EncounterDiagnosisArgs[] | undefined;
+    /**
+     * The billing system may choose to allocate billable items associated with the Encounter to different referenced Accounts based on internal business rules.
+     */
+    account?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * An Encounter may cover more than just the inpatient stay. Contexts such as outpatients, community clinics, and aged care facilities are also included.
+     * The duration recorded in the period of this encounter covers the entire scope of this hospitalization record.
+     */
+    hospitalization?: fhir.EncounterHospitalizationArgs | undefined;
+    /**
+     * Virtual encounters can be recorded in the Encounter by specifying a location reference to a location of type "kind" such as "client's home" and an encounter.class = "virtual".
+     */
+    location?: fhir.EncounterLocationArgs[] | undefined;
+    /**
+     * The organization that is primarily responsible for this Encounter's services. This MAY be the same as the organization on the Patient record, however it could be different, such as if the actor performing the services was from an external organization (which may be billed seperately) for an external consultation.  Refer to the example bundle showing an abbreviated set of Encounters for a colonoscopy.
+     */
+    serviceProvider?: fhir.ReferenceArgs | undefined;
+    /**
+     * This is also used for associating a child's encounter back to the mother's encounter.
+     * Refer to the Notes section in the Patient resource for further details.
+     */
+    partOf?: fhir.ReferenceArgs | undefined;
 }
 /**
  * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
  */
-export declare class Encounter extends fhir.DomainResource implements IEncounter {
+export declare class Encounter extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -506,10 +510,6 @@ export declare class Encounter extends fhir.DomainResource implements IEncounter
      * Note that internal business rules will determine the appropriate transitions that may occur between statuses (and also classes).
      */
     status: EncounterStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: Encounter.status
-     */
-    _status?: fhir.FhirElement | undefined;
     /**
      * The current status is always found in the current version of the resource, not the status history.
      */
@@ -599,7 +599,7 @@ export declare class Encounter extends fhir.DomainResource implements IEncounter
     /**
      * Default constructor for Encounter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IEncounter>);
+    constructor(source?: Partial<EncounterArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -627,6 +627,10 @@ export declare class Encounter extends fhir.DomainResource implements IEncounter
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Encounter.d.ts.map

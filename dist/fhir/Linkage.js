@@ -3,7 +3,9 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Linkage
 import * as fhir from '../fhir.js';
-import { LinkageTypeValueSet } from '../fhirValueSets/LinkageTypeValueSet.js';
+import { LinkageTypeValueSet, } from '../fhirValueSets/LinkageTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
  */
@@ -11,16 +13,14 @@ export class LinkageItem extends fhir.BackboneElement {
     /**
      * Default constructor for LinkageItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'LinkageItem';
         if (source['type']) {
             this.type = source.type;
         }
         else {
             this.type = null;
-        }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
         }
         if (source['resource']) {
             this.resource = new fhir.Reference(source.resource);
@@ -39,20 +39,23 @@ export class LinkageItem extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: Linkage.item.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:LinkageTypeValueSetEnum fhir: Linkage.item.type:code", }));
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
-        }
-        if (!this["resource"]) {
-            results.push(["resource", 'Missing required element: Linkage.item.resource']);
+        if (!this['resource']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resource:fhir.Reference fhir: Linkage.item.resource:Reference", }));
         }
         if (this["resource"]) {
-            results.push(...this.resource.doModelValidation());
+            outcome.issue.push(...this.resource.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -62,14 +65,16 @@ export class Linkage extends fhir.DomainResource {
     /**
      * Default constructor for Linkage - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Linkage';
+        /**
+         * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
+         */
+        this.item = [];
         this.resourceType = 'Linkage';
         if (source['active']) {
-            this.active = source.active;
-        }
-        if (source['_active']) {
-            this._active = new fhir.FhirElement(source._active);
+            this.active = new fhir.FhirBoolean({ value: source.active });
         }
         if (source['author']) {
             this.author = new fhir.Reference(source.author);
@@ -85,23 +90,35 @@ export class Linkage extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Linkage.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Linkage' fhir: Linkage.resourceType:'Linkage'", }));
         }
-        if (this["_active"]) {
-            results.push(...this._active.doModelValidation());
+        if (this["active"]) {
+            outcome.issue.push(...this.active.doModelValidation().issue);
         }
         if (this["author"]) {
-            results.push(...this.author.doModelValidation());
+            outcome.issue.push(...this.author.doModelValidation().issue);
         }
-        if ((!this["item"]) || (this["item"].length === 0)) {
-            results.push(["item", 'Missing required element: Linkage.item']);
+        if (!this['item']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property item:fhir.LinkageItem[] fhir: Linkage.item:item", }));
+        }
+        else if (!Array.isArray(this.item)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property item:fhir.LinkageItem[] fhir: Linkage.item:item", }));
+        }
+        else if (this.item.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property item:fhir.LinkageItem[] fhir: Linkage.item:item", }));
         }
         if (this["item"]) {
-            this.item.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.item.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Linkage.js.map

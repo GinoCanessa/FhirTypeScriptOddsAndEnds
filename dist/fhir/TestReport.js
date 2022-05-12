@@ -3,10 +3,12 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: TestReport
 import * as fhir from '../fhir.js';
-import { ReportParticipantTypeValueSet } from '../fhirValueSets/ReportParticipantTypeValueSet.js';
-import { ReportActionResultCodesValueSet } from '../fhirValueSets/ReportActionResultCodesValueSet.js';
-import { ReportStatusCodesValueSet } from '../fhirValueSets/ReportStatusCodesValueSet.js';
-import { ReportResultCodesValueSet } from '../fhirValueSets/ReportResultCodesValueSet.js';
+import { ReportParticipantTypeValueSet, } from '../fhirValueSets/ReportParticipantTypeValueSet.js';
+import { ReportActionResultCodesValueSet, } from '../fhirValueSets/ReportActionResultCodesValueSet.js';
+import { ReportStatusCodesValueSet, } from '../fhirValueSets/ReportStatusCodesValueSet.js';
+import { ReportResultCodesValueSet, } from '../fhirValueSets/ReportResultCodesValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A participant in the test execution, either the execution engine, a client, or a server.
  */
@@ -14,31 +16,23 @@ export class TestReportParticipant extends fhir.BackboneElement {
     /**
      * Default constructor for TestReportParticipant - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestReportParticipant';
         if (source['type']) {
             this.type = source.type;
         }
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['uri']) {
-            this.uri = source.uri;
+            this.uri = new fhir.FhirUri({ value: source.uri });
         }
         else {
             this.uri = null;
         }
-        if (source['_uri']) {
-            this._uri = new fhir.FhirElement(source._uri);
-        }
         if (source['display']) {
-            this.display = source.display;
-        }
-        if (source['_display']) {
-            this._display = new fhir.FhirElement(source._display);
+            this.display = new fhir.FhirString({ value: source.display });
         }
     }
     /**
@@ -51,23 +45,26 @@ export class TestReportParticipant extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: TestReport.participant.type']);
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:ReportParticipantTypeValueSetEnum fhir: TestReport.participant.type:code", }));
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (!this['uri']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property uri:fhir.FhirUri fhir: TestReport.participant.uri:uri", }));
         }
-        if (!this["uri"]) {
-            results.push(["uri", 'Missing required element: TestReport.participant.uri']);
+        if (this["uri"]) {
+            outcome.issue.push(...this.uri.doModelValidation().issue);
         }
-        if (this["_uri"]) {
-            results.push(...this._uri.doModelValidation());
+        if (this["display"]) {
+            outcome.issue.push(...this.display.doModelValidation().issue);
         }
-        if (this["_display"]) {
-            results.push(...this._display.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -77,28 +74,20 @@ export class TestReportSetupActionOperation extends fhir.BackboneElement {
     /**
      * Default constructor for TestReportSetupActionOperation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestReportSetupActionOperation';
         if (source['result']) {
             this.result = source.result;
         }
         else {
             this.result = null;
         }
-        if (source['_result']) {
-            this._result = new fhir.FhirElement(source._result);
-        }
         if (source['message']) {
-            this.message = source.message;
-        }
-        if (source['_message']) {
-            this._message = new fhir.FhirElement(source._message);
+            this.message = new fhir.FhirMarkdown({ value: source.message });
         }
         if (source['detail']) {
-            this.detail = source.detail;
-        }
-        if (source['_detail']) {
-            this._detail = new fhir.FhirElement(source._detail);
+            this.detail = new fhir.FhirUri({ value: source.detail });
         }
     }
     /**
@@ -111,20 +100,23 @@ export class TestReportSetupActionOperation extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["result"]) {
-            results.push(["result", 'Missing required element: TestReport.setup.action.operation.result']);
+        var outcome = super.doModelValidation();
+        if (!this['result']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property result:ReportActionResultCodesValueSetEnum fhir: TestReport.setup.action.operation.result:code", }));
         }
-        if (this["_result"]) {
-            results.push(...this._result.doModelValidation());
+        if (this["message"]) {
+            outcome.issue.push(...this.message.doModelValidation().issue);
         }
-        if (this["_message"]) {
-            results.push(...this._message.doModelValidation());
+        if (this["detail"]) {
+            outcome.issue.push(...this.detail.doModelValidation().issue);
         }
-        if (this["_detail"]) {
-            results.push(...this._detail.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -134,28 +126,20 @@ export class TestReportSetupActionAssert extends fhir.BackboneElement {
     /**
      * Default constructor for TestReportSetupActionAssert - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestReportSetupActionAssert';
         if (source['result']) {
             this.result = source.result;
         }
         else {
             this.result = null;
         }
-        if (source['_result']) {
-            this._result = new fhir.FhirElement(source._result);
-        }
         if (source['message']) {
-            this.message = source.message;
-        }
-        if (source['_message']) {
-            this._message = new fhir.FhirElement(source._message);
+            this.message = new fhir.FhirMarkdown({ value: source.message });
         }
         if (source['detail']) {
-            this.detail = source.detail;
-        }
-        if (source['_detail']) {
-            this._detail = new fhir.FhirElement(source._detail);
+            this.detail = new fhir.FhirString({ value: source.detail });
         }
     }
     /**
@@ -168,20 +152,23 @@ export class TestReportSetupActionAssert extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["result"]) {
-            results.push(["result", 'Missing required element: TestReport.setup.action.assert.result']);
+        var outcome = super.doModelValidation();
+        if (!this['result']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property result:ReportActionResultCodesValueSetEnum fhir: TestReport.setup.action.assert.result:code", }));
         }
-        if (this["_result"]) {
-            results.push(...this._result.doModelValidation());
+        if (this["message"]) {
+            outcome.issue.push(...this.message.doModelValidation().issue);
         }
-        if (this["_message"]) {
-            results.push(...this._message.doModelValidation());
+        if (this["detail"]) {
+            outcome.issue.push(...this.detail.doModelValidation().issue);
         }
-        if (this["_detail"]) {
-            results.push(...this._detail.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -191,8 +178,9 @@ export class TestReportSetupAction extends fhir.BackboneElement {
     /**
      * Default constructor for TestReportSetupAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestReportSetupAction';
         if (source['operation']) {
             this.operation = new fhir.TestReportSetupActionOperation(source.operation);
         }
@@ -204,14 +192,20 @@ export class TestReportSetupAction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["operation"]) {
-            results.push(...this.operation.doModelValidation());
+            outcome.issue.push(...this.operation.doModelValidation().issue);
         }
         if (this["assert"]) {
-            results.push(...this.assert.doModelValidation());
+            outcome.issue.push(...this.assert.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -221,8 +215,13 @@ export class TestReportSetup extends fhir.BackboneElement {
     /**
      * Default constructor for TestReportSetup - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestReportSetup';
+        /**
+         * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
+         */
+        this.action = [];
         if (source['action']) {
             this.action = source.action.map((x) => new fhir.TestReportSetupAction(x));
         }
@@ -234,14 +233,26 @@ export class TestReportSetup extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if ((!this["action"]) || (this["action"].length === 0)) {
-            results.push(["action", 'Missing required element: TestReport.setup.action']);
+        var outcome = super.doModelValidation();
+        if (!this['action']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property action:fhir.TestReportSetupAction[] fhir: TestReport.setup.action:action", }));
+        }
+        else if (!Array.isArray(this.action)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property action:fhir.TestReportSetupAction[] fhir: TestReport.setup.action:action", }));
+        }
+        else if (this.action.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property action:fhir.TestReportSetupAction[] fhir: TestReport.setup.action:action", }));
         }
         if (this["action"]) {
-            this.action.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.action.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -251,8 +262,9 @@ export class TestReportTestAction extends fhir.BackboneElement {
     /**
      * Default constructor for TestReportTestAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestReportTestAction';
         if (source['operation']) {
             this.operation = new fhir.TestReportSetupActionOperation(source.operation);
         }
@@ -264,14 +276,20 @@ export class TestReportTestAction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["operation"]) {
-            results.push(...this.operation.doModelValidation());
+            outcome.issue.push(...this.operation.doModelValidation().issue);
         }
         if (this["assert"]) {
-            results.push(...this.assert.doModelValidation());
+            outcome.issue.push(...this.assert.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -281,19 +299,18 @@ export class TestReportTest extends fhir.BackboneElement {
     /**
      * Default constructor for TestReportTest - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestReportTest';
+        /**
+         * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
+         */
+        this.action = [];
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirString({ value: source.description });
         }
         if (source['action']) {
             this.action = source.action.map((x) => new fhir.TestReportTestAction(x));
@@ -306,20 +323,32 @@ export class TestReportTest extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if ((!this["action"]) || (this["action"].length === 0)) {
-            results.push(["action", 'Missing required element: TestReport.test.action']);
+        if (!this['action']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property action:fhir.TestReportTestAction[] fhir: TestReport.test.action:action", }));
+        }
+        else if (!Array.isArray(this.action)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property action:fhir.TestReportTestAction[] fhir: TestReport.test.action:action", }));
+        }
+        else if (this.action.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property action:fhir.TestReportTestAction[] fhir: TestReport.test.action:action", }));
         }
         if (this["action"]) {
-            this.action.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.action.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -329,8 +358,9 @@ export class TestReportTeardownAction extends fhir.BackboneElement {
     /**
      * Default constructor for TestReportTeardownAction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestReportTeardownAction';
         if (source['operation']) {
             this.operation = new fhir.TestReportSetupActionOperation(source.operation);
         }
@@ -342,14 +372,20 @@ export class TestReportTeardownAction extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["operation"]) {
-            results.push(["operation", 'Missing required element: TestReport.teardown.action.operation']);
+        var outcome = super.doModelValidation();
+        if (!this['operation']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property operation:fhir.TestReportSetupActionOperation fhir: TestReport.teardown.action.operation:TestReport.setup.action.operation", }));
         }
         if (this["operation"]) {
-            results.push(...this.operation.doModelValidation());
+            outcome.issue.push(...this.operation.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -359,8 +395,13 @@ export class TestReportTeardown extends fhir.BackboneElement {
     /**
      * Default constructor for TestReportTeardown - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestReportTeardown';
+        /**
+         * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
+         */
+        this.action = [];
         if (source['action']) {
             this.action = source.action.map((x) => new fhir.TestReportTeardownAction(x));
         }
@@ -372,14 +413,26 @@ export class TestReportTeardown extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if ((!this["action"]) || (this["action"].length === 0)) {
-            results.push(["action", 'Missing required element: TestReport.teardown.action']);
+        var outcome = super.doModelValidation();
+        if (!this['action']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property action:fhir.TestReportTeardownAction[] fhir: TestReport.teardown.action:action", }));
+        }
+        else if (!Array.isArray(this.action)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property action:fhir.TestReportTeardownAction[] fhir: TestReport.teardown.action:action", }));
+        }
+        else if (this.action.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property action:fhir.TestReportTeardownAction[] fhir: TestReport.teardown.action:action", }));
         }
         if (this["action"]) {
-            this.action.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.action.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -389,26 +442,29 @@ export class TestReport extends fhir.DomainResource {
     /**
      * Default constructor for TestReport - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'TestReport';
+        /**
+         * A participant in the test execution, either the execution engine, a client, or a server.
+         */
+        this.participant = [];
+        /**
+         * A test executed from the test script.
+         */
+        this.test = [];
         this.resourceType = 'TestReport';
         if (source['identifier']) {
             this.identifier = new fhir.Identifier(source.identifier);
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['status']) {
             this.status = source.status;
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['testScript']) {
             this.testScript = new fhir.Reference(source.testScript);
@@ -422,26 +478,14 @@ export class TestReport extends fhir.DomainResource {
         else {
             this.result = null;
         }
-        if (source['_result']) {
-            this._result = new fhir.FhirElement(source._result);
-        }
         if (source['score']) {
-            this.score = source.score;
-        }
-        if (source['_score']) {
-            this._score = new fhir.FhirElement(source._score);
+            this.score = new fhir.FhirDecimal({ value: source.score });
         }
         if (source['tester']) {
-            this.tester = source.tester;
-        }
-        if (source['_tester']) {
-            this._tester = new fhir.FhirElement(source._tester);
+            this.tester = new fhir.FhirString({ value: source.tester });
         }
         if (source['issued']) {
-            this.issued = source.issued;
-        }
-        if (source['_issued']) {
-            this._issued = new fhir.FhirElement(source._issued);
+            this.issued = new fhir.FhirDateTime({ value: source.issued });
         }
         if (source['participant']) {
             this.participant = source.participant.map((x) => new fhir.TestReportParticipant(x));
@@ -472,56 +516,56 @@ export class TestReport extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: TestReport.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'TestReport' fhir: TestReport.resourceType:'TestReport'", }));
         }
         if (this["identifier"]) {
-            results.push(...this.identifier.doModelValidation());
+            outcome.issue.push(...this.identifier.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: TestReport.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:ReportStatusCodesValueSetEnum fhir: TestReport.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
-        }
-        if (!this["testScript"]) {
-            results.push(["testScript", 'Missing required element: TestReport.testScript']);
+        if (!this['testScript']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property testScript:fhir.Reference fhir: TestReport.testScript:Reference", }));
         }
         if (this["testScript"]) {
-            results.push(...this.testScript.doModelValidation());
+            outcome.issue.push(...this.testScript.doModelValidation().issue);
         }
-        if (!this["result"]) {
-            results.push(["result", 'Missing required element: TestReport.result']);
+        if (!this['result']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property result:ReportResultCodesValueSetEnum fhir: TestReport.result:code", }));
         }
-        if (this["_result"]) {
-            results.push(...this._result.doModelValidation());
+        if (this["score"]) {
+            outcome.issue.push(...this.score.doModelValidation().issue);
         }
-        if (this["_score"]) {
-            results.push(...this._score.doModelValidation());
+        if (this["tester"]) {
+            outcome.issue.push(...this.tester.doModelValidation().issue);
         }
-        if (this["_tester"]) {
-            results.push(...this._tester.doModelValidation());
-        }
-        if (this["_issued"]) {
-            results.push(...this._issued.doModelValidation());
+        if (this["issued"]) {
+            outcome.issue.push(...this.issued.doModelValidation().issue);
         }
         if (this["participant"]) {
-            this.participant.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.participant.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["setup"]) {
-            results.push(...this.setup.doModelValidation());
+            outcome.issue.push(...this.setup.doModelValidation().issue);
         }
         if (this["test"]) {
-            this.test.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.test.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["teardown"]) {
-            results.push(...this.teardown.doModelValidation());
+            outcome.issue.push(...this.teardown.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=TestReport.js.map

@@ -35,13 +35,3 @@ export type VisionEyeCodesValueSetType = typeof VisionEyeCodesValueSet;
 /**
  * A coded concept listing the eye codes.
  */
-export enum VisionEyeCodesValueSetEnum {
-  /**
-   * left: Left Eye.
-   */
-  LeftEye = "left",
-  /**
-   * right: Right Eye.
-   */
-  RightEye = "right",
-}

@@ -3,16 +3,16 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ActivityDefinition
 import * as fhir from '../fhir.js';
-import { ActionParticipantTypeValueSet } from '../fhirValueSets/ActionParticipantTypeValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { SubjectTypeValueSet } from '../fhirValueSets/SubjectTypeValueSet.js';
-import { DefinitionTopicValueSet } from '../fhirValueSets/DefinitionTopicValueSet.js';
-import { RequestResourceTypesValueSet } from '../fhirValueSets/RequestResourceTypesValueSet.js';
-import { ProcedureCodeValueSet } from '../fhirValueSets/ProcedureCodeValueSet.js';
-import { RequestIntentValueSet } from '../fhirValueSets/RequestIntentValueSet.js';
-import { RequestPriorityValueSet } from '../fhirValueSets/RequestPriorityValueSet.js';
-import { MedicationCodesValueSet } from '../fhirValueSets/MedicationCodesValueSet.js';
-import { BodySiteValueSet } from '../fhirValueSets/BodySiteValueSet.js';
+import { ActionParticipantTypeValueSet, } from '../fhirValueSets/ActionParticipantTypeValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { DefinitionTopicValueSet, } from '../fhirValueSets/DefinitionTopicValueSet.js';
+import { RequestResourceTypesValueSet, } from '../fhirValueSets/RequestResourceTypesValueSet.js';
+import { ProcedureCodeValueSet, } from '../fhirValueSets/ProcedureCodeValueSet.js';
+import { RequestIntentValueSet, } from '../fhirValueSets/RequestIntentValueSet.js';
+import { RequestPriorityValueSet, } from '../fhirValueSets/RequestPriorityValueSet.js';
+import { BodySiteValueSet, } from '../fhirValueSets/BodySiteValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Indicates who should participate in performing the action described.
  */
@@ -20,16 +20,14 @@ export class ActivityDefinitionParticipant extends fhir.BackboneElement {
     /**
      * Default constructor for ActivityDefinitionParticipant - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ActivityDefinitionParticipant';
         if (source['type']) {
             this.type = source.type;
         }
         else {
             this.type = null;
-        }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
         }
         if (source['role']) {
             this.role = new fhir.CodeableConcept(source.role);
@@ -45,17 +43,20 @@ export class ActivityDefinitionParticipant extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: ActivityDefinition.participant.type']);
-        }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:ActionParticipantTypeValueSetEnum fhir: ActivityDefinition.participant.type:code", }));
         }
         if (this["role"]) {
-            results.push(...this.role.doModelValidation());
+            outcome.issue.push(...this.role.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -65,16 +66,14 @@ export class ActivityDefinitionDynamicValue extends fhir.BackboneElement {
     /**
      * Default constructor for ActivityDefinitionDynamicValue - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ActivityDefinitionDynamicValue';
         if (source['path']) {
-            this.path = source.path;
+            this.path = new fhir.FhirString({ value: source.path });
         }
         else {
             this.path = null;
-        }
-        if (source['_path']) {
-            this._path = new fhir.FhirElement(source._path);
         }
         if (source['expression']) {
             this.expression = new fhir.Expression(source.expression);
@@ -87,20 +86,26 @@ export class ActivityDefinitionDynamicValue extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["path"]) {
-            results.push(["path", 'Missing required element: ActivityDefinition.dynamicValue.path']);
+        var outcome = super.doModelValidation();
+        if (!this['path']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property path:fhir.FhirString fhir: ActivityDefinition.dynamicValue.path:string", }));
         }
-        if (this["_path"]) {
-            results.push(...this._path.doModelValidation());
+        if (this["path"]) {
+            outcome.issue.push(...this.path.doModelValidation().issue);
         }
-        if (!this["expression"]) {
-            results.push(["expression", 'Missing required element: ActivityDefinition.dynamicValue.expression']);
+        if (!this['expression']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property expression:fhir.Expression fhir: ActivityDefinition.dynamicValue.expression:Expression", }));
         }
         if (this["expression"]) {
-            results.push(...this.expression.doModelValidation());
+            outcome.issue.push(...this.expression.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -110,41 +115,102 @@ export class ActivityDefinition extends fhir.DomainResource {
     /**
      * Default constructor for ActivityDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ActivityDefinition';
+        /**
+         * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this activity definition outside of FHIR, where it is not possible to use the logical URI.
+         */
+        this.identifier = [];
+        this.__subjectIsChoice = true;
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the activity definition to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * Descriptive topics related to the content of the activity. Topics provide a high-level categorization of the activity that can be useful for filtering and searching.
+         */
+        this.topic = [];
+        /**
+         * An individiual or organization primarily involved in the creation and maintenance of the content.
+         */
+        this.author = [];
+        /**
+         * An individual or organization primarily responsible for internal coherence of the content.
+         */
+        this.editor = [];
+        /**
+         * An individual or organization primarily responsible for review of some aspect of the content.
+         */
+        this.reviewer = [];
+        /**
+         * An individual or organization responsible for officially endorsing the content for use in some setting.
+         */
+        this.endorser = [];
+        /**
+         * Each related artifact is either an attachment, or a reference to another resource, but not both.
+         */
+        this.relatedArtifact = [];
+        /**
+         * A reference to a Library resource containing any formal logic used by the activity definition.
+         */
+        this.library = [];
+        this.__timingIsChoice = true;
+        /**
+         * Indicates who should participate in performing the action described.
+         */
+        this.participant = [];
+        this.__productIsChoice = true;
+        /**
+         * If a dosage instruction is used, the definition should not specify timing or quantity.
+         */
+        this.dosage = [];
+        /**
+         * Only used if not implicit in the code found in ServiceRequest.type.
+         */
+        this.bodySite = [];
+        /**
+         * Defines specimen requirements for the action to be performed, such as required specimens for a lab test.
+         */
+        this.specimenRequirement = [];
+        /**
+         * Defines observation requirements for the action to be performed, such as body weight or surface area.
+         */
+        this.observationRequirement = [];
+        /**
+         * Defines the observations that are expected to be produced by the action.
+         */
+        this.observationResultRequirement = [];
+        /**
+         * Dynamic values are applied in the order in which they are defined in the ActivityDefinition. Note that if both a transform and dynamic values are specified, the dynamic values will be applied to the result of the transform.
+         */
+        this.dynamicValue = [];
         this.resourceType = 'ActivityDefinition';
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['subtitle']) {
-            this.subtitle = source.subtitle;
-        }
-        if (source['_subtitle']) {
-            this._subtitle = new fhir.FhirElement(source._subtitle);
+            this.subtitle = new fhir.FhirString({ value: source.subtitle });
         }
         if (source['status']) {
             this.status = source.status;
@@ -152,41 +218,29 @@ export class ActivityDefinition extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+        if (source['subject']) {
+            this.subject = source.subject;
         }
-        if (source['subjectCodeableConcept']) {
-            this.subjectCodeableConcept = new fhir.CodeableConcept(source.subjectCodeableConcept);
+        else if (source['subjectCodeableConcept']) {
+            this.subject = new fhir.CodeableConcept(source.subjectCodeableConcept);
         }
-        if (source['subjectReference']) {
-            this.subjectReference = new fhir.Reference(source.subjectReference);
+        else if (source['subjectReference']) {
+            this.subject = new fhir.Reference(source.subjectReference);
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -195,34 +249,19 @@ export class ActivityDefinition extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['usage']) {
-            this.usage = source.usage;
-        }
-        if (source['_usage']) {
-            this._usage = new fhir.FhirElement(source._usage);
+            this.usage = new fhir.FhirString({ value: source.usage });
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['approvalDate']) {
-            this.approvalDate = source.approvalDate;
-        }
-        if (source['_approvalDate']) {
-            this._approvalDate = new fhir.FhirElement(source._approvalDate);
+            this.approvalDate = new fhir.FhirDate({ value: source.approvalDate });
         }
         if (source['lastReviewDate']) {
-            this.lastReviewDate = source.lastReviewDate;
-        }
-        if (source['_lastReviewDate']) {
-            this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate);
+            this.lastReviewDate = new fhir.FhirDate({ value: source.lastReviewDate });
         }
         if (source['effectivePeriod']) {
             this.effectivePeriod = new fhir.Period(source.effectivePeriod);
@@ -246,22 +285,13 @@ export class ActivityDefinition extends fhir.DomainResource {
             this.relatedArtifact = source.relatedArtifact.map((x) => new fhir.RelatedArtifact(x));
         }
         if (source['library']) {
-            this.library = source.library.map((x) => (x));
-        }
-        if (source['_library']) {
-            this._library = source._library.map((x) => new fhir.FhirElement(x));
+            this.library = source.library.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['kind']) {
-            this.kind = source.kind;
-        }
-        if (source['_kind']) {
-            this._kind = new fhir.FhirElement(source._kind);
+            this.kind = new fhir.FhirCode({ value: source.kind });
         }
         if (source['profile']) {
-            this.profile = source.profile;
-        }
-        if (source['_profile']) {
-            this._profile = new fhir.FhirElement(source._profile);
+            this.profile = new fhir.FhirCanonical({ value: source.profile });
         }
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
@@ -269,41 +299,32 @@ export class ActivityDefinition extends fhir.DomainResource {
         if (source['intent']) {
             this.intent = source.intent;
         }
-        if (source['_intent']) {
-            this._intent = new fhir.FhirElement(source._intent);
-        }
         if (source['priority']) {
             this.priority = source.priority;
         }
-        if (source['_priority']) {
-            this._priority = new fhir.FhirElement(source._priority);
-        }
         if (source['doNotPerform']) {
-            this.doNotPerform = source.doNotPerform;
+            this.doNotPerform = new fhir.FhirBoolean({ value: source.doNotPerform });
         }
-        if (source['_doNotPerform']) {
-            this._doNotPerform = new fhir.FhirElement(source._doNotPerform);
+        if (source['timing']) {
+            this.timing = source.timing;
         }
-        if (source['timingTiming']) {
-            this.timingTiming = new fhir.Timing(source.timingTiming);
+        else if (source['timingTiming']) {
+            this.timing = new fhir.Timing(source.timingTiming);
         }
-        if (source['timingDateTime']) {
-            this.timingDateTime = source.timingDateTime;
+        else if (source['timingDateTime']) {
+            this.timing = new fhir.FhirDateTime({ value: source.timingDateTime });
         }
-        if (source['_timingDateTime']) {
-            this._timingDateTime = new fhir.FhirElement(source._timingDateTime);
+        else if (source['timingAge']) {
+            this.timing = new fhir.Age(source.timingAge);
         }
-        if (source['timingAge']) {
-            this.timingAge = new fhir.Age(source.timingAge);
+        else if (source['timingPeriod']) {
+            this.timing = new fhir.Period(source.timingPeriod);
         }
-        if (source['timingPeriod']) {
-            this.timingPeriod = new fhir.Period(source.timingPeriod);
+        else if (source['timingRange']) {
+            this.timing = new fhir.Range(source.timingRange);
         }
-        if (source['timingRange']) {
-            this.timingRange = new fhir.Range(source.timingRange);
-        }
-        if (source['timingDuration']) {
-            this.timingDuration = new fhir.Duration(source.timingDuration);
+        else if (source['timingDuration']) {
+            this.timing = new fhir.Duration(source.timingDuration);
         }
         if (source['location']) {
             this.location = new fhir.Reference(source.location);
@@ -311,11 +332,14 @@ export class ActivityDefinition extends fhir.DomainResource {
         if (source['participant']) {
             this.participant = source.participant.map((x) => new fhir.ActivityDefinitionParticipant(x));
         }
-        if (source['productReference']) {
-            this.productReference = new fhir.Reference(source.productReference);
+        if (source['product']) {
+            this.product = source.product;
         }
-        if (source['productCodeableConcept']) {
-            this.productCodeableConcept = new fhir.CodeableConcept(source.productCodeableConcept);
+        else if (source['productReference']) {
+            this.product = new fhir.Reference(source.productReference);
+        }
+        else if (source['productCodeableConcept']) {
+            this.product = new fhir.CodeableConcept(source.productCodeableConcept);
         }
         if (source['quantity']) {
             this.quantity = new fhir.Quantity(source.quantity);
@@ -336,10 +360,7 @@ export class ActivityDefinition extends fhir.DomainResource {
             this.observationResultRequirement = source.observationResultRequirement.map((x) => new fhir.Reference(x));
         }
         if (source['transform']) {
-            this.transform = source.transform;
-        }
-        if (source['_transform']) {
-            this._transform = new fhir.FhirElement(source._transform);
+            this.transform = new fhir.FhirCanonical({ value: source.transform });
         }
         if (source['dynamicValue']) {
             this.dynamicValue = source.dynamicValue.map((x) => new fhir.ActivityDefinitionDynamicValue(x));
@@ -350,18 +371,6 @@ export class ActivityDefinition extends fhir.DomainResource {
      */
     static statusRequiredValueSet() {
         return PublicationStatusValueSet;
-    }
-    /**
-     * Extensible-bound Value Set for subjectCodeableConcept
-     */
-    static subjectCodeableConceptExtensibleValueSet() {
-        return SubjectTypeValueSet;
-    }
-    /**
-     * Extensible-bound Value Set for subjectReference
-     */
-    static subjectReferenceExtensibleValueSet() {
-        return SubjectTypeValueSet;
     }
     /**
      * Example-bound Value Set for topic
@@ -394,18 +403,6 @@ export class ActivityDefinition extends fhir.DomainResource {
         return RequestPriorityValueSet;
     }
     /**
-     * Example-bound Value Set for productReference
-     */
-    static productReferenceExampleValueSet() {
-        return MedicationCodesValueSet;
-    }
-    /**
-     * Example-bound Value Set for productCodeableConcept
-     */
-    static productCodeableConceptExampleValueSet() {
-        return MedicationCodesValueSet;
-    }
-    /**
      * Example-bound Value Set for bodySite
      */
     static bodySiteExampleValueSet() {
@@ -415,173 +412,140 @@ export class ActivityDefinition extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: ActivityDefinition.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'ActivityDefinition' fhir: ActivityDefinition.resourceType:'ActivityDefinition'", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_subtitle"]) {
-            results.push(...this._subtitle.doModelValidation());
+        if (this["subtitle"]) {
+            outcome.issue.push(...this.subtitle.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: ActivityDefinition.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: ActivityDefinition.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["subjectCodeableConcept"]) {
-            results.push(...this.subjectCodeableConcept.doModelValidation());
-        }
-        if (this["subjectReference"]) {
-            results.push(...this.subjectReference.doModelValidation());
-        }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (this["_usage"]) {
-            results.push(...this._usage.doModelValidation());
+        if (this["usage"]) {
+            outcome.issue.push(...this.usage.doModelValidation().issue);
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
-        if (this["_approvalDate"]) {
-            results.push(...this._approvalDate.doModelValidation());
+        if (this["approvalDate"]) {
+            outcome.issue.push(...this.approvalDate.doModelValidation().issue);
         }
-        if (this["_lastReviewDate"]) {
-            results.push(...this._lastReviewDate.doModelValidation());
+        if (this["lastReviewDate"]) {
+            outcome.issue.push(...this.lastReviewDate.doModelValidation().issue);
         }
         if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
+            outcome.issue.push(...this.effectivePeriod.doModelValidation().issue);
         }
         if (this["topic"]) {
-            this.topic.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.topic.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["author"]) {
-            this.author.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.author.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["editor"]) {
-            this.editor.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.editor.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reviewer"]) {
-            this.reviewer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reviewer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["endorser"]) {
-            this.endorser.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.endorser.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relatedArtifact"]) {
-            this.relatedArtifact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relatedArtifact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_library"]) {
-            this._library.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["library"]) {
+            this.library.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_kind"]) {
-            results.push(...this._kind.doModelValidation());
+        if (this["kind"]) {
+            outcome.issue.push(...this.kind.doModelValidation().issue);
         }
-        if (this["_profile"]) {
-            results.push(...this._profile.doModelValidation());
+        if (this["profile"]) {
+            outcome.issue.push(...this.profile.doModelValidation().issue);
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
-        if (this["_intent"]) {
-            results.push(...this._intent.doModelValidation());
-        }
-        if (this["_priority"]) {
-            results.push(...this._priority.doModelValidation());
-        }
-        if (this["_doNotPerform"]) {
-            results.push(...this._doNotPerform.doModelValidation());
-        }
-        if (this["timingTiming"]) {
-            results.push(...this.timingTiming.doModelValidation());
-        }
-        if (this["_timingDateTime"]) {
-            results.push(...this._timingDateTime.doModelValidation());
-        }
-        if (this["timingAge"]) {
-            results.push(...this.timingAge.doModelValidation());
-        }
-        if (this["timingPeriod"]) {
-            results.push(...this.timingPeriod.doModelValidation());
-        }
-        if (this["timingRange"]) {
-            results.push(...this.timingRange.doModelValidation());
-        }
-        if (this["timingDuration"]) {
-            results.push(...this.timingDuration.doModelValidation());
+        if (this["doNotPerform"]) {
+            outcome.issue.push(...this.doNotPerform.doModelValidation().issue);
         }
         if (this["location"]) {
-            results.push(...this.location.doModelValidation());
+            outcome.issue.push(...this.location.doModelValidation().issue);
         }
         if (this["participant"]) {
-            this.participant.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["productReference"]) {
-            results.push(...this.productReference.doModelValidation());
-        }
-        if (this["productCodeableConcept"]) {
-            results.push(...this.productCodeableConcept.doModelValidation());
+            this.participant.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["quantity"]) {
-            results.push(...this.quantity.doModelValidation());
+            outcome.issue.push(...this.quantity.doModelValidation().issue);
         }
         if (this["dosage"]) {
-            this.dosage.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.dosage.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["bodySite"]) {
-            this.bodySite.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.bodySite.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["specimenRequirement"]) {
-            this.specimenRequirement.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.specimenRequirement.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["observationRequirement"]) {
-            this.observationRequirement.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.observationRequirement.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["observationResultRequirement"]) {
-            this.observationResultRequirement.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.observationResultRequirement.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_transform"]) {
-            results.push(...this._transform.doModelValidation());
+        if (this["transform"]) {
+            outcome.issue.push(...this.transform.doModelValidation().issue);
         }
         if (this["dynamicValue"]) {
-            this.dynamicValue.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.dynamicValue.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=ActivityDefinition.js.map

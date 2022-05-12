@@ -3,9 +3,11 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Medication
 import * as fhir from '../fhir.js';
-import { MedicationCodesValueSet } from '../fhirValueSets/MedicationCodesValueSet.js';
-import { MedicationStatusValueSet } from '../fhirValueSets/MedicationStatusValueSet.js';
-import { MedicationFormCodesValueSet } from '../fhirValueSets/MedicationFormCodesValueSet.js';
+import { MedicationCodesValueSet, } from '../fhirValueSets/MedicationCodesValueSet.js';
+import { MedicationStatusValueSet, } from '../fhirValueSets/MedicationStatusValueSet.js';
+import { MedicationFormCodesValueSet, } from '../fhirValueSets/MedicationFormCodesValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The ingredients need not be a complete list.  If an ingredient is not specified, this does not indicate whether an ingredient is present or absent.  If an ingredient is specified it does not mean that all ingredients are specified.  It is possible to specify both inactive and active ingredients.
  */
@@ -13,19 +15,24 @@ export class MedicationIngredient extends fhir.BackboneElement {
     /**
      * Default constructor for MedicationIngredient - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['itemCodeableConcept']) {
-            this.itemCodeableConcept = new fhir.CodeableConcept(source.itemCodeableConcept);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicationIngredient';
+        this.__itemIsChoice = true;
+        if (source['item']) {
+            this.item = source.item;
         }
-        if (source['itemReference']) {
-            this.itemReference = new fhir.Reference(source.itemReference);
+        else if (source['itemCodeableConcept']) {
+            this.item = new fhir.CodeableConcept(source.itemCodeableConcept);
+        }
+        else if (source['itemReference']) {
+            this.item = new fhir.Reference(source.itemReference);
+        }
+        else {
+            this.item = null;
         }
         if (source['isActive']) {
-            this.isActive = source.isActive;
-        }
-        if (source['_isActive']) {
-            this._isActive = new fhir.FhirElement(source._isActive);
+            this.isActive = new fhir.FhirBoolean({ value: source.isActive });
         }
         if (source['strength']) {
             this.strength = new fhir.Ratio(source.strength);
@@ -35,20 +42,23 @@ export class MedicationIngredient extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["itemCodeableConcept"]) {
-            results.push(...this.itemCodeableConcept.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['item']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property item: fhir: Medication.ingredient.item[x]:", }));
         }
-        if (this["itemReference"]) {
-            results.push(...this.itemReference.doModelValidation());
-        }
-        if (this["_isActive"]) {
-            results.push(...this._isActive.doModelValidation());
+        if (this["isActive"]) {
+            outcome.issue.push(...this.isActive.doModelValidation().issue);
         }
         if (this["strength"]) {
-            results.push(...this.strength.doModelValidation());
+            outcome.issue.push(...this.strength.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -58,33 +68,34 @@ export class MedicationBatch extends fhir.BackboneElement {
     /**
      * Default constructor for MedicationBatch - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicationBatch';
         if (source['lotNumber']) {
-            this.lotNumber = source.lotNumber;
-        }
-        if (source['_lotNumber']) {
-            this._lotNumber = new fhir.FhirElement(source._lotNumber);
+            this.lotNumber = new fhir.FhirString({ value: source.lotNumber });
         }
         if (source['expirationDate']) {
-            this.expirationDate = source.expirationDate;
-        }
-        if (source['_expirationDate']) {
-            this._expirationDate = new fhir.FhirElement(source._expirationDate);
+            this.expirationDate = new fhir.FhirDateTime({ value: source.expirationDate });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_lotNumber"]) {
-            results.push(...this._lotNumber.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["lotNumber"]) {
+            outcome.issue.push(...this.lotNumber.doModelValidation().issue);
         }
-        if (this["_expirationDate"]) {
-            results.push(...this._expirationDate.doModelValidation());
+        if (this["expirationDate"]) {
+            outcome.issue.push(...this.expirationDate.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -94,8 +105,17 @@ export class Medication extends fhir.DomainResource {
     /**
      * Default constructor for Medication - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Medication';
+        /**
+         * The serial number could be included as an identifier.
+         */
+        this.identifier = [];
+        /**
+         * The ingredients need not be a complete list.  If an ingredient is not specified, this does not indicate whether an ingredient is present or absent.  If an ingredient is specified it does not mean that all ingredients are specified.  It is possible to specify both inactive and active ingredients.
+         */
+        this.ingredient = [];
         this.resourceType = 'Medication';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -105,9 +125,6 @@ export class Medication extends fhir.DomainResource {
         }
         if (source['status']) {
             this.status = source.status;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['manufacturer']) {
             this.manufacturer = new fhir.Reference(source.manufacturer);
@@ -147,35 +164,38 @@ export class Medication extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Medication.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Medication' fhir: Medication.resourceType:'Medication'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["manufacturer"]) {
-            results.push(...this.manufacturer.doModelValidation());
+            outcome.issue.push(...this.manufacturer.doModelValidation().issue);
         }
         if (this["form"]) {
-            results.push(...this.form.doModelValidation());
+            outcome.issue.push(...this.form.doModelValidation().issue);
         }
         if (this["amount"]) {
-            results.push(...this.amount.doModelValidation());
+            outcome.issue.push(...this.amount.doModelValidation().issue);
         }
         if (this["ingredient"]) {
-            this.ingredient.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.ingredient.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["batch"]) {
-            results.push(...this.batch.doModelValidation());
+            outcome.issue.push(...this.batch.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Medication.js.map

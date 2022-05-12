@@ -35,19 +35,4 @@ export const ReasonMedicationGivenCodesValueSet = {
 /**
  * This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the medication process.
  */
-export var ReasonMedicationGivenCodesValueSetEnum;
-(function (ReasonMedicationGivenCodesValueSetEnum) {
-    /**
-     * a: No reason known.
-     */
-    ReasonMedicationGivenCodesValueSetEnum["None"] = "a";
-    /**
-     * b: The administration was following an ordered protocol.
-     */
-    ReasonMedicationGivenCodesValueSetEnum["GivenAsOrdered"] = "b";
-    /**
-     * c: The administration was needed to treat an emergency.
-     */
-    ReasonMedicationGivenCodesValueSetEnum["Emergency"] = "c";
-})(ReasonMedicationGivenCodesValueSetEnum || (ReasonMedicationGivenCodesValueSetEnum = {}));
 //# sourceMappingURL=ReasonMedicationGivenCodesValueSet.js.map

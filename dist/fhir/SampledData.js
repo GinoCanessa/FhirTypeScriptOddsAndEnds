@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: SampledData
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
  */
@@ -10,8 +12,9 @@ export class SampledData extends fhir.FhirElement {
     /**
      * Default constructor for SampledData - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SampledData';
         if (source['origin']) {
             this.origin = new fhir.Quantity(source.origin);
         }
@@ -19,84 +22,72 @@ export class SampledData extends fhir.FhirElement {
             this.origin = null;
         }
         if (source['period']) {
-            this.period = source.period;
+            this.period = new fhir.FhirDecimal({ value: source.period });
         }
         else {
             this.period = null;
         }
-        if (source['_period']) {
-            this._period = new fhir.FhirElement(source._period);
-        }
         if (source['factor']) {
-            this.factor = source.factor;
-        }
-        if (source['_factor']) {
-            this._factor = new fhir.FhirElement(source._factor);
+            this.factor = new fhir.FhirDecimal({ value: source.factor });
         }
         if (source['lowerLimit']) {
-            this.lowerLimit = source.lowerLimit;
-        }
-        if (source['_lowerLimit']) {
-            this._lowerLimit = new fhir.FhirElement(source._lowerLimit);
+            this.lowerLimit = new fhir.FhirDecimal({ value: source.lowerLimit });
         }
         if (source['upperLimit']) {
-            this.upperLimit = source.upperLimit;
-        }
-        if (source['_upperLimit']) {
-            this._upperLimit = new fhir.FhirElement(source._upperLimit);
+            this.upperLimit = new fhir.FhirDecimal({ value: source.upperLimit });
         }
         if (source['dimensions']) {
-            this.dimensions = source.dimensions;
+            this.dimensions = new fhir.FhirPositiveInt({ value: source.dimensions });
         }
         else {
             this.dimensions = null;
         }
-        if (source['_dimensions']) {
-            this._dimensions = new fhir.FhirElement(source._dimensions);
-        }
         if (source['data']) {
-            this.data = source.data;
-        }
-        if (source['_data']) {
-            this._data = new fhir.FhirElement(source._data);
+            this.data = new fhir.FhirString({ value: source.data });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["origin"]) {
-            results.push(["origin", 'Missing required element: SampledData.origin']);
+        var outcome = super.doModelValidation();
+        if (!this['origin']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property origin:fhir.Quantity fhir: SampledData.origin:Quantity", }));
         }
         if (this["origin"]) {
-            results.push(...this.origin.doModelValidation());
+            outcome.issue.push(...this.origin.doModelValidation().issue);
         }
-        if (!this["period"]) {
-            results.push(["period", 'Missing required element: SampledData.period']);
+        if (!this['period']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property period:fhir.FhirDecimal fhir: SampledData.period:decimal", }));
         }
-        if (this["_period"]) {
-            results.push(...this._period.doModelValidation());
+        if (this["period"]) {
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
-        if (this["_factor"]) {
-            results.push(...this._factor.doModelValidation());
+        if (this["factor"]) {
+            outcome.issue.push(...this.factor.doModelValidation().issue);
         }
-        if (this["_lowerLimit"]) {
-            results.push(...this._lowerLimit.doModelValidation());
+        if (this["lowerLimit"]) {
+            outcome.issue.push(...this.lowerLimit.doModelValidation().issue);
         }
-        if (this["_upperLimit"]) {
-            results.push(...this._upperLimit.doModelValidation());
+        if (this["upperLimit"]) {
+            outcome.issue.push(...this.upperLimit.doModelValidation().issue);
         }
-        if (!this["dimensions"]) {
-            results.push(["dimensions", 'Missing required element: SampledData.dimensions']);
+        if (!this['dimensions']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property dimensions:fhir.FhirPositiveInt fhir: SampledData.dimensions:positiveInt", }));
         }
-        if (this["_dimensions"]) {
-            results.push(...this._dimensions.doModelValidation());
+        if (this["dimensions"]) {
+            outcome.issue.push(...this.dimensions.doModelValidation().issue);
         }
-        if (this["_data"]) {
-            results.push(...this._data.doModelValidation());
+        if (this["data"]) {
+            outcome.issue.push(...this.data.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=SampledData.js.map

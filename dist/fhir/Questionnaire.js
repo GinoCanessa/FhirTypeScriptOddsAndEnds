@@ -3,12 +3,14 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Questionnaire
 import * as fhir from '../fhir.js';
-import { QuestionnaireEnableOperatorValueSet } from '../fhirValueSets/QuestionnaireEnableOperatorValueSet.js';
-import { QuestionnaireQuestionsValueSet } from '../fhirValueSets/QuestionnaireQuestionsValueSet.js';
-import { ItemTypeValueSet } from '../fhirValueSets/ItemTypeValueSet.js';
-import { QuestionnaireEnableBehaviorValueSet } from '../fhirValueSets/QuestionnaireEnableBehaviorValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { ResourceTypesValueSet } from '../fhirValueSets/ResourceTypesValueSet.js';
+import { QuestionnaireEnableOperatorValueSet, } from '../fhirValueSets/QuestionnaireEnableOperatorValueSet.js';
+import { QuestionnaireQuestionsValueSet, } from '../fhirValueSets/QuestionnaireQuestionsValueSet.js';
+import { ItemTypeValueSet, } from '../fhirValueSets/ItemTypeValueSet.js';
+import { QuestionnaireEnableBehaviorValueSet, } from '../fhirValueSets/QuestionnaireEnableBehaviorValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { ResourceTypesValueSet, } from '../fhirValueSets/ResourceTypesValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * If multiple repetitions of this extension are present, the item should be enabled when the condition for *any* of the repetitions is true.  I.e. treat "enableWhen"s as being joined by an "or" clause.  This element is a modifier because if enableWhen is present for an item, "required" is ignored unless one of the enableWhen conditions is met. When an item is disabled, all of its descendants are disabled, regardless of what their own enableWhen logic might evaluate to.
  */
@@ -16,16 +18,15 @@ export class QuestionnaireItemEnableWhen extends fhir.BackboneElement {
     /**
      * Default constructor for QuestionnaireItemEnableWhen - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'QuestionnaireItemEnableWhen';
+        this.__answerIsChoice = true;
         if (source['question']) {
-            this.question = source.question;
+            this.question = new fhir.FhirString({ value: source.question });
         }
         else {
             this.question = null;
-        }
-        if (source['_question']) {
-            this._question = new fhir.FhirElement(source._question);
         }
         if (source['operator']) {
             this.operator = source.operator;
@@ -33,59 +34,41 @@ export class QuestionnaireItemEnableWhen extends fhir.BackboneElement {
         else {
             this.operator = null;
         }
-        if (source['_operator']) {
-            this._operator = new fhir.FhirElement(source._operator);
+        if (source['answer']) {
+            this.answer = source.answer;
         }
-        if (source['answerBoolean']) {
-            this.answerBoolean = source.answerBoolean;
+        else if (source['answerBoolean']) {
+            this.answer = new fhir.FhirBoolean({ value: source.answerBoolean });
         }
-        if (source['_answerBoolean']) {
-            this._answerBoolean = new fhir.FhirElement(source._answerBoolean);
+        else if (source['answerDecimal']) {
+            this.answer = new fhir.FhirDecimal({ value: source.answerDecimal });
         }
-        if (source['answerDecimal']) {
-            this.answerDecimal = source.answerDecimal;
+        else if (source['answerInteger']) {
+            this.answer = new fhir.FhirInteger({ value: source.answerInteger });
         }
-        if (source['_answerDecimal']) {
-            this._answerDecimal = new fhir.FhirElement(source._answerDecimal);
+        else if (source['answerDate']) {
+            this.answer = new fhir.FhirDate({ value: source.answerDate });
         }
-        if (source['answerInteger']) {
-            this.answerInteger = source.answerInteger;
+        else if (source['answerDateTime']) {
+            this.answer = new fhir.FhirDateTime({ value: source.answerDateTime });
         }
-        if (source['_answerInteger']) {
-            this._answerInteger = new fhir.FhirElement(source._answerInteger);
+        else if (source['answerTime']) {
+            this.answer = new fhir.FhirTime({ value: source.answerTime });
         }
-        if (source['answerDate']) {
-            this.answerDate = source.answerDate;
+        else if (source['answerString']) {
+            this.answer = new fhir.FhirString({ value: source.answerString });
         }
-        if (source['_answerDate']) {
-            this._answerDate = new fhir.FhirElement(source._answerDate);
+        else if (source['answerCoding']) {
+            this.answer = new fhir.Coding(source.answerCoding);
         }
-        if (source['answerDateTime']) {
-            this.answerDateTime = source.answerDateTime;
+        else if (source['answerQuantity']) {
+            this.answer = new fhir.Quantity(source.answerQuantity);
         }
-        if (source['_answerDateTime']) {
-            this._answerDateTime = new fhir.FhirElement(source._answerDateTime);
+        else if (source['answerReference']) {
+            this.answer = new fhir.Reference(source.answerReference);
         }
-        if (source['answerTime']) {
-            this.answerTime = source.answerTime;
-        }
-        if (source['_answerTime']) {
-            this._answerTime = new fhir.FhirElement(source._answerTime);
-        }
-        if (source['answerString']) {
-            this.answerString = source.answerString;
-        }
-        if (source['_answerString']) {
-            this._answerString = new fhir.FhirElement(source._answerString);
-        }
-        if (source['answerCoding']) {
-            this.answerCoding = new fhir.Coding(source.answerCoding);
-        }
-        if (source['answerQuantity']) {
-            this.answerQuantity = new fhir.Quantity(source.answerQuantity);
-        }
-        if (source['answerReference']) {
-            this.answerReference = new fhir.Reference(source.answerReference);
+        else {
+            this.answer = null;
         }
     }
     /**
@@ -98,50 +81,26 @@ export class QuestionnaireItemEnableWhen extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["question"]) {
-            results.push(["question", 'Missing required element: Questionnaire.item.enableWhen.question']);
+        var outcome = super.doModelValidation();
+        if (!this['question']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property question:fhir.FhirString fhir: Questionnaire.item.enableWhen.question:string", }));
         }
-        if (this["_question"]) {
-            results.push(...this._question.doModelValidation());
+        if (this["question"]) {
+            outcome.issue.push(...this.question.doModelValidation().issue);
         }
-        if (!this["operator"]) {
-            results.push(["operator", 'Missing required element: Questionnaire.item.enableWhen.operator']);
+        if (!this['operator']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property operator:QuestionnaireEnableOperatorValueSetEnum fhir: Questionnaire.item.enableWhen.operator:code", }));
         }
-        if (this["_operator"]) {
-            results.push(...this._operator.doModelValidation());
+        if (!this['answer']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property answer: fhir: Questionnaire.item.enableWhen.answer[x]:", }));
         }
-        if (this["_answerBoolean"]) {
-            results.push(...this._answerBoolean.doModelValidation());
-        }
-        if (this["_answerDecimal"]) {
-            results.push(...this._answerDecimal.doModelValidation());
-        }
-        if (this["_answerInteger"]) {
-            results.push(...this._answerInteger.doModelValidation());
-        }
-        if (this["_answerDate"]) {
-            results.push(...this._answerDate.doModelValidation());
-        }
-        if (this["_answerDateTime"]) {
-            results.push(...this._answerDateTime.doModelValidation());
-        }
-        if (this["_answerTime"]) {
-            results.push(...this._answerTime.doModelValidation());
-        }
-        if (this["_answerString"]) {
-            results.push(...this._answerString.doModelValidation());
-        }
-        if (this["answerCoding"]) {
-            results.push(...this.answerCoding.doModelValidation());
-        }
-        if (this["answerQuantity"]) {
-            results.push(...this.answerQuantity.doModelValidation());
-        }
-        if (this["answerReference"]) {
-            results.push(...this.answerReference.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -151,72 +110,56 @@ export class QuestionnaireItemAnswerOption extends fhir.BackboneElement {
     /**
      * Default constructor for QuestionnaireItemAnswerOption - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['valueInteger']) {
-            this.valueInteger = source.valueInteger;
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'QuestionnaireItemAnswerOption';
+        this.__valueIsChoice = true;
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['_valueInteger']) {
-            this._valueInteger = new fhir.FhirElement(source._valueInteger);
+        else if (source['valueInteger']) {
+            this.value = new fhir.FhirInteger({ value: source.valueInteger });
         }
-        if (source['valueDate']) {
-            this.valueDate = source.valueDate;
+        else if (source['valueDate']) {
+            this.value = new fhir.FhirDate({ value: source.valueDate });
         }
-        if (source['_valueDate']) {
-            this._valueDate = new fhir.FhirElement(source._valueDate);
+        else if (source['valueTime']) {
+            this.value = new fhir.FhirTime({ value: source.valueTime });
         }
-        if (source['valueTime']) {
-            this.valueTime = source.valueTime;
+        else if (source['valueString']) {
+            this.value = new fhir.FhirString({ value: source.valueString });
         }
-        if (source['_valueTime']) {
-            this._valueTime = new fhir.FhirElement(source._valueTime);
+        else if (source['valueCoding']) {
+            this.value = new fhir.Coding(source.valueCoding);
         }
-        if (source['valueString']) {
-            this.valueString = source.valueString;
+        else if (source['valueReference']) {
+            this.value = new fhir.Reference(source.valueReference);
         }
-        if (source['_valueString']) {
-            this._valueString = new fhir.FhirElement(source._valueString);
-        }
-        if (source['valueCoding']) {
-            this.valueCoding = new fhir.Coding(source.valueCoding);
-        }
-        if (source['valueReference']) {
-            this.valueReference = new fhir.Reference(source.valueReference);
+        else {
+            this.value = null;
         }
         if (source['initialSelected']) {
-            this.initialSelected = source.initialSelected;
-        }
-        if (source['_initialSelected']) {
-            this._initialSelected = new fhir.FhirElement(source._initialSelected);
+            this.initialSelected = new fhir.FhirBoolean({ value: source.initialSelected });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_valueInteger"]) {
-            results.push(...this._valueInteger.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value: fhir: Questionnaire.item.answerOption.value[x]:", }));
         }
-        if (this["_valueDate"]) {
-            results.push(...this._valueDate.doModelValidation());
+        if (this["initialSelected"]) {
+            outcome.issue.push(...this.initialSelected.doModelValidation().issue);
         }
-        if (this["_valueTime"]) {
-            results.push(...this._valueTime.doModelValidation());
-        }
-        if (this["_valueString"]) {
-            results.push(...this._valueString.doModelValidation());
-        }
-        if (this["valueCoding"]) {
-            results.push(...this.valueCoding.doModelValidation());
-        }
-        if (this["valueReference"]) {
-            results.push(...this.valueReference.doModelValidation());
-        }
-        if (this["_initialSelected"]) {
-            results.push(...this._initialSelected.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -226,111 +169,68 @@ export class QuestionnaireItemInitial extends fhir.BackboneElement {
     /**
      * Default constructor for QuestionnaireItemInitial - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
-        if (source['valueBoolean']) {
-            this.valueBoolean = source.valueBoolean;
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'QuestionnaireItemInitial';
+        this.__valueIsChoice = true;
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['_valueBoolean']) {
-            this._valueBoolean = new fhir.FhirElement(source._valueBoolean);
+        else if (source['valueBoolean']) {
+            this.value = new fhir.FhirBoolean({ value: source.valueBoolean });
         }
-        if (source['valueDecimal']) {
-            this.valueDecimal = source.valueDecimal;
+        else if (source['valueDecimal']) {
+            this.value = new fhir.FhirDecimal({ value: source.valueDecimal });
         }
-        if (source['_valueDecimal']) {
-            this._valueDecimal = new fhir.FhirElement(source._valueDecimal);
+        else if (source['valueInteger']) {
+            this.value = new fhir.FhirInteger({ value: source.valueInteger });
         }
-        if (source['valueInteger']) {
-            this.valueInteger = source.valueInteger;
+        else if (source['valueDate']) {
+            this.value = new fhir.FhirDate({ value: source.valueDate });
         }
-        if (source['_valueInteger']) {
-            this._valueInteger = new fhir.FhirElement(source._valueInteger);
+        else if (source['valueDateTime']) {
+            this.value = new fhir.FhirDateTime({ value: source.valueDateTime });
         }
-        if (source['valueDate']) {
-            this.valueDate = source.valueDate;
+        else if (source['valueTime']) {
+            this.value = new fhir.FhirTime({ value: source.valueTime });
         }
-        if (source['_valueDate']) {
-            this._valueDate = new fhir.FhirElement(source._valueDate);
+        else if (source['valueString']) {
+            this.value = new fhir.FhirString({ value: source.valueString });
         }
-        if (source['valueDateTime']) {
-            this.valueDateTime = source.valueDateTime;
+        else if (source['valueUri']) {
+            this.value = new fhir.FhirUri({ value: source.valueUri });
         }
-        if (source['_valueDateTime']) {
-            this._valueDateTime = new fhir.FhirElement(source._valueDateTime);
+        else if (source['valueAttachment']) {
+            this.value = new fhir.Attachment(source.valueAttachment);
         }
-        if (source['valueTime']) {
-            this.valueTime = source.valueTime;
+        else if (source['valueCoding']) {
+            this.value = new fhir.Coding(source.valueCoding);
         }
-        if (source['_valueTime']) {
-            this._valueTime = new fhir.FhirElement(source._valueTime);
+        else if (source['valueQuantity']) {
+            this.value = new fhir.Quantity(source.valueQuantity);
         }
-        if (source['valueString']) {
-            this.valueString = source.valueString;
+        else if (source['valueReference']) {
+            this.value = new fhir.Reference(source.valueReference);
         }
-        if (source['_valueString']) {
-            this._valueString = new fhir.FhirElement(source._valueString);
-        }
-        if (source['valueUri']) {
-            this.valueUri = source.valueUri;
-        }
-        if (source['_valueUri']) {
-            this._valueUri = new fhir.FhirElement(source._valueUri);
-        }
-        if (source['valueAttachment']) {
-            this.valueAttachment = new fhir.Attachment(source.valueAttachment);
-        }
-        if (source['valueCoding']) {
-            this.valueCoding = new fhir.Coding(source.valueCoding);
-        }
-        if (source['valueQuantity']) {
-            this.valueQuantity = new fhir.Quantity(source.valueQuantity);
-        }
-        if (source['valueReference']) {
-            this.valueReference = new fhir.Reference(source.valueReference);
+        else {
+            this.value = null;
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_valueBoolean"]) {
-            results.push(...this._valueBoolean.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (!this['value']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property value: fhir: Questionnaire.item.initial.value[x]:", }));
         }
-        if (this["_valueDecimal"]) {
-            results.push(...this._valueDecimal.doModelValidation());
-        }
-        if (this["_valueInteger"]) {
-            results.push(...this._valueInteger.doModelValidation());
-        }
-        if (this["_valueDate"]) {
-            results.push(...this._valueDate.doModelValidation());
-        }
-        if (this["_valueDateTime"]) {
-            results.push(...this._valueDateTime.doModelValidation());
-        }
-        if (this["_valueTime"]) {
-            results.push(...this._valueTime.doModelValidation());
-        }
-        if (this["_valueString"]) {
-            results.push(...this._valueString.doModelValidation());
-        }
-        if (this["_valueUri"]) {
-            results.push(...this._valueUri.doModelValidation());
-        }
-        if (this["valueAttachment"]) {
-            results.push(...this.valueAttachment.doModelValidation());
-        }
-        if (this["valueCoding"]) {
-            results.push(...this.valueCoding.doModelValidation());
-        }
-        if (this["valueQuantity"]) {
-            results.push(...this.valueQuantity.doModelValidation());
-        }
-        if (this["valueReference"]) {
-            results.push(...this.valueReference.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -340,37 +240,46 @@ export class QuestionnaireItem extends fhir.BackboneElement {
     /**
      * Default constructor for QuestionnaireItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'QuestionnaireItem';
+        /**
+         * The value may come from the ElementDefinition referred to by .definition.
+         */
+        this.code = [];
+        /**
+         * If multiple repetitions of this extension are present, the item should be enabled when the condition for *any* of the repetitions is true.  I.e. treat "enableWhen"s as being joined by an "or" clause.  This element is a modifier because if enableWhen is present for an item, "required" is ignored unless one of the enableWhen conditions is met. When an item is disabled, all of its descendants are disabled, regardless of what their own enableWhen logic might evaluate to.
+         */
+        this.enableWhen = [];
+        /**
+         * This element can be used when the value set machinery of answerValueSet is deemed too cumbersome or when there's a need to capture possible answers that are not codes.
+         */
+        this.answerOption = [];
+        /**
+         * The user is allowed to change the value and override the default (unless marked as read-only). If the user doesn't change the value, then this initial value will be persisted when the QuestionnaireResponse is initially created.  Note that initial values can influence results.  The data type of initial[x] must agree with the item.type, and only repeating items can have more then one initial value.
+         */
+        this.initial = [];
+        /**
+         * There is no specified limit to the depth of nesting.  However, Questionnaire authors are encouraged to consider the impact on the user and user interface of overly deep nesting.
+         */
+        this.item = [];
         if (source['linkId']) {
-            this.linkId = source.linkId;
+            this.linkId = new fhir.FhirString({ value: source.linkId });
         }
         else {
             this.linkId = null;
         }
-        if (source['_linkId']) {
-            this._linkId = new fhir.FhirElement(source._linkId);
-        }
         if (source['definition']) {
-            this.definition = source.definition;
-        }
-        if (source['_definition']) {
-            this._definition = new fhir.FhirElement(source._definition);
+            this.definition = new fhir.FhirUri({ value: source.definition });
         }
         if (source['code']) {
             this.code = source.code.map((x) => new fhir.Coding(x));
         }
         if (source['prefix']) {
-            this.prefix = source.prefix;
-        }
-        if (source['_prefix']) {
-            this._prefix = new fhir.FhirElement(source._prefix);
+            this.prefix = new fhir.FhirString({ value: source.prefix });
         }
         if (source['text']) {
-            this.text = source.text;
-        }
-        if (source['_text']) {
-            this._text = new fhir.FhirElement(source._text);
+            this.text = new fhir.FhirString({ value: source.text });
         }
         if (source['type']) {
             this.type = source.type;
@@ -378,47 +287,26 @@ export class QuestionnaireItem extends fhir.BackboneElement {
         else {
             this.type = null;
         }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
-        }
         if (source['enableWhen']) {
             this.enableWhen = source.enableWhen.map((x) => new fhir.QuestionnaireItemEnableWhen(x));
         }
         if (source['enableBehavior']) {
             this.enableBehavior = source.enableBehavior;
         }
-        if (source['_enableBehavior']) {
-            this._enableBehavior = new fhir.FhirElement(source._enableBehavior);
-        }
         if (source['required']) {
-            this.required = source.required;
-        }
-        if (source['_required']) {
-            this._required = new fhir.FhirElement(source._required);
+            this.required = new fhir.FhirBoolean({ value: source.required });
         }
         if (source['repeats']) {
-            this.repeats = source.repeats;
-        }
-        if (source['_repeats']) {
-            this._repeats = new fhir.FhirElement(source._repeats);
+            this.repeats = new fhir.FhirBoolean({ value: source.repeats });
         }
         if (source['readOnly']) {
-            this.readOnly = source.readOnly;
-        }
-        if (source['_readOnly']) {
-            this._readOnly = new fhir.FhirElement(source._readOnly);
+            this.readOnly = new fhir.FhirBoolean({ value: source.readOnly });
         }
         if (source['maxLength']) {
-            this.maxLength = source.maxLength;
-        }
-        if (source['_maxLength']) {
-            this._maxLength = new fhir.FhirElement(source._maxLength);
+            this.maxLength = new fhir.FhirInteger({ value: source.maxLength });
         }
         if (source['answerValueSet']) {
-            this.answerValueSet = source.answerValueSet;
-        }
-        if (source['_answerValueSet']) {
-            this._answerValueSet = new fhir.FhirElement(source._answerValueSet);
+            this.answerValueSet = new fhir.FhirCanonical({ value: source.answerValueSet });
         }
         if (source['answerOption']) {
             this.answerOption = source.answerOption.map((x) => new fhir.QuestionnaireItemAnswerOption(x));
@@ -452,62 +340,62 @@ export class QuestionnaireItem extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["linkId"]) {
-            results.push(["linkId", 'Missing required element: Questionnaire.item.linkId']);
+        var outcome = super.doModelValidation();
+        if (!this['linkId']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property linkId:fhir.FhirString fhir: Questionnaire.item.linkId:string", }));
         }
-        if (this["_linkId"]) {
-            results.push(...this._linkId.doModelValidation());
+        if (this["linkId"]) {
+            outcome.issue.push(...this.linkId.doModelValidation().issue);
         }
-        if (this["_definition"]) {
-            results.push(...this._definition.doModelValidation());
+        if (this["definition"]) {
+            outcome.issue.push(...this.definition.doModelValidation().issue);
         }
         if (this["code"]) {
-            this.code.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.code.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_prefix"]) {
-            results.push(...this._prefix.doModelValidation());
+        if (this["prefix"]) {
+            outcome.issue.push(...this.prefix.doModelValidation().issue);
         }
-        if (this["_text"]) {
-            results.push(...this._text.doModelValidation());
+        if (this["text"]) {
+            outcome.issue.push(...this.text.doModelValidation().issue);
         }
-        if (!this["type"]) {
-            results.push(["type", 'Missing required element: Questionnaire.item.type']);
-        }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (!this['type']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property type:ItemTypeValueSetEnum fhir: Questionnaire.item.type:code", }));
         }
         if (this["enableWhen"]) {
-            this.enableWhen.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.enableWhen.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_enableBehavior"]) {
-            results.push(...this._enableBehavior.doModelValidation());
+        if (this["required"]) {
+            outcome.issue.push(...this.required.doModelValidation().issue);
         }
-        if (this["_required"]) {
-            results.push(...this._required.doModelValidation());
+        if (this["repeats"]) {
+            outcome.issue.push(...this.repeats.doModelValidation().issue);
         }
-        if (this["_repeats"]) {
-            results.push(...this._repeats.doModelValidation());
+        if (this["readOnly"]) {
+            outcome.issue.push(...this.readOnly.doModelValidation().issue);
         }
-        if (this["_readOnly"]) {
-            results.push(...this._readOnly.doModelValidation());
+        if (this["maxLength"]) {
+            outcome.issue.push(...this.maxLength.doModelValidation().issue);
         }
-        if (this["_maxLength"]) {
-            results.push(...this._maxLength.doModelValidation());
-        }
-        if (this["_answerValueSet"]) {
-            results.push(...this._answerValueSet.doModelValidation());
+        if (this["answerValueSet"]) {
+            outcome.issue.push(...this.answerValueSet.doModelValidation().issue);
         }
         if (this["answerOption"]) {
-            this.answerOption.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.answerOption.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["initial"]) {
-            this.initial.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.initial.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["item"]) {
-            this.item.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.item.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -517,41 +405,59 @@ export class Questionnaire extends fhir.DomainResource {
     /**
      * Default constructor for Questionnaire - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Questionnaire';
+        /**
+         * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this questionnaire outside of FHIR, where it is not possible to use the logical URI.
+         */
+        this.identifier = [];
+        /**
+         * The URL of a Questionnaire that this Questionnaire is based on.
+         */
+        this.derivedFrom = [];
+        /**
+         * If none are specified, then the subject is unlimited.
+         */
+        this.subjectType = [];
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the questionnaire to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * An identifier for this question or group of questions in a particular terminology such as LOINC.
+         */
+        this.code = [];
+        /**
+         * The content of the questionnaire is constructed from an ordered, hierarchical collection of items.
+         */
+        this.item = [];
         this.resourceType = 'Questionnaire';
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['derivedFrom']) {
-            this.derivedFrom = source.derivedFrom.map((x) => (x));
-        }
-        if (source['_derivedFrom']) {
-            this._derivedFrom = source._derivedFrom.map((x) => new fhir.FhirElement(x));
+            this.derivedFrom = source.derivedFrom.map((x) => new fhir.FhirCanonical({ value: x }));
         }
         if (source['status']) {
             this.status = source.status;
@@ -559,41 +465,23 @@ export class Questionnaire extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['experimental']) {
-            this.experimental = source.experimental;
-        }
-        if (source['_experimental']) {
-            this._experimental = new fhir.FhirElement(source._experimental);
+            this.experimental = new fhir.FhirBoolean({ value: source.experimental });
         }
         if (source['subjectType']) {
-            this.subjectType = source.subjectType.map((x) => (x));
-        }
-        if (source['_subjectType']) {
-            this._subjectType = source._subjectType.map((x) => new fhir.FhirElement(x));
+            this.subjectType = source.subjectType.map((x) => new fhir.FhirCode({ value: x }));
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['useContext']) {
             this.useContext = source.useContext.map((x) => new fhir.UsageContext(x));
@@ -602,28 +490,16 @@ export class Questionnaire extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['purpose']) {
-            this.purpose = source.purpose;
-        }
-        if (source['_purpose']) {
-            this._purpose = new fhir.FhirElement(source._purpose);
+            this.purpose = new fhir.FhirMarkdown({ value: source.purpose });
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['approvalDate']) {
-            this.approvalDate = source.approvalDate;
-        }
-        if (source['_approvalDate']) {
-            this._approvalDate = new fhir.FhirElement(source._approvalDate);
+            this.approvalDate = new fhir.FhirDate({ value: source.approvalDate });
         }
         if (source['lastReviewDate']) {
-            this.lastReviewDate = source.lastReviewDate;
-        }
-        if (source['_lastReviewDate']) {
-            this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate);
+            this.lastReviewDate = new fhir.FhirDate({ value: source.lastReviewDate });
         }
         if (source['effectivePeriod']) {
             this.effectivePeriod = new fhir.Period(source.effectivePeriod);
@@ -657,80 +533,83 @@ export class Questionnaire extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Questionnaire.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Questionnaire' fhir: Questionnaire.resourceType:'Questionnaire'", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_derivedFrom"]) {
-            this._derivedFrom.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["derivedFrom"]) {
+            this.derivedFrom.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Questionnaire.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: Questionnaire.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["experimental"]) {
+            outcome.issue.push(...this.experimental.doModelValidation().issue);
         }
-        if (this["_experimental"]) {
-            results.push(...this._experimental.doModelValidation());
+        if (this["subjectType"]) {
+            this.subjectType.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_subjectType"]) {
-            this._subjectType.forEach((x) => { results.push(...x.doModelValidation()); });
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_purpose"]) {
-            results.push(...this._purpose.doModelValidation());
+        if (this["purpose"]) {
+            outcome.issue.push(...this.purpose.doModelValidation().issue);
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
-        if (this["_approvalDate"]) {
-            results.push(...this._approvalDate.doModelValidation());
+        if (this["approvalDate"]) {
+            outcome.issue.push(...this.approvalDate.doModelValidation().issue);
         }
-        if (this["_lastReviewDate"]) {
-            results.push(...this._lastReviewDate.doModelValidation());
+        if (this["lastReviewDate"]) {
+            outcome.issue.push(...this.lastReviewDate.doModelValidation().issue);
         }
         if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
+            outcome.issue.push(...this.effectivePeriod.doModelValidation().issue);
         }
         if (this["code"]) {
-            this.code.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.code.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["item"]) {
-            this.item.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.item.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Questionnaire.js.map

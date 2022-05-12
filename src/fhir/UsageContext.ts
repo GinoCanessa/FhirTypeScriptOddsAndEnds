@@ -3,40 +3,47 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: UsageContext
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { UsageContextTypeValueSet, UsageContextTypeValueSetType, UsageContextTypeValueSetEnum } from '../fhirValueSets/UsageContextTypeValueSet.js'
-
+import { UsageContextTypeValueSet, UsageContextTypeValueSetType,} from '../fhirValueSets/UsageContextTypeValueSet.js';
+import { UsageContextTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
+ * Valid arguments for the UsageContext type.
  */
-export type IUsageContext = fhir.IFhirElement & { 
+export interface UsageContextArgs extends fhir.FhirElementArgs {
   /**
    * A code that identifies the type of context being specified by this usage context.
    */
-  code: fhir.ICoding|null;
+  code: fhir.CodingArgs|null;
   /**
    * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
    */
-  valueCodeableConcept?: fhir.ICodeableConcept|undefined;
+  value?: fhir.CodeableConcept|fhir.Quantity|fhir.Range|fhir.Reference|undefined;
   /**
    * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
    */
-  valueQuantity?: fhir.IQuantity|undefined;
+  valueCodeableConcept?: fhir.CodeableConceptArgs|undefined;
   /**
    * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
    */
-  valueRange?: fhir.IRange|undefined;
+  valueQuantity?: fhir.QuantityArgs|undefined;
   /**
    * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
    */
-  valueReference?: fhir.IReference|undefined;
+  valueRange?: fhir.RangeArgs|undefined;
+  /**
+   * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
+   */
+  valueReference?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
  */
-export class UsageContext extends fhir.FhirElement implements IUsageContext {
+export class UsageContext extends fhir.FhirElement {
+  readonly __dataType:string = 'UsageContext';
   /**
    * A code that identifies the type of context being specified by this usage context.
    */
@@ -44,30 +51,21 @@ export class UsageContext extends fhir.FhirElement implements IUsageContext {
   /**
    * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
    */
-  public valueCodeableConcept?: fhir.CodeableConcept|undefined;
-  /**
-   * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
-   */
-  public valueQuantity?: fhir.Quantity|undefined;
-  /**
-   * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
-   */
-  public valueRange?: fhir.Range|undefined;
-  /**
-   * A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.
-   */
-  public valueReference?: fhir.Reference|undefined;
+  public value: (fhir.CodeableConcept|fhir.Quantity|fhir.Range|fhir.Reference)|null;
+  readonly __valueIsChoice:true = true;
   /**
    * Default constructor for UsageContext - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IUsageContext> = { }) {
-    super(source);
-    if (source['code']) { this.code = new fhir.Coding(source.code!); }
+  constructor(source:Partial<UsageContextArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.Coding(source.code); }
     else { this.code = null; }
-    if (source['valueCodeableConcept']) { this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept!); }
-    if (source['valueQuantity']) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
-    if (source['valueRange']) { this.valueRange = new fhir.Range(source.valueRange!); }
-    if (source['valueReference']) { this.valueReference = new fhir.Reference(source.valueReference!); }
+    if (source['value']) { this.value = source.value; }
+    else if (source['valueCodeableConcept']) { this.value = new fhir.CodeableConcept(source.valueCodeableConcept); }
+    else if (source['valueQuantity']) { this.value = new fhir.Quantity(source.valueQuantity); }
+    else if (source['valueRange']) { this.value = new fhir.Range(source.valueRange); }
+    else if (source['valueReference']) { this.value = new fhir.Reference(source.valueReference); }
+    else { this.value = null; }
   }
   /**
    * Extensible-bound Value Set for code
@@ -78,14 +76,21 @@ export class UsageContext extends fhir.FhirElement implements IUsageContext {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["code"]) { results.push(["code",'Missing required element: UsageContext.code']); }
-    if (this["code"]) { results.push(...this.code.doModelValidation()); }
-    if (this["valueCodeableConcept"]) { results.push(...this.valueCodeableConcept.doModelValidation()); }
-    if (this["valueQuantity"]) { results.push(...this.valueQuantity.doModelValidation()); }
-    if (this["valueRange"]) { results.push(...this.valueRange.doModelValidation()); }
-    if (this["valueReference"]) { results.push(...this.valueReference.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['code']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property code:fhir.Coding fhir: UsageContext.code:Coding", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value: fhir: UsageContext.value[x]:", }));
+    }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

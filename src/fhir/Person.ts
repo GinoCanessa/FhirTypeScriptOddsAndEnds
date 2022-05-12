@@ -3,95 +3,33 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Person
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { IdentityAssuranceLevelValueSet, IdentityAssuranceLevelValueSetType, IdentityAssuranceLevelValueSetEnum } from '../fhirValueSets/IdentityAssuranceLevelValueSet.js'
-import { AdministrativeGenderValueSet, AdministrativeGenderValueSetType, AdministrativeGenderValueSetEnum } from '../fhirValueSets/AdministrativeGenderValueSet.js'
-
+import { IdentityAssuranceLevelValueSet, IdentityAssuranceLevelValueSetType,} from '../fhirValueSets/IdentityAssuranceLevelValueSet.js';
+import { IdentityAssuranceLevelValueSetEnum } from '../valueSetEnums.js';
+import { AdministrativeGenderValueSet, AdministrativeGenderValueSetType,} from '../fhirValueSets/AdministrativeGenderValueSet.js';
+import { AdministrativeGenderValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Link to a resource that concerns the same actual person.
+ * Valid arguments for the PersonLink type.
  */
-export type IPersonLink = fhir.IBackboneElement & { 
+export interface PersonLinkArgs extends fhir.BackboneElementArgs {
   /**
    * The resource to which this actual person is associated.
    */
-  target: fhir.IReference|null;
+  target: fhir.ReferenceArgs|null;
   /**
    * Level of assurance that this link is associated with the target resource.
    */
   assurance?: IdentityAssuranceLevelValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: Person.link.assurance
-   */
-  _assurance?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Demographics and administrative information about a person independent of a specific health-related context.
- */
-export type IPerson = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Person";
-  /**
-   * Identifier for a person within a particular scope.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * Person may have multiple names with different uses or applicable periods.
-   */
-  name?: fhir.IHumanName[]|undefined;
-  /**
-   * Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification.
-   */
-  telecom?: fhir.IContactPoint[]|undefined;
-  /**
-   * The gender might not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though a clear majority of systems and contexts only support M and F.
-   */
-  gender?: AdministrativeGenderValueSetEnum|undefined;
-  /**
-   * Extended properties for primitive element: Person.gender
-   */
-  _gender?: fhir.IFhirElement|undefined;
-  /**
-   * At least an estimated year should be provided as a guess if the real DOB is unknown.
-   */
-  birthDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Person.birthDate
-   */
-  _birthDate?: fhir.IFhirElement|undefined;
-  /**
-   * Person may have multiple addresses with different uses or applicable periods.
-   */
-  address?: fhir.IAddress[]|undefined;
-  /**
-   * An image that can be displayed as a thumbnail of the person to enhance the identification of the individual.
-   */
-  photo?: fhir.IAttachment|undefined;
-  /**
-   * The organization that is the custodian of the person record.
-   */
-  managingOrganization?: fhir.IReference|undefined;
-  /**
-   * Whether this person's record is in active use.
-   */
-  active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Person.active
-   */
-  _active?: fhir.IFhirElement|undefined;
-  /**
-   * Link to a resource that concerns the same actual person.
-   */
-  link?: fhir.IPersonLink[]|undefined;
 }
 
 /**
  * Link to a resource that concerns the same actual person.
  */
-export class PersonLink extends fhir.BackboneElement implements IPersonLink {
+export class PersonLink extends fhir.BackboneElement {
+  readonly __dataType:string = 'PersonLink';
   /**
    * The resource to which this actual person is associated.
    */
@@ -101,18 +39,13 @@ export class PersonLink extends fhir.BackboneElement implements IPersonLink {
    */
   public assurance?: IdentityAssuranceLevelValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Person.link.assurance
-   */
-  public _assurance?: fhir.FhirElement|undefined;
-  /**
    * Default constructor for PersonLink - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IPersonLink> = { }) {
-    super(source);
-    if (source['target']) { this.target = new fhir.Reference(source.target!); }
+  constructor(source:Partial<PersonLinkArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['target']) { this.target = new fhir.Reference(source.target); }
     else { this.target = null; }
     if (source['assurance']) { this.assurance = source.assurance; }
-    if (source['_assurance']) { this._assurance = new fhir.FhirElement(source._assurance!); }
   }
   /**
    * Required-bound Value Set for assurance
@@ -123,19 +56,76 @@ export class PersonLink extends fhir.BackboneElement implements IPersonLink {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["target"]) { results.push(["target",'Missing required element: Person.link.target']); }
-    if (this["target"]) { results.push(...this.target.doModelValidation()); }
-    if (this["_assurance"]) { results.push(...this._assurance.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['target']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property target:fhir.Reference fhir: Person.link.target:Reference", }));
+    }
+    if (this["target"]) { outcome.issue!.push(...this.target.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Person type.
+ */
+export interface PersonArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Person"|undefined;
+  /**
+   * Identifier for a person within a particular scope.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * Person may have multiple names with different uses or applicable periods.
+   */
+  name?: fhir.HumanNameArgs[]|undefined;
+  /**
+   * Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification.
+   */
+  telecom?: fhir.ContactPointArgs[]|undefined;
+  /**
+   * The gender might not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though a clear majority of systems and contexts only support M and F.
+   */
+  gender?: AdministrativeGenderValueSetEnum|undefined;
+  /**
+   * At least an estimated year should be provided as a guess if the real DOB is unknown.
+   */
+  birthDate?: fhir.FhirDate|string|undefined;
+  /**
+   * Person may have multiple addresses with different uses or applicable periods.
+   */
+  address?: fhir.AddressArgs[]|undefined;
+  /**
+   * An image that can be displayed as a thumbnail of the person to enhance the identification of the individual.
+   */
+  photo?: fhir.AttachmentArgs|undefined;
+  /**
+   * The organization that is the custodian of the person record.
+   */
+  managingOrganization?: fhir.ReferenceArgs|undefined;
+  /**
+   * Whether this person's record is in active use.
+   */
+  active?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Link to a resource that concerns the same actual person.
+   */
+  link?: fhir.PersonLinkArgs[]|undefined;
 }
 
 /**
  * Demographics and administrative information about a person independent of a specific health-related context.
  */
-export class Person extends fhir.DomainResource implements IPerson {
+export class Person extends fhir.DomainResource {
+  readonly __dataType:string = 'Person';
   /**
    * Resource Type Name
    */
@@ -143,35 +133,27 @@ export class Person extends fhir.DomainResource implements IPerson {
   /**
    * Identifier for a person within a particular scope.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * Person may have multiple names with different uses or applicable periods.
    */
-  public name?: fhir.HumanName[]|undefined;
+  public name?: fhir.HumanName[]|undefined = [];
   /**
    * Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification.
    */
-  public telecom?: fhir.ContactPoint[]|undefined;
+  public telecom?: fhir.ContactPoint[]|undefined = [];
   /**
    * The gender might not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though a clear majority of systems and contexts only support M and F.
    */
   public gender?: AdministrativeGenderValueSetEnum|undefined;
   /**
-   * Extended properties for primitive element: Person.gender
-   */
-  public _gender?: fhir.FhirElement|undefined;
-  /**
    * At least an estimated year should be provided as a guess if the real DOB is unknown.
    */
-  public birthDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: Person.birthDate
-   */
-  public _birthDate?: fhir.FhirElement|undefined;
+  public birthDate?: fhir.FhirDate|undefined;
   /**
    * Person may have multiple addresses with different uses or applicable periods.
    */
-  public address?: fhir.Address[]|undefined;
+  public address?: fhir.Address[]|undefined = [];
   /**
    * An image that can be displayed as a thumbnail of the person to enhance the identification of the individual.
    */
@@ -183,33 +165,26 @@ export class Person extends fhir.DomainResource implements IPerson {
   /**
    * Whether this person's record is in active use.
    */
-  public active?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: Person.active
-   */
-  public _active?: fhir.FhirElement|undefined;
+  public active?: fhir.FhirBoolean|undefined;
   /**
    * Link to a resource that concerns the same actual person.
    */
-  public link?: fhir.PersonLink[]|undefined;
+  public link?: fhir.PersonLink[]|undefined = [];
   /**
    * Default constructor for Person - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IPerson> = { }) {
-    super(source);
+  constructor(source:Partial<PersonArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Person';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['name']) { this.name = source.name.map((x) => new fhir.HumanName(x)); }
     if (source['telecom']) { this.telecom = source.telecom.map((x) => new fhir.ContactPoint(x)); }
     if (source['gender']) { this.gender = source.gender; }
-    if (source['_gender']) { this._gender = new fhir.FhirElement(source._gender!); }
-    if (source['birthDate']) { this.birthDate = source.birthDate; }
-    if (source['_birthDate']) { this._birthDate = new fhir.FhirElement(source._birthDate!); }
+    if (source['birthDate']) { this.birthDate = new fhir.FhirDate({value: source.birthDate}); }
     if (source['address']) { this.address = source.address.map((x) => new fhir.Address(x)); }
-    if (source['photo']) { this.photo = new fhir.Attachment(source.photo!); }
-    if (source['managingOrganization']) { this.managingOrganization = new fhir.Reference(source.managingOrganization!); }
-    if (source['active']) { this.active = source.active; }
-    if (source['_active']) { this._active = new fhir.FhirElement(source._active!); }
+    if (source['photo']) { this.photo = new fhir.Attachment(source.photo); }
+    if (source['managingOrganization']) { this.managingOrganization = new fhir.Reference(source.managingOrganization); }
+    if (source['active']) { this.active = new fhir.FhirBoolean({value: source.active}); }
     if (source['link']) { this.link = source.link.map((x) => new fhir.PersonLink(x)); }
   }
   /**
@@ -221,19 +196,26 @@ export class Person extends fhir.DomainResource implements IPerson {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Person.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["name"]) { this.name.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["telecom"]) { this.telecom.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_gender"]) { results.push(...this._gender.doModelValidation()); }
-    if (this["_birthDate"]) { results.push(...this._birthDate.doModelValidation()); }
-    if (this["address"]) { this.address.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["photo"]) { results.push(...this.photo.doModelValidation()); }
-    if (this["managingOrganization"]) { results.push(...this.managingOrganization.doModelValidation()); }
-    if (this["_active"]) { results.push(...this._active.doModelValidation()); }
-    if (this["link"]) { this.link.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Person' fhir: Person.resourceType:'Person'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["name"]) { this.name.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["telecom"]) { this.telecom.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["birthDate"]) { outcome.issue!.push(...this.birthDate.doModelValidation().issue!); }
+    if (this["address"]) { this.address.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["photo"]) { outcome.issue!.push(...this.photo.doModelValidation().issue!); }
+    if (this["managingOrganization"]) { outcome.issue!.push(...this.managingOrganization.doModelValidation().issue!); }
+    if (this["active"]) { outcome.issue!.push(...this.active.doModelValidation().issue!); }
+    if (this["link"]) { this.link.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

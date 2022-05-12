@@ -3,59 +3,58 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: ContactDetail
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Specifies contact information for a person or organization.
+ * Valid arguments for the ContactDetail type.
  */
-export type IContactDetail = fhir.IFhirElement & { 
+export interface ContactDetailArgs extends fhir.FhirElementArgs {
   /**
    * If there is no named individual, the telecom information is for the organization as a whole.
    */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ContactDetail.name
-   */
-  _name?: fhir.IFhirElement|undefined;
+  name?: fhir.FhirString|string|undefined;
   /**
    * The contact details for the individual (if a name was provided) or the organization.
    */
-  telecom?: fhir.IContactPoint[]|undefined;
+  telecom?: fhir.ContactPointArgs[]|undefined;
 }
 
 /**
  * Specifies contact information for a person or organization.
  */
-export class ContactDetail extends fhir.FhirElement implements IContactDetail {
+export class ContactDetail extends fhir.FhirElement {
+  readonly __dataType:string = 'ContactDetail';
   /**
    * If there is no named individual, the telecom information is for the organization as a whole.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ContactDetail.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * The contact details for the individual (if a name was provided) or the organization.
    */
-  public telecom?: fhir.ContactPoint[]|undefined;
+  public telecom?: fhir.ContactPoint[]|undefined = [];
   /**
    * Default constructor for ContactDetail - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IContactDetail> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
+  constructor(source:Partial<ContactDetailArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     if (source['telecom']) { this.telecom = source.telecom.map((x) => new fhir.ContactPoint(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["telecom"]) { this.telecom.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["telecom"]) { this.telecom.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

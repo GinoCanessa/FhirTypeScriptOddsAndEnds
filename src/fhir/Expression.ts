@@ -3,116 +3,74 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Expression
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ExpressionLanguageValueSet, ExpressionLanguageValueSetType, ExpressionLanguageValueSetEnum } from '../fhirValueSets/ExpressionLanguageValueSet.js'
-
+import { ExpressionLanguageValueSet, ExpressionLanguageValueSetType,} from '../fhirValueSets/ExpressionLanguageValueSet.js';
+import { ExpressionLanguageValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * A expression that is evaluated in a specified context and returns a value. The context of use of the expression must specify the context in which the expression is evaluated, and how the result of the expression is used.
+ * Valid arguments for the Expression type.
  */
-export type IExpression = fhir.IFhirElement & { 
+export interface ExpressionArgs extends fhir.FhirElementArgs {
   /**
    * A brief, natural language description of the condition that effectively communicates the intended semantics.
    */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: Expression.description
-   */
-  _description?: fhir.IFhirElement|undefined;
+  description?: fhir.FhirString|string|undefined;
   /**
    * A short name assigned to the expression to allow for multiple reuse of the expression in the context where it is defined.
    */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Expression.name
-   */
-  _name?: fhir.IFhirElement|undefined;
+  name?: fhir.FhirId|string|undefined;
   /**
    * The media type of the language for the expression.
    */
-  language: string|null;
-  /**
-   * Extended properties for primitive element: Expression.language
-   */
-  _language?: fhir.IFhirElement|undefined;
+  language: fhir.FhirCode|string|undefined;
   /**
    * An expression in the specified language that returns a value.
    */
-  expression?: string|undefined;
-  /**
-   * Extended properties for primitive element: Expression.expression
-   */
-  _expression?: fhir.IFhirElement|undefined;
+  expression?: fhir.FhirString|string|undefined;
   /**
    * If both a reference and an expression is found, the reference SHALL point to the same expression.
    */
-  reference?: string|undefined;
-  /**
-   * Extended properties for primitive element: Expression.reference
-   */
-  _reference?: fhir.IFhirElement|undefined;
+  reference?: fhir.FhirUri|string|undefined;
 }
 
 /**
  * A expression that is evaluated in a specified context and returns a value. The context of use of the expression must specify the context in which the expression is evaluated, and how the result of the expression is used.
  */
-export class Expression extends fhir.FhirElement implements IExpression {
+export class Expression extends fhir.FhirElement {
+  readonly __dataType:string = 'Expression';
   /**
    * A brief, natural language description of the condition that effectively communicates the intended semantics.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: Expression.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * A short name assigned to the expression to allow for multiple reuse of the expression in the context where it is defined.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: Expression.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirId|undefined;
   /**
    * The media type of the language for the expression.
    */
-  public language: string|null;
-  /**
-   * Extended properties for primitive element: Expression.language
-   */
-  public _language?: fhir.FhirElement|undefined;
+  public language: fhir.FhirCode|null;
   /**
    * An expression in the specified language that returns a value.
    */
-  public expression?: string|undefined;
-  /**
-   * Extended properties for primitive element: Expression.expression
-   */
-  public _expression?: fhir.FhirElement|undefined;
+  public expression?: fhir.FhirString|undefined;
   /**
    * If both a reference and an expression is found, the reference SHALL point to the same expression.
    */
-  public reference?: string|undefined;
-  /**
-   * Extended properties for primitive element: Expression.reference
-   */
-  public _reference?: fhir.FhirElement|undefined;
+  public reference?: fhir.FhirUri|undefined;
   /**
    * Default constructor for Expression - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IExpression> = { }) {
-    super(source);
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['language']) { this.language = source.language; }
+  constructor(source:Partial<ExpressionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
+    if (source['name']) { this.name = new fhir.FhirId({value: source.name}); }
+    if (source['language']) { this.language = new fhir.FhirCode({value: source.language}); }
     else { this.language = null; }
-    if (source['_language']) { this._language = new fhir.FhirElement(source._language!); }
-    if (source['expression']) { this.expression = source.expression; }
-    if (source['_expression']) { this._expression = new fhir.FhirElement(source._expression!); }
-    if (source['reference']) { this.reference = source.reference; }
-    if (source['_reference']) { this._reference = new fhir.FhirElement(source._reference!); }
+    if (source['expression']) { this.expression = new fhir.FhirString({value: source.expression}); }
+    if (source['reference']) { this.reference = new fhir.FhirUri({value: source.reference}); }
   }
   /**
    * Extensible-bound Value Set for language
@@ -123,14 +81,22 @@ export class Expression extends fhir.FhirElement implements IExpression {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (!this["language"]) { results.push(["language",'Missing required element: Expression.language']); }
-    if (this["_language"]) { results.push(...this._language.doModelValidation()); }
-    if (this["_expression"]) { results.push(...this._expression.doModelValidation()); }
-    if (this["_reference"]) { results.push(...this._reference.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (!this['language']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property language:fhir.FhirCode fhir: Expression.language:code", }));
+    }
+    if (this["language"]) { outcome.issue!.push(...this.language.doModelValidation().issue!); }
+    if (this["expression"]) { outcome.issue!.push(...this.expression.doModelValidation().issue!); }
+    if (this["reference"]) { outcome.issue!.push(...this.reference.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

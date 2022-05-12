@@ -59,31 +59,4 @@ export const CommunicationNotDoneReasonValueSet = {
 /**
  * Codes for the reason why a communication did not happen.
  */
-export var CommunicationNotDoneReasonValueSetEnum;
-(function (CommunicationNotDoneReasonValueSetEnum) {
-    /**
-     * family-objection: The communication was not done due to a family objection.
-     */
-    CommunicationNotDoneReasonValueSetEnum["FamilyObjection"] = "family-objection";
-    /**
-     * invalid-phone-number: The communication was not done due to an invalid phone number.
-     */
-    CommunicationNotDoneReasonValueSetEnum["InvalidPhoneNumber"] = "invalid-phone-number";
-    /**
-     * patient-objection: The communication was not done due to a patient objection.
-     */
-    CommunicationNotDoneReasonValueSetEnum["PatientObjection"] = "patient-objection";
-    /**
-     * recipient-unavailable: The communication was not done due to the recipient being unavailable.
-     */
-    CommunicationNotDoneReasonValueSetEnum["RecipientUnavailable"] = "recipient-unavailable";
-    /**
-     * system-error: The communication was not done due to a system error.
-     */
-    CommunicationNotDoneReasonValueSetEnum["SystemError"] = "system-error";
-    /**
-     * unknown: The communication was not done due to an unknown reason.
-     */
-    CommunicationNotDoneReasonValueSetEnum["Unknown"] = "unknown";
-})(CommunicationNotDoneReasonValueSetEnum || (CommunicationNotDoneReasonValueSetEnum = {}));
 //# sourceMappingURL=CommunicationNotDoneReasonValueSet.js.map

@@ -1,120 +1,28 @@
 import * as fhir from '../fhir.js';
-import { AccountStatusValueSetType, AccountStatusValueSetEnum } from '../fhirValueSets/AccountStatusValueSet.js';
+import { AccountStatusValueSetType } from '../fhirValueSets/AccountStatusValueSet.js';
+import { AccountStatusValueSetEnum } from '../valueSetEnums.js';
 import { AccountTypeValueSetType } from '../fhirValueSets/AccountTypeValueSet.js';
 /**
- * Typically. this may be some form of insurance, internal charges, or self-pay.
- * Local or jurisdictional business rules may determine which coverage covers which types of billable items charged to the account, and in which order.
- * Where the order is important, a local/jurisdictional extension may be defined to specify the order for the type of charge.
+ * Valid arguments for the AccountCoverage type.
  */
-export declare type IAccountCoverage = fhir.IBackboneElement & {
+export interface AccountCoverageArgs extends fhir.BackboneElementArgs {
     /**
      * The party(s) that contribute to payment (or part of) of the charges applied to this account (including self-pay).
      * A coverage may only be responsible for specific types of charges, and the sequence of the coverages in the account could be important when processing billing.
      */
-    coverage: fhir.IReference | null;
+    coverage: fhir.ReferenceArgs | null;
     /**
      * It is common in some jurisdictions for there to be multiple coverages allocated to an account, and a sequence is required to order the settling of the account (often with insurance claiming).
      */
-    priority?: number | undefined;
-    /**
-     * Extended properties for primitive element: Account.coverage.priority
-     */
-    _priority?: fhir.IFhirElement | undefined;
-};
-/**
- * The parties responsible for balancing the account if other payment options fall short.
- */
-export declare type IAccountGuarantor = fhir.IBackboneElement & {
-    /**
-     * The entity who is responsible.
-     */
-    party: fhir.IReference | null;
-    /**
-     * A guarantor may be placed on credit hold or otherwise have their role temporarily suspended.
-     */
-    onHold?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Account.guarantor.onHold
-     */
-    _onHold?: fhir.IFhirElement | undefined;
-    /**
-     * The timeframe during which the guarantor accepts responsibility for the account.
-     */
-    period?: fhir.IPeriod | undefined;
-};
-/**
- * A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
- */
-export declare type IAccount = fhir.IDomainResource & {
-    /**
-     * Resource Type Name
-     */
-    resourceType: "Account";
-    /**
-     * Unique identifier used to reference the account.  Might or might not be intended for human use (e.g. credit card number).
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * This element is labeled as a modifier because the status contains the codes inactive and entered-in-error that mark the Account as not currently valid.
-     */
-    status: AccountStatusValueSetEnum | null;
-    /**
-     * Extended properties for primitive element: Account.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * Categorizes the account for reporting and searching purposes.
-     */
-    type?: fhir.ICodeableConcept | undefined;
-    /**
-     * Name used for the account when displaying it to humans in reports, etc.
-     */
-    name?: string | undefined;
-    /**
-     * Extended properties for primitive element: Account.name
-     */
-    _name?: fhir.IFhirElement | undefined;
-    /**
-     * Accounts can be applied to non-patients for tracking other non-patient related activities, such as group services (patients not tracked, and costs charged to another body), or might not be allocated.
-     */
-    subject?: fhir.IReference[] | undefined;
-    /**
-     * It is possible for transactions to be posted outside the service period, as long as the service was provided within the defined service period.
-     */
-    servicePeriod?: fhir.IPeriod | undefined;
-    /**
-     * Typically. this may be some form of insurance, internal charges, or self-pay.
-     * Local or jurisdictional business rules may determine which coverage covers which types of billable items charged to the account, and in which order.
-     * Where the order is important, a local/jurisdictional extension may be defined to specify the order for the type of charge.
-     */
-    coverage?: fhir.IAccountCoverage[] | undefined;
-    /**
-     * Indicates the service area, hospital, department, etc. with responsibility for managing the Account.
-     */
-    owner?: fhir.IReference | undefined;
-    /**
-     * Provides additional information about what the account tracks and how it is used.
-     */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: Account.description
-     */
-    _description?: fhir.IFhirElement | undefined;
-    /**
-     * The parties responsible for balancing the account if other payment options fall short.
-     */
-    guarantor?: fhir.IAccountGuarantor[] | undefined;
-    /**
-     * Reference to a parent Account.
-     */
-    partOf?: fhir.IReference | undefined;
-};
+    priority?: fhir.FhirPositiveInt | number | undefined;
+}
 /**
  * Typically. this may be some form of insurance, internal charges, or self-pay.
  * Local or jurisdictional business rules may determine which coverage covers which types of billable items charged to the account, and in which order.
  * Where the order is important, a local/jurisdictional extension may be defined to specify the order for the type of charge.
  */
-export declare class AccountCoverage extends fhir.BackboneElement implements IAccountCoverage {
+export declare class AccountCoverage extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The party(s) that contribute to payment (or part of) of the charges applied to this account (including self-pay).
      * A coverage may only be responsible for specific types of charges, and the sequence of the coverages in the account could be important when processing billing.
@@ -123,24 +31,42 @@ export declare class AccountCoverage extends fhir.BackboneElement implements IAc
     /**
      * It is common in some jurisdictions for there to be multiple coverages allocated to an account, and a sequence is required to order the settling of the account (often with insurance claiming).
      */
-    priority?: number | undefined;
-    /**
-     * Extended properties for primitive element: Account.coverage.priority
-     */
-    _priority?: fhir.FhirElement | undefined;
+    priority?: fhir.FhirPositiveInt | undefined;
     /**
      * Default constructor for AccountCoverage - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IAccountCoverage>);
+    constructor(source?: Partial<AccountCoverageArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the AccountGuarantor type.
+ */
+export interface AccountGuarantorArgs extends fhir.BackboneElementArgs {
+    /**
+     * The entity who is responsible.
+     */
+    party: fhir.ReferenceArgs | null;
+    /**
+     * A guarantor may be placed on credit hold or otherwise have their role temporarily suspended.
+     */
+    onHold?: fhir.FhirBoolean | boolean | undefined;
+    /**
+     * The timeframe during which the guarantor accepts responsibility for the account.
+     */
+    period?: fhir.PeriodArgs | undefined;
 }
 /**
  * The parties responsible for balancing the account if other payment options fall short.
  */
-export declare class AccountGuarantor extends fhir.BackboneElement implements IAccountGuarantor {
+export declare class AccountGuarantor extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The entity who is responsible.
      */
@@ -148,11 +74,7 @@ export declare class AccountGuarantor extends fhir.BackboneElement implements IA
     /**
      * A guarantor may be placed on credit hold or otherwise have their role temporarily suspended.
      */
-    onHold?: boolean | undefined;
-    /**
-     * Extended properties for primitive element: Account.guarantor.onHold
-     */
-    _onHold?: fhir.FhirElement | undefined;
+    onHold?: fhir.FhirBoolean | undefined;
     /**
      * The timeframe during which the guarantor accepts responsibility for the account.
      */
@@ -160,16 +82,76 @@ export declare class AccountGuarantor extends fhir.BackboneElement implements IA
     /**
      * Default constructor for AccountGuarantor - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IAccountGuarantor>);
+    constructor(source?: Partial<AccountGuarantorArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
+}
+/**
+ * Valid arguments for the Account type.
+ */
+export interface AccountArgs extends fhir.DomainResourceArgs {
+    /**
+     * Resource Type Name
+     */
+    resourceType: "Account" | undefined;
+    /**
+     * Unique identifier used to reference the account.  Might or might not be intended for human use (e.g. credit card number).
+     */
+    identifier?: fhir.IdentifierArgs[] | undefined;
+    /**
+     * This element is labeled as a modifier because the status contains the codes inactive and entered-in-error that mark the Account as not currently valid.
+     */
+    status: AccountStatusValueSetEnum | null;
+    /**
+     * Categorizes the account for reporting and searching purposes.
+     */
+    type?: fhir.CodeableConceptArgs | undefined;
+    /**
+     * Name used for the account when displaying it to humans in reports, etc.
+     */
+    name?: fhir.FhirString | string | undefined;
+    /**
+     * Accounts can be applied to non-patients for tracking other non-patient related activities, such as group services (patients not tracked, and costs charged to another body), or might not be allocated.
+     */
+    subject?: fhir.ReferenceArgs[] | undefined;
+    /**
+     * It is possible for transactions to be posted outside the service period, as long as the service was provided within the defined service period.
+     */
+    servicePeriod?: fhir.PeriodArgs | undefined;
+    /**
+     * Typically. this may be some form of insurance, internal charges, or self-pay.
+     * Local or jurisdictional business rules may determine which coverage covers which types of billable items charged to the account, and in which order.
+     * Where the order is important, a local/jurisdictional extension may be defined to specify the order for the type of charge.
+     */
+    coverage?: fhir.AccountCoverageArgs[] | undefined;
+    /**
+     * Indicates the service area, hospital, department, etc. with responsibility for managing the Account.
+     */
+    owner?: fhir.ReferenceArgs | undefined;
+    /**
+     * Provides additional information about what the account tracks and how it is used.
+     */
+    description?: fhir.FhirString | string | undefined;
+    /**
+     * The parties responsible for balancing the account if other payment options fall short.
+     */
+    guarantor?: fhir.AccountGuarantorArgs[] | undefined;
+    /**
+     * Reference to a parent Account.
+     */
+    partOf?: fhir.ReferenceArgs | undefined;
 }
 /**
  * A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
  */
-export declare class Account extends fhir.DomainResource implements IAccount {
+export declare class Account extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -183,21 +165,13 @@ export declare class Account extends fhir.DomainResource implements IAccount {
      */
     status: AccountStatusValueSetEnum | null;
     /**
-     * Extended properties for primitive element: Account.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * Categorizes the account for reporting and searching purposes.
      */
     type?: fhir.CodeableConcept | undefined;
     /**
      * Name used for the account when displaying it to humans in reports, etc.
      */
-    name?: string | undefined;
-    /**
-     * Extended properties for primitive element: Account.name
-     */
-    _name?: fhir.FhirElement | undefined;
+    name?: fhir.FhirString | undefined;
     /**
      * Accounts can be applied to non-patients for tracking other non-patient related activities, such as group services (patients not tracked, and costs charged to another body), or might not be allocated.
      */
@@ -219,11 +193,7 @@ export declare class Account extends fhir.DomainResource implements IAccount {
     /**
      * Provides additional information about what the account tracks and how it is used.
      */
-    description?: string | undefined;
-    /**
-     * Extended properties for primitive element: Account.description
-     */
-    _description?: fhir.FhirElement | undefined;
+    description?: fhir.FhirString | undefined;
     /**
      * The parties responsible for balancing the account if other payment options fall short.
      */
@@ -235,7 +205,7 @@ export declare class Account extends fhir.DomainResource implements IAccount {
     /**
      * Default constructor for Account - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IAccount>);
+    constructor(source?: Partial<AccountArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -247,6 +217,10 @@ export declare class Account extends fhir.DomainResource implements IAccount {
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Account.d.ts.map

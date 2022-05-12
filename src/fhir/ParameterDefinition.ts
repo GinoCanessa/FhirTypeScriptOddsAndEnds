@@ -3,154 +3,95 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: ParameterDefinition
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { OperationParameterUseValueSet, OperationParameterUseValueSetType, OperationParameterUseValueSetEnum } from '../fhirValueSets/OperationParameterUseValueSet.js'
-import { AllTypesValueSet, AllTypesValueSetType, AllTypesValueSetEnum } from '../fhirValueSets/AllTypesValueSet.js'
-
+import { OperationParameterUseValueSet, OperationParameterUseValueSetType,} from '../fhirValueSets/OperationParameterUseValueSet.js';
+import { OperationParameterUseValueSetEnum } from '../valueSetEnums.js';
+import { AllTypesValueSet, AllTypesValueSetType,} from '../fhirValueSets/AllTypesValueSet.js';
+import { AllTypesValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
+ * Valid arguments for the ParameterDefinition type.
  */
-export type IParameterDefinition = fhir.IFhirElement & { 
+export interface ParameterDefinitionArgs extends fhir.FhirElementArgs {
   /**
    * The name of the parameter used to allow access to the value of the parameter in evaluation contexts.
    */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ParameterDefinition.name
-   */
-  _name?: fhir.IFhirElement|undefined;
+  name?: fhir.FhirCode|string|undefined;
   /**
    * Whether the parameter is input or output for the module.
    */
   use: OperationParameterUseValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ParameterDefinition.use
-   */
-  _use?: fhir.IFhirElement|undefined;
-  /**
    * The minimum number of times this parameter SHALL appear in the request or response.
    */
-  min?: number|undefined;
-  /**
-   * Extended properties for primitive element: ParameterDefinition.min
-   */
-  _min?: fhir.IFhirElement|undefined;
+  min?: fhir.FhirInteger|number|undefined;
   /**
    * The maximum number of times this element is permitted to appear in the request or response.
    */
-  max?: string|undefined;
-  /**
-   * Extended properties for primitive element: ParameterDefinition.max
-   */
-  _max?: fhir.IFhirElement|undefined;
+  max?: fhir.FhirString|string|undefined;
   /**
    * A brief discussion of what the parameter is for and how it is used by the module.
    */
-  documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: ParameterDefinition.documentation
-   */
-  _documentation?: fhir.IFhirElement|undefined;
+  documentation?: fhir.FhirString|string|undefined;
   /**
    * The type of the parameter.
    */
-  type: string|null;
-  /**
-   * Extended properties for primitive element: ParameterDefinition.type
-   */
-  _type?: fhir.IFhirElement|undefined;
+  type: fhir.FhirCode|string|undefined;
   /**
    * If specified, this indicates a profile that the input data must conform to, or that the output data will conform to.
    */
-  profile?: string|undefined;
-  /**
-   * Extended properties for primitive element: ParameterDefinition.profile
-   */
-  _profile?: fhir.IFhirElement|undefined;
+  profile?: fhir.FhirCanonical|string|undefined;
 }
 
 /**
  * The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
  */
-export class ParameterDefinition extends fhir.FhirElement implements IParameterDefinition {
+export class ParameterDefinition extends fhir.FhirElement {
+  readonly __dataType:string = 'ParameterDefinition';
   /**
    * The name of the parameter used to allow access to the value of the parameter in evaluation contexts.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ParameterDefinition.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirCode|undefined;
   /**
    * Whether the parameter is input or output for the module.
    */
   public use: OperationParameterUseValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ParameterDefinition.use
-   */
-  public _use?: fhir.FhirElement|undefined;
-  /**
    * The minimum number of times this parameter SHALL appear in the request or response.
    */
-  public min?: number|undefined;
-  /**
-   * Extended properties for primitive element: ParameterDefinition.min
-   */
-  public _min?: fhir.FhirElement|undefined;
+  public min?: fhir.FhirInteger|undefined;
   /**
    * The maximum number of times this element is permitted to appear in the request or response.
    */
-  public max?: string|undefined;
-  /**
-   * Extended properties for primitive element: ParameterDefinition.max
-   */
-  public _max?: fhir.FhirElement|undefined;
+  public max?: fhir.FhirString|undefined;
   /**
    * A brief discussion of what the parameter is for and how it is used by the module.
    */
-  public documentation?: string|undefined;
-  /**
-   * Extended properties for primitive element: ParameterDefinition.documentation
-   */
-  public _documentation?: fhir.FhirElement|undefined;
+  public documentation?: fhir.FhirString|undefined;
   /**
    * The type of the parameter.
    */
-  public type: string|null;
-  /**
-   * Extended properties for primitive element: ParameterDefinition.type
-   */
-  public _type?: fhir.FhirElement|undefined;
+  public type: fhir.FhirCode|null;
   /**
    * If specified, this indicates a profile that the input data must conform to, or that the output data will conform to.
    */
-  public profile?: string|undefined;
-  /**
-   * Extended properties for primitive element: ParameterDefinition.profile
-   */
-  public _profile?: fhir.FhirElement|undefined;
+  public profile?: fhir.FhirCanonical|undefined;
   /**
    * Default constructor for ParameterDefinition - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IParameterDefinition> = { }) {
-    super(source);
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
+  constructor(source:Partial<ParameterDefinitionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['name']) { this.name = new fhir.FhirCode({value: source.name}); }
     if (source['use']) { this.use = source.use; }
     else { this.use = null; }
-    if (source['_use']) { this._use = new fhir.FhirElement(source._use!); }
-    if (source['min']) { this.min = source.min; }
-    if (source['_min']) { this._min = new fhir.FhirElement(source._min!); }
-    if (source['max']) { this.max = source.max; }
-    if (source['_max']) { this._max = new fhir.FhirElement(source._max!); }
-    if (source['documentation']) { this.documentation = source.documentation; }
-    if (source['_documentation']) { this._documentation = new fhir.FhirElement(source._documentation!); }
-    if (source['type']) { this.type = source.type; }
+    if (source['min']) { this.min = new fhir.FhirInteger({value: source.min}); }
+    if (source['max']) { this.max = new fhir.FhirString({value: source.max}); }
+    if (source['documentation']) { this.documentation = new fhir.FhirString({value: source.documentation}); }
+    if (source['type']) { this.type = new fhir.FhirCode({value: source.type}); }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['profile']) { this.profile = source.profile; }
-    if (source['_profile']) { this._profile = new fhir.FhirElement(source._profile!); }
+    if (source['profile']) { this.profile = new fhir.FhirCanonical({value: source.profile}); }
   }
   /**
    * Required-bound Value Set for use
@@ -167,17 +108,26 @@ export class ParameterDefinition extends fhir.FhirElement implements IParameterD
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (!this["use"]) { results.push(["use",'Missing required element: ParameterDefinition.use']); }
-    if (this["_use"]) { results.push(...this._use.doModelValidation()); }
-    if (this["_min"]) { results.push(...this._min.doModelValidation()); }
-    if (this["_max"]) { results.push(...this._max.doModelValidation()); }
-    if (this["_documentation"]) { results.push(...this._documentation.doModelValidation()); }
-    if (!this["type"]) { results.push(["type",'Missing required element: ParameterDefinition.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_profile"]) { results.push(...this._profile.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (!this['use']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property use:OperationParameterUseValueSetEnum fhir: ParameterDefinition.use:code", }));
+    }
+    if (this["min"]) { outcome.issue!.push(...this.min.doModelValidation().issue!); }
+    if (this["max"]) { outcome.issue!.push(...this.max.doModelValidation().issue!); }
+    if (this["documentation"]) { outcome.issue!.push(...this.documentation.doModelValidation().issue!); }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:fhir.FhirCode fhir: ParameterDefinition.type:code", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["profile"]) { outcome.issue!.push(...this.profile.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -19,11 +19,4 @@ export const ContractSecurityControlValueSet = {
 /**
  * This value set contract specific codes for security control.
  */
-export var ContractSecurityControlValueSetEnum;
-(function (ContractSecurityControlValueSetEnum) {
-    /**
-     * policy: To be completed
-     */
-    ContractSecurityControlValueSetEnum["Policy"] = "policy";
-})(ContractSecurityControlValueSetEnum || (ContractSecurityControlValueSetEnum = {}));
 //# sourceMappingURL=ContractSecurityControlValueSet.js.map

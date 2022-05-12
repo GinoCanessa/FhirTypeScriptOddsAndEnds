@@ -35,19 +35,4 @@ export const ProcessPriorityValueSet = {
 /**
  * This value set includes the financial processing priority codes.
  */
-export var ProcessPriorityValueSetEnum;
-(function (ProcessPriorityValueSetEnum) {
-    /**
-     * deferred: Later, when possible.
-     */
-    ProcessPriorityValueSetEnum["Deferred"] = "deferred";
-    /**
-     * normal: With best effort.
-     */
-    ProcessPriorityValueSetEnum["Normal"] = "normal";
-    /**
-     * stat: Immediately in real time.
-     */
-    ProcessPriorityValueSetEnum["Immediate"] = "stat";
-})(ProcessPriorityValueSetEnum || (ProcessPriorityValueSetEnum = {}));
 //# sourceMappingURL=ProcessPriorityValueSet.js.map

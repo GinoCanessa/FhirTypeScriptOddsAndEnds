@@ -15,10 +15,4 @@ export declare type ContractScopeValueSetType = typeof ContractScopeValueSet;
 /**
  * This value set contract specific codes for scope.
  */
-export declare enum ContractScopeValueSetEnum {
-    /**
-     * policy: To be completed
-     */
-    Policy = "policy"
-}
 //# sourceMappingURL=ContractScopeValueSet.d.ts.map

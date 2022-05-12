@@ -3,126 +3,39 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: EpisodeOfCare
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { EpisodeOfCareStatusValueSet, EpisodeOfCareStatusValueSetType, EpisodeOfCareStatusValueSetEnum } from '../fhirValueSets/EpisodeOfCareStatusValueSet.js'
-import { DiagnosisRoleValueSet, DiagnosisRoleValueSetType, DiagnosisRoleValueSetEnum } from '../fhirValueSets/DiagnosisRoleValueSet.js'
-import { EpisodeofcareTypeValueSet, EpisodeofcareTypeValueSetType, EpisodeofcareTypeValueSetEnum } from '../fhirValueSets/EpisodeofcareTypeValueSet.js'
-
+import { EpisodeOfCareStatusValueSet, EpisodeOfCareStatusValueSetType,} from '../fhirValueSets/EpisodeOfCareStatusValueSet.js';
+import { EpisodeOfCareStatusValueSetEnum } from '../valueSetEnums.js';
+import { DiagnosisRoleValueSet, DiagnosisRoleValueSetType,} from '../fhirValueSets/DiagnosisRoleValueSet.js';
+import { DiagnosisRoleValueSetEnum } from '../valueSetEnums.js';
+import { EpisodeofcareTypeValueSet, EpisodeofcareTypeValueSetType,} from '../fhirValueSets/EpisodeofcareTypeValueSet.js';
+import { EpisodeofcareTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * The history of statuses that the EpisodeOfCare has been through (without requiring processing the history of the resource).
+ * Valid arguments for the EpisodeOfCareStatusHistory type.
  */
-export type IEpisodeOfCareStatusHistory = fhir.IBackboneElement & { 
+export interface EpisodeOfCareStatusHistoryArgs extends fhir.BackboneElementArgs {
   /**
    * planned | waitlist | active | onhold | finished | cancelled.
    */
   status: EpisodeOfCareStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: EpisodeOfCare.statusHistory.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
    * The period during this EpisodeOfCare that the specific status applied.
    */
-  period: fhir.IPeriod|null;
-}
-
-/**
- * The list of diagnosis relevant to this episode of care.
- */
-export type IEpisodeOfCareDiagnosis = fhir.IBackboneElement & { 
-  /**
-   * A list of conditions/problems/diagnoses that this episode of care is intended to be providing care for.
-   */
-  condition: fhir.IReference|null;
-  /**
-   * Role that this diagnosis has within the episode of care (e.g. admission, billing, discharge …).
-   */
-  role?: fhir.ICodeableConcept|undefined;
-  /**
-   * Ranking of the diagnosis (for each role type).
-   */
-  rank?: number|undefined;
-  /**
-   * Extended properties for primitive element: EpisodeOfCare.diagnosis.rank
-   */
-  _rank?: fhir.IFhirElement|undefined;
-}
-
-/**
- * An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.
- */
-export type IEpisodeOfCare = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "EpisodeOfCare";
-  /**
-   * The EpisodeOfCare may be known by different identifiers for different contexts of use, such as when an external agency is tracking the Episode for funding purposes.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains codes that mark the episode as not currently valid.
-   */
-  status: EpisodeOfCareStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: EpisodeOfCare.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * The history of statuses that the EpisodeOfCare has been through (without requiring processing the history of the resource).
-   */
-  statusHistory?: fhir.IEpisodeOfCareStatusHistory[]|undefined;
-  /**
-   * The type can be very important in processing as this could be used in determining if the EpisodeOfCare is relevant to specific government reporting, or other types of classifications.
-   */
-  type?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The list of diagnosis relevant to this episode of care.
-   */
-  diagnosis?: fhir.IEpisodeOfCareDiagnosis[]|undefined;
-  /**
-   * The patient who is the focus of this episode of care.
-   */
-  patient: fhir.IReference|null;
-  /**
-   * The organization that has assumed the specific responsibilities for the specified duration.
-   */
-  managingOrganization?: fhir.IReference|undefined;
-  /**
-   * The interval during which the managing organization assumes the defined responsibility.
-   */
-  period?: fhir.IPeriod|undefined;
-  /**
-   * Referral Request(s) that are fulfilled by this EpisodeOfCare, incoming referrals.
-   */
-  referralRequest?: fhir.IReference[]|undefined;
-  /**
-   * The practitioner that is the care manager/care coordinator for this patient.
-   */
-  careManager?: fhir.IReference|undefined;
-  /**
-   * The list of practitioners that may be facilitating this episode of care for specific purposes.
-   */
-  team?: fhir.IReference[]|undefined;
-  /**
-   * The billing system may choose to allocate billable items associated with the EpisodeOfCare to different referenced Accounts based on internal business rules.
-   */
-  account?: fhir.IReference[]|undefined;
+  period: fhir.PeriodArgs|null;
 }
 
 /**
  * The history of statuses that the EpisodeOfCare has been through (without requiring processing the history of the resource).
  */
-export class EpisodeOfCareStatusHistory extends fhir.BackboneElement implements IEpisodeOfCareStatusHistory {
+export class EpisodeOfCareStatusHistory extends fhir.BackboneElement {
+  readonly __dataType:string = 'EpisodeOfCareStatusHistory';
   /**
    * planned | waitlist | active | onhold | finished | cancelled.
    */
   public status: EpisodeOfCareStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: EpisodeOfCare.statusHistory.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * The period during this EpisodeOfCare that the specific status applied.
    */
@@ -130,12 +43,11 @@ export class EpisodeOfCareStatusHistory extends fhir.BackboneElement implements 
   /**
    * Default constructor for EpisodeOfCareStatusHistory - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IEpisodeOfCareStatusHistory> = { }) {
-    super(source);
+  constructor(source:Partial<EpisodeOfCareStatusHistoryArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
     else { this.period = null; }
   }
   /**
@@ -147,20 +59,47 @@ export class EpisodeOfCareStatusHistory extends fhir.BackboneElement implements 
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["status"]) { results.push(["status",'Missing required element: EpisodeOfCare.statusHistory.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (!this["period"]) { results.push(["period",'Missing required element: EpisodeOfCare.statusHistory.period']); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:EpisodeOfCareStatusValueSetEnum fhir: EpisodeOfCare.statusHistory.status:code", }));
+    }
+    if (!this['period']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property period:fhir.Period fhir: EpisodeOfCare.statusHistory.period:Period", }));
+    }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the EpisodeOfCareDiagnosis type.
+ */
+export interface EpisodeOfCareDiagnosisArgs extends fhir.BackboneElementArgs {
+  /**
+   * A list of conditions/problems/diagnoses that this episode of care is intended to be providing care for.
+   */
+  condition: fhir.ReferenceArgs|null;
+  /**
+   * Role that this diagnosis has within the episode of care (e.g. admission, billing, discharge …).
+   */
+  role?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Ranking of the diagnosis (for each role type).
+   */
+  rank?: fhir.FhirPositiveInt|number|undefined;
 }
 
 /**
  * The list of diagnosis relevant to this episode of care.
  */
-export class EpisodeOfCareDiagnosis extends fhir.BackboneElement implements IEpisodeOfCareDiagnosis {
+export class EpisodeOfCareDiagnosis extends fhir.BackboneElement {
+  readonly __dataType:string = 'EpisodeOfCareDiagnosis';
   /**
    * A list of conditions/problems/diagnoses that this episode of care is intended to be providing care for.
    */
@@ -172,21 +111,16 @@ export class EpisodeOfCareDiagnosis extends fhir.BackboneElement implements IEpi
   /**
    * Ranking of the diagnosis (for each role type).
    */
-  public rank?: number|undefined;
-  /**
-   * Extended properties for primitive element: EpisodeOfCare.diagnosis.rank
-   */
-  public _rank?: fhir.FhirElement|undefined;
+  public rank?: fhir.FhirPositiveInt|undefined;
   /**
    * Default constructor for EpisodeOfCareDiagnosis - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IEpisodeOfCareDiagnosis> = { }) {
-    super(source);
-    if (source['condition']) { this.condition = new fhir.Reference(source.condition!); }
+  constructor(source:Partial<EpisodeOfCareDiagnosisArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['condition']) { this.condition = new fhir.Reference(source.condition); }
     else { this.condition = null; }
-    if (source['role']) { this.role = new fhir.CodeableConcept(source.role!); }
-    if (source['rank']) { this.rank = source.rank; }
-    if (source['_rank']) { this._rank = new fhir.FhirElement(source._rank!); }
+    if (source['role']) { this.role = new fhir.CodeableConcept(source.role); }
+    if (source['rank']) { this.rank = new fhir.FhirPositiveInt({value: source.rank}); }
   }
   /**
    * Preferred-bound Value Set for role
@@ -197,20 +131,86 @@ export class EpisodeOfCareDiagnosis extends fhir.BackboneElement implements IEpi
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["condition"]) { results.push(["condition",'Missing required element: EpisodeOfCare.diagnosis.condition']); }
-    if (this["condition"]) { results.push(...this.condition.doModelValidation()); }
-    if (this["role"]) { results.push(...this.role.doModelValidation()); }
-    if (this["_rank"]) { results.push(...this._rank.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['condition']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property condition:fhir.Reference fhir: EpisodeOfCare.diagnosis.condition:Reference", }));
+    }
+    if (this["condition"]) { outcome.issue!.push(...this.condition.doModelValidation().issue!); }
+    if (this["role"]) { outcome.issue!.push(...this.role.doModelValidation().issue!); }
+    if (this["rank"]) { outcome.issue!.push(...this.rank.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the EpisodeOfCare type.
+ */
+export interface EpisodeOfCareArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "EpisodeOfCare"|undefined;
+  /**
+   * The EpisodeOfCare may be known by different identifiers for different contexts of use, such as when an external agency is tracking the Episode for funding purposes.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains codes that mark the episode as not currently valid.
+   */
+  status: EpisodeOfCareStatusValueSetEnum|null;
+  /**
+   * The history of statuses that the EpisodeOfCare has been through (without requiring processing the history of the resource).
+   */
+  statusHistory?: fhir.EpisodeOfCareStatusHistoryArgs[]|undefined;
+  /**
+   * The type can be very important in processing as this could be used in determining if the EpisodeOfCare is relevant to specific government reporting, or other types of classifications.
+   */
+  type?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The list of diagnosis relevant to this episode of care.
+   */
+  diagnosis?: fhir.EpisodeOfCareDiagnosisArgs[]|undefined;
+  /**
+   * The patient who is the focus of this episode of care.
+   */
+  patient: fhir.ReferenceArgs|null;
+  /**
+   * The organization that has assumed the specific responsibilities for the specified duration.
+   */
+  managingOrganization?: fhir.ReferenceArgs|undefined;
+  /**
+   * The interval during which the managing organization assumes the defined responsibility.
+   */
+  period?: fhir.PeriodArgs|undefined;
+  /**
+   * Referral Request(s) that are fulfilled by this EpisodeOfCare, incoming referrals.
+   */
+  referralRequest?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The practitioner that is the care manager/care coordinator for this patient.
+   */
+  careManager?: fhir.ReferenceArgs|undefined;
+  /**
+   * The list of practitioners that may be facilitating this episode of care for specific purposes.
+   */
+  team?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The billing system may choose to allocate billable items associated with the EpisodeOfCare to different referenced Accounts based on internal business rules.
+   */
+  account?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.
  */
-export class EpisodeOfCare extends fhir.DomainResource implements IEpisodeOfCare {
+export class EpisodeOfCare extends fhir.DomainResource {
+  readonly __dataType:string = 'EpisodeOfCare';
   /**
    * Resource Type Name
    */
@@ -218,27 +218,23 @@ export class EpisodeOfCare extends fhir.DomainResource implements IEpisodeOfCare
   /**
    * The EpisodeOfCare may be known by different identifiers for different contexts of use, such as when an external agency is tracking the Episode for funding purposes.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains codes that mark the episode as not currently valid.
    */
   public status: EpisodeOfCareStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: EpisodeOfCare.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * The history of statuses that the EpisodeOfCare has been through (without requiring processing the history of the resource).
    */
-  public statusHistory?: fhir.EpisodeOfCareStatusHistory[]|undefined;
+  public statusHistory?: fhir.EpisodeOfCareStatusHistory[]|undefined = [];
   /**
    * The type can be very important in processing as this could be used in determining if the EpisodeOfCare is relevant to specific government reporting, or other types of classifications.
    */
-  public type?: fhir.CodeableConcept[]|undefined;
+  public type?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The list of diagnosis relevant to this episode of care.
    */
-  public diagnosis?: fhir.EpisodeOfCareDiagnosis[]|undefined;
+  public diagnosis?: fhir.EpisodeOfCareDiagnosis[]|undefined = [];
   /**
    * The patient who is the focus of this episode of care.
    */
@@ -254,7 +250,7 @@ export class EpisodeOfCare extends fhir.DomainResource implements IEpisodeOfCare
   /**
    * Referral Request(s) that are fulfilled by this EpisodeOfCare, incoming referrals.
    */
-  public referralRequest?: fhir.Reference[]|undefined;
+  public referralRequest?: fhir.Reference[]|undefined = [];
   /**
    * The practitioner that is the care manager/care coordinator for this patient.
    */
@@ -262,30 +258,29 @@ export class EpisodeOfCare extends fhir.DomainResource implements IEpisodeOfCare
   /**
    * The list of practitioners that may be facilitating this episode of care for specific purposes.
    */
-  public team?: fhir.Reference[]|undefined;
+  public team?: fhir.Reference[]|undefined = [];
   /**
    * The billing system may choose to allocate billable items associated with the EpisodeOfCare to different referenced Accounts based on internal business rules.
    */
-  public account?: fhir.Reference[]|undefined;
+  public account?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for EpisodeOfCare - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IEpisodeOfCare> = { }) {
-    super(source);
+  constructor(source:Partial<EpisodeOfCareArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'EpisodeOfCare';
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
     if (source['statusHistory']) { this.statusHistory = source.statusHistory.map((x) => new fhir.EpisodeOfCareStatusHistory(x)); }
     if (source['type']) { this.type = source.type.map((x) => new fhir.CodeableConcept(x)); }
     if (source['diagnosis']) { this.diagnosis = source.diagnosis.map((x) => new fhir.EpisodeOfCareDiagnosis(x)); }
-    if (source['patient']) { this.patient = new fhir.Reference(source.patient!); }
+    if (source['patient']) { this.patient = new fhir.Reference(source.patient); }
     else { this.patient = null; }
-    if (source['managingOrganization']) { this.managingOrganization = new fhir.Reference(source.managingOrganization!); }
-    if (source['period']) { this.period = new fhir.Period(source.period!); }
+    if (source['managingOrganization']) { this.managingOrganization = new fhir.Reference(source.managingOrganization); }
+    if (source['period']) { this.period = new fhir.Period(source.period); }
     if (source['referralRequest']) { this.referralRequest = source.referralRequest.map((x) => new fhir.Reference(x)); }
-    if (source['careManager']) { this.careManager = new fhir.Reference(source.careManager!); }
+    if (source['careManager']) { this.careManager = new fhir.Reference(source.careManager); }
     if (source['team']) { this.team = source.team.map((x) => new fhir.Reference(x)); }
     if (source['account']) { this.account = source.account.map((x) => new fhir.Reference(x)); }
   }
@@ -304,23 +299,34 @@ export class EpisodeOfCare extends fhir.DomainResource implements IEpisodeOfCare
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: EpisodeOfCare.resourceType']); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: EpisodeOfCare.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["statusHistory"]) { this.statusHistory.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["type"]) { this.type.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["diagnosis"]) { this.diagnosis.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["patient"]) { results.push(["patient",'Missing required element: EpisodeOfCare.patient']); }
-    if (this["patient"]) { results.push(...this.patient.doModelValidation()); }
-    if (this["managingOrganization"]) { results.push(...this.managingOrganization.doModelValidation()); }
-    if (this["period"]) { results.push(...this.period.doModelValidation()); }
-    if (this["referralRequest"]) { this.referralRequest.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["careManager"]) { results.push(...this.careManager.doModelValidation()); }
-    if (this["team"]) { this.team.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["account"]) { this.account.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'EpisodeOfCare' fhir: EpisodeOfCare.resourceType:'EpisodeOfCare'", }));
+    }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:EpisodeOfCareStatusValueSetEnum fhir: EpisodeOfCare.status:code", }));
+    }
+    if (this["statusHistory"]) { this.statusHistory.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["type"]) { this.type.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["diagnosis"]) { this.diagnosis.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['patient']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property patient:fhir.Reference fhir: EpisodeOfCare.patient:Reference", }));
+    }
+    if (this["patient"]) { outcome.issue!.push(...this.patient.doModelValidation().issue!); }
+    if (this["managingOrganization"]) { outcome.issue!.push(...this.managingOrganization.doModelValidation().issue!); }
+    if (this["period"]) { outcome.issue!.push(...this.period.doModelValidation().issue!); }
+    if (this["referralRequest"]) { this.referralRequest.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["careManager"]) { outcome.issue!.push(...this.careManager.doModelValidation().issue!); }
+    if (this["team"]) { this.team.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["account"]) { this.account.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

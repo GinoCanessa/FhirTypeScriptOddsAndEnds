@@ -35,19 +35,4 @@ export const ReportResultCodesValueSet = {
 /**
  * The reported execution result.
  */
-export var ReportResultCodesValueSetEnum;
-(function (ReportResultCodesValueSetEnum) {
-    /**
-     * fail: One or more test operations failed one or more asserts.
-     */
-    ReportResultCodesValueSetEnum["Fail"] = "fail";
-    /**
-     * pass: All test operations successfully passed all asserts.
-     */
-    ReportResultCodesValueSetEnum["Pass"] = "pass";
-    /**
-     * pending: One or more test operations is pending execution completion.
-     */
-    ReportResultCodesValueSetEnum["Pending"] = "pending";
-})(ReportResultCodesValueSetEnum || (ReportResultCodesValueSetEnum = {}));
 //# sourceMappingURL=ReportResultCodesValueSet.js.map

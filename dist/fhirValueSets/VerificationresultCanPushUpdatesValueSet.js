@@ -35,19 +35,4 @@ export const VerificationresultCanPushUpdatesValueSet = {
 /**
  * Ability of the primary source to push updates/alerts
  */
-export var VerificationresultCanPushUpdatesValueSetEnum;
-(function (VerificationresultCanPushUpdatesValueSetEnum) {
-    /**
-     * Code: no
-     */
-    VerificationresultCanPushUpdatesValueSetEnum["No"] = "no";
-    /**
-     * Code: undetermined
-     */
-    VerificationresultCanPushUpdatesValueSetEnum["Undetermined"] = "undetermined";
-    /**
-     * Code: yes
-     */
-    VerificationresultCanPushUpdatesValueSetEnum["Yes"] = "yes";
-})(VerificationresultCanPushUpdatesValueSetEnum || (VerificationresultCanPushUpdatesValueSetEnum = {}));
 //# sourceMappingURL=VerificationresultCanPushUpdatesValueSet.js.map

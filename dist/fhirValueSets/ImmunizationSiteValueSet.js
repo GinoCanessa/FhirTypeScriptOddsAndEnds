@@ -27,15 +27,4 @@ export const ImmunizationSiteValueSet = {
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the body site where the vaccination occurred. This value set is provided as a suggestive example.
  */
-export var ImmunizationSiteValueSetEnum;
-(function (ImmunizationSiteValueSetEnum) {
-    /**
-     * LA: left arm
-     */
-    ImmunizationSiteValueSetEnum["LeftArm"] = "LA";
-    /**
-     * RA: right arm
-     */
-    ImmunizationSiteValueSetEnum["RightArm"] = "RA";
-})(ImmunizationSiteValueSetEnum || (ImmunizationSiteValueSetEnum = {}));
 //# sourceMappingURL=ImmunizationSiteValueSet.js.map

@@ -27,15 +27,4 @@ export const RelationTypeValueSet = {
 /**
  * The type of relations between entries.
  */
-export var RelationTypeValueSetEnum;
-(function (RelationTypeValueSetEnum) {
-    /**
-     * is-replaced-by: the related entry represents an item that replaces the current retired item.
-     */
-    RelationTypeValueSetEnum["ReplacedBy"] = "is-replaced-by";
-    /**
-     * triggers: the related entry represents an activity that may be triggered by the current item.
-     */
-    RelationTypeValueSetEnum["Triggers"] = "triggers";
-})(RelationTypeValueSetEnum || (RelationTypeValueSetEnum = {}));
 //# sourceMappingURL=RelationTypeValueSet.js.map

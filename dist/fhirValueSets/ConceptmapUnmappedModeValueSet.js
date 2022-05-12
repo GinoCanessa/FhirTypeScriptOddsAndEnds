@@ -35,19 +35,4 @@ export const ConceptmapUnmappedModeValueSet = {
 /**
  * Defines which action to take if there is no match in the group.
  */
-export var ConceptmapUnmappedModeValueSetEnum;
-(function (ConceptmapUnmappedModeValueSetEnum) {
-    /**
-     * fixed: Use the code explicitly provided in the group.unmapped.
-     */
-    ConceptmapUnmappedModeValueSetEnum["FixedCode"] = "fixed";
-    /**
-     * other-map: Use the map identified by the canonical URL in the url element.
-     */
-    ConceptmapUnmappedModeValueSetEnum["OtherMap"] = "other-map";
-    /**
-     * provided: Use the code as provided in the $translate request.
-     */
-    ConceptmapUnmappedModeValueSetEnum["ProvidedCode"] = "provided";
-})(ConceptmapUnmappedModeValueSetEnum || (ConceptmapUnmappedModeValueSetEnum = {}));
 //# sourceMappingURL=ConceptmapUnmappedModeValueSet.js.map

@@ -3,9 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SupplyDelivery
 import * as fhir from '../fhir.js';
-import { SupplyItemValueSet } from '../fhirValueSets/SupplyItemValueSet.js';
-import { SupplydeliveryStatusValueSet } from '../fhirValueSets/SupplydeliveryStatusValueSet.js';
-import { SupplydeliveryTypeValueSet } from '../fhirValueSets/SupplydeliveryTypeValueSet.js';
+import { SupplydeliveryStatusValueSet, } from '../fhirValueSets/SupplydeliveryStatusValueSet.js';
+import { SupplydeliveryTypeValueSet, } from '../fhirValueSets/SupplydeliveryTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The item that is being delivered or has been supplied.
  */
@@ -13,45 +14,38 @@ export class SupplyDeliverySuppliedItem extends fhir.BackboneElement {
     /**
      * Default constructor for SupplyDeliverySuppliedItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SupplyDeliverySuppliedItem';
+        this.__itemIsChoice = true;
         if (source['quantity']) {
             this.quantity = new fhir.Quantity(source.quantity);
         }
-        if (source['itemCodeableConcept']) {
-            this.itemCodeableConcept = new fhir.CodeableConcept(source.itemCodeableConcept);
+        if (source['item']) {
+            this.item = source.item;
         }
-        if (source['itemReference']) {
-            this.itemReference = new fhir.Reference(source.itemReference);
+        else if (source['itemCodeableConcept']) {
+            this.item = new fhir.CodeableConcept(source.itemCodeableConcept);
         }
-    }
-    /**
-     * Example-bound Value Set for itemCodeableConcept
-     */
-    static itemCodeableConceptExampleValueSet() {
-        return SupplyItemValueSet;
-    }
-    /**
-     * Example-bound Value Set for itemReference
-     */
-    static itemReferenceExampleValueSet() {
-        return SupplyItemValueSet;
+        else if (source['itemReference']) {
+            this.item = new fhir.Reference(source.itemReference);
+        }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["quantity"]) {
-            results.push(...this.quantity.doModelValidation());
+            outcome.issue.push(...this.quantity.doModelValidation().issue);
         }
-        if (this["itemCodeableConcept"]) {
-            results.push(...this.itemCodeableConcept.doModelValidation());
-        }
-        if (this["itemReference"]) {
-            results.push(...this.itemReference.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -61,8 +55,27 @@ export class SupplyDelivery extends fhir.DomainResource {
     /**
      * Default constructor for SupplyDelivery - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'SupplyDelivery';
+        /**
+         * This identifier is typically assigned by the dispenser, and may be used to reference the delivery when exchanging information about it with other systems.
+         */
+        this.identifier = [];
+        /**
+         * A plan, proposal or order that is fulfilled in whole or in part by this event.
+         */
+        this.basedOn = [];
+        /**
+         * Not to be used to link an event to an Encounter - use Event.context for that.
+         * [The allowed reference resources may be adjusted as appropriate for the event resource].
+         */
+        this.partOf = [];
+        this.__occurrenceIsChoice = true;
+        /**
+         * Identifies the person who picked up the Supply.
+         */
+        this.receiver = [];
         this.resourceType = 'SupplyDelivery';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -76,9 +89,6 @@ export class SupplyDelivery extends fhir.DomainResource {
         if (source['status']) {
             this.status = source.status;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['patient']) {
             this.patient = new fhir.Reference(source.patient);
         }
@@ -88,17 +98,17 @@ export class SupplyDelivery extends fhir.DomainResource {
         if (source['suppliedItem']) {
             this.suppliedItem = new fhir.SupplyDeliverySuppliedItem(source.suppliedItem);
         }
-        if (source['occurrenceDateTime']) {
-            this.occurrenceDateTime = source.occurrenceDateTime;
+        if (source['occurrence']) {
+            this.occurrence = source.occurrence;
         }
-        if (source['_occurrenceDateTime']) {
-            this._occurrenceDateTime = new fhir.FhirElement(source._occurrenceDateTime);
+        else if (source['occurrenceDateTime']) {
+            this.occurrence = new fhir.FhirDateTime({ value: source.occurrenceDateTime });
         }
-        if (source['occurrencePeriod']) {
-            this.occurrencePeriod = new fhir.Period(source.occurrencePeriod);
+        else if (source['occurrencePeriod']) {
+            this.occurrence = new fhir.Period(source.occurrencePeriod);
         }
-        if (source['occurrenceTiming']) {
-            this.occurrenceTiming = new fhir.Timing(source.occurrenceTiming);
+        else if (source['occurrenceTiming']) {
+            this.occurrence = new fhir.Timing(source.occurrenceTiming);
         }
         if (source['supplier']) {
             this.supplier = new fhir.Reference(source.supplier);
@@ -126,50 +136,44 @@ export class SupplyDelivery extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: SupplyDelivery.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'SupplyDelivery' fhir: SupplyDelivery.resourceType:'SupplyDelivery'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["partOf"]) {
-            this.partOf.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+            this.partOf.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["patient"]) {
-            results.push(...this.patient.doModelValidation());
+            outcome.issue.push(...this.patient.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["suppliedItem"]) {
-            results.push(...this.suppliedItem.doModelValidation());
-        }
-        if (this["_occurrenceDateTime"]) {
-            results.push(...this._occurrenceDateTime.doModelValidation());
-        }
-        if (this["occurrencePeriod"]) {
-            results.push(...this.occurrencePeriod.doModelValidation());
-        }
-        if (this["occurrenceTiming"]) {
-            results.push(...this.occurrenceTiming.doModelValidation());
+            outcome.issue.push(...this.suppliedItem.doModelValidation().issue);
         }
         if (this["supplier"]) {
-            results.push(...this.supplier.doModelValidation());
+            outcome.issue.push(...this.supplier.doModelValidation().issue);
         }
         if (this["destination"]) {
-            results.push(...this.destination.doModelValidation());
+            outcome.issue.push(...this.destination.doModelValidation().issue);
         }
         if (this["receiver"]) {
-            this.receiver.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.receiver.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=SupplyDelivery.js.map

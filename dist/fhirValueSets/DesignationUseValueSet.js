@@ -25,15 +25,4 @@ export const DesignationUseValueSet = {
 /**
  * Details of how a designation would be used
  */
-export var DesignationUseValueSetEnum;
-(function (DesignationUseValueSetEnum) {
-    /**
-     * Code: 900000000000003001
-     */
-    DesignationUseValueSetEnum["VAL900000000000003001"] = "900000000000003001";
-    /**
-     * Code: 900000000000013009
-     */
-    DesignationUseValueSetEnum["VAL900000000000013009"] = "900000000000013009";
-})(DesignationUseValueSetEnum || (DesignationUseValueSetEnum = {}));
 //# sourceMappingURL=DesignationUseValueSet.js.map

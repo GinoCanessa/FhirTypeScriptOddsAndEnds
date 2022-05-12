@@ -23,18 +23,4 @@ export declare type VerificationresultNeedValueSetType = typeof Verificationresu
 /**
  * The frequency with which the target must be validated
  */
-export declare enum VerificationresultNeedValueSetEnum {
-    /**
-     * initial: ***TODO***
-     */
-    Initial = "initial",
-    /**
-     * none: ***TODO***
-     */
-    None = "none",
-    /**
-     * periodic: ***TODO***
-     */
-    Periodic = "periodic"
-}
 //# sourceMappingURL=VerificationresultNeedValueSet.d.ts.map

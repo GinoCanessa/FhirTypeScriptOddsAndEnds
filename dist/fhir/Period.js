@@ -10,33 +10,34 @@ export class Period extends fhir.FhirElement {
     /**
      * Default constructor for Period - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Period';
         if (source['start']) {
-            this.start = source.start;
-        }
-        if (source['_start']) {
-            this._start = new fhir.FhirElement(source._start);
+            this.start = new fhir.FhirDateTime({ value: source.start });
         }
         if (source['end']) {
-            this.end = source.end;
-        }
-        if (source['_end']) {
-            this._end = new fhir.FhirElement(source._end);
+            this.end = new fhir.FhirDateTime({ value: source.end });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_start"]) {
-            results.push(...this._start.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["start"]) {
+            outcome.issue.push(...this.start.doModelValidation().issue);
         }
-        if (this["_end"]) {
-            results.push(...this._end.doModelValidation());
+        if (this["end"]) {
+            outcome.issue.push(...this.end.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Period.js.map

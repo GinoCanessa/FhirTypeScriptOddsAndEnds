@@ -3,18 +3,20 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Immunization
 import * as fhir from '../fhir.js';
-import { ImmunizationFunctionValueSet } from '../fhirValueSets/ImmunizationFunctionValueSet.js';
-import { ImmunizationTargetDiseaseValueSet } from '../fhirValueSets/ImmunizationTargetDiseaseValueSet.js';
-import { ImmunizationStatusValueSet } from '../fhirValueSets/ImmunizationStatusValueSet.js';
-import { ImmunizationStatusReasonValueSet } from '../fhirValueSets/ImmunizationStatusReasonValueSet.js';
-import { VaccineCodeValueSet } from '../fhirValueSets/VaccineCodeValueSet.js';
-import { ImmunizationOriginValueSet } from '../fhirValueSets/ImmunizationOriginValueSet.js';
-import { ImmunizationSiteValueSet } from '../fhirValueSets/ImmunizationSiteValueSet.js';
-import { ImmunizationRouteValueSet } from '../fhirValueSets/ImmunizationRouteValueSet.js';
-import { ImmunizationReasonValueSet } from '../fhirValueSets/ImmunizationReasonValueSet.js';
-import { ImmunizationSubpotentReasonValueSet } from '../fhirValueSets/ImmunizationSubpotentReasonValueSet.js';
-import { ImmunizationProgramEligibilityValueSet } from '../fhirValueSets/ImmunizationProgramEligibilityValueSet.js';
-import { ImmunizationFundingSourceValueSet } from '../fhirValueSets/ImmunizationFundingSourceValueSet.js';
+import { ImmunizationFunctionValueSet, } from '../fhirValueSets/ImmunizationFunctionValueSet.js';
+import { ImmunizationTargetDiseaseValueSet, } from '../fhirValueSets/ImmunizationTargetDiseaseValueSet.js';
+import { ImmunizationStatusValueSet, } from '../fhirValueSets/ImmunizationStatusValueSet.js';
+import { ImmunizationStatusReasonValueSet, } from '../fhirValueSets/ImmunizationStatusReasonValueSet.js';
+import { VaccineCodeValueSet, } from '../fhirValueSets/VaccineCodeValueSet.js';
+import { ImmunizationOriginValueSet, } from '../fhirValueSets/ImmunizationOriginValueSet.js';
+import { ImmunizationSiteValueSet, } from '../fhirValueSets/ImmunizationSiteValueSet.js';
+import { ImmunizationRouteValueSet, } from '../fhirValueSets/ImmunizationRouteValueSet.js';
+import { ImmunizationReasonValueSet, } from '../fhirValueSets/ImmunizationReasonValueSet.js';
+import { ImmunizationSubpotentReasonValueSet, } from '../fhirValueSets/ImmunizationSubpotentReasonValueSet.js';
+import { ImmunizationProgramEligibilityValueSet, } from '../fhirValueSets/ImmunizationProgramEligibilityValueSet.js';
+import { ImmunizationFundingSourceValueSet, } from '../fhirValueSets/ImmunizationFundingSourceValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Indicates who performed the immunization event.
  */
@@ -22,8 +24,9 @@ export class ImmunizationPerformer extends fhir.BackboneElement {
     /**
      * Default constructor for ImmunizationPerformer - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImmunizationPerformer';
         if (source['function']) {
             this.function = new fhir.CodeableConcept(source.function);
         }
@@ -44,17 +47,23 @@ export class ImmunizationPerformer extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["function"]) {
-            results.push(...this.function.doModelValidation());
+            outcome.issue.push(...this.function.doModelValidation().issue);
         }
-        if (!this["actor"]) {
-            results.push(["actor", 'Missing required element: Immunization.performer.actor']);
+        if (!this['actor']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property actor:fhir.Reference fhir: Immunization.performer.actor:Reference", }));
         }
         if (this["actor"]) {
-            results.push(...this.actor.doModelValidation());
+            outcome.issue.push(...this.actor.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -64,51 +73,46 @@ export class ImmunizationEducation extends fhir.BackboneElement {
     /**
      * Default constructor for ImmunizationEducation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImmunizationEducation';
         if (source['documentType']) {
-            this.documentType = source.documentType;
-        }
-        if (source['_documentType']) {
-            this._documentType = new fhir.FhirElement(source._documentType);
+            this.documentType = new fhir.FhirString({ value: source.documentType });
         }
         if (source['reference']) {
-            this.reference = source.reference;
-        }
-        if (source['_reference']) {
-            this._reference = new fhir.FhirElement(source._reference);
+            this.reference = new fhir.FhirUri({ value: source.reference });
         }
         if (source['publicationDate']) {
-            this.publicationDate = source.publicationDate;
-        }
-        if (source['_publicationDate']) {
-            this._publicationDate = new fhir.FhirElement(source._publicationDate);
+            this.publicationDate = new fhir.FhirDateTime({ value: source.publicationDate });
         }
         if (source['presentationDate']) {
-            this.presentationDate = source.presentationDate;
-        }
-        if (source['_presentationDate']) {
-            this._presentationDate = new fhir.FhirElement(source._presentationDate);
+            this.presentationDate = new fhir.FhirDateTime({ value: source.presentationDate });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_documentType"]) {
-            results.push(...this._documentType.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["documentType"]) {
+            outcome.issue.push(...this.documentType.doModelValidation().issue);
         }
-        if (this["_reference"]) {
-            results.push(...this._reference.doModelValidation());
+        if (this["reference"]) {
+            outcome.issue.push(...this.reference.doModelValidation().issue);
         }
-        if (this["_publicationDate"]) {
-            results.push(...this._publicationDate.doModelValidation());
+        if (this["publicationDate"]) {
+            outcome.issue.push(...this.publicationDate.doModelValidation().issue);
         }
-        if (this["_presentationDate"]) {
-            results.push(...this._presentationDate.doModelValidation());
+        if (this["presentationDate"]) {
+            outcome.issue.push(...this.presentationDate.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -118,39 +122,40 @@ export class ImmunizationReaction extends fhir.BackboneElement {
     /**
      * Default constructor for ImmunizationReaction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImmunizationReaction';
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['detail']) {
             this.detail = new fhir.Reference(source.detail);
         }
         if (source['reported']) {
-            this.reported = source.reported;
-        }
-        if (source['_reported']) {
-            this._reported = new fhir.FhirElement(source._reported);
+            this.reported = new fhir.FhirBoolean({ value: source.reported });
         }
     }
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
         if (this["detail"]) {
-            results.push(...this.detail.doModelValidation());
+            outcome.issue.push(...this.detail.doModelValidation().issue);
         }
-        if (this["_reported"]) {
-            results.push(...this._reported.doModelValidation());
+        if (this["reported"]) {
+            outcome.issue.push(...this.reported.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -160,13 +165,17 @@ export class ImmunizationProtocolApplied extends fhir.BackboneElement {
     /**
      * Default constructor for ImmunizationProtocolApplied - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ImmunizationProtocolApplied';
+        /**
+         * The vaccine preventable disease the dose is being administered against.
+         */
+        this.targetDisease = [];
+        this.__doseNumberIsChoice = true;
+        this.__seriesDosesIsChoice = true;
         if (source['series']) {
-            this.series = source.series;
-        }
-        if (source['_series']) {
-            this._series = new fhir.FhirElement(source._series);
+            this.series = new fhir.FhirString({ value: source.series });
         }
         if (source['authority']) {
             this.authority = new fhir.Reference(source.authority);
@@ -174,29 +183,26 @@ export class ImmunizationProtocolApplied extends fhir.BackboneElement {
         if (source['targetDisease']) {
             this.targetDisease = source.targetDisease.map((x) => new fhir.CodeableConcept(x));
         }
-        if (source['doseNumberPositiveInt']) {
-            this.doseNumberPositiveInt = source.doseNumberPositiveInt;
+        if (source['doseNumber']) {
+            this.doseNumber = source.doseNumber;
         }
-        if (source['_doseNumberPositiveInt']) {
-            this._doseNumberPositiveInt = new fhir.FhirElement(source._doseNumberPositiveInt);
+        else if (source['doseNumberPositiveInt']) {
+            this.doseNumber = new fhir.FhirPositiveInt({ value: source.doseNumberPositiveInt });
         }
-        if (source['doseNumberString']) {
-            this.doseNumberString = source.doseNumberString;
+        else if (source['doseNumberString']) {
+            this.doseNumber = new fhir.FhirString({ value: source.doseNumberString });
         }
-        if (source['_doseNumberString']) {
-            this._doseNumberString = new fhir.FhirElement(source._doseNumberString);
+        else {
+            this.doseNumber = null;
         }
-        if (source['seriesDosesPositiveInt']) {
-            this.seriesDosesPositiveInt = source.seriesDosesPositiveInt;
+        if (source['seriesDoses']) {
+            this.seriesDoses = source.seriesDoses;
         }
-        if (source['_seriesDosesPositiveInt']) {
-            this._seriesDosesPositiveInt = new fhir.FhirElement(source._seriesDosesPositiveInt);
+        else if (source['seriesDosesPositiveInt']) {
+            this.seriesDoses = new fhir.FhirPositiveInt({ value: source.seriesDosesPositiveInt });
         }
-        if (source['seriesDosesString']) {
-            this.seriesDosesString = source.seriesDosesString;
-        }
-        if (source['_seriesDosesString']) {
-            this._seriesDosesString = new fhir.FhirElement(source._seriesDosesString);
+        else if (source['seriesDosesString']) {
+            this.seriesDoses = new fhir.FhirString({ value: source.seriesDosesString });
         }
     }
     /**
@@ -209,29 +215,26 @@ export class ImmunizationProtocolApplied extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_series"]) {
-            results.push(...this._series.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["series"]) {
+            outcome.issue.push(...this.series.doModelValidation().issue);
         }
         if (this["authority"]) {
-            results.push(...this.authority.doModelValidation());
+            outcome.issue.push(...this.authority.doModelValidation().issue);
         }
         if (this["targetDisease"]) {
-            this.targetDisease.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.targetDisease.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_doseNumberPositiveInt"]) {
-            results.push(...this._doseNumberPositiveInt.doModelValidation());
+        if (!this['doseNumber']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property doseNumber: fhir: Immunization.protocolApplied.doseNumber[x]:", }));
         }
-        if (this["_doseNumberString"]) {
-            results.push(...this._doseNumberString.doModelValidation());
-        }
-        if (this["_seriesDosesPositiveInt"]) {
-            results.push(...this._seriesDosesPositiveInt.doModelValidation());
-        }
-        if (this["_seriesDosesString"]) {
-            results.push(...this._seriesDosesString.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -241,8 +244,50 @@ export class Immunization extends fhir.DomainResource {
     /**
      * Default constructor for Immunization - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Immunization';
+        /**
+         * A unique identifier assigned to this immunization record.
+         */
+        this.identifier = [];
+        this.__occurrenceIsChoice = true;
+        /**
+         * Indicates who performed the immunization event.
+         */
+        this.performer = [];
+        /**
+         * Extra information about the immunization that is not conveyed by the other attributes.
+         */
+        this.note = [];
+        /**
+         * Reasons why the vaccine was administered.
+         */
+        this.reasonCode = [];
+        /**
+         * Condition, Observation or DiagnosticReport that supports why the immunization was administered.
+         */
+        this.reasonReference = [];
+        /**
+         * Reason why a dose is considered to be subpotent.
+         */
+        this.subpotentReason = [];
+        /**
+         * Educational material presented to the patient (or guardian) at the time of vaccine administration.
+         */
+        this.education = [];
+        /**
+         * Indicates a patient's eligibility for a funding program.
+         */
+        this.programEligibility = [];
+        /**
+         * A reaction may be an indication of an allergy or intolerance and, if this is determined to be the case, it should be recorded as a new AllergyIntolerance resource instance as most systems will not query against past Immunization.reaction elements.
+         */
+        this.reaction = [];
+        /**
+         * The protocol (set of recommendations) being followed by the provider who administered the dose.
+         */
+        this.protocolApplied = [];
         this.resourceType = 'Immunization';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -252,9 +297,6 @@ export class Immunization extends fhir.DomainResource {
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['statusReason']) {
             this.statusReason = new fhir.CodeableConcept(source.statusReason);
@@ -274,29 +316,23 @@ export class Immunization extends fhir.DomainResource {
         if (source['encounter']) {
             this.encounter = new fhir.Reference(source.encounter);
         }
-        if (source['occurrenceDateTime']) {
-            this.occurrenceDateTime = source.occurrenceDateTime;
+        if (source['occurrence']) {
+            this.occurrence = source.occurrence;
         }
-        if (source['_occurrenceDateTime']) {
-            this._occurrenceDateTime = new fhir.FhirElement(source._occurrenceDateTime);
+        else if (source['occurrenceDateTime']) {
+            this.occurrence = new fhir.FhirDateTime({ value: source.occurrenceDateTime });
         }
-        if (source['occurrenceString']) {
-            this.occurrenceString = source.occurrenceString;
+        else if (source['occurrenceString']) {
+            this.occurrence = new fhir.FhirString({ value: source.occurrenceString });
         }
-        if (source['_occurrenceString']) {
-            this._occurrenceString = new fhir.FhirElement(source._occurrenceString);
+        else {
+            this.occurrence = null;
         }
         if (source['recorded']) {
-            this.recorded = source.recorded;
-        }
-        if (source['_recorded']) {
-            this._recorded = new fhir.FhirElement(source._recorded);
+            this.recorded = new fhir.FhirDateTime({ value: source.recorded });
         }
         if (source['primarySource']) {
-            this.primarySource = source.primarySource;
-        }
-        if (source['_primarySource']) {
-            this._primarySource = new fhir.FhirElement(source._primarySource);
+            this.primarySource = new fhir.FhirBoolean({ value: source.primarySource });
         }
         if (source['reportOrigin']) {
             this.reportOrigin = new fhir.CodeableConcept(source.reportOrigin);
@@ -308,16 +344,10 @@ export class Immunization extends fhir.DomainResource {
             this.manufacturer = new fhir.Reference(source.manufacturer);
         }
         if (source['lotNumber']) {
-            this.lotNumber = source.lotNumber;
-        }
-        if (source['_lotNumber']) {
-            this._lotNumber = new fhir.FhirElement(source._lotNumber);
+            this.lotNumber = new fhir.FhirString({ value: source.lotNumber });
         }
         if (source['expirationDate']) {
-            this.expirationDate = source.expirationDate;
-        }
-        if (source['_expirationDate']) {
-            this._expirationDate = new fhir.FhirElement(source._expirationDate);
+            this.expirationDate = new fhir.FhirDate({ value: source.expirationDate });
         }
         if (source['site']) {
             this.site = new fhir.CodeableConcept(source.site);
@@ -341,10 +371,7 @@ export class Immunization extends fhir.DomainResource {
             this.reasonReference = source.reasonReference.map((x) => new fhir.Reference(x));
         }
         if (source['isSubpotent']) {
-            this.isSubpotent = source.isSubpotent;
-        }
-        if (source['_isSubpotent']) {
-            this._isSubpotent = new fhir.FhirElement(source._isSubpotent);
+            this.isSubpotent = new fhir.FhirBoolean({ value: source.isSubpotent });
         }
         if (source['subpotentReason']) {
             this.subpotentReason = source.subpotentReason.map((x) => new fhir.CodeableConcept(x));
@@ -429,107 +456,107 @@ export class Immunization extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Immunization.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Immunization' fhir: Immunization.resourceType:'Immunization'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Immunization.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:ImmunizationStatusValueSetEnum fhir: Immunization.status:code", }));
         }
         if (this["statusReason"]) {
-            results.push(...this.statusReason.doModelValidation());
+            outcome.issue.push(...this.statusReason.doModelValidation().issue);
         }
-        if (!this["vaccineCode"]) {
-            results.push(["vaccineCode", 'Missing required element: Immunization.vaccineCode']);
+        if (!this['vaccineCode']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property vaccineCode:fhir.CodeableConcept fhir: Immunization.vaccineCode:CodeableConcept", }));
         }
         if (this["vaccineCode"]) {
-            results.push(...this.vaccineCode.doModelValidation());
+            outcome.issue.push(...this.vaccineCode.doModelValidation().issue);
         }
-        if (!this["patient"]) {
-            results.push(["patient", 'Missing required element: Immunization.patient']);
+        if (!this['patient']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property patient:fhir.Reference fhir: Immunization.patient:Reference", }));
         }
         if (this["patient"]) {
-            results.push(...this.patient.doModelValidation());
+            outcome.issue.push(...this.patient.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_occurrenceDateTime"]) {
-            results.push(...this._occurrenceDateTime.doModelValidation());
+        if (!this['occurrence']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property occurrence: fhir: Immunization.occurrence[x]:", }));
         }
-        if (this["_occurrenceString"]) {
-            results.push(...this._occurrenceString.doModelValidation());
+        if (this["recorded"]) {
+            outcome.issue.push(...this.recorded.doModelValidation().issue);
         }
-        if (this["_recorded"]) {
-            results.push(...this._recorded.doModelValidation());
-        }
-        if (this["_primarySource"]) {
-            results.push(...this._primarySource.doModelValidation());
+        if (this["primarySource"]) {
+            outcome.issue.push(...this.primarySource.doModelValidation().issue);
         }
         if (this["reportOrigin"]) {
-            results.push(...this.reportOrigin.doModelValidation());
+            outcome.issue.push(...this.reportOrigin.doModelValidation().issue);
         }
         if (this["location"]) {
-            results.push(...this.location.doModelValidation());
+            outcome.issue.push(...this.location.doModelValidation().issue);
         }
         if (this["manufacturer"]) {
-            results.push(...this.manufacturer.doModelValidation());
+            outcome.issue.push(...this.manufacturer.doModelValidation().issue);
         }
-        if (this["_lotNumber"]) {
-            results.push(...this._lotNumber.doModelValidation());
+        if (this["lotNumber"]) {
+            outcome.issue.push(...this.lotNumber.doModelValidation().issue);
         }
-        if (this["_expirationDate"]) {
-            results.push(...this._expirationDate.doModelValidation());
+        if (this["expirationDate"]) {
+            outcome.issue.push(...this.expirationDate.doModelValidation().issue);
         }
         if (this["site"]) {
-            results.push(...this.site.doModelValidation());
+            outcome.issue.push(...this.site.doModelValidation().issue);
         }
         if (this["route"]) {
-            results.push(...this.route.doModelValidation());
+            outcome.issue.push(...this.route.doModelValidation().issue);
         }
         if (this["doseQuantity"]) {
-            results.push(...this.doseQuantity.doModelValidation());
+            outcome.issue.push(...this.doseQuantity.doModelValidation().issue);
         }
         if (this["performer"]) {
-            this.performer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.performer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonCode"]) {
-            this.reasonCode.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonCode.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reasonReference"]) {
-            this.reasonReference.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reasonReference.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_isSubpotent"]) {
-            results.push(...this._isSubpotent.doModelValidation());
+        if (this["isSubpotent"]) {
+            outcome.issue.push(...this.isSubpotent.doModelValidation().issue);
         }
         if (this["subpotentReason"]) {
-            this.subpotentReason.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.subpotentReason.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["education"]) {
-            this.education.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.education.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["programEligibility"]) {
-            this.programEligibility.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.programEligibility.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["fundingSource"]) {
-            results.push(...this.fundingSource.doModelValidation());
+            outcome.issue.push(...this.fundingSource.doModelValidation().issue);
         }
         if (this["reaction"]) {
-            this.reaction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reaction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["protocolApplied"]) {
-            this.protocolApplied.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.protocolApplied.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Immunization.js.map

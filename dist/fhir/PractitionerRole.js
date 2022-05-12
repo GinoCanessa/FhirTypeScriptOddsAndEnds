@@ -3,9 +3,11 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: PractitionerRole
 import * as fhir from '../fhir.js';
-import { DaysOfWeekValueSet } from '../fhirValueSets/DaysOfWeekValueSet.js';
-import { PractitionerRoleValueSet } from '../fhirValueSets/PractitionerRoleValueSet.js';
-import { C80PracticeCodesValueSet } from '../fhirValueSets/C80PracticeCodesValueSet.js';
+import { DaysOfWeekValueSet, } from '../fhirValueSets/DaysOfWeekValueSet.js';
+import { PractitionerRoleValueSet, } from '../fhirValueSets/PractitionerRoleValueSet.js';
+import { C80PracticeCodesValueSet, } from '../fhirValueSets/C80PracticeCodesValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * More detailed availability information may be provided in associated Schedule/Slot resources.
  */
@@ -13,31 +15,24 @@ export class PractitionerRoleAvailableTime extends fhir.BackboneElement {
     /**
      * Default constructor for PractitionerRoleAvailableTime - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PractitionerRoleAvailableTime';
+        /**
+         * Indicates which days of the week are available between the start and end Times.
+         */
+        this.daysOfWeek = [];
         if (source['daysOfWeek']) {
-            this.daysOfWeek = source.daysOfWeek.map((x) => (x));
-        }
-        if (source['_daysOfWeek']) {
-            this._daysOfWeek = source._daysOfWeek.map((x) => new fhir.FhirElement(x));
+            this.daysOfWeek = source.daysOfWeek.map((x) => x);
         }
         if (source['allDay']) {
-            this.allDay = source.allDay;
-        }
-        if (source['_allDay']) {
-            this._allDay = new fhir.FhirElement(source._allDay);
+            this.allDay = new fhir.FhirBoolean({ value: source.allDay });
         }
         if (source['availableStartTime']) {
-            this.availableStartTime = source.availableStartTime;
-        }
-        if (source['_availableStartTime']) {
-            this._availableStartTime = new fhir.FhirElement(source._availableStartTime);
+            this.availableStartTime = new fhir.FhirTime({ value: source.availableStartTime });
         }
         if (source['availableEndTime']) {
-            this.availableEndTime = source.availableEndTime;
-        }
-        if (source['_availableEndTime']) {
-            this._availableEndTime = new fhir.FhirElement(source._availableEndTime);
+            this.availableEndTime = new fhir.FhirTime({ value: source.availableEndTime });
         }
     }
     /**
@@ -50,20 +45,23 @@ export class PractitionerRoleAvailableTime extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_daysOfWeek"]) {
-            this._daysOfWeek.forEach((x) => { results.push(...x.doModelValidation()); });
+        var outcome = super.doModelValidation();
+        if (this["allDay"]) {
+            outcome.issue.push(...this.allDay.doModelValidation().issue);
         }
-        if (this["_allDay"]) {
-            results.push(...this._allDay.doModelValidation());
+        if (this["availableStartTime"]) {
+            outcome.issue.push(...this.availableStartTime.doModelValidation().issue);
         }
-        if (this["_availableStartTime"]) {
-            results.push(...this._availableStartTime.doModelValidation());
+        if (this["availableEndTime"]) {
+            outcome.issue.push(...this.availableEndTime.doModelValidation().issue);
         }
-        if (this["_availableEndTime"]) {
-            results.push(...this._availableEndTime.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -73,16 +71,14 @@ export class PractitionerRoleNotAvailable extends fhir.BackboneElement {
     /**
      * Default constructor for PractitionerRoleNotAvailable - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PractitionerRoleNotAvailable';
         if (source['description']) {
-            this.description = source.description;
+            this.description = new fhir.FhirString({ value: source.description });
         }
         else {
             this.description = null;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
         }
         if (source['during']) {
             this.during = new fhir.Period(source.during);
@@ -92,17 +88,23 @@ export class PractitionerRoleNotAvailable extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["description"]) {
-            results.push(["description", 'Missing required element: PractitionerRole.notAvailable.description']);
+        var outcome = super.doModelValidation();
+        if (!this['description']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property description:fhir.FhirString fhir: PractitionerRole.notAvailable.description:string", }));
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["during"]) {
-            results.push(...this.during.doModelValidation());
+            outcome.issue.push(...this.during.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -112,17 +114,51 @@ export class PractitionerRole extends fhir.DomainResource {
     /**
      * Default constructor for PractitionerRole - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'PractitionerRole';
+        /**
+         * Business Identifiers that are specific to a role/location.
+         */
+        this.identifier = [];
+        /**
+         * A person may have more than one role.
+         */
+        this.code = [];
+        /**
+         * Specific specialty of the practitioner.
+         */
+        this.specialty = [];
+        /**
+         * The location(s) at which this practitioner provides care.
+         */
+        this.location = [];
+        /**
+         * The list of healthcare services that this worker provides for this role's Organization/Location(s).
+         */
+        this.healthcareService = [];
+        /**
+         * Contact details that are specific to the role/location/service.
+         */
+        this.telecom = [];
+        /**
+         * More detailed availability information may be provided in associated Schedule/Slot resources.
+         */
+        this.availableTime = [];
+        /**
+         * The practitioner is not available or performing this role during this period of time due to the provided reason.
+         */
+        this.notAvailable = [];
+        /**
+         * Technical endpoints providing access to services operated for the practitioner with this role.
+         */
+        this.endpoint = [];
         this.resourceType = 'PractitionerRole';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['active']) {
-            this.active = source.active;
-        }
-        if (source['_active']) {
-            this._active = new fhir.FhirElement(source._active);
+            this.active = new fhir.FhirBoolean({ value: source.active });
         }
         if (source['period']) {
             this.period = new fhir.Period(source.period);
@@ -155,10 +191,7 @@ export class PractitionerRole extends fhir.DomainResource {
             this.notAvailable = source.notAvailable.map((x) => new fhir.PractitionerRoleNotAvailable(x));
         }
         if (source['availabilityExceptions']) {
-            this.availabilityExceptions = source.availabilityExceptions;
-        }
-        if (source['_availabilityExceptions']) {
-            this._availabilityExceptions = new fhir.FhirElement(source._availabilityExceptions);
+            this.availabilityExceptions = new fhir.FhirString({ value: source.availabilityExceptions });
         }
         if (source['endpoint']) {
             this.endpoint = source.endpoint.map((x) => new fhir.Reference(x));
@@ -180,53 +213,59 @@ export class PractitionerRole extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: PractitionerRole.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'PractitionerRole' fhir: PractitionerRole.resourceType:'PractitionerRole'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_active"]) {
-            results.push(...this._active.doModelValidation());
+        if (this["active"]) {
+            outcome.issue.push(...this.active.doModelValidation().issue);
         }
         if (this["period"]) {
-            results.push(...this.period.doModelValidation());
+            outcome.issue.push(...this.period.doModelValidation().issue);
         }
         if (this["practitioner"]) {
-            results.push(...this.practitioner.doModelValidation());
+            outcome.issue.push(...this.practitioner.doModelValidation().issue);
         }
         if (this["organization"]) {
-            results.push(...this.organization.doModelValidation());
+            outcome.issue.push(...this.organization.doModelValidation().issue);
         }
         if (this["code"]) {
-            this.code.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.code.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["specialty"]) {
-            this.specialty.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.specialty.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["location"]) {
-            this.location.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.location.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["healthcareService"]) {
-            this.healthcareService.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.healthcareService.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["telecom"]) {
-            this.telecom.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.telecom.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["availableTime"]) {
-            this.availableTime.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.availableTime.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["notAvailable"]) {
-            this.notAvailable.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.notAvailable.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_availabilityExceptions"]) {
-            results.push(...this._availabilityExceptions.doModelValidation());
+        if (this["availabilityExceptions"]) {
+            outcome.issue.push(...this.availabilityExceptions.doModelValidation().issue);
         }
         if (this["endpoint"]) {
-            this.endpoint.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.endpoint.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=PractitionerRole.js.map

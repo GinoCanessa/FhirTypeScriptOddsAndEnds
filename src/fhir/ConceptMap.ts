@@ -3,483 +3,164 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ConceptMap
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ConceptMapEquivalenceValueSet, ConceptMapEquivalenceValueSetType, ConceptMapEquivalenceValueSetEnum } from '../fhirValueSets/ConceptMapEquivalenceValueSet.js'
-import { ConceptmapUnmappedModeValueSet, ConceptmapUnmappedModeValueSetType, ConceptmapUnmappedModeValueSetEnum } from '../fhirValueSets/ConceptmapUnmappedModeValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
+import { ConceptMapEquivalenceValueSet, ConceptMapEquivalenceValueSetType,} from '../fhirValueSets/ConceptMapEquivalenceValueSet.js';
+import { ConceptMapEquivalenceValueSetEnum } from '../valueSetEnums.js';
+import { ConceptmapUnmappedModeValueSet, ConceptmapUnmappedModeValueSetType,} from '../fhirValueSets/ConceptmapUnmappedModeValueSet.js';
+import { ConceptmapUnmappedModeValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
+/**
+ * Valid arguments for the ConceptMapGroupElementTargetDependsOn type.
+ */
+export interface ConceptMapGroupElementTargetDependsOnArgs extends fhir.BackboneElementArgs {
+  /**
+   * A reference to an element that holds a coded value that corresponds to a code system property. The idea is that the information model carries an element somewhere that is labeled to correspond with a code system property.
+   */
+  property: fhir.FhirUri|string|undefined;
+  /**
+   * An absolute URI that identifies the code system of the dependency code (if the source/dependency is a value set that crosses code systems).
+   */
+  system?: fhir.FhirCanonical|string|undefined;
+  /**
+   * Identity (code or path) or the element/item/ValueSet/text that the map depends on / refers to.
+   */
+  value: fhir.FhirString|string|undefined;
+  /**
+   * The display is ignored when processing the map.
+   */
+  display?: fhir.FhirString|string|undefined;
+}
 
 /**
  * A set of additional dependencies for this mapping to hold. This mapping is only applicable if the specified element can be resolved, and it has the specified value.
  */
-export type IConceptMapGroupElementTargetDependsOn = fhir.IBackboneElement & { 
+export class ConceptMapGroupElementTargetDependsOn extends fhir.BackboneElement {
+  readonly __dataType:string = 'ConceptMapGroupElementTargetDependsOn';
   /**
    * A reference to an element that holds a coded value that corresponds to a code system property. The idea is that the information model carries an element somewhere that is labeled to correspond with a code system property.
    */
-  property: string|null;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.dependsOn.property
-   */
-  _property?: fhir.IFhirElement|undefined;
+  public property: fhir.FhirUri|null;
   /**
    * An absolute URI that identifies the code system of the dependency code (if the source/dependency is a value set that crosses code systems).
    */
-  system?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.dependsOn.system
-   */
-  _system?: fhir.IFhirElement|undefined;
+  public system?: fhir.FhirCanonical|undefined;
   /**
    * Identity (code or path) or the element/item/ValueSet/text that the map depends on / refers to.
    */
-  value: string|null;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.dependsOn.value
-   */
-  _value?: fhir.IFhirElement|undefined;
+  public value: fhir.FhirString|null;
   /**
    * The display is ignored when processing the map.
    */
-  display?: string|undefined;
+  public display?: fhir.FhirString|undefined;
   /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.dependsOn.display
+   * Default constructor for ConceptMapGroupElementTargetDependsOn - initializes any required elements to null if a value is not provided.
    */
-  _display?: fhir.IFhirElement|undefined;
+  constructor(source:Partial<ConceptMapGroupElementTargetDependsOnArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['property']) { this.property = new fhir.FhirUri({value: source.property}); }
+    else { this.property = null; }
+    if (source['system']) { this.system = new fhir.FhirCanonical({value: source.system}); }
+    if (source['value']) { this.value = new fhir.FhirString({value: source.value}); }
+    else { this.value = null; }
+    if (source['display']) { this.display = new fhir.FhirString({value: source.display}); }
+  }
+  /**
+   * Function to perform basic model validation (e.g., check if required elements are present).
+   */
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['property']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property property:fhir.FhirUri fhir: ConceptMap.group.element.target.dependsOn.property:uri", }));
+    }
+    if (this["property"]) { outcome.issue!.push(...this.property.doModelValidation().issue!); }
+    if (this["system"]) { outcome.issue!.push(...this.system.doModelValidation().issue!); }
+    if (!this['value']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property value:fhir.FhirString fhir: ConceptMap.group.element.target.dependsOn.value:string", }));
+    }
+    if (this["value"]) { outcome.issue!.push(...this.value.doModelValidation().issue!); }
+    if (this["display"]) { outcome.issue!.push(...this.display.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
 }
-
 /**
- * Ideally there would only be one map, with equal or equivalent mapping. But multiple maps are allowed for several narrower options, or to assert that other concepts are unmatched.
+ * Valid arguments for the ConceptMapGroupElementTarget type.
  */
-export type IConceptMapGroupElementTarget = fhir.IBackboneElement & { 
+export interface ConceptMapGroupElementTargetArgs extends fhir.BackboneElementArgs {
   /**
    * Identity (code or path) or the element/item that the map refers to.
    */
-  code?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.code
-   */
-  _code?: fhir.IFhirElement|undefined;
+  code?: fhir.FhirCode|string|undefined;
   /**
    * The display is ignored when processing the map.
    */
-  display?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.display
-   */
-  _display?: fhir.IFhirElement|undefined;
+  display?: fhir.FhirString|string|undefined;
   /**
    * This element is labeled as a modifier because it may indicate that a target does not apply.
    */
   equivalence: ConceptMapEquivalenceValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.equivalence
-   */
-  _equivalence?: fhir.IFhirElement|undefined;
-  /**
    * A description of status/issues in mapping that conveys additional information not represented in  the structured data.
    */
-  comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.comment
-   */
-  _comment?: fhir.IFhirElement|undefined;
+  comment?: fhir.FhirString|string|undefined;
   /**
    * A set of additional dependencies for this mapping to hold. This mapping is only applicable if the specified element can be resolved, and it has the specified value.
    */
-  dependsOn?: fhir.IConceptMapGroupElementTargetDependsOn[]|undefined;
+  dependsOn?: fhir.ConceptMapGroupElementTargetDependsOnArgs[]|undefined;
   /**
    * A set of additional outcomes from this mapping to other elements. To properly execute this mapping, the specified element must be mapped to some data element or source that is in context. The mapping may still be useful without a place for the additional data elements, but the equivalence cannot be relied on.
    */
-  product?: fhir.IConceptMapGroupElementTargetDependsOn[]|undefined;
-}
-
-/**
- * Generally, the ideal is that there would only be one mapping for each concept in the source value set, but a given concept may be mapped multiple times with different comments or dependencies.
- */
-export type IConceptMapGroupElement = fhir.IBackboneElement & { 
-  /**
-   * Identity (code or path) or the element/item being mapped.
-   */
-  code?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.code
-   */
-  _code?: fhir.IFhirElement|undefined;
-  /**
-   * The display is ignored when processing the map.
-   */
-  display?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.display
-   */
-  _display?: fhir.IFhirElement|undefined;
-  /**
-   * Ideally there would only be one map, with equal or equivalent mapping. But multiple maps are allowed for several narrower options, or to assert that other concepts are unmatched.
-   */
-  target?: fhir.IConceptMapGroupElementTarget[]|undefined;
-}
-
-/**
- * This only applies if the source code has a system value that matches the system defined for the group.
- */
-export type IConceptMapGroupUnmapped = fhir.IBackboneElement & { 
-  /**
-   * Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).
-   */
-  mode: ConceptmapUnmappedModeValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.unmapped.mode
-   */
-  _mode?: fhir.IFhirElement|undefined;
-  /**
-   * The fixed code to use when the mode = 'fixed'  - all unmapped codes are mapped to a single fixed code.
-   */
-  code?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.unmapped.code
-   */
-  _code?: fhir.IFhirElement|undefined;
-  /**
-   * The display is ignored when processing the map.
-   */
-  display?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.unmapped.display
-   */
-  _display?: fhir.IFhirElement|undefined;
-  /**
-   * The canonical reference to an additional ConceptMap resource instance to use for mapping if this ConceptMap resource contains no matching mapping for the source concept.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.unmapped.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-}
-
-/**
- * A group of mappings that all have the same source and target system.
- */
-export type IConceptMapGroup = fhir.IBackboneElement & { 
-  /**
-   * This is not needed if the source value set is specified and it contains concepts from only a single system.
-   */
-  source?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.source
-   */
-  _source?: fhir.IFhirElement|undefined;
-  /**
-   * The specification of a particular code system version may be required for code systems which lack concept permanence.
-   */
-  sourceVersion?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.sourceVersion
-   */
-  _sourceVersion?: fhir.IFhirElement|undefined;
-  /**
-   * This is not needed if the target value set is specified and it contains concepts from only a single system. The group target may also be omitted if all of the target element equivalence values are 'unmatched'.
-   */
-  target?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.target
-   */
-  _target?: fhir.IFhirElement|undefined;
-  /**
-   * The specification of a particular code system version may be required for code systems which lack concept permanence.
-   */
-  targetVersion?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.targetVersion
-   */
-  _targetVersion?: fhir.IFhirElement|undefined;
-  /**
-   * Generally, the ideal is that there would only be one mapping for each concept in the source value set, but a given concept may be mapped multiple times with different comments or dependencies.
-   */
-  element: fhir.IConceptMapGroupElement[]|null;
-  /**
-   * This only applies if the source code has a system value that matches the system defined for the group.
-   */
-  unmapped?: fhir.IConceptMapGroupUnmapped|undefined;
-}
-
-/**
- * A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
- */
-export type IConceptMap = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "ConceptMap";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this concept map outside of FHIR, where it is not possible to use the logical URI.
-   */
-  identifier?: fhir.IIdentifier|undefined;
-  /**
-   * There may be different concept map instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the concept map with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-   */
-  title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of concept maps that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ConceptMap.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of concept maps that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the concept map. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the concept map is the organization or individual primarily responsible for the maintenance and upkeep of the concept map. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the concept map. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * The description is not intended to describe the semantics of the concept map. The description should capture its intended use, which is needed for ensuring integrity for its use in models across future changes.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the concept map to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * This element does not describe the usage of the concept map. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this concept map.
-   */
-  purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.purpose
-   */
-  _purpose?: fhir.IFhirElement|undefined;
-  /**
-   * Frequently the copyright differs between the concept map and codes that are included. The copyright statement should clearly differentiate between these when required.
-   */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-  /**
-   * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, there is no specified context for the map (not recommended).  The source value set may select codes from either an explicit (standard or local) or implicit code system.
-   */
-  sourceUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.source[x]
-   */
-  _sourceUri?: fhir.IFhirElement|undefined;
-  /**
-   * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, there is no specified context for the map (not recommended).  The source value set may select codes from either an explicit (standard or local) or implicit code system.
-   */
-  sourceCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.source[x]
-   */
-  _sourceCanonical?: fhir.IFhirElement|undefined;
-  /**
-   * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, the is no specified context for the map.
-   */
-  targetUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.target[x]
-   */
-  _targetUri?: fhir.IFhirElement|undefined;
-  /**
-   * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, the is no specified context for the map.
-   */
-  targetCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.target[x]
-   */
-  _targetCanonical?: fhir.IFhirElement|undefined;
-  /**
-   * A group of mappings that all have the same source and target system.
-   */
-  group?: fhir.IConceptMapGroup[]|undefined;
-}
-
-/**
- * A set of additional dependencies for this mapping to hold. This mapping is only applicable if the specified element can be resolved, and it has the specified value.
- */
-export class ConceptMapGroupElementTargetDependsOn extends fhir.BackboneElement implements IConceptMapGroupElementTargetDependsOn {
-  /**
-   * A reference to an element that holds a coded value that corresponds to a code system property. The idea is that the information model carries an element somewhere that is labeled to correspond with a code system property.
-   */
-  public property: string|null;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.dependsOn.property
-   */
-  public _property?: fhir.FhirElement|undefined;
-  /**
-   * An absolute URI that identifies the code system of the dependency code (if the source/dependency is a value set that crosses code systems).
-   */
-  public system?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.dependsOn.system
-   */
-  public _system?: fhir.FhirElement|undefined;
-  /**
-   * Identity (code or path) or the element/item/ValueSet/text that the map depends on / refers to.
-   */
-  public value: string|null;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.dependsOn.value
-   */
-  public _value?: fhir.FhirElement|undefined;
-  /**
-   * The display is ignored when processing the map.
-   */
-  public display?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.dependsOn.display
-   */
-  public _display?: fhir.FhirElement|undefined;
-  /**
-   * Default constructor for ConceptMapGroupElementTargetDependsOn - initializes any required elements to null if a value is not provided.
-   */
-  constructor(source:Partial<IConceptMapGroupElementTargetDependsOn> = { }) {
-    super(source);
-    if (source['property']) { this.property = source.property; }
-    else { this.property = null; }
-    if (source['_property']) { this._property = new fhir.FhirElement(source._property!); }
-    if (source['system']) { this.system = source.system; }
-    if (source['_system']) { this._system = new fhir.FhirElement(source._system!); }
-    if (source['value']) { this.value = source.value; }
-    else { this.value = null; }
-    if (source['_value']) { this._value = new fhir.FhirElement(source._value!); }
-    if (source['display']) { this.display = source.display; }
-    if (source['_display']) { this._display = new fhir.FhirElement(source._display!); }
-  }
-  /**
-   * Function to perform basic model validation (e.g., check if required elements are present).
-   */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["property"]) { results.push(["property",'Missing required element: ConceptMap.group.element.target.dependsOn.property']); }
-    if (this["_property"]) { results.push(...this._property.doModelValidation()); }
-    if (this["_system"]) { results.push(...this._system.doModelValidation()); }
-    if (!this["value"]) { results.push(["value",'Missing required element: ConceptMap.group.element.target.dependsOn.value']); }
-    if (this["_value"]) { results.push(...this._value.doModelValidation()); }
-    if (this["_display"]) { results.push(...this._display.doModelValidation()); }
-    return results;
-  }
+  product?: fhir.ConceptMapGroupElementTargetDependsOnArgs[]|undefined;
 }
 
 /**
  * Ideally there would only be one map, with equal or equivalent mapping. But multiple maps are allowed for several narrower options, or to assert that other concepts are unmatched.
  */
-export class ConceptMapGroupElementTarget extends fhir.BackboneElement implements IConceptMapGroupElementTarget {
+export class ConceptMapGroupElementTarget extends fhir.BackboneElement {
+  readonly __dataType:string = 'ConceptMapGroupElementTarget';
   /**
    * Identity (code or path) or the element/item that the map refers to.
    */
-  public code?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.code
-   */
-  public _code?: fhir.FhirElement|undefined;
+  public code?: fhir.FhirCode|undefined;
   /**
    * The display is ignored when processing the map.
    */
-  public display?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.display
-   */
-  public _display?: fhir.FhirElement|undefined;
+  public display?: fhir.FhirString|undefined;
   /**
    * This element is labeled as a modifier because it may indicate that a target does not apply.
    */
   public equivalence: ConceptMapEquivalenceValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.equivalence
-   */
-  public _equivalence?: fhir.FhirElement|undefined;
-  /**
    * A description of status/issues in mapping that conveys additional information not represented in  the structured data.
    */
-  public comment?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.target.comment
-   */
-  public _comment?: fhir.FhirElement|undefined;
+  public comment?: fhir.FhirString|undefined;
   /**
    * A set of additional dependencies for this mapping to hold. This mapping is only applicable if the specified element can be resolved, and it has the specified value.
    */
-  public dependsOn?: fhir.ConceptMapGroupElementTargetDependsOn[]|undefined;
+  public dependsOn?: fhir.ConceptMapGroupElementTargetDependsOn[]|undefined = [];
   /**
    * A set of additional outcomes from this mapping to other elements. To properly execute this mapping, the specified element must be mapped to some data element or source that is in context. The mapping may still be useful without a place for the additional data elements, but the equivalence cannot be relied on.
    */
-  public product?: fhir.ConceptMapGroupElementTargetDependsOn[]|undefined;
+  public product?: fhir.ConceptMapGroupElementTargetDependsOn[]|undefined = [];
   /**
    * Default constructor for ConceptMapGroupElementTarget - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IConceptMapGroupElementTarget> = { }) {
-    super(source);
-    if (source['code']) { this.code = source.code; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['display']) { this.display = source.display; }
-    if (source['_display']) { this._display = new fhir.FhirElement(source._display!); }
+  constructor(source:Partial<ConceptMapGroupElementTargetArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.FhirCode({value: source.code}); }
+    if (source['display']) { this.display = new fhir.FhirString({value: source.display}); }
     if (source['equivalence']) { this.equivalence = source.equivalence; }
     else { this.equivalence = null; }
-    if (source['_equivalence']) { this._equivalence = new fhir.FhirElement(source._equivalence!); }
-    if (source['comment']) { this.comment = source.comment; }
-    if (source['_comment']) { this._comment = new fhir.FhirElement(source._comment!); }
+    if (source['comment']) { this.comment = new fhir.FhirString({value: source.comment}); }
     if (source['dependsOn']) { this.dependsOn = source.dependsOn.map((x) => new fhir.ConceptMapGroupElementTargetDependsOn(x)); }
     if (source['product']) { this.product = source.product.map((x) => new fhir.ConceptMapGroupElementTargetDependsOn(x)); }
   }
@@ -492,116 +173,139 @@ export class ConceptMapGroupElementTarget extends fhir.BackboneElement implement
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["_display"]) { results.push(...this._display.doModelValidation()); }
-    if (!this["equivalence"]) { results.push(["equivalence",'Missing required element: ConceptMap.group.element.target.equivalence']); }
-    if (this["_equivalence"]) { results.push(...this._equivalence.doModelValidation()); }
-    if (this["_comment"]) { results.push(...this._comment.doModelValidation()); }
-    if (this["dependsOn"]) { this.dependsOn.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["product"]) { this.product.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["display"]) { outcome.issue!.push(...this.display.doModelValidation().issue!); }
+    if (!this['equivalence']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property equivalence:ConceptMapEquivalenceValueSetEnum fhir: ConceptMap.group.element.target.equivalence:code", }));
+    }
+    if (this["comment"]) { outcome.issue!.push(...this.comment.doModelValidation().issue!); }
+    if (this["dependsOn"]) { this.dependsOn.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["product"]) { this.product.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ConceptMapGroupElement type.
+ */
+export interface ConceptMapGroupElementArgs extends fhir.BackboneElementArgs {
+  /**
+   * Identity (code or path) or the element/item being mapped.
+   */
+  code?: fhir.FhirCode|string|undefined;
+  /**
+   * The display is ignored when processing the map.
+   */
+  display?: fhir.FhirString|string|undefined;
+  /**
+   * Ideally there would only be one map, with equal or equivalent mapping. But multiple maps are allowed for several narrower options, or to assert that other concepts are unmatched.
+   */
+  target?: fhir.ConceptMapGroupElementTargetArgs[]|undefined;
 }
 
 /**
  * Generally, the ideal is that there would only be one mapping for each concept in the source value set, but a given concept may be mapped multiple times with different comments or dependencies.
  */
-export class ConceptMapGroupElement extends fhir.BackboneElement implements IConceptMapGroupElement {
+export class ConceptMapGroupElement extends fhir.BackboneElement {
+  readonly __dataType:string = 'ConceptMapGroupElement';
   /**
    * Identity (code or path) or the element/item being mapped.
    */
-  public code?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.code
-   */
-  public _code?: fhir.FhirElement|undefined;
+  public code?: fhir.FhirCode|undefined;
   /**
    * The display is ignored when processing the map.
    */
-  public display?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.element.display
-   */
-  public _display?: fhir.FhirElement|undefined;
+  public display?: fhir.FhirString|undefined;
   /**
    * Ideally there would only be one map, with equal or equivalent mapping. But multiple maps are allowed for several narrower options, or to assert that other concepts are unmatched.
    */
-  public target?: fhir.ConceptMapGroupElementTarget[]|undefined;
+  public target?: fhir.ConceptMapGroupElementTarget[]|undefined = [];
   /**
    * Default constructor for ConceptMapGroupElement - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IConceptMapGroupElement> = { }) {
-    super(source);
-    if (source['code']) { this.code = source.code; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['display']) { this.display = source.display; }
-    if (source['_display']) { this._display = new fhir.FhirElement(source._display!); }
+  constructor(source:Partial<ConceptMapGroupElementArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['code']) { this.code = new fhir.FhirCode({value: source.code}); }
+    if (source['display']) { this.display = new fhir.FhirString({value: source.display}); }
     if (source['target']) { this.target = source.target.map((x) => new fhir.ConceptMapGroupElementTarget(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["_display"]) { results.push(...this._display.doModelValidation()); }
-    if (this["target"]) { this.target.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["display"]) { outcome.issue!.push(...this.display.doModelValidation().issue!); }
+    if (this["target"]) { this.target.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ConceptMapGroupUnmapped type.
+ */
+export interface ConceptMapGroupUnmappedArgs extends fhir.BackboneElementArgs {
+  /**
+   * Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).
+   */
+  mode: ConceptmapUnmappedModeValueSetEnum|null;
+  /**
+   * The fixed code to use when the mode = 'fixed'  - all unmapped codes are mapped to a single fixed code.
+   */
+  code?: fhir.FhirCode|string|undefined;
+  /**
+   * The display is ignored when processing the map.
+   */
+  display?: fhir.FhirString|string|undefined;
+  /**
+   * The canonical reference to an additional ConceptMap resource instance to use for mapping if this ConceptMap resource contains no matching mapping for the source concept.
+   */
+  url?: fhir.FhirCanonical|string|undefined;
 }
 
 /**
  * This only applies if the source code has a system value that matches the system defined for the group.
  */
-export class ConceptMapGroupUnmapped extends fhir.BackboneElement implements IConceptMapGroupUnmapped {
+export class ConceptMapGroupUnmapped extends fhir.BackboneElement {
+  readonly __dataType:string = 'ConceptMapGroupUnmapped';
   /**
    * Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).
    */
   public mode: ConceptmapUnmappedModeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ConceptMap.group.unmapped.mode
-   */
-  public _mode?: fhir.FhirElement|undefined;
-  /**
    * The fixed code to use when the mode = 'fixed'  - all unmapped codes are mapped to a single fixed code.
    */
-  public code?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.unmapped.code
-   */
-  public _code?: fhir.FhirElement|undefined;
+  public code?: fhir.FhirCode|undefined;
   /**
    * The display is ignored when processing the map.
    */
-  public display?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.unmapped.display
-   */
-  public _display?: fhir.FhirElement|undefined;
+  public display?: fhir.FhirString|undefined;
   /**
    * The canonical reference to an additional ConceptMap resource instance to use for mapping if this ConceptMap resource contains no matching mapping for the source concept.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.unmapped.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirCanonical|undefined;
   /**
    * Default constructor for ConceptMapGroupUnmapped - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IConceptMapGroupUnmapped> = { }) {
-    super(source);
+  constructor(source:Partial<ConceptMapGroupUnmappedArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['mode']) { this.mode = source.mode; }
     else { this.mode = null; }
-    if (source['_mode']) { this._mode = new fhir.FhirElement(source._mode!); }
-    if (source['code']) { this.code = source.code; }
-    if (source['_code']) { this._code = new fhir.FhirElement(source._code!); }
-    if (source['display']) { this.display = source.display; }
-    if (source['_display']) { this._display = new fhir.FhirElement(source._display!); }
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
+    if (source['code']) { this.code = new fhir.FhirCode({value: source.code}); }
+    if (source['display']) { this.display = new fhir.FhirString({value: source.display}); }
+    if (source['url']) { this.url = new fhir.FhirCanonical({value: source.url}); }
   }
   /**
    * Required-bound Value Set for mode
@@ -612,57 +316,78 @@ export class ConceptMapGroupUnmapped extends fhir.BackboneElement implements ICo
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["mode"]) { results.push(["mode",'Missing required element: ConceptMap.group.unmapped.mode']); }
-    if (this["_mode"]) { results.push(...this._mode.doModelValidation()); }
-    if (this["_code"]) { results.push(...this._code.doModelValidation()); }
-    if (this["_display"]) { results.push(...this._display.doModelValidation()); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['mode']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property mode:ConceptmapUnmappedModeValueSetEnum fhir: ConceptMap.group.unmapped.mode:code", }));
+    }
+    if (this["code"]) { outcome.issue!.push(...this.code.doModelValidation().issue!); }
+    if (this["display"]) { outcome.issue!.push(...this.display.doModelValidation().issue!); }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ConceptMapGroup type.
+ */
+export interface ConceptMapGroupArgs extends fhir.BackboneElementArgs {
+  /**
+   * This is not needed if the source value set is specified and it contains concepts from only a single system.
+   */
+  source?: fhir.FhirUri|string|undefined;
+  /**
+   * The specification of a particular code system version may be required for code systems which lack concept permanence.
+   */
+  sourceVersion?: fhir.FhirString|string|undefined;
+  /**
+   * This is not needed if the target value set is specified and it contains concepts from only a single system. The group target may also be omitted if all of the target element equivalence values are 'unmatched'.
+   */
+  target?: fhir.FhirUri|string|undefined;
+  /**
+   * The specification of a particular code system version may be required for code systems which lack concept permanence.
+   */
+  targetVersion?: fhir.FhirString|string|undefined;
+  /**
+   * Generally, the ideal is that there would only be one mapping for each concept in the source value set, but a given concept may be mapped multiple times with different comments or dependencies.
+   */
+  element: fhir.ConceptMapGroupElementArgs[]|null;
+  /**
+   * This only applies if the source code has a system value that matches the system defined for the group.
+   */
+  unmapped?: fhir.ConceptMapGroupUnmappedArgs|undefined;
 }
 
 /**
  * A group of mappings that all have the same source and target system.
  */
-export class ConceptMapGroup extends fhir.BackboneElement implements IConceptMapGroup {
+export class ConceptMapGroup extends fhir.BackboneElement {
+  readonly __dataType:string = 'ConceptMapGroup';
   /**
    * This is not needed if the source value set is specified and it contains concepts from only a single system.
    */
-  public source?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.source
-   */
-  public _source?: fhir.FhirElement|undefined;
+  public source?: fhir.FhirUri|undefined;
   /**
    * The specification of a particular code system version may be required for code systems which lack concept permanence.
    */
-  public sourceVersion?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.sourceVersion
-   */
-  public _sourceVersion?: fhir.FhirElement|undefined;
+  public sourceVersion?: fhir.FhirString|undefined;
   /**
    * This is not needed if the target value set is specified and it contains concepts from only a single system. The group target may also be omitted if all of the target element equivalence values are 'unmatched'.
    */
-  public target?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.target
-   */
-  public _target?: fhir.FhirElement|undefined;
+  public target?: fhir.FhirUri|undefined;
   /**
    * The specification of a particular code system version may be required for code systems which lack concept permanence.
    */
-  public targetVersion?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.group.targetVersion
-   */
-  public _targetVersion?: fhir.FhirElement|undefined;
+  public targetVersion?: fhir.FhirString|undefined;
   /**
    * Generally, the ideal is that there would only be one mapping for each concept in the source value set, but a given concept may be mapped multiple times with different comments or dependencies.
    */
-  public element: fhir.ConceptMapGroupElement[]|null;
+  public element: fhir.ConceptMapGroupElement[]|null = [];
   /**
    * This only applies if the source code has a system value that matches the system defined for the group.
    */
@@ -670,40 +395,148 @@ export class ConceptMapGroup extends fhir.BackboneElement implements IConceptMap
   /**
    * Default constructor for ConceptMapGroup - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IConceptMapGroup> = { }) {
-    super(source);
-    if (source['source']) { this.source = source.source; }
-    if (source['_source']) { this._source = new fhir.FhirElement(source._source!); }
-    if (source['sourceVersion']) { this.sourceVersion = source.sourceVersion; }
-    if (source['_sourceVersion']) { this._sourceVersion = new fhir.FhirElement(source._sourceVersion!); }
-    if (source['target']) { this.target = source.target; }
-    if (source['_target']) { this._target = new fhir.FhirElement(source._target!); }
-    if (source['targetVersion']) { this.targetVersion = source.targetVersion; }
-    if (source['_targetVersion']) { this._targetVersion = new fhir.FhirElement(source._targetVersion!); }
+  constructor(source:Partial<ConceptMapGroupArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['source']) { this.source = new fhir.FhirUri({value: source.source}); }
+    if (source['sourceVersion']) { this.sourceVersion = new fhir.FhirString({value: source.sourceVersion}); }
+    if (source['target']) { this.target = new fhir.FhirUri({value: source.target}); }
+    if (source['targetVersion']) { this.targetVersion = new fhir.FhirString({value: source.targetVersion}); }
     if (source['element']) { this.element = source.element.map((x) => new fhir.ConceptMapGroupElement(x)); }
     else { this.element = null; }
-    if (source['unmapped']) { this.unmapped = new fhir.ConceptMapGroupUnmapped(source.unmapped!); }
+    if (source['unmapped']) { this.unmapped = new fhir.ConceptMapGroupUnmapped(source.unmapped); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_source"]) { results.push(...this._source.doModelValidation()); }
-    if (this["_sourceVersion"]) { results.push(...this._sourceVersion.doModelValidation()); }
-    if (this["_target"]) { results.push(...this._target.doModelValidation()); }
-    if (this["_targetVersion"]) { results.push(...this._targetVersion.doModelValidation()); }
-    if ((!this["element"]) || (this["element"].length === 0)) { results.push(["element",'Missing required element: ConceptMap.group.element']); }
-    if (this["element"]) { this.element.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["unmapped"]) { results.push(...this.unmapped.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["source"]) { outcome.issue!.push(...this.source.doModelValidation().issue!); }
+    if (this["sourceVersion"]) { outcome.issue!.push(...this.sourceVersion.doModelValidation().issue!); }
+    if (this["target"]) { outcome.issue!.push(...this.target.doModelValidation().issue!); }
+    if (this["targetVersion"]) { outcome.issue!.push(...this.targetVersion.doModelValidation().issue!); }
+    if (!this['element']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property element:fhir.ConceptMapGroupElement[] fhir: ConceptMap.group.element:element", }));
+    } else if (!Array.isArray(this.element)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property element:fhir.ConceptMapGroupElement[] fhir: ConceptMap.group.element:element", }));
+    } else if (this.element.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property element:fhir.ConceptMapGroupElement[] fhir: ConceptMap.group.element:element", }));
+    }
+    if (this["element"]) { this.element.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["unmapped"]) { outcome.issue!.push(...this.unmapped.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ConceptMap type.
+ */
+export interface ConceptMapArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "ConceptMap"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this concept map outside of FHIR, where it is not possible to use the logical URI.
+   */
+  identifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * There may be different concept map instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the concept map with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+   */
+  title?: fhir.FhirString|string|undefined;
+  /**
+   * Allows filtering of concept maps that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Allows filtering of concept maps that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the concept map. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the concept map is the organization or individual primarily responsible for the maintenance and upkeep of the concept map. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the concept map. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * The description is not intended to describe the semantics of the concept map. The description should capture its intended use, which is needed for ensuring integrity for its use in models across future changes.
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the concept map to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * This element does not describe the usage of the concept map. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this concept map.
+   */
+  purpose?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Frequently the copyright differs between the concept map and codes that are included. The copyright statement should clearly differentiate between these when required.
+   */
+  copyright?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, there is no specified context for the map (not recommended).  The source value set may select codes from either an explicit (standard or local) or implicit code system.
+   */
+  source?: fhir.FhirUri|fhir.FhirCanonical|undefined;
+  /**
+   * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, there is no specified context for the map (not recommended).  The source value set may select codes from either an explicit (standard or local) or implicit code system.
+   */
+  sourceUri?: fhir.FhirUri|string|undefined;
+  /**
+   * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, there is no specified context for the map (not recommended).  The source value set may select codes from either an explicit (standard or local) or implicit code system.
+   */
+  sourceCanonical?: fhir.FhirCanonical|string|undefined;
+  /**
+   * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, the is no specified context for the map.
+   */
+  target?: fhir.FhirUri|fhir.FhirCanonical|undefined;
+  /**
+   * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, the is no specified context for the map.
+   */
+  targetUri?: fhir.FhirUri|string|undefined;
+  /**
+   * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, the is no specified context for the map.
+   */
+  targetCanonical?: fhir.FhirCanonical|string|undefined;
+  /**
+   * A group of mappings that all have the same source and target system.
+   */
+  group?: fhir.ConceptMapGroupArgs[]|undefined;
 }
 
 /**
  * A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
  */
-export class ConceptMap extends fhir.DomainResource implements IConceptMap {
+export class ConceptMap extends fhir.DomainResource {
+  readonly __dataType:string = 'ConceptMap';
   /**
    * Resource Type Name
    */
@@ -713,11 +546,7 @@ export class ConceptMap extends fhir.DomainResource implements IConceptMap {
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this concept map outside of FHIR, where it is not possible to use the logical URI.
    */
@@ -725,172 +554,97 @@ export class ConceptMap extends fhir.DomainResource implements IConceptMap {
   /**
    * There may be different concept map instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the concept map with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  public title?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title?: fhir.FhirString|undefined;
   /**
    * Allows filtering of concept maps that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ConceptMap.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of concept maps that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the concept map. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the concept map is the organization or individual primarily responsible for the maintenance and upkeep of the concept map. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the concept map. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * The description is not intended to describe the semantics of the concept map. The description should capture its intended use, which is needed for ensuring integrity for its use in models across future changes.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the concept map to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * This element does not describe the usage of the concept map. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this concept map.
    */
-  public purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.purpose
-   */
-  public _purpose?: fhir.FhirElement|undefined;
+  public purpose?: fhir.FhirMarkdown|undefined;
   /**
    * Frequently the copyright differs between the concept map and codes that are included. The copyright statement should clearly differentiate between these when required.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, there is no specified context for the map (not recommended).  The source value set may select codes from either an explicit (standard or local) or implicit code system.
    */
-  public sourceUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.source[x]
-   */
-  public _sourceUri?: fhir.FhirElement|undefined;
-  /**
-   * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, there is no specified context for the map (not recommended).  The source value set may select codes from either an explicit (standard or local) or implicit code system.
-   */
-  public sourceCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.source[x]
-   */
-  public _sourceCanonical?: fhir.FhirElement|undefined;
+  public source?: (fhir.FhirUri|fhir.FhirCanonical)|undefined;
+  readonly __sourceIsChoice:true = true;
   /**
    * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, the is no specified context for the map.
    */
-  public targetUri?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.target[x]
-   */
-  public _targetUri?: fhir.FhirElement|undefined;
-  /**
-   * Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, the is no specified context for the map.
-   */
-  public targetCanonical?: string|undefined;
-  /**
-   * Extended properties for primitive element: ConceptMap.target[x]
-   */
-  public _targetCanonical?: fhir.FhirElement|undefined;
+  public target?: (fhir.FhirUri|fhir.FhirCanonical)|undefined;
+  readonly __targetIsChoice:true = true;
   /**
    * A group of mappings that all have the same source and target system.
    */
-  public group?: fhir.ConceptMapGroup[]|undefined;
+  public group?: fhir.ConceptMapGroup[]|undefined = [];
   /**
    * Default constructor for ConceptMap - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IConceptMap> = { }) {
-    super(source);
+  constructor(source:Partial<ConceptMapArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'ConceptMap';
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['title']) { this.title = source.title; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['purpose']) { this.purpose = source.purpose; }
-    if (source['_purpose']) { this._purpose = new fhir.FhirElement(source._purpose!); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
-    if (source['sourceUri']) { this.sourceUri = source.sourceUri; }
-    if (source['_sourceUri']) { this._sourceUri = new fhir.FhirElement(source._sourceUri!); }
-    if (source['sourceCanonical']) { this.sourceCanonical = source.sourceCanonical; }
-    if (source['_sourceCanonical']) { this._sourceCanonical = new fhir.FhirElement(source._sourceCanonical!); }
-    if (source['targetUri']) { this.targetUri = source.targetUri; }
-    if (source['_targetUri']) { this._targetUri = new fhir.FhirElement(source._targetUri!); }
-    if (source['targetCanonical']) { this.targetCanonical = source.targetCanonical; }
-    if (source['_targetCanonical']) { this._targetCanonical = new fhir.FhirElement(source._targetCanonical!); }
+    if (source['purpose']) { this.purpose = new fhir.FhirMarkdown({value: source.purpose}); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
+    if (source['source']) { this.source = source.source; }
+    else if (source['sourceUri']) { this.source = new fhir.FhirUri({value: source.sourceUri}); }
+    else if (source['sourceCanonical']) { this.source = new fhir.FhirCanonical({value: source.sourceCanonical}); }
+    if (source['target']) { this.target = source.target; }
+    else if (source['targetUri']) { this.target = new fhir.FhirUri({value: source.targetUri}); }
+    else if (source['targetCanonical']) { this.target = new fhir.FhirCanonical({value: source.targetCanonical}); }
     if (source['group']) { this.group = source.group.map((x) => new fhir.ConceptMapGroup(x)); }
   }
   /**
@@ -902,30 +656,35 @@ export class ConceptMap extends fhir.DomainResource implements IConceptMap {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: ConceptMap.resourceType']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: ConceptMap.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_purpose"]) { results.push(...this._purpose.doModelValidation()); }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (this["_sourceUri"]) { results.push(...this._sourceUri.doModelValidation()); }
-    if (this["_sourceCanonical"]) { results.push(...this._sourceCanonical.doModelValidation()); }
-    if (this["_targetUri"]) { results.push(...this._targetUri.doModelValidation()); }
-    if (this["_targetCanonical"]) { results.push(...this._targetCanonical.doModelValidation()); }
-    if (this["group"]) { this.group.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'ConceptMap' fhir: ConceptMap.resourceType:'ConceptMap'", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: ConceptMap.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (this["group"]) { this.group.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

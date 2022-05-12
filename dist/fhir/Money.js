@@ -3,7 +3,7 @@
 // Minimum TypeScript Version: 3.7
 // FHIR ComplexType: Money
 import * as fhir from '../fhir.js';
-import { CurrenciesValueSet } from '../fhirValueSets/CurrenciesValueSet.js';
+import { CurrenciesValueSet, } from '../fhirValueSets/CurrenciesValueSet.js';
 /**
  * An amount of economic utility in some recognized currency.
  */
@@ -11,19 +11,14 @@ export class Money extends fhir.FhirElement {
     /**
      * Default constructor for Money - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Money';
         if (source['value']) {
-            this.value = source.value;
-        }
-        if (source['_value']) {
-            this._value = new fhir.FhirElement(source._value);
+            this.value = new fhir.FhirDecimal({ value: source.value });
         }
         if (source['currency']) {
-            this.currency = source.currency;
-        }
-        if (source['_currency']) {
-            this._currency = new fhir.FhirElement(source._currency);
+            this.currency = new fhir.FhirCode({ value: source.currency });
         }
     }
     /**
@@ -36,14 +31,20 @@ export class Money extends fhir.FhirElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_value"]) {
-            results.push(...this._value.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["value"]) {
+            outcome.issue.push(...this.value.doModelValidation().issue);
         }
-        if (this["_currency"]) {
-            results.push(...this._currency.doModelValidation());
+        if (this["currency"]) {
+            outcome.issue.push(...this.currency.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Money.js.map

@@ -27,15 +27,4 @@ export const ContractActorroleValueSet = {
 /**
  * This value set includes sample Contract Actor Role codes.
  */
-export var ContractActorroleValueSetEnum;
-(function (ContractActorroleValueSetEnum) {
-    /**
-     * patient: A receiver, human or animal, of health care related goods and services.
-     */
-    ContractActorroleValueSetEnum["Patient"] = "patient";
-    /**
-     * practitioner: Someone who provides health care related services to people or animals including both clinical and support services.
-     */
-    ContractActorroleValueSetEnum["Practitioner"] = "practitioner";
-})(ContractActorroleValueSetEnum || (ContractActorroleValueSetEnum = {}));
 //# sourceMappingURL=ContractActorroleValueSet.js.map

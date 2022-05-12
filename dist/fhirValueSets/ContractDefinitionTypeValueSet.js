@@ -19,11 +19,4 @@ export const ContractDefinitionTypeValueSet = {
 /**
  * This value set contract specific codes for status.
  */
-export var ContractDefinitionTypeValueSetEnum;
-(function (ContractDefinitionTypeValueSetEnum) {
-    /**
-     * temp: To be completed
-     */
-    ContractDefinitionTypeValueSetEnum["TemporaryValue"] = "temp";
-})(ContractDefinitionTypeValueSetEnum || (ContractDefinitionTypeValueSetEnum = {}));
 //# sourceMappingURL=ContractDefinitionTypeValueSet.js.map

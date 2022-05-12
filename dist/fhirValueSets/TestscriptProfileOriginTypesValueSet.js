@@ -27,15 +27,4 @@ export const TestscriptProfileOriginTypesValueSet = {
 /**
  * This value set defines a set of codes that are used to indicate the profile type of a test system when acting as the origin within a TestScript.
  */
-export var TestscriptProfileOriginTypesValueSetEnum;
-(function (TestscriptProfileOriginTypesValueSetEnum) {
-    /**
-     * FHIR-Client: General FHIR client used to initiate operations against a FHIR server.
-     */
-    TestscriptProfileOriginTypesValueSetEnum["FHIRClient"] = "FHIR-Client";
-    /**
-     * FHIR-SDC-FormFiller: A FHIR client acting as a Structured Data Capture Form Filler.
-     */
-    TestscriptProfileOriginTypesValueSetEnum["FHIRSDCFormFiller"] = "FHIR-SDC-FormFiller";
-})(TestscriptProfileOriginTypesValueSetEnum || (TestscriptProfileOriginTypesValueSetEnum = {}));
 //# sourceMappingURL=TestscriptProfileOriginTypesValueSet.js.map

@@ -43,23 +43,4 @@ export const RequestPriorityValueSet = {
 /**
  * The clinical priority of a diagnostic order.
  */
-export var RequestPriorityValueSetEnum;
-(function (RequestPriorityValueSetEnum) {
-    /**
-     * asap: The request should be actioned as soon as possible - higher priority than urgent.
-     */
-    RequestPriorityValueSetEnum["ASAP"] = "asap";
-    /**
-     * routine: The request has normal priority.
-     */
-    RequestPriorityValueSetEnum["Routine"] = "routine";
-    /**
-     * stat: The request should be actioned immediately - highest possible priority.  E.g. an emergency.
-     */
-    RequestPriorityValueSetEnum["STAT"] = "stat";
-    /**
-     * urgent: The request should be actioned promptly - higher priority than routine.
-     */
-    RequestPriorityValueSetEnum["Urgent"] = "urgent";
-})(RequestPriorityValueSetEnum || (RequestPriorityValueSetEnum = {}));
 //# sourceMappingURL=RequestPriorityValueSet.js.map

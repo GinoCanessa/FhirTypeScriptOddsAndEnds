@@ -51,27 +51,4 @@ export const CompartmentTypeValueSet = {
 /**
  * Which type a compartment definition describes.
  */
-export var CompartmentTypeValueSetEnum;
-(function (CompartmentTypeValueSetEnum) {
-    /**
-     * Device: The compartment definition is for the device compartment.
-     */
-    CompartmentTypeValueSetEnum["Device"] = "Device";
-    /**
-     * Encounter: The compartment definition is for the encounter compartment.
-     */
-    CompartmentTypeValueSetEnum["Encounter"] = "Encounter";
-    /**
-     * Patient: The compartment definition is for the patient compartment.
-     */
-    CompartmentTypeValueSetEnum["Patient"] = "Patient";
-    /**
-     * Practitioner: The compartment definition is for the practitioner compartment.
-     */
-    CompartmentTypeValueSetEnum["Practitioner"] = "Practitioner";
-    /**
-     * RelatedPerson: The compartment definition is for the related-person compartment.
-     */
-    CompartmentTypeValueSetEnum["RelatedPerson"] = "RelatedPerson";
-})(CompartmentTypeValueSetEnum || (CompartmentTypeValueSetEnum = {}));
 //# sourceMappingURL=CompartmentTypeValueSet.js.map

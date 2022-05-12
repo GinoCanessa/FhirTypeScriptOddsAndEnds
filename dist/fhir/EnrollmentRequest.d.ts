@@ -1,54 +1,48 @@
 import * as fhir from '../fhir.js';
-import { FmStatusValueSetType, FmStatusValueSetEnum } from '../fhirValueSets/FmStatusValueSet.js';
+import { FmStatusValueSetType } from '../fhirValueSets/FmStatusValueSet.js';
+import { FmStatusValueSetEnum } from '../valueSetEnums.js';
 /**
- * This resource provides the insurance enrollment details to the insurer regarding a specified coverage.
+ * Valid arguments for the EnrollmentRequest type.
  */
-export declare type IEnrollmentRequest = fhir.IDomainResource & {
+export interface EnrollmentRequestArgs extends fhir.DomainResourceArgs {
     /**
      * Resource Type Name
      */
-    resourceType: "EnrollmentRequest";
+    resourceType: "EnrollmentRequest" | undefined;
     /**
      * The Response business identifier.
      */
-    identifier?: fhir.IIdentifier[] | undefined;
+    identifier?: fhir.IdentifierArgs[] | undefined;
     /**
      * This element is labeled as a modifier because the status contains codes that mark the request as not currently valid.
      */
     status?: FmStatusValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: EnrollmentRequest.status
-     */
-    _status?: fhir.IFhirElement | undefined;
-    /**
      * The date when this resource was created.
      */
-    created?: string | undefined;
-    /**
-     * Extended properties for primitive element: EnrollmentRequest.created
-     */
-    _created?: fhir.IFhirElement | undefined;
+    created?: fhir.FhirDateTime | string | undefined;
     /**
      * The Insurer who is target  of the request.
      */
-    insurer?: fhir.IReference | undefined;
+    insurer?: fhir.ReferenceArgs | undefined;
     /**
      * The practitioner who is responsible for the services rendered to the patient.
      */
-    provider?: fhir.IReference | undefined;
+    provider?: fhir.ReferenceArgs | undefined;
     /**
      * Patient Resource.
      */
-    candidate?: fhir.IReference | undefined;
+    candidate?: fhir.ReferenceArgs | undefined;
     /**
      * Reference to the program or plan identification, underwriter or payor.
      */
-    coverage?: fhir.IReference | undefined;
-};
+    coverage?: fhir.ReferenceArgs | undefined;
+}
 /**
  * This resource provides the insurance enrollment details to the insurer regarding a specified coverage.
  */
-export declare class EnrollmentRequest extends fhir.DomainResource implements IEnrollmentRequest {
+export declare class EnrollmentRequest extends fhir.DomainResource {
+    readonly __dataType: string;
     /**
      * Resource Type Name
      */
@@ -62,17 +56,9 @@ export declare class EnrollmentRequest extends fhir.DomainResource implements IE
      */
     status?: FmStatusValueSetEnum | undefined;
     /**
-     * Extended properties for primitive element: EnrollmentRequest.status
-     */
-    _status?: fhir.FhirElement | undefined;
-    /**
      * The date when this resource was created.
      */
-    created?: string | undefined;
-    /**
-     * Extended properties for primitive element: EnrollmentRequest.created
-     */
-    _created?: fhir.FhirElement | undefined;
+    created?: fhir.FhirDateTime | undefined;
     /**
      * The Insurer who is target  of the request.
      */
@@ -92,7 +78,7 @@ export declare class EnrollmentRequest extends fhir.DomainResource implements IE
     /**
      * Default constructor for EnrollmentRequest - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IEnrollmentRequest>);
+    constructor(source?: Partial<EnrollmentRequestArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Required-bound Value Set for status
      */
@@ -100,6 +86,10 @@ export declare class EnrollmentRequest extends fhir.DomainResource implements IE
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=EnrollmentRequest.d.ts.map

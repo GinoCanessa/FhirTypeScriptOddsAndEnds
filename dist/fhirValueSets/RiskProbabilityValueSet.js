@@ -51,27 +51,4 @@ export const RiskProbabilityValueSet = {
 /**
  * Codes representing the likelihood of a particular outcome in a risk assessment.
  */
-export var RiskProbabilityValueSetEnum;
-(function (RiskProbabilityValueSetEnum) {
-    /**
-     * certain: The specified outcome is effectively guaranteed.
-     */
-    RiskProbabilityValueSetEnum["Certain"] = "certain";
-    /**
-     * high: The specified outcome is more likely to occur than not.
-     */
-    RiskProbabilityValueSetEnum["HighLikelihood"] = "high";
-    /**
-     * low: The specified outcome is possible but unlikely.
-     */
-    RiskProbabilityValueSetEnum["LowLikelihood"] = "low";
-    /**
-     * moderate: The specified outcome has a reasonable likelihood of occurrence.
-     */
-    RiskProbabilityValueSetEnum["ModerateLikelihood"] = "moderate";
-    /**
-     * negligible: The specified outcome is exceptionally unlikely.
-     */
-    RiskProbabilityValueSetEnum["NegligibleLikelihood"] = "negligible";
-})(RiskProbabilityValueSetEnum || (RiskProbabilityValueSetEnum = {}));
 //# sourceMappingURL=RiskProbabilityValueSet.js.map

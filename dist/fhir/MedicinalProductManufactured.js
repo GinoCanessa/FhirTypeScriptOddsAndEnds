@@ -3,6 +3,8 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: MedicinalProductManufactured
 import * as fhir from '../fhir.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * The manufactured item as contained in the packaged medicinal product.
  */
@@ -10,8 +12,21 @@ export class MedicinalProductManufactured extends fhir.DomainResource {
     /**
      * Default constructor for MedicinalProductManufactured - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'MedicinalProductManufactured';
+        /**
+         * Manufacturer of the item (Note that this should be named "manufacturer" but it currently causes technical issues).
+         */
+        this.manufacturer = [];
+        /**
+         * Ingredient.
+         */
+        this.ingredient = [];
+        /**
+         * Other codeable characteristics.
+         */
+        this.otherCharacteristics = [];
         this.resourceType = 'MedicinalProductManufactured';
         if (source['manufacturedDoseForm']) {
             this.manufacturedDoseForm = new fhir.CodeableConcept(source.manufacturedDoseForm);
@@ -45,38 +60,44 @@ export class MedicinalProductManufactured extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: MedicinalProductManufactured.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'MedicinalProductManufactured' fhir: MedicinalProductManufactured.resourceType:'MedicinalProductManufactured'", }));
         }
-        if (!this["manufacturedDoseForm"]) {
-            results.push(["manufacturedDoseForm", 'Missing required element: MedicinalProductManufactured.manufacturedDoseForm']);
+        if (!this['manufacturedDoseForm']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property manufacturedDoseForm:fhir.CodeableConcept fhir: MedicinalProductManufactured.manufacturedDoseForm:CodeableConcept", }));
         }
         if (this["manufacturedDoseForm"]) {
-            results.push(...this.manufacturedDoseForm.doModelValidation());
+            outcome.issue.push(...this.manufacturedDoseForm.doModelValidation().issue);
         }
         if (this["unitOfPresentation"]) {
-            results.push(...this.unitOfPresentation.doModelValidation());
+            outcome.issue.push(...this.unitOfPresentation.doModelValidation().issue);
         }
-        if (!this["quantity"]) {
-            results.push(["quantity", 'Missing required element: MedicinalProductManufactured.quantity']);
+        if (!this['quantity']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property quantity:fhir.Quantity fhir: MedicinalProductManufactured.quantity:Quantity", }));
         }
         if (this["quantity"]) {
-            results.push(...this.quantity.doModelValidation());
+            outcome.issue.push(...this.quantity.doModelValidation().issue);
         }
         if (this["manufacturer"]) {
-            this.manufacturer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.manufacturer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["ingredient"]) {
-            this.ingredient.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.ingredient.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["physicalCharacteristics"]) {
-            results.push(...this.physicalCharacteristics.doModelValidation());
+            outcome.issue.push(...this.physicalCharacteristics.doModelValidation().issue);
         }
         if (this["otherCharacteristics"]) {
-            this.otherCharacteristics.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.otherCharacteristics.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=MedicinalProductManufactured.js.map

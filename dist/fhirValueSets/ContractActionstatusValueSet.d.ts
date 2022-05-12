@@ -15,10 +15,4 @@ export declare type ContractActionstatusValueSetType = typeof ContractActionstat
 /**
  * This value set contract specific codes for action status.
  */
-export declare enum ContractActionstatusValueSetEnum {
-    /**
-     * complete: To be completed
-     */
-    Complete = "complete"
-}
 //# sourceMappingURL=ContractActionstatusValueSet.d.ts.map

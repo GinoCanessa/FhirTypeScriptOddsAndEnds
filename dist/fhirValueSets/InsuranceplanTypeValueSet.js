@@ -91,47 +91,4 @@ export const InsuranceplanTypeValueSet = {
 /**
  * This example value set defines a set of codes that can be used to indicate a type of insurance plan.
  */
-export var InsuranceplanTypeValueSetEnum;
-(function (InsuranceplanTypeValueSetEnum) {
-    /**
-     * Code: dental
-     */
-    InsuranceplanTypeValueSetEnum["Dental"] = "dental";
-    /**
-     * Code: Drug
-     */
-    InsuranceplanTypeValueSetEnum["Drug"] = "Drug";
-    /**
-     * Code: home
-     */
-    InsuranceplanTypeValueSetEnum["HomeHealth"] = "home";
-    /**
-     * Code: hospice
-     */
-    InsuranceplanTypeValueSetEnum["Hospice"] = "hospice";
-    /**
-     * Code: long-term
-     */
-    InsuranceplanTypeValueSetEnum["LongTermCare"] = "long-term";
-    /**
-     * Code: medical
-     */
-    InsuranceplanTypeValueSetEnum["Medical"] = "medical";
-    /**
-     * Code: mental
-     */
-    InsuranceplanTypeValueSetEnum["MentalHealth"] = "mental";
-    /**
-     * Code: short-term
-     */
-    InsuranceplanTypeValueSetEnum["ShortTerm"] = "short-term";
-    /**
-     * Code: subst-ab
-     */
-    InsuranceplanTypeValueSetEnum["SubstanceAbuse"] = "subst-ab";
-    /**
-     * Code: vision
-     */
-    InsuranceplanTypeValueSetEnum["Vision"] = "vision";
-})(InsuranceplanTypeValueSetEnum || (InsuranceplanTypeValueSetEnum = {}));
 //# sourceMappingURL=InsuranceplanTypeValueSet.js.map

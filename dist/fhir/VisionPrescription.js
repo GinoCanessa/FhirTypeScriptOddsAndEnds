@@ -3,10 +3,12 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: VisionPrescription
 import * as fhir from '../fhir.js';
-import { VisionBaseCodesValueSet } from '../fhirValueSets/VisionBaseCodesValueSet.js';
-import { VisionProductValueSet } from '../fhirValueSets/VisionProductValueSet.js';
-import { VisionEyeCodesValueSet } from '../fhirValueSets/VisionEyeCodesValueSet.js';
-import { FmStatusValueSet } from '../fhirValueSets/FmStatusValueSet.js';
+import { VisionBaseCodesValueSet, } from '../fhirValueSets/VisionBaseCodesValueSet.js';
+import { VisionProductValueSet, } from '../fhirValueSets/VisionProductValueSet.js';
+import { VisionEyeCodesValueSet, } from '../fhirValueSets/VisionEyeCodesValueSet.js';
+import { FmStatusValueSet, } from '../fhirValueSets/FmStatusValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Allows for adjustment on two axis.
  */
@@ -14,25 +16,20 @@ export class VisionPrescriptionLensSpecificationPrism extends fhir.BackboneEleme
     /**
      * Default constructor for VisionPrescriptionLensSpecificationPrism - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'VisionPrescriptionLensSpecificationPrism';
         if (source['amount']) {
-            this.amount = source.amount;
+            this.amount = new fhir.FhirDecimal({ value: source.amount });
         }
         else {
             this.amount = null;
-        }
-        if (source['_amount']) {
-            this._amount = new fhir.FhirElement(source._amount);
         }
         if (source['base']) {
             this.base = source.base;
         }
         else {
             this.base = null;
-        }
-        if (source['_base']) {
-            this._base = new fhir.FhirElement(source._base);
         }
     }
     /**
@@ -45,20 +42,23 @@ export class VisionPrescriptionLensSpecificationPrism extends fhir.BackboneEleme
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["amount"]) {
-            results.push(["amount", 'Missing required element: VisionPrescription.lensSpecification.prism.amount']);
+        var outcome = super.doModelValidation();
+        if (!this['amount']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property amount:fhir.FhirDecimal fhir: VisionPrescription.lensSpecification.prism.amount:decimal", }));
         }
-        if (this["_amount"]) {
-            results.push(...this._amount.doModelValidation());
+        if (this["amount"]) {
+            outcome.issue.push(...this.amount.doModelValidation().issue);
         }
-        if (!this["base"]) {
-            results.push(["base", 'Missing required element: VisionPrescription.lensSpecification.prism.base']);
+        if (!this['base']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property base:VisionBaseCodesValueSetEnum fhir: VisionPrescription.lensSpecification.prism.base:code", }));
         }
-        if (this["_base"]) {
-            results.push(...this._base.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -68,8 +68,17 @@ export class VisionPrescriptionLensSpecification extends fhir.BackboneElement {
     /**
      * Default constructor for VisionPrescriptionLensSpecification - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'VisionPrescriptionLensSpecification';
+        /**
+         * Allows for adjustment on two axis.
+         */
+        this.prism = [];
+        /**
+         * Notes for special requirements such as coatings and lens materials.
+         */
+        this.note = [];
         if (source['product']) {
             this.product = new fhir.CodeableConcept(source.product);
         }
@@ -82,68 +91,38 @@ export class VisionPrescriptionLensSpecification extends fhir.BackboneElement {
         else {
             this.eye = null;
         }
-        if (source['_eye']) {
-            this._eye = new fhir.FhirElement(source._eye);
-        }
         if (source['sphere']) {
-            this.sphere = source.sphere;
-        }
-        if (source['_sphere']) {
-            this._sphere = new fhir.FhirElement(source._sphere);
+            this.sphere = new fhir.FhirDecimal({ value: source.sphere });
         }
         if (source['cylinder']) {
-            this.cylinder = source.cylinder;
-        }
-        if (source['_cylinder']) {
-            this._cylinder = new fhir.FhirElement(source._cylinder);
+            this.cylinder = new fhir.FhirDecimal({ value: source.cylinder });
         }
         if (source['axis']) {
-            this.axis = source.axis;
-        }
-        if (source['_axis']) {
-            this._axis = new fhir.FhirElement(source._axis);
+            this.axis = new fhir.FhirInteger({ value: source.axis });
         }
         if (source['prism']) {
             this.prism = source.prism.map((x) => new fhir.VisionPrescriptionLensSpecificationPrism(x));
         }
         if (source['add']) {
-            this.add = source.add;
-        }
-        if (source['_add']) {
-            this._add = new fhir.FhirElement(source._add);
+            this.add = new fhir.FhirDecimal({ value: source.add });
         }
         if (source['power']) {
-            this.power = source.power;
-        }
-        if (source['_power']) {
-            this._power = new fhir.FhirElement(source._power);
+            this.power = new fhir.FhirDecimal({ value: source.power });
         }
         if (source['backCurve']) {
-            this.backCurve = source.backCurve;
-        }
-        if (source['_backCurve']) {
-            this._backCurve = new fhir.FhirElement(source._backCurve);
+            this.backCurve = new fhir.FhirDecimal({ value: source.backCurve });
         }
         if (source['diameter']) {
-            this.diameter = source.diameter;
-        }
-        if (source['_diameter']) {
-            this._diameter = new fhir.FhirElement(source._diameter);
+            this.diameter = new fhir.FhirDecimal({ value: source.diameter });
         }
         if (source['duration']) {
             this.duration = new fhir.Quantity(source.duration);
         }
         if (source['color']) {
-            this.color = source.color;
-        }
-        if (source['_color']) {
-            this._color = new fhir.FhirElement(source._color);
+            this.color = new fhir.FhirString({ value: source.color });
         }
         if (source['brand']) {
-            this.brand = source.brand;
-        }
-        if (source['_brand']) {
-            this._brand = new fhir.FhirElement(source._brand);
+            this.brand = new fhir.FhirString({ value: source.brand });
         }
         if (source['note']) {
             this.note = source.note.map((x) => new fhir.Annotation(x));
@@ -165,56 +144,59 @@ export class VisionPrescriptionLensSpecification extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["product"]) {
-            results.push(["product", 'Missing required element: VisionPrescription.lensSpecification.product']);
+        var outcome = super.doModelValidation();
+        if (!this['product']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property product:fhir.CodeableConcept fhir: VisionPrescription.lensSpecification.product:CodeableConcept", }));
         }
         if (this["product"]) {
-            results.push(...this.product.doModelValidation());
+            outcome.issue.push(...this.product.doModelValidation().issue);
         }
-        if (!this["eye"]) {
-            results.push(["eye", 'Missing required element: VisionPrescription.lensSpecification.eye']);
+        if (!this['eye']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property eye:VisionEyeCodesValueSetEnum fhir: VisionPrescription.lensSpecification.eye:code", }));
         }
-        if (this["_eye"]) {
-            results.push(...this._eye.doModelValidation());
+        if (this["sphere"]) {
+            outcome.issue.push(...this.sphere.doModelValidation().issue);
         }
-        if (this["_sphere"]) {
-            results.push(...this._sphere.doModelValidation());
+        if (this["cylinder"]) {
+            outcome.issue.push(...this.cylinder.doModelValidation().issue);
         }
-        if (this["_cylinder"]) {
-            results.push(...this._cylinder.doModelValidation());
-        }
-        if (this["_axis"]) {
-            results.push(...this._axis.doModelValidation());
+        if (this["axis"]) {
+            outcome.issue.push(...this.axis.doModelValidation().issue);
         }
         if (this["prism"]) {
-            this.prism.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.prism.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_add"]) {
-            results.push(...this._add.doModelValidation());
+        if (this["add"]) {
+            outcome.issue.push(...this.add.doModelValidation().issue);
         }
-        if (this["_power"]) {
-            results.push(...this._power.doModelValidation());
+        if (this["power"]) {
+            outcome.issue.push(...this.power.doModelValidation().issue);
         }
-        if (this["_backCurve"]) {
-            results.push(...this._backCurve.doModelValidation());
+        if (this["backCurve"]) {
+            outcome.issue.push(...this.backCurve.doModelValidation().issue);
         }
-        if (this["_diameter"]) {
-            results.push(...this._diameter.doModelValidation());
+        if (this["diameter"]) {
+            outcome.issue.push(...this.diameter.doModelValidation().issue);
         }
         if (this["duration"]) {
-            results.push(...this.duration.doModelValidation());
+            outcome.issue.push(...this.duration.doModelValidation().issue);
         }
-        if (this["_color"]) {
-            results.push(...this._color.doModelValidation());
+        if (this["color"]) {
+            outcome.issue.push(...this.color.doModelValidation().issue);
         }
-        if (this["_brand"]) {
-            results.push(...this._brand.doModelValidation());
+        if (this["brand"]) {
+            outcome.issue.push(...this.brand.doModelValidation().issue);
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -224,8 +206,17 @@ export class VisionPrescription extends fhir.DomainResource {
     /**
      * Default constructor for VisionPrescription - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'VisionPrescription';
+        /**
+         * A unique identifier assigned to this vision prescription.
+         */
+        this.identifier = [];
+        /**
+         * Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.
+         */
+        this.lensSpecification = [];
         this.resourceType = 'VisionPrescription';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -236,17 +227,11 @@ export class VisionPrescription extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['created']) {
-            this.created = source.created;
+            this.created = new fhir.FhirDateTime({ value: source.created });
         }
         else {
             this.created = null;
-        }
-        if (source['_created']) {
-            this._created = new fhir.FhirElement(source._created);
         }
         if (source['patient']) {
             this.patient = new fhir.Reference(source.patient);
@@ -258,13 +243,10 @@ export class VisionPrescription extends fhir.DomainResource {
             this.encounter = new fhir.Reference(source.encounter);
         }
         if (source['dateWritten']) {
-            this.dateWritten = source.dateWritten;
+            this.dateWritten = new fhir.FhirDateTime({ value: source.dateWritten });
         }
         else {
             this.dateWritten = null;
-        }
-        if (source['_dateWritten']) {
-            this._dateWritten = new fhir.FhirElement(source._dateWritten);
         }
         if (source['prescriber']) {
             this.prescriber = new fhir.Reference(source.prescriber);
@@ -289,53 +271,62 @@ export class VisionPrescription extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: VisionPrescription.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'VisionPrescription' fhir: VisionPrescription.resourceType:'VisionPrescription'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: VisionPrescription.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:FmStatusValueSetEnum fhir: VisionPrescription.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['created']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property created:fhir.FhirDateTime fhir: VisionPrescription.created:dateTime", }));
         }
-        if (!this["created"]) {
-            results.push(["created", 'Missing required element: VisionPrescription.created']);
+        if (this["created"]) {
+            outcome.issue.push(...this.created.doModelValidation().issue);
         }
-        if (this["_created"]) {
-            results.push(...this._created.doModelValidation());
-        }
-        if (!this["patient"]) {
-            results.push(["patient", 'Missing required element: VisionPrescription.patient']);
+        if (!this['patient']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property patient:fhir.Reference fhir: VisionPrescription.patient:Reference", }));
         }
         if (this["patient"]) {
-            results.push(...this.patient.doModelValidation());
+            outcome.issue.push(...this.patient.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (!this["dateWritten"]) {
-            results.push(["dateWritten", 'Missing required element: VisionPrescription.dateWritten']);
+        if (!this['dateWritten']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property dateWritten:fhir.FhirDateTime fhir: VisionPrescription.dateWritten:dateTime", }));
         }
-        if (this["_dateWritten"]) {
-            results.push(...this._dateWritten.doModelValidation());
+        if (this["dateWritten"]) {
+            outcome.issue.push(...this.dateWritten.doModelValidation().issue);
         }
-        if (!this["prescriber"]) {
-            results.push(["prescriber", 'Missing required element: VisionPrescription.prescriber']);
+        if (!this['prescriber']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property prescriber:fhir.Reference fhir: VisionPrescription.prescriber:Reference", }));
         }
         if (this["prescriber"]) {
-            results.push(...this.prescriber.doModelValidation());
+            outcome.issue.push(...this.prescriber.doModelValidation().issue);
         }
-        if ((!this["lensSpecification"]) || (this["lensSpecification"].length === 0)) {
-            results.push(["lensSpecification", 'Missing required element: VisionPrescription.lensSpecification']);
+        if (!this['lensSpecification']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property lensSpecification:fhir.VisionPrescriptionLensSpecification[] fhir: VisionPrescription.lensSpecification:lensSpecification", }));
+        }
+        else if (!Array.isArray(this.lensSpecification)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property lensSpecification:fhir.VisionPrescriptionLensSpecification[] fhir: VisionPrescription.lensSpecification:lensSpecification", }));
+        }
+        else if (this.lensSpecification.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property lensSpecification:fhir.VisionPrescriptionLensSpecification[] fhir: VisionPrescription.lensSpecification:lensSpecification", }));
         }
         if (this["lensSpecification"]) {
-            this.lensSpecification.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.lensSpecification.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=VisionPrescription.js.map

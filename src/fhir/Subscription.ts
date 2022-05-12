@@ -3,158 +3,67 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Subscription
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { SubscriptionChannelTypeValueSet, SubscriptionChannelTypeValueSetType, SubscriptionChannelTypeValueSetEnum } from '../fhirValueSets/SubscriptionChannelTypeValueSet.js'
-import { SubscriptionStatusValueSet, SubscriptionStatusValueSetType, SubscriptionStatusValueSetEnum } from '../fhirValueSets/SubscriptionStatusValueSet.js'
-
+import { SubscriptionChannelTypeValueSet, SubscriptionChannelTypeValueSetType,} from '../fhirValueSets/SubscriptionChannelTypeValueSet.js';
+import { SubscriptionChannelTypeValueSetEnum } from '../valueSetEnums.js';
+import { SubscriptionStatusValueSet, SubscriptionStatusValueSetType,} from '../fhirValueSets/SubscriptionStatusValueSet.js';
+import { SubscriptionStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Details where to send notifications when resources are received that meet the criteria.
+ * Valid arguments for the SubscriptionChannel type.
  */
-export type ISubscriptionChannel = fhir.IBackboneElement & { 
+export interface SubscriptionChannelArgs extends fhir.BackboneElementArgs {
   /**
    * The type of channel to send notifications on.
    */
   type: SubscriptionChannelTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Subscription.channel.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
    * For rest-hook, and websocket, the end-point must be an http: or https: URL; for email, a mailto: url, for sms, a tel: url, and for message the endpoint can be in any form of url the server understands (usually, http: or mllp:). The URI is allowed to be relative; in which case, it is relative to the server end-point (since there may be more than one, clients should avoid using relative URIs).
    */
-  endpoint?: string|undefined;
-  /**
-   * Extended properties for primitive element: Subscription.channel.endpoint
-   */
-  _endpoint?: fhir.IFhirElement|undefined;
+  endpoint?: fhir.FhirUrl|string|undefined;
   /**
    * Sending the payload has obvious security implications. The server is responsible for ensuring that the content is appropriately secured.
    */
-  payload?: string|undefined;
-  /**
-   * Extended properties for primitive element: Subscription.channel.payload
-   */
-  _payload?: fhir.IFhirElement|undefined;
+  payload?: fhir.FhirCode|string|undefined;
   /**
    * Exactly what these mean depend on the channel type. They can convey additional information to the recipient and/or meet security requirements; for example, support of multiple headers in the outgoing notifications for rest-hook type subscriptions.
    */
-  header?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Subscription.channel.header
-   */
-  _header?: fhir.IFhirElement[]|undefined;
-}
-
-/**
- * The subscription resource is used to define a push-based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined "channel" so that another system can take an appropriate action.
- */
-export type ISubscription = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "Subscription";
-  /**
-   * A client can only submit subscription resources in the requested or off state. Only the server can  move a subscription from requested to active, and then to error. Either the server or the client can turn a subscription off.
-   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-   */
-  status: SubscriptionStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: Subscription.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting.
-   */
-  contact?: fhir.IContactPoint[]|undefined;
-  /**
-   * The server is permitted to deviate from this time but should observe it.
-   */
-  end?: string|undefined;
-  /**
-   * Extended properties for primitive element: Subscription.end
-   */
-  _end?: fhir.IFhirElement|undefined;
-  /**
-   * A description of why this subscription is defined.
-   */
-  reason: string|null;
-  /**
-   * Extended properties for primitive element: Subscription.reason
-   */
-  _reason?: fhir.IFhirElement|undefined;
-  /**
-   * The rules are search criteria (without the [base] part). Like Bundle.entry.request.url, it has no leading "/".
-   */
-  criteria: string|null;
-  /**
-   * Extended properties for primitive element: Subscription.criteria
-   */
-  _criteria?: fhir.IFhirElement|undefined;
-  /**
-   * A record of the last error that occurred when the server processed a notification.
-   */
-  error?: string|undefined;
-  /**
-   * Extended properties for primitive element: Subscription.error
-   */
-  _error?: fhir.IFhirElement|undefined;
-  /**
-   * Details where to send notifications when resources are received that meet the criteria.
-   */
-  channel: fhir.ISubscriptionChannel|null;
+  header?: fhir.FhirString[]|string[]|undefined;
 }
 
 /**
  * Details where to send notifications when resources are received that meet the criteria.
  */
-export class SubscriptionChannel extends fhir.BackboneElement implements ISubscriptionChannel {
+export class SubscriptionChannel extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubscriptionChannel';
   /**
    * The type of channel to send notifications on.
    */
   public type: SubscriptionChannelTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Subscription.channel.type
-   */
-  public _type?: fhir.FhirElement|undefined;
-  /**
    * For rest-hook, and websocket, the end-point must be an http: or https: URL; for email, a mailto: url, for sms, a tel: url, and for message the endpoint can be in any form of url the server understands (usually, http: or mllp:). The URI is allowed to be relative; in which case, it is relative to the server end-point (since there may be more than one, clients should avoid using relative URIs).
    */
-  public endpoint?: string|undefined;
-  /**
-   * Extended properties for primitive element: Subscription.channel.endpoint
-   */
-  public _endpoint?: fhir.FhirElement|undefined;
+  public endpoint?: fhir.FhirUrl|undefined;
   /**
    * Sending the payload has obvious security implications. The server is responsible for ensuring that the content is appropriately secured.
    */
-  public payload?: string|undefined;
-  /**
-   * Extended properties for primitive element: Subscription.channel.payload
-   */
-  public _payload?: fhir.FhirElement|undefined;
+  public payload?: fhir.FhirCode|undefined;
   /**
    * Exactly what these mean depend on the channel type. They can convey additional information to the recipient and/or meet security requirements; for example, support of multiple headers in the outgoing notifications for rest-hook type subscriptions.
    */
-  public header?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: Subscription.channel.header
-   */
-  public _header?: fhir.FhirElement[]|undefined;
+  public header?: fhir.FhirString[]|undefined = [];
   /**
    * Default constructor for SubscriptionChannel - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubscriptionChannel> = { }) {
-    super(source);
+  constructor(source:Partial<SubscriptionChannelArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['endpoint']) { this.endpoint = source.endpoint; }
-    if (source['_endpoint']) { this._endpoint = new fhir.FhirElement(source._endpoint!); }
-    if (source['payload']) { this.payload = source.payload; }
-    if (source['_payload']) { this._payload = new fhir.FhirElement(source._payload!); }
-    if (source['header']) { this.header = source.header.map((x) => (x)); }
-    if (source['_header']) { this._header = source._header.map((x) => new fhir.FhirElement(x)); }
+    if (source['endpoint']) { this.endpoint = new fhir.FhirUrl({value: source.endpoint}); }
+    if (source['payload']) { this.payload = new fhir.FhirCode({value: source.payload}); }
+    if (source['header']) { this.header = source.header.map((x) => new fhir.FhirString({value: x})); }
   }
   /**
    * Required-bound Value Set for type
@@ -165,21 +74,67 @@ export class SubscriptionChannel extends fhir.BackboneElement implements ISubscr
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["type"]) { results.push(["type",'Missing required element: Subscription.channel.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_endpoint"]) { results.push(...this._endpoint.doModelValidation()); }
-    if (this["_payload"]) { results.push(...this._payload.doModelValidation()); }
-    if (this["_header"]) { this._header.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:SubscriptionChannelTypeValueSetEnum fhir: Subscription.channel.type:code", }));
+    }
+    if (this["endpoint"]) { outcome.issue!.push(...this.endpoint.doModelValidation().issue!); }
+    if (this["payload"]) { outcome.issue!.push(...this.payload.doModelValidation().issue!); }
+    if (this["header"]) { this.header.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the Subscription type.
+ */
+export interface SubscriptionArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "Subscription"|undefined;
+  /**
+   * A client can only submit subscription resources in the requested or off state. Only the server can  move a subscription from requested to active, and then to error. Either the server or the client can turn a subscription off.
+   * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+   */
+  status: SubscriptionStatusValueSetEnum|null;
+  /**
+   * Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting.
+   */
+  contact?: fhir.ContactPointArgs[]|undefined;
+  /**
+   * The server is permitted to deviate from this time but should observe it.
+   */
+  end?: fhir.FhirInstant|string|undefined;
+  /**
+   * A description of why this subscription is defined.
+   */
+  reason: fhir.FhirString|string|undefined;
+  /**
+   * The rules are search criteria (without the [base] part). Like Bundle.entry.request.url, it has no leading "/".
+   */
+  criteria: fhir.FhirString|string|undefined;
+  /**
+   * A record of the last error that occurred when the server processed a notification.
+   */
+  error?: fhir.FhirString|string|undefined;
+  /**
+   * Details where to send notifications when resources are received that meet the criteria.
+   */
+  channel: fhir.SubscriptionChannelArgs|null;
 }
 
 /**
  * The subscription resource is used to define a push-based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined "channel" so that another system can take an appropriate action.
  */
-export class Subscription extends fhir.DomainResource implements ISubscription {
+export class Subscription extends fhir.DomainResource {
+  readonly __dataType:string = 'Subscription';
   /**
    * Resource Type Name
    */
@@ -190,45 +145,25 @@ export class Subscription extends fhir.DomainResource implements ISubscription {
    */
   public status: SubscriptionStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: Subscription.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting.
    */
-  public contact?: fhir.ContactPoint[]|undefined;
+  public contact?: fhir.ContactPoint[]|undefined = [];
   /**
    * The server is permitted to deviate from this time but should observe it.
    */
-  public end?: string|undefined;
-  /**
-   * Extended properties for primitive element: Subscription.end
-   */
-  public _end?: fhir.FhirElement|undefined;
+  public end?: fhir.FhirInstant|undefined;
   /**
    * A description of why this subscription is defined.
    */
-  public reason: string|null;
-  /**
-   * Extended properties for primitive element: Subscription.reason
-   */
-  public _reason?: fhir.FhirElement|undefined;
+  public reason: fhir.FhirString|null;
   /**
    * The rules are search criteria (without the [base] part). Like Bundle.entry.request.url, it has no leading "/".
    */
-  public criteria: string|null;
-  /**
-   * Extended properties for primitive element: Subscription.criteria
-   */
-  public _criteria?: fhir.FhirElement|undefined;
+  public criteria: fhir.FhirString|null;
   /**
    * A record of the last error that occurred when the server processed a notification.
    */
-  public error?: string|undefined;
-  /**
-   * Extended properties for primitive element: Subscription.error
-   */
-  public _error?: fhir.FhirElement|undefined;
+  public error?: fhir.FhirString|undefined;
   /**
    * Details where to send notifications when resources are received that meet the criteria.
    */
@@ -236,24 +171,19 @@ export class Subscription extends fhir.DomainResource implements ISubscription {
   /**
    * Default constructor for Subscription - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubscription> = { }) {
-    super(source);
+  constructor(source:Partial<SubscriptionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'Subscription';
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactPoint(x)); }
-    if (source['end']) { this.end = source.end; }
-    if (source['_end']) { this._end = new fhir.FhirElement(source._end!); }
-    if (source['reason']) { this.reason = source.reason; }
+    if (source['end']) { this.end = new fhir.FhirInstant({value: source.end}); }
+    if (source['reason']) { this.reason = new fhir.FhirString({value: source.reason}); }
     else { this.reason = null; }
-    if (source['_reason']) { this._reason = new fhir.FhirElement(source._reason!); }
-    if (source['criteria']) { this.criteria = source.criteria; }
+    if (source['criteria']) { this.criteria = new fhir.FhirString({value: source.criteria}); }
     else { this.criteria = null; }
-    if (source['_criteria']) { this._criteria = new fhir.FhirElement(source._criteria!); }
-    if (source['error']) { this.error = source.error; }
-    if (source['_error']) { this._error = new fhir.FhirElement(source._error!); }
-    if (source['channel']) { this.channel = new fhir.SubscriptionChannel(source.channel!); }
+    if (source['error']) { this.error = new fhir.FhirString({value: source.error}); }
+    if (source['channel']) { this.channel = new fhir.SubscriptionChannel(source.channel); }
     else { this.channel = null; }
   }
   /**
@@ -265,20 +195,35 @@ export class Subscription extends fhir.DomainResource implements ISubscription {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: Subscription.resourceType']); }
-    if (!this["status"]) { results.push(["status",'Missing required element: Subscription.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_end"]) { results.push(...this._end.doModelValidation()); }
-    if (!this["reason"]) { results.push(["reason",'Missing required element: Subscription.reason']); }
-    if (this["_reason"]) { results.push(...this._reason.doModelValidation()); }
-    if (!this["criteria"]) { results.push(["criteria",'Missing required element: Subscription.criteria']); }
-    if (this["_criteria"]) { results.push(...this._criteria.doModelValidation()); }
-    if (this["_error"]) { results.push(...this._error.doModelValidation()); }
-    if (!this["channel"]) { results.push(["channel",'Missing required element: Subscription.channel']); }
-    if (this["channel"]) { results.push(...this.channel.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'Subscription' fhir: Subscription.resourceType:'Subscription'", }));
+    }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:SubscriptionStatusValueSetEnum fhir: Subscription.status:code", }));
+    }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["end"]) { outcome.issue!.push(...this.end.doModelValidation().issue!); }
+    if (!this['reason']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property reason:fhir.FhirString fhir: Subscription.reason:string", }));
+    }
+    if (this["reason"]) { outcome.issue!.push(...this.reason.doModelValidation().issue!); }
+    if (!this['criteria']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property criteria:fhir.FhirString fhir: Subscription.criteria:string", }));
+    }
+    if (this["criteria"]) { outcome.issue!.push(...this.criteria.doModelValidation().issue!); }
+    if (this["error"]) { outcome.issue!.push(...this.error.doModelValidation().issue!); }
+    if (!this['channel']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property channel:fhir.SubscriptionChannel fhir: Subscription.channel:channel", }));
+    }
+    if (this["channel"]) { outcome.issue!.push(...this.channel.doModelValidation().issue!); }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

@@ -51,27 +51,4 @@ export const SlotstatusValueSet = {
 /**
  * The free/busy status of the slot.
  */
-export var SlotstatusValueSetEnum;
-(function (SlotstatusValueSetEnum) {
-    /**
-     * busy: Indicates that the time interval is busy because one  or more events have been scheduled for that interval.
-     */
-    SlotstatusValueSetEnum["Busy"] = "busy";
-    /**
-     * busy-tentative: Indicates that the time interval is busy because one or more events have been tentatively scheduled for that interval.
-     */
-    SlotstatusValueSetEnum["BusyTentative"] = "busy-tentative";
-    /**
-     * busy-unavailable: Indicates that the time interval is busy and that the interval cannot be scheduled.
-     */
-    SlotstatusValueSetEnum["BusyUnavailable"] = "busy-unavailable";
-    /**
-     * entered-in-error: This instance should not have been part of this patient's medical record.
-     */
-    SlotstatusValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * free: Indicates that the time interval is free for scheduling.
-     */
-    SlotstatusValueSetEnum["Free"] = "free";
-})(SlotstatusValueSetEnum || (SlotstatusValueSetEnum = {}));
 //# sourceMappingURL=SlotstatusValueSet.js.map

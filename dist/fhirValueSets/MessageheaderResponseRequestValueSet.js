@@ -43,23 +43,4 @@ export const MessageheaderResponseRequestValueSet = {
 /**
  * HL7-defined table of codes which identify conditions under which acknowledgments are required to be returned in response to a message.
  */
-export var MessageheaderResponseRequestValueSetEnum;
-(function (MessageheaderResponseRequestValueSetEnum) {
-    /**
-     * always: initiator expects a response for this message.
-     */
-    MessageheaderResponseRequestValueSetEnum["Always"] = "always";
-    /**
-     * never: initiator does not expect a response.
-     */
-    MessageheaderResponseRequestValueSetEnum["Never"] = "never";
-    /**
-     * on-error: initiator expects a response only if in error.
-     */
-    MessageheaderResponseRequestValueSetEnum["ErrorRejectConditionsOnly"] = "on-error";
-    /**
-     * on-success: initiator expects a response only if successful.
-     */
-    MessageheaderResponseRequestValueSetEnum["SuccessfulCompletionOnly"] = "on-success";
-})(MessageheaderResponseRequestValueSetEnum || (MessageheaderResponseRequestValueSetEnum = {}));
 //# sourceMappingURL=MessageheaderResponseRequestValueSet.js.map

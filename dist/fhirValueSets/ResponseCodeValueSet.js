@@ -35,19 +35,4 @@ export const ResponseCodeValueSet = {
 /**
  * The kind of response to a message.
  */
-export var ResponseCodeValueSetEnum;
-(function (ResponseCodeValueSetEnum) {
-    /**
-     * fatal-error: The message was rejected because of a problem with the content. There is no point in re-sending without change. The response narrative SHALL describe the issue.
-     */
-    ResponseCodeValueSetEnum["FatalError"] = "fatal-error";
-    /**
-     * ok: The message was accepted and processed without error.
-     */
-    ResponseCodeValueSetEnum["OK"] = "ok";
-    /**
-     * transient-error: Some internal unexpected error occurred - wait and try again. Note - this is usually used for things like database unavailable, which may be expected to resolve, though human intervention may be required.
-     */
-    ResponseCodeValueSetEnum["TransientError"] = "transient-error";
-})(ResponseCodeValueSetEnum || (ResponseCodeValueSetEnum = {}));
 //# sourceMappingURL=ResponseCodeValueSet.js.map

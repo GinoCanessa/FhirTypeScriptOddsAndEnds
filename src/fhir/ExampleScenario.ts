@@ -3,483 +3,70 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: ExampleScenario
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { ExamplescenarioActorTypeValueSet, ExamplescenarioActorTypeValueSetType, ExamplescenarioActorTypeValueSetEnum } from '../fhirValueSets/ExamplescenarioActorTypeValueSet.js'
-import { ResourceTypesValueSet, ResourceTypesValueSetType, ResourceTypesValueSetEnum } from '../fhirValueSets/ResourceTypesValueSet.js'
-import { PublicationStatusValueSet, PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js'
-
+import { ExamplescenarioActorTypeValueSet, ExamplescenarioActorTypeValueSetType,} from '../fhirValueSets/ExamplescenarioActorTypeValueSet.js';
+import { ExamplescenarioActorTypeValueSetEnum } from '../valueSetEnums.js';
+import { ResourceTypesValueSet, ResourceTypesValueSetType,} from '../fhirValueSets/ResourceTypesValueSet.js';
+import { ResourceTypesValueSetEnum } from '../valueSetEnums.js';
+import { PublicationStatusValueSet, PublicationStatusValueSetType,} from '../fhirValueSets/PublicationStatusValueSet.js';
+import { PublicationStatusValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Actor participating in the resource.
+ * Valid arguments for the ExampleScenarioActor type.
  */
-export type IExampleScenarioActor = fhir.IBackboneElement & { 
+export interface ExampleScenarioActorArgs extends fhir.BackboneElementArgs {
   /**
    * should this be called ID or acronym?
    */
-  actorId: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.actor.actorId
-   */
-  _actorId?: fhir.IFhirElement|undefined;
+  actorId: fhir.FhirString|string|undefined;
   /**
    * The type of actor - person or system.
    */
   type: ExamplescenarioActorTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ExampleScenario.actor.type
+   * Cardinality: is name and description 1..1?
    */
-  _type?: fhir.IFhirElement|undefined;
+  name?: fhir.FhirString|string|undefined;
   /**
    * Cardinality: is name and description 1..1?
    */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.actor.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Cardinality: is name and description 1..1?
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.actor.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-}
-
-/**
- * A specific version of the resource.
- */
-export type IExampleScenarioInstanceVersion = fhir.IBackboneElement & { 
-  /**
-   * The identifier of a specific version of a resource.
-   */
-  versionId: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.version.versionId
-   */
-  _versionId?: fhir.IFhirElement|undefined;
-  /**
-   * The description of the resource version.
-   */
-  description: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.version.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Resources contained in the instance (e.g. the observations contained in a bundle).
- */
-export type IExampleScenarioInstanceContainedInstance = fhir.IBackboneElement & { 
-  /**
-   * Each resource contained in the instance.
-   */
-  resourceId: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.containedInstance.resourceId
-   */
-  _resourceId?: fhir.IFhirElement|undefined;
-  /**
-   * A specific version of a resource contained in the instance.
-   */
-  versionId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.containedInstance.versionId
-   */
-  _versionId?: fhir.IFhirElement|undefined;
-}
-
-/**
- * Each resource and each version that is present in the workflow.
- */
-export type IExampleScenarioInstance = fhir.IBackboneElement & { 
-  /**
-   * The id of the resource for referencing.
-   */
-  resourceId: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.resourceId
-   */
-  _resourceId?: fhir.IFhirElement|undefined;
-  /**
-   * The type of the resource.
-   */
-  resourceType: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.resourceType
-   */
-  _resourceType?: fhir.IFhirElement|undefined;
-  /**
-   * A short name for the resource instance.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Human-friendly description of the resource instance.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * A specific version of the resource.
-   */
-  version?: fhir.IExampleScenarioInstanceVersion[]|undefined;
-  /**
-   * Resources contained in the instance (e.g. the observations contained in a bundle).
-   */
-  containedInstance?: fhir.IExampleScenarioInstanceContainedInstance[]|undefined;
-}
-
-/**
- * Each interaction or action.
- */
-export type IExampleScenarioProcessStepOperation = fhir.IBackboneElement & { 
-  /**
-   * The sequential number of the interaction, e.g. 1.2.5.
-   */
-  number: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.number
-   */
-  _number?: fhir.IFhirElement|undefined;
-  /**
-   * The type of operation - CRUD.
-   */
-  type?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.type
-   */
-  _type?: fhir.IFhirElement|undefined;
-  /**
-   * The human-friendly name of the interaction.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Who starts the transaction.
-   */
-  initiator?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.initiator
-   */
-  _initiator?: fhir.IFhirElement|undefined;
-  /**
-   * Who receives the transaction.
-   */
-  receiver?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.receiver
-   */
-  _receiver?: fhir.IFhirElement|undefined;
-  /**
-   * A comment to be inserted in the diagram.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Whether the initiator is deactivated right after the transaction.
-   */
-  initiatorActive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.initiatorActive
-   */
-  _initiatorActive?: fhir.IFhirElement|undefined;
-  /**
-   * Whether the receiver is deactivated right after the transaction.
-   */
-  receiverActive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.receiverActive
-   */
-  _receiverActive?: fhir.IFhirElement|undefined;
-  /**
-   * Each resource instance used by the initiator.
-   */
-  request?: fhir.IExampleScenarioInstanceContainedInstance|undefined;
-  /**
-   * Each resource instance used by the responder.
-   */
-  response?: fhir.IExampleScenarioInstanceContainedInstance|undefined;
-}
-
-/**
- * Indicates an alternative step that can be taken instead of the operations on the base step in exceptional/atypical circumstances.
- */
-export type IExampleScenarioProcessStepAlternative = fhir.IBackboneElement & { 
-  /**
-   * The label to display for the alternative that gives a sense of the circumstance in which the alternative should be invoked.
-   */
-  title: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.alternative.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * A human-readable description of the alternative explaining when the alternative should occur rather than the base step.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.alternative.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * What happens in each alternative option.
-   */
-  step?: fhir.IExampleScenarioProcessStep[]|undefined;
-}
-
-/**
- * Each step of the process.
- */
-export type IExampleScenarioProcessStep = fhir.IBackboneElement & { 
-  /**
-   * Nested process.
-   */
-  process?: fhir.IExampleScenarioProcess[]|undefined;
-  /**
-   * If there is a pause in the flow.
-   */
-  pause?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.pause
-   */
-  _pause?: fhir.IFhirElement|undefined;
-  /**
-   * Each interaction or action.
-   */
-  operation?: fhir.IExampleScenarioProcessStepOperation|undefined;
-  /**
-   * Indicates an alternative step that can be taken instead of the operations on the base step in exceptional/atypical circumstances.
-   */
-  alternative?: fhir.IExampleScenarioProcessStepAlternative[]|undefined;
-}
-
-/**
- * Each major process - a group of operations.
- */
-export type IExampleScenarioProcess = fhir.IBackboneElement & { 
-  /**
-   * The diagram title of the group of operations.
-   */
-  title: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.title
-   */
-  _title?: fhir.IFhirElement|undefined;
-  /**
-   * A longer description of the group of operations.
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * Description of initial status before the process starts.
-   */
-  preConditions?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.preConditions
-   */
-  _preConditions?: fhir.IFhirElement|undefined;
-  /**
-   * Description of final status after the process ends.
-   */
-  postConditions?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.postConditions
-   */
-  _postConditions?: fhir.IFhirElement|undefined;
-  /**
-   * Each step of the process.
-   */
-  step?: fhir.IExampleScenarioProcessStep[]|undefined;
-}
-
-/**
- * Example of workflow instance.
- */
-export type IExampleScenario = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "ExampleScenario";
-  /**
-   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
-   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
-   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
-   */
-  url?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.url
-   */
-  _url?: fhir.IFhirElement|undefined;
-  /**
-   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this example scenario outside of FHIR, where it is not possible to use the logical URI.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * There may be different example scenario instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the example scenario with the format [url]|[version].
-   */
-  version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.version
-   */
-  _version?: fhir.IFhirElement|undefined;
-  /**
-   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-   */
-  name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.name
-   */
-  _name?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of example scenarios that are appropriate for use versus not.
-   */
-  status: PublicationStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Allows filtering of example scenarios that are appropriate for use versus not.
-   */
-  experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.experimental
-   */
-  _experimental?: fhir.IFhirElement|undefined;
-  /**
-   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the example scenario. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Usually an organization but may be an individual. The publisher (or steward) of the example scenario is the organization or individual primarily responsible for the maintenance and upkeep of the example scenario. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the example scenario. This item SHOULD be populated unless the information is available from context.
-   */
-  publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.publisher
-   */
-  _publisher?: fhir.IFhirElement|undefined;
-  /**
-   * May be a web site, an email address, a telephone number, etc.
-   */
-  contact?: fhir.IContactDetail[]|undefined;
-  /**
-   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
-   */
-  useContext?: fhir.IUsageContext[]|undefined;
-  /**
-   * It may be possible for the example scenario to be used in jurisdictions other than those for which it was originally designed or intended.
-   */
-  jurisdiction?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * nullFrequently, the copyright differs between the value set and the codes that are included. The copyright statement should clearly differentiate between these when required.
-   */
-  copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.copyright
-   */
-  _copyright?: fhir.IFhirElement|undefined;
-  /**
-   * This element does not describe the usage of the example scenario. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this example scenario.
-   */
-  purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.purpose
-   */
-  _purpose?: fhir.IFhirElement|undefined;
-  /**
-   * Actor participating in the resource.
-   */
-  actor?: fhir.IExampleScenarioActor[]|undefined;
-  /**
-   * Each resource and each version that is present in the workflow.
-   */
-  instance?: fhir.IExampleScenarioInstance[]|undefined;
-  /**
-   * Each major process - a group of operations.
-   */
-  process?: fhir.IExampleScenarioProcess[]|undefined;
-  /**
-   * Another nested workflow.
-   */
-  workflow?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.workflow
-   */
-  _workflow?: fhir.IFhirElement[]|undefined;
+  description?: fhir.FhirMarkdown|string|undefined;
 }
 
 /**
  * Actor participating in the resource.
  */
-export class ExampleScenarioActor extends fhir.BackboneElement implements IExampleScenarioActor {
+export class ExampleScenarioActor extends fhir.BackboneElement {
+  readonly __dataType:string = 'ExampleScenarioActor';
   /**
    * should this be called ID or acronym?
    */
-  public actorId: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.actor.actorId
-   */
-  public _actorId?: fhir.FhirElement|undefined;
+  public actorId: fhir.FhirString|null;
   /**
    * The type of actor - person or system.
    */
   public type: ExamplescenarioActorTypeValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ExampleScenario.actor.type
+   * Cardinality: is name and description 1..1?
    */
-  public _type?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Cardinality: is name and description 1..1?
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.actor.name
-   */
-  public _name?: fhir.FhirElement|undefined;
-  /**
-   * Cardinality: is name and description 1..1?
-   */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.actor.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * Default constructor for ExampleScenarioActor - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IExampleScenarioActor> = { }) {
-    super(source);
-    if (source['actorId']) { this.actorId = source.actorId; }
+  constructor(source:Partial<ExampleScenarioActorArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['actorId']) { this.actorId = new fhir.FhirString({value: source.actorId}); }
     else { this.actorId = null; }
-    if (source['_actorId']) { this._actorId = new fhir.FhirElement(source._actorId!); }
     if (source['type']) { this.type = source.type; }
     else { this.type = null; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
   }
   /**
    * Required-bound Value Set for type
@@ -490,164 +77,210 @@ export class ExampleScenarioActor extends fhir.BackboneElement implements IExamp
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["actorId"]) { results.push(["actorId",'Missing required element: ExampleScenario.actor.actorId']); }
-    if (this["_actorId"]) { results.push(...this._actorId.doModelValidation()); }
-    if (!this["type"]) { results.push(["type",'Missing required element: ExampleScenario.actor.type']); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['actorId']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property actorId:fhir.FhirString fhir: ExampleScenario.actor.actorId:string", }));
+    }
+    if (this["actorId"]) { outcome.issue!.push(...this.actorId.doModelValidation().issue!); }
+    if (!this['type']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property type:ExamplescenarioActorTypeValueSetEnum fhir: ExampleScenario.actor.type:code", }));
+    }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ExampleScenarioInstanceVersion type.
+ */
+export interface ExampleScenarioInstanceVersionArgs extends fhir.BackboneElementArgs {
+  /**
+   * The identifier of a specific version of a resource.
+   */
+  versionId: fhir.FhirString|string|undefined;
+  /**
+   * The description of the resource version.
+   */
+  description: fhir.FhirMarkdown|string|undefined;
 }
 
 /**
  * A specific version of the resource.
  */
-export class ExampleScenarioInstanceVersion extends fhir.BackboneElement implements IExampleScenarioInstanceVersion {
+export class ExampleScenarioInstanceVersion extends fhir.BackboneElement {
+  readonly __dataType:string = 'ExampleScenarioInstanceVersion';
   /**
    * The identifier of a specific version of a resource.
    */
-  public versionId: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.version.versionId
-   */
-  public _versionId?: fhir.FhirElement|undefined;
+  public versionId: fhir.FhirString|null;
   /**
    * The description of the resource version.
    */
-  public description: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.version.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description: fhir.FhirMarkdown|null;
   /**
    * Default constructor for ExampleScenarioInstanceVersion - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IExampleScenarioInstanceVersion> = { }) {
-    super(source);
-    if (source['versionId']) { this.versionId = source.versionId; }
+  constructor(source:Partial<ExampleScenarioInstanceVersionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['versionId']) { this.versionId = new fhir.FhirString({value: source.versionId}); }
     else { this.versionId = null; }
-    if (source['_versionId']) { this._versionId = new fhir.FhirElement(source._versionId!); }
-    if (source['description']) { this.description = source.description; }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     else { this.description = null; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["versionId"]) { results.push(["versionId",'Missing required element: ExampleScenario.instance.version.versionId']); }
-    if (this["_versionId"]) { results.push(...this._versionId.doModelValidation()); }
-    if (!this["description"]) { results.push(["description",'Missing required element: ExampleScenario.instance.version.description']); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['versionId']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property versionId:fhir.FhirString fhir: ExampleScenario.instance.version.versionId:string", }));
+    }
+    if (this["versionId"]) { outcome.issue!.push(...this.versionId.doModelValidation().issue!); }
+    if (!this['description']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property description:fhir.FhirMarkdown fhir: ExampleScenario.instance.version.description:markdown", }));
+    }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ExampleScenarioInstanceContainedInstance type.
+ */
+export interface ExampleScenarioInstanceContainedInstanceArgs extends fhir.BackboneElementArgs {
+  /**
+   * Each resource contained in the instance.
+   */
+  resourceId: fhir.FhirString|string|undefined;
+  /**
+   * A specific version of a resource contained in the instance.
+   */
+  versionId?: fhir.FhirString|string|undefined;
 }
 
 /**
  * Resources contained in the instance (e.g. the observations contained in a bundle).
  */
-export class ExampleScenarioInstanceContainedInstance extends fhir.BackboneElement implements IExampleScenarioInstanceContainedInstance {
+export class ExampleScenarioInstanceContainedInstance extends fhir.BackboneElement {
+  readonly __dataType:string = 'ExampleScenarioInstanceContainedInstance';
   /**
    * Each resource contained in the instance.
    */
-  public resourceId: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.containedInstance.resourceId
-   */
-  public _resourceId?: fhir.FhirElement|undefined;
+  public resourceId: fhir.FhirString|null;
   /**
    * A specific version of a resource contained in the instance.
    */
-  public versionId?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.containedInstance.versionId
-   */
-  public _versionId?: fhir.FhirElement|undefined;
+  public versionId?: fhir.FhirString|undefined;
   /**
    * Default constructor for ExampleScenarioInstanceContainedInstance - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IExampleScenarioInstanceContainedInstance> = { }) {
-    super(source);
-    if (source['resourceId']) { this.resourceId = source.resourceId; }
+  constructor(source:Partial<ExampleScenarioInstanceContainedInstanceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['resourceId']) { this.resourceId = new fhir.FhirString({value: source.resourceId}); }
     else { this.resourceId = null; }
-    if (source['_resourceId']) { this._resourceId = new fhir.FhirElement(source._resourceId!); }
-    if (source['versionId']) { this.versionId = source.versionId; }
-    if (source['_versionId']) { this._versionId = new fhir.FhirElement(source._versionId!); }
+    if (source['versionId']) { this.versionId = new fhir.FhirString({value: source.versionId}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceId"]) { results.push(["resourceId",'Missing required element: ExampleScenario.instance.containedInstance.resourceId']); }
-    if (this["_resourceId"]) { results.push(...this._resourceId.doModelValidation()); }
-    if (this["_versionId"]) { results.push(...this._versionId.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceId']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceId:fhir.FhirString fhir: ExampleScenario.instance.containedInstance.resourceId:string", }));
+    }
+    if (this["resourceId"]) { outcome.issue!.push(...this.resourceId.doModelValidation().issue!); }
+    if (this["versionId"]) { outcome.issue!.push(...this.versionId.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ExampleScenarioInstance type.
+ */
+export interface ExampleScenarioInstanceArgs extends fhir.BackboneElementArgs {
+  /**
+   * The id of the resource for referencing.
+   */
+  resourceId: fhir.FhirString|string|undefined;
+  /**
+   * The type of the resource.
+   */
+  resourceType: fhir.FhirCode|string|undefined;
+  /**
+   * A short name for the resource instance.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * Human-friendly description of the resource instance.
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * A specific version of the resource.
+   */
+  version?: fhir.ExampleScenarioInstanceVersionArgs[]|undefined;
+  /**
+   * Resources contained in the instance (e.g. the observations contained in a bundle).
+   */
+  containedInstance?: fhir.ExampleScenarioInstanceContainedInstanceArgs[]|undefined;
 }
 
 /**
  * Each resource and each version that is present in the workflow.
  */
-export class ExampleScenarioInstance extends fhir.BackboneElement implements IExampleScenarioInstance {
+export class ExampleScenarioInstance extends fhir.BackboneElement {
+  readonly __dataType:string = 'ExampleScenarioInstance';
   /**
    * The id of the resource for referencing.
    */
-  public resourceId: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.resourceId
-   */
-  public _resourceId?: fhir.FhirElement|undefined;
+  public resourceId: fhir.FhirString|null;
   /**
    * The type of the resource.
    */
-  public resourceType: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.resourceType
-   */
-  public _resourceType?: fhir.FhirElement|undefined;
+  public resourceType: fhir.FhirCode|null;
   /**
    * A short name for the resource instance.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Human-friendly description of the resource instance.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.instance.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * A specific version of the resource.
    */
-  public version?: fhir.ExampleScenarioInstanceVersion[]|undefined;
+  public version?: fhir.ExampleScenarioInstanceVersion[]|undefined = [];
   /**
    * Resources contained in the instance (e.g. the observations contained in a bundle).
    */
-  public containedInstance?: fhir.ExampleScenarioInstanceContainedInstance[]|undefined;
+  public containedInstance?: fhir.ExampleScenarioInstanceContainedInstance[]|undefined = [];
   /**
    * Default constructor for ExampleScenarioInstance - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IExampleScenarioInstance> = { }) {
-    super(source);
-    if (source['resourceId']) { this.resourceId = source.resourceId; }
+  constructor(source:Partial<ExampleScenarioInstanceArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['resourceId']) { this.resourceId = new fhir.FhirString({value: source.resourceId}); }
     else { this.resourceId = null; }
-    if (source['_resourceId']) { this._resourceId = new fhir.FhirElement(source._resourceId!); }
-    this.resourceType = 'ExampleScenario.instance';
-    if (source['_resourceType']) { this._resourceType = new fhir.FhirElement(source._resourceType!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['resourceType']) { this.resourceType = new fhir.FhirCode({value: source.resourceType}); }
+    else { this.resourceType = null; }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['version']) { this.version = source.version.map((x) => new fhir.ExampleScenarioInstanceVersion(x)); }
     if (source['containedInstance']) { this.containedInstance = source.containedInstance.map((x) => new fhir.ExampleScenarioInstanceContainedInstance(x)); }
   }
@@ -660,88 +293,112 @@ export class ExampleScenarioInstance extends fhir.BackboneElement implements IEx
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceId"]) { results.push(["resourceId",'Missing required element: ExampleScenario.instance.resourceId']); }
-    if (this["_resourceId"]) { results.push(...this._resourceId.doModelValidation()); }
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: ExampleScenario.instance.resourceType']); }
-    if (this["_resourceType"]) { results.push(...this._resourceType.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["version"]) { this.version.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["containedInstance"]) { this.containedInstance.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceId']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceId:fhir.FhirString fhir: ExampleScenario.instance.resourceId:string", }));
+    }
+    if (this["resourceId"]) { outcome.issue!.push(...this.resourceId.doModelValidation().issue!); }
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:fhir.FhirCode fhir: ExampleScenario.instance.resourceType:code", }));
+    }
+    if (this["resourceType"]) { outcome.issue!.push(...this.resourceType.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["version"]) { this.version.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["containedInstance"]) { this.containedInstance.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ExampleScenarioProcessStepOperation type.
+ */
+export interface ExampleScenarioProcessStepOperationArgs extends fhir.BackboneElementArgs {
+  /**
+   * The sequential number of the interaction, e.g. 1.2.5.
+   */
+  number: fhir.FhirString|string|undefined;
+  /**
+   * The type of operation - CRUD.
+   */
+  type?: fhir.FhirString|string|undefined;
+  /**
+   * The human-friendly name of the interaction.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * Who starts the transaction.
+   */
+  initiator?: fhir.FhirString|string|undefined;
+  /**
+   * Who receives the transaction.
+   */
+  receiver?: fhir.FhirString|string|undefined;
+  /**
+   * A comment to be inserted in the diagram.
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Whether the initiator is deactivated right after the transaction.
+   */
+  initiatorActive?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Whether the receiver is deactivated right after the transaction.
+   */
+  receiverActive?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Each resource instance used by the initiator.
+   */
+  request?: fhir.ExampleScenarioInstanceContainedInstanceArgs|undefined;
+  /**
+   * Each resource instance used by the responder.
+   */
+  response?: fhir.ExampleScenarioInstanceContainedInstanceArgs|undefined;
 }
 
 /**
  * Each interaction or action.
  */
-export class ExampleScenarioProcessStepOperation extends fhir.BackboneElement implements IExampleScenarioProcessStepOperation {
+export class ExampleScenarioProcessStepOperation extends fhir.BackboneElement {
+  readonly __dataType:string = 'ExampleScenarioProcessStepOperation';
   /**
    * The sequential number of the interaction, e.g. 1.2.5.
    */
-  public number: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.number
-   */
-  public _number?: fhir.FhirElement|undefined;
+  public number: fhir.FhirString|null;
   /**
    * The type of operation - CRUD.
    */
-  public type?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.type
-   */
-  public _type?: fhir.FhirElement|undefined;
+  public type?: fhir.FhirString|undefined;
   /**
    * The human-friendly name of the interaction.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Who starts the transaction.
    */
-  public initiator?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.initiator
-   */
-  public _initiator?: fhir.FhirElement|undefined;
+  public initiator?: fhir.FhirString|undefined;
   /**
    * Who receives the transaction.
    */
-  public receiver?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.receiver
-   */
-  public _receiver?: fhir.FhirElement|undefined;
+  public receiver?: fhir.FhirString|undefined;
   /**
    * A comment to be inserted in the diagram.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * Whether the initiator is deactivated right after the transaction.
    */
-  public initiatorActive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.initiatorActive
-   */
-  public _initiatorActive?: fhir.FhirElement|undefined;
+  public initiatorActive?: fhir.FhirBoolean|undefined;
   /**
    * Whether the receiver is deactivated right after the transaction.
    */
-  public receiverActive?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.operation.receiverActive
-   */
-  public _receiverActive?: fhir.FhirElement|undefined;
+  public receiverActive?: fhir.FhirBoolean|undefined;
   /**
    * Each resource instance used by the initiator.
    */
@@ -753,113 +410,147 @@ export class ExampleScenarioProcessStepOperation extends fhir.BackboneElement im
   /**
    * Default constructor for ExampleScenarioProcessStepOperation - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IExampleScenarioProcessStepOperation> = { }) {
-    super(source);
-    if (source['number']) { this.number = source.number; }
+  constructor(source:Partial<ExampleScenarioProcessStepOperationArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['number']) { this.number = new fhir.FhirString({value: source.number}); }
     else { this.number = null; }
-    if (source['_number']) { this._number = new fhir.FhirElement(source._number!); }
-    if (source['type']) { this.type = source.type; }
-    if (source['_type']) { this._type = new fhir.FhirElement(source._type!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
-    if (source['initiator']) { this.initiator = source.initiator; }
-    if (source['_initiator']) { this._initiator = new fhir.FhirElement(source._initiator!); }
-    if (source['receiver']) { this.receiver = source.receiver; }
-    if (source['_receiver']) { this._receiver = new fhir.FhirElement(source._receiver!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['initiatorActive']) { this.initiatorActive = source.initiatorActive; }
-    if (source['_initiatorActive']) { this._initiatorActive = new fhir.FhirElement(source._initiatorActive!); }
-    if (source['receiverActive']) { this.receiverActive = source.receiverActive; }
-    if (source['_receiverActive']) { this._receiverActive = new fhir.FhirElement(source._receiverActive!); }
-    if (source['request']) { this.request = new fhir.ExampleScenarioInstanceContainedInstance(source.request!); }
-    if (source['response']) { this.response = new fhir.ExampleScenarioInstanceContainedInstance(source.response!); }
+    if (source['type']) { this.type = new fhir.FhirString({value: source.type}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
+    if (source['initiator']) { this.initiator = new fhir.FhirString({value: source.initiator}); }
+    if (source['receiver']) { this.receiver = new fhir.FhirString({value: source.receiver}); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
+    if (source['initiatorActive']) { this.initiatorActive = new fhir.FhirBoolean({value: source.initiatorActive}); }
+    if (source['receiverActive']) { this.receiverActive = new fhir.FhirBoolean({value: source.receiverActive}); }
+    if (source['request']) { this.request = new fhir.ExampleScenarioInstanceContainedInstance(source.request); }
+    if (source['response']) { this.response = new fhir.ExampleScenarioInstanceContainedInstance(source.response); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["number"]) { results.push(["number",'Missing required element: ExampleScenario.process.step.operation.number']); }
-    if (this["_number"]) { results.push(...this._number.doModelValidation()); }
-    if (this["_type"]) { results.push(...this._type.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (this["_initiator"]) { results.push(...this._initiator.doModelValidation()); }
-    if (this["_receiver"]) { results.push(...this._receiver.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_initiatorActive"]) { results.push(...this._initiatorActive.doModelValidation()); }
-    if (this["_receiverActive"]) { results.push(...this._receiverActive.doModelValidation()); }
-    if (this["request"]) { results.push(...this.request.doModelValidation()); }
-    if (this["response"]) { results.push(...this.response.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['number']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property number:fhir.FhirString fhir: ExampleScenario.process.step.operation.number:string", }));
+    }
+    if (this["number"]) { outcome.issue!.push(...this.number.doModelValidation().issue!); }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (this["initiator"]) { outcome.issue!.push(...this.initiator.doModelValidation().issue!); }
+    if (this["receiver"]) { outcome.issue!.push(...this.receiver.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["initiatorActive"]) { outcome.issue!.push(...this.initiatorActive.doModelValidation().issue!); }
+    if (this["receiverActive"]) { outcome.issue!.push(...this.receiverActive.doModelValidation().issue!); }
+    if (this["request"]) { outcome.issue!.push(...this.request.doModelValidation().issue!); }
+    if (this["response"]) { outcome.issue!.push(...this.response.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ExampleScenarioProcessStepAlternative type.
+ */
+export interface ExampleScenarioProcessStepAlternativeArgs extends fhir.BackboneElementArgs {
+  /**
+   * The label to display for the alternative that gives a sense of the circumstance in which the alternative should be invoked.
+   */
+  title: fhir.FhirString|string|undefined;
+  /**
+   * A human-readable description of the alternative explaining when the alternative should occur rather than the base step.
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * What happens in each alternative option.
+   */
+  step?: fhir.ExampleScenarioProcessStepArgs[]|undefined;
 }
 
 /**
  * Indicates an alternative step that can be taken instead of the operations on the base step in exceptional/atypical circumstances.
  */
-export class ExampleScenarioProcessStepAlternative extends fhir.BackboneElement implements IExampleScenarioProcessStepAlternative {
+export class ExampleScenarioProcessStepAlternative extends fhir.BackboneElement {
+  readonly __dataType:string = 'ExampleScenarioProcessStepAlternative';
   /**
    * The label to display for the alternative that gives a sense of the circumstance in which the alternative should be invoked.
    */
-  public title: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.alternative.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title: fhir.FhirString|null;
   /**
    * A human-readable description of the alternative explaining when the alternative should occur rather than the base step.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.alternative.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * What happens in each alternative option.
    */
-  public step?: fhir.ExampleScenarioProcessStep[]|undefined;
+  public step?: fhir.ExampleScenarioProcessStep[]|undefined = [];
   /**
    * Default constructor for ExampleScenarioProcessStepAlternative - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IExampleScenarioProcessStepAlternative> = { }) {
-    super(source);
-    if (source['title']) { this.title = source.title; }
+  constructor(source:Partial<ExampleScenarioProcessStepAlternativeArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
     else { this.title = null; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
     if (source['step']) { this.step = source.step.map((x) => new fhir.ExampleScenarioProcessStep(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["title"]) { results.push(["title",'Missing required element: ExampleScenario.process.step.alternative.title']); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["step"]) { this.step.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['title']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property title:fhir.FhirString fhir: ExampleScenario.process.step.alternative.title:string", }));
+    }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["step"]) { this.step.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ExampleScenarioProcessStep type.
+ */
+export interface ExampleScenarioProcessStepArgs extends fhir.BackboneElementArgs {
+  /**
+   * Nested process.
+   */
+  process?: fhir.ExampleScenarioProcessArgs[]|undefined;
+  /**
+   * If there is a pause in the flow.
+   */
+  pause?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Each interaction or action.
+   */
+  operation?: fhir.ExampleScenarioProcessStepOperationArgs|undefined;
+  /**
+   * Indicates an alternative step that can be taken instead of the operations on the base step in exceptional/atypical circumstances.
+   */
+  alternative?: fhir.ExampleScenarioProcessStepAlternativeArgs[]|undefined;
 }
 
 /**
  * Each step of the process.
  */
-export class ExampleScenarioProcessStep extends fhir.BackboneElement implements IExampleScenarioProcessStep {
+export class ExampleScenarioProcessStep extends fhir.BackboneElement {
+  readonly __dataType:string = 'ExampleScenarioProcessStep';
   /**
    * Nested process.
    */
-  public process?: fhir.ExampleScenarioProcess[]|undefined;
+  public process?: fhir.ExampleScenarioProcess[]|undefined = [];
   /**
    * If there is a pause in the flow.
    */
-  public pause?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.step.pause
-   */
-  public _pause?: fhir.FhirElement|undefined;
+  public pause?: fhir.FhirBoolean|undefined;
   /**
    * Each interaction or action.
    */
@@ -867,106 +558,205 @@ export class ExampleScenarioProcessStep extends fhir.BackboneElement implements 
   /**
    * Indicates an alternative step that can be taken instead of the operations on the base step in exceptional/atypical circumstances.
    */
-  public alternative?: fhir.ExampleScenarioProcessStepAlternative[]|undefined;
+  public alternative?: fhir.ExampleScenarioProcessStepAlternative[]|undefined = [];
   /**
    * Default constructor for ExampleScenarioProcessStep - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IExampleScenarioProcessStep> = { }) {
-    super(source);
+  constructor(source:Partial<ExampleScenarioProcessStepArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     if (source['process']) { this.process = source.process.map((x) => new fhir.ExampleScenarioProcess(x)); }
-    if (source['pause']) { this.pause = source.pause; }
-    if (source['_pause']) { this._pause = new fhir.FhirElement(source._pause!); }
-    if (source['operation']) { this.operation = new fhir.ExampleScenarioProcessStepOperation(source.operation!); }
+    if (source['pause']) { this.pause = new fhir.FhirBoolean({value: source.pause}); }
+    if (source['operation']) { this.operation = new fhir.ExampleScenarioProcessStepOperation(source.operation); }
     if (source['alternative']) { this.alternative = source.alternative.map((x) => new fhir.ExampleScenarioProcessStepAlternative(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["process"]) { this.process.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_pause"]) { results.push(...this._pause.doModelValidation()); }
-    if (this["operation"]) { results.push(...this.operation.doModelValidation()); }
-    if (this["alternative"]) { this.alternative.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["process"]) { this.process.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["pause"]) { outcome.issue!.push(...this.pause.doModelValidation().issue!); }
+    if (this["operation"]) { outcome.issue!.push(...this.operation.doModelValidation().issue!); }
+    if (this["alternative"]) { this.alternative.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ExampleScenarioProcess type.
+ */
+export interface ExampleScenarioProcessArgs extends fhir.BackboneElementArgs {
+  /**
+   * The diagram title of the group of operations.
+   */
+  title: fhir.FhirString|string|undefined;
+  /**
+   * A longer description of the group of operations.
+   */
+  description?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Description of initial status before the process starts.
+   */
+  preConditions?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Description of final status after the process ends.
+   */
+  postConditions?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Each step of the process.
+   */
+  step?: fhir.ExampleScenarioProcessStepArgs[]|undefined;
 }
 
 /**
  * Each major process - a group of operations.
  */
-export class ExampleScenarioProcess extends fhir.BackboneElement implements IExampleScenarioProcess {
+export class ExampleScenarioProcess extends fhir.BackboneElement {
+  readonly __dataType:string = 'ExampleScenarioProcess';
   /**
    * The diagram title of the group of operations.
    */
-  public title: string|null;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.title
-   */
-  public _title?: fhir.FhirElement|undefined;
+  public title: fhir.FhirString|null;
   /**
    * A longer description of the group of operations.
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirMarkdown|undefined;
   /**
    * Description of initial status before the process starts.
    */
-  public preConditions?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.preConditions
-   */
-  public _preConditions?: fhir.FhirElement|undefined;
+  public preConditions?: fhir.FhirMarkdown|undefined;
   /**
    * Description of final status after the process ends.
    */
-  public postConditions?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.process.postConditions
-   */
-  public _postConditions?: fhir.FhirElement|undefined;
+  public postConditions?: fhir.FhirMarkdown|undefined;
   /**
    * Each step of the process.
    */
-  public step?: fhir.ExampleScenarioProcessStep[]|undefined;
+  public step?: fhir.ExampleScenarioProcessStep[]|undefined = [];
   /**
    * Default constructor for ExampleScenarioProcess - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IExampleScenarioProcess> = { }) {
-    super(source);
-    if (source['title']) { this.title = source.title; }
+  constructor(source:Partial<ExampleScenarioProcessArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['title']) { this.title = new fhir.FhirString({value: source.title}); }
     else { this.title = null; }
-    if (source['_title']) { this._title = new fhir.FhirElement(source._title!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
-    if (source['preConditions']) { this.preConditions = source.preConditions; }
-    if (source['_preConditions']) { this._preConditions = new fhir.FhirElement(source._preConditions!); }
-    if (source['postConditions']) { this.postConditions = source.postConditions; }
-    if (source['_postConditions']) { this._postConditions = new fhir.FhirElement(source._postConditions!); }
+    if (source['description']) { this.description = new fhir.FhirMarkdown({value: source.description}); }
+    if (source['preConditions']) { this.preConditions = new fhir.FhirMarkdown({value: source.preConditions}); }
+    if (source['postConditions']) { this.postConditions = new fhir.FhirMarkdown({value: source.postConditions}); }
     if (source['step']) { this.step = source.step.map((x) => new fhir.ExampleScenarioProcessStep(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["title"]) { results.push(["title",'Missing required element: ExampleScenario.process.title']); }
-    if (this["_title"]) { results.push(...this._title.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if (this["_preConditions"]) { results.push(...this._preConditions.doModelValidation()); }
-    if (this["_postConditions"]) { results.push(...this._postConditions.doModelValidation()); }
-    if (this["step"]) { this.step.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['title']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property title:fhir.FhirString fhir: ExampleScenario.process.title:string", }));
+    }
+    if (this["title"]) { outcome.issue!.push(...this.title.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (this["preConditions"]) { outcome.issue!.push(...this.preConditions.doModelValidation().issue!); }
+    if (this["postConditions"]) { outcome.issue!.push(...this.postConditions.doModelValidation().issue!); }
+    if (this["step"]) { this.step.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the ExampleScenario type.
+ */
+export interface ExampleScenarioArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "ExampleScenario"|undefined;
+  /**
+   * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
+   * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
+   * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
+   */
+  url?: fhir.FhirUri|string|undefined;
+  /**
+   * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this example scenario outside of FHIR, where it is not possible to use the logical URI.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * There may be different example scenario instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the example scenario with the format [url]|[version].
+   */
+  version?: fhir.FhirString|string|undefined;
+  /**
+   * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+   */
+  name?: fhir.FhirString|string|undefined;
+  /**
+   * Allows filtering of example scenarios that are appropriate for use versus not.
+   */
+  status: PublicationStatusValueSetEnum|null;
+  /**
+   * Allows filtering of example scenarios that are appropriate for use versus not.
+   */
+  experimental?: fhir.FhirBoolean|boolean|undefined;
+  /**
+   * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the example scenario. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Usually an organization but may be an individual. The publisher (or steward) of the example scenario is the organization or individual primarily responsible for the maintenance and upkeep of the example scenario. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the example scenario. This item SHOULD be populated unless the information is available from context.
+   */
+  publisher?: fhir.FhirString|string|undefined;
+  /**
+   * May be a web site, an email address, a telephone number, etc.
+   */
+  contact?: fhir.ContactDetailArgs[]|undefined;
+  /**
+   * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+   */
+  useContext?: fhir.UsageContextArgs[]|undefined;
+  /**
+   * It may be possible for the example scenario to be used in jurisdictions other than those for which it was originally designed or intended.
+   */
+  jurisdiction?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * nullFrequently, the copyright differs between the value set and the codes that are included. The copyright statement should clearly differentiate between these when required.
+   */
+  copyright?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * This element does not describe the usage of the example scenario. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this example scenario.
+   */
+  purpose?: fhir.FhirMarkdown|string|undefined;
+  /**
+   * Actor participating in the resource.
+   */
+  actor?: fhir.ExampleScenarioActorArgs[]|undefined;
+  /**
+   * Each resource and each version that is present in the workflow.
+   */
+  instance?: fhir.ExampleScenarioInstanceArgs[]|undefined;
+  /**
+   * Each major process - a group of operations.
+   */
+  process?: fhir.ExampleScenarioProcessArgs[]|undefined;
+  /**
+   * Another nested workflow.
+   */
+  workflow?: fhir.FhirCanonical[]|string[]|undefined;
 }
 
 /**
  * Example of workflow instance.
  */
-export class ExampleScenario extends fhir.DomainResource implements IExampleScenario {
+export class ExampleScenario extends fhir.DomainResource {
+  readonly __dataType:string = 'ExampleScenario';
   /**
    * Resource Type Name
    */
@@ -976,145 +766,95 @@ export class ExampleScenario extends fhir.DomainResource implements IExampleScen
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  public url?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.url
-   */
-  public _url?: fhir.FhirElement|undefined;
+  public url?: fhir.FhirUri|undefined;
   /**
    * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this example scenario outside of FHIR, where it is not possible to use the logical URI.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * There may be different example scenario instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the example scenario with the format [url]|[version].
    */
-  public version?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.version
-   */
-  public _version?: fhir.FhirElement|undefined;
+  public version?: fhir.FhirString|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  public name?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.name
-   */
-  public _name?: fhir.FhirElement|undefined;
+  public name?: fhir.FhirString|undefined;
   /**
    * Allows filtering of example scenarios that are appropriate for use versus not.
    */
   public status: PublicationStatusValueSetEnum|null;
   /**
-   * Extended properties for primitive element: ExampleScenario.status
-   */
-  public _status?: fhir.FhirElement|undefined;
-  /**
    * Allows filtering of example scenarios that are appropriate for use versus not.
    */
-  public experimental?: boolean|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.experimental
-   */
-  public _experimental?: fhir.FhirElement|undefined;
+  public experimental?: fhir.FhirBoolean|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the example scenario. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the example scenario is the organization or individual primarily responsible for the maintenance and upkeep of the example scenario. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the example scenario. This item SHOULD be populated unless the information is available from context.
    */
-  public publisher?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.publisher
-   */
-  public _publisher?: fhir.FhirElement|undefined;
+  public publisher?: fhir.FhirString|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  public contact?: fhir.ContactDetail[]|undefined;
+  public contact?: fhir.ContactDetail[]|undefined = [];
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  public useContext?: fhir.UsageContext[]|undefined;
+  public useContext?: fhir.UsageContext[]|undefined = [];
   /**
    * It may be possible for the example scenario to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  public jurisdiction?: fhir.CodeableConcept[]|undefined;
+  public jurisdiction?: fhir.CodeableConcept[]|undefined = [];
   /**
    * nullFrequently, the copyright differs between the value set and the codes that are included. The copyright statement should clearly differentiate between these when required.
    */
-  public copyright?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.copyright
-   */
-  public _copyright?: fhir.FhirElement|undefined;
+  public copyright?: fhir.FhirMarkdown|undefined;
   /**
    * This element does not describe the usage of the example scenario. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this example scenario.
    */
-  public purpose?: string|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.purpose
-   */
-  public _purpose?: fhir.FhirElement|undefined;
+  public purpose?: fhir.FhirMarkdown|undefined;
   /**
    * Actor participating in the resource.
    */
-  public actor?: fhir.ExampleScenarioActor[]|undefined;
+  public actor?: fhir.ExampleScenarioActor[]|undefined = [];
   /**
    * Each resource and each version that is present in the workflow.
    */
-  public instance?: fhir.ExampleScenarioInstance[]|undefined;
+  public instance?: fhir.ExampleScenarioInstance[]|undefined = [];
   /**
    * Each major process - a group of operations.
    */
-  public process?: fhir.ExampleScenarioProcess[]|undefined;
+  public process?: fhir.ExampleScenarioProcess[]|undefined = [];
   /**
    * Another nested workflow.
    */
-  public workflow?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: ExampleScenario.workflow
-   */
-  public _workflow?: fhir.FhirElement[]|undefined;
+  public workflow?: fhir.FhirCanonical[]|undefined = [];
   /**
    * Default constructor for ExampleScenario - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IExampleScenario> = { }) {
-    super(source);
+  constructor(source:Partial<ExampleScenarioArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'ExampleScenario';
-    if (source['url']) { this.url = source.url; }
-    if (source['_url']) { this._url = new fhir.FhirElement(source._url!); }
+    if (source['url']) { this.url = new fhir.FhirUri({value: source.url}); }
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
-    if (source['version']) { this.version = source.version; }
-    if (source['_version']) { this._version = new fhir.FhirElement(source._version!); }
-    if (source['name']) { this.name = source.name; }
-    if (source['_name']) { this._name = new fhir.FhirElement(source._name!); }
+    if (source['version']) { this.version = new fhir.FhirString({value: source.version}); }
+    if (source['name']) { this.name = new fhir.FhirString({value: source.name}); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['experimental']) { this.experimental = source.experimental; }
-    if (source['_experimental']) { this._experimental = new fhir.FhirElement(source._experimental!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['publisher']) { this.publisher = source.publisher; }
-    if (source['_publisher']) { this._publisher = new fhir.FhirElement(source._publisher!); }
+    if (source['experimental']) { this.experimental = new fhir.FhirBoolean({value: source.experimental}); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['publisher']) { this.publisher = new fhir.FhirString({value: source.publisher}); }
     if (source['contact']) { this.contact = source.contact.map((x) => new fhir.ContactDetail(x)); }
     if (source['useContext']) { this.useContext = source.useContext.map((x) => new fhir.UsageContext(x)); }
     if (source['jurisdiction']) { this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['copyright']) { this.copyright = source.copyright; }
-    if (source['_copyright']) { this._copyright = new fhir.FhirElement(source._copyright!); }
-    if (source['purpose']) { this.purpose = source.purpose; }
-    if (source['_purpose']) { this._purpose = new fhir.FhirElement(source._purpose!); }
+    if (source['copyright']) { this.copyright = new fhir.FhirMarkdown({value: source.copyright}); }
+    if (source['purpose']) { this.purpose = new fhir.FhirMarkdown({value: source.purpose}); }
     if (source['actor']) { this.actor = source.actor.map((x) => new fhir.ExampleScenarioActor(x)); }
     if (source['instance']) { this.instance = source.instance.map((x) => new fhir.ExampleScenarioInstance(x)); }
     if (source['process']) { this.process = source.process.map((x) => new fhir.ExampleScenarioProcess(x)); }
-    if (source['workflow']) { this.workflow = source.workflow.map((x) => (x)); }
-    if (source['_workflow']) { this._workflow = source._workflow.map((x) => new fhir.FhirElement(x)); }
+    if (source['workflow']) { this.workflow = source.workflow.map((x) => new fhir.FhirCanonical({value: x})); }
   }
   /**
    * Required-bound Value Set for status
@@ -1125,27 +865,36 @@ export class ExampleScenario extends fhir.DomainResource implements IExampleScen
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: ExampleScenario.resourceType']); }
-    if (this["_url"]) { results.push(...this._url.doModelValidation()); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_version"]) { results.push(...this._version.doModelValidation()); }
-    if (this["_name"]) { results.push(...this._name.doModelValidation()); }
-    if (!this["status"]) { results.push(["status",'Missing required element: ExampleScenario.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["_experimental"]) { results.push(...this._experimental.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_publisher"]) { results.push(...this._publisher.doModelValidation()); }
-    if (this["contact"]) { this.contact.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["useContext"]) { this.useContext.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_copyright"]) { results.push(...this._copyright.doModelValidation()); }
-    if (this["_purpose"]) { results.push(...this._purpose.doModelValidation()); }
-    if (this["actor"]) { this.actor.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["instance"]) { this.instance.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["process"]) { this.process.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_workflow"]) { this._workflow.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'ExampleScenario' fhir: ExampleScenario.resourceType:'ExampleScenario'", }));
+    }
+    if (this["url"]) { outcome.issue!.push(...this.url.doModelValidation().issue!); }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["version"]) { outcome.issue!.push(...this.version.doModelValidation().issue!); }
+    if (this["name"]) { outcome.issue!.push(...this.name.doModelValidation().issue!); }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: ExampleScenario.status:code", }));
+    }
+    if (this["experimental"]) { outcome.issue!.push(...this.experimental.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["publisher"]) { outcome.issue!.push(...this.publisher.doModelValidation().issue!); }
+    if (this["contact"]) { this.contact.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["useContext"]) { this.useContext.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["jurisdiction"]) { this.jurisdiction.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["copyright"]) { outcome.issue!.push(...this.copyright.doModelValidation().issue!); }
+    if (this["purpose"]) { outcome.issue!.push(...this.purpose.doModelValidation().issue!); }
+    if (this["actor"]) { this.actor.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["instance"]) { this.instance.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["process"]) { this.process.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["workflow"]) { this.workflow.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

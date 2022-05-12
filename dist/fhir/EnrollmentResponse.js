@@ -3,8 +3,10 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: EnrollmentResponse
 import * as fhir from '../fhir.js';
-import { FmStatusValueSet } from '../fhirValueSets/FmStatusValueSet.js';
-import { RemittanceOutcomeValueSet } from '../fhirValueSets/RemittanceOutcomeValueSet.js';
+import { FmStatusValueSet, } from '../fhirValueSets/FmStatusValueSet.js';
+import { RemittanceOutcomeValueSet, } from '../fhirValueSets/RemittanceOutcomeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * This resource provides enrollment and plan details from the processing of an EnrollmentRequest resource.
  */
@@ -12,8 +14,13 @@ export class EnrollmentResponse extends fhir.DomainResource {
     /**
      * Default constructor for EnrollmentResponse - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EnrollmentResponse';
+        /**
+         * The Response business identifier.
+         */
+        this.identifier = [];
         this.resourceType = 'EnrollmentResponse';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -21,29 +28,17 @@ export class EnrollmentResponse extends fhir.DomainResource {
         if (source['status']) {
             this.status = source.status;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['request']) {
             this.request = new fhir.Reference(source.request);
         }
         if (source['outcome']) {
             this.outcome = source.outcome;
         }
-        if (source['_outcome']) {
-            this._outcome = new fhir.FhirElement(source._outcome);
-        }
         if (source['disposition']) {
-            this.disposition = source.disposition;
-        }
-        if (source['_disposition']) {
-            this._disposition = new fhir.FhirElement(source._disposition);
+            this.disposition = new fhir.FhirString({ value: source.disposition });
         }
         if (source['created']) {
-            this.created = source.created;
-        }
-        if (source['_created']) {
-            this._created = new fhir.FhirElement(source._created);
+            this.created = new fhir.FhirDateTime({ value: source.created });
         }
         if (source['organization']) {
             this.organization = new fhir.Reference(source.organization);
@@ -68,35 +63,35 @@ export class EnrollmentResponse extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: EnrollmentResponse.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'EnrollmentResponse' fhir: EnrollmentResponse.resourceType:'EnrollmentResponse'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["request"]) {
-            results.push(...this.request.doModelValidation());
+            outcome.issue.push(...this.request.doModelValidation().issue);
         }
-        if (this["_outcome"]) {
-            results.push(...this._outcome.doModelValidation());
+        if (this["disposition"]) {
+            outcome.issue.push(...this.disposition.doModelValidation().issue);
         }
-        if (this["_disposition"]) {
-            results.push(...this._disposition.doModelValidation());
-        }
-        if (this["_created"]) {
-            results.push(...this._created.doModelValidation());
+        if (this["created"]) {
+            outcome.issue.push(...this.created.doModelValidation().issue);
         }
         if (this["organization"]) {
-            results.push(...this.organization.doModelValidation());
+            outcome.issue.push(...this.organization.doModelValidation().issue);
         }
         if (this["requestProvider"]) {
-            results.push(...this.requestProvider.doModelValidation());
+            outcome.issue.push(...this.requestProvider.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=EnrollmentResponse.js.map

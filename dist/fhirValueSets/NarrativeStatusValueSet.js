@@ -43,23 +43,4 @@ export const NarrativeStatusValueSet = {
 /**
  * The status of a resource narrative.
  */
-export var NarrativeStatusValueSetEnum;
-(function (NarrativeStatusValueSetEnum) {
-    /**
-     * additional: The contents of the narrative may contain additional information not found in the structured data. Note that there is no computable way to determine what the extra information is, other than by human inspection.
-     */
-    NarrativeStatusValueSetEnum["Additional"] = "additional";
-    /**
-     * empty: The contents of the narrative are some equivalent of "No human-readable text provided in this case".
-     */
-    NarrativeStatusValueSetEnum["Empty"] = "empty";
-    /**
-     * extensions: The contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions. The narrative SHALL reflect the impact of all modifier extensions.
-     */
-    NarrativeStatusValueSetEnum["Extensions"] = "extensions";
-    /**
-     * generated: The contents of the narrative are entirely generated from the core elements in the content.
-     */
-    NarrativeStatusValueSetEnum["Generated"] = "generated";
-})(NarrativeStatusValueSetEnum || (NarrativeStatusValueSetEnum = {}));
 //# sourceMappingURL=NarrativeStatusValueSet.js.map

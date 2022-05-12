@@ -3,12 +3,14 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: List
 import * as fhir from '../fhir.js';
-import { ListItemFlagValueSet } from '../fhirValueSets/ListItemFlagValueSet.js';
-import { ListStatusValueSet } from '../fhirValueSets/ListStatusValueSet.js';
-import { ListModeValueSet } from '../fhirValueSets/ListModeValueSet.js';
-import { ListExampleCodesValueSet } from '../fhirValueSets/ListExampleCodesValueSet.js';
-import { ListOrderValueSet } from '../fhirValueSets/ListOrderValueSet.js';
-import { ListEmptyReasonValueSet } from '../fhirValueSets/ListEmptyReasonValueSet.js';
+import { ListItemFlagValueSet, } from '../fhirValueSets/ListItemFlagValueSet.js';
+import { ListStatusValueSet, } from '../fhirValueSets/ListStatusValueSet.js';
+import { ListModeValueSet, } from '../fhirValueSets/ListModeValueSet.js';
+import { ListExampleCodesValueSet, } from '../fhirValueSets/ListExampleCodesValueSet.js';
+import { ListOrderValueSet, } from '../fhirValueSets/ListOrderValueSet.js';
+import { ListEmptyReasonValueSet, } from '../fhirValueSets/ListEmptyReasonValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * If there are no entries in the list, an emptyReason SHOULD be provided.
  */
@@ -16,22 +18,17 @@ export class ListEntry extends fhir.BackboneElement {
     /**
      * Default constructor for ListEntry - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ListEntry';
         if (source['flag']) {
             this.flag = new fhir.CodeableConcept(source.flag);
         }
         if (source['deleted']) {
-            this.deleted = source.deleted;
-        }
-        if (source['_deleted']) {
-            this._deleted = new fhir.FhirElement(source._deleted);
+            this.deleted = new fhir.FhirBoolean({ value: source.deleted });
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['item']) {
             this.item = new fhir.Reference(source.item);
@@ -50,23 +47,29 @@ export class ListEntry extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["flag"]) {
-            results.push(...this.flag.doModelValidation());
+            outcome.issue.push(...this.flag.doModelValidation().issue);
         }
-        if (this["_deleted"]) {
-            results.push(...this._deleted.doModelValidation());
+        if (this["deleted"]) {
+            outcome.issue.push(...this.deleted.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (!this["item"]) {
-            results.push(["item", 'Missing required element: List.entry.item']);
+        if (!this['item']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property item:fhir.Reference fhir: List.entry.item:Reference", }));
         }
         if (this["item"]) {
-            results.push(...this.item.doModelValidation());
+            outcome.issue.push(...this.item.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -76,8 +79,21 @@ export class List extends fhir.DomainResource {
     /**
      * Default constructor for List - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'List';
+        /**
+         * Identifier for the List assigned for business purposes outside the context of FHIR.
+         */
+        this.identifier = [];
+        /**
+         * Comments that apply to the overall list.
+         */
+        this.note = [];
+        /**
+         * If there are no entries in the list, an emptyReason SHOULD be provided.
+         */
+        this.entry = [];
         this.resourceType = 'List';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -88,23 +104,14 @@ export class List extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['mode']) {
             this.mode = source.mode;
         }
         else {
             this.mode = null;
         }
-        if (source['_mode']) {
-            this._mode = new fhir.FhirElement(source._mode);
-        }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
@@ -116,10 +123,7 @@ export class List extends fhir.DomainResource {
             this.encounter = new fhir.Reference(source.encounter);
         }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['source']) {
             this.source = new fhir.Reference(source.source);
@@ -171,56 +175,56 @@ export class List extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: List.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'List' fhir: List.resourceType:'List'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: List.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:ListStatusValueSetEnum fhir: List.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['mode']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property mode:ListModeValueSetEnum fhir: List.mode:code", }));
         }
-        if (!this["mode"]) {
-            results.push(["mode", 'Missing required element: List.mode']);
-        }
-        if (this["_mode"]) {
-            results.push(...this._mode.doModelValidation());
-        }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
         if (this["source"]) {
-            results.push(...this.source.doModelValidation());
+            outcome.issue.push(...this.source.doModelValidation().issue);
         }
         if (this["orderedBy"]) {
-            results.push(...this.orderedBy.doModelValidation());
+            outcome.issue.push(...this.orderedBy.doModelValidation().issue);
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["entry"]) {
-            this.entry.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.entry.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["emptyReason"]) {
-            results.push(...this.emptyReason.doModelValidation());
+            outcome.issue.push(...this.emptyReason.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=List.js.map

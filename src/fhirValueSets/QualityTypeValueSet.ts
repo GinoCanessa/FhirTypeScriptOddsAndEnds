@@ -43,17 +43,3 @@ export type QualityTypeValueSetType = typeof QualityTypeValueSet;
 /**
  * Type for quality report.
  */
-export enum QualityTypeValueSetEnum {
-  /**
-   * indel: INDEL Comparison.
-   */
-  INDELComparison = "indel",
-  /**
-   * snp: SNP Comparison.
-   */
-  SNPComparison = "snp",
-  /**
-   * unknown: UNKNOWN Comparison.
-   */
-  UNKNOWNComparison = "unknown",
-}

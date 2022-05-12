@@ -1,41 +1,43 @@
 import * as fhir from '../fhir.js';
 /**
- * A populatioof people with some set of grouping criteria.
+ * Valid arguments for the Population type.
  */
-export declare type IPopulation = fhir.IBackboneElement & {
+export interface PopulationArgs extends fhir.BackboneElementArgs {
     /**
      * The age of the specific population.
      */
-    ageRange?: fhir.IRange | undefined;
+    age?: fhir.Range | fhir.CodeableConcept | undefined;
     /**
      * The age of the specific population.
      */
-    ageCodeableConcept?: fhir.ICodeableConcept | undefined;
+    ageRange?: fhir.RangeArgs | undefined;
+    /**
+     * The age of the specific population.
+     */
+    ageCodeableConcept?: fhir.CodeableConceptArgs | undefined;
     /**
      * The gender of the specific population.
      */
-    gender?: fhir.ICodeableConcept | undefined;
+    gender?: fhir.CodeableConceptArgs | undefined;
     /**
      * Race of the specific population.
      */
-    race?: fhir.ICodeableConcept | undefined;
+    race?: fhir.CodeableConceptArgs | undefined;
     /**
      * The existing physiological conditions of the specific population to which this applies.
      */
-    physiologicalCondition?: fhir.ICodeableConcept | undefined;
-};
+    physiologicalCondition?: fhir.CodeableConceptArgs | undefined;
+}
 /**
  * A populatioof people with some set of grouping criteria.
  */
-export declare class Population extends fhir.BackboneElement implements IPopulation {
+export declare class Population extends fhir.BackboneElement {
+    readonly __dataType: string;
     /**
      * The age of the specific population.
      */
-    ageRange?: fhir.Range | undefined;
-    /**
-     * The age of the specific population.
-     */
-    ageCodeableConcept?: fhir.CodeableConcept | undefined;
+    age?: (fhir.Range | fhir.CodeableConcept) | undefined;
+    readonly __ageIsChoice: true;
     /**
      * The gender of the specific population.
      */
@@ -51,10 +53,14 @@ export declare class Population extends fhir.BackboneElement implements IPopulat
     /**
      * Default constructor for Population - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<IPopulation>);
+    constructor(source?: Partial<PopulationArgs>, options?: fhir.FhirConstructorOptions);
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    doModelValidation(): [string, string][];
+    doModelValidation(): fhir.OperationOutcome;
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON(): any;
 }
 //# sourceMappingURL=Population.d.ts.map

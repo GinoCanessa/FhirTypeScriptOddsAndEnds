@@ -59,31 +59,4 @@ export const DeviceStatementStatusValueSet = {
 /**
  * A coded concept indicating the current status of the Device Usage.
  */
-export var DeviceStatementStatusValueSetEnum;
-(function (DeviceStatementStatusValueSetEnum) {
-    /**
-     * active: The device is still being used.
-     */
-    DeviceStatementStatusValueSetEnum["Active"] = "active";
-    /**
-     * completed: The device is no longer being used.
-     */
-    DeviceStatementStatusValueSetEnum["Completed"] = "completed";
-    /**
-     * entered-in-error: The statement was recorded incorrectly.
-     */
-    DeviceStatementStatusValueSetEnum["EnteredInError"] = "entered-in-error";
-    /**
-     * intended: The device may be used at some time in the future.
-     */
-    DeviceStatementStatusValueSetEnum["Intended"] = "intended";
-    /**
-     * on-hold: Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called "suspended".
-     */
-    DeviceStatementStatusValueSetEnum["OnHold"] = "on-hold";
-    /**
-     * stopped: Actions implied by the statement have been permanently halted, before all of them occurred.
-     */
-    DeviceStatementStatusValueSetEnum["Stopped"] = "stopped";
-})(DeviceStatementStatusValueSetEnum || (DeviceStatementStatusValueSetEnum = {}));
 //# sourceMappingURL=DeviceStatementStatusValueSet.js.map

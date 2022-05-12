@@ -35,19 +35,4 @@ export const AdverseEventSeverityValueSet = {
 /**
  * The severity of the adverse event itself, in direct relation to the subject.
  */
-export var AdverseEventSeverityValueSetEnum;
-(function (AdverseEventSeverityValueSetEnum) {
-    /**
-     * Code: mild
-     */
-    AdverseEventSeverityValueSetEnum["Mild"] = "mild";
-    /**
-     * Code: moderate
-     */
-    AdverseEventSeverityValueSetEnum["Moderate"] = "moderate";
-    /**
-     * Code: severe
-     */
-    AdverseEventSeverityValueSetEnum["Severe"] = "severe";
-})(AdverseEventSeverityValueSetEnum || (AdverseEventSeverityValueSetEnum = {}));
 //# sourceMappingURL=AdverseEventSeverityValueSet.js.map

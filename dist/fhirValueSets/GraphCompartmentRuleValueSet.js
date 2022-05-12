@@ -43,23 +43,4 @@ export const GraphCompartmentRuleValueSet = {
 /**
  * How a compartment must be linked.
  */
-export var GraphCompartmentRuleValueSetEnum;
-(function (GraphCompartmentRuleValueSetEnum) {
-    /**
-     * custom: The compartment rule is defined in the accompanying FHIRPath expression.
-     */
-    GraphCompartmentRuleValueSetEnum["Custom"] = "custom";
-    /**
-     * different: The compartment must be different.
-     */
-    GraphCompartmentRuleValueSetEnum["Different"] = "different";
-    /**
-     * identical: The compartment must be identical (the same literal reference).
-     */
-    GraphCompartmentRuleValueSetEnum["Identical"] = "identical";
-    /**
-     * matching: The compartment must be the same - the record must be about the same patient, but the reference may be different.
-     */
-    GraphCompartmentRuleValueSetEnum["Matching"] = "matching";
-})(GraphCompartmentRuleValueSetEnum || (GraphCompartmentRuleValueSetEnum = {}));
 //# sourceMappingURL=GraphCompartmentRuleValueSet.js.map

@@ -39,23 +39,4 @@ export const ImmunizationRecommendationDateCriterionValueSet = {
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support the definition of dates relevant to recommendations for future doses of vaccines. This value set is provided as a suggestive example.
  */
-export var ImmunizationRecommendationDateCriterionValueSetEnum;
-(function (ImmunizationRecommendationDateCriterionValueSetEnum) {
-    /**
-     * Code: 30980-7
-     */
-    ImmunizationRecommendationDateCriterionValueSetEnum["VAL309807"] = "30980-7";
-    /**
-     * Code: 30981-5
-     */
-    ImmunizationRecommendationDateCriterionValueSetEnum["VAL309815"] = "30981-5";
-    /**
-     * Code: 59777-3
-     */
-    ImmunizationRecommendationDateCriterionValueSetEnum["VAL597773"] = "59777-3";
-    /**
-     * Code: 59778-1
-     */
-    ImmunizationRecommendationDateCriterionValueSetEnum["VAL597781"] = "59778-1";
-})(ImmunizationRecommendationDateCriterionValueSetEnum || (ImmunizationRecommendationDateCriterionValueSetEnum = {}));
 //# sourceMappingURL=ImmunizationRecommendationDateCriterionValueSet.js.map

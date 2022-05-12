@@ -3,10 +3,12 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: EvidenceVariable
 import * as fhir from '../fhir.js';
-import { GroupMeasureValueSet } from '../fhirValueSets/GroupMeasureValueSet.js';
-import { PublicationStatusValueSet } from '../fhirValueSets/PublicationStatusValueSet.js';
-import { DefinitionTopicValueSet } from '../fhirValueSets/DefinitionTopicValueSet.js';
-import { VariableTypeValueSet } from '../fhirValueSets/VariableTypeValueSet.js';
+import { GroupMeasureValueSet, } from '../fhirValueSets/GroupMeasureValueSet.js';
+import { PublicationStatusValueSet, } from '../fhirValueSets/PublicationStatusValueSet.js';
+import { DefinitionTopicValueSet, } from '../fhirValueSets/DefinitionTopicValueSet.js';
+import { VariableTypeValueSet, } from '../fhirValueSets/VariableTypeValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
  */
@@ -14,67 +16,68 @@ export class EvidenceVariableCharacteristic extends fhir.BackboneElement {
     /**
      * Default constructor for EvidenceVariableCharacteristic - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EvidenceVariableCharacteristic';
+        this.__definitionIsChoice = true;
+        /**
+         * Use UsageContext to define the members of the population, such as Age Ranges, Genders, Settings.
+         */
+        this.usageContext = [];
+        this.__participantEffectiveIsChoice = true;
         if (source['description']) {
-            this.description = source.description;
+            this.description = new fhir.FhirString({ value: source.description });
         }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+        if (source['definition']) {
+            this.definition = source.definition;
         }
-        if (source['definitionReference']) {
-            this.definitionReference = new fhir.Reference(source.definitionReference);
+        else if (source['definitionReference']) {
+            this.definition = new fhir.Reference(source.definitionReference);
         }
-        if (source['definitionCanonical']) {
-            this.definitionCanonical = source.definitionCanonical;
+        else if (source['definitionCanonical']) {
+            this.definition = new fhir.FhirCanonical({ value: source.definitionCanonical });
         }
-        if (source['_definitionCanonical']) {
-            this._definitionCanonical = new fhir.FhirElement(source._definitionCanonical);
+        else if (source['definitionCodeableConcept']) {
+            this.definition = new fhir.CodeableConcept(source.definitionCodeableConcept);
         }
-        if (source['definitionCodeableConcept']) {
-            this.definitionCodeableConcept = new fhir.CodeableConcept(source.definitionCodeableConcept);
+        else if (source['definitionExpression']) {
+            this.definition = new fhir.Expression(source.definitionExpression);
         }
-        if (source['definitionExpression']) {
-            this.definitionExpression = new fhir.Expression(source.definitionExpression);
+        else if (source['definitionDataRequirement']) {
+            this.definition = new fhir.DataRequirement(source.definitionDataRequirement);
         }
-        if (source['definitionDataRequirement']) {
-            this.definitionDataRequirement = new fhir.DataRequirement(source.definitionDataRequirement);
+        else if (source['definitionTriggerDefinition']) {
+            this.definition = new fhir.TriggerDefinition(source.definitionTriggerDefinition);
         }
-        if (source['definitionTriggerDefinition']) {
-            this.definitionTriggerDefinition = new fhir.TriggerDefinition(source.definitionTriggerDefinition);
+        else {
+            this.definition = null;
         }
         if (source['usageContext']) {
             this.usageContext = source.usageContext.map((x) => new fhir.UsageContext(x));
         }
         if (source['exclude']) {
-            this.exclude = source.exclude;
+            this.exclude = new fhir.FhirBoolean({ value: source.exclude });
         }
-        if (source['_exclude']) {
-            this._exclude = new fhir.FhirElement(source._exclude);
+        if (source['participantEffective']) {
+            this.participantEffective = source.participantEffective;
         }
-        if (source['participantEffectiveDateTime']) {
-            this.participantEffectiveDateTime = source.participantEffectiveDateTime;
+        else if (source['participantEffectiveDateTime']) {
+            this.participantEffective = new fhir.FhirDateTime({ value: source.participantEffectiveDateTime });
         }
-        if (source['_participantEffectiveDateTime']) {
-            this._participantEffectiveDateTime = new fhir.FhirElement(source._participantEffectiveDateTime);
+        else if (source['participantEffectivePeriod']) {
+            this.participantEffective = new fhir.Period(source.participantEffectivePeriod);
         }
-        if (source['participantEffectivePeriod']) {
-            this.participantEffectivePeriod = new fhir.Period(source.participantEffectivePeriod);
+        else if (source['participantEffectiveDuration']) {
+            this.participantEffective = new fhir.Duration(source.participantEffectiveDuration);
         }
-        if (source['participantEffectiveDuration']) {
-            this.participantEffectiveDuration = new fhir.Duration(source.participantEffectiveDuration);
-        }
-        if (source['participantEffectiveTiming']) {
-            this.participantEffectiveTiming = new fhir.Timing(source.participantEffectiveTiming);
+        else if (source['participantEffectiveTiming']) {
+            this.participantEffective = new fhir.Timing(source.participantEffectiveTiming);
         }
         if (source['timeFromStart']) {
             this.timeFromStart = new fhir.Duration(source.timeFromStart);
         }
         if (source['groupMeasure']) {
             this.groupMeasure = source.groupMeasure;
-        }
-        if (source['_groupMeasure']) {
-            this._groupMeasure = new fhir.FhirElement(source._groupMeasure);
         }
     }
     /**
@@ -87,53 +90,29 @@ export class EvidenceVariableCharacteristic extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        var outcome = super.doModelValidation();
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
-        if (this["definitionReference"]) {
-            results.push(...this.definitionReference.doModelValidation());
-        }
-        if (this["_definitionCanonical"]) {
-            results.push(...this._definitionCanonical.doModelValidation());
-        }
-        if (this["definitionCodeableConcept"]) {
-            results.push(...this.definitionCodeableConcept.doModelValidation());
-        }
-        if (this["definitionExpression"]) {
-            results.push(...this.definitionExpression.doModelValidation());
-        }
-        if (this["definitionDataRequirement"]) {
-            results.push(...this.definitionDataRequirement.doModelValidation());
-        }
-        if (this["definitionTriggerDefinition"]) {
-            results.push(...this.definitionTriggerDefinition.doModelValidation());
+        if (!this['definition']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property definition: fhir: EvidenceVariable.characteristic.definition[x]:", }));
         }
         if (this["usageContext"]) {
-            this.usageContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.usageContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_exclude"]) {
-            results.push(...this._exclude.doModelValidation());
-        }
-        if (this["_participantEffectiveDateTime"]) {
-            results.push(...this._participantEffectiveDateTime.doModelValidation());
-        }
-        if (this["participantEffectivePeriod"]) {
-            results.push(...this.participantEffectivePeriod.doModelValidation());
-        }
-        if (this["participantEffectiveDuration"]) {
-            results.push(...this.participantEffectiveDuration.doModelValidation());
-        }
-        if (this["participantEffectiveTiming"]) {
-            results.push(...this.participantEffectiveTiming.doModelValidation());
+        if (this["exclude"]) {
+            outcome.issue.push(...this.exclude.doModelValidation().issue);
         }
         if (this["timeFromStart"]) {
-            results.push(...this.timeFromStart.doModelValidation());
+            outcome.issue.push(...this.timeFromStart.doModelValidation().issue);
         }
-        if (this["_groupMeasure"]) {
-            results.push(...this._groupMeasure.doModelValidation());
-        }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -143,47 +122,78 @@ export class EvidenceVariable extends fhir.DomainResource {
     /**
      * Default constructor for EvidenceVariable - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'EvidenceVariable';
+        /**
+         * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this evidence variable outside of FHIR, where it is not possible to use the logical URI.
+         */
+        this.identifier = [];
+        /**
+         * May be a web site, an email address, a telephone number, etc.
+         */
+        this.contact = [];
+        /**
+         * A human-readable string to clarify or explain concepts about the resource.
+         */
+        this.note = [];
+        /**
+         * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
+         */
+        this.useContext = [];
+        /**
+         * It may be possible for the evidence variable to be used in jurisdictions other than those for which it was originally designed or intended.
+         */
+        this.jurisdiction = [];
+        /**
+         * Descriptive topics related to the content of the EvidenceVariable. Topics provide a high-level categorization grouping types of EvidenceVariables that can be useful for filtering and searching.
+         */
+        this.topic = [];
+        /**
+         * An individiual or organization primarily involved in the creation and maintenance of the content.
+         */
+        this.author = [];
+        /**
+         * An individual or organization primarily responsible for internal coherence of the content.
+         */
+        this.editor = [];
+        /**
+         * An individual or organization primarily responsible for review of some aspect of the content.
+         */
+        this.reviewer = [];
+        /**
+         * An individual or organization responsible for officially endorsing the content for use in some setting.
+         */
+        this.endorser = [];
+        /**
+         * Each related artifact is either an attachment, or a reference to another resource, but not both.
+         */
+        this.relatedArtifact = [];
+        /**
+         * Characteristics can be defined flexibly to accommodate different use cases for membership criteria, ranging from simple codes, all the way to using an expression language to express the criteria.
+         */
+        this.characteristic = [];
         this.resourceType = 'EvidenceVariable';
         if (source['url']) {
-            this.url = source.url;
-        }
-        if (source['_url']) {
-            this._url = new fhir.FhirElement(source._url);
+            this.url = new fhir.FhirUri({ value: source.url });
         }
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
         }
         if (source['version']) {
-            this.version = source.version;
-        }
-        if (source['_version']) {
-            this._version = new fhir.FhirElement(source._version);
+            this.version = new fhir.FhirString({ value: source.version });
         }
         if (source['name']) {
-            this.name = source.name;
-        }
-        if (source['_name']) {
-            this._name = new fhir.FhirElement(source._name);
+            this.name = new fhir.FhirString({ value: source.name });
         }
         if (source['title']) {
-            this.title = source.title;
-        }
-        if (source['_title']) {
-            this._title = new fhir.FhirElement(source._title);
+            this.title = new fhir.FhirString({ value: source.title });
         }
         if (source['shortTitle']) {
-            this.shortTitle = source.shortTitle;
-        }
-        if (source['_shortTitle']) {
-            this._shortTitle = new fhir.FhirElement(source._shortTitle);
+            this.shortTitle = new fhir.FhirString({ value: source.shortTitle });
         }
         if (source['subtitle']) {
-            this.subtitle = source.subtitle;
-        }
-        if (source['_subtitle']) {
-            this._subtitle = new fhir.FhirElement(source._subtitle);
+            this.subtitle = new fhir.FhirString({ value: source.subtitle });
         }
         if (source['status']) {
             this.status = source.status;
@@ -191,29 +201,17 @@ export class EvidenceVariable extends fhir.DomainResource {
         else {
             this.status = null;
         }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
-        }
         if (source['date']) {
-            this.date = source.date;
-        }
-        if (source['_date']) {
-            this._date = new fhir.FhirElement(source._date);
+            this.date = new fhir.FhirDateTime({ value: source.date });
         }
         if (source['publisher']) {
-            this.publisher = source.publisher;
-        }
-        if (source['_publisher']) {
-            this._publisher = new fhir.FhirElement(source._publisher);
+            this.publisher = new fhir.FhirString({ value: source.publisher });
         }
         if (source['contact']) {
             this.contact = source.contact.map((x) => new fhir.ContactDetail(x));
         }
         if (source['description']) {
-            this.description = source.description;
-        }
-        if (source['_description']) {
-            this._description = new fhir.FhirElement(source._description);
+            this.description = new fhir.FhirMarkdown({ value: source.description });
         }
         if (source['note']) {
             this.note = source.note.map((x) => new fhir.Annotation(x));
@@ -225,22 +223,13 @@ export class EvidenceVariable extends fhir.DomainResource {
             this.jurisdiction = source.jurisdiction.map((x) => new fhir.CodeableConcept(x));
         }
         if (source['copyright']) {
-            this.copyright = source.copyright;
-        }
-        if (source['_copyright']) {
-            this._copyright = new fhir.FhirElement(source._copyright);
+            this.copyright = new fhir.FhirMarkdown({ value: source.copyright });
         }
         if (source['approvalDate']) {
-            this.approvalDate = source.approvalDate;
-        }
-        if (source['_approvalDate']) {
-            this._approvalDate = new fhir.FhirElement(source._approvalDate);
+            this.approvalDate = new fhir.FhirDate({ value: source.approvalDate });
         }
         if (source['lastReviewDate']) {
-            this.lastReviewDate = source.lastReviewDate;
-        }
-        if (source['_lastReviewDate']) {
-            this._lastReviewDate = new fhir.FhirElement(source._lastReviewDate);
+            this.lastReviewDate = new fhir.FhirDate({ value: source.lastReviewDate });
         }
         if (source['effectivePeriod']) {
             this.effectivePeriod = new fhir.Period(source.effectivePeriod);
@@ -265,9 +254,6 @@ export class EvidenceVariable extends fhir.DomainResource {
         }
         if (source['type']) {
             this.type = source.type;
-        }
-        if (source['_type']) {
-            this._type = new fhir.FhirElement(source._type);
         }
         if (source['characteristic']) {
             this.characteristic = source.characteristic.map((x) => new fhir.EvidenceVariableCharacteristic(x));
@@ -298,98 +284,104 @@ export class EvidenceVariable extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: EvidenceVariable.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'EvidenceVariable' fhir: EvidenceVariable.resourceType:'EvidenceVariable'", }));
         }
-        if (this["_url"]) {
-            results.push(...this._url.doModelValidation());
+        if (this["url"]) {
+            outcome.issue.push(...this.url.doModelValidation().issue);
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_version"]) {
-            results.push(...this._version.doModelValidation());
+        if (this["version"]) {
+            outcome.issue.push(...this.version.doModelValidation().issue);
         }
-        if (this["_name"]) {
-            results.push(...this._name.doModelValidation());
+        if (this["name"]) {
+            outcome.issue.push(...this.name.doModelValidation().issue);
         }
-        if (this["_title"]) {
-            results.push(...this._title.doModelValidation());
+        if (this["title"]) {
+            outcome.issue.push(...this.title.doModelValidation().issue);
         }
-        if (this["_shortTitle"]) {
-            results.push(...this._shortTitle.doModelValidation());
+        if (this["shortTitle"]) {
+            outcome.issue.push(...this.shortTitle.doModelValidation().issue);
         }
-        if (this["_subtitle"]) {
-            results.push(...this._subtitle.doModelValidation());
+        if (this["subtitle"]) {
+            outcome.issue.push(...this.subtitle.doModelValidation().issue);
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: EvidenceVariable.status']);
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:PublicationStatusValueSetEnum fhir: EvidenceVariable.status:code", }));
         }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (this["date"]) {
+            outcome.issue.push(...this.date.doModelValidation().issue);
         }
-        if (this["_date"]) {
-            results.push(...this._date.doModelValidation());
-        }
-        if (this["_publisher"]) {
-            results.push(...this._publisher.doModelValidation());
+        if (this["publisher"]) {
+            outcome.issue.push(...this.publisher.doModelValidation().issue);
         }
         if (this["contact"]) {
-            this.contact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.contact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_description"]) {
-            results.push(...this._description.doModelValidation());
+        if (this["description"]) {
+            outcome.issue.push(...this.description.doModelValidation().issue);
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["useContext"]) {
-            this.useContext.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.useContext.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["jurisdiction"]) {
-            this.jurisdiction.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.jurisdiction.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_copyright"]) {
-            results.push(...this._copyright.doModelValidation());
+        if (this["copyright"]) {
+            outcome.issue.push(...this.copyright.doModelValidation().issue);
         }
-        if (this["_approvalDate"]) {
-            results.push(...this._approvalDate.doModelValidation());
+        if (this["approvalDate"]) {
+            outcome.issue.push(...this.approvalDate.doModelValidation().issue);
         }
-        if (this["_lastReviewDate"]) {
-            results.push(...this._lastReviewDate.doModelValidation());
+        if (this["lastReviewDate"]) {
+            outcome.issue.push(...this.lastReviewDate.doModelValidation().issue);
         }
         if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
+            outcome.issue.push(...this.effectivePeriod.doModelValidation().issue);
         }
         if (this["topic"]) {
-            this.topic.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.topic.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["author"]) {
-            this.author.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.author.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["editor"]) {
-            this.editor.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.editor.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["reviewer"]) {
-            this.reviewer.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.reviewer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["endorser"]) {
-            this.endorser.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.endorser.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["relatedArtifact"]) {
-            this.relatedArtifact.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.relatedArtifact.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (this["_type"]) {
-            results.push(...this._type.doModelValidation());
+        if (!this['characteristic']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property characteristic:fhir.EvidenceVariableCharacteristic[] fhir: EvidenceVariable.characteristic:characteristic", }));
         }
-        if ((!this["characteristic"]) || (this["characteristic"].length === 0)) {
-            results.push(["characteristic", 'Missing required element: EvidenceVariable.characteristic']);
+        else if (!Array.isArray(this.characteristic)) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue, diagnostics: "Found scalar in array property characteristic:fhir.EvidenceVariableCharacteristic[] fhir: EvidenceVariable.characteristic:characteristic", }));
+        }
+        else if (this.characteristic.length === 0) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property characteristic:fhir.EvidenceVariableCharacteristic[] fhir: EvidenceVariable.characteristic:characteristic", }));
         }
         if (this["characteristic"]) {
-            this.characteristic.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.characteristic.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=EvidenceVariable.js.map

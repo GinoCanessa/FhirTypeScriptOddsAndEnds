@@ -3,251 +3,33 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: SubstanceSourceMaterial
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Many complex materials are fractions of parts of plants, animals, or minerals. Fraction elements are often necessary to define both Substances and Specified Group 1 Substances. For substances derived from Plants, fraction information will be captured at the Substance information level ( . Oils, Juices and Exudates). Additional information for Extracts, such as extraction solvent composition, will be captured at the Specified Substance Group 1 information level. For plasma-derived products fraction information will be captured at the Substance and the Specified Substance Group 1 levels.
+ * Valid arguments for the SubstanceSourceMaterialFractionDescription type.
  */
-export type ISubstanceSourceMaterialFractionDescription = fhir.IBackboneElement & { 
+export interface SubstanceSourceMaterialFractionDescriptionArgs extends fhir.BackboneElementArgs {
   /**
    * This element is capturing information about the fraction of a plant part, or human plasma for fractionation.
    */
-  fraction?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.fractionDescription.fraction
-   */
-  _fraction?: fhir.IFhirElement|undefined;
+  fraction?: fhir.FhirString|string|undefined;
   /**
    * The specific type of the material constituting the component. For Herbal preparations the particulars of the extracts (liquid/dry) is described in Specified Substance Group 1.
    */
-  materialType?: fhir.ICodeableConcept|undefined;
-}
-
-/**
- * 4.9.13.6.1 Author type (Conditional).
- */
-export type ISubstanceSourceMaterialOrganismAuthor = fhir.IBackboneElement & { 
-  /**
-   * The type of author of an organism species shall be specified. The parenthetical author of an organism species refers to the first author who published the plant/animal name (of any rank). The primary author of an organism species refers to the first author(s), who validly published the plant/animal name.
-   */
-  authorType?: fhir.ICodeableConcept|undefined;
-  /**
-   * The author of an organism species shall be specified. The author year of an organism shall also be specified when applicable; refers to the year in which the first author(s) published the infraspecific plant/animal name (of any rank).
-   */
-  authorDescription?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organism.author.authorDescription
-   */
-  _authorDescription?: fhir.IFhirElement|undefined;
-}
-
-/**
- * 4.9.13.8.1 Hybrid species maternal organism ID (Optional).
- */
-export type ISubstanceSourceMaterialOrganismHybrid = fhir.IBackboneElement & { 
-  /**
-   * The identifier of the maternal species constituting the hybrid organism shall be specified based on a controlled vocabulary. For plants, the parents aren’t always known, and it is unlikely that it will be known which is maternal and which is paternal.
-   */
-  maternalOrganismId?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organism.hybrid.maternalOrganismId
-   */
-  _maternalOrganismId?: fhir.IFhirElement|undefined;
-  /**
-   * The name of the maternal species constituting the hybrid organism shall be specified. For plants, the parents aren’t always known, and it is unlikely that it will be known which is maternal and which is paternal.
-   */
-  maternalOrganismName?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organism.hybrid.maternalOrganismName
-   */
-  _maternalOrganismName?: fhir.IFhirElement|undefined;
-  /**
-   * The identifier of the paternal species constituting the hybrid organism shall be specified based on a controlled vocabulary.
-   */
-  paternalOrganismId?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organism.hybrid.paternalOrganismId
-   */
-  _paternalOrganismId?: fhir.IFhirElement|undefined;
-  /**
-   * The name of the paternal species constituting the hybrid organism shall be specified.
-   */
-  paternalOrganismName?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organism.hybrid.paternalOrganismName
-   */
-  _paternalOrganismName?: fhir.IFhirElement|undefined;
-  /**
-   * The hybrid type of an organism shall be specified.
-   */
-  hybridType?: fhir.ICodeableConcept|undefined;
-}
-
-/**
- * 4.9.13.7.1 Kingdom (Conditional).
- */
-export type ISubstanceSourceMaterialOrganismOrganismGeneral = fhir.IBackboneElement & { 
-  /**
-   * The kingdom of an organism shall be specified.
-   */
-  kingdom?: fhir.ICodeableConcept|undefined;
-  /**
-   * The phylum of an organism shall be specified.
-   */
-  phylum?: fhir.ICodeableConcept|undefined;
-  /**
-   * The class of an organism shall be specified.
-   */
-  class?: fhir.ICodeableConcept|undefined;
-  /**
-   * The order of an organism shall be specified,.
-   */
-  order?: fhir.ICodeableConcept|undefined;
-}
-
-/**
- * This subclause describes the organism which the substance is derived from. For vaccines, the parent organism shall be specified based on these subclause elements. As an example, full taxonomy will be described for the Substance Name: ., Leaf.
- */
-export type ISubstanceSourceMaterialOrganism = fhir.IBackboneElement & { 
-  /**
-   * The family of an organism shall be specified.
-   */
-  family?: fhir.ICodeableConcept|undefined;
-  /**
-   * The genus of an organism shall be specified; refers to the Latin epithet of the genus element of the plant/animal scientific name; it is present in names for genera, species and infraspecies.
-   */
-  genus?: fhir.ICodeableConcept|undefined;
-  /**
-   * The species of an organism shall be specified; refers to the Latin epithet of the species of the plant/animal; it is present in names for species and infraspecies.
-   */
-  species?: fhir.ICodeableConcept|undefined;
-  /**
-   * The Intraspecific type of an organism shall be specified.
-   */
-  intraspecificType?: fhir.ICodeableConcept|undefined;
-  /**
-   * The intraspecific description of an organism shall be specified based on a controlled vocabulary. For Influenza Vaccine, the intraspecific description shall contain the syntax of the antigen in line with the WHO convention.
-   */
-  intraspecificDescription?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organism.intraspecificDescription
-   */
-  _intraspecificDescription?: fhir.IFhirElement|undefined;
-  /**
-   * 4.9.13.6.1 Author type (Conditional).
-   */
-  author?: fhir.ISubstanceSourceMaterialOrganismAuthor[]|undefined;
-  /**
-   * 4.9.13.8.1 Hybrid species maternal organism ID (Optional).
-   */
-  hybrid?: fhir.ISubstanceSourceMaterialOrganismHybrid|undefined;
-  /**
-   * 4.9.13.7.1 Kingdom (Conditional).
-   */
-  organismGeneral?: fhir.ISubstanceSourceMaterialOrganismOrganismGeneral|undefined;
-}
-
-/**
- * To do.
- */
-export type ISubstanceSourceMaterialPartDescription = fhir.IBackboneElement & { 
-  /**
-   * Entity of anatomical origin of source material within an organism.
-   */
-  part?: fhir.ICodeableConcept|undefined;
-  /**
-   * The detailed anatomic location when the part can be extracted from different anatomical locations of the organism. Multiple alternative locations may apply.
-   */
-  partLocation?: fhir.ICodeableConcept|undefined;
-}
-
-/**
- * Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
- */
-export type ISubstanceSourceMaterial = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "SubstanceSourceMaterial";
-  /**
-   * General high level classification of the source material specific to the origin of the material.
-   */
-  sourceMaterialClass?: fhir.ICodeableConcept|undefined;
-  /**
-   * The type of the source material shall be specified based on a controlled vocabulary. For vaccines, this subclause refers to the class of infectious agent.
-   */
-  sourceMaterialType?: fhir.ICodeableConcept|undefined;
-  /**
-   * The state of the source material when extracted.
-   */
-  sourceMaterialState?: fhir.ICodeableConcept|undefined;
-  /**
-   * The unique identifier associated with the source material parent organism shall be specified.
-   */
-  organismId?: fhir.IIdentifier|undefined;
-  /**
-   * The organism accepted Scientific name shall be provided based on the organism taxonomy.
-   */
-  organismName?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organismName
-   */
-  _organismName?: fhir.IFhirElement|undefined;
-  /**
-   * The parent of the herbal drug Ginkgo biloba, Leaf is the substance ID of the substance (fresh) of Ginkgo biloba L. or Ginkgo biloba L. (Whole plant).
-   */
-  parentSubstanceId?: fhir.IIdentifier[]|undefined;
-  /**
-   * The parent substance of the Herbal Drug, or Herbal preparation.
-   */
-  parentSubstanceName?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.parentSubstanceName
-   */
-  _parentSubstanceName?: fhir.IFhirElement[]|undefined;
-  /**
-   * The country where the plant material is harvested or the countries where the plasma is sourced from as laid down in accordance with the Plasma Master File. For “Plasma-derived substances” the attribute country of origin provides information about the countries used for the manufacturing of the Cryopoor plama or Crioprecipitate.
-   */
-  countryOfOrigin?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * The place/region where the plant is harvested or the places/regions where the animal source material has its habitat.
-   */
-  geographicalLocation?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.geographicalLocation
-   */
-  _geographicalLocation?: fhir.IFhirElement[]|undefined;
-  /**
-   * Stage of life for animals, plants, insects and microorganisms. This information shall be provided only when the substance is significantly different in these stages (e.g. foetal bovine serum).
-   */
-  developmentStage?: fhir.ICodeableConcept|undefined;
-  /**
-   * Many complex materials are fractions of parts of plants, animals, or minerals. Fraction elements are often necessary to define both Substances and Specified Group 1 Substances. For substances derived from Plants, fraction information will be captured at the Substance information level ( . Oils, Juices and Exudates). Additional information for Extracts, such as extraction solvent composition, will be captured at the Specified Substance Group 1 information level. For plasma-derived products fraction information will be captured at the Substance and the Specified Substance Group 1 levels.
-   */
-  fractionDescription?: fhir.ISubstanceSourceMaterialFractionDescription[]|undefined;
-  /**
-   * This subclause describes the organism which the substance is derived from. For vaccines, the parent organism shall be specified based on these subclause elements. As an example, full taxonomy will be described for the Substance Name: ., Leaf.
-   */
-  organism?: fhir.ISubstanceSourceMaterialOrganism|undefined;
-  /**
-   * To do.
-   */
-  partDescription?: fhir.ISubstanceSourceMaterialPartDescription[]|undefined;
+  materialType?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * Many complex materials are fractions of parts of plants, animals, or minerals. Fraction elements are often necessary to define both Substances and Specified Group 1 Substances. For substances derived from Plants, fraction information will be captured at the Substance information level ( . Oils, Juices and Exudates). Additional information for Extracts, such as extraction solvent composition, will be captured at the Specified Substance Group 1 information level. For plasma-derived products fraction information will be captured at the Substance and the Specified Substance Group 1 levels.
  */
-export class SubstanceSourceMaterialFractionDescription extends fhir.BackboneElement implements ISubstanceSourceMaterialFractionDescription {
+export class SubstanceSourceMaterialFractionDescription extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSourceMaterialFractionDescription';
   /**
    * This element is capturing information about the fraction of a plant part, or human plasma for fractionation.
    */
-  public fraction?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.fractionDescription.fraction
-   */
-  public _fraction?: fhir.FhirElement|undefined;
+  public fraction?: fhir.FhirString|undefined;
   /**
    * The specific type of the material constituting the component. For Herbal preparations the particulars of the extracts (liquid/dry) is described in Specified Substance Group 1.
    */
@@ -255,27 +37,46 @@ export class SubstanceSourceMaterialFractionDescription extends fhir.BackboneEle
   /**
    * Default constructor for SubstanceSourceMaterialFractionDescription - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSourceMaterialFractionDescription> = { }) {
-    super(source);
-    if (source['fraction']) { this.fraction = source.fraction; }
-    if (source['_fraction']) { this._fraction = new fhir.FhirElement(source._fraction!); }
-    if (source['materialType']) { this.materialType = new fhir.CodeableConcept(source.materialType!); }
+  constructor(source:Partial<SubstanceSourceMaterialFractionDescriptionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['fraction']) { this.fraction = new fhir.FhirString({value: source.fraction}); }
+    if (source['materialType']) { this.materialType = new fhir.CodeableConcept(source.materialType); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_fraction"]) { results.push(...this._fraction.doModelValidation()); }
-    if (this["materialType"]) { results.push(...this.materialType.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["fraction"]) { outcome.issue!.push(...this.fraction.doModelValidation().issue!); }
+    if (this["materialType"]) { outcome.issue!.push(...this.materialType.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSourceMaterialOrganismAuthor type.
+ */
+export interface SubstanceSourceMaterialOrganismAuthorArgs extends fhir.BackboneElementArgs {
+  /**
+   * The type of author of an organism species shall be specified. The parenthetical author of an organism species refers to the first author who published the plant/animal name (of any rank). The primary author of an organism species refers to the first author(s), who validly published the plant/animal name.
+   */
+  authorType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The author of an organism species shall be specified. The author year of an organism shall also be specified when applicable; refers to the year in which the first author(s) published the infraspecific plant/animal name (of any rank).
+   */
+  authorDescription?: fhir.FhirString|string|undefined;
 }
 
 /**
  * 4.9.13.6.1 Author type (Conditional).
  */
-export class SubstanceSourceMaterialOrganismAuthor extends fhir.BackboneElement implements ISubstanceSourceMaterialOrganismAuthor {
+export class SubstanceSourceMaterialOrganismAuthor extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSourceMaterialOrganismAuthor';
   /**
    * The type of author of an organism species shall be specified. The parenthetical author of an organism species refers to the first author who published the plant/animal name (of any rank). The primary author of an organism species refers to the first author(s), who validly published the plant/animal name.
    */
@@ -283,67 +84,78 @@ export class SubstanceSourceMaterialOrganismAuthor extends fhir.BackboneElement 
   /**
    * The author of an organism species shall be specified. The author year of an organism shall also be specified when applicable; refers to the year in which the first author(s) published the infraspecific plant/animal name (of any rank).
    */
-  public authorDescription?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organism.author.authorDescription
-   */
-  public _authorDescription?: fhir.FhirElement|undefined;
+  public authorDescription?: fhir.FhirString|undefined;
   /**
    * Default constructor for SubstanceSourceMaterialOrganismAuthor - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSourceMaterialOrganismAuthor> = { }) {
-    super(source);
-    if (source['authorType']) { this.authorType = new fhir.CodeableConcept(source.authorType!); }
-    if (source['authorDescription']) { this.authorDescription = source.authorDescription; }
-    if (source['_authorDescription']) { this._authorDescription = new fhir.FhirElement(source._authorDescription!); }
+  constructor(source:Partial<SubstanceSourceMaterialOrganismAuthorArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['authorType']) { this.authorType = new fhir.CodeableConcept(source.authorType); }
+    if (source['authorDescription']) { this.authorDescription = new fhir.FhirString({value: source.authorDescription}); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["authorType"]) { results.push(...this.authorType.doModelValidation()); }
-    if (this["_authorDescription"]) { results.push(...this._authorDescription.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["authorType"]) { outcome.issue!.push(...this.authorType.doModelValidation().issue!); }
+    if (this["authorDescription"]) { outcome.issue!.push(...this.authorDescription.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSourceMaterialOrganismHybrid type.
+ */
+export interface SubstanceSourceMaterialOrganismHybridArgs extends fhir.BackboneElementArgs {
+  /**
+   * The identifier of the maternal species constituting the hybrid organism shall be specified based on a controlled vocabulary. For plants, the parents aren’t always known, and it is unlikely that it will be known which is maternal and which is paternal.
+   */
+  maternalOrganismId?: fhir.FhirString|string|undefined;
+  /**
+   * The name of the maternal species constituting the hybrid organism shall be specified. For plants, the parents aren’t always known, and it is unlikely that it will be known which is maternal and which is paternal.
+   */
+  maternalOrganismName?: fhir.FhirString|string|undefined;
+  /**
+   * The identifier of the paternal species constituting the hybrid organism shall be specified based on a controlled vocabulary.
+   */
+  paternalOrganismId?: fhir.FhirString|string|undefined;
+  /**
+   * The name of the paternal species constituting the hybrid organism shall be specified.
+   */
+  paternalOrganismName?: fhir.FhirString|string|undefined;
+  /**
+   * The hybrid type of an organism shall be specified.
+   */
+  hybridType?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * 4.9.13.8.1 Hybrid species maternal organism ID (Optional).
  */
-export class SubstanceSourceMaterialOrganismHybrid extends fhir.BackboneElement implements ISubstanceSourceMaterialOrganismHybrid {
+export class SubstanceSourceMaterialOrganismHybrid extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSourceMaterialOrganismHybrid';
   /**
    * The identifier of the maternal species constituting the hybrid organism shall be specified based on a controlled vocabulary. For plants, the parents aren’t always known, and it is unlikely that it will be known which is maternal and which is paternal.
    */
-  public maternalOrganismId?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organism.hybrid.maternalOrganismId
-   */
-  public _maternalOrganismId?: fhir.FhirElement|undefined;
+  public maternalOrganismId?: fhir.FhirString|undefined;
   /**
    * The name of the maternal species constituting the hybrid organism shall be specified. For plants, the parents aren’t always known, and it is unlikely that it will be known which is maternal and which is paternal.
    */
-  public maternalOrganismName?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organism.hybrid.maternalOrganismName
-   */
-  public _maternalOrganismName?: fhir.FhirElement|undefined;
+  public maternalOrganismName?: fhir.FhirString|undefined;
   /**
    * The identifier of the paternal species constituting the hybrid organism shall be specified based on a controlled vocabulary.
    */
-  public paternalOrganismId?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organism.hybrid.paternalOrganismId
-   */
-  public _paternalOrganismId?: fhir.FhirElement|undefined;
+  public paternalOrganismId?: fhir.FhirString|undefined;
   /**
    * The name of the paternal species constituting the hybrid organism shall be specified.
    */
-  public paternalOrganismName?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organism.hybrid.paternalOrganismName
-   */
-  public _paternalOrganismName?: fhir.FhirElement|undefined;
+  public paternalOrganismName?: fhir.FhirString|undefined;
   /**
    * The hybrid type of an organism shall be specified.
    */
@@ -351,36 +163,60 @@ export class SubstanceSourceMaterialOrganismHybrid extends fhir.BackboneElement 
   /**
    * Default constructor for SubstanceSourceMaterialOrganismHybrid - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSourceMaterialOrganismHybrid> = { }) {
-    super(source);
-    if (source['maternalOrganismId']) { this.maternalOrganismId = source.maternalOrganismId; }
-    if (source['_maternalOrganismId']) { this._maternalOrganismId = new fhir.FhirElement(source._maternalOrganismId!); }
-    if (source['maternalOrganismName']) { this.maternalOrganismName = source.maternalOrganismName; }
-    if (source['_maternalOrganismName']) { this._maternalOrganismName = new fhir.FhirElement(source._maternalOrganismName!); }
-    if (source['paternalOrganismId']) { this.paternalOrganismId = source.paternalOrganismId; }
-    if (source['_paternalOrganismId']) { this._paternalOrganismId = new fhir.FhirElement(source._paternalOrganismId!); }
-    if (source['paternalOrganismName']) { this.paternalOrganismName = source.paternalOrganismName; }
-    if (source['_paternalOrganismName']) { this._paternalOrganismName = new fhir.FhirElement(source._paternalOrganismName!); }
-    if (source['hybridType']) { this.hybridType = new fhir.CodeableConcept(source.hybridType!); }
+  constructor(source:Partial<SubstanceSourceMaterialOrganismHybridArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['maternalOrganismId']) { this.maternalOrganismId = new fhir.FhirString({value: source.maternalOrganismId}); }
+    if (source['maternalOrganismName']) { this.maternalOrganismName = new fhir.FhirString({value: source.maternalOrganismName}); }
+    if (source['paternalOrganismId']) { this.paternalOrganismId = new fhir.FhirString({value: source.paternalOrganismId}); }
+    if (source['paternalOrganismName']) { this.paternalOrganismName = new fhir.FhirString({value: source.paternalOrganismName}); }
+    if (source['hybridType']) { this.hybridType = new fhir.CodeableConcept(source.hybridType); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["_maternalOrganismId"]) { results.push(...this._maternalOrganismId.doModelValidation()); }
-    if (this["_maternalOrganismName"]) { results.push(...this._maternalOrganismName.doModelValidation()); }
-    if (this["_paternalOrganismId"]) { results.push(...this._paternalOrganismId.doModelValidation()); }
-    if (this["_paternalOrganismName"]) { results.push(...this._paternalOrganismName.doModelValidation()); }
-    if (this["hybridType"]) { results.push(...this.hybridType.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["maternalOrganismId"]) { outcome.issue!.push(...this.maternalOrganismId.doModelValidation().issue!); }
+    if (this["maternalOrganismName"]) { outcome.issue!.push(...this.maternalOrganismName.doModelValidation().issue!); }
+    if (this["paternalOrganismId"]) { outcome.issue!.push(...this.paternalOrganismId.doModelValidation().issue!); }
+    if (this["paternalOrganismName"]) { outcome.issue!.push(...this.paternalOrganismName.doModelValidation().issue!); }
+    if (this["hybridType"]) { outcome.issue!.push(...this.hybridType.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSourceMaterialOrganismOrganismGeneral type.
+ */
+export interface SubstanceSourceMaterialOrganismOrganismGeneralArgs extends fhir.BackboneElementArgs {
+  /**
+   * The kingdom of an organism shall be specified.
+   */
+  kingdom?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The phylum of an organism shall be specified.
+   */
+  phylum?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The class of an organism shall be specified.
+   */
+  class?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The order of an organism shall be specified,.
+   */
+  order?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * 4.9.13.7.1 Kingdom (Conditional).
  */
-export class SubstanceSourceMaterialOrganismOrganismGeneral extends fhir.BackboneElement implements ISubstanceSourceMaterialOrganismOrganismGeneral {
+export class SubstanceSourceMaterialOrganismOrganismGeneral extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSourceMaterialOrganismOrganismGeneral';
   /**
    * The kingdom of an organism shall be specified.
    */
@@ -400,30 +236,74 @@ export class SubstanceSourceMaterialOrganismOrganismGeneral extends fhir.Backbon
   /**
    * Default constructor for SubstanceSourceMaterialOrganismOrganismGeneral - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSourceMaterialOrganismOrganismGeneral> = { }) {
-    super(source);
-    if (source['kingdom']) { this.kingdom = new fhir.CodeableConcept(source.kingdom!); }
-    if (source['phylum']) { this.phylum = new fhir.CodeableConcept(source.phylum!); }
-    if (source['class']) { this.class = new fhir.CodeableConcept(source.class!); }
-    if (source['order']) { this.order = new fhir.CodeableConcept(source.order!); }
+  constructor(source:Partial<SubstanceSourceMaterialOrganismOrganismGeneralArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['kingdom']) { this.kingdom = new fhir.CodeableConcept(source.kingdom); }
+    if (source['phylum']) { this.phylum = new fhir.CodeableConcept(source.phylum); }
+    if (source['class']) { this.class = new fhir.CodeableConcept(source.class); }
+    if (source['order']) { this.order = new fhir.CodeableConcept(source.order); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["kingdom"]) { results.push(...this.kingdom.doModelValidation()); }
-    if (this["phylum"]) { results.push(...this.phylum.doModelValidation()); }
-    if (this["class"]) { results.push(...this.class.doModelValidation()); }
-    if (this["order"]) { results.push(...this.order.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["kingdom"]) { outcome.issue!.push(...this.kingdom.doModelValidation().issue!); }
+    if (this["phylum"]) { outcome.issue!.push(...this.phylum.doModelValidation().issue!); }
+    if (this["class"]) { outcome.issue!.push(...this.class.doModelValidation().issue!); }
+    if (this["order"]) { outcome.issue!.push(...this.order.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSourceMaterialOrganism type.
+ */
+export interface SubstanceSourceMaterialOrganismArgs extends fhir.BackboneElementArgs {
+  /**
+   * The family of an organism shall be specified.
+   */
+  family?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The genus of an organism shall be specified; refers to the Latin epithet of the genus element of the plant/animal scientific name; it is present in names for genera, species and infraspecies.
+   */
+  genus?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The species of an organism shall be specified; refers to the Latin epithet of the species of the plant/animal; it is present in names for species and infraspecies.
+   */
+  species?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The Intraspecific type of an organism shall be specified.
+   */
+  intraspecificType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The intraspecific description of an organism shall be specified based on a controlled vocabulary. For Influenza Vaccine, the intraspecific description shall contain the syntax of the antigen in line with the WHO convention.
+   */
+  intraspecificDescription?: fhir.FhirString|string|undefined;
+  /**
+   * 4.9.13.6.1 Author type (Conditional).
+   */
+  author?: fhir.SubstanceSourceMaterialOrganismAuthorArgs[]|undefined;
+  /**
+   * 4.9.13.8.1 Hybrid species maternal organism ID (Optional).
+   */
+  hybrid?: fhir.SubstanceSourceMaterialOrganismHybridArgs|undefined;
+  /**
+   * 4.9.13.7.1 Kingdom (Conditional).
+   */
+  organismGeneral?: fhir.SubstanceSourceMaterialOrganismOrganismGeneralArgs|undefined;
 }
 
 /**
  * This subclause describes the organism which the substance is derived from. For vaccines, the parent organism shall be specified based on these subclause elements. As an example, full taxonomy will be described for the Substance Name: ., Leaf.
  */
-export class SubstanceSourceMaterialOrganism extends fhir.BackboneElement implements ISubstanceSourceMaterialOrganism {
+export class SubstanceSourceMaterialOrganism extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSourceMaterialOrganism';
   /**
    * The family of an organism shall be specified.
    */
@@ -443,15 +323,11 @@ export class SubstanceSourceMaterialOrganism extends fhir.BackboneElement implem
   /**
    * The intraspecific description of an organism shall be specified based on a controlled vocabulary. For Influenza Vaccine, the intraspecific description shall contain the syntax of the antigen in line with the WHO convention.
    */
-  public intraspecificDescription?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organism.intraspecificDescription
-   */
-  public _intraspecificDescription?: fhir.FhirElement|undefined;
+  public intraspecificDescription?: fhir.FhirString|undefined;
   /**
    * 4.9.13.6.1 Author type (Conditional).
    */
-  public author?: fhir.SubstanceSourceMaterialOrganismAuthor[]|undefined;
+  public author?: fhir.SubstanceSourceMaterialOrganismAuthor[]|undefined = [];
   /**
    * 4.9.13.8.1 Hybrid species maternal organism ID (Optional).
    */
@@ -463,39 +339,58 @@ export class SubstanceSourceMaterialOrganism extends fhir.BackboneElement implem
   /**
    * Default constructor for SubstanceSourceMaterialOrganism - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSourceMaterialOrganism> = { }) {
-    super(source);
-    if (source['family']) { this.family = new fhir.CodeableConcept(source.family!); }
-    if (source['genus']) { this.genus = new fhir.CodeableConcept(source.genus!); }
-    if (source['species']) { this.species = new fhir.CodeableConcept(source.species!); }
-    if (source['intraspecificType']) { this.intraspecificType = new fhir.CodeableConcept(source.intraspecificType!); }
-    if (source['intraspecificDescription']) { this.intraspecificDescription = source.intraspecificDescription; }
-    if (source['_intraspecificDescription']) { this._intraspecificDescription = new fhir.FhirElement(source._intraspecificDescription!); }
+  constructor(source:Partial<SubstanceSourceMaterialOrganismArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['family']) { this.family = new fhir.CodeableConcept(source.family); }
+    if (source['genus']) { this.genus = new fhir.CodeableConcept(source.genus); }
+    if (source['species']) { this.species = new fhir.CodeableConcept(source.species); }
+    if (source['intraspecificType']) { this.intraspecificType = new fhir.CodeableConcept(source.intraspecificType); }
+    if (source['intraspecificDescription']) { this.intraspecificDescription = new fhir.FhirString({value: source.intraspecificDescription}); }
     if (source['author']) { this.author = source.author.map((x) => new fhir.SubstanceSourceMaterialOrganismAuthor(x)); }
-    if (source['hybrid']) { this.hybrid = new fhir.SubstanceSourceMaterialOrganismHybrid(source.hybrid!); }
-    if (source['organismGeneral']) { this.organismGeneral = new fhir.SubstanceSourceMaterialOrganismOrganismGeneral(source.organismGeneral!); }
+    if (source['hybrid']) { this.hybrid = new fhir.SubstanceSourceMaterialOrganismHybrid(source.hybrid); }
+    if (source['organismGeneral']) { this.organismGeneral = new fhir.SubstanceSourceMaterialOrganismOrganismGeneral(source.organismGeneral); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["family"]) { results.push(...this.family.doModelValidation()); }
-    if (this["genus"]) { results.push(...this.genus.doModelValidation()); }
-    if (this["species"]) { results.push(...this.species.doModelValidation()); }
-    if (this["intraspecificType"]) { results.push(...this.intraspecificType.doModelValidation()); }
-    if (this["_intraspecificDescription"]) { results.push(...this._intraspecificDescription.doModelValidation()); }
-    if (this["author"]) { this.author.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["hybrid"]) { results.push(...this.hybrid.doModelValidation()); }
-    if (this["organismGeneral"]) { results.push(...this.organismGeneral.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["family"]) { outcome.issue!.push(...this.family.doModelValidation().issue!); }
+    if (this["genus"]) { outcome.issue!.push(...this.genus.doModelValidation().issue!); }
+    if (this["species"]) { outcome.issue!.push(...this.species.doModelValidation().issue!); }
+    if (this["intraspecificType"]) { outcome.issue!.push(...this.intraspecificType.doModelValidation().issue!); }
+    if (this["intraspecificDescription"]) { outcome.issue!.push(...this.intraspecificDescription.doModelValidation().issue!); }
+    if (this["author"]) { this.author.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["hybrid"]) { outcome.issue!.push(...this.hybrid.doModelValidation().issue!); }
+    if (this["organismGeneral"]) { outcome.issue!.push(...this.organismGeneral.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSourceMaterialPartDescription type.
+ */
+export interface SubstanceSourceMaterialPartDescriptionArgs extends fhir.BackboneElementArgs {
+  /**
+   * Entity of anatomical origin of source material within an organism.
+   */
+  part?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The detailed anatomic location when the part can be extracted from different anatomical locations of the organism. Multiple alternative locations may apply.
+   */
+  partLocation?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * To do.
  */
-export class SubstanceSourceMaterialPartDescription extends fhir.BackboneElement implements ISubstanceSourceMaterialPartDescription {
+export class SubstanceSourceMaterialPartDescription extends fhir.BackboneElement {
+  readonly __dataType:string = 'SubstanceSourceMaterialPartDescription';
   /**
    * Entity of anatomical origin of source material within an organism.
    */
@@ -507,26 +402,94 @@ export class SubstanceSourceMaterialPartDescription extends fhir.BackboneElement
   /**
    * Default constructor for SubstanceSourceMaterialPartDescription - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSourceMaterialPartDescription> = { }) {
-    super(source);
-    if (source['part']) { this.part = new fhir.CodeableConcept(source.part!); }
-    if (source['partLocation']) { this.partLocation = new fhir.CodeableConcept(source.partLocation!); }
+  constructor(source:Partial<SubstanceSourceMaterialPartDescriptionArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['part']) { this.part = new fhir.CodeableConcept(source.part); }
+    if (source['partLocation']) { this.partLocation = new fhir.CodeableConcept(source.partLocation); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["part"]) { results.push(...this.part.doModelValidation()); }
-    if (this["partLocation"]) { results.push(...this.partLocation.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["part"]) { outcome.issue!.push(...this.part.doModelValidation().issue!); }
+    if (this["partLocation"]) { outcome.issue!.push(...this.partLocation.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the SubstanceSourceMaterial type.
+ */
+export interface SubstanceSourceMaterialArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "SubstanceSourceMaterial"|undefined;
+  /**
+   * General high level classification of the source material specific to the origin of the material.
+   */
+  sourceMaterialClass?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The type of the source material shall be specified based on a controlled vocabulary. For vaccines, this subclause refers to the class of infectious agent.
+   */
+  sourceMaterialType?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The state of the source material when extracted.
+   */
+  sourceMaterialState?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * The unique identifier associated with the source material parent organism shall be specified.
+   */
+  organismId?: fhir.IdentifierArgs|undefined;
+  /**
+   * The organism accepted Scientific name shall be provided based on the organism taxonomy.
+   */
+  organismName?: fhir.FhirString|string|undefined;
+  /**
+   * The parent of the herbal drug Ginkgo biloba, Leaf is the substance ID of the substance (fresh) of Ginkgo biloba L. or Ginkgo biloba L. (Whole plant).
+   */
+  parentSubstanceId?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * The parent substance of the Herbal Drug, or Herbal preparation.
+   */
+  parentSubstanceName?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * The country where the plant material is harvested or the countries where the plasma is sourced from as laid down in accordance with the Plasma Master File. For “Plasma-derived substances” the attribute country of origin provides information about the countries used for the manufacturing of the Cryopoor plama or Crioprecipitate.
+   */
+  countryOfOrigin?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * The place/region where the plant is harvested or the places/regions where the animal source material has its habitat.
+   */
+  geographicalLocation?: fhir.FhirString[]|string[]|undefined;
+  /**
+   * Stage of life for animals, plants, insects and microorganisms. This information shall be provided only when the substance is significantly different in these stages (e.g. foetal bovine serum).
+   */
+  developmentStage?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Many complex materials are fractions of parts of plants, animals, or minerals. Fraction elements are often necessary to define both Substances and Specified Group 1 Substances. For substances derived from Plants, fraction information will be captured at the Substance information level ( . Oils, Juices and Exudates). Additional information for Extracts, such as extraction solvent composition, will be captured at the Specified Substance Group 1 information level. For plasma-derived products fraction information will be captured at the Substance and the Specified Substance Group 1 levels.
+   */
+  fractionDescription?: fhir.SubstanceSourceMaterialFractionDescriptionArgs[]|undefined;
+  /**
+   * This subclause describes the organism which the substance is derived from. For vaccines, the parent organism shall be specified based on these subclause elements. As an example, full taxonomy will be described for the Substance Name: ., Leaf.
+   */
+  organism?: fhir.SubstanceSourceMaterialOrganismArgs|undefined;
+  /**
+   * To do.
+   */
+  partDescription?: fhir.SubstanceSourceMaterialPartDescriptionArgs[]|undefined;
 }
 
 /**
  * Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
  */
-export class SubstanceSourceMaterial extends fhir.DomainResource implements ISubstanceSourceMaterial {
+export class SubstanceSourceMaterial extends fhir.DomainResource {
+  readonly __dataType:string = 'SubstanceSourceMaterial';
   /**
    * Resource Type Name
    */
@@ -550,35 +513,23 @@ export class SubstanceSourceMaterial extends fhir.DomainResource implements ISub
   /**
    * The organism accepted Scientific name shall be provided based on the organism taxonomy.
    */
-  public organismName?: string|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.organismName
-   */
-  public _organismName?: fhir.FhirElement|undefined;
+  public organismName?: fhir.FhirString|undefined;
   /**
    * The parent of the herbal drug Ginkgo biloba, Leaf is the substance ID of the substance (fresh) of Ginkgo biloba L. or Ginkgo biloba L. (Whole plant).
    */
-  public parentSubstanceId?: fhir.Identifier[]|undefined;
+  public parentSubstanceId?: fhir.Identifier[]|undefined = [];
   /**
    * The parent substance of the Herbal Drug, or Herbal preparation.
    */
-  public parentSubstanceName?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.parentSubstanceName
-   */
-  public _parentSubstanceName?: fhir.FhirElement[]|undefined;
+  public parentSubstanceName?: fhir.FhirString[]|undefined = [];
   /**
    * The country where the plant material is harvested or the countries where the plasma is sourced from as laid down in accordance with the Plasma Master File. For “Plasma-derived substances” the attribute country of origin provides information about the countries used for the manufacturing of the Cryopoor plama or Crioprecipitate.
    */
-  public countryOfOrigin?: fhir.CodeableConcept[]|undefined;
+  public countryOfOrigin?: fhir.CodeableConcept[]|undefined = [];
   /**
    * The place/region where the plant is harvested or the places/regions where the animal source material has its habitat.
    */
-  public geographicalLocation?: string[]|undefined;
-  /**
-   * Extended properties for primitive element: SubstanceSourceMaterial.geographicalLocation
-   */
-  public _geographicalLocation?: fhir.FhirElement[]|undefined;
+  public geographicalLocation?: fhir.FhirString[]|undefined = [];
   /**
    * Stage of life for animals, plants, insects and microorganisms. This information shall be provided only when the substance is significantly different in these stages (e.g. foetal bovine serum).
    */
@@ -586,7 +537,7 @@ export class SubstanceSourceMaterial extends fhir.DomainResource implements ISub
   /**
    * Many complex materials are fractions of parts of plants, animals, or minerals. Fraction elements are often necessary to define both Substances and Specified Group 1 Substances. For substances derived from Plants, fraction information will be captured at the Substance information level ( . Oils, Juices and Exudates). Additional information for Extracts, such as extraction solvent composition, will be captured at the Specified Substance Group 1 information level. For plasma-derived products fraction information will be captured at the Substance and the Specified Substance Group 1 levels.
    */
-  public fractionDescription?: fhir.SubstanceSourceMaterialFractionDescription[]|undefined;
+  public fractionDescription?: fhir.SubstanceSourceMaterialFractionDescription[]|undefined = [];
   /**
    * This subclause describes the organism which the substance is derived from. For vaccines, the parent organism shall be specified based on these subclause elements. As an example, full taxonomy will be described for the Substance Name: ., Leaf.
    */
@@ -594,49 +545,54 @@ export class SubstanceSourceMaterial extends fhir.DomainResource implements ISub
   /**
    * To do.
    */
-  public partDescription?: fhir.SubstanceSourceMaterialPartDescription[]|undefined;
+  public partDescription?: fhir.SubstanceSourceMaterialPartDescription[]|undefined = [];
   /**
    * Default constructor for SubstanceSourceMaterial - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<ISubstanceSourceMaterial> = { }) {
-    super(source);
+  constructor(source:Partial<SubstanceSourceMaterialArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'SubstanceSourceMaterial';
-    if (source['sourceMaterialClass']) { this.sourceMaterialClass = new fhir.CodeableConcept(source.sourceMaterialClass!); }
-    if (source['sourceMaterialType']) { this.sourceMaterialType = new fhir.CodeableConcept(source.sourceMaterialType!); }
-    if (source['sourceMaterialState']) { this.sourceMaterialState = new fhir.CodeableConcept(source.sourceMaterialState!); }
-    if (source['organismId']) { this.organismId = new fhir.Identifier(source.organismId!); }
-    if (source['organismName']) { this.organismName = source.organismName; }
-    if (source['_organismName']) { this._organismName = new fhir.FhirElement(source._organismName!); }
+    if (source['sourceMaterialClass']) { this.sourceMaterialClass = new fhir.CodeableConcept(source.sourceMaterialClass); }
+    if (source['sourceMaterialType']) { this.sourceMaterialType = new fhir.CodeableConcept(source.sourceMaterialType); }
+    if (source['sourceMaterialState']) { this.sourceMaterialState = new fhir.CodeableConcept(source.sourceMaterialState); }
+    if (source['organismId']) { this.organismId = new fhir.Identifier(source.organismId); }
+    if (source['organismName']) { this.organismName = new fhir.FhirString({value: source.organismName}); }
     if (source['parentSubstanceId']) { this.parentSubstanceId = source.parentSubstanceId.map((x) => new fhir.Identifier(x)); }
-    if (source['parentSubstanceName']) { this.parentSubstanceName = source.parentSubstanceName.map((x) => (x)); }
-    if (source['_parentSubstanceName']) { this._parentSubstanceName = source._parentSubstanceName.map((x) => new fhir.FhirElement(x)); }
+    if (source['parentSubstanceName']) { this.parentSubstanceName = source.parentSubstanceName.map((x) => new fhir.FhirString({value: x})); }
     if (source['countryOfOrigin']) { this.countryOfOrigin = source.countryOfOrigin.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['geographicalLocation']) { this.geographicalLocation = source.geographicalLocation.map((x) => (x)); }
-    if (source['_geographicalLocation']) { this._geographicalLocation = source._geographicalLocation.map((x) => new fhir.FhirElement(x)); }
-    if (source['developmentStage']) { this.developmentStage = new fhir.CodeableConcept(source.developmentStage!); }
+    if (source['geographicalLocation']) { this.geographicalLocation = source.geographicalLocation.map((x) => new fhir.FhirString({value: x})); }
+    if (source['developmentStage']) { this.developmentStage = new fhir.CodeableConcept(source.developmentStage); }
     if (source['fractionDescription']) { this.fractionDescription = source.fractionDescription.map((x) => new fhir.SubstanceSourceMaterialFractionDescription(x)); }
-    if (source['organism']) { this.organism = new fhir.SubstanceSourceMaterialOrganism(source.organism!); }
+    if (source['organism']) { this.organism = new fhir.SubstanceSourceMaterialOrganism(source.organism); }
     if (source['partDescription']) { this.partDescription = source.partDescription.map((x) => new fhir.SubstanceSourceMaterialPartDescription(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: SubstanceSourceMaterial.resourceType']); }
-    if (this["sourceMaterialClass"]) { results.push(...this.sourceMaterialClass.doModelValidation()); }
-    if (this["sourceMaterialType"]) { results.push(...this.sourceMaterialType.doModelValidation()); }
-    if (this["sourceMaterialState"]) { results.push(...this.sourceMaterialState.doModelValidation()); }
-    if (this["organismId"]) { results.push(...this.organismId.doModelValidation()); }
-    if (this["_organismName"]) { results.push(...this._organismName.doModelValidation()); }
-    if (this["parentSubstanceId"]) { this.parentSubstanceId.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_parentSubstanceName"]) { this._parentSubstanceName.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["countryOfOrigin"]) { this.countryOfOrigin.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_geographicalLocation"]) { this._geographicalLocation.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["developmentStage"]) { results.push(...this.developmentStage.doModelValidation()); }
-    if (this["fractionDescription"]) { this.fractionDescription.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["organism"]) { results.push(...this.organism.doModelValidation()); }
-    if (this["partDescription"]) { this.partDescription.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'SubstanceSourceMaterial' fhir: SubstanceSourceMaterial.resourceType:'SubstanceSourceMaterial'", }));
+    }
+    if (this["sourceMaterialClass"]) { outcome.issue!.push(...this.sourceMaterialClass.doModelValidation().issue!); }
+    if (this["sourceMaterialType"]) { outcome.issue!.push(...this.sourceMaterialType.doModelValidation().issue!); }
+    if (this["sourceMaterialState"]) { outcome.issue!.push(...this.sourceMaterialState.doModelValidation().issue!); }
+    if (this["organismId"]) { outcome.issue!.push(...this.organismId.doModelValidation().issue!); }
+    if (this["organismName"]) { outcome.issue!.push(...this.organismName.doModelValidation().issue!); }
+    if (this["parentSubstanceId"]) { this.parentSubstanceId.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["parentSubstanceName"]) { this.parentSubstanceName.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["countryOfOrigin"]) { this.countryOfOrigin.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["geographicalLocation"]) { this.geographicalLocation.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["developmentStage"]) { outcome.issue!.push(...this.developmentStage.doModelValidation().issue!); }
+    if (this["fractionDescription"]) { this.fractionDescription.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["organism"]) { outcome.issue!.push(...this.organism.doModelValidation().issue!); }
+    if (this["partDescription"]) { this.partDescription.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

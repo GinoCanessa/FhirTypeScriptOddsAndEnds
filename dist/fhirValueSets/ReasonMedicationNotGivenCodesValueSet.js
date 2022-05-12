@@ -75,39 +75,4 @@ export const ReasonMedicationNotGivenCodesValueSet = {
 /**
  * This value set includes all medication refused, medication not administered, and non-administration of necessary drug or medicine codes from SNOMED CT - provided as an exemplar value set.
  */
-export var ReasonMedicationNotGivenCodesValueSetEnum;
-(function (ReasonMedicationNotGivenCodesValueSetEnum) {
-    /**
-     * Code: 182896008
-     */
-    ReasonMedicationNotGivenCodesValueSetEnum["DrugDeclinedByPatientDislikesTaste"] = "182896008";
-    /**
-     * Code: 182897004
-     */
-    ReasonMedicationNotGivenCodesValueSetEnum["DrugDeclinedByPatientSideEffects"] = "182897004";
-    /**
-     * Code: 182898009
-     */
-    ReasonMedicationNotGivenCodesValueSetEnum["DrugDeclinedByPatientInconvenient"] = "182898009";
-    /**
-     * Code: 182899001
-     */
-    ReasonMedicationNotGivenCodesValueSetEnum["DrugDeclinedByPatientProblemSwallowing"] = "182899001";
-    /**
-     * Code: 182900006
-     */
-    ReasonMedicationNotGivenCodesValueSetEnum["DrugDeclinedByPatientPatientBeliefs"] = "182900006";
-    /**
-     * Code: 182901005
-     */
-    ReasonMedicationNotGivenCodesValueSetEnum["DrugDeclinedByPatientAlternativeTherapy"] = "182901005";
-    /**
-     * Code: 182902003
-     */
-    ReasonMedicationNotGivenCodesValueSetEnum["DrugDeclinedByPatientCannotPayScript"] = "182902003";
-    /**
-     * Code: 182903008
-     */
-    ReasonMedicationNotGivenCodesValueSetEnum["DrugDeclinedByPatientReasonUnknown"] = "182903008";
-})(ReasonMedicationNotGivenCodesValueSetEnum || (ReasonMedicationNotGivenCodesValueSetEnum = {}));
 //# sourceMappingURL=ReasonMedicationNotGivenCodesValueSet.js.map

@@ -43,23 +43,4 @@ export const ActionTypeValueSet = {
 /**
  * The type of action to be performed.
  */
-export var ActionTypeValueSetEnum;
-(function (ActionTypeValueSetEnum) {
-    /**
-     * create: The action is to create a new resource.
-     */
-    ActionTypeValueSetEnum["Create"] = "create";
-    /**
-     * fire-event: The action is to fire a specific event.
-     */
-    ActionTypeValueSetEnum["FireEvent"] = "fire-event";
-    /**
-     * remove: The action is to remove an existing resource.
-     */
-    ActionTypeValueSetEnum["Remove"] = "remove";
-    /**
-     * update: The action is to update an existing resource.
-     */
-    ActionTypeValueSetEnum["Update"] = "update";
-})(ActionTypeValueSetEnum || (ActionTypeValueSetEnum = {}));
 //# sourceMappingURL=ActionTypeValueSet.js.map

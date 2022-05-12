@@ -43,23 +43,4 @@ export const HistoryAbsentReasonValueSet = {
 /**
  * Codes describing the reason why a family member's history is not available.
  */
-export var HistoryAbsentReasonValueSetEnum;
-(function (HistoryAbsentReasonValueSetEnum) {
-    /**
-     * deferred: Patient does not have the information now, but can provide the information at a later date.
-     */
-    HistoryAbsentReasonValueSetEnum["Deferred"] = "deferred";
-    /**
-     * subject-unknown: Patient does not know the subject, e.g. the biological parent of an adopted patient.
-     */
-    HistoryAbsentReasonValueSetEnum["SubjectUnknown"] = "subject-unknown";
-    /**
-     * unable-to-obtain: Information cannot be obtained; e.g. unconscious patient.
-     */
-    HistoryAbsentReasonValueSetEnum["UnableToObtain"] = "unable-to-obtain";
-    /**
-     * withheld: The patient withheld or refused to share the information.
-     */
-    HistoryAbsentReasonValueSetEnum["InformationWithheld"] = "withheld";
-})(HistoryAbsentReasonValueSetEnum || (HistoryAbsentReasonValueSetEnum = {}));
 //# sourceMappingURL=HistoryAbsentReasonValueSet.js.map

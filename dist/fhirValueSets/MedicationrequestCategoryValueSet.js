@@ -43,23 +43,4 @@ export const MedicationrequestCategoryValueSet = {
 /**
  * MedicationRequest Category Codes
  */
-export var MedicationrequestCategoryValueSetEnum;
-(function (MedicationrequestCategoryValueSetEnum) {
-    /**
-     * community: Includes requests for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
-     */
-    MedicationrequestCategoryValueSetEnum["Community"] = "community";
-    /**
-     * discharge: Includes requests for medications created when the patient is being released from a facility
-     */
-    MedicationrequestCategoryValueSetEnum["Discharge"] = "discharge";
-    /**
-     * inpatient: Includes requests for medications to be administered or consumed in an inpatient or acute care setting
-     */
-    MedicationrequestCategoryValueSetEnum["Inpatient"] = "inpatient";
-    /**
-     * outpatient: Includes requests for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
-     */
-    MedicationrequestCategoryValueSetEnum["Outpatient"] = "outpatient";
-})(MedicationrequestCategoryValueSetEnum || (MedicationrequestCategoryValueSetEnum = {}));
 //# sourceMappingURL=MedicationrequestCategoryValueSet.js.map

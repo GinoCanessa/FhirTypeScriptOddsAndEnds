@@ -3,167 +3,53 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: AdverseEvent
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { AdverseEventCausalityAssessValueSet, AdverseEventCausalityAssessValueSetType, AdverseEventCausalityAssessValueSetEnum } from '../fhirValueSets/AdverseEventCausalityAssessValueSet.js'
-import { AdverseEventCausalityMethodValueSet, AdverseEventCausalityMethodValueSetType, AdverseEventCausalityMethodValueSetEnum } from '../fhirValueSets/AdverseEventCausalityMethodValueSet.js'
-import { AdverseEventActualityValueSet, AdverseEventActualityValueSetType, AdverseEventActualityValueSetEnum } from '../fhirValueSets/AdverseEventActualityValueSet.js'
-import { AdverseEventCategoryValueSet, AdverseEventCategoryValueSetType, AdverseEventCategoryValueSetEnum } from '../fhirValueSets/AdverseEventCategoryValueSet.js'
-import { AdverseEventTypeValueSet, AdverseEventTypeValueSetType, AdverseEventTypeValueSetEnum } from '../fhirValueSets/AdverseEventTypeValueSet.js'
-import { AdverseEventSeriousnessValueSet, AdverseEventSeriousnessValueSetType, AdverseEventSeriousnessValueSetEnum } from '../fhirValueSets/AdverseEventSeriousnessValueSet.js'
-import { AdverseEventSeverityValueSet, AdverseEventSeverityValueSetType, AdverseEventSeverityValueSetEnum } from '../fhirValueSets/AdverseEventSeverityValueSet.js'
-import { AdverseEventOutcomeValueSet, AdverseEventOutcomeValueSetType, AdverseEventOutcomeValueSetEnum } from '../fhirValueSets/AdverseEventOutcomeValueSet.js'
-
+import { AdverseEventCausalityAssessValueSet, AdverseEventCausalityAssessValueSetType,} from '../fhirValueSets/AdverseEventCausalityAssessValueSet.js';
+import { AdverseEventCausalityAssessValueSetEnum } from '../valueSetEnums.js';
+import { AdverseEventCausalityMethodValueSet, AdverseEventCausalityMethodValueSetType,} from '../fhirValueSets/AdverseEventCausalityMethodValueSet.js';
+import { AdverseEventCausalityMethodValueSetEnum } from '../valueSetEnums.js';
+import { AdverseEventActualityValueSet, AdverseEventActualityValueSetType,} from '../fhirValueSets/AdverseEventActualityValueSet.js';
+import { AdverseEventActualityValueSetEnum } from '../valueSetEnums.js';
+import { AdverseEventCategoryValueSet, AdverseEventCategoryValueSetType,} from '../fhirValueSets/AdverseEventCategoryValueSet.js';
+import { AdverseEventCategoryValueSetEnum } from '../valueSetEnums.js';
+import { AdverseEventTypeValueSet, AdverseEventTypeValueSetType,} from '../fhirValueSets/AdverseEventTypeValueSet.js';
+import { AdverseEventTypeValueSetEnum } from '../valueSetEnums.js';
+import { AdverseEventSeriousnessValueSet, AdverseEventSeriousnessValueSetType,} from '../fhirValueSets/AdverseEventSeriousnessValueSet.js';
+import { AdverseEventSeriousnessValueSetEnum } from '../valueSetEnums.js';
+import { AdverseEventSeverityValueSet, AdverseEventSeverityValueSetType,} from '../fhirValueSets/AdverseEventSeverityValueSet.js';
+import { AdverseEventSeverityValueSetEnum } from '../valueSetEnums.js';
+import { AdverseEventOutcomeValueSet, AdverseEventOutcomeValueSetType,} from '../fhirValueSets/AdverseEventOutcomeValueSet.js';
+import { AdverseEventOutcomeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * Information on the possible cause of the event.
+ * Valid arguments for the AdverseEventSuspectEntityCausality type.
  */
-export type IAdverseEventSuspectEntityCausality = fhir.IBackboneElement & { 
+export interface AdverseEventSuspectEntityCausalityArgs extends fhir.BackboneElementArgs {
   /**
    * Assessment of if the entity caused the event.
    */
-  assessment?: fhir.ICodeableConcept|undefined;
+  assessment?: fhir.CodeableConceptArgs|undefined;
   /**
    * AdverseEvent.suspectEntity.causalityProductRelatedness.
    */
-  productRelatedness?: string|undefined;
-  /**
-   * Extended properties for primitive element: AdverseEvent.suspectEntity.causality.productRelatedness
-   */
-  _productRelatedness?: fhir.IFhirElement|undefined;
+  productRelatedness?: fhir.FhirString|string|undefined;
   /**
    * AdverseEvent.suspectEntity.causalityAuthor.
    */
-  author?: fhir.IReference|undefined;
+  author?: fhir.ReferenceArgs|undefined;
   /**
    * ProbabilityScale | Bayesian | Checklist.
    */
-  method?: fhir.ICodeableConcept|undefined;
-}
-
-/**
- * Describes the entity that is suspected to have caused the adverse event.
- */
-export type IAdverseEventSuspectEntity = fhir.IBackboneElement & { 
-  /**
-   * Identifies the actual instance of what caused the adverse event.  May be a substance, medication, medication administration, medication statement or a device.
-   */
-  instance: fhir.IReference|null;
-  /**
-   * Information on the possible cause of the event.
-   */
-  causality?: fhir.IAdverseEventSuspectEntityCausality[]|undefined;
-}
-
-/**
- * Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.
- */
-export type IAdverseEvent = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "AdverseEvent";
-  /**
-   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
-   */
-  identifier?: fhir.IIdentifier|undefined;
-  /**
-   * Whether the event actually happened, or just had the potential to. Note that this is independent of whether anyone was affected or harmed or how severely.
-   */
-  actuality: AdverseEventActualityValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: AdverseEvent.actuality
-   */
-  _actuality?: fhir.IFhirElement|undefined;
-  /**
-   * The overall type of event, intended for search and filtering purposes.
-   */
-  category?: fhir.ICodeableConcept[]|undefined;
-  /**
-   * This element defines the specific type of event that occurred or that was prevented from occurring.
-   */
-  event?: fhir.ICodeableConcept|undefined;
-  /**
-   * If AdverseEvent.resultingCondition differs among members of the group, then use Patient as the subject.
-   */
-  subject: fhir.IReference|null;
-  /**
-   * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.  For example, if a medication administration was considered an adverse event because it resulted in a rash, then the encounter when the medication administration was given is the context.  If the patient reports the AdverseEvent during a second encounter, that second encounter is not the context.
-   */
-  encounter?: fhir.IReference|undefined;
-  /**
-   * The date (and perhaps time) when the adverse event occurred.
-   */
-  date?: string|undefined;
-  /**
-   * Extended properties for primitive element: AdverseEvent.date
-   */
-  _date?: fhir.IFhirElement|undefined;
-  /**
-   * Estimated or actual date the AdverseEvent began, in the opinion of the reporter.
-   */
-  detected?: string|undefined;
-  /**
-   * Extended properties for primitive element: AdverseEvent.detected
-   */
-  _detected?: fhir.IFhirElement|undefined;
-  /**
-   * The recordedDate represents the date when this particular AdverseEvent record was created in the system, not the date of the most recent update.  The date of the last record modification can be retrieved from the resource metadata.
-   */
-  recordedDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: AdverseEvent.recordedDate
-   */
-  _recordedDate?: fhir.IFhirElement|undefined;
-  /**
-   * Includes information about the reaction that occurred as a result of exposure to a substance (for example, a drug or a chemical).
-   */
-  resultingCondition?: fhir.IReference[]|undefined;
-  /**
-   * The information about where the adverse event occurred.
-   */
-  location?: fhir.IReference|undefined;
-  /**
-   * Assessment whether this event was of real importance.
-   */
-  seriousness?: fhir.ICodeableConcept|undefined;
-  /**
-   * Describes the severity of the adverse event, in relation to the subject. Contrast to AdverseEvent.seriousness - a severe rash might not be serious, but a mild heart problem is.
-   */
-  severity?: fhir.ICodeableConcept|undefined;
-  /**
-   * Describes the type of outcome from the adverse event.
-   */
-  outcome?: fhir.ICodeableConcept|undefined;
-  /**
-   * Information on who recorded the adverse event.  May be the patient or a practitioner.
-   */
-  recorder?: fhir.IReference|undefined;
-  /**
-   * Parties that may or should contribute or have contributed information to the adverse event, which can consist of one or more activities.  Such information includes information leading to the decision to perform the activity and how to perform the activity (e.g. consultant), information that the activity itself seeks to reveal (e.g. informant of clinical history), or information about what activity was performed (e.g. informant witness).
-   */
-  contributor?: fhir.IReference[]|undefined;
-  /**
-   * Describes the entity that is suspected to have caused the adverse event.
-   */
-  suspectEntity?: fhir.IAdverseEventSuspectEntity[]|undefined;
-  /**
-   * AdverseEvent.subjectMedicalHistory.
-   */
-  subjectMedicalHistory?: fhir.IReference[]|undefined;
-  /**
-   * AdverseEvent.referenceDocument.
-   */
-  referenceDocument?: fhir.IReference[]|undefined;
-  /**
-   * AdverseEvent.study.
-   */
-  study?: fhir.IReference[]|undefined;
+  method?: fhir.CodeableConceptArgs|undefined;
 }
 
 /**
  * Information on the possible cause of the event.
  */
-export class AdverseEventSuspectEntityCausality extends fhir.BackboneElement implements IAdverseEventSuspectEntityCausality {
+export class AdverseEventSuspectEntityCausality extends fhir.BackboneElement {
+  readonly __dataType:string = 'AdverseEventSuspectEntityCausality';
   /**
    * Assessment of if the entity caused the event.
    */
@@ -171,11 +57,7 @@ export class AdverseEventSuspectEntityCausality extends fhir.BackboneElement imp
   /**
    * AdverseEvent.suspectEntity.causalityProductRelatedness.
    */
-  public productRelatedness?: string|undefined;
-  /**
-   * Extended properties for primitive element: AdverseEvent.suspectEntity.causality.productRelatedness
-   */
-  public _productRelatedness?: fhir.FhirElement|undefined;
+  public productRelatedness?: fhir.FhirString|undefined;
   /**
    * AdverseEvent.suspectEntity.causalityAuthor.
    */
@@ -187,13 +69,12 @@ export class AdverseEventSuspectEntityCausality extends fhir.BackboneElement imp
   /**
    * Default constructor for AdverseEventSuspectEntityCausality - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAdverseEventSuspectEntityCausality> = { }) {
-    super(source);
-    if (source['assessment']) { this.assessment = new fhir.CodeableConcept(source.assessment!); }
-    if (source['productRelatedness']) { this.productRelatedness = source.productRelatedness; }
-    if (source['_productRelatedness']) { this._productRelatedness = new fhir.FhirElement(source._productRelatedness!); }
-    if (source['author']) { this.author = new fhir.Reference(source.author!); }
-    if (source['method']) { this.method = new fhir.CodeableConcept(source.method!); }
+  constructor(source:Partial<AdverseEventSuspectEntityCausalityArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['assessment']) { this.assessment = new fhir.CodeableConcept(source.assessment); }
+    if (source['productRelatedness']) { this.productRelatedness = new fhir.FhirString({value: source.productRelatedness}); }
+    if (source['author']) { this.author = new fhir.Reference(source.author); }
+    if (source['method']) { this.method = new fhir.CodeableConcept(source.method); }
   }
   /**
    * Example-bound Value Set for assessment
@@ -210,20 +91,40 @@ export class AdverseEventSuspectEntityCausality extends fhir.BackboneElement imp
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["assessment"]) { results.push(...this.assessment.doModelValidation()); }
-    if (this["_productRelatedness"]) { results.push(...this._productRelatedness.doModelValidation()); }
-    if (this["author"]) { results.push(...this.author.doModelValidation()); }
-    if (this["method"]) { results.push(...this.method.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["assessment"]) { outcome.issue!.push(...this.assessment.doModelValidation().issue!); }
+    if (this["productRelatedness"]) { outcome.issue!.push(...this.productRelatedness.doModelValidation().issue!); }
+    if (this["author"]) { outcome.issue!.push(...this.author.doModelValidation().issue!); }
+    if (this["method"]) { outcome.issue!.push(...this.method.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the AdverseEventSuspectEntity type.
+ */
+export interface AdverseEventSuspectEntityArgs extends fhir.BackboneElementArgs {
+  /**
+   * Identifies the actual instance of what caused the adverse event.  May be a substance, medication, medication administration, medication statement or a device.
+   */
+  instance: fhir.ReferenceArgs|null;
+  /**
+   * Information on the possible cause of the event.
+   */
+  causality?: fhir.AdverseEventSuspectEntityCausalityArgs[]|undefined;
 }
 
 /**
  * Describes the entity that is suspected to have caused the adverse event.
  */
-export class AdverseEventSuspectEntity extends fhir.BackboneElement implements IAdverseEventSuspectEntity {
+export class AdverseEventSuspectEntity extends fhir.BackboneElement {
+  readonly __dataType:string = 'AdverseEventSuspectEntity';
   /**
    * Identifies the actual instance of what caused the adverse event.  May be a substance, medication, medication administration, medication statement or a device.
    */
@@ -231,32 +132,130 @@ export class AdverseEventSuspectEntity extends fhir.BackboneElement implements I
   /**
    * Information on the possible cause of the event.
    */
-  public causality?: fhir.AdverseEventSuspectEntityCausality[]|undefined;
+  public causality?: fhir.AdverseEventSuspectEntityCausality[]|undefined = [];
   /**
    * Default constructor for AdverseEventSuspectEntity - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAdverseEventSuspectEntity> = { }) {
-    super(source);
-    if (source['instance']) { this.instance = new fhir.Reference(source.instance!); }
+  constructor(source:Partial<AdverseEventSuspectEntityArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['instance']) { this.instance = new fhir.Reference(source.instance); }
     else { this.instance = null; }
     if (source['causality']) { this.causality = source.causality.map((x) => new fhir.AdverseEventSuspectEntityCausality(x)); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["instance"]) { results.push(["instance",'Missing required element: AdverseEvent.suspectEntity.instance']); }
-    if (this["instance"]) { results.push(...this.instance.doModelValidation()); }
-    if (this["causality"]) { this.causality.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['instance']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property instance:fhir.Reference fhir: AdverseEvent.suspectEntity.instance:Reference", }));
+    }
+    if (this["instance"]) { outcome.issue!.push(...this.instance.doModelValidation().issue!); }
+    if (this["causality"]) { this.causality.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the AdverseEvent type.
+ */
+export interface AdverseEventArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "AdverseEvent"|undefined;
+  /**
+   * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+   */
+  identifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * Whether the event actually happened, or just had the potential to. Note that this is independent of whether anyone was affected or harmed or how severely.
+   */
+  actuality: AdverseEventActualityValueSetEnum|null;
+  /**
+   * The overall type of event, intended for search and filtering purposes.
+   */
+  category?: fhir.CodeableConceptArgs[]|undefined;
+  /**
+   * This element defines the specific type of event that occurred or that was prevented from occurring.
+   */
+  event?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * If AdverseEvent.resultingCondition differs among members of the group, then use Patient as the subject.
+   */
+  subject: fhir.ReferenceArgs|null;
+  /**
+   * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.  For example, if a medication administration was considered an adverse event because it resulted in a rash, then the encounter when the medication administration was given is the context.  If the patient reports the AdverseEvent during a second encounter, that second encounter is not the context.
+   */
+  encounter?: fhir.ReferenceArgs|undefined;
+  /**
+   * The date (and perhaps time) when the adverse event occurred.
+   */
+  date?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Estimated or actual date the AdverseEvent began, in the opinion of the reporter.
+   */
+  detected?: fhir.FhirDateTime|string|undefined;
+  /**
+   * The recordedDate represents the date when this particular AdverseEvent record was created in the system, not the date of the most recent update.  The date of the last record modification can be retrieved from the resource metadata.
+   */
+  recordedDate?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Includes information about the reaction that occurred as a result of exposure to a substance (for example, a drug or a chemical).
+   */
+  resultingCondition?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * The information about where the adverse event occurred.
+   */
+  location?: fhir.ReferenceArgs|undefined;
+  /**
+   * Assessment whether this event was of real importance.
+   */
+  seriousness?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Describes the severity of the adverse event, in relation to the subject. Contrast to AdverseEvent.seriousness - a severe rash might not be serious, but a mild heart problem is.
+   */
+  severity?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Describes the type of outcome from the adverse event.
+   */
+  outcome?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Information on who recorded the adverse event.  May be the patient or a practitioner.
+   */
+  recorder?: fhir.ReferenceArgs|undefined;
+  /**
+   * Parties that may or should contribute or have contributed information to the adverse event, which can consist of one or more activities.  Such information includes information leading to the decision to perform the activity and how to perform the activity (e.g. consultant), information that the activity itself seeks to reveal (e.g. informant of clinical history), or information about what activity was performed (e.g. informant witness).
+   */
+  contributor?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Describes the entity that is suspected to have caused the adverse event.
+   */
+  suspectEntity?: fhir.AdverseEventSuspectEntityArgs[]|undefined;
+  /**
+   * AdverseEvent.subjectMedicalHistory.
+   */
+  subjectMedicalHistory?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * AdverseEvent.referenceDocument.
+   */
+  referenceDocument?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * AdverseEvent.study.
+   */
+  study?: fhir.ReferenceArgs[]|undefined;
 }
 
 /**
  * Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.
  */
-export class AdverseEvent extends fhir.DomainResource implements IAdverseEvent {
+export class AdverseEvent extends fhir.DomainResource {
+  readonly __dataType:string = 'AdverseEvent';
   /**
    * Resource Type Name
    */
@@ -270,13 +269,9 @@ export class AdverseEvent extends fhir.DomainResource implements IAdverseEvent {
    */
   public actuality: AdverseEventActualityValueSetEnum|null;
   /**
-   * Extended properties for primitive element: AdverseEvent.actuality
-   */
-  public _actuality?: fhir.FhirElement|undefined;
-  /**
    * The overall type of event, intended for search and filtering purposes.
    */
-  public category?: fhir.CodeableConcept[]|undefined;
+  public category?: fhir.CodeableConcept[]|undefined = [];
   /**
    * This element defines the specific type of event that occurred or that was prevented from occurring.
    */
@@ -292,31 +287,19 @@ export class AdverseEvent extends fhir.DomainResource implements IAdverseEvent {
   /**
    * The date (and perhaps time) when the adverse event occurred.
    */
-  public date?: string|undefined;
-  /**
-   * Extended properties for primitive element: AdverseEvent.date
-   */
-  public _date?: fhir.FhirElement|undefined;
+  public date?: fhir.FhirDateTime|undefined;
   /**
    * Estimated or actual date the AdverseEvent began, in the opinion of the reporter.
    */
-  public detected?: string|undefined;
-  /**
-   * Extended properties for primitive element: AdverseEvent.detected
-   */
-  public _detected?: fhir.FhirElement|undefined;
+  public detected?: fhir.FhirDateTime|undefined;
   /**
    * The recordedDate represents the date when this particular AdverseEvent record was created in the system, not the date of the most recent update.  The date of the last record modification can be retrieved from the resource metadata.
    */
-  public recordedDate?: string|undefined;
-  /**
-   * Extended properties for primitive element: AdverseEvent.recordedDate
-   */
-  public _recordedDate?: fhir.FhirElement|undefined;
+  public recordedDate?: fhir.FhirDateTime|undefined;
   /**
    * Includes information about the reaction that occurred as a result of exposure to a substance (for example, a drug or a chemical).
    */
-  public resultingCondition?: fhir.Reference[]|undefined;
+  public resultingCondition?: fhir.Reference[]|undefined = [];
   /**
    * The information about where the adverse event occurred.
    */
@@ -340,50 +323,46 @@ export class AdverseEvent extends fhir.DomainResource implements IAdverseEvent {
   /**
    * Parties that may or should contribute or have contributed information to the adverse event, which can consist of one or more activities.  Such information includes information leading to the decision to perform the activity and how to perform the activity (e.g. consultant), information that the activity itself seeks to reveal (e.g. informant of clinical history), or information about what activity was performed (e.g. informant witness).
    */
-  public contributor?: fhir.Reference[]|undefined;
+  public contributor?: fhir.Reference[]|undefined = [];
   /**
    * Describes the entity that is suspected to have caused the adverse event.
    */
-  public suspectEntity?: fhir.AdverseEventSuspectEntity[]|undefined;
+  public suspectEntity?: fhir.AdverseEventSuspectEntity[]|undefined = [];
   /**
    * AdverseEvent.subjectMedicalHistory.
    */
-  public subjectMedicalHistory?: fhir.Reference[]|undefined;
+  public subjectMedicalHistory?: fhir.Reference[]|undefined = [];
   /**
    * AdverseEvent.referenceDocument.
    */
-  public referenceDocument?: fhir.Reference[]|undefined;
+  public referenceDocument?: fhir.Reference[]|undefined = [];
   /**
    * AdverseEvent.study.
    */
-  public study?: fhir.Reference[]|undefined;
+  public study?: fhir.Reference[]|undefined = [];
   /**
    * Default constructor for AdverseEvent - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IAdverseEvent> = { }) {
-    super(source);
+  constructor(source:Partial<AdverseEventArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'AdverseEvent';
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
     if (source['actuality']) { this.actuality = source.actuality; }
     else { this.actuality = null; }
-    if (source['_actuality']) { this._actuality = new fhir.FhirElement(source._actuality!); }
     if (source['category']) { this.category = source.category.map((x) => new fhir.CodeableConcept(x)); }
-    if (source['event']) { this.event = new fhir.CodeableConcept(source.event!); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
+    if (source['event']) { this.event = new fhir.CodeableConcept(source.event); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
     else { this.subject = null; }
-    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter!); }
-    if (source['date']) { this.date = source.date; }
-    if (source['_date']) { this._date = new fhir.FhirElement(source._date!); }
-    if (source['detected']) { this.detected = source.detected; }
-    if (source['_detected']) { this._detected = new fhir.FhirElement(source._detected!); }
-    if (source['recordedDate']) { this.recordedDate = source.recordedDate; }
-    if (source['_recordedDate']) { this._recordedDate = new fhir.FhirElement(source._recordedDate!); }
+    if (source['encounter']) { this.encounter = new fhir.Reference(source.encounter); }
+    if (source['date']) { this.date = new fhir.FhirDateTime({value: source.date}); }
+    if (source['detected']) { this.detected = new fhir.FhirDateTime({value: source.detected}); }
+    if (source['recordedDate']) { this.recordedDate = new fhir.FhirDateTime({value: source.recordedDate}); }
     if (source['resultingCondition']) { this.resultingCondition = source.resultingCondition.map((x) => new fhir.Reference(x)); }
-    if (source['location']) { this.location = new fhir.Reference(source.location!); }
-    if (source['seriousness']) { this.seriousness = new fhir.CodeableConcept(source.seriousness!); }
-    if (source['severity']) { this.severity = new fhir.CodeableConcept(source.severity!); }
-    if (source['outcome']) { this.outcome = new fhir.CodeableConcept(source.outcome!); }
-    if (source['recorder']) { this.recorder = new fhir.Reference(source.recorder!); }
+    if (source['location']) { this.location = new fhir.Reference(source.location); }
+    if (source['seriousness']) { this.seriousness = new fhir.CodeableConcept(source.seriousness); }
+    if (source['severity']) { this.severity = new fhir.CodeableConcept(source.severity); }
+    if (source['outcome']) { this.outcome = new fhir.CodeableConcept(source.outcome); }
+    if (source['recorder']) { this.recorder = new fhir.Reference(source.recorder); }
     if (source['contributor']) { this.contributor = source.contributor.map((x) => new fhir.Reference(x)); }
     if (source['suspectEntity']) { this.suspectEntity = source.suspectEntity.map((x) => new fhir.AdverseEventSuspectEntity(x)); }
     if (source['subjectMedicalHistory']) { this.subjectMedicalHistory = source.subjectMedicalHistory.map((x) => new fhir.Reference(x)); }
@@ -429,31 +408,42 @@ export class AdverseEvent extends fhir.DomainResource implements IAdverseEvent {
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: AdverseEvent.resourceType']); }
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (!this["actuality"]) { results.push(["actuality",'Missing required element: AdverseEvent.actuality']); }
-    if (this["_actuality"]) { results.push(...this._actuality.doModelValidation()); }
-    if (this["category"]) { this.category.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["event"]) { results.push(...this.event.doModelValidation()); }
-    if (!this["subject"]) { results.push(["subject",'Missing required element: AdverseEvent.subject']); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["encounter"]) { results.push(...this.encounter.doModelValidation()); }
-    if (this["_date"]) { results.push(...this._date.doModelValidation()); }
-    if (this["_detected"]) { results.push(...this._detected.doModelValidation()); }
-    if (this["_recordedDate"]) { results.push(...this._recordedDate.doModelValidation()); }
-    if (this["resultingCondition"]) { this.resultingCondition.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["location"]) { results.push(...this.location.doModelValidation()); }
-    if (this["seriousness"]) { results.push(...this.seriousness.doModelValidation()); }
-    if (this["severity"]) { results.push(...this.severity.doModelValidation()); }
-    if (this["outcome"]) { results.push(...this.outcome.doModelValidation()); }
-    if (this["recorder"]) { results.push(...this.recorder.doModelValidation()); }
-    if (this["contributor"]) { this.contributor.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["suspectEntity"]) { this.suspectEntity.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["subjectMedicalHistory"]) { this.subjectMedicalHistory.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["referenceDocument"]) { this.referenceDocument.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["study"]) { this.study.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'AdverseEvent' fhir: AdverseEvent.resourceType:'AdverseEvent'", }));
+    }
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (!this['actuality']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property actuality:AdverseEventActualityValueSetEnum fhir: AdverseEvent.actuality:code", }));
+    }
+    if (this["category"]) { this.category.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["event"]) { outcome.issue!.push(...this.event.doModelValidation().issue!); }
+    if (!this['subject']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property subject:fhir.Reference fhir: AdverseEvent.subject:Reference", }));
+    }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["encounter"]) { outcome.issue!.push(...this.encounter.doModelValidation().issue!); }
+    if (this["date"]) { outcome.issue!.push(...this.date.doModelValidation().issue!); }
+    if (this["detected"]) { outcome.issue!.push(...this.detected.doModelValidation().issue!); }
+    if (this["recordedDate"]) { outcome.issue!.push(...this.recordedDate.doModelValidation().issue!); }
+    if (this["resultingCondition"]) { this.resultingCondition.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["location"]) { outcome.issue!.push(...this.location.doModelValidation().issue!); }
+    if (this["seriousness"]) { outcome.issue!.push(...this.seriousness.doModelValidation().issue!); }
+    if (this["severity"]) { outcome.issue!.push(...this.severity.doModelValidation().issue!); }
+    if (this["outcome"]) { outcome.issue!.push(...this.outcome.doModelValidation().issue!); }
+    if (this["recorder"]) { outcome.issue!.push(...this.recorder.doModelValidation().issue!); }
+    if (this["contributor"]) { this.contributor.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["suspectEntity"]) { this.suspectEntity.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["subjectMedicalHistory"]) { this.subjectMedicalHistory.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["referenceDocument"]) { this.referenceDocument.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["study"]) { this.study.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

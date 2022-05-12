@@ -51,27 +51,4 @@ export const EntformulaAdditiveValueSet = {
 /**
  * EnteralFormulaAdditiveType: Codes for the type of modular component such as protein, carbohydrate or fiber to be provided in addition to or mixed with the base formula. This value set is provided as a suggestive example.
  */
-export var EntformulaAdditiveValueSetEnum;
-(function (EntformulaAdditiveValueSetEnum) {
-    /**
-     * carbohydrate: Modular carbohydrate enteral formula component
-     */
-    EntformulaAdditiveValueSetEnum["Carbohydrate"] = "carbohydrate";
-    /**
-     * fiber: Modular fiber enteral formula component
-     */
-    EntformulaAdditiveValueSetEnum["Fiber"] = "fiber";
-    /**
-     * lipid: Modular lipid enteral formula component
-     */
-    EntformulaAdditiveValueSetEnum["Lipid"] = "lipid";
-    /**
-     * protein: Modular protein enteral formula component
-     */
-    EntformulaAdditiveValueSetEnum["Protein"] = "protein";
-    /**
-     * water: Added water
-     */
-    EntformulaAdditiveValueSetEnum["Water"] = "water";
-})(EntformulaAdditiveValueSetEnum || (EntformulaAdditiveValueSetEnum = {}));
 //# sourceMappingURL=EntformulaAdditiveValueSet.js.map

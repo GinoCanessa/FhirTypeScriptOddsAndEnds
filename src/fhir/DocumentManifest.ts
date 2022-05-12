@@ -3,103 +3,33 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: DocumentManifest
 
-import * as fhir from '../fhir.js'
+import * as fhir from '../fhir.js';
 
-import { DocumentReferenceStatusValueSet, DocumentReferenceStatusValueSetType, DocumentReferenceStatusValueSetEnum } from '../fhirValueSets/DocumentReferenceStatusValueSet.js'
-import { V3ActCodeValueSet, V3ActCodeValueSetType, V3ActCodeValueSetEnum } from '../fhirValueSets/V3ActCodeValueSet.js'
-
+import { DocumentReferenceStatusValueSet, DocumentReferenceStatusValueSetType,} from '../fhirValueSets/DocumentReferenceStatusValueSet.js';
+import { DocumentReferenceStatusValueSetEnum } from '../valueSetEnums.js';
+import { V3ActCodeValueSet, V3ActCodeValueSetType,} from '../fhirValueSets/V3ActCodeValueSet.js';
+import { V3ActCodeValueSetEnum } from '../valueSetEnums.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
- * May be identifiers or resources that caused the DocumentManifest to be created.
+ * Valid arguments for the DocumentManifestRelated type.
  */
-export type IDocumentManifestRelated = fhir.IBackboneElement & { 
+export interface DocumentManifestRelatedArgs extends fhir.BackboneElementArgs {
   /**
    * If both identifier and ref elements are present they shall refer to the same thing.
    */
-  identifier?: fhir.IIdentifier|undefined;
+  identifier?: fhir.IdentifierArgs|undefined;
   /**
    * If both identifier and ref elements are present they shall refer to the same thing.
    */
-  ref?: fhir.IReference|undefined;
-}
-
-/**
- * A collection of documents compiled for a purpose together with metadata that applies to the collection.
- */
-export type IDocumentManifest = fhir.IDomainResource & { 
-  /**
-   * Resource Type Name
-   */
-  resourceType: "DocumentManifest";
-  /**
-   * A single identifier that uniquely identifies this manifest. Principally used to refer to the manifest in non-FHIR contexts.
-   */
-  masterIdentifier?: fhir.IIdentifier|undefined;
-  /**
-   * Other identifiers associated with the document manifest, including version independent  identifiers.
-   */
-  identifier?: fhir.IIdentifier[]|undefined;
-  /**
-   * This element is labeled as a modifier because the status contains the codes that mark the manifest as not currently valid.
-   */
-  status: DocumentReferenceStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: DocumentManifest.status
-   */
-  _status?: fhir.IFhirElement|undefined;
-  /**
-   * Specifies the kind of this set of documents (e.g. Patient Summary, Discharge Summary, Prescription, etc.). The type of a set of documents may be the same as one of the documents in it - especially if there is only one - but it may be wider.
-   */
-  type?: fhir.ICodeableConcept|undefined;
-  /**
-   * Who or what the set of documents is about. The documents can be about a person, (patient or healthcare practitioner), a device (i.e. machine) or even a group of subjects (such as a document about a herd of farm animals, or a set of patients that share a common exposure). If the documents cross more than one subject, then more than one subject is allowed here (unusual use case).
-   */
-  subject?: fhir.IReference|undefined;
-  /**
-   * Creation time is used for tracking, organizing versions and searching. This is the creation time of the document set, not the documents on which it is based.
-   */
-  created?: string|undefined;
-  /**
-   * Extended properties for primitive element: DocumentManifest.created
-   */
-  _created?: fhir.IFhirElement|undefined;
-  /**
-   * Not necessarily who did the actual data entry (i.e. typist) or who was the source (informant).
-   */
-  author?: fhir.IReference[]|undefined;
-  /**
-   * How the recipient receives the document set or is notified of it is up to the implementation. This element is just a statement of intent. If the recipient is a person, and it is not known whether the person is a patient or a practitioner, RelatedPerson would be the default choice.
-   */
-  recipient?: fhir.IReference[]|undefined;
-  /**
-   * Identifies the source system, application, or software that produced the document manifest.
-   */
-  source?: string|undefined;
-  /**
-   * Extended properties for primitive element: DocumentManifest.source
-   */
-  _source?: fhir.IFhirElement|undefined;
-  /**
-   * What the document is about, rather than a terse summary of the document. It is commonly the case that records do not have a title and are collectively referred to by the display name of Record code (e.g. a "consultation" or "progress note").
-   */
-  description?: string|undefined;
-  /**
-   * Extended properties for primitive element: DocumentManifest.description
-   */
-  _description?: fhir.IFhirElement|undefined;
-  /**
-   * When used for XDS the intended focus of the DocumentManifest is for the reference to target to be a set of DocumentReference Resources. The reference is to "Any" to support EN 13606 usage, where an extract is DocumentManifest that references  List and Composition resources.
-   */
-  content: fhir.IReference[]|null;
-  /**
-   * May be identifiers or resources that caused the DocumentManifest to be created.
-   */
-  related?: fhir.IDocumentManifestRelated[]|undefined;
+  ref?: fhir.ReferenceArgs|undefined;
 }
 
 /**
  * May be identifiers or resources that caused the DocumentManifest to be created.
  */
-export class DocumentManifestRelated extends fhir.BackboneElement implements IDocumentManifestRelated {
+export class DocumentManifestRelated extends fhir.BackboneElement {
+  readonly __dataType:string = 'DocumentManifestRelated';
   /**
    * If both identifier and ref elements are present they shall refer to the same thing.
    */
@@ -111,26 +41,90 @@ export class DocumentManifestRelated extends fhir.BackboneElement implements IDo
   /**
    * Default constructor for DocumentManifestRelated - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IDocumentManifestRelated> = { }) {
-    super(source);
-    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier!); }
-    if (source['ref']) { this.ref = new fhir.Reference(source.ref!); }
+  constructor(source:Partial<DocumentManifestRelatedArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
+    if (source['identifier']) { this.identifier = new fhir.Identifier(source.identifier); }
+    if (source['ref']) { this.ref = new fhir.Reference(source.ref); }
   }
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (this["identifier"]) { results.push(...this.identifier.doModelValidation()); }
-    if (this["ref"]) { results.push(...this.ref.doModelValidation()); }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (this["identifier"]) { outcome.issue!.push(...this.identifier.doModelValidation().issue!); }
+    if (this["ref"]) { outcome.issue!.push(...this.ref.doModelValidation().issue!); }
+    return outcome;
   }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
+  }
+}
+/**
+ * Valid arguments for the DocumentManifest type.
+ */
+export interface DocumentManifestArgs extends fhir.DomainResourceArgs {
+  /**
+   * Resource Type Name
+   */
+  resourceType: "DocumentManifest"|undefined;
+  /**
+   * A single identifier that uniquely identifies this manifest. Principally used to refer to the manifest in non-FHIR contexts.
+   */
+  masterIdentifier?: fhir.IdentifierArgs|undefined;
+  /**
+   * Other identifiers associated with the document manifest, including version independent  identifiers.
+   */
+  identifier?: fhir.IdentifierArgs[]|undefined;
+  /**
+   * This element is labeled as a modifier because the status contains the codes that mark the manifest as not currently valid.
+   */
+  status: DocumentReferenceStatusValueSetEnum|null;
+  /**
+   * Specifies the kind of this set of documents (e.g. Patient Summary, Discharge Summary, Prescription, etc.). The type of a set of documents may be the same as one of the documents in it - especially if there is only one - but it may be wider.
+   */
+  type?: fhir.CodeableConceptArgs|undefined;
+  /**
+   * Who or what the set of documents is about. The documents can be about a person, (patient or healthcare practitioner), a device (i.e. machine) or even a group of subjects (such as a document about a herd of farm animals, or a set of patients that share a common exposure). If the documents cross more than one subject, then more than one subject is allowed here (unusual use case).
+   */
+  subject?: fhir.ReferenceArgs|undefined;
+  /**
+   * Creation time is used for tracking, organizing versions and searching. This is the creation time of the document set, not the documents on which it is based.
+   */
+  created?: fhir.FhirDateTime|string|undefined;
+  /**
+   * Not necessarily who did the actual data entry (i.e. typist) or who was the source (informant).
+   */
+  author?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * How the recipient receives the document set or is notified of it is up to the implementation. This element is just a statement of intent. If the recipient is a person, and it is not known whether the person is a patient or a practitioner, RelatedPerson would be the default choice.
+   */
+  recipient?: fhir.ReferenceArgs[]|undefined;
+  /**
+   * Identifies the source system, application, or software that produced the document manifest.
+   */
+  source?: fhir.FhirUri|string|undefined;
+  /**
+   * What the document is about, rather than a terse summary of the document. It is commonly the case that records do not have a title and are collectively referred to by the display name of Record code (e.g. a "consultation" or "progress note").
+   */
+  description?: fhir.FhirString|string|undefined;
+  /**
+   * When used for XDS the intended focus of the DocumentManifest is for the reference to target to be a set of DocumentReference Resources. The reference is to "Any" to support EN 13606 usage, where an extract is DocumentManifest that references  List and Composition resources.
+   */
+  content: fhir.ReferenceArgs[]|null;
+  /**
+   * May be identifiers or resources that caused the DocumentManifest to be created.
+   */
+  related?: fhir.DocumentManifestRelatedArgs[]|undefined;
 }
 
 /**
  * A collection of documents compiled for a purpose together with metadata that applies to the collection.
  */
-export class DocumentManifest extends fhir.DomainResource implements IDocumentManifest {
+export class DocumentManifest extends fhir.DomainResource {
+  readonly __dataType:string = 'DocumentManifest';
   /**
    * Resource Type Name
    */
@@ -142,15 +136,11 @@ export class DocumentManifest extends fhir.DomainResource implements IDocumentMa
   /**
    * Other identifiers associated with the document manifest, including version independent  identifiers.
    */
-  public identifier?: fhir.Identifier[]|undefined;
+  public identifier?: fhir.Identifier[]|undefined = [];
   /**
    * This element is labeled as a modifier because the status contains the codes that mark the manifest as not currently valid.
    */
   public status: DocumentReferenceStatusValueSetEnum|null;
-  /**
-   * Extended properties for primitive element: DocumentManifest.status
-   */
-  public _status?: fhir.FhirElement|undefined;
   /**
    * Specifies the kind of this set of documents (e.g. Patient Summary, Discharge Summary, Prescription, etc.). The type of a set of documents may be the same as one of the documents in it - especially if there is only one - but it may be wider.
    */
@@ -162,64 +152,48 @@ export class DocumentManifest extends fhir.DomainResource implements IDocumentMa
   /**
    * Creation time is used for tracking, organizing versions and searching. This is the creation time of the document set, not the documents on which it is based.
    */
-  public created?: string|undefined;
-  /**
-   * Extended properties for primitive element: DocumentManifest.created
-   */
-  public _created?: fhir.FhirElement|undefined;
+  public created?: fhir.FhirDateTime|undefined;
   /**
    * Not necessarily who did the actual data entry (i.e. typist) or who was the source (informant).
    */
-  public author?: fhir.Reference[]|undefined;
+  public author?: fhir.Reference[]|undefined = [];
   /**
    * How the recipient receives the document set or is notified of it is up to the implementation. This element is just a statement of intent. If the recipient is a person, and it is not known whether the person is a patient or a practitioner, RelatedPerson would be the default choice.
    */
-  public recipient?: fhir.Reference[]|undefined;
+  public recipient?: fhir.Reference[]|undefined = [];
   /**
    * Identifies the source system, application, or software that produced the document manifest.
    */
-  public source?: string|undefined;
-  /**
-   * Extended properties for primitive element: DocumentManifest.source
-   */
-  public _source?: fhir.FhirElement|undefined;
+  public source?: fhir.FhirUri|undefined;
   /**
    * What the document is about, rather than a terse summary of the document. It is commonly the case that records do not have a title and are collectively referred to by the display name of Record code (e.g. a "consultation" or "progress note").
    */
-  public description?: string|undefined;
-  /**
-   * Extended properties for primitive element: DocumentManifest.description
-   */
-  public _description?: fhir.FhirElement|undefined;
+  public description?: fhir.FhirString|undefined;
   /**
    * When used for XDS the intended focus of the DocumentManifest is for the reference to target to be a set of DocumentReference Resources. The reference is to "Any" to support EN 13606 usage, where an extract is DocumentManifest that references  List and Composition resources.
    */
-  public content: fhir.Reference[]|null;
+  public content: fhir.Reference[]|null = [];
   /**
    * May be identifiers or resources that caused the DocumentManifest to be created.
    */
-  public related?: fhir.DocumentManifestRelated[]|undefined;
+  public related?: fhir.DocumentManifestRelated[]|undefined = [];
   /**
    * Default constructor for DocumentManifest - initializes any required elements to null if a value is not provided.
    */
-  constructor(source:Partial<IDocumentManifest> = { }) {
-    super(source);
+  constructor(source:Partial<DocumentManifestArgs> = {}, options:fhir.FhirConstructorOptions = {}) {
+    super(source, options);
     this.resourceType = 'DocumentManifest';
-    if (source['masterIdentifier']) { this.masterIdentifier = new fhir.Identifier(source.masterIdentifier!); }
+    if (source['masterIdentifier']) { this.masterIdentifier = new fhir.Identifier(source.masterIdentifier); }
     if (source['identifier']) { this.identifier = source.identifier.map((x) => new fhir.Identifier(x)); }
     if (source['status']) { this.status = source.status; }
     else { this.status = null; }
-    if (source['_status']) { this._status = new fhir.FhirElement(source._status!); }
-    if (source['type']) { this.type = new fhir.CodeableConcept(source.type!); }
-    if (source['subject']) { this.subject = new fhir.Reference(source.subject!); }
-    if (source['created']) { this.created = source.created; }
-    if (source['_created']) { this._created = new fhir.FhirElement(source._created!); }
+    if (source['type']) { this.type = new fhir.CodeableConcept(source.type); }
+    if (source['subject']) { this.subject = new fhir.Reference(source.subject); }
+    if (source['created']) { this.created = new fhir.FhirDateTime({value: source.created}); }
     if (source['author']) { this.author = source.author.map((x) => new fhir.Reference(x)); }
     if (source['recipient']) { this.recipient = source.recipient.map((x) => new fhir.Reference(x)); }
-    if (source['source']) { this.source = source.source; }
-    if (source['_source']) { this._source = new fhir.FhirElement(source._source!); }
-    if (source['description']) { this.description = source.description; }
-    if (source['_description']) { this._description = new fhir.FhirElement(source._description!); }
+    if (source['source']) { this.source = new fhir.FhirUri({value: source.source}); }
+    if (source['description']) { this.description = new fhir.FhirString({value: source.description}); }
     if (source['content']) { this.content = source.content.map((x) => new fhir.Reference(x)); }
     else { this.content = null; }
     if (source['related']) { this.related = source.related.map((x) => new fhir.DocumentManifestRelated(x)); }
@@ -239,23 +213,38 @@ export class DocumentManifest extends fhir.DomainResource implements IDocumentMa
   /**
    * Function to perform basic model validation (e.g., check if required elements are present).
    */
-  public override doModelValidation():[string,string][] {
-    var results:[string,string][] = super.doModelValidation();
-    if (!this["resourceType"]) { results.push(["resourceType",'Missing required element: DocumentManifest.resourceType']); }
-    if (this["masterIdentifier"]) { results.push(...this.masterIdentifier.doModelValidation()); }
-    if (this["identifier"]) { this.identifier.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (!this["status"]) { results.push(["status",'Missing required element: DocumentManifest.status']); }
-    if (this["_status"]) { results.push(...this._status.doModelValidation()); }
-    if (this["type"]) { results.push(...this.type.doModelValidation()); }
-    if (this["subject"]) { results.push(...this.subject.doModelValidation()); }
-    if (this["_created"]) { results.push(...this._created.doModelValidation()); }
-    if (this["author"]) { this.author.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["recipient"]) { this.recipient.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["_source"]) { results.push(...this._source.doModelValidation()); }
-    if (this["_description"]) { results.push(...this._description.doModelValidation()); }
-    if ((!this["content"]) || (this["content"].length === 0)) { results.push(["content",'Missing required element: DocumentManifest.content']); }
-    if (this["content"]) { this.content.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    if (this["related"]) { this.related.forEach((x) => { results.push(...x.doModelValidation()); }) }
-    return results;
+  public override doModelValidation():fhir.OperationOutcome {
+    var outcome:fhir.OperationOutcome = super.doModelValidation();
+    if (!this['resourceType']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property resourceType:'DocumentManifest' fhir: DocumentManifest.resourceType:'DocumentManifest'", }));
+    }
+    if (this["masterIdentifier"]) { outcome.issue!.push(...this.masterIdentifier.doModelValidation().issue!); }
+    if (this["identifier"]) { this.identifier.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (!this['status']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property status:DocumentReferenceStatusValueSetEnum fhir: DocumentManifest.status:code", }));
+    }
+    if (this["type"]) { outcome.issue!.push(...this.type.doModelValidation().issue!); }
+    if (this["subject"]) { outcome.issue!.push(...this.subject.doModelValidation().issue!); }
+    if (this["created"]) { outcome.issue!.push(...this.created.doModelValidation().issue!); }
+    if (this["author"]) { this.author.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["recipient"]) { this.recipient.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["source"]) { outcome.issue!.push(...this.source.doModelValidation().issue!); }
+    if (this["description"]) { outcome.issue!.push(...this.description.doModelValidation().issue!); }
+    if (!this['content']) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property content:fhir.Reference[] fhir: DocumentManifest.content:Reference", }));
+    } else if (!Array.isArray(this.content)) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.StructuralIssue,  diagnostics: "Found scalar in array property content:fhir.Reference[] fhir: DocumentManifest.content:Reference", }));
+    } else if (this.content.length === 0) {
+      outcome.issue!.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing,  diagnostics: "Missing required property content:fhir.Reference[] fhir: DocumentManifest.content:Reference", }));
+    }
+    if (this["content"]) { this.content.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    if (this["related"]) { this.related.forEach((x) => { outcome.issue!.push(...x.doModelValidation().issue!); }) }
+    return outcome;
+  }
+  /**
+   * Function to strip invalid element values for serialization.
+   */
+  public toJSON() {
+    return fhir.fhirToJson(this);
   }
 }

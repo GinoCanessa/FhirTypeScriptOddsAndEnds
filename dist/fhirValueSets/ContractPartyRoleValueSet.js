@@ -19,11 +19,4 @@ export const ContractPartyRoleValueSet = {
 /**
  * This value set contract specific codes for offer party participation.
  */
-export var ContractPartyRoleValueSetEnum;
-(function (ContractPartyRoleValueSetEnum) {
-    /**
-     * flunky: To be completed
-     */
-    ContractPartyRoleValueSetEnum["FLunky"] = "flunky";
-})(ContractPartyRoleValueSetEnum || (ContractPartyRoleValueSetEnum = {}));
 //# sourceMappingURL=ContractPartyRoleValueSet.js.map

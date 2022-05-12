@@ -3,15 +3,17 @@
 // Minimum TypeScript Version: 3.7
 // FHIR Resource: Observation
 import * as fhir from '../fhir.js';
-import { ReferencerangeMeaningValueSet } from '../fhirValueSets/ReferencerangeMeaningValueSet.js';
-import { ReferencerangeAppliestoValueSet } from '../fhirValueSets/ReferencerangeAppliestoValueSet.js';
-import { ObservationCodesValueSet } from '../fhirValueSets/ObservationCodesValueSet.js';
-import { DataAbsentReasonValueSet } from '../fhirValueSets/DataAbsentReasonValueSet.js';
-import { ObservationInterpretationValueSet } from '../fhirValueSets/ObservationInterpretationValueSet.js';
-import { ObservationStatusValueSet } from '../fhirValueSets/ObservationStatusValueSet.js';
-import { ObservationCategoryValueSet } from '../fhirValueSets/ObservationCategoryValueSet.js';
-import { BodySiteValueSet } from '../fhirValueSets/BodySiteValueSet.js';
-import { ObservationMethodsValueSet } from '../fhirValueSets/ObservationMethodsValueSet.js';
+import { ReferencerangeMeaningValueSet, } from '../fhirValueSets/ReferencerangeMeaningValueSet.js';
+import { ReferencerangeAppliestoValueSet, } from '../fhirValueSets/ReferencerangeAppliestoValueSet.js';
+import { ObservationCodesValueSet, } from '../fhirValueSets/ObservationCodesValueSet.js';
+import { DataAbsentReasonValueSet, } from '../fhirValueSets/DataAbsentReasonValueSet.js';
+import { ObservationInterpretationValueSet, } from '../fhirValueSets/ObservationInterpretationValueSet.js';
+import { ObservationStatusValueSet, } from '../fhirValueSets/ObservationStatusValueSet.js';
+import { ObservationCategoryValueSet, } from '../fhirValueSets/ObservationCategoryValueSet.js';
+import { BodySiteValueSet, } from '../fhirValueSets/BodySiteValueSet.js';
+import { ObservationMethodsValueSet, } from '../fhirValueSets/ObservationMethodsValueSet.js';
+import { IssueTypeValueSetEnum } from '../valueSetEnums.js';
+import { IssueSeverityValueSetEnum } from '../valueSetEnums.js';
 /**
  * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
  */
@@ -19,8 +21,13 @@ export class ObservationReferenceRange extends fhir.BackboneElement {
     /**
      * Default constructor for ObservationReferenceRange - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ObservationReferenceRange';
+        /**
+         * This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.
+         */
+        this.appliesTo = [];
         if (source['low']) {
             this.low = new fhir.Quantity(source.low);
         }
@@ -37,10 +44,7 @@ export class ObservationReferenceRange extends fhir.BackboneElement {
             this.age = new fhir.Range(source.age);
         }
         if (source['text']) {
-            this.text = source.text;
-        }
-        if (source['_text']) {
-            this._text = new fhir.FhirElement(source._text);
+            this.text = new fhir.FhirString({ value: source.text });
         }
     }
     /**
@@ -59,26 +63,32 @@ export class ObservationReferenceRange extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
+        var outcome = super.doModelValidation();
         if (this["low"]) {
-            results.push(...this.low.doModelValidation());
+            outcome.issue.push(...this.low.doModelValidation().issue);
         }
         if (this["high"]) {
-            results.push(...this.high.doModelValidation());
+            outcome.issue.push(...this.high.doModelValidation().issue);
         }
         if (this["type"]) {
-            results.push(...this.type.doModelValidation());
+            outcome.issue.push(...this.type.doModelValidation().issue);
         }
         if (this["appliesTo"]) {
-            this.appliesTo.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.appliesTo.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["age"]) {
-            results.push(...this.age.doModelValidation());
+            outcome.issue.push(...this.age.doModelValidation().issue);
         }
-        if (this["_text"]) {
-            results.push(...this._text.doModelValidation());
+        if (this["text"]) {
+            outcome.issue.push(...this.text.doModelValidation().issue);
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -88,61 +98,59 @@ export class ObservationComponent extends fhir.BackboneElement {
     /**
      * Default constructor for ObservationComponent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'ObservationComponent';
+        this.__valueIsChoice = true;
+        /**
+         * Historically used for laboratory results (known as 'abnormal flag' ),  its use extends to other use cases where coded interpretations  are relevant.  Often reported as one or more simple compact codes this element is often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result.
+         */
+        this.interpretation = [];
+        /**
+         * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
+         */
+        this.referenceRange = [];
         if (source['code']) {
             this.code = new fhir.CodeableConcept(source.code);
         }
         else {
             this.code = null;
         }
-        if (source['valueQuantity']) {
-            this.valueQuantity = new fhir.Quantity(source.valueQuantity);
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['valueCodeableConcept']) {
-            this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept);
+        else if (source['valueQuantity']) {
+            this.value = new fhir.Quantity(source.valueQuantity);
         }
-        if (source['valueString']) {
-            this.valueString = source.valueString;
+        else if (source['valueCodeableConcept']) {
+            this.value = new fhir.CodeableConcept(source.valueCodeableConcept);
         }
-        if (source['_valueString']) {
-            this._valueString = new fhir.FhirElement(source._valueString);
+        else if (source['valueString']) {
+            this.value = new fhir.FhirString({ value: source.valueString });
         }
-        if (source['valueBoolean']) {
-            this.valueBoolean = source.valueBoolean;
+        else if (source['valueBoolean']) {
+            this.value = new fhir.FhirBoolean({ value: source.valueBoolean });
         }
-        if (source['_valueBoolean']) {
-            this._valueBoolean = new fhir.FhirElement(source._valueBoolean);
+        else if (source['valueInteger']) {
+            this.value = new fhir.FhirInteger({ value: source.valueInteger });
         }
-        if (source['valueInteger']) {
-            this.valueInteger = source.valueInteger;
+        else if (source['valueRange']) {
+            this.value = new fhir.Range(source.valueRange);
         }
-        if (source['_valueInteger']) {
-            this._valueInteger = new fhir.FhirElement(source._valueInteger);
+        else if (source['valueRatio']) {
+            this.value = new fhir.Ratio(source.valueRatio);
         }
-        if (source['valueRange']) {
-            this.valueRange = new fhir.Range(source.valueRange);
+        else if (source['valueSampledData']) {
+            this.value = new fhir.SampledData(source.valueSampledData);
         }
-        if (source['valueRatio']) {
-            this.valueRatio = new fhir.Ratio(source.valueRatio);
+        else if (source['valueTime']) {
+            this.value = new fhir.FhirTime({ value: source.valueTime });
         }
-        if (source['valueSampledData']) {
-            this.valueSampledData = new fhir.SampledData(source.valueSampledData);
+        else if (source['valueDateTime']) {
+            this.value = new fhir.FhirDateTime({ value: source.valueDateTime });
         }
-        if (source['valueTime']) {
-            this.valueTime = source.valueTime;
-        }
-        if (source['_valueTime']) {
-            this._valueTime = new fhir.FhirElement(source._valueTime);
-        }
-        if (source['valueDateTime']) {
-            this.valueDateTime = source.valueDateTime;
-        }
-        if (source['_valueDateTime']) {
-            this._valueDateTime = new fhir.FhirElement(source._valueDateTime);
-        }
-        if (source['valuePeriod']) {
-            this.valuePeriod = new fhir.Period(source.valuePeriod);
+        else if (source['valuePeriod']) {
+            this.value = new fhir.Period(source.valuePeriod);
         }
         if (source['dataAbsentReason']) {
             this.dataAbsentReason = new fhir.CodeableConcept(source.dataAbsentReason);
@@ -176,56 +184,29 @@ export class ObservationComponent extends fhir.BackboneElement {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: Observation.component.code']);
+        var outcome = super.doModelValidation();
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.CodeableConcept fhir: Observation.component.code:CodeableConcept", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
-        }
-        if (this["valueQuantity"]) {
-            results.push(...this.valueQuantity.doModelValidation());
-        }
-        if (this["valueCodeableConcept"]) {
-            results.push(...this.valueCodeableConcept.doModelValidation());
-        }
-        if (this["_valueString"]) {
-            results.push(...this._valueString.doModelValidation());
-        }
-        if (this["_valueBoolean"]) {
-            results.push(...this._valueBoolean.doModelValidation());
-        }
-        if (this["_valueInteger"]) {
-            results.push(...this._valueInteger.doModelValidation());
-        }
-        if (this["valueRange"]) {
-            results.push(...this.valueRange.doModelValidation());
-        }
-        if (this["valueRatio"]) {
-            results.push(...this.valueRatio.doModelValidation());
-        }
-        if (this["valueSampledData"]) {
-            results.push(...this.valueSampledData.doModelValidation());
-        }
-        if (this["_valueTime"]) {
-            results.push(...this._valueTime.doModelValidation());
-        }
-        if (this["_valueDateTime"]) {
-            results.push(...this._valueDateTime.doModelValidation());
-        }
-        if (this["valuePeriod"]) {
-            results.push(...this.valuePeriod.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["dataAbsentReason"]) {
-            results.push(...this.dataAbsentReason.doModelValidation());
+            outcome.issue.push(...this.dataAbsentReason.doModelValidation().issue);
         }
         if (this["interpretation"]) {
-            this.interpretation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.interpretation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["referenceRange"]) {
-            this.referenceRange.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.referenceRange.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 /**
@@ -235,8 +216,59 @@ export class Observation extends fhir.DomainResource {
     /**
      * Default constructor for Observation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source = {}) {
-        super(source);
+    constructor(source = {}, options = {}) {
+        super(source, options);
+        this.__dataType = 'Observation';
+        /**
+         * A unique identifier assigned to this observation.
+         */
+        this.identifier = [];
+        /**
+         * A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.
+         */
+        this.basedOn = [];
+        /**
+         * To link an Observation to an Encounter use `encounter`.  See the  [Notes](observation.html#obsgrouping) below for guidance on referencing another Observation.
+         */
+        this.partOf = [];
+        /**
+         * In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.
+         */
+        this.category = [];
+        /**
+         * Typically, an observation is made about the subject - a patient, or group of patients, location, or device - and the distinction between the subject and what is directly measured for an observation is specified in the observation code itself ( e.g., "Blood Glucose") and does not need to be represented separately using this element.  Use `specimen` if a reference to a specimen is required.  If a code is required instead of a resource use either  `bodysite` for bodysites or the standard extension [focusCode](extension-observation-focuscode.html).
+         */
+        this.focus = [];
+        this.__effectiveIsChoice = true;
+        /**
+         * Who was responsible for asserting the observed value as "true".
+         */
+        this.performer = [];
+        this.__valueIsChoice = true;
+        /**
+         * Historically used for laboratory results (known as 'abnormal flag' ),  its use extends to other use cases where coded interpretations  are relevant.  Often reported as one or more simple compact codes this element is often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result.
+         */
+        this.interpretation = [];
+        /**
+         * May include general statements about the observation, or statements about significant, unexpected or unreliable results values, or information about its source when relevant to its interpretation.
+         */
+        this.note = [];
+        /**
+         * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
+         */
+        this.referenceRange = [];
+        /**
+         * When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.
+         */
+        this.hasMember = [];
+        /**
+         * All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.
+         */
+        this.derivedFrom = [];
+        /**
+         * For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.
+         */
+        this.component = [];
         this.resourceType = 'Observation';
         if (source['identifier']) {
             this.identifier = source.identifier.map((x) => new fhir.Identifier(x));
@@ -252,9 +284,6 @@ export class Observation extends fhir.DomainResource {
         }
         else {
             this.status = null;
-        }
-        if (source['_status']) {
-            this._status = new fhir.FhirElement(source._status);
         }
         if (source['category']) {
             this.category = source.category.map((x) => new fhir.CodeableConcept(x));
@@ -274,80 +303,62 @@ export class Observation extends fhir.DomainResource {
         if (source['encounter']) {
             this.encounter = new fhir.Reference(source.encounter);
         }
-        if (source['effectiveDateTime']) {
-            this.effectiveDateTime = source.effectiveDateTime;
+        if (source['effective']) {
+            this.effective = source.effective;
         }
-        if (source['_effectiveDateTime']) {
-            this._effectiveDateTime = new fhir.FhirElement(source._effectiveDateTime);
+        else if (source['effectiveDateTime']) {
+            this.effective = new fhir.FhirDateTime({ value: source.effectiveDateTime });
         }
-        if (source['effectivePeriod']) {
-            this.effectivePeriod = new fhir.Period(source.effectivePeriod);
+        else if (source['effectivePeriod']) {
+            this.effective = new fhir.Period(source.effectivePeriod);
         }
-        if (source['effectiveTiming']) {
-            this.effectiveTiming = new fhir.Timing(source.effectiveTiming);
+        else if (source['effectiveTiming']) {
+            this.effective = new fhir.Timing(source.effectiveTiming);
         }
-        if (source['effectiveInstant']) {
-            this.effectiveInstant = source.effectiveInstant;
-        }
-        if (source['_effectiveInstant']) {
-            this._effectiveInstant = new fhir.FhirElement(source._effectiveInstant);
+        else if (source['effectiveInstant']) {
+            this.effective = new fhir.FhirInstant({ value: source.effectiveInstant });
         }
         if (source['issued']) {
-            this.issued = source.issued;
-        }
-        if (source['_issued']) {
-            this._issued = new fhir.FhirElement(source._issued);
+            this.issued = new fhir.FhirInstant({ value: source.issued });
         }
         if (source['performer']) {
             this.performer = source.performer.map((x) => new fhir.Reference(x));
         }
-        if (source['valueQuantity']) {
-            this.valueQuantity = new fhir.Quantity(source.valueQuantity);
+        if (source['value']) {
+            this.value = source.value;
         }
-        if (source['valueCodeableConcept']) {
-            this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept);
+        else if (source['valueQuantity']) {
+            this.value = new fhir.Quantity(source.valueQuantity);
         }
-        if (source['valueString']) {
-            this.valueString = source.valueString;
+        else if (source['valueCodeableConcept']) {
+            this.value = new fhir.CodeableConcept(source.valueCodeableConcept);
         }
-        if (source['_valueString']) {
-            this._valueString = new fhir.FhirElement(source._valueString);
+        else if (source['valueString']) {
+            this.value = new fhir.FhirString({ value: source.valueString });
         }
-        if (source['valueBoolean']) {
-            this.valueBoolean = source.valueBoolean;
+        else if (source['valueBoolean']) {
+            this.value = new fhir.FhirBoolean({ value: source.valueBoolean });
         }
-        if (source['_valueBoolean']) {
-            this._valueBoolean = new fhir.FhirElement(source._valueBoolean);
+        else if (source['valueInteger']) {
+            this.value = new fhir.FhirInteger({ value: source.valueInteger });
         }
-        if (source['valueInteger']) {
-            this.valueInteger = source.valueInteger;
+        else if (source['valueRange']) {
+            this.value = new fhir.Range(source.valueRange);
         }
-        if (source['_valueInteger']) {
-            this._valueInteger = new fhir.FhirElement(source._valueInteger);
+        else if (source['valueRatio']) {
+            this.value = new fhir.Ratio(source.valueRatio);
         }
-        if (source['valueRange']) {
-            this.valueRange = new fhir.Range(source.valueRange);
+        else if (source['valueSampledData']) {
+            this.value = new fhir.SampledData(source.valueSampledData);
         }
-        if (source['valueRatio']) {
-            this.valueRatio = new fhir.Ratio(source.valueRatio);
+        else if (source['valueTime']) {
+            this.value = new fhir.FhirTime({ value: source.valueTime });
         }
-        if (source['valueSampledData']) {
-            this.valueSampledData = new fhir.SampledData(source.valueSampledData);
+        else if (source['valueDateTime']) {
+            this.value = new fhir.FhirDateTime({ value: source.valueDateTime });
         }
-        if (source['valueTime']) {
-            this.valueTime = source.valueTime;
-        }
-        if (source['_valueTime']) {
-            this._valueTime = new fhir.FhirElement(source._valueTime);
-        }
-        if (source['valueDateTime']) {
-            this.valueDateTime = source.valueDateTime;
-        }
-        if (source['_valueDateTime']) {
-            this._valueDateTime = new fhir.FhirElement(source._valueDateTime);
-        }
-        if (source['valuePeriod']) {
-            this.valuePeriod = new fhir.Period(source.valuePeriod);
+        else if (source['valuePeriod']) {
+            this.value = new fhir.Period(source.valuePeriod);
         }
         if (source['dataAbsentReason']) {
             this.dataAbsentReason = new fhir.CodeableConcept(source.dataAbsentReason);
@@ -429,128 +440,86 @@ export class Observation extends fhir.DomainResource {
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
     doModelValidation() {
-        var results = super.doModelValidation();
-        if (!this["resourceType"]) {
-            results.push(["resourceType", 'Missing required element: Observation.resourceType']);
+        var outcome = super.doModelValidation();
+        if (!this['resourceType']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property resourceType:'Observation' fhir: Observation.resourceType:'Observation'", }));
         }
         if (this["identifier"]) {
-            this.identifier.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.identifier.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["basedOn"]) {
-            this.basedOn.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.basedOn.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["partOf"]) {
-            this.partOf.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.partOf.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["status"]) {
-            results.push(["status", 'Missing required element: Observation.status']);
-        }
-        if (this["_status"]) {
-            results.push(...this._status.doModelValidation());
+        if (!this['status']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property status:ObservationStatusValueSetEnum fhir: Observation.status:code", }));
         }
         if (this["category"]) {
-            this.category.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.category.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        if (!this["code"]) {
-            results.push(["code", 'Missing required element: Observation.code']);
+        if (!this['code']) {
+            outcome.issue.push(new fhir.OperationOutcomeIssue({ severity: IssueSeverityValueSetEnum.Error, code: IssueTypeValueSetEnum.RequiredElementMissing, diagnostics: "Missing required property code:fhir.CodeableConcept fhir: Observation.code:CodeableConcept", }));
         }
         if (this["code"]) {
-            results.push(...this.code.doModelValidation());
+            outcome.issue.push(...this.code.doModelValidation().issue);
         }
         if (this["subject"]) {
-            results.push(...this.subject.doModelValidation());
+            outcome.issue.push(...this.subject.doModelValidation().issue);
         }
         if (this["focus"]) {
-            this.focus.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.focus.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["encounter"]) {
-            results.push(...this.encounter.doModelValidation());
+            outcome.issue.push(...this.encounter.doModelValidation().issue);
         }
-        if (this["_effectiveDateTime"]) {
-            results.push(...this._effectiveDateTime.doModelValidation());
-        }
-        if (this["effectivePeriod"]) {
-            results.push(...this.effectivePeriod.doModelValidation());
-        }
-        if (this["effectiveTiming"]) {
-            results.push(...this.effectiveTiming.doModelValidation());
-        }
-        if (this["_effectiveInstant"]) {
-            results.push(...this._effectiveInstant.doModelValidation());
-        }
-        if (this["_issued"]) {
-            results.push(...this._issued.doModelValidation());
+        if (this["issued"]) {
+            outcome.issue.push(...this.issued.doModelValidation().issue);
         }
         if (this["performer"]) {
-            this.performer.forEach((x) => { results.push(...x.doModelValidation()); });
-        }
-        if (this["valueQuantity"]) {
-            results.push(...this.valueQuantity.doModelValidation());
-        }
-        if (this["valueCodeableConcept"]) {
-            results.push(...this.valueCodeableConcept.doModelValidation());
-        }
-        if (this["_valueString"]) {
-            results.push(...this._valueString.doModelValidation());
-        }
-        if (this["_valueBoolean"]) {
-            results.push(...this._valueBoolean.doModelValidation());
-        }
-        if (this["_valueInteger"]) {
-            results.push(...this._valueInteger.doModelValidation());
-        }
-        if (this["valueRange"]) {
-            results.push(...this.valueRange.doModelValidation());
-        }
-        if (this["valueRatio"]) {
-            results.push(...this.valueRatio.doModelValidation());
-        }
-        if (this["valueSampledData"]) {
-            results.push(...this.valueSampledData.doModelValidation());
-        }
-        if (this["_valueTime"]) {
-            results.push(...this._valueTime.doModelValidation());
-        }
-        if (this["_valueDateTime"]) {
-            results.push(...this._valueDateTime.doModelValidation());
-        }
-        if (this["valuePeriod"]) {
-            results.push(...this.valuePeriod.doModelValidation());
+            this.performer.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["dataAbsentReason"]) {
-            results.push(...this.dataAbsentReason.doModelValidation());
+            outcome.issue.push(...this.dataAbsentReason.doModelValidation().issue);
         }
         if (this["interpretation"]) {
-            this.interpretation.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.interpretation.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["note"]) {
-            this.note.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.note.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["bodySite"]) {
-            results.push(...this.bodySite.doModelValidation());
+            outcome.issue.push(...this.bodySite.doModelValidation().issue);
         }
         if (this["method"]) {
-            results.push(...this.method.doModelValidation());
+            outcome.issue.push(...this.method.doModelValidation().issue);
         }
         if (this["specimen"]) {
-            results.push(...this.specimen.doModelValidation());
+            outcome.issue.push(...this.specimen.doModelValidation().issue);
         }
         if (this["device"]) {
-            results.push(...this.device.doModelValidation());
+            outcome.issue.push(...this.device.doModelValidation().issue);
         }
         if (this["referenceRange"]) {
-            this.referenceRange.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.referenceRange.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["hasMember"]) {
-            this.hasMember.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.hasMember.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["derivedFrom"]) {
-            this.derivedFrom.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.derivedFrom.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
         if (this["component"]) {
-            this.component.forEach((x) => { results.push(...x.doModelValidation()); });
+            this.component.forEach((x) => { outcome.issue.push(...x.doModelValidation().issue); });
         }
-        return results;
+        return outcome;
+    }
+    /**
+     * Function to strip invalid element values for serialization.
+     */
+    toJSON() {
+        return fhir.fhirToJson(this);
     }
 }
 //# sourceMappingURL=Observation.js.map
